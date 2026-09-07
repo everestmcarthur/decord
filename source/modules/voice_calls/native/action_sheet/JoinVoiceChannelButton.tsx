@@ -1,10 +1,10 @@
-// Module ID: 13783
-// Function ID: 13784
+// Module ID: 13786
+// Function ID: 13787
 // Name: JoinVoiceChannelButton
-// Dependencies: [19, 17, 4199, 1074, 21, 4560, 9937, 504, 1114, 1874, 5411, 4975, 2]
+// Dependencies: [19, 17, 4199, 1074, 21, 4560, 9942, 504, 1114, 1874, 5411, 4975, 2]
 // Exports: default
 
-// Module 13783 (JoinVoiceChannelButton)
+// Module 13786 (JoinVoiceChannelButton)
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "getUncachedChannelPermissions" /* 4199 */;

@@ -1,8 +1,8 @@
-// Module ID: 11834
-// Function ID: 11835
-// Dependencies: [19, 2021, 1979, 4199, 1371, 1074, 21, 4560, 504, 11835, 9403, 4712, 4527, 7200, 1114, 7380, 4763, 11836, 1896, 11833, 4188, 11853, 11839, 4501, 11855, 9433, 11857, 7150, 7149, 11859, 5687, 2]
+// Module ID: 11839
+// Function ID: 11840
+// Dependencies: [19, 2021, 1979, 4199, 1371, 1074, 21, 4560, 504, 11840, 9408, 4712, 4527, 7200, 1114, 7380, 4763, 11841, 1896, 11838, 4188, 11858, 11844, 4501, 11860, 9438, 11862, 7150, 7149, 11864, 5687, 2]
 
-// Module 11834
+// Module 11839
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "trackCommunicationDisabled" /* 2021 */;
 import closure_5 from "createGuildRecordFromRust" /* 1979 */;

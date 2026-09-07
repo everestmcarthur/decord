@@ -1,8 +1,8 @@
-// Module ID: 16282
-// Function ID: 16283
-// Dependencies: [19, 21, 4560, 1115, 9610, 16283, 16292, 16180, 11533, 6655, 5589, 7072, 16360, 10238, 2]
+// Module ID: 16285
+// Function ID: 16286
+// Dependencies: [19, 21, 4560, 1115, 9615, 16286, 16295, 16183, 11538, 6655, 5589, 7072, 16363, 10243, 2]
 
-// Module 16282
+// Module 16285
 import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -17,12 +17,12 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
     flag = false;
   }
   listProps = undefined;
-  let tmp4 = fastListRef(16283)();
+  let tmp4 = fastListRef(16286)();
   fastListRef = tmp4.fastListRef;
   listProps = fastListRef;
   ({ scrollPosition, gesture, scrollerRef, persistantKeys, onFastListScroll, onFastListScrollWorklet } = tmp4);
   let tmp = callback();
-  ({ listProps, listDataProps } = fastListRef(16292)(fastListRef));
+  ({ listProps, listDataProps } = fastListRef(16295)(fastListRef));
   const items = [fastListRef];
   const effect = importAllResult.useEffect(() => {
     const result = listProps(ref[7]).registerGuildVisibilityMethod(listProps);
@@ -75,11 +75,11 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
     }
   }, items1);
   let obj = { profile: null, children: null };
-  const tmp5 = fastListRef(16292)(fastListRef);
-  obj[0] = listProps(11533).Profiles.Guilds;
+  const tmp5 = fastListRef(16295)(fastListRef);
+  obj[0] = listProps(11538).Profiles.Guilds;
   obj = { gesture, children: null };
   obj = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
-  const tmp10 = fastListRef(11533);
+  const tmp10 = fastListRef(11538);
   const tmp11 = closure_5;
   obj1 = {};
   const tmp12 = fastListRef(5589);
@@ -101,7 +101,7 @@ const memoResult = importAllResult.memo(function GuildsBar(enableHome) {
   }
   obj1.style = obj2;
   obj1.nativeID = "guilds-bar-fast-list";
-  const items2 = [closure_4(fastListRef(7072), obj1), closure_4(fastListRef(16360), {}), closure_4(fastListRef(10238), {})];
+  const items2 = [closure_4(fastListRef(7072), obj1), closure_4(fastListRef(16363), {}), closure_4(fastListRef(10243), {})];
   obj[3] = items2;
   obj[1] = tmp11(tmp12, obj);
   obj[1] = closure_4(listProps(6655).GestureDetector, obj);

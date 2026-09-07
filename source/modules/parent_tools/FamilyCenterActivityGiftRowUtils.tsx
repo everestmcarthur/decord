@@ -1,10 +1,10 @@
-// Module ID: 14904
-// Function ID: 14905
+// Module ID: 14907
+// Function ID: 14908
 // Name: getGiftRowDisplayInfo
 // Dependencies: [1114, 3796, 7234, 2396, 2]
 // Exports: formatGiftDate, getGiftRowDisplayInfo, getGiftSubtext
 
-// Module 14904 (getGiftRowDisplayInfo)
+// Module 14907 (getGiftRowDisplayInfo)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;

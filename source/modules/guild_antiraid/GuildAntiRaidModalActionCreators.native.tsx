@@ -1,10 +1,10 @@
-// Module ID: 13963
-// Function ID: 13964
+// Module ID: 13966
+// Function ID: 13967
 // Name: openReportRaidModal
-// Dependencies: [8016, 4763, 13964, 1896, 2]
+// Dependencies: [8016, 4763, 13967, 1896, 2]
 // Exports: openReportRaidModal
 
-// Module 13963 (openReportRaidModal)
+// Module 13966 (openReportRaidModal)
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
@@ -21,5 +21,5 @@ export const openReportRaidModal = function openReportRaidModal(id) {
     },
     guildId: id
   };
-  obj.pushLazy(asyncRequireImpl(13964, dependencyMap.paths), obj, closure_3);
+  obj.pushLazy(asyncRequireImpl(13967, dependencyMap.paths), obj, closure_3);
 };

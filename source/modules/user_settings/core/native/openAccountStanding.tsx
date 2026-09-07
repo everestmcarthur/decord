@@ -1,10 +1,10 @@
-// Module ID: 11909
-// Function ID: 11910
+// Module ID: 11914
+// Function ID: 11915
 // Name: openAccountStanding
 // Dependencies: [1074, 7382, 2]
 // Exports: openAccountStanding
 
-// Module 11909 (openAccountStanding)
+// Module 11914 (openAccountStanding)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import openUserSettings from "openUserSettings" /* 7382 */;

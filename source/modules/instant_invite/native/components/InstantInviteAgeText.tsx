@@ -1,15 +1,15 @@
-// Module ID: 9891
-// Function ID: 9892
+// Module ID: 9896
+// Function ID: 9897
 // Name: InstantInviteAgeText
-// Dependencies: [19, 17, 9821, 21, 4560, 8095, 504, 4556, 9822, 5123, 9820, 1114, 2]
+// Dependencies: [19, 17, 9826, 21, 4560, 8095, 504, 4556, 9827, 5123, 9825, 1114, 2]
 // Exports: default
 
-// Module 9891 (InstantInviteAgeText)
+// Module 9896 (InstantInviteAgeText)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import apexExperiment from "apexExperiment" /* 8095 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_3 from "updateWithLatestInvite" /* 9821 */;
+import closure_3 from "updateWithLatestInvite" /* 9826 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -42,7 +42,7 @@ export default function InstantInviteAgeText(style) {
     }
     obj = { variant: null, children: null };
     obj[0] = str2;
-    const items2 = [tmp2(9822).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
+    const items2 = [tmp2(9827).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
     obj[1] = items2;
     const items3 = [closure_4(tmp2(4556).Text, obj), ];
     if (canEditInvite) {
@@ -69,7 +69,7 @@ export default function InstantInviteAgeText(style) {
     items3[1] = canEditInvite;
     obj[1] = items3;
     tmp7Result = tmp7(View, obj);
-    const tmp2Result = tmp2(9822);
+    const tmp2Result = tmp2(9827);
     const tmp8 = View;
   }
   return tmp7Result;

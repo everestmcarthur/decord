@@ -1,10 +1,10 @@
-// Module ID: 8900
-// Function ID: 8901
+// Module ID: 8905
+// Function ID: 8906
 // Name: _fetchGameAutocomplete
 // Dependencies: [5, 5108, 1074, 5109, 573, 1272, 2]
 // Exports: fetchGameAutocomplete
 
-// Module 8900 (_fetchGameAutocomplete)
+// Module 8905 (_fetchGameAutocomplete)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "set" /* 5108 */;
 import { Endpoints } from "ME" /* 1074 */;

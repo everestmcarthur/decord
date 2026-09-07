@@ -1,10 +1,10 @@
-// Module ID: 11669
-// Function ID: 11670
+// Module ID: 11674
+// Function ID: 11675
 // Name: createPendingReply
 // Dependencies: [573, 2]
 // Exports: createPendingReply, createShallowPendingReply, deletePendingReply, setPendingReplyShouldMention
 
-// Module 11669 (createPendingReply)
+// Module 11674 (createPendingReply)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 

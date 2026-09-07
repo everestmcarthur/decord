@@ -1,10 +1,10 @@
-// Module ID: 16604
-// Function ID: 16605
+// Module ID: 16607
+// Function ID: 16608
 // Name: VibegrationsMessageAuthor
-// Dependencies: [19, 17, 1371, 21, 4560, 576, 16605, 504, 4404, 1178, 4556, 2]
+// Dependencies: [19, 17, 1371, 21, 4560, 576, 16608, 504, 4404, 1178, 4556, 2]
 // Exports: default
 
-// Module 16604 (VibegrationsMessageAuthor)
+// Module 16607 (VibegrationsMessageAuthor)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

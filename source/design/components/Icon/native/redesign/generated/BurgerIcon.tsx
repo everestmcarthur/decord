@@ -1,14 +1,14 @@
-// Module ID: 15603
-// Function ID: 15604
+// Module ID: 15606
+// Function ID: 15607
 // Name: BurgerIcon
-// Dependencies: [19, 21, 576, 4261, 15604, 2]
+// Dependencies: [19, 21, 576, 4261, 15607, 2]
 // Exports: BurgerIcon
 
-// Module 15603 (BurgerIcon)
+// Module 15606 (BurgerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 15604 */;
+import registerAsset from "registerAsset" /* 15607 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

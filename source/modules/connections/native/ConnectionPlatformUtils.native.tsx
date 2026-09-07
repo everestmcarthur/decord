@@ -1,10 +1,10 @@
-// Module ID: 14961
-// Function ID: 14962
+// Module ID: 14964
+// Function ID: 14965
 // Name: getConnectionBackgroundColor
 // Dependencies: [1074, 576, 2]
 // Exports: getConnectionBackgroundColor
 
-// Module 14961 (getConnectionBackgroundColor)
+// Module 14964 (getConnectionBackgroundColor)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import ME from "ME" /* 1074 */;

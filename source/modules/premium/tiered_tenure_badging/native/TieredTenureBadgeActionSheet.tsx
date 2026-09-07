@@ -1,13 +1,13 @@
-// Module ID: 11157
-// Function ID: 11158
+// Module ID: 11162
+// Function ID: 11163
 // Name: TieredTenureBadgeItem
-// Dependencies: [19, 17, 1371, 1373, 1074, 21, 4560, 576, 11158, 7634, 11183, 5587, 4556, 1114, 11184, 504, 1885, 8768, 1250, 1611, 7382, 4527, 8179, 9967, 9970, 7150, 6627, 2]
+// Dependencies: [19, 17, 1371, 1373, 1074, 21, 4560, 576, 11163, 7634, 11188, 5587, 4556, 1114, 11189, 504, 1885, 8773, 1250, 1611, 7382, 4527, 8179, 9972, 9975, 7150, 6627, 2]
 // Exports: default
 
-// Module 11157 (TieredTenureBadgeItem)
+// Module 11162 (TieredTenureBadgeItem)
 import ThemesDefault from "Themes" /* 576 */;
 import preloadDefault from "preload" /* 5587 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11158 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11163 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
@@ -27,7 +27,7 @@ function TieredTenureBadgeItem(arg0) {
   }
   let tmp2Result = tmp2(7634);
   const tieredTenureBadgeData = tmp2Result.getTieredTenureBadgeData(badge);
-  tmp2Result = tmp2(11183);
+  tmp2Result = tmp2(11188);
   if (tieredTenureBadgeData != null) {
     const tenureReqNumMonths = tieredTenureBadgeData.tenureReqNumMonths;
   }

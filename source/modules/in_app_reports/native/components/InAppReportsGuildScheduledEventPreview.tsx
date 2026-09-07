@@ -1,10 +1,10 @@
-// Module ID: 9037
-// Function ID: 9038
+// Module ID: 9042
+// Function ID: 9043
 // Name: GuildScheduledEventPreview
 // Dependencies: [19, 17, 1979, 21, 4560, 576, 504, 4409, 4556, 1114, 5584, 2]
 // Exports: default
 
-// Module 9037 (GuildScheduledEventPreview)
+// Module 9042 (GuildScheduledEventPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;

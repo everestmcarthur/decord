@@ -1,15 +1,15 @@
-// Module ID: 17633
-// Function ID: 17634
+// Module ID: 17636
+// Function ID: 17637
 // Name: RolePermissionTemplatesActionSheet
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 1242, 4527, 4258, 7149, 1114, 7198, 17613, 4904, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 1242, 4527, 4258, 7149, 1114, 7198, 17616, 4904, 2]
 // Exports: default
 
-// Module 17633 (RolePermissionTemplatesActionSheet)
+// Module 17636 (RolePermissionTemplatesActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
-import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 17613 */;
+import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 17616 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;

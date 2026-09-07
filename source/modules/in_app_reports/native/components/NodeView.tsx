@@ -1,23 +1,23 @@
-// Module ID: 8636
-// Function ID: 8637
+// Module ID: 8641
+// Function ID: 8642
 // Name: HeaderView
-// Dependencies: [32, 19, 17, 4559, 1957, 4199, 8637, 8635, 1074, 1085, 21, 4560, 576, 5598, 4995, 4556, 4409, 4515, 504, 5123, 8638, 1483, 4962, 4971, 8632, 8630, 4740, 4272, 8640, 8644, 8645, 7123, 8648, 8649, 8650, 8651, 8656, 8657, 9035, 9036, 9037, 9038, 9039, 9040, 9041, 9052, 9055, 9056, 9061, 9062, 9075, 9076, 9077, 9080, 2]
+// Dependencies: [32, 19, 17, 4559, 1957, 4199, 8642, 8640, 1074, 1085, 21, 4560, 576, 5598, 4995, 4556, 4409, 4515, 504, 5123, 8643, 1483, 4962, 4971, 8637, 8635, 4740, 4272, 8645, 8649, 8650, 7123, 8653, 8654, 8655, 8656, 8661, 8662, 9040, 9041, 9042, 9043, 9044, 9045, 9046, 9057, 9060, 9061, 9066, 9067, 9080, 9081, 9082, 9085, 2]
 // Exports: default
 
-// Module 8636 (HeaderView)
+// Module 8641 (HeaderView)
 import ThemesDefault from "Themes" /* 576 */;
 import hexToRgba from "hexToRgba" /* 4409 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
 import Text from "Text" /* 4556 */;
-import ArrowDefault from "Arrow" /* 8638 */;
+import ArrowDefault from "Arrow" /* 8643 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "getUserAgnosticState" /* 4559 */;
 import closure_9 from "ensureGuildLoaded" /* 1957 */;
 import closure_10 from "getUncachedChannelPermissions" /* 4199 */;
-import { REMEDIATION_ELEMENT_TYPES } from "REMEDIATION_ELEMENT_TYPES" /* 8637 */;
-import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8635 */;
+import { REMEDIATION_ELEMENT_TYPES } from "REMEDIATION_ELEMENT_TYPES" /* 8642 */;
+import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8640 */;
 import ME from "ME" /* 1074 */;
 import { Permissions } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;

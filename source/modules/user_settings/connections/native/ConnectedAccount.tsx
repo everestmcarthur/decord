@@ -1,9 +1,9 @@
-// Module ID: 14963
-// Function ID: 14964
+// Module ID: 14966
+// Function ID: 14967
 // Name: Integration
-// Dependencies: [5, 32, 19, 17, 5281, 1979, 1074, 5408, 21, 4560, 1178, 576, 5524, 5406, 504, 4975, 1114, 4556, 5584, 5283, 7201, 4271, 14964, 9459, 4904, 4994, 9252, 14965, 14968, 5407, 11575, 4255, 2024, 5123, 10652, 14970, 3010, 1396, 4411, 4973, 6992, 5605, 5687, 2]
+// Dependencies: [5, 32, 19, 17, 5281, 1979, 1074, 5408, 21, 4560, 1178, 576, 5524, 5406, 504, 4975, 1114, 4556, 5584, 5283, 7201, 4271, 14967, 9464, 4904, 4994, 9257, 14968, 14971, 5407, 11580, 4255, 2024, 5123, 10657, 14973, 3010, 1396, 4411, 4973, 6992, 5605, 5687, 2]
 
-// Module 14963 (Integration)
+// Module 14966 (Integration)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button2 from "Button" /* 1178 */;
@@ -17,8 +17,8 @@ import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
 import TableRowInner from "TableRowInner" /* 5605 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
-import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 14965 */;
-import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 14968 */;
+import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 14968 */;
+import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 14971 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
@@ -505,33 +505,33 @@ prototype["renderMetadata"] = function renderMetadata() {
   const createdAtDate = obj1.getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let tmp2Result = tmp2(11575);
+    let tmp2Result = tmp2(11580);
     let redditMetadataItems = tmp2Result.generateRedditMetadataItems(metadata);
   } else if (tmp6.STEAM === type) {
-    tmp2Result = tmp2(11575);
+    tmp2Result = tmp2(11580);
     redditMetadataItems = tmp2Result.generateSteamMetadataItems(metadata);
   } else {
     if (tmp6.BLUESKY !== type) {
       if (tmp6.TWITTER !== type) {
         if (tmp6.MASTODON !== type) {
           if (tmp6.EBAY === type) {
-            redditMetadataItems = tmp2(11575).generateEbayMetadataItems(metadata);
-            const tmp2Result1 = tmp2(11575);
+            redditMetadataItems = tmp2(11580).generateEbayMetadataItems(metadata);
+            const tmp2Result1 = tmp2(11580);
           } else if (tmp6.PAYPAL === type) {
-            redditMetadataItems = tmp2(11575).generatePaypalMetadataItems(metadata);
-            const tmp2Result2 = tmp2(11575);
+            redditMetadataItems = tmp2(11580).generatePaypalMetadataItems(metadata);
+            const tmp2Result2 = tmp2(11580);
           } else {
             redditMetadataItems = [];
             if (tmp6.TIKTOK === type) {
-              redditMetadataItems = tmp2(11575).generateTikTokMetadataItems(metadata);
-              const tmp2Result3 = tmp2(11575);
+              redditMetadataItems = tmp2(11580).generateTikTokMetadataItems(metadata);
+              const tmp2Result3 = tmp2(11580);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(11575).generateTwitterMetadataItems(metadata);
-    const tmp2Result4 = tmp2(11575);
+    redditMetadataItems = tmp2(11580).generateTwitterMetadataItems(metadata);
+    const tmp2Result4 = tmp2(11580);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "text-xs/normal", color: "interactive-text-default", children: null };
@@ -632,9 +632,9 @@ prototype["renderMetadata"] = function renderMetadata() {
     obj10[0] = tmp.metadataRefreshIcon;
     obj10[1] = tmp2(1178).Icon.Sizes.SMALL;
     if (self.state.metadataAlreadyRefreshed) {
-      let tmp9Result = tmp9(10652);
+      let tmp9Result = tmp9(10657);
     } else {
-      tmp9Result = tmp9(14970);
+      tmp9Result = tmp9(14973);
     }
     obj10[2] = tmp9Result;
     obj9[6] = callback3(tmp2(1178).Icon, obj10);

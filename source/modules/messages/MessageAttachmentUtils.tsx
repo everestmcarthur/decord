@@ -1,16 +1,16 @@
-// Module ID: 12012
-// Function ID: 12013
+// Module ID: 12016
+// Function ID: 12017
 // Name: getForumPostShouldObscure
-// Dependencies: [4199, 1074, 7292, 7297, 7296, 7897, 563, 1935, 11526, 1114, 2]
+// Dependencies: [4199, 1074, 7292, 7297, 7296, 7897, 563, 1935, 11531, 1114, 2]
 // Exports: getObscureReasonForAttachment, getObscureReasonForEmbed, getObscureReasonForUnfurledMediaItem, getObscuredAlt, useShouldObscure
 
-// Module 12012 (getForumPostShouldObscure)
+// Module 12016 (getForumPostShouldObscure)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 7292 */;
 import ObscureReason from "ObscureReason" /* 7296 */;
 import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 7297 */;
 import isMediaAttachment from "isMediaAttachment" /* 7897 */;
-import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 11526 */;
+import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 11531 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
 import { Permissions } from "ME" /* 1074 */;
 

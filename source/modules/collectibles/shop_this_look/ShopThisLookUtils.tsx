@@ -1,13 +1,13 @@
-// Module ID: 13112
-// Function ID: 13113
+// Module ID: 13116
+// Function ID: 13117
 // Name: isShoppableCollectibleSku
-// Dependencies: [1232, 13113, 2]
+// Dependencies: [1232, 13117, 2]
 // Exports: isShoppableCollectibleSku
 
-// Module 13112 (isShoppableCollectibleSku)
+// Module 13116 (isShoppableCollectibleSku)
 import set from "set" /* 2 */;
 import _modDef1232 from "module_1232" /* 1232 */;
-import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 13113 */;
+import CollectiblesSKUSourceType from "CollectiblesSKUSourceType" /* 13117 */;
 
 const result = set.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");
 

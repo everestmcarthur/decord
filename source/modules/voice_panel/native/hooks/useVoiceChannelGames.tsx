@@ -1,10 +1,10 @@
-// Module ID: 17162
-// Function ID: 17163
+// Module ID: 17165
+// Function ID: 17166
 // Name: useVoiceChannelGames
-// Dependencies: [19, 502, 4600, 5279, 1371, 504, 9180, 9181, 5111, 2]
+// Dependencies: [19, 502, 4600, 5279, 1371, 504, 9185, 9186, 5111, 2]
 // Exports: default
 
-// Module 17162 (useVoiceChannelGames)
+// Module 17165 (useVoiceChannelGames)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 502 */;
 import closure_5 from "sortActivity" /* 4600 */;
@@ -53,8 +53,8 @@ export default function useVoiceChannelGames(arg0, arg1, arg2) {
     }
   }, items1);
   const obj = _require(504);
-  const getGamesForAppIds = _require(9181).useGetGamesForAppIds(stateFromStoresArray);
-  let obj2 = _require(9181);
+  const getGamesForAppIds = _require(9186).useGetGamesForAppIds(stateFromStoresArray);
+  let obj2 = _require(9186);
   const items2 = [closure_7];
   stateFromStores = _require(504).useStateFromStores(items2, () => {
     currentUser = currentUser.getCurrentUser();

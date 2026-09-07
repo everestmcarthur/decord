@@ -1,17 +1,17 @@
 // Module ID: 8498
 // Function ID: 8499
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 8469, 8492]
+// Dependencies: [41, 42, 93, 95, 98, 8472, 8495]
 
 // Module 8498 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8492 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8495 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
-const FeConvolveMatrix = arg1;
+const FeComponentTransfer = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,12 +31,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeConvolveMatrix {
+class FeComponentTransfer {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeConvolveMatrix);
+    tmp = closure_2(this, FeComponentTransfer);
     tmp2 = closure_4;
-    obj = closure_4(FeConvolveMatrix);
+    obj = closure_4(FeComponentTransfer);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -51,17 +51,17 @@ class FeConvolveMatrix {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeConvolveMatrix, _isNativeReflectConstructDefault);
+_inheritsDefault(FeComponentTransfer, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
-    const result = FeConvolveMatrix(8469).warnUnimplementedFilter();
+    const result = FeComponentTransfer(8472).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeConvolveMatrix, items);
-importDefaultResultResult.displayName = "FeConvolveMatrix";
+const importDefaultResultResult = importDefaultResult(FeComponentTransfer, items);
+importDefaultResultResult.displayName = "FeComponentTransfer";
 obj = {};
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = obj;

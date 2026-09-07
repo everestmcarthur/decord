@@ -1,10 +1,10 @@
-// Module ID: 17736
-// Function ID: 17737
+// Module ID: 17739
+// Function ID: 17740
 // Name: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet
-// Dependencies: [19, 17, 21, 4560, 576, 1611, 38, 17737, 7150, 6627, 4556, 1178, 4975, 4527, 1114, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 1611, 38, 17740, 7150, 6627, 4556, 1178, 4975, 4527, 1114, 2]
 // Exports: default
 
-// Module 17736 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
+// Module 17739 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
 import noopAll from "noop" /* 19 */;
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -15,7 +15,7 @@ import Text from "Text" /* 4556 */;
 import Button2 from "Button" /* 4975 */;
 import BottomSheetModal from "BottomSheetModal" /* 6627 */;
 import Background from "Background" /* 7150 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17737 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17740 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

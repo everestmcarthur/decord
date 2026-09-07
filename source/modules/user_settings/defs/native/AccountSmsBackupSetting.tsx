@@ -1,23 +1,23 @@
-// Module ID: 14798
-// Function ID: 14799
+// Module ID: 14801
+// Function ID: 14802
 // Name: toggle
-// Dependencies: [1371, 7975, 1074, 7043, 504, 14794, 1114, 14680, 14796, 4905, 4763, 7042, 1896, 7045, 12, 11468, 14681, 2]
+// Dependencies: [1371, 7975, 1074, 7043, 504, 14797, 1114, 14683, 14799, 4905, 4763, 7042, 1896, 7045, 12, 11473, 14684, 2]
 
-// Module 14798 (toggle)
+// Module 14801 (toggle)
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
 import _modDef4905 from "module_4905" /* 4905 */;
 import ChangePhoneReason from "ChangePhoneReason" /* 7045 */;
-import _modDef14680 from "module_14680" /* 14680 */;
-import getSMSBackupDisabledMessage from "getSMSBackupDisabledMessage" /* 14794 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14796 */;
+import _modDef14683 from "module_14683" /* 14683 */;
+import getSMSBackupDisabledMessage from "getSMSBackupDisabledMessage" /* 14797 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14799 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;
 import { UserFlags } from "ME" /* 1074 */;
 import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 7043 */;
 import apply from "apply" /* 12 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 let closure_6 = apply.debounce(function toggleSMS(user) {
@@ -29,7 +29,7 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
     const str2 = intl2.string(getSystemLocale.t["CIGa+7"]);
     let obj = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
     const formatted1 = intl3.string(getSystemLocale.t.wlfmlR).toUpperCase();
-    obj[0] = _modDef14680.disableSMS;
+    obj[0] = _modDef14683.disableSMS;
     obj[1] = formatted1;
     obj[2] = formatted;
     showUserSettingsInputAlertDefault(obj);

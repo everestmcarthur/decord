@@ -1,10 +1,10 @@
-// Module ID: 14981
-// Function ID: 14982
+// Module ID: 14984
+// Function ID: 14985
 // Name: ThemedTabBadge
-// Dependencies: [32, 19, 17, 4224, 1373, 7432, 21, 4560, 576, 4411, 4495, 4556, 8768, 1250, 10742, 1178, 14982, 7447, 8060, 4218, 4380, 1943, 504, 7388, 8056, 8055, 13352, 1114, 4987, 1093, 1115, 2]
+// Dependencies: [32, 19, 17, 4224, 1373, 7432, 21, 4560, 576, 4411, 4495, 4556, 8773, 1250, 10747, 1178, 14985, 7447, 8060, 4218, 4380, 1943, 504, 7388, 8056, 8055, 13356, 1114, 4987, 1093, 1115, 2]
 // Exports: default
 
-// Module 14981 (ThemedTabBadge)
+// Module 14984 (ThemedTabBadge)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import encodeProperties from "encodeProperties" /* 1250 */;
@@ -17,9 +17,9 @@ import Text from "Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7447 */;
 import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8060 */;
-import trackImpressionDefault from "trackImpression" /* 8768 */;
-import MarketingComponentType from "MarketingComponentType" /* 10742 */;
-import registerAssetDefault from "registerAsset" /* 14982 */;
+import trackImpressionDefault from "trackImpression" /* 8773 */;
+import MarketingComponentType from "MarketingComponentType" /* 10747 */;
+import registerAssetDefault from "registerAsset" /* 14985 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "reset" /* 4224 */;
@@ -140,7 +140,7 @@ export default function PremiumTabBadge() {
       const tmp2Result2 = tmp2(8056);
       const isReferralProgramEntrypointBadgeAcknowledged = tmp2(8055).useIsReferralProgramEntrypointBadgeAcknowledged();
       const tmp2Result3 = tmp2(8055);
-      const promotionMarketingComponent = tmp2(13352).usePromotionMarketingComponent(tmp2(10742).MarketingComponentType.PREMIUM_TAB);
+      const promotionMarketingComponent = tmp2(13356).usePromotionMarketingComponent(tmp2(10747).MarketingComponentType.PREMIUM_TAB);
       const tmp2Result5 = tmp2(7388);
       let prop = null;
       if (null != promotionMarketingComponent) {
@@ -280,7 +280,7 @@ export default function PremiumTabBadge() {
           tmp2Result7 = tmp2(1115);
         }
       }
-      const tmp2Result4 = tmp2(13352);
+      const tmp2Result4 = tmp2(13356);
     }
     items2 = [];
     const tmp13 = callback(tmp11(items1, undefined, true), 2);

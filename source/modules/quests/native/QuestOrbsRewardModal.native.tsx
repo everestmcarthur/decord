@@ -1,19 +1,19 @@
-// Module ID: 11779
-// Function ID: 11780
+// Module ID: 11784
+// Function ID: 11785
 // Name: OrbsBalance
-// Dependencies: [32, 5, 19, 17, 4552, 1371, 1895, 5444, 21, 4763, 11779, 1896, 4560, 576, 8837, 5631, 5680, 1114, 5587, 8808, 1116, 11780, 8307, 11781, 11782, 11783, 11784, 504, 8850, 1093, 11290, 11785, 11767, 5447, 7123, 4556, 4975, 2]
+// Dependencies: [32, 5, 19, 17, 4552, 1371, 1895, 5444, 21, 4763, 11784, 1896, 4560, 576, 8842, 5631, 5680, 1114, 5587, 8813, 1116, 11785, 8307, 11786, 11787, 11788, 11789, 504, 8855, 1093, 11295, 11790, 11772, 5447, 7123, 4556, 4975, 2]
 // Exports: default, openQuestOrbsRewardModal
 
-// Module 11779 (OrbsBalance)
+// Module 11784 (OrbsBalance)
 import ThemesDefault from "Themes" /* 576 */;
 import PlatformTypes from "PlatformTypes" /* 1116 */;
 import _modDef4763 from "module_4763" /* 4763 */;
 import preloadDefault from "preload" /* 5587 */;
 import VideoComponent from "VideoComponent" /* 8307 */;
-import OrbsIcon from "OrbsIcon" /* 8837 */;
-import metadataDefault from "metadata" /* 11780 */;
-import metadataDefault2 from "metadata" /* 11781 */;
-import metadataDefault3 from "metadata" /* 11782 */;
+import OrbsIcon from "OrbsIcon" /* 8842 */;
+import metadataDefault from "metadata" /* 11785 */;
+import metadataDefault2 from "metadata" /* 11786 */;
+import metadataDefault3 from "metadata" /* 11787 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
@@ -193,7 +193,7 @@ let closure_23 = importAllResult.memo((animate) => {
   }
   let aPNGPlayerControls;
   const ref = importAllResult.useRef(null);
-  aPNGPlayerControls = flag(8808).useAPNGPlayerControls(ref);
+  aPNGPlayerControls = flag(8813).useAPNGPlayerControls(ref);
   const items = [flag, aPNGPlayerControls];
   const effect = importAllResult.useEffect(() => {
     if (flag) {
@@ -202,7 +202,7 @@ let closure_23 = importAllResult.memo((animate) => {
       obj.stop();
     }
   }, items);
-  return callback3(flag(8808).APNGPlayer, { ref, url, autoplay: false, style: { width: "100%", height: "100%" }, onLoad });
+  return callback3(flag(8813).APNGPlayer, { ref, url, autoplay: false, style: { width: "100%", height: "100%" }, onLoad });
 });
 let closure_24 = importAllResult.memo((animate) => {
   let flag = animate.animate;
@@ -252,7 +252,7 @@ export default function QuestOrbsRewardModal(quest) {
   let obj = num(504);
   const items = [closure_9];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj1 = num(8850);
+  obj1 = num(8855);
   num = obj1.useFetchVirtualCurrencyBalance().balance;
   let obj2 = importAllResult;
   [tmp6, c1] = callback(importAllResult.useState(false), 2);
@@ -270,8 +270,8 @@ export default function QuestOrbsRewardModal(quest) {
     num2 = userStatus.orbQuantityClaimed;
   }
   if (num2 == null) {
-    num2 = tmp2(11290).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
-    const tmp2Result = tmp2(11290);
+    num2 = tmp2(11295).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
+    const tmp2Result = tmp2(11295);
   }
   const tmp11 = stateFromStores1 === num(1093).AppStates.ACTIVE;
   const effect = obj2.useEffect(() => {

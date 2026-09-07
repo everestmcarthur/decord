@@ -1,14 +1,14 @@
-// Module ID: 12700
-// Function ID: 12701
+// Module ID: 12704
+// Function ID: 12705
 // Name: ContactSyncInviteFriends
-// Dependencies: [19, 17, 1371, 1074, 21, 4560, 576, 504, 5587, 12701, 4556, 1114, 4975, 1242, 4404, 8361, 2]
+// Dependencies: [19, 17, 1371, 1074, 21, 4560, 576, 504, 5587, 12705, 4556, 1114, 4975, 1242, 4404, 8361, 2]
 // Exports: default
 
-// Module 12700 (ContactSyncInviteFriends)
+// Module 12704 (ContactSyncInviteFriends)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 12701 */;
+import registerAssetDefault from "registerAsset" /* 12705 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;

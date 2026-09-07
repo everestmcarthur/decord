@@ -1,10 +1,10 @@
-// Module ID: 9214
-// Function ID: 9215
+// Module ID: 9219
+// Function ID: 9220
 // Name: useGameConsoleAccounts
 // Dependencies: [5281, 1074, 504, 1369, 2]
 // Exports: default
 
-// Module 9214 (useGameConsoleAccounts)
+// Module 9219 (useGameConsoleAccounts)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "set" /* 5281 */;
 import { PlatformTypes } from "ME" /* 1074 */;

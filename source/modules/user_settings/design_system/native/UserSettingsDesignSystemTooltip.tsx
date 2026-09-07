@@ -1,10 +1,10 @@
-// Module ID: 15785
-// Function ID: 15786
+// Module ID: 15788
+// Function ID: 15789
 // Name: Content
-// Dependencies: [32, 19, 17, 21, 4560, 8332, 11128, 4975, 7201, 4556, 7123, 7156, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 8332, 11133, 4975, 7201, 4556, 7123, 7156, 2]
 // Exports: default, useCanRotate
 
-// Module 15785 (Content)
+// Module 15788 (Content)
 import Text from "Text" /* 4556 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
 import Layer from "Layer" /* 7156 */;
@@ -58,7 +58,7 @@ function Content() {
       }
     };
   }, items1);
-  obj1 = first1(11128);
+  obj1 = first1(11133);
   const tooltip = obj1.useTooltip(ref, memo);
   obj = { children: null };
   obj = { style: tmp.container, children: callback2(first1(4975).Button, obj1) };

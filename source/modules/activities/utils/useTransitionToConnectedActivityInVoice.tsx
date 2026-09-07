@@ -1,10 +1,10 @@
-// Module ID: 17050
-// Function ID: 17051
+// Module ID: 17053
+// Function ID: 17054
 // Name: useTransitionToConnectedActivityInVoice
-// Dependencies: [5, 19, 1957, 2011, 1074, 4189, 9526, 9545, 9535, 1109, 2]
+// Dependencies: [5, 19, 1957, 2011, 1074, 4189, 9531, 9550, 9540, 1109, 2]
 // Exports: default
 
-// Module 17050 (useTransitionToConnectedActivityInVoice)
+// Module 17053 (useTransitionToConnectedActivityInVoice)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;

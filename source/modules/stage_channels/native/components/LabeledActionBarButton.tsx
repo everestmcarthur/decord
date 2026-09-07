@@ -1,10 +1,10 @@
-// Module ID: 10010
-// Function ID: 10011
+// Module ID: 10015
+// Function ID: 10016
 // Name: IconPosition
 // Dependencies: [19, 17, 1085, 21, 4560, 5441, 576, 5123, 1178, 2]
 // Exports: LabeledActionButton
 
-// Module 10010 (IconPosition)
+// Module 10015 (IconPosition)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;

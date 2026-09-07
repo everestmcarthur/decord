@@ -1,10 +1,10 @@
-// Module ID: 15765
-// Function ID: 15766
+// Module ID: 15768
+// Function ID: 15769
 // Name: UserSettingsDesignSystemExperimentalButtons
-// Dependencies: [19, 17, 21, 4262, 576, 8902, 4973, 5687, 5613, 7052, 4508, 4975, 4556, 4271, 4987, 8595, 7381, 2]
+// Dependencies: [19, 17, 21, 4262, 576, 8907, 4973, 5687, 5613, 7052, 4508, 4975, 4556, 4271, 4987, 8600, 7381, 2]
 // Exports: default
 
-// Module 15765 (UserSettingsDesignSystemExperimentalButtons)
+// Module 15768 (UserSettingsDesignSystemExperimentalButtons)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;
@@ -18,8 +18,8 @@ import registerAssetDefault2 from "registerAsset" /* 5613 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import registerAssetDefault3 from "registerAsset" /* 7052 */;
 import registerAssetDefault4 from "registerAsset" /* 7381 */;
-import RowButtonWrapper from "RowButtonWrapper" /* 8595 */;
-import TwinButtons from "TwinButtons" /* 8902 */;
+import RowButtonWrapper from "RowButtonWrapper" /* 8600 */;
+import TwinButtons from "TwinButtons" /* 8907 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

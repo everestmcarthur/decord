@@ -1,24 +1,24 @@
-// Module ID: 16133
-// Function ID: 16134
+// Module ID: 16136
+// Function ID: 16137
 // Name: GuildInfoHeader
-// Dependencies: [19, 17, 4552, 4251, 10118, 1074, 21, 7873, 4495, 4411, 4982, 16134, 1982, 16104, 10119, 4262, 576, 4980, 10993, 4560, 4296, 4297, 5125, 16135, 1477, 504, 1484, 4974, 4978, 13907, 1396, 5587, 16178, 2]
+// Dependencies: [19, 17, 4552, 4251, 10123, 1074, 21, 7873, 4495, 4411, 4982, 16137, 1982, 16107, 10124, 4262, 576, 4980, 10998, 4560, 4296, 4297, 5125, 16138, 1477, 504, 1484, 4974, 4978, 13910, 1396, 5587, 16181, 2]
 // Exports: useRedesignGuildHeaderHeight
 
-// Module 16133 (GuildInfoHeader)
+// Module 16136 (GuildInfoHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import getFontScale from "getFontScale" /* 4982 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7873 */;
-import map from "map" /* 10119 */;
-import tDefault from "t" /* 10993 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16104 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16134 */;
+import map from "map" /* 10124 */;
+import tDefault from "t" /* 10998 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16107 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16137 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import closure_8 from "setContent" /* 4251 */;
-import hairlineWidth from "hairlineWidth" /* 10118 */;
+import hairlineWidth from "hairlineWidth" /* 10123 */;
 import { GuildFeatures } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -60,7 +60,7 @@ function GuildInfoHeader(bannerHeight) {
   const tmp5 = bannerHeight(4297);
   obj[1] = callback(bannerHeight(5125), { absolute: true, tall: true });
   const items1 = [callback(bannerHeight(4297), obj), ];
-  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(16135), obj2) };
+  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(16138), obj2) };
   obj2 = { guild, showExtraButtons: !isFavoritesGuildIdResult, canOpenGuildActionSheet: !isFavoritesGuildIdResult, showCoachmarks: !isFavoritesGuildIdResult };
   items1[1] = callback(closure_5, obj1);
   obj[1] = items1;
@@ -264,7 +264,7 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   }
   let num6 = 0;
   if (tmp9) {
-    tmp7Result = tmp7(10119);
+    tmp7Result = tmp7(10124);
     num6 = tmp7Result.scaleTextLineHeight(token, fontScale);
   }
   let bound = scaleTextLineHeightResult;

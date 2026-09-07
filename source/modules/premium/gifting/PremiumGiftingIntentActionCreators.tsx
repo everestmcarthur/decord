@@ -1,10 +1,10 @@
-// Module ID: 10744
-// Function ID: 10745
+// Module ID: 10749
+// Function ID: 10750
 // Name: fetchAndReconcileGiftIntentDismissals
 // Dependencies: [7659, 502, 4781, 1373, 1074, 1272, 573, 1232, 1242, 2]
 // Exports: fetchAndReconcileGiftIntentDismissals, logFriendsListGiftIntentsShown, logGiftIntentFlowPurchasedGift, logGiftIntentMessageDismissed, logMessageGiftIntentShown
 
-// Module 10744 (fetchAndReconcileGiftIntentDismissals)
+// Module 10749 (fetchAndReconcileGiftIntentDismissals)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import sendRequest from "sendRequest" /* 1272 */;

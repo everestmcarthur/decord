@@ -1,10 +1,10 @@
-// Module ID: 16832
-// Function ID: 16833
+// Module ID: 16835
+// Function ID: 16836
 // Name: experiment
 // Dependencies: [4477, 4474, 2]
 // Exports: getHangoutWindowExperiment, useHangoutWindowExperiment
 
-// Module 16832 (experiment)
+// Module 16835 (experiment)
 import set from "set" /* 2 */;
 import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
 import createExperiment from "createExperiment" /* 4474 */;

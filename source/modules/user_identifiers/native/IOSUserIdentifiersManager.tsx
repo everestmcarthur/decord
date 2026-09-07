@@ -1,9 +1,9 @@
-// Module ID: 17404
-// Function ID: 17405
+// Module ID: 17407
+// Function ID: 17408
 // Name: onPostConnectionOpen
-// Dependencies: [5, 17, 1371, 1074, 7118, 1115, 17405, 1272, 1232, 1242, 2]
+// Dependencies: [5, 17, 1371, 1074, 7118, 1115, 17408, 1272, 1232, 1242, 2]
 
-// Module 17404 (onPostConnectionOpen)
+// Module 17407 (onPostConnectionOpen)
 import _modDef1232 from "module_1232" /* 1232 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import initializeDefault from "initialize" /* 7118 */;

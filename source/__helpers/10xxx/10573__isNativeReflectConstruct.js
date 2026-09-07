@@ -1,17 +1,16 @@
 // Module ID: 10573
 // Function ID: 10574
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 10561, 10434, 10435, 10563]
+// Dependencies: [41, 42, 93, 95, 98, 10458]
 
 // Module 10573 (_isNativeReflectConstruct)
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10563 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10458 */;
+import RUMergeDateTimeRefiner from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const RUTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,13 +30,29 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class RUTimeUnitCasualRelativeFormatParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: null };
+      obj[0] = __esModule;
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class RUMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = closure_2(this, RUTimeUnitCasualRelativeFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(RUTimeUnitCasualRelativeFormatParser);
-    tmp3 = closure_3;
+    tmp = RUMergeDateTimeRefiner(this, RUMergeDateTimeRefiner);
+    tmp2 = closure_2;
+    obj = closure_2(RUMergeDateTimeRefiner);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -51,29 +66,15 @@ class RUTimeUnitCasualRelativeFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUTimeUnitCasualRelativeFormatParser, _isNativeReflectConstruct2.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(RUMergeDateTimeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
-    key: "innerPatternString",
-    value: function innerPatternString(arg0) {
-      return "(\u044D\u0442\u0438|\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0435|\u043F\u0440\u043E\u0448\u043B\u044B\u0435|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0435|\u043F\u043E\u0441\u043B\u0435|\u0441\u043F\u0443\u0441\u0442\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" + RUTimeUnitCasualRelativeFormatParser(10561).TIME_UNITS_PATTERN + ")";
-    }
-  },
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = RUTimeUnitCasualRelativeFormatParser(10561).parseDuration(arg1[2]);
-      if ("\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0435" !== formatted) {
-        if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0435" !== formatted) {
-          let reverseDurationResult = parseDurationResult;
-        }
-        const ParsingComponents = tmp2(10435).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-      }
-      reverseDurationResult = tmp2(10434).reverseDuration(parseDurationResult);
+    key: "patternBetween",
+    value: function patternBetween() {
+      const regExp = new RegExp("^\\s*(T|\u0432|,|-)?\\s*$");
+      return regExp;
     }
   }
 ];
 
-export default _createClass(RUTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(RUMergeDateTimeRefiner, items);

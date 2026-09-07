@@ -1,11 +1,11 @@
-// Module ID: 16760
-// Function ID: 16761
+// Module ID: 16763
+// Function ID: 16764
 // Name: useMediaKeyboardConfig
-// Dependencies: [19, 1607, 1074, 7761, 12236, 7269, 9546, 10635, 1894, 2]
+// Dependencies: [19, 1607, 1074, 7761, 12240, 7269, 9551, 10640, 1894, 2]
 // Exports: default
 
-// Module 16760 (useMediaKeyboardConfig)
-import useUploadDisabledDefault from "useUploadDisabled" /* 12236 */;
+// Module 16763 (useMediaKeyboardConfig)
+import useUploadDisabledDefault from "useUploadDisabled" /* 12240 */;
 import closure_3 from "noop" /* 19 */;
 import { MediaKeyboardTarget } from "DRAG_HANDLE" /* 1607 */;
 import ME from "ME" /* 1074 */;
@@ -37,11 +37,11 @@ export default function useMediaKeyboardConfig(arg0) {
   if (canStartThread) {
     canStartThread = !tmp;
   }
-  tmp2Result = tmp2(9546);
+  tmp2Result = tmp2(9551);
   const tmp8 = tmp2Result.useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
   MediaKeyboardTarget = tmp8;
   let obj = context(7761);
-  mediaKeyboardDraftType = context(10635).getMediaKeyboardDraftType(context.target);
+  mediaKeyboardDraftType = context(10640).getMediaKeyboardDraftType(context.target);
   let items = [context, tmp4, tmp5, mediaKeyboardDraftType, canStartThread, tmp8];
   return canStartThread.useMemo(() => {
     const target = context.target;

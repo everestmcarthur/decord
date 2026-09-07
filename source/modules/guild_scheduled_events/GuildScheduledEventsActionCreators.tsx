@@ -1,13 +1,13 @@
-// Module ID: 9703
-// Function ID: 9704
-// Dependencies: [5, 502, 7526, 1963, 1074, 1272, 5411, 1100, 9704, 4802, 573, 9706, 11, 2]
+// Module ID: 9708
+// Function ID: 9709
+// Dependencies: [5, 502, 7526, 1963, 1074, 1272, 5411, 1100, 9709, 4802, 573, 9711, 11, 2]
 
-// Module 9703
+// Module 9708
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import transitionTo from "transitionTo" /* 1100 */;
 import sendRequest from "sendRequest" /* 1272 */;
 import _modDef5411 from "module_5411" /* 5411 */;
-import EditGuildEventScreens from "EditGuildEventScreens" /* 9704 */;
+import EditGuildEventScreens from "EditGuildEventScreens" /* 9709 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 502 */;
 import closure_5 from "scheduledEventSort" /* 7526 */;

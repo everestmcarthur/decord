@@ -1,9 +1,9 @@
-// Module ID: 16412
-// Function ID: 16413
+// Module ID: 16415
+// Function ID: 16416
 // Name: handleLoadFinished
 // Dependencies: [32, 7637, 1090, 504, 7640, 11, 573, 2]
 
-// Module 16412 (handleLoadFinished)
+// Module 16415 (handleLoadFinished)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

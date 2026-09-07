@@ -1,18 +1,17 @@
 // Module ID: 10536
 // Function ID: 10537
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 10526, 10434, 10435, 10439]
+// Dependencies: [41, 42, 93, 95, 96, 98, 10451]
 
 // Module 10536 (_isNativeReflectConstruct)
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10439 */;
-import WEEKDAY_DICTIONARY from "WEEKDAY_DICTIONARY" /* 10526 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10451 */;
+import NLTimeExpressionParser from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const NLTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,43 +31,63 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(" + WEEKDAY_DICTIONARY.TIME_UNITS_PATTERN + ")(?:geleden|voor|eerder)(?=(?:\\W|$))", "i");
-const regExp1 = new RegExp("(" + WEEKDAY_DICTIONARY.TIME_UNITS_PATTERN + ")geleden(?=(?:\\W|$))", "i");
-class NLTimeUnitAgoFormatParser {
-  constructor(arg0) {
+class NLTimeExpressionParser {
+  constructor() {
     self = this;
-    tmp = closure_2(this, NLTimeUnitAgoFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(NLTimeUnitAgoFormatParser);
-    tmp3 = closure_3;
+    tmp = NLTimeExpressionParser(this, NLTimeExpressionParser);
+    tmp2 = closure_2;
+    obj = closure_2(NLTimeExpressionParser);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(NLTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const items = [
+_inherits(NLTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+let items = [
   {
-    key: "innerPattern",
-    value: function innerPattern() {
-      return this.strictMode ? regExp1 : regExp;
+    key: "primaryPrefix",
+    value: function primaryPrefix() {
+      return "(?:(?:om)\\s*)?";
     }
   },
   {
-    key: "innerExtract",
-    value: function innerExtract(reference) {
-      const parseDurationResult = NLTimeUnitAgoFormatParser(10526).parseDuration(arg1[1]);
-      const ParsingComponents = NLTimeUnitAgoFormatParser(10435).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, NLTimeUnitAgoFormatParser(10434).reverseDuration(NLTimeUnitAgoFormatParser(10526).parseDuration(arg1[1])));
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|om|\\?)\\s*";
+    }
+  },
+  {
+    key: "primarySuffix",
+    value: function primarySuffix() {
+      return "(?:\\s*(?:uur))?(?!/)(?=\\W|$)";
+    }
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      let fnResult = null;
+      if (!str.match(/^\s*\d{4}\s*$/)) {
+        let self = this;
+        self = this;
+        let fn = callback2(callback(self.prototype), "extractPrimaryTimeComponents", this);
+        if (typeof fn === "function") {
+          fn = (items) => fn.apply(self, items);
+        }
+        const items = [arg0, arg1];
+        fnResult = fn(items);
+      }
+      return fnResult;
     }
   }
 ];
 
-export default _createClass(NLTimeUnitAgoFormatParser, items);
+export default _createClass(NLTimeExpressionParser, items);

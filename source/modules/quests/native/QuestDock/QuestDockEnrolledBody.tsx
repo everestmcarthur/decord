@@ -1,22 +1,22 @@
-// Module ID: 15198
-// Function ID: 15199
+// Module ID: 15201
+// Function ID: 15202
 // Name: EnrolledBodyWatchTask
-// Dependencies: [5, 19, 17, 7703, 15093, 5444, 15095, 21, 4560, 576, 15099, 15096, 8265, 15091, 15124, 5447, 15121, 15120, 15122, 15102, 1611, 7724, 2]
+// Dependencies: [5, 19, 17, 7703, 15096, 5444, 15098, 21, 4560, 576, 15102, 15099, 8265, 15094, 15127, 5447, 15124, 15123, 15125, 15105, 1611, 7724, 2]
 
-// Module 15198 (EnrolledBodyWatchTask)
+// Module 15201 (EnrolledBodyWatchTask)
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5447 */;
-import QuestBottomSheet from "QuestBottomSheet" /* 15120 */;
-import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 15121 */;
-import useQuestRewardClaimHandlerDefault from "useQuestRewardClaimHandler" /* 15122 */;
+import QuestBottomSheet from "QuestBottomSheet" /* 15123 */;
+import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 15124 */;
+import useQuestRewardClaimHandlerDefault from "useQuestRewardClaimHandler" /* 15125 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "initializeState" /* 7703 */;
-import closure_7 from "QuestDockMode" /* 15093 */;
+import closure_7 from "QuestDockMode" /* 15096 */;
 import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15095 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15098 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -200,9 +200,9 @@ let closure_15 = createCacheKey.createStyles(obj);
 let obj2 = { marginTop: ThemesDefault.space.PX_16 };
 let obj3 = { marginLeft: -1 * QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, marginRight: -1 * QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL };
 const memoResult = importAllResult.memo(function QuestDockEnrolledBody() {
-  let obj = minExpandedContentHeight(15102);
+  let obj = minExpandedContentHeight(15105);
   const questDockQuest = obj.useQuestDockQuest();
-  minExpandedContentHeight = importAllResult.useContext(minExpandedContentHeight(15096).QuestDockGestureContext).minExpandedContentHeight;
+  minExpandedContentHeight = importAllResult.useContext(minExpandedContentHeight(15099).QuestDockGestureContext).minExpandedContentHeight;
   const items = [minExpandedContentHeight];
   const items1 = [minExpandedContentHeight];
   const callback = importAllResult.useCallback((nativeEvent) => {

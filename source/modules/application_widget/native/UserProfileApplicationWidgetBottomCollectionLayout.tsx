@@ -1,13 +1,13 @@
-// Module ID: 9020
-// Function ID: 9021
+// Module ID: 9025
+// Function ID: 9026
 // Name: CollectionItem
-// Dependencies: [19, 17, 21, 4560, 576, 8926, 9014, 4556, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 8931, 9019, 4556, 2]
 // Exports: default
 
-// Module 9020 (CollectionItem)
+// Module 9025 (CollectionItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8926 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8931 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -38,7 +38,7 @@ function CollectionItem(arg0) {
   } else {
     const obj2 = { style: null };
     obj2[0] = tmp.itemImage;
-    tmp11 = callback(tmp3(9014).ImageSkeleton, obj2);
+    tmp11 = callback(tmp3(9019).ImageSkeleton, obj2);
     tmp12 = callback;
   }
   const items1 = [tmp11, ];
@@ -48,7 +48,7 @@ function CollectionItem(arg0) {
     obj4[2] = singleStringOrSkeleton.text;
     let tmp12Result = tmp12(tmp3(4556).Text, obj4);
   } else {
-    tmp12Result = tmp12(tmp3(9014).TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
+    tmp12Result = tmp12(tmp3(9019).TextSkeleton, { variant: "text-xs/medium", widthChars: 6 });
   }
   const items2 = [tmp12Result, ];
   if ("value" === singleStringOrSkeleton1.status) {
@@ -56,7 +56,7 @@ function CollectionItem(arg0) {
     obj5[3] = singleStringOrSkeleton1.text;
     tmp12Result = tmp12(tmp3(4556).Text, obj5);
   } else {
-    tmp12Result = tmp12(tmp3(9014).TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
+    tmp12Result = tmp12(tmp3(9019).TextSkeleton, { variant: "text-xxs/medium", widthChars: 10 });
   }
   items2[1] = tmp12Result;
   obj3[1] = items2;

@@ -1,10 +1,10 @@
-// Module ID: 12656
-// Function ID: 12657
+// Module ID: 12660
+// Function ID: 12661
 // Name: _fetchWelcomeScreen
 // Dependencies: [5, 1074, 573, 1272, 2]
 // Exports: clearWelcomeScreenSettings, fetchWelcomeScreen, resetWelcomeScreen, saveWelcomeScreen, updateSettings, welcomeScreenViewed
 
-// Module 12656 (_fetchWelcomeScreen)
+// Module 12660 (_fetchWelcomeScreen)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 1074 */;

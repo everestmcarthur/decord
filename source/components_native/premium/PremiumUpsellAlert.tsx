@@ -1,9 +1,9 @@
-// Module ID: 9322
-// Function ID: 9323
+// Module ID: 9327
+// Function ID: 9328
 // Name: PremiumUpsellItem
-// Dependencies: [32, 19, 17, 1185, 1371, 1074, 9323, 1373, 21, 4560, 576, 4271, 4556, 7447, 1114, 4218, 9314, 9315, 4495, 4411, 9350, 9351, 9352, 9353, 9304, 9354, 9355, 9356, 9357, 504, 7201, 9358, 9313, 1477, 7162, 7182, 4992, 1242, 9359, 4457, 4994, 1178, 5587, 9360, 9361, 9317, 2]
+// Dependencies: [32, 19, 17, 1185, 1371, 1074, 9328, 1373, 21, 4560, 576, 4271, 4556, 7447, 1114, 4218, 9319, 9320, 4495, 4411, 9355, 9356, 9357, 9358, 9309, 9359, 9360, 9361, 9362, 504, 7201, 9363, 9318, 1477, 7162, 7182, 4992, 1242, 9364, 4457, 4994, 1178, 5587, 9365, 9366, 9322, 2]
 
-// Module 9322 (PremiumUpsellItem)
+// Module 9327 (PremiumUpsellItem)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -12,18 +12,18 @@ import useThemeDefault from "useTheme" /* 4495 */;
 import Text from "Text" /* 4556 */;
 import createCacheKey2 from "createCacheKey" /* 4560 */;
 import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7447 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9304 */;
-import registerAssetDefault from "registerAsset" /* 9314 */;
-import registerAssetDefault2 from "registerAsset" /* 9315 */;
-import registerAssetDefault3 from "registerAsset" /* 9352 */;
-import registerAssetDefault4 from "registerAsset" /* 9353 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9309 */;
+import registerAssetDefault from "registerAsset" /* 9319 */;
+import registerAssetDefault2 from "registerAsset" /* 9320 */;
+import registerAssetDefault3 from "registerAsset" /* 9357 */;
+import registerAssetDefault4 from "registerAsset" /* 9358 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
-import { getIcons } from "items" /* 9323 */;
+import { getIcons } from "items" /* 9328 */;
 import GuildFeatures from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -131,9 +131,9 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   const tmp6 = closure_14;
   const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(9350);
+    let tmp4Result = tmp4(9355);
   } else {
-    tmp4Result = tmp4(9351);
+    tmp4Result = tmp4(9356);
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = tmp(1114).intl;
@@ -208,9 +208,9 @@ function LongerMessageUpsell(alertWidth) {
   const tmp7 = closure_14;
   const tmp8 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(9354);
+    let tmp4Result = tmp4(9359);
   } else {
-    tmp4Result = tmp4(9355);
+    tmp4Result = tmp4(9360);
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = tmp(1114).intl;
@@ -228,9 +228,9 @@ function GuildCapUpsell(alertWidth) {
   const tmp6 = closure_14;
   const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = tmp4(9356);
+    let tmp4Result = tmp4(9361);
   } else {
-    tmp4Result = tmp4(9357);
+    tmp4Result = tmp4(9362);
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = tmp(1114).intl;

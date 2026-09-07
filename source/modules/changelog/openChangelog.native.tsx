@@ -1,10 +1,10 @@
-// Module ID: 17328
-// Function ID: 17329
+// Module ID: 17331
+// Function ID: 17332
 // Name: openChangelog
-// Dependencies: [2010, 4417, 4763, 15542, 1896, 2]
+// Dependencies: [2010, 4417, 4763, 15545, 1896, 2]
 // Exports: openChangelog
 
-// Module 17328 (openChangelog)
+// Module 17331 (openChangelog)
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import CHANGELOG_MODAL_KEY2 from "CHANGELOG_MODAL_KEY" /* 2010 */;
@@ -25,7 +25,7 @@ export const openChangelog = function openChangelog() {
     const obj = coerceMainRoute;
   }
   if (!isModalOpenResult) {
-    _modDef4763.pushLazy(asyncRequireImpl(15542, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
+    _modDef4763.pushLazy(asyncRequireImpl(15545, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
     const obj2 = _modDef4763;
   }
 };

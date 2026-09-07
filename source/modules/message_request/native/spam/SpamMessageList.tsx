@@ -1,15 +1,15 @@
-// Module ID: 16891
-// Function ID: 16892
+// Module ID: 16894
+// Function ID: 16895
 // Name: PendingSpamMessageRequestRow
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 1114, 12450, 4259, 5597, 4571, 4763, 12442, 1242, 5123, 16876, 1178, 9566, 14923, 8593, 1611, 16885, 16892, 16883, 4992, 7602, 7607, 16886, 1115, 4556, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 1114, 12454, 4259, 5597, 4571, 4763, 12446, 1242, 5123, 16879, 1178, 9571, 14926, 8598, 1611, 16888, 16895, 16886, 4992, 7602, 7607, 16889, 1115, 4556, 2]
 // Exports: default
 
-// Module 16891 (PendingSpamMessageRequestRow)
+// Module 16894 (PendingSpamMessageRequestRow)
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
-import MessageRequestEmptyDefault from "MessageRequestEmpty" /* 16886 */;
-import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 16892 */;
+import MessageRequestEmptyDefault from "MessageRequestEmpty" /* 16889 */;
+import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 16895 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
@@ -195,10 +195,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = callback2();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  let obj = goToMessageRequestPreview(16885);
+  let obj = goToMessageRequestPreview(16888);
   dependencyMap = obj.useSpamMessageRequestCount();
   arr = useSortedSpamMessageRequestsDefault();
-  obj1 = goToMessageRequestPreview(16883);
+  obj1 = goToMessageRequestPreview(16886);
   closure_4 = obj1.useListHasSingleSpamMessageRequest();
   useMountLayoutEffectDefault(() => {
     let obj = lib(1242);

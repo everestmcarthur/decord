@@ -1,23 +1,23 @@
-// Module ID: 8772
-// Function ID: 8773
+// Module ID: 8777
+// Function ID: 8778
 // Name: CollectiblesPreview
-// Dependencies: [19, 17, 7546, 1074, 21, 4560, 8773, 576, 8171, 8797, 1889, 8810, 8799, 8822, 8824, 8825, 4262, 4271, 1369, 2]
+// Dependencies: [19, 17, 7546, 1074, 21, 4560, 8778, 576, 8171, 8802, 1889, 8815, 8804, 8827, 8829, 8830, 4262, 4271, 1369, 2]
 // Exports: default
 
-// Module 8772 (CollectiblesPreview)
+// Module 8777 (CollectiblesPreview)
 import ThemesDefault from "Themes" /* 576 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import map from "map" /* 4262 */;
 import ManaContext from "ManaContext" /* 4271 */;
 import firstAvatarDecoration from "firstAvatarDecoration" /* 8171 */;
-import SourceIcon from "SourceIcon" /* 8773 */;
-import BundleStaticPreviewContentDefault from "BundleStaticPreviewContent" /* 8797 */;
-import ProfileEffectSampleDefault from "ProfileEffectSample" /* 8799 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8810 */;
-import filterLayerDefault from "filterLayer" /* 8822 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8824 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8825 */;
+import SourceIcon from "SourceIcon" /* 8778 */;
+import BundleStaticPreviewContentDefault from "BundleStaticPreviewContent" /* 8802 */;
+import ProfileEffectSampleDefault from "ProfileEffectSample" /* 8804 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8815 */;
+import filterLayerDefault from "filterLayer" /* 8827 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8829 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8830 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { transformSKUToCollectiblesItem as closure_5 } from "createCollectiblesItemsFromServerResponse" /* 7546 */;
@@ -138,7 +138,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(8773).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(8778).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = React.useMemo(() => closure_1_5(sku), items);

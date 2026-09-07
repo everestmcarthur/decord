@@ -1,17 +1,17 @@
-// Module ID: 11503
-// Function ID: 11504
+// Module ID: 11508
+// Function ID: 11509
 // Name: AppStoreOverlayStatCardItem
-// Dependencies: [19, 17, 21, 4560, 576, 11504, 1114, 11505, 4556, 1115, 6655, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 11509, 1114, 11510, 4556, 1115, 6655, 2]
 // Exports: default
 
-// Module 11503 (AppStoreOverlayStatCardItem)
+// Module 11508 (AppStoreOverlayStatCardItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 11504 */;
-import FractionalStarDefault from "FractionalStar" /* 11505 */;
+import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 11509 */;
+import FractionalStarDefault from "FractionalStar" /* 11510 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -34,10 +34,10 @@ function AppStoreOverlayStatCardItem(onRatingPress) {
     const result = obj2.formatAppStoreRatingValue(stat.rating, getSystemLocale.intl.currentLocale);
     let result1;
     if (null != stat.ratingCount) {
-      let tmp9Result = tmp9(11504);
+      let tmp9Result = tmp9(11509);
       result1 = tmp9Result.formatAppStoreRatingCount(stat.ratingCount, tmp9(1114).intl.currentLocale);
     }
-    tmp9Result = tmp9(11504);
+    tmp9Result = tmp9(11509);
     const appStoreStarFillAmounts = tmp9Result.getAppStoreStarFillAmounts(stat.rating, num);
     const intl = tmp9(1114).intl;
     let obj = { label: null, rating: null, maxRating: null, ratingCount: null };

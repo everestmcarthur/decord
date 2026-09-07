@@ -1,19 +1,19 @@
-// Module ID: 12231
-// Function ID: 12232
+// Module ID: 12235
+// Function ID: 12236
 // Name: getApplicationCommandsIconSource
-// Dependencies: [4901, 4900, 4999, 1396, 12232, 12233, 7523, 1884, 10633, 9307, 2]
+// Dependencies: [4901, 4900, 4999, 1396, 12236, 12237, 7523, 1884, 10638, 9312, 2]
 // Exports: getApplicationCommandsIconSource, openCommandAttachmentPreview
 
-// Module 12231 (getApplicationCommandsIconSource)
+// Module 12235 (getApplicationCommandsIconSource)
 import set from "set" /* 2 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 import registerAssetDefault from "registerAsset" /* 1884 */;
 import handleChanged from "handleChanged" /* 4901 */;
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4999 */;
 import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7523 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10633 */;
-import registerAssetDefault2 from "registerAsset" /* 12232 */;
-import registerAssetDefault3 from "registerAsset" /* 12233 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10638 */;
+import registerAssetDefault2 from "registerAsset" /* 12236 */;
+import registerAssetDefault3 from "registerAsset" /* 12237 */;
 import closure_4 from "map" /* 4900 */;
 
 const DraftType = handleChanged.DraftType;

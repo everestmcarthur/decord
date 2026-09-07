@@ -1,14 +1,14 @@
-// Module ID: 10252
-// Function ID: 10253
+// Module ID: 10257
+// Function ID: 10258
 // Name: ForumComposerModal
-// Dependencies: [19, 17, 9684, 1957, 4901, 4900, 7277, 21, 4560, 576, 1874, 4905, 1114, 7777, 9307, 7162, 504, 10253, 10251, 1481, 1609, 11, 7767, 5630, 10254, 2]
+// Dependencies: [19, 17, 9689, 1957, 4901, 4900, 7277, 21, 4560, 576, 1874, 4905, 1114, 7777, 9312, 7162, 504, 10258, 10256, 1481, 1609, 11, 7767, 5630, 10259, 2]
 // Exports: default
 
-// Module 10252 (ForumComposerModal)
+// Module 10257 (ForumComposerModal)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 9684 */;
+import closure_5 from "initialize" /* 9689 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
 import closure_7 from "handleChanged" /* 4901 */;
 import { DraftType } from "handleChanged" /* 4901 */;

@@ -1,14 +1,14 @@
-// Module ID: 14899
-// Function ID: 14900
+// Module ID: 14902
+// Function ID: 14903
 // Name: FamilyCenterActivitySectionHeader
-// Dependencies: [32, 19, 17, 7538, 21, 4560, 576, 8646, 7593, 14894, 4556, 11916, 1114, 2396, 14900, 5123, 2]
+// Dependencies: [32, 19, 17, 7538, 21, 4560, 576, 8651, 7593, 14897, 4556, 11921, 1114, 2396, 14903, 5123, 2]
 // Exports: default
 
-// Module 14899 (FamilyCenterActivitySectionHeader)
+// Module 14902 (FamilyCenterActivitySectionHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7593 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
-import useActionsForDisplayType from "useActionsForDisplayType" /* 14894 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8651 */;
+import useActionsForDisplayType from "useActionsForDisplayType" /* 14897 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -87,11 +87,11 @@ export default function FamilyCenterActivitySection(displayType) {
   let loadMore;
   dependencyMap = undefined;
   let loadMoreButton = callback4();
-  let obj = displayType(14894);
+  let obj = displayType(14897);
   const actionsForDisplayType = obj.useActionsForDisplayType(displayType);
-  obj1 = displayType(14894);
+  obj1 = displayType(14897);
   const actionTotalsForDisplayType = obj1.useActionTotalsForDisplayType(displayType);
-  let obj2 = displayType(11916);
+  let obj2 = displayType(11921);
   const familyCenterActions = obj2.useFamilyCenterActions({});
   loadMore = familyCenterActions.loadMore;
   const tmp6 = callback(React.useState(closure_7), 2);
@@ -110,7 +110,7 @@ export default function FamilyCenterActivitySection(displayType) {
     obj[0] = loadMoreButton.container;
     obj1 = { displayType: null };
     obj1[0] = displayType;
-    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => callback(loadMore(14900), { action }, action.event_id)), ];
+    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => callback(loadMore(14903), { action }, action.event_id)), ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
       obj[1] = items1;

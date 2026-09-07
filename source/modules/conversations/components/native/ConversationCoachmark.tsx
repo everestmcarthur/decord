@@ -1,10 +1,10 @@
-// Module ID: 13256
-// Function ID: 13257
+// Module ID: 13260
+// Function ID: 13261
 // Name: NewBadge
-// Dependencies: [32, 19, 17, 1954, 21, 1943, 4560, 576, 4556, 1114, 7388, 11127, 2]
+// Dependencies: [32, 19, 17, 1954, 21, 1943, 4560, 576, 4556, 1114, 7388, 11132, 2]
 // Exports: ConversationCoachmark
 
-// Module 13256 (NewBadge)
+// Module 13260 (NewBadge)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
@@ -60,7 +60,7 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
     return obj;
   }, items);
   const tmp = callback2();
-  const coachmark = first(11127).useCoachmark(ref, memo);
+  const coachmark = first(11132).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
   callback = React.useCallback(() => {

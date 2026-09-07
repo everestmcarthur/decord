@@ -1,14 +1,14 @@
-// Module ID: 17677
-// Function ID: 17678
+// Module ID: 17680
+// Function ID: 17681
 // Name: FinishingTouchesScreen
-// Dependencies: [32, 19, 17, 9064, 2015, 8035, 1074, 21, 4262, 576, 504, 4204, 9063, 1086, 17624, 17666, 17665, 17663, 1114, 4556, 4973, 5687, 17675, 7201, 2024, 2]
+// Dependencies: [32, 19, 17, 9069, 2015, 8035, 1074, 21, 4262, 576, 504, 4204, 9068, 1086, 17627, 17669, 17668, 17666, 1114, 4556, 4973, 5687, 17678, 7201, 2024, 2]
 // Exports: default
 
-// Module 17677 (FinishingTouchesScreen)
+// Module 17680 (FinishingTouchesScreen)
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleFormInit" /* 9064 */;
+import closure_8 from "handleFormInit" /* 9069 */;
 import closure_9 from "createGuildRoleRecordFromRust" /* 2015 */;
 import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8035 */;
 import ME from "ME" /* 1074 */;
@@ -94,20 +94,20 @@ export default function FinishingTouchesScreen() {
       }
       obj[5] = publicUpdatesChannelId;
       obj[6] = features.defaultMessageNotifications;
-      first(9063).saveGuild(features.id, obj);
+      first(9068).saveGuild(features.id, obj);
       if (removeResult !== everyoneRole.permissions) {
-        obj = guild(17624);
+        obj = guild(17627);
         const items = [obj];
         obj.saveRoleSettings(features.id, items);
       }
-      const obj5 = first(9063);
+      const obj5 = first(9068);
     }
   }, []);
   const tmp11 = callback(obj.useState(!closure_11.some((VIEW_CHANNEL) => closure_1_2(closure_1_3[11]).canEveryone(VIEW_CHANNEL, guild))), 2);
   const tmp8 = constants2;
-  const tmp19 = first(17666)();
-  const enableCommunitySharedStyles = guild(17665).useEnableCommunitySharedStyles();
-  obj = { headerRef: ref, currentStep: tmp2(17663).EnableCommunityModalSteps.STEP_3, onSuccess: callback1, disableNextStep: !first1, buttonText: null, children: null };
+  const tmp19 = first(17669)();
+  const enableCommunitySharedStyles = guild(17668).useEnableCommunitySharedStyles();
+  obj = { headerRef: ref, currentStep: tmp2(17666).EnableCommunityModalSteps.STEP_3, onSuccess: callback1, disableNextStep: !first1, buttonText: null, children: null };
   const intl = tmp2(1114).intl;
   obj[4] = intl.string(guild(1114).t.XGl4ba);
   obj = { style: enableCommunitySharedStyles.content, children: null };
@@ -129,7 +129,7 @@ export default function FinishingTouchesScreen() {
   const items3 = [callback3(closure_7, obj), , ];
   let obj5 = { spacing: 24, style: { paddingHorizontal: token }, children: null };
   const obj6 = { formSwitchDisabled: first === constants2.ONLY_MENTIONS, children: null };
-  let tmp4Result = tmp4(17675);
+  let tmp4Result = tmp4(17678);
   const obj7 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl5 = tmp2(1114).intl;
   obj7[0] = intl5.format(guild(1114).t.K8Eg4P, {
@@ -148,7 +148,7 @@ export default function FinishingTouchesScreen() {
   obj6[1] = callback2(guild(7201).TableSwitchRow, obj7);
   const items4 = [callback2(tmp4Result, obj6), ];
   const obj10 = { formSwitchDisabled: first2, children: null };
-  tmp4Result = tmp4(17675);
+  tmp4Result = tmp4(17678);
   const obj11 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl6 = tmp2(1114).intl;
   obj11[0] = intl6.format(guild(1114).t.v8qCoG, {
@@ -188,12 +188,12 @@ export default function FinishingTouchesScreen() {
       return null;
     }
   };
-  const tmp2Result = guild(17665);
+  const tmp2Result = guild(17668);
   obj16[0] = first(2024).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES);
   const tmp4Result1 = first(2024);
   obj16[1] = first(2024).getArticleURL(constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES);
   obj15[3] = intl9.format(guild(1114).t["BwbW/Q"], obj16);
   items3[2] = callback2(guild(4556).Text, obj15);
   obj[5] = items3;
-  return callback3(guild(17663).EnableCommunityModalScreen, obj);
+  return callback3(guild(17666).EnableCommunityModalScreen, obj);
 };

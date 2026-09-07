@@ -1,10 +1,10 @@
-// Module ID: 13232
-// Function ID: 13233
+// Module ID: 13236
+// Function ID: 13237
 // Name: getAskToJoinText
 // Dependencies: [1371, 1074, 1114, 2882, 4712, 2]
 // Exports: getDeadGameInviteText, getHeaderText, getPartyText, getRequestToStreamText
 
-// Module 13232 (getAskToJoinText)
+// Module 13236 (getAskToJoinText)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2882 */;
 import getNickname from "getNickname" /* 4712 */;

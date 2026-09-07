@@ -1,10 +1,10 @@
-// Module ID: 17576
-// Function ID: 17577
+// Module ID: 17579
+// Function ID: 17580
 // Name: useLoadGuildStickersWithCreator
-// Dependencies: [5, 32, 19, 1371, 5503, 504, 10388, 2]
+// Dependencies: [5, 32, 19, 1371, 5503, 504, 10393, 2]
 // Exports: default
 
-// Module 17576 (useLoadGuildStickersWithCreator)
+// Module 17579 (useLoadGuildStickersWithCreator)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

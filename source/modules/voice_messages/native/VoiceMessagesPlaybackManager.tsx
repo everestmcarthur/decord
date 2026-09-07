@@ -1,14 +1,14 @@
-// Module ID: 14542
-// Function ID: 14543
+// Module ID: 14545
+// Function ID: 14546
 // Name: _terminate
-// Dependencies: [17, 4552, 2011, 1115, 14543, 1898, 573, 4908, 2]
+// Dependencies: [17, 4552, 2011, 1115, 14546, 1898, 573, 4908, 2]
 // Exports: handleVoiceMessageDeleted, pauseCurrentAudioPlayer, playCurrentAudioPlayer
 
-// Module 14542 (_terminate)
+// Module 14545 (_terminate)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import initializeDefault from "initialize" /* 1898 */;
-import enforcingDefault from "enforcing" /* 14543 */;
+import enforcingDefault from "enforcing" /* 14546 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import closure_6 from "handleConnectionOpen" /* 2011 */;
@@ -27,8 +27,8 @@ class VoiceMessagesPlaybackManager extends tmp3 {
       id = id.id;
       if (id.channelId === currentlySelectedChannelId.getCurrentlySelectedChannelId()) {
         if (obj.isAndroid()) {
-          const result = callback(14543).handleVoiceMessageDeleted(id);
-          const obj2 = callback(14543);
+          const result = callback(14546).handleVoiceMessageDeleted(id);
+          const obj2 = callback(14546);
         } else {
           const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
           if (DCDAudioPlayerManager != null) {
@@ -40,8 +40,8 @@ class VoiceMessagesPlaybackManager extends tmp3 {
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       if (obj.isAndroid()) {
-        callback(14543).pauseCurrentPlayer(false);
-        const obj2 = callback(14543);
+        callback(14546).pauseCurrentPlayer(false);
+        const obj2 = callback(14546);
       } else {
         const DCDAudioPlayerManager = closure_4.DCDAudioPlayerManager;
         if (DCDAudioPlayerManager != null) {

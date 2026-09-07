@@ -1,9 +1,9 @@
-// Module ID: 17315
-// Function ID: 17316
+// Module ID: 17318
+// Function ID: 17319
 // Name: onPostConnectionOpen
 // Dependencies: [7118, 7732, 1232, 2]
 
-// Module 17315 (onPostConnectionOpen)
+// Module 17318 (onPostConnectionOpen)
 import _modDef1232 from "module_1232" /* 1232 */;
 import initializeDefault from "initialize" /* 7118 */;
 import _fetchAdUser from "_fetchAdUser" /* 7732 */;

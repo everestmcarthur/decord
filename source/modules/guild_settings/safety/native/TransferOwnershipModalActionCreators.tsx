@@ -1,8 +1,8 @@
-// Module ID: 11844
-// Function ID: 11845
-// Dependencies: [4763, 11845, 1896, 573, 2]
+// Module ID: 11849
+// Function ID: 11850
+// Dependencies: [4763, 11850, 1896, 573, 2]
 
-// Module 11844
+// Module 11849
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -15,7 +15,7 @@ export default {
   open(guild, toUser) {
     let obj = _modDef4763;
     obj = { guild, toUser };
-    obj.pushLazy(asyncRequireImpl(11845, dependencyMap.paths), obj, TRANSFER_OWNERSHIP_MODAL_KEY);
+    obj.pushLazy(asyncRequireImpl(11850, dependencyMap.paths), obj, TRANSFER_OWNERSHIP_MODAL_KEY);
   },
   close() {
     dispatcherDefault.wait(() => {

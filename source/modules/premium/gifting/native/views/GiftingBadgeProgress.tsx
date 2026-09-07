@@ -1,16 +1,16 @@
-// Module ID: 11031
-// Function ID: 11032
+// Module ID: 11036
+// Function ID: 11037
 // Name: GiftingBadgeProgressBar
-// Dependencies: [19, 17, 8192, 21, 4560, 576, 10749, 4556, 1114, 2492, 2]
+// Dependencies: [19, 17, 8192, 21, 4560, 576, 10754, 4556, 1114, 2492, 2]
 // Exports: default
 
-// Module 11031 (GiftingBadgeProgressBar)
+// Module 11036 (GiftingBadgeProgressBar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2492 */;
 import Text from "Text" /* 4556 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10749 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10754 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { getSingleRequirementThreshold as closure_4 } from "initialize" /* 8192 */;
 import jsxProd from "jsxProd" /* 21 */;

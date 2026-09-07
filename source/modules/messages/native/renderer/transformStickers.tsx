@@ -1,10 +1,10 @@
-// Module ID: 13241
-// Function ID: 13242
+// Module ID: 13245
+// Function ID: 13246
 // Name: transformStickers
 // Dependencies: [4899, 7999, 7951, 1114, 2]
 // Exports: default
 
-// Module 13241 (transformStickers)
+// Module 13245 (transformStickers)
 import set from "set" /* 2 */;
 import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4899 */;
 

@@ -1,9 +1,9 @@
-// Module ID: 13489
-// Function ID: 13490
+// Module ID: 13493
+// Function ID: 13494
 // Name: handleMutationStart
-// Dependencies: [4224, 4232, 1074, 573, 13490, 504, 2]
+// Dependencies: [4224, 4232, 1074, 573, 13494, 504, 2]
 
-// Module 13489 (handleMutationStart)
+// Module 13493 (handleMutationStart)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "reset" /* 4224 */;

@@ -1,0 +1,10 @@
+// Module ID: 17720
+// Function ID: 17721
+// Name: registerAsset
+// Dependencies: [1122]
+
+// Module 17720 (registerAsset)
+import registerAsset from "registerAsset" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images", width: 375, height: 187, scales: [2, 3], hash: "a089de21c15f6e03808f87d787c28c08", name: "role_subscription_settings_hero", type: "png" });

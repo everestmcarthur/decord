@@ -1,11 +1,11 @@
-// Module ID: 12432
-// Function ID: 12433
+// Module ID: 12436
+// Function ID: 12437
 // Name: AttachedCoachmark
-// Dependencies: [19, 17, 1954, 21, 4560, 1114, 12220, 11127, 2]
+// Dependencies: [19, 17, 1954, 21, 4560, 1114, 12224, 11132, 2]
 // Exports: default
 
-// Module 12432 (AttachedCoachmark)
-import useCoachmark from "useCoachmark" /* 11127 */;
+// Module 12436 (AttachedCoachmark)
+import useCoachmark from "useCoachmark" /* 11132 */;
 import closure_3 from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;

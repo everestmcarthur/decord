@@ -1,9 +1,9 @@
-// Module ID: 17378
-// Function ID: 17379
+// Module ID: 17381
+// Function ID: 17382
 // Name: prototype
 // Dependencies: [4381, 4382, 7118, 4905, 4384, 5527, 5541, 2]
 
-// Module 17378 (prototype)
+// Module 17381 (prototype)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "handleConnectionOpen" /* 4381 */;
 import closure_4 from "handleGatewayJoinRequestUpdate" /* 4382 */;

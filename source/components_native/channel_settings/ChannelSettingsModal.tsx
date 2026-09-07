@@ -1,10 +1,10 @@
-// Module ID: 16808
-// Function ID: 16809
+// Module ID: 16811
+// Function ID: 16812
 // Name: styles
-// Dependencies: [19, 17, 1074, 7878, 21, 4560, 576, 16809, 1114, 10143, 16716, 16818, 16819, 16821, 16828, 16829, 16838, 16841, 16850, 16852, 16853, 16854, 16855, 16856, 2]
+// Dependencies: [19, 17, 1074, 7878, 21, 4560, 576, 16812, 1114, 10148, 16719, 16821, 16822, 16824, 16831, 16832, 16841, 16844, 16853, 16855, 16856, 16857, 16858, 16859, 2]
 // Exports: getChannelSettingsScreens
 
-// Module 16808 (styles)
+// Module 16811 (styles)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

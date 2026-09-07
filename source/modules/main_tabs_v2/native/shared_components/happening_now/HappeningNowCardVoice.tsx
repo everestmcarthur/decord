@@ -1,10 +1,10 @@
-// Module ID: 16086
-// Function ID: 16087
+// Module ID: 16089
+// Function ID: 16090
 // Name: formatVoiceActivityTitle
-// Dependencies: [19, 17, 7659, 1371, 4579, 15294, 1074, 21, 4560, 1242, 9536, 1896, 16069, 15295, 5101, 13039, 16079, 8073, 504, 12, 1369, 4712, 1114, 2]
+// Dependencies: [19, 17, 7659, 1371, 4579, 15297, 1074, 21, 4560, 1242, 9541, 1896, 16072, 15298, 5101, 13043, 16082, 8073, 504, 12, 1369, 4712, 1114, 2]
 // Exports: useVoiceChannelUsers
 
-// Module 16086 (formatVoiceActivityTitle)
+// Module 16089 (formatVoiceActivityTitle)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import getNicknameDefault from "getNickname" /* 4712 */;
 import importAllResult from "noop" /* 19 */;
@@ -12,7 +12,7 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "recomputeAffinities" /* 7659 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
 import closure_7 from "updateVoiceState" /* 4579 */;
-import { HappeningNowCardTrackingType as closure_8 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15294 */;
+import { HappeningNowCardTrackingType as closure_8 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15297 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

@@ -1,13 +1,13 @@
-// Module ID: 13537
-// Function ID: 13538
+// Module ID: 13541
+// Function ID: 13542
 // Name: PricingSubheadingCopy
-// Dependencies: [32, 19, 17, 2025, 1371, 4223, 4224, 7237, 1074, 1373, 21, 4560, 504, 4218, 13417, 573, 7419, 7240, 4556, 1115, 7235, 7234, 1114, 1880, 2]
+// Dependencies: [32, 19, 17, 2025, 1371, 4223, 4224, 7237, 1074, 1373, 21, 4560, 504, 4218, 13421, 573, 7419, 7240, 4556, 1115, 7235, 7234, 1114, 1880, 2]
 // Exports: default
 
-// Module 13537 (PricingSubheadingCopy)
+// Module 13541 (PricingSubheadingCopy)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
-import getSubscriptionPlansLoaded from "getSubscriptionPlansLoaded" /* 13417 */;
+import getSubscriptionPlansLoaded from "getSubscriptionPlansLoaded" /* 13421 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

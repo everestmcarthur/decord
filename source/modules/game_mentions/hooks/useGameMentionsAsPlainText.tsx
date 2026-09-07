@@ -1,10 +1,10 @@
-// Module ID: 10880
-// Function ID: 10881
+// Module ID: 10885
+// Function ID: 10886
 // Name: useGameMentionsAsPlainText
 // Dependencies: [19, 1916, 1371, 5000, 7309, 504, 1925, 5111, 1114, 2]
 // Exports: useGameMentionsAsPlainText
 
-// Module 10880 (useGameMentionsAsPlainText)
+// Module 10885 (useGameMentionsAsPlainText)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "createGamesFromMessage" /* 1916 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;

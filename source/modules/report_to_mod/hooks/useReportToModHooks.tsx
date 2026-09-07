@@ -1,10 +1,10 @@
-// Module ID: 11666
-// Function ID: 11667
+// Module ID: 11671
+// Function ID: 11672
 // Name: useIsReportToModEnabled
 // Dependencies: [19, 1979, 4781, 504, 7266, 7290, 7276, 7456, 8181, 2]
 // Exports: loadOriginalAuthorFromSnapshot, useIsModeratorReportOrPostChannel, useIsModeratorReportPostChannel, useIsReportToModEnabled, useLoadReportedMessage, useReportToModChannelId
 
-// Module 11666 (useIsReportToModEnabled)
+// Module 11671 (useIsReportToModEnabled)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import canReportMessageToMods from "canReportMessageToMods" /* 7276 */;

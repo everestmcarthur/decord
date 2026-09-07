@@ -1,10 +1,10 @@
-// Module ID: 16436
-// Function ID: 16437
+// Module ID: 16439
+// Function ID: 16440
 // Name: ForYouRecentActivitySectionHeader
 // Dependencies: [19, 17, 21, 4560, 576, 4556, 1114, 2]
 // Exports: ForYouRecentActivitySectionHeader
 
-// Module 16436 (ForYouRecentActivitySectionHeader)
+// Module 16439 (ForYouRecentActivitySectionHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

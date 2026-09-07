@@ -1,16 +1,16 @@
-// Module ID: 15726
-// Function ID: 15727
+// Module ID: 15729
+// Function ID: 15730
 // Name: getSelectedGuildChannel
-// Dependencies: [19, 17, 5502, 1961, 4210, 1957, 1979, 2011, 1371, 1074, 21, 4560, 576, 4259, 8588, 10094, 10096, 5268, 11, 1611, 1178, 5687, 5605, 15583, 5612, 2]
+// Dependencies: [19, 17, 5502, 1961, 4210, 1957, 1979, 2011, 1371, 1074, 21, 4560, 576, 4259, 8593, 10099, 10101, 5268, 11, 1611, 1178, 5687, 5605, 15586, 5612, 2]
 // Exports: default
 
-// Module 15726 (getSelectedGuildChannel)
+// Module 15729 (getSelectedGuildChannel)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import dispatcherDefault from "dispatcher" /* 4259 */;
 import StickerFormat from "StickerFormat" /* 5268 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10094 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10099 */;
 import closure_3 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "loadSavedGuildStickers" /* 5502 */;

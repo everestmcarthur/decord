@@ -1,10 +1,10 @@
-// Module ID: 8853
-// Function ID: 8854
+// Module ID: 8858
+// Function ID: 8859
 // Name: fetchVirtualCurrencyBalance
-// Dependencies: [5, 5510, 1074, 3, 573, 1272, 4461, 8854, 1232, 2]
+// Dependencies: [5, 5510, 1074, 3, 573, 1272, 4461, 8859, 1232, 2]
 // Exports: redeemVirtualCurrencyForSKU, setBalancePillOverlay
 
-// Module 8853 (fetchVirtualCurrencyBalance)
+// Module 8858 (fetchVirtualCurrencyBalance)
 import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -220,7 +220,7 @@ function _redeemVirtualCurrencyForSKU() {
                 }
                 let result = null != applicationId;
                 if (result) {
-                  let obj8 = callback(8854);
+                  let obj8 = callback(8859);
                   result = obj8.isTestModeForApplication(applicationId);
                 }
                 c8 = result;

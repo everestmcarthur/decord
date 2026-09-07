@@ -1,10 +1,10 @@
-// Module ID: 12552
-// Function ID: 12553
+// Module ID: 12556
+// Function ID: 12557
 // Name: GuildPowerupsSectionHeader
 // Dependencies: [17, 21, 4560, 576, 8095, 4556, 2]
 // Exports: default
 
-// Module 12552 (GuildPowerupsSectionHeader)
+// Module 12556 (GuildPowerupsSectionHeader)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;

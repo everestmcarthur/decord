@@ -1,10 +1,10 @@
-// Module ID: 10999
-// Function ID: 11000
+// Module ID: 11004
+// Function ID: 11005
 // Name: GuildIconWithChannelTypeSizes
-// Dependencies: [19, 17, 21, 5584, 4560, 576, 5028, 11000, 8813, 1178, 2]
+// Dependencies: [19, 17, 21, 5584, 4560, 576, 5028, 11005, 8818, 1178, 2]
 // Exports: GuildIconWithChannelType
 
-// Module 10999 (GuildIconWithChannelTypeSizes)
+// Module 11004 (GuildIconWithChannelTypeSizes)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -49,7 +49,7 @@ export const GuildIconWithChannelType = function GuildIconWithChannelType(arg0) 
   const memo2 = React.useMemo(() => ({ width: typeIconSize, height: typeIconSize }), items2);
   obj = typeIconSize(5028);
   const channelIcon = obj.getChannelIcon(channel);
-  obj = { "aria-label": tmp, shape: typeIconSize(8813).CutoutShape.Circle, size: memo, gap, depthX: sum1, depthY: sum1, children: null };
+  obj = { "aria-label": tmp, shape: typeIconSize(8818).CutoutShape.Circle, size: memo, gap, depthX: sum1, depthY: sum1, children: null };
   obj = {};
   const tmp3 = callback3();
   const merged1 = Object.assign(merged);
@@ -60,5 +60,5 @@ export const GuildIconWithChannelType = function GuildIconWithChannelType(arg0) 
   const items5 = [memo2];
   items3[1] = callback(View, { style: items4, children: callback(typeIconSize(1178).Icon, { style: items5, source: channelIcon }) });
   obj[6] = items3;
-  return callback2(typeIconSize(11000).Pile, obj);
+  return callback2(typeIconSize(11005).Pile, obj);
 };

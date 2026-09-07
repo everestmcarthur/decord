@@ -1,10 +1,10 @@
-// Module ID: 12334
-// Function ID: 12335
+// Module ID: 12338
+// Function ID: 12339
 // Name: CreateGuild
-// Dependencies: [19, 17, 1371, 1074, 21, 4560, 576, 4962, 4971, 4973, 4556, 1114, 11798, 6606, 7201, 4975, 6941, 2]
+// Dependencies: [19, 17, 1371, 1074, 21, 4560, 576, 4962, 4971, 4973, 4556, 1114, 11803, 6606, 7201, 4975, 6941, 2]
 // Exports: default
 
-// Module 12334 (CreateGuild)
+// Module 12338 (CreateGuild)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
@@ -70,7 +70,7 @@ export default function CreateGuild(arg0) {
   }
   obj1[3] = customDescription;
   items1[1] = closure_7(isScreenReaderEnabled(4556).Text, obj1);
-  items1[2] = closure_7(ref(11798), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
+  items1[2] = closure_7(ref(11803), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
   const obj3 = { isClearable: true, label: null, errorMessage: null, value: null, onChange: null, autoFocus: null, autoCorrect: false, returnKeyType: "done" };
   const intl3 = tmp4(1114).intl;
   obj3[1] = intl3.string(isScreenReaderEnabled(1114).t.dBih7e);

@@ -1,13 +1,13 @@
-// Module ID: 9025
-// Function ID: 9026
+// Module ID: 9030
+// Function ID: 9031
 // Name: useApplicationWidgetConfigs
-// Dependencies: [19, 9026, 1935, 504, 1369, 9027, 2]
+// Dependencies: [19, 9031, 1935, 504, 1369, 9032, 2]
 // Exports: default
 
-// Module 9025 (useApplicationWidgetConfigs)
+// Module 9030 (useApplicationWidgetConfigs)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateApplicationConfigs" /* 9026 */;
-import { FetchState } from "updateApplicationConfigs" /* 9026 */;
+import closure_3 from "updateApplicationConfigs" /* 9031 */;
+import { FetchState } from "updateApplicationConfigs" /* 9031 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");

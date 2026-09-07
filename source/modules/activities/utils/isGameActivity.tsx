@@ -1,10 +1,10 @@
-// Module ID: 10886
-// Function ID: 10887
+// Module ID: 10891
+// Function ID: 10892
 // Name: isGameActivity
 // Dependencies: [1074, 2]
 // Exports: default
 
-// Module 10886 (isGameActivity)
+// Module 10891 (isGameActivity)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 

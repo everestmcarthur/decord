@@ -1,9 +1,9 @@
-// Module ID: 16451
-// Function ID: 16452
+// Module ID: 16454
+// Function ID: 16455
 // Name: NUM_GUILDS_EXTENDED_ONBOARDING
 // Dependencies: [1090, 2]
 
-// Module 16451 (NUM_GUILDS_EXTENDED_ONBOARDING)
+// Module 16454 (NUM_GUILDS_EXTENDED_ONBOARDING)
 import setDefault from "set" /* 1090 */;
 
 const result = 15 * setDefault.Millis.MINUTE;

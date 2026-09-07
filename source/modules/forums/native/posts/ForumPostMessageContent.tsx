@@ -1,13 +1,13 @@
-// Module ID: 12023
-// Function ID: 12024
+// Module ID: 12027
+// Function ID: 12028
 // Name: ForumPostMessageContent
-// Dependencies: [19, 21, 4560, 12024, 4556, 2]
+// Dependencies: [19, 21, 4560, 12028, 4556, 2]
 // Exports: default
 
-// Module 12023 (ForumPostMessageContent)
+// Module 12027 (ForumPostMessageContent)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4556 */;
-import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 12024 */;
+import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 12028 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

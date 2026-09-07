@@ -1,10 +1,10 @@
-// Module ID: 9394
-// Function ID: 9395
+// Module ID: 9399
+// Function ID: 9400
 // Name: openForumExplicitMediaWarning
-// Dependencies: [21, 4905, 9395, 1896, 2]
+// Dependencies: [21, 4905, 9400, 1896, 2]
 // Exports: default
 
-// Module 9394 (openForumExplicitMediaWarning)
+// Module 9399 (openForumExplicitMediaWarning)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import _modDef4905 from "module_4905" /* 4905 */;

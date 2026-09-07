@@ -1,12 +1,12 @@
-// Module ID: 16719
-// Function ID: 16720
+// Module ID: 16722
+// Function ID: 16723
 // Name: SearchTabsGradient
-// Dependencies: [19, 21, 4262, 576, 4409, 12759, 2]
+// Dependencies: [19, 21, 4262, 576, 4409, 12763, 2]
 // Exports: default
 
-// Module 16719 (SearchTabsGradient)
+// Module 16722 (SearchTabsGradient)
 import ThemesDefault from "Themes" /* 576 */;
-import TabsGradientDefault from "TabsGradient" /* 12759 */;
+import TabsGradientDefault from "TabsGradient" /* 12763 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

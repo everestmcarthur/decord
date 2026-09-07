@@ -1,9 +1,9 @@
-// Module ID: 11384
-// Function ID: 11385
+// Module ID: 11389
+// Function ID: 11390
 // Name: IgnoredInformationTable
-// Dependencies: [32, 19, 17, 1957, 1371, 9043, 11382, 1074, 21, 4560, 576, 8185, 1114, 4517, 5687, 5605, 1178, 1611, 7162, 7182, 504, 1242, 8181, 7150, 6627, 6969, 4556, 4712, 7930, 4527, 11383, 1896, 1250, 4975, 9042, 2024, 4255, 2]
+// Dependencies: [32, 19, 17, 1957, 1371, 9048, 11387, 1074, 21, 4560, 576, 8185, 1114, 4517, 5687, 5605, 1178, 1611, 7162, 7182, 504, 1242, 8181, 7150, 6627, 6969, 4556, 4712, 7930, 4527, 11388, 1896, 1250, 4975, 9047, 2024, 4255, 2]
 
-// Module 11384 (IgnoredInformationTable)
+// Module 11389 (IgnoredInformationTable)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import registerAssetDefault from "registerAsset" /* 4517 */;
@@ -14,8 +14,8 @@ import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { UserRemediationAction } from "ClearFriendRequestFilters" /* 9043 */;
-import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 11382 */;
+import { UserRemediationAction } from "ClearFriendRequestFilters" /* 9048 */;
+import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 11387 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

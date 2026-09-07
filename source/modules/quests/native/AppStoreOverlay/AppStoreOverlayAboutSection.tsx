@@ -1,10 +1,10 @@
-// Module ID: 11511
-// Function ID: 11512
+// Module ID: 11516
+// Function ID: 11517
 // Name: AppStoreOverlayAboutSection
 // Dependencies: [32, 19, 17, 21, 576, 4560, 1114, 4556, 2]
 // Exports: default
 
-// Module 11511 (AppStoreOverlayAboutSection)
+// Module 11516 (AppStoreOverlayAboutSection)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;

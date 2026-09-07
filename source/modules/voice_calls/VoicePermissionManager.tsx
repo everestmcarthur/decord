@@ -1,10 +1,10 @@
-// Module ID: 17317
-// Function ID: 17318
+// Module ID: 17320
+// Function ID: 17321
 // Name: handleVoiceChannelSelect
-// Dependencies: [5421, 4580, 502, 1957, 1908, 4583, 1074, 4770, 5139, 17318, 4707, 7118, 2]
+// Dependencies: [5421, 4580, 502, 1957, 1908, 4583, 1074, 4770, 5139, 17321, 4707, 7118, 2]
 // Exports: shouldImmediatelyRequestVoicePermissions
 
-// Module 17317 (handleVoiceChannelSelect)
+// Module 17320 (handleVoiceChannelSelect)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "buildStageChannelUserRoles" /* 5421 */;
 import closure_4 from "isVoiceMuted" /* 4580 */;

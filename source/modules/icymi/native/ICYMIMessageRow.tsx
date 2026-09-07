@@ -1,10 +1,10 @@
-// Module ID: 16495
-// Function ID: 16496
+// Module ID: 16498
+// Function ID: 16499
 // Name: MessageRowContent
-// Dependencies: [19, 17, 1957, 2021, 1979, 4209, 4741, 1371, 16490, 1074, 21, 576, 16452, 1115, 16453, 8263, 8348, 504, 16496, 16497, 4556, 1114, 1178, 4712, 5520, 8350, 8351, 10913, 11657, 16491, 16493, 11, 5123, 9770, 16499, 2]
+// Dependencies: [19, 17, 1957, 2021, 1979, 4209, 4741, 1371, 16493, 1074, 21, 576, 16455, 1115, 16456, 8263, 8348, 504, 16499, 16500, 4556, 1114, 1178, 4712, 5520, 8350, 8351, 10918, 11662, 16494, 16496, 11, 5123, 9775, 16502, 2]
 // Exports: default
 
-// Module 16495 (MessageRowContent)
+// Module 16498 (MessageRowContent)
 import ThemesDefault from "Themes" /* 576 */;
 import set from "set" /* 1115 */;
 import importAllResult from "noop" /* 19 */;
@@ -15,10 +15,10 @@ import closure_7 from "createGuildRecordFromRust" /* 1979 */;
 import closure_8 from "markAllUserIdListsStale" /* 4209 */;
 import closure_9 from "updateUserGuildSettingsInternal" /* 4741 */;
 import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import { ITEM_PADDING } from "ITEM_PADDING" /* 16490 */;
+import { ITEM_PADDING } from "ITEM_PADDING" /* 16493 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16452 */;
+import createICYMIStyles from "createICYMIStyles" /* 16455 */;
 
 require = arg1;
 class MessageRowContent {
@@ -143,7 +143,7 @@ function ReplyMessageContent(message) {
   ({ channel, guild } = message);
   const tmp = callback3();
   let obj = importAllResult;
-  const context = importAllResult.useContext(message(16453).ICYMIContext);
+  const context = importAllResult.useContext(message(16456).ICYMIContext);
   obj1 = message(504);
   const items = [closure_10];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_1_10.getUser(message.author.id));
@@ -157,7 +157,7 @@ function ReplyMessageContent(message) {
   if (colorString == null) {
     colorString = closure_12;
   }
-  const width = obj.useContext(tmp2(16453).ICYMIContext).width;
+  const width = obj.useContext(tmp2(16456).ICYMIContext).width;
   let tmp8 = null;
   if (null != stateFromStores) {
     obj = { style: null, children: null };
@@ -194,7 +194,7 @@ function ReplyMessageContent(message) {
     obj9[1] = channel;
     obj9[2] = guild;
     obj7[1] = callback(MessageRowContent, obj9);
-    items4[1] = callback(tmp2(16453).ICYMIContext.Provider, obj7);
+    items4[1] = callback(tmp2(16456).ICYMIContext.Provider, obj7);
     obj3[1] = items4;
     items3[1] = callback2(View, obj3);
     obj1[1] = items3;

@@ -1,10 +1,10 @@
-// Module ID: 11553
-// Function ID: 11554
+// Module ID: 11558
+// Function ID: 11559
 // Name: useSortedOnboardingPrompts
 // Dependencies: [19, 7100, 563, 2]
 // Exports: default
 
-// Module 11553 (useSortedOnboardingPrompts)
+// Module 11558 (useSortedOnboardingPrompts)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "handleUpdate" /* 7100 */;
 

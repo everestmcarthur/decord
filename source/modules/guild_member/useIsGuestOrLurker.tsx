@@ -1,10 +1,10 @@
-// Module ID: 10049
-// Function ID: 10050
+// Module ID: 10054
+// Function ID: 10055
 // Name: useIsGuestOrLurker
 // Dependencies: [2021, 1979, 1074, 504, 2]
 // Exports: default, isGuestOrLurkerInGuild
 
-// Module 10049 (useIsGuestOrLurker)
+// Module 10054 (useIsGuestOrLurker)
 import closure_2 from "trackCommunicationDisabled" /* 2021 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;
 import { GuildFeatures } from "ME" /* 1074 */;

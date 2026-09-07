@@ -1,10 +1,10 @@
-// Module ID: 16405
-// Function ID: 16406
+// Module ID: 16408
+// Function ID: 16409
 // Name: getIconSize
 // Dependencies: [2]
 // Exports: getIconSize
 
-// Module 16405 (getIconSize)
+// Module 16408 (getIconSize)
 import set from "set" /* 2 */;
 
 let obj = { xxs: 12, xs: 16, sm: 18, md: 24, lg: 32, custom: "ip", refresh_sm: true };

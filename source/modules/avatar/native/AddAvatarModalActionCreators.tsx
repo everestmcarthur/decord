@@ -1,10 +1,10 @@
-// Module ID: 17433
-// Function ID: 17434
+// Module ID: 17436
+// Function ID: 17437
 // Name: handlePressNext
-// Dependencies: [17434, 1074, 1242, 6984, 4904, 1114, 8164, 8166, 4763, 17435, 1896, 12704, 2]
+// Dependencies: [17437, 1074, 1242, 6984, 4904, 1114, 8164, 8166, 4763, 17438, 1896, 12708, 2]
 // Exports: handlePressNext, openAddAvatarModal, showSkipAvatarModal
 
-// Module 17433 (handlePressNext)
+// Module 17436 (handlePressNext)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
@@ -12,8 +12,8 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
 import setDefault from "set" /* 4904 */;
 import saveProfileAndAccountRequest from "saveProfileAndAccountRequest" /* 6984 */;
-import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12704 */;
-import ADD_AVATAR_MODAL_KEY2 from "ADD_AVATAR_MODAL_KEY" /* 17434 */;
+import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12708 */;
+import ADD_AVATAR_MODAL_KEY2 from "ADD_AVATAR_MODAL_KEY" /* 17437 */;
 
 const ADD_AVATAR_MODAL_KEY = ADD_AVATAR_MODAL_KEY2.ADD_AVATAR_MODAL_KEY;
 const AnalyticEvents = ME.AnalyticEvents;
@@ -70,5 +70,5 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   setDefault.show(obj);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  _modDef4763.pushLazy(asyncRequireImpl(17435, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  _modDef4763.pushLazy(asyncRequireImpl(17438, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

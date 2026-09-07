@@ -1,10 +1,10 @@
-// Module ID: 12527
-// Function ID: 12528
+// Module ID: 12531
+// Function ID: 12532
 // Name: getIconForPerk
-// Dependencies: [4454, 8757, 12528, 10381, 12530, 12532, 9371, 9752, 11699, 10235, 5097, 10114, 2]
+// Dependencies: [4454, 8762, 12532, 10386, 12534, 12536, 9376, 9757, 11704, 10240, 5097, 10119, 2]
 // Exports: getIconForPerk
 
-// Module 12527 (getIconForPerk)
+// Module 12531 (getIconForPerk)
 import set from "set" /* 2 */;
 import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4454 */;
 
@@ -12,28 +12,28 @@ const result = set.fileFinishedImporting("modules/guild_boosting/native/GuildBoo
 
 export const getIconForPerk = function getIconForPerk(perkIcon) {
   if (getGuildTierFromGuild.PerkIcons.EMOJI === perkIcon) {
-    return tmp(8757).ReactionIcon;
+    return tmp(8762).ReactionIcon;
   } else if (tmp(4454).PerkIcons.SOUNDBOARD === perkIcon) {
-    return tmp(12528).SoundboardIcon;
+    return tmp(12532).SoundboardIcon;
   } else if (tmp(4454).PerkIcons.ANIMATED === perkIcon) {
-    return tmp(10381).GifIcon;
+    return tmp(10386).GifIcon;
   } else if (tmp(4454).PerkIcons.AUDIO === perkIcon) {
-    return tmp(12530).HeadphonesIcon;
+    return tmp(12534).HeadphonesIcon;
   } else if (tmp(4454).PerkIcons.STREAM === perkIcon) {
-    return tmp(12532).ScreenArrowIcon;
+    return tmp(12536).ScreenArrowIcon;
   } else if (tmp(4454).PerkIcons.UPLOAD === perkIcon) {
-    return tmp(9371).UploadIcon;
+    return tmp(9376).UploadIcon;
   } else if (tmp(4454).PerkIcons.CUSTOM_ROLE_ICON === perkIcon) {
-    return tmp(9752).ShieldUserIcon;
+    return tmp(9757).ShieldUserIcon;
   } else if (tmp(4454).PerkIcons.CUSTOMIZATION === perkIcon) {
-    return tmp(11699).ImagesIcon;
+    return tmp(11704).ImagesIcon;
   } else if (tmp(4454).PerkIcons.VANITY === perkIcon) {
-    return tmp(10235).StarIcon;
+    return tmp(10240).StarIcon;
   } else if (tmp(4454).PerkIcons.STAGE_VIDEO === perkIcon) {
     return tmp(5097).StageIcon;
   } else if (tmp(4454).PerkIcons.STICKER === perkIcon) {
-    return tmp(10114).StickerIcon;
+    return tmp(10119).StickerIcon;
   } else {
-    return tmp(8757).ReactionIcon;
+    return tmp(8762).ReactionIcon;
   }
 };

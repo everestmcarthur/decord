@@ -1,10 +1,10 @@
-// Module ID: 12229
-// Function ID: 12230
+// Module ID: 12233
+// Function ID: 12234
 // Name: EditPollCreationImageAltTextModal
-// Dependencies: [32, 19, 17, 7829, 21, 4560, 576, 12226, 12228, 7123, 1114, 1178, 6992, 4556, 5578, 9816, 8593, 2]
+// Dependencies: [32, 19, 17, 7829, 21, 4560, 576, 12230, 12232, 7123, 1114, 1178, 6992, 4556, 5578, 9821, 8598, 2]
 // Exports: default
 
-// Module 12229 (EditPollCreationImageAltTextModal)
+// Module 12233 (EditPollCreationImageAltTextModal)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -36,7 +36,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   imageSize = imageSize.imageSize;
   let first;
   const tmp = callback4();
-  const tmp4 = first(12226)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
+  const tmp4 = first(12230)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
   const upload = tmp4.upload;
   let obj = React;
   let str;
@@ -57,7 +57,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   }, items);
   obj = { top: true, style: tmp.container, children: null };
   obj = { style: tmp.header, children: null };
-  obj1 = { onPress: onSave(12228).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
+  obj1 = { onPress: onSave(12232).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = onSave(1114).intl;
   obj1[3] = intl.string(onSave(1114).t.cpT0Cq);
   obj1[4] = callback2(onSave(1178).Icon, { source: first(6992) });
@@ -80,14 +80,14 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   const obj9 = { style: tmp.formContainer, children: null };
   const items4 = [callback2(onSave(1178).Spacer, { size: 27 }), , , ];
   const obj10 = { children: null };
-  tmp2Result = tmp2(9816);
+  tmp2Result = tmp2(9821);
   const intl4 = onSave(1114).intl;
   obj10[0] = intl4.string(onSave(1114).t["/2Gnoa"]);
   items4[1] = callback2(tmp2Result, obj10);
   const obj11 = { showTopContainer: false, showBorder: false, multiline: false, value: first, onChange: tmp5[1], clearButtonVisibility: onSave(1178).ClearButtonVisibility.WITH_CONTENT, style: tmp.textInput, textContentType: "none", maxLength: MAX_POLL_ANSWER_LENGTH, autoFocus: true, autoCorrect: true, accessibilityLabel: null };
   const intl5 = onSave(1114).intl;
   obj11[11] = intl5.string(onSave(1114).t["/2Gnoa"]);
-  items4[2] = callback2(onSave(8593).FormInput, obj11);
+  items4[2] = callback2(onSave(8598).FormInput, obj11);
   items4[3] = callback2(onSave(1178).Spacer, { size: 27 });
   obj9[1] = items4;
   items3[1] = callback3(closure_6, obj9);

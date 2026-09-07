@@ -1,10 +1,10 @@
-// Module ID: 13394
-// Function ID: 13395
+// Module ID: 13398
+// Function ID: 13399
 // Name: BuyNitroGradient
 // Dependencies: [19, 1373, 21, 4296, 4987, 4561, 4564, 2]
 // Exports: default
 
-// Module 13394 (BuyNitroGradient)
+// Module 13398 (BuyNitroGradient)
 import noopAll from "noop" /* 19 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import { PremiumTypes } from "GuildFeatures" /* 1373 */;

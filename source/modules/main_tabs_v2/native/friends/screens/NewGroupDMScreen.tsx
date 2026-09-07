@@ -1,20 +1,20 @@
-// Module ID: 16765
-// Function ID: 16766
+// Module ID: 16768
+// Function ID: 16769
 // Name: handleOneRecipientInDM
-// Dependencies: [32, 5, 19, 17, 1957, 13754, 4583, 1371, 10860, 1074, 21, 4560, 576, 4573, 4767, 9182, 9536, 4527, 504, 11592, 11594, 11591, 1242, 4259, 1114, 16755, 7863, 11595, 4258, 7873, 9855, 8378, 7759, 1178, 10861, 16688, 2]
+// Dependencies: [32, 5, 19, 17, 1957, 13758, 4583, 1371, 10865, 1074, 21, 4560, 576, 4573, 4767, 9187, 9541, 4527, 504, 11597, 11599, 11596, 1242, 4259, 1114, 16758, 7863, 11600, 4258, 7873, 9860, 8378, 7759, 1178, 10866, 16691, 2]
 // Exports: default
 
-// Module 16765 (handleOneRecipientInDM)
+// Module 16768 (handleOneRecipientInDM)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "ensureGuildLoaded" /* 1957 */;
-import closure_9 from "performQuery" /* 13754 */;
+import closure_9 from "performQuery" /* 13758 */;
 import closure_10 from "createRTCConnection" /* 4583 */;
 import closure_11 from "mergeGuildAvatar" /* 1371 */;
-import { UserRowModes } from "UserRowModes" /* 10860 */;
+import { UserRowModes } from "UserRowModes" /* 10865 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -213,14 +213,14 @@ function _handleInviteUsers() {
                                 obj[0] = arg1;
                                 return obj;
                               } else {
-                                const tmp8 = v0(9182);
+                                const tmp8 = v0(9187);
                                 const call = tmp8.call;
                                 if (typeof call === "unknown") {
                                   tmp8(false, true);
                                 } else {
                                   call(tmp9, false, true);
                                 }
-                                v0(9536)(closure_3);
+                                v0(9541)(closure_3);
                                 dependencyMap = 3;
                                 tmp9 = closure_3;
                               }
@@ -297,7 +297,7 @@ function _handleInviteUsers() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   closure_3 = arg1;
-                  obj = arr(9182);
+                  obj = arr(9187);
                   obj.ring(closure_3, arr, "gdm_invite");
                 }
                 c6 = 3;

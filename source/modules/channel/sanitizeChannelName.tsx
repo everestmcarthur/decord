@@ -1,10 +1,10 @@
-// Module ID: 9741
-// Function ID: 9742
+// Module ID: 9746
+// Function ID: 9747
 // Name: sanitizeChannelName
 // Dependencies: [1094, 7274, 4715, 2]
 // Exports: default
 
-// Module 9741 (sanitizeChannelName)
+// Module 9746 (sanitizeChannelName)
 import set from "set" /* 2 */;
 import set2 from "set" /* 1094 */;
 import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4715 */;

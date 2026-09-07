@@ -1,11 +1,11 @@
-// Module ID: 9781
-// Function ID: 9782
+// Module ID: 9786
+// Function ID: 9787
 // Name: getGuildEventsForCurrentUser
-// Dependencies: [5, 4381, 7526, 9703, 7118, 2]
+// Dependencies: [5, 4381, 7526, 9708, 7118, 2]
 
-// Module 9781 (getGuildEventsForCurrentUser)
+// Module 9786 (getGuildEventsForCurrentUser)
 import initializeDefault from "initialize" /* 7118 */;
-import _modDef9703 from "module_9703" /* 9703 */;
+import _modDef9708 from "module_9708" /* 9708 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "handleConnectionOpen" /* 4381 */;
 import closure_4 from "scheduledEventSort" /* 7526 */;
@@ -185,7 +185,7 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
   })();
 };
 prototype["getGuildEventUsers"] = function getGuildEventUsers(id, arg1, guild_id) {
-  return _modDef9703.fetchUsersForGuildEvent(id, arg1, guild_id);
+  return _modDef9708.fetchUsersForGuildEvent(id, arg1, guild_id);
 };
 prototype["getGuildEventsForCurrentUser"] = function getGuildEventsForCurrentUser(arg0) {
   return getGuildEventsForCurrentUser(arg0);

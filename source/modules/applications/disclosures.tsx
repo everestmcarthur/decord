@@ -1,11 +1,11 @@
-// Module ID: 9240
-// Function ID: 9241
+// Module ID: 9245
+// Function ID: 9246
 // Name: _getDisclosures
-// Dependencies: [5, 1074, 1272, 9241, 1114, 2]
+// Dependencies: [5, 1074, 1272, 9246, 1114, 2]
 // Exports: ackDisclosures, getDisclosures, getTextForDisclosure
 
-// Module 9240 (_getDisclosures)
-import create from "create" /* 9241 */;
+// Module 9245 (_getDisclosures)
+import create from "create" /* 9246 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 1074 */;
 
@@ -143,7 +143,7 @@ export const getTextForDisclosure = function getTextForDisclosure(toFixed) {
   if (create.ApplicationDisclosureType.IP_LOCATION === toFixed) {
     const intl2 = tmp(1114).intl;
     return intl2.string(tmp(1114).t["6wPmjo"]);
-  } else if (tmp(9241).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === toFixed) {
+  } else if (tmp(9246).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === toFixed) {
     const intl = tmp(1114).intl;
     return intl.string(tmp(1114).t["/uOMKZ"]);
   } else {

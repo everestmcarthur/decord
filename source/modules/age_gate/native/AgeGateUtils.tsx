@@ -1,14 +1,14 @@
-// Module ID: 10294
-// Function ID: 10295
+// Module ID: 10299
+// Function ID: 10300
 // Name: GuildNSFWContentLevel
-// Dependencies: [1979, 4199, 1371, 1074, 1115, 4763, 10295, 1896, 9296, 2]
+// Dependencies: [1979, 4199, 1371, 1074, 1115, 4763, 10300, 1896, 9301, 2]
 // Exports: handleNSFWGuildInvite, isNSFWInvite, shouldNSFWGateGuild
 
-// Module 10294 (GuildNSFWContentLevel)
+// Module 10299 (GuildNSFWContentLevel)
 import set2 from "set" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
-import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 9296 */;
+import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 9301 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
@@ -72,9 +72,9 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
       }
       obj = { guildId: null };
       obj[0] = id;
-      obj2.pushLazy(asyncRequireImpl(10295, tmp2.paths), obj);
+      obj2.pushLazy(asyncRequireImpl(10300, tmp2.paths), obj);
       flag2 = true;
-      const tmp12 = asyncRequireImpl(10295, tmp2.paths);
+      const tmp12 = asyncRequireImpl(10300, tmp2.paths);
     }
     return flag2;
   } else {

@@ -7,7 +7,7 @@
 // Module 830 (AsyncFromSyncIterator)
 import getSpanStatusFromHttpCode from "getSpanStatusFromHttpCode" /* 705 */;
 import captureCheckIn from "captureCheckIn" /* 734 */;
-import items2 from "items" /* 829 */;
+import items10 from "items" /* 829 */;
 import closure_2 from "_awaitAsyncGenerator" /* 831 */;
 import closure_3 from "AsyncGenerator" /* 833 */;
 
@@ -215,7 +215,7 @@ function processResponsesApiEvent(obj, responsesApiToolCalls, arg2, setStatus) {
         obj[0] = { handled: false, type: "auto.ai.openai.stream-response" };
         captureCheckIn.captureException(obj, obj);
       } else if ("type" in obj) {
-        const RESPONSE_EVENT_TYPES = items2.RESPONSE_EVENT_TYPES;
+        const RESPONSE_EVENT_TYPES = items10.RESPONSE_EVENT_TYPES;
         if (RESPONSE_EVENT_TYPES.includes(obj.type)) {
           let output_text = arg2;
           if (arg2) {
@@ -282,190 +282,1323 @@ function processResponsesApiEvent(obj, responsesApiToolCalls, arg2, setStatus) {
 }
 function _instrumentStream() {
   const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
+  let tmp = callback((arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
     c21 = 0;
     c22 = 0;
     c19 = 0;
-    return (function*(arg0, arg1, arg2) {
+    return (function*(arg0, done) {
       if (c22 === 2) {
         c22 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       } else {
-        throwTypeErrorResult = arg1;
+        throwTypeErrorResult = done;
         throwTypeErrorResult = arg0;
-        throwTypeErrorResult = tmp12;
+        throwTypeErrorResult = tmp13;
         throwTypeErrorResult = globalThis;
         throwTypeErrorResult = null;
-        if (tmp13 === 3) {
+        if (tmp14 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw done;
           } else if (arg0 === 2) {
             let obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = done;
             return obj;
           } else {
             return { value: "HermesInternal", done: null };
           }
         } else {
           try {
-            if (arg0 === 1) {
-              c22 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              while (true) {
+            c22 = 2;
+            switch (c21) {
+              case 0:
+                if (arg0 === 1) {
+                  c22 = 3;
+                  throw done;
+                } else if (arg0 === 2) {
+                  c22 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = done;
+                  return obj;
+                } else {
+                  closure_17 = tmp4;
+                  closure_18 = tmp15;
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  store = dependencyMap;
+                  throwTypeErrorResult = obj1;
+                  dependencyMap = obj1;
+                  closure_3 = undefined;
+                  let lib;
+                  let lib2;
+                  let value;
+                  let items9;
+                  obj1 = { eventTypes: null, responseTexts: null, finishReasons: null, responseId: "", responseModel: "", responseTimestamp: 0, promptTokens: "r", completionTokens: "sa", totalTokens: "isArray", chatCompletionToolCalls: null, responsesApiToolCalls: null };
+                  obj1[0] = [];
+                  obj1[1] = [];
+                  obj1[2] = [];
+                  obj1[9] = {};
+                  obj1[10] = [];
+                  c4 = false;
+                  closure_5 = false;
+                  c19 = 4;
+                  const iter = (function _asyncIterator(closure_0) {
+                    if (typeof Symbol !== "undefined") {
+                      const _Symbol = Symbol;
+                      let str2 = Symbol.asyncIterator;
+                      const _Symbol2 = Symbol;
+                      let str = Symbol.iterator;
+                    }
+                    let num = 1;
+                    while (true) {
+                      let tmp2 = str;
+                      let tmp3 = str2;
+                      let tmp = num;
+                      if (str2) {
+                        if (null != closure_0[str2]) {
+                          break;
+                        }
+                      }
+                      if (str) {
+                        let tmp5 = closure_0[str];
+                        if (null != tmp5) {
+                          let call = tmp5.call;
+                          let tmp10 = c4;
+                          let tmp11 = typeof call === "unknown" ? tmp5() : call(closure_0);
+                          let tmp12 = new.target;
+                          let tmp13 = new.target;
+                          let tmp14 = tmp11;
+                          tmp10 = new tmp10(tmp11);
+                          let tmp16 = tmp10;
+                          return tmp10;
+                        }
+                      }
+                      num = num - 1;
+                      str = "@@iterator";
+                      str2 = "@@asyncIterator";
+                      if (tmp) {
+                        continue;
+                      } else {
+                        let _TypeError = TypeError;
+                        let tmp6 = new.target;
+                        let str3 = "Object is not async iterable";
+                        let tmp7 = new.target;
+                        let typeError = new TypeError("Object is not async iterable");
+                        let tmp9 = typeError;
+                        throw typeError;
+                      }
+                    }
+                    const call2 = tmp4.call;
+                    return typeof call2 === "unknown" ? tmp4() : call2(closure_0);
+                  })(store);
+                  lib2 = iter;
+                  throwTypeErrorResult = callback;
+                  c21 = 5;
+                  c22 = 1;
+                  const obj2 = { value: null, done: false };
+                  obj2[0] = callback(iter.next());
+                  return obj2;
+                }
+              break;
+              case 1:
+                throwTypeErrorResult = closure_18;
+                throwTypeErrorResult = closure_17;
+                c19 = 0;
+                throwTypeErrorResult = store;
+                throwTypeErrorResult = dependencyMap;
+                const obj64 = store(828);
+                throwTypeErrorResult = store;
+                throwTypeErrorResult = obj1;
+                throwTypeErrorResult = obj1;
+                throwTypeErrorResult = obj1;
+                throwTypeErrorResult = obj64;
+                throwTypeErrorResult = obj64.setCommonResponseAttributes(store, obj1.responseId, obj1.responseModel, obj1.responseTimestamp);
+                throwTypeErrorResult = store;
+                throwTypeErrorResult = dependencyMap;
+                const obj65 = store(828);
+                throwTypeErrorResult = store;
+                throwTypeErrorResult = obj1;
+                throwTypeErrorResult = obj1;
+                throwTypeErrorResult = obj1;
+                throwTypeErrorResult = obj65;
+                throwTypeErrorResult = obj65.setTokenUsageAttributes(store, obj1.promptTokens, obj1.completionTokens, obj1.totalTokens);
+                throwTypeErrorResult = store;
+                const obj3 = {};
+                throwTypeErrorResult = store;
+                throwTypeErrorResult = dependencyMap;
+                obj3[store(823).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                throwTypeErrorResult = store.setAttributes(obj3);
+                throwTypeErrorResult = obj1;
+                if (obj1.finishReasons.length) {
+                  throwTypeErrorResult = closure_18;
+                  throwTypeErrorResult = closure_17;
+                  throwTypeErrorResult = store;
+                  const obj4 = {};
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  const _JSON17 = JSON;
+                  throwTypeErrorResult = obj1;
+                  obj4[store(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(obj1.finishReasons);
+                  throwTypeErrorResult = store.setAttributes(obj4);
+                }
+                throwTypeErrorResult = closure_18;
+                let length9 = dependencyMap;
+                if (dependencyMap) {
+                  throwTypeErrorResult = obj1;
+                  length9 = obj1.responseTexts.length;
+                }
+                if (length9) {
+                  throwTypeErrorResult = closure_18;
+                  throwTypeErrorResult = closure_17;
+                  throwTypeErrorResult = store;
+                  const obj5 = {};
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  throwTypeErrorResult = obj1;
+                  const responseTexts9 = obj1.responseTexts;
+                  obj5[store(823).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts9.join("");
+                  throwTypeErrorResult = store.setAttributes(obj5);
+                }
+                throwTypeErrorResult = closure_18;
+                closure_12 = 0;
+                const _Object9 = Object;
+                throwTypeErrorResult = obj1;
+                const items = [];
+                throwTypeErrorResult = closure_12;
+                throwTypeErrorResult = items;
+                closure_12 = HermesBuiltin.arraySpread(Object.values(obj1.chatCompletionToolCalls), closure_12);
+                throwTypeErrorResult = obj1;
+                throwTypeErrorResult = closure_12;
+                throwTypeErrorResult = items;
+                closure_12 = HermesBuiltin.arraySpread(obj1.responsesApiToolCalls, closure_12);
+                items9 = items;
+                throwTypeErrorResult = items9;
+                if (items9.length > 0) {
+                  throwTypeErrorResult = closure_18;
+                  throwTypeErrorResult = closure_17;
+                  throwTypeErrorResult = store;
+                  const obj6 = {};
+                  throwTypeErrorResult = store;
+                  throwTypeErrorResult = dependencyMap;
+                  const _JSON18 = JSON;
+                  throwTypeErrorResult = items9;
+                  obj6[store(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(items9);
+                  throwTypeErrorResult = store.setAttributes(obj6);
+                }
+                throwTypeErrorResult = closure_18;
+                throwTypeErrorResult = store;
+                throwTypeErrorResult = store.end();
+                throw throwTypeErrorResult;
+              case 2:
+                closure_16 = throwTypeErrorResult;
+                throwTypeErrorResult = closure_18;
+                c19 = 3;
+                throwTypeErrorResult = c4;
+                if (c4) {
+                  throwTypeErrorResult = lib2;
+                  throwTypeErrorResult = null != lib2.return;
+                }
+                if (!throwTypeErrorResult) {
+                  c19 = 1;
+                  throwTypeErrorResult = closure_18;
+                  throwTypeErrorResult = closure_5;
+                  if (closure_5) {
+                    throwTypeErrorResult = closure_3;
+                    throw closure_3;
+                  } else {
+                    throwTypeErrorResult = closure_16;
+                    throw closure_16;
+                  }
+                } else {
+                  throwTypeErrorResult = closure_18;
+                  throwTypeErrorResult = closure_17;
+                  throwTypeErrorResult = obj1;
+                  throwTypeErrorResult = lib2;
+                  c21 = 16;
+                  c22 = 1;
+                  let obj7 = { value: null, done: false };
+                  obj7[0] = obj1(lib2.return());
+                  return obj7;
+                }
+              break;
+              case 3:
+                throwTypeErrorResult = closure_18;
                 c19 = 1;
-                let tmp71 = closure_18;
-                let tmp72 = closure_5;
+                throwTypeErrorResult = closure_5;
                 if (closure_5) {
                   throwTypeErrorResult = closure_3;
                   throw closure_3;
                 } else {
-                  c19 = 0;
-                  let tmp73 = closure_17;
-                  let tmp74 = store;
-                  let tmp75 = dependencyMap;
-                  let obj7 = store(828);
-                  let tmp76 = store;
-                  let tmp77 = closure_2;
-                  let tmp78 = closure_2;
-                  let tmp79 = closure_2;
-                  let tmp80 = obj7;
-                  let result = obj7.setCommonResponseAttributes(store, closure_2.responseId, closure_2.responseModel, closure_2.responseTimestamp);
-                  let tmp82 = store;
-                  let tmp83 = dependencyMap;
-                  let obj8 = store(828);
-                  let tmp84 = store;
-                  let tmp85 = closure_2;
-                  let tmp86 = closure_2;
-                  let tmp87 = closure_2;
-                  let tmp88 = obj8;
-                  let result1 = obj8.setTokenUsageAttributes(store, closure_2.promptTokens, closure_2.completionTokens, closure_2.totalTokens);
-                  let tmp90 = store;
-                  obj = {};
-                  let tmp91 = store;
-                  let tmp92 = dependencyMap;
-                  obj[store(823).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                  let setAttributesResult = store.setAttributes(obj);
-                  let tmp94 = closure_2;
-                  if (closure_2.finishReasons.length) {
-                    let tmp95 = closure_18;
-                    let tmp96 = closure_17;
-                    let tmp97 = store;
-                    obj1 = {};
-                    let tmp98 = store;
-                    let tmp99 = dependencyMap;
-                    let _JSON3 = JSON;
-                    throwTypeErrorResult = closure_2;
-                    obj1[store(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(closure_2.finishReasons);
-                    throwTypeErrorResult = store.setAttributes(obj1);
-                  }
+                  throw throwTypeErrorResult;
+                }
+              break;
+              case 4:
+                throwTypeErrorResult = closure_18;
+                c19 = 2;
+                closure_5 = true;
+                closure_3 = throwTypeErrorResult;
+                throwTypeErrorResult = closure_18;
+                c19 = 8;
+                throwTypeErrorResult = c4;
+                if (c4) {
+                  throwTypeErrorResult = lib2;
+                  throwTypeErrorResult = null != lib2.return;
+                }
+                if (throwTypeErrorResult) {
                   throwTypeErrorResult = closure_18;
-                  let length2 = dependencyMap;
-                  if (dependencyMap) {
-                    throwTypeErrorResult = closure_2;
-                    length2 = closure_2.responseTexts.length;
-                  }
-                  if (length2) {
-                    throwTypeErrorResult = closure_18;
+                  throwTypeErrorResult = closure_17;
+                  throwTypeErrorResult = obj1;
+                  throwTypeErrorResult = lib2;
+                  c21 = 15;
+                  c22 = 1;
+                  let obj8 = { value: null, done: false };
+                  obj8[0] = obj1(lib2.return());
+                  return obj8;
+                } else {
+                  c19 = 1;
+                  throwTypeErrorResult = closure_18;
+                  throwTypeErrorResult = closure_5;
+                  if (closure_5) {
+                    throwTypeErrorResult = closure_3;
+                    throw closure_3;
+                  } else {
+                    c19 = 0;
                     throwTypeErrorResult = closure_17;
                     throwTypeErrorResult = store;
-                    let obj2 = {};
+                    throwTypeErrorResult = dependencyMap;
+                    let obj55 = store(828);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj55;
+                    throwTypeErrorResult = obj55.setCommonResponseAttributes(store, obj1.responseId, obj1.responseModel, obj1.responseTimestamp);
                     throwTypeErrorResult = store;
                     throwTypeErrorResult = dependencyMap;
-                    throwTypeErrorResult = closure_2;
-                    let responseTexts2 = closure_2.responseTexts;
-                    obj2[store(823).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts2.join("");
-                    throwTypeErrorResult = store.setAttributes(obj2);
-                  }
-                  throwTypeErrorResult = closure_18;
-                  closure_11 = 0;
-                  let _Object2 = Object;
-                  throwTypeErrorResult = closure_2;
-                  let items = [];
-                  throwTypeErrorResult = closure_11;
-                  throwTypeErrorResult = items;
-                  closure_11 = HermesBuiltin.arraySpread(Object.values(closure_2.chatCompletionToolCalls), closure_11);
-                  throwTypeErrorResult = closure_2;
-                  throwTypeErrorResult = closure_11;
-                  throwTypeErrorResult = items;
-                  closure_11 = HermesBuiltin.arraySpread(closure_2.responsesApiToolCalls, closure_11);
-                  let items1 = items;
-                  throwTypeErrorResult = items1;
-                  if (items1.length > 0) {
+                    let obj56 = store(828);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj56;
+                    throwTypeErrorResult = obj56.setTokenUsageAttributes(store, obj1.promptTokens, obj1.completionTokens, obj1.totalTokens);
+                    throwTypeErrorResult = store;
+                    const obj9 = {};
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    obj9[store(823).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    throwTypeErrorResult = store.setAttributes(obj9);
+                    throwTypeErrorResult = obj1;
+                    if (obj1.finishReasons.length) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      const obj10 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON15 = JSON;
+                      throwTypeErrorResult = obj1;
+                      obj10[store(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(obj1.finishReasons);
+                      throwTypeErrorResult = store.setAttributes(obj10);
+                    }
                     throwTypeErrorResult = closure_18;
-                    throwTypeErrorResult = closure_17;
-                    throwTypeErrorResult = store;
-                    let obj3 = {};
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = dependencyMap;
-                    let _JSON4 = JSON;
+                    let length8 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = obj1;
+                      length8 = obj1.responseTexts.length;
+                    }
+                    if (length8) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      const obj11 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = obj1;
+                      const responseTexts8 = obj1.responseTexts;
+                      obj11[store(823).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts8.join("");
+                      throwTypeErrorResult = store.setAttributes(obj11);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    closure_11 = 0;
+                    const _Object8 = Object;
+                    throwTypeErrorResult = obj1;
+                    const items1 = [];
+                    throwTypeErrorResult = closure_11;
                     throwTypeErrorResult = items1;
-                    obj3[store(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(items1);
-                    throwTypeErrorResult = store.setAttributes(obj3);
+                    closure_11 = HermesBuiltin.arraySpread(Object.values(obj1.chatCompletionToolCalls), closure_11);
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = closure_11;
+                    throwTypeErrorResult = items1;
+                    closure_11 = HermesBuiltin.arraySpread(obj1.responsesApiToolCalls, closure_11);
+                    items9 = items1;
+                    throwTypeErrorResult = items9;
+                    if (items9.length > 0) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      const obj12 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON16 = JSON;
+                      throwTypeErrorResult = items9;
+                      obj12[store(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(items9);
+                      throwTypeErrorResult = store.setAttributes(obj12);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = store.end();
+                    c22 = 3;
+                    return { value: "HermesInternal", done: null };
                   }
-                  throwTypeErrorResult = closure_18;
-                  throwTypeErrorResult = store;
-                  throwTypeErrorResult = store.end();
-                  let num3 = 3;
+                }
+              break;
+              case 5:
+                if (arg0 === 1) {
                   c22 = 3;
-                  return { value: "HermesInternal", done: null };
+                  throw done;
+                } else {
+                  closure_15 = done;
+                  if (arg0 === 2) {
+                    throwTypeErrorResult = closure_18;
+                    c19 = 5;
+                    throwTypeErrorResult = c4;
+                    if (c4) {
+                      throwTypeErrorResult = lib2;
+                      throwTypeErrorResult = null != lib2.return;
+                    }
+                    if (throwTypeErrorResult) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = obj1;
+                      throwTypeErrorResult = lib2;
+                      c21 = 8;
+                      c22 = 1;
+                      const obj13 = { value: null, done: false };
+                      obj13[0] = obj1(lib2.return());
+                      return obj13;
+                    } else {
+                      c19 = 1;
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_5;
+                      if (closure_5) {
+                        throwTypeErrorResult = closure_3;
+                        throw closure_3;
+                      } else {
+                        c19 = 0;
+                        throwTypeErrorResult = closure_17;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = dependencyMap;
+                        let obj47 = store(828);
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj47;
+                        throwTypeErrorResult = obj47.setCommonResponseAttributes(store, obj1.responseId, obj1.responseModel, obj1.responseTimestamp);
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = dependencyMap;
+                        let obj48 = store(828);
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj48;
+                        throwTypeErrorResult = obj48.setTokenUsageAttributes(store, obj1.promptTokens, obj1.completionTokens, obj1.totalTokens);
+                        throwTypeErrorResult = store;
+                        const obj14 = {};
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = dependencyMap;
+                        obj14[store(823).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                        throwTypeErrorResult = store.setAttributes(obj14);
+                        throwTypeErrorResult = obj1;
+                        if (obj1.finishReasons.length) {
+                          throwTypeErrorResult = closure_18;
+                          throwTypeErrorResult = closure_17;
+                          throwTypeErrorResult = store;
+                          let obj15 = {};
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          const _JSON13 = JSON;
+                          throwTypeErrorResult = obj1;
+                          obj15[store(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(obj1.finishReasons);
+                          throwTypeErrorResult = store.setAttributes(obj15);
+                        }
+                        throwTypeErrorResult = closure_18;
+                        let length7 = dependencyMap;
+                        if (dependencyMap) {
+                          throwTypeErrorResult = obj1;
+                          length7 = obj1.responseTexts.length;
+                        }
+                        if (length7) {
+                          throwTypeErrorResult = closure_18;
+                          throwTypeErrorResult = closure_17;
+                          throwTypeErrorResult = store;
+                          let obj16 = {};
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = obj1;
+                          const responseTexts7 = obj1.responseTexts;
+                          obj16[store(823).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts7.join("");
+                          throwTypeErrorResult = store.setAttributes(obj16);
+                        }
+                        throwTypeErrorResult = closure_18;
+                        c4 = 0;
+                        const _Object7 = Object;
+                        throwTypeErrorResult = obj1;
+                        const items2 = [];
+                        throwTypeErrorResult = c4;
+                        throwTypeErrorResult = items2;
+                        c4 = HermesBuiltin.arraySpread(Object.values(obj1.chatCompletionToolCalls), c4);
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = c4;
+                        throwTypeErrorResult = items2;
+                        c4 = HermesBuiltin.arraySpread(obj1.responsesApiToolCalls, c4);
+                        items9 = items2;
+                        throwTypeErrorResult = items9;
+                        if (items9.length > 0) {
+                          throwTypeErrorResult = closure_18;
+                          throwTypeErrorResult = closure_17;
+                          throwTypeErrorResult = store;
+                          const obj17 = {};
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          const _JSON14 = JSON;
+                          throwTypeErrorResult = items9;
+                          obj17[store(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(items9);
+                          throwTypeErrorResult = store.setAttributes(obj17);
+                        }
+                        throwTypeErrorResult = closure_18;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = store.end();
+                        c22 = 3;
+                        throwTypeErrorResult = closure_15;
+                        const obj18 = { value: null, done: true };
+                        obj18[0] = closure_15;
+                        return obj18;
+                      }
+                    }
+                  } else {
+                    throwTypeErrorResult = closure_18;
+                    lib = done;
+                    const done2 = done.done;
+                    c4 = !done2;
+                    if (done2) {
+                      c19 = 2;
+                    } else {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = lib;
+                      value = lib.value;
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      let obj45 = store(828);
+                      throwTypeErrorResult = value;
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      if (obj45.isChatCompletionChunk(value)) {
+                        throwTypeErrorResult = lib;
+                        throwTypeErrorResult = value;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = dependencyMap;
+                        throwTypeErrorResult = lib(value, obj1, dependencyMap);
+                      } else {
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = dependencyMap;
+                        let obj46 = store(828);
+                        throwTypeErrorResult = value;
+                        if (obj46.isResponsesApiStreamEvent(value)) {
+                          throwTypeErrorResult = closure_18;
+                          throwTypeErrorResult = closure_17;
+                          throwTypeErrorResult = lib2;
+                          throwTypeErrorResult = value;
+                          throwTypeErrorResult = obj1;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = lib2(value, obj1, dependencyMap, store);
+                        }
+                      }
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = value;
+                      c21 = 11;
+                      c22 = 1;
+                    }
+                  }
                 }
-              }
-            } else {
-              c19 = 1;
-              throwTypeErrorResult = closure_18;
-              throwTypeErrorResult = closure_5;
-              if (closure_5) {
-                throw closure_3;
-              } else {
-                c19 = 0;
-                obj = store(828);
-                const result2 = obj.setCommonResponseAttributes(store, closure_2.responseId, closure_2.responseModel, closure_2.responseTimestamp);
-                obj1 = store(828);
-                const result3 = obj1.setTokenUsageAttributes(store, closure_2.promptTokens, closure_2.completionTokens, closure_2.totalTokens);
-                const obj4 = {};
-                obj4[store(823).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                store.setAttributes(obj4);
-                if (closure_2.finishReasons.length) {
-                  const obj5 = {};
-                  const _JSON = JSON;
-                  obj5[store(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(closure_2.finishReasons);
-                  store.setAttributes(obj5);
+              break;
+              case 6:
+                if (arg0 === 1) {
+                  c22 = 3;
+                  throw done;
+                } else {
+                  closure_14 = done;
+                  if (arg0 === 2) {
+                    throwTypeErrorResult = closure_18;
+                    c19 = 6;
+                    throwTypeErrorResult = c4;
+                    if (c4) {
+                      throwTypeErrorResult = lib2;
+                      throwTypeErrorResult = null != lib2.return;
+                    }
+                    if (throwTypeErrorResult) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = obj1;
+                      throwTypeErrorResult = lib2;
+                      c21 = 10;
+                      c22 = 1;
+                      const obj19 = { value: null, done: false };
+                      obj19[0] = obj1(lib2.return());
+                      return obj19;
+                    } else {
+                      c19 = 1;
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_5;
+                      if (closure_5) {
+                        throwTypeErrorResult = closure_3;
+                        throw closure_3;
+                      } else {
+                        c19 = 0;
+                        throwTypeErrorResult = closure_17;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = dependencyMap;
+                        let obj37 = store(828);
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj37;
+                        throwTypeErrorResult = obj37.setCommonResponseAttributes(store, obj1.responseId, obj1.responseModel, obj1.responseTimestamp);
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = dependencyMap;
+                        let obj38 = store(828);
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj38;
+                        throwTypeErrorResult = obj38.setTokenUsageAttributes(store, obj1.promptTokens, obj1.completionTokens, obj1.totalTokens);
+                        throwTypeErrorResult = store;
+                        const obj20 = {};
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = dependencyMap;
+                        obj20[store(823).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                        throwTypeErrorResult = store.setAttributes(obj20);
+                        throwTypeErrorResult = obj1;
+                        if (obj1.finishReasons.length) {
+                          throwTypeErrorResult = closure_18;
+                          throwTypeErrorResult = closure_17;
+                          throwTypeErrorResult = store;
+                          const obj21 = {};
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          const _JSON11 = JSON;
+                          throwTypeErrorResult = obj1;
+                          obj21[store(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(obj1.finishReasons);
+                          throwTypeErrorResult = store.setAttributes(obj21);
+                        }
+                        throwTypeErrorResult = closure_18;
+                        let length6 = dependencyMap;
+                        if (dependencyMap) {
+                          throwTypeErrorResult = obj1;
+                          length6 = obj1.responseTexts.length;
+                        }
+                        if (length6) {
+                          throwTypeErrorResult = closure_18;
+                          throwTypeErrorResult = closure_17;
+                          throwTypeErrorResult = store;
+                          const obj22 = {};
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = obj1;
+                          const responseTexts6 = obj1.responseTexts;
+                          obj22[store(823).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts6.join("");
+                          throwTypeErrorResult = store.setAttributes(obj22);
+                        }
+                        throwTypeErrorResult = closure_18;
+                        lib = 0;
+                        const _Object6 = Object;
+                        throwTypeErrorResult = obj1;
+                        const items3 = [];
+                        throwTypeErrorResult = lib;
+                        throwTypeErrorResult = items3;
+                        lib = HermesBuiltin.arraySpread(Object.values(obj1.chatCompletionToolCalls), lib);
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = lib;
+                        throwTypeErrorResult = items3;
+                        lib = HermesBuiltin.arraySpread(obj1.responsesApiToolCalls, lib);
+                        items9 = items3;
+                        throwTypeErrorResult = items9;
+                        if (items9.length > 0) {
+                          throwTypeErrorResult = closure_18;
+                          throwTypeErrorResult = closure_17;
+                          throwTypeErrorResult = store;
+                          let obj23 = {};
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          const _JSON12 = JSON;
+                          throwTypeErrorResult = items9;
+                          obj23[store(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(items9);
+                          throwTypeErrorResult = store.setAttributes(obj23);
+                        }
+                        throwTypeErrorResult = closure_18;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = store.end();
+                        c22 = 3;
+                        throwTypeErrorResult = closure_14;
+                        let obj24 = { value: null, done: true };
+                        obj24[0] = closure_14;
+                        return obj24;
+                      }
+                    }
+                  } else {
+                    throwTypeErrorResult = closure_18;
+                    lib = done;
+                    done = done.done;
+                    c4 = !done;
+                  }
                 }
-                let length = dependencyMap;
-                if (dependencyMap) {
-                  length = closure_2.responseTexts.length;
+              break;
+              case 7:
+                throwTypeErrorResult = closure_18;
+                c19 = 1;
+                throwTypeErrorResult = closure_5;
+                if (closure_5) {
+                  throwTypeErrorResult = closure_3;
+                  throw closure_3;
+                } else {
+                  throw throwTypeErrorResult;
                 }
-                if (length) {
-                  const obj6 = {};
-                  const responseTexts = closure_2.responseTexts;
-                  obj6[store(823).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
-                  store.setAttributes(obj6);
+              break;
+              case 8:
+                if (arg0 === 1) {
+                  c22 = 3;
+                  throw done;
+                } else if (arg0 === 2) {
+                  c19 = 1;
+                  throwTypeErrorResult = closure_18;
+                  throwTypeErrorResult = closure_5;
+                  if (closure_5) {
+                    throwTypeErrorResult = closure_3;
+                    throw closure_3;
+                  } else {
+                    c19 = 0;
+                    throwTypeErrorResult = closure_17;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    let obj30 = store(828);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj30;
+                    throwTypeErrorResult = obj30.setCommonResponseAttributes(store, obj1.responseId, obj1.responseModel, obj1.responseTimestamp);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    let obj31 = store(828);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj31;
+                    throwTypeErrorResult = obj31.setTokenUsageAttributes(store, obj1.promptTokens, obj1.completionTokens, obj1.totalTokens);
+                    throwTypeErrorResult = store;
+                    const obj25 = {};
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    obj25[store(823).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    throwTypeErrorResult = store.setAttributes(obj25);
+                    throwTypeErrorResult = obj1;
+                    if (obj1.finishReasons.length) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      const obj26 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON9 = JSON;
+                      throwTypeErrorResult = obj1;
+                      obj26[store(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(obj1.finishReasons);
+                      throwTypeErrorResult = store.setAttributes(obj26);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    let length5 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = obj1;
+                      length5 = obj1.responseTexts.length;
+                    }
+                    if (length5) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      const obj27 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = obj1;
+                      const responseTexts5 = obj1.responseTexts;
+                      obj27[store(823).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts5.join("");
+                      throwTypeErrorResult = store.setAttributes(obj27);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    closure_3 = 0;
+                    const _Object5 = Object;
+                    throwTypeErrorResult = obj1;
+                    const items4 = [];
+                    throwTypeErrorResult = closure_3;
+                    throwTypeErrorResult = items4;
+                    closure_3 = HermesBuiltin.arraySpread(Object.values(obj1.chatCompletionToolCalls), closure_3);
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = closure_3;
+                    throwTypeErrorResult = items4;
+                    closure_3 = HermesBuiltin.arraySpread(obj1.responsesApiToolCalls, closure_3);
+                    items9 = items4;
+                    throwTypeErrorResult = items9;
+                    if (items9.length > 0) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      const obj28 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON10 = JSON;
+                      throwTypeErrorResult = items9;
+                      obj28[store(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(items9);
+                      throwTypeErrorResult = store.setAttributes(obj28);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = store.end();
+                    c22 = 3;
+                    const obj29 = { value: null, done: true };
+                    obj29[0] = done;
+                    return obj29;
+                  }
                 }
-                items1 = 0;
-                const _Object = Object;
-                items1 = [];
-                items1 = HermesBuiltin.arraySpread(Object.values(closure_2.chatCompletionToolCalls), items1);
-                items1 = HermesBuiltin.arraySpread(closure_2.responsesApiToolCalls, items1);
-                if (items1.length > 0) {
-                  obj7 = {};
-                  const _JSON2 = JSON;
-                  obj7[store(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(items1);
-                  store.setAttributes(obj7);
+              break;
+              case 9:
+                throwTypeErrorResult = closure_18;
+                c19 = 1;
+                throwTypeErrorResult = closure_5;
+                if (closure_5) {
+                  throwTypeErrorResult = closure_3;
+                  throw closure_3;
+                } else {
+                  throw throwTypeErrorResult;
                 }
-                store.end();
-                c22 = 3;
-                obj8 = { value: null, done: true };
-                obj8[0] = arg1;
-                return obj8;
-              }
+              break;
+              case 10:
+                if (arg0 === 1) {
+                  c22 = 3;
+                  throw done;
+                } else if (arg0 === 2) {
+                  c19 = 1;
+                  throwTypeErrorResult = closure_18;
+                  throwTypeErrorResult = closure_5;
+                  if (closure_5) {
+                    throwTypeErrorResult = closure_3;
+                    throw closure_3;
+                  } else {
+                    c19 = 0;
+                    throwTypeErrorResult = closure_17;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    obj23 = store(828);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj23;
+                    throwTypeErrorResult = obj23.setCommonResponseAttributes(store, obj1.responseId, obj1.responseModel, obj1.responseTimestamp);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    obj24 = store(828);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj24;
+                    throwTypeErrorResult = obj24.setTokenUsageAttributes(store, obj1.promptTokens, obj1.completionTokens, obj1.totalTokens);
+                    throwTypeErrorResult = store;
+                    obj30 = {};
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    obj30[store(823).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    throwTypeErrorResult = store.setAttributes(obj30);
+                    throwTypeErrorResult = obj1;
+                    if (obj1.finishReasons.length) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      obj31 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON7 = JSON;
+                      throwTypeErrorResult = obj1;
+                      obj31[store(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(obj1.finishReasons);
+                      throwTypeErrorResult = store.setAttributes(obj31);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    let length4 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = obj1;
+                      length4 = obj1.responseTexts.length;
+                    }
+                    if (length4) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      const obj32 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = obj1;
+                      const responseTexts4 = obj1.responseTexts;
+                      obj32[store(823).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts4.join("");
+                      throwTypeErrorResult = store.setAttributes(obj32);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    closure_5 = 0;
+                    const _Object4 = Object;
+                    throwTypeErrorResult = obj1;
+                    const items5 = [];
+                    throwTypeErrorResult = closure_5;
+                    throwTypeErrorResult = items5;
+                    closure_5 = HermesBuiltin.arraySpread(Object.values(obj1.chatCompletionToolCalls), closure_5);
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = closure_5;
+                    throwTypeErrorResult = items5;
+                    closure_5 = HermesBuiltin.arraySpread(obj1.responsesApiToolCalls, closure_5);
+                    items9 = items5;
+                    throwTypeErrorResult = items9;
+                    if (items9.length > 0) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      const obj33 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON8 = JSON;
+                      throwTypeErrorResult = items9;
+                      obj33[store(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(items9);
+                      throwTypeErrorResult = store.setAttributes(obj33);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = store.end();
+                    c22 = 3;
+                    const obj34 = { value: null, done: true };
+                    obj34[0] = done;
+                    return obj34;
+                  }
+                }
+              break;
+              case 11:
+                if (arg0 === 1) {
+                  c22 = 3;
+                  throw done;
+                } else {
+                  closure_13 = done;
+                  if (arg0 === 2) {
+                    throwTypeErrorResult = closure_18;
+                    c19 = 7;
+                    throwTypeErrorResult = c4;
+                    if (c4) {
+                      throwTypeErrorResult = lib2;
+                      throwTypeErrorResult = null != lib2.return;
+                    }
+                    if (throwTypeErrorResult) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = obj1;
+                      throwTypeErrorResult = lib2;
+                      c21 = 13;
+                      c22 = 1;
+                      const obj35 = { value: null, done: false };
+                      obj35[0] = obj1(lib2.return());
+                      return obj35;
+                    } else {
+                      c19 = 1;
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_5;
+                      if (closure_5) {
+                        throwTypeErrorResult = closure_3;
+                        throw closure_3;
+                      } else {
+                        c19 = 0;
+                        throwTypeErrorResult = closure_17;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = dependencyMap;
+                        obj15 = store(828);
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj15;
+                        throwTypeErrorResult = obj15.setCommonResponseAttributes(store, obj1.responseId, obj1.responseModel, obj1.responseTimestamp);
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = dependencyMap;
+                        obj16 = store(828);
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = obj16;
+                        throwTypeErrorResult = obj16.setTokenUsageAttributes(store, obj1.promptTokens, obj1.completionTokens, obj1.totalTokens);
+                        throwTypeErrorResult = store;
+                        const obj36 = {};
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = dependencyMap;
+                        obj36[store(823).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                        throwTypeErrorResult = store.setAttributes(obj36);
+                        throwTypeErrorResult = obj1;
+                        if (obj1.finishReasons.length) {
+                          throwTypeErrorResult = closure_18;
+                          throwTypeErrorResult = closure_17;
+                          throwTypeErrorResult = store;
+                          obj37 = {};
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          const _JSON5 = JSON;
+                          throwTypeErrorResult = obj1;
+                          obj37[store(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(obj1.finishReasons);
+                          throwTypeErrorResult = store.setAttributes(obj37);
+                        }
+                        throwTypeErrorResult = closure_18;
+                        let length3 = dependencyMap;
+                        if (dependencyMap) {
+                          throwTypeErrorResult = obj1;
+                          length3 = obj1.responseTexts.length;
+                        }
+                        if (length3) {
+                          throwTypeErrorResult = closure_18;
+                          throwTypeErrorResult = closure_17;
+                          throwTypeErrorResult = store;
+                          obj38 = {};
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          throwTypeErrorResult = obj1;
+                          const responseTexts3 = obj1.responseTexts;
+                          obj38[store(823).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts3.join("");
+                          throwTypeErrorResult = store.setAttributes(obj38);
+                        }
+                        throwTypeErrorResult = closure_18;
+                        value = 0;
+                        const _Object3 = Object;
+                        throwTypeErrorResult = obj1;
+                        const items6 = [];
+                        throwTypeErrorResult = value;
+                        throwTypeErrorResult = items6;
+                        value = HermesBuiltin.arraySpread(Object.values(obj1.chatCompletionToolCalls), value);
+                        throwTypeErrorResult = obj1;
+                        throwTypeErrorResult = value;
+                        throwTypeErrorResult = items6;
+                        value = HermesBuiltin.arraySpread(obj1.responsesApiToolCalls, value);
+                        items9 = items6;
+                        throwTypeErrorResult = items9;
+                        if (items9.length > 0) {
+                          throwTypeErrorResult = closure_18;
+                          throwTypeErrorResult = closure_17;
+                          throwTypeErrorResult = store;
+                          const obj39 = {};
+                          throwTypeErrorResult = store;
+                          throwTypeErrorResult = dependencyMap;
+                          const _JSON6 = JSON;
+                          throwTypeErrorResult = items9;
+                          obj39[store(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(items9);
+                          throwTypeErrorResult = store.setAttributes(obj39);
+                        }
+                        throwTypeErrorResult = closure_18;
+                        throwTypeErrorResult = store;
+                        throwTypeErrorResult = store.end();
+                        c22 = 3;
+                        throwTypeErrorResult = closure_13;
+                        const obj40 = { value: null, done: true };
+                        obj40[0] = closure_13;
+                        return obj40;
+                      }
+                    }
+                  } else {
+                    throwTypeErrorResult = closure_18;
+                    c4 = false;
+                    throwTypeErrorResult = closure_17;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = lib2;
+                    c21 = 6;
+                    c22 = 1;
+                    const obj41 = { value: null, done: false };
+                    obj41[0] = obj1(lib2.next());
+                    return obj41;
+                  }
+                }
+              break;
+              case 12:
+                throwTypeErrorResult = closure_18;
+                c19 = 1;
+                throwTypeErrorResult = closure_5;
+                if (closure_5) {
+                  throwTypeErrorResult = closure_3;
+                  throw closure_3;
+                } else {
+                  throw throwTypeErrorResult;
+                }
+              break;
+              case 13:
+                if (arg0 === 1) {
+                  c22 = 3;
+                  throw done;
+                } else if (arg0 === 2) {
+                  c19 = 1;
+                  throwTypeErrorResult = closure_18;
+                  throwTypeErrorResult = closure_5;
+                  if (closure_5) {
+                    throwTypeErrorResult = closure_3;
+                    throw closure_3;
+                  } else {
+                    c19 = 0;
+                    obj7 = store(828);
+                    const result = obj7.setCommonResponseAttributes(store, obj1.responseId, obj1.responseModel, obj1.responseTimestamp);
+                    obj8 = store(828);
+                    const result1 = obj8.setTokenUsageAttributes(store, obj1.promptTokens, obj1.completionTokens, obj1.totalTokens);
+                    const obj42 = {};
+                    obj42[store(823).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    store.setAttributes(obj42);
+                    if (obj1.finishReasons.length) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      const obj43 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON3 = JSON;
+                      throwTypeErrorResult = obj1;
+                      obj43[store(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(obj1.finishReasons);
+                      throwTypeErrorResult = store.setAttributes(obj43);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    let length2 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = obj1;
+                      length2 = obj1.responseTexts.length;
+                    }
+                    if (length2) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      const obj44 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = obj1;
+                      const responseTexts2 = obj1.responseTexts;
+                      obj44[store(823).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts2.join("");
+                      throwTypeErrorResult = store.setAttributes(obj44);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    lib2 = 0;
+                    const _Object2 = Object;
+                    throwTypeErrorResult = obj1;
+                    const items7 = [];
+                    throwTypeErrorResult = lib2;
+                    throwTypeErrorResult = items7;
+                    lib2 = HermesBuiltin.arraySpread(Object.values(obj1.chatCompletionToolCalls), lib2);
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = lib2;
+                    throwTypeErrorResult = items7;
+                    lib2 = HermesBuiltin.arraySpread(obj1.responsesApiToolCalls, lib2);
+                    items9 = items7;
+                    throwTypeErrorResult = items9;
+                    if (items9.length > 0) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      obj45 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON4 = JSON;
+                      throwTypeErrorResult = items9;
+                      obj45[store(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(items9);
+                      throwTypeErrorResult = store.setAttributes(obj45);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = store.end();
+                    c22 = 3;
+                    obj46 = { value: null, done: true };
+                    obj46[0] = done;
+                    return obj46;
+                  }
+                }
+              break;
+              case 14:
+                c19 = 1;
+                if (closure_5) {
+                  throw closure_3;
+                } else {
+                  throw tmp74;
+                }
+              break;
+              case 15:
+                if (arg0 === 1) {
+                  c22 = 3;
+                  throw done;
+                } else if (arg0 === 2) {
+                  c19 = 1;
+                  throwTypeErrorResult = closure_18;
+                  throwTypeErrorResult = closure_5;
+                  if (closure_5) {
+                    throw closure_3;
+                  } else {
+                    c19 = 0;
+                    obj = store(828);
+                    const result2 = obj.setCommonResponseAttributes(store, obj1.responseId, obj1.responseModel, obj1.responseTimestamp);
+                    obj1 = store(828);
+                    const result3 = obj1.setTokenUsageAttributes(store, obj1.promptTokens, obj1.completionTokens, obj1.totalTokens);
+                    obj47 = {};
+                    obj47[store(823).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    store.setAttributes(obj47);
+                    if (obj1.finishReasons.length) {
+                      obj48 = {};
+                      const _JSON = JSON;
+                      obj48[store(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(obj1.finishReasons);
+                      store.setAttributes(obj48);
+                    }
+                    let length = dependencyMap;
+                    if (dependencyMap) {
+                      length = obj1.responseTexts.length;
+                    }
+                    if (length) {
+                      const obj49 = {};
+                      const responseTexts = obj1.responseTexts;
+                      obj49[store(823).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
+                      store.setAttributes(obj49);
+                    }
+                    items9 = 0;
+                    const _Object = Object;
+                    const items8 = [];
+                    items9 = HermesBuiltin.arraySpread(Object.values(obj1.chatCompletionToolCalls), items9);
+                    items9 = HermesBuiltin.arraySpread(obj1.responsesApiToolCalls, items9);
+                    items9 = items8;
+                    if (items9.length > 0) {
+                      const obj50 = {};
+                      const _JSON2 = JSON;
+                      obj50[store(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(items9);
+                      store.setAttributes(obj50);
+                    }
+                    store.end();
+                    c22 = 3;
+                    const obj51 = { value: null, done: true };
+                    obj51[0] = done;
+                    return obj51;
+                  }
+                }
+              break;
+              default:
+                if (arg0 === 1) {
+                  c22 = 3;
+                  throw done;
+                } else if (arg0 === 2) {
+                  c19 = 1;
+                  throwTypeErrorResult = closure_18;
+                  throwTypeErrorResult = closure_5;
+                  if (closure_5) {
+                    throwTypeErrorResult = closure_3;
+                    throw closure_3;
+                  } else {
+                    c19 = 0;
+                    throwTypeErrorResult = closure_17;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    const obj72 = store(828);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj72;
+                    throwTypeErrorResult = obj72.setCommonResponseAttributes(store, obj1.responseId, obj1.responseModel, obj1.responseTimestamp);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    const obj73 = store(828);
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = obj73;
+                    throwTypeErrorResult = obj73.setTokenUsageAttributes(store, obj1.promptTokens, obj1.completionTokens, obj1.totalTokens);
+                    throwTypeErrorResult = store;
+                    const obj52 = {};
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = dependencyMap;
+                    obj52[store(823).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    throwTypeErrorResult = store.setAttributes(obj52);
+                    throwTypeErrorResult = obj1;
+                    if (obj1.finishReasons.length) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      const obj53 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON19 = JSON;
+                      throwTypeErrorResult = obj1;
+                      obj53[store(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(obj1.finishReasons);
+                      throwTypeErrorResult = store.setAttributes(obj53);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    let length10 = dependencyMap;
+                    if (dependencyMap) {
+                      throwTypeErrorResult = obj1;
+                      length10 = obj1.responseTexts.length;
+                    }
+                    if (length10) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      const obj54 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      throwTypeErrorResult = obj1;
+                      const responseTexts10 = obj1.responseTexts;
+                      obj54[store(823).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts10.join("");
+                      throwTypeErrorResult = store.setAttributes(obj54);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    closure_10 = 0;
+                    const _Object10 = Object;
+                    throwTypeErrorResult = obj1;
+                    items9 = [];
+                    throwTypeErrorResult = closure_10;
+                    throwTypeErrorResult = items9;
+                    closure_10 = HermesBuiltin.arraySpread(Object.values(obj1.chatCompletionToolCalls), closure_10);
+                    throwTypeErrorResult = obj1;
+                    throwTypeErrorResult = closure_10;
+                    throwTypeErrorResult = items9;
+                    closure_10 = HermesBuiltin.arraySpread(obj1.responsesApiToolCalls, closure_10);
+                    throwTypeErrorResult = items9;
+                    if (items9.length > 0) {
+                      throwTypeErrorResult = closure_18;
+                      throwTypeErrorResult = closure_17;
+                      throwTypeErrorResult = store;
+                      obj55 = {};
+                      throwTypeErrorResult = store;
+                      throwTypeErrorResult = dependencyMap;
+                      const _JSON20 = JSON;
+                      throwTypeErrorResult = items9;
+                      obj55[store(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(items9);
+                      throwTypeErrorResult = store.setAttributes(obj55);
+                    }
+                    throwTypeErrorResult = closure_18;
+                    throwTypeErrorResult = store;
+                    throwTypeErrorResult = store.end();
+                    c22 = 3;
+                    obj56 = { value: null, done: true };
+                    obj56[0] = done;
+                    return obj56;
+                  }
+                }
             }
           } catch (throwTypeErrorResult) {
             throwTypeErrorResult = c19;
-            if (tmp4 === c19) {
+            if (tmp5 === c19) {
               throwTypeErrorResult = tmp3;
               c22 = tmp3;
               throw throwTypeErrorResult;
@@ -475,16 +1608,16 @@ function _instrumentStream() {
               c21 = throwTypeErrorResult;
             } else if (tmp3 === throwTypeErrorResult) {
               c21 = tmp3;
-            } else if (tmp11 === throwTypeErrorResult) {
-              c21 = tmp11;
-            } else if (tmp5 === throwTypeErrorResult) {
-              c21 = tmp10;
+            } else if (tmp12 === throwTypeErrorResult) {
+              c21 = tmp12;
             } else if (tmp6 === throwTypeErrorResult) {
+              c21 = tmp11;
+            } else if (tmp7 === throwTypeErrorResult) {
+              c21 = tmp10;
+            } else if (tmp11 === throwTypeErrorResult) {
               c21 = tmp9;
-            } else if (tmp10 === throwTypeErrorResult) {
-              c21 = tmp8;
             } else {
-              c21 = tmp7;
+              c21 = tmp8;
             }
           }
         }

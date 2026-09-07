@@ -1,10 +1,10 @@
-// Module ID: 10980
-// Function ID: 10981
+// Module ID: 10985
+// Function ID: 10986
 // Name: useTrackFavoritesGuildAddModalOpened
 // Dependencies: [19, 1074, 1242, 2]
 // Exports: default
 
-// Module 10980 (useTrackFavoritesGuildAddModalOpened)
+// Module 10985 (useTrackFavoritesGuildAddModalOpened)
 import closure_2 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 

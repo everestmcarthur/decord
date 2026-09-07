@@ -1,10 +1,10 @@
-// Module ID: 16417
-// Function ID: 16418
+// Module ID: 16420
+// Function ID: 16421
 // Name: ForYouMentionPlaceholder
 // Dependencies: [19, 17, 4552, 21, 4560, 576, 504, 4296, 4561, 2]
 // Exports: ForYouMentionPlaceholder
 
-// Module 16417 (ForYouMentionPlaceholder)
+// Module 16420 (ForYouMentionPlaceholder)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

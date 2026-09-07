@@ -1,15 +1,15 @@
-// Module ID: 13576
-// Function ID: 13577
+// Module ID: 13580
+// Function ID: 13581
 // Name: PerkText
-// Dependencies: [19, 17, 4449, 21, 4560, 576, 672, 4556, 13577, 12488, 12513, 1114, 2428, 13578, 2]
+// Dependencies: [19, 17, 4449, 21, 4560, 576, 672, 4556, 13581, 12492, 12517, 1114, 2428, 13582, 2]
 // Exports: default
 
-// Module 13576 (PerkText)
+// Module 13580 (PerkText)
 import ThemesDefault from "Themes" /* 576 */;
 import nDefault from "n" /* 672 */;
 import Text from "Text" /* 4556 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12513 */;
-import setDefault from "set" /* 13577 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12517 */;
+import setDefault from "set" /* 13581 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "calculateAppliedBoosts" /* 4449 */;
@@ -63,7 +63,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       if (null != arr) {
         str2 = "";
         if (0 !== arr.length) {
-          let first = tmp2(13578)(arr);
+          let first = tmp2(13582)(arr);
           if (1 === first.length) {
             obj = { powerup: null };
             first = first[0];

@@ -1,10 +1,10 @@
-// Module ID: 12696
-// Function ID: 12697
+// Module ID: 12700
+// Function ID: 12701
 // Name: SkipHeaderButton
 // Dependencies: [19, 21, 4560, 576, 1114, 7863, 2]
 // Exports: default
 
-// Module 12696 (SkipHeaderButton)
+// Module 12700 (SkipHeaderButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

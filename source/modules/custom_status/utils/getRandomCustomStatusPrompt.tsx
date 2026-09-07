@@ -1,12 +1,12 @@
-// Module ID: 11116
-// Function ID: 11117
+// Module ID: 11121
+// Function ID: 11122
 // Name: getRandomCustomStatusPrompt
-// Dependencies: [11115, 1114, 2]
+// Dependencies: [11120, 1114, 2]
 // Exports: default
 
-// Module 11116 (getRandomCustomStatusPrompt)
+// Module 11121 (getRandomCustomStatusPrompt)
 import set from "set" /* 2 */;
-import StatusTypes from "StatusTypes" /* 11115 */;
+import StatusTypes from "StatusTypes" /* 11120 */;
 
 ({ CustomStatusPrompts: obj1, CustomStatusPromptValues: c3 } = StatusTypes);
 const result = set.fileFinishedImporting("modules/custom_status/utils/getRandomCustomStatusPrompt.tsx");

@@ -1,10 +1,10 @@
-// Module ID: 9428
-// Function ID: 9429
+// Module ID: 9433
+// Function ID: 9434
 // Name: BotPermissions
-// Dependencies: [32, 19, 17, 21, 4560, 576, 4204, 1086, 9248, 9429, 4973, 5680, 4556, 1114, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 4204, 1086, 9253, 9434, 4973, 5680, 4556, 1114, 2]
 // Exports: default
 
-// Module 9428 (BotPermissions)
+// Module 9433 (BotPermissions)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

@@ -1,10 +1,10 @@
-// Module ID: 10024
-// Function ID: 10025
+// Module ID: 10029
+// Function ID: 10030
 // Name: ScreenshareParticipant
-// Dependencies: [19, 17, 21, 4560, 576, 9592, 6655, 9593, 4556, 1114, 4975, 9951, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 9597, 6655, 9598, 4556, 1114, 4975, 9956, 2]
 // Exports: default
 
-// Module 10024 (ScreenshareParticipant)
+// Module 10029 (ScreenshareParticipant)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

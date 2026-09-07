@@ -1,10 +1,10 @@
-// Module ID: 11938
-// Function ID: 11939
+// Module ID: 11942
+// Function ID: 11943
 // Name: showUserProfile
 // Dependencies: [8179, 2]
 // Exports: showUserProfile
 
-// Module 11938 (showUserProfile)
+// Module 11942 (showUserProfile)
 import set from "set" /* 2 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
 

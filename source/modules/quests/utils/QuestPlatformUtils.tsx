@@ -1,10 +1,10 @@
-// Module ID: 11496
-// Function ID: 11497
+// Module ID: 11501
+// Function ID: 11502
 // Name: supportedConsoles
-// Dependencies: [5444, 1074, 7724, 5452, 11192, 11193, 11197, 5451, 7718, 9252, 1114, 1115, 11295, 4525, 11497, 1109, 11489, 4249, 11498, 11500, 1256, 11488, 11493, 7382, 573, 2]
+// Dependencies: [5444, 1074, 7724, 5452, 11197, 11198, 11202, 5451, 7718, 9257, 1114, 1115, 11300, 4525, 11502, 1109, 11494, 4249, 11503, 11505, 1256, 11493, 11498, 7382, 573, 2]
 // Exports: getExpiredCredentialsHintMessage, getPlatformTypeForHintMessage, isQuestSupportedOnWeb, openAdGameLinkDirectly, openAdGameLinkDirectlyFromBountyEntireVideoTap, openAddConsoleConnectionModal, openAuthorizationConnectionModal, openConsoleConnectionSettings, openGameLinkDirectly, openSingleConsoleConnectionModal, supportedTaskPlatforms
 
-// Module 11496 (supportedConsoles)
+// Module 11501 (supportedConsoles)
 import set2 from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -13,8 +13,8 @@ import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
 import set4 from "set" /* 5452 */;
 import openUserSettings from "openUserSettings" /* 7382 */;
 import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7724 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9252 */;
-import apexExperiment from "apexExperiment" /* 11192 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9257 */;
+import apexExperiment from "apexExperiment" /* 11197 */;
 import ME from "ME" /* 1074 */;
 
 function supportedConsoles(quest) {
@@ -339,11 +339,11 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   if (null != tmp) {
     url = tmp;
   }
-  let obj = adContentId(11192);
-  if (obj.shouldMigrateToAdAnalyticsInterface(adContentId(11192).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")) {
-    let tmp2Result = tmp2(11193);
+  let obj = adContentId(11197);
+  if (obj.shouldMigrateToAdAnalyticsInterface(adContentId(11197).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")) {
+    let tmp2Result = tmp2(11198);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
-    obj[0] = tmp2(11197).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA;
+    obj[0] = tmp2(11202).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA;
     obj[1] = adCreativeType;
     obj[2] = adContentId;
     ({ ctaContent: obj5[3], content: obj5[4], sourceQuestContent: obj5[5], position: obj5[6], impressionId: obj5[7] } = impressionId);
@@ -366,8 +366,8 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
     if (ios != null) {
       iosAppId = ios.iosAppId;
     }
-    iosAttributionClickFramework = tmp2(11488).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, adContentId);
-    const tmp2Result1 = tmp2(11488);
+    iosAttributionClickFramework = tmp2(11493).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, adContentId);
+    const tmp2Result1 = tmp2(11493);
   }
   let fn;
   if (null != iosAttributionClickFramework) {
@@ -447,9 +447,9 @@ export const openAuthorizationConnectionModal = function openAuthorizationConnec
   const quest = platformType.quest;
   let obj = apexExperiment;
   if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")) {
-    let tmpResult = tmp(11193);
+    let tmpResult = tmp(11198);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null };
-    obj[0] = tmp(11197).AdUserActionType.CLICK_INTERNAL;
+    obj[0] = tmp(11202).AdUserActionType.CLICK_INTERNAL;
     obj[1] = tmp(5451).AdCreativeType.QUEST;
     obj[2] = quest.id;
     ({ ctaContent: obj5[3], content: obj5[4], sourceQuestContent: obj5[5], impressionId: obj5[6] } = ctaContent);
@@ -601,9 +601,9 @@ export const openConsoleConnectionSettings = function openConsoleConnectionSetti
   quest = quest.quest;
   let obj = apexExperiment;
   if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")) {
-    let tmpResult = tmp(11193);
+    let tmpResult = tmp(11198);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null };
-    obj[0] = tmp(11197).AdUserActionType.CLICK_INTERNAL;
+    obj[0] = tmp(11202).AdUserActionType.CLICK_INTERNAL;
     obj[1] = tmp(5451).AdCreativeType.QUEST;
     obj[2] = quest.id;
     ({ ctaContent: obj5[3], content: obj5[4], sourceQuestContent: obj5[5], impressionId: obj5[6], position: obj5[7] } = arg1);
@@ -621,9 +621,9 @@ export const openAddConsoleConnectionModal = function openAddConsoleConnectionMo
   quest = quest.quest;
   let obj = apexExperiment;
   if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")) {
-    let tmpResult = tmp(11193);
+    let tmpResult = tmp(11198);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null, questContentRowIndex: null };
-    obj[0] = tmp(11197).AdUserActionType.CLICK_INTERNAL;
+    obj[0] = tmp(11202).AdUserActionType.CLICK_INTERNAL;
     obj[1] = tmp(5451).AdCreativeType.QUEST;
     obj[2] = quest.id;
     ({ ctaContent: obj5[3], content: obj5[4], sourceQuestContent: obj5[5], impressionId: obj5[6], position: obj5[7], rowIndex: obj5[8] } = arg1);
@@ -655,9 +655,9 @@ export const openSingleConsoleConnectionModal = function openSingleConsoleConnec
   quest = quest.quest;
   let obj = apexExperiment;
   if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")) {
-    let tmpResult = tmp(11193);
+    let tmpResult = tmp(11198);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null, questContentRowIndex: null };
-    obj[0] = tmp(11197).AdUserActionType.CLICK_INTERNAL;
+    obj[0] = tmp(11202).AdUserActionType.CLICK_INTERNAL;
     obj[1] = tmp(5451).AdCreativeType.QUEST;
     obj[2] = quest.id;
     ({ ctaContent: obj5[3], content: obj5[4], sourceQuestContent: obj5[5], impressionId: obj5[6], position: obj5[7], rowIndex: obj5[8] } = arg1);

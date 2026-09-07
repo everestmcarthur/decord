@@ -1,10 +1,10 @@
-// Module ID: 13296
-// Function ID: 13297
+// Module ID: 13300
+// Function ID: 13301
 // Name: BetaTag
 // Dependencies: [19, 17, 7432, 21, 4560, 576, 4987, 1093, 4556, 1114, 2]
 // Exports: default
 
-// Module 13296 (BetaTag)
+// Module 13300 (BetaTag)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import keys from "keys" /* 1093 */;

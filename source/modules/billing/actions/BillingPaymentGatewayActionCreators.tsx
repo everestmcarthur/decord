@@ -731,7 +731,7 @@ function _confirmPaymentElementSource() {
                           if (closure_11 == null) {
                             c7 = undefined;
                           }
-                          const obj5 = { setupIntent: null, error: "a" };
+                          const obj5 = { setupIntent: null, error: "Array" };
                           obj5[0] = c7;
                           closure_10 = obj5;
                           if ((function shouldRecreateSetupIntentForPaymentElement(error) {

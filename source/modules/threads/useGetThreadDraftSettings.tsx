@@ -1,10 +1,10 @@
-// Module ID: 10253
-// Function ID: 10254
+// Module ID: 10258
+// Function ID: 10259
 // Name: useGetThreadDraftSettings
 // Dependencies: [4901, 504, 11, 2]
 // Exports: default, useHasThreadDraft
 
-// Module 10253 (useGetThreadDraftSettings)
+// Module 10258 (useGetThreadDraftSettings)
 import closure_3 from "handleChanged" /* 4901 */;
 
 const require = arg1;

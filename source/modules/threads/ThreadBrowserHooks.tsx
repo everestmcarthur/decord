@@ -1,13 +1,13 @@
-// Module ID: 12761
-// Function ID: 12762
+// Module ID: 12765
+// Function ID: 12766
 // Name: useTrackThreadBrowserTab
-// Dependencies: [32, 19, 12762, 1957, 4199, 4575, 5507, 7766, 4201, 1085, 7781, 504, 12, 1369, 11, 7765, 7898, 2]
+// Dependencies: [32, 19, 12766, 1957, 4199, 4575, 5507, 7766, 4201, 1085, 7781, 504, 12, 1369, 11, 7765, 7898, 2]
 // Exports: useActiveGuildThreads, useActiveThreadIds, useActiveThreads, useArchivedThreads, useTrackThreadBrowserTab
 
-// Module 12761 (useTrackThreadBrowserTab)
+// Module 12765 (useTrackThreadBrowserTab)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import { useShouldShowResolvedFlagsForChannel as closure_5 } from "useReportToModChannelFiltersStore" /* 12762 */;
+import { useShouldShowResolvedFlagsForChannel as closure_5 } from "useReportToModChannelFiltersStore" /* 12766 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
 import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_8 from "generateOldThreadCutoff" /* 4575 */;

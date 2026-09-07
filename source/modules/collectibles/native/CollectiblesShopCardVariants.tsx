@@ -1,14 +1,14 @@
-// Module ID: 8865
-// Function ID: 8866
+// Module ID: 8870
+// Function ID: 8871
 // Name: VariantOption
-// Dependencies: [19, 17, 21, 4560, 576, 8842, 8866, 7133, 8867, 8765, 7553, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 8847, 8871, 7133, 8872, 8770, 7553, 2]
 
-// Module 8865 (VariantOption)
+// Module 8870 (VariantOption)
 import ThemesDefault from "Themes" /* 576 */;
 import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7133 */;
-import getProductPurchaseState from "getProductPurchaseState" /* 8842 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 8866 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 8867 */;
+import getProductPurchaseState from "getProductPurchaseState" /* 8847 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 8871 */;
+import PlusSmallIcon from "PlusSmallIcon" /* 8872 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -74,7 +74,7 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
 const memoResult = importAllResult.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
-  let obj = defaultVariantIndex(8765);
+  let obj = defaultVariantIndex(8770);
   defaultVariantIndex = obj.useDefaultVariantIndex(product);
   const tmp = callback2();
   if (obj2.getIsVariantProduct(product)) {

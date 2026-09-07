@@ -1,13 +1,13 @@
-// Module ID: 16683
-// Function ID: 16684
+// Module ID: 16686
+// Function ID: 16687
 // Name: useMessageSearchErrorScreen
-// Dependencies: [19, 7281, 12339, 7878, 504, 12340, 1114, 4259, 9625, 2]
+// Dependencies: [19, 7281, 12343, 7878, 504, 12344, 1114, 4259, 9630, 2]
 // Exports: useMessageSearchErrorScreen, useMessageTabCountsErrorText
 
-// Module 16683 (useMessageSearchErrorScreen)
+// Module 16686 (useMessageSearchErrorScreen)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleReaction" /* 7281 */;
-import closure_5 from "prototype" /* 12339 */;
+import closure_5 from "prototype" /* 12343 */;
 import { SEARCH_MESSAGE_TAB_SENTINEL as closure_6 } from "MessageEmbedTypes" /* 7878 */;
 
 const require = arg1;

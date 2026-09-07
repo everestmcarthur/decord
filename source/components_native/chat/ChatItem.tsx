@@ -1,14 +1,14 @@
-// Module ID: 8652
-// Function ID: 8653
+// Module ID: 8657
+// Function ID: 8658
 // Name: DCDChatItem
-// Dependencies: [32, 19, 17, 4552, 1074, 7933, 21, 576, 8653, 1089, 8654, 7270, 8655, 4560, 1115, 8126, 4262, 672, 4987, 2]
+// Dependencies: [32, 19, 17, 4552, 1074, 7933, 21, 576, 8658, 1089, 8659, 7270, 8660, 4560, 1115, 8126, 4262, 672, 4987, 2]
 // Exports: default
 
-// Module 8652 (DCDChatItem)
+// Module 8657 (DCDChatItem)
 import ThemesDefault from "Themes" /* 576 */;
 import set from "set" /* 1089 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 8653 */;
+import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 8658 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -31,15 +31,15 @@ function DCDChatItem(message) {
     if (AUTOMOD_INCIDENT_ACTIONS.has(message.type)) {
       obj = {};
       const merged2 = Object.assign(merged);
-      tmp3Result = callback(tmp21(8654).default, obj);
+      tmp3Result = callback(tmp21(8659).default, obj);
     } else if (isSystemMessageDefault(message)) {
       obj1 = {};
       const merged3 = Object.assign(merged);
-      tmp3Result = tmp3(tmp21(8655).default, obj1);
+      tmp3Result = tmp3(tmp21(8660).default, obj1);
     } else {
       obj = {};
       const merged4 = Object.assign(merged);
-      tmp3Result = tmp3(tmp21(8654).default, obj);
+      tmp3Result = tmp3(tmp21(8659).default, obj);
     }
   }
   return tmp3Result;

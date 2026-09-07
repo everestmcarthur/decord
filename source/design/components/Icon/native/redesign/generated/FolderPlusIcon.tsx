@@ -1,14 +1,14 @@
-// Module ID: 16154
-// Function ID: 16155
+// Module ID: 16157
+// Function ID: 16158
 // Name: FolderPlusIcon
-// Dependencies: [19, 21, 576, 4261, 15756, 2]
+// Dependencies: [19, 21, 576, 4261, 15759, 2]
 // Exports: FolderPlusIcon
 
-// Module 16154 (FolderPlusIcon)
+// Module 16157 (FolderPlusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 15756 */;
+import registerAsset from "registerAsset" /* 15759 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

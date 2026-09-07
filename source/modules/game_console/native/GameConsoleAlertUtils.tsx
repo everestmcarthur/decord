@@ -1,12 +1,12 @@
-// Module ID: 9452
-// Function ID: 9453
-// Dependencies: [19, 1908, 9233, 1074, 21, 4380, 1943, 1114, 4905, 9453, 9252, 2]
+// Module ID: 9457
+// Function ID: 9458
+// Dependencies: [19, 1908, 9238, 1074, 21, 4380, 1943, 1114, 4905, 9458, 9257, 2]
 
-// Module 9452
+// Module 9457
 import noopAll from "noop" /* 19 */;
 import _modDef4905 from "module_4905" /* 4905 */;
 import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import { GAME_CONSOLE_ALERT_MODAL_LOCATION as closure_4 } from "XBOX_URL_BASE" /* 9233 */;
+import { GAME_CONSOLE_ALERT_MODAL_LOCATION as closure_4 } from "XBOX_URL_BASE" /* 9238 */;
 import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -55,7 +55,7 @@ export default {
     let obj = _modDef4905;
     obj = { title, body: null, onConfirm: null };
     obj = { body, errorCodeMessage, dismissCallback: _modDef4905.close };
-    obj[1] = jsx(reconnectPlatformType(9453).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: _modDef4905.close });
+    obj[1] = jsx(reconnectPlatformType(9458).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: _modDef4905.close });
     obj[2] = function onConfirm() {
       if (null != reconnectPlatformType) {
         const obj = { platformType: null, location: null };

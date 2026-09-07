@@ -1,10 +1,10 @@
-// Module ID: 14097
-// Function ID: 14098
+// Module ID: 14100
+// Function ID: 14101
 // Name: OverflowSquircle
 // Dependencies: [19, 17, 21, 4560, 576, 4556, 2]
 // Exports: OverflowCircle, OverflowText, OverflowTextSmall, default
 
-// Module 14097 (OverflowSquircle)
+// Module 14100 (OverflowSquircle)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;

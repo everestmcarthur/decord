@@ -1,10 +1,10 @@
-// Module ID: 16138
-// Function ID: 16139
+// Module ID: 16141
+// Function ID: 16142
 // Name: useFavoritesGuildHideAction
-// Dependencies: [19, 4381, 1074, 10224, 10223, 1982, 1100, 1114, 3225, 2]
+// Dependencies: [19, 4381, 1074, 10229, 10228, 1982, 1100, 1114, 3225, 2]
 // Exports: default
 
-// Module 16138 (useFavoritesGuildHideAction)
+// Module 16141 (useFavoritesGuildHideAction)
 import messagesProxyDefault from "messagesProxy" /* 3225 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleConnectionOpen" /* 4381 */;
@@ -14,7 +14,7 @@ const require = arg1;
 let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
 
 export default function useFavoritesGuildHideAction() {
-  let obj = hasAccess(10224);
+  let obj = hasAccess(10229);
   hasAccess = obj.useFavoritesAccess().hasAccess;
   const items = [hasAccess];
   obj = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };

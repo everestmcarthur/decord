@@ -1,10 +1,10 @@
-// Module ID: 11649
-// Function ID: 11650
+// Module ID: 11654
+// Function ID: 11655
 // Name: PublicGuildAnnouncementProfile
-// Dependencies: [19, 17, 21, 4560, 576, 7150, 5587, 8034, 1178, 11650, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 7150, 5587, 8034, 1178, 11655, 4556, 1114, 2]
 // Exports: default
 
-// Module 11649 (PublicGuildAnnouncementProfile)
+// Module 11654 (PublicGuildAnnouncementProfile)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -13,7 +13,7 @@ import Text from "Text" /* 4556 */;
 import preloadDefault from "preload" /* 5587 */;
 import Background from "Background" /* 7150 */;
 import isPublicSystemMessage from "isPublicSystemMessage" /* 8034 */;
-import registerAssetDefault from "registerAsset" /* 11650 */;
+import registerAssetDefault from "registerAsset" /* 11655 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

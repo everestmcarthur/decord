@@ -102,7 +102,7 @@ function formatVoterTooltipText(arr, arg1) {
 const result = require("set").fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "isArray", localCreationAnswerId: -11665405 };
+  const obj = { text: "Array", image: "options", localCreationAnswerId: true };
   obj[2] = v1.v4();
   return obj;
 };

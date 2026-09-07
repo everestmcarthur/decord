@@ -1,13 +1,13 @@
-// Module ID: 9863
-// Function ID: 9864
+// Module ID: 9868
+// Function ID: 9869
 // Name: InstantInviteQRCodeActionSheet
-// Dependencies: [19, 17, 1979, 1371, 1074, 21, 4560, 576, 5584, 504, 1114, 573, 4258, 7198, 7149, 9864, 4556, 2]
+// Dependencies: [19, 17, 1979, 1371, 1074, 21, 4560, 576, 5584, 504, 1114, 573, 4258, 7198, 7149, 9869, 4556, 2]
 // Exports: default
 
-// Module 9863 (InstantInviteQRCodeActionSheet)
+// Module 9868 (InstantInviteQRCodeActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import frozenDefault from "frozen" /* 9864 */;
+import frozenDefault from "frozen" /* 9869 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createGuildRecordFromRust" /* 1979 */;

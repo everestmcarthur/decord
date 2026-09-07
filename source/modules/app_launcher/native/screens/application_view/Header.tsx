@@ -1,18 +1,18 @@
-// Module ID: 12130
-// Function ID: 12131
+// Module ID: 12134
+// Function ID: 12135
 // Name: xl
-// Dependencies: [19, 17, 1371, 9408, 1482, 1074, 21, 576, 4560, 4296, 504, 12051, 4262, 8132, 12056, 9289, 8856, 12131, 4556, 1178, 8097, 4504, 1242, 7190, 12132, 4258, 1114, 12133, 2]
+// Dependencies: [19, 17, 1371, 9413, 1482, 1074, 21, 576, 4560, 4296, 504, 12055, 4262, 8132, 12060, 9294, 8861, 12135, 4556, 1178, 8097, 4504, 1242, 7190, 12136, 4258, 1114, 12137, 2]
 // Exports: default
 
-// Module 12130 (xl)
+// Module 12134 (xl)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import hasFetchedColorsDefault from "hasFetchedColors" /* 8132 */;
-import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 12131 */;
+import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 12135 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "handleDismissWithDismissed" /* 9408 */;
+import closure_5 from "handleDismissWithDismissed" /* 9413 */;
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -56,7 +56,7 @@ export default function Header(application) {
   const tmp3 = callback3();
   let appLauncherIconSource = null;
   if (null != application) {
-    let tmpResult = tmp(12051);
+    let tmpResult = tmp(12055);
     appLauncherIconSource = tmpResult.getAppLauncherIconSource(application);
   }
   tmpResult = tmp(4262);
@@ -77,7 +77,7 @@ export default function Header(application) {
     obj = { iconSource: null, iconBorderRadius: null, iconSize: 72 };
     obj[0] = appLauncherIconSource;
     obj[1] = xl;
-    let tmp12 = callback(tmp5(12056), obj);
+    let tmp12 = callback(tmp5(12060), obj);
     let tmp13 = callback;
   } else {
     obj = { style: null };
@@ -144,16 +144,16 @@ export default function Header(application) {
   let str2 = "";
   const animatedStyle3 = tmpResult4.useAnimatedStyle(fn4);
   if (null != application) {
-    str2 = tmp(9289).getSectionName(application);
-    const tmpResult5 = tmp(9289);
+    str2 = tmp(9294).getSectionName(application);
+    const tmpResult5 = tmp(9294);
   }
   let hasApplicationFlagResult = null != application;
   if (hasApplicationFlagResult) {
     hasApplicationFlagResult = "flags" in application;
   }
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = tmp(8856).hasApplicationFlag(application, constants.EMBEDDED);
-    const tmpResult6 = tmp(8856);
+    hasApplicationFlagResult = tmp(8861).hasApplicationFlag(application, constants.EMBEDDED);
+    const tmpResult6 = tmp(8861);
   }
   dependencyMap = hasApplicationFlagResult;
   currentUser2 = currentUser.getCurrentUser();
@@ -211,11 +211,11 @@ export default function Header(application) {
       const obj12 = { application: null, onAddAppMenuClick: null };
       obj12[0] = application;
       obj12[1] = onAddAppMenuClick;
-      items7[1] = tmp13(tmp5(12133), obj12);
+      items7[1] = tmp13(tmp5(12137), obj12);
       obj10[1] = items7;
       tmp22Result = tmp22(tmp23, obj10);
     }
-    tmpResult7 = tmp(9289);
+    tmpResult7 = tmp(9294);
   }
   items3[2] = tmp22Result;
   obj5[2] = items3;

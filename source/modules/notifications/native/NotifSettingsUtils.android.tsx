@@ -1,14 +1,14 @@
-// Module ID: 14448
-// Function ID: 14449
+// Module ID: 14451
+// Function ID: 14452
 // Name: inferImportanceFromBehavior
-// Dependencies: [14444, 1114, 14449, 14450, 1232, 2]
+// Dependencies: [14447, 1114, 14452, 14453, 1232, 2]
 
-// Module 14448 (inferImportanceFromBehavior)
+// Module 14451 (inferImportanceFromBehavior)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import _modDef1232 from "module_1232" /* 1232 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 14449 */;
-import items2 from "items2" /* 14444 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 14452 */;
+import items2 from "items2" /* 14447 */;
 
 function inferImportanceFromBehavior(visibility) {
   if (!("ringtone" in visibility)) {
@@ -58,7 +58,7 @@ function formatSetting(item10022, arg1) {
   }
 }
 function buildChannelsAndMapping() {
-  let obj = map(14450);
+  let obj = map(14453);
   const assignedNotifSettingsAndMappings = obj.getAssignedNotifSettingsAndMappings();
   ({ settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = (function computeInheritedImportances(mappings) {

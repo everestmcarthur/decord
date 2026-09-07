@@ -1,10 +1,10 @@
-// Module ID: 10230
-// Function ID: 10231
+// Module ID: 10235
+// Function ID: 10236
 // Name: PromoSheet
-// Dependencies: [109, 19, 17, 21, 4560, 576, 10231, 7150, 4973, 10232, 4556, 2]
+// Dependencies: [109, 19, 17, 21, 4560, 576, 10236, 7150, 4973, 10237, 4556, 2]
 // Exports: PromoSheet
 
-// Module 10230 (PromoSheet)
+// Module 10235 (PromoSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "noop" /* 19 */;
@@ -42,7 +42,7 @@ export const PromoSheet = function PromoSheet(arg0) {
     obj = {};
     const merged1 = Object.assign(graphic);
     obj.style = tmp2.graphic;
-    let tmp4Result = tmp4(tmp5(10232).Graphic, obj);
+    let tmp4Result = tmp4(tmp5(10237).Graphic, obj);
   } else {
     tmp4Result = null;
     if (null != illustration) {

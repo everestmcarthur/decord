@@ -1,25 +1,25 @@
-// Module ID: 16586
-// Function ID: 16587
+// Module ID: 16589
+// Function ID: 16590
 // Name: newMessage
-// Dependencies: [32, 109, 7537, 10081, 2011, 4381, 5279, 16587, 1074, 1964, 1114, 3547, 16588, 1935, 9902, 504, 573, 2]
+// Dependencies: [32, 109, 7537, 10086, 2011, 4381, 5279, 16590, 1074, 1964, 1114, 3547, 16591, 1935, 9907, 504, 573, 2]
 // Exports: getOlderHistoryCursor, turnSettled
 
-// Module 16586 (newMessage)
+// Module 16589 (newMessage)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import messagesProxyDefault from "messagesProxy" /* 3547 */;
-import createSoundForPack from "createSoundForPack" /* 9902 */;
-import _modDef16588 from "module_16588" /* 16588 */;
+import createSoundForPack from "createSoundForPack" /* 9907 */;
+import _modDef16591 from "module_16591" /* 16591 */;
 import closure_6 from "_slicedToArray" /* 32 */;
 import closure_7 from "_objectWithoutProperties" /* 109 */;
 import closure_8 from "freshTeenActivityWithMap" /* 7537 */;
-import closure_9 from "DesktopNotificationTypes" /* 10081 */;
+import closure_9 from "DesktopNotificationTypes" /* 10086 */;
 import closure_10 from "handleConnectionOpen" /* 2011 */;
 import closure_11 from "handleConnectionOpen" /* 4381 */;
 import closure_12 from "filterPlayingActivities" /* 5279 */;
-import closure_13 from "isProjectOwner" /* 16587 */;
+import closure_13 from "isProjectOwner" /* 16590 */;
 import ME from "ME" /* 1074 */;
 import { StaticChannelRoute } from "set" /* 1964 */;
 import set from "set" /* 2 */;
@@ -333,7 +333,7 @@ function recordThinkingTransition(projectId) {
       }
       const project = store.getProject(projectId);
       if (null != project) {
-        result = _modDef16588.areTurnNotificationsDisabled();
+        result = _modDef16591.areTurnNotificationsDisabled();
         if (!result) {
           result = status.getStatus() === constants.DND;
         }
@@ -359,8 +359,8 @@ function recordThinkingTransition(projectId) {
             isWindowFocusedResult = channelId.getChannelId() === StaticChannelRoute.VIBEGRATIONS;
           }
           if (isWindowFocusedResult) {
-            isWindowFocusedResult = tmp68(16588).isWindowFocused();
-            const tmp68Result = tmp68(16588);
+            isWindowFocusedResult = tmp68(16591).isWindowFocused();
+            const tmp68Result = tmp68(16591);
           }
           if (guild_id == null) {
             guild_id = project.guild_id;
@@ -450,12 +450,12 @@ function recordThinkingTransition(projectId) {
                 tmp58 = bit_message1;
               }
               obj[5] = tmp58;
-              const result3 = _modDef16588.presentTurnNotification(obj);
-              const obj7 = _modDef16588;
+              const result3 = _modDef16591.presentTurnNotification(obj);
+              const obj7 = _modDef16591;
             }
           }
         }
-        const obj10 = _modDef16588;
+        const obj10 = _modDef16591;
         tmp68 = importDefault;
       }
       obj5 = store;

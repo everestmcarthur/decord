@@ -1,17 +1,15 @@
 // Module ID: 8495
 // Function ID: 8496
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 8469, 8492]
+// Dependencies: [42, 41, 93, 95, 98, 19]
 
 // Module 8495 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8492 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import FilterPrimitive from "_classCallCheck" /* 41 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
-const FeComponentTransfer = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,39 +29,40 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeComponentTransfer {
+class FilterPrimitive {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeComponentTransfer);
-    tmp2 = closure_4;
-    obj = closure_4(FeComponentTransfer);
-    tmp3 = closure_3;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = FilterPrimitive(this, closure_0);
+    items1 = [...items];
+    tmp2 = closure_2;
+    obj = closure_2(closure_0);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.root = null;
+    tmp3Result.refMethod = (root) => {
+      closure_0.root = root;
+    };
+    tmp3Result.setNativeProps = (arg0) => {
+      root = root.root;
+      if (root != null) {
+        root.setNativeProps(arg0);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inheritsDefault(FeComponentTransfer, _isNativeReflectConstructDefault);
-let obj = {
-  key: "render",
-  value: function render() {
-    const result = FeComponentTransfer(8469).warnUnimplementedFilter();
-    return null;
-  }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeComponentTransfer, items);
-importDefaultResultResult.displayName = "FeComponentTransfer";
-obj = {};
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = obj;
+_inheritsDefault(FilterPrimitive, require("noop").Component);
+const importDefaultResultResult = importDefaultResult(FilterPrimitive);
+importDefaultResultResult.defaultPrimitiveProps = {};
 
 export default importDefaultResultResult;

@@ -1,10 +1,10 @@
-// Module ID: 10090
-// Function ID: 10091
+// Module ID: 10095
+// Function ID: 10096
 // Name: useFocusModeEnabled
-// Dependencies: [5279, 4212, 1074, 1935, 1940, 1218, 1242, 4904, 1114, 10091, 2]
+// Dependencies: [5279, 4212, 1074, 1935, 1940, 1218, 1242, 4904, 1114, 10096, 2]
 // Exports: getFocusModeEnabled, setFocusMode, useFocusModeEnabled
 
-// Module 10090 (useFocusModeEnabled)
+// Module 10095 (useFocusModeEnabled)
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import setDefault from "set" /* 4904 */;

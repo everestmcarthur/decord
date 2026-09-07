@@ -1,11 +1,11 @@
-// Module ID: 9024
-// Function ID: 9025
+// Module ID: 9029
+// Function ID: 9030
 // Name: fetchStore
-// Dependencies: [5, 9023, 1074, 573, 1272, 504, 2]
+// Dependencies: [5, 9028, 1074, 573, 1272, 504, 2]
 
-// Module 9024 (fetchStore)
+// Module 9029 (fetchStore)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import importDefaultResult from "map" /* 9023 */;
+import importDefaultResult from "map" /* 9028 */;
 import ME from "ME" /* 1074 */;
 import initialize from "initialize" /* 504 */;
 

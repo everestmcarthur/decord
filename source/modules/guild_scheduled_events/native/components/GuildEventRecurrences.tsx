@@ -1,12 +1,12 @@
-// Module ID: 9796
-// Function ID: 9797
+// Module ID: 9801
+// Function ID: 9802
 // Name: GuildEventRecurrences
-// Dependencies: [19, 17, 21, 4560, 576, 9797, 4556, 1114, 11, 9799, 4975, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 9802, 4556, 1114, 11, 9804, 4975, 2]
 // Exports: default
 
-// Module 9796 (GuildEventRecurrences)
+// Module 9801 (GuildEventRecurrences)
 import ThemesDefault from "Themes" /* 576 */;
-import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9797 */;
+import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9802 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

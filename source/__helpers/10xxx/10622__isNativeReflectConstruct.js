@@ -1,18 +1,17 @@
 // Module ID: 10622
 // Function ID: 10623
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 10620, 10434, 10435, 10439]
+// Dependencies: [41, 42, 93, 95, 98, 10606, 10439, 10440, 10456]
 
 // Module 10622 (_isNativeReflectConstruct)
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10439 */;
-import WEEKDAY_DICTIONARY from "WEEKDAY_DICTIONARY" /* 10620 */;
+import Filter from "Filter" /* 10456 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const SVTimeUnitCasualRelativeFormatParser = require;
+const ENMergeRelativeDateRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,58 +31,80 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" + WEEKDAY_DICTIONARY.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
-const regExp1 = new RegExp("(denna|den h\u00E4r|f\u00F6rra|passerade|n\u00E4sta|kommande|efter|\\+|-)\\s*(" + WEEKDAY_DICTIONARY.TIME_UNITS_NO_ABBR_PATTERN + ")(?=\\W|$)", "i");
-class SVTimeUnitCasualRelativeFormatParser {
+class ENMergeRelativeDateRefiner {
   constructor() {
-    flag = global;
-    if (global === undefined) {
-      flag = true;
-    }
     self = this;
-    tmp = closure_2(this, SVTimeUnitCasualRelativeFormatParser);
+    tmp = closure_2(this, ENMergeRelativeDateRefiner);
     tmp2 = closure_4;
-    obj = closure_4(SVTimeUnitCasualRelativeFormatParser);
+    obj = closure_4(ENMergeRelativeDateRefiner);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.allowAbbreviations = flag;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(SVTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENMergeRelativeDateRefiner, Filter.MergingRefiner);
 const items = [
   {
-    key: "innerPattern",
-    value: function innerPattern() {
-      return this.allowAbbreviations ? regExp : regExp1;
+    key: "patternBetween",
+    value: function patternBetween() {
+      return /^\s*$/i;
     }
   },
   {
-    key: "innerExtract",
-    value: function innerExtract(reference) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = SVTimeUnitCasualRelativeFormatParser(10620).parseDuration(arg1[2]);
-      if (parseDurationResult) {
-        if ("f\u00F6rra" !== formatted) {
-          if ("passerade" !== formatted) {
-            let reverseDurationResult = parseDurationResult;
-          }
-          const ParsingComponents = tmp2(10435).ParsingComponents;
-          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+    key: "shouldMergeResults",
+    value: function shouldMergeResults(str, text, start) {
+      let match = str.match(this.patternBetween());
+      if (match) {
+        const tmp4 = null != text.text.match(/\s+(prima|dal)$/i);
+        let tmp5 = !tmp4;
+        if (!tmp4) {
+          tmp5 = null == text.text.match(/\s+(dopo|dal|fino)$/i);
+          const str2 = text.text;
         }
-        reverseDurationResult = tmp2(10434).reverseDuration(parseDurationResult);
-      } else {
-        return null;
+        let tmp6 = !tmp5;
+        if (!tmp5) {
+          start = start.start;
+          let value = start.get("day");
+          if (value) {
+            const start2 = start.start;
+            value = start2.get("month");
+          }
+          if (value) {
+            const start3 = start.start;
+            value = start3.get("year");
+          }
+          tmp6 = value;
+        }
+        match = tmp6;
+        str = text.text;
       }
+      return match;
+    }
+  },
+  {
+    key: "mergeResults",
+    value: function mergeResults(arg0, text, start) {
+      const parseDurationResult = ENMergeRelativeDateRefiner(10606).parseDuration(text.text);
+      let reverseDurationResult = parseDurationResult;
+      if (null != str.match(/\s+(prima|dal)$/i)) {
+        reverseDurationResult = tmp(10439).reverseDuration(parseDurationResult);
+      }
+      const ParsingComponents = tmp(10440).ParsingComponents;
+      const ReferenceWithTimezone = tmp(10440).ReferenceWithTimezone;
+      start = start.start;
+      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
+      return new ENMergeRelativeDateRefiner(10440).ParsingResult(start.reference, text.index, "" + text.text + arg0 + start.text, relativeFromReference);
     }
   }
 ];
 
-export default _createClass(SVTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(ENMergeRelativeDateRefiner, items);

@@ -1,12 +1,12 @@
-// Module ID: 9808
-// Function ID: 9809
+// Module ID: 9813
+// Function ID: 9814
 // Name: GuildEventCardControls
-// Dependencies: [19, 17, 4583, 7526, 1963, 21, 4560, 576, 9772, 5433, 504, 9704, 5607, 8410, 9796, 2]
+// Dependencies: [19, 17, 4583, 7526, 1963, 21, 4560, 576, 9777, 5433, 504, 9709, 5607, 8410, 9801, 2]
 
-// Module 9808 (GuildEventCardControls)
+// Module 9813 (GuildEventCardControls)
 import ThemesDefault from "Themes" /* 576 */;
 import ButtonGroup from "ButtonGroup" /* 5433 */;
-import usePrimaryActionButtonType from "usePrimaryActionButtonType" /* 9772 */;
+import usePrimaryActionButtonType from "usePrimaryActionButtonType" /* 9777 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "createRTCConnection" /* 4583 */;
 import { isGuildScheduledEventActive as closure_5 } from "scheduledEventSort" /* 7526 */;
@@ -26,7 +26,7 @@ function GuildEventCardControls(onCloseAction) {
   if (tmp6Result) {
     obj = { event: null };
     obj[0] = event;
-    tmp6Result = tmp6(tmp2(9772).GuildEventCardRSVPAction, obj);
+    tmp6Result = tmp6(tmp2(9777).GuildEventCardRSVPAction, obj);
   }
   items[1] = tmp6Result;
   items[2] = callback2(usePrimaryActionButtonType.GuildEventShareAction, { event });

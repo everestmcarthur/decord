@@ -1,15 +1,15 @@
-// Module ID: 9659
-// Function ID: 9660
+// Module ID: 9664
+// Function ID: 9665
 // Name: ModeratorViewOverlay
-// Dependencies: [32, 19, 17, 1085, 21, 9660, 4296, 4974, 576, 9661, 9940, 9674, 9471, 9470, 9941, 9622, 4761, 9944, 10013, 4271, 9474, 10021, 10022, 9677, 10027, 10037, 10041, 10073, 10074, 4560, 10075, 9898, 2]
+// Dependencies: [32, 19, 17, 1085, 21, 9665, 4296, 4974, 576, 9666, 9945, 9679, 9476, 9475, 9946, 9627, 4761, 9949, 10018, 4271, 9479, 10026, 10027, 9682, 10032, 10042, 10046, 10078, 10079, 4560, 10080, 9903, 2]
 // Exports: default
 
-// Module 9659 (ModeratorViewOverlay)
+// Module 9664 (ModeratorViewOverlay)
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;
-import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 9898 */;
-import JoinStageViewDefault from "JoinStageView" /* 9940 */;
-import RootThemeContextProvider from "RootThemeContextProvider" /* 10075 */;
+import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 9903 */;
+import JoinStageViewDefault from "JoinStageView" /* 9945 */;
+import RootThemeContextProvider from "RootThemeContextProvider" /* 10080 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

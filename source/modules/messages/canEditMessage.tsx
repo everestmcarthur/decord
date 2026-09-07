@@ -1,10 +1,10 @@
-// Module ID: 11746
-// Function ID: 11747
+// Module ID: 11751
+// Function ID: 11752
 // Name: canEditMessage
 // Dependencies: [1074, 7270, 4783, 7302, 2]
 // Exports: default
 
-// Module 11746 (canEditMessage)
+// Module 11751 (canEditMessage)
 import set from "set" /* 2 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7270 */;

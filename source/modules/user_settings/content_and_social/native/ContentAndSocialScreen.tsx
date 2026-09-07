@@ -1,14 +1,14 @@
-// Module ID: 15867
-// Function ID: 15868
+// Module ID: 15870
+// Function ID: 15871
 // Name: ContentAndSocialSettings
-// Dependencies: [32, 19, 17, 7975, 1074, 21, 4560, 576, 1114, 2024, 15868, 12680, 15871, 7301, 11468, 14815, 14689, 15872, 4556, 2]
+// Dependencies: [32, 19, 17, 7975, 1074, 21, 4560, 576, 1114, 2024, 15871, 12684, 15874, 7301, 11473, 14818, 14692, 15875, 4556, 2]
 // Exports: ConnectedGamesPage, DiscordPermissionsPage, default
 
-// Module 15867 (ContentAndSocialSettings)
+// Module 15870 (ContentAndSocialSettings)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15872 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15875 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -212,7 +212,7 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
   } else {
     obj = { node: null };
     obj[0] = tmp5;
-    tmp7 = callback2(tmp2(14689), obj);
+    tmp7 = callback2(tmp2(14692), obj);
   }
   return tmp7;
 };

@@ -1,10 +1,10 @@
-// Module ID: 14998
-// Function ID: 14999
+// Module ID: 15001
+// Function ID: 15002
 // Name: FilterFooter
-// Dependencies: [32, 19, 17, 5444, 21, 4560, 576, 7123, 5433, 4975, 1114, 4962, 4411, 4527, 11483, 7150, 7149, 6627, 4973, 5685, 5688, 5687, 5604, 11295, 2]
+// Dependencies: [32, 19, 17, 5444, 21, 4560, 576, 7123, 5433, 4975, 1114, 4962, 4411, 4527, 11488, 7150, 7149, 6627, 4973, 5685, 5688, 5687, 5604, 11300, 2]
 // Exports: default
 
-// Module 14998 (FilterFooter)
+// Module 15001 (FilterFooter)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 4975 */;

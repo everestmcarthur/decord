@@ -1,10 +1,10 @@
-// Module ID: 10275
-// Function ID: 10276
+// Module ID: 10280
+// Function ID: 10281
 // Name: PortalKeyboardFooterIOS
 // Dependencies: [19, 21, 4560, 576, 1611, 1625, 4427, 4296, 1609, 1093, 4432, 2]
 // Exports: default
 
-// Module 10275 (PortalKeyboardFooterIOS)
+// Module 10280 (PortalKeyboardFooterIOS)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

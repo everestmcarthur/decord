@@ -1,11 +1,11 @@
-// Module ID: 15744
-// Function ID: 15745
+// Module ID: 15747
+// Function ID: 15748
 // Name: getSortedDevToolsScreens
-// Dependencies: [32, 7719, 15578, 15574, 504, 2]
+// Dependencies: [32, 7719, 15581, 15577, 504, 2]
 // Exports: default, updateSortOrder
 
-// Module 15744 (getSortedDevToolsScreens)
-import updateDevToolsSettings from "updateDevToolsSettings" /* 15574 */;
+// Module 15747 (getSortedDevToolsScreens)
+import updateDevToolsSettings from "updateDevToolsSettings" /* 15577 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "initialize" /* 7719 */;
 
@@ -15,7 +15,7 @@ function getSortedDevToolsScreens() {
   {
     sortedScreenKeys = closure_3.sortedScreenKeys;
   }
-  const entries = Object.entries(sortedScreenKeys(15578).DevToolsScreens);
+  const entries = Object.entries(sortedScreenKeys(15581).DevToolsScreens);
   const found = entries.filter((arg0) => {
     [, obj] = arg0;
     return null == obj.predicate || obj.predicate();
@@ -50,7 +50,7 @@ export default function useSortedDevToolsScreens() {
   if (sortedScreenKeys === undefined) {
     sortedScreenKeys = closure_3.sortedScreenKeys;
   }
-  const entries = Object.entries(sortedScreenKeys(15578).DevToolsScreens);
+  const entries = Object.entries(sortedScreenKeys(15581).DevToolsScreens);
   const found = entries.filter((arg0) => {
     [, obj] = arg0;
     return null == obj.predicate || obj.predicate();

@@ -1,10 +1,10 @@
-// Module ID: 16970
-// Function ID: 16971
+// Module ID: 16973
+// Function ID: 16974
 // Name: SimpleGuild
-// Dependencies: [19, 17, 1975, 7636, 1979, 1074, 21, 4560, 5584, 16971, 504, 16972, 16974, 1114, 16333, 5071, 576, 16973, 2]
+// Dependencies: [19, 17, 1975, 7636, 1979, 1074, 21, 4560, 5584, 16974, 504, 16975, 16977, 1114, 16336, 5071, 576, 16976, 2]
 // Exports: default
 
-// Module 16970 (SimpleGuild)
+// Module 16973 (SimpleGuild)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { getGuildIconSource } from "GuildNSFWContentLevel" /* 1975 */;

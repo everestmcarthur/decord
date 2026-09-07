@@ -1,16 +1,16 @@
-// Module ID: 13353
-// Function ID: 13354
+// Module ID: 13357
+// Function ID: 13358
 // Name: fetchActivePromotions
-// Dependencies: [5, 2025, 10666, 1371, 10665, 1373, 1074, 573, 13354, 1272, 7400, 1940, 1218, 13355, 2]
+// Dependencies: [5, 2025, 10671, 1371, 10670, 1373, 1074, 573, 13358, 1272, 7400, 1940, 1218, 13359, 2]
 // Exports: addClaimedOutboundPromotionCode, clearActivePromotions, dismissOutboundPromotionNotice, fetchActiveBogoPromotion, fetchClaimedOutboundPromotionCodes, maybeFetchActivePromotions
 
-// Module 13353 (fetchActivePromotions)
+// Module 13357 (fetchActivePromotions)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_getSystemLocale" /* 2025 */;
-import closure_5 from "createFromServer" /* 10666 */;
+import closure_5 from "createFromServer" /* 10671 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import closure_7 from "createEmptyPromotionsByType" /* 10665 */;
+import closure_7 from "createEmptyPromotionsByType" /* 10670 */;
 import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "GuildFeatures" /* 1373 */;
 import { Endpoints } from "ME" /* 1074 */;
 
@@ -256,7 +256,7 @@ function _fetchClaimedOutboundPromotionCodes() {
       throw arg1;
     } else if (arg0 !== 2) {
       const body = arg1.body;
-      callback = body.map(callback(13355).claimedOutboundPromotionCodeFromServer);
+      callback = body.map(callback(13359).claimedOutboundPromotionCodeFromServer);
       const obj = callback2(573);
       const obj4 = { type: "CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS", claimedOutboundPromotionCodes: null };
       obj4[1] = callback;

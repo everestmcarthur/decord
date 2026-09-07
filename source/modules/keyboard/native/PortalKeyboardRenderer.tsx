@@ -1,12 +1,12 @@
-// Module ID: 16756
-// Function ID: 16757
+// Module ID: 16759
+// Function ID: 16760
 // Name: transitionGroupGetItemKey
-// Dependencies: [19, 1479, 21, 4271, 4427, 1609, 1115, 16757, 4428, 4418, 7221, 10089, 1481, 4431, 10322, 2]
+// Dependencies: [19, 1479, 21, 4271, 4427, 1609, 1115, 16760, 4428, 4418, 7221, 10094, 1481, 4431, 10327, 2]
 // Exports: PortalKeyboardRenderer
 
-// Module 16756 (transitionGroupGetItemKey)
+// Module 16759 (transitionGroupGetItemKey)
 import ManaContext from "ManaContext" /* 4271 */;
-import _modDef16757 from "module_16757" /* 16757 */;
+import _modDef16760 from "module_16760" /* 16760 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "subscribeToKeyboardUIStore" /* 1479 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -33,7 +33,7 @@ function transitionGroupRenderItem(arg0, arg1, arg2, arg3) {
     obj[0] = arg1;
     obj[1] = arg2;
     obj[2] = arg3;
-    tmp5 = jsx(_modDef16757, { item: null, state: null, cleanUp: null }, arg0);
+    tmp5 = jsx(_modDef16760, { item: null, state: null, cleanUp: null }, arg0);
   }
   return tmp5;
 }
@@ -131,7 +131,7 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
   } else {
     obj1 = { value: true, children: null };
     obj1[1] = tmp11;
-    tmp10Result = tmp10(tmp5(10322).PortalKeyboardInModalContext.Provider, obj1);
+    tmp10Result = tmp10(tmp5(10327).PortalKeyboardInModalContext.Provider, obj1);
   }
   return tmp10Result;
 };

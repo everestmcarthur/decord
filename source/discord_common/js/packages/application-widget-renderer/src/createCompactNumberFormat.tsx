@@ -1,10 +1,10 @@
-// Module ID: 8927
-// Function ID: 8928
+// Module ID: 8932
+// Function ID: 8933
 // Name: toAsciiDigits
 // Dependencies: [2]
 // Exports: createCompactNumberFormat
 
-// Module 8927 (toAsciiDigits)
+// Module 8932 (toAsciiDigits)
 import set from "set" /* 2 */;
 
 function toAsciiDigits(arg0, get) {

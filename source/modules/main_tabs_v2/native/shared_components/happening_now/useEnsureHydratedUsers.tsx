@@ -1,10 +1,10 @@
-// Module ID: 16088
-// Function ID: 16089
+// Module ID: 16091
+// Function ID: 16092
 // Name: useEnsureHydratedUsers
 // Dependencies: [19, 5426, 1371, 7311, 2]
 // Exports: useEnsureHydratedUsers
 
-// Module 16088 (useEnsureHydratedUsers)
+// Module 16091 (useEnsureHydratedUsers)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "handleConnectionReset" /* 5426 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;

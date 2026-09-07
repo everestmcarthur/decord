@@ -1,15 +1,15 @@
-// Module ID: 16289
-// Function ID: 16290
+// Module ID: 16292
+// Function ID: 16293
 // Name: GuildFolderSettingsScene
-// Dependencies: [32, 19, 17, 5438, 16290, 21, 4560, 9358, 6981, 4527, 16291, 1896, 576, 4973, 6606, 1114, 5687, 5605, 1091, 14597, 5624, 504, 16288, 7000, 2]
+// Dependencies: [32, 19, 17, 5438, 16293, 21, 4560, 9363, 6981, 4527, 16294, 1896, 576, 4973, 6606, 1114, 5687, 5605, 1091, 14600, 5624, 504, 16291, 7000, 2]
 // Exports: default
 
-// Module 16289 (GuildFolderSettingsScene)
+// Module 16292 (GuildFolderSettingsScene)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "insertUnsortedGuilds" /* 5438 */;
-import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 16290 */;
+import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 16293 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -46,7 +46,7 @@ function GuildFolderSettingsScene(color) {
   obj3[0] = intl3.string(color(1114).t.xpurRF);
   obj3[1] = color(1091).int2hex(color);
   obj3[2] = callback;
-  obj3[4] = callback(onColorChange(14597), { color, style: tmp.colorBlock });
+  obj3[4] = callback(onColorChange(14600), { color, style: tmp.colorBlock });
   obj2[1] = callback(color(5605).TableRow, obj3);
   items1[1] = callback(color(5687).TableRowGroup, obj2);
   obj[1] = items1;
@@ -101,7 +101,7 @@ export default function GuildFolderSettingsModal(folderId) {
   callback = obj2.useCallback(() => {
     dependencyMap = first1;
     const guildFolders = callback1.getGuildFolders();
-    folderId(9358).saveGuildFolders(guildFolders.map((folderId) => {
+    folderId(9363).saveGuildFolders(guildFolders.map((folderId) => {
       let tmp = folderId;
       if (folderId.folderId === closure_0) {
         const obj = {};
@@ -112,11 +112,11 @@ export default function GuildFolderSettingsModal(folderId) {
       }
       return tmp;
     }));
-    let obj = folderId(9358);
-    const result = folderId(16288).hideGuildsBarFolderModal();
+    let obj = folderId(9363);
+    const result = folderId(16291).hideGuildsBarFolderModal();
   }, items2);
   callback1 = obj2.useCallback(() => {
-    const result = folderId(16288).hideGuildsBarFolderModal();
+    const result = folderId(16291).hideGuildsBarFolderModal();
   }, []);
   const items3 = [first1, first, first !== initialFolderName || first1 !== initialFolderColor, callback, callback1];
   const memo = obj2.useMemo(() => {

@@ -1,10 +1,10 @@
-// Module ID: 11256
-// Function ID: 11257
+// Module ID: 11261
+// Function ID: 11262
 // Name: useReactors
-// Dependencies: [32, 19, 17, 4552, 1957, 2021, 7762, 4199, 1074, 21, 4296, 4556, 4560, 576, 504, 4211, 1332, 7763, 7764, 5598, 12, 7162, 11257, 4712, 4404, 8179, 7137, 1178, 1396, 9803, 1115, 5680, 8599, 11258, 1114, 11259, 4409, 1935, 7130, 11260, 4561, 1477, 4518, 4527, 11261, 1896, 7209, 7189, 11262, 4528, 4529, 1611, 8232, 7150, 6627, 510, 7269, 7784, 7825, 11263, 7072, 2]
+// Dependencies: [32, 19, 17, 4552, 1957, 2021, 7762, 4199, 1074, 21, 4296, 4556, 4560, 576, 504, 4211, 1332, 7763, 7764, 5598, 12, 7162, 11262, 4712, 4404, 8179, 7137, 1178, 1396, 9808, 1115, 5680, 8604, 11263, 1114, 11264, 4409, 1935, 7130, 11265, 4561, 1477, 4518, 4527, 11266, 1896, 7209, 7189, 11267, 4528, 4529, 1611, 8232, 7150, 6627, 510, 7269, 7784, 7825, 11268, 7072, 2]
 // Exports: MessageReactionsContent, MessageReactionsEmpty
 
-// Module 11256 (useReactors)
+// Module 11261 (useReactors)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
@@ -15,7 +15,7 @@ import BottomSheetModal from "BottomSheetModal" /* 6627 */;
 import EmojiDefault from "Emoji" /* 7130 */;
 import Background from "Background" /* 7150 */;
 import getNoResultsSource from "getNoResultsSource" /* 8232 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 11259 */;
+import useEmojiColorPalette from "useEmojiColorPalette" /* 11264 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -316,7 +316,7 @@ function EmojiOptionsButton(channelId) {
   const items = [closure_11];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_11.getChannel(channelId), items1);
-  const tmp3 = messageId(11260)(stateFromStores);
+  const tmp3 = messageId(11265)(stateFromStores);
   closure_2 = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
@@ -363,11 +363,11 @@ function ReactionTabs(setReactionSelectedIndex) {
     initialNumTabsToRender: reactionSelectedIndex(4211).MAX_REACTIONS
   };
   ({ tab: obj3[1], tabActive: obj3[2], tabSelected: obj3[3] } = tmp);
-  const items = [callback2(setReactionSelectedIndex(11262), obj), callback2(setReactionSelectedIndex(8599), { outer: true }), ];
+  const items = [callback2(setReactionSelectedIndex(11267), obj), callback2(setReactionSelectedIndex(8604), { outer: true }), ];
   obj1 = { style: tmp.removeButtonContainer, children: null };
   const obj2 = { style: tmp.emojiTextIdentifier, variant: "eyebrow", color: "text-default", children: null };
   const tmp4 = callback2;
-  const tmp5 = setReactionSelectedIndex(11262);
+  const tmp5 = setReactionSelectedIndex(11267);
   obj2[3] = reactionSelectedIndex(4211).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
   const items1 = [callback2(reactionSelectedIndex(4556).Text, obj2), ];
   const obj3 = {};

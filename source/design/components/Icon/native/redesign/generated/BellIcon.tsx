@@ -1,10 +1,10 @@
-// Module ID: 9776
-// Function ID: 9777
+// Module ID: 9781
+// Function ID: 9782
 // Name: BellIcon
 // Dependencies: [19, 21, 576, 4261, 7949, 2]
 // Exports: BellIcon
 
-// Module 9776 (BellIcon)
+// Module 9781 (BellIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;

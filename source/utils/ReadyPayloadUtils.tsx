@@ -1,10 +1,10 @@
-// Module ID: 13678
-// Function ID: 13679
+// Module ID: 13682
+// Function ID: 13683
 // Name: hydrateGuild
 // Dependencies: [1961, 1986, 7649, 7653, 2007, 7654, 2003, 12, 38, 2]
 // Exports: hydrateInitialGuild, hydrateReadyPayloadPrioritized, hydrateReadySupplementalPayload, preloadReadyPayloadData
 
-// Module 13678 (hydrateGuild)
+// Module 13682 (hydrateGuild)
 import set2 from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1961 */;
 import itemsDefault from "items" /* 1986 */;

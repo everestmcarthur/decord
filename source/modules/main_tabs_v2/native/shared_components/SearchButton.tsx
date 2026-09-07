@@ -1,10 +1,10 @@
-// Module ID: 12370
-// Function ID: 12371
+// Module ID: 12374
+// Function ID: 12375
 // Name: SEARCH_BAR_HEIGHT
 // Dependencies: [19, 17, 21, 4560, 576, 7051, 4556, 1114, 2]
 // Exports: SearchButtonContent
 
-// Module 12370 (SEARCH_BAR_HEIGHT)
+// Module 12374 (SEARCH_BAR_HEIGHT)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

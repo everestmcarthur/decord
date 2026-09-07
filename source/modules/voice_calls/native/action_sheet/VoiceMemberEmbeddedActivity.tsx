@@ -1,10 +1,10 @@
-// Module ID: 13785
-// Function ID: 13786
+// Module ID: 13788
+// Function ID: 13789
 // Name: XSMALL
-// Dependencies: [32, 19, 17, 1956, 1957, 1371, 1182, 7151, 21, 1178, 4560, 576, 7168, 1369, 504, 4189, 9531, 1477, 5033, 9530, 5123, 1114, 4556, 9651, 4976, 2]
+// Dependencies: [32, 19, 17, 1956, 1957, 1371, 1182, 7151, 21, 1178, 4560, 576, 7168, 1369, 504, 4189, 9536, 1477, 5033, 9535, 5123, 1114, 4556, 9656, 4976, 2]
 // Exports: calculateActivityRowHeight, default
 
-// Module 13785 (XSMALL)
+// Module 13788 (XSMALL)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;

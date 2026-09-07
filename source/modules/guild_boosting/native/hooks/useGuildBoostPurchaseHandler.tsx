@@ -1,10 +1,10 @@
-// Module ID: 12538
-// Function ID: 12539
+// Module ID: 12542
+// Function ID: 12543
 // Name: useGuildBoostPurchaseHandler
-// Dependencies: [5, 19, 1074, 3, 7406, 10663, 7405, 1242, 4905, 1114, 5434, 2]
+// Dependencies: [5, 19, 1074, 3, 7406, 10668, 7405, 1242, 4905, 1114, 5434, 2]
 // Exports: default
 
-// Module 12538 (useGuildBoostPurchaseHandler)
+// Module 12542 (useGuildBoostPurchaseHandler)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;

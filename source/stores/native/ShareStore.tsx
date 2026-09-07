@@ -1,9 +1,9 @@
-// Module ID: 14395
-// Function ID: 14396
+// Module ID: 14398
+// Function ID: 14399
 // Name: handleTokenUpdated
 // Dependencies: [502, 1957, 1979, 2011, 4381, 1371, 1074, 1369, 8362, 1250, 1242, 504, 573, 2]
 
-// Module 14395 (handleTokenUpdated)
+// Module 14398 (handleTokenUpdated)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

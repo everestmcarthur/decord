@@ -1,21 +1,21 @@
-// Module ID: 8797
-// Function ID: 8798
+// Module ID: 8802
+// Function ID: 8803
 // Name: BundleStaticPreviewContent
-// Dependencies: [19, 17, 8798, 21, 5587, 4560, 576, 38, 1889, 1886, 8799, 8810, 8817, 1178, 2]
+// Dependencies: [19, 17, 8803, 21, 5587, 4560, 576, 38, 1889, 1886, 8804, 8815, 8822, 1178, 2]
 // Exports: default
 
-// Module 8797 (BundleStaticPreviewContent)
+// Module 8802 (BundleStaticPreviewContent)
 import noopAll from "noop" /* 19 */;
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getNameplateData from "getNameplateData" /* 1886 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import preloadDefault from "preload" /* 5587 */;
-import ProfileEffectSampleDefault from "ProfileEffectSample" /* 8799 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8810 */;
-import NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG from "NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG" /* 8817 */;
+import ProfileEffectSampleDefault from "ProfileEffectSample" /* 8804 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8815 */;
+import NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG from "NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG" /* 8822 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { BUNDLE_PREVIEW_CONFIG } from "SAMPLE_PROFILE_ASPECT_RATIO" /* 8798 */;
+import { BUNDLE_PREVIEW_CONFIG } from "SAMPLE_PROFILE_ASPECT_RATIO" /* 8803 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

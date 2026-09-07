@@ -1,7 +1,7 @@
 // Module ID: 4604
 // Function ID: 4605
 // Name: isOwner
-// Dependencies: [1914, 4605, 4606, 502, 1957, 4608, 1908, 4609, 4583, 4610, 1074, 4585, 1090, 4587, 4611, 4447, 4612, 4613, 12, 573, 4614, 4615, 4689, 1242, 4554, 4695, 4589, 4696, 4700, 4701, 13674, 7672, 2]
+// Dependencies: [1914, 4605, 4606, 502, 1957, 4608, 1908, 4609, 4583, 4610, 1074, 4585, 1090, 4587, 4611, 4447, 4612, 4613, 12, 573, 4614, 4615, 4689, 1242, 4554, 4695, 4589, 4696, 4700, 4701, 13678, 7672, 2]
 
 // Module 4604 (isOwner)
 import applyDefault from "apply" /* 12 */;
@@ -742,9 +742,9 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
     obj[0] = obj2(4701).default.getApplicationNames();
     if (self.isOwner) {
       obj = { clips_enabled: null, clips_buffer_length: null };
-      obj[0] = tmp5(13674).isClipsEnabled();
+      obj[0] = tmp5(13678).isClipsEnabled();
       obj[1] = tmp8.clipsLength;
-      const tmp5Result = tmp5(13674);
+      const tmp5Result = tmp5(13678);
     } else {
       obj = {};
     }

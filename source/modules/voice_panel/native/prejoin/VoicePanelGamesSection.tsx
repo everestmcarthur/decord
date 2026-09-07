@@ -1,15 +1,15 @@
-// Module ID: 17161
-// Function ID: 17162
+// Module ID: 17164
+// Function ID: 17165
 // Name: GameRow
-// Dependencies: [19, 21, 7309, 8675, 8686, 1114, 9183, 5605, 9178, 17162, 9118, 2]
+// Dependencies: [19, 21, 7309, 8680, 8691, 1114, 9188, 5605, 9183, 17165, 9123, 2]
 
-// Module 17161 (GameRow)
+// Module 17164 (GameRow)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8675 */;
-import VoiceBadges from "VoiceBadges" /* 9118 */;
-import useIsVoiceChannelGamesExperimentEnabledDefault from "useIsVoiceChannelGamesExperimentEnabled" /* 9178 */;
-import _modDef9183 from "module_9183" /* 9183 */;
-import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17162 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8680 */;
+import VoiceBadges from "VoiceBadges" /* 9123 */;
+import useIsVoiceChannelGamesExperimentEnabledDefault from "useIsVoiceChannelGamesExperimentEnabled" /* 9183 */;
+import _modDef9188 from "module_9188" /* 9188 */;
+import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17165 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -19,7 +19,7 @@ function GameRow(gameId) {
   let _require;
   let obj = _require(7309);
   const data = obj.useGame(gameId).data;
-  obj = { gameId, source: _require(8686).GameProfileSources.VoiceChannelGames };
+  obj = { gameId, source: _require(8691).GameProfileSources.VoiceChannelGames };
   const tmp4Result = useOpenGameProfileModalDefault(obj);
   _require = tmp4Result;
   if (null == data) {
@@ -33,7 +33,7 @@ function GameRow(gameId) {
     }
     obj = { game: null, size: 32, fallback: "placeholder" };
     obj[0] = data;
-    const tmp7 = jsx(_modDef9183, { game: null, size: 32, fallback: "placeholder" });
+    const tmp7 = jsx(_modDef9188, { game: null, size: 32, fallback: "placeholder" });
     if (null == tmp4Result) {
       obj1 = { icon: null, label: null, disabled: true };
       obj1[0] = tmp7;

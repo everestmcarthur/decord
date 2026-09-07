@@ -1,10 +1,10 @@
-// Module ID: 8856
-// Function ID: 8857
+// Module ID: 8861
+// Function ID: 8862
 // Name: getApplicationFlags
 // Dependencies: [1918, 1086, 2]
 // Exports: hasApplicationFlag
 
-// Module 8856 (getApplicationFlags)
+// Module 8861 (getApplicationFlags)
 import fromStringAll from "fromString" /* 1086 */;
 import closure_2 from "createExecutable" /* 1918 */;
 

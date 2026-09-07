@@ -1,14 +1,14 @@
-// Module ID: 9715
-// Function ID: 9716
+// Module ID: 9720
+// Function ID: 9721
 // Name: LocationIcon
-// Dependencies: [19, 21, 576, 4261, 9716, 2]
+// Dependencies: [19, 21, 576, 4261, 9721, 2]
 // Exports: LocationIcon
 
-// Module 9715 (LocationIcon)
+// Module 9720 (LocationIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 9716 */;
+import registerAsset from "registerAsset" /* 9721 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

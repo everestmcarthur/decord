@@ -1,8 +1,8 @@
-// Module ID: 12637
-// Function ID: 12638
-// Dependencies: [19, 17, 4552, 4427, 1877, 6625, 1609, 4992, 4428, 4425, 4431, 11356, 2]
+// Module ID: 12641
+// Function ID: 12642
+// Dependencies: [19, 17, 4552, 4427, 1877, 6625, 1609, 4992, 4428, 4425, 4431, 11361, 2]
 
-// Module 12637
+// Module 12641
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
@@ -64,8 +64,8 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
                 tmp.current = true;
                 const obj2 = messagesRef(4428);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(11356).getKeyboardActionSheetHeight().minimum, 0.25, 7);
-                const obj3 = messagesRef(11356);
+                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(11361).getKeyboardActionSheetHeight().minimum, 0.25, 7);
+                const obj3 = messagesRef(11361);
               }
             }
           }

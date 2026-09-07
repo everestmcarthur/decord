@@ -1,17 +1,17 @@
-// Module ID: 8799
-// Function ID: 8800
+// Module ID: 8804
+// Function ID: 8805
 // Name: ProfileEffectSample
-// Dependencies: [17, 8798, 21, 4560, 576, 5587, 8800, 8801, 2]
+// Dependencies: [17, 8803, 21, 4560, 576, 5587, 8805, 8806, 2]
 // Exports: default
 
-// Module 8799 (ProfileEffectSample)
+// Module 8804 (ProfileEffectSample)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
 import preloadDefault from "preload" /* 5587 */;
-import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO" /* 8798 */;
-import metadataDefault from "metadata" /* 8800 */;
-import StaticEffectDefault from "StaticEffect" /* 8801 */;
+import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO" /* 8803 */;
+import metadataDefault from "metadata" /* 8805 */;
+import StaticEffectDefault from "StaticEffect" /* 8806 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

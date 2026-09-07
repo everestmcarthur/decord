@@ -1,10 +1,10 @@
-// Module ID: 13853
-// Function ID: 13854
+// Module ID: 13856
+// Function ID: 13857
 // Name: AddFriendModalScene
-// Dependencies: [32, 19, 17, 1371, 1074, 12678, 21, 4560, 5524, 576, 12680, 4992, 1242, 1115, 1486, 4763, 4404, 1114, 8361, 7377, 13854, 5624, 4556, 13855, 13857, 1611, 7000, 2]
+// Dependencies: [32, 19, 17, 1371, 1074, 12682, 21, 4560, 5524, 576, 12684, 4992, 1242, 1115, 1486, 4763, 4404, 1114, 8361, 7377, 13857, 5624, 4556, 13858, 13860, 1611, 7000, 2]
 // Exports: default
 
-// Module 13853 (AddFriendModalScene)
+// Module 13856 (AddFriendModalScene)
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -12,7 +12,7 @@ import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12678 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12682 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importDefaultResult from "createTextStyle" /* 5524 */;

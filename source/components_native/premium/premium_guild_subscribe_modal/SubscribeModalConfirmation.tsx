@@ -1,22 +1,22 @@
-// Module ID: 13606
-// Function ID: 13607
+// Module ID: 13610
+// Function ID: 13611
 // Name: PendingCancellationWarning
-// Dependencies: [5, 19, 17, 12562, 1979, 4455, 4224, 1074, 7432, 4450, 21, 4560, 4409, 576, 504, 4454, 5597, 4556, 1114, 13607, 13608, 4975, 13617, 4987, 1093, 1242, 13574, 38, 4458, 4905, 13621, 1896, 2]
+// Dependencies: [5, 19, 17, 12566, 1979, 4455, 4224, 1074, 7432, 4450, 21, 4560, 4409, 576, 504, 4454, 5597, 4556, 1114, 13611, 13612, 4975, 13621, 4987, 1093, 1242, 13578, 38, 4458, 4905, 13625, 1896, 2]
 // Exports: default
 
-// Module 13606 (PendingCancellationWarning)
+// Module 13610 (PendingCancellationWarning)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import Button from "Button" /* 4975 */;
 import registerAssetDefault from "registerAsset" /* 5597 */;
-import registerAssetDefault2 from "registerAsset" /* 13607 */;
-import PremiumGuildTierPillDefault from "PremiumGuildTierPill" /* 13608 */;
+import registerAssetDefault2 from "registerAsset" /* 13611 */;
+import PremiumGuildTierPillDefault from "PremiumGuildTierPill" /* 13612 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "handleModifyingAppliedBoostStart" /* 12562 */;
+import closure_9 from "handleModifyingAppliedBoostStart" /* 12566 */;
 import closure_10 from "createGuildRecordFromRust" /* 1979 */;
 import closure_11 from "handleGuildBoostsUpdate" /* 4455 */;
 import closure_12 from "reset" /* 4224 */;
@@ -96,7 +96,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
   ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
   const tmp = callback3();
-  let obj = prop(13617);
+  let obj = prop(13621);
   const guildSubscriptionRemovalSource = obj.useGuildSubscriptionRemovalSource();
   obj1 = prop(504);
   const items = [closure_10];
@@ -143,7 +143,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     const obj7 = { style: null, guild: null };
     obj7[0] = tmp.guildPreview;
     obj7[1] = stateFromStores;
-    items2[1] = callback(onPremiumGuildSubscribe(13608), obj7);
+    items2[1] = callback(onPremiumGuildSubscribe(13612), obj7);
     const obj8 = { style: null, variant: "eyebrow", color: "text-default", children: null };
     obj8[0] = tmp.previewHeader;
     const intl4 = tmp2(1114).intl;
@@ -160,7 +160,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj10[3] = Gradients.PREMIUM_GUILD;
     const obj11 = { guild: null };
     obj11[0] = guild;
-    obj10[4] = callback(onPremiumGuildSubscribe(13608), obj11);
+    obj10[4] = callback(onPremiumGuildSubscribe(13612), obj11);
     items2[3] = callback(onPremiumGuildSubscribe(4987), obj10);
     obj5[1] = items2;
     items1[3] = callback2(closure_7, obj5);

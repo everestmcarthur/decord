@@ -1,10 +1,10 @@
-// Module ID: 10803
-// Function ID: 10804
+// Module ID: 10808
+// Function ID: 10809
 // Name: _redirectToSlayerStorefrontWeb
 // Dependencies: [5, 1074, 3, 4259, 1114, 7316, 4233, 2]
 // Exports: default
 
-// Module 10803 (_redirectToSlayerStorefrontWeb)
+// Module 10808 (_redirectToSlayerStorefrontWeb)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Routes } from "ME" /* 1074 */;

@@ -1,14 +1,14 @@
-// Module ID: 16864
-// Function ID: 16865
-// Dependencies: [19, 17, 7877, 16643, 1074, 21, 4560, 576, 7913, 7000, 12358, 1611, 16865, 7863, 16860, 16861, 2]
+// Module ID: 16867
+// Function ID: 16868
+// Dependencies: [19, 17, 7877, 16646, 1074, 21, 4560, 576, 7913, 7000, 12362, 1611, 16868, 7863, 16863, 16864, 2]
 
-// Module 16864
+// Module 16867
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { SearchEntrypointAnalyticsLocations as closure_5 } from "SearchEntrypointAnalyticsLocations" /* 7877 */;
-import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16643 */;
+import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16646 */;
 import { SearchTypes } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -52,7 +52,7 @@ const memoResult = importAllResult.memo((route) => {
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(16865).default;
+        return searchContext(16868).default;
       }
     }),
     callback(closure_11.Screen, {
@@ -71,7 +71,7 @@ const memoResult = importAllResult.memo((route) => {
         return obj;
       },
       getComponent() {
-        return searchContext(16861).default;
+        return searchContext(16864).default;
       }
     })
   ];

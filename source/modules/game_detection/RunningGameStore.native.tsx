@@ -1,13 +1,13 @@
 // Module ID: 1915
 // Function ID: 1916
 // Name: initialize
-// Dependencies: [1916, 1931, 7397, 13989, 504, 573, 2]
+// Dependencies: [1916, 1931, 7397, 13992, 504, 573, 2]
 // Exports: gameKey, getRawOverlayGameStatus, isDetectionEnabled, maybeTransformSubgame, transformForGameSettings
 
 // Module 1915 (initialize)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
-import DevToolsFocusedPidsTrackMode from "DevToolsFocusedPidsTrackMode" /* 13989 */;
+import DevToolsFocusedPidsTrackMode from "DevToolsFocusedPidsTrackMode" /* 13992 */;
 import closure_2 from "createGamesFromMessage" /* 1916 */;
 import closure_3 from "gameFromServer" /* 1931 */;
 import closure_4 from "setLibraryApplications" /* 7397 */;

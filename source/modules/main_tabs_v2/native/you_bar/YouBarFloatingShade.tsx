@@ -1,16 +1,16 @@
-// Module ID: 16395
-// Function ID: 16396
-// Dependencies: [19, 17, 4379, 15098, 16285, 21, 4560, 504, 4262, 576, 15100, 1477, 4420, 16017, 4296, 4378, 1091, 4987, 2]
+// Module ID: 16398
+// Function ID: 16399
+// Dependencies: [19, 17, 4379, 15101, 16288, 21, 4560, 504, 4262, 576, 15103, 1477, 4420, 16020, 4296, 4378, 1091, 4987, 2]
 
-// Module 16395
+// Module 16398
 import initialize from "initialize" /* 504 */;
 import int2hslRaw from "int2hslRaw" /* 1091 */;
 import map from "map" /* 4262 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15100 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15103 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "reset" /* 4379 */;
-import { YOU_BAR_GRADIENT_EXTRA_HEIGHT as closure_5 } from "CONNECTION_BANNER_HEIGHT" /* 15098 */;
-import { GUILD_LIST_WIDTH } from "GUILD_ITEM_SIZE" /* 16285 */;
+import { YOU_BAR_GRADIENT_EXTRA_HEIGHT as closure_5 } from "CONNECTION_BANNER_HEIGHT" /* 15101 */;
+import { GUILD_LIST_WIDTH } from "GUILD_ITEM_SIZE" /* 16288 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;

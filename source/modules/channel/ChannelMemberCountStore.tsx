@@ -1,9 +1,9 @@
-// Module ID: 13276
-// Function ID: 13277
+// Module ID: 13280
+// Function ID: 13281
 // Name: initialize
 // Dependencies: [5277, 1957, 11, 504, 573, 2]
 
-// Module 13276 (initialize)
+// Module 13280 (initialize)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

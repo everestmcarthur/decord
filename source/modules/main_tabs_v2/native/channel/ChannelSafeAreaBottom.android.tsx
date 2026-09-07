@@ -1,17 +1,17 @@
-// Module ID: 12642
-// Function ID: 12643
-// Dependencies: [11350, 12643, 12644, 2]
+// Module ID: 12646
+// Function ID: 12647
+// Dependencies: [11355, 12647, 12648, 2]
 
-// Module 12642
+// Module 12646
 import set from "set" /* 2 */;
-import _modDef12643 from "module_12643" /* 12643 */;
-import _modDef12644 from "module_12644" /* 12644 */;
-import apexExperiment from "apexExperiment" /* 11350 */;
+import _modDef12647 from "module_12647" /* 12647 */;
+import _modDef12648 from "module_12648" /* 12648 */;
+import apexExperiment from "apexExperiment" /* 11355 */;
 
 if (apexExperiment.isAnimatedAndroidKeyboard()) {
-  let importDefaultResult = _modDef12643;
+  let importDefaultResult = _modDef12647;
 } else {
-  importDefaultResult = _modDef12644;
+  importDefaultResult = _modDef12648;
 }
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
 

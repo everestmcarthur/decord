@@ -1,18 +1,18 @@
-// Module ID: 17079
-// Function ID: 17080
+// Module ID: 17082
+// Function ID: 17083
 // Name: SoundCategoryItem
-// Dependencies: [19, 17, 17061, 1371, 1074, 21, 4560, 576, 5020, 5584, 1114, 10391, 4523, 17077, 8717, 5123, 1178, 5095, 4528, 4529, 504, 4218, 9965, 1611, 4432, 8245, 2]
+// Dependencies: [19, 17, 17064, 1371, 1074, 21, 4560, 576, 5020, 5584, 1114, 10396, 4523, 17080, 8722, 5123, 1178, 5095, 4528, 4529, 504, 4218, 9970, 1611, 4432, 8245, 2]
 
-// Module 17079 (SoundCategoryItem)
+// Module 17082 (SoundCategoryItem)
 import ThemesDefault from "Themes" /* 576 */;
 import SoundButtonOverlay from "SoundButtonOverlay" /* 5020 */;
 import PressableBase from "PressableBase" /* 5123 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import registerAssetDefault from "registerAsset" /* 10391 */;
-import registerAssetDefault2 from "registerAsset" /* 17077 */;
+import registerAssetDefault from "registerAsset" /* 10396 */;
+import registerAssetDefault2 from "registerAsset" /* 17080 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { setSearchQuery } from "withEqualityFn" /* 17061 */;
+import { setSearchQuery } from "withEqualityFn" /* 17064 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -73,7 +73,7 @@ function SoundCategoryItem(style) {
       name = intl5.formatToPlainString(tmp2(1114).t.GXs41w, obj);
       obj1 = { style: null };
       obj1[0] = tmp.keyboardItem;
-      tmp7 = callback(tmp2(8717).TrophyIcon, obj1);
+      tmp7 = callback(tmp2(8722).TrophyIcon, obj1);
       tmp6 = null;
       tmp14Result = null;
     }

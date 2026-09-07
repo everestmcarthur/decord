@@ -1,15 +1,15 @@
-// Module ID: 15956
-// Function ID: 15957
+// Module ID: 15959
+// Function ID: 15960
 // Name: useIdentityRegistrationStep
-// Dependencies: [5, 32, 19, 15946, 15947, 1074, 1483, 15943, 1114, 15957, 11277, 6948, 15954, 1093, 15945, 1484, 6963, 6957, 8376, 2]
+// Dependencies: [5, 32, 19, 15949, 15950, 1074, 1483, 15946, 1114, 15960, 11282, 6948, 15957, 1093, 15948, 1484, 6963, 6957, 8376, 2]
 // Exports: useIdentityRegistrationStep
 
-// Module 15956 (useIdentityRegistrationStep)
+// Module 15959 (useIdentityRegistrationStep)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15946 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15947 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15949 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15950 */;
 import { AbortCodes } from "ME" /* 1074 */;
 
 const require = arg1;

@@ -1,10 +1,10 @@
-// Module ID: 9848
-// Function ID: 9849
+// Module ID: 9853
+// Function ID: 9854
 // Name: fetchUserAffinitiesV2
 // Dependencies: [6595, 7659, 1074, 573, 1272, 2]
 // Exports: fetchUserAffinitiesV2
 
-// Module 9848 (fetchUserAffinitiesV2)
+// Module 9853 (fetchUserAffinitiesV2)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import sendRequest from "sendRequest" /* 1272 */;
 import closure_3 from "hasConsented" /* 6595 */;

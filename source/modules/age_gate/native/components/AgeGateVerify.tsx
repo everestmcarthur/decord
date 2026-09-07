@@ -1,10 +1,10 @@
-// Module ID: 17311
-// Function ID: 17312
+// Module ID: 17314
+// Function ID: 17315
 // Name: AgeGateVerify
 // Dependencies: [19, 17, 21, 4560, 576, 4771, 4773, 7123, 5692, 4556, 4975, 8411, 8413, 2]
 // Exports: default
 
-// Module 17311 (AgeGateVerify)
+// Module 17314 (AgeGateVerify)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;

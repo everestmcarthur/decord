@@ -1,10 +1,10 @@
-// Module ID: 10815
-// Function ID: 10816
+// Module ID: 10820
+// Function ID: 10821
 // Name: useMobilePurchaseSKU
-// Dependencies: [5, 19, 7424, 1371, 1074, 7238, 3, 10703, 5598, 1242, 573, 7429, 4233, 1925, 10816, 1256, 2]
+// Dependencies: [5, 19, 7424, 1371, 1074, 7238, 3, 10708, 5598, 1242, 573, 7429, 4233, 1925, 10821, 1256, 2]
 // Exports: default
 
-// Module 10815 (useMobilePurchaseSKU)
+// Module 10820 (useMobilePurchaseSKU)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;

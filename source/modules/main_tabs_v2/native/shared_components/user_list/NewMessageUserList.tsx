@@ -1,10 +1,10 @@
-// Module ID: 12366
-// Function ID: 12367
+// Module ID: 12370
+// Function ID: 12371
 // Name: matchGroupDMRecipients
-// Dependencies: [32, 19, 17, 1957, 4209, 1371, 10860, 21, 4560, 576, 5517, 4404, 4713, 12, 10862, 1114, 4556, 10864, 10866, 10994, 12367, 2]
+// Dependencies: [32, 19, 17, 1957, 4209, 1371, 10865, 21, 4560, 576, 5517, 4404, 4713, 12, 10867, 1114, 4556, 10869, 10871, 10999, 12371, 2]
 // Exports: default, useSearchGDMNames
 
-// Module 12366 (matchGroupDMRecipients)
+// Module 12370 (matchGroupDMRecipients)
 import ThemesDefault from "Themes" /* 576 */;
 import computeChannelName from "computeChannelName" /* 4713 */;
 import fuzzysearchDefault from "fuzzysearch" /* 5517 */;
@@ -14,7 +14,7 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
 import closure_7 from "markAllUserIdListsStale" /* 4209 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import { UserRowModes } from "UserRowModes" /* 10860 */;
+import { UserRowModes } from "UserRowModes" /* 10865 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 11986
-// Function ID: 11987
+// Module ID: 11990
+// Function ID: 11991
 // Name: useScheduledMessageDraftCoachmarkState
 // Dependencies: [32, 19, 5277, 4901, 1954, 1943, 4380, 504, 1945, 2]
 // Exports: useScheduledMessageDraftCoachmarkState
 
-// Module 11986 (useScheduledMessageDraftCoachmarkState)
+// Module 11990 (useScheduledMessageDraftCoachmarkState)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "_handleConnectionOpen" /* 5277 */;

@@ -1,10 +1,10 @@
-// Module ID: 16952
-// Function ID: 16953
+// Module ID: 16955
+// Function ID: 16956
 // Name: usePreloadedAsset
-// Dependencies: [32, 19, 4552, 504, 1115, 16953, 5587, 2]
+// Dependencies: [32, 19, 4552, 504, 1115, 16956, 5587, 2]
 // Exports: default
 
-// Module 16952 (usePreloadedAsset)
+// Module 16955 (usePreloadedAsset)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
@@ -37,7 +37,7 @@ export default function usePreloadedAsset(arg0) {
   dependencyMap = tmp3;
   let tmp4 = !tmp3;
   if (tmp3) {
-    tmp4 = null != num(16953);
+    tmp4 = null != num(16956);
   }
   callback = tmp4;
   let str = "image";
@@ -78,9 +78,9 @@ export default function usePreloadedAsset(arg0) {
           }
         }, timeout);
         if (dependencyMap) {
-          if (null != num(16953)) {
-            let preloadResult = num(16953).preload(tmp);
-            const obj2 = num(16953);
+          if (null != num(16956)) {
+            let preloadResult = num(16956).preload(tmp);
+            const obj2 = num(16956);
           }
           preloadResult.then(() => {
             if (!c0) {

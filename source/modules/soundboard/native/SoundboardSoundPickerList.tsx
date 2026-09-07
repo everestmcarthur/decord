@@ -1,16 +1,16 @@
-// Module ID: 17068
-// Function ID: 17069
+// Module ID: 17071
+// Function ID: 17072
 // Name: getSectionLabel
-// Dependencies: [19, 17, 1371, 17062, 21, 4560, 576, 5020, 1114, 10344, 504, 4218, 9965, 10307, 17069, 4982, 12, 5584, 1178, 17077, 10391, 4523, 8717, 10306, 7072, 4556, 2]
+// Dependencies: [19, 17, 1371, 17065, 21, 4560, 576, 5020, 1114, 10349, 504, 4218, 9970, 10312, 17072, 4982, 12, 5584, 1178, 17080, 10396, 4523, 8722, 10311, 7072, 4556, 2]
 
-// Module 17068 (getSectionLabel)
+// Module 17071 (getSectionLabel)
 import ThemesDefault from "Themes" /* 576 */;
 import SoundButtonOverlay from "SoundButtonOverlay" /* 5020 */;
 import renderDefaultEmptyDefault from "renderDefaultEmpty" /* 7072 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import SOUND_BUTTON_HEIGHT from "SOUND_BUTTON_HEIGHT" /* 17062 */;
+import SOUND_BUTTON_HEIGHT from "SOUND_BUTTON_HEIGHT" /* 17065 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -173,7 +173,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerListCompon
     while (iter !== undefined) {
       let tmp2 = callback;
       let tmp3 = dependencyMap;
-      let arr2 = callback(10344)(nextResult.items, closure_6);
+      let arr2 = callback(10349)(nextResult.items, closure_6);
       let tmp4 = closure_9;
       let obj = { category: null, height: null, soundsByRow: null };
       obj[0] = nextResult;

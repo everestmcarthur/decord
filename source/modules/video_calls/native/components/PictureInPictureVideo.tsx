@@ -1,15 +1,15 @@
-// Module ID: 9588
-// Function ID: 9589
+// Module ID: 9593
+// Function ID: 9594
 // Name: areParticipantsEqual
-// Dependencies: [32, 19, 17, 1956, 4576, 502, 1908, 2011, 5419, 9486, 9467, 4581, 21, 4560, 1178, 576, 9589, 12, 9475, 9590, 504, 4761, 9591, 9594, 9604, 9622, 9623, 9631, 9535, 9653, 4262, 8132, 9625, 9493, 9489, 9492, 1477, 1115, 8332, 2]
+// Dependencies: [32, 19, 17, 1956, 4576, 502, 1908, 2011, 5419, 9491, 9472, 4581, 21, 4560, 1178, 576, 9594, 12, 9480, 9595, 504, 4761, 9596, 9599, 9609, 9627, 9628, 9636, 9540, 9658, 4262, 8132, 9630, 9498, 9494, 9497, 1477, 1115, 8332, 2]
 
-// Module 9588 (areParticipantsEqual)
+// Module 9593 (areParticipantsEqual)
 import ThemesDefault from "Themes" /* 576 */;
 import set from "set" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9489 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 9492 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 9493 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9494 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 9497 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 9498 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -19,8 +19,8 @@ import closure_8 from "fetchFingerprint" /* 502 */;
 import closure_9 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_10 from "handleConnectionOpen" /* 2011 */;
 import closure_11 from "anyoneHasFlagInContext" /* 5419 */;
-import closure_12 from "initialize" /* 9486 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9467 */;
+import closure_12 from "initialize" /* 9491 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9472 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

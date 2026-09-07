@@ -1,9 +1,9 @@
-// Module ID: 17374
-// Function ID: 17375
+// Module ID: 17377
+// Function ID: 17378
 // Name: isExperimentEnabled
 // Dependencies: [502, 4718, 7118, 4760, 4716, 2]
 
-// Module 17374 (isExperimentEnabled)
+// Module 17377 (isExperimentEnabled)
 import _guildRoomConnect from "_guildRoomConnect" /* 4716 */;
 import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4760 */;
 import initializeDefault from "initialize" /* 7118 */;

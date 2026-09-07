@@ -1,17 +1,17 @@
-// Module ID: 10240
-// Function ID: 10241
+// Module ID: 10245
+// Function ID: 10246
 // Name: items1
-// Dependencies: [32, 19, 1954, 1943, 7389, 10226, 10224, 10239, 7388, 10238, 2]
+// Dependencies: [32, 19, 1954, 1943, 7389, 10231, 10229, 10244, 7388, 10243, 2]
 // Exports: useFavoritesBetaTagDismissibleContent, useFavoritesMenuItemPopoverDismissibleContent, useShouldRenderFavoritesMenuItemPopover
 
-// Module 10240 (items1)
+// Module 10245 (items1)
 import DismissibleContent from "DismissibleContent" /* 1943 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7388 */;
 import useGetVisibleContent from "useGetVisibleContent" /* 7389 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10224 */;
-import useFavoritesGuildConfig from "useFavoritesGuildConfig" /* 10226 */;
-import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 10238 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10239 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10229 */;
+import useFavoritesGuildConfig from "useFavoritesGuildConfig" /* 10231 */;
+import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 10243 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10244 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;

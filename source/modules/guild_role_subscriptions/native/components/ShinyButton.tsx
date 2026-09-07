@@ -1,14 +1,14 @@
-// Module ID: 10301
-// Function ID: 10302
+// Module ID: 10306
+// Function ID: 10307
 // Name: ShinyButton
-// Dependencies: [19, 21, 4560, 576, 4976, 1178, 10302, 2]
+// Dependencies: [19, 21, 4560, 576, 4976, 1178, 10307, 2]
 // Exports: default
 
-// Module 10301 (ShinyButton)
+// Module 10306 (ShinyButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import CollapsingText from "CollapsingText" /* 4976 */;
-import registerAssetDefault from "registerAsset" /* 10302 */;
+import registerAssetDefault from "registerAsset" /* 10307 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

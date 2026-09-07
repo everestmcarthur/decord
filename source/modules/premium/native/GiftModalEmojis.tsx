@@ -1,10 +1,10 @@
-// Module ID: 11446
-// Function ID: 11447
+// Module ID: 11451
+// Function ID: 11452
 // Name: items
 // Dependencies: [32, 19, 17, 21, 4560, 4217, 7130, 2]
 // Exports: default
 
-// Module 11446 (items)
+// Module 11451 (items)
 import noopAll from "noop" /* 19 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;

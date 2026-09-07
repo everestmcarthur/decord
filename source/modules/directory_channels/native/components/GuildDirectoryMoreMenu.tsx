@@ -1,12 +1,12 @@
-// Module ID: 12313
-// Function ID: 12314
+// Module ID: 12317
+// Function ID: 12318
 // Name: GuildDirectoryMoreMenu
-// Dependencies: [19, 21, 12307, 12314, 4905, 1114, 12316, 1178, 8629, 10250, 4518, 8664, 8666, 8097, 8672, 576, 2]
+// Dependencies: [19, 21, 12311, 12318, 4905, 1114, 12320, 1178, 8634, 10255, 4518, 8669, 8671, 8097, 8677, 576, 2]
 // Exports: default
 
-// Module 12313 (GuildDirectoryMoreMenu)
+// Module 12317 (GuildDirectoryMoreMenu)
 import noopAll from "noop" /* 19 */;
-import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 12307 */;
+import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 12311 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -22,7 +22,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     let obj = { label: null, IconComponent: null, action: null };
     let intl = entry(1114).intl;
     obj[0] = intl.string(entry(1114).t.XnuOvN);
-    obj[1] = entry(10250).PencilIcon;
+    obj[1] = entry(10255).PencilIcon;
     obj[2] = function handleEdit() {
       let obj = closure_1_1(closure_1_3[3]);
       obj = { entry };
@@ -62,7 +62,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     obj = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl3 = entry(1114).intl;
     obj[0] = intl3.string(entry(1114).t.Aen9eh);
-    obj[1] = entry(8664).FlagIcon;
+    obj[1] = entry(8669).FlagIcon;
     obj[3] = function handleReport() {
       const result = entry(closure_1_3[8]).showReportModalForGuildDirectoryEntry(entry);
     };
@@ -81,10 +81,10 @@ export default function GuildDirectoryMoreMenu(entry) {
       const intl = entry(1114).intl;
       obj.accessibilityLabel = intl.string(entry(1114).t.PdRCRg);
       obj = { size: "sm", color: callback(576).colors.WHITE };
-      obj.icon = callback2(entry(8672).MoreHorizontalIcon, obj);
+      obj.icon = callback2(entry(8677).MoreHorizontalIcon, obj);
       return callback2(entry(8097).IconButton, obj);
     };
-    tmp9 = jsx(entry(8666).ContextMenu, { items: null, children: null });
+    tmp9 = jsx(entry(8671).ContextMenu, { items: null, children: null });
   }
   return tmp9;
 };

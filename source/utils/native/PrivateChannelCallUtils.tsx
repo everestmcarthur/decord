@@ -1,7 +1,7 @@
 // Module ID: 4767
 // Function ID: 4768
 // Name: openChannelCallModal
-// Dependencies: [5, 19, 4251, 4768, 1957, 4209, 2011, 1371, 1074, 1098, 4770, 21, 4771, 4761, 9681, 1109, 4763, 9466, 1896, 7038, 7211, 4527, 13765, 5411, 4905, 1114, 5139, 4425, 13800, 4906, 9182, 4417, 8394, 2]
+// Dependencies: [5, 19, 4251, 4768, 1957, 4209, 2011, 1371, 1074, 1098, 4770, 21, 4771, 4761, 9686, 1109, 4763, 9471, 1896, 7038, 7211, 4527, 13768, 5411, 4905, 1114, 5139, 4425, 13803, 4906, 9187, 4417, 8394, 2]
 // Exports: dismissVoiceChannelScreens, getVoiceChannelKey, getVoiceChannelKeyByChannelId, handleJoinCall, handleRedesignGroupDMCall, handleRedesignJoinCall, handleStartCall, hideVoiceChannelActionSheet, isVoiceChannelModalKey, maybeShowAgeGateModal, navigateToVoiceChannel, openGuildVoiceModal, openVoiceChannelActionSheet, showGuardCallAlert
 
 // Module 4767 (openChannelCallModal)
@@ -46,10 +46,10 @@ function openChannelCallModal(channel) {
       obj[0] = channel;
       const _HermesInternal = HermesInternal;
       const tmp3Result = tmp3(4763);
-      tmp3Result.pushLazy(tmp(1896)(9466, dependencyMap.paths), obj, "" + c17 + "-" + channel.id);
-      const tmp5 = tmp(1896)(9466, dependencyMap.paths);
+      tmp3Result.pushLazy(tmp(1896)(9471, dependencyMap.paths), obj, "" + c17 + "-" + channel.id);
+      const tmp5 = tmp(1896)(9471, dependencyMap.paths);
     }
-    tmpResult = tmp(9681);
+    tmpResult = tmp(9686);
   }
 }
 function monkeyPatchCall() {
@@ -174,7 +174,7 @@ export const maybeShowAgeGateModal = function maybeShowAgeGateModal(width) {
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl(13765, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
+  obj.openLazy(asyncRequireImpl(13768, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(closure_0) {
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet("" + c17 + "-" + closure_0.id);
@@ -359,7 +359,7 @@ export const handleStartCall = function handleStartCall(channel, flag) {
           if (!isFriendResult) {
             recipientId = isFriendResult.getRecipientId();
           }
-          const tmp25 = recipientId(9182);
+          const tmp25 = recipientId(9187);
           const call = tmp25.call;
           const id = isFriendResult.id;
           let tmp28 = isFriendResult;
@@ -474,7 +474,7 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
           }
           obj1 = closure_1_0(4425);
           obj1.dismissKeyboard();
-          const tmp11 = v0(9182);
+          const tmp11 = v0(9187);
           const call = tmp11.call;
           id = id.id;
           if (typeof call === "unknown") {

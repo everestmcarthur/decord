@@ -1,14 +1,14 @@
-// Module ID: 16485
-// Function ID: 16486
+// Module ID: 16488
+// Function ID: 16489
 // Name: useSharedICYMILogic
-// Dependencies: [32, 19, 8335, 16451, 16486, 504, 8359, 8357, 9798, 8351, 8350, 8348, 16487, 2]
+// Dependencies: [32, 19, 8335, 16454, 16489, 504, 8359, 8357, 9803, 8351, 8350, 8348, 16490, 2]
 // Exports: useSharedICYMILogic
 
-// Module 16485 (useSharedICYMILogic)
+// Module 16488 (useSharedICYMILogic)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "filterStaffGuild" /* 8335 */;
-import { SCROLL_EVENT_THROTTLE_MS } from "NUM_GUILDS_EXTENDED_ONBOARDING" /* 16451 */;
+import { SCROLL_EVENT_THROTTLE_MS } from "NUM_GUILDS_EXTENDED_ONBOARDING" /* 16454 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");

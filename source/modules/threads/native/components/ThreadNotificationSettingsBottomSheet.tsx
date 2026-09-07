@@ -1,10 +1,10 @@
-// Module ID: 11313
-// Function ID: 11314
+// Module ID: 11318
+// Function ID: 11319
 // Name: ThreadNotificationsBottomSheet
-// Dependencies: [1113, 21, 10088, 7198, 7149, 1114, 5685, 7765, 5688, 2]
+// Dependencies: [1113, 21, 10093, 7198, 7149, 1114, 5685, 7765, 5688, 2]
 // Exports: default
 
-// Module 11313 (ThreadNotificationsBottomSheet)
+// Module 11318 (ThreadNotificationsBottomSheet)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import AbortCodes from "AbortCodes" /* 1113 */;
@@ -15,7 +15,7 @@ const result = set.fileFinishedImporting("modules/threads/native/components/Thre
 
 export default function ThreadNotificationsBottomSheet(channel) {
   channel = channel.channel;
-  let obj = channel(10088);
+  let obj = channel(10093);
   const threadNotificationSetting = obj.useThreadNotificationSetting(channel);
   obj = { header: null, children: null };
   obj = { title: null };

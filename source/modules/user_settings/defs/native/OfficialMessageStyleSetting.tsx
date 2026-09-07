@@ -1,16 +1,16 @@
-// Module ID: 15332
-// Function ID: 15333
+// Module ID: 15335
+// Function ID: 15336
 // Name: useOfficialMessageStyleSettingValue
-// Dependencies: [19, 4552, 7975, 504, 14437, 1114, 11468, 2]
+// Dependencies: [19, 4552, 7975, 504, 14440, 1114, 11473, 2]
 // Exports: onOfficialMessageStyleSettingValueChange, useOfficialMessageStyleSettingOptions, useOfficialMessageStyleSettingValue
 
-// Module 15332 (useOfficialMessageStyleSettingValue)
+// Module 15335 (useOfficialMessageStyleSettingValue)
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setFontSize from "setFontSize" /* 14437 */;
+import setFontSize from "setFontSize" /* 14440 */;
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 function useOfficialMessageStyleSettingValue() {

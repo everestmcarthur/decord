@@ -1,16 +1,16 @@
-// Module ID: 8634
-// Function ID: 8635
+// Module ID: 8639
+// Function ID: 8640
 // Name: InAppReportModal
-// Dependencies: [5, 32, 19, 8635, 21, 7377, 6992, 1114, 8636, 4992, 7593, 8633, 8631, 7000, 2]
+// Dependencies: [5, 32, 19, 8640, 21, 7377, 6992, 1114, 8641, 4992, 7593, 8638, 8636, 7000, 2]
 // Exports: default
 
-// Module 8634 (InAppReportModal)
+// Module 8639 (InAppReportModal)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import NavigationStack from "NavigationStack" /* 7000 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8635 */;
+import { IN_APP_REPORTS_NODE } from "IN_APP_REPORTS_NODE" /* 8640 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -232,7 +232,7 @@ export default function InAppReportModal(arg0) {
         obj.addOnCloseCallback = callback2;
         obj.reportId = closure_5;
         obj.onNavigate = onNavigate;
-        return callback2(callback(8636), obj);
+        return callback2(callback(8641), obj);
       };
       obj2[c6] = obj3;
       obj[1] = obj2;

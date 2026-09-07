@@ -1,10 +1,10 @@
-// Module ID: 14452
-// Function ID: 14453
+// Module ID: 14455
+// Function ID: 14456
 // Name: useIsDeclarativeNotificationSettingsRedesignEnabled
 // Dependencies: [1433, 2]
 // Exports: useIsDeclarativeNotificationSettingsRedesignEnabled
 
-// Module 14452 (useIsDeclarativeNotificationSettingsRedesignEnabled)
+// Module 14455 (useIsDeclarativeNotificationSettingsRedesignEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 

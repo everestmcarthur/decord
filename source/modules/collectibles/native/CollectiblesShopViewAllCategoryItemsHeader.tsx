@@ -1,10 +1,10 @@
-// Module ID: 15847
-// Function ID: 15848
+// Module ID: 15850
+// Function ID: 15851
 // Name: CollectiblesShopViewAllCategoryItemsHeader
-// Dependencies: [19, 17, 21, 4560, 1483, 13350, 7863, 7867, 1114, 2]
+// Dependencies: [19, 17, 21, 4560, 1483, 13354, 7863, 7867, 1114, 2]
 // Exports: default
 
-// Module 15847 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 15850 (CollectiblesShopViewAllCategoryItemsHeader)
 import noopAll from "noop" /* 19 */;
 import registerAssetDefault from "registerAsset" /* 7867 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -24,7 +24,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   let obj = _require(1483);
   _require = obj.useStackNavigation();
   const tmp = callback3();
-  obj1 = _require(13350);
+  obj1 = _require(13354);
   obj = { style: null, children: null };
   obj = {};
   const youBarSettingsCustomHeaderPaddingTop = obj1.useYouBarSettingsCustomHeaderPaddingTop();

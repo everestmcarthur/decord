@@ -1,8 +1,8 @@
-// Module ID: 16209
-// Function ID: 16210
-// Dependencies: [19, 1957, 2012, 10118, 4742, 21, 4560, 576, 563, 1100, 10913, 16116, 9770, 2]
+// Module ID: 16212
+// Function ID: 16213
+// Dependencies: [19, 1957, 2012, 10123, 4742, 21, 4560, 576, 563, 1100, 10918, 16119, 9775, 2]
 
-// Module 16209
+// Module 16212
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
@@ -51,15 +51,15 @@ const memoResult = importAllResult.memo((guildId) => {
     obj[2] = tmp.container;
     obj = { channel: null };
     obj[0] = stateFromStores;
-    obj[5] = id(9770)(obj);
+    obj[5] = id(9775)(obj);
     obj1 = { selected: null };
     obj1[0] = selected;
     obj[6] = obj1;
     obj[7] = stateFromStores;
     obj[8] = selected;
     obj[9] = UnreadSetting.ONLY_MENTIONS;
-    tmp7 = jsx(id(16116), { channel: null });
-    const tmp10 = id(16116);
+    tmp7 = jsx(id(16119), { channel: null });
+    const tmp10 = id(16119);
   }
   return tmp7;
 });

@@ -1,10 +1,10 @@
-// Module ID: 10864
-// Function ID: 10865
+// Module ID: 10869
+// Function ID: 10870
 // Name: UserFlashListActions
-// Dependencies: [19, 17, 21, 10865, 5687, 5605, 2]
+// Dependencies: [19, 17, 21, 10870, 5687, 5605, 2]
 // Exports: useUserListActionsProps
 
-// Module 10864 (UserFlashListActions)
+// Module 10869 (UserFlashListActions)
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -38,7 +38,7 @@ export const useUserListActionsProps = function useUserListActionsProps(actions)
   actions = actions.actions;
   const style = actions.style;
   dependencyMap = undefined;
-  const tmp = style(10865)();
+  const tmp = style(10870)();
   dependencyMap = tmp;
   const items = [actions, tmp, style];
   return React.useMemo(() => {

@@ -1,13 +1,13 @@
-// Module ID: 16385
-// Function ID: 16386
-// Dependencies: [19, 17, 1371, 15098, 21, 4560, 576, 504, 4296, 4974, 4404, 16386, 16387, 16388, 2]
+// Module ID: 16388
+// Function ID: 16389
+// Dependencies: [19, 17, 1371, 15101, 21, 4560, 576, 504, 4296, 4974, 4404, 16389, 16390, 16391, 2]
 
-// Module 16385
+// Module 16388
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 15098 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 15101 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -57,14 +57,14 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
       obj = { isLargeAvatar: null, onPress: null };
       obj[0] = tmp5;
       obj[1] = isQuestRendered.onAvatarPress;
-      const items2 = [callback(tmp9(16387), obj), ];
+      const items2 = [callback(tmp9(16390), obj), ];
       obj1 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj1[0] = items3;
       const obj2 = { userId: null, username: null };
       obj2[0] = stateFromStores.id;
       obj2[1] = name;
-      obj1[1] = callback(tmp9(16388), obj2);
+      obj1[1] = callback(tmp9(16391), obj2);
       items2[1] = callback(tmp9(4296).View, obj1);
       obj[1] = items2;
     }
@@ -72,7 +72,7 @@ const memoResult = importAllResult.memo(function YouBarUser(isQuestRendered) {
   }
   obj3 = { style: items4, children: null };
   items4 = [tmp.youButton];
-  const items5 = [callback(sharedValue(16386), { isLarge: !isQuestRendered }), ];
+  const items5 = [callback(sharedValue(16389), { isLarge: !isQuestRendered }), ];
   const tmp2 = _require;
   const tmp2Result = _require(4296);
   const items6 = [tmp.userText, animatedStyle, { flexShrink: 1 }];

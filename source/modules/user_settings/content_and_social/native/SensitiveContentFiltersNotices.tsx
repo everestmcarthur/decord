@@ -1,13 +1,13 @@
-// Module ID: 14817
-// Function ID: 14818
+// Module ID: 14820
+// Function ID: 14821
 // Name: SensitiveContentFiltersTeenNotice
-// Dependencies: [19, 8399, 21, 7301, 14687, 1114, 4255, 2024, 8411, 8413, 2]
+// Dependencies: [19, 8399, 21, 7301, 14690, 1114, 4255, 2024, 8411, 8413, 2]
 // Exports: SensitiveContentFiltersAgeVerificationNotice, SensitiveContentFiltersTeenNotice
 
-// Module 14817 (SensitiveContentFiltersTeenNotice)
+// Module 14820 (SensitiveContentFiltersTeenNotice)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14687 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14690 */;
 import { SafetySettingsNoticeType } from "SafetyToastType" /* 8399 */;
 import { jsx } from "jsxProd" /* 21 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 12479
-// Function ID: 12480
+// Module ID: 12483
+// Function ID: 12484
 // Name: openGuildPowerupsModal
-// Dependencies: [4763, 12480, 1896, 2]
+// Dependencies: [4763, 12484, 1896, 2]
 // Exports: default
 
-// Module 12479 (openGuildPowerupsModal)
+// Module 12483 (openGuildPowerupsModal)
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
@@ -23,5 +23,5 @@ export default function openGuildPowerupsModal(navigationParams) {
     obj.autoOpenRequestId = sum;
     tmp2 = obj;
   }
-  _modDef4763.pushLazy(asyncRequireImpl(12480, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
+  _modDef4763.pushLazy(asyncRequireImpl(12484, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
 };

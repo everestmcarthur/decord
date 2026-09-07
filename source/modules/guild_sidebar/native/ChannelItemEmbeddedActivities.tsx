@@ -1,10 +1,10 @@
-// Module ID: 16232
-// Function ID: 16233
+// Module ID: 16235
+// Function ID: 16236
 // Name: ChannelItemEmbeddedActivities
 // Dependencies: [19, 17, 21, 4560, 576, 7172, 4556, 2]
 // Exports: default
 
-// Module 16232 (ChannelItemEmbeddedActivities)
+// Module 16235 (ChannelItemEmbeddedActivities)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;

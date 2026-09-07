@@ -1,10 +1,10 @@
-// Module ID: 8685
-// Function ID: 8686
+// Module ID: 8690
+// Function ID: 8691
 // Name: XBOX_DISCORD_OCID
 // Dependencies: [2]
 // Exports: buildXboxGamePassStoreDeepLinkUrl, buildXboxGamePassStoreUrl
 
-// Module 8685 (XBOX_DISCORD_OCID)
+// Module 8690 (XBOX_DISCORD_OCID)
 import set from "set" /* 2 */;
 
 const discord7937464 = "discord7937464";

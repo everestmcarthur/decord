@@ -1,9 +1,9 @@
-// Module ID: 11851
-// Function ID: 11852
+// Module ID: 11856
+// Function ID: 11857
 // Name: items
-// Dependencies: [32, 19, 17, 1979, 1371, 21, 1114, 1090, 4560, 576, 6981, 11146, 504, 5520, 11852, 4556, 4404, 5685, 5688, 7085, 4975, 2]
+// Dependencies: [32, 19, 17, 1979, 1371, 21, 1114, 1090, 4560, 576, 6981, 11151, 504, 5520, 11857, 4556, 4404, 5685, 5688, 7085, 4975, 2]
 
-// Module 11851 (items)
+// Module 11856 (items)
 import ThemesDefault from "Themes" /* 576 */;
 import setDefault from "set" /* 1090 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

@@ -1,10 +1,10 @@
-// Module ID: 12971
-// Function ID: 12972
+// Module ID: 12975
+// Function ID: 12976
 // Name: clamp
-// Dependencies: [32, 19, 17, 21, 4560, 576, 4296, 11537, 4561, 1178, 12972, 6655, 4297, 7123, 7154, 12973, 12963, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 4296, 11542, 4561, 1178, 12976, 6655, 4297, 7123, 7154, 12977, 12967, 2]
 // Exports: MediaModalOverlayFooter
 
-// Module 12971 (clamp)
+// Module 12975 (clamp)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -14,7 +14,7 @@ import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { drawerContainer: { overflow: "hidden", backgroundColor: "WireType" }, drawerHeaderTab: null, drawerHeader: null, messagePreviewContainer: null, thumbnailsContainer: null };
+createCacheKey = { drawerContainer: { overflow: "hidden", backgroundColor: "call" }, drawerHeaderTab: null, drawerHeader: null, messagePreviewContainer: null, thumbnailsContainer: null };
 createCacheKey = { width: 40, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: "Array" };

@@ -1,10 +1,10 @@
-// Module ID: 10989
-// Function ID: 10990
+// Module ID: 10994
+// Function ID: 10995
 // Name: navigateToTabLocation
-// Dependencies: [1957, 2011, 4381, 10990, 1074, 1964, 4761, 1100, 4571, 573, 2]
+// Dependencies: [1957, 2011, 4381, 10995, 1074, 1964, 4761, 1100, 4571, 573, 2]
 // Exports: closeChannelTab, cycleChannelTab, goBackInActiveTab, goForwardInActiveTab, moveChannelTab, navigateToRoute, openChannelTab, openDuplicateTab, selectChannelTab, setChannelTabPinned, setChannelTabsEnabled
 
-// Module 10989 (navigateToTabLocation)
+// Module 10994 (navigateToTabLocation)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import transitionTo from "transitionTo" /* 1100 */;
 import transitionToChannel from "transitionToChannel" /* 4571 */;
@@ -12,7 +12,7 @@ import _modDef4761 from "module_4761" /* 4761 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "handleConnectionOpen" /* 2011 */;
 import closure_5 from "handleConnectionOpen" /* 4381 */;
-import closure_6 from "handleChannelDelete" /* 10990 */;
+import closure_6 from "handleChannelDelete" /* 10995 */;
 import { Routes } from "ME" /* 1074 */;
 import { isStaticChannelRoute } from "set" /* 1964 */;
 

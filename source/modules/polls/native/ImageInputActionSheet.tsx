@@ -1,10 +1,10 @@
-// Module ID: 12227
-// Function ID: 12228
+// Module ID: 12231
+// Function ID: 12232
 // Name: ImageInputAnswerActionSheet
-// Dependencies: [19, 17, 7829, 21, 4560, 576, 12226, 4425, 4527, 7198, 4556, 1178, 7200, 1114, 12228, 2]
+// Dependencies: [19, 17, 7829, 21, 4560, 576, 12230, 4425, 4527, 7198, 4556, 1178, 7200, 1114, 12232, 2]
 // Exports: default
 
-// Module 12227 (ImageInputAnswerActionSheet)
+// Module 12231 (ImageInputAnswerActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

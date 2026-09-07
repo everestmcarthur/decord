@@ -1,10 +1,10 @@
-// Module ID: 13188
-// Function ID: 13189
+// Module ID: 13192
+// Function ID: 13193
 // Name: createExecutedCommand
-// Dependencies: [17, 1385, 1957, 1371, 1074, 1399, 1396, 4793, 11619, 576, 7521, 1894, 7961, 7963, 9546, 1114, 9289, 2]
+// Dependencies: [17, 1385, 1957, 1371, 1074, 1399, 1396, 4793, 11624, 576, 7521, 1894, 7961, 7963, 9551, 1114, 9294, 2]
 // Exports: createExecutedCommand
 
-// Module 13188 (createExecutedCommand)
+// Module 13192 (createExecutedCommand)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -16,7 +16,7 @@ import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4793 */;
 import buildCommand from "buildCommand" /* 7521 */;
 import processColorStrings from "processColorStrings" /* 7961 */;
 import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7963 */;
-import canViewInteractionInfo from "canViewInteractionInfo" /* 11619 */;
+import canViewInteractionInfo from "canViewInteractionInfo" /* 11624 */;
 import closure_4 from "createdAt" /* 1385 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
@@ -147,7 +147,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       obj[1] = obj;
       if (tmp) {
         if (!result) {
-          const result3 = tmp16(9546).isActivitiesInTextEnabled(channel);
+          const result3 = tmp16(9551).isActivitiesInTextEnabled(channel);
           const intl = tmp16(1114).intl;
           const formatToParts = intl.formatToParts;
           const t = tmp16(1114).t;
@@ -164,7 +164,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
             const merged1 = Object.assign(obj);
             formatToPartsResult = formatToParts(t.k964Wm, obj3);
           }
-          const tmp16Result7 = tmp16(9546);
+          const tmp16Result7 = tmp16(9551);
         }
         let obj4 = { userId: null, username: null, usernameColor: null, avatarURL: null, targetUsernameColor: null, content: null, commandNameBackgroundStyles: null, showAppsIcon: true };
         obj4[0] = message.interaction.user.id;
@@ -180,8 +180,8 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       }
       let result4 = displayName;
       if (result) {
-        result4 = tmp16(9289).formatPrimaryEntryPointCommandName(displayName);
-        const tmp16Result8 = tmp16(9289);
+        result4 = tmp16(9294).formatPrimaryEntryPointCommandName(displayName);
+        const tmp16Result8 = tmp16(9294);
       }
       const intl2 = tmp16(1114).intl;
       obj6 = {};

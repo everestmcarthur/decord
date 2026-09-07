@@ -1,13 +1,13 @@
-// Module ID: 12523
-// Function ID: 12524
+// Module ID: 12527
+// Function ID: 12528
 // Name: GuildPowerupsImage
-// Dependencies: [4552, 21, 4560, 504, 1116, 8809, 5587, 2]
+// Dependencies: [4552, 21, 4560, 504, 1116, 8814, 5587, 2]
 // Exports: default
 
-// Module 12523 (GuildPowerupsImage)
+// Module 12527 (GuildPowerupsImage)
 import initialize from "initialize" /* 504 */;
 import preloadDefault from "preload" /* 5587 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8809 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8814 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

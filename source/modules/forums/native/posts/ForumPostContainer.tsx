@@ -1,12 +1,12 @@
-// Module ID: 12020
-// Function ID: 12021
+// Module ID: 12024
+// Function ID: 12025
 // Name: useForumPostContainerPressedIn
-// Dependencies: [19, 17, 21, 4560, 576, 7074, 4296, 10219, 5607, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 7074, 4296, 10224, 5607, 2]
 // Exports: ForumPostDisabledContainer, ForumPostPressableContainer, useForumPostContainerPressedIn
 
-// Module 12020 (useForumPostContainerPressedIn)
+// Module 12024 (useForumPostContainerPressedIn)
 import ThemesDefault from "Themes" /* 576 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10219 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10224 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

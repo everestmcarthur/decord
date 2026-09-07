@@ -1,12 +1,12 @@
-// Module ID: 9182
-// Function ID: 9183
-// Dependencies: [1957, 4209, 1371, 1074, 5411, 1272, 1242, 4904, 1114, 9042, 9174, 573, 2]
+// Module ID: 9187
+// Function ID: 9188
+// Dependencies: [1957, 4209, 1371, 1074, 5411, 1272, 1242, 4904, 1114, 9047, 9179, 573, 2]
 
-// Module 9182
+// Module 9187
 import dispatcherDefault from "dispatcher" /* 573 */;
 import sendRequest from "sendRequest" /* 1272 */;
 import _modDef5411 from "module_5411" /* 5411 */;
-import useCanRingToGuildVoiceChannel from "useCanRingToGuildVoiceChannel" /* 9174 */;
+import useCanRingToGuildVoiceChannel from "useCanRingToGuildVoiceChannel" /* 9179 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "markAllUserIdListsStale" /* 4209 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;

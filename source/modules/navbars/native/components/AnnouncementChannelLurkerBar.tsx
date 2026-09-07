@@ -1,9 +1,9 @@
-// Module ID: 11324
-// Function ID: 11325
+// Module ID: 11329
+// Function ID: 11330
 // Name: AnnouncementChannelLurkerBar
-// Dependencies: [19, 17, 21, 4560, 576, 4556, 1114, 4975, 11325, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4556, 1114, 4975, 11330, 2]
 
-// Module 11324 (AnnouncementChannelLurkerBar)
+// Module 11329 (AnnouncementChannelLurkerBar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

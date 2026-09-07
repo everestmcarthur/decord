@@ -1,10 +1,10 @@
-// Module ID: 8769
-// Function ID: 8770
+// Module ID: 8774
+// Function ID: 8775
 // Name: getProductNameAndTypeFromSku
 // Dependencies: [1889, 1114, 7554, 2]
 // Exports: getProductNameAndTypeFromSku, isWishlistableCollectiblesProduct
 
-// Module 8769 (getProductNameAndTypeFromSku)
+// Module 8774 (getProductNameAndTypeFromSku)
 import set from "set" /* 2 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7554 */;

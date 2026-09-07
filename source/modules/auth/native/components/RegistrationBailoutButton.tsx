@@ -1,10 +1,10 @@
-// Module ID: 15975
-// Function ID: 15976
+// Module ID: 15978
+// Function ID: 15979
 // Name: RegistrationBailoutButton
 // Dependencies: [19, 21, 4560, 1178, 1114, 2]
 // Exports: default
 
-// Module 15975 (RegistrationBailoutButton)
+// Module 15978 (RegistrationBailoutButton)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;

@@ -1,10 +1,10 @@
-// Module ID: 8773
-// Function ID: 8774
+// Module ID: 8778
+// Function ID: 8779
 // Name: SourceIcon
-// Dependencies: [19, 17, 21, 576, 4560, 4259, 8774, 4271, 8238, 4262, 8776, 1114, 1369, 8795, 5095, 2]
+// Dependencies: [19, 17, 21, 576, 4560, 4259, 8779, 4271, 8238, 4262, 8781, 1114, 1369, 8800, 5095, 2]
 // Exports: default
 
-// Module 8773 (SourceIcon)
+// Module 8778 (SourceIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -31,7 +31,7 @@ function SourceIcon(toastText) {
     children: null
   };
   obj = { color: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-  obj[5] = callback(toastText(8774).HeartIcon, obj);
+  obj[5] = callback(toastText(8779).HeartIcon, obj);
   return callback(closure_3, obj);
 }
 noopAll;
@@ -109,7 +109,7 @@ export default function WishlistItemCardBase(username) {
       stringResult = intl2.string(tmp2(1114).t.wu4gyV);
     }
   }
-  let tmp14Result1 = source === tmp2(8776).WishlistItemSource.WISHLIST;
+  let tmp14Result1 = source === tmp2(8781).WishlistItemSource.WISHLIST;
   items1[1] = stringResult;
   let tmp10 = null;
   if (tmp14Result1) {
@@ -133,7 +133,7 @@ export default function WishlistItemCardBase(username) {
     const obj3 = { color: null, size: "custom", style: null };
     obj3[0] = tmp5(576).colors.WHITE;
     obj3[2] = { width: 40, height: 40 };
-    obj2[4] = tmp14(tmp2(8795).CheckmarkLargeBoldIcon, obj3);
+    obj2[4] = tmp14(tmp2(8800).CheckmarkLargeBoldIcon, obj3);
     tmp14Result = tmp14(tmp15, obj2);
   }
   items3[1] = tmp14Result;

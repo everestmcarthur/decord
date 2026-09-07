@@ -1,9 +1,9 @@
-// Module ID: 8606
-// Function ID: 8607
+// Module ID: 8611
+// Function ID: 8612
 // Name: FormTextColors
 // Dependencies: [19, 21, 4560, 5441, 576, 1178, 2]
 
-// Module 8606 (FormTextColors)
+// Module 8611 (FormTextColors)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import result2 from "result" /* 5441 */;

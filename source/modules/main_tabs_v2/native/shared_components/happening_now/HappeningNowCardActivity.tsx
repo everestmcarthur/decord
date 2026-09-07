@@ -1,21 +1,21 @@
-// Module ID: 16073
-// Function ID: 16074
+// Module ID: 16076
+// Function ID: 16077
 // Name: IconOrPreview
-// Dependencies: [19, 17, 1962, 1371, 15294, 1074, 1085, 21, 16074, 16075, 4560, 576, 7162, 504, 7168, 1242, 9536, 1896, 8179, 16069, 4712, 16076, 15295, 16070, 1178, 16079, 10891, 16080, 9911, 13002, 8708, 5097, 9223, 1114, 4409, 10059, 5587, 16071, 16082, 10062, 8139, 16084, 8248, 2]
+// Dependencies: [19, 17, 1962, 1371, 15297, 1074, 1085, 21, 16077, 16078, 4560, 576, 7162, 504, 7168, 1242, 9541, 1896, 8179, 16072, 4712, 16079, 15298, 16073, 1178, 16082, 10896, 16083, 9916, 13006, 8713, 5097, 9228, 1114, 4409, 10064, 5587, 16074, 16085, 10067, 8139, 16087, 8248, 2]
 
-// Module 16073 (IconOrPreview)
+// Module 16076 (IconOrPreview)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10062 */;
-import useLiveStageData from "useLiveStageData" /* 16071 */;
-import registerAssetDefault from "registerAsset" /* 16074 */;
-import registerAssetDefault2 from "registerAsset" /* 16075 */;
-import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 16082 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10067 */;
+import useLiveStageData from "useLiveStageData" /* 16074 */;
+import registerAssetDefault from "registerAsset" /* 16077 */;
+import registerAssetDefault2 from "registerAsset" /* 16078 */;
+import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 16085 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15294 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15297 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -122,7 +122,7 @@ function IconOrPreview(arg0) {
       obj[0] = memo;
       obj = { stream: null, children: null, style: null, ctaText: null, disabled: true };
       obj[0] = stream;
-      let tmp2Result = tmp2(10059);
+      let tmp2Result = tmp2(10064);
       obj1 = { style: null, textStyle: null, allowFontScaling: false };
       ({ cardImageStreamLive: obj13[0], stageStreamLiveText: obj13[1] } = tmp);
       obj[1] = callback(tmp28(1178).LiveTag, obj1);
@@ -132,7 +132,7 @@ function IconOrPreview(arg0) {
       obj[1] = callback(tmp2Result, obj);
       return callback(closure_4, obj);
     } else {
-      if (tmp2(10891)(activity)) {
+      if (tmp2(10896)(activity)) {
         const intl4 = tmp28(1114).intl;
         let stringResult = intl4.string(tmp28(1114).t.rmnkz4);
       } else {
@@ -143,7 +143,7 @@ function IconOrPreview(arg0) {
         if (type === constants.LISTENING) {
           const intl3 = tmp28(1114).intl;
           stringResult = intl3.string(tmp28(1114).t.kUEnxN);
-        } else if (tmp2(13002)(activity)) {
+        } else if (tmp2(13006)(activity)) {
           const intl2 = tmp28(1114).intl;
           stringResult = intl2.string(tmp28(1114).t.T0uYK9);
         } else {
@@ -180,7 +180,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       tmp2Result = items[userId % items.length];
     } else {
-      tmp2Result = tmp2(16084);
+      tmp2Result = tmp2(16087);
     }
   }
 }

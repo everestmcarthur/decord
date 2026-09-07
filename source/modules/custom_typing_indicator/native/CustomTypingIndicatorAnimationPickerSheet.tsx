@@ -1,10 +1,10 @@
-// Module ID: 15359
-// Function ID: 15360
+// Module ID: 15362
+// Function ID: 15363
 // Name: MotionOptionButton
-// Dependencies: [32, 19, 17, 21, 4560, 576, 5607, 4556, 1379, 1114, 3549, 7198, 11981, 4973, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 5607, 4556, 1379, 1114, 3549, 7198, 11985, 4973, 2]
 // Exports: default
 
-// Module 15359 (MotionOptionButton)
+// Module 15362 (MotionOptionButton)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import PressableCard from "PressableCard" /* 5607 */;
@@ -79,7 +79,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   const obj4 = { config: null, size: 54 };
   const obj5 = { emojis, animation: first, typingSuggestion: onChange(1379).TypingSuggestion.UNSPECIFIED };
   obj4[0] = obj5;
-  obj3[1] = callback2(first(11981), obj4);
+  obj3[1] = callback2(first(11985), obj4);
   const items1 = [callback2(View, obj3), ];
   const obj6 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];

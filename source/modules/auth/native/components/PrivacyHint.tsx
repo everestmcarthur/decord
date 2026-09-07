@@ -1,18 +1,18 @@
-// Module ID: 15984
-// Function ID: 15985
+// Module ID: 15987
+// Function ID: 15988
 // Name: PrivacyPolicyDescription
-// Dependencies: [19, 17, 6594, 15946, 1074, 21, 4560, 4556, 1114, 4277, 5617, 8593, 15985, 2]
+// Dependencies: [19, 17, 6594, 15949, 1074, 21, 4560, 4556, 1114, 4277, 5617, 8598, 15988, 2]
 // Exports: default
 
-// Module 15984 (PrivacyPolicyDescription)
+// Module 15987 (PrivacyPolicyDescription)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4277 */;
 import Text from "Text" /* 4556 */;
-import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15985 */;
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15988 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { usePromoEmailConsentStore } from "setPromoEmailConsentState" /* 6594 */;
-import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15946 */;
+import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15949 */;
 import { MarketingURLs } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -46,7 +46,7 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
   } else {
     obj1 = { selected: null };
     obj1[0] = consent;
-    tmp7Result = tmp7(tmp2(8593).FormRow.Radio, obj1);
+    tmp7Result = tmp7(tmp2(8598).FormRow.Radio, obj1);
     tmp9 = tmp7;
   }
   const items = [tmp7Result, ];

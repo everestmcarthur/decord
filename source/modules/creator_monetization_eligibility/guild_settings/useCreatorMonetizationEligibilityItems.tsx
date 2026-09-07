@@ -1,10 +1,10 @@
-// Module ID: 17687
-// Function ID: 17688
+// Module ID: 17690
+// Function ID: 17691
 // Name: useCreatorMonetizationEligibilityItems
-// Dependencies: [5, 19, 1074, 17688, 17689, 1114, 2024, 4249, 17690, 2]
+// Dependencies: [5, 19, 1074, 17691, 17692, 1114, 2024, 4249, 17693, 2]
 // Exports: default
 
-// Module 17687 (useCreatorMonetizationEligibilityItems)
+// Module 17690 (useCreatorMonetizationEligibilityItems)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;

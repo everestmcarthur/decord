@@ -1,7 +1,7 @@
 // Module ID: 5412
 // Function ID: 5413
 // Name: getChannelSelectionOrigin
-// Dependencies: [1957, 1979, 5413, 4199, 2011, 4381, 1371, 4579, 5414, 4705, 5415, 4258, 5416, 5417, 4527, 5430, 1896, 13626, 1256, 573, 2]
+// Dependencies: [1957, 1979, 5413, 4199, 2011, 4381, 1371, 4579, 5414, 4705, 5415, 4258, 5416, 5417, 4527, 5430, 1896, 13630, 1256, 573, 2]
 // Exports: getChannelSelectionOrigin, selectVoiceChannelAdditional
 
 // Module 5412 (getChannelSelectionOrigin)

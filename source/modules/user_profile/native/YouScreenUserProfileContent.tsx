@@ -1,15 +1,15 @@
-// Module ID: 16800
-// Function ID: 16801
+// Module ID: 16803
+// Function ID: 16804
 // Name: YouAvatar
-// Dependencies: [32, 19, 17, 1949, 5279, 7621, 8183, 7208, 1954, 21, 16793, 16369, 1115, 8256, 8241, 13064, 8674, 8190, 9177, 11198, 11967, 1943, 7388, 12996, 4975, 10250, 576, 1114, 16801, 16802, 16789, 1484, 8186, 11110, 8242, 504, 8227, 8238, 12945, 16803, 9032, 13069, 13070, 11116, 16804, 13073, 15695, 12998, 11207, 8599, 13079, 16806, 13051, 13084, 13090, 9792, 4296, 7156, 11112, 11152, 9770, 12614, 12616, 2]
+// Dependencies: [32, 19, 17, 1949, 5279, 7621, 8183, 7208, 1954, 21, 16796, 16372, 1115, 8256, 8241, 13068, 8679, 8190, 9182, 11203, 11971, 1943, 7388, 13000, 4975, 10255, 576, 1114, 16804, 16805, 16792, 1484, 8186, 11115, 8242, 504, 8227, 8238, 12949, 16806, 9037, 13073, 13074, 11121, 16807, 13077, 15698, 13002, 11212, 8604, 13083, 16809, 13055, 13088, 13094, 9797, 4296, 7156, 11117, 11157, 9775, 12618, 12620, 2]
 // Exports: default
 
-// Module 16800 (YouAvatar)
+// Module 16803 (YouAvatar)
 import set from "set" /* 1115 */;
 import useSharedStylesDefault from "useSharedStyles" /* 8241 */;
 import OpenableUserProfileAvatarDefault from "OpenableUserProfileAvatar" /* 8256 */;
-import WidgetRendererDefault from "WidgetRenderer" /* 8674 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13064 */;
+import WidgetRendererDefault from "WidgetRenderer" /* 8679 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13068 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -24,9 +24,9 @@ import jsxProd from "jsxProd" /* 21 */;
 require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(16793).trackYouTabAvatarPress();
-    const obj = callback(16793);
-    const result1 = callback(16369).showYouAccountActionSheet();
+    const result = callback(16796).trackYouTabAvatarPress();
+    const obj = callback(16796);
+    const result1 = callback(16372).showYouAccountActionSheet();
   }, []);
   let obj = set;
   const isAndroidResult = obj.isAndroid();

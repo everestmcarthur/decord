@@ -1,21 +1,21 @@
-// Module ID: 9082
-// Function ID: 9083
+// Module ID: 9087
+// Function ID: 9088
 // Name: _handleToggleVideo
-// Dependencies: [32, 5, 19, 17, 4582, 1957, 1908, 2011, 4579, 9083, 9086, 4770, 9088, 4905, 1114, 5139, 9089, 9110, 1874, 4767, 5411, 12, 9111, 9112, 9113, 1115, 504, 9114, 9087, 9465, 9084, 2]
+// Dependencies: [32, 5, 19, 17, 4582, 1957, 1908, 2011, 4579, 9088, 9091, 4770, 9093, 4905, 1114, 5139, 9094, 9115, 1874, 4767, 5411, 12, 9116, 9117, 9118, 1115, 504, 9119, 9092, 9470, 9089, 2]
 // Exports: getAudioDeviceToDisplayText, handleDisconnect, handleToggleSelfDeaf, handleToggleSelfMute, handleToggleVideo, showCameraDisabledAlert, showMinOSScreenshareRequirementAlert, showScreenshareDisabledAlert, showServerDeafenAlert, showServerMuteAlert, showSuppressedAlert, showTabletRequirementAlert, useImmediateMaskedSpeakerStates
 
-// Module 9082 (_handleToggleVideo)
+// Module 9087 (_handleToggleVideo)
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import dismissGlobalKeyboardAll from "dismissGlobalKeyboard" /* 1874 */;
 import openChannelCallModal from "openChannelCallModal" /* 4767 */;
 import _modDef4905 from "module_4905" /* 4905 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9089 */;
-import mapped from "mapped" /* 9110 */;
-import registerAssetDefault from "registerAsset" /* 9111 */;
-import registerAssetDefault2 from "registerAsset" /* 9112 */;
-import registerAssetDefault3 from "registerAsset" /* 9113 */;
-import useIsVideoModeDefault from "useIsVideoMode" /* 9465 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9094 */;
+import mapped from "mapped" /* 9115 */;
+import registerAssetDefault from "registerAsset" /* 9116 */;
+import registerAssetDefault2 from "registerAsset" /* 9117 */;
+import registerAssetDefault3 from "registerAsset" /* 9118 */;
+import useIsVideoModeDefault from "useIsVideoMode" /* 9470 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "noop" /* 19 */;
@@ -25,8 +25,8 @@ import closure_9 from "ensureGuildLoaded" /* 1957 */;
 import closure_10 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_11 from "handleConnectionOpen" /* 2011 */;
 import closure_12 from "updateVoiceState" /* 4579 */;
-import closure_13 from "handleAudioRouteChanged" /* 9083 */;
-import closure_14 from "nativeEventEmitter" /* 9086 */;
+import closure_13 from "handleAudioRouteChanged" /* 9088 */;
+import closure_14 from "nativeEventEmitter" /* 9091 */;
 import { NativePermissionTypes } from "NativePermissionStatus" /* 4770 */;
 import importDefaultResult from "apply" /* 12 */;
 import set from "set" /* 1115 */;
@@ -300,10 +300,10 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
   obj = isEnabled(504);
   const items = [closure_9, closure_11, closure_8, closure_12, closure_10, closure_13];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    isVideoMode = isEnabled(9465).isVideoMode(closure_9, closure_11, closure_8, closure_12, closure_10);
+    isVideoMode = isEnabled(9470).isVideoMode(closure_9, closure_11, closure_8, closure_12, closure_10);
     currentRouteType = currentRouteType.getCurrentRouteType();
-    isEnabled = currentRouteType === isEnabled(9084).RouteTypes.SPEAKER;
-    const isBluetoothRoute = currentRouteType === isEnabled(9084).RouteTypes.BLUETOOTH;
+    isEnabled = currentRouteType === isEnabled(9089).RouteTypes.SPEAKER;
+    const isBluetoothRoute = currentRouteType === isEnabled(9089).RouteTypes.BLUETOOTH;
     if (!isEnabled) {
       isEnabled = isBluetoothRoute;
     }
@@ -336,7 +336,7 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
     }
     dependencyMap(isEnabled);
   }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9112 : 9113) };
+  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9117 : 9118) };
   return obj;
 });
 export const useImmediateMaskedSpeakerStates = () => {
@@ -345,8 +345,8 @@ export const useImmediateMaskedSpeakerStates = () => {
   const stateFromStores = obj.useStateFromStores(items, () => currentRouteType.getCurrentRouteType());
   const tmp4 = useIsVideoModeDefault();
   _require = tmp4;
-  let tmp5 = stateFromStores === _require(9084).RouteTypes.SPEAKER;
-  const tmp6 = stateFromStores === _require(9084).RouteTypes.BLUETOOTH;
+  let tmp5 = stateFromStores === _require(9089).RouteTypes.SPEAKER;
+  const tmp6 = stateFromStores === _require(9089).RouteTypes.BLUETOOTH;
   if (!tmp5) {
     tmp5 = tmp6;
   }
@@ -371,6 +371,6 @@ export const useImmediateMaskedSpeakerStates = () => {
   const effect = React.useEffect(() => {
     callback(closure_1);
   }, items2);
-  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9112 : 9113) };
+  obj = { isAudioRouteEnabled: first, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9117 : 9118) };
   return obj;
 };

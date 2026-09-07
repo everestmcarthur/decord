@@ -1,10 +1,10 @@
-// Module ID: 9791
-// Function ID: 9792
+// Module ID: 9796
+// Function ID: 9797
 // Name: useInterestedEventUsers
 // Dependencies: [19, 7526, 1963, 504, 2]
 // Exports: default
 
-// Module 9791 (useInterestedEventUsers)
+// Module 9796 (useInterestedEventUsers)
 import set2 from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;

@@ -1,9 +1,9 @@
-// Module ID: 12431
-// Function ID: 12432
+// Module ID: 12435
+// Function ID: 12436
 // Name: EmojiSuggestionBarSmallAnimated
-// Dependencies: [19, 10290, 21, 576, 4560, 12426, 4296, 10310, 10328, 4271, 2]
+// Dependencies: [19, 10295, 21, 576, 4560, 12430, 4296, 10315, 10333, 4271, 2]
 
-// Module 12431 (EmojiSuggestionBarSmallAnimated)
+// Module 12435 (EmojiSuggestionBarSmallAnimated)
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import importAllResult from "noop" /* 19 */;
@@ -16,7 +16,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   ({ reducedMotion: importDefault, handlePress: dependencyMap, handlePressEmojiUnavailable: closure_3, transitionState } = displayEmojis);
   let suggestionBarHeight;
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
-  let obj = displayEmojis(12426);
+  let obj = displayEmojis(12430);
   suggestionBarHeight = obj.useSuggestionBarHeight(transitionState, cleanUp, closure_6, onOccupiedHeightChange);
   const tmp = callback(displayEmojis.anchorTop);
   class A {

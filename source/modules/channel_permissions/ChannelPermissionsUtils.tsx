@@ -1,10 +1,10 @@
-// Module ID: 9738
-// Function ID: 9739
+// Module ID: 9743
+// Function ID: 9744
 // Name: getRoleRowData
-// Dependencies: [1961, 1975, 2016, 2021, 1371, 8401, 1074, 2019, 1114, 1086, 11, 4404, 1369, 4204, 9739, 1894, 4705, 2]
+// Dependencies: [1961, 1975, 2016, 2021, 1371, 8401, 1074, 2019, 1114, 1086, 11, 4404, 1369, 4204, 9744, 1894, 4705, 2]
 // Exports: canCreatePrivateChannel, extractPermissionOverwrites, flipEveryonePermission, getAllExistingRolesWithPermission, getExistingMembers, getExistingMembersRows, getExistingRoles, getExistingRolesRowWithPermissionDisabled, getExistingRolesRows, getMembersRows, getNoRolesRow, getPrivateChannelHintText, getRemoveTooltipHint, getRolesRows, getRolesRowsWithPermissionDisabled, getRowTypeLabel, grantUserChannelAccess, isEveryoneRoleId, isPrivateGuildChannel, isPrivateTextChannel, toggleChannelEveryonePermission
 
-// Module 9738 (getRoleRowData)
+// Module 9743 (getRoleRowData)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import fromStringAll from "fromString" /* 1086 */;
@@ -16,7 +16,7 @@ import compareGuildRoles from "compareGuildRoles" /* 2019 */;
 import applyOverwritesAll from "applyOverwrites" /* 4204 */;
 import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import RowType2 from "RowType" /* 8401 */;
-import _updatePermission from "_updatePermission" /* 9739 */;
+import _updatePermission from "_updatePermission" /* 9744 */;
 import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 2016 */;
 import closure_8 from "trackCommunicationDisabled" /* 2021 */;
 import closure_9 from "mergeGuildAvatar" /* 1371 */;

@@ -1,10 +1,10 @@
-// Module ID: 15513
-// Function ID: 15514
+// Module ID: 15516
+// Function ID: 15517
 // Name: onSummaryReminderNotificationSettingsChanged
 // Dependencies: [4212, 1074, 1935, 1242, 2]
 // Exports: onSummaryReminderNotificationSettingsChanged
 
-// Module 15513 (onSummaryReminderNotificationSettingsChanged)
+// Module 15516 (onSummaryReminderNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

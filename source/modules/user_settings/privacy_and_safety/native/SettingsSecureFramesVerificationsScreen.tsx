@@ -1,10 +1,10 @@
-// Module ID: 15854
-// Function ID: 15855
+// Module ID: 15857
+// Function ID: 15858
 // Name: VerificationListItem
-// Dependencies: [19, 17, 1371, 21, 4560, 9150, 5605, 1114, 5123, 5680, 4556, 6994, 1483, 504, 4404, 7863, 15851, 8874, 2]
+// Dependencies: [19, 17, 1371, 21, 4560, 9155, 5605, 1114, 5123, 5680, 4556, 6994, 1483, 504, 4404, 7863, 15854, 8879, 2]
 // Exports: default
 
-// Module 15854 (VerificationListItem)
+// Module 15857 (VerificationListItem)
 import Text from "Text" /* 4556 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -107,7 +107,7 @@ export default function SettingsSecureFramesVerificationsScreen() {
     navigation.setOptions(obj);
   });
   const obj4 = navigation(4404);
-  secureFramesUserVerifiedKeys = userId(15851).useSecureFramesUserVerifiedKeys(userId);
+  secureFramesUserVerifiedKeys = userId(15854).useSecureFramesUserVerifiedKeys(userId);
   const items1 = [userId, secureFramesUserVerifiedKeys];
   const items2 = [navigation, secureFramesUserVerifiedKeys];
   const memo = secureFramesUserVerifiedKeys.useMemo(() => {
@@ -131,6 +131,6 @@ export default function SettingsSecureFramesVerificationsScreen() {
   obj = { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null };
   obj1 = { style: tmp.listFooter, children: <ClearVerificationsListFooter userId={userId} /> };
   obj[5] = <View style={tmp.listFooter}><ClearVerificationsListFooter userId={userId} /></View>;
-  obj[1] = jsx(userId(8874).FlashList, { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null });
+  obj[1] = jsx(userId(8879).FlashList, { keyExtractor, getItemType, renderItem, data: memo, contentContainerStyle: tmp.listContent, ListFooterComponent: null });
   return <View keyExtractor={keyExtractor} getItemType={getItemType} renderItem={renderItem} data={memo} contentContainerStyle={tmp.listContent} ListFooterComponent={null} />;
 };

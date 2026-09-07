@@ -1,10 +1,10 @@
-// Module ID: 13115
-// Function ID: 13116
+// Module ID: 13119
+// Function ID: 13120
 // Name: AddFriendNicknameModal
-// Dependencies: [5, 32, 19, 17, 4209, 1371, 21, 4560, 576, 10927, 504, 1114, 4763, 9042, 5578, 4994, 4556, 6613, 4404, 2]
+// Dependencies: [5, 32, 19, 17, 4209, 1371, 21, 4560, 576, 10932, 504, 1114, 4763, 9047, 5578, 4994, 4556, 6613, 4404, 2]
 // Exports: default
 
-// Module 13115 (AddFriendNicknameModal)
+// Module 13119 (AddFriendNicknameModal)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -153,7 +153,7 @@ export default function AddFriendNicknameModal(arg0) {
   let tmp = callback4();
   let obj = React;
   [c2, c3] = callback(React.useState(false), 2);
-  callback = showUserProfile(10927)();
+  callback = showUserProfile(10932)();
   obj1 = initialize;
   const items = [_handleSubmit];
   const stateFromStores = obj1.useStateFromStores(items, () => _handleSubmit.getNickname(closure_0));

@@ -1,10 +1,10 @@
-// Module ID: 9071
-// Function ID: 9072
+// Module ID: 9076
+// Function ID: 9077
 // Name: _fetchGuildIntegrationsApplications
 // Dependencies: [5, 1918, 1385, 1074, 1272, 573, 2]
 // Exports: fetchGuildEmbed, fetchGuildIntegrationsApplications
 
-// Module 9071 (_fetchGuildIntegrationsApplications)
+// Module 9076 (_fetchGuildIntegrationsApplications)
 import sendRequest from "sendRequest" /* 1272 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { BasicApplicationRecord } from "createExecutable" /* 1918 */;

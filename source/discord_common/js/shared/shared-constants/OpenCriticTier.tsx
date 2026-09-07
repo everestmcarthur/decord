@@ -1,9 +1,9 @@
-// Module ID: 8726
-// Function ID: 8727
+// Module ID: 8731
+// Function ID: 8732
 // Name: OpenCriticTier
 // Dependencies: [2]
 
-// Module 8726 (OpenCriticTier)
+// Module 8731 (OpenCriticTier)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/OpenCriticTier.tsx");

@@ -1,13 +1,13 @@
-// Module ID: 13345
-// Function ID: 13346
+// Module ID: 13349
+// Function ID: 13350
 // Name: SubscriptionAccountHoldNotice
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 1178, 12769, 4556, 1114, 4218, 4975, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 1178, 12773, 4556, 1114, 4218, 4975, 2]
 // Exports: default
 
-// Module 13345 (SubscriptionAccountHoldNotice)
+// Module 13349 (SubscriptionAccountHoldNotice)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 12769 */;
+import registerAssetDefault from "registerAsset" /* 12773 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { SubscriptionStatusTypes } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;

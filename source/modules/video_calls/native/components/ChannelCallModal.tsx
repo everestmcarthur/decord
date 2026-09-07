@@ -1,21 +1,21 @@
-// Module ID: 9466
-// Function ID: 9467
+// Module ID: 9471
+// Function ID: 9472
 // Name: ChannelCallCameraPreview
-// Dependencies: [32, 19, 4576, 1957, 9467, 9468, 9473, 1074, 21, 9471, 9474, 4417, 9484, 9656, 9481, 9657, 4296, 4425, 12781, 504, 1477, 9475, 12782, 7162, 7182, 12926, 4767, 6655, 9589, 2]
+// Dependencies: [32, 19, 4576, 1957, 9472, 9473, 9478, 1074, 21, 9476, 9479, 4417, 9489, 9661, 9486, 9662, 4296, 4425, 12785, 504, 1477, 9480, 12786, 7162, 7182, 12930, 4767, 6655, 9594, 2]
 
-// Module 9466 (ChannelCallCameraPreview)
+// Module 9471 (ChannelCallCameraPreview)
 import coerceMainRoute from "coerceMainRoute" /* 4417 */;
-import useIsConnectedToVoiceChannel from "useIsConnectedToVoiceChannel" /* 9471 */;
-import useRevealProviderValue from "useRevealProviderValue" /* 9474 */;
-import CameraPreviewDefault from "CameraPreview" /* 9484 */;
-import CallWithVoiceChatDefault from "CallWithVoiceChat" /* 9657 */;
+import useIsConnectedToVoiceChannel from "useIsConnectedToVoiceChannel" /* 9476 */;
+import useRevealProviderValue from "useRevealProviderValue" /* 9479 */;
+import CameraPreviewDefault from "CameraPreview" /* 9489 */;
+import CallWithVoiceChatDefault from "CallWithVoiceChat" /* 9662 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import closure_5 from "getParticipants" /* 4576 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9467 */;
-import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9468 */;
-import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 9473 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9472 */;
+import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9473 */;
+import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 9478 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -67,10 +67,10 @@ let closure_18 = importAllResult.memo((arg0) => {
     if (null != first) {
       closure_1_1(closure_1_2[13]).initialize(tmp);
       return () => {
-        callback2(9656).terminate();
-        const obj = callback2(9656);
-        callback2(9481).setHidden(false);
-        const obj2 = callback2(9481);
+        callback2(9661).terminate();
+        const obj = callback2(9661);
+        callback2(9486).setHidden(false);
+        const obj2 = callback2(9486);
         if (!obj3.isModalOpen(closure_31)) {
           callback3();
         }

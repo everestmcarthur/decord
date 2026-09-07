@@ -1,18 +1,18 @@
-// Module ID: 17339
-// Function ID: 17340
+// Module ID: 17342
+// Function ID: 17343
 // Name: finishRoll
-// Dependencies: [1957, 2011, 11959, 9301, 4553, 7118, 1114, 7456, 7682, 2]
+// Dependencies: [1957, 2011, 11963, 9306, 4553, 7118, 1114, 7456, 7682, 2]
 
-// Module 17339 (finishRoll)
+// Module 17342 (finishRoll)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import initializeDefault from "initialize" /* 7118 */;
 import trackInviteDefault from "trackInvite" /* 7456 */;
 import rebuildDefault from "rebuild" /* 7682 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "handleConnectionOpen" /* 2011 */;
-import closure_5 from "INITIAL_STATE" /* 11959 */;
-import { INITIAL_STATE } from "INITIAL_STATE" /* 11959 */;
-import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 9301 */;
+import closure_5 from "INITIAL_STATE" /* 11963 */;
+import { INITIAL_STATE } from "INITIAL_STATE" /* 11963 */;
+import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 9306 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
 
 require = arg1;

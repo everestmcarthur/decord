@@ -1,10 +1,10 @@
-// Module ID: 11662
-// Function ID: 11663
+// Module ID: 11667
+// Function ID: 11668
 // Name: useShouldHideMediaOptions
 // Dependencies: [1957, 1964, 563, 2]
 // Exports: default
 
-// Module 11662 (useShouldHideMediaOptions)
+// Module 11667 (useShouldHideMediaOptions)
 import closure_2 from "ensureGuildLoaded" /* 1957 */;
 import { ChannelFlags } from "set" /* 1964 */;
 

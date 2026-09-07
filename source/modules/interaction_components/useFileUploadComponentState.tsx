@@ -1,10 +1,10 @@
-// Module ID: 17396
-// Function ID: 17397
+// Module ID: 17399
+// Function ID: 17400
 // Name: useFileUploadComponentState
 // Dependencies: [19, 4901, 4900, 8112, 38, 1894, 2]
 // Exports: useFileUploadComponentState
 
-// Module 17396 (useFileUploadComponentState)
+// Module 17399 (useFileUploadComponentState)
 import closure_3 from "noop" /* 19 */;
 import { DraftType } from "handleChanged" /* 4901 */;
 import closure_5 from "map" /* 4900 */;

@@ -1,10 +1,10 @@
-// Module ID: 10830
-// Function ID: 10831
+// Module ID: 10835
+// Function ID: 10836
 // Name: PremiumGiftBackgroundAnimation
-// Dependencies: [32, 19, 17, 4552, 21, 4560, 504, 8082, 10831, 5529, 2]
+// Dependencies: [32, 19, 17, 4552, 21, 4560, 504, 8082, 10836, 5529, 2]
 // Exports: default
 
-// Module 10830 (PremiumGiftBackgroundAnimation)
+// Module 10835 (PremiumGiftBackgroundAnimation)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

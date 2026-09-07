@@ -1,10 +1,10 @@
-// Module ID: 14705
-// Function ID: 14706
+// Module ID: 14708
+// Function ID: 14709
 // Name: UsernameStatusMessage
-// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4560, 576, 4745, 14706, 4556, 1114, 1483, 504, 4218, 14707, 6990, 6984, 1272, 1484, 7863, 6606, 6998, 6938, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4560, 576, 4745, 14709, 4556, 1114, 1483, 504, 4218, 14710, 6990, 6984, 1272, 1484, 7863, 6606, 6998, 6938, 2]
 // Exports: default
 
-// Module 14705 (UsernameStatusMessage)
+// Module 14708 (UsernameStatusMessage)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
@@ -19,11 +19,11 @@ const require = arg1;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
   const match = showHint(4745).match(showHint.usernameStatus);
-  let obj = { type: showHint(14706).NameValidationState.ERROR, message: null };
+  let obj = { type: showHint(14709).NameValidationState.ERROR, message: null };
   const P = showHint(4745).P;
   obj[1] = P.select();
   const str = showHint(4745);
-  obj = { type: showHint(14706).NameValidationState.AVAILABLE, message: null };
+  obj = { type: showHint(14709).NameValidationState.AVAILABLE, message: null };
   const P2 = showHint(4745).P;
   obj[1] = P2.select();
   const withResult = match.with(obj, (children) => callback(showHint(4556).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));

@@ -1,10 +1,10 @@
-// Module ID: 14902
-// Function ID: 14903
+// Module ID: 14905
+// Function ID: 14906
 // Name: getCollectibleTypeName
 // Dependencies: [7547, 7548, 1373, 1889, 1114, 2396, 1396, 2]
 // Exports: getAvatarDecorationPreviewUrl, getProfileEffectPreviewUrl, getPurchaseDisplayInfo, isGuildBoostSubscription
 
-// Module 14902 (getCollectibleTypeName)
+// Module 14905 (getCollectibleTypeName)
 import set from "set" /* 2 */;
 import getAvatarURL from "getAvatarURL" /* 1396 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;

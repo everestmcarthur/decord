@@ -1,10 +1,10 @@
-// Module ID: 13822
-// Function ID: 13823
+// Module ID: 13825
+// Function ID: 13826
 // Name: dispatchAutoDisableVideo
 // Dependencies: [4585, 573, 2]
 // Exports: default
 
-// Module 13822 (dispatchAutoDisableVideo)
+// Module 13825 (dispatchAutoDisableVideo)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import DesktopSources from "DesktopSources" /* 4585 */;

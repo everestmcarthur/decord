@@ -1,10 +1,10 @@
-// Module ID: 9901
-// Function ID: 9902
+// Module ID: 9906
+// Function ID: 9907
 // Name: checkVoiceStates
-// Dependencies: [1957, 1908, 2011, 4579, 5418, 1962, 9899, 9902, 504, 5431, 5425, 7118, 2]
+// Dependencies: [1957, 1908, 2011, 4579, 5418, 1962, 9904, 9907, 504, 5431, 5425, 7118, 2]
 // Exports: shouldShowStageMusicMuteButton, useShowStageMusicMuteButton
 
-// Module 9901 (checkVoiceStates)
+// Module 9906 (checkVoiceStates)
 import sortKey from "sortKey" /* 5425 */;
 import initializeDefault from "initialize" /* 7118 */;
 import closure_2 from "ensureGuildLoaded" /* 1957 */;
@@ -13,8 +13,8 @@ import closure_4 from "handleConnectionOpen" /* 2011 */;
 import closure_5 from "updateVoiceState" /* 4579 */;
 import closure_6 from "getActiveStageChannelIds" /* 5418 */;
 import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
-import closure_8 from "initialize" /* 9899 */;
-import createSoundForPack from "createSoundForPack" /* 9902 */;
+import closure_8 from "initialize" /* 9904 */;
+import createSoundForPack from "createSoundForPack" /* 9907 */;
 
 require = arg1;
 function checkVoiceStates() {

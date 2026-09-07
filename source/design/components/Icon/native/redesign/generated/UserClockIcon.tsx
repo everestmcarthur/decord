@@ -1,14 +1,14 @@
-// Module ID: 13125
-// Function ID: 13126
+// Module ID: 13129
+// Function ID: 13130
 // Name: UserClockIcon
-// Dependencies: [19, 21, 576, 4261, 13126, 2]
+// Dependencies: [19, 21, 576, 4261, 13130, 2]
 // Exports: UserClockIcon
 
-// Module 13125 (UserClockIcon)
+// Module 13129 (UserClockIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 13126 */;
+import registerAsset from "registerAsset" /* 13130 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

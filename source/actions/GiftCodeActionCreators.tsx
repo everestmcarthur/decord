@@ -1,12 +1,12 @@
-// Module ID: 11430
-// Function ID: 11431
+// Module ID: 11435
+// Function ID: 11436
 // Name: resolveGiftCode
-// Dependencies: [5, 4788, 7542, 7550, 1074, 1373, 573, 4799, 7163, 7541, 4461, 4241, 1232, 1272, 11431, 11432, 2]
+// Dependencies: [5, 4788, 7542, 7550, 1074, 1373, 573, 4799, 7163, 7541, 4461, 4241, 1232, 1272, 11436, 11437, 2]
 // Exports: deliverGiftCodes, reportUnexpectedGiftCodeError, resolveGiftCode
 
-// Module 11430 (resolveGiftCode)
+// Module 11435 (resolveGiftCode)
 import prototypeDefault from "prototype" /* 4241 */;
-import _modDef11431 from "module_11431" /* 11431 */;
+import _modDef11436 from "module_11436" /* 11436 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "addApplication" /* 4788 */;
 import closure_5 from "updateCategoriesAndProducts" /* 7542 */;
@@ -398,7 +398,7 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    _modDef11431.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    _modDef11436.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   }
 };
 export { resolveGiftCode };

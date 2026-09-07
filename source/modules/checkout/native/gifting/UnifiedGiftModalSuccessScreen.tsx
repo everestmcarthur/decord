@@ -1,10 +1,10 @@
-// Module ID: 11015
-// Function ID: 11016
+// Module ID: 11020
+// Function ID: 11021
 // Name: UnifiedGiftModalSuccessScreen
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 11016, 10743, 4763, 11027, 1896, 7382, 4994, 4556, 1114, 4976, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 11021, 10748, 4763, 11032, 1896, 7382, 4994, 4556, 1114, 4976, 2]
 // Exports: default
 
-// Module 11015 (UnifiedGiftModalSuccessScreen)
+// Module 11020 (UnifiedGiftModalSuccessScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;

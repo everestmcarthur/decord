@@ -1,15 +1,15 @@
-// Module ID: 11204
-// Function ID: 11205
+// Module ID: 11209
+// Function ID: 11210
 // Name: CirclePlusIcon
-// Dependencies: [19, 17, 21, 576, 4261, 11205, 11206, 2]
+// Dependencies: [19, 17, 21, 576, 4261, 11210, 11211, 2]
 // Exports: CirclePlusIcon
 
-// Module 11204 (CirclePlusIcon)
+// Module 11209 (CirclePlusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 11205 */;
-import registerAsset2 from "registerAsset" /* 11206 */;
+import registerAsset from "registerAsset" /* 11210 */;
+import registerAsset2 from "registerAsset" /* 11211 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

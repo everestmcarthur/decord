@@ -1,15 +1,15 @@
-// Module ID: 10645
-// Function ID: 10646
+// Module ID: 10650
+// Function ID: 10651
 // Name: getDeviceMediaPhotos
-// Dependencies: [17, 3, 1232, 1115, 10646, 2]
+// Dependencies: [17, 3, 1232, 1115, 10651, 2]
 // Exports: default
 
-// Module 10645 (getDeviceMediaPhotos)
+// Module 10650 (getDeviceMediaPhotos)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 1115 */;
-import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 10646 */;
+import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 10651 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let closure_4 = new timestampDefault("DeviceMedia.tsx");

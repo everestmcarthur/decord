@@ -1,10 +1,10 @@
-// Module ID: 12296
-// Function ID: 12297
+// Module ID: 12300
+// Function ID: 12301
 // Name: NewBadge
 // Dependencies: [19, 17, 21, 4560, 1115, 576, 4411, 7873, 4495, 4556, 1114, 2]
 // Exports: default
 
-// Module 12296 (NewBadge)
+// Module 12300 (NewBadge)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

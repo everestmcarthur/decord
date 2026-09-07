@@ -1,12 +1,12 @@
-// Module ID: 11189
-// Function ID: 11190
+// Module ID: 11194
+// Function ID: 11195
 // Name: CoachmarkImg
-// Dependencies: [32, 19, 17, 1074, 1954, 21, 4560, 11158, 5587, 7634, 1943, 7388, 1114, 7382, 11127, 2]
+// Dependencies: [32, 19, 17, 1074, 1954, 21, 4560, 11163, 5587, 7634, 1943, 7388, 1114, 7382, 11132, 2]
 // Exports: default
 
-// Module 11189 (CoachmarkImg)
+// Module 11194 (CoachmarkImg)
 import preloadDefault from "preload" /* 5587 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11158 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11163 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -91,6 +91,6 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     return obj;
   }, items2);
   let obj = tieredTenureBadgeData(7634);
-  const coachmark = tieredTenureBadgeData(11127).useCoachmark(targetRef, memo);
+  const coachmark = tieredTenureBadgeData(11132).useCoachmark(targetRef, memo);
   return null;
 };

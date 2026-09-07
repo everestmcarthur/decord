@@ -1,17 +1,17 @@
-// Module ID: 14620
-// Function ID: 14621
+// Module ID: 14623
+// Function ID: 14624
 // Name: HideBadgeMenu
-// Dependencies: [19, 17, 8160, 1371, 8192, 1074, 7151, 1373, 21, 4560, 576, 4528, 8668, 8666, 1114, 14621, 4515, 5607, 11190, 8097, 6968, 11199, 6964, 4296, 4561, 4564, 13067, 8667, 6655, 4272, 11198, 1611, 504, 4218, 7162, 7182, 7152, 9392, 9362, 1242, 8197, 4259, 1477, 10993, 14622, 4556, 5577, 7150, 7149, 6627, 2]
+// Dependencies: [19, 17, 8160, 1371, 8192, 1074, 7151, 1373, 21, 4560, 576, 4528, 8673, 8671, 1114, 14624, 4515, 5607, 11195, 8097, 6968, 11204, 6964, 4296, 4561, 4564, 13071, 8672, 6655, 4272, 11203, 1611, 504, 4218, 7162, 7182, 7152, 9397, 9367, 1242, 8197, 4259, 1477, 10998, 14625, 4556, 5577, 7150, 7149, 6627, 2]
 // Exports: default
 
-// Module 14620 (HideBadgeMenu)
+// Module 14623 (HideBadgeMenu)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
 import PressableCard from "PressableCard" /* 5607 */;
-import ContextMenu from "ContextMenu" /* 8666 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11190 */;
-import PX_16 from "PX_16" /* 14621 */;
+import ContextMenu from "ContextMenu" /* 8671 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11195 */;
+import PX_16 from "PX_16" /* 14624 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "handleFormOpen" /* 8160 */;

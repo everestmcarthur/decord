@@ -1,8 +1,8 @@
-// Module ID: 9183
-// Function ID: 9184
-// Dependencies: [19, 17, 21, 4560, 576, 4271, 8565, 4411, 5587, 1396, 2]
+// Module ID: 9188
+// Function ID: 9189
+// Dependencies: [19, 17, 21, 4560, 576, 4271, 8568, 4411, 5587, 1396, 2]
 
-// Module 9183
+// Module 9188
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -41,7 +41,7 @@ const memoResult = importAllResult.memo(function GameActivityIcon(style) {
       let tmp2Result = tmp2(4411);
       const colors = iconURL(576).colors;
       obj[2] = tmp2Result.isThemeDark(obj.useThemeContext().theme) ? colors.WHITE : colors.BLACK;
-      jsx(tmp2(8565).UnknownGameIcon, { size: "custom", style: null, color: null });
+      jsx(tmp2(8568).UnknownGameIcon, { size: "custom", style: null, color: null });
       const isThemeDarkResult = tmp2Result.isThemeDark(obj.useThemeContext().theme);
     }
   } else {

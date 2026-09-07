@@ -1,10 +1,10 @@
-// Module ID: 8829
-// Function ID: 8830
+// Module ID: 8834
+// Function ID: 8835
 // Name: useWishlistButtonState
-// Dependencies: [5, 32, 19, 7621, 7162, 1925, 504, 8776, 8783, 4411, 1114, 2]
+// Dependencies: [5, 32, 19, 7621, 7162, 1925, 504, 8781, 8788, 4411, 1114, 2]
 // Exports: useWishlistButtonState
 
-// Module 8829 (useWishlistButtonState)
+// Module 8834 (useWishlistButtonState)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;

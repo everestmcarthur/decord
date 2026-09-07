@@ -1,10 +1,10 @@
-// Module ID: 10822
-// Function ID: 10823
+// Module ID: 10827
+// Function ID: 10828
 // Name: NativePaymentContextProvider
-// Dependencies: [32, 19, 4223, 1085, 21, 7428, 9366, 7257, 10823, 504, 2]
+// Dependencies: [32, 19, 4223, 1085, 21, 7428, 9371, 7257, 10828, 504, 2]
 // Exports: NativePaymentContextProvider
 
-// Module 10822 (NativePaymentContextProvider)
+// Module 10827 (NativePaymentContextProvider)
 import createDefinedContextDefault from "createDefinedContext" /* 7428 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "addSubscriptionPlan" /* 4223 */;

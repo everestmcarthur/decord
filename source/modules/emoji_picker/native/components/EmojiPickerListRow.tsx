@@ -1,20 +1,20 @@
-// Module ID: 10310
-// Function ID: 10311
+// Module ID: 10315
+// Function ID: 10316
 // Name: EmojiItemLockedOverlay
-// Dependencies: [19, 17, 1183, 10290, 1219, 21, 4560, 576, 1115, 672, 1396, 5095, 5123, 5587, 4411, 7131, 7132, 1178, 10311, 2]
+// Dependencies: [19, 17, 1183, 10295, 1219, 21, 4560, 576, 1115, 672, 1396, 5095, 5123, 5587, 4411, 7131, 7132, 1178, 10316, 2]
 
-// Module 10310 (EmojiItemLockedOverlay)
+// Module 10315 (EmojiItemLockedOverlay)
 import ThemesDefault from "Themes" /* 576 */;
 import nDefault from "n" /* 672 */;
 import set2 from "set" /* 1115 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 import LockIcon from "LockIcon" /* 5095 */;
 import preloadDefault from "preload" /* 5587 */;
-import ViewDefault from "View" /* 10311 */;
+import ViewDefault from "View" /* 10316 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_4 from "handleThemeChange" /* 1183 */;
-import IMAGE_SIZE from "IMAGE_SIZE" /* 10290 */;
+import IMAGE_SIZE from "IMAGE_SIZE" /* 10295 */;
 import { PADDING_VERTICAL } from "ExpressionPickerViewType" /* 1219 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

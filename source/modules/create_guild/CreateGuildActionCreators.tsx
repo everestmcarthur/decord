@@ -1,9 +1,9 @@
-// Module ID: 12320
-// Function ID: 12321
+// Module ID: 12324
+// Function ID: 12325
 // Name: _createGuildFromTemplate
 // Dependencies: [5, 1074, 4753, 1250, 4461, 2]
 
-// Module 12320 (_createGuildFromTemplate)
+// Module 12324 (_createGuildFromTemplate)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 1074 */;
 

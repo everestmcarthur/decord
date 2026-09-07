@@ -1,9 +1,9 @@
-// Module ID: 12074
-// Function ID: 12075
+// Module ID: 12078
+// Function ID: 12079
 // Name: getSimilarApplications
 // Dependencies: [1437, 504, 573, 2]
 
-// Module 12074 (getSimilarApplications)
+// Module 12078 (getSimilarApplications)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import privDefault from "priv" /* 1437 */;

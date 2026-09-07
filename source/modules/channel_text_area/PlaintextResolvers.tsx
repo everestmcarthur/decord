@@ -1,10 +1,10 @@
-// Module ID: 9415
-// Function ID: 9416
+// Module ID: 9420
+// Function ID: 9421
 // Name: resolvePlaintextInlineVoid
 // Dependencies: [32, 5459, 5506, 1957, 2012, 2021, 2015, 1979, 4199, 4209, 1371, 1074, 1374, 7686, 4713, 11, 5442, 4213, 4217, 2]
 // Exports: resolveApplicationCommandOption
 
-// Module 9415 (resolvePlaintextInlineVoid)
+// Module 9420 (resolvePlaintextInlineVoid)
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;
 import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4217 */;
 import createEmptyState from "createEmptyState" /* 7686 */;

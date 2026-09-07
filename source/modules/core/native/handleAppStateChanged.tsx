@@ -1,10 +1,10 @@
-// Module ID: 17900
-// Function ID: 17901
+// Module ID: 17903
+// Function ID: 17904
 // Name: handleAppStateChanged
-// Dependencies: [502, 1895, 1074, 3, 10, 573, 4583, 17899, 7475, 4408, 9, 1242, 2]
+// Dependencies: [502, 1895, 1074, 3, 10, 573, 4583, 17902, 7475, 4408, 9, 1242, 2]
 // Exports: default
 
-// Module 17900 (handleAppStateChanged)
+// Module 17903 (handleAppStateChanged)
 import timestampDefault from "timestamp" /* 3 */;
 import isTracingDefault from "isTracing" /* 10 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
@@ -36,7 +36,7 @@ export default function handleAppStateChanged(state) {
     const _default = createRTCConnection.default;
   }
   if (isAuthenticatedResult) {
-    let tmp2Result = tmp2(17899);
+    let tmp2Result = tmp2(17902);
     tmp2Result.deferUpdate();
   }
   if (state === constants2.ACTIVE) {

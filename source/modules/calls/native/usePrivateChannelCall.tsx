@@ -1,10 +1,10 @@
-// Module ID: 13127
-// Function ID: 13128
+// Module ID: 13131
+// Function ID: 13132
 // Name: usePrivateChannelCall
-// Dependencies: [5, 19, 1957, 504, 1114, 10869, 4573, 2]
+// Dependencies: [5, 19, 1957, 504, 1114, 10874, 4573, 2]
 // Exports: default
 
-// Module 13127 (usePrivateChannelCall)
+// Module 13131 (usePrivateChannelCall)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
@@ -24,7 +24,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
     if (null != channel) {
       if (channel.isPrivate()) {
         let obj = { text: null, accessibilityHint: null, inCall: null };
-        ({ text: obj2[0], accessibilityHint: obj2[1], inCall: obj2[2] } = callback2(10869)(channel, callback2));
+        ({ text: obj2[0], accessibilityHint: obj2[1], inCall: obj2[2] } = callback2(10874)(channel, callback2));
         return obj;
       }
     }
@@ -113,8 +113,8 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             isPrivateResult = obj1.isPrivate();
           }
           if (isPrivateResult) {
-            closure_1_1(10869)(channel, closure_1).onPress();
-            const obj3 = closure_1_1(10869)(channel, closure_1);
+            closure_1_1(10874)(channel, closure_1).onPress();
+            const obj3 = closure_1_1(10874)(channel, closure_1);
           }
           if (dependencyMap != null) {
             dependencyMap();

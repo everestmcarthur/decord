@@ -1,10 +1,10 @@
-// Module ID: 10185
-// Function ID: 10186
+// Module ID: 10190
+// Function ID: 10191
 // Name: handleClose
-// Dependencies: [5, 32, 19, 17, 1371, 10184, 21, 4560, 576, 672, 1090, 4763, 1483, 504, 1114, 5624, 5128, 4259, 6992, 10186, 559, 10187, 9566, 7377, 5688, 5587, 1396, 5150, 4973, 4556, 5607, 10196, 5123, 1178, 4975, 6606, 5687, 5605, 4527, 10211, 1896, 5685, 7085, 1348, 10214, 10176, 7000, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 10189, 21, 4560, 576, 672, 1090, 4763, 1483, 504, 1114, 5624, 5128, 4259, 6992, 10191, 559, 10192, 9571, 7377, 5688, 5587, 1396, 5150, 4973, 4556, 5607, 10201, 5123, 1178, 4975, 6606, 5687, 5605, 4527, 10216, 1896, 5685, 7085, 1348, 10219, 10181, 7000, 2]
 // Exports: default
 
-// Module 10185 (handleClose)
+// Module 10190 (handleClose)
 import ThemesDefault from "Themes" /* 576 */;
 import setDefault from "set" /* 1090 */;
 import _modDef4763 from "module_4763" /* 4763 */;
@@ -13,7 +13,7 @@ import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "zustandStore" /* 10184 */;
+import closure_9 from "zustandStore" /* 10189 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importDefaultResult from "n" /* 672 */;
@@ -303,7 +303,7 @@ class BugCreateScreen {
                       closure_2 = arg2;
                       c5 = 0;
                       c6 = 0;
-                      return (/* F125956 */ function*() { ... })();
+                      return (/* F125988 */ function*() { ... })();
                     });
                     closure_3 = tmp;
                     const apply = tmp.apply;

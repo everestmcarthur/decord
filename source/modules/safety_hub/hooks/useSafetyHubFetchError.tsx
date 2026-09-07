@@ -1,10 +1,10 @@
-// Module ID: 14765
-// Function ID: 14766
+// Module ID: 14768
+// Function ID: 14769
 // Name: useSafetyHubFetchError
 // Dependencies: [8430, 504, 2]
 // Exports: useSafetyHubFetchError
 
-// Module 14765 (useSafetyHubFetchError)
+// Module 14768 (useSafetyHubFetchError)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 14922
-// Function ID: 14923
+// Module ID: 14925
+// Function ID: 14926
 // Name: FamilyCenterAvatarPair
 // Dependencies: [19, 17, 1371, 21, 4560, 576, 563, 1178, 2]
 // Exports: default
 
-// Module 14922 (FamilyCenterAvatarPair)
+// Module 14925 (FamilyCenterAvatarPair)
 import noopAll from "noop" /* 19 */;
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -36,7 +36,7 @@ export default function FamilyCenterAvatarPair(otherUser) {
     if (undefined !== otherUser) {
       obj = { style: null, children: null };
       obj[0] = tmp.avatars;
-      obj = { size: null, user: null, guildId: "Array", avatarDecoration: false };
+      obj = { size: null, user: null, guildId: "Array", avatarDecoration: true };
       obj[0] = tmp2(1178).AvatarSizes.LARGE_48;
       obj[1] = stateFromStores;
       obj[3] = stateFromStores.avatarDecoration;
@@ -47,7 +47,7 @@ export default function FamilyCenterAvatarPair(otherUser) {
       obj1[1] = tmp2(1178).Icon.Sizes.EXTRA_SMALL;
       obj1[2] = iconSrc;
       items1[1] = callback(tmp2(1178).Icon, obj1);
-      const obj2 = { size: null, user: null, guildId: "Array", avatarDecoration: false };
+      const obj2 = { size: null, user: null, guildId: "Array", avatarDecoration: true };
       obj2[0] = tmp2(1178).AvatarSizes.LARGE_48;
       obj2[1] = otherUser;
       obj2[3] = otherUser.avatarDecoration;

@@ -1,13 +1,13 @@
-// Module ID: 16795
-// Function ID: 16796
+// Module ID: 16798
+// Function ID: 16799
 // Name: CoachmarkVariant
-// Dependencies: [32, 19, 7585, 1954, 21, 7388, 1943, 16794, 12138, 1114, 16796, 563, 13986, 7566, 10625, 2]
+// Dependencies: [32, 19, 7585, 1954, 21, 7388, 1943, 16797, 12142, 1114, 16799, 563, 13989, 7566, 10630, 2]
 // Exports: default
 
-// Module 16795 (CoachmarkVariant)
+// Module 16798 (CoachmarkVariant)
 import noopAll from "noop" /* 19 */;
-import itemsDefault from "items" /* 16794 */;
-import MobileShopButtonCoachmarkDefault from "MobileShopButtonCoachmark" /* 16796 */;
+import itemsDefault from "items" /* 16797 */;
+import MobileShopButtonCoachmarkDefault from "MobileShopButtonCoachmark" /* 16799 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "getMarketingBySurface" /* 7585 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
@@ -25,7 +25,7 @@ function CoachmarkVariant(shopButtonRef) {
   const tmp3 = tmp[0] === navigateToShop(1943).DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING;
   dependencyMap = tmp3;
   obj = { children: null };
-  obj = { ref: shopButtonRef, IconComponent: navigateToShop(12138).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
+  obj = { ref: shopButtonRef, IconComponent: navigateToShop(12142).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
   const intl = navigateToShop(1114).intl;
   obj[2] = intl.string(navigateToShop(1114).t.pWG4ze);
   obj[3] = function onPress() {
@@ -102,7 +102,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
       }
       obj[1] = num;
       obj[2] = content;
-      let tmp15Result = tmp15(tmp(10625).SelectedVersionedDismissibleContent, obj);
+      let tmp15Result = tmp15(tmp(10630).SelectedVersionedDismissibleContent, obj);
     } else {
       let type2;
       if (stateFromStores != null) {
@@ -123,7 +123,7 @@ export default function CollectiblesShopEntryButton(navigateToShop) {
         tmp15Result = tmp15(tmp7, obj1);
       }
       items2 = [];
-      tmp7 = shopButtonRef(10625);
+      tmp7 = shopButtonRef(10630);
     }
     return tmp15Result;
   }

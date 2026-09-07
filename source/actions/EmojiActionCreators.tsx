@@ -1,10 +1,10 @@
-// Module ID: 10336
-// Function ID: 10337
+// Module ID: 10341
+// Function ID: 10342
 // Name: _updateEmoji
 // Dependencies: [5, 5459, 5277, 4902, 1074, 1084, 1940, 1218, 573, 1272, 5169, 4411, 1114, 4462, 4213, 1369, 5466, 12, 4904, 2]
 // Exports: deleteEmoji, favoriteEmoji, fetchEmoji, setDiversityColor, unfavoriteEmoji, updateEmoji, uploadEmoji
 
-// Module 10336 (_updateEmoji)
+// Module 10341 (_updateEmoji)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import sendRequest from "sendRequest" /* 1272 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;

@@ -1,13 +1,13 @@
-// Module ID: 13765
-// Function ID: 13766
+// Module ID: 13768
+// Function ID: 13769
 // Name: VoiceActionSheet
-// Dependencies: [19, 17, 4584, 21, 4560, 7162, 7182, 504, 4417, 4767, 13766, 13767, 7198, 13777, 13780, 13781, 4965, 13784, 2]
+// Dependencies: [19, 17, 4584, 21, 4560, 7162, 7182, 504, 4417, 4767, 13769, 13770, 7198, 13780, 13783, 13784, 4965, 13787, 2]
 // Exports: default
 
-// Module 13765 (VoiceActionSheet)
+// Module 13768 (VoiceActionSheet)
 import contextDefault from "context" /* 7162 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import _initializeDefault from "_initialize" /* 13767 */;
+import _initializeDefault from "_initialize" /* 13770 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "getVoiceStatesForGuild" /* 4584 */;
@@ -48,17 +48,17 @@ export default function VoiceActionSheet(channel) {
     obj = { children: null };
     obj = { channel: null };
     obj[0] = channel;
-    obj[0] = callback(tmp2(13777), obj);
+    obj[0] = callback(tmp2(13780), obj);
     let children = callback(tmp5(7198).ActionSheet, obj);
     let tmp8 = callback;
   } else if (stateFromStores) {
     obj1 = { children: null };
     const obj2 = { channel: null };
     obj2[0] = channel;
-    const items2 = [callback(tmp2(13780), obj2), ];
+    const items2 = [callback(tmp2(13783), obj2), ];
     let obj3 = { channel: null };
     obj3[0] = channel;
-    items2[1] = callback(tmp2(13781), obj3);
+    items2[1] = callback(tmp2(13784), obj3);
     obj1[0] = items2;
     children = callback2(tmp5(7198).ActionSheet, obj1);
     tmp8 = callback;
@@ -72,7 +72,7 @@ export default function VoiceActionSheet(channel) {
     const items3 = [callback(tmp2(4965), obj6), ];
     const obj7 = { channel: null };
     obj7[0] = channel;
-    items3[1] = callback(tmp2(13784), obj7);
+    items3[1] = callback(tmp2(13787), obj7);
     obj5[1] = items3;
     obj4[2] = callback2(closure_4, obj5);
     children = callback(tmp5(7198).ActionSheet, obj4);

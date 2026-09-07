@@ -1,12 +1,12 @@
-// Module ID: 11471
-// Function ID: 11472
+// Module ID: 11476
+// Function ID: 11477
 // Name: handleConnectionOpenOrResumed
-// Dependencies: [32, 4600, 1920, 11472, 4447, 504, 573, 2]
+// Dependencies: [32, 4600, 1920, 11477, 4447, 504, 573, 2]
 
-// Module 11471 (handleConnectionOpenOrResumed)
+// Module 11476 (handleConnectionOpenOrResumed)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
-import _modDef11472 from "module_11472" /* 11472 */;
+import _modDef11477 from "module_11477" /* 11477 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "sortActivity" /* 4600 */;
 import { INVITE_EXPIRATION_MS } from "items3" /* 1920 */;
@@ -32,8 +32,8 @@ const delayedCall = new require("start").DelayedCall(3000, function flush() {
     continue;
   }
   if (0 !== items.length) {
-    _modDef11472.subscribeActivities(items);
-    const obj = _modDef11472;
+    _modDef11477.subscribeActivities(items);
+    const obj = _modDef11477;
   }
 });
 const Store = initializeDefault.Store;

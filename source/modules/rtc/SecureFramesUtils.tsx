@@ -1,10 +1,10 @@
-// Module ID: 9150
-// Function ID: 9151
+// Module ID: 9155
+// Function ID: 9156
 // Name: getCurrentUserSigningKey
-// Dependencies: [32, 5, 502, 1908, 4583, 4599, 1371, 9151, 9152, 1074, 2024, 9153, 9161, 9135, 9154, 1114, 4404, 4153, 1090, 38, 206, 1272, 1232, 4904, 4712, 2]
+// Dependencies: [32, 5, 502, 1908, 4583, 4599, 1371, 9156, 9157, 1074, 2024, 9158, 9166, 9140, 9159, 1114, 4404, 4153, 1090, 38, 206, 1272, 1232, 4904, 4712, 2]
 // Exports: addVerification, deletePersistentVerification, deleteUserPersistentVerifications, deleteVerification, ensureCurrentUserPublicKey, getSecureFramesHelpdeskArticle, getSecureFramesPersistentCodesHelpdeskArticle, getSecureFramesUserVerifiedTimestamp, getSecureFramesVerifiedDevicesHelpdeskArticle, getUserVerificationDeeplink, getUserVerificationFooterText, getUserVerifyStateText, isCurrentUserPublicKeyMatch, showSecureFramesKeyInconsistentAlert, validateSecureFramesKeyConsistent
 
-// Module 9150 (getCurrentUserSigningKey)
+// Module 9155 (getCurrentUserSigningKey)
 import byteLengthDefault from "byteLength" /* 206 */;
 import setDefault from "set" /* 1090 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -13,10 +13,10 @@ import hooksDefault from "hooks" /* 4153 */;
 import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import getNicknameDefault from "getNickname" /* 4712 */;
 import setDefault2 from "set" /* 4904 */;
-import set from "set" /* 9135 */;
-import savePersistentCodesEnabledDefault from "savePersistentCodesEnabled" /* 9153 */;
-import _modDef9154 from "module_9154" /* 9154 */;
-import trackRTCPanelViewed from "trackRTCPanelViewed" /* 9161 */;
+import set from "set" /* 9140 */;
+import savePersistentCodesEnabledDefault from "savePersistentCodesEnabled" /* 9158 */;
+import _modDef9159 from "module_9159" /* 9159 */;
+import trackRTCPanelViewed from "trackRTCPanelViewed" /* 9166 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "fetchFingerprint" /* 502 */;
@@ -24,8 +24,8 @@ import closure_6 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_7 from "createRTCConnection" /* 4583 */;
 import closure_8 from "initialize" /* 4599 */;
 import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import closure_10 from "items" /* 9151 */;
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9152 */;
+import closure_10 from "items" /* 9156 */;
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9157 */;
 import ME from "ME" /* 1074 */;
 
 require = arg1;
@@ -581,7 +581,7 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
 export const deletePersistentVerification = function deletePersistentVerification(userId, verifiedKey) {
   const _require = userId;
   importDefault = verifiedKey;
-  let obj = _modDef9154;
+  let obj = _modDef9159;
   obj = { title: null, subtitle: null, onConfirm: null };
   const intl = _require(1114).intl;
   obj[0] = intl.string(_require(1114).t.hdL152);
@@ -609,7 +609,7 @@ export const deleteUserPersistentVerifications = function deleteUserPersistentVe
     const obj = closure_1_1(closure_1_2[11]);
     const result1 = userId(closure_1_2[12]).trackE2EESettingsUserDelete();
   };
-  let result = _modDef9154.openSecureFramesUpdateConfirmation(obj);
+  let result = _modDef9159.openSecureFramesUpdateConfirmation(obj);
 };
 export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
   let obj = hooksDefault();

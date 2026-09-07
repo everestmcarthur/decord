@@ -1,21 +1,21 @@
-// Module ID: 10107
-// Function ID: 10108
+// Module ID: 10112
+// Function ID: 10113
 // Name: NativeMessagePreviewContent
-// Dependencies: [19, 17, 1957, 10095, 1085, 21, 4560, 1116, 576, 10108, 10109, 10094, 4556, 5587, 10131, 4793, 10139, 10140, 1095, 7302, 1114, 7879, 2]
+// Dependencies: [19, 17, 1957, 10100, 1085, 21, 4560, 1116, 576, 10113, 10114, 10099, 4556, 5587, 10136, 4793, 10144, 10145, 1095, 7302, 1114, 7879, 2]
 // Exports: default
 
-// Module 10107 (NativeMessagePreviewContent)
+// Module 10112 (NativeMessagePreviewContent)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import preloadDefault from "preload" /* 5587 */;
 import isForwardMessageDefault from "isForwardMessage" /* 7302 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10094 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10108 */;
-import PreviewIcon from "PreviewIcon" /* 10109 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10099 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10113 */;
+import PreviewIcon from "PreviewIcon" /* 10114 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import set from "set" /* 10095 */;
+import set from "set" /* 10100 */;
 import { Fonts } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -166,7 +166,7 @@ export default function MessagePreviewText(message) {
   if (showMessageAuthor === undefined) {
     showMessageAuthor = false;
   }
-  let obj = message(10131);
+  let obj = message(10136);
   const previewableMedia = obj.usePreviewableMedia(message);
   obj1 = message(4793);
   let tmp3 = null;
@@ -174,10 +174,10 @@ export default function MessagePreviewText(message) {
     tmp3 = message;
   }
   const nullableMessageAuthor = obj1.useNullableMessageAuthor(tmp3);
-  let tmpResult = tmp(10139);
+  let tmpResult = tmp(10144);
   const previewableMediaText = tmpResult.usePreviewableMediaText({ previewableMedia, author: nullableMessageAuthor });
   ({ text, secondaryText } = previewableMediaText);
-  tmpResult = tmp(10140);
+  tmpResult = tmp(10145);
   const getInitialMessagePreview = tmpResult.useGetInitialMessagePreview({ message });
   const items = [message.embeds];
   const memo = React.useMemo(() => {
@@ -208,7 +208,7 @@ export default function MessagePreviewText(message) {
   } else if (isForwardMessageDefault(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
-      tmp29 = previewableMedia[0].type === tmp(10131).PreviewableMediaTypes.GIF;
+      tmp29 = previewableMedia[0].type === tmp(10136).PreviewableMediaTypes.GIF;
     }
     if (previewableMedia.length > 0) {
       if (null != nullableMessageAuthor) {
@@ -232,7 +232,7 @@ export default function MessagePreviewText(message) {
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
       channel = channel.getChannel(message.channel_id);
-      tmp(10094);
+      tmp(10099);
       if (null != channel) {
         const obj6 = { channel: null, message: null, color: "text-default", layout: null, variant: null, muted: false, lineClamp: null };
         obj6[0] = channel;
@@ -240,7 +240,7 @@ export default function MessagePreviewText(message) {
         obj6[3] = tmp(7879).ChannelListLayoutTypes.COZY;
         obj6[4] = tmp24;
         obj6[6] = lineClamp;
-        return callback(tmp(10109).ChannelRowPreview, obj6);
+        return callback(tmp(10114).ChannelRowPreview, obj6);
       }
     }
     const obj7 = { message: null, lineClamp: null, maxHeight: null };

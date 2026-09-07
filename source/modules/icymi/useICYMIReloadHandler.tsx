@@ -1,10 +1,10 @@
-// Module ID: 16487
-// Function ID: 16488
+// Module ID: 16490
+// Function ID: 16491
 // Name: useICYMIReloadHandler
 // Dependencies: [5, 19, 8359, 8351, 2]
 // Exports: useICYMIReloadHandler
 
-// Module 16487 (useICYMIReloadHandler)
+// Module 16490 (useICYMIReloadHandler)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 

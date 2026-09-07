@@ -1,9 +1,9 @@
-// Module ID: 15052
-// Function ID: 15053
+// Module ID: 15055
+// Function ID: 15056
 // Name: metadata
 // Dependencies: [2]
 
-// Module 15052 (metadata)
+// Module 15055 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/quests/bounties/starfield_bg.mp4.js");

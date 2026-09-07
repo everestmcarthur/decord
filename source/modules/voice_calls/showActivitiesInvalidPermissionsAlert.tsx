@@ -1,10 +1,10 @@
-// Module ID: 9532
-// Function ID: 9533
+// Module ID: 9537
+// Function ID: 9538
 // Name: showActivitiesInvalidPermissionsAlert
 // Dependencies: [4904, 1114, 2]
 // Exports: showActivitiesInvalidPermissionsAlert
 
-// Module 9532 (showActivitiesInvalidPermissionsAlert)
+// Module 9537 (showActivitiesInvalidPermissionsAlert)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import setDefault from "set" /* 4904 */;

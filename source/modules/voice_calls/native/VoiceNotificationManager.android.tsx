@@ -1,9 +1,9 @@
-// Module ID: 14453
-// Function ID: 14454
+// Module ID: 14456
+// Function ID: 14457
 // Name: processColor
-// Dependencies: [32, 17, 1956, 4788, 4582, 1957, 1908, 4583, 4209, 1371, 1074, 576, 7758, 7756, 10040, 10890, 4713, 1114, 1898, 2]
+// Dependencies: [32, 17, 1956, 4788, 4582, 1957, 1908, 4583, 4209, 1371, 1074, 576, 7758, 7756, 10045, 10895, 4713, 1114, 1898, 2]
 
-// Module 14453 (processColor)
+// Module 14456 (processColor)
 import ThemesDefault from "Themes" /* 576 */;
 import initializeDefault from "initialize" /* 1898 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -27,7 +27,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: "15.30", isPushToTalk: "3.30", embeddedActivity: "halv fire", isStreaming: "klokkesl\u00E6t" };
+    obj.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "braintreeunionpayhostedfields", embeddedActivity: "tanabata_tree", isStreaming: "leaves" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = closure_1_9.getChannelId();
       const state = closure_1_9.getState();
@@ -222,7 +222,7 @@ prototype["terminate"] = function terminate() {
 };
 set = Object.create(VoiceNotificationManager.prototype);
 set.voiceServiceHandlerId = 9000;
-set.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: "15.30", isPushToTalk: "3.30", embeddedActivity: "halv fire", isStreaming: "klokkesl\u00E6t" };
+set.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "braintreeunionpayhostedfields", embeddedActivity: "tanabata_tree", isStreaming: "leaves" };
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = closure_1_9.getChannelId();
   const state = closure_1_9.getState();

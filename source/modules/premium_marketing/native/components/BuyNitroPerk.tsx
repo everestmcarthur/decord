@@ -1,10 +1,10 @@
-// Module ID: 13393
-// Function ID: 13394
+// Module ID: 13397
+// Function ID: 13398
 // Name: BuyNitroPerk
-// Dependencies: [19, 17, 21, 4560, 576, 5605, 13394, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 5605, 13398, 2]
 // Exports: default
 
-// Module 13393 (BuyNitroPerk)
+// Module 13397 (BuyNitroPerk)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -35,7 +35,7 @@ export default function BuyNitroPerk(perk) {
   let obj = { label: perk.label, subLabel: perk.subLabel, disabled: perk.disabled, icon: null, arrow: null, onPress: null, start: null, end: null };
   obj = { style: callback3().iconTile, children: null };
   obj = { selectedTier, nitroColors: perk.iconGradient, basicColors: perk.iconGradientBasic, start: closure_7, end: closure_8, style: absoluteFill.absoluteFill };
-  const items = [callback(onOpenDetails(13394), obj), ];
+  const items = [callback(onOpenDetails(13398), obj), ];
   const tmp = callback3();
   const tmp4 = callback;
   items[1] = callback(perk.IconComponent, { size: "sm", color: onOpenDetails(576).colors.WHITE });

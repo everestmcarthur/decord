@@ -1,10 +1,10 @@
-// Module ID: 16316
-// Function ID: 16317
+// Module ID: 16319
+// Function ID: 16320
 // Name: GuildRowWrapper
-// Dependencies: [19, 17, 4201, 1961, 1957, 2012, 7636, 1979, 4575, 4209, 4741, 1371, 1074, 4742, 21, 4560, 504, 4423, 4420, 13287, 9059, 4556, 16317, 16318, 4713, 11, 16319, 16320, 11979, 16321, 16322, 16323, 16325, 16326, 16305, 2]
+// Dependencies: [19, 17, 4201, 1961, 1957, 2012, 7636, 1979, 4575, 4209, 4741, 1371, 1074, 4742, 21, 4560, 504, 4423, 4420, 13291, 9064, 4556, 16320, 16321, 4713, 11, 16322, 16323, 11983, 16324, 16325, 16326, 16328, 16329, 16308, 2]
 // Exports: default
 
-// Module 16316 (GuildRowWrapper)
+// Module 16319 (GuildRowWrapper)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "storeThread" /* 4201 */;

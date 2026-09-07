@@ -1,10 +1,10 @@
-// Module ID: 13436
-// Function ID: 13437
+// Module ID: 13440
+// Function ID: 13441
 // Name: usePremiumPrimaryGradientColors
 // Dependencies: [4262, 576, 2]
 // Exports: default
 
-// Module 13436 (usePremiumPrimaryGradientColors)
+// Module 13440 (usePremiumPrimaryGradientColors)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;

@@ -1,26 +1,26 @@
-// Module ID: 16484
-// Function ID: 16485
+// Module ID: 16487
+// Function ID: 16488
 // Name: SelectedServerIcon
-// Dependencies: [5, 32, 19, 17, 4552, 1979, 16483, 1074, 21, 16452, 576, 5584, 9286, 4296, 4561, 7055, 504, 1396, 8813, 5587, 5123, 4556, 4975, 4520, 1114, 1611, 8359, 8351, 4259, 4763, 16467, 8874, 2]
+// Dependencies: [5, 32, 19, 17, 4552, 1979, 16486, 1074, 21, 16455, 576, 5584, 9291, 4296, 4561, 7055, 504, 1396, 8818, 5587, 5123, 4556, 4975, 4520, 1114, 1611, 8359, 8351, 4259, 4763, 16470, 8879, 2]
 // Exports: default
 
-// Module 16484 (SelectedServerIcon)
+// Module 16487 (SelectedServerIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 import GuildIconSizes from "GuildIconSizes" /* 5584 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import SolidCutoutDefault from "SolidCutout" /* 8813 */;
-import ServerIcon from "ServerIcon" /* 9286 */;
+import SolidCutoutDefault from "SolidCutout" /* 8818 */;
+import ServerIcon from "ServerIcon" /* 9291 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import closure_9 from "createGuildRecordFromRust" /* 1979 */;
-import closure_10 from "initialize" /* 16483 */;
+import closure_10 from "initialize" /* 16486 */;
 import { GuildFeatures } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16452 */;
+import createICYMIStyles from "createICYMIStyles" /* 16455 */;
 
 require = arg1;
 function SelectedServerIcon(guild) {
@@ -149,7 +149,7 @@ function CutoutGuildBanner(guild) {
   }
   obj = { style: tmp.bannerImage, children: null };
   obj = { cutouts: null, children: null };
-  obj1 = { shape: guild(8813).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
+  obj1 = { shape: guild(8818).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
   const items1 = [obj1];
   obj[0] = items1;
   if (null != guild.banner) {
@@ -390,7 +390,7 @@ export default function ICYMIJoinGuildsScreen() {
             const guildChannelScores = obj7.getGuildChannelScores();
             const recommendedGuilds = v0(8351).getRecommendedGuilds();
             const obj9 = v0(8351);
-            v0(4763).popWithKey(closure_1_0(16467).ICYMI_INFO_MODAL_KEY);
+            v0(4763).popWithKey(closure_1_0(16470).ICYMI_INFO_MODAL_KEY);
             dependencyMap = 3;
             const obj5 = { value: null, done: true };
             obj5[0] = undefined;
@@ -426,7 +426,7 @@ export default function ICYMIJoinGuildsScreen() {
           const obj19 = v0(8351);
           const recommendedGuilds1 = v0(8351).getRecommendedGuilds();
           const obj20 = v0(8351);
-          v0(4763).popWithKey(closure_1_0(16467).ICYMI_INFO_MODAL_KEY);
+          v0(4763).popWithKey(closure_1_0(16470).ICYMI_INFO_MODAL_KEY);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

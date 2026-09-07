@@ -1,10 +1,10 @@
-// Module ID: 8733
-// Function ID: 8734
+// Module ID: 8738
+// Function ID: 8739
 // Name: GameProfileLinkAccount
-// Dependencies: [19, 17, 1371, 21, 4560, 576, 7165, 504, 8686, 4556, 1114, 5587, 1178, 4975, 8734, 2]
+// Dependencies: [19, 17, 1371, 21, 4560, 576, 7165, 504, 8691, 4556, 1114, 5587, 1178, 4975, 8739, 2]
 // Exports: default
 
-// Module 8733 (GameProfileLinkAccount)
+// Module 8738 (GameProfileLinkAccount)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

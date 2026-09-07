@@ -1,16 +1,16 @@
-// Module ID: 12647
-// Function ID: 12648
+// Module ID: 12651
+// Function ID: 12652
 // Name: WaveformBar
-// Dependencies: [32, 19, 17, 4552, 11960, 11961, 21, 4296, 4560, 576, 1115, 4974, 4561, 4262, 5168, 4556, 2]
+// Dependencies: [32, 19, 17, 4552, 11964, 11965, 21, 4296, 4560, 576, 1115, 4974, 4561, 4262, 5168, 4556, 2]
 
-// Module 12647 (WaveformBar)
+// Module 12651 (WaveformBar)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11960 */;
-import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11961 */;
+import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11964 */;
+import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11965 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importDefaultResult from "module_4296" /* 4296 */;

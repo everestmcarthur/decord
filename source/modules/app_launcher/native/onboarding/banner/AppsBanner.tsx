@@ -1,14 +1,14 @@
-// Module ID: 12063
-// Function ID: 12064
+// Module ID: 12067
+// Function ID: 12068
 // Name: AppsBaner
-// Dependencies: [19, 17, 21, 4560, 12064, 12061, 1114, 2]
+// Dependencies: [19, 17, 21, 4560, 12068, 12065, 1114, 2]
 // Exports: default
 
-// Module 12063 (AppsBaner)
+// Module 12067 (AppsBaner)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import BannerBaseDefault from "BannerBase" /* 12061 */;
-import SvgComponentDefault from "SvgComponent" /* 12064 */;
+import BannerBaseDefault from "BannerBase" /* 12065 */;
+import SvgComponentDefault from "SvgComponent" /* 12068 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

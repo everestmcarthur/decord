@@ -1,18 +1,18 @@
-// Module ID: 10396
-// Function ID: 10397
-// Dependencies: [19, 17, 10273, 21, 4560, 576, 4556, 4899, 1178, 10397, 10398, 1114, 10399, 5123, 2]
+// Module ID: 10401
+// Function ID: 10402
+// Dependencies: [19, 17, 10278, 21, 4560, 576, 4556, 4899, 1178, 10402, 10403, 1114, 10404, 5123, 2]
 
-// Module 10396
+// Module 10401
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4899 */;
-import registerAssetDefault from "registerAsset" /* 10397 */;
-import registerAssetDefault2 from "registerAsset" /* 10398 */;
-import StickerPackBannerDefault from "StickerPackBanner" /* 10399 */;
+import registerAssetDefault from "registerAsset" /* 10402 */;
+import registerAssetDefault2 from "registerAsset" /* 10403 */;
+import StickerPackBannerDefault from "StickerPackBanner" /* 10404 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10273 */;
+import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10278 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;

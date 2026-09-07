@@ -1,9 +1,9 @@
-// Module ID: 12790
-// Function ID: 12791
+// Module ID: 12794
+// Function ID: 12795
 // Name: getMatchData
 // Dependencies: [1074, 4386, 4399, 1244, 1249, 2]
 
-// Module 12790 (getMatchData)
+// Module 12794 (getMatchData)
 import set from "set" /* 2 */;
 import matchPath from "matchPath" /* 4386 */;
 import ME from "ME" /* 1074 */;

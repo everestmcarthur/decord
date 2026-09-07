@@ -1,12 +1,12 @@
-// Module ID: 11083
-// Function ID: 11084
+// Module ID: 11088
+// Function ID: 11089
 // Name: useHandleUseNow
-// Dependencies: [19, 11084, 4527, 4763, 4418, 4259, 1114, 11085, 11088, 9207, 2]
+// Dependencies: [19, 11089, 4527, 4763, 4418, 4259, 1114, 11090, 11093, 9212, 2]
 // Exports: useHandleUseNow
 
-// Module 11083 (useHandleUseNow)
+// Module 11088 (useHandleUseNow)
 import closure_3 from "noop" /* 19 */;
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 11084 */;
+import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 11089 */;
 
 let require = arg1;
 let result = require("set").fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");

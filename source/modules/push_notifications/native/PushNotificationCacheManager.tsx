@@ -1,11 +1,11 @@
-// Module ID: 17472
-// Function ID: 17473
+// Module ID: 17475
+// Function ID: 17476
 // Name: prototype
-// Dependencies: [12413, 1371, 4404, 7118, 9687, 2]
+// Dependencies: [12417, 1371, 4404, 7118, 9692, 2]
 
-// Module 17472 (prototype)
+// Module 17475 (prototype)
 import initializeDefault from "initialize" /* 7118 */;
-import closure_2 from "initialize" /* 12413 */;
+import closure_2 from "initialize" /* 12417 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;
 
 initializeDefault;
@@ -29,15 +29,15 @@ let prototype = function PushNotificationCacheManager() {
   applyArgumentsResult.handleUserUpdate = function handleUserUpdate() {
     currentUser = currentUser.getCurrentUser();
     if (null != currentUser) {
-      applyArgumentsResult(9687).setCurrentUser(currentUser.username, currentUser.id);
-      const obj2 = applyArgumentsResult(9687);
+      applyArgumentsResult(9692).setCurrentUser(currentUser.username, currentUser.id);
+      const obj2 = applyArgumentsResult(9692);
     } else {
-      applyArgumentsResult(9687).setCurrentUser(null, null);
-      const obj = applyArgumentsResult(9687);
+      applyArgumentsResult(9692).setCurrentUser(null, null);
+      const obj = applyArgumentsResult(9692);
     }
   };
   applyArgumentsResult.syncMultiAccountUsers = function syncMultiAccountUsers() {
-    obj = obj(9687);
+    obj = obj(9692);
     obj = undefined;
     if (obj.canUseMultiAccountNotifications) {
       const validUsers = obj.getValidUsers();

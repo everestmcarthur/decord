@@ -1,14 +1,14 @@
-// Module ID: 10957
-// Function ID: 10958
+// Module ID: 10962
+// Function ID: 10963
 // Name: InboxIcon
-// Dependencies: [19, 21, 576, 4261, 10958, 2]
+// Dependencies: [19, 21, 576, 4261, 10963, 2]
 // Exports: InboxIcon
 
-// Module 10957 (InboxIcon)
+// Module 10962 (InboxIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 10958 */;
+import registerAsset from "registerAsset" /* 10963 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

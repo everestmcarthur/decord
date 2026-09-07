@@ -1,8 +1,8 @@
-// Module ID: 12449
-// Function ID: 12450
-// Dependencies: [19, 1371, 21, 1483, 504, 12450, 12442, 4259, 1114, 5597, 12448, 4571, 2]
+// Module ID: 12453
+// Function ID: 12454
+// Dependencies: [19, 1371, 21, 1483, 504, 12454, 12446, 4259, 1114, 5597, 12452, 4571, 2]
 
-// Module 12449
+// Module 12453
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -19,12 +19,12 @@ const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageReques
   const items = [c4];
   const stateFromStores = channel(504).useStateFromStores(items, () => _undefined2.getUser(channel.getRecipientId()));
   const obj2 = channel(504);
-  dependencyMap = channel(12450).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
+  dependencyMap = channel(12454).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
   const items1 = [navigation];
   const callback = importAllResult.useCallback(() => {
     navigation.pop();
   }, items1);
-  const obj3 = channel(12450);
+  const obj3 = channel(12454);
   obj = {
     user: stateFromStores,
     onError() {
@@ -37,7 +37,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageReques
     },
     onRejectSuccess: callback
   };
-  const messageRequestActions = channel(12442).useMessageRequestActions(obj);
+  const messageRequestActions = channel(12446).useMessageRequestActions(obj);
   ({ rejectMessageRequest: c3, isRejectLoading, isUserProfileLoading, isOptimisticRejected, markAsNotSpam: c4 } = messageRequestActions);
   let tmp7 = isRejectLoading;
   if (!isRejectLoading) {
@@ -47,7 +47,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageReques
     tmp7 = isOptimisticRejected;
   }
   obj = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  const obj4 = channel(12442);
+  const obj4 = channel(12446);
   const tmp8 = jsx;
   let intl = tmp(1114).intl;
   obj[1] = intl.string(channel(1114).t.fS08qB);
@@ -72,7 +72,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageReques
   };
   obj[10] = tmp7;
   obj[11] = isUserProfileLoading;
-  return tmp8(navigation(12448), obj);
+  return tmp8(navigation(12452), obj);
 });
 const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardSpamMessageRequest.tsx");
 

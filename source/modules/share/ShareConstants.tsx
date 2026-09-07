@@ -1,12 +1,12 @@
-// Module ID: 10982
-// Function ID: 10983
+// Module ID: 10987
+// Function ID: 10988
 // Name: ALLOWED_TYPES
-// Dependencies: [9835, 2]
+// Dependencies: [9840, 2]
 // Exports: isAllowedType
 
-// Module 10982 (ALLOWED_TYPES)
+// Module 10987 (ALLOWED_TYPES)
 import set from "set" /* 2 */;
-import sortByMatchScore from "sortByMatchScore" /* 9835 */;
+import sortByMatchScore from "sortByMatchScore" /* 9840 */;
 
 const items = [sortByMatchScore.AutocompleterResultTypes.USER, sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL, sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL, sortByMatchScore.AutocompleterResultTypes.GROUP_DM];
 const arr = Array.from(items);

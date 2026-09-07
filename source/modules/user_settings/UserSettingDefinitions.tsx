@@ -14,7 +14,7 @@ const result = require("set").fileFinishedImporting("modules/user_settings/UserS
 
 export const defineProtoSetting = function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto, set) {
   let getSetting = textAndImages;
-  let f74584 = activityRestrictedGuildIds;
+  let f74600 = activityRestrictedGuildIds;
   closure_2 = explicitContentFromProto;
   closure_3 = explicitContentToProto;
   let obj = set;
@@ -34,7 +34,7 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
   getSetting = function getSetting() {
     let tmp3;
     if (INFREQUENT_USER_ACTION.settings[getSetting] != null) {
-      tmp3 = tmp2[f74584];
+      tmp3 = tmp2[f74600];
     }
     return closure_2(tmp3);
   };
@@ -45,14 +45,14 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f74591(tmp2);
+      return f74607(tmp2);
     },
     useSetting() {
       const items = [INFREQUENT_USER_ACTION];
       return getSetting(explicitContentFromProto[4]).useStateFromStores(items, getSetting, undefined, fn);
     }
   };
-  f74584 = (favorites) => {
+  f74600 = (favorites) => {
     closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(explicitContentFromProto[3]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync(closure_0, (arg0) => {
@@ -63,10 +63,10 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
 };
 export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animateEmoji) {
   let getSetting = defineProtoSetting;
-  let f74588 = text;
+  let f74604 = text;
   closure_2 = animateEmoji;
   getSetting = function getSetting() {
-    const tmp = closure_1_3.getState()[f74588];
+    const tmp = closure_1_3.getState()[f74604];
     let setting;
     if (tmp != null) {
       setting = tmp.settings[closure_2];
@@ -76,18 +76,18 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
     }
     return setting;
   };
-  f74588 = (arg0) => {
-    if (closure_1_3.shouldSync(f74588)) {
+  f74604 = (arg0) => {
+    if (closure_1_3.shouldSync(f74604)) {
       let updateSettingResult = getSetting.updateSetting(arg0);
     } else {
-      let obj = f74588(animateEmoji[5]);
+      let obj = f74604(animateEmoji[5]);
       obj = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
       obj = {};
       obj1 = { settings: null };
       const obj2 = {};
       obj2[animateEmoji] = arg0;
       obj1[0] = obj2;
-      obj[f74588] = obj1;
+      obj[f74604] = obj1;
       obj[1] = obj;
       obj.dispatch(obj);
       updateSettingResult = Promise.resolve();
@@ -117,13 +117,13 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f74591(tmp2);
+      return f74607(tmp2);
     }
   };
 }
 export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, arg3) {
   let getSetting = defineProtoSetting;
-  let f74591 = animateEmoji;
+  let f74607 = animateEmoji;
   closure_2 = arg2;
   closure_3 = arg3;
   getSetting = function getSetting() {
@@ -133,9 +133,9 @@ export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, 
     }
     return setting;
   };
-  f74591 = (arg0) => {
-    const items = [f74591];
-    f74591(573).dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items });
+  f74607 = (arg0) => {
+    const items = [f74607];
+    f74607(573).dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items });
     return getSetting.updateSetting(arg0);
   };
   return {
@@ -153,7 +153,7 @@ export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, 
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f74591(tmp2);
+      return f74607(tmp2);
     }
   };
 }

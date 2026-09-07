@@ -1,10 +1,10 @@
-// Module ID: 14175
-// Function ID: 14176
+// Module ID: 14178
+// Function ID: 14179
 // Name: StepPill
 // Dependencies: [19, 17, 21, 4560, 576, 4296, 4262, 4974, 1114, 2038, 2]
 // Exports: ModalStepIndicator
 
-// Module 14175 (StepPill)
+// Module 14178 (StepPill)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2038 */;
 import closure_3 from "noop" /* 19 */;

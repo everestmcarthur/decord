@@ -1,15 +1,15 @@
-// Module ID: 16294
-// Function ID: 16295
+// Module ID: 16297
+// Function ID: 16298
 // Name: UnreadIndicator
-// Dependencies: [19, 4984, 16285, 21, 4560, 576, 4262, 4271, 4974, 4296, 7073, 16295, 16022, 1114, 4272, 5589, 8813, 2]
+// Dependencies: [19, 4984, 16288, 21, 4560, 576, 4262, 4271, 4974, 4296, 7073, 16298, 16025, 1114, 4272, 5589, 8818, 2]
 // Exports: default, useGuildsBarAnimatedWrapperStyles
 
-// Module 16294 (UnreadIndicator)
+// Module 16297 (UnreadIndicator)
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;
 import closure_3 from "noop" /* 19 */;
 import { IOS_POINTER_STYLE } from "IOS_POINTER_STYLE" /* 4984 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16285 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16288 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

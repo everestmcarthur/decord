@@ -1,13 +1,13 @@
-// Module ID: 12365
-// Function ID: 12366
+// Module ID: 12369
+// Function ID: 12370
 // Name: teardown
-// Dependencies: [1957, 5509, 12, 12366, 10862, 1114, 504, 573, 2]
+// Dependencies: [1957, 5509, 12, 12370, 10867, 1114, 504, 573, 2]
 
-// Module 12365 (teardown)
+// Module 12369 (teardown)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
-import _toPropertyKey from "_toPropertyKey" /* 10862 */;
+import _toPropertyKey from "_toPropertyKey" /* 10867 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "handleChannelSelect" /* 5509 */;
 
@@ -52,7 +52,7 @@ prototype["search"] = function search(str) {
     } else {
       const obj2 = applyDefault;
       const values = applyDefault.chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
-      const found = values.filter(trimmed1(12366).filterGroupDMs);
+      const found = values.filter(trimmed1(12370).filterGroupDMs);
       const mapped = found.map((id) => {
         const items = [id, trimmed1(closure_1_2[3]).matchGroupDM(id, trimmed1), closure_1_4.getScoreWithoutFetchingLatest(id.id)];
         return items;
@@ -174,7 +174,7 @@ const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(dispatcherDefault,
       obj.groupDMs = [];
       obj.userIndexes = {};
       obj.results = [];
-      let userSearch = new obj(10862).UserSearch(() => obj.processResults());
+      let userSearch = new obj(10867).UserSearch(() => obj.processResults());
       obj.userSearch = userSearch;
       userSearch = obj.userSearch;
       const subscription = userSearch.subscribe(() => obj.processResults(), true);

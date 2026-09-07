@@ -1,9 +1,9 @@
-// Module ID: 13824
-// Function ID: 13825
+// Module ID: 13827
+// Function ID: 13828
 // Name: updateVoiceStates
 // Dependencies: [1908, 4579, 4584, 4585, 12, 2]
 
-// Module 13824 (updateVoiceStates)
+// Module 13827 (updateVoiceStates)
 import apply from "apply" /* 12 */;
 import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_3 from "updateVoiceState" /* 4579 */;

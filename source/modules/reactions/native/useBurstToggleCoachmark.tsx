@@ -1,12 +1,12 @@
-// Module ID: 11126
-// Function ID: 11127
+// Module ID: 11131
+// Function ID: 11132
 // Name: EducationCoachmarkImg
-// Dependencies: [32, 19, 17, 1371, 1954, 21, 1943, 4560, 576, 9373, 504, 4218, 7388, 1114, 11127, 2]
+// Dependencies: [32, 19, 17, 1371, 1954, 21, 1943, 4560, 576, 9378, 504, 4218, 7388, 1114, 11132, 2]
 // Exports: default
 
-// Module 11126 (EducationCoachmarkImg)
+// Module 11131 (EducationCoachmarkImg)
 import ThemesDefault from "Themes" /* 576 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9373 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9378 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -59,7 +59,7 @@ export default function useBurstToggleCoachmark(targetRef) {
     obj[5] = first === closure_1_9;
     return obj;
   }, items3);
-  tmpResult = tmp(11127);
+  tmpResult = tmp(11132);
   const coachmark = tmpResult.useCoachmark(targetRef, memo);
   return tmp5[1];
 };

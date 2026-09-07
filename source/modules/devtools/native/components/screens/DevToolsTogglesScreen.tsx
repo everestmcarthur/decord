@@ -1,10 +1,10 @@
-// Module ID: 15706
-// Function ID: 15707
+// Module ID: 15709
+// Function ID: 15710
 // Name: fuzzySearchToggle
-// Dependencies: [32, 19, 17, 5627, 4559, 21, 5517, 4560, 576, 5605, 4259, 7202, 504, 5687, 15690, 6981, 15707, 4973, 15708, 7050, 2]
+// Dependencies: [32, 19, 17, 5627, 4559, 21, 5517, 4560, 576, 5605, 4259, 7202, 504, 5687, 15693, 6981, 15710, 4973, 15711, 7050, 2]
 // Exports: default
 
-// Module 15706 (fuzzySearchToggle)
+// Module 15709 (fuzzySearchToggle)
 import ThemesDefault from "Themes" /* 576 */;
 import fuzzysearchDefault from "fuzzysearch" /* 5517 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
@@ -92,7 +92,7 @@ export default function DevToolsTogglesScreen() {
   let tmp = callback4();
   let tmp3 = callback(React.useState(""), 2);
   const first = tmp3[0];
-  let obj = first(15707);
+  let obj = first(15710);
   const manaTextMigrationHighlightRestartNotice = obj.useManaTextMigrationHighlightRestartNotice();
   obj1 = first(504);
   const items = [closure_6];
@@ -126,9 +126,9 @@ export default function DevToolsTogglesScreen() {
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(15708).clearAll();
-        const obj = first(15708);
-        first(15690).clearAll();
+        first(15711).clearAll();
+        const obj = first(15711);
+        first(15693).clearAll();
       },
       arrow: true
     }),

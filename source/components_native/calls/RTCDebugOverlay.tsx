@@ -1,10 +1,10 @@
-// Module ID: 10037
-// Function ID: 10038
+// Module ID: 10042
+// Function ID: 10043
 // Name: Text
-// Dependencies: [19, 17, 1957, 1979, 4583, 10038, 4599, 1371, 4585, 21, 4560, 4409, 576, 1178, 504, 4713, 10040, 10039, 573, 7123, 4975, 1114, 2]
+// Dependencies: [19, 17, 1957, 1979, 4583, 10043, 4599, 1371, 4585, 21, 4560, 4409, 576, 1178, 504, 4713, 10045, 10044, 573, 7123, 4975, 1114, 2]
 // Exports: default
 
-// Module 10037 (Text)
+// Module 10042 (Text)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -16,7 +16,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import closure_8 from "createGuildRecordFromRust" /* 1979 */;
 import closure_9 from "createRTCConnection" /* 4583 */;
-import closure_10 from "updateStats" /* 10038 */;
+import closure_10 from "updateStats" /* 10043 */;
 import closure_11 from "initialize" /* 4599 */;
 import closure_12 from "mergeGuildAvatar" /* 1371 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
@@ -214,7 +214,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = callback3();
   const effect = importAllResult.useEffect(() => {
     callback(table[17]).open();
-    return () => callback(573).wait(callback2(10039).close);
+    return () => callback(573).wait(callback2(10044).close);
   }, []);
   let obj = { top: true, left: true, right: true, bottom: true, style: items, children: null };
   items = [tmp.container, style];

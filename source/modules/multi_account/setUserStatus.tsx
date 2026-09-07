@@ -1,10 +1,10 @@
-// Module ID: 10091
-// Function ID: 10092
+// Module ID: 10096
+// Function ID: 10097
 // Name: _setUserStatus
-// Dependencies: [5, 7115, 5279, 1074, 4404, 1114, 10092, 1940, 1218, 4412, 1242, 2]
+// Dependencies: [5, 7115, 5279, 1074, 4404, 1114, 10097, 1940, 1218, 4412, 1242, 2]
 // Exports: default
 
-// Module 10091 (_setUserStatus)
+// Module 10096 (_setUserStatus)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "initialize" /* 7115 */;
 import closure_5 from "filterPlayingActivities" /* 5279 */;

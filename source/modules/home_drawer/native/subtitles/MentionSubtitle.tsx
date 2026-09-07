@@ -1,14 +1,14 @@
-// Module ID: 16323
-// Function ID: 16324
+// Module ID: 16326
+// Function ID: 16327
 // Name: MentionSubtitle
-// Dependencies: [19, 17, 21, 16324, 5028, 5080, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 16327, 5028, 5080, 4556, 1114, 2]
 // Exports: default
 
-// Module 16323 (MentionSubtitle)
+// Module 16326 (MentionSubtitle)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
-import styles from "styles" /* 16324 */;
+import styles from "styles" /* 16327 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

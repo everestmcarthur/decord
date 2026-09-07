@@ -1,9 +1,9 @@
-// Module ID: 13554
-// Function ID: 13555
+// Module ID: 13558
+// Function ID: 13559
 // Name: GiftingSectionTitle
-// Dependencies: [32, 19, 17, 8192, 7394, 1074, 1373, 21, 4560, 576, 5687, 7414, 1483, 1611, 504, 12, 4799, 7417, 13468, 10743, 8184, 13417, 573, 7400, 7419, 8197, 6990, 6995, 9362, 13555, 4556, 1114, 13556, 13562, 13564, 13567, 13569, 11435, 6998, 2492, 13570, 5577, 2]
+// Dependencies: [32, 19, 17, 8192, 7394, 1074, 1373, 21, 4560, 576, 5687, 7414, 1483, 1611, 504, 12, 4799, 7417, 13472, 10748, 8184, 13421, 573, 7400, 7419, 8197, 6990, 6995, 9367, 13559, 4556, 1114, 13560, 13566, 13568, 13571, 13573, 11440, 6998, 2492, 13574, 5577, 2]
 
-// Module 13554 (GiftingSectionTitle)
+// Module 13558 (GiftingSectionTitle)
 import ThemesDefault from "Themes" /* 576 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import closure_3 from "_slicedToArray" /* 32 */;

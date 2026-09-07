@@ -1,10 +1,10 @@
-// Module ID: 10339
-// Function ID: 10340
+// Module ID: 10344
+// Function ID: 10345
 // Name: EmojiPopoutType
 // Dependencies: [5585, 1114, 2]
 // Exports: getEmojiPopoutData
 
-// Module 10339 (EmojiPopoutType)
+// Module 10344 (EmojiPopoutType)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import getEmojiSourceData from "getEmojiSourceData" /* 5585 */;

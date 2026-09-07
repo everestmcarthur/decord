@@ -1,10 +1,10 @@
-// Module ID: 9992
-// Function ID: 9993
+// Module ID: 9997
+// Function ID: 9998
 // Name: VoiceProcessingOptions
-// Dependencies: [19, 17, 1908, 21, 4560, 576, 504, 9993, 9994, 9089, 5685, 1114, 5688, 4556, 9997, 9979, 7201, 2]
+// Dependencies: [19, 17, 1908, 21, 4560, 576, 504, 9998, 9999, 9094, 5685, 1114, 5688, 4556, 10002, 9984, 7201, 2]
 // Exports: default
 
-// Module 9992 (VoiceProcessingOptions)
+// Module 9997 (VoiceProcessingOptions)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -13,10 +13,10 @@ import Text2 from "Text" /* 4556 */;
 import context from "context" /* 5685 */;
 import TableRadioRow from "TableRadioRow" /* 5688 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
-import UserSettingsVoice from "UserSettingsVoice" /* 9979 */;
-import handleAutomaticGainControlChange from "handleAutomaticGainControlChange" /* 9993 */;
-import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 9994 */;
-import handleKrispLinkPressedDefault from "handleKrispLinkPressed" /* 9997 */;
+import UserSettingsVoice from "UserSettingsVoice" /* 9984 */;
+import handleAutomaticGainControlChange from "handleAutomaticGainControlChange" /* 9998 */;
+import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 9999 */;
+import handleKrispLinkPressedDefault from "handleKrispLinkPressed" /* 10002 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -44,9 +44,9 @@ class VoiceProcessingOptions {
       obj1 = { value: null, onChange: null, title: null, hasIcons: false, children: null };
       obj1[0] = selectedNoiseSuppressionOption;
       obj1[1] = function noiseCancellationChanged(arg0) {
-        callback2(9089).setNoiseCancellation(arg0 === callback(9993).NoiseSuppressionOpt.KRISP);
-        const obj = callback2(9089);
-        callback2(9089).setNoiseSuppression(arg0 === callback(9993).NoiseSuppressionOpt.STANDARD);
+        callback2(9094).setNoiseCancellation(arg0 === callback(9998).NoiseSuppressionOpt.KRISP);
+        const obj = callback2(9094);
+        callback2(9094).setNoiseSuppression(arg0 === callback(9998).NoiseSuppressionOpt.STANDARD);
       };
       intl3 = require("getSystemLocale").intl;
       obj1[2] = intl3.string(require("getSystemLocale").t.t8Qhib);
@@ -115,8 +115,8 @@ class VoiceProcessingOptions {
       obj10[1] = intl2.string(require("getSystemLocale").t.najZCV);
       obj10[2] = selectedNoiseSuppressionOption === require("handleAutomaticGainControlChange").NoiseSuppressionOpt.STANDARD;
       obj10[3] = function onValueChange(arg0) {
-        const NoiseSuppressionOpt = callback(9993).NoiseSuppressionOpt;
-        return callback(9993).handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
+        const NoiseSuppressionOpt = callback(9998).NoiseSuppressionOpt;
+        return callback(9998).handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
       };
       obj9[1] = jsx(require("TableSwitchRow").TableSwitchRow, obj10);
       return jsx(require("UserSettingsVoice").UserSettingsTableRowGroup, obj9);

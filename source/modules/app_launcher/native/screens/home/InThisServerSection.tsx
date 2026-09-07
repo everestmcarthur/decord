@@ -1,10 +1,10 @@
-// Module ID: 12110
-// Function ID: 12111
+// Module ID: 12114
+// Function ID: 12115
 // Name: AppInThisServer
-// Dependencies: [19, 17, 21, 4560, 576, 12088, 1369, 4556, 1114, 5123, 12051, 8902, 9409, 12056, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 12092, 1369, 4556, 1114, 5123, 12055, 8907, 9414, 12060, 2]
 // Exports: default
 
-// Module 12110 (AppInThisServer)
+// Module 12114 (AppInThisServer)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -20,7 +20,7 @@ function AppInThisServer(onAppSelected) {
   let application;
   const tmp = callback2();
   application = onAppSelected.appItem.application;
-  let obj = onAppSelected(12051);
+  let obj = onAppSelected(12055);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   obj = {
     accessible: true,
@@ -46,11 +46,11 @@ function AppInThisServer(onAppSelected) {
     obj = { iconSource: null, wrapperStyle: null, iconSize: 36 };
     obj[0] = appLauncherIconSource;
     obj[1] = tmp.iconContainer;
-    tmp6 = callback(application(12056), obj);
+    tmp6 = callback(application(12060), obj);
   }
   const items = [tmp6, callback(onAppSelected(4556).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
   obj[5] = items;
-  return closure_6(onAppSelected(8902).PressableScale, obj, application.id);
+  return closure_6(onAppSelected(8907).PressableScale, obj, application.id);
 }
 noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);

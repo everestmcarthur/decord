@@ -1,10 +1,10 @@
-// Module ID: 15226
-// Function ID: 15227
+// Module ID: 15229
+// Function ID: 15230
 // Name: WhatYouLose
-// Dependencies: [5, 32, 19, 17, 4224, 21, 4560, 576, 15227, 4153, 1114, 5584, 1178, 4556, 15217, 5587, 15235, 7162, 7182, 9366, 4905, 4884, 4258, 4240, 4975, 15223, 15212, 15236, 15237, 504, 2]
+// Dependencies: [5, 32, 19, 17, 4224, 21, 4560, 576, 15230, 4153, 1114, 5584, 1178, 4556, 15220, 5587, 15238, 7162, 7182, 9371, 4905, 4884, 4258, 4240, 4975, 15226, 15215, 15239, 15240, 504, 2]
 // Exports: default
 
-// Module 15226 (WhatYouLose)
+// Module 15229 (WhatYouLose)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
@@ -12,13 +12,13 @@ import hooksDefault from "hooks" /* 4153 */;
 import Text from "Text" /* 4556 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
 import preloadDefault from "preload" /* 5587 */;
-import useFetchListingsForGuild from "useFetchListingsForGuild" /* 15212 */;
-import FormSeparatorDefault from "FormSeparator" /* 15217 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 15223 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 15227 */;
-import registerAssetDefault from "registerAsset" /* 15235 */;
-import FastAssetImageDefault from "FastAssetImage" /* 15236 */;
-import SectionTitleAll from "SectionTitle" /* 15237 */;
+import useFetchListingsForGuild from "useFetchListingsForGuild" /* 15215 */;
+import FormSeparatorDefault from "FormSeparator" /* 15220 */;
+import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 15226 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 15230 */;
+import registerAssetDefault from "registerAsset" /* 15238 */;
+import FastAssetImageDefault from "FastAssetImage" /* 15239 */;
+import SectionTitleAll from "SectionTitle" /* 15240 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
@@ -80,7 +80,7 @@ function CancelSubscriptionButtonFooter(guild) {
   [tmp3, c3] = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
   const tmp2 = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
   analyticsLocations = subscription(7162)(subscription(7182).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL).analyticsLocations;
-  let obj = subscription(9366);
+  let obj = subscription(9371);
   cancelSubscription = obj.useCancelSubscription(subscription.id, subscription.isACOM);
   cancelSubscription = cancelSubscription.cancelSubscription;
   isPurchasedViaAppleGeneric = subscription.isPurchasedViaAppleGeneric;

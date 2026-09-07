@@ -1,10 +1,10 @@
-// Module ID: 11000
-// Function ID: 11001
+// Module ID: 11005
+// Function ID: 11006
 // Name: Pile
-// Dependencies: [19, 17, 21, 4560, 1369, 12, 8813, 11001, 2]
+// Dependencies: [19, 17, 21, 4560, 1369, 12, 8818, 11006, 2]
 // Exports: Pile
 
-// Module 11000 (Pile)
+// Module 11005 (Pile)
 import apply from "apply" /* 12 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
 import closure_3 from "noop" /* 19 */;

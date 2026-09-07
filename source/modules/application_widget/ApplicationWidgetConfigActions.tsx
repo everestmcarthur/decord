@@ -1,14 +1,14 @@
-// Module ID: 9027
-// Function ID: 9028
+// Module ID: 9032
+// Function ID: 9033
 // Name: getApplicationsFromConfigs
-// Dependencies: [5, 9026, 1074, 9028, 559, 1090, 573, 1272, 1232, 2]
+// Dependencies: [5, 9031, 1074, 9033, 559, 1090, 573, 1272, 1232, 2]
 // Exports: fetchDeveloperWidgetConfigs, fetchFeaturedWidgetConfigs, fetchWidgetConfigs
 
-// Module 9027 (getApplicationsFromConfigs)
+// Module 9032 (getApplicationsFromConfigs)
 import setDefault from "set" /* 1090 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateApplicationConfigs" /* 9026 */;
-import { FetchState } from "updateApplicationConfigs" /* 9026 */;
+import closure_4 from "updateApplicationConfigs" /* 9031 */;
+import { FetchState } from "updateApplicationConfigs" /* 9031 */;
 import { Endpoints } from "ME" /* 1074 */;
 import importDefaultResult from "fails" /* 559 */;
 import importDefaultResult1 from "dispatcher" /* 573 */;

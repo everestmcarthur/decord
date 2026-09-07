@@ -1,19 +1,19 @@
-// Module ID: 10658
-// Function ID: 10659
+// Module ID: 10663
+// Function ID: 10664
 // Name: MediaKeyboardEmptyState
-// Dependencies: [19, 17, 4770, 21, 4560, 576, 4556, 4975, 7380, 1114, 10659, 10653, 10660, 2]
+// Dependencies: [19, 17, 4770, 21, 4560, 576, 4556, 4975, 7380, 1114, 10664, 10658, 10665, 2]
 // Exports: getMediaEmptyStateComponentOrNull
 
-// Module 10658 (MediaKeyboardEmptyState)
+// Module 10663 (MediaKeyboardEmptyState)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import Button from "Button" /* 4975 */;
 import SettingsIcon from "SettingsIcon" /* 7380 */;
-import CameraIcon from "CameraIcon" /* 10653 */;
-import registerAssetDefault from "registerAsset" /* 10659 */;
-import registerAssetDefault2 from "registerAsset" /* 10660 */;
+import CameraIcon from "CameraIcon" /* 10658 */;
+import registerAssetDefault from "registerAsset" /* 10664 */;
+import registerAssetDefault2 from "registerAsset" /* 10665 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { NativePermissionStatus } from "NativePermissionStatus" /* 4770 */;
 import jsxProd from "jsxProd" /* 21 */;

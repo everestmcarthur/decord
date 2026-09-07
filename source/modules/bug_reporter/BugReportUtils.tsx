@@ -1,10 +1,10 @@
-// Module ID: 10187
-// Function ID: 10188
+// Module ID: 10192
+// Function ID: 10193
 // Name: _fetchBugReportConfig
-// Dependencies: [5, 1183, 1074, 1272, 1114, 10188, 1115, 4753, 1250, 2]
+// Dependencies: [5, 1183, 1074, 1272, 1114, 10193, 1115, 4753, 1250, 2]
 // Exports: fetchBugReportConfig, getFeatureId, getPriorities, submitReport
 
-// Module 10187 (_fetchBugReportConfig)
+// Module 10192 (_fetchBugReportConfig)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleThemeChange" /* 1183 */;
@@ -156,7 +156,7 @@ function _submitReport() {
                 items.push(obj17);
               }
               let obj19 = dependencyMap;
-              let obj18 = lib(10188);
+              let obj18 = lib(10193);
               let uploadDebugLogFiles = obj18.uploadDebugLogFiles;
               obj19 = lib(1115);
               let BUG_REPORTS = closure_1_5;

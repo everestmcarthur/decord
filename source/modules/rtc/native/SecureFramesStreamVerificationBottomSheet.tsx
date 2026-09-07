@@ -1,10 +1,10 @@
-// Module ID: 9166
-// Function ID: 9167
+// Module ID: 9171
+// Function ID: 9172
 // Name: SecureFramesStreamVerificationBottomSheet
-// Dependencies: [19, 4599, 1074, 21, 504, 9161, 8361, 9167, 1114, 9150, 2]
+// Dependencies: [19, 4599, 1074, 21, 504, 9166, 8361, 9172, 1114, 9155, 2]
 // Exports: default
 
-// Module 9166 (SecureFramesStreamVerificationBottomSheet)
+// Module 9171 (SecureFramesStreamVerificationBottomSheet)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "initialize" /* 4599 */;
 import { AnalyticsSections } from "ME" /* 1074 */;
@@ -41,8 +41,8 @@ export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   obj[1] = intl2.string(channelId(1114).t.qODBkW);
   const intl3 = channelId(1114).intl;
   obj = { helpArticle: null };
-  const tmp3 = streamKey(9167);
-  obj[0] = channelId(9150).getSecureFramesHelpdeskArticle();
+  const tmp3 = streamKey(9172);
+  obj[0] = channelId(9155).getSecureFramesHelpdeskArticle();
   obj[2] = intl3.format(channelId(1114).t["H3+ktv"], obj);
   obj[3] = stateFromStores;
   obj[4] = callback;

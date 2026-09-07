@@ -1,10 +1,10 @@
-// Module ID: 17063
-// Function ID: 17064
+// Module ID: 17066
+// Function ID: 17067
 // Name: createSoundItems
-// Dependencies: [32, 19, 1957, 1979, 4199, 2011, 1371, 5012, 5014, 1373, 5020, 4454, 17064, 504, 4218, 17065, 9671, 17066, 4992, 17067, 2]
+// Dependencies: [32, 19, 1957, 1979, 4199, 2011, 1371, 5012, 5014, 1373, 5020, 4454, 17067, 504, 4218, 17068, 9676, 17069, 4992, 17070, 2]
 // Exports: default, useSearchCategories
 
-// Module 17063 (createSoundItems)
+// Module 17066 (createSoundItems)
 import SoundButtonOverlay from "SoundButtonOverlay" /* 5020 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

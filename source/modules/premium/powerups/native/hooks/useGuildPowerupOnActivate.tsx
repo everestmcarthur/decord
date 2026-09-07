@@ -1,10 +1,10 @@
-// Module ID: 12535
-// Function ID: 12536
+// Module ID: 12539
+// Function ID: 12540
 // Name: useGuildPowerupOnActivate
-// Dependencies: [19, 1979, 4455, 4450, 12536, 504, 12537, 7162, 12538, 4454, 4527, 12517, 5434, 7403, 4763, 7412, 2]
+// Dependencies: [19, 1979, 4455, 4450, 12540, 504, 12541, 7162, 12542, 4454, 4527, 12521, 5434, 7403, 4763, 7412, 2]
 // Exports: default
 
-// Module 12535 (useGuildPowerupOnActivate)
+// Module 12539 (useGuildPowerupOnActivate)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRecordFromRust" /* 1979 */;
 import closure_5 from "handleGuildBoostsUpdate" /* 4455 */;

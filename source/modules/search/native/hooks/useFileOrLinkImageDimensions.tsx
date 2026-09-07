@@ -1,10 +1,10 @@
-// Module ID: 16701
-// Function ID: 16702
+// Module ID: 16704
+// Function ID: 16705
 // Name: useFileOrLinkImageDimensions
 // Dependencies: [19, 7878, 2]
 // Exports: useFileOrLinkImageDimensions
 
-// Module 16701 (useFileOrLinkImageDimensions)
+// Module 16704 (useFileOrLinkImageDimensions)
 import closure_0 from "noop" /* 19 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
 

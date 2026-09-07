@@ -1,10 +1,10 @@
-// Module ID: 13128
-// Function ID: 13129
+// Module ID: 13132
+// Function ID: 13133
 // Name: ConfirmStartCall
 // Dependencies: [19, 21, 4910, 1114, 4910, 4906, 2]
 // Exports: confirmStartCall
 
-// Module 13128 (ConfirmStartCall)
+// Module 13132 (ConfirmStartCall)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useAlertStore from "useAlertStore" /* 4906 */;

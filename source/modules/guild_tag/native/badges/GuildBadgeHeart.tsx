@@ -1,13 +1,13 @@
-// Module ID: 13925
-// Function ID: 13926
+// Module ID: 13928
+// Function ID: 13929
 // Name: items
-// Dependencies: [19, 21, 13917, 8453, 2]
+// Dependencies: [19, 21, 13920, 8456, 2]
 // Exports: GuildBadgeHeart
 
-// Module 13925 (items)
+// Module 13928 (items)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
-import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13917 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
+import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13920 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

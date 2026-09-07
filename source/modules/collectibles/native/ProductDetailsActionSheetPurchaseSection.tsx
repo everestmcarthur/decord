@@ -1,10 +1,10 @@
-// Module ID: 13151
-// Function ID: 13152
+// Module ID: 13155
+// Function ID: 13156
 // Name: GiftButton
-// Dependencies: [32, 19, 17, 7558, 1076, 1074, 11084, 1373, 21, 4560, 576, 8097, 11030, 4527, 11007, 1114, 13149, 8869, 8842, 1483, 7162, 4763, 13152, 1896, 7541, 13156, 1077, 13157, 11077, 8837, 4556, 4976, 1889, 4495, 4411, 4262, 8178, 504, 11156, 4218, 7554, 7553, 8850, 11083, 13159, 13160, 10707, 13162, 1611, 4987, 8453, 4975, 1116, 7182, 2024, 13163, 2]
+// Dependencies: [32, 19, 17, 7558, 1076, 1074, 11089, 1373, 21, 4560, 576, 8097, 11035, 4527, 11012, 1114, 13153, 8874, 8847, 1483, 7162, 4763, 13156, 1896, 7541, 13160, 1077, 13161, 11082, 8842, 4556, 4976, 1889, 4495, 4411, 4262, 8178, 504, 11161, 4218, 7554, 7553, 8855, 11088, 13163, 13164, 10712, 13166, 1611, 4987, 8456, 4975, 1116, 7182, 2024, 13167, 2]
 // Exports: default
 
-// Module 13151 (GiftButton)
+// Module 13155 (GiftButton)
 import ThemesDefault from "Themes" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import Text from "Text" /* 4556 */;
@@ -15,7 +15,7 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "map" /* 7558 */;
 import items from "items" /* 1076 */;
 import ME from "ME" /* 1074 */;
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 11084 */;
+import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 11089 */;
 import GuildFeatures from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -64,12 +64,12 @@ function VCButton(balance) {
   let str;
   const tmp = callback3();
   React = tmp;
-  let obj = balance(13149);
+  let obj = balance(13153);
   const virtualCurrencyData = obj.useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  obj1 = balance(8869);
+  obj1 = balance(8874);
   let isPartiallyOwnedBundle = obj1.useProductDisableState(product.skuId).isDisabled;
-  let obj2 = balance(8842);
+  let obj2 = balance(8847);
   if (!isPartiallyOwnedBundle) {
     isPartiallyOwnedBundle = !canAfford;
   }

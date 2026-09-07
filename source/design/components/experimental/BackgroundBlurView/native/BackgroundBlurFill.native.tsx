@@ -1,10 +1,10 @@
-// Module ID: 8597
-// Function ID: 8598
+// Module ID: 8602
+// Function ID: 8603
 // Name: BlurTheme
 // Dependencies: [19, 17, 21, 576, 4409, 4271, 4262, 4965, 4964, 4296, 4974, 4978, 2]
 // Exports: BackgroundBlurFill, BackgroundBlurFillAnimated, BackgroundBlurFillWithPress
 
-// Module 8597 (BlurTheme)
+// Module 8602 (BlurTheme)
 import ThemesDefault from "Themes" /* 576 */;
 import animatedComponentDefault from "animatedComponent" /* 4964 */;
 import isBlurDisabledDefault from "isBlurDisabled" /* 4965 */;

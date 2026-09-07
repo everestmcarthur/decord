@@ -1,10 +1,10 @@
-// Module ID: 16929
-// Function ID: 16930
+// Module ID: 16932
+// Function ID: 16933
 // Name: RobloxIcon
-// Dependencies: [32, 19, 17, 5281, 1371, 13711, 1074, 1954, 21, 4560, 576, 4271, 1611, 4527, 7150, 7149, 7199, 4973, 4556, 1114, 4975, 12956, 9252, 7382, 4269, 5283, 1396, 1178, 8453, 504, 13712, 5406, 4380, 1943, 2]
+// Dependencies: [32, 19, 17, 5281, 1371, 13715, 1074, 1954, 21, 4560, 576, 4271, 1611, 4527, 7150, 7149, 7199, 4973, 4556, 1114, 4975, 12960, 9257, 7382, 4269, 5283, 1396, 1178, 8456, 504, 13716, 5406, 4380, 1943, 2]
 // Exports: default, useShouldShowRobloxConnectionCoachmark
 
-// Module 16929 (RobloxIcon)
+// Module 16932 (RobloxIcon)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
@@ -12,14 +12,14 @@ import getAvatarURL from "getAvatarURL" /* 1396 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import isThemeLight from "isThemeLight" /* 4269 */;
 import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5283 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
-import inlineStylesDefault from "inlineStyles" /* 8453 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
+import inlineStylesDefault from "inlineStyles" /* 8456 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "set" /* 5281 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import closure_8 from "initialize" /* 13711 */;
+import closure_8 from "initialize" /* 13715 */;
 import ME from "ME" /* 1074 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -132,7 +132,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const obj7 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl3 = markAsDismissed(1114).intl;
   obj7[0] = intl3.string(markAsDismissed(1114).t.ItuabN);
-  obj7[1] = callback(markAsDismissed(12956).WindowLaunchIcon, { size: "sm", color: ThemesDefault.colors.WHITE });
+  obj7[1] = callback(markAsDismissed(12960).WindowLaunchIcon, { size: "sm", color: ThemesDefault.colors.WHITE });
   obj7[4] = function onPress() {
     let obj = closure_1_1(closure_1_2[13]);
     obj.hideActionSheet();
@@ -159,7 +159,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
 export { UnionIcon };
 export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobloxConnectionCoachmark() {
   const items = [closure_8];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(13712).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(13716).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(React.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];

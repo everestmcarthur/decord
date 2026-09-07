@@ -1,10 +1,10 @@
-// Module ID: 13445
-// Function ID: 13446
+// Module ID: 13449
+// Function ID: 13450
 // Name: MAX_REFERRALS_SENT
 // Dependencies: [19, 1371, 7452, 504, 8181, 2]
 // Exports: useReferralProgramBannerDetails
 
-// Module 13445 (MAX_REFERRALS_SENT)
+// Module 13449 (MAX_REFERRALS_SENT)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;
 import closure_4 from "emitChanges" /* 7452 */;

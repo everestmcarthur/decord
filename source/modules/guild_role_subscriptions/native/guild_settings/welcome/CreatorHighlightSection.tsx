@@ -1,15 +1,15 @@
-// Module ID: 17707
-// Function ID: 17708
+// Module ID: 17710
+// Function ID: 17711
 // Name: GuildServerSubscriberCount
-// Dependencies: [19, 17, 21, 4560, 576, 4556, 1178, 10302, 1114, 17708, 4255, 17680, 5587, 15240, 4976, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4556, 1178, 10307, 1114, 17711, 4255, 17683, 5587, 15243, 4976, 2]
 // Exports: default
 
-// Module 17707 (GuildServerSubscriberCount)
+// Module 17710 (GuildServerSubscriberCount)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
-import registerAssetDefault from "registerAsset" /* 10302 */;
+import registerAssetDefault from "registerAsset" /* 10307 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -45,14 +45,14 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp4 = guild_id(17708)(guild_id, 3, 60);
+  const tmp4 = guild_id(17711)(guild_id, 3, 60);
   dependencyMap = tmp4;
   hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp4];
   if (tmp4.isLoading) {
     let obj = { style: null, children: null };
     obj[0] = tmp.cardContainer;
-    obj[1] = callback(tmp2(17680), {});
+    obj[1] = callback(tmp2(17683), {});
     return callback(closure_4, obj);
   } else if (hasAllImperativeDetails) {
     const details = tmp4.details;

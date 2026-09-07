@@ -1,7 +1,7 @@
 // Module ID: 1914
 // Function ID: 1915
 // Name: _migrateDefaultStorage
-// Dependencies: [5, 1915, 502, 5132, 1074, 4607, 4182, 13990, 38, 13674, 4612, 1384, 13991, 13993, 13994, 504, 1908, 573, 2]
+// Dependencies: [5, 1915, 502, 5132, 1074, 4607, 4182, 13993, 38, 13678, 4612, 1384, 13994, 13996, 13997, 504, 1908, 573, 2]
 
 // Module 1914 (_migrateDefaultStorage)
 import _modDef38 from "module_38" /* 38 */;
@@ -10,10 +10,10 @@ import dispatcherDefault from "dispatcher" /* 573 */;
 import hasFlag from "hasFlag" /* 1384 */;
 import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 1908 */;
 import isStreamKey from "isStreamKey" /* 4612 */;
-import isClipsEnabled from "isClipsEnabled" /* 13674 */;
-import getClipPOVWindow from "getClipPOVWindow" /* 13991 */;
-import apexExperimentDefault from "apexExperiment" /* 13993 */;
-import apexExperiment from "apexExperiment" /* 13994 */;
+import isClipsEnabled from "isClipsEnabled" /* 13678 */;
+import getClipPOVWindow from "getClipPOVWindow" /* 13994 */;
+import apexExperimentDefault from "apexExperiment" /* 13996 */;
+import apexExperiment from "apexExperiment" /* 13997 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "initialize" /* 1915 */;
 import closure_5 from "fetchFingerprint" /* 502 */;
@@ -99,7 +99,7 @@ function _migrateDefaultStorage() {
             return obj3;
           } else {
             callback2 = arg1;
-            obj = callback(13990);
+            obj = callback(13993);
             callback = obj.pathJoin(callback2, closure_17);
             c3 = 0;
           }
@@ -159,7 +159,7 @@ function recordPOVMatches(arg0, arg1) {
         if (null != clipAttachmentPOVWindow1) {
           let tmp19 = tmp13;
           let tmp20 = tmp15;
-          let tmp14Result = tmp14(13991);
+          let tmp14Result = tmp14(13994);
           let tmp21 = clipAttachmentPOVWindow;
           let tmp22 = clipAttachmentPOVWindow1;
           if (null != tmp14Result.getClipPOVOverlapMilliseconds(tmp8, tmp18)) {

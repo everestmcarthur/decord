@@ -1,9 +1,9 @@
-// Module ID: 9813
-// Function ID: 9814
+// Module ID: 9818
+// Function ID: 9819
 // Name: closeModal
-// Dependencies: [5, 32, 19, 17, 1962, 5414, 1074, 1963, 21, 4560, 576, 4763, 5123, 1114, 1178, 7089, 8407, 5584, 504, 7213, 8593, 4556, 9050, 9814, 9815, 4992, 1242, 1874, 8398, 7216, 4461, 9816, 9817, 8410, 4975, 7123, 5578, 2]
+// Dependencies: [5, 32, 19, 17, 1962, 5414, 1074, 1963, 21, 4560, 576, 4763, 5123, 1114, 1178, 7089, 8407, 5584, 504, 7213, 8598, 4556, 9055, 9819, 9820, 4992, 1242, 1874, 8398, 7216, 4461, 9821, 9822, 8410, 4975, 7123, 5578, 2]
 
-// Module 9813 (closeModal)
+// Module 9818 (closeModal)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -15,7 +15,7 @@ import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
 import registerAssetDefault from "registerAsset" /* 7089 */;
 import HotspotStore2 from "HotspotStore" /* 7213 */;
 import StageSparkleInnerDefault from "StageSparkleInner" /* 8407 */;
-import Form from "Form" /* 8593 */;
+import Form from "Form" /* 8598 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;

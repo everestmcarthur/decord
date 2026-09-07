@@ -1,10 +1,10 @@
-// Module ID: 9189
-// Function ID: 9190
+// Module ID: 9194
+// Function ID: 9195
 // Name: RestrictedGuildProfileView
-// Dependencies: [19, 17, 21, 9190, 4495, 4262, 576, 4987, 5584, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 9195, 4495, 4262, 576, 4987, 5584, 4556, 1114, 2]
 // Exports: default
 
-// Module 9189 (RestrictedGuildProfileView)
+// Module 9194 (RestrictedGuildProfileView)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -14,7 +14,7 @@ import Text from "Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import GuildIconSizes from "GuildIconSizes" /* 5584 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import GuildProfileBackground from "GuildProfileBackground" /* 9190 */;
+import GuildProfileBackground from "GuildProfileBackground" /* 9195 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

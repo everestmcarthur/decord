@@ -1,26 +1,26 @@
-// Module ID: 9089
-// Function ID: 9090
+// Module ID: 9094
+// Function ID: 9095
 // Name: trackDeviceChanged
-// Dependencies: [5, 9090, 1957, 1908, 4583, 2011, 1371, 1074, 9091, 4585, 3, 1242, 551, 573, 9092, 9094, 9095, 9109, 2]
+// Dependencies: [5, 9095, 1957, 1908, 4583, 2011, 1371, 1074, 9096, 4585, 3, 1242, 551, 573, 9097, 9099, 9100, 9114, 2]
 
-// Module 9089 (trackDeviceChanged)
+// Module 9094 (trackDeviceChanged)
 import timestampDefault from "timestamp" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import snapVolumeToDefault from "snapVolumeToDefault" /* 9092 */;
-import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9094 */;
-import _getFilterBlob from "_getFilterBlob" /* 9095 */;
-import isPremiumResolution from "isPremiumResolution" /* 9109 */;
+import snapVolumeToDefault from "snapVolumeToDefault" /* 9097 */;
+import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9099 */;
+import _getFilterBlob from "_getFilterBlob" /* 9100 */;
+import isPremiumResolution from "isPremiumResolution" /* 9114 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 9090 */;
+import closure_4 from "initialize" /* 9095 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import closure_6 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_7 from "createRTCConnection" /* 4583 */;
 import closure_8 from "handleConnectionOpen" /* 2011 */;
 import closure_9 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
-import { SoundOutputChannel } from "SoundOutputChannel" /* 9091 */;
+import { SoundOutputChannel } from "SoundOutputChannel" /* 9096 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
 
 require = arg1;
@@ -642,7 +642,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9094)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
+              obj1[0] = v0(9099)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -729,7 +729,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = v0(9094)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
+              obj1[0] = v0(9099)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
               return obj1;
             }
           } else if (arg0 === 1) {

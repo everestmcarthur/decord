@@ -1,10 +1,10 @@
-// Module ID: 10737
-// Function ID: 10738
+// Module ID: 10742
+// Function ID: 10743
 // Name: useMaybeFetchCollectiblesCategoriesShared
 // Dependencies: [32, 19, 4476, 7542, 1076, 504, 7589, 7541, 2]
 // Exports: useMaybeFetchCollectiblesCategoriesShared
 
-// Module 10737 (useMaybeFetchCollectiblesCategoriesShared)
+// Module 10742 (useMaybeFetchCollectiblesCategoriesShared)
 import closure_2 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import closure_5 from "getHash" /* 4476 */;

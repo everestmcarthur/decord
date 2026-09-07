@@ -1,12 +1,12 @@
-// Module ID: 9530
-// Function ID: 9531
+// Module ID: 9535
+// Function ID: 9536
 // Name: handlePressJoinActivity
-// Dependencies: [5, 1918, 1957, 1979, 4199, 1371, 4579, 1956, 9531, 9532, 4904, 1114, 7163, 9502, 9533, 2]
+// Dependencies: [5, 1918, 1957, 1979, 4199, 1371, 4579, 1956, 9536, 9537, 4904, 1114, 7163, 9507, 9538, 2]
 // Exports: maybeJoinEmbeddedActivity
 
-// Module 9530 (handlePressJoinActivity)
+// Module 9535 (handlePressJoinActivity)
 import setDefault from "set" /* 4904 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9531 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9536 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createExecutable" /* 1918 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
@@ -23,10 +23,10 @@ function handlePressJoinActivity(arg0) {
     if (handleCanJoin != null) {
       handleCanJoin();
     }
-  } else if (tmp(9531).EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === embeddedActivityJoinability) {
-    const result = tmp(9532).showActivitiesInvalidPermissionsAlert();
-    const tmpResult = tmp(9532);
-  } else if (tmp(9531).EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS === embeddedActivityJoinability) {
+  } else if (tmp(9536).EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === embeddedActivityJoinability) {
+    const result = tmp(9537).showActivitiesInvalidPermissionsAlert();
+    const tmpResult = tmp(9537);
+  } else if (tmp(9536).EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS === embeddedActivityJoinability) {
     let obj = { title: null, body: null, hideActionSheet: false };
     const intl7 = tmp(1114).intl;
     obj[0] = intl7.string(tmp(1114).t.PtobXW);
@@ -34,7 +34,7 @@ function handlePressJoinActivity(arg0) {
     obj[1] = intl8.string(tmp(1114).t.UXoQTp);
     setDefault.show(obj);
     const obj7 = setDefault;
-  } else if (tmp(9531).EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS === embeddedActivityJoinability) {
+  } else if (tmp(9536).EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS === embeddedActivityJoinability) {
     obj = { title: null, body: null, hideActionSheet: false };
     const intl5 = tmp(1114).intl;
     obj[0] = intl5.string(tmp(1114).t.PtobXW);
@@ -42,7 +42,7 @@ function handlePressJoinActivity(arg0) {
     obj[1] = intl6.string(tmp(1114).t.uGDCcw);
     setDefault.show(obj);
     const obj5 = setDefault;
-  } else if (tmp(9531).EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability) {
+  } else if (tmp(9536).EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability) {
     let obj2 = setDefault;
     obj1 = { title: null, body: null, hideActionSheet: false };
     const intl3 = tmp(1114).intl;
@@ -236,13 +236,13 @@ function _maybeJoinEmbeddedActivity() {
                 obj4[1] = closure_9;
                 obj4[2] = callback;
                 obj4[3] = id;
-                obj3 = callback(9502);
+                obj3 = callback(9507);
                 obj4[4] = obj3.getIsActivitiesEnabledForCurrentPlatform();
                 obj4[5] = c5;
                 obj4[6] = closure_9;
                 obj4[7] = c7;
                 obj4[8] = c6;
-                obj3[0] = callback2(9531)(obj4);
+                obj3[0] = callback2(9536)(obj4);
                 obj3[1] = function handleCanJoin() {
                   const self = this;
                   const apply = _handleCanJoin.apply;
@@ -255,7 +255,7 @@ function _maybeJoinEmbeddedActivity() {
                 };
                 id(obj3);
                 const tmp49 = id;
-                const tmp52 = callback2(9531);
+                const tmp52 = callback2(9536);
               }
             }
             c4 = 3;

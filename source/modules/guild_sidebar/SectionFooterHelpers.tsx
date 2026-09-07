@@ -1,10 +1,10 @@
-// Module ID: 16240
-// Function ID: 16241
+// Module ID: 16243
+// Function ID: 16244
 // Name: getSectionFooterConfig
 // Dependencies: [7117, 4199, 7534, 1074, 7528, 1982, 2]
 // Exports: getSectionFooterActiveVoiceChannels, getSectionFooterConfig, isSectionFooterWithActiveVoiceChannels
 
-// Module 16240 (getSectionFooterConfig)
+// Module 16243 (getSectionFooterConfig)
 import computeSubtitle from "computeSubtitle" /* 7528 */;
 import closure_2 from "incrementVersion" /* 7117 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4199 */;

@@ -1,14 +1,14 @@
-// Module ID: 12348
-// Function ID: 12349
+// Module ID: 12352
+// Function ID: 12353
 // Name: createRequestPayload
-// Dependencies: [109, 7878, 1074, 12349, 12350, 2]
+// Dependencies: [109, 7878, 1074, 12353, 12354, 2]
 
-// Module 12348 (createRequestPayload)
-import fetch from "fetch" /* 12350 */;
+// Module 12352 (createRequestPayload)
+import fetch from "fetch" /* 12354 */;
 import closure_3 from "_objectWithoutProperties" /* 109 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
 import { SearchTypes } from "ME" /* 1074 */;
-import { AbstractSearchFetchManager } from "cleanUp" /* 12349 */;
+import { AbstractSearchFetchManager } from "cleanUp" /* 12353 */;
 
 require = arg1;
 let closure_2 = ["include_nsfw", "channel_id"];

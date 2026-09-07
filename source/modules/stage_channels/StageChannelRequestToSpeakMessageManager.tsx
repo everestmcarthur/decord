@@ -1,9 +1,9 @@
-// Module ID: 17486
-// Function ID: 17487
+// Module ID: 17489
+// Function ID: 17490
 // Name: handleVoiceStateUpdates
-// Dependencies: [502, 1957, 4781, 4199, 2011, 1371, 1074, 7118, 1965, 17487, 1089, 7456, 2]
+// Dependencies: [502, 1957, 4781, 4199, 2011, 1371, 1074, 7118, 1965, 17490, 1089, 7456, 2]
 
-// Module 17486 (handleVoiceStateUpdates)
+// Module 17489 (handleVoiceStateUpdates)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "fetchFingerprint" /* 502 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;

@@ -1,13 +1,13 @@
-// Module ID: 10142
-// Function ID: 10143
+// Module ID: 10147
+// Function ID: 10148
 // Name: ConnectedInAppNotificationSettingsScreen
-// Dependencies: [19, 1961, 1957, 4209, 4741, 1371, 1074, 21, 7119, 7114, 4713, 8593, 1114, 10143, 7382, 504, 5624, 7000, 2]
+// Dependencies: [19, 1961, 1957, 4209, 4741, 1371, 1074, 21, 7119, 7114, 4713, 8598, 1114, 10148, 7382, 504, 5624, 7000, 2]
 
-// Module 10142 (ConnectedInAppNotificationSettingsScreen)
+// Module 10147 (ConnectedInAppNotificationSettingsScreen)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import computeChannelName from "computeChannelName" /* 4713 */;
-import Form from "Form" /* 8593 */;
-import ChannelSettingsNotificationsGuardDefault from "ChannelSettingsNotificationsGuard" /* 10143 */;
+import Form from "Form" /* 8598 */;
+import ChannelSettingsNotificationsGuardDefault from "ChannelSettingsNotificationsGuard" /* 10148 */;
 import importAllResult from "noop" /* 19 */;
 import { isMultiUserDM } from "createChannelRecord" /* 1961 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;

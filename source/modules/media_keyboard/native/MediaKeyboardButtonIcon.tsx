@@ -1,10 +1,10 @@
-// Module ID: 12240
-// Function ID: 12241
+// Module ID: 12244
+// Function ID: 12245
 // Name: MediaKeyboardButtonIcon
-// Dependencies: [19, 21, 4427, 4296, 1609, 4561, 4564, 10951, 2]
+// Dependencies: [19, 21, 4427, 4296, 1609, 4561, 4564, 10956, 2]
 // Exports: MediaKeyboardButtonIcon
 
-// Module 12240 (MediaKeyboardButtonIcon)
+// Module 12244 (MediaKeyboardButtonIcon)
 import noopAll from "noop" /* 19 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 4427 */;
@@ -50,7 +50,7 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     obj[0] = animatedStyle;
     obj1 = {};
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(_require(10951).PlusLargeIcon, {});
+    obj[1] = jsx(_require(10956).PlusLargeIcon, {});
     return jsx(_modDef4296.View, { style: null, children: null });
   }
 };

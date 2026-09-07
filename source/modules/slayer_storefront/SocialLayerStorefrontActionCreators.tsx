@@ -1,15 +1,15 @@
-// Module ID: 10798
-// Function ID: 10799
+// Module ID: 10803
+// Function ID: 10804
 // Name: _fetchSocialLayerStorefront
-// Dependencies: [5, 8786, 7228, 1074, 1090, 573, 7226, 8854, 1272, 1925, 559, 2]
+// Dependencies: [5, 8791, 7228, 1074, 1090, 573, 7226, 8859, 1272, 1925, 559, 2]
 // Exports: fetchSocialLayerSKUPurchaseEligibility, fetchSocialLayerStorefront, fetchSocialLayerStorefrontAnnouncement, fetchSocialLayerStorefrontById, fetchSocialLayerStorefrontConfig, fetchSocialLayerStorefrontEntries, fetchSocialLayerStorefrontForApplication, fetchSocialLayerStorefrontLaunchAnnouncement, fetchSocialLayerStorefrontSku, fetchSocialLayerStorefrontSkuForApplication, setSocialLayerStorefrontState
 
-// Module 10798 (_fetchSocialLayerStorefront)
+// Module 10803 (_fetchSocialLayerStorefront)
 import failsDefault from "fails" /* 559 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import setDefault from "set" /* 1090 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getPromotionIdOverride" /* 8786 */;
+import closure_4 from "getPromotionIdOverride" /* 8791 */;
 import closure_5 from "handleUserSettingsStoreUpdate" /* 7228 */;
 import { Endpoints } from "ME" /* 1074 */;
 

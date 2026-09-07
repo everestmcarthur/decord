@@ -1,10 +1,10 @@
-// Module ID: 8836
-// Function ID: 8837
+// Module ID: 8841
+// Function ID: 8842
 // Name: LimitedTimeBadge
 // Dependencies: [19, 17, 2025, 1183, 21, 4560, 576, 1114, 504, 4411, 7439, 4556, 2]
 // Exports: default
 
-// Module 8836 (LimitedTimeBadge)
+// Module 8841 (LimitedTimeBadge)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;

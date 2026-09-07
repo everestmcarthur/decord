@@ -1,19 +1,19 @@
-// Module ID: 16825
-// Function ID: 16826
+// Module ID: 16828
+// Function ID: 16829
 // Name: ChannelPermissionSyncModule
-// Dependencies: [32, 5, 19, 17, 2016, 1957, 2015, 1979, 4209, 1371, 1074, 21, 4560, 576, 4904, 1114, 4713, 4204, 11610, 9740, 8625, 12, 5687, 5605, 15158, 1483, 12753, 10270, 15312, 504, 1894, 10942, 16826, 5581, 7863, 4573, 2]
+// Dependencies: [32, 5, 19, 17, 2016, 1957, 2015, 1979, 4209, 1371, 1074, 21, 4560, 576, 4904, 1114, 4713, 4204, 11615, 9745, 8630, 12, 5687, 5605, 15161, 1483, 12757, 10275, 15315, 504, 1894, 10947, 16829, 5581, 7863, 4573, 2]
 // Exports: default
 
-// Module 16825 (ChannelPermissionSyncModule)
+// Module 16828 (ChannelPermissionSyncModule)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import applyOverwritesAll from "applyOverwrites" /* 4204 */;
 import TableRowInner from "TableRowInner" /* 5605 */;
-import RoleLabel from "RoleLabel" /* 10270 */;
-import memoResult1Default from "memoResult1" /* 10942 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15312 */;
-import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 16826 */;
+import RoleLabel from "RoleLabel" /* 10275 */;
+import memoResult1Default from "memoResult1" /* 10947 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15315 */;
+import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 16829 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "noop" /* 19 */;
@@ -140,7 +140,7 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj1);
   }
   let obj2 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj3 = { icon: closure_16(channel(15158).RefreshIcon, {}), label: null, onPress: null };
+  let obj3 = { icon: closure_16(channel(15161).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1114).intl;
   obj3[1] = intl2.string(channel(1114).t.NVwuHq);
   obj3[2] = callback;
@@ -176,7 +176,7 @@ function AddPermission(isEditing) {
     const intl = tmp2(1114).intl;
     obj[0] = intl.string(tmp2(1114).t.vPHdP5);
     obj1 = { icon: null, label: null, onPress: null };
-    obj1[0] = callback2(tmp2(12753).PlusMediumIcon, {});
+    obj1[0] = callback2(tmp2(12757).PlusMediumIcon, {});
     const intl2 = tmp2(1114).intl;
     obj1[1] = intl2.string(tmp2(1114).t.fVWxvT);
     obj1[2] = function onPress() {
@@ -184,7 +184,7 @@ function AddPermission(isEditing) {
     };
     const items = [callback2(tmp2(5605).TableRow, obj1), ];
     const obj2 = { icon: null, label: null, onPress: null };
-    obj2[0] = callback2(tmp2(12753).PlusMediumIcon, {});
+    obj2[0] = callback2(tmp2(12757).PlusMediumIcon, {});
     const intl3 = tmp2(1114).intl;
     obj2[1] = intl3.string(tmp2(1114).t.riesLt);
     obj2[2] = function onPress() {
@@ -210,7 +210,7 @@ function RoleRow(onDelete) {
       obj[0] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
       const intl = tmp3(1114).intl;
       obj[1] = intl.string(tmp3(1114).t.N86XcP);
-      tmp2Result = tmp2(tmp3(15312).CircleMinusIcon, obj);
+      tmp2Result = tmp2(tmp3(15315).CircleMinusIcon, obj);
     }
   }
   obj[2] = tmp2Result;

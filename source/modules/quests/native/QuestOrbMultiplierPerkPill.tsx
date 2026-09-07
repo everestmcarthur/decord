@@ -1,17 +1,17 @@
-// Module ID: 15165
-// Function ID: 15166
+// Module ID: 15168
+// Function ID: 15169
 // Name: QuestOrbMultiplierPerkPill
-// Dependencies: [19, 17, 21, 4560, 576, 4495, 4269, 4262, 4409, 11483, 11293, 1114, 8662, 4556, 5123, 15166, 4987, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4495, 4269, 4262, 4409, 11488, 11298, 1114, 8667, 4556, 5123, 15169, 4987, 2]
 // Exports: QuestOrbMultiplierPerkPill
 
-// Module 15165 (QuestOrbMultiplierPerkPill)
+// Module 15168 (QuestOrbMultiplierPerkPill)
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;
 import isThemeLight from "isThemeLight" /* 4269 */;
 import hexToRgba from "hexToRgba" /* 4409 */;
 import useTheme from "useTheme" /* 4495 */;
-import items5 from "items" /* 11293 */;
-import useQuests from "useQuests" /* 11483 */;
+import items5 from "items" /* 11298 */;
+import useQuests from "useQuests" /* 11488 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -84,7 +84,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     let tmp21Result = !tmp13;
     let tmp19 = tmp21Result;
     if (!tmp13) {
-      tmp19 = questOrbRewardMultiplier(tmp2(8662).NitroWheelIcon, { size: "xs", color: "white" });
+      tmp19 = questOrbRewardMultiplier(tmp2(8667).NitroWheelIcon, { size: "xs", color: "white" });
     }
     obj1 = { children: null };
     const items2 = [tmp19, ];

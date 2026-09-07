@@ -1,18 +1,18 @@
-// Module ID: 14462
-// Function ID: 14463
+// Module ID: 14465
+// Function ID: 14466
 // Name: validateEmbeddedAppFrame
-// Dependencies: [9510, 14463, 4465, 1074, 9511, 9559, 8856, 9554, 2]
+// Dependencies: [9515, 14466, 4465, 1074, 9516, 9564, 8861, 9559, 2]
 // Exports: tryValidateEmbeddedAppFrame
 
-// Module 14462 (validateEmbeddedAppFrame)
-import getApplicationFlags from "getApplicationFlags" /* 8856 */;
-import prototypeDefault from "prototype" /* 9554 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9559 */;
-import closure_3 from "map" /* 9510 */;
-import closure_4 from "getBuilderPreviewApplicationId" /* 14463 */;
+// Module 14465 (validateEmbeddedAppFrame)
+import getApplicationFlags from "getApplicationFlags" /* 8861 */;
+import prototypeDefault from "prototype" /* 9559 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9564 */;
+import closure_3 from "map" /* 9515 */;
+import closure_4 from "getBuilderPreviewApplicationId" /* 14466 */;
 import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4465 */;
 import ME from "ME" /* 1074 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9511 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 9516 */;
 
 require = arg1;
 function validateEmbeddedAppFrame(transport) {
@@ -40,7 +40,7 @@ function validateEmbeddedAppFrame(transport) {
           tmp13 = null;
           if (tmp12.MAIN === type) {
             if (tmp35.applicationId === builderPreviewApplicationId.getBuilderPreviewApplicationId()) {
-              obj1 = { channelId: "hash", guildId: "call" };
+              obj1 = { channelId: "push", guildId: "channel" };
             } else {
               obj1 = null;
             }

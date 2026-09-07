@@ -1,9 +1,9 @@
-// Module ID: 17482
-// Function ID: 17483
+// Module ID: 17485
+// Function ID: 17486
 // Name: handleGuildCreate
 // Dependencies: [1908, 2011, 4381, 1074, 7118, 7342, 5411, 1100, 573, 2]
 
-// Module 17482 (handleGuildCreate)
+// Module 17485 (handleGuildCreate)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import transitionTo from "transitionTo" /* 1100 */;
 import _modDef5411 from "module_5411" /* 5411 */;

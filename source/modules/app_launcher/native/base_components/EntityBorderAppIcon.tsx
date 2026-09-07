@@ -1,10 +1,10 @@
-// Module ID: 12056
-// Function ID: 12057
+// Module ID: 12060
+// Function ID: 12061
 // Name: EntityBorderAppIcon
 // Dependencies: [17, 21, 576, 4560, 5587, 2]
 // Exports: default
 
-// Module 12056 (EntityBorderAppIcon)
+// Module 12060 (EntityBorderAppIcon)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

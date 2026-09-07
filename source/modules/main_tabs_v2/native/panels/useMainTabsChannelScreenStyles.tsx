@@ -1,10 +1,10 @@
-// Module ID: 16531
-// Function ID: 16532
+// Module ID: 16534
+// Function ID: 16535
 // Name: useMainTabsChannelScreenStyles
 // Dependencies: [19, 17, 4560, 576, 4296, 2]
 // Exports: useMainTabsChannelScreenStyles
 
-// Module 16531 (useMainTabsChannelScreenStyles)
+// Module 16534 (useMainTabsChannelScreenStyles)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_2 from "noop" /* 19 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

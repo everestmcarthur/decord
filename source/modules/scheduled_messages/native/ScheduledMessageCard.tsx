@@ -1,14 +1,14 @@
-// Module ID: 12214
-// Function ID: 12215
+// Module ID: 12218
+// Function ID: 12219
 // Name: ScheduledMessageCardStatusHeader
-// Dependencies: [19, 17, 1957, 1074, 21, 4560, 576, 504, 1100, 4763, 5607, 12215, 5577, 12216, 10112, 4556, 1114, 7845, 12217, 12209, 12218, 2]
+// Dependencies: [19, 17, 1957, 1074, 21, 4560, 576, 504, 1100, 4763, 5607, 12219, 5577, 12220, 10117, 4556, 1114, 7845, 12221, 12213, 12222, 2]
 
-// Module 12214 (ScheduledMessageCardStatusHeader)
+// Module 12218 (ScheduledMessageCardStatusHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import ScheduledMessagesConfig from "ScheduledMessagesConfig" /* 7845 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12209 */;
-import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 12217 */;
-import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 12218 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12213 */;
+import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 12221 */;
+import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 12222 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
@@ -65,7 +65,7 @@ const memoResult = importAllResult.memo(function ScheduledMessageCard(scheduledM
     const items1 = [callback(ScheduledMessageCardStatusHeader, obj), , , ];
     obj1 = { channel: null, actions: null };
     obj1[0] = stateFromStores;
-    items1[1] = callback(tmp2(12215).ForLaterCardHeader, obj1);
+    items1[1] = callback(tmp2(12219).ForLaterCardHeader, obj1);
     let obj2 = { style: null };
     obj2[0] = tmp.cardDivider;
     items1[2] = callback(View, obj2);
@@ -83,7 +83,7 @@ const memoResult = importAllResult.memo(function ScheduledMessageCard(scheduledM
         obj5[0] = tmp.attachmentCount;
         const obj6 = { size: "xxs", color: null };
         obj6[1] = stateFromStores(576).colors.TEXT_MUTED;
-        const items2 = [tmp10(tmp2(10112).AttachmentIcon, obj6), ];
+        const items2 = [tmp10(tmp2(10117).AttachmentIcon, obj6), ];
         const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp2(1114).intl;
         const obj8 = { count: null };
@@ -94,7 +94,7 @@ const memoResult = importAllResult.memo(function ScheduledMessageCard(scheduledM
         tmp9Result = tmp9(tmp12, obj5);
       }
       obj4[3] = tmp9Result;
-      tmp10Result = tmp10(tmp2(12216).ForLaterMessageRow, obj4);
+      tmp10Result = tmp10(tmp2(12220).ForLaterMessageRow, obj4);
     }
     items1[3] = tmp10Result;
     obj[5] = items1;

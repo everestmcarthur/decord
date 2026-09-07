@@ -1,10 +1,10 @@
-// Module ID: 9018
-// Function ID: 9019
+// Module ID: 9023
+// Function ID: 9024
 // Name: UserProfileApplicationWidgetBottomStatsLayout
-// Dependencies: [19, 17, 21, 4560, 576, 8926, 9013, 4556, 9014, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 8931, 9018, 4556, 9019, 2]
 // Exports: default
 
-// Module 9018 (UserProfileApplicationWidgetBottomStatsLayout)
+// Module 9023 (UserProfileApplicationWidgetBottomStatsLayout)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

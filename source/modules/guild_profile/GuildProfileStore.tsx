@@ -1,9 +1,9 @@
-// Module ID: 9065
-// Function ID: 9066
+// Module ID: 9070
+// Function ID: 9071
 // Name: handleUpdateStart
 // Dependencies: [1074, 559, 5548, 504, 573, 2]
 
-// Module 9065 (handleUpdateStart)
+// Module 9070 (handleUpdateStart)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 504 */;
 import failsDefault from "fails" /* 559 */;

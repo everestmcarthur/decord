@@ -1,10 +1,10 @@
-// Module ID: 10753
-// Function ID: 10754
+// Module ID: 10758
+// Function ID: 10759
 // Name: useThemeAndReducedMotionAwareAssetUrl
 // Dependencies: [4552, 4495, 504, 4269, 2]
 // Exports: useThemeAndReducedMotionAwareAssetUrl
 
-// Module 10753 (useThemeAndReducedMotionAwareAssetUrl)
+// Module 10758 (useThemeAndReducedMotionAwareAssetUrl)
 import initialize from "initialize" /* 504 */;
 import isThemeLight from "isThemeLight" /* 4269 */;
 import useThemeDefault from "useTheme" /* 4495 */;

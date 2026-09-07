@@ -1,18 +1,18 @@
-// Module ID: 16383
-// Function ID: 16384
+// Module ID: 16386
+// Function ID: 16387
 // Name: YouBarMaskedBackground
-// Dependencies: [19, 17, 15098, 21, 4560, 576, 5664, 4987, 672, 4262, 15184, 4296, 4974, 2]
+// Dependencies: [19, 17, 15101, 21, 4560, 576, 5664, 4987, 672, 4262, 15187, 4296, 4974, 2]
 
-// Module 16383 (YouBarMaskedBackground)
+// Module 16386 (YouBarMaskedBackground)
 import ThemesDefault from "Themes" /* 576 */;
 import nDefault from "n" /* 672 */;
 import map from "map" /* 4262 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5664 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 15184 */;
+import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 15187 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 15098 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 15101 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;

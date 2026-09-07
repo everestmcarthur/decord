@@ -1,10 +1,10 @@
-// Module ID: 12614
-// Function ID: 12615
+// Module ID: 12618
+// Function ID: 12619
 // Name: defaultCountFormatter
-// Dependencies: [19, 17, 2025, 21, 4296, 4560, 576, 4974, 9495, 12615, 6655, 1115, 2]
+// Dependencies: [19, 17, 2025, 21, 4296, 4560, 576, 4974, 9500, 12619, 6655, 1115, 2]
 // Exports: Tabs
 
-// Module 12614 (defaultCountFormatter)
+// Module 12618 (defaultCountFormatter)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

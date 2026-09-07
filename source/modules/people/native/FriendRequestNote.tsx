@@ -1,10 +1,10 @@
-// Module ID: 13120
-// Function ID: 13121
+// Module ID: 13124
+// Function ID: 13125
 // Name: FriendRequestNote
-// Dependencies: [32, 19, 17, 4209, 1074, 21, 4560, 576, 13121, 504, 13122, 4556, 4975, 6970, 1114, 2]
+// Dependencies: [32, 19, 17, 4209, 1074, 21, 4560, 576, 13125, 504, 13126, 4556, 4975, 6970, 1114, 2]
 // Exports: default
 
-// Module 13120 (FriendRequestNote)
+// Module 13124 (FriendRequestNote)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;

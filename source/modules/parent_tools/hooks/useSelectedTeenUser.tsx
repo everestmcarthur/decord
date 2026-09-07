@@ -1,11 +1,11 @@
-// Module ID: 14893
-// Function ID: 14894
+// Module ID: 14896
+// Function ID: 14897
 // Name: useSelectedTeenUser
-// Dependencies: [1371, 7540, 7537, 8646, 563, 2]
+// Dependencies: [1371, 7540, 7537, 8651, 563, 2]
 // Exports: useSelectedTeenUser, useShouldLoadSettingsForSelectedTeenUser, useTeenUserForId
 
-// Module 14893 (useSelectedTeenUser)
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
+// Module 14896 (useSelectedTeenUser)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8651 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;
 import closure_4 from "getSettings" /* 7540 */;
 import closure_5 from "freshTeenActivityWithMap" /* 7537 */;

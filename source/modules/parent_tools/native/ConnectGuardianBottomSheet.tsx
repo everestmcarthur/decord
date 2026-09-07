@@ -1,18 +1,18 @@
-// Module ID: 14879
-// Function ID: 14880
+// Module ID: 14882
+// Function ID: 14883
 // Name: ConnectGuardianBottomSheet
-// Dependencies: [19, 17, 7537, 7538, 21, 4560, 576, 563, 4527, 14880, 7150, 4556, 1114, 2396, 14881, 4975, 2]
+// Dependencies: [19, 17, 7537, 7538, 21, 4560, 576, 563, 4527, 14883, 7150, 4556, 1114, 2396, 14884, 4975, 2]
 // Exports: default
 
-// Module 14879 (ConnectGuardianBottomSheet)
+// Module 14882 (ConnectGuardianBottomSheet)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
 import ThemesDefault from "Themes" /* 576 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;
 import Text from "Text" /* 4556 */;
 import Button from "Button" /* 4975 */;
 import Background from "Background" /* 7150 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14880 */;
-import ConnectGuardianCard from "ConnectGuardianCard" /* 14881 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14883 */;
+import ConnectGuardianCard from "ConnectGuardianCard" /* 14884 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "freshTeenActivityWithMap" /* 7537 */;

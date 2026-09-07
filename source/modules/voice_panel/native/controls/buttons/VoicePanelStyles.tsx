@@ -1,10 +1,10 @@
-// Module ID: 17184
-// Function ID: 17185
+// Module ID: 17187
+// Function ID: 17188
 // Name: useVoicePanelButtonStyles
 // Dependencies: [4560, 576, 8265, 2]
 // Exports: useVoicePanelButtonStyles
 
-// Module 17184 (useVoicePanelButtonStyles)
+// Module 17187 (useVoicePanelButtonStyles)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 8265 */;

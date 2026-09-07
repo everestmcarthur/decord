@@ -1,10 +1,10 @@
-// Module ID: 9590
-// Function ID: 9591
+// Module ID: 9595
+// Function ID: 9596
 // Name: isWatchTogetherApplication
 // Dependencies: [1920, 2]
 // Exports: default
 
-// Module 9590 (isWatchTogetherApplication)
+// Module 9595 (isWatchTogetherApplication)
 import set from "set" /* 2 */;
 import items3 from "items3" /* 1920 */;
 

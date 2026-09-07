@@ -1,10 +1,10 @@
-// Module ID: 8450
-// Function ID: 8451
+// Module ID: 8439
+// Function ID: 8440
 // Name: MIN_AGE_GATE
 // Dependencies: [1608, 4539, 1115, 2]
 // Exports: isAppStoreAgeSignalSupported
 
-// Module 8450 (MIN_AGE_GATE)
+// Module 8439 (MIN_AGE_GATE)
 import set from "set" /* 2 */;
 import isMetaQuest from "isMetaQuest" /* 1608 */;
 

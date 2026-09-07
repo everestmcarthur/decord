@@ -1,10 +1,10 @@
-// Module ID: 16853
-// Function ID: 16854
+// Module ID: 16856
+// Function ID: 16857
 // Name: shouldComponentUpdate
-// Dependencies: [32, 718, 19, 1957, 7111, 1979, 4199, 4209, 1371, 1074, 21, 4560, 576, 4271, 7112, 12416, 4204, 5520, 4904, 1114, 4713, 5605, 5687, 8593, 4973, 4556, 504, 1483, 11610, 38, 2]
+// Dependencies: [32, 718, 19, 1957, 7111, 1979, 4199, 4209, 1371, 1074, 21, 4560, 576, 4271, 7112, 12420, 4204, 5520, 4904, 1114, 4713, 5605, 5687, 8598, 4973, 4556, 504, 1483, 11615, 38, 2]
 // Exports: default
 
-// Module 16853 (shouldComponentUpdate)
+// Module 16856 (shouldComponentUpdate)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 576 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
@@ -277,7 +277,7 @@ prototype["render"] = function render() {
   items[2] = self.renderCategories();
   obj[2] = items;
   obj[1] = closure_14(first(4973).Stack, obj);
-  return closure_13(first(8593).Form, obj);
+  return closure_13(first(8598).Form, obj);
 };
 ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
 let obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -290,7 +290,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(504);
   const navigation = channelId(1483).useNavigation();
   const obj2 = channelId(1483);
-  const appChannelBotUserId = channelId(11610).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11615).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return callback3(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 };

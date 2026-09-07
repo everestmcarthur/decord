@@ -1,10 +1,10 @@
-// Module ID: 16585
-// Function ID: 16586
+// Module ID: 16588
+// Function ID: 16589
 // Name: ProjectList
-// Dependencies: [5, 32, 19, 17, 2021, 1979, 4199, 16586, 16589, 16587, 1074, 9511, 21, 4560, 576, 1611, 1483, 504, 7247, 16592, 1114, 3547, 4556, 7085, 4975, 5687, 5605, 7641, 6981, 9507, 13254, 4905, 4527, 16597, 16598, 16601, 9371, 7380, 14999, 10180, 7248, 5624, 7377, 8274, 8666, 8672, 16602, 7249, 7000, 2]
+// Dependencies: [5, 32, 19, 17, 2021, 1979, 4199, 16589, 16592, 16590, 1074, 9516, 21, 4560, 576, 1611, 1483, 504, 7247, 16597, 1114, 3547, 4556, 7085, 4975, 5687, 5605, 7641, 6981, 9512, 13258, 4905, 4527, 16600, 16601, 16604, 9376, 7380, 15002, 10185, 7248, 5624, 7377, 8274, 8671, 8677, 16605, 7249, 7000, 2]
 // Exports: default
 
-// Module 16585 (ProjectList)
+// Module 16588 (ProjectList)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -13,13 +13,13 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "trackCommunicationDisabled" /* 2021 */;
 import closure_10 from "createGuildRecordFromRust" /* 1979 */;
 import closure_11 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_12 from "newMessage" /* 16586 */;
-import rejectPendingPublish from "rejectPendingPublish" /* 16589 */;
-import closure_17 from "rejectPendingPublish" /* 16589 */;
-import isProjectOwner from "isProjectOwner" /* 16587 */;
-import closure_20 from "isProjectOwner" /* 16587 */;
+import closure_12 from "newMessage" /* 16589 */;
+import rejectPendingPublish from "rejectPendingPublish" /* 16592 */;
+import closure_17 from "rejectPendingPublish" /* 16592 */;
+import isProjectOwner from "isProjectOwner" /* 16590 */;
+import closure_20 from "isProjectOwner" /* 16590 */;
 import { Permissions } from "ME" /* 1074 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 9511 */;
+import { MAIN_SURFACE } from "FrameLayoutModes" /* 9516 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -603,7 +603,7 @@ function ChatScene(guildId) {
           align: "below",
           children(arg0) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-            const obj = { ref, IconComponent: callback(8672).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
+            const obj = { ref, IconComponent: callback(8677).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
             const intl = callback(1114).intl;
             obj[3] = intl.string(callback(1114).t["UKOtz+"]);
             obj[4] = accessibilityActions;

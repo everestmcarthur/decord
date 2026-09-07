@@ -1,9 +1,9 @@
-// Module ID: 17435
-// Function ID: 17436
+// Module ID: 17438
+// Function ID: 17439
 // Name: AddAvatarScreen
-// Dependencies: [5, 32, 19, 17, 8160, 1074, 21, 4560, 576, 5682, 5524, 1611, 504, 14593, 17436, 8169, 8248, 5138, 8164, 8166, 4556, 1114, 17445, 1178, 4975, 17433, 1250, 7377, 5624, 7000, 2]
+// Dependencies: [5, 32, 19, 17, 8160, 1074, 21, 4560, 576, 5682, 5524, 1611, 504, 14596, 17439, 8169, 8248, 5138, 8164, 8166, 4556, 1114, 17448, 1178, 4975, 17436, 1250, 7377, 5624, 7000, 2]
 
-// Module 17435 (AddAvatarScreen)
+// Module 17438 (AddAvatarScreen)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -79,7 +79,7 @@ function AddAvatarScreen() {
             if (null == base64) {
               pendingImage = undefined;
               if (null != closure_1_0) {
-                obj = closure_1_0(14593);
+                obj = closure_1_0(14596);
                 const obj4 = { imageUri: null, description: null };
                 obj4[0] = base64;
                 obj2 = closure_1_0(8169);
@@ -127,9 +127,9 @@ function AddAvatarScreen() {
   let pendingImage;
   const stateFromStores = obj.useStateFromStores(items, () => pendingChanges.getPendingChanges().pendingAvatar);
   if (null != first) {
-    let tmp9Result = tmp9(14593);
+    let tmp9Result = tmp9(14596);
     obj = { imageUri: null, description: null };
-    obj[0] = tmp9(17436).DEFAULT_AVATARS[first];
+    obj[0] = tmp9(17439).DEFAULT_AVATARS[first];
     tmp9Result = tmp9(8169);
     obj[1] = tmp9Result.generateAvatarDescription();
     pendingImage = tmp9Result.createPendingImage(obj);
@@ -163,7 +163,7 @@ function AddAvatarScreen() {
   obj2[0] = items2;
   const items3 = [closure_10(View, obj2), , ];
   const memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(imageUri);
-  items3[1] = callback(first(17445), {
+  items3[1] = callback(first(17448), {
     avatarSource: useDominantRGBFromImage.memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
@@ -187,7 +187,7 @@ function AddAvatarScreen() {
   obj6[1] = callback(Button.LegacyText, obj7);
   items3[2] = callback(View, obj6);
   obj1[1] = items3;
-  const items4 = [closure_10(View, obj1), callback(first(17436), { onAvatarSelect: tmp4[1], selectedAvatar: first }), ];
+  const items4 = [closure_10(View, obj1), callback(first(17439), { onAvatarSelect: tmp4[1], selectedAvatar: first }), ];
   const obj8 = { style: tmp.buttonContainer, children: null };
   const obj9 = { text: null, grow: true, onPress: null, disabled: null };
   const intl4 = tmp9(1114).intl;

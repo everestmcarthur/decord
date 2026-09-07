@@ -1,14 +1,14 @@
-// Module ID: 12170
-// Function ID: 12171
+// Module ID: 12174
+// Function ID: 12175
 // Name: AppLauncherAutocompleteOption
-// Dependencies: [32, 19, 1074, 21, 4560, 576, 1874, 4527, 12171, 1896, 12169, 5123, 4556, 2]
+// Dependencies: [32, 19, 1074, 21, 4560, 576, 1874, 4527, 12175, 1896, 12173, 5123, 4556, 2]
 // Exports: default
 
-// Module 12170 (AppLauncherAutocompleteOption)
+// Module 12174 (AppLauncherAutocompleteOption)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import PressableBase from "PressableBase" /* 5123 */;
-import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12169 */;
+import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12173 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,10 +1,10 @@
-// Module ID: 10255
-// Function ID: 10256
+// Module ID: 10260
+// Function ID: 10261
 // Name: useCreateThread
-// Dependencies: [5, 19, 4901, 4553, 7162, 9305, 7456, 7682, 9309, 9307, 7839, 5179, 5134, 9310, 2]
+// Dependencies: [5, 19, 4901, 4553, 7162, 9310, 7456, 7682, 9314, 9312, 7839, 5179, 5134, 9315, 2]
 // Exports: default, useCreateForumPost
 
-// Module 10255 (useCreateThread)
+// Module 10260 (useCreateThread)
 import contextDefault from "context" /* 7162 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
@@ -18,7 +18,7 @@ export default function useCreateThread(arg0) {
   let analyticsLocations;
   ({ parentChannel, parentMessageId, threadSettings, privateThreadMode, location: _location, onThreadCreated, useDefaultThreadName } = arg0);
   analyticsLocations = contextDefault().analyticsLocations;
-  let obj = analyticsLocations(9305);
+  let obj = analyticsLocations(9310);
   obj = {
     parentChannel,
     parentMessageId,
@@ -74,7 +74,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
       obj7.on("progress", (currentSize) => {
         if (currentSize.currentSize > c3) {
           obj7.cancel();
-          let obj = closure_2_1(9307);
+          let obj = closure_2_1(9312);
           obj = { channelId: null, uploads: null, draftType: null, resetState: true };
           obj[0] = guildId.id;
           obj[1] = guildId;
@@ -86,8 +86,8 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
           obj[2] = dependencyMap;
           obj[3] = guildId.getGuildId();
           obj[4] = obj7;
-          closure_2_1(9310)(obj);
-          const tmp10 = closure_2_1(9310);
+          closure_2_1(9315)(obj);
+          const tmp10 = closure_2_1(9315);
         }
       });
       closure_4 = yield obj7.uploadFiles(guildId);
@@ -108,7 +108,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
     }
     return applyArgumentsResult;
   }, items);
-  let obj = _require(9305);
+  let obj = _require(9310);
   obj = { parentChannel, name: null, appliedTags: null, analyticsLocations: null, onThreadCreated: null, upload: null };
   let str;
   if (threadSettings != null) {

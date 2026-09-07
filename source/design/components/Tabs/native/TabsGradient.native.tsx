@@ -1,10 +1,10 @@
-// Module ID: 12759
-// Function ID: 12760
+// Module ID: 12763
+// Function ID: 12764
 // Name: TabsGradient
 // Dependencies: [19, 1074, 21, 4296, 4987, 4560, 4974, 2]
 // Exports: default
 
-// Module 12759 (TabsGradient)
+// Module 12763 (TabsGradient)
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import closure_2 from "noop" /* 19 */;
 import { HorizontalGradient } from "ME" /* 1074 */;

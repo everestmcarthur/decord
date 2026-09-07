@@ -1,32 +1,32 @@
-// Module ID: 11543
-// Function ID: 11544
+// Module ID: 11548
+// Function ID: 11549
 // Name: items
-// Dependencies: [109, 5, 32, 8446, 4788, 7164, 10080, 7526, 8078, 7703, 7595, 11345, 4201, 7659, 502, 1957, 11429, 2021, 1979, 4544, 11457, 4781, 4199, 4600, 2011, 4381, 5279, 7838, 1371, 7933, 1074, 7736, 1373, 8419, 1113, 7182, 11544, 11546, 1896, 11547, 11548, 11583, 11586, 7981, 4767, 7195, 1114, 7880, 10110, 11212, 4527, 11217, 7523, 11613, 11614, 4540, 7735, 11615, 11616, 11252, 11254, 10403, 1115, 8036, 7269, 10262, 8034, 11649, 9185, 8179, 11, 11651, 11652, 11344, 4792, 11657, 7971, 4528, 4529, 11679, 1100, 11667, 11746, 5434, 4740, 7508, 7968, 11747, 11748, 1384, 11753, 11761, 11762, 11763, 11764, 11765, 9570, 4255, 11766, 9951, 11472, 4545, 9698, 7759, 1608, 7699, 11767, 5449, 11276, 7728, 4548, 11306, 11307, 8378, 11789, 10797, 7342, 9205, 11792, 7890, 11806, 9573, 1242, 4771, 7329, 8393, 5411, 10294, 7212, 9313, 5621, 11433, 4763, 11438, 11814, 7422, 7382, 11815, 10661, 11816, 8768, 1250, 4259, 11818, 11253, 11819, 7456, 4785, 1894, 4904, 8116, 11821, 11823, 11827, 8001, 11828, 8398, 8017, 8015, 11829, 11833, 11860, 11861, 4571, 7190, 4258, 11872, 11873, 11874, 4714, 7341, 11875, 11876, 7600, 4773, 8411, 8413, 11878, 11714, 8263, 8261, 11911, 9396, 11913, 11929, 7967, 10919, 11617, 11930, 11931, 11932, 11680, 11933, 11936, 11939, 11940, 11946, 11949, 2]
+// Dependencies: [109, 5, 32, 8453, 4788, 7164, 10085, 7526, 8078, 7703, 7595, 11350, 4201, 7659, 502, 1957, 11434, 2021, 1979, 4544, 11462, 4781, 4199, 4600, 2011, 4381, 5279, 7838, 1371, 7933, 1074, 7736, 1373, 8419, 1113, 7182, 11549, 11551, 1896, 11552, 11553, 11588, 11591, 7981, 4767, 7195, 1114, 7880, 10115, 11217, 4527, 11222, 7523, 11618, 11619, 4540, 7735, 11620, 11621, 11257, 11259, 10408, 1115, 8036, 7269, 10267, 8034, 11654, 9190, 8179, 11, 11656, 11657, 11349, 4792, 11662, 7971, 4528, 4529, 11684, 1100, 11672, 11751, 5434, 4740, 7508, 7968, 11752, 11753, 1384, 11758, 11766, 11767, 11768, 11769, 11770, 9575, 4255, 11771, 9956, 11477, 4545, 9703, 7759, 1608, 7699, 11772, 5449, 11281, 7728, 4548, 11311, 11312, 8378, 11794, 10802, 7342, 9210, 11797, 7890, 11811, 9578, 1242, 4771, 7329, 8393, 5411, 10299, 7212, 9318, 5621, 11438, 4763, 11443, 11819, 7422, 7382, 11820, 10666, 11821, 8773, 1250, 4259, 11823, 11258, 11824, 7456, 4785, 1894, 4904, 8116, 11826, 11828, 11832, 8001, 11833, 8398, 8017, 8015, 11834, 11838, 11865, 11866, 4571, 7190, 4258, 11877, 11878, 11879, 4714, 7341, 11880, 11881, 7600, 4773, 8411, 8413, 11883, 11719, 8263, 8261, 11916, 9401, 11918, 8592, 7967, 10924, 11622, 11934, 11935, 11936, 11685, 11937, 11940, 11943, 11944, 11950, 11953, 2]
 
-// Module 11543 (items)
+// Module 11548 (items)
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
 import closure_6 from "_objectWithoutProperties" /* 109 */;
 import closure_7 from "asyncGeneratorStep" /* 5 */;
 import closure_8 from "_slicedToArray" /* 32 */;
-import closure_9 from "initialize" /* 8446 */;
+import closure_9 from "initialize" /* 8453 */;
 import closure_10 from "addApplication" /* 4788 */;
 import closure_11 from "set" /* 7164 */;
-import closure_12 from "computeAlertSettings" /* 10080 */;
+import closure_12 from "computeAlertSettings" /* 10085 */;
 import closure_13 from "scheduledEventSort" /* 7526 */;
 import { isGuildScheduledEventActive as closure_14 } from "scheduledEventSort" /* 7526 */;
 import closure_15 from "getCurrentTime" /* 8078 */;
 import closure_16 from "initializeState" /* 7703 */;
 import closure_17 from "processMessage" /* 7595 */;
-import closure_18 from "handleQuickSwitcherUpdate" /* 11345 */;
+import closure_18 from "handleQuickSwitcherUpdate" /* 11350 */;
 import closure_19 from "storeThread" /* 4201 */;
 import closure_20 from "recomputeAffinities" /* 7659 */;
 import closure_21 from "fetchFingerprint" /* 502 */;
 import closure_22 from "ensureGuildLoaded" /* 1957 */;
-import closure_23 from "updateGiftCode" /* 11429 */;
+import closure_23 from "updateGiftCode" /* 11434 */;
 import closure_24 from "trackCommunicationDisabled" /* 2021 */;
 import closure_25 from "createGuildRecordFromRust" /* 1979 */;
 import closure_26 from "updateInvite" /* 4544 */;
-import closure_27 from "updateActivities" /* 11457 */;
+import closure_27 from "updateActivities" /* 11462 */;
 import closure_28 from "reinjectEphemerals" /* 4781 */;
 import closure_29 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_30 from "sortActivity" /* 4600 */;
@@ -2289,10 +2289,10 @@ class MessagesHandlers {
                 closure_1 = tmp2;
                 isReveal = undefined;
                 closure_1 = undefined;
-                const nativeSyntheticEventData = callback(11547).getNativeSyntheticEventData(isReveal);
+                const nativeSyntheticEventData = callback(11552).getNativeSyntheticEventData(isReveal);
                 ({ messageId, channelId, isReveal } = nativeSyntheticEventData);
                 ({ attachmentId, embedId } = nativeSyntheticEventData);
-                const obj10 = callback(11547);
+                const obj10 = callback(11552);
                 if (isReveal) {
                   if (obj11.shouldAgeVerifyForExplicitMedia()) {
                     dependencyMap = 1;

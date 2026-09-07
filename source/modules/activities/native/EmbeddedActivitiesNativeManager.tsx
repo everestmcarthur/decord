@@ -1,9 +1,9 @@
-// Module ID: 9515
-// Function ID: 9516
+// Module ID: 9520
+// Function ID: 9521
 // Name: postMessageToWebView
-// Dependencies: [5, 17, 1957, 4583, 1956, 1920, 1074, 4465, 8298, 1115, 9516, 9517, 1232, 9518, 9550, 4905, 1114, 9521, 4189, 1242, 573, 9565, 9504, 4259, 9566, 1109, 1369, 1256, 2]
+// Dependencies: [5, 17, 1957, 4583, 1956, 1920, 1074, 4465, 8298, 1115, 9521, 9522, 1232, 9523, 9555, 4905, 1114, 9526, 4189, 1242, 573, 9570, 9509, 4259, 9571, 1109, 1369, 1256, 2]
 
-// Module 9515 (postMessageToWebView)
+// Module 9520 (postMessageToWebView)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -11,11 +11,11 @@ import v1 from "v1" /* 1256 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
 import dispatcherDefault2 from "dispatcher" /* 4259 */;
 import _modDef4905 from "module_4905" /* 4905 */;
-import _runPrimaryAppCommandOrJoinEmbeddedActivity from "_runPrimaryAppCommandOrJoinEmbeddedActivity" /* 9504 */;
-import enforcingDefault from "enforcing" /* 9516 */;
-import getShelfItemTrackingPropertiesDefault from "getShelfItemTrackingProperties" /* 9518 */;
-import NativeModulesDefault from "NativeModules" /* 9521 */;
-import registerAssetDefault from "registerAsset" /* 9566 */;
+import _runPrimaryAppCommandOrJoinEmbeddedActivity from "_runPrimaryAppCommandOrJoinEmbeddedActivity" /* 9509 */;
+import enforcingDefault from "enforcing" /* 9521 */;
+import getShelfItemTrackingPropertiesDefault from "getShelfItemTrackingProperties" /* 9523 */;
+import NativeModulesDefault from "NativeModules" /* 9526 */;
+import registerAssetDefault from "registerAsset" /* 9571 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import closure_5 from "createRTCConnection" /* 4583 */;

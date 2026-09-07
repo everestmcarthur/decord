@@ -1,10 +1,10 @@
-// Module ID: 8599
-// Function ID: 8600
+// Module ID: 8604
+// Function ID: 8605
 // Name: Divider
 // Dependencies: [19, 17, 1074, 21, 4560, 576, 4271, 7184, 4409, 5686, 2]
 // Exports: default
 
-// Module 8599 (Divider)
+// Module 8604 (Divider)
 import ThemesDefault from "Themes" /* 576 */;
 import ManaContext from "ManaContext" /* 4271 */;
 import context from "context" /* 5686 */;

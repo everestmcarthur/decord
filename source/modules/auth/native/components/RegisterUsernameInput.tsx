@@ -1,17 +1,17 @@
-// Module ID: 15972
-// Function ID: 15973
+// Module ID: 15975
+// Function ID: 15976
 // Name: UsernameStatusMessage
-// Dependencies: [109, 32, 19, 15946, 21, 4560, 4296, 14706, 4973, 6610, 576, 4556, 1114, 15964, 6606, 1115, 2]
+// Dependencies: [109, 32, 19, 15949, 21, 4560, 4296, 14709, 4973, 6610, 576, 4556, 1114, 15967, 6606, 1115, 2]
 // Exports: RegisterUsernameInput
 
-// Module 15972 (UsernameStatusMessage)
+// Module 15975 (UsernameStatusMessage)
 import ThemesDefault from "Themes" /* 576 */;
-import NameValidationState from "NameValidationState" /* 14706 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15964 */;
+import NameValidationState from "NameValidationState" /* 14709 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15967 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15946 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15949 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import { FadeIn, FadeOut, LinearTransition, Easing } from "module_4296" /* 4296 */;
@@ -44,7 +44,7 @@ function UsernameStatusMessage(arg0) {
       if (usernameStatus != null) {
         type1 = usernameStatus.type;
       }
-      if (type1 === tmp3(14706).NameValidationState.AVAILABLE) {
+      if (type1 === tmp3(14709).NameValidationState.AVAILABLE) {
         const obj2 = {};
         const merged2 = Object.assign(createCacheKey);
         const merged3 = Object.assign(createCacheKey);
@@ -145,7 +145,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14706).NameValidationState.ERROR) {
+  if (type === tmp14(14709).NameValidationState.ERROR) {
     str2 = "error";
   }
   obj1 = { children: null };

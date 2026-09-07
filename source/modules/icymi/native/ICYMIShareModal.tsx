@@ -1,13 +1,13 @@
-// Module ID: 16502
-// Function ID: 16503
+// Module ID: 16505
+// Function ID: 16506
 // Name: Screenshot
-// Dependencies: [32, 5, 19, 17, 1957, 4901, 4900, 1074, 10860, 4553, 21, 4560, 576, 9775, 1114, 16503, 4259, 1477, 4413, 7872, 16504, 5125, 4378, 4271, 6981, 11692, 11701, 4975, 4763, 10981, 1369, 7682, 9307, 1256, 5128, 7456, 9309, 1611, 1115, 5631, 7863, 5624, 10984, 2]
+// Dependencies: [32, 5, 19, 17, 1957, 4901, 4900, 1074, 10865, 4553, 21, 4560, 576, 9780, 1114, 16506, 4259, 1477, 4413, 7872, 16507, 5125, 4378, 4271, 6981, 11697, 11706, 4975, 4763, 10986, 1369, 7682, 9312, 1256, 5128, 7456, 9314, 1611, 1115, 5631, 7863, 5624, 10989, 2]
 // Exports: GameShareModal, GuildEventShareModal
 
-// Module 16502 (Screenshot)
+// Module 16505 (Screenshot)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 9775 */;
+import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 9780 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
@@ -16,7 +16,7 @@ import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import { DraftType } from "handleChanged" /* 4901 */;
 import closure_9 from "map" /* 4900 */;
 import { AbortCodes } from "ME" /* 1074 */;
-import { UserRowModes } from "UserRowModes" /* 10860 */;
+import { UserRowModes } from "UserRowModes" /* 10865 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -54,7 +54,7 @@ function Screenshot(setUri) {
   const tmp4 = ref(4413)();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = ref(16504);
+  const tmp6 = ref(16507);
   obj4[0] = setUri(4378).OverlayOpacity.LEVEL_7;
   obj4[1] = setUri(4378).OverlayOpacity.LEVEL_8;
   obj3[4] = obj4;
@@ -201,7 +201,7 @@ class ICYMIShareModal {
                     closure_0 = arg0;
                     c2 = 0;
                     c1 = 0;
-                    return (/* F125923 */ function*() { ... })();
+                    return (/* F125955 */ function*() { ... })();
                   });
                   return function(arg0) {
                     const self = this;

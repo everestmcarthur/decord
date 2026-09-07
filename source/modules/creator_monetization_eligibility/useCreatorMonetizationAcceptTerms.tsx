@@ -1,10 +1,10 @@
-// Module ID: 17684
-// Function ID: 17685
+// Module ID: 17687
+// Function ID: 17688
 // Name: useCreateCreatorMonetizationAcceptTermsRequest
-// Dependencies: [5, 32, 19, 1975, 1979, 1371, 504, 7261, 17685, 4462, 2]
+// Dependencies: [5, 32, 19, 1975, 1979, 1371, 504, 7261, 17688, 4462, 2]
 // Exports: default
 
-// Module 17684 (useCreateCreatorMonetizationAcceptTermsRequest)
+// Module 17687 (useCreateCreatorMonetizationAcceptTermsRequest)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
@@ -77,10 +77,10 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                 v0 = 4;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_2(17685).acceptCreatorMonetizationTerms(tmp56, tmp42);
+                obj1[0] = closure_1_2(17688).acceptCreatorMonetizationTerms(tmp56, tmp42);
                 return obj1;
               } else {
-                let obj2 = closure_1_2(17685);
+                let obj2 = closure_1_2(17688);
                 v0 = 3;
                 c5 = 1;
                 obj2 = { value: null, done: false };

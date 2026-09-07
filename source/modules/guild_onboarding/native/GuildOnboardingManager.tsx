@@ -1,9 +1,9 @@
-// Module ID: 17372
-// Function ID: 17373
+// Module ID: 17375
+// Function ID: 17376
 // Name: prototype
 // Dependencies: [2021, 1979, 4381, 1074, 4187, 7118, 7095, 1384, 2]
 
-// Module 17372 (prototype)
+// Module 17375 (prototype)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "trackCommunicationDisabled" /* 2021 */;
 import closure_4 from "createGuildRecordFromRust" /* 1979 */;

@@ -1,14 +1,14 @@
-// Module ID: 17550
-// Function ID: 17551
+// Module ID: 17553
+// Function ID: 17554
 // Name: HomeIcon
-// Dependencies: [19, 21, 576, 4261, 17551, 2]
+// Dependencies: [19, 21, 576, 4261, 17554, 2]
 // Exports: HomeIcon
 
-// Module 17550 (HomeIcon)
+// Module 17553 (HomeIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 17551 */;
+import registerAsset from "registerAsset" /* 17554 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

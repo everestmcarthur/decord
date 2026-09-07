@@ -1,10 +1,10 @@
-// Module ID: 8714
-// Function ID: 8715
+// Module ID: 8719
+// Function ID: 8720
 // Name: GameProfileHeader
-// Dependencies: [32, 19, 17, 21, 4560, 576, 4296, 8715, 4987, 8716, 4556, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 4296, 8720, 4987, 8721, 4556, 2]
 // Exports: default
 
-// Module 8714 (GameProfileHeader)
+// Module 8719 (GameProfileHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

@@ -1,9 +1,9 @@
-// Module ID: 16387
-// Function ID: 16388
+// Module ID: 16390
+// Function ID: 16391
 // Name: YouBarAvatarLarge
-// Dependencies: [5, 32, 19, 17, 4552, 5279, 1371, 15098, 1074, 21, 4560, 576, 504, 1178, 4271, 4296, 8217, 8813, 4974, 4262, 8812, 8157, 4528, 7382, 1896, 6655, 2]
+// Dependencies: [5, 32, 19, 17, 4552, 5279, 1371, 15101, 1074, 21, 4560, 576, 504, 1178, 4271, 4296, 8217, 8818, 4974, 4262, 8817, 8157, 4528, 7382, 1896, 6655, 2]
 
-// Module 16387 (YouBarAvatarLarge)
+// Module 16390 (YouBarAvatarLarge)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -12,7 +12,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import closure_9 from "filterPlayingActivities" /* 5279 */;
 import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 15098 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 15101 */;
 import { StatusTypes } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

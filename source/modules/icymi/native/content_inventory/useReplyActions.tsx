@@ -1,10 +1,10 @@
-// Module ID: 16506
-// Function ID: 16507
+// Module ID: 16509
+// Function ID: 16510
 // Name: useReplyActions
-// Dependencies: [5, 19, 1957, 4901, 1371, 1374, 4553, 21, 504, 8130, 9307, 4573, 16507, 4404, 7682, 7456, 16503, 4527, 4259, 1114, 14887, 8351, 11121, 7763, 16507, 1896, 2]
+// Dependencies: [5, 19, 1957, 4901, 1371, 1374, 4553, 21, 504, 8130, 9312, 4573, 16510, 4404, 7682, 7456, 16506, 4527, 4259, 1114, 14890, 8351, 11126, 7763, 16510, 1896, 2]
 // Exports: useReplyActions
 
-// Module 16506 (useReplyActions)
+// Module 16509 (useReplyActions)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;

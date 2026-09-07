@@ -1,10 +1,10 @@
-// Module ID: 13910
-// Function ID: 13911
+// Module ID: 13913
+// Function ID: 13914
 // Name: HideMutedChannelsOption
-// Dependencies: [19, 17, 7532, 1221, 1975, 7636, 2015, 4575, 4741, 1371, 1074, 7097, 7944, 4742, 21, 4560, 576, 504, 7200, 1114, 10964, 7335, 4380, 1943, 7528, 4527, 4763, 11549, 1896, 12291, 4712, 7162, 7182, 9207, 1178, 9803, 13911, 1187, 1940, 9067, 13912, 8165, 9184, 4556, 1935, 6995, 7119, 10147, 7114, 13960, 10144, 13961, 9673, 5407, 9737, 9698, 11569, 13962, 4906, 38, 13909, 10099, 10098, 7535, 11555, 13963, 8629, 8017, 11829, 7189, 7190, 4258, 1396, 2]
+// Dependencies: [19, 17, 7532, 1221, 1975, 7636, 2015, 4575, 4741, 1371, 1074, 7097, 7944, 4742, 21, 4560, 576, 504, 7200, 1114, 10969, 7335, 4380, 1943, 7528, 4527, 4763, 11554, 1896, 12295, 4712, 7162, 7182, 9212, 1178, 9808, 13914, 1187, 1940, 9072, 13915, 8165, 9189, 4556, 1935, 6995, 7119, 10152, 7114, 13963, 10149, 13964, 9678, 5407, 9742, 9703, 11574, 13965, 4906, 38, 13912, 10104, 10103, 7535, 11560, 13966, 8634, 8017, 11834, 7189, 7190, 4258, 1396, 2]
 // Exports: GuildActionSheetDirectoryActions, GuildActionSheetPrimaryActions, GuildActionSheetSecondaryActions, GuildDeveloperOptionAction, GuildUnreadAction, handleLeaveServer
 
-// Module 13910 (HideMutedChannelsOption)
+// Module 13913 (HideMutedChannelsOption)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 576 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
@@ -14,8 +14,8 @@ import contextDefault from "context" /* 7162 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
 import experimentDefault from "experiment" /* 7189 */;
 import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7335 */;
-import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 9207 */;
-import DiscordTagDefault from "DiscordTag" /* 9803 */;
+import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 9212 */;
+import DiscordTagDefault from "DiscordTag" /* 9808 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "guildHasCommunity" /* 7532 */;
@@ -88,7 +88,7 @@ function BrowseChannelsOption(guild) {
       obj[2] = stringResult;
       tmp8Result = tmp8(tmp9, obj);
     }
-    tmp8Result = tmp8(tmp3(12291).NewBadge, {});
+    tmp8Result = tmp8(tmp3(12295).NewBadge, {});
   }
 }
 function ChangeIdentityOption(arg0) {
@@ -151,7 +151,7 @@ function GuildThemePreferenceOption(guild) {
 }
 function ServerTagOption(guild) {
   guild = guild.guild;
-  let obj = guild(9067);
+  let obj = guild(9072);
   [][0] = guild.id;
   const result = obj.canViewMobileServerTag(guild.id);
   if (result) {
@@ -174,7 +174,7 @@ function ServerTagOption(guild) {
     obj2[0] = tag;
     obj2[1] = guildTagBadgeUrl;
     obj2[2] = GuildTagBadgeSize.SIZE_16;
-    obj1[2] = closure_21(tmp2(9184).BaseGuildTagChiplet, obj2);
+    obj1[2] = closure_21(tmp2(9189).BaseGuildTagChiplet, obj2);
     const items = [closure_21(View, obj1), ];
     const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1114).intl;
@@ -321,7 +321,7 @@ export const GuildUnreadAction = function GuildUnreadAction(guild) {
 };
 export const GuildActionSheetPrimaryActions = function GuildActionSheetPrimaryActions(guild) {
   guild = guild.guild;
-  let obj = guild(13961);
+  let obj = guild(13964);
   obj1 = guild(504);
   const items = [closure_10];
   const items1 = [];
@@ -397,7 +397,7 @@ export const GuildActionSheetDirectoryActions = function GuildActionSheetDirecto
   items.push(callback2(NotificationAction, { guild }));
   items.push(callback2(ChangeIdentityOption, { guild, user: currentUser }));
   items.push(callback2(RestrictedGuildPrivacyOption, { guild }));
-  let obj = guild(13909);
+  let obj = guild(13912);
   const messageRequestPrivacyOption = obj.useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
@@ -437,9 +437,9 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
   guild = guild.guild;
   const currentUser = authStore.getCurrentUser();
   const tmp2 = callback(guild, currentUser);
-  let obj = guild(10099);
+  let obj = guild(10104);
   const canReportRaid = obj.useCanReportRaid(guild);
-  obj1 = guild(10098);
+  obj1 = guild(10103);
   const guildIncidentsState = obj1.useGuildIncidentsState(guild.id);
   const items = [];
   ({ shouldShowIncidentActions, isUnderLockdown } = guildIncidentsState);
@@ -461,7 +461,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
   }
   items.push(callback2(HideMutedChannelsOption, { guild }));
   items.push(callback2(RestrictedGuildPrivacyOption, { guild }));
-  const messageRequestPrivacyOption = guild(13909).useMessageRequestPrivacyOption({ guild });
+  const messageRequestPrivacyOption = guild(13912).useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
   }

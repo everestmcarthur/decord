@@ -1,17 +1,17 @@
-// Module ID: 14768
-// Function ID: 14769
+// Module ID: 14771
+// Function ID: 14772
 // Name: handleLogInClick
-// Dependencies: [19, 17, 8430, 8419, 1074, 21, 6593, 11883, 504, 1178, 1114, 4556, 4975, 4560, 576, 14769, 11910, 11882, 14765, 4992, 11881, 1242, 7602, 7607, 4527, 14770, 1896, 14771, 14773, 2]
+// Dependencies: [19, 17, 8430, 8419, 1074, 21, 6593, 11888, 504, 1178, 1114, 4556, 4975, 4560, 576, 14772, 11915, 11887, 14768, 4992, 11886, 1242, 7602, 7607, 4527, 14773, 1896, 14774, 14776, 2]
 // Exports: default
 
-// Module 14768 (handleLogInClick)
+// Module 14771 (handleLogInClick)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import Button2 from "Button" /* 4975 */;
 import handleLogoutDefault from "handleLogout" /* 6593 */;
-import _modDef11883 from "module_11883" /* 11883 */;
+import _modDef11888 from "module_11888" /* 11888 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
@@ -25,7 +25,7 @@ function handleLogInClick() {
   handleLogoutDefault.closeSuspendedUser();
 }
 function handleRetryClick() {
-  _modDef11883.openV2("");
+  _modDef11888.openV2("");
 }
 function AutomatedUnderageAppealStatus() {
   let hyh4ls = require;

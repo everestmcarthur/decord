@@ -1,24 +1,24 @@
-// Module ID: 16976
-// Function ID: 16977
+// Module ID: 16979
+// Function ID: 16980
 // Name: renderItemJSX
-// Dependencies: [19, 17, 2025, 7636, 1979, 4742, 21, 4560, 576, 16977, 7342, 504, 4982, 16978, 5123, 16979, 16981, 5584, 16982, 16984, 9835, 16985, 16991, 16992, 16994, 16106, 4556, 1114, 1477, 16980, 7072, 2]
+// Dependencies: [19, 17, 2025, 7636, 1979, 4742, 21, 4560, 576, 16980, 7342, 504, 4982, 16981, 5123, 16982, 16984, 5584, 16985, 16987, 9840, 16988, 16994, 16995, 16997, 16109, 4556, 1114, 1477, 16983, 7072, 2]
 
-// Module 16976 (renderItemJSX)
+// Module 16979 (renderItemJSX)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import sortByMatchScore from "sortByMatchScore" /* 9835 */;
-import renderCategoryItem from "renderCategoryItem" /* 16106 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16977 */;
-import itemsDefault from "items" /* 16978 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16979 */;
-import _modDef16981 from "module_16981" /* 16981 */;
-import ChannelContentDefault from "ChannelContent" /* 16982 */;
-import renderChannelBadgeDefault from "renderChannelBadge" /* 16984 */;
-import _modDef16985 from "module_16985" /* 16985 */;
-import _modDef16991 from "module_16991" /* 16991 */;
-import handleVoiceOrStageChannelConnectPressDefault from "handleVoiceOrStageChannelConnectPress" /* 16992 */;
-import userDefault from "user" /* 16994 */;
+import sortByMatchScore from "sortByMatchScore" /* 9840 */;
+import renderCategoryItem from "renderCategoryItem" /* 16109 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16980 */;
+import itemsDefault from "items" /* 16981 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16982 */;
+import _modDef16984 from "module_16984" /* 16984 */;
+import ChannelContentDefault from "ChannelContent" /* 16985 */;
+import renderChannelBadgeDefault from "renderChannelBadge" /* 16987 */;
+import _modDef16988 from "module_16988" /* 16988 */;
+import _modDef16994 from "module_16994" /* 16994 */;
+import handleVoiceOrStageChannelConnectPressDefault from "handleVoiceOrStageChannelConnectPress" /* 16995 */;
+import userDefault from "user" /* 16997 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "_getSystemLocale" /* 2025 */;
@@ -39,26 +39,26 @@ function renderItemJSX(result) {
       let obj = { guild: null };
       obj[0] = result.record;
       return callback(closure_14, obj);
-    } else if (tmp13(9835).AutocompleterResultTypes.TEXT_CHANNEL === type) {
+    } else if (tmp13(9840).AutocompleterResultTypes.TEXT_CHANNEL === type) {
       obj = { channel: null, navigationReplace: true, showGuildBadgeIcon: true };
       obj[0] = result.record;
-      return callback(_modDef16985, obj);
-    } else if (tmp13(9835).AutocompleterResultTypes.GROUP_DM === type) {
+      return callback(_modDef16988, obj);
+    } else if (tmp13(9840).AutocompleterResultTypes.GROUP_DM === type) {
       obj1 = { channel: null, navigationReplace: true };
       obj1[0] = result.record;
-      return callback(_modDef16991, obj1);
-    } else if (tmp13(9835).AutocompleterResultTypes.VOICE_CHANNEL === type) {
+      return callback(_modDef16994, obj1);
+    } else if (tmp13(9840).AutocompleterResultTypes.VOICE_CHANNEL === type) {
       const obj2 = { channel: null };
       obj2[0] = result.record;
       return callback(handleVoiceOrStageChannelConnectPressDefault, obj2);
-    } else if (tmp13(9835).AutocompleterResultTypes.USER === type) {
+    } else if (tmp13(9840).AutocompleterResultTypes.USER === type) {
       ({ record: obj4[0], comparator: obj4[1] } = result);
       return callback(userDefault, { user: null, comparator: null });
-    } else if (tmp13(9835).AutocompleterResultTypes.HEADER === type) {
+    } else if (tmp13(9840).AutocompleterResultTypes.HEADER === type) {
       const obj4 = { name: null, styles: null };
       obj4[0] = result.record.text;
       obj4[1] = tmp;
-      return tmp13(16106).renderCategoryItem(obj4);
+      return tmp13(16109).renderCategoryItem(obj4);
     } else {
       obj = { variant: "text-sm/semibold", children: null };
       obj[1] = result.type;
@@ -105,7 +105,7 @@ let closure_14 = importAllResult.memo((guild) => {
   obj = { children: null };
   const tmp7 = itemsDefault;
   obj1 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items4 = [callback(_modDef16981, obj1), , ];
+  const items4 = [callback(_modDef16984, obj1), , ];
   obj2 = { size: tmp2.icon.guildIconSize, guild, style: items5 };
   items5 = [tmp.guildIcon, tmp2.icon.margin];
   items4[1] = callback(GuildIconSizesDefault, obj2);

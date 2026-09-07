@@ -1,10 +1,10 @@
-// Module ID: 10802
-// Function ID: 10803
+// Module ID: 10807
+// Function ID: 10808
 // Name: useFormattedSKUPrice
-// Dependencies: [19, 9367, 504, 7237, 2]
+// Dependencies: [19, 9372, 504, 7237, 2]
 // Exports: useFormattedSKUPrice
 
-// Module 10802 (useFormattedSKUPrice)
+// Module 10807 (useFormattedSKUPrice)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

@@ -1,10 +1,10 @@
-// Module ID: 17601
-// Function ID: 17602
+// Module ID: 17604
+// Function ID: 17605
 // Name: SyncingToGamesItem
-// Dependencies: [19, 4209, 1371, 1074, 21, 1483, 7168, 5687, 5605, 4713, 5028, 4262, 576, 17524, 12, 8593, 4973, 7040, 2]
+// Dependencies: [19, 4209, 1371, 1074, 21, 1483, 7168, 5687, 5605, 4713, 5028, 4262, 576, 17527, 12, 8598, 4973, 7040, 2]
 // Exports: default
 
-// Module 17601 (SyncingToGamesItem)
+// Module 17604 (SyncingToGamesItem)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "markAllUserIdListsStale" /* 4209 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
@@ -63,7 +63,7 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   ({ contentContainerStyle, guildId } = arg0);
   let obj = _require(4262);
   const token = obj.useToken(keys(576).modules.mobile.TABLE_ROW_PADDING);
-  obj1 = _require(17524);
+  obj1 = _require(17527);
   const channelsAllowedToUnlink = obj1.useChannelsAllowedToUnlink(guildId);
   let obj2 = keys(12);
   const groupByResult = obj2.groupBy(channelsAllowedToUnlink, (linkedLobby) => {
@@ -83,7 +83,7 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   obj[0] = items;
   obj2 = { style: { paddingHorizontal: token }, spacing: keys(576).space.PX_24, children: keys.map((applicationId) => closure_1_6(closure_1_9, { applicationId, channels: _undefined[applicationId], isOnlySection: 1 === keys.length }, applicationId)) };
   obj[1] = callback(_require(4973).Stack, obj2);
-  const items1 = [callback(_require(8593).Form, obj), callback(_require(7040).NavScrim, {})];
+  const items1 = [callback(_require(8598).Form, obj), callback(_require(7040).NavScrim, {})];
   obj[0] = items1;
   return callback2(closure_7, obj);
 };

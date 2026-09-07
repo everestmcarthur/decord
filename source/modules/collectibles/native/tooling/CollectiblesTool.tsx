@@ -1,12 +1,12 @@
-// Module ID: 15718
-// Function ID: 15719
+// Module ID: 15721
+// Function ID: 15722
 // Name: FramePreviewOverrideSection
-// Dependencies: [32, 19, 17, 7542, 7558, 8203, 21, 4560, 576, 8764, 4556, 4976, 563, 10734, 15719, 1178, 11077, 2]
+// Dependencies: [32, 19, 17, 7542, 7558, 8203, 21, 4560, 576, 8769, 4556, 4976, 563, 10739, 15722, 1178, 11082, 2]
 // Exports: default
 
-// Module 15718 (FramePreviewOverrideSection)
+// Module 15721 (FramePreviewOverrideSection)
 import ThemesDefault from "Themes" /* 576 */;
-import CollectiblesShopCardInternalV2Default from "CollectiblesShopCardInternalV2" /* 8764 */;
+import CollectiblesShopCardInternalV2Default from "CollectiblesShopCardInternalV2" /* 8769 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

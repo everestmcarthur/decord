@@ -1,10 +1,10 @@
-// Module ID: 8719
-// Function ID: 8720
+// Module ID: 8724
+// Function ID: 8725
 // Name: MEDIA_ITEM_MAX_WIDTH
 // Dependencies: [1430, 4802, 1929, 2]
 // Exports: buildMediaEntries, buildMediaViewerSources, getCarouselPreviewPixelSize
 
-// Module 8719 (MEDIA_ITEM_MAX_WIDTH)
+// Module 8724 (MEDIA_ITEM_MAX_WIDTH)
 import set from "set" /* 2 */;
 import handleImageLoad from "handleImageLoad" /* 1430 */;
 

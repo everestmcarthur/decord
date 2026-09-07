@@ -1,15 +1,15 @@
-// Module ID: 16628
-// Function ID: 16629
-// Dependencies: [19, 17, 1957, 1979, 4209, 1371, 12339, 7878, 7877, 1074, 21, 4560, 1114, 4713, 504, 4982, 12338, 12361, 4272, 12358, 12341, 9755, 16629, 2]
+// Module ID: 16631
+// Function ID: 16632
+// Dependencies: [19, 17, 1957, 1979, 4209, 1371, 12343, 7878, 7877, 1074, 21, 4560, 1114, 4713, 504, 4982, 12342, 12365, 4272, 12362, 12345, 9760, 16632, 2]
 
-// Module 16628
+// Module 16631
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import closure_6 from "createGuildRecordFromRust" /* 1979 */;
 import closure_7 from "markAllUserIdListsStale" /* 4209 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "prototype" /* 12339 */;
+import closure_9 from "prototype" /* 12343 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
 import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 7877 */;
 import { SearchTypes } from "ME" /* 1074 */;

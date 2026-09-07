@@ -1,7 +1,7 @@
 // Module ID: 4540
 // Function ID: 4541
 // Name: parseQuery
-// Dependencies: [32, 1074, 1076, 4541, 4542, 1471, 4257, 1367, 4543, 4548, 12945, 4799, 13848, 1365, 4714, 9237, 7406, 1608, 1115, 9160, 1242, 1255, 13849, 2]
+// Dependencies: [32, 1074, 1076, 4541, 4542, 1471, 4257, 1367, 4543, 4548, 12949, 4799, 13851, 1365, 4714, 9242, 7406, 1608, 1115, 9165, 1242, 1255, 13852, 2]
 // Exports: default
 
 // Module 4540 (parseQuery)
@@ -12,7 +12,7 @@ import parseDefault from "parse" /* 1471 */;
 import tDefault from "t" /* 4257 */;
 import getPathsFromURL from "getPathsFromURL" /* 4543 */;
 import _resolveGiftCode from "_resolveGiftCode" /* 4799 */;
-import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 13849 */;
+import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 13852 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import ME from "ME" /* 1074 */;
 import items from "items" /* 1076 */;
@@ -154,7 +154,7 @@ export default function parseURL(arg0) {
                                   if (tmp5(4548).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU !== type) {
                                     if (tmp5(4548).CodedLinkType.APP_OAUTH2_LINK !== type) {
                                       if (tmp5(4548).CodedLinkType.COLLECTIBLES_SHOP === type) {
-                                        let tmp5Result = tmp5(12945);
+                                        let tmp5Result = tmp5(12949);
                                         const tmp10 = callback(findCodedLinkResult.code.split("-"), 2)[1];
                                         if (tmp5Result.isVirtualCurrencyEnabled().enabled) {
                                           if (tmp9 === constants2.ORBS) {
@@ -223,7 +223,7 @@ export default function parseURL(arg0) {
       obj13[3] = obj14;
       return obj13;
     } else {
-      tmp5Result = tmp5(13848);
+      tmp5Result = tmp5(13851);
       const result = tmp5Result.findRemoteAuthFingerprint(host, pathname);
       if (null != result) {
         if (result.length > 0) {
@@ -435,7 +435,7 @@ export default function parseURL(arg0) {
                 if (query == null) {
                   str6 = "";
                 }
-                const result1 = tmp5(9237).parseOAuth2AuthorizeProps(str6);
+                const result1 = tmp5(9242).parseOAuth2AuthorizeProps(str6);
                 if (null != result1) {
                   const obj41 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
                   obj41[0] = fingerprint;
@@ -450,7 +450,7 @@ export default function parseURL(arg0) {
                   obj41[3] = obj42;
                   return obj41;
                 }
-                const tmp5Result3 = tmp5(9237);
+                const tmp5Result3 = tmp5(9242);
               }
               if (null != pathname.match(closure_17)) {
                 let str13 = query;

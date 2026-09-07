@@ -1,10 +1,10 @@
-// Module ID: 16927
-// Function ID: 16928
+// Module ID: 16930
+// Function ID: 16931
 // Name: PX_4
-// Dependencies: [19, 17, 4552, 10665, 1074, 1954, 21, 4560, 576, 1115, 504, 10753, 16928, 8272, 4527, 7162, 7182, 10661, 7150, 8808, 5587, 4556, 4975, 11030, 1114, 2]
+// Dependencies: [19, 17, 4552, 10670, 1074, 1954, 21, 4560, 576, 1115, 504, 10758, 16931, 8272, 4527, 7162, 7182, 10666, 7150, 8813, 5587, 4556, 4975, 11035, 1114, 2]
 // Exports: default
 
-// Module 16927 (PX_4)
+// Module 16930 (PX_4)
 import ThemesDefault from "Themes" /* 576 */;
 import contextDefault from "context" /* 7162 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
@@ -12,7 +12,7 @@ import usePreviousDefault from "usePrevious" /* 8272 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_6 from "createEmptyPromotionsByType" /* 10665 */;
+import closure_6 from "createEmptyPromotionsByType" /* 10670 */;
 import ME from "ME" /* 1074 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -55,7 +55,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   let obj = markAsDismissed(504);
   const items = [analyticsLocations];
   const stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.useReducedMotion);
-  obj1 = markAsDismissed(10753);
+  obj1 = markAsDismissed(10758);
   let asset;
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
@@ -64,7 +64,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   let tmp2Result = tmp2(504);
   const items1 = [closure_6];
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
-  tmp2Result = tmp2(16928);
+  tmp2Result = tmp2(16931);
   let endDate;
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
@@ -132,7 +132,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       const obj6 = { grow: true, icon: null, text: null, onPress: null };
       const obj7 = { size: "sm", color: null };
       obj7[1] = tmp10(576).colors.WHITE;
-      obj6[1] = tmp18(tmp2(11030).GiftIcon, obj7);
+      obj6[1] = tmp18(tmp2(11035).GiftIcon, obj7);
       const intl = tmp2(1114).intl;
       obj6[2] = intl.string(tmp2(1114).t.Ve9Ge6);
       obj6[3] = tmp16;
@@ -150,7 +150,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
           const obj9 = { url: null, style: null, autoplay: true };
           obj9[0] = themeAndReducedMotionAwareAssetUrl;
           obj9[1] = tmp.imageShared;
-          obj8[1] = tmp18(tmp2(8808).APNGPlayer, obj9);
+          obj8[1] = tmp18(tmp2(8813).APNGPlayer, obj9);
           let tmp18Result1 = tmp18(tmp21, obj8);
         }
       }

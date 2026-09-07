@@ -1,18 +1,18 @@
-// Module ID: 15622
-// Function ID: 15623
+// Module ID: 15625
+// Function ID: 15626
 // Name: TestLocaleSelector
-// Dependencies: [32, 5, 19, 17, 2026, 2025, 21, 4560, 576, 5685, 1114, 9358, 5688, 504, 4153, 5687, 5605, 1155, 4973, 4556, 15623, 15655, 2]
+// Dependencies: [32, 5, 19, 17, 2026, 2025, 21, 4560, 576, 5685, 1114, 9363, 5688, 504, 4153, 5687, 5605, 1155, 4973, 4556, 15626, 15658, 2]
 // Exports: default
 
-// Module 15622 (TestLocaleSelector)
+// Module 15625 (TestLocaleSelector)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import hooksDefault from "hooks" /* 4153 */;
 import TableRowInner from "TableRowInner" /* 5605 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import messagesProxyDefault from "messagesProxy" /* 15623 */;
-import messagesProxyDefault2 from "messagesProxy" /* 15655 */;
+import messagesProxyDefault from "messagesProxy" /* 15626 */;
+import messagesProxyDefault2 from "messagesProxy" /* 15658 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;

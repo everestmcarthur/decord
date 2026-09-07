@@ -1,10 +1,10 @@
-// Module ID: 8858
-// Function ID: 8859
+// Module ID: 8863
+// Function ID: 8864
 // Name: useRedeemVirtualCurrency
-// Dependencies: [5, 32, 19, 8859, 8860, 7243, 8853, 1114, 2]
+// Dependencies: [5, 32, 19, 8864, 8865, 7243, 8858, 1114, 2]
 // Exports: useRedeemVirtualCurrency
 
-// Module 8858 (useRedeemVirtualCurrency)
+// Module 8863 (useRedeemVirtualCurrency)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
@@ -23,7 +23,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   const isSubmitting = callback2(enabled(false), 2);
   callback2 = isSubmitting[1];
   const tmp5 = callback2(enabled(null), 2);
-  enabled = entitlements(8859).useConfig({ location: "orb_checkout_modal" }).enabled;
+  enabled = entitlements(8864).useConfig({ location: "orb_checkout_modal" }).enabled;
   order = undefined;
   if (order != null) {
     order = order.order;
@@ -35,8 +35,8 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   if (order != null) {
     onSignFailure = order.onSignFailure;
   }
-  let obj = entitlements(8859);
-  const orderSigning = _require(8860).useOrderSigning({ order, errorSource: "orb_redeem_orders_api", onSignFailure });
+  let obj = entitlements(8864);
+  const orderSigning = _require(8865).useOrderSigning({ order, errorSource: "orb_redeem_orders_api", onSignFailure });
   const signOrder = orderSigning.signOrder;
   const _reportError = orderSigning.reportError;
   if (enabled) {
@@ -185,7 +185,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   closure_9 = tmp11;
   const tmp12 = _reportError((skuId, loadId) => {
     const callback = arg2;
-    let obj = callback(8853);
+    let obj = callback(8858);
     obj = {
       skuId,
       loadId,

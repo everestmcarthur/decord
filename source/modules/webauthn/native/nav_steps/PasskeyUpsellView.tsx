@@ -1,17 +1,17 @@
-// Module ID: 14661
-// Function ID: 14662
+// Module ID: 14664
+// Function ID: 14665
 // Name: PasskeyUpsellView
-// Dependencies: [32, 19, 17, 14657, 1074, 1954, 21, 4560, 576, 1483, 1114, 14662, 14663, 5624, 2024, 7123, 14666, 4556, 1115, 4975, 6949, 2]
+// Dependencies: [32, 19, 17, 14660, 1074, 1954, 21, 4560, 576, 1483, 1114, 14665, 14666, 5624, 2024, 7123, 14669, 4556, 1115, 4975, 6949, 2]
 // Exports: default
 
-// Module 14661 (PasskeyUpsellView)
+// Module 14664 (PasskeyUpsellView)
 import ThemesDefault from "Themes" /* 576 */;
 import combinedDefault from "combined" /* 2024 */;
-import registerAssetDefault from "registerAsset" /* 14666 */;
+import registerAssetDefault from "registerAsset" /* 14669 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { WebAuthnScreens } from "WebAuthnScreens" /* 14657 */;
+import { WebAuthnScreens } from "WebAuthnScreens" /* 14660 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -50,9 +50,9 @@ export default function PasskeyUpsellView() {
     navigation.push(closure_1_8.NAME, obj);
   }
   function onCancel() {
-    callback(14662).markDismissed(constants.USER_DISMISS);
-    const obj = callback(14662);
-    const result = callback(14663).closePasskeyUpsellModal();
+    callback(14665).markDismissed(constants.USER_DISMISS);
+    const obj = callback(14665);
+    const result = callback(14666).closePasskeyUpsellModal();
   }
   let obj = navigation(1483);
   navigation = obj.useNavigation();

@@ -1,10 +1,10 @@
-// Module ID: 13800
-// Function ID: 13801
+// Module ID: 13803
+// Function ID: 13804
 // Name: ProvisionalAccountNoCallAllowed
 // Dependencies: [19, 1074, 21, 4560, 4910, 6610, 1114, 2024, 4910, 2]
 // Exports: default
 
-// Module 13800 (ProvisionalAccountNoCallAllowed)
+// Module 13803 (ProvisionalAccountNoCallAllowed)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import combinedDefault from "combined" /* 2024 */;

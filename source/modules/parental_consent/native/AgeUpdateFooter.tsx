@@ -1,10 +1,10 @@
-// Module ID: 17884
-// Function ID: 17885
+// Module ID: 17887
+// Function ID: 17888
 // Name: AgeUpdateFooter
 // Dependencies: [19, 21, 4560, 4556, 1114, 2690, 8411, 8413, 2]
 // Exports: default
 
-// Module 17884 (AgeUpdateFooter)
+// Module 17887 (AgeUpdateFooter)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2690 */;

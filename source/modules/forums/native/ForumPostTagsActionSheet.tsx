@@ -1,10 +1,10 @@
-// Module ID: 11248
-// Function ID: 11249
+// Module ID: 11253
+// Function ID: 11254
 // Name: ForumPostTagsActionSheet
-// Dependencies: [32, 19, 17, 7273, 21, 4560, 1114, 7275, 7198, 7149, 11249, 4975, 7898, 4527, 2]
+// Dependencies: [32, 19, 17, 7273, 21, 4560, 1114, 7275, 7198, 7149, 11254, 4975, 7898, 4527, 2]
 // Exports: default
 
-// Module 11248 (ForumPostTagsActionSheet)
+// Module 11253 (ForumPostTagsActionSheet)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

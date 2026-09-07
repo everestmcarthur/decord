@@ -1,10 +1,10 @@
-// Module ID: 9036
-// Function ID: 9037
+// Module ID: 9041
+// Function ID: 9042
 // Name: GuildPreview
 // Dependencies: [19, 17, 21, 4560, 576, 4409, 4556, 1114, 5584, 2]
 // Exports: default
 
-// Module 9036 (GuildPreview)
+// Module 9041 (GuildPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

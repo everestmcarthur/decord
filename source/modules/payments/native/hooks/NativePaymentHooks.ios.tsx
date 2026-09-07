@@ -1,14 +1,14 @@
-// Module ID: 10805
-// Function ID: 10806
+// Module ID: 10810
+// Function ID: 10811
 // Name: useNativeIAPPayments
-// Dependencies: [5, 32, 19, 7239, 4223, 4224, 7237, 1074, 3, 504, 7419, 10755, 4233, 10806, 5598, 1242, 10808, 7240, 38, 4884, 10810, 10811, 2]
+// Dependencies: [5, 32, 19, 7239, 4223, 4224, 7237, 1074, 3, 504, 7419, 10760, 4233, 10811, 5598, 1242, 10813, 7240, 38, 4884, 10815, 10816, 2]
 // Exports: useCancelSubscription, useCreateSubscription, useGoogleSkuIds, useNativeIAPPayments, useResubscribeSubscription
 
-// Module 10805 (useNativeIAPPayments)
+// Module 10810 (useNativeIAPPayments)
 import timestampDefault from "timestamp" /* 3 */;
 import useInitialValueDefault from "useInitialValue" /* 5598 */;
-import useTimeoutDefault from "useTimeout" /* 10755 */;
-import useCreateSubscriptionParamsDefault from "useCreateSubscriptionParams" /* 10806 */;
+import useTimeoutDefault from "useTimeout" /* 10760 */;
+import useCreateSubscriptionParamsDefault from "useCreateSubscriptionParams" /* 10811 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -148,7 +148,7 @@ function useCreateSubscription(planId) {
   closure_6 = tmp12;
   const items4 = [tmp12, analyticsLocation, applicationId, planId, skuId];
   callback = React.useCallback(() => {
-    let obj = first(10808);
+    let obj = first(10813);
     obj = { load_id: closure_6, payment_type: closure_1_10[closure_1_11.SUBSCRIPTION], subscription_plan_gateway_plan_id: first(7240).ProductIds.GENERIC_SUBSCRIPTION, subscription_type: closure_1_12.GUILD, is_gift: false, location: closure_3, application_id: dependencyMap, subscription_plan_id: first, sku_id: closure_1 };
     const result = obj.trackPaymentFlowStartedAnalyticsAndCTP(obj);
   }, items4);
@@ -324,7 +324,7 @@ function useResubscribeSubscription(arg0) {
       const obj = first(7419);
     }
   }, items1);
-  first(10755)(() => {
+  first(10760)(() => {
     let tmp = memo;
     if (!memo) {
       tmp = c15;
@@ -366,7 +366,7 @@ function useResubscribeSubscription(arg0) {
     }
     return tmp3;
   }, items4);
-  const tmp12 = first(10811)(arg0);
+  const tmp12 = first(10816)(arg0);
   React = tmp12;
   obj = {
     resubscribeSubscription: React.useCallback(stateFromStores(function*() {

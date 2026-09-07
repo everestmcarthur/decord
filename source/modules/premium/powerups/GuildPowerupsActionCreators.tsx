@@ -1,10 +1,10 @@
-// Module ID: 12488
-// Function ID: 12489
+// Module ID: 12492
+// Function ID: 12493
 // Name: guildPowerupsAckNotification
-// Dependencies: [4450, 1074, 573, 12489, 4802, 1272, 12490, 1369, 2]
+// Dependencies: [4450, 1074, 573, 12493, 4802, 1272, 12494, 1369, 2]
 // Exports: disablePowerupForGuild, enablePowerupForGuild, fetchGuildBoostEntitlements, fetchPowerupCatalogForGuild, guildPowerupsAckNotification, guildPowerupsResetNotifications
 
-// Module 12488 (guildPowerupsAckNotification)
+// Module 12492 (guildPowerupsAckNotification)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import ME from "ME" /* 1074 */;
@@ -26,11 +26,11 @@ export const guildPowerupsResetNotifications = function guildPowerupsResetNotifi
 export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(closure_0) {
   const _require = closure_0;
   if (true === arg1) {
-    const MOCK_LEVELS = _require(12489).MOCK_LEVELS;
-    const combined = MOCK_LEVELS.concat(_require(12489).MOCK_PERKS);
+    const MOCK_LEVELS = _require(12493).MOCK_LEVELS;
+    const combined = MOCK_LEVELS.concat(_require(12493).MOCK_PERKS);
     let obj = {};
-    obj[constants.LEVEL] = _require(12489).MOCK_LEVELS;
-    obj[constants.PERK] = _require(12489).MOCK_PERKS;
+    obj[constants.LEVEL] = _require(12493).MOCK_LEVELS;
+    obj[constants.PERK] = _require(12493).MOCK_PERKS;
     let obj2 = dispatcherDefault;
     obj = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: null, allPowerups: null, powerupCatalog: null };
     obj[1] = closure_0;

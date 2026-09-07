@@ -1,10 +1,10 @@
-// Module ID: 12955
-// Function ID: 12956
+// Module ID: 12959
+// Function ID: 12960
 // Name: trustDomain
 // Dependencies: [573, 2]
 // Exports: trustDomain, trustProtocol
 
-// Module 12955 (trustDomain)
+// Module 12959 (trustDomain)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 

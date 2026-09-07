@@ -1,9 +1,9 @@
-// Module ID: 8857
-// Function ID: 8858
+// Module ID: 8862
+// Function ID: 8863
 // Name: reset
 // Dependencies: [1184, 1221, 7397, 504, 1935, 573, 2]
 
-// Module 8857 (reset)
+// Module 8862 (reset)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;

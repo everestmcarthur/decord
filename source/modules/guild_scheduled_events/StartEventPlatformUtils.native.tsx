@@ -1,10 +1,10 @@
-// Module ID: 9812
-// Function ID: 9813
+// Module ID: 9817
+// Function ID: 9818
 // Name: _navigateToEvent
 // Dependencies: [5, 1957, 4583, 4381, 1963, 1074, 38, 8393, 8398, 5411, 1100, 2]
 // Exports: navigateToEvent, postStartActions
 
-// Module 9812 (_navigateToEvent)
+// Module 9817 (_navigateToEvent)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import closure_6 from "createRTCConnection" /* 4583 */;

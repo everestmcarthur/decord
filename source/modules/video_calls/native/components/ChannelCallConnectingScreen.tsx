@@ -1,24 +1,24 @@
-// Module ID: 9978
-// Function ID: 9979
+// Module ID: 9983
+// Function ID: 9984
 // Name: VoiceSettingsActionSheet
-// Dependencies: [19, 17, 4577, 1908, 4199, 4578, 9467, 1074, 1085, 21, 4560, 9496, 4527, 7150, 1608, 6627, 9979, 4713, 9937, 9820, 10000, 10001, 1114, 9089, 5411, 4495, 10002, 9215, 504, 9214, 7345, 10009, 9447, 10010, 576, 9627, 10011, 2]
+// Dependencies: [19, 17, 4577, 1908, 4199, 4578, 9472, 1074, 1085, 21, 4560, 9501, 4527, 7150, 1608, 6627, 9984, 4713, 9942, 9825, 10005, 10006, 1114, 9094, 5411, 4495, 10007, 9220, 504, 9219, 7345, 10014, 9452, 10015, 576, 9632, 10016, 2]
 // Exports: CallConnectingActionBar, ChannelCallConnectingHeader, showVoiceSettingsActionSheet
 
-// Module 9978 (VoiceSettingsActionSheet)
+// Module 9983 (VoiceSettingsActionSheet)
 import isMetaQuest from "isMetaQuest" /* 1608 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 import BottomSheetModal from "BottomSheetModal" /* 6627 */;
 import Background from "Background" /* 7150 */;
-import UserSettingsVoiceDefault from "UserSettingsVoice" /* 9979 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 10002 */;
+import UserSettingsVoiceDefault from "UserSettingsVoice" /* 9984 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 10007 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "set" /* 4577 */;
 import closure_6 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_8 from "handleUpdate" /* 4578 */;
-import { resetFocus } from "VoiceChatDrawerState" /* 9467 */;
+import { resetFocus } from "VoiceChatDrawerState" /* 9472 */;
 import { InstantInviteSources } from "ME" /* 1074 */;
 import { Permissions } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -144,7 +144,7 @@ export const showVoiceSettingsActionSheet = function showVoiceSettingsActionShee
 export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(channel) {
   channel = channel.channel;
   const tmp = callback3();
-  let obj = channel(9937);
+  let obj = channel(9942);
   const isVoiceChannelLocked = obj.useIsVoiceChannelLocked(channel);
   let fn = null;
   if (closure_7.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
@@ -161,14 +161,14 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   let tmp9Result = null;
   if (null != fn) {
     obj = { source: null, onPress: null, accessibilityLabel: null };
-    obj[0] = tmp2(10001);
+    obj[0] = tmp2(10006);
     obj[1] = fn;
     const intl = tmp5(1114).intl;
     obj = { channelName: null };
     obj[0] = tmp4;
     obj[2] = intl.formatToPlainString(tmp5(1114).t["dHHb/2"], obj);
-    tmp9Result = tmp9(tmp2(10000), obj);
-    const tmp2Result = tmp2(10000);
+    tmp9Result = tmp9(tmp2(10005), obj);
+    const tmp2Result = tmp2(10005);
   }
   obj1 = { children: null };
   items[1] = tmp9Result;

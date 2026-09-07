@@ -1,7 +1,7 @@
 // Module ID: 8334
 // Function ID: 8335
 // Name: useMediaShareActions
-// Dependencies: [19, 8335, 1957, 4781, 8360, 1074, 7601, 21, 563, 7600, 8125, 4527, 8263, 4710, 8361, 8266, 8370, 4255, 11680, 4571, 4420, 11677, 1896, 11661, 4509, 1114, 11688, 9053, 12956, 11736, 5081, 7198, 7200, 2]
+// Dependencies: [19, 8335, 1957, 4781, 8360, 1074, 7601, 21, 563, 7600, 8125, 4527, 8263, 4710, 8361, 8266, 8370, 4255, 11685, 4571, 4420, 11682, 1896, 11666, 4509, 1114, 11693, 9058, 12960, 11741, 5081, 7198, 7200, 2]
 // Exports: default
 
 // Module 8334 (useMediaShareActions)
@@ -104,7 +104,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = tmp8.attachmentId;
         if (null != attachmentId) {
-          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUESTS_USER_COMPLETION_UPDATE" };
+          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUEST_PREVIEW_UPDATE" };
           obj[0] = tmp3;
           obj = { onlyAttachmentIds: null };
           const items = [attachmentId];
@@ -115,7 +115,7 @@ function useMediaShareActions(source) {
         }
       } else {
         obj1 = source(tmp[18]);
-        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUESTS_USER_COMPLETION_UPDATE" };
+        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUEST_PREVIEW_UPDATE" };
         obj1[0] = tmp3;
         const obj2 = { onlyEmbedIndices: null };
         const items1 = [tmp8.mediaIndex];

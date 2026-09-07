@@ -1,10 +1,10 @@
-// Module ID: 9572
-// Function ID: 9573
+// Module ID: 9577
+// Function ID: 9578
 // Name: _installApplicationOnDemandIfNeeded
-// Dependencies: [5, 1918, 4788, 1074, 9418, 7163, 9245, 4740, 4425, 9573, 2]
+// Dependencies: [5, 1918, 4788, 1074, 9423, 7163, 9250, 4740, 4425, 9578, 2]
 // Exports: installApplicationOnDemandIfNeeded
 
-// Module 9572 (_installApplicationOnDemandIfNeeded)
+// Module 9577 (_installApplicationOnDemandIfNeeded)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "createExecutable" /* 1918 */;
 import closure_4 from "addApplication" /* 4788 */;
@@ -90,7 +90,7 @@ function _installApplicationOnDemandIfNeeded() {
                   obj4[0] = Promise.resolve({ isAuthorized: true });
                   return obj4;
                 }
-                obj11 = callback(9418);
+                obj11 = callback(9423);
               }
             } else if (arg0 === 1) {
               application = 3;
@@ -104,7 +104,7 @@ function _installApplicationOnDemandIfNeeded() {
               obj = arg1;
               application = c3.createFromServer(obj);
             }
-            USER_INSTALL = callback(9245).ApplicationIntegrationType.USER_INSTALL;
+            USER_INSTALL = callback(9250).ApplicationIntegrationType.USER_INSTALL;
             scopes = undefined;
             if (application != null) {
               const integrationTypesConfig = application.integrationTypesConfig;

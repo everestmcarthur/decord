@@ -1,9 +1,9 @@
-// Module ID: 10214
-// Function ID: 10215
+// Module ID: 10219
+// Function ID: 10220
 // Name: showNotification
-// Dependencies: [5, 17, 1347, 1074, 4770, 1115, 10094, 10096, 1256, 7118, 10215, 2]
+// Dependencies: [5, 17, 1347, 1074, 4770, 1115, 10099, 10101, 1256, 7118, 10220, 2]
 
-// Module 10214 (showNotification)
+// Module 10219 (showNotification)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -152,12 +152,12 @@ function showNotification(uri) {
             }
             obj1 = tmp7;
             BUG_REPORTER = closure_1_7.BUG_REPORTER;
-            dependencyMap = obj1(10094).getNotificationDuration(BUG_REPORTER);
-            const obj5 = obj1(10094);
+            dependencyMap = obj1(10099).getNotificationDuration(BUG_REPORTER);
+            const obj5 = obj1(10099);
             const obj3 = { type: null, duration: null, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
             obj3[0] = BUG_REPORTER;
             obj3[1] = dependencyMap;
-            const obj6 = BUG_REPORTER(10096);
+            const obj6 = BUG_REPORTER(10101);
             obj3[2] = obj1(1256).v4();
             obj3[3] = obj1;
             uri = undefined;

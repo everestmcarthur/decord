@@ -1,10 +1,10 @@
-// Module ID: 12436
-// Function ID: 12437
+// Module ID: 12440
+// Function ID: 12441
 // Name: useRequiredLinkedLobbyApplicationAuthorization
 // Dependencies: [19, 4788, 7107, 504, 7170, 7163, 2]
 // Exports: default
 
-// Module 12436 (useRequiredLinkedLobbyApplicationAuthorization)
+// Module 12440 (useRequiredLinkedLobbyApplicationAuthorization)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import recomputeFromAppTokens from "recomputeFromAppTokens" /* 7107 */;

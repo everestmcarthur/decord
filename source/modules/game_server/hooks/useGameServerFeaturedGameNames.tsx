@@ -1,10 +1,10 @@
-// Module ID: 12577
-// Function ID: 12578
+// Module ID: 12581
+// Function ID: 12582
 // Name: useGameServerFeaturedGameNames
 // Dependencies: [4451, 7309, 2]
 // Exports: default
 
-// Module 12577 (useGameServerFeaturedGameNames)
+// Module 12581 (useGameServerFeaturedGameNames)
 import set from "set" /* 2 */;
 import importDefaultResult1 from "importDefaultResult1" /* 7309 */;
 import str11 from "str11" /* 4451 */;

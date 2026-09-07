@@ -1,21 +1,21 @@
-// Module ID: 15701
-// Function ID: 15702
+// Module ID: 15704
+// Function ID: 15705
 // Name: setWarningBoosts
-// Dependencies: [5, 19, 17, 1221, 12562, 1979, 4381, 15702, 1074, 21, 4560, 576, 1272, 4153, 4458, 12488, 15616, 7201, 12494, 1940, 1943, 1611, 504, 4556, 5687, 5605, 2]
+// Dependencies: [5, 19, 17, 1221, 12566, 1979, 4381, 15705, 1074, 21, 4560, 576, 1272, 4153, 4458, 12492, 15619, 7201, 12498, 1940, 1943, 1611, 504, 4556, 5687, 5605, 2]
 // Exports: default
 
-// Module 15701 (setWarningBoosts)
+// Module 15704 (setWarningBoosts)
 import ThemesDefault from "Themes" /* 576 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
-import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15616 */;
+import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15619 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "handleConnectionClosedOrResumed" /* 1221 */;
-import closure_8 from "handleModifyingAppliedBoostStart" /* 12562 */;
+import closure_8 from "handleModifyingAppliedBoostStart" /* 12566 */;
 import closure_9 from "createGuildRecordFromRust" /* 1979 */;
 import closure_10 from "handleConnectionOpen" /* 4381 */;
-import items from "items" /* 15702 */;
+import items from "items" /* 15705 */;
 import { Endpoints } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -97,7 +97,7 @@ function _setWarningBoosts() {
           } else {
             obj = callback(4458);
             const appliedGuildBoostsForGuild = obj.fetchAppliedGuildBoostsForGuild(callback);
-            obj1 = callback(12488);
+            obj1 = callback(12492);
             const guildBoostEntitlements = obj1.fetchGuildBoostEntitlements(callback, true);
             c6 = 3;
             return { value: "HermesInternal", done: null };

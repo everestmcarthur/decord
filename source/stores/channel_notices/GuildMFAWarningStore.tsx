@@ -1,9 +1,9 @@
-// Module ID: 13757
-// Function ID: 13758
+// Module ID: 13761
+// Function ID: 13762
 // Name: handleUserStoreUpdates
 // Dependencies: [2012, 1371, 1074, 504, 573, 2]
 
-// Module 13757 (handleUserStoreUpdates)
+// Module 13761 (handleUserStoreUpdates)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_0 from "comparator" /* 2012 */;

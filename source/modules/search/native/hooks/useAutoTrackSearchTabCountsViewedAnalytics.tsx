@@ -1,10 +1,10 @@
-// Module ID: 16723
-// Function ID: 16724
+// Module ID: 16726
+// Function ID: 16727
 // Name: useAutoTrackSearchTabCountsViewedAnalytics
-// Dependencies: [19, 7878, 12358, 2]
+// Dependencies: [19, 7878, 12362, 2]
 // Exports: useAutoTrackSearchTabCountsViewedAnalytics
 
-// Module 16723 (useAutoTrackSearchTabCountsViewedAnalytics)
+// Module 16726 (useAutoTrackSearchTabCountsViewedAnalytics)
 import closure_2 from "noop" /* 19 */;
 import { SearchTabs } from "MessageEmbedTypes" /* 7878 */;
 

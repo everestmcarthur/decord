@@ -1,10 +1,10 @@
-// Module ID: 11616
-// Function ID: 11617
+// Module ID: 11621
+// Function ID: 11622
 // Name: handleMessagesTapURLLink
-// Dependencies: [9290, 4788, 7938, 11345, 1385, 1957, 4544, 4781, 1371, 1074, 1482, 1964, 6596, 1113, 11614, 4540, 7735, 11615, 8686, 8680, 8370, 11544, 8179, 4527, 9185, 1896, 5411, 4702, 11617, 10919, 11618, 7456, 7182, 11619, 1609, 11620, 4793, 1100, 7992, 11623, 11646, 2]
+// Dependencies: [9295, 4788, 7938, 11350, 1385, 1957, 4544, 4781, 1371, 1074, 1482, 1964, 6596, 1113, 11619, 4540, 7735, 11620, 8691, 8685, 8370, 11549, 8179, 4527, 9190, 1896, 5411, 4702, 11622, 10924, 11623, 7456, 7182, 11624, 1609, 11625, 4793, 1100, 7992, 11628, 11651, 2]
 // Exports: handleMessagesTapLink
 
-// Module 11616 (handleMessagesTapURLLink)
+// Module 11621 (handleMessagesTapURLLink)
 import set from "set" /* 2 */;
 import AbortCodes from "AbortCodes" /* 1113 */;
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
@@ -12,14 +12,14 @@ import set2 from "set" /* 1964 */;
 import parseQueryDefault from "parseQuery" /* 4540 */;
 import str2 from "str2" /* 6596 */;
 import isLinkTrusted from "isLinkTrusted" /* 8370 */;
-import _mod8680 from "module_8680" /* 8680 */;
-import GameProfileEmbedAction from "GameProfileEmbedAction" /* 8686 */;
-import getIndexKey from "getIndexKey" /* 9290 */;
-import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 11544 */;
-import isLinkTrusted2 from "isLinkTrusted" /* 11614 */;
+import _mod8685 from "module_8685" /* 8685 */;
+import GameProfileEmbedAction from "GameProfileEmbedAction" /* 8691 */;
+import getIndexKey from "getIndexKey" /* 9295 */;
+import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 11549 */;
+import isLinkTrusted2 from "isLinkTrusted" /* 11619 */;
 import closure_4 from "addApplication" /* 4788 */;
 import closure_5 from "handleMessageSendFailedAutomod" /* 7938 */;
-import closure_6 from "handleQuickSwitcherUpdate" /* 11345 */;
+import closure_6 from "handleQuickSwitcherUpdate" /* 11350 */;
 import closure_7 from "createdAt" /* 1385 */;
 import closure_8 from "ensureGuildLoaded" /* 1957 */;
 import closure_9 from "updateInvite" /* 4544 */;
@@ -51,7 +51,7 @@ function handleMessagesTapURLLink(data, channelId) {
               const tmp2Result = tmp2(7735);
             }
             if (!num) {
-              tmp4(11615)(invite);
+              tmp4(11620)(invite);
               num = 0;
             }
             flag2 = !num;
@@ -84,9 +84,9 @@ function handleMessagesTapURLLink(data, channelId) {
         obj = { shouldOpenGameProfile: true, gameId: null };
         obj[1] = gameId;
         obj[3] = obj;
-        _mod8680.default.openGameProfileModal(obj);
+        _mod8685.default.openGameProfileModal(obj);
         flag3 = true;
-        const _default = _mod8680.default;
+        const _default = _mod8685.default;
       }
       flag2 = flag3;
     }
@@ -96,8 +96,8 @@ function handleMessagesTapURLLink(data, channelId) {
       obj1[0] = data.url;
       let isLinkTrustedResult = null != data.node;
       if (isLinkTrustedResult) {
-        isLinkTrustedResult = tmp19(11614).isLinkTrusted(data.node);
-        const tmp19Result = tmp19(11614);
+        isLinkTrustedResult = tmp19(11619).isLinkTrusted(data.node);
+        const tmp19Result = tmp19(11619);
       }
       obj1[1] = isLinkTrustedResult;
       obj1[2] = data.messageId;
@@ -129,6 +129,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
     }
     if (!tmp4(data, id)) {
       if (null != data.action) {
+        const action = data.action;
         if (chatInputRef != null) {
           const current = chatInputRef.current;
           if (current != null) {

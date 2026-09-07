@@ -1,10 +1,10 @@
-// Module ID: 12487
-// Function ID: 12488
+// Module ID: 12491
+// Function ID: 12492
 // Name: regionResponseToRegion
 // Dependencies: [2]
 // Exports: default
 
-// Module 12487 (regionResponseToRegion)
+// Module 12491 (regionResponseToRegion)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/game_server/utils/regionResponseToRegion.tsx");

@@ -1,9 +1,9 @@
-// Module ID: 14195
-// Function ID: 14196
+// Module ID: 14198
+// Function ID: 14199
 // Name: defineProperty
 // Dependencies: [32, 1188, 2]
 
-// Module 14195 (defineProperty)
+// Module 14198 (defineProperty)
 import _mod1188 from "module_1188" /* 1188 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4 } from "module_1188" /* 1188 */;

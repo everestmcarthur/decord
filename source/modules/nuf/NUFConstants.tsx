@@ -1,9 +1,9 @@
-// Module ID: 12705
-// Function ID: 12706
+// Module ID: 12709
+// Function ID: 12710
 // Name: NewUserTypes
 // Dependencies: [2]
 
-// Module 12705 (NewUserTypes)
+// Module 12709 (NewUserTypes)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/nuf/NUFConstants.tsx");

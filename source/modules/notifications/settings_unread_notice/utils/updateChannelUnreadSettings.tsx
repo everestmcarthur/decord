@@ -1,13 +1,13 @@
-// Module ID: 11419
-// Function ID: 11420
+// Module ID: 11424
+// Function ID: 11425
 // Name: updateChannelUnreadSettings
-// Dependencies: [4741, 1074, 4742, 1084, 7119, 10150, 7114, 2]
+// Dependencies: [4741, 1074, 4742, 1084, 7119, 10155, 7114, 2]
 // Exports: default
 
-// Module 11419 (updateChannelUnreadSettings)
+// Module 11424 (updateChannelUnreadSettings)
 import UserNotificationSettings from "UserNotificationSettings" /* 7114 */;
 import _modDef7119 from "module_7119" /* 7119 */;
-import resetGuildUnreadFlags from "resetGuildUnreadFlags" /* 10150 */;
+import resetGuildUnreadFlags from "resetGuildUnreadFlags" /* 10155 */;
 import closure_3 from "updateUserGuildSettingsInternal" /* 4741 */;
 import { AnalyticsObjects } from "ME" /* 1074 */;
 import { UnreadSetting } from "ReadStateTypes" /* 4742 */;

@@ -1,10 +1,10 @@
-// Module ID: 12416
-// Function ID: 12417
+// Module ID: 12420
+// Function ID: 12421
 // Name: calculatePositionDeltas
 // Dependencies: [3, 12, 2]
 // Exports: getPositionUpdates, moveItemFromTo
 
-// Module 12416 (calculatePositionDeltas)
+// Module 12420 (calculatePositionDeltas)
 import timestampDefault from "timestamp" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 

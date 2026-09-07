@@ -1,14 +1,14 @@
-// Module ID: 9127
-// Function ID: 9128
+// Module ID: 9132
+// Function ID: 9133
 // Name: MicrophoneSlashIcon
-// Dependencies: [19, 21, 576, 4261, 9128, 2]
+// Dependencies: [19, 21, 576, 4261, 9133, 2]
 // Exports: MicrophoneSlashIcon
 
-// Module 9127 (MicrophoneSlashIcon)
+// Module 9132 (MicrophoneSlashIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 9128 */;
+import registerAsset from "registerAsset" /* 9133 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

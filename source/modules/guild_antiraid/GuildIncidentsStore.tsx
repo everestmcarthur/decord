@@ -1,9 +1,9 @@
-// Module ID: 10080
-// Function ID: 10081
+// Module ID: 10085
+// Function ID: 10086
 // Name: computeAlertSettings
 // Dependencies: [4476, 1221, 1979, 4199, 8015, 504, 573, 2]
 
-// Module 10080 (computeAlertSettings)
+// Module 10085 (computeAlertSettings)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import DATE_CONFIG from "DATE_CONFIG" /* 8015 */;

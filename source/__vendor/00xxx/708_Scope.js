@@ -135,7 +135,7 @@ let items = [
     value: function setUser(arg0) {
       let obj = arg0;
       if (!arg0) {
-        obj = { email: "Array", id: "flexDirection", ip_address: "y", username: "HermesInternal" };
+        obj = { email: "T", id: "call", ip_address: "sk", username: "rejectWithError" };
       }
       const self = this;
       this._user = obj;

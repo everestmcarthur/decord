@@ -1,10 +1,10 @@
-// Module ID: 11006
-// Function ID: 11007
+// Module ID: 11011
+// Function ID: 11012
 // Name: useSocialLayerStorefrontMobileAccountLinkingDisabled
 // Dependencies: [7228, 504, 2]
 // Exports: useSocialLayerStorefrontMobileAccountLinkingDisabled
 
-// Module 11006 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
+// Module 11011 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
 import closure_2 from "handleUserSettingsStoreUpdate" /* 7228 */;
 
 const require = arg1;

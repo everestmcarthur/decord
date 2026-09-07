@@ -1,15 +1,15 @@
-// Module ID: 8657
-// Function ID: 8658
+// Module ID: 8662
+// Function ID: 8663
 // Name: WidgetPreview
-// Dependencies: [19, 17, 21, 4560, 576, 8241, 7630, 8658, 7623, 8674, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 8241, 7630, 8663, 7623, 8679, 4556, 1114, 2]
 // Exports: default
 
-// Module 8657 (WidgetPreview)
+// Module 8662 (WidgetPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import createDefaultFieldsSection from "createDefaultFieldsSection" /* 7630 */;
 import useSharedStylesDefault from "useSharedStyles" /* 8241 */;
-import PersonalWidgetTextDefault from "PersonalWidgetText" /* 8658 */;
+import PersonalWidgetTextDefault from "PersonalWidgetText" /* 8663 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -44,7 +44,7 @@ export default function WidgetPreview(arg0) {
         obj[1] = widget;
         const items1 = [tmp4.card, tmp.card];
         obj[3] = items1;
-        tmp6 = callback(tmp5(8674).WidgetSection, obj);
+        tmp6 = callback(tmp5(8679).WidgetSection, obj);
       }
     }
     tmp5Result = tmp5(7623);

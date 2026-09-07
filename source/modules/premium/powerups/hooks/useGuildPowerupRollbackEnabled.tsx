@@ -1,10 +1,10 @@
-// Module ID: 12496
-// Function ID: 12497
+// Module ID: 12500
+// Function ID: 12501
 // Name: useGuildPowerupRollbackEnabled
 // Dependencies: [4487, 4453, 2]
 // Exports: default, isGuildPowerupRollbackEnabled
 
-// Module 12496 (useGuildPowerupRollbackEnabled)
+// Module 12500 (useGuildPowerupRollbackEnabled)
 import set from "set" /* 2 */;
 import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4453 */;
 import experiment from "experiment" /* 4487 */;

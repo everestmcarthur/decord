@@ -1,8 +1,8 @@
-// Module ID: 9154
-// Function ID: 9155
-// Dependencies: [1957, 4583, 9152, 1074, 4763, 9155, 1896, 4527, 9166, 1114, 4905, 1178, 7244, 9169, 2]
+// Module ID: 9159
+// Function ID: 9160
+// Dependencies: [1957, 4583, 9157, 1074, 4763, 9160, 1896, 4527, 9171, 1114, 4905, 1178, 7244, 9174, 2]
 
-// Module 9154
+// Module 9159
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
@@ -11,7 +11,7 @@ import _modDef4905 from "module_4905" /* 4905 */;
 import _safeTransitionToDefault from "_safeTransitionTo" /* 7244 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "createRTCConnection" /* 4583 */;
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9152 */;
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9157 */;
 import ME from "ME" /* 1074 */;
 
 require = arg1;
@@ -23,7 +23,7 @@ export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
     let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { streamKey, channelId };
-    obj.openLazy(asyncRequireImpl(9166, dependencyMap.paths), closure_6, obj);
+    obj.openLazy(asyncRequireImpl(9171, dependencyMap.paths), closure_6, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, arg2) {
     if (arg2()) {
@@ -31,7 +31,7 @@ export default {
       obj = { userId: null, channelId: null };
       obj[0] = id;
       obj[1] = id2;
-      obj.pushLazy(asyncRequireImpl(9155, dependencyMap.paths), obj, closure_7);
+      obj.pushLazy(asyncRequireImpl(9160, dependencyMap.paths), obj, closure_7);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -73,7 +73,7 @@ export default {
         obj[1] = channelId;
         obj[2] = guildId;
         obj[3] = fingerprint;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9169, dependencyMap.paths), closure_5, obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9174, dependencyMap.paths), closure_5, obj);
         const obj4 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }

@@ -1,10 +1,10 @@
-// Module ID: 14437
-// Function ID: 14438
+// Module ID: 14440
+// Function ID: 14441
 // Name: setFontSize
-// Dependencies: [4552, 1074, 1938, 1084, 573, 1242, 9358, 2]
+// Dependencies: [4552, 1074, 1938, 1084, 573, 1242, 9363, 2]
 // Exports: disableKeyboardMode, enableKeyboardMode, forcedColorsModalSeen, keyboardNavigationExplainerModalSeen, resetToDefault, setAlwaysShowLinkDecorations, setChatBarSettings, setContrast, setContrastMode, setDisplayNameStylesEnabled, setEnableCustomCursor, setFontSize, setHDRDynamicRange, setLowContrastMode, setMessageGroupSpacing, setOfficialMessageStyle, setPrefersReducedMotion, setRoleStyle, setSaturation, setSwitchIconsEnabled, setSyncForcedColors, setYouBarAnimations, setZoom, systemColorPreferencesChanged, systemPrefersContrastChanged, systemPrefersCrossfadesChanged, systemPrefersReducedMotionChanged, toggleColorblindMode, toggleDesaturateUserColors, toggleSubmitButton, toggleSyncProfileThemeWithUserTheme
 
-// Module 14437 (setFontSize)
+// Module 14440 (setFontSize)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
@@ -84,7 +84,7 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(prefersR
   const useReducedMotion2 = closure_2.useReducedMotion;
   if (!useReducedMotion) {
     if (useReducedMotion2) {
-      let tmpResult = tmp(9358);
+      let tmpResult = tmp(9363);
       obj = { gifAutoPlay: null, animateEmoji: null, animateStickers: null };
       obj1 = { value: false, reasonKey: null };
       obj1[1] = constants.REDUCED_MOTION;
@@ -103,7 +103,7 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(prefersR
     useReducedMotion = !useReducedMotion2;
   }
   if (useReducedMotion) {
-    tmpResult = tmp(9358);
+    tmpResult = tmp(9363);
     const result1 = tmpResult.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers");
   }
 };

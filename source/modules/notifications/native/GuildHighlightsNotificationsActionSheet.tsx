@@ -1,10 +1,10 @@
-// Module ID: 11625
-// Function ID: 11626
+// Module ID: 11630
+// Function ID: 11631
 // Name: GuildPill
-// Dependencies: [32, 19, 17, 1979, 4741, 1074, 11626, 21, 4560, 576, 5584, 4556, 11627, 563, 1114, 11628, 1611, 7150, 6627, 2024, 4296, 5607, 8593, 7119, 7114, 4527, 2]
+// Dependencies: [32, 19, 17, 1979, 4741, 1074, 11631, 21, 4560, 576, 5584, 4556, 11632, 563, 1114, 11633, 1611, 7150, 6627, 2024, 4296, 5607, 8598, 7119, 7114, 4527, 2]
 // Exports: default
 
-// Module 11625 (GuildPill)
+// Module 11630 (GuildPill)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import GuildIconSizes from "GuildIconSizes" /* 5584 */;
@@ -15,7 +15,7 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "createGuildRecordFromRust" /* 1979 */;
 import closure_7 from "updateUserGuildSettingsInternal" /* 4741 */;
 import ME from "ME" /* 1074 */;
-import { FeedbackRating } from "FeedbackRating" /* 11626 */;
+import { FeedbackRating } from "FeedbackRating" /* 11631 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

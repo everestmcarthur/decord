@@ -1,9 +1,9 @@
-// Module ID: 17387
-// Function ID: 17388
+// Module ID: 17390
+// Function ID: 17391
 // Name: prototype
 // Dependencies: [7118, 2]
 
-// Module 17387 (prototype)
+// Module 17390 (prototype)
 import initializeDefault from "initialize" /* 7118 */;
 
 initializeDefault;

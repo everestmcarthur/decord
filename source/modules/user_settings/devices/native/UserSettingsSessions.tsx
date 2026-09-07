@@ -1,15 +1,15 @@
-// Module ID: 14948
-// Function ID: 14949
+// Module ID: 14951
+// Function ID: 14952
 // Name: UserSettingsSessions
-// Dependencies: [32, 19, 17, 1371, 1074, 21, 4560, 5524, 576, 14671, 504, 14949, 4973, 5687, 1114, 5605, 7123, 4556, 1369, 5123, 1178, 6992, 1483, 12264, 6990, 14950, 8879, 10064, 6960, 14951, 2]
+// Dependencies: [32, 19, 17, 1371, 1074, 21, 4560, 5524, 576, 14674, 504, 14952, 4973, 5687, 1114, 5605, 7123, 4556, 1369, 5123, 1178, 6992, 1483, 12268, 6990, 14953, 8884, 10069, 6960, 14954, 2]
 // Exports: default
 
-// Module 14948 (UserSettingsSessions)
+// Module 14951 (UserSettingsSessions)
 import ThemesDefault from "Themes" /* 576 */;
 import registerAssetDefault from "registerAsset" /* 6992 */;
-import registerAssetDefault2 from "registerAsset" /* 10064 */;
-import registerAssetDefault3 from "registerAsset" /* 12264 */;
-import registerAssetDefault4 from "registerAsset" /* 14950 */;
+import registerAssetDefault2 from "registerAsset" /* 10069 */;
+import registerAssetDefault3 from "registerAsset" /* 12268 */;
+import registerAssetDefault4 from "registerAsset" /* 14953 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -22,7 +22,7 @@ import importDefaultResult from "createTextStyle" /* 5524 */;
 const require = arg1;
 function UserSettingsSessions() {
   const tmp = callback4();
-  let obj = otherSessions(14671);
+  let obj = otherSessions(14674);
   let authSessions = obj.useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
   obj1 = otherSessions(504);
@@ -141,14 +141,14 @@ function SessionInfo(session) {
               let obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
               obj[1] = registerAssetDefault2;
-              obj[2] = session(14951).VrHeadsetIcon;
+              obj[2] = session(14954).VrHeadsetIcon;
               let tmp9 = session;
               let tmp10 = importDefault;
             } else {
               obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
               obj[1] = registerAssetDefault4;
-              obj[2] = session(8879).ScreenIcon;
+              obj[2] = session(8884).ScreenIcon;
               tmp9 = session;
               tmp10 = importDefault;
             }
@@ -164,8 +164,8 @@ function SessionInfo(session) {
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = obj);
       if (!current) {
-        formatDateResult = tmp9(14671).formatDate(session.approx_last_used_time);
-        const tmp9Result = tmp9(14671);
+        formatDateResult = tmp9(14674).formatDate(session.approx_last_used_time);
+        const tmp9Result = tmp9(14674);
       }
       const items = [text, platform];
       const found = items.filter(tmp9(1369).isNotNullish);
@@ -246,7 +246,7 @@ function SessionInfo(session) {
   const intl = session(1114).intl;
   obj16[0] = intl.string(session(1114).t.cDHCNY);
   obj16[1] = registerAssetDefault4;
-  obj16[2] = session(8879).ScreenIcon;
+  obj16[2] = session(8884).ScreenIcon;
   tmp9 = session;
   tmp10 = importDefault;
   obj = obj16;

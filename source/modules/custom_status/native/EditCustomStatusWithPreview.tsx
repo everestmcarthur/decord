@@ -1,10 +1,10 @@
-// Module ID: 11114
-// Function ID: 11115
+// Module ID: 11119
+// Function ID: 11120
 // Name: ClearInputButton
-// Dependencies: [32, 19, 17, 1371, 11115, 1074, 1374, 21, 4560, 576, 5123, 1114, 1178, 6940, 11116, 1242, 11110, 504, 11117, 11118, 4411, 11120, 4971, 11121, 6981, 11146, 10923, 4425, 11148, 7863, 5624, 4556, 10895, 8601, 5687, 5605, 4527, 11201, 1896, 11203, 4518, 1116, 1625, 4763, 7000, 2]
+// Dependencies: [32, 19, 17, 1371, 11120, 1074, 1374, 21, 4560, 576, 5123, 1114, 1178, 6940, 11121, 1242, 11115, 504, 11122, 11123, 4411, 11125, 4971, 11126, 6981, 11151, 10928, 4425, 11153, 7863, 5624, 4556, 10900, 8606, 5687, 5605, 4527, 11206, 1896, 11208, 4518, 1116, 1625, 4763, 7000, 2]
 // Exports: default
 
-// Module 11114 (ClearInputButton)
+// Module 11119 (ClearInputButton)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
@@ -14,7 +14,7 @@ import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { STATUS_MAX_LENGTH } from "StatusTypes" /* 11115 */;
+import { STATUS_MAX_LENGTH } from "StatusTypes" /* 11120 */;
 import ME from "ME" /* 1074 */;
 import { EmojiIntention } from "set" /* 1374 */;
 import jsxProd from "jsxProd" /* 21 */;

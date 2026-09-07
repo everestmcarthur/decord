@@ -1,9 +1,9 @@
-// Module ID: 13646
-// Function ID: 13647
+// Module ID: 13650
+// Function ID: 13651
 // Name: flush
 // Dependencies: [573, 2]
 
-// Module 13646 (flush)
+// Module 13650 (flush)
 import set from "set" /* 2 */;
 
 let ActionBatcher;

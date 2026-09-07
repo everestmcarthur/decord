@@ -1,14 +1,14 @@
-// Module ID: 8774
-// Function ID: 8775
+// Module ID: 8779
+// Function ID: 8780
 // Name: HeartIcon
-// Dependencies: [19, 21, 576, 4261, 8775, 2]
+// Dependencies: [19, 21, 576, 4261, 8780, 2]
 // Exports: HeartIcon
 
-// Module 8774 (HeartIcon)
+// Module 8779 (HeartIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8775 */;
+import registerAsset from "registerAsset" /* 8780 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

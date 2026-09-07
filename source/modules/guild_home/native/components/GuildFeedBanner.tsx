@@ -1,15 +1,15 @@
-// Module ID: 16552
-// Function ID: 16553
+// Module ID: 16555
+// Function ID: 16556
 // Name: GuildFeedBanner
-// Dependencies: [19, 17, 13968, 1979, 16553, 1074, 21, 4560, 576, 4296, 1477, 4495, 13969, 1115, 1396, 5590, 4561, 4564, 504, 6945, 11528, 4411, 16554, 16555, 5584, 4556, 1178, 5123, 4259, 1114, 16556, 2]
+// Dependencies: [19, 17, 13971, 1979, 16556, 1074, 21, 4560, 576, 4296, 1477, 4495, 13972, 1115, 1396, 5590, 4561, 4564, 504, 6945, 11533, 4411, 16557, 16558, 5584, 4556, 1178, 5123, 4259, 1114, 16559, 2]
 
-// Module 16552 (GuildFeedBanner)
+// Module 16555 (GuildFeedBanner)
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 13968 */;
+import closure_6 from "initialize" /* 13971 */;
 import closure_7 from "createGuildRecordFromRust" /* 1979 */;
-import GUILD_FEED_CARD_MARGIN_HORIZONTAL from "GUILD_FEED_CARD_MARGIN_HORIZONTAL" /* 16553 */;
+import GUILD_FEED_CARD_MARGIN_HORIZONTAL from "GUILD_FEED_CARD_MARGIN_HORIZONTAL" /* 16556 */;
 import { GuildFeatures } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -42,7 +42,7 @@ function GuildFeedBanner(guild) {
   let obj2 = width;
   const items = [guild];
   const effect = width.useEffect(() => {
-    const guildForPopout = guild(13969).fetchGuildForPopout(guild.id);
+    const guildForPopout = guild(13972).fetchGuildForPopout(guild.id);
   }, items);
   const items1 = [guild];
   const memo = width.useMemo(() => {
@@ -89,7 +89,7 @@ function GuildFeedBanner(guild) {
   width = size.width;
   height = size.height;
   const tmp8 = sharedValue(4495)();
-  drawerWidth = guild(11528).useDrawerWidth();
+  drawerWidth = guild(11533).useDrawerWidth();
   const items4 = [width, height, tmp12, drawerWidth];
   obj = { style: tmp.container, children: null };
   const memo1 = obj2.useMemo(() => {
@@ -120,9 +120,9 @@ function GuildFeedBanner(guild) {
     const items6 = [obj3, animatedStyle];
     obj2[0] = items6;
     if (tmp2Result2.isThemeDark(tmp8)) {
-      let tmp6Result = tmp6(16554);
+      let tmp6Result = tmp6(16557);
     } else {
-      tmp6Result = tmp6(16555);
+      tmp6Result = tmp6(16558);
     }
     obj2[1] = tmp6Result;
     obj2[2] = handleLoad;
@@ -178,7 +178,7 @@ function GuildFeedBanner(guild) {
       };
       const obj14 = { style: null, source: null };
       obj14[0] = tmp.publicIcon;
-      obj14[1] = tmp6(16556);
+      obj14[1] = tmp6(16559);
       const items12 = [tmp17(tmp2(1178).Icon, obj14), ];
       const obj15 = { variant: "text-xs/medium", color: "text-default", children: null };
       let intl = tmp2(1114).intl;

@@ -1,10 +1,10 @@
-// Module ID: 16304
-// Function ID: 16305
+// Module ID: 16307
+// Function ID: 16308
 // Name: Wrapper
-// Dependencies: [19, 17, 7636, 1979, 5438, 4741, 4579, 1074, 21, 4560, 504, 9059, 4556, 1114, 16305, 4423, 4420, 2]
+// Dependencies: [19, 17, 7636, 1979, 5438, 4741, 4579, 1074, 21, 4560, 504, 9064, 4556, 1114, 16308, 4423, 4420, 2]
 // Exports: default
 
-// Module 16304 (Wrapper)
+// Module 16307 (Wrapper)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "updateGuildUnreadSentinel" /* 7636 */;

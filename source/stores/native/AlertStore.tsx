@@ -1,9 +1,9 @@
-// Module ID: 11545
-// Function ID: 11546
+// Module ID: 11550
+// Function ID: 11551
 // Name: getAlert
 // Dependencies: [504, 573, 2]
 
-// Module 11545 (getAlert)
+// Module 11550 (getAlert)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 

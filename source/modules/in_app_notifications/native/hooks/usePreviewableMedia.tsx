@@ -1,17 +1,17 @@
-// Module ID: 10131
-// Function ID: 10132
+// Module ID: 10136
+// Function ID: 10137
 // Name: VoiceMessageIcon
-// Dependencies: [19, 17, 1074, 21, 4560, 4262, 576, 8453, 10132, 10135, 4710, 10137, 7302, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 4262, 576, 8456, 10137, 10140, 4710, 10142, 7302, 2]
 // Exports: usePreviewableMedia
 
-// Module 10131 (VoiceMessageIcon)
+// Module 10136 (VoiceMessageIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;
 import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4710 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
-import inlineStylesDefault from "inlineStyles" /* 8453 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 10132 */;
-import WaveformIcon from "WaveformIcon" /* 10135 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
+import inlineStylesDefault from "inlineStyles" /* 8456 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 10137 */;
+import WaveformIcon from "WaveformIcon" /* 10140 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;
@@ -110,7 +110,7 @@ function getBasePreviewableMedia(arg0) {
               obj2[1] = tmp13.AUDIO;
               obj2[2] = tmp6;
               let tmp17 = callback;
-              obj2[3] = callback(tmp8(10132).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
+              obj2[3] = callback(tmp8(10137).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
               let str5 = null;
               if (isForward) {
                 str5 = "forward";
@@ -126,7 +126,7 @@ function getBasePreviewableMedia(arg0) {
               let obj3 = { size: "lg", color: null };
               let tmp15 = importDefault;
               obj3[1] = ThemesDefault.colors.ICON_SUBTLE;
-              obj2[3] = callback(tmp8(10137).FileIcon, obj3);
+              obj2[3] = callback(tmp8(10142).FileIcon, obj3);
               let str4 = null;
               if (isForward) {
                 str4 = "forward";

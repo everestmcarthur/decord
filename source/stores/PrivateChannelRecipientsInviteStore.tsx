@@ -1,14 +1,14 @@
-// Module ID: 13754
-// Function ID: 13755
+// Module ID: 13758
+// Function ID: 13759
 // Name: performQuery
-// Dependencies: [4476, 7659, 1961, 1957, 6595, 5509, 2021, 1979, 4209, 1371, 1074, 1925, 4404, 9839, 504, 573, 2]
+// Dependencies: [4476, 7659, 1961, 1957, 6595, 5509, 2021, 1979, 4209, 1371, 1074, 1925, 4404, 9844, 504, 573, 2]
 
-// Module 13754 (performQuery)
+// Module 13758 (performQuery)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import isNullOrEmpty from "isNullOrEmpty" /* 1925 */;
 import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import getTransformedUserDefault from "getTransformedUser" /* 9839 */;
+import getTransformedUserDefault from "getTransformedUser" /* 9844 */;
 import closure_4 from "getHash" /* 4476 */;
 import closure_5 from "recomputeAffinities" /* 7659 */;
 import { PrivateChannelRecord } from "createChannelRecord" /* 1961 */;

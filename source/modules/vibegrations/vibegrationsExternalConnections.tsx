@@ -1,10 +1,10 @@
-// Module ID: 16596
-// Function ID: 16597
+// Module ID: 16599
+// Function ID: 16600
 // Name: externalConnectionOffer
 // Dependencies: [2]
 // Exports: beginExternalAuthorization, endExternalAuthorization, externalAuthErrorCode, externalAuthErrorCopy, externalAuthErrorFor, externalConnectionOffers
 
-// Module 16596 (externalConnectionOffer)
+// Module 16599 (externalConnectionOffer)
 import set from "set" /* 2 */;
 
 function externalConnectionOffer(nextResult) {

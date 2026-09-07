@@ -1,12 +1,12 @@
-// Module ID: 10413
-// Function ID: 10414
+// Module ID: 10418
+// Function ID: 10419
 // Name: EmptyStateSticker
-// Dependencies: [32, 19, 17, 5502, 1938, 1074, 1373, 21, 4560, 10387, 10176, 7162, 7182, 504, 1242, 4556, 1114, 5123, 4528, 4529, 4975, 5587, 9360, 10407, 2]
+// Dependencies: [32, 19, 17, 5502, 1938, 1074, 1373, 21, 4560, 10392, 10181, 7162, 7182, 504, 1242, 4556, 1114, 5123, 4528, 4529, 4975, 5587, 9365, 10412, 2]
 // Exports: default
 
-// Module 10413 (EmptyStateSticker)
-import StickerDefault from "Sticker" /* 10176 */;
-import useStickerPackCategories from "useStickerPackCategories" /* 10387 */;
+// Module 10418 (EmptyStateSticker)
+import StickerDefault from "Sticker" /* 10181 */;
+import useStickerPackCategories from "useStickerPackCategories" /* 10392 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -37,7 +37,7 @@ let result = require("set").fileFinishedImporting("modules/stickers/native/Stick
 export default function _default() {
   const tmp = callback4();
   const _require = tmp;
-  let obj = _require(10387);
+  let obj = _require(10392);
   const fetchStickerPacks = obj.useFetchStickerPacks();
   analyticsLocations = analyticsLocations(7162)(analyticsLocations(7182).EMPTY_STATE).analyticsLocations;
   obj1 = _require(504);
@@ -112,7 +112,7 @@ export default function _default() {
       return closure_1_11(lib(closure_1_2[17]).PressableOpacity, obj, id);
     })
   };
-  obj5[0] = analyticsLocations(9360);
+  obj5[0] = analyticsLocations(9365);
   obj5[1] = tmp.nitroWheel;
   obj4[0] = callback2(analyticsLocations(5587), obj5);
   const intl3 = _require(1114).intl;

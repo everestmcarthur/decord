@@ -1,10 +1,10 @@
-// Module ID: 8848
-// Function ID: 8849
+// Module ID: 8853
+// Function ID: 8854
 // Name: hasAtLeastOneGPlaySynced
-// Dependencies: [1074, 7234, 4231, 7237, 7554, 4218, 7553, 8196, 8849, 2]
+// Dependencies: [1074, 7234, 4231, 7237, 7554, 4218, 7553, 8196, 8854, 2]
 // Exports: createOrbProfileBadge, extractPriceByPurchaseTypes, filterGPlaySyncedCategories, filterHiddenCategories, getCollectibleGoogleSkuId, getFormattedPriceForCollectiblesProduct, isGPlaySynced
 
-// Module 8848 (hasAtLeastOneGPlaySynced)
+// Module 8853 (hasAtLeastOneGPlaySynced)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
@@ -13,7 +13,7 @@ import updateProductDefault from "updateProduct" /* 7237 */;
 import getProductOrbPrice from "getProductOrbPrice" /* 7553 */;
 import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7554 */;
 import BalanceWidgetMode from "BalanceWidgetMode" /* 8196 */;
-import metadataDefault from "metadata" /* 8849 */;
+import metadataDefault from "metadata" /* 8854 */;
 
 function hasAtLeastOneGPlaySynced(nextResult) {
   const products = nextResult.products;

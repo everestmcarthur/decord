@@ -1,10 +1,10 @@
-// Module ID: 8825
-// Function ID: 8826
+// Module ID: 8830
+// Function ID: 8831
 // Name: SlayerStorefrontItemCard
-// Dependencies: [19, 17, 21, 4560, 576, 7226, 8826, 7552, 5587, 4987, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 7226, 8831, 7552, 5587, 4987, 2]
 // Exports: default
 
-// Module 8825 (SlayerStorefrontItemCard)
+// Module 8830 (SlayerStorefrontItemCard)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

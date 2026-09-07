@@ -1,10 +1,10 @@
-// Module ID: 8765
-// Function ID: 8766
+// Module ID: 8770
+// Function ID: 8771
 // Name: useDefaultVariantIndex
 // Dependencies: [7558, 504, 7553, 2]
 // Exports: useDefaultVariantIndex
 
-// Module 8765 (useDefaultVariantIndex)
+// Module 8770 (useDefaultVariantIndex)
 import closure_2 from "map" /* 7558 */;
 
 const require = arg1;

@@ -1,22 +1,22 @@
-// Module ID: 17613
-// Function ID: 17614
+// Module ID: 17616
+// Function ID: 17617
 // Name: GuildSettingsRoleTemplate
-// Dependencies: [32, 19, 17, 4552, 1979, 17609, 1074, 21, 4560, 576, 6945, 1477, 4962, 4296, 1242, 4740, 8278, 5123, 4556, 10757, 1178, 11564, 4975, 1114, 2]
+// Dependencies: [32, 19, 17, 4552, 1979, 17612, 1074, 21, 4560, 576, 6945, 1477, 4962, 4296, 1242, 4740, 8278, 5123, 4556, 10762, 1178, 11569, 4975, 1114, 2]
 // Exports: default
 
-// Module 17613 (GuildSettingsRoleTemplate)
+// Module 17616 (GuildSettingsRoleTemplate)
 import ThemesDefault from "Themes" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4962 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 6945 */;
 import _modDef8278 from "module_8278" /* 8278 */;
-import PaginationDefault from "Pagination" /* 10757 */;
+import PaginationDefault from "Pagination" /* 10762 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import closure_8 from "createGuildRecordFromRust" /* 1979 */;
-import title from "title" /* 17609 */;
+import title from "title" /* 17612 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

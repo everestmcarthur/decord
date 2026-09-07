@@ -1,10 +1,10 @@
-// Module ID: 11843
-// Function ID: 11844
+// Module ID: 11848
+// Function ID: 11849
 // Name: GuildEnableCommunicationAlert
-// Dependencies: [5, 32, 19, 17, 1371, 2023, 1074, 21, 4560, 7977, 4992, 1242, 11842, 4259, 1114, 9566, 4994, 4556, 4712, 10930, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 2023, 1074, 21, 4560, 7977, 4992, 1242, 11847, 4259, 1114, 9571, 4994, 4556, 4712, 10935, 2]
 // Exports: default
 
-// Module 11843 (GuildEnableCommunicationAlert)
+// Module 11848 (GuildEnableCommunicationAlert)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -60,7 +60,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
               return obj;
             } else {
               closure_0 = tmp4;
-              obj1 = v0(11842);
+              obj1 = v0(11847);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -79,7 +79,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
             const obj2 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
             const intl = closure_1_0(1114).intl;
             obj2[1] = intl.string(closure_1_0(1114).t["/Mmbfv"]);
-            obj2[2] = v0(9566);
+            obj2[2] = v0(9571);
             v0(4259).open(obj2);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };

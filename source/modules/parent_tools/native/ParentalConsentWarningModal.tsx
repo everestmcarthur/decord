@@ -1,10 +1,10 @@
-// Module ID: 17462
-// Function ID: 17463
+// Module ID: 17465
+// Function ID: 17466
 // Name: ParentalConsentWarningModal
-// Dependencies: [19, 17, 7537, 7538, 1074, 1954, 21, 1943, 7539, 4418, 7382, 4766, 4560, 576, 1611, 1114, 2396, 1242, 573, 1945, 4527, 4763, 17463, 1896, 7150, 4973, 5692, 4556, 4975, 2]
+// Dependencies: [19, 17, 7537, 7538, 1074, 1954, 21, 1943, 7539, 4418, 7382, 4766, 4560, 576, 1611, 1114, 2396, 1242, 573, 1945, 4527, 4763, 17466, 1896, 7150, 4973, 5692, 4556, 4975, 2]
 // Exports: default
 
-// Module 17462 (ParentalConsentWarningModal)
+// Module 17465 (ParentalConsentWarningModal)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

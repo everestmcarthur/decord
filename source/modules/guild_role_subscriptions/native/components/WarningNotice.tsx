@@ -1,10 +1,10 @@
-// Module ID: 17683
-// Function ID: 17684
+// Module ID: 17686
+// Function ID: 17687
 // Name: WarningNotice
 // Dependencies: [19, 17, 21, 4560, 576, 5587, 5597, 4556, 4975, 2]
 // Exports: default
 
-// Module 17683 (WarningNotice)
+// Module 17686 (WarningNotice)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;

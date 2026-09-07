@@ -1,13 +1,13 @@
-// Module ID: 13400
-// Function ID: 13401
+// Module ID: 13404
+// Function ID: 13405
 // Name: navigateToSocialLayerStorefrontWithGuildPreview
-// Dependencies: [5, 1979, 7228, 1074, 10798, 7226, 1100, 7341, 8378, 2]
+// Dependencies: [5, 1979, 7228, 1074, 10803, 7226, 1100, 7341, 8378, 2]
 // Exports: default, eagerNavigateToSocialLayerStorefront, eagerNavigateToSocialLayerStorefrontForApplication
 
-// Module 13400 (navigateToSocialLayerStorefrontWithGuildPreview)
+// Module 13404 (navigateToSocialLayerStorefrontWithGuildPreview)
 import transitionTo from "transitionTo" /* 1100 */;
 import getPrice from "getPrice" /* 7226 */;
-import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 10798 */;
+import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 10803 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createGuildRecordFromRust" /* 1979 */;
 import closure_5 from "handleUserSettingsStoreUpdate" /* 7228 */;

@@ -1,10 +1,10 @@
-// Module ID: 12060
-// Function ID: 12061
+// Module ID: 12064
+// Function ID: 12065
 // Name: SubmittingOverlay
 // Dependencies: [21, 4560, 576, 4296, 4974, 4978, 4991, 2]
 // Exports: SubmittingOverlay
 
-// Module 12060 (SubmittingOverlay)
+// Module 12064 (SubmittingOverlay)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 576 */;

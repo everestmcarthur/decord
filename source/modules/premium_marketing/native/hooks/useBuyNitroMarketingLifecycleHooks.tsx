@@ -1,10 +1,10 @@
-// Module ID: 13351
-// Function ID: 13352
+// Module ID: 13355
+// Function ID: 13356
 // Name: useBuyNitroMarketingLifecycleHooks
-// Dependencies: [19, 7421, 1954, 4560, 576, 13352, 10742, 4380, 1943, 1945, 13356, 13357, 2]
+// Dependencies: [19, 7421, 1954, 4560, 576, 13356, 10747, 4380, 1943, 1945, 13360, 13361, 2]
 // Exports: useBuyNitroMarketingLifecycleHooks
 
-// Module 13351 (useBuyNitroMarketingLifecycleHooks)
+// Module 13355 (useBuyNitroMarketingLifecycleHooks)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore" /* 7421 */;
@@ -26,7 +26,7 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
   dependencyMap = tmp;
   _require = initialLoadCompleted;
   promotionMarketingComponent = undefined;
-  promotionMarketingComponent = _require(13352).usePromotionMarketingComponent(_require(10742).MarketingComponentType.PREMIUM_TAB);
+  promotionMarketingComponent = _require(13356).usePromotionMarketingComponent(_require(10747).MarketingComponentType.PREMIUM_TAB);
   const items = [initialLoadCompleted, promotionMarketingComponent];
   const effect = React.useEffect(() => {
     let tmp = initialLoadCompleted;
@@ -52,11 +52,11 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
     BuyNitroPurchaseLock.end();
     let result = initialLoadCompleted(_navigator[11]).resetBuyNitroTrialAndPriceOverrides();
     return () => {
-      const BuyNitroPurchaseLock = callback(13356).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock = callback(13360).BuyNitroPurchaseLock;
       BuyNitroPurchaseLock.end();
-      const BuyNitroPurchaseLock2 = callback(13356).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock2 = callback(13360).BuyNitroPurchaseLock;
       const result = BuyNitroPurchaseLock2.setInitialLoadComplete(false);
-      const result1 = callback(13357).resetBuyNitroTrialAndPriceOverrides();
+      const result1 = callback(13361).resetBuyNitroTrialAndPriceOverrides();
     };
   }, []);
   const items1 = [initialLoadCompleted];

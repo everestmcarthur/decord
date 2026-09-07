@@ -1,10 +1,10 @@
-// Module ID: 11519
-// Function ID: 11520
+// Module ID: 11524
+// Function ID: 11525
 // Name: _launchActivityInBotDM
-// Dependencies: [5, 9523, 4573, 9548, 2]
+// Dependencies: [5, 9528, 4573, 9553, 2]
 // Exports: launchActivityInBotDM
 
-// Module 11519 (_launchActivityInBotDM)
+// Module 11524 (_launchActivityInBotDM)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -85,7 +85,7 @@ function _launchActivityInBotDM() {
                 obj6[0] = obj4.openPrivateChannel(obj5);
                 return obj6;
               }
-              obj13 = callback(9523);
+              obj13 = callback(9528);
             }
           } else if (2 === tmp5) {
             if (arg0 === 1) {
@@ -108,7 +108,7 @@ function _launchActivityInBotDM() {
               c3 = 3;
               c4 = 1;
               const obj9 = { value: null, done: false };
-              obj9[0] = callback2(9548)(obj8);
+              obj9[0] = callback2(9553)(obj8);
               return obj9;
             }
           } else if (arg0 === 1) {

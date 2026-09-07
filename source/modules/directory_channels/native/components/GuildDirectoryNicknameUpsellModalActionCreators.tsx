@@ -1,8 +1,8 @@
-// Module ID: 12661
-// Function ID: 12662
-// Dependencies: [4763, 12662, 1896, 2]
+// Module ID: 12665
+// Function ID: 12666
+// Dependencies: [4763, 12666, 1896, 2]
 
-// Module 12661
+// Module 12665
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
@@ -12,7 +12,7 @@ const result = set.fileFinishedImporting("modules/directory_channels/native/comp
 
 export default {
   open(closure_0) {
-    _modDef4763.pushLazy(asyncRequireImpl(12662, dependencyMap.paths), closure_0, c3);
+    _modDef4763.pushLazy(asyncRequireImpl(12666, dependencyMap.paths), closure_0, c3);
   },
   close() {
     _modDef4763.popWithKey(c3);

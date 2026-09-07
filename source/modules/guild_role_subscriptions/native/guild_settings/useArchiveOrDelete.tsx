@@ -1,11 +1,11 @@
-// Module ID: 17737
-// Function ID: 17738
+// Module ID: 17740
+// Function ID: 17741
 // Name: useArchiveOrDelete
-// Dependencies: [5, 32, 19, 15212, 15227, 1114, 4905, 1178, 38, 4258, 2]
+// Dependencies: [5, 32, 19, 15215, 15230, 1114, 4905, 1178, 38, 4258, 2]
 // Exports: default
 
-// Module 17737 (useArchiveOrDelete)
-import getRoleEmojisAll from "getRoleEmojis" /* 15227 */;
+// Module 17740 (useArchiveOrDelete)
+import getRoleEmojisAll from "getRoleEmojis" /* 15230 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
@@ -135,18 +135,18 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
     return applyArgumentsResult;
   }
   let stringResult3 = dependencyMap;
-  let obj = _require(15212);
+  let obj = _require(15215);
   const subscriptionListing = obj.useSubscriptionListing(editStateId);
   const removeEditStateId = getRoleEmojisAll.useEditStateIds(groupListingId, guildId).removeEditStateId;
   let obj2 = getRoleEmojisAll;
-  const deleteSubscriptionListing = _require(15212).useDeleteSubscriptionListing();
+  const deleteSubscriptionListing = _require(15215).useDeleteSubscriptionListing();
   ({ error, deleteSubscriptionListing: closure_8, submitting } = deleteSubscriptionListing);
-  let obj3 = _require(15212);
-  const archiveSubscriptionListing = _require(15212).useArchiveSubscriptionListing();
+  let obj3 = _require(15215);
+  const archiveSubscriptionListing = _require(15215).useArchiveSubscriptionListing();
   closure_9 = archiveSubscriptionListing.archiveSubscriptionListing;
   ({ submitting: submitting2, error: error2 } = archiveSubscriptionListing);
   closure_10 = removeEditStateId(null);
-  let obj4 = _require(15212);
+  let obj4 = _require(15215);
   const first = callback(getRoleEmojisAll.useName(editStateId), 1)[0];
   let archived;
   if (subscriptionListing != null) {

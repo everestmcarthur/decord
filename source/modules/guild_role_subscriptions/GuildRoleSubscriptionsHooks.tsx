@@ -1,12 +1,12 @@
-// Module ID: 15212
-// Function ID: 15213
+// Module ID: 15215
+// Function ID: 15216
 // Name: useFetchListingsForGuild
-// Dependencies: [5, 32, 19, 5277, 4193, 504, 7255, 5586, 15213, 15214, 12203, 1369, 2]
+// Dependencies: [5, 32, 19, 5277, 4193, 504, 7255, 5586, 15216, 15217, 12207, 1369, 2]
 // Exports: useArchiveSubscriptionListing, useCreateSubscriptionGroupListing, useDeleteSubscriptionGroupListing, useDeleteSubscriptionListing, useFetchListingsForSubscriptions, useFetchSubscriptionsSettings, useGroupListingsForGuild, usePublishSubscriptionListing, useSubscriptionGroupListing, useSubscriptionListing, useSubscriptionListingsForGroup, useSubscriptionListingsForGuild, useSubscriptionTrial, useSubscriptionTrialsForGroup, useSubscriptionTrialsForGuild, useSubscriptionsSettings, useUpdateSubscriptionGroupListing, useUpdateSubscriptionsSettings, useUpdateSubscriptionsTrial
 
-// Module 15212 (useFetchListingsForGuild)
+// Module 15215 (useFetchListingsForGuild)
 import _fetchSubscriptionsSettingsAll from "_fetchSubscriptionsSettings" /* 7255 */;
-import useRequestDefault from "useRequest" /* 12203 */;
+import useRequestDefault from "useRequest" /* 12207 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
@@ -384,8 +384,8 @@ export const useSubscriptionGroupListing = function useSubscriptionGroupListing(
 };
 export const useGroupListingsForGuild = function useGroupListingsForGuild(guildId) {
   const _require = guildId;
-  closure_1 = _require(15213).useGroupListingsFetchContext("useGroupListingsForGuild");
-  const obj = _require(15213);
+  closure_1 = _require(15216).useGroupListingsFetchContext("useGroupListingsForGuild");
+  const obj = _require(15216);
   const items = [closure_8];
   return _require(504).useStateFromStores(items, () => {
     if (null != closure_0) {

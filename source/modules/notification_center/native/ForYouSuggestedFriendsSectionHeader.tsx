@@ -1,10 +1,10 @@
-// Module ID: 16438
-// Function ID: 16439
+// Module ID: 16441
+// Function ID: 16442
 // Name: ForYouSuggestedFriendsSectionHeader
 // Dependencies: [19, 17, 21, 4560, 576, 4556, 1114, 2]
 // Exports: default
 
-// Module 16438 (ForYouSuggestedFriendsSectionHeader)
+// Module 16441 (ForYouSuggestedFriendsSectionHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

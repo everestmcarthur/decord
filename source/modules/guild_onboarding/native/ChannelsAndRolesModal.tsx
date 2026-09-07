@@ -1,15 +1,15 @@
-// Module ID: 11549
-// Function ID: 11550
+// Module ID: 11554
+// Function ID: 11555
 // Name: ChannelsAndRolesScreen
-// Dependencies: [32, 19, 17, 1979, 7101, 21, 4560, 576, 563, 7335, 9792, 1114, 9793, 11550, 11556, 10924, 2]
+// Dependencies: [32, 19, 17, 1979, 7101, 21, 4560, 576, 563, 7335, 9797, 1114, 9798, 11555, 11561, 10929, 2]
 // Exports: default
 
-// Module 11549 (ChannelsAndRolesScreen)
+// Module 11554 (ChannelsAndRolesScreen)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7335 */;
-import _modDef10924 from "module_10924" /* 10924 */;
+import _modDef10929 from "module_10929" /* 10929 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -115,5 +115,5 @@ export default function ChannelsAndRolesModal(arg0) {
       return closure_1_8(closure_1_11, { guildId: closure_0, defaultTab: closure_1 });
     }
   };
-  return tmp3(_modDef10924, obj);
+  return tmp3(_modDef10929, obj);
 };

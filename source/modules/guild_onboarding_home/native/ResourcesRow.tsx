@@ -1,15 +1,15 @@
-// Module ID: 16557
-// Function ID: 16558
+// Module ID: 16560
+// Function ID: 16561
 // Name: ResourcesRow
-// Dependencies: [19, 17, 16558, 21, 4560, 576, 16559, 12284, 4527, 16560, 1896, 5123, 4556, 1114, 2]
+// Dependencies: [19, 17, 16561, 21, 4560, 576, 16562, 12288, 4527, 16563, 1896, 5123, 4556, 1114, 2]
 // Exports: default
 
-// Module 16557 (ResourcesRow)
+// Module 16560 (ResourcesRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16559 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16562 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 16558 */;
+import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 16561 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

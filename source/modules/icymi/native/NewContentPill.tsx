@@ -1,15 +1,15 @@
-// Module ID: 16521
-// Function ID: 16522
+// Module ID: 16524
+// Function ID: 16525
 // Name: CutoutGuildIcon
-// Dependencies: [32, 19, 17, 1979, 8335, 21, 4560, 576, 8813, 5584, 504, 4495, 8348, 8350, 4296, 4974, 1486, 5123, 15056, 4556, 1114, 4411, 2]
+// Dependencies: [32, 19, 17, 1979, 8335, 21, 4560, 576, 8818, 5584, 504, 4495, 8348, 8350, 4296, 4974, 1486, 5123, 15059, 4556, 1114, 4411, 2]
 // Exports: default
 
-// Module 16521 (CutoutGuildIcon)
+// Module 16524 (CutoutGuildIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import GuildIconSizes from "GuildIconSizes" /* 5584 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import SolidCutout from "SolidCutout" /* 8813 */;
-import SolidCutoutDefault from "SolidCutout" /* 8813 */;
+import SolidCutout from "SolidCutout" /* 8818 */;
+import SolidCutoutDefault from "SolidCutout" /* 8818 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

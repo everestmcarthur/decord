@@ -1,13 +1,13 @@
-// Module ID: 12435
-// Function ID: 12436
+// Module ID: 12439
+// Function ID: 12440
 // Name: usePendingGameProfileReturn
-// Dependencies: [19, 1916, 8682, 1074, 504, 8680, 8686, 2]
+// Dependencies: [19, 1916, 8687, 1074, 504, 8685, 8691, 2]
 // Exports: default
 
-// Module 12435 (usePendingGameProfileReturn)
+// Module 12439 (usePendingGameProfileReturn)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGamesFromMessage" /* 1916 */;
-import closure_5 from "getSimilarGames" /* 8682 */;
+import closure_5 from "getSimilarGames" /* 8687 */;
 import { AVATAR_SIZE } from "ME" /* 1074 */;
 
 const require = arg1;

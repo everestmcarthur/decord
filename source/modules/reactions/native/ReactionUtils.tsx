@@ -1,17 +1,17 @@
-// Module ID: 11254
-// Function ID: 11255
+// Module ID: 11259
+// Function ID: 11260
 // Name: handleOutOfSuperReactions
-// Dependencies: [1957, 4781, 4381, 1371, 1074, 1374, 21, 4211, 4528, 4529, 7764, 4218, 4527, 11136, 1896, 4425, 11121, 7763, 4740, 11255, 11267, 11268, 11269, 8757, 9373, 4904, 1114, 4556, 2]
+// Dependencies: [1957, 4781, 4381, 1371, 1074, 1374, 21, 4211, 4528, 4529, 7764, 4218, 4527, 11141, 1896, 4425, 11126, 7763, 4740, 11260, 11272, 11273, 11274, 8762, 9378, 4904, 1114, 4556, 2]
 // Exports: handleAddNewReactions, handleOutOfSuperReactions, handleRemoveAllReactions, handleViewPreviewReactions, handleViewReactions
 
-// Module 11254 (handleOutOfSuperReactions)
+// Module 11259 (handleOutOfSuperReactions)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
 import setDefault from "set" /* 4904 */;
-import registerAssetDefault from "registerAsset" /* 11268 */;
-import registerAssetDefault2 from "registerAsset" /* 11269 */;
+import registerAssetDefault from "registerAsset" /* 11273 */;
+import registerAssetDefault2 from "registerAsset" /* 11274 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "reinjectEphemerals" /* 4781 */;
 import closure_5 from "handleConnectionOpen" /* 4381 */;
@@ -38,7 +38,7 @@ export const handleOutOfSuperReactions = function handleOutOfSuperReactions(arg0
     if (!obj.isPremium(currentUser)) {
       obj = { onDismiss: null };
       obj[0] = arg0;
-      openLazyResult = ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11136, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
+      openLazyResult = ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(11141, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
       const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     }
     return openLazyResult;
@@ -156,14 +156,14 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
     obj1[2] = isPoll.emoji;
     const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
     const merged2 = Object.assign(merged);
-    obj6.openLazy(asyncRequireImpl(11255, dependencyMap.paths), "MessageReactions", obj1);
+    obj6.openLazy(asyncRequireImpl(11260, dependencyMap.paths), "MessageReactions", obj1);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
 };
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { messageId: id2, channelId: id, emoji };
-  obj.openLazy(asyncRequireImpl(11267, dependencyMap.paths), "MessagePreviewReactions", obj);
+  obj.openLazy(asyncRequireImpl(11272, dependencyMap.paths), "MessagePreviewReactions", obj);
 };
 export const ADD_REACTION_ICONS = obj;
 export const ADD_REACTION_ICON_COMPONENTS = obj;

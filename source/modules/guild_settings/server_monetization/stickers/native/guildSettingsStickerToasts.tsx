@@ -1,10 +1,10 @@
-// Module ID: 17580
-// Function ID: 17581
+// Module ID: 17583
+// Function ID: 17584
 // Name: showGuildSettingsStickerError
 // Dependencies: [4259, 6610, 1114, 4515, 2]
 // Exports: showGuildSettingsStickerError, showGuildSettingsStickerSuccess
 
-// Module 17580 (showGuildSettingsStickerError)
+// Module 17583 (showGuildSettingsStickerError)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import dispatcherDefault from "dispatcher" /* 4259 */;

@@ -1,10 +1,10 @@
-// Module ID: 11839
-// Function ID: 11840
+// Module ID: 11844
+// Function ID: 11845
 // Name: openDisableCommunication
-// Dependencies: [19, 1371, 21, 4763, 11840, 1896, 4905, 11843, 2]
+// Dependencies: [19, 1371, 21, 4763, 11845, 1896, 4905, 11848, 2]
 // Exports: openDisableCommunication, openEnableCommunication
 
-// Module 11839 (openDisableCommunication)
+// Module 11844 (openDisableCommunication)
 import noopAll from "noop" /* 19 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
@@ -25,7 +25,7 @@ export const openDisableCommunication = function openDisableCommunication(userId
     obj[0] = guildId;
     obj[1] = user;
     obj[2] = cancelButtonCallback;
-    obj.pushLazy(asyncRequireImpl(11840, dependencyMap.paths), obj);
+    obj.pushLazy(asyncRequireImpl(11845, dependencyMap.paths), obj);
   }
 };
 export const openEnableCommunication = function openEnableCommunication(arg0) {

@@ -1,16 +1,16 @@
-// Module ID: 11512
-// Function ID: 11513
+// Module ID: 11517
+// Function ID: 11518
 // Name: getVideoQuestWatchCtaText
-// Dependencies: [4609, 7703, 7705, 1074, 7699, 11276, 7724, 1114, 7718, 4417, 2, 11513]
+// Dependencies: [4609, 7703, 7705, 1074, 7699, 11281, 7724, 1114, 7718, 4417, 2, 11518]
 // Exports: computeMaxSeekableTime, formatVideoProgressRatio, getVideoOrientation, getVideoQuestEndCardCtaText, getVideoQuestModalKey, getVideoQuestProgressRemainingAccessibilityLabel, handleVideoQuestModalClose, isVideoQuestProgressing, sendVideoProgress
 
-// Module 11512 (getVideoQuestWatchCtaText)
+// Module 11517 (getVideoQuestWatchCtaText)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import coerceMainRoute from "coerceMainRoute" /* 4417 */;
 import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7699 */;
 import trackQuestEvent from "trackQuestEvent" /* 7718 */;
 import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7724 */;
-import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 11276 */;
+import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 11281 */;
 import closure_2 from "handleConnectionInfoChange" /* 4609 */;
 import closure_3 from "initializeState" /* 7703 */;
 import closure_4 from "_toPropertyKey" /* 7705 */;
@@ -162,8 +162,8 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
         isQuestExpiredResult = null != completedAt1;
       }
       if (!isQuestExpiredResult) {
-        tmp6(11276).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
-        const tmp6Result = tmp6(11276);
+        tmp6(11281).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
+        const tmp6Result = tmp6(11281);
       }
       tmp6 = require;
     }

@@ -1,10 +1,10 @@
-// Module ID: 9244
-// Function ID: 9245
+// Module ID: 9249
+// Function ID: 9250
 // Name: getLocationContextServer
 // Dependencies: [5, 1957, 2011, 1074, 1272, 6593, 1083, 2]
 // Exports: acceptWhitelist, authorize, fetchAuthorization, fetchChannels, finishUserCode, finishUserCodeTwoWayLinkError, logoutWithRedirect, startSamsungAuthorization, verifyUserCode
 
-// Module 9244 (getLocationContextServer)
+// Module 9249 (getLocationContextServer)
 import getAuthenticationPath from "getAuthenticationPath" /* 1083 */;
 import sendRequest from "sendRequest" /* 1272 */;
 import handleLogoutDefault from "handleLogout" /* 6593 */;

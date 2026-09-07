@@ -1,23 +1,23 @@
-// Module ID: 15968
-// Function ID: 15969
+// Module ID: 15971
+// Function ID: 15972
 // Name: RegisterAccountInformation
-// Dependencies: [5, 32, 19, 17, 6595, 4544, 8739, 15946, 15947, 1074, 21, 4560, 576, 4296, 6944, 15943, 504, 15969, 15971, 15954, 1114, 15962, 15945, 15961, 6972, 15972, 15973, 4975, 6941, 5578, 2]
+// Dependencies: [5, 32, 19, 17, 6595, 4544, 8744, 15949, 15950, 1074, 21, 4560, 576, 4296, 6944, 15946, 504, 15972, 15974, 15957, 1114, 15965, 15948, 15964, 6972, 15975, 15976, 4975, 6941, 5578, 2]
 // Exports: default
 
-// Module 15968 (RegisterAccountInformation)
+// Module 15971 (RegisterAccountInformation)
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 6944 */;
-import useInitialRegistrationStepDefault from "useInitialRegistrationStep" /* 15961 */;
+import useInitialRegistrationStepDefault from "useInitialRegistrationStep" /* 15964 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "hasConsented" /* 6595 */;
 import closure_9 from "updateInvite" /* 4544 */;
-import closure_10 from "getDisplayedInviteCode" /* 8739 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15946 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15947 */;
+import closure_10 from "getDisplayedInviteCode" /* 8744 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15949 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15950 */;
 import { AuthStates } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -162,7 +162,7 @@ export default function RegisterAccountInformation() {
   const tmp3 = useWideAuthViewDefault();
   const tmp4 = callback4(tmp3);
   let obj = React;
-  context = React.useContext(context(15943).TrackRegistrationContext);
+  context = React.useContext(context(15946).TrackRegistrationContext);
   let tmp8 = callback2((submitting) => submitting.submitting);
   const tmp7 = callback2((registrationOptions) => registrationOptions.registrationOptions);
   [tmp10, importDefault] = callback(React.useState(false), 2);
@@ -180,10 +180,10 @@ export default function RegisterAccountInformation() {
     return invite;
   });
   const ref = React.useRef(null);
-  let obj3 = context(15969);
+  let obj3 = context(15972);
   const passwordRegistrationStep = obj3.usePasswordRegistrationStep();
   ({ password, validatePassword: closure_4, setPassword, passwordScore, preventSubmitPassword } = passwordRegistrationStep);
-  let obj4 = context(15971);
+  let obj4 = context(15974);
   const usernameRegistrationStep = obj4.useUsernameRegistrationStep(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   ({ transitionToNextStepOrSubmit: closure_5, username, preventSubmitUsername, validateUsername: closure_6 } = usernameRegistrationStep);
   obj = {};
@@ -199,7 +199,7 @@ export default function RegisterAccountInformation() {
   let tmp5Result = tmp5(504);
   const items2 = [result];
   const stateFromStores1 = tmp5Result.useStateFromStores(items2, () => authenticationConsentRequired.getAuthenticationConsentRequired());
-  tmp5Result = tmp5(15954);
+  tmp5Result = tmp5(15957);
   obj = { isConsentRequired: true === stateFromStores1 };
   result = tmp5Result.hasAllRegistrationFieldsCompleted(obj, obj);
   const intl = tmp5(1114).intl;
@@ -220,9 +220,9 @@ export default function RegisterAccountInformation() {
     }
     return applyArgumentsResult;
   }
-  let tmpResult = tmp(15962);
+  let tmpResult = tmp(15965);
   const tmp9 = callback(React.useState(false), 2);
-  tmpResult(context(15945).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
+  tmpResult(context(15948).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
   useInitialRegistrationStepDefault(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   const items3 = [context];
   const effect = obj.useEffect(() => {
@@ -239,7 +239,7 @@ export default function RegisterAccountInformation() {
   const intl2 = tmp5(1114).intl;
   obj1[0] = intl2.string(context(1114).t.jec90v);
   obj2 = { contentContainerStyle: { flexGrow: 1 }, keyboardShouldPersistTaps: "handled", children: null };
-  obj3 = { style: tmp4.container, children: callback3(tmp5(15972).RegisterUsernameInput, { username, setUsername, onSubmitEditing: callback, usernameStatus, submitBehavior: "submit", autoFocus: true }) };
+  obj3 = { style: tmp4.container, children: callback3(tmp5(15975).RegisterUsernameInput, { username, setUsername, onSubmitEditing: callback, usernameStatus, submitBehavior: "submit", autoFocus: true }) };
   const items4 = [callback3(closure_6, obj3), , ];
   obj4 = { style: tmp4.password };
   const merged1 = Object.assign(createCacheKey);
@@ -249,7 +249,7 @@ export default function RegisterAccountInformation() {
     str = "done";
   }
   obj5[5] = str;
-  obj4.children = callback3(context(15973).RegisterPasswordInput, obj5);
+  obj4.children = callback3(context(15976).RegisterPasswordInput, obj5);
   items4[1] = callback3(_modDef4296.View, obj4);
   const obj6 = { style: tmp4.button };
   const merged2 = Object.assign(createCacheKey);

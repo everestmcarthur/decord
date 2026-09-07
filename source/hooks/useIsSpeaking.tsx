@@ -1,10 +1,10 @@
-// Module ID: 9478
-// Function ID: 9479
+// Module ID: 9483
+// Function ID: 9484
 // Name: useIsSpeaking
 // Dependencies: [5012, 2011, 5419, 4579, 504, 2]
 // Exports: default, getIsSpeaking
 
-// Module 9478 (useIsSpeaking)
+// Module 9483 (useIsSpeaking)
 import closure_2 from "handleSoundCreateOrUpdate" /* 5012 */;
 import closure_3 from "handleConnectionOpen" /* 2011 */;
 import closure_4 from "anyoneHasFlagInContext" /* 5419 */;

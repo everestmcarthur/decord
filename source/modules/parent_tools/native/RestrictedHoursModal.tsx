@@ -1,14 +1,14 @@
-// Module ID: 17294
-// Function ID: 17295
+// Module ID: 17297
+// Function ID: 17298
 // Name: RestrictedHoursLogoutBlockingLayer
-// Dependencies: [32, 19, 17, 1371, 21, 4560, 576, 5577, 1611, 17295, 504, 4296, 4561, 1114, 2396, 8421, 17296, 4271, 4556, 7000, 17297, 6593, 17293, 4972, 11928, 2]
+// Dependencies: [32, 19, 17, 1371, 21, 4560, 576, 5577, 1611, 17298, 504, 4296, 4561, 1114, 2396, 8421, 17299, 4271, 4556, 7000, 17300, 6593, 17296, 4972, 11933, 2]
 // Exports: default
 
-// Module 17294 (RestrictedHoursLogoutBlockingLayer)
+// Module 17297 (RestrictedHoursLogoutBlockingLayer)
 import ThemesDefault from "Themes" /* 576 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 4972 */;
 import ActivityIndicator from "ActivityIndicator" /* 5577 */;
-import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 17297 */;
+import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 17300 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -242,11 +242,11 @@ export default function RestrictedHoursModal() {
       current = tmp4.current;
     }
     if (!current) {
-      const result = callback(17293).closeRestrictedHoursModal();
-      const obj = callback(17293);
+      const result = callback(17296).closeRestrictedHoursModal();
+      const obj = callback(17296);
     }
   }, items1);
   useBackPressHandlerDefault(() => true);
   obj = { screens: navigatorScreens, initialRouteName: constants.MAIN };
-  return callback2(callback(11928).Modal, obj);
+  return callback2(callback(11933).Modal, obj);
 };

@@ -1,10 +1,10 @@
-// Module ID: 12680
-// Function ID: 12681
+// Module ID: 12684
+// Function ID: 12685
 // Name: _uploadContacts
-// Dependencies: [5, 17, 5281, 12679, 12678, 1074, 1116, 4753, 1250, 573, 12681, 1935, 1232, 504, 1384, 2024, 4255, 4763, 2]
+// Dependencies: [5, 17, 5281, 12683, 12682, 1074, 1116, 4753, 1250, 573, 12685, 1935, 1232, 504, 1384, 2024, 4255, 4763, 2]
 // Exports: adminDeleteContactSync, bulkAddFriends, checkContactPermissions, getContacts, getImageForContactId, getOpenLearnMoreUrl, getStoredContacts, handleOpenLearnMoreLink, isContactSyncAvailable, isContactSyncEnabled, transitionToAddFriendsLandingPage, uploadContacts, useContactSyncAccount, useContactSyncEnabled, useContactSyncUserIsDiscoverable
 
-// Module 12680 (_uploadContacts)
+// Module 12684 (_uploadContacts)
 import initialize from "initialize" /* 504 */;
 import PlatformTypes from "PlatformTypes" /* 1116 */;
 import _modDef1232 from "module_1232" /* 1232 */;
@@ -15,12 +15,12 @@ import combinedDefault from "combined" /* 2024 */;
 import _modDef4255 from "module_4255" /* 4255 */;
 import _modDef4753 from "module_4753" /* 4753 */;
 import _modDef4763 from "module_4763" /* 4763 */;
-import _requestAndSyncContacts from "_requestAndSyncContacts" /* 12681 */;
+import _requestAndSyncContacts from "_requestAndSyncContacts" /* 12685 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "set" /* 5281 */;
-import setStoredContacts from "setStoredContacts" /* 12679 */;
-import ContactSyncLandingPage from "ContactSyncLandingPage" /* 12678 */;
+import setStoredContacts from "setStoredContacts" /* 12683 */;
+import ContactSyncLandingPage from "ContactSyncLandingPage" /* 12682 */;
 import ME from "ME" /* 1074 */;
 
 require = arg1;

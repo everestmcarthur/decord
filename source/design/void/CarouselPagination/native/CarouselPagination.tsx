@@ -1,10 +1,10 @@
-// Module ID: 14180
-// Function ID: 14181
+// Module ID: 14183
+// Function ID: 14184
 // Name: CarouselPagination
-// Dependencies: [19, 17, 21, 4560, 576, 4296, 4561, 14120, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4296, 4561, 14123, 2]
 // Exports: default
 
-// Module 14180 (CarouselPagination)
+// Module 14183 (CarouselPagination)
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

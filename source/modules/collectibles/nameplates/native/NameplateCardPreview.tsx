@@ -1,10 +1,10 @@
-// Module ID: 8824
-// Function ID: 8825
+// Module ID: 8829
+// Function ID: 8830
 // Name: NameplateCardPreview
-// Dependencies: [17, 21, 4560, 576, 38, 1889, 1886, 8817, 1178, 2]
+// Dependencies: [17, 21, 4560, 576, 38, 1889, 1886, 8822, 1178, 2]
 // Exports: default
 
-// Module 8824 (NameplateCardPreview)
+// Module 8829 (NameplateCardPreview)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import _modDef38 from "module_38" /* 38 */;
@@ -12,7 +12,7 @@ import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import getNameplateData from "getNameplateData" /* 1886 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG from "NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG" /* 8817 */;
+import NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG from "NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG" /* 8822 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

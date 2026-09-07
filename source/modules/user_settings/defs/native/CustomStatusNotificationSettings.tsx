@@ -1,10 +1,10 @@
-// Module ID: 15488
-// Function ID: 15489
+// Module ID: 15491
+// Function ID: 15492
 // Name: onChange
-// Dependencies: [7975, 1074, 4212, 1935, 1187, 1242, 11468, 1114, 2]
+// Dependencies: [7975, 1074, 4212, 1935, 1187, 1242, 11473, 1114, 2]
 // Exports: onChange
 
-// Module 15488 (onChange)
+// Module 15491 (onChange)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -13,7 +13,7 @@ import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import AccountNotificationFlags from "AccountNotificationFlags" /* 4212 */;
 import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 function onChange(custom_status_push_notifications) {
   const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;

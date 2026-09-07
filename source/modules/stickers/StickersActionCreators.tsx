@@ -1,10 +1,10 @@
-// Module ID: 10388
-// Function ID: 10389
+// Module ID: 10393
+// Function ID: 10394
 // Name: _fetchStickerPack
 // Dependencies: [5, 5277, 2025, 4902, 1371, 5502, 1074, 1084, 4802, 1272, 573, 4899, 5169, 1940, 12, 4904, 1114, 2]
 // Exports: addStickerPreview, clearStickerPreview, createGuildSticker, deleteGuildSticker, favoriteSticker, fetchGuildStickersWithCreator, fetchSticker, fetchStickerPack, fetchStickerPacks, unfavoriteSticker, updateGuildSticker
 
-// Module 10388 (_fetchStickerPack)
+// Module 10393 (_fetchStickerPack)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_handleConnectionOpen" /* 5277 */;

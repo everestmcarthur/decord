@@ -1,10 +1,10 @@
-// Module ID: 13497
-// Function ID: 13498
+// Module ID: 13501
+// Function ID: 13502
 // Name: ManagePlanHeader
-// Dependencies: [5, 32, 19, 17, 4219, 1371, 4220, 4223, 4224, 7394, 1895, 7237, 1074, 5603, 4542, 1373, 21, 3, 4560, 576, 1483, 5123, 5628, 4556, 1114, 7162, 13343, 7182, 504, 4271, 4411, 1093, 4884, 5598, 10663, 7404, 1242, 4218, 38, 7234, 13498, 13499, 13320, 13330, 8068, 4975, 13309, 13347, 13346, 5091, 9363, 13415, 2024, 5607, 4987, 1178, 8051, 1611, 13350, 7393, 4992, 7257, 8065, 13461, 13438, 1974, 4964, 6990, 6995, 13348, 13476, 2]
+// Dependencies: [5, 32, 19, 17, 4219, 1371, 4220, 4223, 4224, 7394, 1895, 7237, 1074, 5603, 4542, 1373, 21, 3, 4560, 576, 1483, 5123, 5628, 4556, 1114, 7162, 13347, 7182, 504, 4271, 4411, 1093, 4884, 5598, 10668, 7404, 1242, 4218, 38, 7234, 13502, 13503, 13324, 13334, 8068, 4975, 13313, 13351, 13350, 5091, 9368, 13419, 2024, 5607, 4987, 1178, 8051, 1611, 13354, 7393, 4992, 7257, 8065, 13465, 13442, 1974, 4964, 6990, 6995, 13352, 13480, 2]
 // Exports: default
 
-// Module 13497 (ManagePlanHeader)
+// Module 13501 (ManagePlanHeader)
 import timestampDefault from "timestamp" /* 3 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -17,9 +17,9 @@ import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
 import PressableCard from "PressableCard" /* 5607 */;
 import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 7393 */;
 import registerAssetDefault from "registerAsset" /* 8051 */;
-import PremiumTypesDefault from "PremiumTypes" /* 9363 */;
-import roundFPCountdownUnitsDefault from "roundFPCountdownUnits" /* 13461 */;
-import CheckIconDefault from "CheckIcon" /* 13476 */;
+import PremiumTypesDefault from "PremiumTypes" /* 9368 */;
+import roundFPCountdownUnitsDefault from "roundFPCountdownUnits" /* 13465 */;
+import CheckIconDefault from "CheckIcon" /* 13480 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -664,7 +664,7 @@ export default function PremiumManagePlan() {
   const tmp = callback5();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  let obj = navigation(13350);
+  let obj = navigation(13354);
   const youBarSettingsOutsideSafeAreaTop = obj.useYouBarSettingsOutsideSafeAreaTop();
   obj1 = navigation(1483);
   navigation = obj1.useNavigation();
@@ -792,7 +792,7 @@ export default function PremiumManagePlan() {
   if (isInReverseTrial) {
     obj3 = { premiumType: null, forFractionalPremium: true, hideButton: true };
     obj3[0] = closure_27.TIER_2;
-    isInReverseTrial = tmp29(tmp2(9363), obj3);
+    isInReverseTrial = tmp29(tmp2(9368), obj3);
   }
   items9[1] = isInReverseTrial;
   tmp29Result = result;
@@ -803,7 +803,7 @@ export default function PremiumManagePlan() {
     obj4 = { premiumType: null, hideButton: true, hidePrice: true, isPremiumGroup: true, premiumGroupRole: null };
     obj4[0] = closure_27.TIER_2;
     obj4[4] = premiumGroupRole;
-    tmp29Result = tmp29(tmp2(9363), obj4);
+    tmp29Result = tmp29(tmp2(9368), obj4);
   }
   items9[2] = tmp29Result;
   if (tmp29Result1) {
@@ -836,25 +836,25 @@ export default function PremiumManagePlan() {
       }
     };
     obj7[2] = tmp10;
-    const items10 = [tmp29(tmp2(13309), obj7), ];
+    const items10 = [tmp29(tmp2(13313), obj7), ];
     obj8 = { style: null, subscription: null };
     obj8[0] = tmp.billingInfo;
     obj8[1] = tmp10;
-    items10[1] = tmp29(tmp2(13346), obj8);
+    items10[1] = tmp29(tmp2(13350), obj8);
     obj6[0] = items10;
     tmp27Result = tmp27(tmp28, obj6);
   }
   items9[4] = tmp27Result;
   const obj9 = { style: tmp.accountCredit, creditListContainerStyle: tmp.accountCreditList, currentSubscription: tmp10, entitlements: stateFromStores2, hasPremiumGroup: null };
   let flag = result;
-  tmp2Result = tmp2(13348);
+  tmp2Result = tmp2(13352);
   if (result == null) {
     flag = false;
   }
   obj9[4] = flag;
   items9[5] = closure_29(tmp2Result, obj9);
   const obj10 = { style: tmp.featuresTable, variant: "nitro_home", titleOverride: null, isFractionalOnly: null, isPremiumGroup: null, premiumGroupRole: null };
-  tmp15Result = roundFPCountdownUnitsDefault(tmp12.endsAt, navigation(13461).CountDownMessageTypes.SHORT_TIME);
+  tmp15Result = roundFPCountdownUnitsDefault(tmp12.endsAt, navigation(13465).CountDownMessageTypes.SHORT_TIME);
   const tmp31 = closure_9;
   const intl = tmp4(1114).intl;
   obj10[2] = intl.string(navigation(1114).t.QXx2gs);

@@ -1,6 +1,6 @@
 // Module ID: 4573
 // Function ID: 4574
-// Dependencies: [32, 5, 4574, 1961, 1957, 4575, 1074, 9182, 1272, 5522, 4418, 4571, 5411, 573, 8374, 1242, 1100, 4411, 1114, 7323, 4802, 2]
+// Dependencies: [32, 5, 4574, 1961, 1957, 4575, 1074, 9187, 1272, 5522, 4418, 4571, 5411, 573, 8374, 1242, 1100, 4411, 1114, 7323, 4802, 2]
 
 // Module 4573
 import dispatcherDefault from "dispatcher" /* 573 */;
@@ -441,7 +441,7 @@ export default {
       tmpResult.track(constants.CHANGE_LOG_DM_REMOVED, obj);
     }
     tmpResult = tmp(573);
-    obj = { id, guild_id: "Array", parent_id: "isArray" };
+    obj = { id, guild_id: "Array", parent_id: "options" };
     tmpResult.dispatch({ type: "CHANNEL_DELETE", channel: obj, silent: flag2 });
     if (flag) {
       transitionTo.transitionTo(constants2.FRIENDS);

@@ -1,13 +1,13 @@
-// Module ID: 13488
-// Function ID: 13489
+// Module ID: 13492
+// Function ID: 13493
 // Name: usePremiumGroupMembership
-// Dependencies: [19, 13489, 504, 573, 2]
+// Dependencies: [19, 13493, 504, 573, 2]
 // Exports: default
 
-// Module 13488 (usePremiumGroupMembership)
+// Module 13492 (usePremiumGroupMembership)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "handleMutationStart" /* 13489 */;
+import closure_4 from "handleMutationStart" /* 13493 */;
 
 const useEffect = noop.useEffect;
 const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembership.tsx");

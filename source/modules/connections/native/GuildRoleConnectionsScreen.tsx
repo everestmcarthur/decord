@@ -1,10 +1,10 @@
-// Module ID: 11571
-// Function ID: 11572
+// Module ID: 11576
+// Function ID: 11577
 // Name: GuildRoleConnectionsScreen
-// Dependencies: [32, 19, 17, 1385, 502, 2021, 2015, 1074, 21, 4560, 576, 1178, 4495, 504, 1242, 4740, 5520, 4527, 11572, 1896, 11562, 11569, 5283, 1396, 4411, 4556, 1114, 2024, 11568, 7204, 10054, 2]
+// Dependencies: [32, 19, 17, 1385, 502, 2021, 2015, 1074, 21, 4560, 576, 1178, 4495, 504, 1242, 4740, 5520, 4527, 11577, 1896, 11567, 11574, 5283, 1396, 4411, 4556, 1114, 2024, 11573, 7204, 10059, 2]
 // Exports: default
 
-// Module 11571 (GuildRoleConnectionsScreen)
+// Module 11576 (GuildRoleConnectionsScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -220,14 +220,14 @@ export default function GuildRoleConnectionsScreen(guildId) {
         obj[0] = found.roleCheckmark;
         obj = { size: null, source: null, color: null };
         obj[0] = guildId(1178).Icon.Sizes.SMALL_20;
-        obj[1] = onCloseModal(11568);
+        obj[1] = onCloseModal(11573);
         obj[2] = onCloseModal(576).unsafe_rawColors.WHITE;
         obj[1] = closure_1_14(guildId(1178).Icon, obj);
         tmp12 = closure_1_14(stateFromStores1, obj);
       }
       const items1 = [tmp12, closure_1_14(onCloseModal(7204), { style: found.verifiedRoleIcon, guildId: id, role: children, size: 24 }), closure_1_14(guildId(4556).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", lineClamp: 1, style: found.verifiedRoleName, children: children.name }), ];
       const obj3 = { style: found.platformIconContainer, users: [], renderedUsers: items, max: 3, withNames: false, avatarSize: guildId(1178).AvatarSizes.XSMALL, withPlusCount: true };
-      items1[3] = closure_1_14(onCloseModal(10054), obj3);
+      items1[3] = closure_1_14(onCloseModal(10059), obj3);
       obj[3] = items1;
       return closure_1_15(first, obj, children.id);
     });

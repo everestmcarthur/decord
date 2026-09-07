@@ -1,14 +1,14 @@
-// Module ID: 14469
-// Function ID: 14470
+// Module ID: 14472
+// Function ID: 14473
 // Name: RPC_LOCAL_SCOPE
-// Dependencies: [4465, 1074, 4585, 8339, 9557, 9554, 14470, 2]
+// Dependencies: [4465, 1074, 4585, 8339, 9562, 9559, 14473, 2]
 
-// Module 14469 (RPC_LOCAL_SCOPE)
+// Module 14472 (RPC_LOCAL_SCOPE)
 import set from "set" /* 2 */;
 import DesktopSources from "DesktopSources" /* 4585 */;
 import set2 from "set" /* 8339 */;
-import prototypeDefault from "prototype" /* 9554 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
+import prototypeDefault from "prototype" /* 9559 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9562 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
 import ME from "ME" /* 1074 */;
 
@@ -70,7 +70,7 @@ obj[2] = function handler(socket) {
     const tmp10 = new prototypeDefault(obj, "No application.");
     throw tmp10;
   } else {
-    obj = devices(14470);
+    obj = devices(14473);
     obj.setCertifiedDevices(socket.application.id, devices.map((type) => {
       const related = type.related;
       return {

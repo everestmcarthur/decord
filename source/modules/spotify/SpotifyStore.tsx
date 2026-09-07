@@ -1,7 +1,7 @@
 // Module ID: 5280
 // Function ID: 5281
 // Name: upsertAccount
-// Dependencies: [1915, 502, 5281, 5410, 4600, 5419, 4579, 8340, 1074, 5283, 1090, 3, 4447, 573, 559, 11751, 12, 1242, 558, 13627, 9478, 1369, 504, 8139, 2]
+// Dependencies: [1915, 502, 5281, 5410, 4600, 5419, 4579, 8340, 1074, 5283, 1090, 3, 4447, 573, 559, 11756, 12, 1242, 558, 13631, 9483, 1369, 504, 8139, 2]
 
 // Module 5280 (upsertAccount)
 import timestampDefault from "timestamp" /* 3 */;
@@ -13,8 +13,8 @@ import setDefault from "set" /* 1090 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import start2 from "start" /* 4447 */;
 import updateAssets from "updateAssets" /* 8139 */;
-import useIsSpeaking from "useIsSpeaking" /* 9478 */;
-import apiRequest from "apiRequest" /* 11751 */;
+import useIsSpeaking from "useIsSpeaking" /* 9483 */;
+import apiRequest from "apiRequest" /* 11756 */;
 import closure_6 from "initialize" /* 1915 */;
 import closure_7 from "fetchFingerprint" /* 502 */;
 import closure_8 from "set" /* 5281 */;
@@ -455,7 +455,7 @@ function updatePlayerState(arg0, arg1, device) {
         if (context.type === tmp12.ALBUM) {
           resolved = Promise.resolve(context);
         } else {
-          const SpotifyAPI = _require(11751).SpotifyAPI;
+          const SpotifyAPI = _require(11756).SpotifyAPI;
           const obj2 = { url: null };
           obj2[0] = context.href;
           const value = SpotifyAPI.get(arg0, arg1, obj2);
@@ -636,7 +636,7 @@ prototype["connect"] = function connect() {
     self._requestedDisconnect = false;
     self._requestedConnect = true;
     ({ accountId, accessToken } = self);
-    const SpotifyAPI = accountId(11751).SpotifyAPI;
+    const SpotifyAPI = accountId(11756).SpotifyAPI;
     let obj = { url: null, query: null, onlyRetryOnAuthorizationErrors: true };
     obj[0] = constants.PLAYER;
     obj = { additional_types: null };
@@ -768,9 +768,9 @@ prototype["handleOpen"] = function handleOpen() {
   backoff.succeed();
   const pingInterval = this.pingInterval;
   pingInterval.start(closure_23, () => self.ping());
-  const profile = self(11751).getProfile(this.accountId, this.accessToken);
-  const obj = self(11751);
-  const devices = self(11751).getDevices(this.accountId, this.accessToken);
+  const profile = self(11756).getProfile(this.accountId, this.accessToken);
+  const obj = self(11756);
+  const devices = self(11756).getDevices(this.accountId, this.accessToken);
 };
 prototype["handleMessage"] = function handleMessage(data) {
   data = data.data;
@@ -1289,7 +1289,7 @@ const spotifyStore = new SpotifyStore(dispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_35.stop(), false);
-        obj9 = device(9478);
+        obj9 = device(9483);
       }
       if (null != tmp10) {
         if (!tmp22) {

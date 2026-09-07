@@ -1,14 +1,14 @@
-// Module ID: 16002
-// Function ID: 16003
-// Dependencies: [19, 17, 21, 4560, 4413, 7874, 1611, 4271, 5125, 16003, 2]
+// Module ID: 16005
+// Function ID: 16006
+// Dependencies: [19, 17, 21, 4560, 4413, 7874, 1611, 4271, 5125, 16006, 2]
 
-// Module 16002
+// Module 16005
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ManaContext from "ManaContext" /* 4271 */;
 import getGuildThemeNameDefault from "getGuildThemeName" /* 4413 */;
 import getMixedGradientColorDefault from "getMixedGradientColor" /* 5125 */;
 import useActiveThemeType from "useActiveThemeType" /* 7874 */;
-import _modDef16003 from "module_16003" /* 16003 */;
+import _modDef16006 from "module_16006" /* 16006 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -25,7 +25,7 @@ const memoResult = importAllResult.memo(function MainTabs() {
   obj = { style: items, children: null };
   items = [callback3().container, { marginLeft: rect.left, marginRight: rect.right }];
   obj = { gradient: tmp, children: null };
-  const items1 = [callback(getMixedGradientColorDefault, { absolute: true, mix: isCustomThemeActive }), callback(_modDef16003, {})];
+  const items1 = [callback(getMixedGradientColorDefault, { absolute: true, mix: isCustomThemeActive }), callback(_modDef16006, {})];
   obj[1] = items1;
   obj[1] = callback2(ManaContext.ThemeContextProvider, obj);
   return callback(View, obj);

@@ -1,10 +1,10 @@
-// Module ID: 11293
-// Function ID: 11294
+// Module ID: 11298
+// Function ID: 11299
 // Name: items
 // Dependencies: [4218, 1377, 1379, 7556, 2]
 // Exports: getQuestOrbMultiplierSource, shouldReceiveQuestOrbMultiplier
 
-// Module 11293 (items)
+// Module 11298 (items)
 import set from "set" /* 2 */;
 import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1377 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;

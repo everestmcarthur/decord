@@ -1,13 +1,13 @@
 // Module ID: 8393
 // Function ID: 8394
 // Name: connectToStage
-// Dependencies: [5, 4582, 1957, 1979, 4199, 2011, 1965, 8394, 7321, 5520, 12927, 12928, 5411, 4612, 4702, 12930, 2]
+// Dependencies: [5, 4582, 1957, 1979, 4199, 2011, 1965, 8394, 7321, 5520, 12931, 12932, 5411, 4612, 4702, 12934, 2]
 // Exports: connectOrLurkStage, navigateToStage, showUserProfile
 
 // Module 8393 (connectToStage)
 import _modDef5411 from "module_5411" /* 5411 */;
 import openStageChannelSettingsAll from "openStageChannelSettings" /* 8394 */;
-import _initializeDefault from "_initialize" /* 12928 */;
+import _initializeDefault from "_initialize" /* 12932 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "reset" /* 4582 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
@@ -77,8 +77,8 @@ function connectAndOpen(channel, flag) {
     result = voiceChannelId !== channel.id;
   }
   if (result) {
-    result = _require(12930).shouldShowVoiceChannelChangeConfirmation(channel);
-    const obj = _require(12930);
+    result = _require(12934).shouldShowVoiceChannelChangeConfirmation(channel);
+    const obj = _require(12934);
   }
   if (result) {
     result = flag2(8394).showChannelChangeConfirmationAlert(channel, () => {

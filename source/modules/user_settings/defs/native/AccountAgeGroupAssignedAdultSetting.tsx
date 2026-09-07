@@ -1,16 +1,16 @@
-// Module ID: 14756
-// Function ID: 14757
+// Module ID: 14759
+// Function ID: 14760
 // Name: route
-// Dependencies: [7975, 1074, 11468, 1114, 2946, 14757, 14720, 2]
+// Dependencies: [7975, 1074, 11473, 1114, 2946, 14760, 14723, 2]
 
-// Module 14756 (route)
+// Module 14759 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2946 */;
 import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import AGE_GROUP_CONFIRM_ROW_PROPS from "AGE_GROUP_CONFIRM_ROW_PROPS" /* 14757 */;
-import createToggle from "createToggle" /* 11468 */;
+import AGE_GROUP_CONFIRM_ROW_PROPS from "AGE_GROUP_CONFIRM_ROW_PROPS" /* 14760 */;
+import createToggle from "createToggle" /* 11473 */;
 
 obj = {
   useTitle() {
@@ -29,7 +29,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.AGE_GROUP,
   getComponent() {
-    return require(14720) /* SettingsAgeGroupHeader */.default;
+    return require(14723) /* SettingsAgeGroupHeader */.default;
   }
 };
 const route = createToggle.createRoute(obj);

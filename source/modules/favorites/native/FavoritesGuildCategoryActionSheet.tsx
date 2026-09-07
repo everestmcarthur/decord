@@ -1,10 +1,10 @@
-// Module ID: 16110
-// Function ID: 16111
+// Module ID: 16113
+// Function ID: 16114
 // Name: FavoritesGuildCategoryActionSheetConnected
-// Dependencies: [19, 1960, 21, 4713, 10975, 1935, 7198, 7149, 7200, 10951, 1114, 7380, 16111, 10629, 7190, 4258, 504, 2]
+// Dependencies: [19, 1960, 21, 4713, 10980, 1935, 7198, 7149, 7200, 10956, 1114, 7380, 16114, 10634, 7190, 4258, 504, 2]
 // Exports: default
 
-// Module 16110 (FavoritesGuildCategoryActionSheetConnected)
+// Module 16113 (FavoritesGuildCategoryActionSheetConnected)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "initializeFromUserSettings" /* 1960 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -14,7 +14,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   category = category.category;
   const onClose = category.onClose;
   dependencyMap = undefined;
-  const tmp3 = onClose(10975)(category);
+  const tmp3 = onClose(10980)(category);
   dependencyMap = tmp3;
   const DeveloperMode = category(1935).DeveloperMode;
   const setting = DeveloperMode.useSetting();
@@ -25,7 +25,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
     obj = { label: null, icon: null, onPress: null };
     obj[0] = tmp3.label;
     obj1 = { IconComponent: null };
-    obj1[0] = tmp4(10951).PlusLargeIcon;
+    obj1[0] = tmp4(10956).PlusLargeIcon;
     obj[1] = tmp7(tmp4(7200).ActionSheetRow.Icon, obj1);
     obj[2] = function onPress() {
       closure_2.perform();
@@ -55,7 +55,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
     const intl2 = tmp4(1114).intl;
     obj6[0] = intl2.string(tmp4(1114).t["2visC6"]);
     const obj7 = { IconComponent: null };
-    obj7[0] = tmp4(10629).IdIcon;
+    obj7[0] = tmp4(10634).IdIcon;
     obj6[1] = tmp7(tmp4(7200).ActionSheetRow.Icon, obj7);
     obj6[2] = function onPress() {
       category(closure_2[14]).copy(category.id);

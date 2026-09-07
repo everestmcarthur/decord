@@ -1,10 +1,10 @@
-// Module ID: 13253
-// Function ID: 13254
+// Module ID: 13257
+// Function ID: 13258
 // Name: ButtonBadge
 // Dependencies: [19, 21, 4560, 576, 1115, 1178, 4982, 5123, 4556, 7869, 2]
 // Exports: default
 
-// Module 13253 (ButtonBadge)
+// Module 13257 (ButtonBadge)
 import ThemesDefault from "Themes" /* 576 */;
 import set from "set" /* 1115 */;
 import getFontScale from "getFontScale" /* 4982 */;

@@ -1,10 +1,10 @@
-// Module ID: 17321
-// Function ID: 17322
+// Module ID: 17324
+// Function ID: 17325
 // Name: _backgroundSync
-// Dependencies: [32, 5, 1961, 1957, 4575, 1895, 7479, 1074, 5502, 5459, 1979, 3, 1090, 510, 7755, 1115, 573, 1232, 1242, 1986, 1272, 11, 12, 7653, 7656, 7654, 13668, 15570, 7477, 1369, 7487, 2]
+// Dependencies: [32, 5, 1961, 1957, 4575, 1895, 7479, 1074, 5502, 5459, 1979, 3, 1090, 510, 7755, 1115, 573, 1232, 1242, 1986, 1272, 11, 12, 7653, 7656, 7654, 13672, 15573, 7477, 1369, 7487, 2]
 // Exports: backgroundSync
 
-// Module 17321 (_backgroundSync)
+// Module 17324 (_backgroundSync)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 1090 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -599,12 +599,12 @@ function _backgroundSyncGuildData() {
                 obj4[0] = c5;
                 obj4[1] = c6.highest_last_message_id;
                 obj4[2] = c6.api_code_version;
-                let obj11 = callback(13668);
+                let obj11 = callback(13672);
                 obj4[3] = obj11.isChannelMetadataObfuscationEnabled("background-sync");
                 let obj5 = obj4;
               } else {
                 obj5 = { channel_privacy: null };
-                let obj9 = callback(13668);
+                let obj9 = callback(13672);
                 obj5[0] = obj9.isChannelMetadataObfuscationEnabled("background-sync");
               }
               obj3[1] = obj5;
@@ -731,7 +731,7 @@ function _backgroundSyncGuildData() {
               c6 = 3;
               throw body;
             } else if (arg0 !== 2) {
-              obj = callback(15570);
+              obj = callback(15573);
               obj.writeCaches(true);
               const _Date = Date;
               callback.time_save_guild_data = Date.now() - callback2;

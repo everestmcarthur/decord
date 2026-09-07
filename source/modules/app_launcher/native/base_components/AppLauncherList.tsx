@@ -1,17 +1,17 @@
-// Module ID: 12167
-// Function ID: 12168
+// Module ID: 12171
+// Function ID: 12172
 // Name: AppLauncherList
-// Dependencies: [19, 17, 21, 4560, 1611, 12102, 1178, 12168, 1114, 7050, 2]
+// Dependencies: [19, 17, 21, 4560, 1611, 12106, 1178, 12172, 1114, 7050, 2]
 // Exports: AppLauncherListEmptyState, AppLauncherListSearchBar
 
-// Module 12167 (AppLauncherList)
+// Module 12171 (AppLauncherList)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import SearchField from "SearchField" /* 7050 */;
-import useAppLauncherFlashListProps from "useAppLauncherFlashListProps" /* 12102 */;
-import useAppLauncherFlashListPropsDefault from "useAppLauncherFlashListProps" /* 12102 */;
-import registerAssetDefault from "registerAsset" /* 12168 */;
+import useAppLauncherFlashListProps from "useAppLauncherFlashListProps" /* 12106 */;
+import useAppLauncherFlashListPropsDefault from "useAppLauncherFlashListProps" /* 12106 */;
+import registerAssetDefault from "registerAsset" /* 12172 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

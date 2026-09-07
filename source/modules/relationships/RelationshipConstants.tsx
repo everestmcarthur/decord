@@ -1,9 +1,9 @@
-// Module ID: 9043
-// Function ID: 9044
+// Module ID: 9048
+// Function ID: 9049
 // Name: ClearFriendRequestFilters
 // Dependencies: [2]
 
-// Module 9043 (ClearFriendRequestFilters)
+// Module 9048 (ClearFriendRequestFilters)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/relationships/RelationshipConstants.tsx");

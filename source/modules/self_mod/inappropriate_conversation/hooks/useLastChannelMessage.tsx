@@ -1,10 +1,10 @@
-// Module ID: 11390
-// Function ID: 11391
+// Module ID: 11395
+// Function ID: 11396
 // Name: useLastChannelMessage
 // Dependencies: [4781, 504, 2]
 // Exports: useLastChannelMessage
 
-// Module 11390 (useLastChannelMessage)
+// Module 11395 (useLastChannelMessage)
 import closure_2 from "reinjectEphemerals" /* 4781 */;
 
 const require = arg1;

@@ -1,10 +1,10 @@
-// Module ID: 16258
-// Function ID: 16259
+// Module ID: 16261
+// Function ID: 16262
 // Name: useIsGameServerTabAlwaysOnEnabled
 // Dependencies: [1433, 2]
 // Exports: useIsGameServerTabAlwaysOnEnabled
 
-// Module 16258 (useIsGameServerTabAlwaysOnEnabled)
+// Module 16261 (useIsGameServerTabAlwaysOnEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 

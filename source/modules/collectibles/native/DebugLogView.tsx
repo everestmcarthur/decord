@@ -1,10 +1,10 @@
-// Module ID: 15842
-// Function ID: 15843
+// Module ID: 15845
+// Function ID: 15846
 // Name: DebugLogView
 // Dependencies: [19, 17, 4559, 7557, 21, 4560, 576, 504, 4556, 2]
 // Exports: default
 
-// Module 15842 (DebugLogView)
+// Module 15845 (DebugLogView)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

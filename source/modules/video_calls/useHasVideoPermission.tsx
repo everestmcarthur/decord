@@ -1,10 +1,10 @@
-// Module ID: 9946
-// Function ID: 9947
+// Module ID: 9951
+// Function ID: 9952
 // Name: useHasVideoPermission
 // Dependencies: [1979, 4199, 504, 7726, 2]
 // Exports: default, getVideoPermission
 
-// Module 9946 (useHasVideoPermission)
+// Module 9951 (useHasVideoPermission)
 import canStreamInChannel from "canStreamInChannel" /* 7726 */;
 import closure_2 from "createGuildRecordFromRust" /* 1979 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4199 */;

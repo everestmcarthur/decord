@@ -1,14 +1,14 @@
-// Module ID: 10963
-// Function ID: 10964
+// Module ID: 10968
+// Function ID: 10969
 // Name: showThreadBrowserModal
-// Dependencies: [10916, 7781, 4418, 2]
+// Dependencies: [10921, 7781, 4418, 2]
 // Exports: default
 
-// Module 10963 (showThreadBrowserModal)
+// Module 10968 (showThreadBrowserModal)
 import set from "set" /* 2 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
 import getAccessibilityLabelFormatter from "getAccessibilityLabelFormatter" /* 7781 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10916 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10921 */;
 
 let closure_2 = ChannelDetailsNavigatorScreens.ChannelDetailsNavigatorScreens;
 let result = set.fileFinishedImporting("modules/threads/native/showThreadBrowserModal.tsx");

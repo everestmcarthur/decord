@@ -1,9 +1,9 @@
-// Module ID: 15555
-// Function ID: 15556
+// Module ID: 15558
+// Function ID: 15559
 // Name: handleLogout
-// Dependencies: [21, 510, 1093, 5411, 9687, 6990, 6593, 4906, 4910, 1114, 11468, 9073, 2]
+// Dependencies: [21, 510, 1093, 5411, 9692, 6990, 6593, 4906, 4910, 1114, 11473, 9078, 2]
 
-// Module 15555 (handleLogout)
+// Module 15558 (handleLogout)
 import set from "set" /* 2 */;
 import Storage2 from "Storage" /* 510 */;
 import keys from "keys" /* 1093 */;
@@ -13,10 +13,10 @@ import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
 import _modDef5411 from "module_5411" /* 5411 */;
 import handleLogoutDefault from "handleLogout" /* 6593 */;
 import dispatcherDefault from "dispatcher" /* 6990 */;
-import DoorExitIcon from "DoorExitIcon" /* 9073 */;
-import NativeModulesDefault from "NativeModules" /* 9687 */;
+import DoorExitIcon from "DoorExitIcon" /* 9078 */;
+import NativeModulesDefault from "NativeModules" /* 9692 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 function handleLogout() {
   const Storage = Storage2.Storage;

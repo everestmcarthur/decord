@@ -1,10 +1,10 @@
-// Module ID: 11550
-// Function ID: 11551
+// Module ID: 11555
+// Function ID: 11556
 // Name: EmptyCustomizeCommunity
-// Dependencies: [19, 17, 5459, 1979, 4575, 4381, 7100, 7101, 1074, 1374, 4742, 21, 4560, 576, 5524, 4269, 4495, 504, 11551, 11552, 1178, 1114, 4556, 7106, 7125, 7160, 7182, 1611, 11553, 7099, 7110, 7105, 7130, 1396, 1369, 4262, 4296, 4561, 11554, 4527, 7135, 1896, 5123, 7158, 7126, 2]
+// Dependencies: [19, 17, 5459, 1979, 4575, 4381, 7100, 7101, 1074, 1374, 4742, 21, 4560, 576, 5524, 4269, 4495, 504, 11556, 11557, 1178, 1114, 4556, 7106, 7125, 7160, 7182, 1611, 11558, 7099, 7110, 7105, 7130, 1396, 1369, 4262, 4296, 4561, 11559, 4527, 7135, 1896, 5123, 7158, 7126, 2]
 // Exports: default
 
-// Module 11550 (EmptyCustomizeCommunity)
+// Module 11555 (EmptyCustomizeCommunity)
 import ThemesDefault from "Themes" /* 576 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import Text from "Text" /* 4556 */;
@@ -33,7 +33,7 @@ function EmptyCustomizeCommunity(setTab) {
   const items = [closure_10];
   importDefault = obj1.useStateFromStores(items, () => guildId.getGuildId());
   obj = { style: tmp.emptyContainer, children: null };
-  obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useThemeDefault()) ? 11551 : 11552) };
+  obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useThemeDefault()) ? 11556 : 11557) };
   const items1 = [closure_16(closure_5, obj), , ];
   obj1 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1114).intl;
@@ -488,7 +488,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(11553)(guildId);
+  const tmp7 = stateFromStores(11558)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);

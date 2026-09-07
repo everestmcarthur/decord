@@ -1,12 +1,12 @@
-// Module ID: 17297
-// Function ID: 17298
+// Module ID: 17300
+// Function ID: 17301
 // Name: useIsInRestrictedHours
-// Dependencies: [1371, 7537, 504, 17298, 2]
+// Dependencies: [1371, 7537, 504, 17301, 2]
 // Exports: default
 
-// Module 17297 (useIsInRestrictedHours)
+// Module 17300 (useIsInRestrictedHours)
 import initialize from "initialize" /* 504 */;
-import scheduleUpcomingWarning from "scheduleUpcomingWarning" /* 17298 */;
+import scheduleUpcomingWarning from "scheduleUpcomingWarning" /* 17301 */;
 import closure_2 from "mergeGuildAvatar" /* 1371 */;
 import closure_3 from "freshTeenActivityWithMap" /* 7537 */;
 

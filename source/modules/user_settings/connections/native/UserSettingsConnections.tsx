@@ -1,14 +1,14 @@
-// Module ID: 14958
-// Function ID: 14959
+// Module ID: 14961
+// Function ID: 14962
 // Name: ADD_CONNECTIONS_SHEET_SENTINEL
-// Dependencies: [19, 17, 7107, 502, 5281, 2025, 1074, 21, 4560, 576, 4495, 504, 13081, 7170, 5406, 4527, 14957, 1896, 9252, 14959, 8593, 4973, 14962, 14963, 2]
+// Dependencies: [19, 17, 7107, 502, 5281, 2025, 1074, 21, 4560, 576, 4495, 504, 13085, 7170, 5406, 4527, 14960, 1896, 9257, 14962, 8598, 4973, 14965, 14966, 2]
 // Exports: UserSettingsConnections
 
-// Module 14958 (ADD_CONNECTIONS_SHEET_SENTINEL)
+// Module 14961 (ADD_CONNECTIONS_SHEET_SENTINEL)
 import ThemesDefault from "Themes" /* 576 */;
 import useThemeDefault from "useTheme" /* 4495 */;
-import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 13081 */;
-import EmptyStateCardDefault from "EmptyStateCard" /* 14959 */;
+import useConnectionFilteredAppIdentitiesDefault from "useConnectionFilteredAppIdentities" /* 13085 */;
+import EmptyStateCardDefault from "EmptyStateCard" /* 14962 */;
 import closure_3 from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "recomputeFromAppTokens" /* 7107 */;
@@ -96,7 +96,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
       ];
       obj[1] = items5;
       obj[1] = callback2(tmp4(4973).Stack, obj);
-      tmp14 = callback(tmp4(8593).Form, obj);
+      tmp14 = callback(tmp4(8598).Form, obj);
     }
     return tmp14;
   }

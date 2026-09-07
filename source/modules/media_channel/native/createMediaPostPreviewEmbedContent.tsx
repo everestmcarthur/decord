@@ -1,22 +1,22 @@
-// Module ID: 13243
-// Function ID: 13244
+// Module ID: 13247
+// Function ID: 13248
 // Name: createMediaPostPreviewEmbedContent
-// Dependencies: [17, 4559, 1957, 1979, 4381, 1371, 11426, 4708, 4714, 1114, 7960, 7962, 576, 4710, 13244, 7600, 4773, 4709, 2]
+// Dependencies: [17, 4559, 1957, 1979, 4381, 1371, 11431, 4708, 4714, 1114, 7960, 7962, 576, 4710, 13248, 7600, 4773, 4709, 2]
 // Exports: default
 
-// Module 13243 (createMediaPostPreviewEmbedContent)
+// Module 13247 (createMediaPostPreviewEmbedContent)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getMediaPostEmbedCommonData from "getMediaPostEmbedCommonData" /* 4708 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
-import getMediaPostEmbed from "getMediaPostEmbed" /* 11426 */;
+import getMediaPostEmbed from "getMediaPostEmbed" /* 11431 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "getUserAgnosticState" /* 4559 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
 import closure_7 from "createGuildRecordFromRust" /* 1979 */;
 import closure_8 from "handleConnectionOpen" /* 4381 */;
 import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import closure_10 from "getMediaPostEmbed" /* 11426 */;
+import closure_10 from "getMediaPostEmbed" /* 11431 */;
 
 ({ Image: c3, processColor: c4 } = get_ActivityIndicator);
 const FetchState = getMediaPostEmbed.FetchState;
@@ -103,7 +103,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
               if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
                 const obj2 = {};
                 const merged = Object.assign(mediaPostEmbedCommonData);
-                obj2.blurredCoverImage = closure_3.resolveAssetSource(tmp10(13244)).uri;
+                obj2.blurredCoverImage = closure_3.resolveAssetSource(tmp10(13248)).uri;
                 obj2.footer = formatToPartsResult;
                 obj2.ctaButtonColor = tmp11;
                 return obj2;

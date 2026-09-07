@@ -1,10 +1,10 @@
-// Module ID: 13485
-// Function ID: 13486
+// Module ID: 13489
+// Function ID: 13490
 // Name: BetaPill
-// Dependencies: [17, 7432, 21, 4560, 576, 4556, 1114, 13486, 1178, 4987, 4409, 9381, 2]
+// Dependencies: [17, 7432, 21, 4560, 576, 4556, 1114, 13490, 1178, 4987, 4409, 9386, 2]
 // Exports: default
 
-// Module 13485 (BetaPill)
+// Module 13489 (BetaPill)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -13,7 +13,7 @@ import Button from "Button" /* 1178 */;
 import hexToRgba from "hexToRgba" /* 4409 */;
 import Text from "Text" /* 4556 */;
 import items3 from "items" /* 7432 */;
-import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13486 */;
+import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 13490 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -73,7 +73,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     obj[4] = tmp.premiumGroupCard;
     obj = { style: null, children: null };
     obj[0] = tmp.headerContainer;
-    const items1 = [callback(tmp2(9381), { width: 181, height: 16 }), callback(BetaPill, {})];
+    const items1 = [callback(tmp2(9386), { width: 181, height: 16 }), callback(BetaPill, {})];
     obj[1] = items1;
     const items2 = [callback2(View, obj), , ];
     obj1 = { variant: "text-sm/normal", style: null, children: null };

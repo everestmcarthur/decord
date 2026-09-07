@@ -1,8 +1,8 @@
-// Module ID: 11472
-// Function ID: 11473
-// Dependencies: [5, 1957, 1074, 4553, 573, 1272, 7682, 7456, 4740, 11473, 11474, 4573, 2]
+// Module ID: 11477
+// Function ID: 11478
+// Dependencies: [5, 1957, 1074, 4553, 573, 1272, 7682, 7456, 4740, 11478, 11479, 4573, 2]
 
-// Module 11472
+// Module 11477
 import _modDef4573 from "module_4573" /* 4573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;

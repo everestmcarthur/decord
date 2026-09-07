@@ -1,10 +1,10 @@
-// Module ID: 11278
-// Function ID: 11279
+// Module ID: 11283
+// Function ID: 11284
 // Name: useCaptchaStore
 // Dependencies: [32, 560, 1249, 7602, 7607, 2]
 // Exports: flushCaptchaServeVolume, incrementCaptchaServeVolume, isCaptchaStoreVolumeEmpty
 
-// Module 11278 (useCaptchaStore)
+// Module 11283 (useCaptchaStore)
 import batchUpdates from "batchUpdates" /* 1249 */;
 import setDefault from "set" /* 7602 */;
 import set from "set" /* 7607 */;

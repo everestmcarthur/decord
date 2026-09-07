@@ -1,10 +1,10 @@
-// Module ID: 12375
-// Function ID: 12376
+// Module ID: 12379
+// Function ID: 12380
 // Name: UpcomingEventsLongPressActionSheet
-// Dependencies: [19, 17, 1979, 4741, 4742, 21, 4560, 504, 7198, 7149, 5584, 1114, 8593, 1178, 12376, 7110, 4527, 12377, 12378, 7119, 7114, 2]
+// Dependencies: [19, 17, 1979, 4741, 4742, 21, 4560, 504, 7198, 7149, 5584, 1114, 8598, 1178, 12380, 7110, 4527, 12381, 12382, 7119, 7114, 2]
 // Exports: default
 
-// Module 12375 (UpcomingEventsLongPressActionSheet)
+// Module 12379 (UpcomingEventsLongPressActionSheet)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "createGuildRecordFromRust" /* 1979 */;
@@ -42,20 +42,20 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   const items2 = [callback(guildId(7149).BottomSheetTitleHeader, obj), , ];
   const obj2 = { leading: null, label: null, onPress: null };
   const tmp9 = stateFromStores1(5584);
-  obj2[0] = callback(guildId(1178).Icon, { source: stateFromStores1(12376) });
+  obj2[0] = callback(guildId(1178).Icon, { source: stateFromStores1(12380) });
   const obj4 = { text: null };
   const intl2 = guildId(1114).intl;
   obj4[0] = intl2.string(guildId(1114).t.e6RscS);
-  obj2[1] = callback(guildId(8593).FormLabel, obj4);
+  obj2[1] = callback(guildId(8598).FormLabel, obj4);
   obj2[2] = function onPress() {
     guildId(closure_1_2[15]).ackGuildFeature(guildId, closure_1_6.GUILD_EVENT);
     const obj = guildId(closure_1_2[15]);
     stateFromStores1(closure_1_2[16]).hideActionSheet();
   };
-  items2[1] = callback(guildId(8593).FormRow, obj2);
+  items2[1] = callback(guildId(8598).FormRow, obj2);
   const obj5 = { leading: null, label: null, onPress: null };
-  const obj3 = { source: stateFromStores1(12376) };
-  obj5[0] = callback(guildId(1178).Icon, { source: tmp8(stateFromStores1 ? 12377 : 12378) });
+  const obj3 = { source: stateFromStores1(12380) };
+  obj5[0] = callback(guildId(1178).Icon, { source: tmp8(stateFromStores1 ? 12381 : 12382) });
   const intl3 = tmp2(1114).intl;
   const string = intl3.string;
   const t = tmp2(1114).t;
@@ -65,14 +65,14 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
     stringResult = string(t.ONG3Yz);
   }
   const obj7 = { children: null };
-  obj5[1] = callback(guildId(8593).FormLabel, { text: stringResult });
+  obj5[1] = callback(guildId(8598).FormLabel, { text: stringResult });
   obj5[2] = function onPress() {
     let obj = stateFromStores1(closure_1_2[19]);
     obj = { mute_scheduled_events: !stateFromStores1 };
     const NotificationLabel = guildId(closure_1_2[20]).NotificationLabel;
     const result = obj.updateGuildNotificationSettings(guildId, obj, NotificationLabel.mutedEvents(!stateFromStores1));
   };
-  items2[2] = callback(guildId(8593).FormRow, obj5);
+  items2[2] = callback(guildId(8598).FormRow, obj5);
   obj7[0] = items2;
   return tmp6(guildId(7198).ActionSheet, obj7);
 };

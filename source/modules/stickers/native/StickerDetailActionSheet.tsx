@@ -1,14 +1,14 @@
-// Module ID: 10404
-// Function ID: 10405
+// Module ID: 10409
+// Function ID: 10410
 // Name: StandardStickerDetail
-// Dependencies: [5, 32, 19, 17, 1979, 1371, 5502, 10273, 1074, 7151, 21, 4560, 1115, 576, 10387, 10235, 10241, 4527, 4556, 1114, 10388, 4259, 504, 1477, 1242, 10401, 4975, 10403, 10389, 10394, 4218, 7189, 1935, 4899, 10405, 1896, 4740, 5520, 10406, 7382, 10176, 8672, 9970, 10407, 8593, 10342, 7150, 2]
+// Dependencies: [5, 32, 19, 17, 1979, 1371, 5502, 10278, 1074, 7151, 21, 4560, 1115, 576, 10392, 10240, 10246, 4527, 4556, 1114, 10393, 4259, 504, 1477, 1242, 10406, 4975, 10408, 10394, 10399, 4218, 7189, 1935, 4899, 10410, 1896, 4740, 5520, 10411, 7382, 10181, 8677, 9975, 10412, 8598, 10347, 7150, 2]
 
-// Module 10404 (StandardStickerDetail)
+// Module 10409 (StandardStickerDetail)
 import ThemesDefault from "Themes" /* 576 */;
-import useStickerPackCategories from "useStickerPackCategories" /* 10387 */;
-import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet" /* 10394 */;
-import openStickerPackDetailActionSheetDefault from "openStickerPackDetailActionSheet" /* 10394 */;
-import hideStickerDetailActionSheet from "hideStickerDetailActionSheet" /* 10403 */;
+import useStickerPackCategories from "useStickerPackCategories" /* 10392 */;
+import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet" /* 10399 */;
+import openStickerPackDetailActionSheetDefault from "openStickerPackDetailActionSheet" /* 10399 */;
+import hideStickerDetailActionSheet from "hideStickerDetailActionSheet" /* 10408 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
@@ -16,7 +16,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "createGuildRecordFromRust" /* 1979 */;
 import closure_10 from "mergeGuildAvatar" /* 1371 */;
 import closure_11 from "loadSavedGuildStickers" /* 5502 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10273 */;
+import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10278 */;
 import ME from "ME" /* 1074 */;
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -110,8 +110,8 @@ function StandardStickerDetail(chatInputRef) {
         if (null != stateFromStores) {
           if (stateFromStores1) {
             if (null != chatInputRef) {
-              const result1 = tmp(10389).openStickerPickerToPackId(tmp6, pack_id);
-              const tmpResult = tmp(10389);
+              const result1 = tmp(10394).openStickerPickerToPackId(tmp6, pack_id);
+              const tmpResult = tmp(10394);
             }
           }
         }

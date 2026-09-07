@@ -1,9 +1,9 @@
-// Module ID: 13718
-// Function ID: 13719
+// Module ID: 13722
+// Function ID: 13723
 // Name: initialize
-// Dependencies: [32, 1957, 4781, 3, 504, 573, 13719, 5276, 2]
+// Dependencies: [32, 1957, 4781, 3, 504, 573, 13723, 5276, 2]
 
-// Module 13718 (initialize)
+// Module 13722 (initialize)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
@@ -114,7 +114,7 @@ prototype["data"] = function data(guildId, items, arg2) {
   const guilds = this.guilds;
   if (!guilds.has(guildId)) {
     const guilds2 = self.guilds;
-    const previewData = new object(13719).PreviewData();
+    const previewData = new object(13723).PreviewData();
     const result = guilds2.set(guildId, previewData);
   }
   const guilds3 = self.guilds;

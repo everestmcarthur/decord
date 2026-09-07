@@ -1,10 +1,10 @@
-// Module ID: 13356
-// Function ID: 13357
+// Module ID: 13360
+// Function ID: 13361
 // Name: useIsBuyNitroPurchaseBlocked
 // Dependencies: [7237, 560, 504, 2]
 // Exports: useIsBuyNitroPurchaseBlocked
 
-// Module 13356 (useIsBuyNitroPurchaseBlocked)
+// Module 13360 (useIsBuyNitroPurchaseBlocked)
 import closure_2 from "updateProduct" /* 7237 */;
 import keys from "keys" /* 560 */;
 

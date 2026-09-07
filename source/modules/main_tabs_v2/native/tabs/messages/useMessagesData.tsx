@@ -1,10 +1,10 @@
-// Module ID: 16045
-// Function ID: 16046
+// Module ID: 16048
+// Function ID: 16049
 // Name: useMessagesData
-// Dependencies: [32, 19, 5277, 502, 4209, 7218, 504, 16046, 1935, 2]
+// Dependencies: [32, 19, 5277, 502, 4209, 7218, 504, 16049, 1935, 2]
 // Exports: default
 
-// Module 16045 (useMessagesData)
+// Module 16048 (useMessagesData)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "_handleConnectionOpen" /* 5277 */;

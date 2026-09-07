@@ -1,10 +1,10 @@
-// Module ID: 9540
-// Function ID: 9541
+// Module ID: 9545
+// Function ID: 9546
 // Name: confirmActivityChangeModal
 // Dependencies: [4209, 1371, 4713, 4904, 1114, 1925, 2]
 // Exports: default
 
-// Module 9540 (confirmActivityChangeModal)
+// Module 9545 (confirmActivityChangeModal)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import computeChannelName from "computeChannelName" /* 4713 */;
 import setDefault from "set" /* 4904 */;

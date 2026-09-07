@@ -1,12 +1,12 @@
-// Module ID: 9970
-// Function ID: 9971
-// Dependencies: [19, 4552, 21, 504, 4975, 8662, 576, 2]
+// Module ID: 9975
+// Function ID: 9976
+// Dependencies: [19, 4552, 21, 504, 4975, 8667, 576, 2]
 
-// Module 9970
+// Module 9975
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 4975 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;

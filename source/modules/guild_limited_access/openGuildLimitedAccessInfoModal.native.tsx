@@ -1,10 +1,10 @@
-// Module ID: 13830
-// Function ID: 13831
+// Module ID: 13833
+// Function ID: 13834
 // Name: openGuildLimitedAccessInfoModal
-// Dependencies: [19, 17, 21, 4425, 4905, 13831, 1896, 2]
+// Dependencies: [19, 17, 21, 4425, 4905, 13834, 1896, 2]
 // Exports: default
 
-// Module 13830 (openGuildLimitedAccessInfoModal)
+// Module 13833 (openGuildLimitedAccessInfoModal)
 import noopAll from "noop" /* 19 */;
 import _modDef4905 from "module_4905" /* 4905 */;
 import { Keyboard } from "get ActivityIndicator" /* 17 */;

@@ -1,12 +1,12 @@
 // Module ID: 500
 // Function ID: 501
 // Name: buildQosTokenFromDerivedData
-// Dependencies: [501, 3, 14195, 1224, 2]
+// Dependencies: [501, 3, 14198, 1224, 2]
 // Exports: buildQosToken
 
 // Module 500 (buildQosTokenFromDerivedData)
 import timestampDefault from "timestamp" /* 3 */;
-import defineProperty from "defineProperty" /* 14195 */;
+import defineProperty from "defineProperty" /* 14198 */;
 import closure_2 from "initialize" /* 501 */;
 
 require = arg1;
@@ -18,14 +18,14 @@ function buildQosTokenFromDerivedData(derivedQosData, isActive) {
   if (null != derivedQosData) {
     try {
       let tmp2Result = tmp2(1224);
-      derived = tmp2Result.b64ToProto(tmp2(14195).DerivedQosData, derivedQosData);
+      derived = tmp2Result.b64ToProto(tmp2(14198).DerivedQosData, derivedQosData);
     } catch (tmp5) {
       const _HermesInternal = HermesInternal;
       logger.warn("Failed to decode derived QOS data: " + tmp5);
     }
   }
   tmp2Result = tmp2(1224);
-  const QosToken = tmp2(14195).QosToken;
+  const QosToken = tmp2(14198).QosToken;
   return tmp2Result.protoToB64(defineProperty.QosToken, QosToken.create({ clientProvided, derived }));
 }
 let closure_3 = new timestampDefault("QOS");

@@ -1,9 +1,9 @@
-// Module ID: 14441
-// Function ID: 14442
+// Module ID: 14444
+// Function ID: 14445
 // Name: _initialize
 // Dependencies: [1898, 2]
 
-// Module 14441 (_initialize)
+// Module 14444 (_initialize)
 import initializeDefault from "initialize" /* 1898 */;
 
 initializeDefault;

@@ -1,9 +1,9 @@
-// Module ID: 16581
-// Function ID: 16582
+// Module ID: 16584
+// Function ID: 16585
 // Name: ApplicationStatusIcon
-// Dependencies: [19, 17, 21, 4560, 576, 4384, 4520, 6616, 16582, 4556, 1114, 16578, 4242, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4384, 4520, 6616, 16585, 4556, 1114, 16581, 4242, 2]
 
-// Module 16581 (ApplicationStatusIcon)
+// Module 16584 (ApplicationStatusIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4384 */;
 import importAllResult from "noop" /* 19 */;
@@ -43,7 +43,7 @@ const memoResult = importAllResult.memo((arg0) => {
   ({ guildId, userId, selectedJoinRequestId } = arg0);
   const tmp = callback3();
   _require = tmp;
-  let obj = _require(16582);
+  let obj = _require(16585);
   const otherGuildJoinRequestsForUser = obj.useOtherGuildJoinRequestsForUser({ guildId, userId, selectedJoinRequestId });
   let tmp4 = null;
   if (0 !== otherGuildJoinRequestsForUser.length) {

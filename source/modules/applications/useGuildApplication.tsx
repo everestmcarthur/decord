@@ -1,10 +1,10 @@
-// Module ID: 17679
-// Function ID: 17680
+// Module ID: 17682
+// Function ID: 17683
 // Name: useGuildApplication
 // Dependencies: [5, 32, 19, 4788, 504, 7163, 4461, 2]
 // Exports: default
 
-// Module 17679 (useGuildApplication)
+// Module 17682 (useGuildApplication)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;

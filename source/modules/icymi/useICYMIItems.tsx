@@ -1,10 +1,10 @@
-// Module ID: 16486
-// Function ID: 16487
+// Module ID: 16489
+// Function ID: 16490
 // Name: createItem
 // Dependencies: [19, 8335, 8348, 504, 8351, 2]
 // Exports: default
 
-// Module 16486 (createItem)
+// Module 16489 (createItem)
 import MessageEmbedTypes from "MessageEmbedTypes" /* 8348 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "filterStaffGuild" /* 8335 */;

@@ -1,18 +1,18 @@
-// Module ID: 16190
-// Function ID: 16191
+// Module ID: 16193
+// Function ID: 16194
 // Name: PX_8
-// Dependencies: [5, 19, 17, 1074, 1954, 21, 576, 16191, 10119, 4980, 4560, 16192, 8920, 1114, 5607, 5123, 5680, 4556, 4975, 8580, 7316, 2]
+// Dependencies: [5, 19, 17, 1074, 1954, 21, 576, 16194, 10124, 4980, 4560, 16195, 8925, 1114, 5607, 5123, 5680, 4556, 4975, 8583, 7316, 2]
 // Exports: getScaledGameClaimNoticeHeight
 
-// Module 16190 (PX_8)
+// Module 16193 (PX_8)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4980 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8920 */;
-import map from "map" /* 10119 */;
-import importDefaultResult1 from "importDefaultResult1" /* 16191 */;
-import importDefaultResult1Default from "importDefaultResult1" /* 16191 */;
-import fetchUnclaimedGames from "fetchUnclaimedGames" /* 16192 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8925 */;
+import map from "map" /* 10124 */;
+import importDefaultResult1 from "importDefaultResult1" /* 16194 */;
+import importDefaultResult1Default from "importDefaultResult1" /* 16194 */;
+import fetchUnclaimedGames from "fetchUnclaimedGames" /* 16195 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;
@@ -93,7 +93,7 @@ const memoResult = importAllResult.memo((arg0) => {
     const obj6 = { variant: "primary", size: "sm", text: null, icon: null, iconPosition: "end", onPress: null };
     const intl3 = tmp2(1114).intl;
     obj6[2] = intl3.string(tmp2(1114).t["2u6ZlY"]);
-    obj6[3] = callback2(tmp2(8580).LinkExternalSmallIcon, { size: "xs", color: "white" });
+    obj6[3] = callback2(tmp2(8583).LinkExternalSmallIcon, { size: "xs", color: "white" });
     obj6[5] = callback(function*() {
       if (v0 === 2) {
         v0 = 3;

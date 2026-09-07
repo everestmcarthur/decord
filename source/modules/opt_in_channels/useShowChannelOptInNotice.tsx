@@ -1,10 +1,10 @@
-// Module ID: 11422
-// Function ID: 11423
+// Module ID: 11427
+// Function ID: 11428
 // Name: useShowChannelOptInNotice
 // Dependencies: [4741, 1074, 1964, 7535, 504, 7222, 2]
 // Exports: default
 
-// Module 11422 (useShowChannelOptInNotice)
+// Module 11427 (useShowChannelOptInNotice)
 import closure_2 from "updateUserGuildSettingsInternal" /* 4741 */;
 import { NULL_STRING_GUILD_ID } from "ME" /* 1074 */;
 import { ChannelFlags } from "set" /* 1964 */;

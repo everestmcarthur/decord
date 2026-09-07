@@ -1,10 +1,10 @@
-// Module ID: 9069
-// Function ID: 9070
+// Module ID: 9074
+// Function ID: 9075
 // Name: fetchVanityUrl
 // Dependencies: [1074, 1272, 573, 2]
 // Exports: fetchVanityUrl, resetCode, saveCode, setCode
 
-// Module 9069 (fetchVanityUrl)
+// Module 9074 (fetchVanityUrl)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import ME from "ME" /* 1074 */;

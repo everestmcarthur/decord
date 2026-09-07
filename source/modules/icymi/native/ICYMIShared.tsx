@@ -1,18 +1,18 @@
-// Module ID: 16491
-// Function ID: 16492
+// Module ID: 16494
+// Function ID: 16495
 // Name: Separator
-// Dependencies: [19, 17, 7306, 1957, 2021, 4199, 1371, 1074, 21, 8348, 9198, 5087, 10132, 16420, 7110, 7244, 7038, 7456, 4491, 16452, 1115, 576, 1178, 8813, 5584, 4982, 5123, 4556, 7641, 16492, 8672, 504, 4712, 8351, 8179, 5094, 8350, 16088, 9785, 1114, 16453, 4495, 4262, 4409, 4296, 4561, 4573, 5071, 7209, 4550, 2]
+// Dependencies: [19, 17, 7306, 1957, 2021, 4199, 1371, 1074, 21, 8348, 9203, 5087, 10137, 16423, 7110, 7244, 7038, 7456, 4491, 16455, 1115, 576, 1178, 8818, 5584, 4982, 5123, 4556, 7641, 16495, 8677, 504, 4712, 8351, 8179, 5094, 8350, 16091, 9790, 1114, 16456, 4495, 4262, 4409, 4296, 4561, 4573, 5071, 7209, 4550, 2]
 // Exports: AnnouncementContentPost, GuildEventPost, MessageContentPost, SimplePost, ThreadAsComments, navigateToPost, truncateUsername
 
-// Module 16491 (Separator)
+// Module 16494 (Separator)
 import ThemesDefault from "Themes" /* 576 */;
 import set from "set" /* 1115 */;
 import Button from "Button" /* 1178 */;
 import GuildIconSizes from "GuildIconSizes" /* 5584 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
 import _safeTransitionToDefault from "_safeTransitionTo" /* 7244 */;
-import SolidCutout from "SolidCutout" /* 8813 */;
-import SolidCutoutDefault from "SolidCutout" /* 8813 */;
+import SolidCutout from "SolidCutout" /* 8818 */;
+import SolidCutoutDefault from "SolidCutout" /* 8818 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "updateState" /* 7306 */;
@@ -22,7 +22,7 @@ import closure_8 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_9 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16452 */;
+import createICYMIStyles from "createICYMIStyles" /* 16455 */;
 
 require = arg1;
 class Separator {

@@ -1,10 +1,10 @@
-// Module ID: 11207
-// Function ID: 11208
+// Module ID: 11212
+// Function ID: 11213
 // Name: Heading
-// Dependencies: [19, 17, 2025, 2021, 1979, 7208, 1074, 1482, 21, 4560, 4262, 576, 4556, 1114, 11208, 504, 5407, 11, 10818, 5584, 11209, 1178, 8370, 7162, 8190, 11210, 4527, 4418, 1100, 7038, 4425, 1609, 8179, 11211, 4975, 7207, 2]
+// Dependencies: [19, 17, 2025, 2021, 1979, 7208, 1074, 1482, 21, 4560, 4262, 576, 4556, 1114, 11213, 504, 5407, 11, 10823, 5584, 11214, 1178, 8370, 7162, 8190, 11215, 4527, 4418, 1100, 7038, 4425, 1609, 8179, 11216, 4975, 7207, 2]
 // Exports: default
 
-// Module 11207 (Heading)
+// Module 11212 (Heading)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -13,8 +13,8 @@ import map from "map" /* 4262 */;
 import Text from "Text" /* 4556 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7207 */;
-import LinkButtonDefault from "LinkButton" /* 11208 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 11209 */;
+import LinkButtonDefault from "LinkButton" /* 11213 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 11214 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "_getSystemLocale" /* 2025 */;
@@ -142,7 +142,7 @@ function MemberJoinDates(userId) {
   const items3 = [callback(Heading, obj), ];
   obj = { style: items4, children: null };
   items4 = [callback3().memberJoinDates, { columnGap }];
-  obj1 = { themeType, icon: callback(tmp4(10818).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
+  obj1 = { themeType, icon: callback(tmp4(10823).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
   const intl2 = tmp4(1114).intl;
   obj1[2] = intl2.formatToPlainString(userId(1114).t["9t7w53"], { date: createdAtDate });
   obj1[3] = createdAtDate;

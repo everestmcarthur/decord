@@ -1,14 +1,14 @@
-// Module ID: 14876
-// Function ID: 14877
+// Module ID: 14879
+// Function ID: 14880
 // Name: FamilyCenterTeenQRCodeButtonInner
-// Dependencies: [19, 17, 1371, 7537, 7538, 1074, 4770, 21, 4560, 576, 8645, 4258, 1114, 11916, 563, 14877, 1242, 14878, 4527, 14879, 1896, 4973, 4975, 9053, 2396, 14882, 4763, 1365, 11913, 1608, 5139, 13868, 2]
+// Dependencies: [19, 17, 1371, 7537, 7538, 1074, 4770, 21, 4560, 576, 8650, 4258, 1114, 11921, 563, 14880, 1242, 14881, 4527, 14882, 1896, 4973, 4975, 9058, 2396, 14885, 4763, 1365, 11918, 1608, 5139, 13871, 2]
 // Exports: FamilyCenterParentQRCodeButton, FamilyCenterTeenQRCodeButton
 
-// Module 14876 (FamilyCenterTeenQRCodeButtonInner)
+// Module 14879 (FamilyCenterTeenQRCodeButtonInner)
 import ThemesDefault from "Themes" /* 576 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;
 import Button from "Button" /* 4975 */;
-import QrCodeIcon from "QrCodeIcon" /* 14882 */;
+import QrCodeIcon from "QrCodeIcon" /* 14885 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
@@ -141,8 +141,8 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
         tmp4 = null;
         if (tmpResult.isDiscordHostname(hostname)) {
           if (null !== pathname.match(closure_8)) {
-            const result = handleQrCodeScanSucess(11913).handleFamilyCenterQRCodeScan(pathname, "FamilyCenterQRCodeScan");
-            const obj4 = handleQrCodeScanSucess(11913);
+            const result = handleQrCodeScanSucess(11918).handleFamilyCenterQRCodeScan(pathname, "FamilyCenterQRCodeScan");
+            const obj4 = handleQrCodeScanSucess(11918);
           }
           tmp4 = tmp6;
         }
@@ -151,7 +151,7 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
     }
     return tmp4;
   }
-  let obj = handleQrCodeScanSucess(8645);
+  let obj = handleQrCodeScanSucess(8650);
   if (obj.useHasMaxConnections()) {
     return null;
   } else {

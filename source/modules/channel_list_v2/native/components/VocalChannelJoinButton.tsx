@@ -1,8 +1,8 @@
-// Module ID: 12293
-// Function ID: 12294
-// Dependencies: [19, 17, 4199, 4579, 1074, 21, 4560, 576, 1115, 7873, 4495, 4411, 9471, 563, 5431, 5425, 5417, 12294, 4556, 1114, 4975, 5097, 5101, 2]
+// Module ID: 12297
+// Function ID: 12298
+// Dependencies: [19, 17, 4199, 4579, 1074, 21, 4560, 576, 1115, 7873, 4495, 4411, 9476, 563, 5431, 5425, 5417, 12298, 4556, 1114, 4975, 5097, 5101, 2]
 
-// Module 12293
+// Module 12297
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -61,7 +61,7 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
   const tmp = voiceStates(7873)();
   let obj = channel(4411);
   let joinButtonText = callback(tmp, obj.isThemeLight(voiceStates(4495)()));
-  obj1 = channel(9471);
+  obj1 = channel(9476);
   const isConnectedToVoiceChannel = obj1.useIsConnectedToVoiceChannel(channel);
   let obj2 = channel(563);
   const items = [closure_6];
@@ -87,10 +87,10 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
   if (!stateFromStores1) {
     tmp12 = tmp8;
   }
-  tmp3Result = tmp3(12294);
+  tmp3Result = tmp3(12298);
   const connectedUserLimit = tmp3Result.useConnectedUserLimit({ channel, video: tmp12 });
   tmp8 = channel(5417).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
-  let connectedUserLimitFormatted = channel(12294).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
+  let connectedUserLimitFormatted = channel(12298).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
   let tmp15 = !stateFromStores;
   if (!stateFromStores) {
     tmp15 = !isConnectedToVoiceChannel;

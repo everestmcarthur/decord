@@ -1,14 +1,14 @@
-// Module ID: 13272
-// Function ID: 13273
+// Module ID: 13276
+// Function ID: 13277
 // Name: GroupDMNitroCapCoachmark
-// Dependencies: [32, 19, 17, 11593, 1954, 21, 4560, 11591, 11598, 11594, 7388, 1943, 1114, 1178, 10031, 8662, 576, 11590, 11127, 2]
+// Dependencies: [32, 19, 17, 11598, 1954, 21, 4560, 11596, 11603, 11599, 7388, 1943, 1114, 1178, 10036, 8667, 576, 11595, 11132, 2]
 // Exports: default
 
-// Module 13272 (GroupDMNitroCapCoachmark)
+// Module 13276 (GroupDMNitroCapCoachmark)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_GROUP_DM_NITRO_PARTICIPANTS as closure_6 } from "MAX_GROUP_DM_NITRO_PARTICIPANTS" /* 11593 */;
+import { MAX_GROUP_DM_NITRO_PARTICIPANTS as closure_6 } from "MAX_GROUP_DM_NITRO_PARTICIPANTS" /* 11598 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -30,14 +30,14 @@ export default function GroupDMNitroCapCoachmark(channelId) {
   dependencyMap = tmp;
   let obj = React;
   const ref = React.useRef(null);
-  groupDMNitroAudience = channelId(11591).useGroupDMNitroAudience();
+  groupDMNitroAudience = channelId(11596).useGroupDMNitroAudience();
   React = tmp6;
   obj = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: null };
-  const obj2 = channelId(11591);
-  obj[2] = channelId(11591).GroupDMNitroAcquisitionStrategy.MARKETING;
-  const tmp7Result = _location(11598)(obj);
+  const obj2 = channelId(11596);
+  obj[2] = channelId(11596).GroupDMNitroAcquisitionStrategy.MARKETING;
+  const tmp7Result = _location(11603)(obj);
   closure_5 = tmp7Result;
-  let tmp7 = _location(11598);
+  let tmp7 = _location(11603);
   channelId(7388);
   if (obj4.useConfig({ location: _location }).enabled) {
     if ("staff" !== groupDMNitroAudience) {
@@ -93,7 +93,7 @@ export default function GroupDMNitroCapCoachmark(channelId) {
       };
       return obj;
     }, items1);
-    const coachmark = tmp3(11127).useCoachmark(ref, memo);
+    const coachmark = tmp3(11132).useCoachmark(ref, memo);
     obj = { ref: null, collapsable: false, children: null };
     obj[0] = ref;
     obj[2] = channelId.children;

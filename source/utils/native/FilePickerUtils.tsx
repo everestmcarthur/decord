@@ -1,10 +1,10 @@
-// Module ID: 11223
-// Function ID: 11224
+// Module ID: 11228
+// Function ID: 11229
 // Name: _handleDocumentSelection
-// Dependencies: [5, 1074, 11224, 1115, 4905, 1114, 4740, 2]
+// Dependencies: [5, 1074, 11229, 1115, 4905, 1114, 4740, 2]
 // Exports: handleDocumentSelection
 
-// Module 11223 (_handleDocumentSelection)
+// Module 11228 (_handleDocumentSelection)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 
@@ -115,7 +115,7 @@ function _handleDocumentSelection() {
               }
               dependencyMap = tmp54;
               c4 = 1;
-              let pick = callback(11224).pick;
+              let pick = callback(11229).pick;
               let obj8 = callback(1115);
               if (obj8.isIOS()) {
                 let obj3 = { mode: "open" };
@@ -129,14 +129,14 @@ function _handleDocumentSelection() {
               pick = pick(obj4);
               c5 = 3;
               c6 = 1;
-              const tmp61 = callback(11224);
+              const tmp61 = callback(11229);
             }
           } else if (2 === tmp7) {
             c4 = 0;
             c4 = closure_3;
-            obj3 = flag(11224);
+            obj3 = flag(11229);
             if (obj3.isErrorWithCode(c4)) {
-              if (c4.code === flag(11224).errorCodes.OPERATION_CANCELED) {
+              if (c4.code === flag(11229).errorCodes.OPERATION_CANCELED) {
                 c6 = 3;
                 return { value: "HermesInternal", done: null };
               }

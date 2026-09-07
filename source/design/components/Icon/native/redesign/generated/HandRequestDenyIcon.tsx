@@ -1,14 +1,14 @@
-// Module ID: 9933
-// Function ID: 9934
+// Module ID: 9938
+// Function ID: 9939
 // Name: HandRequestDenyIcon
-// Dependencies: [19, 21, 576, 4261, 9934, 2]
+// Dependencies: [19, 21, 576, 4261, 9939, 2]
 // Exports: HandRequestDenyIcon
 
-// Module 9933 (HandRequestDenyIcon)
+// Module 9938 (HandRequestDenyIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 9934 */;
+import registerAsset from "registerAsset" /* 9939 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

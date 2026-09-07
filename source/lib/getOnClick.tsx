@@ -1,7 +1,7 @@
 // Module ID: 8377
 // Function ID: 8378
 // Name: openInviteModal
-// Dependencies: [32, 5, 4788, 7526, 7228, 502, 2021, 1979, 4544, 4781, 2011, 4381, 5438, 1074, 1076, 7229, 573, 4545, 8378, 9703, 1896, 5520, 7244, 9789, 4543, 4548, 7691, 4249, 1242, 9514, 11943, 12940, 9504, 4573, 9548, 12944, 10797, 11484, 1365, 11767, 5449, 12945, 7541, 4740, 4714, 8127, 12946, 2]
+// Dependencies: [32, 5, 4788, 7526, 7228, 502, 2021, 1979, 4544, 4781, 2011, 4381, 5438, 1074, 1076, 7229, 573, 4545, 8378, 9708, 1896, 5520, 7244, 9794, 4543, 4548, 7691, 4249, 1242, 9519, 11947, 12944, 9509, 4573, 9553, 12948, 10802, 11489, 1365, 11772, 5449, 12949, 7541, 4740, 4714, 8127, 12950, 2]
 // Exports: default
 
 // Module 8377 (openInviteModal)
@@ -69,7 +69,7 @@ function _openInviteModal() {
               return obj;
             } else {
               obj1 = callback(table[16]);
-              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "accessible", invite_instance_id: true };
+              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "accessible", invite_instance_id: false };
               obj1[1] = closure_0;
               obj1[4] = callback;
               c3 = 1;
@@ -332,7 +332,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== tmp3(tmp4[25]).CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = tmp3(tmp4[26]).parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "hash", skuId: "call" };
+            result = { applicationId: "push", skuId: "channel" };
           }
           const tmp3Result = tmp3(tmp4[26]);
         }
@@ -349,7 +349,7 @@ export default function getOnClick(url) {
         closure_1_1(tmp4[27])(url);
         return true;
       }
-      result = { applicationId: code, skuId: "a" };
+      result = { applicationId: code, skuId: "Array" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -651,7 +651,7 @@ export default function getOnClick(url) {
   }
   if (null != findCodedLinkResult) {
     if (findCodedLinkResult.type === tmp2(4548).CodedLinkType.QUESTS_EMBED) {
-      let tmp2Result = tmp2(11484);
+      let tmp2Result = tmp2(11489);
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {

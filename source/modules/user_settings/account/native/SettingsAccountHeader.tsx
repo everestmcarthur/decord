@@ -1,14 +1,14 @@
-// Module ID: 14686
-// Function ID: 14687
+// Module ID: 14689
+// Function ID: 14690
 // Name: RestrictedAccountRedirect
-// Dependencies: [19, 17, 4209, 1371, 1074, 8399, 21, 4560, 576, 14687, 1114, 7382, 504, 6998, 5621, 5605, 4975, 2]
+// Dependencies: [19, 17, 4209, 1371, 1074, 8399, 21, 4560, 576, 14690, 1114, 7382, 504, 6998, 5621, 5605, 4975, 2]
 
-// Module 14686 (RestrictedAccountRedirect)
+// Module 14689 (RestrictedAccountRedirect)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import handleOpenEmailVerification from "handleOpenEmailVerification" /* 6998 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14687 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14690 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "markAllUserIdListsStale" /* 4209 */;

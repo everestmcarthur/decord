@@ -1,10 +1,10 @@
-// Module ID: 9622
-// Function ID: 9623
+// Module ID: 9627
+// Function ID: 9628
 // Name: canRenderParticipantVideo
 // Dependencies: [502, 1908, 4581, 4585, 504, 2]
 // Exports: default, useCanRenderParticipantVideo
 
-// Module 9622 (canRenderParticipantVideo)
+// Module 9627 (canRenderParticipantVideo)
 import closure_2 from "fetchFingerprint" /* 502 */;
 import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
 import ParticipantTypes from "ParticipantTypes" /* 4581 */;

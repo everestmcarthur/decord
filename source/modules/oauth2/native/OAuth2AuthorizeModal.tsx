@@ -1,10 +1,10 @@
-// Module ID: 9578
-// Function ID: 9579
+// Module ID: 9583
+// Function ID: 9584
 // Name: OAuth2AuthorizeModal
-// Dependencies: [19, 17, 21, 4560, 576, 9235, 1611, 4296, 4974, 5123, 1114, 9579, 5680, 4556, 7123, 9581, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 9240, 1611, 4296, 4974, 5123, 1114, 9584, 5680, 4556, 7123, 9586, 2]
 // Exports: default
 
-// Module 9578 (OAuth2AuthorizeModal)
+// Module 9583 (OAuth2AuthorizeModal)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -29,7 +29,7 @@ let result = require("set").fileFinishedImporting("modules/oauth2/native/OAuth2A
 
 export default function OAuth2AuthorizeModal(arg0) {
   const tmp = callback();
-  const tmp4 = sharedValue(9235)(arg0);
+  const tmp4 = sharedValue(9240)(arg0);
   const _require = tmp4;
   let obj = _require(4296);
   sharedValue = obj.useSharedValue(0);
@@ -81,7 +81,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   if (null != tmp4.backStep) {
     const obj3 = { color: null };
     obj3[0] = tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT;
-    let tmp11Result = tmp11(tmp5(9579).ArrowSmallLeftIcon, obj3);
+    let tmp11Result = tmp11(tmp5(9584).ArrowSmallLeftIcon, obj3);
   } else {
     const obj4 = { color: null };
     obj4[0] = tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT;
@@ -104,7 +104,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const merged = Object.assign(tmp4);
   obj8.onScroll = callback;
   obj8.centerContent = true;
-  obj7[2] = closure_5(sharedValue(9581), obj8);
+  obj7[2] = closure_5(sharedValue(9586), obj8);
   items4[1] = closure_5(_require(7123).SafeAreaPaddingView, obj7);
   obj[1] = items4;
   return closure_6(View, obj);

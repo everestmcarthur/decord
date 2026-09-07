@@ -1,10 +1,10 @@
-// Module ID: 12929
-// Function ID: 12930
+// Module ID: 12933
+// Function ID: 12934
 // Name: openStageChannelAudienceNoticeModal
 // Dependencies: [8394, 2]
 // Exports: openStageChannelAudienceNoticeModal
 
-// Module 12929 (openStageChannelAudienceNoticeModal)
+// Module 12933 (openStageChannelAudienceNoticeModal)
 import set from "set" /* 2 */;
 import openStageChannelSettingsAll from "openStageChannelSettings" /* 8394 */;
 

@@ -1,17 +1,17 @@
-// Module ID: 13899
-// Function ID: 13900
+// Module ID: 13902
+// Function ID: 13903
 // Name: onClose
-// Dependencies: [5, 32, 19, 1957, 13851, 21, 3, 4763, 8362, 504, 4573, 1094, 13900, 2]
+// Dependencies: [5, 32, 19, 1957, 13854, 21, 3, 4763, 8362, 504, 4573, 1094, 13903, 2]
 // Exports: default
 
-// Module 13899 (onClose)
+// Module 13902 (onClose)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef4763 from "module_4763" /* 4763 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13851 */;
+import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13854 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 let require = arg1;

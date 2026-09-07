@@ -1,10 +1,10 @@
-// Module ID: 9459
-// Function ID: 9460
+// Module ID: 9464
+// Function ID: 9465
 // Name: InfoBox
 // Dependencies: [19, 17, 21, 4560, 576, 4515, 6610, 4556, 2]
 // Exports: default
 
-// Module 9459 (InfoBox)
+// Module 9464 (InfoBox)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;

@@ -1,9 +1,9 @@
-// Module ID: 13634
-// Function ID: 13635
+// Module ID: 13638
+// Function ID: 13639
 // Name: presenceUpdate
 // Dependencies: [4610, 568, 1906, 11, 2]
 
-// Module 13634 (presenceUpdate)
+// Module 13638 (presenceUpdate)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import Opcode from "Opcode" /* 1906 */;
 import closure_3 from "initialize" /* 4610 */;

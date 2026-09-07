@@ -1,9 +1,9 @@
-// Module ID: 11478
-// Function ID: 11479
+// Module ID: 11483
+// Function ID: 11484
 // Name: hasUpdates
 // Dependencies: [17, 2]
 
-// Module 11478 (hasUpdates)
+// Module 11483 (hasUpdates)
 import set2 from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

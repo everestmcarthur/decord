@@ -1,14 +1,14 @@
-// Module ID: 9433
-// Function ID: 9434
+// Module ID: 9438
+// Function ID: 9439
 // Name: HammerIcon
-// Dependencies: [19, 21, 576, 4261, 9434, 2]
+// Dependencies: [19, 21, 576, 4261, 9439, 2]
 // Exports: HammerIcon
 
-// Module 9433 (HammerIcon)
+// Module 9438 (HammerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 9434 */;
+import registerAsset from "registerAsset" /* 9439 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

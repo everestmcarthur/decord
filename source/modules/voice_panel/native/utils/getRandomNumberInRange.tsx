@@ -1,10 +1,10 @@
-// Module ID: 17138
-// Function ID: 17139
+// Module ID: 17141
+// Function ID: 17142
 // Name: n
 // Dependencies: [2]
 // Exports: default
 
-// Module 17138 (n)
+// Module 17141 (n)
 import set from "set" /* 2 */;
 
 const fn = function n(arg0, arg1) {

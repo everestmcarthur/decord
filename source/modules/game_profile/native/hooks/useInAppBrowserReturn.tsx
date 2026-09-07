@@ -1,12 +1,12 @@
-// Module ID: 8687
-// Function ID: 8688
+// Module ID: 8692
+// Function ID: 8693
 // Name: useInAppBrowserReturn
-// Dependencies: [19, 8682, 1116, 4525, 8680, 8686, 2]
+// Dependencies: [19, 8687, 1116, 4525, 8685, 8691, 2]
 // Exports: default
 
-// Module 8687 (useInAppBrowserReturn)
+// Module 8692 (useInAppBrowserReturn)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "getSimilarGames" /* 8682 */;
+import closure_4 from "getSimilarGames" /* 8687 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/game_profile/native/hooks/useInAppBrowserReturn.tsx");

@@ -1,9 +1,9 @@
-// Module ID: 8783
-// Function ID: 8784
+// Module ID: 8788
+// Function ID: 8789
 // Name: extraWishlistParams
-// Dependencies: [5, 7621, 1371, 4220, 7227, 8778, 1074, 1116, 1369, 573, 7231, 1272, 8776, 1232, 4461, 1242, 8181, 2]
+// Dependencies: [5, 7621, 1371, 4220, 7227, 8783, 1074, 1116, 1369, 573, 7231, 1272, 8781, 1232, 4461, 1242, 8181, 2]
 
-// Module 8783 (extraWishlistParams)
+// Module 8788 (extraWishlistParams)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import PlatformTypes from "PlatformTypes" /* 1116 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
@@ -13,8 +13,8 @@ import closure_4 from "createUserWidgetFromServer" /* 7621 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
 import closure_6 from "handlePaymentSourceCreateEnd" /* 4220 */;
 import closure_7 from "fromServer" /* 7227 */;
-import closure_8 from "fromServer" /* 8778 */;
-import { getWishlistSkuIds } from "fromServer" /* 8778 */;
+import closure_8 from "fromServer" /* 8783 */;
+import { getWishlistSkuIds } from "fromServer" /* 8783 */;
 import ME from "ME" /* 1074 */;
 
 require = arg1;

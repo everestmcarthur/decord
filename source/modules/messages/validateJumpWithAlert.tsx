@@ -1,10 +1,10 @@
-// Module ID: 13285
-// Function ID: 13286
+// Module ID: 13289
+// Function ID: 13290
 // Name: validateJumpWithAlert
 // Dependencies: [1957, 4199, 4209, 1074, 4904, 1114, 7507, 2]
 // Exports: default
 
-// Module 13285 (validateJumpWithAlert)
+// Module 13289 (validateJumpWithAlert)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import setDefault from "set" /* 4904 */;
 import isSpamSupported from "isSpamSupported" /* 7507 */;

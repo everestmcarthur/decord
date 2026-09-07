@@ -1,9 +1,9 @@
-// Module ID: 14501
-// Function ID: 14502
-// Dependencies: [5, 1074, 9554, 14502, 1242, 14503, 2]
+// Module ID: 14504
+// Function ID: 14505
+// Dependencies: [5, 1074, 9559, 14505, 1242, 14506, 2]
 
-// Module 14501
-import prototypeDefault from "prototype" /* 9554 */;
+// Module 14504
+import prototypeDefault from "prototype" /* 9559 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 1074 */;
 
@@ -50,10 +50,10 @@ let obj = {
                 obj1 = { errorCode: null };
                 obj1[0] = closure_1_5.INVALID_EVENT;
                 const _HermesInternal = HermesInternal;
-                let tmp35 = closure_1_1(9554);
+                let tmp35 = closure_1_1(9559);
                 tmp35 = new tmp35(obj1, "Invalid event: " + dependencyMap);
                 throw tmp35;
-              } else if (closure_1_1(14502)(closure_1_1.authorization.scopes, tmp67.scope)) {
+              } else if (closure_1_1(14505)(closure_1_1.authorization.scopes, tmp67.scope)) {
                 const obj2 = { event: null, scope: null, application_id: null, socket_scope: null };
                 obj2[0] = dependencyMap;
                 if (typeof tmp67.scope === "object") {
@@ -78,7 +78,7 @@ let obj = {
               } else {
                 const obj4 = { errorCode: null };
                 obj4[0] = closure_1_5.INVALID_PERMISSIONS;
-                const tmp10 = new tmp72(9554)(obj4, "Not authenticated or invalid scope");
+                const tmp10 = new tmp72(9559)(obj4, "Not authenticated or invalid scope");
                 throw tmp10;
               }
               obj13 = closure_1_0;
@@ -96,7 +96,7 @@ let obj = {
             if (null != closure_1.validate(initialSubscriptionPayload, closure_0.validation(closure_1), { convert: false }).error) {
               let obj5 = { errorCode: null };
               obj5[0] = closure_1_5.INVALID_PAYLOAD;
-              const tmp64 = new closure_1_1(9554)(obj5, "Invalid subscription parameters provided");
+              const tmp64 = new closure_1_1(9559)(obj5, "Invalid subscription parameters provided");
               throw tmp64;
             }
           }
@@ -104,7 +104,7 @@ let obj = {
           obj6[0] = initialSubscriptionPayload;
           obj6[1] = closure_1;
           closure_2 = closure_0.handler(obj6);
-          obj5 = closure_1_0(14503);
+          obj5 = closure_1_0(14506);
           initialSubscriptionPayload = obj5.getInitialSubscriptionPayload(closure_1, closure_2, initialSubscriptionPayload);
           const promise = new Promise((arg0) => {
             setImmediate(() => {

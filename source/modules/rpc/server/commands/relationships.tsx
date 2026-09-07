@@ -1,17 +1,17 @@
-// Module ID: 14491
-// Function ID: 14492
+// Module ID: 14494
+// Function ID: 14495
 // Name: items
-// Dependencies: [32, 4209, 1371, 4465, 1074, 14476, 8339, 1086, 9554, 9559, 2]
+// Dependencies: [32, 4209, 1371, 4465, 1074, 14479, 8339, 1086, 9559, 9564, 2]
 
-// Module 14491 (items)
+// Module 14494 (items)
 import fromStringAll from "fromString" /* 1086 */;
-import prototypeDefault from "prototype" /* 9554 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9559 */;
+import prototypeDefault from "prototype" /* 9559 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9564 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "markAllUserIdListsStale" /* 4209 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14476 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14479 */;
 
 require = arg1;
 ({ ApplicationFlags: error, RelationshipTypes: closure_8, RPCCommands, RPCErrors: c9 } = ME);

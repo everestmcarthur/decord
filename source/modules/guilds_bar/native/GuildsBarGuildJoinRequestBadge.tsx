@@ -1,18 +1,18 @@
-// Module ID: 16298
-// Function ID: 16299
+// Module ID: 16301
+// Function ID: 16302
 // Name: GuildsBarGuildJoinRequestBadge
-// Dependencies: [19, 17, 21, 4560, 576, 5441, 4384, 16299, 16300, 16301, 12289, 5587, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 5441, 4384, 16302, 16303, 16304, 12293, 5587, 2]
 // Exports: default
 
-// Module 16298 (GuildsBarGuildJoinRequestBadge)
+// Module 16301 (GuildsBarGuildJoinRequestBadge)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4384 */;
 import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 12289 */;
-import registerAssetDefault2 from "registerAsset" /* 16299 */;
-import registerAssetDefault3 from "registerAsset" /* 16300 */;
-import registerAssetDefault4 from "registerAsset" /* 16301 */;
+import registerAssetDefault from "registerAsset" /* 12293 */;
+import registerAssetDefault2 from "registerAsset" /* 16302 */;
+import registerAssetDefault3 from "registerAsset" /* 16303 */;
+import registerAssetDefault4 from "registerAsset" /* 16304 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

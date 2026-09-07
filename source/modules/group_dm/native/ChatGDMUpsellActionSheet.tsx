@@ -1,14 +1,14 @@
-// Module ID: 11603
-// Function ID: 11604
+// Module ID: 11608
+// Function ID: 11609
 // Name: ChatGDMUpsellActionSheet
-// Dependencies: [19, 17, 21, 4560, 576, 1611, 4380, 1943, 4527, 7150, 5587, 11604, 4975, 1114, 6627, 4556, 11605, 4503, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 1611, 4380, 1943, 4527, 7150, 5587, 11609, 4975, 1114, 6627, 4556, 11610, 4503, 2]
 // Exports: default
 
-// Module 11603 (ChatGDMUpsellActionSheet)
+// Module 11608 (ChatGDMUpsellActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 11604 */;
+import registerAssetDefault from "registerAsset" /* 11609 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -82,7 +82,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const obj9 = { style: tmp.noticeContainer, children: null };
   const obj10 = { style: tmp.innerContainer, children: null };
   const obj2 = { padding: 16, paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
-  const items4 = [callback(View, { style: tmp.item, children: callback(onClick(11605).TimerIcon, { size: "sm" }) }), ];
+  const items4 = [callback(View, { style: tmp.item, children: callback(onClick(11610).TimerIcon, { size: "sm" }) }), ];
   const obj12 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = onClick(1114).intl;
   obj12[3] = intl5.string(onClick(1114).t.Fq3DJb);
@@ -90,7 +90,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj10[1] = items4;
   const items5 = [callback2(View, obj10), ];
   const obj13 = { style: tmp.secondInnerContainer, children: null };
-  const obj11 = { style: tmp.item, children: callback(onClick(11605).TimerIcon, { size: "sm" }) };
+  const obj11 = { style: tmp.item, children: callback(onClick(11610).TimerIcon, { size: "sm" }) };
   const items6 = [callback(View, { style: tmp.item, children: callback(onClick(4503).LinkIcon, { size: "sm" }) }), ];
   const obj15 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl6 = onClick(1114).intl;

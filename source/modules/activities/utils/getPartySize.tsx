@@ -1,10 +1,10 @@
-// Module ID: 11755
-// Function ID: 11756
+// Module ID: 11760
+// Function ID: 11761
 // Name: getPartySize
 // Dependencies: [32, 2]
 // Exports: getPartySize
 
-// Module 11755 (getPartySize)
+// Module 11760 (getPartySize)
 import closure_0 from "_slicedToArray" /* 32 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getPartySize.tsx");

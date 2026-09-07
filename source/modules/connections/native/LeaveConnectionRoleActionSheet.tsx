@@ -1,10 +1,10 @@
-// Module ID: 11572
-// Function ID: 11573
+// Module ID: 11577
+// Function ID: 11578
 // Name: LeaveConnectionRoleActionSheet
 // Dependencies: [19, 17, 21, 4560, 7150, 4556, 1114, 4975, 2]
 // Exports: default
 
-// Module 11572 (LeaveConnectionRoleActionSheet)
+// Module 11577 (LeaveConnectionRoleActionSheet)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;

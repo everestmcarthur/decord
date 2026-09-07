@@ -1,11 +1,11 @@
-// Module ID: 13674
-// Function ID: 13675
+// Module ID: 13678
+// Function ID: 13679
 // Name: isClipsEnabled
-// Dependencies: [1914, 13675, 504, 2]
+// Dependencies: [1914, 13679, 504, 2]
 // Exports: isClipsEnabled, useIsClipsEnabled
 
-// Module 13674 (isClipsEnabled)
-import apexExperiment from "apexExperiment" /* 13675 */;
+// Module 13678 (isClipsEnabled)
+import apexExperiment from "apexExperiment" /* 13679 */;
 import closure_2 from "_migrateDefaultStorage" /* 1914 */;
 
 require = arg1;

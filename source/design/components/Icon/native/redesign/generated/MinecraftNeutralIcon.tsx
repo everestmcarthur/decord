@@ -1,16 +1,16 @@
-// Module ID: 8704
-// Function ID: 8705
+// Module ID: 8709
+// Function ID: 8710
 // Name: MinecraftNeutralIcon
-// Dependencies: [19, 17, 21, 576, 4261, 8705, 8706, 8707, 2]
+// Dependencies: [19, 17, 21, 576, 4261, 8710, 8711, 8712, 2]
 // Exports: MinecraftNeutralIcon
 
-// Module 8704 (MinecraftNeutralIcon)
+// Module 8709 (MinecraftNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8705 */;
-import registerAsset2 from "registerAsset" /* 8706 */;
-import registerAsset3 from "registerAsset" /* 8707 */;
+import registerAsset from "registerAsset" /* 8710 */;
+import registerAsset2 from "registerAsset" /* 8711 */;
+import registerAsset3 from "registerAsset" /* 8712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 14769
-// Function ID: 14770
+// Module ID: 14772
+// Function ID: 14773
 // Name: useIsSafetyHubLoading
 // Dependencies: [8430, 504, 2]
 // Exports: default
 
-// Module 14769 (useIsSafetyHubLoading)
+// Module 14772 (useIsSafetyHubLoading)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
 

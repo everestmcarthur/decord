@@ -1,11 +1,11 @@
-// Module ID: 11316
-// Function ID: 11317
+// Module ID: 11321
+// Function ID: 11322
 // Name: AnimatedCount
-// Dependencies: [32, 19, 17, 21, 4560, 38, 4296, 4271, 4974, 4556, 4978, 11317, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 38, 4296, 4271, 4974, 4556, 4978, 11322, 2]
 
-// Module 11316 (AnimatedCount)
+// Module 11321 (AnimatedCount)
 import Text from "Text" /* 4556 */;
-import defaultFormatter2 from "defaultFormatter" /* 11317 */;
+import defaultFormatter2 from "defaultFormatter" /* 11322 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

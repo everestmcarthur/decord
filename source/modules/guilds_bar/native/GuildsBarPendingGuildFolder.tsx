@@ -1,10 +1,10 @@
-// Module ID: 16306
-// Function ID: 16307
-// Dependencies: [19, 4381, 1074, 21, 16294, 9206, 504, 16287, 4296, 4528, 5520, 1114, 16293, 9030, 2]
+// Module ID: 16309
+// Function ID: 16310
+// Dependencies: [19, 4381, 1074, 21, 16297, 9211, 504, 16290, 4296, 4528, 5520, 1114, 16296, 9035, 2]
 
-// Module 16306
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9206 */;
-import UnreadIndicatorDefault from "UnreadIndicator" /* 16294 */;
+// Module 16309
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9211 */;
+import UnreadIndicatorDefault from "UnreadIndicator" /* 16297 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "handleConnectionOpen" /* 4381 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 1074 */;
@@ -16,7 +16,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
   id = id.id;
   importDefault = undefined;
   ({ expanded, childNodes } = id);
-  let obj = id(16294);
+  let obj = id(16297);
   importDefault = usePendingFolderGuildIdsDefault();
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
   const items = [closure_4];
@@ -57,7 +57,7 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
       const result1 = closure_1_1(closure_1_2[10]).toggleGuildFolderExpand(closure_0);
     }
   }), items2);
-  obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "accessible", config: true, externalChildren: true, children: true };
+  obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "call", config: "a", externalChildren: "Array", children: "call" };
   const obj3 = id(4296);
   obj[0] = "" + id;
   obj[1] = accessibilityActions;
@@ -73,11 +73,11 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
     obj = { folderId: null, totalItems: null };
     obj[0] = id;
     obj[1] = childNodes.length;
-    tmp8Result = tmp8(tmp(16293).GuildsBarGuildFolderBG, obj);
+    tmp8Result = tmp8(tmp(16296).GuildsBarGuildFolderBG, obj);
   }
   obj[12] = tmp8Result;
-  obj[13] = jsx(id(9030).HourglassIcon, {});
-  return jsx(UnreadIndicatorDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "accessible", config: true, externalChildren: true, children: true });
+  obj[13] = jsx(id(9035).HourglassIcon, {});
+  return jsx(UnreadIndicatorDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "call", config: "a", externalChildren: "Array", children: "call" });
 });
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuildFolder.tsx");
 

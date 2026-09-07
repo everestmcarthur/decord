@@ -1,10 +1,10 @@
-// Module ID: 15613
-// Function ID: 15614
+// Module ID: 15616
+// Function ID: 15617
 // Name: DevToolsPersistedStoresActionSheet
-// Dependencies: [32, 19, 17, 505, 502, 21, 4560, 576, 5605, 1986, 4259, 504, 2003, 1484, 6981, 7049, 10212, 10867, 7050, 4527, 4556, 7055, 7198, 7149, 7200, 2]
+// Dependencies: [32, 19, 17, 505, 502, 21, 4560, 576, 5605, 1986, 4259, 504, 2003, 1484, 6981, 7049, 10217, 10872, 7050, 4527, 4556, 7055, 7198, 7149, 7200, 2]
 // Exports: default
 
-// Module 15613 (DevToolsPersistedStoresActionSheet)
+// Module 15616 (DevToolsPersistedStoresActionSheet)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import databaseNameDefault from "databaseName" /* 2003 */;

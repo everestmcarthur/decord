@@ -1,9 +1,9 @@
-// Module ID: 11942
-// Function ID: 11943
+// Module ID: 11946
+// Function ID: 11947
 // Name: AppMessageEmbedDisplayType
 // Dependencies: [2]
 
-// Module 11942 (AppMessageEmbedDisplayType)
+// Module 11946 (AppMessageEmbedDisplayType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinksTypes.tsx");

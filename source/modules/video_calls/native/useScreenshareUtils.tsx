@@ -1,20 +1,20 @@
-// Module ID: 9951
-// Function ID: 9952
+// Module ID: 9956
+// Function ID: 9957
 // Name: stopScreenshare
-// Dependencies: [19, 17, 4582, 1908, 1074, 4585, 4539, 7756, 1910, 9082, 4702, 4612, 9089, 9110, 9952, 9946, 1608, 9971, 9972, 9973, 9974, 504, 9958, 7162, 1114, 2]
+// Dependencies: [19, 17, 4582, 1908, 1074, 4585, 4539, 7756, 1910, 9087, 4702, 4612, 9094, 9115, 9957, 9951, 1608, 9976, 9977, 9978, 9979, 504, 9963, 7162, 1114, 2]
 // Exports: default, getOSRequirement, getStreamPressHandler, handleCloseScreenshare, tryStartScreenShare
 
-// Module 9951 (stopScreenshare)
+// Module 9956 (stopScreenshare)
 import inject from "inject" /* 1910 */;
 import isStreamKey from "isStreamKey" /* 4612 */;
 import watchStream from "watchStream" /* 4702 */;
 import contextDefault from "context" /* 7162 */;
 import initializeDefault from "initialize" /* 7756 */;
-import _handleToggleVideo from "_handleToggleVideo" /* 9082 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9089 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 9946 */;
-import useHasVideoPermissionDefault from "useHasVideoPermission" /* 9946 */;
-import apexExperimentDefault from "apexExperiment" /* 9958 */;
+import _handleToggleVideo from "_handleToggleVideo" /* 9087 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9094 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 9951 */;
+import useHasVideoPermissionDefault from "useHasVideoPermission" /* 9951 */;
+import apexExperimentDefault from "apexExperiment" /* 9963 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "reset" /* 4582 */;
 import closure_5 from "_detectH265HardwareDecode" /* 1908 */;
@@ -107,7 +107,7 @@ export default function useScreenshareUtils(arg0) {
             }
           }
         } else {
-          fn = callback(9082).showScreenshareDisabledAlert;
+          fn = callback(9087).showScreenshareDisabledAlert;
         }
       } else {
         fn = function l() {
@@ -119,12 +119,12 @@ export default function useScreenshareUtils(arg0) {
       }
       obj[3] = fn;
       if (obj2.isMetaQuest()) {
-        tmp19(tmp ? 9971 : 9972);
+        tmp19(tmp ? 9976 : 9977);
       } else {
         if (tmp4) {
-          let tmp20 = 9973;
+          let tmp20 = 9978;
         } else {
-          tmp20 = tmp ? 9974 : 9973;
+          tmp20 = tmp ? 9979 : 9978;
         }
         obj[4] = tmp19(tmp20);
         return obj;

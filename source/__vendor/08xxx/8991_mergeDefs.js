@@ -1,10 +1,10 @@
 // Module ID: 8991
 // Function ID: 8992
 // Name: mergeDefs
-// Dependencies: [8939]
+// Dependencies: [8944]
 
 // Module 8991 (mergeDefs)
-import mergeDefs from "mergeDefs" /* 8939 */;
+import mergeDefs from "mergeDefs" /* 8944 */;
 
 const self = this;
 let self2 = this;
@@ -63,10 +63,10 @@ if (self2) {
       if (typeof error !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      closure_0 = { string: { unit: "k\u00FD t\u1EF1", verb: "c\u00F3" }, file: { unit: "byte", verb: "c\u00F3" }, array: { unit: "ph\u1EA7n t\u1EED", verb: "c\u00F3" }, set: { unit: "ph\u1EA7n t\u1EED", verb: "c\u00F3" } };
-      closure_1 = { regex: "\u0111\u1EA7u v\u00E0o", email: "\u0111\u1ECBa ch\u1EC9 email", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ng\u00E0y gi\u1EDD ISO", date: "ng\u00E0y ISO", time: "gi\u1EDD ISO", duration: "kho\u1EA3ng th\u1EDDi gian ISO", ipv4: "\u0111\u1ECBa ch\u1EC9 IPv4", ipv6: "\u0111\u1ECBa ch\u1EC9 IPv6", cidrv4: "d\u1EA3i IPv4", cidrv6: "d\u1EA3i IPv6", base64: "chu\u1ED7i m\u00E3 h\u00F3a base64", base64url: "chu\u1ED7i m\u00E3 h\u00F3a base64url", json_string: "chu\u1ED7i JSON", e164: "s\u1ED1 E.164", jwt: "JWT", template_literal: "\u0111\u1EA7u v\u00E0o" };
-      closure_2 = { nan: "NaN", number: "s\u1ED1", array: "m\u1EA3ng" };
-      return { localeError: (arg0) => "Gi\u00E1 tr\u1ECB kh\u00F4ng h\u1EE3p l\u1EC7 trong " + tmp.origin };
+      closure_0 = { string: { unit: "karakter", verb: "olmal\u0131" }, file: { unit: "bayt", verb: "olmal\u0131" }, array: { unit: "\u00F6\u011Fe", verb: "olmal\u0131" }, set: { unit: "\u00F6\u011Fe", verb: "olmal\u0131" } };
+      closure_1 = { regex: "girdi", email: "e-posta adresi", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO tarih ve saat", date: "ISO tarih", time: "ISO saat", duration: "ISO s\u00FCre", ipv4: "IPv4 adresi", ipv6: "IPv6 adresi", cidrv4: "IPv4 aral\u0131\u011F\u0131", cidrv6: "IPv6 aral\u0131\u011F\u0131", base64: "base64 ile \u015Fifrelenmi\u015F metin", base64url: "base64url ile \u015Fifrelenmi\u015F metin", json_string: "JSON dizesi", e164: "E.164 say\u0131s\u0131", jwt: "JWT", template_literal: "\u015Eablon dizesi" };
+      closure_2 = { nan: "NaN" };
+      return { localeError: (arg0) => "" + tmp.origin + " i\u00E7inde ge\u00E7ersiz de\u011Fer" };
     };
     let closure_2 = fn(mergeDefs);
     function error() {

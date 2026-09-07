@@ -1,10 +1,10 @@
-// Module ID: 12396
-// Function ID: 12397
+// Module ID: 12400
+// Function ID: 12401
 // Name: ApplicationSectionHeader
-// Dependencies: [19, 17, 2021, 21, 4560, 576, 504, 12231, 1114, 5587, 4556, 2]
+// Dependencies: [19, 17, 2021, 21, 4560, 576, 504, 12235, 1114, 5587, 4556, 2]
 // Exports: default
 
-// Module 12396 (ApplicationSectionHeader)
+// Module 12400 (ApplicationSectionHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -40,7 +40,7 @@ export default function ApplicationSectionHeader(section) {
       }
     }
   });
-  const applicationCommandsIconSource = section(12231).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(12235).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;

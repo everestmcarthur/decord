@@ -1,20 +1,20 @@
-// Module ID: 17007
-// Function ID: 17008
+// Module ID: 17010
+// Function ID: 17011
 // Name: BaseActivityPanelController
-// Dependencies: [32, 19, 4788, 8290, 9658, 1957, 1956, 1920, 9505, 21, 1933, 17008, 4296, 8332, 17009, 1611, 1477, 17010, 17013, 9472, 9634, 9681, 17014, 5630, 9636, 4425, 504, 4189, 9526, 5411, 4571, 17015, 9504, 2]
+// Dependencies: [32, 19, 4788, 8290, 9663, 1957, 1956, 1920, 9510, 21, 1933, 17011, 4296, 8332, 17012, 1611, 1477, 17013, 17016, 9477, 9639, 9686, 17017, 5630, 9641, 4425, 504, 4189, 9531, 5411, 4571, 17018, 9509, 2]
 // Exports: default
 
-// Module 17007 (BaseActivityPanelController)
-import _runPrimaryAppCommandOrJoinEmbeddedActivityAll from "_runPrimaryAppCommandOrJoinEmbeddedActivity" /* 9504 */;
+// Module 17010 (BaseActivityPanelController)
+import _runPrimaryAppCommandOrJoinEmbeddedActivityAll from "_runPrimaryAppCommandOrJoinEmbeddedActivity" /* 9509 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import closure_6 from "addApplication" /* 4788 */;
 import closure_7 from "module_8290" /* 8290 */;
-import closure_8 from "module_9658" /* 9658 */;
+import closure_8 from "module_9663" /* 9663 */;
 import closure_9 from "ensureGuildLoaded" /* 1957 */;
 import closure_10 from "participantFromServer" /* 1956 */;
 import items3 from "items3" /* 1920 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9505 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9510 */;
 import { jsx } from "jsxProd" /* 21 */;
 import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1933 */;
 
@@ -87,7 +87,7 @@ class BaseActivityPanelController {
     effect = obj3.useEffect(() => {
       if (null != isActivityPanelFullscreen) {
         if (null == ref2.current) {
-          if (!isActivityPanelFullscreen(9636)(closure_10.isWindowLandscape, defaultOrientationLockState)) {
+          if (!isActivityPanelFullscreen(9641)(closure_10.isWindowLandscape, defaultOrientationLockState)) {
             if (!closure_8) {
               first(closure_1_14.LAUNCHING_WITH_ORIENTATION_CHANGE);
             }
@@ -103,7 +103,7 @@ class BaseActivityPanelController {
       }
       let tmp4 = sharedValue1 === closure_1_14.LAUNCHING_WITH_ORIENTATION_CHANGE;
       if (tmp4) {
-        tmp4 = isActivityPanelFullscreen(9636)(closure_10.isWindowLandscape, defaultOrientationLockState);
+        tmp4 = isActivityPanelFullscreen(9641)(closure_10.isWindowLandscape, defaultOrientationLockState);
       }
       if (tmp4) {
         first(closure_1_14.PANEL);
@@ -143,7 +143,7 @@ class BaseActivityPanelController {
       if (!first) {
         if (isActivityPanelFullscreen === closure_1_14.PANEL) {
           if (sharedValue1) {
-            isActivityPanelFullscreen(17009)(dependencyMap);
+            isActivityPanelFullscreen(17012)(dependencyMap);
           }
         }
         const result = sharedValue1(8332).restoreDefaultOrientation();
@@ -351,7 +351,7 @@ export default function ActivityPanelController(children) {
       }
     }
   }, items1);
-  obj = { context: connectedActivityInTextChannelId(17015), orientationLockStateForApp, mode, hasConnectedActivity, connectedActivityAppId, currentApp, updateActivityPanelMode: _runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode, children: children.children };
-  return <BaseActivityPanelController context={connectedActivityInTextChannelId(17015)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={_runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode}>{arg0.children}</BaseActivityPanelController>;
+  obj = { context: connectedActivityInTextChannelId(17018), orientationLockStateForApp, mode, hasConnectedActivity, connectedActivityAppId, currentApp, updateActivityPanelMode: _runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode, children: children.children };
+  return <BaseActivityPanelController context={connectedActivityInTextChannelId(17018)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={_runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode}>{arg0.children}</BaseActivityPanelController>;
 };
 export { BaseActivityPanelController };

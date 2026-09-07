@@ -1,10 +1,10 @@
-// Module ID: 17510
-// Function ID: 17511
+// Module ID: 17513
+// Function ID: 17514
 // Name: getVerifyPhoneSource
-// Dependencies: [19, 17, 21, 8233, 17511, 17512, 17513, 4411, 2]
+// Dependencies: [19, 17, 21, 8233, 17514, 17515, 17516, 4411, 2]
 // Exports: VerifyPhone, getVerifyPhoneSource, useVerifyPhoneSource
 
-// Module 17510 (getVerifyPhoneSource)
+// Module 17513 (getVerifyPhoneSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import getIllustrationSource from "getIllustrationSource" /* 8233 */;
@@ -19,13 +19,13 @@ export const getVerifyPhoneSource = function getVerifyPhoneSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(17511);
+      return callback(17514);
     },
     darker() {
-      return callback(17512);
+      return callback(17515);
     },
     light() {
-      return callback(17513);
+      return callback(17516);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -34,13 +34,13 @@ export const useVerifyPhoneSource = function useVerifyPhoneSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(17511);
+      return callback(17514);
     },
     darker() {
-      return callback(17512);
+      return callback(17515);
     },
     light() {
-      return callback(17513);
+      return callback(17516);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -49,13 +49,13 @@ export const VerifyPhone = function VerifyPhone(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(17511);
+      return callback(17514);
     },
     darker() {
-      return callback(17512);
+      return callback(17515);
     },
     light() {
-      return callback(17513);
+      return callback(17516);
     }
   };
   obj = {};

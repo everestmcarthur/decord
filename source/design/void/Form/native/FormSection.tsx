@@ -1,14 +1,14 @@
-// Module ID: 8602
-// Function ID: 8603
+// Module ID: 8607
+// Function ID: 8608
 // Name: FormSection
-// Dependencies: [19, 17, 1182, 21, 4560, 576, 5686, 7137, 8599, 5687, 8603, 1115, 2]
+// Dependencies: [19, 17, 1182, 21, 4560, 576, 5686, 7137, 8604, 5687, 8608, 1115, 2]
 // Exports: default
 
-// Module 8602 (FormSection)
+// Module 8607 (FormSection)
 import ThemesDefault from "Themes" /* 576 */;
 import context from "context" /* 5686 */;
-import DividerDefault from "Divider" /* 8599 */;
-import FormTitleDefault from "FormTitle" /* 8603 */;
+import DividerDefault from "Divider" /* 8604 */;
+import FormTitleDefault from "FormTitle" /* 8608 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { TitleStyleType } from "semanticColor" /* 1182 */;
@@ -49,7 +49,7 @@ export default function FormSection(arg0) {
     const found = toArrayResult.filter((type) => {
       let isValidElementResult = closure_3.isValidElement(type);
       if (isValidElementResult) {
-        isValidElementResult = type.type !== callback(8599);
+        isValidElementResult = type.type !== callback(8604);
       }
       return isValidElementResult;
     });

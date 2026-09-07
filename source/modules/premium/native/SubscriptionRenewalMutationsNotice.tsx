@@ -1,10 +1,10 @@
-// Module ID: 13344
-// Function ID: 13345
+// Module ID: 13348
+// Function ID: 13349
 // Name: SubscriptionRenewalMutationsNotice
 // Dependencies: [19, 17, 4219, 21, 4560, 576, 5441, 1178, 1114, 4218, 2]
 // Exports: default
 
-// Module 13344 (SubscriptionRenewalMutationsNotice)
+// Module 13348 (SubscriptionRenewalMutationsNotice)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

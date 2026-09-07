@@ -1,12 +1,12 @@
-// Module ID: 16712
-// Function ID: 16713
+// Module ID: 16715
+// Function ID: 16716
 // Name: stripPossessive
-// Dependencies: [12, 16713, 16715, 2]
+// Dependencies: [12, 16716, 16718, 2]
 // Exports: analyze, createASTHighlighter
 
-// Module 16712 (stripPossessive)
+// Module 16715 (stripPossessive)
 import applyDefault from "apply" /* 12 */;
-import snowballStem from "snowballStem" /* 16713 */;
+import snowballStem from "snowballStem" /* 16716 */;
 import set from "set" /* 2 */;
 
 function stripPossessive(str) {

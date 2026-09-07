@@ -1,10 +1,10 @@
-// Module ID: 11252
-// Function ID: 11253
+// Module ID: 11257
+// Function ID: 11258
 // Name: getVisibleMessages
-// Dependencies: [32, 5, 9485, 7595, 1957, 2021, 5413, 4781, 4609, 4199, 4575, 1371, 7933, 1074, 4710, 4785, 1894, 7297, 7764, 5057, 4188, 4259, 1114, 11253, 11254, 1885, 7763, 4211, 4528, 4529, 5569, 7765, 7767, 4740, 7190, 4705, 11, 4258, 11270, 9, 12, 1115, 1609, 11275, 1242, 11271, 7456, 5447, 4491, 11276, 11304, 7521, 2]
+// Dependencies: [32, 5, 9490, 7595, 1957, 2021, 5413, 4781, 4609, 4199, 4575, 1371, 7933, 1074, 4710, 4785, 1894, 7297, 7764, 5057, 4188, 4259, 1114, 11258, 11259, 1885, 7763, 4211, 4528, 4529, 5569, 7765, 7767, 4740, 7190, 4705, 11, 4258, 11275, 9, 12, 1115, 1609, 11280, 1242, 11276, 7456, 5447, 4491, 11281, 11309, 7521, 2]
 // Exports: canAddNewReactions, clearRows, findMessageIndex, findMessageIndexInRows, getChatRef, getLongPressSelectedMedia, getMessageAuthorMemberUserIds, getVoiceChannelIdChangedAuthorIds, getVoiceStateChannelSummaryFromVoiceStates, handleAddOrRemoveReaction, handleCopyLinkForumPost, handleFirstLayout, handleLongPressSticker, handleMediaPlayFinishedAnalytics, handleMessageVisibilityChanged, handleTapNavBar, handleTapTableView, handleToggleFollowForumPost, handleVisibleMessagesChange, isLoadingAtTop, jumpToPresent, loadMoreAfter, loadMoreBefore, maybeRescrollToMessageId, recordTimings, scrollToBottom, scrollToMessageIdWithRescroll, scrollToNewMessages, scrollToRelativeOffset, scrollToTop, scrollToTopMessage, shouldJumpToOriginalPost, startOrCancelChannelLatestMessagesLoad, syncMessageDisplay, toObscuredMedia
 
-// Module 11252 (getVisibleMessages)
+// Module 11257 (getVisibleMessages)
 import serializeDefault from "serialize" /* 9 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
@@ -27,14 +27,14 @@ import buildCommand from "buildCommand" /* 7521 */;
 import checkReactionResponse from "checkReactionResponse" /* 7764 */;
 import patchThreadDefault from "patchThread" /* 7765 */;
 import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7767 */;
-import computeScrollData from "computeScrollData" /* 11270 */;
-import ChatScrollPositionDefault from "ChatScrollPosition" /* 11271 */;
-import map2 from "map" /* 11275 */;
-import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 11276 */;
-import getVoiceInviteEmbedRenderInfo from "getVoiceInviteEmbedRenderInfo" /* 11304 */;
+import computeScrollData from "computeScrollData" /* 11275 */;
+import ChatScrollPositionDefault from "ChatScrollPosition" /* 11276 */;
+import map2 from "map" /* 11280 */;
+import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 11281 */;
+import getVoiceInviteEmbedRenderInfo from "getVoiceInviteEmbedRenderInfo" /* 11309 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { updateShouldShowJumpToPresentButton as closure_5 } from "updateChatInputContainerHeight" /* 9485 */;
+import { updateShouldShowJumpToPresentButton as closure_5 } from "updateChatInputContainerHeight" /* 9490 */;
 import closure_6 from "processMessage" /* 7595 */;
 import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import closure_8 from "trackCommunicationDisabled" /* 2021 */;
@@ -441,7 +441,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: null, icon: null };
     obj[1] = stringResult;
-    tmp36Result = tmp36(11253);
+    tmp36Result = tmp36(11258);
     obj[2] = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();
@@ -450,7 +450,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (true === !reaction.me_burst) {
         let tmp12Result = tmp12(1885);
         if (!tmp12Result.isPremium(currentUser)) {
-          tmp12Result = tmp12(11254);
+          tmp12Result = tmp12(11259);
           return tmp12Result.handleOutOfSuperReactions();
         }
       }
@@ -493,7 +493,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     tmp12Result1 = tmp12(4211);
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result7 = tmp12(11254);
+    const tmp12Result7 = tmp12(11259);
     const obj3 = { burst: null };
     obj3[0] = flag;
     const result4 = tmp12Result7.handleAddNewReactions(channel, messageId, MESSAGE, obj3);

@@ -1,11 +1,11 @@
-// Module ID: 14579
-// Function ID: 14580
+// Module ID: 14582
+// Function ID: 14583
 // Name: NativeModules
-// Dependencies: [5, 19, 17, 7720, 7719, 21, 1115, 14580, 14581, 1896, 504, 14575, 15925, 2]
+// Dependencies: [5, 19, 17, 7720, 7719, 21, 1115, 14583, 14584, 1896, 504, 14578, 15928, 2]
 // Exports: default
 
-// Module 14579 (NativeModules)
-import enforcingDefault from "enforcing" /* 14580 */;
+// Module 14582 (NativeModules)
+import enforcingDefault from "enforcing" /* 14583 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -102,10 +102,10 @@ export default function DevToolsLazy() {
     }
   });
   const obj2 = stateFromStores(504);
-  const keyCommands = stateFromStores(14575).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(14578).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(15925).default, {});
+      return jsx(tmp(15928).default, {});
     }
   }
   return null;

@@ -1,16 +1,16 @@
-// Module ID: 16647
-// Function ID: 16648
+// Module ID: 16650
+// Function ID: 16651
 // Name: MediaGridPlaceholderItem
-// Dependencies: [19, 17, 7878, 21, 4560, 576, 16646, 4296, 16648, 12, 4556, 1114, 12338, 16649, 2]
+// Dependencies: [19, 17, 7878, 21, 4560, 576, 16649, 4296, 16651, 12, 4556, 1114, 12342, 16652, 2]
 // Exports: RecentsMediaGridPlaceholder, default
 
-// Module 16647 (MediaGridPlaceholderItem)
+// Module 16650 (MediaGridPlaceholderItem)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import Text from "Text" /* 4556 */;
-import useFullscreenPlaceholderCount from "useFullscreenPlaceholderCount" /* 16646 */;
-import _modDef16648 from "module_16648" /* 16648 */;
+import useFullscreenPlaceholderCount from "useFullscreenPlaceholderCount" /* 16649 */;
+import _modDef16651 from "module_16651" /* 16651 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
@@ -31,7 +31,7 @@ export default function MediaGridPlaceholderItem(arg0) {
   ({ size, containerStyle } = arg0);
   let obj = useFullscreenPlaceholderCount;
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
-  obj = { style: items, pointerEvents: "none", children: callback(_modDef16648, { height: size, width: size, style: containerStyle }) };
+  obj = { style: items, pointerEvents: "none", children: callback(_modDef16651, { height: size, width: size, style: containerStyle }) };
   items = [containerStyle, placeholderAnimatedStyle];
   return callback(_modDef4296.View, obj);
 };
@@ -75,9 +75,9 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
           style: row.row,
           children: arr.map((arg0, arg1) => {
             let obj = { height: closure_0, width: closure_0, style: null };
-            const tmp = numRows(16648);
+            const tmp = numRows(16651);
             obj = { itemIndex: closure_0 * closure_2_5 + arg1, numItems: closure_1_3.length, numColumns: closure_2_5, spacing: closure_2_6 };
-            obj[2] = closure_2_0(12338).getMediaGridItemStyles(obj);
+            obj[2] = closure_2_0(12342).getMediaGridItemStyles(obj);
             return closure_2_7(tmp, obj, arg1);
           })
         }),

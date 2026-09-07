@@ -1,9 +1,9 @@
-// Module ID: 17476
-// Function ID: 17477
+// Module ID: 17479
+// Function ID: 17480
 // Name: _terminate
-// Dependencies: [1908, 4610, 4585, 1090, 3, 7118, 17477, 1115, 2]
+// Dependencies: [1908, 4610, 4585, 1090, 3, 7118, 17480, 1115, 2]
 
-// Module 17476 (_terminate)
+// Module 17479 (_terminate)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 1090 */;
 import initializeDefault from "initialize" /* 7118 */;

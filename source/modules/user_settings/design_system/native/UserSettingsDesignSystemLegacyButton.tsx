@@ -1,10 +1,10 @@
-// Module ID: 15759
-// Function ID: 15760
+// Module ID: 15762
+// Function ID: 15763
 // Name: ComparisonRow
-// Dependencies: [19, 17, 21, 1178, 4556, 4975, 4560, 576, 4973, 8593, 2]
+// Dependencies: [19, 17, 21, 1178, 4556, 4975, 4560, 576, 4973, 8598, 2]
 // Exports: default
 
-// Module 15759 (ComparisonRow)
+// Module 15762 (ComparisonRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
@@ -298,7 +298,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   const entries = Object.entries(obj);
   items1[1] = entries.map((arg0) => {
     [tmp, arr] = arg0;
-    return callback2(callback(8593).FormSection, { title: tmp, children: arr.map((entry) => callback(closure_8, { entry }, arg1)) }, "cmp-" + tmp);
+    return callback2(callback(8598).FormSection, { title: tmp, children: arr.map((entry) => callback(closure_8, { entry }, arg1)) }, "cmp-" + tmp);
   });
   obj1 = { spacing: 4, style: tmp.header, children: null };
   const items2 = [callback2(Text.Text, { variant: "heading-xl/bold", children: "Legacy Button Audit" }), callback2(Text.Text, { variant: "text-sm/normal", color: "text-muted", children: "41 combinations across 185 importers" })];
@@ -307,7 +307,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
   const entries1 = Object.entries(tmp2);
   items1[3] = entries1.map((arg0) => {
     [tmp, arr] = arg0;
-    return callback2(callback(8593).FormSection, { title: "" + tmp + " (" + arr.reduce((arg0, count) => arg0 + count.count, 0) + " usages)", children: arr.map((combo) => callback(closure_9, { combo }, arg1)) }, tmp);
+    return callback2(callback(8598).FormSection, { title: "" + tmp + " (" + arr.reduce((arg0, count) => arg0 + count.count, 0) + " usages)", children: arr.map((combo) => callback(closure_9, { combo }, arg1)) }, tmp);
   });
   obj[1] = items1;
   return callback(closure_2, obj);

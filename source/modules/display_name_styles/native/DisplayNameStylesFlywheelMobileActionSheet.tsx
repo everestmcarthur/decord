@@ -1,10 +1,10 @@
-// Module ID: 16936
-// Function ID: 16937
+// Module ID: 16939
+// Function ID: 16940
 // Name: DisplayNameStylesFlywheelMobileActionSheet
-// Dependencies: [19, 17, 1371, 1074, 1954, 21, 4279, 4411, 4495, 504, 4218, 1114, 2786, 7382, 7038, 4380, 1943, 7150, 7123, 7154, 5692, 1115, 5587, 16937, 8808, 4556, 4975, 4560, 576, 2]
+// Dependencies: [19, 17, 1371, 1074, 1954, 21, 4279, 4411, 4495, 504, 4218, 1114, 2786, 7382, 7038, 4380, 1943, 7150, 7123, 7154, 5692, 1115, 5587, 16940, 8813, 4556, 4975, 4560, 576, 2]
 // Exports: default
 
-// Module 16936 (DisplayNameStylesFlywheelMobileActionSheet)
+// Module 16939 (DisplayNameStylesFlywheelMobileActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -144,7 +144,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     if (tmp2Result.isIOS()) {
       const obj9 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
       const obj10 = { uri: null };
-      obj10[0] = tmp4(16937);
+      obj10[0] = tmp4(16940);
       obj9[0] = obj10;
       obj9[1] = tmp6.image;
       obj9[3] = !enabled;
@@ -152,9 +152,9 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
       const tmp4Result = tmp4(5587);
     } else {
       const obj11 = { url: null, style: null, autoplay: true };
-      obj11[0] = tmp4(16937);
+      obj11[0] = tmp4(16940);
       obj11[1] = tmp6.image;
-      tmp14Result = tmp14(tmp2(8808).APNGPlayer, obj11);
+      tmp14Result = tmp14(tmp2(8813).APNGPlayer, obj11);
     }
     tmp2Result = tmp2(1115);
   }

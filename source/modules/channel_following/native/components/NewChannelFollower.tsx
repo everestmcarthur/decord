@@ -1,10 +1,10 @@
-// Module ID: 11326
-// Function ID: 11327
+// Module ID: 11331
+// Function ID: 11332
 // Name: canFollowIntoChannel
-// Dependencies: [32, 19, 17, 1961, 1957, 2012, 1979, 4199, 5438, 1074, 21, 4560, 576, 8170, 4495, 504, 4713, 4992, 4411, 11327, 11328, 7150, 6627, 5584, 1178, 5028, 4556, 1114, 4973, 5687, 5605, 4527, 9426, 1896, 11329, 8593, 5433, 4975, 11332, 7154, 2]
+// Dependencies: [32, 19, 17, 1961, 1957, 2012, 1979, 4199, 5438, 1074, 21, 4560, 576, 8170, 4495, 504, 4713, 4992, 4411, 11332, 11333, 7150, 6627, 5584, 1178, 5028, 4556, 1114, 4973, 5687, 5605, 4527, 9431, 1896, 11334, 8598, 5433, 4975, 11337, 7154, 2]
 // Exports: default
 
-// Module 11326 (canFollowIntoChannel)
+// Module 11331 (canFollowIntoChannel)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

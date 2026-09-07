@@ -1,10 +1,10 @@
-// Module ID: 13212
-// Function ID: 13213
+// Module ID: 13216
+// Function ID: 13217
 // Name: createFriendInvite
 // Dependencies: [17, 4209, 7736, 7945, 1114, 4404, 1396, 2]
 // Exports: createFriendInvite
 
-// Module 13212 (createFriendInvite)
+// Module 13216 (createFriendInvite)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

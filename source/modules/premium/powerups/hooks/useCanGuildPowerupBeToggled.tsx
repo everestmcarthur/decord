@@ -1,11 +1,11 @@
-// Module ID: 12534
-// Function ID: 12535
+// Module ID: 12538
+// Function ID: 12539
 // Name: useCanGuildPowerupBeToggled
-// Dependencies: [19, 4449, 4450, 504, 12499, 1114, 2428, 2]
+// Dependencies: [19, 4449, 4450, 504, 12503, 1114, 2428, 2]
 // Exports: default
 
-// Module 12534 (useCanGuildPowerupBeToggled)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12499 */;
+// Module 12538 (useCanGuildPowerupBeToggled)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12503 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "calculateAppliedBoosts" /* 4449 */;
 import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4450 */;

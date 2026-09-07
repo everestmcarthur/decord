@@ -1,10 +1,10 @@
-// Module ID: 8833
-// Function ID: 8834
+// Module ID: 8838
+// Function ID: 8839
 // Name: PremiumFeaturesBackground
 // Dependencies: [19, 7432, 1373, 21, 4560, 576, 672, 4987, 1093, 2]
 // Exports: default
 
-// Module 8833 (PremiumFeaturesBackground)
+// Module 8838 (PremiumFeaturesBackground)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;

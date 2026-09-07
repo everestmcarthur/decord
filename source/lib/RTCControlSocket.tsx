@@ -1,7 +1,7 @@
 // Module ID: 1907
 // Function ID: 1908
 // Name: noop
-// Dependencies: [1347, 1908, 4585, 1090, 4618, 559, 3, 4589, 14079, 1115, 38, 2]
+// Dependencies: [1347, 1908, 4585, 1090, 4618, 559, 3, 4589, 14082, 1115, 38, 2]
 
 // Module 1907 (noop)
 import timestampDefault from "timestamp" /* 3 */;
@@ -82,7 +82,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     self.handleClose(false, 0, "The connection timed out after " + self(closure_1_2[7]).now() - self.connectionStartTime + " ms - did not receive OP_HELLO in time.");
   }, closure_13);
   obj = { location: "RTCControlSocket", supportsSfuUpdate: closure_4.supports(constants.UDP_ENDPOINT_UPDATE) };
-  const webSocket = new WebSocket("" + self.url + "?v=" + self(14079).getVoiceGatewayProtocolVersion(obj));
+  const webSocket = new WebSocket("" + self.url + "?v=" + self(14082).getVoiceGatewayProtocolVersion(obj));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";
   webSocket.onopen = () => {

@@ -1,10 +1,10 @@
-// Module ID: 11042
-// Function ID: 11043
+// Module ID: 11047
+// Function ID: 11048
 // Name: useFetchCollectiblesProduct
 // Dependencies: [32, 19, 5510, 7542, 1074, 563, 1889, 7541, 2]
 // Exports: useFetchCollectiblesProduct
 
-// Module 11042 (useFetchCollectiblesProduct)
+// Module 11047 (useFetchCollectiblesProduct)
 import closure_2 from "_slicedToArray" /* 32 */;
 import { useEffect } from "noop" /* 19 */;
 import closure_4 from "addSku" /* 5510 */;

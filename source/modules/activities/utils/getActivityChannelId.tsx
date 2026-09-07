@@ -1,10 +1,10 @@
-// Module ID: 13033
-// Function ID: 13034
+// Module ID: 13037
+// Function ID: 13038
 // Name: getActivityChannelId
 // Dependencies: [1961, 1957, 4579, 2]
 // Exports: default
 
-// Module 13033 (getActivityChannelId)
+// Module 13037 (getActivityChannelId)
 import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1961 */;
 import closure_1 from "ensureGuildLoaded" /* 1957 */;

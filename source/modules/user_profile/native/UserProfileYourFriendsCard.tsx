@@ -1,10 +1,10 @@
-// Module ID: 16806
-// Function ID: 16807
+// Module ID: 16809
+// Function ID: 16810
 // Name: UserProfileYourFriendsCard
-// Dependencies: [32, 19, 17, 7659, 4209, 1371, 1074, 21, 1178, 4560, 576, 504, 13063, 9848, 12, 1369, 5123, 1114, 4556, 7209, 2]
+// Dependencies: [32, 19, 17, 7659, 4209, 1371, 1074, 21, 1178, 4560, 576, 504, 13067, 9853, 12, 1369, 5123, 1114, 4556, 7209, 2]
 // Exports: default
 
-// Module 16806 (UserProfileYourFriendsCard)
+// Module 16809 (UserProfileYourFriendsCard)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -51,9 +51,9 @@ export default function UserProfileYourFriendsCard(arg0) {
   const items1 = [closure_7];
   stateFromStoresArray1 = _require(504).useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
   const obj2 = _require(504);
-  gameRelationshipsByType = _require(13063).useGameRelationshipsByType(RelationshipTypes.FRIEND);
+  gameRelationshipsByType = _require(13067).useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = lib(9848).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = lib(9853).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {

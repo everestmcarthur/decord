@@ -1,10 +1,10 @@
-// Module ID: 9470
-// Function ID: 9471
+// Module ID: 9475
+// Function ID: 9476
 // Name: useSelectedParticipant
 // Dependencies: [4576, 504, 2]
 // Exports: default
 
-// Module 9470 (useSelectedParticipant)
+// Module 9475 (useSelectedParticipant)
 import closure_2 from "getParticipants" /* 4576 */;
 
 const require = arg1;

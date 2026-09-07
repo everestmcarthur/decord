@@ -1,12 +1,12 @@
 // Module ID: 10523
 // Function ID: 10524
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 10456, 10439]
+// Dependencies: [41, 42, 93, 95, 98, 10461, 10444]
 
 // Module 10523 (_isNativeReflectConstruct)
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10439 */;
-import now from "now" /* 10456 */;
-import NLCasualDateParser from "_classCallCheck" /* 41 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10444 */;
+import now from "now" /* 10461 */;
+import PTCasualDateParser from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import closure_1 from "_possibleConstructorReturn" /* 93 */;
 import closure_2 from "_getPrototypeOf" /* 95 */;
@@ -47,7 +47,7 @@ if (self2) {
       fn = self.__importStar;
     }
     if (!fn) {
-      function o(arg0) {
+      function u(arg0) {
         let fn = Object.getOwnPropertyNames;
         if (!fn) {
           fn = (obj) => {
@@ -82,7 +82,7 @@ if (self2) {
         }
         const obj = {};
         if (null != __esModule) {
-          const arr = o(__esModule);
+          const arr = u(__esModule);
           for (let num = 0; num < arr.length; num = num + 1) {
             let tmp2 = num;
             if ("default" !== arr[num]) {
@@ -97,12 +97,12 @@ if (self2) {
     }
     const _Object3 = Object;
     let closure_7 = fn(now);
-    class NLCasualDateParser {
+    class PTCasualDateParser {
       constructor() {
         self = this;
-        tmp = NLCasualDateParser(this, NLCasualDateParser);
+        tmp = PTCasualDateParser(this, PTCasualDateParser);
         tmp2 = closure_2;
-        obj = closure_2(NLCasualDateParser);
+        obj = closure_2(PTCasualDateParser);
         tmp3 = closure_1;
         if (_isNativeReflectConstruct()) {
           tmp7 = globalThis;
@@ -117,23 +117,23 @@ if (self2) {
         return tmp3(self, constructResult);
       }
     }
-    _inherits(NLCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    _inherits(PTCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
     let obj = { key: "innerPattern", value: null };
     obj[1] = function innerPattern(arg0) {
-      return /(nu|vandaag|morgen|morgend|gisteren)(?=\W|$)/i;
+      return /(agora|hoje|amanha|amanhã|ontem)(?=\W|$)/i;
     };
     let items = [obj, ];
     obj = { key: "innerExtract", value: null };
     obj[1] = function innerExtract(reference) {
       const formatted = arg1[0].toLowerCase();
-      if ("nu" === formatted) {
+      if ("agora" === formatted) {
         return closure_7.now(reference.reference);
-      } else if ("vandaag" === formatted) {
+      } else if ("hoje" === formatted) {
         return closure_7.today(reference.reference);
       } else {
-        if ("morgen" !== formatted) {
-          if ("morgend" !== formatted) {
-            if ("gisteren" === formatted) {
+        if ("amanha" !== formatted) {
+          if ("amanh\u00E3" !== formatted) {
+            if ("ontem" === formatted) {
               return closure_7.yesterday(reference.reference);
             } else {
               return tmp2;
@@ -145,7 +145,7 @@ if (self2) {
       const str = arg1[0];
     };
     items[1] = obj;
-    exports.default = _createClass(NLCasualDateParser, items);
+    exports.default = _createClass(PTCasualDateParser, items);
   } else {
     const _Object2 = Object;
   }

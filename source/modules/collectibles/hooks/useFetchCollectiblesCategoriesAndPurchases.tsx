@@ -1,11 +1,11 @@
-// Module ID: 10734
-// Function ID: 10735
+// Module ID: 10739
+// Function ID: 10740
 // Name: useFetchPurchases
-// Dependencies: [32, 19, 4476, 7558, 563, 7541, 10735, 2]
+// Dependencies: [32, 19, 4476, 7558, 563, 7541, 10740, 2]
 // Exports: useGetOrFetchCollectiblesCategoriesAndPurchases, useGetOrFetchPurchase, useGetOrFetchPurchases
 
-// Module 10734 (useFetchPurchases)
-import setDefault from "set" /* 10735 */;
+// Module 10739 (useFetchPurchases)
+import setDefault from "set" /* 10740 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import closure_6 from "getHash" /* 4476 */;

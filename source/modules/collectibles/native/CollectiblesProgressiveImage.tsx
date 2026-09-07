@@ -1,10 +1,10 @@
-// Module ID: 15846
-// Function ID: 15847
+// Module ID: 15849
+// Function ID: 15850
 // Name: CollectiblesProgressiveImage
 // Dependencies: [19, 17, 21, 4296, 4561, 2]
 // Exports: CollectiblesProgressiveImage
 
-// Module 15846 (CollectiblesProgressiveImage)
+// Module 15849 (CollectiblesProgressiveImage)
 import noopAll from "noop" /* 19 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

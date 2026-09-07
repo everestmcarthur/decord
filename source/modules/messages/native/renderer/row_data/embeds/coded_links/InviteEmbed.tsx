@@ -1,12 +1,12 @@
-// Module ID: 13208
-// Function ID: 13209
+// Module ID: 13212
+// Function ID: 13213
 // Name: createInviteEmbed
-// Dependencies: [4544, 1371, 1074, 7736, 13209, 7735, 13211, 13212, 13213, 13215, 13217, 11306, 11307, 2]
+// Dependencies: [4544, 1371, 1074, 7736, 13213, 7735, 13215, 13216, 13217, 13219, 13221, 11311, 11312, 2]
 // Exports: createInviteEmbed
 
-// Module 13208 (createInviteEmbed)
+// Module 13212 (createInviteEmbed)
 import InviteTypes2 from "InviteTypes" /* 7735 */;
-import createResolvingGuildInvite from "createResolvingGuildInvite" /* 13209 */;
+import createResolvingGuildInvite from "createResolvingGuildInvite" /* 13213 */;
 import closure_2 from "updateInvite" /* 4544 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
@@ -47,22 +47,22 @@ export const createInviteEmbed = function createInviteEmbed(closure_0, code, clo
           } else {
             const inviteType = InviteTypes2.getInviteType(invite);
             if (InviteTypes.GROUP_DM === inviteType) {
-              let tmp29Result = tmp29(13211);
+              let tmp29Result = tmp29(13215);
               return tmp29Result.createGroupDMInvite(invite, tmp28, closure_2);
             } else if (tmp32.FRIEND === inviteType) {
-              tmp29Result = tmp29(13212);
+              tmp29Result = tmp29(13216);
               return tmp29Result.createFriendInvite(invite, tmp28, id, closure_2);
             } else {
               const guildInviteExtendedType = tmp29(7735).getGuildInviteExtendedType(invite);
               if (tmp29(7735).GuildInviteExtendedType.EVENT === guildInviteExtendedType) {
-                return tmp29(13213).createGuildScheduledEventInviteEmbed(invite, closure_2);
+                return tmp29(13217).createGuildScheduledEventInviteEmbed(invite, closure_2);
               } else if (tmp29(7735).GuildInviteExtendedType.APPLICATION === guildInviteExtendedType) {
                 obj = { inviteCode: null, theme: null };
                 obj[0] = invite.code;
                 obj[1] = closure_2;
-                return tmp29(13215).createEmbeddedActivityInviteEmbed(obj);
+                return tmp29(13219).createEmbeddedActivityInviteEmbed(obj);
               } else if (tmp29(7735).GuildInviteExtendedType.PROFILE === guildInviteExtendedType) {
-                return tmp29(13217).createGuildProfileInvite(invite, closure_2);
+                return tmp29(13221).createGuildProfileInvite(invite, closure_2);
               } else if (tmp29(7735).GuildInviteExtendedType.VOICE_CHANNEL === guildInviteExtendedType) {
                 const guild = invite.guild;
                 id = undefined;
@@ -73,17 +73,17 @@ export const createInviteEmbed = function createInviteEmbed(closure_0, code, clo
                   obj = { guildId: null, location: "mobile_invite_embed" };
                   obj[0] = id;
                   if (tmp29Result5.getVoiceChannelListInviteExperiment(obj).enabled) {
-                    const voiceChannelListInviteEmbed = tmp29(11307).createVoiceChannelListInviteEmbed(invite, closure_2);
+                    const voiceChannelListInviteEmbed = tmp29(11312).createVoiceChannelListInviteEmbed(invite, closure_2);
                     if (null != voiceChannelListInviteEmbed) {
                       return voiceChannelListInviteEmbed;
                     }
-                    const tmp29Result6 = tmp29(11307);
+                    const tmp29Result6 = tmp29(11312);
                   }
-                  tmp29Result5 = tmp29(11306);
+                  tmp29Result5 = tmp29(11311);
                 }
-                return tmp29(13209).createGuildInvite(invite, tmp28, closure_2);
+                return tmp29(13213).createGuildInvite(invite, tmp28, closure_2);
               } else {
-                return tmp29(13209).createGuildInvite(invite, tmp28, closure_2);
+                return tmp29(13213).createGuildInvite(invite, tmp28, closure_2);
               }
               const tmp29Result1 = tmp29(7735);
             }

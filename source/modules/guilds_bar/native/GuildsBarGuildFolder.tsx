@@ -1,9 +1,9 @@
-// Module ID: 16293
-// Function ID: 16294
+// Module ID: 16296
+// Function ID: 16297
 // Name: MiniGuildIcon
-// Dependencies: [19, 7636, 1979, 4381, 5438, 16284, 16290, 16285, 21, 4560, 576, 4262, 504, 5584, 4974, 4409, 1091, 7073, 4296, 4271, 5587, 5031, 16294, 16296, 12619, 16303, 4528, 5520, 5589, 16287, 16304, 2]
+// Dependencies: [19, 7636, 1979, 4381, 5438, 16287, 16293, 16288, 21, 4560, 576, 4262, 504, 5584, 4974, 4409, 1091, 7073, 4296, 4271, 5587, 5031, 16297, 16299, 12623, 16306, 4528, 5520, 5589, 16290, 16307, 2]
 
-// Module 16293 (MiniGuildIcon)
+// Module 16296 (MiniGuildIcon)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;
@@ -17,9 +17,9 @@ import closure_5 from "createGuildRecordFromRust" /* 1979 */;
 import closure_6 from "handleConnectionOpen" /* 4381 */;
 import closure_7 from "insertUnsortedGuilds" /* 5438 */;
 import { GuildsNodeType } from "insertUnsortedGuilds" /* 5438 */;
-import withEqualityFn from "withEqualityFn" /* 16284 */;
-import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 16290 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16285 */;
+import withEqualityFn from "withEqualityFn" /* 16287 */;
+import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 16293 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16288 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

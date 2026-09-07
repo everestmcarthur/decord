@@ -1,9 +1,9 @@
-// Module ID: 12386
-// Function ID: 12387
+// Module ID: 12390
+// Function ID: 12391
 // Name: AutocompleteLabel
-// Dependencies: [19, 17, 1979, 4209, 1371, 1074, 10263, 21, 4560, 576, 8593, 504, 4404, 1178, 9803, 5605, 5614, 1114, 8124, 5028, 4713, 4556, 5587, 12387, 10387, 5123, 10176, 12, 5022, 1924, 1925, 8565, 2]
+// Dependencies: [19, 17, 1979, 4209, 1371, 1074, 10268, 21, 4560, 576, 8598, 504, 4404, 1178, 9808, 5605, 5614, 1114, 8124, 5028, 4713, 4556, 5587, 12391, 10392, 5123, 10181, 12, 5022, 1924, 1925, 8568, 2]
 
-// Module 12386 (AutocompleteLabel)
+// Module 12390 (AutocompleteLabel)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1924 */;
@@ -17,10 +17,10 @@ import preloadDefault from "preload" /* 5587 */;
 import TableRowInner from "TableRowInner" /* 5605 */;
 import TableRowTrailingText from "TableRowTrailingText" /* 5614 */;
 import registerAssetDefault from "registerAsset" /* 8124 */;
-import Form from "Form" /* 8593 */;
-import StickerDefault from "Sticker" /* 10176 */;
-import useStickerPackCategories from "useStickerPackCategories" /* 10387 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12387 */;
+import Form from "Form" /* 8598 */;
+import StickerDefault from "Sticker" /* 10181 */;
+import useStickerPackCategories from "useStickerPackCategories" /* 10392 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12391 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createGuildRecordFromRust" /* 1979 */;
@@ -89,8 +89,8 @@ const obj9 = {
     obj[4] = closure_9(user(1178).Avatar, obj);
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
-    obj[5] = closure_9(guildId(9803), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
-    return closure_9(user(8593).FormRow, obj);
+    obj[5] = closure_9(guildId(9808), { user, usernameStyle: items1, discriminatorStyle: tmp.trailing });
+    return closure_9(user(8598).FormRow, obj);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -221,7 +221,7 @@ const obj9 = {
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
-      let tmp6Result = tmp6(tmp5(8565).UnknownGameIcon, obj);
+      let tmp6Result = tmp6(tmp5(8568).UnknownGameIcon, obj);
       let tmp8 = tmp6;
     } else {
       obj = { style: null, source: null };

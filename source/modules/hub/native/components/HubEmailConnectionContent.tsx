@@ -1,10 +1,10 @@
-// Module ID: 12731
-// Function ID: 12732
+// Module ID: 12735
+// Function ID: 12736
 // Name: HubEmailConnectionContent
-// Dependencies: [5, 32, 19, 17, 1957, 12719, 1074, 21, 4560, 576, 1483, 6981, 12732, 4461, 1114, 12727, 5692, 4556, 4527, 12733, 1896, 6605, 1178, 4975, 2]
+// Dependencies: [5, 32, 19, 17, 1957, 12723, 1074, 21, 4560, 576, 1483, 6981, 12736, 4461, 1114, 12731, 5692, 4556, 4527, 12737, 1896, 6605, 1178, 4975, 2]
 // Exports: default
 
-// Module 12731 (HubEmailConnectionContent)
+// Module 12735 (HubEmailConnectionContent)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
@@ -12,13 +12,13 @@ import useNavigation from "useNavigation" /* 1483 */;
 import Text from "Text" /* 4556 */;
 import Button2 from "Button" /* 4975 */;
 import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12727 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12731 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "ensureGuildLoaded" /* 1957 */;
-import HubEmailConnectionSteps from "HubEmailConnectionSteps" /* 12719 */;
+import HubEmailConnectionSteps from "HubEmailConnectionSteps" /* 12723 */;
 import { MarketingURLs } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

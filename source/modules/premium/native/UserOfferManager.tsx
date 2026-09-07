@@ -1,9 +1,9 @@
-// Module ID: 17501
-// Function ID: 17502
+// Module ID: 17504
+// Function ID: 17505
 // Name: prototype
-// Dependencies: [1371, 7450, 1085, 7118, 9365, 1885, 8062, 2]
+// Dependencies: [1371, 7450, 1085, 7118, 9370, 1885, 8062, 2]
 
-// Module 17501 (prototype)
+// Module 17504 (prototype)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_2 from "mergeGuildAvatar" /* 1371 */;
 import closure_3 from "emitChanges" /* 7450 */;

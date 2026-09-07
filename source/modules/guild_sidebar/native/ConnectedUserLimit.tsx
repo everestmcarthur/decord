@@ -1,13 +1,13 @@
-// Module ID: 16119
-// Function ID: 16120
+// Module ID: 16122
+// Function ID: 16123
 // Name: ConnectedUserLimit
-// Dependencies: [19, 21, 9088, 16120, 2]
+// Dependencies: [19, 21, 9093, 16123, 2]
 // Exports: ConnectedUserLimit
 
-// Module 16119 (ConnectedUserLimit)
+// Module 16122 (ConnectedUserLimit)
 import noopAll from "noop" /* 19 */;
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9088 */;
-import _modDef16120 from "module_16120" /* 16120 */;
+import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9093 */;
+import _modDef16123 from "module_16123" /* 16123 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;
@@ -35,5 +35,5 @@ export const ConnectedUserLimit = function ConnectedUserLimit(users) {
     videoLimit = num < 0 || limit < num;
     const tmp4 = num < 0 || limit < num;
   }
-  return jsx(_modDef16120, { users: users.userCount, total, videoLimit });
+  return jsx(_modDef16123, { users: users.userCount, total, videoLimit });
 };

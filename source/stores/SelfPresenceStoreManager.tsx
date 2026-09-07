@@ -1,9 +1,9 @@
-// Module ID: 17483
-// Function ID: 17484
+// Module ID: 17486
+// Function ID: 17487
 // Name: handleChange
 // Dependencies: [5279, 7118, 573, 2]
 
-// Module 17483 (handleChange)
+// Module 17486 (handleChange)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import initializeDefault from "initialize" /* 7118 */;
 import closure_2 from "filterPlayingActivities" /* 5279 */;

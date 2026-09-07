@@ -1,7 +1,7 @@
 // Module ID: 8158
 // Function ID: 8159
 // Name: EditAvatarDecorationInner
-// Dependencies: [32, 19, 17, 7558, 7547, 2021, 1074, 21, 4560, 576, 8159, 8169, 8170, 7162, 7182, 1242, 8171, 4271, 7150, 4556, 1114, 8172, 10734, 504, 13168, 8166, 13169, 13174, 13175, 8173, 8257, 1178, 13176, 2]
+// Dependencies: [32, 19, 17, 7558, 7547, 2021, 1074, 21, 4560, 576, 8159, 8169, 8170, 7162, 7182, 1242, 8171, 4271, 7150, 4556, 1114, 8172, 10739, 504, 13172, 8166, 13173, 13178, 13179, 8173, 8257, 1178, 13180, 2]
 // Exports: default
 
 // Module 8158 (EditAvatarDecorationInner)
@@ -137,7 +137,7 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   const tmp6 = closure_11;
   const tmp7 = View;
   obj[4] = tmp10(1178).AvatarSizes.EDIT_AVATAR_DECORATION;
-  const items1 = [callback2(purchase(8257), obj), callback2(purchase(13176), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo })];
+  const items1 = [callback2(purchase(8257), obj), callback2(purchase(13180), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo })];
   obj[4] = items1;
   return tmp6(tmp7, obj);
 }

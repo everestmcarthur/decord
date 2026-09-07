@@ -1,14 +1,14 @@
-// Module ID: 15113
-// Function ID: 15114
-// Dependencies: [5451, 7724, 15102, 11192, 11193, 11197, 7718, 4763, 15114, 1896, 2]
+// Module ID: 15116
+// Function ID: 15117
+// Dependencies: [5451, 7724, 15105, 11197, 11198, 11202, 7718, 4763, 15117, 1896, 2]
 
-// Module 15113
+// Module 15116
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
 import AdCreativeType from "AdCreativeType" /* 5451 */;
-import apexExperiment from "apexExperiment" /* 11192 */;
-import getCreativeAnalyticsParams from "getCreativeAnalyticsParams" /* 15102 */;
+import apexExperiment from "apexExperiment" /* 11197 */;
+import getCreativeAnalyticsParams from "getCreativeAnalyticsParams" /* 15105 */;
 
 const QUEST_DISCLOSURE_MODAL = "QUEST_DISCLOSURE_MODAL";
 let result = set.fileFinishedImporting("modules/quests/native/QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx");
@@ -20,9 +20,9 @@ export default {
     const creativeAnalyticsParams = obj.getCreativeAnalyticsParams(creative);
     obj1 = apexExperiment;
     if (obj1.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_disclosure_modal")) {
-      let tmpResult = tmp(11193);
+      let tmpResult = tmp(11198);
       obj = { type: null };
-      obj[0] = tmp(11197).AdUserActionType.CLICK_INTERNAL;
+      obj[0] = tmp(11202).AdUserActionType.CLICK_INTERNAL;
       const merged = Object.assign(creativeAnalyticsParams);
       ({ ctaContent: obj8.questContentCTA, content: obj8.surfaceId, sourceQuestContent: obj8.sourceQuestContent, position: obj8.questContentPosition } = trackingCtx);
       tmpResult.captureAdUserAction(obj);
@@ -66,7 +66,7 @@ export default {
     const obj4 = {};
     const merged1 = Object.assign(tmp11);
     obj4.isTargetedDisclosure = isTargetedDisclosure.isTargetedDisclosure;
-    obj9.pushLazy(asyncRequireImpl(15114, dependencyMap.paths), obj4, QUEST_DISCLOSURE_MODAL);
+    obj9.pushLazy(asyncRequireImpl(15117, dependencyMap.paths), obj4, QUEST_DISCLOSURE_MODAL);
   },
   hideModal() {
     _modDef4763.popWithKey(QUEST_DISCLOSURE_MODAL);

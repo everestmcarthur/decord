@@ -1,14 +1,14 @@
-// Module ID: 14828
-// Function ID: 14829
+// Module ID: 14831
+// Function ID: 14832
 // Name: getGoreContentSettingOrDefault
-// Dependencies: [1187, 14825, 7301, 7298, 2]
+// Dependencies: [1187, 14828, 7301, 7298, 2]
 // Exports: isSetAndNotDefault, resolveExplicitContentSettingWithDefaultsForTeen, updateExplicitContentSetting, updateGoreContentSetting
 
-// Module 14828 (getGoreContentSettingOrDefault)
+// Module 14831 (getGoreContentSettingOrDefault)
 import set from "set" /* 2 */;
 import create from "create" /* 1187 */;
 import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 7298 */;
-import result2 from "result" /* 14825 */;
+import result2 from "result" /* 14828 */;
 
 function getGoreContentSettingOrDefault(arg0) {
   const ParentalControlledGoreContent = result2.ParentalControlledGoreContent;
@@ -52,7 +52,7 @@ function getExplicitContentSettingOrDefault(teenId) {
       prop1 = controlledSetting.explicitContentFriendDm;
     }
     if (!tmp10) {
-      const ParentalControlledLegacyExplicitContent2 = tmp(14825).ParentalControlledLegacyExplicitContent;
+      const ParentalControlledLegacyExplicitContent2 = tmp(14828).ParentalControlledLegacyExplicitContent;
       const controlledSetting1 = ParentalControlledLegacyExplicitContent2.getControlledSetting(teenId);
       prop1 = tmp(7298).TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM[controlledSetting1];
     }
@@ -60,7 +60,7 @@ function getExplicitContentSettingOrDefault(teenId) {
     obj[2] = tmp(1187).ExplicitContentRedaction.BLUR;
     return obj;
   } else {
-    const ParentalControlledLegacyExplicitContent = tmp(14825).ParentalControlledLegacyExplicitContent;
+    const ParentalControlledLegacyExplicitContent = tmp(14828).ParentalControlledLegacyExplicitContent;
     const controlledSetting2 = ParentalControlledLegacyExplicitContent.getControlledSetting(teenId);
     let TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM = tmp(7298);
     if (isFriend) {

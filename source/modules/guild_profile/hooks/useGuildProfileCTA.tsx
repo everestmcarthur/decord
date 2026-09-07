@@ -1,11 +1,11 @@
-// Module ID: 9205
-// Function ID: 9206
+// Module ID: 9210
+// Function ID: 9211
 // Name: useGuildProfileCTA
-// Dependencies: [19, 502, 2021, 1979, 4544, 1371, 1074, 504, 1384, 8392, 9206, 8165, 5550, 2]
+// Dependencies: [19, 502, 2021, 1979, 4544, 1371, 1074, 504, 1384, 8392, 9211, 8165, 5550, 2]
 // Exports: default, getGuildProfileCTAType
 
-// Module 9205 (useGuildProfileCTA)
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9206 */;
+// Module 9210 (useGuildProfileCTA)
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9211 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 502 */;
 import closure_5 from "trackCommunicationDisabled" /* 2021 */;
@@ -230,7 +230,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
       }
     }
   }
-  const pendingFolderGuildIds = set(9206).getPendingFolderGuildIds();
+  const pendingFolderGuildIds = set(9211).getPendingFolderGuildIds();
   if (tmp7) {
     let roles;
     if (invite != null) {
@@ -292,7 +292,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
     }
     return APPLY_TO_JOIN;
   }
-  const obj2 = set(9206);
+  const obj2 = set(9211);
   const tmp15 = set;
   tmp7 = null != joinedAt;
 };

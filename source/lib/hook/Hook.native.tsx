@@ -1,10 +1,10 @@
-// Module ID: 14003
-// Function ID: 14004
+// Module ID: 14006
+// Function ID: 14007
 // Name: isHookModuleTooOld
 // Dependencies: [2]
 // Exports: attachToProcess, cancelAttachToProcess, findSteamProcess, isHookModuleTooOld
 
-// Module 14003 (isHookModuleTooOld)
+// Module 14006 (isHookModuleTooOld)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("lib/hook/Hook.native.tsx");

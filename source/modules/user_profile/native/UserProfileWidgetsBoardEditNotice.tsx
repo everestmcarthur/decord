@@ -1,14 +1,14 @@
-// Module ID: 13064
-// Function ID: 13065
+// Module ID: 13068
+// Function ID: 13069
 // Name: UserProfileWidgetsBoardEditNotice
-// Dependencies: [19, 17, 1954, 21, 4560, 576, 8241, 10625, 1943, 4515, 4556, 1114, 5123, 5680, 2]
+// Dependencies: [19, 17, 1954, 21, 4560, 576, 8241, 10630, 1943, 4515, 4556, 1114, 5123, 5680, 2]
 // Exports: default
 
-// Module 13064 (UserProfileWidgetsBoardEditNotice)
+// Module 13068 (UserProfileWidgetsBoardEditNotice)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import useSharedStylesDefault from "useSharedStyles" /* 8241 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10625 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10630 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import jsxProd from "jsxProd" /* 21 */;

@@ -1,10 +1,10 @@
-// Module ID: 9395
-// Function ID: 9396
+// Module ID: 9400
+// Function ID: 9401
 // Name: ForumExplicitMediaAlert
-// Dependencies: [19, 17, 21, 4560, 576, 4994, 4556, 1114, 4975, 9396, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4994, 4556, 1114, 4975, 9401, 2]
 // Exports: default
 
-// Module 9395 (ForumExplicitMediaAlert)
+// Module 9400 (ForumExplicitMediaAlert)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

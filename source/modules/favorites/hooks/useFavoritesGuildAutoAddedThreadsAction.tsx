@@ -1,10 +1,10 @@
-// Module ID: 16140
-// Function ID: 16141
+// Module ID: 16143
+// Function ID: 16144
 // Name: useFavoritesGuildAutoAddedThreadsAction
-// Dependencies: [19, 1371, 1960, 10224, 504, 10223, 1114, 3225, 2]
+// Dependencies: [19, 1371, 1960, 10229, 504, 10228, 1114, 3225, 2]
 // Exports: default
 
-// Module 16140 (useFavoritesGuildAutoAddedThreadsAction)
+// Module 16143 (useFavoritesGuildAutoAddedThreadsAction)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import closure_5 from "initializeFromUserSettings" /* 1960 */;
@@ -13,7 +13,7 @@ const require = arg1;
 let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
-  let obj = hasAccess(10224);
+  let obj = hasAccess(10229);
   hasAccess = obj.useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
   const items = [closure_4];
   if (hasAccess) {

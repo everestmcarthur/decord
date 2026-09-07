@@ -1,10 +1,10 @@
-// Module ID: 10053
-// Function ID: 10054
+// Module ID: 10058
+// Function ID: 10059
 // Name: StageSectionHeader
 // Dependencies: [19, 17, 21, 4560, 576, 4296, 4561, 4556, 1178, 7158, 2]
 // Exports: default
 
-// Module 10053 (StageSectionHeader)
+// Module 10058 (StageSectionHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;

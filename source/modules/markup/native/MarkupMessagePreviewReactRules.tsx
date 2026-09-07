@@ -1,16 +1,16 @@
-// Module ID: 10117
-// Function ID: 10118
+// Module ID: 10122
+// Function ID: 10123
 // Name: defaultReactFn
-// Dependencies: [19, 10118, 21, 4555, 8096, 10121, 6620, 4996, 4998, 10126, 5587, 1116, 10127, 10128, 1178, 10129, 2]
+// Dependencies: [19, 10123, 21, 4555, 8096, 10126, 6620, 4996, 4998, 10131, 5587, 1116, 10132, 10133, 1178, 10134, 2]
 // Exports: default
 
-// Module 10117 (defaultReactFn)
+// Module 10122 (defaultReactFn)
 import noopAll from "noop" /* 19 */;
 import parseLinkDefault from "parseLink" /* 4998 */;
 import ICON_SIZE from "ICON_SIZE" /* 6620 */;
 import smartOutput from "smartOutput" /* 8096 */;
-import getLayoutStyles from "getLayoutStyles" /* 10121 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10118 */;
+import getLayoutStyles from "getLayoutStyles" /* 10126 */;
+import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10123 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -67,7 +67,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(4996).AST_KEY.HIGHLIGHT] = {
     react(node, output, key) {
       const obj = { children: null };
-      const tmp = callback(10126);
+      const tmp = callback(10131);
       obj[0] = num(8096).smartOutput(node, output, key);
       return callback2(tmp, obj, key.key);
     }
@@ -122,7 +122,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(4996).AST_KEY.SPOILER] = {
     react(node, output, muted) {
       const obj = { disableReveal: true, muted: muted.muted, children: null };
-      const tmp = callback(10127);
+      const tmp = callback(10132);
       obj[2] = num(8096).smartOutput(node, output, muted);
       return callback2(tmp, obj, muted.key);
     }
@@ -159,7 +159,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(4996).AST_KEY.MENTION] = obj12;
   const obj13 = {};
   const merged13 = Object.assign(parseLinkDefault.RULES[num(undefined, 4996).AST_KEY.CHANNEL_MENTION]);
-  obj13.react = num(10128).inlineChannelMentionReact;
+  obj13.react = num(10133).inlineChannelMentionReact;
   obj[num(4996).AST_KEY.CHANNEL_MENTION] = obj13;
   const obj14 = {};
   const merged14 = Object.assign(parseLinkDefault.RULES[num(undefined, 4996).AST_KEY.ATTACHMENT_LINK]);
@@ -176,7 +176,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(4996).AST_KEY.SOUNDBOARD] = obj15;
   obj[num(4996).AST_KEY.GUILD] = { react: defaultReactFn };
   const obj16 = { react: null };
-  let obj19 = num(10128);
+  let obj19 = num(10133);
   obj16[0] = obj19.createInlineChannelReact("\u{1F4AC}");
   obj[num(4996).AST_KEY.CHANNEL] = obj16;
   const obj17 = {};
@@ -191,7 +191,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   const obj18 = {};
   const merged17 = Object.assign(parseLinkDefault.RULES[num(undefined, 4996).AST_KEY.TIMESTAMP]);
   obj18.react = function react(node, arg1, key) {
-    return callback2(callback(10129), { node, style: null }, key.key);
+    return callback2(callback(10134), { node, style: null }, key.key);
   };
   obj[num(4996).AST_KEY.TIMESTAMP] = obj18;
   obj19 = {};

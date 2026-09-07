@@ -1,17 +1,17 @@
-// Module ID: 17901
-// Function ID: 17902
+// Module ID: 17904
+// Function ID: 17905
 // Name: onStageConnectionError
-// Dependencies: [5, 5558, 7526, 502, 1957, 1371, 6596, 1074, 4602, 1963, 12414, 3, 4259, 1114, 11253, 4418, 1109, 8393, 4571, 7342, 9789, 4417, 16416, 7640, 8179, 7182, 4573, 9182, 1242, 4740, 1115, 9536, 11, 16414, 7475, 10, 7476, 5277, 13629, 12417, 504, 12782, 9941, 4540, 1093, 11627, 8351, 8348, 573, 4763, 1100, 4762, 13850, 2]
+// Dependencies: [5, 5558, 7526, 502, 1957, 1371, 6596, 1074, 4602, 1963, 12418, 3, 4259, 1114, 11258, 4418, 1109, 8393, 4571, 7342, 9794, 4417, 16419, 7640, 8179, 7182, 4573, 9187, 1242, 4740, 1115, 9541, 11, 16417, 7475, 10, 7476, 5277, 13633, 12421, 504, 12786, 9946, 4540, 1093, 11632, 8351, 8348, 573, 4763, 1100, 4762, 13853, 2]
 // Exports: default
 
-// Module 17901 (onStageConnectionError)
+// Module 17904 (onStageConnectionError)
 import timestampDefault from "timestamp" /* 3 */;
 import isTracingDefault from "isTracing" /* 10 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import dispatcherDefault from "dispatcher" /* 4259 */;
 import parseQueryDefault from "parseQuery" /* 4540 */;
-import fetchMessagesDefault from "fetchMessages" /* 9941 */;
-import registerAssetDefault from "registerAsset" /* 11253 */;
+import fetchMessagesDefault from "fetchMessages" /* 9946 */;
+import registerAssetDefault from "registerAsset" /* 11258 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "scheduledEventSort" /* 7526 */;
 import closure_7 from "fetchFingerprint" /* 502 */;
@@ -21,7 +21,7 @@ import { NotificationTypes } from "str2" /* 6596 */;
 import ME from "ME" /* 1074 */;
 import { StreamTypes } from "StreamIssueReportReasons" /* 4602 */;
 import { GuildScheduledEventEntityTypes as closure_16 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
-import { MultiAccountSwitchLocation as closure_17 } from "MAX_ACCOUNTS" /* 12414 */;
+import { MultiAccountSwitchLocation as closure_17 } from "MAX_ACCOUNTS" /* 12418 */;
 
 require = arg1;
 function onStageConnectionError() {
@@ -404,7 +404,7 @@ function _handleGuildEventNotification() {
                     obj = { key: "VOICE_CONNECTION_ERROR_GENERIC", content: null, icon: null };
                     const intl = channel_id(1114).intl;
                     obj[1] = intl.string(channel_id(1114).t.S69lJR);
-                    obj[2] = guild_scheduled_event_id(11253);
+                    obj[2] = guild_scheduled_event_id(11258);
                     obj.open(obj);
                   })();
                   c4 = 3;
@@ -444,7 +444,7 @@ function _handleGuildEventNotification() {
             } else {
               id = guildScheduledEvent.getGuildScheduledEvent(guild_scheduled_event_id);
               if (null != id) {
-                obj3 = channel_id(9789);
+                obj3 = channel_id(9794);
                 const obj7 = { eventId: null, event: null };
                 obj7[0] = id.id;
                 obj7[1] = id;
@@ -540,7 +540,7 @@ function _handleRelationshipAddNotification() {
                 user_id = lib.user_id;
                 lib(4417).navigateToRootTab({ screen: "notifications" });
                 const obj8 = lib(4417);
-                user_id(16416).setTab(lib(7640).NotificationCenterTabs.ForYou);
+                user_id(16419).setTab(lib(7640).NotificationCenterTabs.ForYou);
                 dependencyMap = 2;
                 c4 = 1;
                 let obj3 = { value: null, done: false };
@@ -737,7 +737,7 @@ function _handleCallConnectNotification() {
             obj4[0] = arg1;
             return obj4;
           } else {
-            const tmp60 = callback(9182);
+            const tmp60 = callback(9187);
             const call = tmp60.call;
             const channel_id = lib.channel_id;
             if (typeof call === "unknown") {
@@ -762,7 +762,7 @@ function _handleCallConnectNotification() {
                 const merged1 = Object.assign(obj6.collectChannelAnalyticsMetadataFromId(lib.channel_id));
                 obj4.track(constants.CALLKIT_CLICKED, obj6);
               }
-              callback(9536)(lib.channel_id);
+              callback(9541)(lib.channel_id);
             }
             c4 = 3;
             return { value: "HermesInternal", done: null };
@@ -966,14 +966,14 @@ function _maybeAckNotificationCenter() {
               const obj8 = prop(11);
               const _HermesInternal = HermesInternal;
               const items = ["incoming_friend_requests_" + lib.user_id + "_" + closure_2];
-              const result = lib(16414).markNotificationCenterLocalItemsAcked(items);
-              const obj10 = lib(16414);
+              const result = lib(16417).markNotificationCenterLocalItemsAcked(items);
+              const obj10 = lib(16417);
             }
           } else if (arg0 === 1) {
             c4 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            obj = lib(16414);
+            obj = lib(16417);
             const result1 = obj.markNotificationCenterRemoteItemAcked(prop);
           }
           c4 = 3;
@@ -998,7 +998,7 @@ function _maybeAckNotificationCenter() {
 }
 function receiveNotification_(type) {
   const _require = type;
-  let obj = _require(12782);
+  let obj = _require(12786);
   const result = obj.initializeRouteManagerIfNeeded();
   if ("MESSAGE_CREATE" === type.type) {
     const _HermesInternal2 = HermesInternal;
@@ -1021,10 +1021,10 @@ function receiveNotification_(type) {
               tracking_type = type.type;
             }
             if (tmp8) {
-              tmp(11627).receivedNotification(payload.messageId, payload.channelId, tracking_type);
-              const tmpResult = tmp(11627);
+              tmp(11632).receivedNotification(payload.messageId, payload.channelId, tracking_type);
+              const tmpResult = tmp(11632);
             }
-            let tmp20Result = tmp20(9941);
+            let tmp20Result = tmp20(9946);
             obj = { guildId: null, channelId: null, messageId: null, isPreload: true };
             ({ guildId: obj8[0], channelId: obj8[1], messageId: obj8[2] } = payload);
             const messages1 = tmp20Result.fetchMessages(obj);
@@ -1091,14 +1091,14 @@ export default function receiveNotification(getData) {
         if (data.receiving_user_id !== obj.getId()) {
           tmp7(7476);
           tmp7(5277);
-          tmp7(13629);
+          tmp7(13633);
           let receiving_user_id = data.receiving_user_id;
-          receiving_user_id = tmp7(12417).switchAccount(receiving_user_id, false, arg1 ? tmp5.PUSH_NOTIFICATION_INITIAL : tmp5.PUSH_NOTIFICATION);
+          receiving_user_id = tmp7(12421).switchAccount(receiving_user_id, false, arg1 ? tmp5.PUSH_NOTIFICATION_INITIAL : tmp5.PUSH_NOTIFICATION);
           receiving_user_id.then(() => {
             const Emitter = closure_1_1(closure_1_3[40]).Emitter;
             Emitter.batched(() => closure_1_34(closure_0));
           });
-          const tmp7Result2 = tmp7(12417);
+          const tmp7Result2 = tmp7(12421);
         }
       }
       obj = id;

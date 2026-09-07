@@ -1,14 +1,14 @@
-// Module ID: 12580
-// Function ID: 12581
+// Module ID: 12584
+// Function ID: 12585
 // Name: useMaybeGetSortedBoosts
-// Dependencies: [32, 19, 12562, 5426, 2021, 1979, 504, 12581, 4458, 11, 1114, 2]
+// Dependencies: [32, 19, 12566, 5426, 2021, 1979, 504, 12585, 4458, 11, 1114, 2]
 // Exports: default, useGetBoostUserConfig
 
-// Module 12580 (useMaybeGetSortedBoosts)
+// Module 12584 (useMaybeGetSortedBoosts)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleModifyingAppliedBoostStart" /* 12562 */;
+import closure_5 from "handleModifyingAppliedBoostStart" /* 12566 */;
 import closure_6 from "handleConnectionReset" /* 5426 */;
 import closure_7 from "trackCommunicationDisabled" /* 2021 */;
 import closure_8 from "createGuildRecordFromRust" /* 1979 */;

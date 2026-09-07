@@ -1,10 +1,10 @@
-// Module ID: 15734
-// Function ID: 15735
+// Module ID: 15737
+// Function ID: 15738
 // Name: BenchmarkResultsList
-// Dependencies: [19, 21, 5687, 5605, 15730, 2]
+// Dependencies: [19, 21, 5687, 5605, 15733, 2]
 // Exports: default
 
-// Module 15734 (BenchmarkResultsList)
+// Module 15737 (BenchmarkResultsList)
 import noopAll from "noop" /* 19 */;
 import TableRowInner from "TableRowInner" /* 5605 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
@@ -36,7 +36,7 @@ export default function BenchmarkResultsList(results) {
             const _HermesInternal2 = HermesInternal;
             obj[0] = "Scroll \u00B7 mean " + toFixedResult + " ms \u00B7 worst " + worstMs.toFixed(1) + " ms";
             ({ dropped, frames } = kind);
-            const FRAME_BUDGET_MS = callback(15730).FRAME_BUDGET_MS;
+            const FRAME_BUDGET_MS = callback(15733).FRAME_BUDGET_MS;
             const _HermesInternal3 = HermesInternal;
             obj[1] = "" + dropped + "/" + frames + " frames over " + FRAME_BUDGET_MS.toFixed(1) + " ms";
             tmp5 = callback2(callback(5605).TableRow, obj, kind.id);

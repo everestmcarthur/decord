@@ -1,10 +1,10 @@
-// Module ID: 17402
-// Function ID: 17403
+// Module ID: 17405
+// Function ID: 17406
 // Name: InteractionIframeModal
-// Dependencies: [32, 19, 17, 1350, 21, 4560, 576, 17390, 6981, 8332, 17403, 4972, 4259, 1114, 9642, 9650, 5123, 4513, 4556, 9438, 2]
+// Dependencies: [32, 19, 17, 1350, 21, 4560, 576, 17393, 6981, 8332, 17406, 4972, 4259, 1114, 9647, 9655, 5123, 4513, 4556, 9443, 2]
 // Exports: default
 
-// Module 17402 (InteractionIframeModal)
+// Module 17405 (InteractionIframeModal)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -55,7 +55,7 @@ export default function InteractionIframeModal(children) {
   importDefault(callback[11])(callback1);
   let tmp11 = null;
   if (!tmp5[0]) {
-    obj = { onActivityCrash: null, applicationId: null, channelId: null, guildId: null, activityUrl: null, activitySessionId: null, queryParams: null, onLoadError: null, allowPopups: null, referrerPolicy: "origin", isPipOrGridMode: false, webViewKey: "PX_16", ignoreSilentHardwareSwitch: "barn" };
+    obj = { onActivityCrash: null, applicationId: null, channelId: null, guildId: null, activityUrl: null, activitySessionId: null, queryParams: null, onLoadError: null, allowPopups: null, referrerPolicy: "origin", isPipOrGridMode: false, webViewKey: "PX_16", ignoreSilentHardwareSwitch: "jente" };
     obj[0] = function onActivityCrash() {
       callback(true);
       const timerId = setTimeout(() => callback(false), 0);

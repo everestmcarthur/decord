@@ -1,10 +1,10 @@
-// Module ID: 15687
-// Function ID: 15688
+// Module ID: 15690
+// Function ID: 15691
 // Name: markAsDismissed
-// Dependencies: [19, 1373, 1074, 1954, 21, 7162, 7182, 1242, 13306, 9392, 4218, 7150, 15688, 2]
+// Dependencies: [19, 1373, 1074, 1954, 21, 7162, 7182, 1242, 13310, 9397, 4218, 7150, 15691, 2]
 // Exports: default
 
-// Module 15687 (markAsDismissed)
+// Module 15690 (markAsDismissed)
 import closure_3 from "noop" /* 19 */;
 import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 import { AnalyticEvents } from "ME" /* 1074 */;

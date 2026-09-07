@@ -1,7 +1,7 @@
 // Module ID: 4575
 // Function ID: 4576
 // Name: generateOldThreadCutoff
-// Dependencies: [5, 32, 1956, 4576, 2013, 4476, 7526, 7219, 7220, 7639, 5507, 4201, 1221, 1961, 502, 7280, 1957, 5271, 4902, 1979, 5410, 4781, 4199, 4209, 2011, 4741, 1371, 13833, 1074, 9505, 1964, 1963, 4742, 1113, 3, 13834, 13835, 11, 1090, 573, 4798, 13836, 1272, 4447, 11300, 10089, 4208, 13837, 7535, 7636, 13838, 1896, 1384, 4153, 12, 1369, 5275, 4418, 13839, 10088, 4207, 1969, 504, 1895, 8374, 2]
+// Dependencies: [5, 32, 1956, 4576, 2013, 4476, 7526, 7219, 7220, 7639, 5507, 4201, 1221, 1961, 502, 7280, 1957, 5271, 4902, 1979, 5410, 4781, 4199, 4209, 2011, 4741, 1371, 13836, 1074, 9510, 1964, 1963, 4742, 1113, 3, 13837, 13838, 11, 1090, 573, 4798, 13839, 1272, 4447, 11305, 10094, 4208, 13840, 7535, 7636, 13841, 1896, 1384, 4153, 12, 1369, 5275, 4418, 13842, 10093, 4207, 1969, 504, 1895, 8374, 2]
 // Exports: isNonMutedPrivateMessage
 
 // Module 4575 (generateOldThreadCutoff)
@@ -20,11 +20,11 @@ import isIOSPushNotificationRawPayloadFixExperimentEnabled from "isIOSPushNotifi
 import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 7535 */;
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel" /* 7636 */;
 import isChangelogChannelDefault from "isChangelogChannel" /* 8374 */;
-import getFocusedChannelId from "getFocusedChannelId" /* 10089 */;
-import _modDef11300 from "module_11300" /* 11300 */;
-import _networkAwareRetryDefault from "_networkAwareRetry" /* 13836 */;
-import filterOutMessageRequestsAndSpam from "filterOutMessageRequestsAndSpam" /* 13837 */;
-import map2 from "map" /* 13839 */;
+import getFocusedChannelId from "getFocusedChannelId" /* 10094 */;
+import _modDef11305 from "module_11305" /* 11305 */;
+import _networkAwareRetryDefault from "_networkAwareRetry" /* 13839 */;
+import filterOutMessageRequestsAndSpam from "filterOutMessageRequestsAndSpam" /* 13840 */;
+import map2 from "map" /* 13842 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "participantFromServer" /* 1956 */;
@@ -53,9 +53,9 @@ import closure_31 from "markAllUserIdListsStale" /* 4209 */;
 import importDefaultResult from "handleConnectionOpen" /* 2011 */;
 import closure_33 from "updateUserGuildSettingsInternal" /* 4741 */;
 import closure_34 from "mergeGuildAvatar" /* 1371 */;
-import closure_35 from "map" /* 13833 */;
+import closure_35 from "map" /* 13836 */;
 import ME from "ME" /* 1074 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 9505 */;
+import ActivityPanelModes from "ActivityPanelModes" /* 9510 */;
 import set from "set" /* 1964 */;
 import { GuildScheduledEventStatus } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
 import { ReadStateTypes } from "ReadStateTypes" /* 4742 */;
@@ -310,7 +310,7 @@ function shouldAutomaticallyAck(value, arg1) {
           }
           return false;
         }
-        obj5 = _modDef11300;
+        obj5 = _modDef11305;
       }
       if (tmp4) {
         if (!value._persisted) {
@@ -2045,14 +2045,14 @@ prototype2["_ack"] = function _ack(closure_1, c0) {
         }
         callback(573).dispatch({ type: "MESSAGE_ACKED" });
         if (dependencyMap) {
-          recalculateFlagsResult(1896)(13838, tmp5.paths).then((arg0) => {
+          recalculateFlagsResult(1896)(13841, tmp5.paths).then((arg0) => {
             obj = closure_1;
             if (closure_1 == null) {
               obj = {};
             }
             arg0.default(channelId.channelId, obj);
           });
-          const promise = recalculateFlagsResult(1896)(13838, tmp5.paths);
+          const promise = recalculateFlagsResult(1896)(13841, tmp5.paths);
         }
         obj = callback(573);
         tmp5 = dependencyMap;
@@ -3190,7 +3190,7 @@ obj = {
     }
     let result = channelId2 === channelId || currentSidebarChannelId === channelId;
     if (!result) {
-      let tmp8Result = tmp8(13839);
+      let tmp8Result = tmp8(13842);
       result = tmp8Result.isChannelVisibleInline(channelId, (arg0) => focused.isFocused(arg0));
     }
     if (result) {
@@ -3229,7 +3229,7 @@ obj = {
       if (null != value.oldestUnreadMessageId) {
         if (!value.oldestUnreadMessageIdStale) {
           if (!hasUnreadResult) {
-            tmp8Result = tmp8(10089);
+            tmp8Result = tmp8(10094);
             hasUnreadResult = tmp8Result.getFocusedChannelId() === channelId;
           }
           if (!hasUnreadResult) {
@@ -3295,7 +3295,7 @@ obj = {
                     if (tmp8Result2.computeThreadNotificationSetting(channel) === ThreadMemberFlags.ALL_MESSAGES) {
                       obj6 = { shouldMention: true, isMentionLowImportance: true };
                     }
-                    tmp8Result2 = tmp8(10088);
+                    tmp8Result2 = tmp8(10093);
                   } else if (!channel.isVocal()) {
                     if (!obj16.isChannelMuted(channel.guild_id, channel.id)) {
                       if (obj16.resolvedMessageNotifications(channel) === constants10.ALL_MESSAGES) {
@@ -3341,7 +3341,7 @@ obj = {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     const value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "PX_16", force: "krisp", isExplicitUserAction: "MESSAGE_NOTIFICATION_SHOWN", trackAnalytics: null });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "PX_16", force: "krisp", isExplicitUserAction: "LOAD_ARCHIVED_THREADS", trackAnalytics: null });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     const value = ReadState.get(channelId.channelId);
@@ -3726,7 +3726,7 @@ obj = {
     });
     const item = found.forEach((messageId) => {
       const value = closure_81.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "PX_16", isExplicitUserAction: "describe", trackAnalytics: "boolean" });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "PX_16", isExplicitUserAction: "AUDIO_SET_ATTENUATION", trackAnalytics: null });
     });
     if (context === closure_41) {
       const push = navigation.push;

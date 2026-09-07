@@ -1,15 +1,15 @@
-// Module ID: 16060
-// Function ID: 16061
+// Module ID: 16063
+// Function ID: 16064
 // Name: importDefaultResult1
-// Dependencies: [32, 19, 1956, 5277, 13705, 7526, 1962, 7659, 4582, 502, 7279, 1957, 2012, 1979, 4199, 4600, 4209, 4741, 1371, 4579, 15294, 1074, 9848, 504, 16061, 16062, 7312, 7286, 573, 9681, 10, 12, 4771, 16063, 16064, 16065, 7313, 16066, 9823, 1369, 5586, 2]
+// Dependencies: [32, 19, 1956, 5277, 13709, 7526, 1962, 7659, 4582, 502, 7279, 1957, 2012, 1979, 4199, 4600, 4209, 4741, 1371, 4579, 15297, 1074, 9853, 504, 16064, 16065, 7312, 7286, 573, 9686, 10, 12, 4771, 16066, 16067, 16068, 7313, 16069, 9828, 1369, 5586, 2]
 // Exports: default
 
-// Module 16060 (importDefaultResult1)
+// Module 16063 (importDefaultResult1)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "participantFromServer" /* 1956 */;
 import closure_6 from "_handleConnectionOpen" /* 5277 */;
-import closure_7 from "truncateOldMessageData" /* 13705 */;
+import closure_7 from "truncateOldMessageData" /* 13709 */;
 import scheduledEventSort from "scheduledEventSort" /* 7526 */;
 import closure_11 from "scheduledEventSort" /* 7526 */;
 import closure_12 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
@@ -28,7 +28,7 @@ import closure_24 from "markAllUserIdListsStale" /* 4209 */;
 import closure_25 from "updateUserGuildSettingsInternal" /* 4741 */;
 import importDefaultResult2 from "mergeGuildAvatar" /* 1371 */;
 import importDefaultResult3 from "updateVoiceState" /* 4579 */;
-import { HappeningNowItem } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15294 */;
+import { HappeningNowItem } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15297 */;
 import ME from "ME" /* 1074 */;
 
 const require = arg1;

@@ -1,10 +1,10 @@
-// Module ID: 11128
-// Function ID: 11129
+// Module ID: 11133
+// Function ID: 11134
 // Name: useTooltip
-// Dependencies: [32, 5, 19, 21, 3, 1256, 7157, 11129, 1477, 11133, 2]
+// Dependencies: [32, 5, 19, 21, 3, 1256, 7157, 11134, 1477, 11138, 2]
 // Exports: useTooltip, useTooltipHelper
 
-// Module 11128 (useTooltip)
+// Module 11133 (useTooltip)
 import timestampDefault from "timestamp" /* 3 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import closure_3 from "_slicedToArray" /* 32 */;

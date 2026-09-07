@@ -1,10 +1,10 @@
-// Module ID: 15585
-// Function ID: 15586
+// Module ID: 15588
+// Function ID: 15589
 // Name: DevToolsLoggingFlagsScreen
 // Dependencies: [17, 1347, 21, 4560, 576, 504, 5687, 7201, 1348, 2]
 // Exports: default
 
-// Module 15585 (DevToolsLoggingFlagsScreen)
+// Module 15588 (DevToolsLoggingFlagsScreen)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import initialize from "initialize" /* 504 */;

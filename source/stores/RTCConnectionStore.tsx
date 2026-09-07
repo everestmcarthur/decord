@@ -1,16 +1,16 @@
 // Module ID: 4583
 // Function ID: 4584
 // Name: createRTCConnection
-// Dependencies: [4577, 502, 4584, 1074, 4585, 3, 4587, 4614, 573, 13824, 4447, 4589, 5411, 13825, 504, 13827, 1242, 1896, 2]
+// Dependencies: [4577, 502, 4584, 1074, 4585, 3, 4587, 4614, 573, 13827, 4447, 4589, 5411, 13828, 504, 13830, 1242, 1896, 2]
 
 // Module 4583 (createRTCConnection)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import sleep from "sleep" /* 4589 */;
-import updateVoiceStatesDefault from "updateVoiceStates" /* 13824 */;
-import useSpatialAudioControlState from "useSpatialAudioControlState" /* 13825 */;
-import trackVideoToggle from "trackVideoToggle" /* 13827 */;
+import updateVoiceStatesDefault from "updateVoiceStates" /* 13827 */;
+import useSpatialAudioControlState from "useSpatialAudioControlState" /* 13828 */;
+import trackVideoToggle from "trackVideoToggle" /* 13830 */;
 import closure_5 from "set" /* 4577 */;
 import closure_6 from "fetchFingerprint" /* 502 */;
 import closure_7 from "getVoiceStatesForGuild" /* 4584 */;

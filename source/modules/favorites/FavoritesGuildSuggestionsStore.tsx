@@ -1,10 +1,10 @@
-// Module ID: 16202
-// Function ID: 16203
+// Module ID: 16205
+// Function ID: 16206
 // Name: items
-// Dependencies: [32, 19, 1949, 1074, 1954, 560, 10224, 7388, 1943, 2]
+// Dependencies: [32, 19, 1949, 1074, 1954, 560, 10229, 7388, 1943, 2]
 // Exports: setFavoritesGuildSuggestions, useFavoritesGuildSuggestionCount, useFavoritesGuildSuggestions, useFavoritesGuildSuggestionsDismissal, useFavoritesGuildSuggestionsVisibility, useHasFavoritesGuildSuggestions
 
-// Module 16202 (items)
+// Module 16205 (items)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "withContent" /* 1949 */;
@@ -31,7 +31,7 @@ export const setFavoritesGuildSuggestions = function setFavoritesGuildSuggestion
   state.setState({ suggestions });
 };
 export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuildSuggestionsVisibility() {
-  let obj = _require(10224);
+  let obj = _require(10229);
   const favoritesAccess = obj.useFavoritesAccess();
   let isFreemium = favoritesAccess.hasAccess;
   if (isFreemium) {

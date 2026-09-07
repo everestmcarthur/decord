@@ -1,9 +1,9 @@
-// Module ID: 10750
-// Function ID: 10751
+// Module ID: 10755
+// Function ID: 10756
 // Name: PremiumGiftPlanSelectPromotionDetails
-// Dependencies: [19, 17, 10665, 1373, 1085, 21, 576, 4560, 5524, 504, 10742, 9370, 10751, 10752, 8833, 9384, 9382, 4556, 1114, 9391, 4975, 10753, 4271, 4987, 10754, 1925, 2]
+// Dependencies: [19, 17, 10670, 1373, 1085, 21, 576, 4560, 5524, 504, 10747, 9375, 10756, 10757, 8838, 9389, 9387, 4556, 1114, 9396, 4975, 10758, 4271, 4987, 10759, 1925, 2]
 
-// Module 10750 (PremiumGiftPlanSelectPromotionDetails)
+// Module 10755 (PremiumGiftPlanSelectPromotionDetails)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -13,16 +13,16 @@ import Text from "Text" /* 4556 */;
 import Button from "Button" /* 4975 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import createTextStyleDefault from "createTextStyle" /* 5524 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9370 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9382 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9384 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9391 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10751 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10752 */;
-import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10753 */;
-import PremiumGiftPromotionDetailsBaseDefault from "PremiumGiftPromotionDetailsBase" /* 10754 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9375 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9387 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9389 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9396 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10756 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10757 */;
+import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10758 */;
+import PremiumGiftPromotionDetailsBaseDefault from "PremiumGiftPromotionDetailsBase" /* 10759 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createEmptyPromotionsByType" /* 10665 */;
+import closure_4 from "createEmptyPromotionsByType" /* 10670 */;
 import GuildFeatures from "GuildFeatures" /* 1373 */;
 import { Fonts } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;

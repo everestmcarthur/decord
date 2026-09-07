@@ -1,10 +1,10 @@
-// Module ID: 16778
-// Function ID: 16779
+// Module ID: 16781
+// Function ID: 16782
 // Name: handleConfirm
-// Dependencies: [5, 19, 21, 9042, 4910, 1114, 4910, 2]
+// Dependencies: [5, 19, 21, 9047, 4910, 1114, 4910, 2]
 // Exports: default
 
-// Module 16778 (handleConfirm)
+// Module 16781 (handleConfirm)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;

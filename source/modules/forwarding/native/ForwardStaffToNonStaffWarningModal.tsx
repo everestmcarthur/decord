@@ -1,10 +1,10 @@
-// Module ID: 11686
-// Function ID: 11687
+// Module ID: 11691
+// Function ID: 11692
 // Name: ForwardStaffToNonStaffWarningModal
 // Dependencies: [21, 4910, 1114, 2]
 // Exports: default
 
-// Module 11686 (ForwardStaffToNonStaffWarningModal)
+// Module 11691 (ForwardStaffToNonStaffWarningModal)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;

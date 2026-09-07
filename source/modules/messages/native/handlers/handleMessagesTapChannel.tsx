@@ -1,10 +1,10 @@
-// Module ID: 11548
-// Function ID: 11549
+// Module ID: 11553
+// Function ID: 11554
 // Name: maybeStartLurking
-// Dependencies: [5, 1961, 1975, 1957, 2021, 2015, 1979, 4199, 1074, 1964, 7101, 7097, 7341, 8375, 8096, 4763, 11549, 1896, 7244, 4527, 11562, 11570, 1369, 4714, 4767, 5411, 2]
+// Dependencies: [5, 1961, 1975, 1957, 2021, 2015, 1979, 4199, 1074, 1964, 7101, 7097, 7341, 8375, 8096, 4763, 11554, 1896, 7244, 4527, 11567, 11575, 1369, 4714, 4767, 5411, 2]
 // Exports: handleMessagesTapChannel
 
-// Module 11548 (maybeStartLurking)
+// Module 11553 (maybeStartLurking)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { isGuildVocalChannelType } from "createChannelRecord" /* 1961 */;
 import { isGuildLurker } from "GuildNSFWContentLevel" /* 1975 */;

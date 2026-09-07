@@ -1,10 +1,10 @@
-// Module ID: 13122
-// Function ID: 13123
+// Module ID: 13126
+// Function ID: 13127
 // Name: FriendsListItemActionType
 // Dependencies: [1074, 1242, 2]
 // Exports: trackFriendsListItemClicked, trackFriendsListItemContextMenuInteracted, trackFriendsListItemMessageClicked, trackFriendsListItemRemoveFriendClicked, trackFriendsListItemVideoCallClicked, trackFriendsListItemVoiceCallClicked, trackViewFriendRequestNote
 
-// Module 13122 (FriendsListItemActionType)
+// Module 13126 (FriendsListItemActionType)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

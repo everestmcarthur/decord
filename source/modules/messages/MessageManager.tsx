@@ -1,9 +1,9 @@
-// Module ID: 9941
-// Function ID: 9942
+// Module ID: 9946
+// Function ID: 9947
 // Name: fetchMessages
-// Dependencies: [32, 4576, 5277, 1961, 7280, 1957, 1979, 4575, 2011, 4381, 1074, 1964, 1090, 3, 5272, 9942, 4491, 8374, 7456, 9943, 510, 4386, 1100, 7282, 4904, 1114, 573, 7118, 2]
+// Dependencies: [32, 4576, 5277, 1961, 7280, 1957, 1979, 4575, 2011, 4381, 1074, 1964, 1090, 3, 5272, 9947, 4491, 8374, 7456, 9948, 510, 4386, 1100, 7282, 4904, 1114, 573, 7118, 2]
 
-// Module 9941 (fetchMessages)
+// Module 9946 (fetchMessages)
 import timestampDefault from "timestamp" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
@@ -17,8 +17,8 @@ import mergeMessageDefault from "mergeMessage" /* 5272 */;
 import initializeDefault from "initialize" /* 7118 */;
 import SidebarType from "SidebarType" /* 7282 */;
 import trackInviteDefault from "trackInvite" /* 7456 */;
-import isRefreshableAttachmentUrlAll from "isRefreshableAttachmentUrl" /* 9942 */;
-import getMessageLimit from "getMessageLimit" /* 9943 */;
+import isRefreshableAttachmentUrlAll from "isRefreshableAttachmentUrl" /* 9947 */;
+import getMessageLimit from "getMessageLimit" /* 9948 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "getParticipants" /* 4576 */;
 import closure_6 from "_handleConnectionOpen" /* 5277 */;

@@ -1,13 +1,13 @@
-// Module ID: 10257
-// Function ID: 10258
+// Module ID: 10262
+// Function ID: 10263
 // Name: items
-// Dependencies: [1074, 10258, 1114, 2]
+// Dependencies: [1074, 10263, 1114, 2]
 
-// Module 10257 (items)
+// Module 10262 (items)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import parsedItemUsesEveryoneRoleDefault from "parsedItemUsesEveryoneRole" /* 10258 */;
+import parsedItemUsesEveryoneRoleDefault from "parsedItemUsesEveryoneRole" /* 10263 */;
 
 const TOKEN_REGEX = ME.TOKEN_REGEX;
 const items = [
@@ -21,9 +21,9 @@ const items = [
           if (null == extractEveryoneRoleResult) {
             return false;
           } else {
-            let tmp8Result = tmp8(10258);
+            let tmp8Result = tmp8(10263);
             if (tmp8Result.shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId)) {
-              tmp8Result = tmp8(10258);
+              tmp8Result = tmp8(10263);
               const everyoneMemberCountResult = tmp8Result.everyoneMemberCount(extractEveryoneRoleResult, getGuildId);
               const _Math = Math;
               const _Math2 = Math;
@@ -54,7 +54,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "call"
+    animation: "accessible"
   },
   {
     check(arg0) {

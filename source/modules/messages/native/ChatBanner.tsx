@@ -1,17 +1,17 @@
-// Module ID: 11420
-// Function ID: 11421
+// Module ID: 11425
+// Function ID: 11426
 // Name: OptInChannelBanner
-// Dependencies: [19, 17, 5277, 4575, 11421, 1074, 21, 4560, 576, 11422, 11423, 504, 11, 1242, 4740, 7113, 4556, 1114, 4975, 7269, 7765, 5123, 7110, 7973, 2]
+// Dependencies: [19, 17, 5277, 4575, 11426, 1074, 21, 4560, 576, 11427, 11428, 504, 11, 1242, 4740, 7113, 4556, 1114, 4975, 7269, 7765, 5123, 7110, 7973, 2]
 // Exports: default
 
-// Module 11420 (OptInChannelBanner)
+// Module 11425 (OptInChannelBanner)
 import ThemesDefault from "Themes" /* 576 */;
-import ChatOverlaysDefault from "ChatOverlays" /* 11423 */;
+import ChatOverlaysDefault from "ChatOverlays" /* 11428 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "_handleConnectionOpen" /* 5277 */;
 import closure_6 from "generateOldThreadCutoff" /* 4575 */;
-import { ChatOverlays } from "ChatOverlays" /* 11421 */;
+import { ChatOverlays } from "ChatOverlays" /* 11426 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

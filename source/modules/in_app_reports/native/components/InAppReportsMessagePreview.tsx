@@ -1,17 +1,17 @@
-// Module ID: 8651
-// Function ID: 8652
+// Module ID: 8656
+// Function ID: 8657
 // Name: MessagePreview
-// Dependencies: [19, 17, 21, 4560, 576, 7932, 4409, 4556, 1114, 8652, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 7932, 4409, 4556, 1114, 8657, 2]
 // Exports: default
 
-// Module 8651 (MessagePreview)
+// Module 8656 (MessagePreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import hexToRgba from "hexToRgba" /* 4409 */;
 import Text from "Text" /* 4556 */;
 import setOptionsDefault from "setOptions" /* 7932 */;
-import DCDChatItemDefault from "DCDChatItem" /* 8652 */;
+import DCDChatItemDefault from "DCDChatItem" /* 8657 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

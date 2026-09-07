@@ -1,10 +1,10 @@
-// Module ID: 16263
-// Function ID: 16264
+// Module ID: 16266
+// Function ID: 16267
 // Name: useShouldRenderChannelList
 // Dependencies: [32, 19, 7476, 5277, 1074, 4417, 4418, 1109, 2]
 // Exports: useShouldRenderChannelList
 
-// Module 16263 (useShouldRenderChannelList)
+// Module 16266 (useShouldRenderChannelList)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleClearCaches" /* 7476 */;

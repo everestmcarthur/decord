@@ -1,13 +1,13 @@
-// Module ID: 13675
-// Function ID: 13676
+// Module ID: 13679
+// Function ID: 13680
 // Name: apexExperiment
-// Dependencies: [1908, 1371, 1373, 1433, 13676, 504, 4218, 2]
+// Dependencies: [1908, 1371, 1373, 1433, 13680, 504, 4218, 2]
 // Exports: areClipsAvailable, isScreenshotKeybindEnabled, isUserPremiumTypeForClipsEarlyAccess, useIsClipsAvailable, useScreenshotKeybindEnabled
 
-// Module 13675 (apexExperiment)
+// Module 13679 (apexExperiment)
 import initialize from "initialize" /* 504 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13676 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13680 */;
 import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import { PremiumTypes } from "GuildFeatures" /* 1373 */;

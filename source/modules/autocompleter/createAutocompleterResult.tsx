@@ -1,10 +1,10 @@
-// Module ID: 9842
-// Function ID: 9843
+// Module ID: 9847
+// Function ID: 9848
 // Name: HeaderRecord
 // Dependencies: [5515, 2]
 // Exports: createHeaderResult
 
-// Module 9842 (HeaderRecord)
+// Module 9847 (HeaderRecord)
 import set from "set" /* 2 */;
 import HeaderRecord from "HeaderRecord" /* 5515 */;
 

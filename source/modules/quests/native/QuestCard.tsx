@@ -1,9 +1,9 @@
-// Module ID: 15090
-// Function ID: 15091
+// Module ID: 15093
+// Function ID: 15094
 // Name: ESTIMATED_CARD_HEIGHT
-// Dependencies: [5, 32, 19, 17, 1371, 7703, 5444, 1085, 21, 576, 4560, 4412, 4409, 5447, 7709, 11774, 11483, 1477, 11285, 15091, 8874, 7602, 7607, 7728, 504, 11290, 7724, 7699, 11295, 4495, 11042, 4262, 15118, 11486, 11192, 11193, 11197, 5451, 11496, 4527, 15120, 1896, 11775, 7552, 1114, 11767, 11513, 15124, 11276, 11292, 11293, 4982, 10119, 8686, 1115, 8837, 4556, 15125, 5607, 15164, 5587, 4987, 1093, 15150, 5591, 15131, 11770, 15165, 4973, 4975, 15168, 8097, 10181, 15151, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 7703, 5444, 1085, 21, 576, 4560, 4412, 4409, 5447, 7709, 11779, 11488, 1477, 11290, 15094, 8879, 7602, 7607, 7728, 504, 11295, 7724, 7699, 11300, 4495, 11047, 4262, 15121, 11491, 11197, 11198, 11202, 5451, 11501, 4527, 15123, 1896, 11780, 7552, 1114, 11772, 11518, 15127, 11281, 11297, 11298, 4982, 10124, 8691, 1115, 8842, 4556, 15128, 5607, 15167, 5587, 4987, 1093, 15153, 5591, 15134, 11775, 15168, 4973, 4975, 15171, 8097, 10186, 15154, 2]
 
-// Module 15090 (ESTIMATED_CARD_HEIGHT)
+// Module 15093 (ESTIMATED_CARD_HEIGHT)
 import ThemesDefault from "Themes" /* 576 */;
 import hexToRgba from "hexToRgba" /* 4409 */;
 import _mod4412 from "module_4412" /* 4412 */;
@@ -510,7 +510,7 @@ const memoResult = importAllResult.memo((questContent) => {
               } else {
                 closure_0 = tmp2;
                 closure_1_5.log("Enrolling in quest");
-                closure_1_0(11276);
+                closure_1_0(11281);
                 obj1 = { questContent: null, questContentCTA: null, sourceQuestContent: null };
                 obj1[0] = dependencyMap;
                 if (!closure_1_20) {
@@ -539,7 +539,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   obj = { questId: null, sourceQuestContent: null };
                   obj[0] = v0.id;
                   obj[1] = closure_4;
-                  v0(15124)(obj);
+                  v0(15127)(obj);
                   dependencyMap = 3;
                 }
                 callback2();

@@ -1,10 +1,10 @@
-// Module ID: 14619
-// Function ID: 14620
+// Module ID: 14622
+// Function ID: 14623
 // Name: UserProfileBadgesEditButton
-// Dependencies: [32, 19, 17, 1954, 21, 4560, 576, 11198, 7162, 7388, 1943, 4527, 14620, 1896, 14618, 1114, 4556, 11199, 11190, 2]
+// Dependencies: [32, 19, 17, 1954, 21, 4560, 576, 11203, 7162, 7388, 1943, 4527, 14623, 1896, 14621, 1114, 4556, 11204, 11195, 2]
 // Exports: default
 
-// Module 14619 (UserProfileBadgesEditButton)
+// Module 14622 (UserProfileBadgesEditButton)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -33,7 +33,7 @@ export default function UserProfileBadgesEditButton(arg0) {
   let React;
   const tmp = callback3();
   _require = tmp;
-  let obj = _require(11198);
+  let obj = _require(11203);
   const isBadgeManagementEnabled = obj.useIsBadgeManagementEnabled({ location: "UserProfileBadgesEditButton" });
   analyticsLocations = analyticsLocations(7162)().analyticsLocations;
   let length;
@@ -70,7 +70,7 @@ export default function UserProfileBadgesEditButton(arg0) {
       obj[0] = intl3.string(tmp2(1114).t.l6w3Vj);
       obj = { showNewBadge: null };
       obj[0] = tmp8;
-      obj[1] = callback2(tmp2(14618).UserProfileEditFormLabelBadges, obj);
+      obj[1] = callback2(tmp2(14621).UserProfileEditFormLabelBadges, obj);
       obj1 = { style: null, "aria-hidden": true, children: null };
       obj1[0] = tmp.content;
       const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
@@ -84,20 +84,20 @@ export default function UserProfileBadgesEditButton(arg0) {
       obj[3] = obj3;
       obj[4] = !ownsAnyBadge;
       obj[5] = callback;
-      return callback2(tmp2(14618).UserProfileEditFormButton, obj);
+      return callback2(tmp2(14621).UserProfileEditFormButton, obj);
     } else {
-      tmp2Result = tmp2(11199);
+      tmp2Result = tmp2(11204);
       React = tmp2Result.getLegacyIconUrlByBadgeId(badges);
-      const substr = badges.slice(0, tmp2(11199).MAX_DISPLAYED_PROFILE_BADGES);
+      const substr = badges.slice(0, tmp2(11204).MAX_DISPLAYED_PROFILE_BADGES);
       let substr1;
       if (catalogBadges != null) {
-        substr1 = catalogBadges.slice(0, tmp2(11199).MAX_DISPLAYED_PROFILE_BADGES);
+        substr1 = catalogBadges.slice(0, tmp2(11204).MAX_DISPLAYED_PROFILE_BADGES);
       }
       if (substr1 == null) {
         substr1 = null;
       }
       const _Math = Math;
-      const diff = length - Math.min(length, tmp2(11199).MAX_DISPLAYED_PROFILE_BADGES);
+      const diff = length - Math.min(length, tmp2(11204).MAX_DISPLAYED_PROFILE_BADGES);
       let mapped;
       if (substr1 != null) {
         mapped = substr1.map((name) => name.name);
@@ -114,7 +114,7 @@ export default function UserProfileBadgesEditButton(arg0) {
       obj5[0] = intl2.string(tmp2(1114).t.l6w3Vj);
       const obj6 = { showNewBadge: null };
       obj6[0] = tmp8;
-      obj5[1] = callback2(tmp2(14618).UserProfileEditFormLabelBadges, obj6);
+      obj5[1] = callback2(tmp2(14621).UserProfileEditFormLabelBadges, obj6);
       const obj7 = { style: null, "aria-hidden": true, children: null };
       obj7[0] = tmp.content;
       if (null != substr1) {
@@ -163,7 +163,7 @@ export default function UserProfileBadgesEditButton(arg0) {
       }
       obj5[3] = tmp20;
       obj5[4] = callback;
-      return callback2(tmp2(14618).UserProfileEditFormButton, obj5);
+      return callback2(tmp2(14621).UserProfileEditFormButton, obj5);
     }
   } else {
     return null;

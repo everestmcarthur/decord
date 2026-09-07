@@ -1,10 +1,10 @@
-// Module ID: 13178
-// Function ID: 13179
+// Module ID: 13182
+// Function ID: 13183
 // Name: createInteractionStatus
 // Dependencies: [8116, 1114, 2]
 // Exports: createInteractionStatus
 
-// Module 13178 (createInteractionStatus)
+// Module 13182 (createInteractionStatus)
 import set from "set" /* 2 */;
 import _executeMessageComponentInteraction from "_executeMessageComponentInteraction" /* 8116 */;
 

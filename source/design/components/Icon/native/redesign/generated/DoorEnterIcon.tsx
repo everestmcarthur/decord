@@ -1,14 +1,14 @@
-// Module ID: 13371
-// Function ID: 13372
+// Module ID: 13375
+// Function ID: 13376
 // Name: DoorEnterIcon
-// Dependencies: [19, 21, 576, 4261, 13372, 2]
+// Dependencies: [19, 21, 576, 4261, 13376, 2]
 // Exports: DoorEnterIcon
 
-// Module 13371 (DoorEnterIcon)
+// Module 13375 (DoorEnterIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 13372 */;
+import registerAsset from "registerAsset" /* 13376 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

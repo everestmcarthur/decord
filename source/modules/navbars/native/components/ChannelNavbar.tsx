@@ -1,10 +1,10 @@
-// Module ID: 12774
-// Function ID: 12775
+// Module ID: 12778
+// Function ID: 12779
 // Name: ChannelTitleContent
-// Dependencies: [19, 17, 5277, 1961, 1957, 1979, 4600, 4209, 1371, 1074, 1964, 1954, 21, 4560, 5524, 576, 504, 1114, 5028, 4713, 10876, 12775, 12776, 1178, 12777, 12778, 5587, 12779, 10294, 5123, 4556, 4404, 8259, 9050, 4380, 1943, 10625, 12780, 2]
+// Dependencies: [19, 17, 5277, 1961, 1957, 1979, 4600, 4209, 1371, 1074, 1964, 1954, 21, 4560, 5524, 576, 504, 1114, 5028, 4713, 10881, 12779, 12780, 1178, 12781, 12782, 5587, 12783, 10299, 5123, 4556, 4404, 8259, 9055, 4380, 1943, 10630, 12784, 2]
 // Exports: ChannelButtons, ChannelTitleWithoutRoute
 
-// Module 12774 (ChannelTitleContent)
+// Module 12778 (ChannelTitleContent)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -12,7 +12,7 @@ import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import computeChannelName from "computeChannelName" /* 4713 */;
 import PressableBase from "PressableBase" /* 5123 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10876 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10881 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "_handleConnectionOpen" /* 5277 */;

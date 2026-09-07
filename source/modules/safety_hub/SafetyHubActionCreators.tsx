@@ -1,10 +1,10 @@
-// Module ID: 11881
-// Function ID: 11882
+// Module ID: 11886
+// Function ID: 11887
 // Name: getSafetyHubData
 // Dependencies: [5, 502, 8430, 8419, 1074, 573, 1272, 4710, 8418, 2]
 // Exports: getSafetyHubDataForClassification, requestReview, requestSuspendedUserAgeVerification, resetAgeCheckStatus
 
-// Module 11881 (getSafetyHubData)
+// Module 11886 (getSafetyHubData)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 502 */;
@@ -81,7 +81,7 @@ function _getSafetyHubData() {
             }
             const obj9 = v02(closure_1_2[5]);
             postResult.then((body) => {
-              ({ classifications, guild_classifications, appeal_eligibility, expressive_modal_v2_enabled, show_expressive_modal_subtitle_alt, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
+              ({ classifications, guild_classifications, appeal_eligibility, expressive_modal_v2_enabled, show_expressive_modal_subtitle_alt, manual_review_fallback_enabled, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
               const mapped = classifications.map((flagged_content) => {
                 if (null != flagged_content.flagged_content) {
                   if (flagged_content.flagged_content.length > 0) {
@@ -110,7 +110,7 @@ function _getSafetyHubData() {
               if (guild_classifications == null) {
                 guild_classifications = [];
               }
-              let obj = { type: "SAFETY_HUB_FETCH_SUCCESS", classifications: mapped.concat(guild_classifications), accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible, appealEligibility: null, expressiveModalV2Enabled: null, showExpressiveModalSubtitleAlt: null };
+              let obj = { type: "SAFETY_HUB_FETCH_SUCCESS", classifications: mapped.concat(guild_classifications), accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible, appealEligibility: null, expressiveModalV2Enabled: null, showExpressiveModalSubtitleAlt: null, manualReviewFallbackEnabled: null };
               if (appeal_eligibility == null) {
                 appeal_eligibility = [];
               }
@@ -123,6 +123,10 @@ function _getSafetyHubData() {
                 show_expressive_modal_subtitle_alt = false;
               }
               obj[8] = show_expressive_modal_subtitle_alt;
+              if (manual_review_fallback_enabled == null) {
+                manual_review_fallback_enabled = false;
+              }
+              obj[9] = manual_review_fallback_enabled;
               v1(573).dispatch(obj);
             }).catch((body) => {
               let str;
@@ -140,7 +144,7 @@ function _getSafetyHubData() {
             v02 = 1;
             v0 = 1;
             const nextPromise = postResult.then((body) => {
-              ({ classifications, guild_classifications, appeal_eligibility, expressive_modal_v2_enabled, show_expressive_modal_subtitle_alt, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
+              ({ classifications, guild_classifications, appeal_eligibility, expressive_modal_v2_enabled, show_expressive_modal_subtitle_alt, manual_review_fallback_enabled, account_standing, is_dsa_eligible, username, is_appeal_eligible } = body.body);
               const mapped = classifications.map((flagged_content) => {
                 if (null != flagged_content.flagged_content) {
                   if (flagged_content.flagged_content.length > 0) {
@@ -169,7 +173,7 @@ function _getSafetyHubData() {
               if (guild_classifications == null) {
                 guild_classifications = [];
               }
-              let obj = { type: "SAFETY_HUB_FETCH_SUCCESS", classifications: mapped.concat(guild_classifications), accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible, appealEligibility: null, expressiveModalV2Enabled: null, showExpressiveModalSubtitleAlt: null };
+              let obj = { type: "SAFETY_HUB_FETCH_SUCCESS", classifications: mapped.concat(guild_classifications), accountStanding: account_standing, isDsaEligible: is_dsa_eligible, username, isAppealEligible: is_appeal_eligible, appealEligibility: null, expressiveModalV2Enabled: null, showExpressiveModalSubtitleAlt: null, manualReviewFallbackEnabled: null };
               if (appeal_eligibility == null) {
                 appeal_eligibility = [];
               }
@@ -182,6 +186,10 @@ function _getSafetyHubData() {
                 show_expressive_modal_subtitle_alt = false;
               }
               obj[8] = show_expressive_modal_subtitle_alt;
+              if (manual_review_fallback_enabled == null) {
+                manual_review_fallback_enabled = false;
+              }
+              obj[9] = manual_review_fallback_enabled;
               v1(573).dispatch(obj);
             });
           }

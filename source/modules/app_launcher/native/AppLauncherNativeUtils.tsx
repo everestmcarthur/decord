@@ -1,16 +1,16 @@
-// Module ID: 12051
-// Function ID: 12052
+// Module ID: 12055
+// Function ID: 12056
 // Name: handleApplicationSelected
-// Dependencies: [19, 1957, 1371, 1482, 1074, 4999, 4740, 7523, 12052, 7521, 1894, 7778, 1884, 9289, 1396, 11215, 9619, 12057, 7168, 9515, 4528, 2]
+// Dependencies: [19, 1957, 1371, 1482, 1074, 4999, 4740, 7523, 12056, 7521, 1894, 7778, 1884, 9294, 1396, 11220, 9624, 12061, 7168, 9520, 4528, 2]
 // Exports: getAppLauncherIconSource, getInitialOptionValues, handleApplicationCommandSelected, handleApplicationSelected, handleViewAllSelected, useHandleActivityItemSelected, useLogAppLauncherEmptyStateView
 
-// Module 12051 (handleApplicationSelected)
+// Module 12055 (handleApplicationSelected)
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 import registerAssetDefault from "registerAsset" /* 1884 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
 import setActiveCommandAll from "setActiveCommand" /* 7778 */;
-import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 9289 */;
-import Placeholder from "Placeholder" /* 12052 */;
+import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 9294 */;
+import Placeholder from "Placeholder" /* 12056 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
@@ -242,7 +242,7 @@ export const getAppLauncherIconSource = function getAppLauncherIconSource(applic
 };
 export const useLogAppLauncherEmptyStateView = function useLogAppLauncherEmptyStateView(COMMAND_NOT_FOUND, query) {
   const _require = COMMAND_NOT_FOUND;
-  const entrypoint = _require(11215).useAppLauncherContext().entrypoint;
+  const entrypoint = _require(11220).useAppLauncherContext().entrypoint;
   const items = [COMMAND_NOT_FOUND, query, entrypoint];
   const effect = React.useEffect(() => {
     if (null != COMMAND_NOT_FOUND) {

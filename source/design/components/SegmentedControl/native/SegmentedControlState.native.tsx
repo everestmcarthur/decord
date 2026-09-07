@@ -1,10 +1,10 @@
-// Module ID: 9792
-// Function ID: 9793
+// Module ID: 9797
+// Function ID: 9798
 // Name: useSegmentedControlState
 // Dependencies: [19, 576, 4279, 4296, 4528, 4962, 2]
 // Exports: useSegmentedControlState
 
-// Module 9792 (useSegmentedControlState)
+// Module 9797 (useSegmentedControlState)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

@@ -1,10 +1,10 @@
-// Module ID: 11818
-// Function ID: 11819
+// Module ID: 11823
+// Function ID: 11824
 // Name: MessageGameIconActionSheet
 // Dependencies: [19, 17, 4788, 1074, 21, 4560, 1115, 576, 504, 7150, 1178, 4556, 1114, 2024, 2]
 // Exports: default
 
-// Module 11818 (MessageGameIconActionSheet)
+// Module 11823 (MessageGameIconActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import combinedDefault from "combined" /* 2024 */;

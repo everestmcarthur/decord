@@ -1,9 +1,9 @@
-// Module ID: 16595
-// Function ID: 16596
+// Module ID: 16598
+// Function ID: 16599
 // Name: open
 // Dependencies: [2]
 
-// Module 16595 (open)
+// Module 16598 (open)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/vibegrations/lib/VibegrationsWebSocket.tsx");
@@ -55,6 +55,23 @@ prototype["sendUserMessage"] = function sendUserMessage(arg0, arg1, arg2, arg3) 
       obj[2] = arg1;
       obj[3] = arg2;
       obj[4] = arg3;
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  error = new Error("WebSocket not open");
+  throw error;
+};
+prototype["sendUpstreamTicketAck"] = function sendUpstreamTicketAck(closure_1, ticket, arg2) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: "upstream_ticket_ack", id: null, ticket: null, error: null };
+      obj[1] = closure_1;
+      obj[2] = ticket;
+      obj[3] = arg2;
       socket.send(JSON.stringify(obj));
     }
   }

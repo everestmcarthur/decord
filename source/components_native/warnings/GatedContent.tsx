@@ -1,10 +1,10 @@
-// Module ID: 12666
-// Function ID: 12667
+// Module ID: 12670
+// Function ID: 12671
 // Name: GatedContent
 // Dependencies: [19, 21, 4560, 576, 8413, 4973, 4556, 5433, 4975, 2]
 // Exports: default
 
-// Module 12666 (GatedContent)
+// Module 12670 (GatedContent)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_2 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;

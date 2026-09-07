@@ -1,10 +1,10 @@
-// Module ID: 13185
-// Function ID: 13186
+// Module ID: 13189
+// Function ID: 13190
 // Name: createSurveyIndication
-// Dependencies: [6596, 1114, 7946, 4411, 13186, 13187, 2]
+// Dependencies: [6596, 1114, 7946, 4411, 13190, 13191, 2]
 // Exports: createSurveyIndication
 
-// Module 13185 (createSurveyIndication)
+// Module 13189 (createSurveyIndication)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import str2 from "str2" /* 6596 */;
@@ -29,9 +29,9 @@ export const createSurveyIndication = function createSurveyIndication(message, f
   let tmp2Result = tmp2(7946);
   tmp2Result = tmp2(4411);
   if (tmp2Result.isThemeDark(forcedTheme)) {
-    let tmp6Result = tmp6(13186);
+    let tmp6Result = tmp6(13190);
   } else {
-    tmp6Result = tmp6(13187);
+    tmp6Result = tmp6(13191);
   }
   obj[1] = tmp2Result.getAssetUriForEmbed(tmp6Result);
   return obj;

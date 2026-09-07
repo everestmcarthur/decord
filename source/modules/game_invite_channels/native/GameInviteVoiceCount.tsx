@@ -1,10 +1,10 @@
-// Module ID: 12026
-// Function ID: 12027
+// Module ID: 12030
+// Function ID: 12031
 // Name: GameInviteVoiceCount
 // Dependencies: [19, 17, 4584, 21, 4560, 504, 5101, 576, 4556, 2]
 // Exports: default
 
-// Module 12026 (GameInviteVoiceCount)
+// Module 12030 (GameInviteVoiceCount)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

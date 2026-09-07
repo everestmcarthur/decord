@@ -1,10 +1,10 @@
-// Module ID: 9251
-// Function ID: 9252
+// Module ID: 9256
+// Function ID: 9257
 // Name: ConnectAccountStep
-// Dependencies: [19, 17, 4788, 502, 1371, 21, 4560, 576, 4495, 504, 5283, 1396, 4411, 7163, 1178, 8672, 4556, 1114, 4975, 9252, 4515, 4511, 2]
+// Dependencies: [19, 17, 4788, 502, 1371, 21, 4560, 576, 4495, 504, 5283, 1396, 4411, 7163, 1178, 8677, 4556, 1114, 4975, 9257, 4515, 4511, 2]
 // Exports: ConnectedAccountCard, default
 
-// Module 9251 (ConnectAccountStep)
+// Module 9256 (ConnectAccountStep)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import getAvatarURL from "getAvatarURL" /* 1396 */;
@@ -95,7 +95,7 @@ export default function ConnectAccountStep(clientId) {
     const items4 = [callback(tmp5(1178).Avatar, obj3), , ];
     const obj4 = { color: null, size: "md" };
     obj4[0] = tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT;
-    items4[1] = callback(tmp5(8672).MoreHorizontalIcon, obj4);
+    items4[1] = callback(tmp5(8677).MoreHorizontalIcon, obj4);
     const obj5 = { source: null, size: null };
     obj5[0] = userAvatarSource;
     obj5[1] = tmp5(1178).AvatarSizes.XLARGE;

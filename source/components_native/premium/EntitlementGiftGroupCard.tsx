@@ -1,34 +1,34 @@
-// Module ID: 13562
-// Function ID: 13563
+// Module ID: 13566
+// Function ID: 13567
 // Name: importDefaultResult1
-// Dependencies: [19, 17, 4788, 502, 11429, 4223, 5510, 1074, 1373, 21, 4560, 576, 4271, 11430, 4556, 1114, 4975, 7226, 8825, 1178, 7172, 11153, 7209, 13193, 13195, 13196, 13194, 13197, 13198, 13199, 13200, 11022, 13201, 13204, 13205, 13563, 504, 11441, 2]
+// Dependencies: [19, 17, 4788, 502, 11434, 4223, 5510, 1074, 1373, 21, 4560, 576, 4271, 11435, 4556, 1114, 4975, 7226, 8830, 1178, 7172, 11158, 7209, 13197, 13199, 13200, 13198, 13201, 13202, 13203, 13204, 11027, 13205, 13208, 13209, 13567, 504, 11446, 2]
 
-// Module 13562 (importDefaultResult1)
+// Module 13566 (importDefaultResult1)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import Button from "Button" /* 4975 */;
 import GameIconDefault from "GameIcon" /* 7172 */;
 import getPrice from "getPrice" /* 7226 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8825 */;
-import metadataDefault from "metadata" /* 11022 */;
-import getSubscriptionPlans from "getSubscriptionPlans" /* 11441 */;
-import registerAssetDefault from "registerAsset" /* 13193 */;
-import registerAssetDefault2 from "registerAsset" /* 13194 */;
-import registerAssetDefault3 from "registerAsset" /* 13195 */;
-import registerAssetDefault4 from "registerAsset" /* 13196 */;
-import registerAssetDefault5 from "registerAsset" /* 13197 */;
-import registerAssetDefault6 from "registerAsset" /* 13198 */;
-import registerAssetDefault7 from "registerAsset" /* 13199 */;
-import registerAssetDefault8 from "registerAsset" /* 13200 */;
-import registerAssetDefault9 from "registerAsset" /* 13201 */;
-import registerAssetDefault10 from "registerAsset" /* 13204 */;
-import registerAssetDefault11 from "registerAsset" /* 13205 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8830 */;
+import metadataDefault from "metadata" /* 11027 */;
+import getSubscriptionPlans from "getSubscriptionPlans" /* 11446 */;
+import registerAssetDefault from "registerAsset" /* 13197 */;
+import registerAssetDefault2 from "registerAsset" /* 13198 */;
+import registerAssetDefault3 from "registerAsset" /* 13199 */;
+import registerAssetDefault4 from "registerAsset" /* 13200 */;
+import registerAssetDefault5 from "registerAsset" /* 13201 */;
+import registerAssetDefault6 from "registerAsset" /* 13202 */;
+import registerAssetDefault7 from "registerAsset" /* 13203 */;
+import registerAssetDefault8 from "registerAsset" /* 13204 */;
+import registerAssetDefault9 from "registerAsset" /* 13205 */;
+import registerAssetDefault10 from "registerAsset" /* 13208 */;
+import registerAssetDefault11 from "registerAsset" /* 13209 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import importDefaultResult from "addApplication" /* 4788 */;
 import importDefaultResult1 from "fetchFingerprint" /* 502 */;
-import importDefaultResult2 from "updateGiftCode" /* 11429 */;
+import importDefaultResult2 from "updateGiftCode" /* 11434 */;
 import importDefaultResult4 from "addSku" /* 5510 */;
 import GuildFeatures from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -198,7 +198,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   obj3[1] = items2;
   items1[1] = closure_15(closure_4, obj3);
   if (isOpen) {
-    let ChevronSmallRightIcon = tmp2(11153).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp2(11158).ChevronSmallDownIcon;
   } else {
     ChevronSmallRightIcon = tmp2(7209).ChevronSmallRightIcon;
   }

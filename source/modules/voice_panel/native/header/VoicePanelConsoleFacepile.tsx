@@ -1,14 +1,14 @@
-// Module ID: 17125
-// Function ID: 17126
+// Module ID: 17128
+// Function ID: 17129
 // Name: getConsoleInfo
-// Dependencies: [19, 1074, 21, 4560, 576, 9463, 1114, 9214, 1369, 5589, 1178, 2]
+// Dependencies: [19, 1074, 21, 4560, 576, 9468, 1114, 9219, 1369, 5589, 1178, 2]
 // Exports: default
 
-// Module 17125 (getConsoleInfo)
+// Module 17128 (getConsoleInfo)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9214 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 9463 */;
+import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 9219 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 9468 */;
 import closure_3 from "noop" /* 19 */;
 import { PlatformTypes } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;

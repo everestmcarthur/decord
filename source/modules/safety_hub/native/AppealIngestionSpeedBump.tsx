@@ -1,13 +1,13 @@
-// Module ID: 11887
-// Function ID: 11888
+// Module ID: 11892
+// Function ID: 11893
 // Name: AppealIngestionSpeedBump
-// Dependencies: [19, 17, 8430, 8419, 1074, 21, 4560, 504, 11880, 11888, 1114, 11886, 11889, 11899, 11900, 4556, 2]
+// Dependencies: [19, 17, 8430, 8419, 1074, 21, 4560, 504, 11885, 11893, 1114, 11891, 11894, 11904, 11905, 4556, 2]
 // Exports: default
 
-// Module 11887 (AppealIngestionSpeedBump)
+// Module 11892 (AppealIngestionSpeedBump)
 import noopAll from "noop" /* 19 */;
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 11889 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 11899 */;
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 11894 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 11904 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
 import SafetyHubView from "SafetyHubView" /* 8419 */;
@@ -28,13 +28,13 @@ export default function AppealIngestionSpeedBump(arg0) {
   let obj = _require(504);
   const items = [closure_4];
   let stateFromStores = obj.useStateFromStores(items, () => appealClassificationId.getAppealClassificationId());
-  obj1 = _require(11880);
+  obj1 = _require(11885);
   if (stateFromStores == null) {
     stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
   }
   const safetyHubClassification = obj1.useSafetyHubClassification(stateFromStores);
   const tmp = callback2();
-  _require = _require(11888).useEmitAppealIngestionEvent();
+  _require = _require(11893).useEmitAppealIngestionEvent();
   ({ isDsaEligible, classification } = safetyHubClassification);
   let str;
   if (classification != null) {
@@ -52,10 +52,10 @@ export default function AppealIngestionSpeedBump(arg0) {
     flagged_content = [];
   }
   const intl = tmp2(1114).intl;
-  const tmp2Result = _require(11888);
+  const tmp2Result = _require(11893);
   const intl2 = tmp2(1114).intl;
   const stringResult = intl.string(_require(1114).t["C5q+pW"]);
-  const items1 = [callback(_require(11886).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(_require(1114).t.URt7VI) }), ];
+  const items1 = [callback(_require(11891).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(_require(1114).t.URt7VI) }), ];
   obj = { style: tmp.container, children: null };
   let tmp9Result = flagged_content.length > 0;
   if (tmp9Result) {
@@ -69,7 +69,7 @@ export default function AppealIngestionSpeedBump(arg0) {
   tmp9Result = isCoppa;
   if (isCoppa) {
     const obj2 = { text: null, url: null, onPress: null };
-    let tmp13Result = tmp13(11900);
+    let tmp13Result = tmp13(11905);
     const intl3 = tmp2(1114).intl;
     obj2[0] = intl3.string(tmp2(1114).t["gJs+kf"]);
     obj2[1] = constants.AGE_VERIFICATION_LINK;
@@ -84,7 +84,7 @@ export default function AppealIngestionSpeedBump(arg0) {
   }
   if (isSpam) {
     const obj3 = { text: null, url: null, onPress: null };
-    tmp13Result = tmp13(11900);
+    tmp13Result = tmp13(11905);
     const intl4 = tmp2(1114).intl;
     obj3[0] = intl4.string(tmp2(1114).t.NBsJvm);
     obj3[1] = constants.SPAM_LINK;
@@ -102,8 +102,8 @@ export default function AppealIngestionSpeedBump(arg0) {
     obj4[2] = function onPress() {
       return callback(closure_1_5.ClickAppAppealLink);
     };
-    isDeveloperClassification = tmp9(tmp13(11900), obj4);
-    const tmp13Result1 = tmp13(11900);
+    isDeveloperClassification = tmp9(tmp13(11905), obj4);
+    const tmp13Result1 = tmp13(11905);
   }
   items2[4] = isDeveloperClassification;
   let tmp9Result1 = !isCoppa;
@@ -115,8 +115,8 @@ export default function AppealIngestionSpeedBump(arg0) {
     obj5[2] = function onPress() {
       return callback(closure_1_5.ClickLearnMoreLink);
     };
-    tmp9Result1 = tmp9(tmp13(11900), obj5);
-    const tmp13Result2 = tmp13(11900);
+    tmp9Result1 = tmp9(tmp13(11905), obj5);
+    const tmp13Result2 = tmp13(11905);
   }
   items2[5] = tmp9Result1;
   if (isDsaEligible) {
@@ -130,5 +130,5 @@ export default function AppealIngestionSpeedBump(arg0) {
   obj[1] = items2;
   items1[1] = closure_9(View, obj);
   obj7[0] = items1;
-  return closure_9(_require(11886).AppealIngestionModalScreen, obj7);
+  return closure_9(_require(11891).AppealIngestionModalScreen, obj7);
 };

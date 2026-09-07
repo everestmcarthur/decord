@@ -1,14 +1,14 @@
-// Module ID: 12309
-// Function ID: 12310
+// Module ID: 12313
+// Function ID: 12314
 // Name: GuildDirectoryAddModal
-// Dependencies: [19, 12310, 21, 4560, 5682, 1250, 5624, 12308, 12311, 12319, 12323, 12333, 7123, 5598, 7000, 1114, 2]
+// Dependencies: [19, 12314, 21, 4560, 5682, 1250, 5624, 12312, 12315, 12323, 12327, 12337, 7123, 5598, 7000, 1114, 2]
 // Exports: GuildDirectoryAddModalScreen, default
 
-// Module 12309 (GuildDirectoryAddModal)
+// Module 12313 (GuildDirectoryAddModal)
 import noopAll from "noop" /* 19 */;
 import useInitialValueDefault from "useInitialValue" /* 5598 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import { GuildDirectoryCreate } from "GuildDirectoryCreate" /* 12310 */;
+import { GuildDirectoryCreate } from "GuildDirectoryCreate" /* 12314 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -38,7 +38,7 @@ export default function GuildDirectoryAddModal(arg0) {
     };
     obj2[4] = function render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(12311), {});
+      return callback2(callback(12315), {});
     };
     obj1[closure_1_3.CREATE_OR_ADD] = obj2;
     obj1[closure_1_3.DESCRIPTION] = {
@@ -49,7 +49,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(12319), {});
+        return callback2(callback(12323), {});
       }
     };
     const obj3 = {
@@ -60,7 +60,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(12319), {});
+        return callback2(callback(12323), {});
       }
     };
     obj1[closure_1_3.TEMPLATES] = {
@@ -71,7 +71,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(12323), {});
+        return callback2(callback(12327), {});
       }
     };
     obj5 = {
@@ -82,7 +82,7 @@ export default function GuildDirectoryAddModal(arg0) {
       impressionName: callback(closure_1_2[5]).ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
       render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(12333), {});
+        return callback2(callback(12337), {});
       }
     };
     obj1[closure_1_3.CREATE] = obj5;

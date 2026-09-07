@@ -1,14 +1,14 @@
-// Module ID: 16257
-// Function ID: 16258
+// Module ID: 16260
+// Function ID: 16261
 // Name: useGuildActionRows
-// Dependencies: [32, 4747, 7534, 1074, 12372, 7264, 7250, 7262, 7226, 7222, 563, 7247, 7223, 12288, 7265, 7224, 12513, 16157, 16222, 7267, 4473, 16258, 7388, 1943, 2]
+// Dependencies: [32, 4747, 7534, 1074, 12376, 7264, 7250, 7262, 7226, 7222, 563, 7247, 7223, 12292, 7265, 7224, 12517, 16160, 16225, 7267, 4473, 16261, 7388, 1943, 2]
 // Exports: default
 
-// Module 16257 (useGuildActionRows)
+// Module 16260 (useGuildActionRows)
 import useIsNewMemberDefault from "useIsNewMember" /* 7223 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12372 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12513 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16222 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12376 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12517 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16225 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "handleSettingsLoadSuccess" /* 4747 */;
 import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 7534 */;
@@ -38,8 +38,8 @@ export default function useGuildActionRows(id) {
   const canAccessVibegrations = _require(7247).useCanAccessVibegrations(id, "useGuildActionRows");
   const obj7 = _require(7247);
   const tmp10 = useIsNewMemberDefault(id.id);
-  const allActionsCompleted = _require(12288).useAllActionsCompleted(id.id);
-  const obj8 = _require(12288);
+  const allActionsCompleted = _require(12292).useAllActionsCompleted(id.id);
+  const obj8 = _require(12292);
   const canAccessMemberSafetyPage = _require(7265).useCanAccessMemberSafetyPage(id.id);
   const obj9 = _require(7265);
   const features = id.features;
@@ -51,8 +51,8 @@ export default function useGuildActionRows(id) {
   const obj10 = _require(7224);
   const tmp14 = GuildFeatures;
   const tmp18 = useHasAllocateBoostPermissionDefault(id.id);
-  const mobileBoostProgressBarEnabled = _require(16157).useMobileBoostProgressBarEnabled("useGuildActionRows");
-  const obj11 = _require(16157);
+  const mobileBoostProgressBarEnabled = _require(16160).useMobileBoostProgressBarEnabled("useGuildActionRows");
+  const obj11 = _require(16160);
   const tmp20 = useTotalPossibleBoostCountDefault(id);
   const isGuildOfficialMessagesEnabled = _require(7267).useIsGuildOfficialMessagesEnabled(id.id, "useGuildActionRows");
   const obj12 = _require(7267);
@@ -60,7 +60,7 @@ export default function useGuildActionRows(id) {
   const features4 = id.features;
   const hasItem3 = features4.has(GuildFeatures.GAME_SERVERS);
   const obj13 = _require(4473);
-  const isGameServerTabAlwaysOnEnabled = _require(16258).useIsGameServerTabAlwaysOnEnabled("useGuildActionRows");
+  const isGameServerTabAlwaysOnEnabled = _require(16261).useIsGameServerTabAlwaysOnEnabled("useGuildActionRows");
   _require(7388);
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {

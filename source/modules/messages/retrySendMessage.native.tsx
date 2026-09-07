@@ -1,10 +1,10 @@
-// Module ID: 11676
-// Function ID: 11677
+// Module ID: 11681
+// Function ID: 11682
 // Name: retrySendMessage
-// Dependencies: [4553, 7456, 9411, 5127, 9309, 2]
+// Dependencies: [4553, 7456, 9416, 5127, 9314, 2]
 // Exports: default
 
-// Module 11676 (retrySendMessage)
+// Module 11681 (retrySendMessage)
 import set from "set" /* 2 */;
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4553 */;
 import trackInviteDefault from "trackInvite" /* 7456 */;
@@ -21,8 +21,8 @@ export default function retrySendMessage(id, id2, arr) {
   trackInviteDefault.deleteMessage(id.id, id2.id, true);
   if (id2.isCommandType()) {
     if (tmp17) {
-      _require(9411).retryCommandMessage(id2, id, obj);
-      const obj6 = _require(9411);
+      _require(9416).retryCommandMessage(id2, id, obj);
+      const obj6 = _require(9416);
     }
     tmp17 = null != id2.interactionData && null != obj.applicationId;
   } else {

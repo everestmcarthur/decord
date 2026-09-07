@@ -1,10 +1,10 @@
-// Module ID: 10992
-// Function ID: 10993
+// Module ID: 10997
+// Function ID: 10998
 // Name: useAutocompleter
-// Dependencies: [32, 19, 5598, 9835, 2]
+// Dependencies: [32, 19, 5598, 9840, 2]
 // Exports: default
 
-// Module 10992 (useAutocompleter)
+// Module 10997 (useAutocompleter)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 

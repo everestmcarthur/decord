@@ -1,15 +1,15 @@
-// Module ID: 11730
-// Function ID: 11731
+// Module ID: 11735
+// Function ID: 11736
 // Name: EmojiRow
-// Dependencies: [19, 17, 7151, 21, 4560, 4527, 4528, 7764, 4211, 7456, 11123, 4262, 576, 11731, 11732, 11254, 11733, 7182, 2]
+// Dependencies: [19, 17, 7151, 21, 4560, 4527, 4528, 7764, 4211, 7456, 11128, 4262, 576, 11736, 11737, 11259, 11738, 7182, 2]
 // Exports: default
 
-// Module 11730 (EmojiRow)
+// Module 11735 (EmojiRow)
 import noopAll from "noop" /* 19 */;
 import map from "map" /* 4262 */;
-import useEmojisForReactionRow from "useEmojisForReactionRow" /* 11731 */;
-import EmojiPickerRowButton from "EmojiPickerRowButton" /* 11732 */;
-import DoubleTapEmojiEditNudgeInner from "DoubleTapEmojiEditNudgeInner" /* 11733 */;
+import useEmojisForReactionRow from "useEmojisForReactionRow" /* 11736 */;
+import EmojiPickerRowButton from "EmojiPickerRowButton" /* 11737 */;
+import DoubleTapEmojiEditNudgeInner from "DoubleTapEmojiEditNudgeInner" /* 11738 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -44,7 +44,7 @@ export default function EmojiRow(arg0) {
   const items = [
     emojisForReactionRow.map((emoji) => {
       closure_0 = emoji;
-      return token(closure_1_0(11732).EmojiReactionRowButton, {
+      return token(closure_1_0(11737).EmojiReactionRowButton, {
         emoji,
         onPress() {
           let obj = channel(table[5]);
@@ -68,14 +68,14 @@ export default function EmojiRow(arg0) {
         emojiFontSize: closure_3,
         emojiLineHeight: closure_4,
         emojiContainerSize: token
-      }, closure_1_0(11732).getEmojiKey(emoji, arg1));
+      }, closure_1_0(11737).getEmojiKey(emoji, arg1));
     }),
 
   ];
   obj1 = {
     emojiContainerSize: token,
     onPress() {
-      return closure_1_0(11254).handleAddNewReactions(channel, id.id, closure_1_0(7764).ReactionLocations.MESSAGE);
+      return closure_1_0(11259).handleAddNewReactions(channel, id.id, closure_1_0(7764).ReactionLocations.MESSAGE);
     }
   };
   items[1] = token(EmojiPickerRowButton.EmojiPickerRowButton, obj1);

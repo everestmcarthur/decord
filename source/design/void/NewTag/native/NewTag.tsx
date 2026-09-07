@@ -1,10 +1,10 @@
-// Module ID: 14094
-// Function ID: 14095
+// Module ID: 14097
+// Function ID: 14098
 // Name: NewTag
 // Dependencies: [19, 17, 1074, 21, 4560, 576, 4987, 4556, 1114, 2]
 // Exports: default
 
-// Module 14094 (NewTag)
+// Module 14097 (NewTag)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

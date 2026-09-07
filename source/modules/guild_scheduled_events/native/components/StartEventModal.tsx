@@ -1,15 +1,15 @@
-// Module ID: 9809
-// Function ID: 9810
+// Module ID: 9814
+// Function ID: 9815
 // Name: NavigationBar
-// Dependencies: [5, 32, 19, 17, 1957, 1979, 1963, 9699, 21, 4560, 576, 4763, 5123, 1114, 1178, 7089, 4556, 9808, 504, 9671, 9810, 7123, 8410, 9813, 4975, 2]
+// Dependencies: [5, 32, 19, 17, 1957, 1979, 1963, 9704, 21, 4560, 576, 4763, 5123, 1114, 1178, 7089, 4556, 9813, 504, 9676, 9815, 7123, 8410, 9818, 4975, 2]
 // Exports: default
 
-// Module 9809 (NavigationBar)
+// Module 9814 (NavigationBar)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import registerAssetDefault from "registerAsset" /* 7089 */;
-import GuildEventCardControlsDefault from "GuildEventCardControls" /* 9808 */;
+import GuildEventCardControlsDefault from "GuildEventCardControls" /* 9813 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -17,7 +17,7 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import closure_8 from "createGuildRecordFromRust" /* 1979 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
-import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 9699 */;
+import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 9704 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

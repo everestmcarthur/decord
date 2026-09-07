@@ -1,9 +1,9 @@
-// Module ID: 12421
-// Function ID: 12422
+// Module ID: 12425
+// Function ID: 12426
 // Name: ChatInputReplyBarNoAuthor
-// Dependencies: [19, 17, 4552, 4901, 1371, 1074, 21, 1178, 4560, 576, 4262, 4556, 1114, 5123, 6940, 504, 4277, 4794, 9176, 7961, 12422, 4378, 4296, 4561, 11669, 1242, 11667, 1100, 4793, 12423, 7777, 12211, 7847, 2]
+// Dependencies: [19, 17, 4552, 4901, 1371, 1074, 21, 1178, 4560, 576, 4262, 4556, 1114, 5123, 6940, 504, 4277, 4794, 9181, 7961, 12426, 4378, 4296, 4561, 11674, 1242, 11672, 1100, 4793, 12427, 7777, 12215, 7847, 2]
 
-// Module 12421 (ChatInputReplyBarNoAuthor)
+// Module 12425 (ChatInputReplyBarNoAuthor)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;

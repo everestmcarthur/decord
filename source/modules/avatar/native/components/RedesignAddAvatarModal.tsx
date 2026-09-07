@@ -1,10 +1,10 @@
-// Module ID: 17451
-// Function ID: 17452
+// Module ID: 17454
+// Function ID: 17455
 // Name: RedesignAddAvatarModal
-// Dependencies: [5, 32, 19, 17, 8160, 1074, 21, 4560, 576, 1611, 504, 14593, 17436, 8169, 8248, 5138, 8164, 8166, 4556, 1114, 17445, 4975, 17433, 2]
+// Dependencies: [5, 32, 19, 17, 8160, 1074, 21, 4560, 576, 1611, 504, 14596, 17439, 8169, 8248, 5138, 8164, 8166, 4556, 1114, 17448, 4975, 17436, 2]
 // Exports: default
 
-// Module 17451 (RedesignAddAvatarModal)
+// Module 17454 (RedesignAddAvatarModal)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -95,7 +95,7 @@ export default function RedesignAddAvatarModal(route) {
             if (null == base64) {
               pendingImage = undefined;
               if (null != closure_1_0) {
-                obj = closure_1_0(14593);
+                obj = closure_1_0(14596);
                 const obj4 = { imageUri: null, description: null };
                 obj4[0] = base64;
                 obj2 = closure_1_0(8169);

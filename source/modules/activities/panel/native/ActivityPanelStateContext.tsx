@@ -1,9 +1,9 @@
-// Module ID: 17015
-// Function ID: 17016
+// Module ID: 17018
+// Function ID: 17019
 // Name: useActivityWebViewLock
-// Dependencies: [19, 9505, 7074, 2]
+// Dependencies: [19, 9510, 7074, 2]
 
-// Module 17015 (useActivityWebViewLock)
+// Module 17018 (useActivityWebViewLock)
 import createFakeSharedValue from "createFakeSharedValue" /* 7074 */;
 import importAllResult from "noop" /* 19 */;
 

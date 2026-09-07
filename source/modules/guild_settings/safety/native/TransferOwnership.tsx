@@ -1,17 +1,17 @@
-// Module ID: 11847
-// Function ID: 11848
+// Module ID: 11852
+// Function ID: 11853
 // Name: TransferOwnership
-// Dependencies: [5, 32, 19, 17, 1371, 11846, 1074, 21, 4560, 576, 4262, 1483, 504, 38, 9063, 11844, 4258, 4712, 5584, 4556, 11848, 1178, 1114, 4404, 5687, 5604, 4975, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 11851, 1074, 21, 4560, 576, 4262, 1483, 504, 38, 9068, 11849, 4258, 4712, 5584, 4556, 11853, 1178, 1114, 4404, 5687, 5604, 4975, 2]
 // Exports: default
 
-// Module 11847 (TransferOwnership)
+// Module 11852 (TransferOwnership)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import TransferOwnershipModalScenes from "TransferOwnershipModalScenes" /* 11846 */;
+import TransferOwnershipModalScenes from "TransferOwnershipModalScenes" /* 11851 */;
 import { NOOP } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -90,10 +90,10 @@ export default function TransferOwnership(guild) {
               }
               const obj4 = v0(arr[14]);
               v0(arr[14]).transferOwnership(closure_1_0.id, v0.id, MFA).then(() => {
-                v1(11844).close();
-                const obj = v1(11844);
-                v1(9063).close();
-                const obj2 = v1(9063);
+                v1(11849).close();
+                const obj = v1(11849);
+                v1(9068).close();
+                const obj2 = v1(9068);
                 const result = tmp2(4258).showTransferOwnershipSuccess();
               }, closure_1_12);
               arr = 3;
@@ -176,7 +176,7 @@ export default function TransferOwnership(guild) {
   obj1 = { paddingTop: toUser(576).space.PX_16, paddingHorizontal: token };
   obj[0] = obj1;
   obj2 = { style: tmp5.header, children: null };
-  obj3 = { source: toUser(11848), style: tmp5.arrow };
+  obj3 = { source: toUser(11853), style: tmp5.arrow };
   const items1 = [callback2(c7, obj3), , , ];
   let obj4 = { style: tmp5.avatarsWrapper, children: null };
   const tmp12 = closure_8;

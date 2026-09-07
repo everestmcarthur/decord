@@ -1,9 +1,9 @@
-// Module ID: 13266
-// Function ID: 13267
+// Module ID: 13270
+// Function ID: 13271
 // Name: GroupDmMemberCount
-// Dependencies: [19, 17, 1957, 4600, 4209, 1371, 1074, 21, 1178, 4560, 576, 504, 13263, 4713, 1114, 10876, 13267, 4404, 13269, 13272, 2]
+// Dependencies: [19, 17, 1957, 4600, 4209, 1371, 1074, 21, 1178, 4560, 576, 504, 13267, 4713, 1114, 10881, 13271, 4404, 13273, 13276, 2]
 
-// Module 13266 (GroupDmMemberCount)
+// Module 13270 (GroupDmMemberCount)
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -46,7 +46,7 @@ function GroupDmMemberCount(channel) {
     }, 0);
   });
   const obj = channel(504);
-  return channel(13269).renderMemberCountText(stateFromStores, channel.recipients.length);
+  return channel(13273).renderMemberCountText(stateFromStores, channel.recipients.length);
 }
 let c3 = importAllResult;
 ({ ChannelTypes: c9, StatusTypes: c10 } = ME);

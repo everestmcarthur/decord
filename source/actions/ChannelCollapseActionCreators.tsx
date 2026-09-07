@@ -1,8 +1,8 @@
-// Module ID: 10964
-// Function ID: 10965
+// Module ID: 10969
+// Function ID: 10970
 // Dependencies: [4741, 573, 7116, 2]
 
-// Module 10964
+// Module 10969
 import dispatcherDefault from "dispatcher" /* 573 */;
 import handleConnectionOpenDefault from "handleConnectionOpen" /* 7116 */;
 import closure_2 from "updateUserGuildSettingsInternal" /* 4741 */;

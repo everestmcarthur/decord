@@ -1,10 +1,10 @@
-// Module ID: 8897
-// Function ID: 8898
+// Module ID: 8902
+// Function ID: 8903
 // Name: GameProfileReportButton
-// Dependencies: [19, 21, 4527, 8686, 4763, 8898, 1896, 8898, 4975, 1114, 2]
+// Dependencies: [19, 21, 4527, 8691, 4763, 8903, 1896, 8903, 4975, 1114, 2]
 // Exports: default
 
-// Module 8897 (GameProfileReportButton)
+// Module 8902 (GameProfileReportButton)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

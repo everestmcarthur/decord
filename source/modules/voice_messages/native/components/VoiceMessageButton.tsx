@@ -1,12 +1,12 @@
-// Module ID: 12255
-// Function ID: 12256
+// Module ID: 12259
+// Function ID: 12260
 // Name: VoiceMessageRecordingCancelledToastIcon
-// Dependencies: [5, 32, 19, 17, 4251, 7680, 1957, 4901, 11960, 11961, 1074, 4553, 4770, 21, 4560, 576, 7973, 4417, 4767, 12256, 4296, 11527, 1477, 11873, 5127, 5128, 7456, 9309, 11669, 1109, 4259, 1114, 10089, 4418, 5139, 4258, 9759, 6655, 12258, 12239, 10005, 2]
+// Dependencies: [5, 32, 19, 17, 4251, 7680, 1957, 4901, 11964, 11965, 1074, 4553, 4770, 21, 4560, 576, 7973, 4417, 4767, 12260, 4296, 11532, 1477, 11878, 5127, 5128, 7456, 9314, 11674, 1109, 4259, 1114, 10094, 4418, 5139, 4258, 9764, 6655, 12262, 12243, 10010, 2]
 
-// Module 12255 (VoiceMessageRecordingCancelledToastIcon)
+// Module 12259 (VoiceMessageRecordingCancelledToastIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import XSmallBoldIcon from "XSmallBoldIcon" /* 7973 */;
-import _startAudioRecording from "_startAudioRecording" /* 12256 */;
+import _startAudioRecording from "_startAudioRecording" /* 12260 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
@@ -15,8 +15,8 @@ import closure_8 from "setContent" /* 4251 */;
 import closure_9 from "getState" /* 7680 */;
 import closure_10 from "ensureGuildLoaded" /* 1957 */;
 import closure_11 from "handleChanged" /* 4901 */;
-import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus" /* 11960 */;
-import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11961 */;
+import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus" /* 11964 */;
+import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11965 */;
 import ME from "ME" /* 1074 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
 import { NativePermissionTypes } from "NativePermissionStatus" /* 4770 */;
@@ -93,7 +93,7 @@ const memoResult = importAllResult.memo((disabled) => {
   currentState = importAllResult.useRef(true);
   closure_8 = importAllResult.useRef(currentState.currentState);
   closure_9 = importAllResult.useRef(null);
-  const tmp9 = sharedValue1(11527)();
+  const tmp9 = sharedValue1(11532)();
   _require = undefined;
   _require = sharedValue((arg0) => {
     closure_0 = arg0;
@@ -630,7 +630,7 @@ const memoResult = importAllResult.memo((disabled) => {
     }
   }, items9);
   let obj3 = _require(4417);
-  const tmp21 = sharedValue1(9759);
+  const tmp21 = sharedValue1(9764);
   let intl = _require(1114).intl;
   const tmp22 = sharedValue(function*() {
     if (c2 === 2) {
@@ -800,7 +800,7 @@ const memoResult = importAllResult.memo((disabled) => {
     return onUpdateResult.onFinalize(fn3);
   }, items10);
   obj = { gesture: memo, children: null };
-  obj1 = { ref: sharedValue1(12258)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null };
+  obj1 = { ref: sharedValue1(12262)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null };
   const tmp21Result = tmp21(sharedValue(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -857,13 +857,13 @@ const memoResult = importAllResult.memo((disabled) => {
       }
     }
   }), intl.string(_require(1114).t.lwy6aX));
-  obj1[1] = _require(10005).MicrophoneIcon;
+  obj1[1] = _require(10010).MicrophoneIcon;
   const intl2 = _require(1114).intl;
   obj1[3] = intl2.string(_require(1114).t.lwy6aX);
   obj1[4] = accessibilityActions;
   obj1[5] = onAccessibilityAction;
   obj1[6] = disabled;
-  obj[1] = jsx(sharedValue1(12239), { ref: sharedValue1(12258)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null });
+  obj[1] = jsx(sharedValue1(12243), { ref: sharedValue1(12262)().tooltipTargetRef, IconComponent: null, active: false, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null, disabled: null });
   return jsx(_require(6655).GestureDetector, { gesture: memo, children: null });
 });
 let result = require("set").fileFinishedImporting("modules/voice_messages/native/components/VoiceMessageButton.tsx");

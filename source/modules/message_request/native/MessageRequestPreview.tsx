@@ -1,8 +1,8 @@
-// Module ID: 16878
-// Function ID: 16879
-// Dependencies: [19, 17, 4209, 1074, 21, 4560, 5524, 576, 12594, 504, 1242, 1114, 7888, 4899, 1178, 2]
+// Module ID: 16881
+// Function ID: 16882
+// Dependencies: [19, 17, 4209, 1074, 21, 4560, 5524, 576, 12598, 504, 1242, 1114, 7888, 4899, 1178, 2]
 
-// Module 16878
+// Module 16881
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -30,7 +30,7 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
   channel = channel.channel;
   let message;
   const tmp = callback();
-  let obj = channel(12594);
+  let obj = channel(12598);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);

@@ -1,14 +1,14 @@
-// Module ID: 9167
-// Function ID: 9168
+// Module ID: 9172
+// Function ID: 9173
 // Name: SecureFramesVerificationBottomSheet
-// Dependencies: [19, 17, 9152, 21, 4560, 576, 9158, 4527, 7150, 7149, 7199, 5123, 1114, 4556, 4973, 5095, 9165, 9168, 2]
+// Dependencies: [19, 17, 9157, 21, 4560, 576, 9163, 4527, 7150, 7149, 7199, 5123, 1114, 4556, 4973, 5095, 9170, 9173, 2]
 // Exports: default
 
-// Module 9167 (SecureFramesVerificationBottomSheet)
+// Module 9172 (SecureFramesVerificationBottomSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9152 */;
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9157 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -31,7 +31,7 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   let readableSecureFramesFingerprint;
   ({ title, subtitle, footer, epochAuthenticator } = onShareClick);
   const tmp = callback3();
-  let obj = onShareClick(9158);
+  let obj = onShareClick(9163);
   obj = { fingerprintBase64: epochAuthenticator, chunkSize: closure_5, desiredLength: closure_7 };
   readableSecureFramesFingerprint = obj.useReadableSecureFramesFingerprint(obj);
   const items = [readableSecureFramesFingerprint, onShareClick];
@@ -76,12 +76,12 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   if (tmp7Result) {
     const obj10 = { chunks: null };
     obj10[0] = readableSecureFramesFingerprint;
-    tmp7Result = tmp7(tmp10(9168), obj10);
+    tmp7Result = tmp7(tmp10(9173), obj10);
   }
   obj9[1] = tmp7Result;
   obj9[2] = readableSecureFramesFingerprint;
   obj9[3] = closure_6;
-  items2[1] = callback(readableSecureFramesFingerprint(9165), obj9);
+  items2[1] = callback(readableSecureFramesFingerprint(9170), obj9);
   items2[2] = callback(tmp2(4556).Text, { style: tmp.footer, variant: "text-xs/normal", color: "text-muted", children: footer });
   obj4[1] = items2;
   obj[2] = tmp8(tmp9, obj4);

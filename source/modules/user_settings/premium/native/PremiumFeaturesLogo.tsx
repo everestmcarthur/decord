@@ -1,14 +1,14 @@
-// Module ID: 9382
-// Function ID: 9383
+// Module ID: 9387
+// Function ID: 9388
 // Name: PremiumFeaturesLogo
-// Dependencies: [19, 1373, 21, 9383, 7437, 5587, 4218, 2]
+// Dependencies: [19, 1373, 21, 9388, 7437, 5587, 4218, 2]
 // Exports: default
 
-// Module 9382 (PremiumFeaturesLogo)
+// Module 9387 (PremiumFeaturesLogo)
 import noopAll from "noop" /* 19 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
 import registerAssetDefault from "registerAsset" /* 7437 */;
-import registerAssetDefault2 from "registerAsset" /* 9383 */;
+import registerAssetDefault2 from "registerAsset" /* 9388 */;
 import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 import { jsx } from "jsxProd" /* 21 */;
 

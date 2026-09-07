@@ -1,17 +1,17 @@
-// Module ID: 16821
-// Function ID: 16822
+// Module ID: 16824
+// Function ID: 16825
 // Name: ChannelPermissionSettingsBasicView
-// Dependencies: [32, 5, 19, 17, 16822, 1957, 2021, 2015, 1979, 4199, 4209, 1371, 8401, 1074, 21, 4560, 576, 1483, 11610, 504, 9738, 9739, 9740, 1114, 4713, 4904, 9751, 4204, 4973, 5687, 7201, 1178, 5605, 11204, 11608, 5630, 4740, 9792, 9793, 16823, 16825, 2]
+// Dependencies: [32, 5, 19, 17, 16825, 1957, 2021, 2015, 1979, 4199, 4209, 1371, 8401, 1074, 21, 4560, 576, 1483, 11615, 504, 9743, 9744, 9745, 1114, 4713, 4904, 9756, 4204, 4973, 5687, 7201, 1178, 5605, 11209, 11613, 5630, 4740, 9797, 9798, 16826, 16828, 2]
 // Exports: default
 
-// Module 16821 (ChannelPermissionSettingsBasicView)
+// Module 16824 (ChannelPermissionSettingsBasicView)
 import ThemesDefault from "Themes" /* 576 */;
 import setDefault from "set" /* 4904 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_9 from "init" /* 16822 */;
+import closure_9 from "init" /* 16825 */;
 import closure_10 from "ensureGuildLoaded" /* 1957 */;
 import closure_11 from "trackCommunicationDisabled" /* 2021 */;
 import closure_12 from "createGuildRoleRecordFromRust" /* 2015 */;
@@ -76,13 +76,13 @@ function ChannelPermissionSettingsBasicView(channel) {
               closure_0 = tmp2;
               closure_0 = undefined;
               const accessPermissions = closure_1_0.accessPermissions;
-              const result = v0(9738).isPrivateGuildChannel(closure_1_0);
-              const obj9 = v0(9738);
+              const result = v0(9743).isPrivateGuildChannel(closure_1_0);
+              const obj9 = v0(9743);
               const tmp22 = v0;
-              closure_0 = v0(9738).flipEveryonePermission(closure_1_0, accessPermissions, result);
+              closure_0 = v0(9743).flipEveryonePermission(closure_1_0, accessPermissions, result);
               const currentUser = closure_1_16.getCurrentUser();
               let tmp7 = closure_1_9;
-              const obj10 = v0(9738);
+              const obj10 = v0(9743);
               if (!closure_1_9) {
                 tmp7 = null == currentUser;
               }
@@ -93,7 +93,7 @@ function ChannelPermissionSettingsBasicView(channel) {
                 v0 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = tmp22(9738).grantUserChannelAccess(closure_1_0, accessPermissions);
+                obj1[0] = tmp22(9743).grantUserChannelAccess(closure_1_0, accessPermissions);
                 return obj1;
               }
               canResult = closure_1_14.can(closure_1_19.ADMINISTRATOR, closure_1_4);
@@ -124,7 +124,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           v0 = 2;
           dependencyMap = 1;
           const obj3 = { value: null, done: false };
-          obj3[0] = closure_1_0(9739).savePermissionUpdates(closure_1_0.id, items);
+          obj3[0] = closure_1_0(9744).savePermissionUpdates(closure_1_0.id, items);
           return obj3;
         } catch (tmp16) {
           dependencyMap = tmp;
@@ -177,7 +177,7 @@ function ChannelPermissionSettingsBasicView(channel) {
               v0 = undefined;
               if (null != stringResult.guild_id) {
                 if (!callback) {
-                  obj1 = stringResult(9740);
+                  obj1 = stringResult(9745);
                   v0 = 1;
                   dependencyMap = 1;
                   obj1 = { value: null, done: false };

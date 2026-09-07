@@ -1,18 +1,18 @@
-// Module ID: 17615
-// Function ID: 17616
+// Module ID: 17618
+// Function ID: 17619
 // Name: MemberRow
-// Dependencies: [32, 19, 17, 17609, 21, 4560, 576, 4277, 10942, 5617, 6981, 4547, 1178, 4272, 1114, 8874, 9755, 5519, 17614, 11, 9760, 7311, 7150, 7149, 4975, 9063, 4527, 4556, 2]
+// Dependencies: [32, 19, 17, 17612, 21, 4560, 576, 4277, 10947, 5617, 6981, 4547, 1178, 4272, 1114, 8879, 9760, 5519, 17617, 11, 9765, 7311, 7150, 7149, 4975, 9068, 4527, 4556, 2]
 // Exports: default
 
-// Module 17615 (MemberRow)
+// Module 17618 (MemberRow)
 import ThemesDefault from "Themes" /* 576 */;
 import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4277 */;
 import FormCheckbox from "FormCheckbox" /* 5617 */;
-import memoResult1Default from "memoResult1" /* 10942 */;
+import memoResult1Default from "memoResult1" /* 10947 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_BULK_ROLE_MEMBERS_ADD } from "title" /* 17609 */;
+import { MAX_BULK_ROLE_MEMBERS_ADD } from "title" /* 17612 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -89,7 +89,7 @@ class AddMembersBody {
     tmp10 = closure_9;
     tmp11 = closure_8;
     obj2 = { placeholder: null, tags: null, onChangeText: null, onRemove: null, autoFocus: null, inActionSheet: null };
-    tmp4Result = require("module_9755");
+    tmp4Result = require("module_9760");
     intl = require("getSystemLocale").intl;
     obj2[0] = intl.string(require("getSystemLocale").t.vMiCaQ);
     values = Object.values(pendingAdditions);

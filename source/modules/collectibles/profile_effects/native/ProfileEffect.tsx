@@ -1,13 +1,13 @@
-// Module ID: 8801
-// Function ID: 8802
+// Module ID: 8806
+// Function ID: 8807
 // Name: StaticEffect
-// Dependencies: [32, 19, 17, 4552, 1895, 21, 4560, 1477, 8802, 8803, 8804, 8806, 504, 1093, 8807, 8805, 5587, 8226, 2]
+// Dependencies: [32, 19, 17, 4552, 1895, 21, 4560, 1477, 8807, 8808, 8809, 8811, 504, 1093, 8812, 8810, 5587, 8226, 2]
 // Exports: default, usePreloadProfileEffect
 
-// Module 8801 (StaticEffect)
+// Module 8806 (StaticEffect)
 import initialize from "initialize" /* 504 */;
 import useProfileEffectDefault from "useProfileEffect" /* 8226 */;
-import sortEffectLayers from "sortEffectLayers" /* 8802 */;
+import sortEffectLayers from "sortEffectLayers" /* 8807 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -145,7 +145,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = React.useRef(-memo(8803).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = React.useRef(-memo(8808).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(React.useState([]), 2);
   closure_12 = React.useRef([]);
   closure_13 = React.useRef(false);
@@ -161,7 +161,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(React.useState([]), 2);
-  const tmp9Result = memo1(8806)(React.useCallback((arg0) => {
+  const tmp9Result = memo1(8811)(React.useCallback((arg0) => {
     if (ref.current) {
       if (!ref4.current) {
         tmp.current = true;

@@ -1,13 +1,13 @@
-// Module ID: 9096
-// Function ID: 9097
+// Module ID: 9101
+// Function ID: 9102
 // Name: handleSyncedStoresUpdate
-// Dependencies: [1221, 1908, 2011, 1371, 9097, 4615, 504, 573, 2]
+// Dependencies: [1221, 1908, 2011, 1371, 9102, 4615, 504, 573, 2]
 
-// Module 9096 (handleSyncedStoresUpdate)
+// Module 9101 (handleSyncedStoresUpdate)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
-import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9097 */;
+import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9102 */;
 import closure_2 from "handleConnectionClosedOrResumed" /* 1221 */;
 import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_4 from "handleConnectionOpen" /* 2011 */;

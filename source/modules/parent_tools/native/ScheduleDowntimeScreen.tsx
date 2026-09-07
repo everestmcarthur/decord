@@ -1,10 +1,10 @@
-// Module ID: 14934
-// Function ID: 14935
+// Module ID: 14937
+// Function ID: 14938
 // Name: OverlappingSchedulesWarning
-// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4527, 9717, 1896, 4560, 576, 1178, 4973, 4556, 1114, 2396, 1483, 6994, 10083, 563, 14935, 14936, 4518, 5687, 7201, 5605, 7123, 4975, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4527, 9722, 1896, 4560, 576, 1178, 4973, 4556, 1114, 2396, 1483, 6994, 10088, 563, 14938, 14939, 4518, 5687, 7201, 5605, 7123, 4975, 2]
 // Exports: default
 
-// Module 14934 (OverlappingSchedulesWarning)
+// Module 14937 (OverlappingSchedulesWarning)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button2 from "Button" /* 1178 */;
@@ -567,9 +567,9 @@ export default function ScheduleDowntimeScreen() {
     obj10[1] = callback2(tmp2(stringResult[14]).Text, obj11);
     obj10[3] = function handleStartTimePress() {
       const intl = lib(rule[15]).intl;
-      const f116116 = (first1) => {
+      const f116143 = (first1) => {
         callback(first1);
-        let obj = f116116(closure_1_2[19]);
+        let obj = f116143(closure_1_2[19]);
         const result = (obj.timeToMinutes(first1) + 540) % 1440;
         obj = { hours: Math.floor(result / 60), minutes: result % 60 };
         callback2(obj);

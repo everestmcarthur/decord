@@ -1,10 +1,10 @@
-// Module ID: 16153
-// Function ID: 16154
+// Module ID: 16156
+// Function ID: 16157
 // Name: FavoritesGuildAddCategoryActionSheet
-// Dependencies: [32, 19, 1970, 21, 4560, 576, 1982, 10223, 4527, 7150, 7149, 1114, 6606, 4975, 2]
+// Dependencies: [32, 19, 1970, 21, 4560, 576, 1982, 10228, 4527, 7150, 7149, 1114, 6606, 4975, 2]
 // Exports: openFavoritesGuildAddCategoryActionSheet
 
-// Module 16153 (FavoritesGuildAddCategoryActionSheet)
+// Module 16156 (FavoritesGuildAddCategoryActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 import closure_3 from "_slicedToArray" /* 32 */;

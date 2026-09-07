@@ -1,10 +1,10 @@
-// Module ID: 10043
-// Function ID: 10044
+// Module ID: 10048
+// Function ID: 10049
 // Name: StageChannelBackground
 // Dependencies: [19, 17, 21, 4560, 576, 2]
 // Exports: default
 
-// Module 10043 (StageChannelBackground)
+// Module 10048 (StageChannelBackground)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

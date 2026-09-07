@@ -1,29 +1,29 @@
-// Module ID: 10196
-// Function ID: 10197
+// Module ID: 10201
+// Function ID: 10202
 // Name: AttachmentIcon
-// Dependencies: [19, 17, 21, 4560, 576, 10197, 10198, 10199, 10200, 10201, 10202, 10203, 10204, 10205, 10206, 10207, 10208, 10209, 10210, 5134, 4556, 1115, 5587, 1178, 10132, 8307, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 10202, 10203, 10204, 10205, 10206, 10207, 10208, 10209, 10210, 10211, 10212, 10213, 10214, 10215, 5134, 4556, 1115, 5587, 1178, 10137, 8307, 2]
 // Exports: default
 
-// Module 10196 (AttachmentIcon)
+// Module 10201 (AttachmentIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import set from "set" /* 1115 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 10197 */;
-import registerAssetDefault2 from "registerAsset" /* 10198 */;
-import registerAssetDefault3 from "registerAsset" /* 10199 */;
-import registerAssetDefault4 from "registerAsset" /* 10200 */;
-import registerAssetDefault5 from "registerAsset" /* 10201 */;
-import registerAssetDefault6 from "registerAsset" /* 10202 */;
-import registerAssetDefault7 from "registerAsset" /* 10203 */;
-import registerAssetDefault8 from "registerAsset" /* 10204 */;
-import registerAssetDefault9 from "registerAsset" /* 10205 */;
-import registerAssetDefault10 from "registerAsset" /* 10206 */;
-import registerAssetDefault11 from "registerAsset" /* 10207 */;
-import registerAssetDefault12 from "registerAsset" /* 10208 */;
-import registerAssetDefault13 from "registerAsset" /* 10209 */;
-import registerAssetDefault14 from "registerAsset" /* 10210 */;
+import registerAssetDefault from "registerAsset" /* 10202 */;
+import registerAssetDefault2 from "registerAsset" /* 10203 */;
+import registerAssetDefault3 from "registerAsset" /* 10204 */;
+import registerAssetDefault4 from "registerAsset" /* 10205 */;
+import registerAssetDefault5 from "registerAsset" /* 10206 */;
+import registerAssetDefault6 from "registerAsset" /* 10207 */;
+import registerAssetDefault7 from "registerAsset" /* 10208 */;
+import registerAssetDefault8 from "registerAsset" /* 10209 */;
+import registerAssetDefault9 from "registerAsset" /* 10210 */;
+import registerAssetDefault10 from "registerAsset" /* 10211 */;
+import registerAssetDefault11 from "registerAsset" /* 10212 */;
+import registerAssetDefault12 from "registerAsset" /* 10213 */;
+import registerAssetDefault13 from "registerAsset" /* 10214 */;
+import registerAssetDefault14 from "registerAsset" /* 10215 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -243,7 +243,7 @@ export default function AttachmentPreview(height) {
       const obj6 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj6[0] = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(10132).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(10137).CirclePlayIcon;
       tmp6 = callback(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj6[1] = tmp6;
       items[1] = callback(closure_5, obj6);

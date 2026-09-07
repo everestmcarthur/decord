@@ -1,10 +1,10 @@
-// Module ID: 10164
-// Function ID: 10165
+// Module ID: 10169
+// Function ID: 10170
 // Name: NotificationSettingsMockChannels
-// Dependencies: [19, 17, 4742, 21, 4560, 576, 1114, 10165, 5080, 4556, 1178, 2]
+// Dependencies: [19, 17, 4742, 21, 4560, 576, 1114, 10170, 5080, 4556, 1178, 2]
 // Exports: default
 
-// Module 10164 (NotificationSettingsMockChannels)
+// Module 10169 (NotificationSettingsMockChannels)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

@@ -1,10 +1,10 @@
-// Module ID: 9321
-// Function ID: 9322
+// Module ID: 9326
+// Function ID: 9327
 // Name: apexExperiment
 // Dependencies: [1433, 7853, 2]
 // Exports: getMobileStickerPickerUpsellRestyleEnabled, getMobileStickerPickerUpsellRestyleEnabledForFeature, useMobileStickerPickerUpsellRestyleEnabled
 
-// Module 9321 (apexExperiment)
+// Module 9326 (apexExperiment)
 import set from "set" /* 2 */;
 import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7853 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;

@@ -1,10 +1,10 @@
-// Module ID: 13556
-// Function ID: 13557
+// Module ID: 13560
+// Function ID: 13561
 // Name: TermsAndConditionsActionSheet
-// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 5441, 7150, 7149, 1114, 4556, 4550, 4495, 13355, 13557, 4905, 13558, 1896, 13353, 4975, 4527, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 5441, 7150, 7149, 1114, 4556, 4550, 4495, 13359, 13561, 4905, 13562, 1896, 13357, 4975, 4527, 2]
 // Exports: default
 
-// Module 13556 (TermsAndConditionsActionSheet)
+// Module 13560 (TermsAndConditionsActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import get_defaultRulesDefault from "get defaultRules" /* 4550 */;

@@ -1,10 +1,10 @@
-// Module ID: 13267
-// Function ID: 13268
+// Module ID: 13271
+// Function ID: 13272
 // Name: openLoadingIndicatorDebugBody
-// Dependencies: [32, 19, 17, 4552, 5277, 4781, 2011, 1371, 1895, 1074, 21, 4560, 576, 4905, 4994, 1896, 504, 4556, 13268, 4296, 4561, 1114, 5123, 2]
+// Dependencies: [32, 19, 17, 4552, 5277, 4781, 2011, 1371, 1895, 1074, 21, 4560, 576, 4905, 4994, 1896, 504, 4556, 13272, 4296, 4561, 1114, 5123, 2]
 // Exports: ChannelHeaderLoadingIndicator, useShouldChannelShowLoadingIndicator
 
-// Module 13267 (openLoadingIndicatorDebugBody)
+// Module 13271 (openLoadingIndicatorDebugBody)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;

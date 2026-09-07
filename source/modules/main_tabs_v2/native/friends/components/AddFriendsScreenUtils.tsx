@@ -1,12 +1,12 @@
-// Module ID: 16044
-// Function ID: 16045
+// Module ID: 16047
+// Function ID: 16048
 // Name: _sendWave
-// Dependencies: [5, 1957, 1074, 4553, 10870, 4573, 4258, 1114, 12265, 7456, 9042, 2]
+// Dependencies: [5, 1957, 1074, 4553, 10875, 4573, 4258, 1114, 12269, 7456, 9047, 2]
 // Exports: acceptIncomingRequest, addContactSuggestion, dismissIncomingRequest, sendWave
 
-// Module 16044 (_sendWave)
-import handleRelationshipAddErrorDefault from "handleRelationshipAddError" /* 9042 */;
-import _modDef10870 from "module_10870" /* 10870 */;
+// Module 16047 (_sendWave)
+import handleRelationshipAddErrorDefault from "handleRelationshipAddError" /* 9047 */;
+import _modDef10875 from "module_10875" /* 10875 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import { AnalyticsSections } from "ME" /* 1074 */;
@@ -83,7 +83,7 @@ function _sendWave() {
                 } else {
                   constants = 2;
                   if (null != dMFromUserId2) {
-                    let obj7 = callback(12265);
+                    let obj7 = callback(12269);
                     const obj3 = { channelId: null, source: null };
                     obj3[0] = dMFromUserId2;
                     obj3[1] = dependencyMap;
@@ -179,13 +179,13 @@ let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/f
 
 export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef10870;
+  let obj = _modDef10875;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.cancelFriendRequest(obj);
 };
 export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef10870;
+  let obj = _modDef10875;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   const result = obj.maybeConfirmFriendRequestAccept(obj);
 };

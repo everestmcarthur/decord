@@ -11,10 +11,10 @@ import noop from "noop" /* 19 */;
 const require = arg1;
 ({ useCallback: c3, useEffect: c4, useRef: c5, useState: closure_6 } = noop);
 
-export const useRiveProperty = function useRiveProperty(instance, FillColor, f30504) {
+export const useRiveProperty = function useRiveProperty(instance, FillColor, f30507) {
   const _require = instance;
   dependencyMap = FillColor;
-  const callback = f30504;
+  const callback = f30507;
   let tmp = first(undefined);
   const callback2 = tmp;
   const items = [instance, FillColor];

@@ -1,17 +1,16 @@
 // Module ID: 10486
 // Function ID: 10487
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 10478, 10435, 10439]
+// Dependencies: [41, 42, 93, 95, 98, 10458]
 
 // Module 10486 (_isNativeReflectConstruct)
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10439 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10458 */;
+import DEMergeDateTimeRefiner from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const DETimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,13 +30,29 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class DETimeUnitWithinFormatParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: null };
+      obj[0] = __esModule;
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class DEMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = closure_2(this, DETimeUnitWithinFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(DETimeUnitWithinFormatParser);
-    tmp3 = closure_3;
+    tmp = DEMergeDateTimeRefiner(this, DEMergeDateTimeRefiner);
+    tmp2 = closure_2;
+    obj = closure_2(DEMergeDateTimeRefiner);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -51,22 +66,15 @@ class DETimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(DETimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(DEMergeDateTimeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
-    key: "innerPattern",
-    value: function innerPattern() {
-      const regExp = new RegExp("(?:in|f\u00FCr|w\u00E4hrend)\\s*(" + DETimeUnitWithinFormatParser(10478).TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+    key: "patternBetween",
+    value: function patternBetween() {
+      const regExp = new RegExp("^\\s*(T|um|am|,|-)?\\s*$");
       return regExp;
-    }
-  },
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference) {
-      const ParsingComponents = DETimeUnitWithinFormatParser(10435).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, DETimeUnitWithinFormatParser(10478).parseDuration(arg1[1]));
     }
   }
 ];
 
-export default _createClass(DETimeUnitWithinFormatParser, items);
+export default _createClass(DEMergeDateTimeRefiner, items);

@@ -1,10 +1,10 @@
-// Module ID: 13246
-// Function ID: 13247
+// Module ID: 13250
+// Function ID: 13251
 // Name: createSafetySystemNotificationEmbed
-// Dependencies: [17, 1074, 4153, 8589, 5036, 8418, 7946, 1114, 2]
+// Dependencies: [17, 1074, 4153, 8594, 5036, 8418, 7946, 1114, 2]
 // Exports: createSafetySystemNotificationEmbed
 
-// Module 13246 (createSafetySystemNotificationEmbed)
+// Module 13250 (createSafetySystemNotificationEmbed)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;
@@ -55,7 +55,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             }
             obj = { titleText: null, titleIcon: null, subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
             obj[0] = str;
-            obj[1] = tmp6(7946).getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8589 : 5036)));
+            obj[1] = tmp6(7946).getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8594 : 5036)));
             const intl = tmp6(1114).intl;
             let num = parseMessageForPropsResult.timestamp;
             if (num == null) {

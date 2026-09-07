@@ -1,12 +1,12 @@
-// Module ID: 17804
-// Function ID: 17805
+// Module ID: 17807
+// Function ID: 17808
 // Name: handleChannelCreate
-// Dependencies: [5, 13860, 1074, 7118, 13859, 7244, 2]
+// Dependencies: [5, 13863, 1074, 7118, 13862, 7244, 2]
 
-// Module 17804 (handleChannelCreate)
+// Module 17807 (handleChannelCreate)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { MIDJOURNEY_GUILD_ID } from "MIDJOURNEY_GUILD_ID" /* 13860 */;
+import { MIDJOURNEY_GUILD_ID } from "MIDJOURNEY_GUILD_ID" /* 13863 */;
 import { Routes } from "ME" /* 1074 */;
 
 const require = arg1;
@@ -52,12 +52,12 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = tmp22(13859).hasRedirectedToGuild(closure_1_4);
+              obj1[0] = tmp22(13862).hasRedirectedToGuild(closure_1_4);
               return obj1;
             } else {
               dependencyMap = 3;
             }
-            obj6 = closure_1_0(13859);
+            obj6 = closure_1_0(13862);
             tmp22 = closure_1_0;
           }
         } else if (arg0 === 1) {

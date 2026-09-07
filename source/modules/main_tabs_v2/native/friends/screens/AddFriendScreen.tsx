@@ -1,17 +1,17 @@
-// Module ID: 16766
-// Function ID: 16767
+// Module ID: 16769
+// Function ID: 16770
 // Name: AddFriendScreen
-// Dependencies: [32, 19, 17, 1371, 1074, 12678, 21, 4560, 576, 12680, 4404, 1242, 1114, 8361, 7863, 1115, 5125, 4556, 13855, 13857, 2]
+// Dependencies: [32, 19, 17, 1371, 1074, 12682, 21, 4560, 576, 12684, 4404, 1242, 1114, 8361, 7863, 1115, 5125, 4556, 13858, 13860, 2]
 // Exports: default
 
-// Module 16766 (AddFriendScreen)
+// Module 16769 (AddFriendScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12678 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12682 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -34,9 +34,9 @@ export default function AddFriendScreen(navigation) {
   dependencyMap = undefined;
   let callback;
   let tmp = callback2();
-  let obj = navigation(12680);
+  let obj = navigation(12684);
   contactSyncAccount = obj.useContactSyncAccount();
-  obj1 = navigation(12680);
+  obj1 = navigation(12684);
   [tmp5, c2] = callback(React.useState(!obj1.isContactSyncEnabled(contactSyncAccount)), 2);
   callback = React.useCallback(() => {
     currentUser = currentUser.getCurrentUser();
@@ -88,7 +88,7 @@ export default function AddFriendScreen(navigation) {
   const intl2 = navigation(1114).intl;
   obj1[3] = intl2.string(navigation(1114).t["Rn/sLl"]);
   items2[1] = callback(navigation(4556).Text, obj1);
-  items2[2] = callback(contactSyncAccount(13855), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
+  items2[2] = callback(contactSyncAccount(13858), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
   const obj3 = { style: tmp.otherOptionsContainer, children: null };
   const obj4 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
   const intl3 = navigation(1114).intl;
@@ -98,7 +98,7 @@ export default function AddFriendScreen(navigation) {
   if (tmp5) {
     const obj5 = { style: null, location: "Add Friend Modal" };
     obj5[0] = tmp.rowContainer;
-    tmp10Result = callback(contactSyncAccount(13857), obj5);
+    tmp10Result = callback(contactSyncAccount(13860), obj5);
   }
   const obj6 = { children: null };
   items3[1] = tmp10Result;

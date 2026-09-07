@@ -1,9 +1,9 @@
-// Module ID: 9224
-// Function ID: 9225
+// Module ID: 9229
+// Function ID: 9230
 // Name: metadata
 // Dependencies: [2]
 
-// Module 9224 (metadata)
+// Module 9229 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/connections/xbox_link_landing.png.js");

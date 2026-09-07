@@ -1,10 +1,10 @@
-// Module ID: 16753
-// Function ID: 16754
+// Module ID: 16756
+// Function ID: 16757
 // Name: isPrivateChannelMatch
-// Dependencies: [5, 32, 19, 17, 1961, 1957, 4209, 7218, 10860, 1074, 21, 4296, 4556, 4560, 576, 1115, 4573, 7221, 573, 504, 1242, 16754, 4561, 16755, 7863, 1114, 11340, 16756, 7162, 7182, 6981, 4992, 11594, 11592, 11591, 7875, 1100, 11595, 4258, 10031, 10032, 4498, 4497, 10994, 4975, 12366, 16688, 2]
+// Dependencies: [5, 32, 19, 17, 1961, 1957, 4209, 7218, 10865, 1074, 21, 4296, 4556, 4560, 576, 1115, 4573, 7221, 573, 504, 1242, 16757, 4561, 16758, 7863, 1114, 11345, 16759, 7162, 7182, 6981, 4992, 11599, 11597, 11596, 7875, 1100, 11600, 4258, 10036, 10037, 4498, 4497, 10999, 4975, 12370, 16691, 2]
 // Exports: default
 
-// Module 16753 (isPrivateChannelMatch)
+// Module 16756 (isPrivateChannelMatch)
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -15,7 +15,7 @@ import { PrivateChannelRecord } from "createChannelRecord" /* 1961 */;
 import closure_8 from "ensureGuildLoaded" /* 1957 */;
 import closure_9 from "markAllUserIdListsStale" /* 4209 */;
 import closure_10 from "makeSortedChannel" /* 7218 */;
-import { UserRowModes } from "UserRowModes" /* 10860 */;
+import { UserRowModes } from "UserRowModes" /* 10865 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -196,7 +196,7 @@ function Header(recipientLimit) {
     obj[0] = title;
     obj[1] = numInGroup + 1;
     obj[2] = recipientLimit;
-    return callback3(recipientLimit(16755), obj);
+    return callback3(recipientLimit(16758), obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.header;
@@ -244,15 +244,15 @@ function ChatPreview(channelId) {
     obj.track(closure_1_12.MESSAGE_COMPOSER_TRANSITIONED, obj);
     navigateToChannel(channelId);
   }, items1);
-  navigateToChannel(16754)(callback);
+  navigateToChannel(16757)(callback);
   let obj = { style: tmp.background, children: null };
   obj = { style: tmp.container, children: null };
   obj = { guildId: closure_15, channelId, chatInputRef: React.useRef(null), HACK_fixModalInteraction: true, alwaysRespectKeyboard: true, screenIndex: "new-message", secondaryTextFieldRef: channelId.tagListInputRef };
-  const items2 = [callback3(navigateToChannel(11340), obj), ];
+  const items2 = [callback3(navigateToChannel(11345), obj), ];
   obj1 = { portal: null };
   const ref = React.useRef(null);
   obj1[0] = channelId(1115).isAndroid();
-  items2[1] = callback3(channelId(16756).PortalKeyboardRenderer, obj1);
+  items2[1] = callback3(channelId(16759).PortalKeyboardRenderer, obj1);
   obj[1] = items2;
   obj[1] = callback4(View, obj);
   return callback3(View, obj);
@@ -491,7 +491,7 @@ export default function NewMessageScreen(navigation) {
         return () => {
           let obj = callback2(573);
           obj = { type: "CHANNEL_DELETE", channel: null };
-          obj = { id: callback(7221).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "isArray" };
+          obj = { id: callback(7221).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "options" };
           obj[1] = obj;
           obj.dispatch(obj);
         };
@@ -513,17 +513,17 @@ export default function NewMessageScreen(navigation) {
     }
   }, items6);
   const ref = obj.useRef(null);
-  let tmp2Result = tmp2(11594);
+  let tmp2Result = tmp2(11599);
   const config = tmp2Result.useConfig({ location: "NewMessageScreen" });
-  const tmp20 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(11592)({ useNitroCapExperiment: true });
+  const tmp20 = FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(11597)({ useNitroCapExperiment: true });
   closure_9 = tmp20;
   let tmp9 = first(obj.useState(false), 2);
-  const result = _require(11591).shouldUseGroupDMParticipantLimitUI(config.enabled, tmp20);
+  const result = _require(11596).shouldUseGroupDMParticipantLimitUI(config.enabled, tmp20);
   c10 = result;
-  _require(11591);
+  _require(11596);
   enabled = config.enabled;
   if (enabled) {
-    let tmp13Result = tmp13(11591);
+    let tmp13Result = tmp13(11596);
     enabled = tmp13Result.isGroupDMNitroUpsellAudience(tmp23);
   }
   const items7 = [navigation, first.length, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, tmp20, result];
@@ -602,7 +602,7 @@ export default function NewMessageScreen(navigation) {
                 if (-1 === index) {
                   if (arr.length >= closure_1_9 - 1) {
                     if (closure_1_11) {
-                      FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(11595)("NewMessageScreen");
+                      FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(11600)("NewMessageScreen");
                     } else {
                       callback(4258).showMaxGroupMembers();
                       const obj6 = callback(4258);
@@ -758,8 +758,8 @@ export default function NewMessageScreen(navigation) {
   }, items13);
   obj = { value: tmp4(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(7182).NEW_MESSAGE_COMPOSER).analyticsLocations, children: null };
   obj1 = { actions: memo, noResultActions: memo1, rowMode: enabled.NONE, tagListInputRef: ref, onSelectUser: callback1, onQueryChanged: callback3, selectedUserIds: first, withAffinitySuggestions: true, overrideResults: tmp31Result, afterSearchContent: null, withGuildMembers: null, withGDMNames: true, forceSearchResults: null, onForceSearchResults: null, defaultNoResultsFound: null, autoFocusSearch: true };
-  tmp2Result = tmp2(12366);
-  obj1[9] = callback3(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(16688), { location: "NewMessageScreen", memberCount: first.length + 1, recipientLimit: tmp20 });
+  tmp2Result = tmp2(12370);
+  obj1[9] = callback3(FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID(16691), { location: "NewMessageScreen", memberCount: first.length + 1, recipientLimit: tmp20 });
   obj1[10] = 0 === first.length;
   obj1[12] = tmp10;
   obj1[13] = callback2;

@@ -1,16 +1,16 @@
-// Module ID: 13141
-// Function ID: 13142
+// Module ID: 13145
+// Function ID: 13146
 // Name: FractionalNitroPreview
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 1114, 4987, 5587, 13142, 13143, 7133, 4556, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 1114, 4987, 5587, 13146, 13147, 7133, 4556, 2]
 // Exports: FractionalNitroPreview
 
-// Module 13141 (FractionalNitroPreview)
+// Module 13145 (FractionalNitroPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 13142 */;
-import NitroIconDefault from "NitroIcon" /* 13143 */;
+import metadataDefault from "metadata" /* 13146 */;
+import NitroIconDefault from "NitroIcon" /* 13147 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { VerticalGradient } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;

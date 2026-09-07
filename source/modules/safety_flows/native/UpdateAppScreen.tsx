@@ -1,10 +1,10 @@
-// Module ID: 17879
-// Function ID: 17880
+// Module ID: 17882
+// Function ID: 17883
 // Name: UpdateAppScreen
 // Dependencies: [17, 21, 4560, 576, 4556, 1114, 2690, 4975, 2]
 // Exports: default
 
-// Module 17879 (UpdateAppScreen)
+// Module 17882 (UpdateAppScreen)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

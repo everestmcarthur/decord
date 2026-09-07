@@ -1,17 +1,17 @@
-// Module ID: 9281
-// Function ID: 9282
+// Module ID: 9286
+// Function ID: 9287
 // Name: DomainScreen
-// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 1483, 1272, 7123, 4556, 1114, 6605, 9282, 4975, 4763, 5624, 7000, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 1483, 1272, 7123, 4556, 1114, 6605, 9287, 4975, 4763, 5624, 7000, 2]
 // Exports: default
 
-// Module 9281 (DomainScreen)
+// Module 9286 (DomainScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import Text from "Text" /* 4556 */;
 import Button from "Button" /* 4975 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import EXAMPLE_DOMAIN from "EXAMPLE_DOMAIN" /* 9282 */;
+import EXAMPLE_DOMAIN from "EXAMPLE_DOMAIN" /* 9287 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

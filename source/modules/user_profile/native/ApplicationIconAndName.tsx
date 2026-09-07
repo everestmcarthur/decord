@@ -1,10 +1,10 @@
-// Module ID: 12628
-// Function ID: 12629
+// Module ID: 12632
+// Function ID: 12633
 // Name: ApplicationIconAndName
 // Dependencies: [21, 4560, 576, 1178, 4556, 2]
 // Exports: default
 
-// Module 12628 (ApplicationIconAndName)
+// Module 12632 (ApplicationIconAndName)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;

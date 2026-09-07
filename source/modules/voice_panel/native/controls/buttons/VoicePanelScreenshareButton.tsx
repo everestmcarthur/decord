@@ -1,10 +1,10 @@
-// Module ID: 17200
-// Function ID: 17201
+// Module ID: 17203
+// Function ID: 17204
 // Name: MobilePhoneShareIcon
-// Dependencies: [19, 1957, 1074, 21, 1608, 12532, 17201, 4560, 576, 12272, 17184, 504, 38, 9951, 13260, 4906, 13262, 1114, 1242, 17203, 17185, 5589, 2]
+// Dependencies: [19, 1957, 1074, 21, 1608, 12536, 17204, 4560, 576, 12276, 17187, 504, 38, 9956, 13264, 4906, 13266, 1114, 1242, 17206, 17188, 5589, 2]
 // Exports: default
 
-// Module 17200 (MobilePhoneShareIcon)
+// Module 17203 (MobilePhoneShareIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;

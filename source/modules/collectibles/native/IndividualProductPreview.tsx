@@ -1,19 +1,19 @@
-// Module ID: 13138
-// Function ID: 13139
+// Module ID: 13142
+// Function ID: 13143
 // Name: ProfilePreviewWrapper
-// Dependencies: [19, 17, 1076, 21, 4560, 576, 4987, 8178, 11108, 11219, 13139, 13140, 1889, 1077, 13141, 13144, 2]
+// Dependencies: [19, 17, 1076, 21, 4560, 576, 4987, 8178, 11113, 11224, 13143, 13144, 1889, 1077, 13145, 13148, 2]
 // Exports: IndividualProductPreview
 
-// Module 13138 (ProfilePreviewWrapper)
+// Module 13142 (ProfilePreviewWrapper)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import useCurrentUser from "useCurrentUser" /* 8178 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11108 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11219 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 13139 */;
-import NameplateUserDefault from "NameplateUser" /* 13140 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11113 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11224 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 13143 */;
+import NameplateUserDefault from "NameplateUser" /* 13144 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import items from "items" /* 1076 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -129,11 +129,11 @@ export const IndividualProductPreview = function IndividualProductPreview(arg0) 
   } else if (tmp(1889).CollectiblesItemType.EXTERNAL_SKU === type) {
     const ALL = tmp(1077).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
-      let tmp5 = callback(tmp(13141).FractionalNitroPreview, {});
+      let tmp5 = callback(tmp(13145).FractionalNitroPreview, {});
     } else {
       tmp5 = null;
       if (product.skuId === constants.ORB_PROFILE_BADGE) {
-        tmp5 = callback(tmp(13144).OrbBadgePreview, {});
+        tmp5 = callback(tmp(13148).OrbBadgePreview, {});
       }
     }
     return tmp5;

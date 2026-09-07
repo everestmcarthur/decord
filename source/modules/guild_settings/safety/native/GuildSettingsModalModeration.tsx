@@ -1,20 +1,20 @@
-// Module ID: 17534
-// Function ID: 17535
+// Module ID: 17537
+// Function ID: 17538
 // Name: GuildSettingsOwnerConfiguredContentLevel
-// Dependencies: [19, 4199, 9064, 1074, 21, 4560, 576, 8644, 9063, 5687, 1114, 2024, 7201, 4271, 5624, 7377, 5685, 14837, 5688, 4556, 8593, 4973, 7040, 1483, 504, 2]
+// Dependencies: [19, 4199, 9069, 1074, 21, 4560, 576, 8649, 9068, 5687, 1114, 2024, 7201, 4271, 5624, 7377, 5685, 14840, 5688, 4556, 8598, 4973, 7040, 1483, 504, 2]
 // Exports: default
 
-// Module 17534 (GuildSettingsOwnerConfiguredContentLevel)
+// Module 17537 (GuildSettingsOwnerConfiguredContentLevel)
 import ThemesDefault from "Themes" /* 576 */;
 import combinedDefault from "combined" /* 2024 */;
 import Stack from "Stack" /* 4973 */;
 import NavScrim from "NavScrim" /* 7040 */;
-import Form from "Form" /* 8593 */;
-import useUserIsTeen from "useUserIsTeen" /* 8644 */;
-import _modDef9063 from "module_9063" /* 9063 */;
+import Form from "Form" /* 8598 */;
+import useUserIsTeen from "useUserIsTeen" /* 8649 */;
+import _modDef9068 from "module_9068" /* 9068 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_5 from "handleFormInit" /* 9064 */;
+import closure_5 from "handleFormInit" /* 9069 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -122,7 +122,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(14837).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(14840).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj[5] = verificationLevelOptions.map((arg0) => {
     ({ name, color, value } = arg0);
     ({ desc, disabled } = arg0);
@@ -163,7 +163,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
   };
   const obj3 = combinedDefault;
   const features = guild.features;
-  const contentFilterOptions = self(14837).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(14840).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj[5] = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);
@@ -202,17 +202,17 @@ prototype["render"] = function render() {
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
   if (this.props.hasChanges) {
-    _modDef9063.cancelChanges(tmp.props.guild.id);
-    const obj = _modDef9063;
+    _modDef9068.cancelChanges(tmp.props.guild.id);
+    const obj = _modDef9068;
   }
 };
 prototype["handleVerificationLevelChange"] = function handleVerificationLevelChange(verificationLevel) {
-  let obj = _modDef9063;
+  let obj = _modDef9068;
   obj = { verificationLevel };
   obj.updateGuild(obj);
 };
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
-  let obj = _modDef9063;
+  let obj = _modDef9068;
   obj = { explicitContentFilter };
   obj.updateGuild(obj);
 };

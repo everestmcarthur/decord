@@ -1,10 +1,10 @@
-// Module ID: 17628
-// Function ID: 17629
+// Module ID: 17631
+// Function ID: 17632
 // Name: EnhancedRoleColorsSelectStyleModal
-// Dependencies: [17, 17610, 17612, 17609, 1085, 21, 4560, 576, 4495, 5004, 17629, 1114, 7932, 7150, 7149, 4527, 8652, 2018, 7961, 13293, 4556, 2428, 2]
+// Dependencies: [17, 17613, 17615, 17612, 1085, 21, 4560, 576, 4495, 5004, 17632, 1114, 7932, 7150, 7149, 4527, 8657, 2018, 7961, 13297, 4556, 2428, 2]
 // Exports: default
 
-// Module 17628 (EnhancedRoleColorsSelectStyleModal)
+// Module 17631 (EnhancedRoleColorsSelectStyleModal)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import sum from "sum" /* 1085 */;
@@ -14,10 +14,10 @@ import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5004 */;
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
 import Background from "Background" /* 7150 */;
 import setOptionsDefault from "setOptions" /* 7932 */;
-import title from "title" /* 17609 */;
-import handleSetSection from "handleSetSection" /* 17610 */;
-import HOLOGRAPHIC_ROLE_COLORS2 from "HOLOGRAPHIC_ROLE_COLORS" /* 17612 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 17629 */;
+import title from "title" /* 17612 */;
+import handleSetSection from "handleSetSection" /* 17613 */;
+import HOLOGRAPHIC_ROLE_COLORS2 from "HOLOGRAPHIC_ROLE_COLORS" /* 17615 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 17632 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -122,7 +122,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
             const obj = closure_2_0(2018);
             message.message.roleColors = closure_2_0(7961).processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = closure_2_1(13293);
+            message.message.avatarURL = closure_2_1(13297);
           }
         };
         const items1 = [closure_1_9(closure_1_1(button[16]), obj), ];

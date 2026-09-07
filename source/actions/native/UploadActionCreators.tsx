@@ -1,8 +1,8 @@
-// Module ID: 11747
-// Function ID: 11748
+// Module ID: 11752
+// Function ID: 11753
 // Dependencies: [4901, 7838, 573, 2]
 
-// Module 11747
+// Module 11752
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_2 from "handleChanged" /* 4901 */;
 import { DraftType } from "handleChanged" /* 4901 */;

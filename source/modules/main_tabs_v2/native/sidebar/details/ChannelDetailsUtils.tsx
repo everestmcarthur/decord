@@ -1,13 +1,13 @@
-// Module ID: 11612
-// Function ID: 11613
+// Module ID: 11617
+// Function ID: 11618
 // Name: getChannelDetailsButtons
-// Dependencies: [10916, 1094, 2]
+// Dependencies: [10921, 1094, 2]
 // Exports: getChannelDetailsButtons, navigateToChannelDetailsScreen
 
-// Module 11612 (getChannelDetailsButtons)
+// Module 11617 (getChannelDetailsButtons)
 import set from "set" /* 2 */;
 import set2 from "set" /* 1094 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10916 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10921 */;
 
 const ChannelDetailsButtonTypes = ChannelDetailsNavigatorScreens.ChannelDetailsButtonTypes;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");

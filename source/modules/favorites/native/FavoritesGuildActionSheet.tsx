@@ -1,14 +1,14 @@
-// Module ID: 16137
-// Function ID: 16138
+// Module ID: 16140
+// Function ID: 16141
 // Name: FavoritesGuildActionSheet
-// Dependencies: [19, 1960, 21, 16138, 16139, 16140, 10224, 504, 7198, 7149, 1114, 7200, 5073, 12151, 16141, 5680, 6968, 4518, 2]
+// Dependencies: [19, 1960, 21, 16141, 16142, 16143, 10229, 504, 7198, 7149, 1114, 7200, 5073, 12155, 16144, 5680, 6968, 4518, 2]
 // Exports: default
 
-// Module 16137 (FavoritesGuildActionSheet)
+// Module 16140 (FavoritesGuildActionSheet)
 import noopAll from "noop" /* 19 */;
-import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 16138 */;
-import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 16139 */;
-import useFavoritesGuildAutoAddedThreadsActionDefault from "useFavoritesGuildAutoAddedThreadsAction" /* 16140 */;
+import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 16141 */;
+import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 16142 */;
+import useFavoritesGuildAutoAddedThreadsActionDefault from "useFavoritesGuildAutoAddedThreadsAction" /* 16143 */;
 import closure_3 from "initializeFromUserSettings" /* 1960 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -26,7 +26,7 @@ export default function FavoritesGuildActionSheet(onClose) {
   const tmp3 = useFavoritesGuildResetActionDefault();
   dependencyMap = tmp3;
   const tmp4 = useFavoritesGuildAutoAddedThreadsActionDefault();
-  let obj = onClose(10224);
+  let obj = onClose(10229);
   obj1 = onClose(504);
   const items = [closure_3];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_3.hasStoredFavorites());
@@ -57,7 +57,7 @@ export default function FavoritesGuildActionSheet(onClose) {
       const intl2 = tmp5(1114).intl;
       obj5[0] = intl2.string(tmp5(1114).t["0dOFq+"]);
       const obj6 = { IconComponent: null };
-      obj6[0] = tmp5(12151).ArrowsUpDownIcon;
+      obj6[0] = tmp5(12155).ArrowsUpDownIcon;
       obj5[1] = tmp8(tmp5(7200).ActionSheetRow.Icon, obj6);
       obj5[2] = function onPress() {
         onClose();

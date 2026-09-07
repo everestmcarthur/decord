@@ -1,13 +1,13 @@
-// Module ID: 16325
-// Function ID: 16326
+// Module ID: 16328
+// Function ID: 16329
 // Name: TypingSubtitle
-// Dependencies: [19, 17, 21, 16324, 5028, 5080, 4556, 2]
+// Dependencies: [19, 17, 21, 16327, 5028, 5080, 4556, 2]
 // Exports: default
 
-// Module 16325 (TypingSubtitle)
+// Module 16328 (TypingSubtitle)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4556 */;
-import styles from "styles" /* 16324 */;
+import styles from "styles" /* 16327 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

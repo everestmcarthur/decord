@@ -1,18 +1,18 @@
-// Module ID: 16526
-// Function ID: 16527
+// Module ID: 16529
+// Function ID: 16530
 // Name: PostCallDisconnectNudge
-// Dependencies: [32, 19, 2011, 4579, 12409, 12410, 21, 16525, 1114, 15481, 12411, 504, 7388, 1943, 12412, 4527, 16526, 1896, 2]
+// Dependencies: [32, 19, 2011, 4579, 12413, 12414, 21, 16528, 1114, 15484, 12415, 504, 7388, 1943, 12416, 4527, 16529, 1896, 2]
 // Exports: default, usePostCallDisconnectNudge
 
-// Module 16526 (PostCallDisconnectNudge)
+// Module 16529 (PostCallDisconnectNudge)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 16525 */;
+import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 16528 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "handleConnectionOpen" /* 2011 */;
 import closure_6 from "updateVoiceState" /* 4579 */;
-import { PermissionPromptType } from "set" /* 12409 */;
-import EventActionType from "EventActionType" /* 12410 */;
+import { PermissionPromptType } from "set" /* 12413 */;
+import EventActionType from "EventActionType" /* 12414 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -36,10 +36,10 @@ export default function PostCallDisconnectNudge(arg0) {
 };
 export const POST_CALL_DISCONNECT_NUDGE_KEY = "post-call-disconnect-nudge-key";
 export const usePostCallDisconnectNudge = function usePostCallDisconnectNudge() {
-  let obj = stateFromStores1(15481);
+  let obj = stateFromStores1(15484);
   let tmp2 = stateFromStores;
-  const canSeePushNotificationNudge = stateFromStores(12411).useCanSeePushNotificationNudge();
-  let obj2 = stateFromStores(12411);
+  const canSeePushNotificationNudge = stateFromStores(12415).useCanSeePushNotificationNudge();
+  let obj2 = stateFromStores(12415);
   const items = [closure_6];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null));
   const obj3 = stateFromStores(504);

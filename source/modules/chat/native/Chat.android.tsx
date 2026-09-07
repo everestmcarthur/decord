@@ -1,14 +1,14 @@
-// Module ID: 11894
-// Function ID: 11895
+// Module ID: 11899
+// Function ID: 11900
 // Name: DCDChatList
-// Dependencies: [19, 4552, 21, 4560, 6655, 11895, 11896, 504, 11272, 2]
+// Dependencies: [19, 4552, 21, 4560, 6655, 11900, 11901, 504, 11277, 2]
 
-// Module 11894 (DCDChatList)
+// Module 11899 (DCDChatList)
 import initialize from "initialize" /* 504 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 11272 */;
-import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 11895 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11896 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 11277 */;
+import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 11900 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11901 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import jsxProd from "jsxProd" /* 21 */;

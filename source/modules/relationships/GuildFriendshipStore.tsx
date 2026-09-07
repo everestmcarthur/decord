@@ -1,9 +1,9 @@
-// Module ID: 13723
-// Function ID: 13724
+// Module ID: 13727
+// Function ID: 13728
 // Name: resetStates
 // Dependencies: [504, 5520, 573, 2]
 
-// Module 13723 (resetStates)
+// Module 13727 (resetStates)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 5520 */;

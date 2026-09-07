@@ -1,10 +1,10 @@
-// Module ID: 9097
-// Function ID: 9098
+// Module ID: 9102
+// Function ID: 9103
 // Name: isAnimatedBackgroundOption
 // Dependencies: [1957, 4583, 6987, 1074, 1396, 4740, 1242, 2]
 // Exports: getEffectAnalyticsType, getVideoBackgroundOptionFromProto, getVideoBackgroundProtoFromOption, isCustomBackgroundOption, isDefaultBackgroundOption, trackBackgroundOptionAdded, trackBackgroundOptionDeleted, trackBackgroundOptionUpdated
 
-// Module 9097 (isAnimatedBackgroundOption)
+// Module 9102 (isAnimatedBackgroundOption)
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import getAvatarURL from "getAvatarURL" /* 1396 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;

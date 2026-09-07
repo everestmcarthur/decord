@@ -1,10 +1,10 @@
-// Module ID: 9472
-// Function ID: 9473
+// Module ID: 9477
+// Function ID: 9478
 // Name: isOrientationLockSupported
 // Dependencies: [4539, 1608, 2]
 // Exports: default
 
-// Module 9472 (isOrientationLockSupported)
+// Module 9477 (isOrientationLockSupported)
 import set from "set" /* 2 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
 

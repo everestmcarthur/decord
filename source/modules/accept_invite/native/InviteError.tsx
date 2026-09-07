@@ -1,10 +1,10 @@
-// Module ID: 12721
-// Function ID: 12722
+// Module ID: 12725
+// Function ID: 12726
 // Name: InviteErrorBase
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 4411, 4495, 12722, 12723, 12724, 1114, 4556, 4975, 1396, 1178, 12725, 5584, 2024, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 4411, 4495, 12726, 12727, 12728, 1114, 4556, 4975, 1396, 1178, 12729, 5584, 2024, 2]
 // Exports: default
 
-// Module 12721 (InviteErrorBase)
+// Module 12725 (InviteErrorBase)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -15,8 +15,8 @@ import useThemeDefault from "useTheme" /* 4495 */;
 import Text from "Text" /* 4556 */;
 import Button from "Button" /* 4975 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import getDescriptiveInviteError from "getDescriptiveInviteError" /* 12724 */;
-import registerAssetDefault from "registerAsset" /* 12725 */;
+import getDescriptiveInviteError from "getDescriptiveInviteError" /* 12728 */;
+import registerAssetDefault from "registerAsset" /* 12729 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -28,7 +28,7 @@ function InviteErrorBase(invite) {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 12722 : 12723);
+  const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 12726 : 12727);
   let code;
   if (inviteError != null) {
     code = inviteError.code;

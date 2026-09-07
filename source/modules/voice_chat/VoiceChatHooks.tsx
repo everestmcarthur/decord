@@ -1,10 +1,10 @@
-// Module ID: 9471
-// Function ID: 9472
+// Module ID: 9476
+// Function ID: 9477
 // Name: useIsConnectedToVoiceChannel
 // Dependencies: [502, 4579, 504, 2]
 // Exports: useIsConnectedToVoiceChannel, useIsConnectedToVoiceChannelForId
 
-// Module 9471 (useIsConnectedToVoiceChannel)
+// Module 9476 (useIsConnectedToVoiceChannel)
 import closure_2 from "fetchFingerprint" /* 502 */;
 import closure_3 from "updateVoiceState" /* 4579 */;
 

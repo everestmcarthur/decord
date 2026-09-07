@@ -1,8 +1,8 @@
-// Module ID: 16039
-// Function ID: 16040
+// Module ID: 16042
+// Function ID: 16043
 // Dependencies: [19, 21, 4975, 1114, 4556, 2]
 
-// Module 16039
+// Module 16042
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import Button from "Button" /* 4975 */;

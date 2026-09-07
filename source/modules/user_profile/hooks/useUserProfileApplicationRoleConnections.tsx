@@ -1,10 +1,10 @@
-// Module ID: 13083
-// Function ID: 13084
+// Module ID: 13087
+// Function ID: 13088
 // Name: useUserProfileApplicationRoleConnections
 // Dependencies: [19, 7621, 504, 2]
 // Exports: default
 
-// Module 13083 (useUserProfileApplicationRoleConnections)
+// Module 13087 (useUserProfileApplicationRoleConnections)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import closure_3 from "createUserWidgetFromServer" /* 7621 */;

@@ -1,10 +1,10 @@
-// Module ID: 13847
-// Function ID: 13848
+// Module ID: 13850
+// Function ID: 13851
 // Name: trimTrailingPunctuation
 // Dependencies: [1366, 2]
 // Exports: default
 
-// Module 13847 (trimTrailingPunctuation)
+// Module 13850 (trimTrailingPunctuation)
 import importDefaultResult from "ip" /* 1366 */;
 
 function trimTrailingPunctuation(str) {

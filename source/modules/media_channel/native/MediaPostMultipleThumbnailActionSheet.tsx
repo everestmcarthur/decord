@@ -1,10 +1,10 @@
-// Module ID: 10265
-// Function ID: 10266
+// Module ID: 10270
+// Function ID: 10271
 // Name: MediaPostThumbnailActionSheet
 // Dependencies: [19, 17, 1954, 21, 4560, 576, 1611, 7150, 6627, 4556, 1114, 1178, 4975, 2]
 // Exports: default
 
-// Module 10265 (MediaPostThumbnailActionSheet)
+// Module 10270 (MediaPostThumbnailActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;

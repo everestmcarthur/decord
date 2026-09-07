@@ -1,19 +1,20 @@
 // Module ID: 8549
 // Function ID: 8550
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8550, 8466, 8477]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8550, 8471, 8480]
 
 // Module 8549 (_isNativeReflectConstruct)
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8477 */;
-import closure_2 from "_classCallCheck" /* 41 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8480 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8550 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const Symbol = importDefault;
+const Rect = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,13 +35,13 @@ function _isNativeReflectConstruct() {
   }
 }
 noopAll;
-class Symbol {
+class Rect {
   constructor() {
     self = this;
-    tmp = closure_2(this, Symbol);
-    tmp2 = closure_4;
-    obj = closure_4(Symbol);
-    tmp3 = closure_3;
+    tmp = closure_3(this, Rect);
+    tmp2 = closure_5;
+    obj = closure_5(Rect);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -54,31 +55,30 @@ class Symbol {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Symbol, _isNativeReflectConstructDefault);
+_inheritsDefault(Rect, _isNativeReflectConstructDefault);
 const items = [
   {
     key: "render",
     value: function render() {
       const self = this;
       const props = this.props;
-      let obj = { name: props.id };
+      let obj = { x: props.x, y: props.y, width: props.width, height: props.height, rx: props.rx, ry: props.ry };
       obj = {
         ref(arg0) {
           return self.refMethod(arg0);
         }
       };
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(self(8466)(props));
-      obj.children = props.children;
-      return jsx(self(8550), {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
+      const tmp = __INTERNAL_VIEW_CONFIGDefault;
+      const merged = Object.assign(self(8471).withoutXY(this, props));
+      const merged1 = Object.assign(obj);
+      return <tmp ref={function ref(arg0) {
+        return self.refMethod(arg0);
+      }} />;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Symbol, items);
-importDefaultResultResult.displayName = "Symbol";
+const importDefaultResultResult = importDefaultResult(Rect, items);
+importDefaultResultResult.displayName = "Rect";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
 
 export default importDefaultResultResult;

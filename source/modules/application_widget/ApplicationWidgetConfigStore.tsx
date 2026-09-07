@@ -1,9 +1,9 @@
-// Module ID: 9026
-// Function ID: 9027
+// Module ID: 9031
+// Function ID: 9032
 // Name: updateApplicationConfigs
 // Dependencies: [32, 504, 573, 2]
 
-// Module 9026 (updateApplicationConfigs)
+// Module 9031 (updateApplicationConfigs)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_0 from "_slicedToArray" /* 32 */;

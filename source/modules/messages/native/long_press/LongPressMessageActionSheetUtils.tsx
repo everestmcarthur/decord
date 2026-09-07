@@ -1,10 +1,10 @@
-// Module ID: 11667
-// Function ID: 11668
+// Module ID: 11672
+// Function ID: 11673
 // Name: handleEdit
-// Dependencies: [19, 7680, 4210, 7681, 7838, 1371, 11668, 1074, 1964, 7601, 21, 4404, 11, 11669, 10251, 7182, 1242, 7456, 4904, 1114, 11670, 11673, 11674, 4272, 7834, 11676, 7765, 4417, 1100, 4785, 7190, 4258, 4705, 4573, 10247, 4710, 1365, 9942, 8263, 8370, 8373, 7292, 4527, 11677, 1896, 7289, 8629, 2528, 7276, 4571, 8179, 4740, 11254, 11679, 1109, 11680, 1894, 11704, 11709, 11710, 11714, 11727, 2]
+// Dependencies: [19, 7680, 4210, 7681, 7838, 1371, 11673, 1074, 1964, 7601, 21, 4404, 11, 11674, 10256, 7182, 1242, 7456, 4904, 1114, 11675, 11678, 11679, 4272, 7834, 11681, 7765, 4417, 1100, 4785, 7190, 4258, 4705, 4573, 10252, 4710, 1365, 9947, 8263, 8370, 8373, 7292, 4527, 11682, 1896, 7289, 8634, 2528, 7276, 4571, 8179, 4740, 11259, 11684, 1109, 11685, 1894, 11709, 11714, 11715, 11719, 11732, 2]
 // Exports: getContextBarCancelReason, handleCopyId, handleCopyMessageLink, handleCreateThread, longPressMessageOptionHandler
 
-// Module 11667 (handleEdit)
+// Module 11672 (handleEdit)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import noopAll from "noop" /* 19 */;
 import transitionTo from "transitionTo" /* 1100 */;
@@ -15,14 +15,14 @@ import allowChannelAccess from "allowChannelAccess" /* 4705 */;
 import _copy from "_copy" /* 7190 */;
 import trackInviteDefault from "trackInvite" /* 7456 */;
 import patchThreadDefault from "patchThread" /* 7765 */;
-import openCreateForumPostModal from "openCreateForumPostModal" /* 10251 */;
-import createPendingReply from "createPendingReply" /* 11669 */;
+import openCreateForumPostModal from "openCreateForumPostModal" /* 10256 */;
+import createPendingReply from "createPendingReply" /* 11674 */;
 import closure_4 from "getState" /* 7680 */;
 import { isMessageComponentsV2 } from "hasFlag" /* 4210 */;
 import closure_6 from "initialize" /* 7681 */;
 import closure_7 from "initialize" /* 7838 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "getOptions" /* 11668 */;
+import closure_9 from "getOptions" /* 11673 */;
 import ME from "ME" /* 1074 */;
 import { isStaticChannelRoute } from "set" /* 1964 */;
 import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_20 } from "USER_SETTING_ACTION_SHEET_KEY" /* 7601 */;
@@ -199,8 +199,8 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
         result = id2;
         if (intl27.string(id2(2528)["1D+vqy"]) === label) {
           if (resultResult.canReportMessageToMods(message)) {
-            result = result(8629).showReportToModMessageModal(message);
-            const resultResult1 = result(8629);
+            result = result(8634).showReportToModMessageModal(message);
+            const resultResult1 = result(8634);
           }
           resultResult = result(7276);
         } else {
@@ -291,7 +291,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                         result = jsx;
                         obj1 = { channelId: null };
                         obj1[0] = id;
-                        obj[1] = jsx(result(11670), { channelId: null });
+                        obj[1] = jsx(result(11675), { channelId: null });
                         const intl24 = result(1114).intl;
                         obj[2] = intl24.string(result(1114).t["ETE/oC"]);
                         const intl25 = result(1114).intl;
@@ -321,7 +321,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                           result = jsx;
                           const obj3 = { message: null };
                           obj3[0] = message;
-                          obj2[2] = jsx(result(11673), { message: null });
+                          obj2[2] = jsx(result(11678), { message: null });
                           const intl21 = result(1114).intl;
                           obj2[3] = intl21.string(result(1114).t.gm1Vej);
                           const intl22 = result(1114).intl;
@@ -352,7 +352,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                             obj4[1] = intl16.string(result(1114).t.NjEPp7);
                             const obj5 = { message: null };
                             obj5[0] = message;
-                            obj4[2] = jsx(result(11673), { message: null });
+                            obj4[2] = jsx(result(11678), { message: null });
                             const intl17 = result(1114).intl;
                             obj4[3] = intl17.string(result(1114).t.gm1Vej);
                             const intl18 = result(1114).intl;
@@ -399,7 +399,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                     obj6[1] = intl12.string(result(1114).t.AMvpS4);
                                     const obj7 = { message: null };
                                     obj7[0] = message;
-                                    obj6[2] = jsx(result(11673), { message: null });
+                                    obj6[2] = jsx(result(11678), { message: null });
                                     const intl13 = result(1114).intl;
                                     obj6[3] = intl13.string(result(1114).t.gm1Vej);
                                     const intl14 = result(1114).intl;
@@ -424,8 +424,8 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                     if (uploaderFileForMessageId != null) {
                                       items = uploaderFileForMessageId.items;
                                     }
-                                    result(11676)(channel, message, items, options.getOptions(message.id));
-                                    const resultResult17 = result(11676);
+                                    result(11681)(channel, message, items, options.getOptions(message.id));
+                                    const resultResult17 = result(11681);
                                     const obj9 = { channel_id: null, guild_id: null, action_sheet_option: "retry", message_state: null };
                                     obj9[0] = id;
                                     obj9[1] = guild_id;
@@ -452,14 +452,14 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                     } else {
                                       const intl42 = result(1114).intl;
                                       if (intl42.string(result(1114).t.lfIHs4) === label) {
-                                        const result3 = result(11254).handleAddNewReactions(channel, id2);
-                                        const resultResult23 = result(11254);
+                                        const result3 = result(11259).handleAddNewReactions(channel, id2);
+                                        const resultResult23 = result(11259);
                                       } else {
                                         const intl43 = result(1114).intl;
                                         if (intl43.string(result(1114).t.gHp0C4) === label) {
                                           if ("Preview" === actionSheetSource) {
-                                            const result4 = result(11254).handleViewPreviewReactions(id2, id);
-                                            const resultResult24 = result(11254);
+                                            const result4 = result(11259).handleViewPreviewReactions(id2, id);
+                                            const resultResult24 = result(11259);
                                           } else {
                                             const obj10 = { messageId: null, channelId: null, location: null };
                                             obj10[0] = id2;
@@ -467,14 +467,14 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                             const obj11 = { object: null };
                                             obj11[0] = constants2.MESSAGE_ACTION_SHEET;
                                             obj10[2] = obj11;
-                                            result(11254).handleViewReactions(obj10);
-                                            const resultResult25 = result(11254);
+                                            result(11259).handleViewReactions(obj10);
+                                            const resultResult25 = result(11259);
                                           }
                                         } else {
                                           const intl44 = result(1114).intl;
                                           if (intl44.string(result(1114).t.ZbtGBm) === label) {
-                                            const result5 = result(11254).handleRemoveAllReactions(id, id2);
-                                            const resultResult26 = result(11254);
+                                            const result5 = result(11259).handleRemoveAllReactions(id, id2);
+                                            const resultResult26 = result(11259);
                                           } else {
                                             const intl45 = result(1114).intl;
                                             if (intl45.string(result(1114).t["g33r/P"]) === label) {
@@ -501,7 +501,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                               } else {
                                                 const intl47 = result(1114).intl;
                                                 if (intl47.string(result(1114).t.RpE9k7) === label) {
-                                                  result(10247)(id, id2);
+                                                  result(10252)(id, id2);
                                                 } else {
                                                   const intl48 = result(1114).intl;
                                                   if (intl48.string(result(1114).t["S/xNKV"]) === label) {
@@ -518,10 +518,10 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                       result = result(1365).toURLSafe(selectedMedia.mediaUrl);
                                                       if (null != result) {
                                                         if (obj40.isRefreshableAttachmentUrl(result)) {
-                                                          let result6 = tmp53(9942).maybeRefreshAttachmentUrl(selectedMedia.mediaUrl);
-                                                          const tmp53Result = tmp53(9942);
+                                                          let result6 = tmp53(9947).maybeRefreshAttachmentUrl(selectedMedia.mediaUrl);
+                                                          const tmp53Result = tmp53(9947);
                                                         }
-                                                        obj40 = selectedMedia(9942);
+                                                        obj40 = selectedMedia(9947);
                                                         tmp53 = selectedMedia;
                                                         result6.then((mediaUrl) => id(closure_1_3[38]).downloadMediaAssetWithContentType(mediaUrl, selectedMedia ? closure_1_16.GIF : closure_1_16.IMAGE, id.contentType)).then(() => {
                                                           let obj = id(closure_1_3[31]);
@@ -618,7 +618,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                               obj15[0] = message;
                                                               obj15[1] = channel;
                                                               obj15[2] = chatInputRef;
-                                                              result(11679)(obj15);
+                                                              result(11684)(obj15);
                                                               if ("Preview" === actionSheetSource) {
                                                                 result = result(4571).transitionToMessage(channel.id, message.id);
                                                                 result = globalThis;
@@ -634,8 +634,8 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                               if (intl54.string(result(1114).t.I3ltXO) === label) {
                                                                 const obj16 = { message: null, source: "long-press-sheet" };
                                                                 obj16[0] = message;
-                                                                result(11680).openForwardModal(obj16);
-                                                                const resultResult37 = result(11680);
+                                                                result(11685).openForwardModal(obj16);
+                                                                const resultResult37 = result(11685);
                                                               } else {
                                                                 const intl55 = result(1114).intl;
                                                                 if (intl55.string(result(1114).t.rBIGBL) === label) {
@@ -679,17 +679,17 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                         const obj18 = { channelId: null, messageId: null, displayToast: true, source: null };
                                                                         obj18[0] = id;
                                                                         obj18[1] = id2;
-                                                                        obj18[3] = result(11709).SavedMessageSources.LONG_PRESS_ACTION_SHEET;
-                                                                        const result11 = result(11704).addOrUpdateSavedMessage(obj18);
-                                                                        const resultResult47 = result(11704);
+                                                                        obj18[3] = result(11714).SavedMessageSources.LONG_PRESS_ACTION_SHEET;
+                                                                        const result11 = result(11709).addOrUpdateSavedMessage(obj18);
+                                                                        const resultResult47 = result(11709);
                                                                       } else {
                                                                         const intl59 = result(1114).intl;
                                                                         if (intl59.string(result(1114).t.SvXS1Z) === label) {
                                                                           const obj19 = { channelId: null, messageId: null, displayToast: true };
                                                                           obj19[0] = id;
                                                                           obj19[1] = id2;
-                                                                          result(11704).removeSavedMessage(obj19);
-                                                                          const resultResult48 = result(11704);
+                                                                          result(11709).removeSavedMessage(obj19);
+                                                                          const resultResult48 = result(11709);
                                                                         } else {
                                                                           const intl60 = result(1114).intl;
                                                                           if (intl60.string(result(1114).t.mJ3P0N) === label) {
@@ -701,7 +701,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                             };
                                                                             ({ channel_id: obj16[1], id: obj16[2] } = message);
                                                                             obj20[3] = onBack;
-                                                                            result(4527).openLazy(result(1896)(11710, tmp2.paths), "MessageReminderDurationActionSheet", obj20);
+                                                                            result(4527).openLazy(result(1896)(11715, tmp2.paths), "MessageReminderDurationActionSheet", obj20);
                                                                             const resultResult49 = result(4527);
                                                                           } else {
                                                                             const intl61 = result(1114).intl;
@@ -719,7 +719,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                               };
                                                                               ({ channel_id: obj14[2], id: obj14[3] } = message);
                                                                               obj21[4] = onBack;
-                                                                              result(4527).openLazy(result(1896)(11710, tmp2.paths), "MessageReminderDurationActionSheet", obj21);
+                                                                              result(4527).openLazy(result(1896)(11715, tmp2.paths), "MessageReminderDurationActionSheet", obj21);
                                                                               const resultResult50 = result(4527);
                                                                             } else {
                                                                               const intl62 = result(1114).intl;
@@ -743,7 +743,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                     ({ channel_id: obj12[0], id: obj12[1] } = message);
                                                                                     obj22[2] = id2;
                                                                                     obj22[3] = id1;
-                                                                                    result(4527).openLazy(result(1896)(11677, tmp2.paths), closure_20, obj22);
+                                                                                    result(4527).openLazy(result(1896)(11682, tmp2.paths), closure_20, obj22);
                                                                                     const resultResult52 = result(4527);
                                                                                   }
                                                                                 }
@@ -751,9 +751,9 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                 const intl63 = result(1114).intl;
                                                                                 if (intl63.string(result(1114).t.grdwwt) === label) {
                                                                                   ({ channel_id: obj9[0], id: obj9[1] } = message);
-                                                                                  result(11714).endPollEarly({ channelId: null, messageId: null });
+                                                                                  result(11719).endPollEarly({ channelId: null, messageId: null });
                                                                                   const obj23 = { channelId: null, messageId: null };
-                                                                                  const resultResult53 = result(11714);
+                                                                                  const resultResult53 = result(11719);
                                                                                 } else {
                                                                                   const intl64 = result(1114).intl;
                                                                                   if (intl64.string(result(1114).t.Rjezbz) === label) {
@@ -761,7 +761,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                     obj24[0] = message;
                                                                                     obj24[1] = guild_id;
                                                                                     obj24[2] = onBack;
-                                                                                    result(4527).openLazy(result(1896)(11727, tmp2.paths), "AppInteractionInfoActionSheet", obj24);
+                                                                                    result(4527).openLazy(result(1896)(11732, tmp2.paths), "AppInteractionInfoActionSheet", obj24);
                                                                                     const resultResult54 = result(4527);
                                                                                   } else {
                                                                                     const intl65 = result(1114).intl;
@@ -905,8 +905,8 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
       }
     }
     if (resultResult61.canReportMessage(message)) {
-      result = result(8629).showReportModalForMessage(message, "mobile_message_action_sheet");
-      const resultResult62 = result(8629);
+      result = result(8634).showReportModalForMessage(message, "mobile_message_action_sheet");
+      const resultResult62 = result(8634);
     }
     resultResult61 = result(7289);
   }

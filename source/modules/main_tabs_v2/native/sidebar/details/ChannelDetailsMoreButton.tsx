@@ -1,12 +1,12 @@
-// Module ID: 16729
-// Function ID: 16730
+// Module ID: 16732
+// Function ID: 16733
 // Name: MoreButton
-// Dependencies: [19, 21, 10913, 7866, 7863, 1114, 9800, 2]
+// Dependencies: [19, 21, 10918, 7866, 7863, 1114, 9805, 2]
 // Exports: default
 
-// Module 16729 (MoreButton)
+// Module 16732 (MoreButton)
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7866 */;
-import registerAssetDefault from "registerAsset" /* 9800 */;
+import registerAssetDefault from "registerAsset" /* 9805 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

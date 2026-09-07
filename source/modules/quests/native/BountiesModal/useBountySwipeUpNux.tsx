@@ -1,12 +1,12 @@
-// Module ID: 15010
-// Function ID: 15011
+// Module ID: 15013
+// Function ID: 15014
 // Name: useBountySwipeUpNux
-// Dependencies: [32, 11521, 15011, 1943, 7388, 2]
+// Dependencies: [32, 11526, 15014, 1943, 7388, 2]
 // Exports: useBountySwipeUpNux
 
-// Module 15010 (useBountySwipeUpNux)
-import apexExperiment from "apexExperiment" /* 11521 */;
-import FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY from "FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY" /* 15011 */;
+// Module 15013 (useBountySwipeUpNux)
+import apexExperiment from "apexExperiment" /* 11526 */;
+import FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY from "FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY" /* 15014 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 
 require = arg1;

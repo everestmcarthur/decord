@@ -1,10 +1,10 @@
-// Module ID: 10027
-// Function ID: 10028
+// Module ID: 10032
+// Function ID: 10033
 // Name: HideStageChannelCallIcon
-// Dependencies: [19, 17, 4576, 1957, 7636, 1979, 1962, 9899, 1074, 21, 4560, 5682, 4409, 576, 1242, 4740, 9481, 4763, 4767, 504, 9924, 10028, 1114, 4761, 1178, 4713, 5431, 5425, 4987, 4556, 8622, 8619, 10029, 10030, 8394, 9662, 10031, 10032, 9820, 9901, 9907, 9908, 9913, 10033, 10034, 2]
+// Dependencies: [19, 17, 4576, 1957, 7636, 1979, 1962, 9904, 1074, 21, 4560, 5682, 4409, 576, 1242, 4740, 9486, 4763, 4767, 504, 9929, 10033, 1114, 4761, 1178, 4713, 5431, 5425, 4987, 4556, 8627, 8624, 10034, 10035, 8394, 9667, 10036, 10037, 9825, 9906, 9912, 9913, 9918, 10038, 10039, 2]
 // Exports: HideChannelCallButton, closeStageModal
 
-// Module 10027 (HideStageChannelCallIcon)
+// Module 10032 (HideStageChannelCallIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
@@ -12,19 +12,19 @@ import computeChannelNameDefault from "computeChannelName" /* 4713 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
 import _modDef4763 from "module_4763" /* 4763 */;
 import openChannelCallModal from "openChannelCallModal" /* 4767 */;
-import componentDidMountDefault from "componentDidMount" /* 9481 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9924 */;
-import registerAssetDefault from "registerAsset" /* 10028 */;
-import registerAssetDefault2 from "registerAsset" /* 10030 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10033 */;
-import CameraButton from "CameraButton" /* 10034 */;
+import componentDidMountDefault from "componentDidMount" /* 9486 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9929 */;
+import registerAssetDefault from "registerAsset" /* 10033 */;
+import registerAssetDefault2 from "registerAsset" /* 10035 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10038 */;
+import CameraButton from "CameraButton" /* 10039 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "getParticipants" /* 4576 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import closure_6 from "updateGuildUnreadSentinel" /* 7636 */;
 import closure_7 from "createGuildRecordFromRust" /* 1979 */;
 import closure_8 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
-import closure_9 from "initialize" /* 9899 */;
+import closure_9 from "initialize" /* 9904 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

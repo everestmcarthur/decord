@@ -1,10 +1,10 @@
-// Module ID: 8913
-// Function ID: 8914
+// Module ID: 8918
+// Function ID: 8919
 // Name: WidgetGameTagIconRole
 // Dependencies: [7632, 1114, 2]
 // Exports: buildWidgetGameTagMetadata
 
-// Module 8913 (WidgetGameTagIconRole)
+// Module 8918 (WidgetGameTagIconRole)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import WidgetGameTag from "WidgetGameTag" /* 7632 */;

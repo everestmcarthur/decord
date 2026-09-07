@@ -1,14 +1,14 @@
-// Module ID: 10703
-// Function ID: 10704
+// Module ID: 10708
+// Function ID: 10709
 // Name: validatePurchase
-// Dependencies: [109, 5, 19, 9368, 502, 4224, 7237, 1074, 1085, 1272, 10704, 4461, 10705, 1114, 4240, 4904, 7240, 504, 7447, 10706, 10707, 10663, 10708, 7235, 4233, 9367, 1242, 2]
+// Dependencies: [109, 5, 19, 9373, 502, 4224, 7237, 1074, 1085, 1272, 10709, 4461, 10710, 1114, 4240, 4904, 7240, 504, 7447, 10711, 10712, 10668, 10713, 7235, 4233, 9372, 1242, 2]
 // Exports: useHandlePremiumPurchase
 
-// Module 10703 (validatePurchase)
+// Module 10708 (validatePurchase)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "noop" /* 19 */;
-import { setGPlayAnalytics } from "setGPlayAnalytics" /* 9368 */;
+import { setGPlayAnalytics } from "setGPlayAnalytics" /* 9373 */;
 import closure_8 from "fetchFingerprint" /* 502 */;
 import closure_9 from "reset" /* 4224 */;
 import closure_10 from "updateProduct" /* 7237 */;
@@ -108,7 +108,7 @@ function _validatePurchase() {
           } else if (2 === tmp8) {
             c4 = 0;
             c6 = c3;
-            const tmp18 = new lib(10704)(c6);
+            const tmp18 = new lib(10709)(c6);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;

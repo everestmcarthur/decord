@@ -1,10 +1,10 @@
-// Module ID: 8904
-// Function ID: 8905
+// Module ID: 8909
+// Function ID: 8910
 // Name: TwinButtons
 // Dependencies: [19, 17, 21, 4560, 576, 4982, 4975, 2]
 // Exports: TwinButtons
 
-// Module 8904 (TwinButtons)
+// Module 8909 (TwinButtons)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

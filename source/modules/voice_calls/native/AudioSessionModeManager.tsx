@@ -1,11 +1,11 @@
-// Module ID: 17316
-// Function ID: 17317
+// Module ID: 17319
+// Function ID: 17320
 // Name: handleAVAudioSessionMode
-// Dependencies: [17, 1956, 5421, 4582, 502, 1957, 1908, 2011, 4579, 1895, 1074, 1115, 17317, 7118, 2]
+// Dependencies: [17, 1956, 5421, 4582, 502, 1957, 1908, 2011, 4579, 1895, 1074, 1115, 17320, 7118, 2]
 
-// Module 17316 (handleAVAudioSessionMode)
+// Module 17319 (handleAVAudioSessionMode)
 import initializeDefault from "initialize" /* 7118 */;
-import handleVoiceChannelSelect from "handleVoiceChannelSelect" /* 17317 */;
+import handleVoiceChannelSelect from "handleVoiceChannelSelect" /* 17320 */;
 import closure_2 from "participantFromServer" /* 1956 */;
 import closure_3 from "buildStageChannelUserRoles" /* 5421 */;
 import closure_4 from "reset" /* 4582 */;

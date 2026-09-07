@@ -1,10 +1,10 @@
-// Module ID: 11860
-// Function ID: 11861
+// Module ID: 11865
+// Function ID: 11866
 // Name: GuildRaidResolveActionSheet
-// Dependencies: [32, 19, 17, 1074, 8399, 21, 4560, 576, 1114, 7518, 4527, 7198, 5578, 4556, 8593, 1178, 4975, 4740, 11831, 8404, 2]
+// Dependencies: [32, 19, 17, 1074, 8399, 21, 4560, 576, 1114, 7518, 4527, 7198, 5578, 4556, 8598, 1178, 4975, 4740, 11836, 8404, 2]
 // Exports: default
 
-// Module 11860 (GuildRaidResolveActionSheet)
+// Module 11865 (GuildRaidResolveActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;

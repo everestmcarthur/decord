@@ -1,13 +1,13 @@
-// Module ID: 16972
-// Function ID: 16973
+// Module ID: 16975
+// Function ID: 16976
 // Name: SimpleGuildContainer
-// Dependencies: [19, 17, 21, 4560, 7868, 16333, 576, 16971, 4262, 16973, 4296, 4974, 2]
+// Dependencies: [19, 17, 21, 4560, 7868, 16336, 576, 16974, 4262, 16976, 4296, 4974, 2]
 // Exports: SimpleGuildContainer, SimpleGuildContainerAnimated
 
-// Module 16972 (SimpleGuildContainer)
+// Module 16975 (SimpleGuildContainer)
 import MaskedBadgeDefault from "MaskedBadge" /* 7868 */;
-import getMediaIcon from "getMediaIcon" /* 16333 */;
-import getMediaIconDefault from "getMediaIcon" /* 16333 */;
+import getMediaIcon from "getMediaIcon" /* 16336 */;
+import getMediaIconDefault from "getMediaIcon" /* 16336 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

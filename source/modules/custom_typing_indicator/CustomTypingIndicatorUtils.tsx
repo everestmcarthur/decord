@@ -1,10 +1,10 @@
-// Module ID: 11971
-// Function ID: 11972
+// Module ID: 11975
+// Function ID: 11976
 // Name: items
 // Dependencies: [5459, 8160, 1957, 5438, 1371, 1074, 1374, 1379, 3549, 4213, 4217, 1392, 1086, 4204, 504, 2]
 // Exports: getCustomTypingIndicatorSuggestionMessage, getCustomTypingIndicatorSuggestionPresets, getCustomTypingIndicatorSuggestionWithNameMessage, getRandomCustomTypingIndicatorAnimation, getRandomCustomTypingIndicatorSuggestion, getSurpriseMeEmojiPool, getViewableCustomTypingIndicatorConfig, pickRandomCustomTypingIndicatorEmojis, useCurrentCustomTypingIndicatorConfig
 
-// Module 11971 (items)
+// Module 11975 (items)
 import fromStringAll from "fromString" /* 1086 */;
 import messagesProxyDefault from "messagesProxy" /* 3549 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;

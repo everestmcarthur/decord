@@ -1,27 +1,27 @@
-// Module ID: 11016
-// Function ID: 11017
+// Module ID: 11021
+// Function ID: 11022
 // Name: PremiumGiftStyles
-// Dependencies: [19, 17, 1373, 11017, 21, 11018, 11019, 11020, 11021, 11022, 11023, 11024, 11025, 11026, 4560, 576, 1114, 2460, 5587, 2]
+// Dependencies: [19, 17, 1373, 11022, 21, 11023, 11024, 11025, 11026, 11027, 11028, 11029, 11030, 11031, 4560, 576, 1114, 2460, 5587, 2]
 // Exports: default
 
-// Module 11016 (PremiumGiftStyles)
+// Module 11021 (PremiumGiftStyles)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2460 */;
 import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 11018 */;
-import registerAssetDefault2 from "registerAsset" /* 11019 */;
-import registerAssetDefault3 from "registerAsset" /* 11020 */;
-import registerAssetDefault4 from "registerAsset" /* 11021 */;
-import metadataDefault from "metadata" /* 11022 */;
-import metadataDefault2 from "metadata" /* 11023 */;
-import metadataDefault3 from "metadata" /* 11024 */;
-import metadataDefault4 from "metadata" /* 11025 */;
-import metadataDefault5 from "metadata" /* 11026 */;
+import registerAssetDefault from "registerAsset" /* 11023 */;
+import registerAssetDefault2 from "registerAsset" /* 11024 */;
+import registerAssetDefault3 from "registerAsset" /* 11025 */;
+import registerAssetDefault4 from "registerAsset" /* 11026 */;
+import metadataDefault from "metadata" /* 11027 */;
+import metadataDefault2 from "metadata" /* 11028 */;
+import metadataDefault3 from "metadata" /* 11029 */;
+import metadataDefault4 from "metadata" /* 11030 */;
+import metadataDefault5 from "metadata" /* 11031 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { PremiumGiftStyles } from "GuildFeatures" /* 1373 */;
-import { GIFT_STYLE_DESCRIPTIONS } from "GIFT_STYLE_DESCRIPTIONS" /* 11017 */;
+import { GIFT_STYLE_DESCRIPTIONS } from "GIFT_STYLE_DESCRIPTIONS" /* 11022 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

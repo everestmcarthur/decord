@@ -1,10 +1,10 @@
-// Module ID: 13633
-// Function ID: 13634
+// Module ID: 13637
+// Function ID: 13638
 // Name: createWebSocket
 // Dependencies: [2]
 // Exports: default
 
-// Module 13633 (createWebSocket)
+// Module 13637 (createWebSocket)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/gateway/createWebSocket.android.tsx");

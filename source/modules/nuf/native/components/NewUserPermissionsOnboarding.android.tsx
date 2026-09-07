@@ -1,10 +1,10 @@
-// Module ID: 12688
-// Function ID: 12689
+// Module ID: 12692
+// Function ID: 12693
 // Name: NewUserPermissionsOnboarding
 // Dependencies: [19, 17, 21, 4560, 5682, 576, 4556, 4975, 1114, 2]
 // Exports: default
 
-// Module 12688 (NewUserPermissionsOnboarding)
+// Module 12692 (NewUserPermissionsOnboarding)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

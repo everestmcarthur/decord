@@ -1,10 +1,10 @@
-// Module ID: 13550
-// Function ID: 13551
+// Module ID: 13554
+// Function ID: 13555
 // Name: getViewerProductId
 // Dependencies: [19, 7424, 7237, 1373, 7409, 7240, 1115, 7234, 4233, 504, 2]
 // Exports: usePremiumTier2DeltaPriceString
 
-// Module 13550 (getViewerProductId)
+// Module 13554 (getViewerProductId)
 import getPremiumBundledItemsFromProductId from "getPremiumBundledItemsFromProductId" /* 7409 */;
 import closure_2 from "noop" /* 19 */;
 import { useNativeCheckoutStore } from "context" /* 7424 */;

@@ -1,20 +1,20 @@
-// Module ID: 9751
-// Function ID: 9752
+// Module ID: 9756
+// Function ID: 9757
 // Name: RemoveIcon
-// Dependencies: [19, 17, 1371, 8401, 21, 4560, 4910, 1114, 4573, 4258, 5123, 6616, 5605, 9752, 9738, 4556, 1178, 9753, 9754, 4277, 5617, 2]
+// Dependencies: [19, 17, 1371, 8401, 21, 4560, 4910, 1114, 4573, 4258, 5123, 6616, 5605, 9757, 9743, 4556, 1178, 9758, 9759, 4277, 5617, 2]
 // Exports: ChannelOverwritesCheckboxItem
 
-// Module 9751 (RemoveIcon)
+// Module 9756 (RemoveIcon)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1178 */;
 import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4277 */;
 import Text from "Text" /* 4556 */;
 import TableRowInner from "TableRowInner" /* 5605 */;
 import FormCheckbox from "FormCheckbox" /* 5617 */;
-import getRoleRowDataAll from "getRoleRowData" /* 9738 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9752 */;
-import registerAssetDefault from "registerAsset" /* 9753 */;
-import registerAssetDefault2 from "registerAsset" /* 9754 */;
+import getRoleRowDataAll from "getRoleRowData" /* 9743 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9757 */;
+import registerAssetDefault from "registerAsset" /* 9758 */;
+import registerAssetDefault2 from "registerAsset" /* 9759 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
 import { RowType } from "RowType" /* 8401 */;

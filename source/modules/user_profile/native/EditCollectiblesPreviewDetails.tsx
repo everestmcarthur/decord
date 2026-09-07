@@ -1,10 +1,10 @@
-// Module ID: 13174
-// Function ID: 13175
+// Module ID: 13178
+// Function ID: 13179
 // Name: EditCollectiblesPreviewDescription
 // Dependencies: [19, 17, 2025, 21, 4560, 504, 4218, 7554, 4242, 4556, 1114, 8173, 2]
 // Exports: default
 
-// Module 13174 (EditCollectiblesPreviewDescription)
+// Module 13178 (EditCollectiblesPreviewDescription)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;

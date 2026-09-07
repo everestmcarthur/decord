@@ -1,10 +1,10 @@
-// Module ID: 16499
-// Function ID: 16500
+// Module ID: 16502
+// Function ID: 16503
 // Name: AddEmojiButton
-// Dependencies: [32, 19, 17, 7306, 1957, 5413, 4199, 1074, 1374, 21, 4211, 7764, 4560, 576, 1115, 4409, 504, 4573, 7456, 11121, 5123, 1114, 8757, 4556, 11259, 1091, 1396, 11252, 10895, 11316, 11688, 11734, 16491, 5071, 7763, 7971, 11661, 8351, 11680, 11669, 4262, 4987, 672, 7209, 2]
+// Dependencies: [32, 19, 17, 7306, 1957, 5413, 4199, 1074, 1374, 21, 4211, 7764, 4560, 576, 1115, 4409, 504, 4573, 7456, 11126, 5123, 1114, 8762, 4556, 11264, 1091, 1396, 11257, 10900, 11321, 11693, 11739, 16494, 5071, 7763, 7971, 11666, 8351, 11685, 11674, 4262, 4987, 672, 7209, 2]
 // Exports: default, onAddReaction, useThread
 
-// Module 16499 (AddEmojiButton)
+// Module 16502 (AddEmojiButton)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import set from "set" /* 1115 */;
@@ -12,8 +12,8 @@ import MAX_REACTIONS from "MAX_REACTIONS" /* 4211 */;
 import hexToRgba from "hexToRgba" /* 4409 */;
 import PressableBase from "PressableBase" /* 5123 */;
 import checkReactionResponse from "checkReactionResponse" /* 7764 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11688 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11734 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11693 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11739 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

@@ -1,18 +1,18 @@
-// Module ID: 16404
-// Function ID: 16405
+// Module ID: 16407
+// Function ID: 16408
 // Name: BadgedIcon
-// Dependencies: [19, 17, 11660, 21, 8813, 16405, 4560, 576, 4495, 4262, 4981, 7860, 4523, 11707, 504, 7855, 7850, 7853, 7182, 7859, 8097, 1114, 2]
+// Dependencies: [19, 17, 11665, 21, 8818, 16408, 4560, 576, 4495, 4262, 4981, 7860, 4523, 11712, 504, 7855, 7850, 7853, 7182, 7859, 8097, 1114, 2]
 
-// Module 16404 (BadgedIcon)
+// Module 16407 (BadgedIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import styleProperties from "styleProperties" /* 4981 */;
 import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7860 */;
-import SolidCutoutDefault from "SolidCutout" /* 8813 */;
+import SolidCutoutDefault from "SolidCutout" /* 8818 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getTimeSafe" /* 11660 */;
+import closure_5 from "getTimeSafe" /* 11665 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -27,7 +27,7 @@ function BadgedIcon(arg0) {
   if (type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
     let BookmarkIcon = tmp4(4523).ClockIcon;
   } else {
-    BookmarkIcon = tmp4(11707).BookmarkIcon;
+    BookmarkIcon = tmp4(11712).BookmarkIcon;
   }
   obj = { style: items, children: null };
   items = [tmp6.container, iconSizeStyles];

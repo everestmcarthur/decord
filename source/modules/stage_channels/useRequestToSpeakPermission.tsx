@@ -1,10 +1,10 @@
-// Module ID: 9916
-// Function ID: 9917
+// Module ID: 9921
+// Function ID: 9922
 // Name: useRequestToSpeakPermission
 // Dependencies: [32, 19, 1957, 1074, 504, 4204, 8398, 2]
 // Exports: useRequestToSpeakPermission
 
-// Module 9916 (useRequestToSpeakPermission)
+// Module 9921 (useRequestToSpeakPermission)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;

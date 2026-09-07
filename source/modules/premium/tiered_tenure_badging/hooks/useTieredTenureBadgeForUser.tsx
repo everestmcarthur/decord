@@ -1,10 +1,10 @@
-// Module ID: 11185
-// Function ID: 11186
+// Module ID: 11190
+// Function ID: 11191
 // Name: useTieredTenureBadgeForUser
 // Dependencies: [7621, 504, 7634, 2]
 // Exports: useTieredTenureBadgeForUser
 
-// Module 11185 (useTieredTenureBadgeForUser)
+// Module 11190 (useTieredTenureBadgeForUser)
 import closure_2 from "createUserWidgetFromServer" /* 7621 */;
 
 const require = arg1;

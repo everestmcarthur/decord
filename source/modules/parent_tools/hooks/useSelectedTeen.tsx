@@ -1,10 +1,10 @@
-// Module ID: 8647
-// Function ID: 8648
+// Module ID: 8652
+// Function ID: 8653
 // Name: useSelectedTeen
 // Dependencies: [1371, 7537, 563, 2]
 // Exports: useSelectedTeen, useSelectedTeenId
 
-// Module 8647 (useSelectedTeen)
+// Module 8652 (useSelectedTeen)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
 import closure_2 from "mergeGuildAvatar" /* 1371 */;
 import closure_3 from "freshTeenActivityWithMap" /* 7537 */;

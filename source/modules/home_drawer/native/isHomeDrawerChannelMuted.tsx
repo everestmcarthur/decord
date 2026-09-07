@@ -1,10 +1,10 @@
-// Module ID: 16317
-// Function ID: 16318
+// Module ID: 16320
+// Function ID: 16321
 // Name: useIsHomeDrawerChannelMuted
 // Dependencies: [4201, 1961, 4741, 504, 2]
 // Exports: useIsHomeDrawerChannelMuted
 
-// Module 16317 (useIsHomeDrawerChannelMuted)
+// Module 16320 (useIsHomeDrawerChannelMuted)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "storeThread" /* 4201 */;
 import { isThread } from "createChannelRecord" /* 1961 */;

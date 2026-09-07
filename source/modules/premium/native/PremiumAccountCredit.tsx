@@ -1,10 +1,10 @@
-// Module ID: 13348
-// Function ID: 13349
+// Module ID: 13352
+// Function ID: 13353
 // Name: AccountCreditTier
 // Dependencies: [19, 17, 7394, 1074, 21, 4560, 576, 4218, 1114, 3063, 7172, 4556, 504, 12, 2]
 // Exports: default
 
-// Module 13348 (AccountCreditTier)
+// Module 13352 (AccountCreditTier)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

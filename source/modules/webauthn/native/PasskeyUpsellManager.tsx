@@ -1,17 +1,17 @@
-// Module ID: 14662
-// Function ID: 14663
+// Module ID: 14665
+// Function ID: 14666
 // Name: handlePasskeyUpsellShow
-// Dependencies: [502, 1371, 14656, 1074, 7118, 6951, 4380, 1943, 4417, 6597, 14663, 2]
+// Dependencies: [502, 1371, 14659, 1074, 7118, 6951, 4380, 1943, 4417, 6597, 14666, 2]
 
-// Module 14662 (handlePasskeyUpsellShow)
+// Module 14665 (handlePasskeyUpsellShow)
 import DismissibleContent from "DismissibleContent" /* 1943 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4380 */;
 import _crypto from "_crypto" /* 6951 */;
 import initializeDefault from "initialize" /* 7118 */;
-import _modDef14663 from "module_14663" /* 14663 */;
+import _modDef14666 from "module_14666" /* 14666 */;
 import closure_3 from "fetchFingerprint" /* 502 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "hasFetchedCredentials" /* 14656 */;
+import closure_5 from "hasFetchedCredentials" /* 14659 */;
 import { LoginStates } from "ME" /* 1074 */;
 
 require = arg1;
@@ -43,8 +43,8 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
                 currentUser = currentUser.getCurrentUser();
                 if (tmp6) {
                   if (obj3.hasFetchedCredentials()) {
-                    _modDef14663.openPasskeyUpsell();
-                    const obj6 = _modDef14663;
+                    _modDef14666.openPasskeyUpsell();
+                    const obj6 = _modDef14666;
                   } else if (!c7) {
                     c7 = true;
                     const webAuthnCredentials = tmp(6597).fetchWebAuthnCredentials();

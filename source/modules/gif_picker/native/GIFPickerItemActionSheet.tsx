@@ -1,10 +1,10 @@
-// Module ID: 10380
-// Function ID: 10381
+// Module ID: 10385
+// Function ID: 10386
 // Name: GIFPickerItemActionSheet
-// Dependencies: [19, 17, 21, 4560, 576, 10370, 10366, 1477, 4527, 4259, 1114, 10381, 7190, 4258, 4975, 7150, 5587, 5433, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 10375, 10371, 1477, 4527, 4259, 1114, 10386, 7190, 4258, 4975, 7150, 5587, 5433, 2]
 // Exports: default
 
-// Module 10380 (GIFPickerItemActionSheet)
+// Module 10385 (GIFPickerItemActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

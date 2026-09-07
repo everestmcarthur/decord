@@ -1,14 +1,14 @@
-// Module ID: 12160
-// Function ID: 12161
+// Module ID: 12164
+// Function ID: 12165
 // Name: set
-// Dependencies: [19, 17, 4552, 21, 1894, 4560, 576, 504, 4296, 12161, 12162, 4556, 12163, 1178, 10415, 2]
+// Dependencies: [19, 17, 4552, 21, 1894, 4560, 576, 504, 4296, 12165, 12166, 4556, 12167, 1178, 10420, 2]
 // Exports: default
 
-// Module 12160 (set)
+// Module 12164 (set)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;
-import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 12163 */;
+import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 12167 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -38,7 +38,7 @@ export default function CommandOptionView(option) {
   const stateFromStores = obj.useStateFromStores(items, () => lib.useReducedMotion);
   const ReduceMotion = option(4296).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
-  const optionEnteringAnimation = option(12161).useOptionEnteringAnimation();
+  const optionEnteringAnimation = option(12165).useOptionEnteringAnimation();
   let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
   if (set.has(option.type)) {
     if (option.required || isPreSelectedOption) {
@@ -66,8 +66,8 @@ export default function CommandOptionView(option) {
     obj1[0] = fn;
     const obj2 = { collapsable: false, entering: null, exiting: null, layout: null, onLayout: null, children: null };
     obj2[1] = optionEnteringAnimation.EnteringAnimation;
-    obj2[2] = tmp2(12161).ExitingAnimation;
-    obj2[3] = tmp2(12161).LayoutAnimation;
+    obj2[2] = tmp2(12165).ExitingAnimation;
+    obj2[3] = tmp2(12165).LayoutAnimation;
     obj2[4] = function onLayout(arg0) {
       callback(arg0, option);
     };
@@ -113,7 +113,7 @@ export default function CommandOptionView(option) {
       obj7[3] = tmp.optionErrorContainer;
       const obj8 = { style: null, source: null, size: null };
       obj8[0] = tmp.optionErrorIcon;
-      obj8[1] = tmp18(10415);
+      obj8[1] = tmp18(10420);
       obj8[2] = tmp2(1178).IconSizes.REFRESH_SMALL_16;
       const items3 = [tmp17(tmp2(1178).Icon, obj8), ];
       const obj9 = { variant: "text-xs/medium", color: "text-feedback-critical", children: null };
@@ -126,10 +126,10 @@ export default function CommandOptionView(option) {
     obj3[2] = items2;
     obj2[5] = closure_6(View, obj3);
     obj1[1] = closure_5(_modDef4296.View, obj2);
-    obj[1] = closure_5(tmp2(12162).AwaitAnimationContext, obj1);
+    obj[1] = closure_5(tmp2(12166).AwaitAnimationContext, obj1);
     return closure_5(tmp2(4296).LayoutAnimationConfig, obj);
   } else {
     return null;
   }
-  const tmp2Result = option(12161);
+  const tmp2Result = option(12165);
 };

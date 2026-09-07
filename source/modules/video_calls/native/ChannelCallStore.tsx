@@ -1,17 +1,17 @@
-// Module ID: 9467
-// Function ID: 9468
+// Module ID: 9472
+// Function ID: 9473
 // Name: VoiceChatDrawerState
-// Dependencies: [19, 1956, 9468, 1920, 4581, 4447, 8332, 560, 1249, 573, 4761, 12, 9469, 9470, 9471, 504, 9472, 2]
+// Dependencies: [19, 1956, 9473, 1920, 4581, 4447, 8332, 560, 1249, 573, 4761, 12, 9474, 9475, 9476, 504, 9477, 2]
 // Exports: clearFocusTimer, resetChannelCallStore, resetFocus, resetFocusTimer, setFocus, setVoiceChatDrawerState, toggleFocus, useChannelCallOrientationHandlers, useIsVoiceChatFocused
 
-// Module 9467 (VoiceChatDrawerState)
+// Module 9472 (VoiceChatDrawerState)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import batchUpdates from "batchUpdates" /* 1249 */;
-import areParticipantStatesEqualDefault from "areParticipantStatesEqual" /* 9469 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 9470 */;
+import areParticipantStatesEqualDefault from "areParticipantStatesEqual" /* 9474 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 9475 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "participantFromServer" /* 1956 */;
-import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9468 */;
+import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9473 */;
 import { OrientationLockState } from "items3" /* 1920 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
 import keys from "keys" /* 560 */;
@@ -99,7 +99,7 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
   if (currentEmbeddedActivity != null) {
     applicationId = currentEmbeddedActivity.applicationId;
   }
-  obj = _require(9471);
+  obj = _require(9476);
   const tmp7 = _require;
   const tmp8 = applicationId;
   const items = [tmp8];

@@ -1,23 +1,23 @@
 // Module ID: 8555
 // Function ID: 8556
 // Name: _isNativeReflectConstruct
-// Dependencies: [109, 41, 42, 93, 95, 98, 19, 21, 8461, 8469, 8475, 8468, 8556, 8552, 8477]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8464, 8471, 8472, 8478, 8556, 8480]
 
 // Module 8555 (_isNativeReflectConstruct)
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import extractFontDefault from "extractFont" /* 8475 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8477 */;
-import _isNativeReflectConstructDefault2 from "_isNativeReflectConstruct" /* 8552 */;
+import extractPropsDefault from "extractProps" /* 8471 */;
+import extractFontDefault from "extractFont" /* 8478 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8480 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8556 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_classCallCheck" /* 41 */;
-import closure_6 from "_possibleConstructorReturn" /* 93 */;
-import closure_7 from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_classCallCheck" /* 41 */;
+import closure_4 from "_possibleConstructorReturn" /* 93 */;
+import closure_5 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
+import extractFont from "extractFont" /* 8478 */;
 
-const TextPath = arg1;
+const TSpan = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -37,18 +37,17 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_3 = ["children", "xlinkHref", "href", "startOffset", "method", "spacing", "side", "alignmentBaseline", "midLine"];
 noopAll;
-class TextPath {
+class TSpan {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_5(this, closure_0);
+    tmp = closure_3(this, closure_0);
     items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(closure_0);
-    tmp3 = closure_6;
+    tmp2 = closure_5;
+    obj = closure_5(closure_0);
+    tmp3 = closure_4;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -62,77 +61,45 @@ class TextPath {
       matrix = matrix.matrix;
       let tmp = !matrix;
       if (!matrix) {
-        tmp = closure_1_1(closure_1_2[8])(matrix);
+        tmp = closure_1_1(closure_1_2[7])(matrix);
       }
       if (tmp) {
         matrix.matrix = tmp;
       }
-      const merged = Object.assign(matrix, lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(matrix, true)));
+      const propsAndStylesResult = lib(closure_1_2[8]).propsAndStyles(matrix);
+      const obj = lib(closure_1_2[8]);
+      const merged = Object.assign(propsAndStylesResult, lib(closure_1_2[9]).pickNotNil(closure_1_1(closure_1_2[10])(propsAndStylesResult, false)));
       if (lib.root) {
         const root = lib.root;
-        root.setNativeProps(matrix);
+        root.setNativeProps(propsAndStylesResult);
       }
     };
     return tmp3Result;
   }
 }
-_inheritsDefault(TextPath, _isNativeReflectConstructDefault);
+_inheritsDefault(TSpan, _isNativeReflectConstructDefault);
 let items = [
   {
     key: "render",
     value: function render() {
-      const self = this;
-      const props = this.props;
-      ({ children, href } = props);
-      if (undefined === href) {
-        href = props.xlinkHref;
-      }
-      const startOffset = props.startOffset;
-      let num = 0;
-      if (undefined !== startOffset) {
-        num = startOffset;
-      }
-      ({ method, spacing, side, alignmentBaseline, midLine } = props);
-      let match = href;
-      if (href) {
-        match = href.match(TextPath(8469).idPattern);
-      }
-      let tmp5 = match;
-      if (match) {
-        tmp5 = match[1];
-      }
-      if (tmp5) {
-        obj1 = TextPath(8468);
-        const withoutXYResult = obj1.withoutXY(self, tmp);
-        const _Object = Object;
-        let obj = { children: null };
-        obj[0] = children;
-        obj = { href: null, startOffset: null, method: null, spacing: null, side: null, alignmentBaseline: null, midLine: null };
-        obj[0] = tmp5;
-        obj[1] = num;
-        obj[2] = method;
-        obj[3] = spacing;
-        obj[4] = side;
-        obj[5] = alignmentBaseline;
-        obj[6] = midLine;
-        const merged = Object.assign(withoutXYResult, extractFontDefault(obj, true), obj);
-        withoutXYResult.ref = self.refMethod;
-        obj1 = {};
-        const merged1 = Object.assign(withoutXYResult);
-        return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
-      } else {
-        const _console = console;
-        console.warn(`Invalid \`href\` prop for \`TextPath\` element, expected a href like "#id", but got: "${href}"`);
-        obj = { ref: null, children: null };
-        obj[0] = self.refMethod;
-        obj[1] = children;
-        return jsx(_isNativeReflectConstructDefault2, { ref: null, children: null });
-      }
-      tmp = callback(props, closure_3);
+      let obj = TSpan(8471);
+      const propsAndStylesResult = obj.propsAndStyles(this.props);
+      obj = {};
+      const merged = Object.assign(propsAndStylesResult);
+      obj.x = null;
+      obj.y = null;
+      const tmp2Result = extractPropsDefault(obj, this);
+      const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
+      tmp2Result.ref = this.refMethod;
+      obj = {};
+      const tmp2 = extractPropsDefault;
+      const merged2 = Object.assign(tmp2Result);
+      return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(TextPath, items);
-importDefaultResultResult.displayName = "TextPath";
+const importDefaultResultResult = importDefaultResult(TSpan, items);
+importDefaultResultResult.displayName = "TSpan";
+extractFont.setTSpan(importDefaultResultResult);
 
 export default importDefaultResultResult;

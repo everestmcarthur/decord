@@ -1,19 +1,19 @@
-// Module ID: 12476
-// Function ID: 12477
+// Module ID: 12480
+// Function ID: 12481
 // Name: GuildProgressHeader
-// Dependencies: [5, 19, 17, 9064, 2012, 12469, 1074, 21, 4560, 576, 504, 12474, 4258, 1242, 12477, 12478, 9820, 6232, 1114, 9063, 5138, 5812, 4571, 4527, 1109, 6348, 12479, 7182, 5802, 4556, 4975, 5123, 7198, 1178, 2]
+// Dependencies: [5, 19, 17, 9069, 2012, 12473, 1074, 21, 4560, 576, 504, 12478, 4258, 1242, 12481, 12482, 9825, 6232, 1114, 9068, 5138, 5812, 4571, 4527, 1109, 6348, 12483, 7182, 5802, 4556, 4975, 5123, 7198, 1178, 2]
 // Exports: default
 
-// Module 12476 (GuildProgressHeader)
+// Module 12480 (GuildProgressHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleFormInit" /* 9064 */;
+import closure_6 from "handleFormInit" /* 9069 */;
 import closure_7 from "comparator" /* 2012 */;
-import Steps from "Steps" /* 12469 */;
+import Steps from "Steps" /* 12473 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -83,10 +83,10 @@ export default function GuildProgressActionSheet(guild) {
               closure_1 = tmp5;
               let base64 = tmp2;
               base64 = undefined;
-              closure_1_1(9063).init(closure_1_5);
-              const obj6 = closure_1_1(9063);
-              closure_1_0(12474).hideActionSheet(closure_1_0.id);
-              const obj7 = closure_1_0(12474);
+              closure_1_1(9068).init(closure_1_5);
+              const obj6 = closure_1_1(9068);
+              closure_1_0(12478).hideActionSheet(closure_1_0.id);
+              const obj7 = closure_1_0(12478);
               obj1 = { size: null };
               obj1[0] = closure_1_10;
               dependencyMap = 1;
@@ -106,7 +106,7 @@ export default function GuildProgressActionSheet(guild) {
           } else {
             base64 = arg1.base64;
             if (null != base64) {
-              obj = closure_1_1(9063);
+              obj = closure_1_1(9068);
               obj.updateIcon(closure_5, base64);
             }
             c3 = 3;

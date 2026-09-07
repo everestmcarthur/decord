@@ -1,9 +1,9 @@
-// Module ID: 17304
-// Function ID: 17305
+// Module ID: 17307
+// Function ID: 17308
 // Name: handlePostConnectionOpen
-// Dependencies: [5, 1957, 2011, 4381, 1098, 1074, 7118, 4771, 4763, 17305, 1896, 1093, 2]
+// Dependencies: [5, 1957, 2011, 4381, 1098, 1074, 7118, 4771, 4763, 17308, 1896, 1093, 2]
 
-// Module 17304 (handlePostConnectionOpen)
+// Module 17307 (handlePostConnectionOpen)
 import _modDef4763 from "module_4763" /* 4763 */;
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4771 */;
 import initializeDefault from "initialize" /* 7118 */;

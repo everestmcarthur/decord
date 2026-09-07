@@ -1,15 +1,15 @@
-// Module ID: 16598
-// Function ID: 16599
+// Module ID: 16601
+// Function ID: 16602
 // Name: VibegrationsModelSettingsSheet
-// Dependencies: [19, 16589, 21, 504, 16599, 1114, 3547, 7198, 7149, 6627, 4973, 576, 5685, 5688, 16600, 4556, 2]
+// Dependencies: [19, 16592, 21, 504, 16602, 1114, 3547, 7198, 7149, 6627, 4973, 576, 5685, 5688, 16603, 4556, 2]
 // Exports: default
 
-// Module 16598 (VibegrationsModelSettingsSheet)
+// Module 16601 (VibegrationsModelSettingsSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import messagesProxyDefault from "messagesProxy" /* 3547 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "rejectPendingPublish" /* 16589 */;
-import { sendModelSettings } from "rejectPendingPublish" /* 16589 */;
+import closure_4 from "rejectPendingPublish" /* 16592 */;
+import { sendModelSettings } from "rejectPendingPublish" /* 16592 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -68,7 +68,7 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     obj3[3] = stringResult;
     obj3[4] = stringResult;
     const main = choices.main;
-    obj3[5] = main.map((label) => callback2(projectId(5688).TableRadioRow, { label: label.label, subLabel: projectId(16600).PROVIDER_LABELS[label.provider], value: label.id }, label.id));
+    obj3[5] = main.map((label) => callback2(projectId(5688).TableRadioRow, { label: label.label, subLabel: projectId(16603).PROVIDER_LABELS[label.provider], value: label.id }, label.id));
     const items3 = [callback(tmp(5685).TableRadioGroup, obj3), , ];
     const obj4 = { hasIcons: false, defaultValue: null, onChange: null, title: null, accessibilityLabel: null, children: null };
     obj4[1] = settings.main.thinking;
@@ -85,7 +85,7 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     obj4[4] = stringResult1;
     const thinking = choices.thinking;
     obj4[5] = thinking.map((value) => {
-      let tmp2 = projectId(16600).THINKING_LABELS[value];
+      let tmp2 = projectId(16603).THINKING_LABELS[value];
       if (tmp2 == null) {
         tmp2 = value;
       }

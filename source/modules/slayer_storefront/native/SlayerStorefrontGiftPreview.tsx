@@ -1,16 +1,16 @@
-// Module ID: 11447
-// Function ID: 11448
+// Module ID: 11452
+// Function ID: 11453
 // Name: WarningBox
-// Dependencies: [19, 17, 21, 4560, 8825, 4556, 1114, 9459, 3417, 2]
+// Dependencies: [19, 17, 21, 4560, 8830, 4556, 1114, 9464, 3417, 2]
 // Exports: default
 
-// Module 11447 (WarningBox)
+// Module 11452 (WarningBox)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8825 */;
-import InfoBox from "InfoBox" /* 9459 */;
-import InfoBoxDefault from "InfoBox" /* 9459 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8830 */;
+import InfoBox from "InfoBox" /* 9464 */;
+import InfoBoxDefault from "InfoBox" /* 9464 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

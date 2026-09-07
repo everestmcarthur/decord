@@ -1,17 +1,17 @@
-// Module ID: 12412
-// Function ID: 12413
+// Module ID: 12416
+// Function ID: 12417
 // Name: getOrRefreshPushSyncToken
-// Dependencies: [5, 12413, 502, 1074, 6596, 3, 1099, 1272, 1232, 12417, 510, 4753, 1115, 1250, 1369, 573, 2]
+// Dependencies: [5, 12417, 502, 1074, 6596, 3, 1099, 1272, 1232, 12421, 510, 4753, 1115, 1250, 1369, 573, 2]
 // Exports: setPushNotificationPermissionEligibleForPrompt, setPushPermissionReactivationSeen, setPushPermissionState, updateNotificationAuthorizationStatus
 
-// Module 12412 (getOrRefreshPushSyncToken)
+// Module 12416 (getOrRefreshPushSyncToken)
 import timestampDefault from "timestamp" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import encodeProperties from "encodeProperties" /* 1250 */;
 import _modDef4753 from "module_4753" /* 4753 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 12413 */;
+import closure_5 from "initialize" /* 12417 */;
 import closure_6 from "fetchFingerprint" /* 502 */;
 import ME from "ME" /* 1074 */;
 import str2 from "str2" /* 6596 */;
@@ -110,7 +110,7 @@ function _getOrRefreshPushSyncToken() {
           } else {
             token = body.body.token;
             c4 = 0;
-            obj = callback(12417);
+            obj = callback(12421);
             obj.updatePushSyncToken(lib.id, token);
             c6 = 3;
             const obj6 = { value: null, done: true };
@@ -249,8 +249,8 @@ let obj = {
       } else if (arg0 !== 2) {
         v0 = arg1;
         if (v0.body.invalid_push_sync_tokens.length > 0) {
-          const result = v0(12417).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
-          const obj9 = v0(12417);
+          const result = v0(12421).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
+          const obj9 = v0(12421);
         }
       }
       return arg1;

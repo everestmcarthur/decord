@@ -1,10 +1,10 @@
-// Module ID: 8901
-// Function ID: 8902
+// Module ID: 8906
+// Function ID: 8907
 // Name: StyleSheet
-// Dependencies: [19, 17, 21, 4560, 576, 4296, 4561, 1396, 8902, 4556, 8716, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4296, 4561, 1396, 8907, 4556, 8721, 2]
 // Exports: default
 
-// Module 8901 (StyleSheet)
+// Module 8906 (StyleSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -110,7 +110,7 @@ export default function GameProfileNavigationHeader(game) {
   if (null != name) {
     obj = { style: null, children: null };
     obj[0] = tmp.headerContainer;
-    const items2 = [callback(tmp3(8902).BackgroundBlurFill, {}), ];
+    const items2 = [callback(tmp3(8907).BackgroundBlurFill, {}), ];
     obj = { style: null, children: null };
     obj[0] = tmp.headerRow;
     let tmp15Result = null != memo;
@@ -138,13 +138,13 @@ export default function GameProfileNavigationHeader(game) {
       obj5[0] = tmp.rankPillContainer;
       const obj6 = { rank: null, compact: true };
       obj6[0] = game.l30Rank;
-      const items5 = [tmp15(application(8716), obj6), ];
+      const items5 = [tmp15(application(8721), obj6), ];
       const obj7 = { style: null, children: null };
       const items6 = [StyleSheet.absoluteFill, animatedStyle1];
       obj7[0] = items6;
       const obj8 = { rank: null };
       obj8[0] = game.l30Rank;
-      obj7[1] = tmp15(application(8716), obj8);
+      obj7[1] = tmp15(application(8721), obj8);
       items5[1] = tmp15(application(4296).View, obj7);
       obj5[1] = items5;
       tmp13Result = tmp13(tmp14, obj5);

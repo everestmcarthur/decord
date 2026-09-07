@@ -1,10 +1,10 @@
-// Module ID: 16457
-// Function ID: 16458
+// Module ID: 16460
+// Function ID: 16461
 // Name: ICYMICustomScoreChannelRow
-// Dependencies: [32, 19, 17, 7525, 1957, 1979, 4741, 8335, 21, 4560, 576, 504, 4713, 8350, 1114, 4527, 16458, 1896, 5028, 5605, 1178, 10145, 4556, 7528, 1611, 16459, 11153, 8874, 2]
+// Dependencies: [32, 19, 17, 7525, 1957, 1979, 4741, 8335, 21, 4560, 576, 504, 4713, 8350, 1114, 4527, 16461, 1896, 5028, 5605, 1178, 10150, 4556, 7528, 1611, 16462, 11158, 8879, 2]
 // Exports: default
 
-// Module 16457 (ICYMICustomScoreChannelRow)
+// Module 16460 (ICYMICustomScoreChannelRow)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -318,6 +318,6 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   obj[2] = callback;
   obj[3] = memo;
   obj[4] = keyExtractor;
-  obj[1] = callback(navigation(8874).AnimatedFlashList, obj);
+  obj[1] = callback(navigation(8879).AnimatedFlashList, obj);
   return callback(guildChannels, obj);
 };

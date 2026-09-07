@@ -1,14 +1,14 @@
-// Module ID: 15660
-// Function ID: 15661
+// Module ID: 15663
+// Function ID: 15664
 // Name: DevToolsProfilingScreen
-// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 10194, 4973, 5687, 5605, 4556, 15661, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 10199, 4973, 5687, 5605, 4556, 15664, 2]
 // Exports: default
 
-// Module 15660 (DevToolsProfilingScreen)
+// Module 15663 (DevToolsProfilingScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import Stack from "Stack" /* 4973 */;
-import addValue from "addValue" /* 10194 */;
-import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 15661 */;
+import addValue from "addValue" /* 10199 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 15664 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -31,7 +31,7 @@ let result = require("set").fileFinishedImporting("modules/devtools/native/compo
 export default function DevToolsProfilingScreen() {
   [r10008, require] = componentRenderStats(React.useState(false), 2);
   const callback = React.useCallback(() => {
-    const result = closure_1_0(10194).clearComponentRenderStats();
+    const result = closure_1_0(10199).clearComponentRenderStats();
     callback(true);
   }, []);
   const tmp3 = callback();

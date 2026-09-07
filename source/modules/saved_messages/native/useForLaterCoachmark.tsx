@@ -1,11 +1,11 @@
-// Module ID: 16402
-// Function ID: 16403
+// Module ID: 16405
+// Function ID: 16406
 // Name: CoachmarkImg
-// Dependencies: [32, 19, 17, 1954, 21, 1943, 4560, 13292, 7855, 7388, 1114, 11127, 2]
+// Dependencies: [32, 19, 17, 1954, 21, 1943, 4560, 13296, 7855, 7388, 1114, 11132, 2]
 // Exports: default
 
-// Module 16402 (CoachmarkImg)
-import registerAssetDefault from "registerAsset" /* 13292 */;
+// Module 16405 (CoachmarkImg)
+import registerAssetDefault from "registerAsset" /* 13296 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
@@ -49,7 +49,7 @@ export default function useForLaterCoachmark(targetRef) {
     };
     return obj;
   }, items2);
-  tmpResult = tmp(11127);
+  tmpResult = tmp(11132);
   const coachmark = tmpResult.useCoachmark(targetRef, memo);
   return tmp4[1];
 };

@@ -1,17 +1,17 @@
-// Module ID: 10756
-// Function ID: 10757
+// Module ID: 10761
+// Function ID: 10762
 // Name: GiftingBadgeProgressBanner
-// Dependencies: [19, 17, 21, 4560, 576, 7162, 8768, 1250, 10749, 4556, 1114, 2492, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 7162, 8773, 1250, 10754, 4556, 1114, 2492, 2]
 // Exports: default
 
-// Module 10756 (GiftingBadgeProgressBanner)
+// Module 10761 (GiftingBadgeProgressBanner)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import encodeProperties from "encodeProperties" /* 1250 */;
 import messagesProxyDefault from "messagesProxy" /* 2492 */;
 import Text from "Text" /* 4556 */;
 import contextDefault from "context" /* 7162 */;
-import trackImpressionDefault from "trackImpression" /* 8768 */;
+import trackImpressionDefault from "trackImpression" /* 8773 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -49,7 +49,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   if (tmp10Result) {
     obj1 = { icon: null, size: 24 };
     obj1[0] = nextTierIcon;
-    tmp10Result = tmp10(tmp2(10749), obj1);
+    tmp10Result = tmp10(tmp2(10754), obj1);
   }
   obj[1] = tmp10Result;
   const items2 = [closure_4(View, obj), ];

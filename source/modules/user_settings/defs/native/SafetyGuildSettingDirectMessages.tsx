@@ -1,20 +1,20 @@
-// Module ID: 15875
-// Function ID: 15876
+// Module ID: 15878
+// Function ID: 15879
 // Name: toggle
-// Dependencies: [1979, 15869, 7975, 11469, 14824, 15876, 1935, 4904, 1114, 4994, 6995, 15877, 11468, 2]
+// Dependencies: [1979, 15872, 7975, 11474, 14827, 15879, 1935, 4904, 1114, 4994, 6995, 15880, 11473, 2]
 
-// Module 15875 (toggle)
+// Module 15878 (toggle)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import setDefault from "set" /* 4904 */;
 import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14824 */;
-import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15876 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15877 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14827 */;
+import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15879 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15880 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15869 */;
-import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11469 */;
-import createToggle from "createToggle" /* 11468 */;
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15872 */;
+import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11474 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 ({ getSelectedGuildId: c4, useUserSafetySettingsSelectedGuildStore: c5 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);

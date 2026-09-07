@@ -1,13 +1,13 @@
-// Module ID: 17678
-// Function ID: 17679
+// Module ID: 17681
+// Function ID: 17682
 // Name: GuildSettingsRoleSubscriptionsEmptyContent
-// Dependencies: [19, 1979, 1074, 1350, 21, 1483, 17679, 17680, 17681, 504, 2]
+// Dependencies: [19, 1979, 1074, 1350, 21, 1483, 17682, 17683, 17684, 504, 2]
 // Exports: default
 
-// Module 17678 (GuildSettingsRoleSubscriptionsEmptyContent)
+// Module 17681 (GuildSettingsRoleSubscriptionsEmptyContent)
 import noopAll from "noop" /* 19 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import PlaceholderDefault from "Placeholder" /* 17680 */;
+import PlaceholderDefault from "Placeholder" /* 17683 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;
 import ME from "ME" /* 1074 */;
 import { ApplicationTypes } from "ApplicationTypes" /* 1350 */;
@@ -19,7 +19,7 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   let obj = useNavigation;
   const str = obj.useNavigation();
   if (tmp3.loading) {
-    let tmp7 = jsx(tmp2(17680), {});
+    let tmp7 = jsx(tmp2(17683), {});
   } else {
     const features = guild.features;
     if (!features.has(constants.CREATOR_MONETIZABLE)) {
@@ -27,7 +27,7 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
       if (!features2.has(tmp5.CREATOR_MONETIZABLE_PROVISIONAL)) {
         obj = { guild: null };
         obj[0] = guild;
-        tmp7 = jsx(tmp2(17681), { guild: null });
+        tmp7 = jsx(tmp2(17684), { guild: null });
       }
     }
     if (null == tmp4) {

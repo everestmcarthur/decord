@@ -1,9 +1,9 @@
-// Module ID: 17379
-// Function ID: 17380
+// Module ID: 17382
+// Function ID: 17383
 // Name: handleMessageCreate
 // Dependencies: [1074, 7118, 1242, 2]
 
-// Module 17379 (handleMessageCreate)
+// Module 17382 (handleMessageCreate)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

@@ -1,10 +1,10 @@
-// Module ID: 11822
-// Function ID: 11823
+// Module ID: 11827
+// Function ID: 11828
 // Name: SelectionHeader
-// Dependencies: [19, 17, 1957, 2011, 7151, 21, 4560, 576, 7149, 1114, 4975, 9755, 4277, 5605, 5617, 9439, 6981, 4272, 1611, 1477, 5682, 504, 4527, 7150, 6627, 2]
+// Dependencies: [19, 17, 1957, 2011, 7151, 21, 4560, 576, 7149, 1114, 4975, 9760, 4277, 5605, 5617, 9444, 6981, 4272, 1611, 1477, 5682, 504, 4527, 7150, 6627, 2]
 // Exports: default
 
-// Module 11822 (SelectionHeader)
+// Module 11827 (SelectionHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -114,8 +114,8 @@ function SelectionHeader(renderIcon) {
         }
         onQueryChange(arg0);
       };
-      tmp5Result1 = tmp5(selectedOptions(9755), obj1);
-      const tmp13 = selectedOptions(9755);
+      tmp5Result1 = tmp5(selectedOptions(9760), obj1);
+      const tmp13 = selectedOptions(9760);
     }
   }
   children[1] = tmp5Result1;
@@ -184,7 +184,7 @@ function SelectionOptionItem(item) {
   } else {
     tmp6Result = null;
     if (true === selected) {
-      tmp6Result = tmp6(tmp2(9439).CheckmarkSmallBoldIcon, { color: "text-brand" });
+      tmp6Result = tmp6(tmp2(9444).CheckmarkSmallBoldIcon, { color: "text-brand" });
     }
   }
   items1[1] = tmp6Result;

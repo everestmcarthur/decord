@@ -1,14 +1,14 @@
-// Module ID: 11825
-// Function ID: 11826
+// Module ID: 11830
+// Function ID: 11831
 // Name: UserIcon
-// Dependencies: [19, 21, 576, 4261, 11826, 2]
+// Dependencies: [19, 21, 576, 4261, 11831, 2]
 // Exports: UserIcon
 
-// Module 11825 (UserIcon)
+// Module 11830 (UserIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 11826 */;
+import registerAsset from "registerAsset" /* 11831 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

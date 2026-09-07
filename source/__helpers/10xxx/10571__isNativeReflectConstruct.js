@@ -1,17 +1,17 @@
 // Module ID: 10571
 // Function ID: 10572
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 10432, 10561, 10459, 10563]
+// Dependencies: [41, 42, 93, 95, 98, 10566, 10439, 10440, 10568]
 
 // Module 10571 (_isNativeReflectConstruct)
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10563 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10568 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const RUWeekdayParser = require;
+const RUTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,12 +31,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class RUWeekdayParser {
+class RUTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = closure_2(this, RUWeekdayParser);
+    tmp = closure_2(this, RUTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(RUWeekdayParser);
+    obj = closure_4(RUTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -51,61 +51,22 @@ class RUWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUWeekdayParser, _isNativeReflectConstruct2.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(RUTimeUnitAgoFormatParser, _isNativeReflectConstruct2.AbstractParserWithLeftBoundaryChecking);
 const items = [
   {
     key: "innerPatternString",
     value: function innerPatternString(arg0) {
-      return "(?:(?:,|\\(|\uFF08)\\s*)?(?:\u0432\\s*?)?(?:(\u044D\u0442\u0443|\u044D\u0442\u043E\u0442|\u043F\u0440\u043E\u0448\u043B\u044B\u0439|\u043F\u0440\u043E\u0448\u043B\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E)\\s*)?(" + RUWeekdayParser(10432).matchAnyPattern(RUWeekdayParser(10561).WEEKDAY_DICTIONARY) + ")(?:\\s*(?:,|\\)|\uFF09))?(?:\\s*\u043D\u0430\\s*(\u044D\u0442\u043E\u0439|\u043F\u0440\u043E\u0448\u043B\u043E\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439)\\s*\u043D\u0435\u0434\u0435\u043B\u0435)?";
+      return "(" + RUTimeUnitAgoFormatParser(10566).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))";
     }
   },
   {
     key: "innerExtract",
     value: function innerExtract(reference) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const formatted1 = str2.toLowerCase();
-      let str3 = "last";
-      if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0439" != formatted1) {
-        str3 = "last";
-        if ("\u043F\u0440\u043E\u0448\u043B\u0443\u044E" != formatted1) {
-          str3 = "last";
-          if ("\u043F\u0440\u043E\u0448\u043B\u043E\u0439" != formatted1) {
-            str3 = "next";
-            if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439" != formatted1) {
-              str3 = "next";
-              if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E" != formatted1) {
-                str3 = "next";
-                if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439" != formatted1) {
-                  str3 = "next";
-                  if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E" != formatted1) {
-                    let tmp5 = "\u044D\u0442\u043E\u0442" != formatted1;
-                    if (tmp5) {
-                      tmp5 = "\u044D\u0442\u0443" != formatted1;
-                    }
-                    if (tmp5) {
-                      tmp5 = "\u044D\u0442\u043E\u0439" != formatted1;
-                    }
-                    str3 = null;
-                    if (!tmp5) {
-                      str3 = "this";
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      return RUWeekdayParser(10459).createParsingComponentsAtWeekday(reference.reference, RUWeekdayParser(10561).WEEKDAY_DICTIONARY[formatted], str3);
+      const parseDurationResult = RUTimeUnitAgoFormatParser(10566).parseDuration(arg1[1]);
+      const ParsingComponents = RUTimeUnitAgoFormatParser(10440).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, RUTimeUnitAgoFormatParser(10439).reverseDuration(RUTimeUnitAgoFormatParser(10566).parseDuration(arg1[1])));
     }
   }
 ];
 
-export default _createClass(RUWeekdayParser, items);
+export default _createClass(RUTimeUnitAgoFormatParser, items);

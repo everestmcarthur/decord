@@ -1,10 +1,10 @@
-// Module ID: 16125
-// Function ID: 16126
+// Module ID: 16128
+// Function ID: 16129
 // Name: VoiceGuildTagChiplet
-// Dependencies: [19, 17, 1371, 7944, 21, 1115, 4560, 576, 504, 8165, 9184, 4556, 2]
+// Dependencies: [19, 17, 1371, 7944, 21, 1115, 4560, 576, 504, 8165, 9189, 4556, 2]
 // Exports: default
 
-// Module 16125 (VoiceGuildTagChiplet)
+// Module 16128 (VoiceGuildTagChiplet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -58,7 +58,7 @@ export default function VoiceGuildTagChiplet(userId) {
       obj2[0] = guildTagBadgeUrl;
       obj1[0] = obj2;
       obj1[1] = GuildTagBadgeSize.SIZE_12;
-      const items2 = [callback(tmp2(9184).GuildTagBadge, obj1), ];
+      const items2 = [callback(tmp2(9189).GuildTagBadge, obj1), ];
       const obj3 = { variant: "text-xs/semibold", color: "text-default", style: null, children: null };
       obj3[2] = tmp.tag;
       obj3[3] = tag;

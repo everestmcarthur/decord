@@ -1,9 +1,9 @@
-// Module ID: 16743
-// Function ID: 16744
+// Module ID: 16746
+// Function ID: 16747
 // Name: Loading
-// Dependencies: [19, 17, 2012, 1979, 4382, 1074, 21, 4560, 576, 5577, 5571, 504, 5598, 4384, 5527, 1100, 4417, 1611, 5578, 16744, 2]
+// Dependencies: [19, 17, 2012, 1979, 4382, 1074, 21, 4560, 576, 5577, 5571, 504, 5598, 4384, 5527, 1100, 4417, 1611, 5578, 16747, 2]
 
-// Module 16743 (Loading)
+// Module 16746 (Loading)
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import MemberVerificationModalDefault from "MemberVerificationModal" /* 5571 */;
@@ -17,7 +17,7 @@ import closure_8 from "handleGatewayJoinRequestUpdate" /* 4382 */;
 import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
-import makeAuthenticated from "makeAuthenticated" /* 16744 */;
+import makeAuthenticated from "makeAuthenticated" /* 16747 */;
 
 require = arg1;
 function Loading() {

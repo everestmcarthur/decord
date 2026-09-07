@@ -1,10 +1,10 @@
-// Module ID: 16881
-// Function ID: 16882
+// Module ID: 16884
+// Function ID: 16885
 // Name: useSortedMessageRequests
-// Dependencies: [19, 1957, 1371, 7219, 504, 16882, 2]
+// Dependencies: [19, 1957, 1371, 7219, 504, 16885, 2]
 // Exports: default
 
-// Module 16881 (useSortedMessageRequests)
+// Module 16884 (useSortedMessageRequests)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;

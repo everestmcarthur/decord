@@ -1,10 +1,10 @@
-// Module ID: 12782
-// Function ID: 12783
+// Module ID: 12786
+// Function ID: 12787
 // Name: voiceRouteRewriter
-// Dependencies: [109, 9467, 1961, 1957, 4385, 2012, 2011, 1074, 9468, 3, 4399, 12783, 5411, 1100, 12788, 4763, 4767, 5520, 9681, 4417, 573, 4761, 4491, 12789, 2]
+// Dependencies: [109, 9472, 1961, 1957, 4385, 2012, 2011, 1074, 9473, 3, 4399, 12787, 5411, 1100, 12792, 4763, 4767, 5520, 9686, 4417, 573, 4761, 4491, 12793, 2]
 // Exports: cleanupRouteManager, extractParamsFromVoiceModalRoute, initializeRouteManagerIfNeeded, popVoiceRoute, transitionToVoiceRoute
 
-// Module 12782 (voiceRouteRewriter)
+// Module 12786 (voiceRouteRewriter)
 import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import transitionTo from "transitionTo" /* 1100 */;
@@ -13,18 +13,18 @@ import _modDef4761 from "module_4761" /* 4761 */;
 import _modDef4763 from "module_4763" /* 4763 */;
 import _modDef5411 from "module_5411" /* 5411 */;
 import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 5520 */;
-import MemoryRouter from "MemoryRouter" /* 12783 */;
-import saveLastRoute from "saveLastRoute" /* 12788 */;
-import initializeDefault from "initialize" /* 12789 */;
+import MemoryRouter from "MemoryRouter" /* 12787 */;
+import saveLastRoute from "saveLastRoute" /* 12792 */;
+import initializeDefault from "initialize" /* 12793 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
-import { setVoiceChatDrawerState } from "VoiceChatDrawerState" /* 9467 */;
+import { setVoiceChatDrawerState } from "VoiceChatDrawerState" /* 9472 */;
 import { isGuildSelectableChannelType as closure_6 } from "createChannelRecord" /* 1961 */;
 import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import closure_8 from "initialize" /* 4385 */;
 import closure_9 from "comparator" /* 2012 */;
 import closure_10 from "handleConnectionOpen" /* 2011 */;
 import ME from "ME" /* 1074 */;
-import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9468 */;
+import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9473 */;
 import { RouteParam, RouteParam as RouteParam2, RouteParam as RouteParam3, RouteParam as RouteParam4 } from "RouteParam" /* 4399 */;
 
 require = arg1;
@@ -122,7 +122,7 @@ function saveLastNonVoiceRouteListener(pathname) {
   }
 }
 function updateSelectedChannelListener(location) {
-  let obj = channel2(12783);
+  let obj = channel2(12787);
   obj = { path: items, strict: false, exact: false };
   const matchPathResult = obj.matchPath(location.pathname, obj);
   let params;
@@ -239,7 +239,7 @@ function updateSelectedChannelListener(location) {
     const _HermesInternal2 = HermesInternal;
     obj8.verbose("UpdateSelectedChannelListener -> voice route present! " + json2 + " " + JSON.stringify(obj5) + " ");
   }
-  tmpResult = tmp(9681);
+  tmpResult = tmp(9686);
   if (!tmpResult.isVoicePanelEnabled(channel2)) {
     const guild1 = showTooManyUserGuildsAlertDefault.selectGuild(voiceGuildId2);
     const obj10 = showTooManyUserGuildsAlertDefault;

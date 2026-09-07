@@ -1,9 +1,9 @@
-// Module ID: 11383
-// Function ID: 11384
+// Module ID: 11388
+// Function ID: 11389
 // Name: BlockedInformationTable
-// Dependencies: [32, 19, 17, 1957, 4209, 1371, 9043, 11382, 1074, 21, 4560, 576, 8185, 1114, 4517, 5687, 5605, 1178, 1611, 7162, 7182, 504, 8181, 7150, 1242, 6627, 7930, 4556, 4712, 6969, 4527, 11384, 1896, 1250, 4975, 9042, 8404, 2024, 4255, 2]
+// Dependencies: [32, 19, 17, 1957, 4209, 1371, 9048, 11387, 1074, 21, 4560, 576, 8185, 1114, 4517, 5687, 5605, 1178, 1611, 7162, 7182, 504, 8181, 7150, 1242, 6627, 7930, 4556, 4712, 6969, 4527, 11389, 1896, 1250, 4975, 9047, 8404, 2024, 4255, 2]
 
-// Module 11383 (BlockedInformationTable)
+// Module 11388 (BlockedInformationTable)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import registerAssetDefault from "registerAsset" /* 4517 */;
@@ -15,8 +15,8 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
 import closure_7 from "markAllUserIdListsStale" /* 4209 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import { UserRemediationAction } from "ClearFriendRequestFilters" /* 9043 */;
-import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 11382 */;
+import { UserRemediationAction } from "ClearFriendRequestFilters" /* 9048 */;
+import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 11387 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

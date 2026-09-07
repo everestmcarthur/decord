@@ -1,19 +1,19 @@
-// Module ID: 17760
-// Function ID: 17761
+// Module ID: 17763
+// Function ID: 17764
 // Name: BaseBenefitRow
-// Dependencies: [19, 17, 15205, 21, 4560, 15240, 1178, 9939, 4556, 4213, 15233, 4713, 5028, 1114, 2]
+// Dependencies: [19, 17, 15208, 21, 4560, 15243, 1178, 9944, 4556, 4213, 15236, 4713, 5028, 1114, 2]
 // Exports: GuildRoleSubscriptionBenefitPreview
 
-// Module 17760 (BaseBenefitRow)
+// Module 17763 (BaseBenefitRow)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1178 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;
 import Text from "Text" /* 4556 */;
-import registerAssetDefault from "registerAsset" /* 9939 */;
-import getUsedTemplateChannelsForGuild from "getUsedTemplateChannelsForGuild" /* 15233 */;
-import EmojiIconDefault from "EmojiIcon" /* 15240 */;
+import registerAssetDefault from "registerAsset" /* 9944 */;
+import getUsedTemplateChannelsForGuild from "getUsedTemplateChannelsForGuild" /* 15236 */;
+import EmojiIconDefault from "EmojiIcon" /* 15243 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { GuildRoleSubscriptionBenefitTypes as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 15205 */;
+import { GuildRoleSubscriptionBenefitTypes as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 15208 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

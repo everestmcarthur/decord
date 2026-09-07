@@ -1,15 +1,15 @@
-// Module ID: 15960
-// Function ID: 15961
+// Module ID: 15963
+// Function ID: 15964
 // Name: submitDateOfBirth
-// Dependencies: [1098, 1074, 15959, 1242, 1272, 573, 2]
+// Dependencies: [1098, 1074, 15962, 1242, 1272, 573, 2]
 // Exports: logoutUnderageNewUser, preventUnderageRegistration, submitDateOfBirth
 
-// Module 15960 (submitDateOfBirth)
+// Module 15963 (submitDateOfBirth)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import result2 from "result" /* 1098 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 15959 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 15962 */;
 import ME from "ME" /* 1074 */;
 
 const AgeGateAnalyticAction = result2.AgeGateAnalyticAction;

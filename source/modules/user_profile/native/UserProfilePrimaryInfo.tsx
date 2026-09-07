@@ -1,15 +1,15 @@
-// Module ID: 11152
-// Function ID: 11153
+// Module ID: 11157
+// Function ID: 11158
 // Name: DisplayName
-// Dependencies: [19, 17, 8183, 7208, 1074, 7944, 8194, 21, 4560, 576, 10899, 10900, 9438, 5123, 11153, 4556, 11155, 7729, 4418, 11187, 1114, 11189, 8184, 11190, 7382, 1925, 4259, 8242, 11192, 11193, 11197, 5447, 1242, 7728, 1115, 11198, 11199, 11200, 1477, 8165, 9184, 4404, 2]
+// Dependencies: [19, 17, 8183, 7208, 1074, 7944, 8194, 21, 4560, 576, 10904, 10905, 9443, 5123, 11158, 4556, 11160, 7729, 4418, 11192, 1114, 11194, 8184, 11195, 7382, 1925, 4259, 8242, 11197, 11198, 11202, 5447, 1242, 7728, 1115, 11203, 11204, 11205, 1477, 8165, 9189, 4404, 2]
 // Exports: default
 
-// Module 11152 (DisplayName)
+// Module 11157 (DisplayName)
 import ThemesDefault from "Themes" /* 576 */;
 import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import guildHasTag from "guildHasTag" /* 8165 */;
-import memoResult1Default from "memoResult1" /* 9184 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 10899 */;
+import memoResult1Default from "memoResult1" /* 9189 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 10904 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { getBadgeName } from "USER_PROFILE_TOOLTIP_DELAY" /* 8183 */;

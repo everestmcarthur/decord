@@ -1,17 +1,17 @@
-// Module ID: 13736
-// Function ID: 13737
+// Module ID: 13740
+// Function ID: 13741
 // Name: getUserCalloutRowText
-// Dependencies: [19, 17, 1957, 1371, 13737, 1074, 21, 4560, 576, 4556, 4712, 1114, 504, 1369, 1178, 11825, 10910, 4520, 4515, 1242, 7198, 11374, 5687, 5605, 4975, 4527, 13738, 4573, 2]
+// Dependencies: [19, 17, 1957, 1371, 13741, 1074, 21, 4560, 576, 4556, 4712, 1114, 504, 1369, 1178, 11830, 10915, 4520, 4515, 1242, 7198, 11379, 5687, 5605, 4975, 4527, 13742, 4573, 2]
 // Exports: default
 
-// Module 13736 (getUserCalloutRowText)
+// Module 13740 (getUserCalloutRowText)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import GdmWarningMedium from "GdmWarningMedium" /* 13737 */;
+import GdmWarningMedium from "GdmWarningMedium" /* 13741 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -88,13 +88,13 @@ function UserCalloutAvatars(userIds) {
       obj[2] = REFRESH_MEDIUM_32;
       let tmp6 = callback(tmp(1178).Avatar, obj);
     } else {
-      tmp6 = callback(tmp(11825).UserIcon, {});
+      tmp6 = callback(tmp(11830).UserIcon, {});
     }
   } else {
     obj = { users: null, size: null };
     obj[0] = found;
     obj[1] = tmp(1178).AvatarSizes.REFRESH_MEDIUM_32;
-    return callback(tmp(10910).FacepileGroupDMAvatar, obj);
+    return callback(tmp(10915).FacepileGroupDMAvatar, obj);
   }
 }
 function BlockedUserInGDMDescription(arg0) {

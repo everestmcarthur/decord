@@ -1,10 +1,10 @@
-// Module ID: 9094
-// Function ID: 9095
+// Module ID: 9099
+// Function ID: 9100
 // Name: trackVoiceAndVideoDebuggingSettingsUpdated
 // Dependencies: [1074, 1242, 2]
 // Exports: default
 
-// Module 9094 (trackVoiceAndVideoDebuggingSettingsUpdated)
+// Module 9099 (trackVoiceAndVideoDebuggingSettingsUpdated)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

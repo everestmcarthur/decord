@@ -1,10 +1,10 @@
-// Module ID: 9430
-// Function ID: 9431
+// Module ID: 9435
+// Function ID: 9436
 // Name: ApplicationDetailsEntry
-// Dependencies: [19, 17, 21, 4560, 576, 9240, 8886, 9431, 11, 9238, 4503, 1114, 5095, 9242, 9433, 4523, 8339, 9435, 9402, 4556, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 9245, 8891, 9436, 11, 9243, 4503, 1114, 5095, 9247, 9438, 4523, 8339, 9440, 9407, 4556, 2]
 // Exports: default
 
-// Module 9430 (ApplicationDetailsEntry)
+// Module 9435 (ApplicationDetailsEntry)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -13,9 +13,9 @@ import ClockIcon from "ClockIcon" /* 4523 */;
 import Text from "Text" /* 4556 */;
 import LockIcon from "LockIcon" /* 5095 */;
 import set from "set" /* 8339 */;
-import items2 from "items" /* 9238 */;
-import getApplicationDetailsText from "getApplicationDetailsText" /* 9242 */;
-import ShieldIcon from "ShieldIcon" /* 9402 */;
+import items2 from "items" /* 9243 */;
+import getApplicationDetailsText from "getApplicationDetailsText" /* 9247 */;
+import ShieldIcon from "ShieldIcon" /* 9407 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -88,7 +88,7 @@ export default function ApplicationDetails(arg0) {
   let tmp18Result = null;
   if (null != connectedAccount) {
     const obj3 = { iconComponent: null, text: null };
-    obj3[0] = tmp5(9433).HammerIcon;
+    obj3[0] = tmp5(9438).HammerIcon;
     const intl2 = tmp5(1114).intl;
     obj3[1] = intl2.string(tmp5(1114).t["8qui3M"]);
     tmp18Result = tmp18(tmp19, obj3);
@@ -103,7 +103,7 @@ export default function ApplicationDetails(arg0) {
     tmp18Result = null;
     if (null != approximateGuildCount) {
       const obj5 = { iconComponent: null, text: null };
-      obj5[0] = tmp5(9435).RobotIcon;
+      obj5[0] = tmp5(9440).RobotIcon;
       const intl4 = tmp5(1114).intl;
       const obj6 = { guildCount: null };
       obj6[0] = approximateGuildCount;
@@ -117,17 +117,17 @@ export default function ApplicationDetails(arg0) {
   let mapped = null;
   if (null != disclosures) {
     mapped = disclosures.map((toFixed) => {
-      let obj = callback(9240);
+      let obj = callback(9245);
       const textForDisclosure = obj.getTextForDisclosure(toFixed);
-      if (callback(9240).ApplicationDisclosure.IP_LOCATION === toFixed) {
+      if (callback(9245).ApplicationDisclosure.IP_LOCATION === toFixed) {
         obj = { iconComponent: null };
-        obj[0] = tmp(8886).GlobeEarthIcon;
+        obj[0] = tmp(8891).GlobeEarthIcon;
         let tmp4 = obj;
       } else {
         tmp4 = null;
-        if (tmp(9240).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
+        if (tmp(9245).ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS === toFixed) {
           obj = { iconComponent: null };
-          obj[0] = tmp(9431).EmbedIcon;
+          obj[0] = tmp(9436).EmbedIcon;
           tmp4 = obj;
         }
       }

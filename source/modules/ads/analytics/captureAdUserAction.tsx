@@ -1,17 +1,17 @@
-// Module ID: 11193
-// Function ID: 11194
+// Module ID: 11198
+// Function ID: 11199
 // Name: emitClickEventWithCreative
-// Dependencies: [5, 7703, 1074, 5451, 7718, 7699, 7728, 7734, 1242, 1256, 1115, 7677, 11194, 7729, 7709, 11197, 2]
+// Dependencies: [5, 7703, 1074, 5451, 7718, 7699, 7728, 7734, 1242, 1256, 1115, 7677, 11199, 7729, 7709, 11202, 2]
 // Exports: captureAdUserAction
 
-// Module 11193 (emitClickEventWithCreative)
+// Module 11198 (emitClickEventWithCreative)
 import set from "set" /* 1115 */;
 import AdCreativeType from "AdCreativeType" /* 5451 */;
 import getDeviceMetadataDefault from "getDeviceMetadata" /* 7677 */;
 import getQuestLogger from "getQuestLogger" /* 7709 */;
 import getQuestContentName from "getQuestContentName" /* 7728 */;
-import getBrandSafetyContext from "getBrandSafetyContext" /* 11194 */;
-import AdUserActionType from "AdUserActionType" /* 11197 */;
+import getBrandSafetyContext from "getBrandSafetyContext" /* 11199 */;
+import AdUserActionType from "AdUserActionType" /* 11202 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "initializeState" /* 7703 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
@@ -573,7 +573,7 @@ export const captureAdUserAction = function captureAdUserAction(type) {
           const tmp2Result4 = tmp2(tmp3[6]);
         }
       })(type);
-    } else if (tmp2(11197).AdUserActionType.CLICK_INTERNAL === type) {
+    } else if (tmp2(11202).AdUserActionType.CLICK_INTERNAL === type) {
       (function handleClickInternalAction(type) {
         const self = this;
         const apply = closure_8.apply;
@@ -594,7 +594,7 @@ export const captureAdUserAction = function captureAdUserAction(type) {
         }
         return applyArgumentsResult;
       })(type);
-    } else if (tmp2(11197).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA === type) {
+    } else if (tmp2(11202).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA === type) {
       (function handleClickExternalAdvertiserCtaAction(type) {
         const self = this;
         const apply = closure_9.apply;
@@ -615,7 +615,7 @@ export const captureAdUserAction = function captureAdUserAction(type) {
         }
         return applyArgumentsResult;
       })(type);
-    } else if (tmp2(11197).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION === type) {
+    } else if (tmp2(11202).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION === type) {
       (function handleViewInternalSurfaceImpressionAction(type) {
         const self = this;
         const apply = closure_11.apply;
@@ -636,7 +636,7 @@ export const captureAdUserAction = function captureAdUserAction(type) {
         }
         return applyArgumentsResult;
       })(type);
-    } else if (tmp2(11197).AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION === type) {
+    } else if (tmp2(11202).AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION === type) {
       handleViewImpression(type);
     }
   } catch (tmp13) {

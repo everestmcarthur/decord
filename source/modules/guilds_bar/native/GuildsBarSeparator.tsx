@@ -1,9 +1,9 @@
-// Module ID: 16344
-// Function ID: 16345
+// Module ID: 16347
+// Function ID: 16348
 // Name: GuildsBarHomeDrawerSeparator
-// Dependencies: [19, 21, 4560, 576, 16022, 4296, 7073, 4262, 5589, 2]
+// Dependencies: [19, 21, 4560, 576, 16025, 4296, 7073, 4262, 5589, 2]
 
-// Module 16344 (GuildsBarHomeDrawerSeparator)
+// Module 16347 (GuildsBarHomeDrawerSeparator)
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;
 import setDefault from "set" /* 5589 */;
@@ -16,8 +16,8 @@ function GuildsBarHomeDrawerSeparator(guildItemSize) {
   guildItemSize = guildItemSize.guildItemSize;
   let panelTranslateX;
   const tmp = callback(guildItemSize);
-  panelTranslateX = guildItemSize(16022).useHomeDrawerState().panelTranslateX;
-  let obj = guildItemSize(16022);
+  panelTranslateX = guildItemSize(16025).useHomeDrawerState().panelTranslateX;
+  let obj = guildItemSize(16025);
   const fn = function n() {
     let obj = { transform: null };
     obj = { scaleX: Math.max(1, (panelTranslateX.get() + guildItemSize) / guildItemSize) };

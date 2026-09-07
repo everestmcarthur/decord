@@ -1,10 +1,10 @@
-// Module ID: 17148
-// Function ID: 17149
+// Module ID: 17151
+// Function ID: 17152
 // Name: ParticipantsSummary
-// Dependencies: [32, 19, 17, 21, 4560, 576, 4409, 17149, 10054, 1178, 4985, 4556, 4296, 4991, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 4409, 17152, 10059, 1178, 4985, 4556, 4296, 4991, 2]
 // Exports: default
 
-// Module 17148 (ParticipantsSummary)
+// Module 17151 (ParticipantsSummary)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
@@ -12,8 +12,8 @@ import _modDef4296 from "module_4296" /* 4296 */;
 import Text from "Text" /* 4556 */;
 import PillWrapper from "PillWrapper" /* 4985 */;
 import EllipsisCircle from "EllipsisCircle" /* 4991 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10054 */;
-import useActivityUsersDefault from "useActivityUsers" /* 17149 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10059 */;
+import useActivityUsersDefault from "useActivityUsers" /* 17152 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

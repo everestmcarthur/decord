@@ -1,10 +1,10 @@
-// Module ID: 13206
-// Function ID: 13207
+// Module ID: 13210
+// Function ID: 13211
 // Name: createCodedLinkEmbeds
-// Dependencies: [32, 4200, 1979, 1371, 7690, 11940, 4548, 13207, 13208, 13218, 13220, 13213, 13222, 13215, 11479, 11807, 11531, 13223, 1369, 2]
+// Dependencies: [32, 4200, 1979, 1371, 7690, 11944, 4548, 13211, 13212, 13222, 13224, 13217, 13226, 13219, 11484, 11812, 11536, 13227, 1369, 2]
 // Exports: createCodedLinkEmbeds
 
-// Module 13206 (createCodedLinkEmbeds)
+// Module 13210 (createCodedLinkEmbeds)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "initialize" /* 4200 */;
 import closure_4 from "createGuildRecordFromRust" /* 1979 */;

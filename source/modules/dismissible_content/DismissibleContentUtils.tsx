@@ -1,7 +1,7 @@
 // Module ID: 1945
 // Function ID: 1946
 // Name: addVersionedDismissedContent
-// Dependencies: [32, 5, 1221, 1946, 1947, 1949, 1954, 1074, 1944, 1955, 11, 1940, 4402, 504, 1943, 573, 10237, 1242, 1948, 2]
+// Dependencies: [32, 5, 1221, 1946, 1947, 1949, 1954, 1074, 1944, 1955, 11, 1940, 4402, 504, 1943, 573, 10242, 1242, 1948, 2]
 // Exports: UNSAFE_addGuildDismissedContent, UNSAFE_addSnowflakeBoundGuildDismissedContent, UNSAFE_addTimeRecurringGuildDismissedContent, UNSAFE_isSingleUseGuildDismissibleContentDismissed, UNSAFE_isSnowflakeBoundGuildDismissibleContentDismissed, UNSAFE_isTimeRecurringGuildDismissibleContentDismissed, UNSAFE_removeGuildDismissedContent, UNSAFE_removeSnowflakeBoundGuildDismissedContent, UNSAFE_removeTimeRecurringGuildDismissedContent, getDismissedRecurringDismissibleContentState, getGuildNextNumTimesDismissed, isDismissibleContentBlockedByOverlay, isTimeRecurringDismissibleContentDismissed, isTimeRecurringSnowflakeBoundDismissibleContentDismissed, isVersionedDismissibleContentDismissed, markLatestVersionDismissibleContentAsDismissed, markSnowflakeBoundDismissibleContentAsDismissed, markTimeRecurringDismissibleContentAsDismissed, requestMarkDismissibleContentAsShown, useIsSingleUseGuildDismissibleContentDismissed
 
 // Module 1945 (addVersionedDismissedContent)
@@ -14,7 +14,7 @@ import isSingleUseDismissibleContent from "isSingleUseDismissibleContent" /* 194
 import set2 from "set" /* 1948 */;
 import getVersionedDismissibleContentCurrentVersion from "getVersionedDismissibleContentCurrentVersion" /* 1955 */;
 import useNewUserDismissibleContent from "useNewUserDismissibleContent" /* 4402 */;
-import handleDCShownToUser from "handleDCShownToUser" /* 10237 */;
+import handleDCShownToUser from "handleDCShownToUser" /* 10242 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "handleConnectionClosedOrResumed" /* 1221 */;
@@ -628,7 +628,7 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "PX_16" };
+      return { isDismissed: false, lastDismissedAtMs: "Array" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

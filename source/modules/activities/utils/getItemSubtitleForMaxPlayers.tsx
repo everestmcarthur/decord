@@ -1,10 +1,10 @@
-// Module ID: 12146
-// Function ID: 12147
+// Module ID: 12150
+// Function ID: 12151
 // Name: getItemSubtitleForMaxPlayers
 // Dependencies: [1114, 2]
 // Exports: default, getItemSubtitleForMaxPlayersShort, getItemSubtitleForMaxPlayersShorter
 
-// Module 12146 (getItemSubtitleForMaxPlayers)
+// Module 12150 (getItemSubtitleForMaxPlayers)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 

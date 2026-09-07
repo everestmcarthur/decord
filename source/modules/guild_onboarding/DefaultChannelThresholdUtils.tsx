@@ -1,10 +1,10 @@
-// Module ID: 9740
-// Function ID: 9741
+// Module ID: 9745
+// Function ID: 9746
 // Name: _isDefaultChannelThresholdMetAfterDelete
 // Dependencies: [5, 1979, 7100, 7101, 1074, 7099, 7106, 1086, 4904, 1114, 2]
 // Exports: checkChattableChannelThresholdMetAfterChannelPermissionDeny, isDefaultChannelThresholdMetAfterDelete
 
-// Module 9740 (_isDefaultChannelThresholdMetAfterDelete)
+// Module 9745 (_isDefaultChannelThresholdMetAfterDelete)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "createGuildRecordFromRust" /* 1979 */;
 import closure_6 from "handleUpdate" /* 7100 */;

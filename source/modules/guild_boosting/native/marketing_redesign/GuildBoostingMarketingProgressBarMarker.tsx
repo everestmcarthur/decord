@@ -1,14 +1,14 @@
-// Module ID: 13583
-// Function ID: 13584
+// Module ID: 13587
+// Function ID: 13588
 // Name: ProgressBarMarkerInnerContent
-// Dependencies: [19, 17, 1074, 21, 13584, 13585, 13586, 4560, 576, 4495, 4296, 4409, 4411, 4974, 12584, 11564, 4556, 4454, 2]
+// Dependencies: [19, 17, 1074, 21, 13588, 13589, 13590, 4560, 576, 4495, 4296, 4409, 4411, 4974, 12588, 11569, 4556, 4454, 2]
 // Exports: default
 
-// Module 13583 (ProgressBarMarkerInnerContent)
+// Module 13587 (ProgressBarMarkerInnerContent)
 import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 13584 */;
-import registerAssetDefault2 from "registerAsset" /* 13585 */;
-import registerAssetDefault3 from "registerAsset" /* 13586 */;
+import registerAssetDefault from "registerAsset" /* 13588 */;
+import registerAssetDefault2 from "registerAsset" /* 13589 */;
+import registerAssetDefault3 from "registerAsset" /* 13590 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { BoostedGuildTiers } from "ME" /* 1074 */;
@@ -213,7 +213,7 @@ export default function ProgressBarMarker(arg0) {
     }
     if (tmp20Result) {
       const obj5 = { source: null, style: null };
-      obj5[0] = tmp2(11564);
+      obj5[0] = tmp2(11569);
       obj5[1] = tmp.progressBarMarkerUnlockedIcon;
       tmp20Result = tmp20(closure_5, obj5);
     }

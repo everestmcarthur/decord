@@ -1,10 +1,10 @@
-// Module ID: 16777
-// Function ID: 16778
+// Module ID: 16780
+// Function ID: 16781
 // Name: compareUserItems
-// Dependencies: [32, 19, 17, 7639, 4209, 1371, 10860, 1074, 10874, 21, 4560, 576, 16778, 1896, 4906, 563, 7640, 1935, 16414, 7641, 11, 7162, 7182, 1242, 13063, 7168, 16779, 1332, 8179, 1114, 1483, 5687, 5605, 4556, 9792, 5125, 9793, 5123, 10994, 5692, 10866, 2]
+// Dependencies: [32, 19, 17, 7639, 4209, 1371, 10865, 1074, 10879, 21, 4560, 576, 16781, 1896, 4906, 563, 7640, 1935, 16417, 7641, 11, 7162, 7182, 1242, 13067, 7168, 16782, 1332, 8179, 1114, 1483, 5687, 5605, 4556, 9797, 5125, 9798, 5123, 10999, 5692, 10871, 2]
 // Exports: default
 
-// Module 16777 (compareUserItems)
+// Module 16780 (compareUserItems)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -13,9 +13,9 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "_validate" /* 7639 */;
 import closure_7 from "markAllUserIdListsStale" /* 4209 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import { UserRowModes } from "UserRowModes" /* 10860 */;
+import { UserRowModes } from "UserRowModes" /* 10865 */;
 import ME from "ME" /* 1074 */;
-import { MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL as closure_13 } from "RELATIONSHIP_COUNT_ANIMATION_THRESHOLD" /* 10874 */;
+import { MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL as closure_13 } from "RELATIONSHIP_COUNT_ANIMATION_THRESHOLD" /* 10879 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -72,10 +72,10 @@ export default function FriendRequestsScreen() {
       const mapped = arr.map((local_id) => local_id.local_id);
       const _Boolean = Boolean;
       const found = mapped.filter(Boolean);
-      const result = stateFromStoresArray(16414).markNotificationCenterLocalItemsAcked(found);
-      const obj = stateFromStoresArray(16414);
-      const result1 = stateFromStoresArray(16414).bulkMarkNotificationCenterItemsAcked(arr.filter((addResult) => !closure_1_0(closure_1_2[19]).isRemoteAcked(addResult, closure_1)));
-      const obj2 = stateFromStoresArray(16414);
+      const result = stateFromStoresArray(16417).markNotificationCenterLocalItemsAcked(found);
+      const obj = stateFromStoresArray(16417);
+      const result1 = stateFromStoresArray(16417).bulkMarkNotificationCenterItemsAcked(arr.filter((addResult) => !closure_1_0(closure_1_2[19]).isRemoteAcked(addResult, closure_1)));
+      const obj2 = stateFromStoresArray(16417);
     }
   }, items1);
   const effect1 = gameRelationshipsByType1.useEffect(() => {
@@ -91,9 +91,9 @@ export default function FriendRequestsScreen() {
   }), 2);
   first = tmp9[0];
   dependencyMap = tmp11;
-  let obj2 = stateFromStoresArray(13063);
+  let obj2 = stateFromStoresArray(13067);
   gameRelationshipsByType = obj2.useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-  let obj3 = stateFromStoresArray(13063);
+  let obj3 = stateFromStoresArray(13067);
   gameRelationshipsByType1 = obj3.useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
   const items3 = [gameRelationshipsByType, gameRelationshipsByType1];
   const memo = gameRelationshipsByType1.useMemo(() => {
@@ -108,7 +108,7 @@ export default function FriendRequestsScreen() {
   }, items3);
   first(7168)(memo);
   const items4 = [first, tmp9[1]];
-  const memo1 = gameRelationshipsByType1.useMemo(() => stateFromStoresArray(16779).getPendingRelationshipIds(first, dependencyMap), items4);
+  const memo1 = gameRelationshipsByType1.useMemo(() => stateFromStoresArray(16782).getPendingRelationshipIds(first, dependencyMap), items4);
   const pendingIncomingIds = memo1.pendingIncomingIds;
   pendingOutgoingIds = memo1.pendingOutgoingIds;
   spamIds = memo1.spamIds;
@@ -282,11 +282,11 @@ export default function FriendRequestsScreen() {
   obj1[1] = intl2.string(stateFromStoresArray(1114).t.tWqcIF);
   items10[1] = obj1;
   obj[3] = items10;
-  const segmentedControlState = stateFromStoresArray(9792).useSegmentedControlState(obj);
+  const segmentedControlState = stateFromStoresArray(9797).useSegmentedControlState(obj);
   obj2 = { value: analyticsLocations, children: null };
   const items11 = [outgoingData(first(5125), { absolute: true }), ];
   obj3 = { style: tmp.container, children: null };
-  obj4 = { style: tmp.tabs, children: outgoingData(tmp4(9793).SegmentedControl, { state: segmentedControlState }) };
+  obj4 = { style: tmp.tabs, children: outgoingData(tmp4(9798).SegmentedControl, { state: segmentedControlState }) };
   const items12 = [outgoingData(pendingIncomingIds, obj4), , ];
   let tmp32Result = null;
   if (tmp28) {
@@ -320,9 +320,9 @@ export default function FriendRequestsScreen() {
     obj9[0] = stringResult;
     WumpusCouchSpotIllustration = tmp4(5692).WumpusCouchSpotIllustration;
     obj9[1] = WumpusCouchSpotIllustration;
-    obj8[1] = tmp32(tmp2(10994), obj9);
+    obj8[1] = tmp32(tmp2(10999), obj9);
     tmp32Result = tmp32(tmp33, obj8);
-    const tmp2Result = tmp2(10994);
+    const tmp2Result = tmp2(10999);
   } else {
     if (first1 === tmp25.Incoming) {
       outgoingSection = incomingSection;
@@ -331,7 +331,7 @@ export default function FriendRequestsScreen() {
     obj10[0] = outgoingSection;
     obj10[1] = callback2;
     obj10[2] = callback1;
-    items12[2] = tmp32(tmp4(10866).UsersFastList, obj10);
+    items12[2] = tmp32(tmp4(10871).UsersFastList, obj10);
     obj3[1] = items12;
     items11[1] = tmp31(tmp33, obj3);
     obj2[1] = items11;

@@ -1,20 +1,20 @@
-// Module ID: 11960
-// Function ID: 11961
+// Module ID: 11964
+// Function ID: 11965
 // Name: VoiceMessageRecordingStatus
-// Dependencies: [11961, 560, 4296, 1249, 4974, 2]
+// Dependencies: [11965, 560, 4296, 1249, 4974, 2]
 // Exports: addVoiceMessageWave, hideVoiceMessagesTooltip, resetVoiceMessageState, setIsUsingHoldGesture, setIsVoiceMessageButtonMounted, setSavedVoiceMessageUploadData, setShowRecordingOverlay, setVoiceMessageAnimationState, setVoiceMessageRecordingId, setVoiceMessageRecordingState, setVoiceMessageStartTimeMillis, showVoiceMessagesTooltip
 
-// Module 11960 (VoiceMessageRecordingStatus)
+// Module 11964 (VoiceMessageRecordingStatus)
 import set from "set" /* 2 */;
 import batchUpdates from "batchUpdates" /* 1249 */;
 import _mod4296 from "module_4296" /* 4296 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4974 */;
-import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11961 */;
+import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11965 */;
 import keys from "keys" /* 560 */;
 
 ({ VoiceMessageAnimationState: obj1, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageAnimationState);
 let obj = keys.create(() => {
-  obj = { voiceMessageAnimationState: _mod4296.makeMutable(items), recordingStatus: null, recordingId: null, currWaveHeight: "PX_16", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "flex", showVoiceMessagesTooltip: "auto", savedVoiceMessageUploadData: "80%", isVoiceMessageButtonMounted: "hidden", isUsingHoldGesture: "auto" };
+  obj = { voiceMessageAnimationState: _mod4296.makeMutable(items), recordingStatus: null, recordingId: null, currWaveHeight: "PX_16", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "flex", showVoiceMessagesTooltip: "M7 7H6v1h1V7Z", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: 0.75, isUsingHoldGesture: null };
   items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = closure_2);
   obj[6] = [];

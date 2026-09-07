@@ -1,10 +1,10 @@
-// Module ID: 11212
-// Function ID: 11213
+// Module ID: 11217
+// Function ID: 11218
 // Name: handleTapCommandMention
-// Dependencies: [19, 1957, 1482, 4999, 5000, 21, 7523, 4418, 4527, 1609, 4905, 1114, 1178, 11213, 4258, 7190, 1935, 10629, 7195, 11215, 4556, 4425, 11217, 8096, 2]
+// Dependencies: [19, 1957, 1482, 4999, 5000, 21, 7523, 4418, 4527, 1609, 4905, 1114, 1178, 11218, 4258, 7190, 1935, 10634, 7195, 11220, 4556, 4425, 11222, 8096, 2]
 // Exports: default
 
-// Module 11212 (handleTapCommandMention)
+// Module 11217 (handleTapCommandMention)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
@@ -109,7 +109,7 @@ function handleLongPressCommandMention(arg0, arg1) {
   let obj = { label: null, IconComponent: null, onPress: null };
   const intl = _require(1114).intl;
   obj[0] = intl.string(_require(1114).t["42H+Nb"]);
-  obj[1] = _require(11213).SlashBoxIcon;
+  obj[1] = _require(11218).SlashBoxIcon;
   obj[2] = function onPress() {
     callback(closure_1_2[14]).presentCommandCopied();
     const obj = callback(closure_1_2[14]);
@@ -121,7 +121,7 @@ function handleLongPressCommandMention(arg0, arg1) {
     obj = { label: null, IconComponent: null, onPress: null };
     const intl2 = tmp(1114).intl;
     obj[0] = intl2.string(tmp(1114).t.oJ1Muw);
-    obj[1] = tmp(10629).IdIcon;
+    obj[1] = tmp(10634).IdIcon;
     obj[2] = function onPress() {
       callback(closure_1_2[14]).presentIdCopied();
       const obj = callback(closure_1_2[14]);
@@ -139,7 +139,7 @@ export default function MarkupReactCommandRule(node) {
   closure_1 = undefined;
   dependencyMap = undefined;
   ({ output, state, style } = node);
-  closure_1 = null != React.useContext(node(11215).AppLauncherContext);
+  closure_1 = null != React.useContext(node(11220).AppLauncherContext);
   dependencyMap = callback();
   let obj = {
     style,
@@ -168,7 +168,7 @@ export default function MarkupReactCommandRule(node) {
         return openCustomKeyboardResult;
       };
       obj[6] = function onSetCommand() {
-        callback(11217)();
+        callback(11222)();
         callback(4527).hideActionSheet();
         if (bestActiveInput != null) {
           obj2.openSystemKeyboard();
@@ -217,7 +217,7 @@ export default function MarkupReactCommandRule(node) {
         return openCustomKeyboardResult;
       };
       obj[6] = function onSetCommand() {
-        callback(11217)();
+        callback(11222)();
         callback(4527).hideActionSheet();
         if (bestActiveInput != null) {
           obj2.openSystemKeyboard();

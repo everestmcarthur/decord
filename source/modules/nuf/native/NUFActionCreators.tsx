@@ -1,18 +1,18 @@
-// Module ID: 12704
-// Function ID: 12705
+// Module ID: 12708
+// Function ID: 12709
 // Name: _startContactSyncForDiscoverability
-// Dependencies: [5, 12677, 5281, 1371, 12705, 1074, 6980, 573, 4763, 12706, 1896, 12743, 12746, 12747, 1093, 12680, 12684, 2]
+// Dependencies: [5, 12681, 5281, 1371, 12709, 1074, 6980, 573, 4763, 12710, 1896, 12747, 12750, 12751, 1093, 12684, 12688, 2]
 // Exports: closeDiscoverabilityModal, nextOnboardingStep, openDiscoverabilityModal, previousOnboardingStep, startContactSyncForDiscoverability, startOnboarding, toggleDiscoverabilityForUser, transitionToHubEmailConnectionModal, transitionToNUFGuildTemplatesModal
 
-// Module 12704 (_startContactSyncForDiscoverability)
+// Module 12708 (_startContactSyncForDiscoverability)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import _modDef4763 from "module_4763" /* 4763 */;
-import _modDef12743 from "module_12743" /* 12743 */;
+import _modDef12747 from "module_12747" /* 12747 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ContactSyncModes from "ContactSyncModes" /* 12677 */;
+import ContactSyncModes from "ContactSyncModes" /* 12681 */;
 import closure_8 from "set" /* 5281 */;
 import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import { NUF_DISCOVERABILITY_MODAL_KEY as closure_10 } from "NewUserTypes" /* 12705 */;
+import { NUF_DISCOVERABILITY_MODAL_KEY as closure_10 } from "NewUserTypes" /* 12709 */;
 import { PlatformTypes } from "ME" /* 1074 */;
 import { IN_APP_GUILD_TEMPLATES_MODAL_KEY as closure_12 } from "NUXGuildTemplatesAnalytics" /* 6980 */;
 
@@ -57,14 +57,14 @@ function _startContactSyncForDiscoverability() {
                 phone = currentUser.phone;
               }
               const localAccount = closure_1_8.getLocalAccount(closure_1_11.CONTACTS);
-              callback(12680);
+              callback(12684);
               if (null == phone) {
                 const _Error = Error;
                 error = new Error("Cannot start contact sync without a phone number");
                 throw error;
               } else {
                 closure_1_6(tmp31);
-                let obj4 = closure_1_1(12684);
+                let obj4 = closure_1_1(12688);
                 obj1 = { enabled: null, name: null };
                 obj1[0] = tmp15;
                 obj1[1] = tmp31;
@@ -85,7 +85,7 @@ function _startContactSyncForDiscoverability() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(12680);
+              obj1 = callback(12684);
               dependencyMap = 2;
               c3 = 1;
               obj4 = { value: null, done: false };
@@ -158,12 +158,12 @@ export const transitionToHubEmailConnectionModal = function transitionToHubEmail
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = _modDef12743;
+  let obj = _modDef12747;
   obj = {
     onCloseExtra(arg0) {
       if (arg0) {
-        const result = callback(12746).setNewUserFlowCompleted();
-        const obj2 = callback(12746);
+        const result = callback(12750).setNewUserFlowCompleted();
+        const obj2 = callback(12750);
       } else {
         callback2(573).dispatch({ type: "ONBOARDING_STEP" });
         const obj = callback2(573);

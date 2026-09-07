@@ -1,10 +1,10 @@
-// Module ID: 11124
-// Function ID: 11125
+// Module ID: 11129
+// Function ID: 11130
 // Name: ToastEmoji
 // Dependencies: [19, 4552, 1374, 21, 4560, 576, 1115, 504, 1396, 7130, 4556, 1114, 4962, 4272, 4259, 2]
 // Exports: showDoubleTapEmojiUpdatedToast
 
-// Module 11124 (ToastEmoji)
+// Module 11129 (ToastEmoji)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import dispatcherDefault from "dispatcher" /* 4259 */;

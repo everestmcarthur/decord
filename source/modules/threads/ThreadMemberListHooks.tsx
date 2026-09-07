@@ -1,13 +1,13 @@
-// Module ID: 16687
-// Function ID: 16688
+// Module ID: 16690
+// Function ID: 16691
 // Name: useThreadMemberListSections
-// Dependencies: [19, 2015, 9837, 1085, 4992, 7312, 7286, 504, 1114, 2]
+// Dependencies: [19, 2015, 9842, 1085, 4992, 7312, 7286, 504, 1114, 2]
 // Exports: useThreadMemberListSections
 
-// Module 16687 (useThreadMemberListSections)
+// Module 16690 (useThreadMemberListSections)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_5 from "handleUserUpdate" /* 9837 */;
+import closure_5 from "handleUserUpdate" /* 9842 */;
 import { StatusTypes } from "sum" /* 1085 */;
 
 const require = arg1;

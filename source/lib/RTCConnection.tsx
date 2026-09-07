@@ -1,7 +1,7 @@
 // Module ID: 4587
 // Function ID: 4588
 // Name: getEventHistoryString
-// Dependencies: [5, 4588, 4598, 9151, 9083, 502, 1957, 1979, 1908, 4583, 10038, 4610, 1371, 1074, 4607, 13802, 4585, 559, 4589, 4618, 1232, 3, 13803, 1256, 13805, 13807, 9609, 10039, 1461, 1115, 4182, 1365, 573, 1907, 1384, 4614, 14, 5420, 13808, 13809, 9605, 1242, 4554, 7672, 13810, 13812, 4218, 4698, 13813, 13814, 4615, 13815, 13816, 13818, 7748, 13819, 9110, 7474, 13820, 13821, 9521, 13823, 4904, 1114, 551, 1241, 2]
+// Dependencies: [5, 4588, 4598, 9156, 9088, 502, 1957, 1979, 1908, 4583, 10043, 4610, 1371, 1074, 4607, 13805, 4585, 559, 4589, 4618, 1232, 3, 13806, 1256, 13808, 13810, 9614, 10044, 1461, 1115, 4182, 1365, 573, 1907, 1384, 4614, 14, 5420, 13811, 13812, 9610, 1242, 4554, 7672, 13813, 13815, 4218, 4698, 13816, 13817, 4615, 13818, 13819, 13821, 7748, 13822, 9115, 7474, 13823, 13824, 9526, 13826, 4904, 1114, 551, 1241, 2]
 
 // Module 4587 (getEventHistoryString)
 import timestampDefault from "timestamp" /* 3 */;
@@ -25,27 +25,27 @@ import onDefault from "on" /* 4618 */;
 import setDefault2 from "set" /* 4904 */;
 import getUnitIdDefault from "getUnitId" /* 5420 */;
 import createDefault from "create" /* 7474 */;
-import NativeModulesDefault from "NativeModules" /* 9521 */;
-import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 9609 */;
-import openAll from "open" /* 10039 */;
-import getUnitIdDefault2 from "getUnitId" /* 13809 */;
-import _modDef13823 from "module_13823" /* 13823 */;
+import NativeModulesDefault from "NativeModules" /* 9526 */;
+import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 9614 */;
+import openAll from "open" /* 10044 */;
+import getUnitIdDefault2 from "getUnitId" /* 13812 */;
+import _modDef13826 from "module_13826" /* 13826 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "DeviceTypes" /* 4588 */;
 import closure_6 from "updateAveragedStatsHelper" /* 4598 */;
-import closure_7 from "items" /* 9151 */;
-import closure_8 from "handleAudioRouteChanged" /* 9083 */;
+import closure_7 from "items" /* 9156 */;
+import closure_8 from "handleAudioRouteChanged" /* 9088 */;
 import closure_9 from "fetchFingerprint" /* 502 */;
 import closure_10 from "ensureGuildLoaded" /* 1957 */;
 import closure_11 from "createGuildRecordFromRust" /* 1979 */;
 import closure_12 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_13 from "createRTCConnection" /* 4583 */;
-import closure_14 from "updateStats" /* 10038 */;
+import closure_14 from "updateStats" /* 10043 */;
 import closure_15 from "initialize" /* 4610 */;
 import closure_16 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
 import RESOLUTION_720 from "RESOLUTION_720" /* 4607 */;
-import { BROWSER_SUPPORTS_UNIFIED_PLAN as closure_24 } from "parsed" /* 13802 */;
+import { BROWSER_SUPPORTS_UNIFIED_PLAN as closure_24 } from "parsed" /* 13805 */;
 import DesktopSources from "DesktopSources" /* 4585 */;
 
 require = arg1;
@@ -648,9 +648,9 @@ prototype["destroy"] = function destroy() {
   }
   obj = { c: constants9.CONNECTION_DESTROY };
   self.recordEvent(obj);
-  const WindowVisibilityVideoManager = tmp5(9609).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = tmp5(9614).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
-  const WindowVisibilityVideoManager2 = tmp5(9609).WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager2 = tmp5(9614).WindowVisibilityVideoManager;
   WindowVisibilityVideoManager2.off(isIncomingVideoEnabled.WindowVisibilityEvent.WindowVisibilityChanged, self.windowVisibilityChanged);
   self._cancelReconnect();
   self._cleanupSocket();
@@ -1094,7 +1094,7 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   const tmp3 = importDefault;
   let enabled = set2.isWeb();
   if (enabled) {
-    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13808).BrowserTransceiverPaddingRemovalExperiment;
+    const BrowserTransceiverPaddingRemovalExperiment = tmp8(13811).BrowserTransceiverPaddingRemovalExperiment;
     enabled = BrowserTransceiverPaddingRemovalExperiment.getConfig({ location: "RTCConnection" }).enabled;
   }
   if (enabled) {
@@ -1113,11 +1113,11 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   tmp8Result = tmp8(1115);
   let isAndroidResult = tmp8Result.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = tmp8(9605).isSurfaceDirectRendererExperimentEnabled();
-    const tmp8Result1 = tmp8(9605);
+    isAndroidResult = tmp8(9610).isSurfaceDirectRendererExperimentEnabled();
+    const tmp8Result1 = tmp8(9610);
   }
   if (isAndroidResult) {
-    items.push(tmp8(9605).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
+    items.push(tmp8(9610).ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT);
   }
   this._selectedExperiments = items;
 };
@@ -1690,7 +1690,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   ({ ssrc, streamParameters } = _readyData);
   this.setState(constants3.RTC_CONNECTING);
   this.port = _sfuEndpoint.port;
-  const ProcessBoostExperiment = _require(13812).ProcessBoostExperiment;
+  const ProcessBoostExperiment = _require(13815).ProcessBoostExperiment;
   const config = ProcessBoostExperiment.getConfig({ location: "media_engine_connect" });
   let obj = store2;
   ({ processPriority, threadPriorityConfiguration } = config);
@@ -2177,22 +2177,22 @@ prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
   self = this;
   if (null != this._connection) {
     if (null == self._videoQuality) {
-      const videoQuality = new self(13820).VideoQuality(self._connection);
+      const videoQuality = new self(13823).VideoQuality(self._connection);
       self._videoQuality = videoQuality;
       const _videoQuality2 = self._videoQuality;
       let result = _videoQuality2.updateCallUserIdsCount(self._userIds.size);
       const _videoQuality3 = self._videoQuality;
       _videoQuality3.start();
-      const defaultConfig = self(13821).VideoHealthManager.defaultConfig;
+      const defaultConfig = self(13824).VideoHealthManager.defaultConfig;
       ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
       if (defaultConfig.featureEnabled) {
-        const videoHealthManager = new tmp10(13821).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
+        const videoHealthManager = new tmp10(13824).VideoHealthManager(windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec);
         self._videoHealthManager = videoHealthManager;
         if (null != self._localMediaSinkWantsManager) {
           self._localMediaSinkWantsManager.videoHealthManager = self._videoHealthManager;
         }
         const _videoQuality = self._videoQuality;
-        _videoQuality.on(tmp10(13820).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
+        _videoQuality.on(tmp10(13823).VideoQualityEvent.FpsUpdate, (arg0, arg1, arg2) => {
           const _localMediaSinkWantsManager = self._localMediaSinkWantsManager;
           let result;
           if (_localMediaSinkWantsManager != null) {
@@ -2714,7 +2714,7 @@ prototype["_handleKeyframeInterval"] = function _handleKeyframeInterval(keyframe
 };
 prototype["_handleBandwidthEstimationExperiment"] = function _handleBandwidthEstimationExperiment(_bandwidthEstimationExperiment) {
   this._bandwidthEstimationExperiment = _bandwidthEstimationExperiment;
-  const mediaEngineExperiments = _modDef13823.getMediaEngineExperiments(_bandwidthEstimationExperiment);
+  const mediaEngineExperiments = _modDef13826.getMediaEngineExperiments(_bandwidthEstimationExperiment);
   let tmp = null !== mediaEngineExperiments;
   if (tmp) {
     tmp = 0 !== mediaEngineExperiments.length;

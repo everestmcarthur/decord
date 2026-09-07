@@ -1,14 +1,14 @@
-// Module ID: 15116
-// Function ID: 15117
+// Module ID: 15119
+// Function ID: 15120
 // Name: maybeRefreshAd
-// Dependencies: [19, 7700, 7703, 1090, 11484, 11300, 11276, 504, 15117, 7701, 7699, 2]
+// Dependencies: [19, 7700, 7703, 1090, 11489, 11305, 11281, 504, 15120, 7701, 7699, 2]
 // Exports: default, useAdDecisionForPlacement, useAdRefreshLoop
 
-// Module 15116 (maybeRefreshAd)
+// Module 15119 (maybeRefreshAd)
 import set from "set" /* 2 */;
 import setDefault from "set" /* 1090 */;
-import _modDef11300 from "module_11300" /* 11300 */;
-import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11484 */;
+import _modDef11305 from "module_11305" /* 11305 */;
+import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11489 */;
 import noop from "noop" /* 19 */;
 import closure_5 from "map" /* 7700 */;
 import closure_6 from "initializeState" /* 7703 */;
@@ -28,18 +28,18 @@ function maybeRefreshAd(fetchedAt, MOBILE_HOME_DOCK_AREA) {
     if ("active" === obj2.getState()) {
       if (!fetchingAdToDeliverByPlacement.isFetchingAdToDeliverByPlacement(MOBILE_HOME_DOCK_AREA)) {
         if (obj4.canRefreshAd(MOBILE_HOME_DOCK_AREA)) {
-          let tmpResult = tmp(11276);
+          let tmpResult = tmp(11281);
           const currentQuests = tmpResult.fetchCurrentQuests();
-          tmpResult = tmp(11276);
+          tmpResult = tmp(11281);
           const questToDeliver = tmpResult.fetchQuestToDeliver(MOBILE_HOME_DOCK_AREA, arg2);
         }
       }
       obj4 = fetchingAdToDeliverByPlacement;
     } else if (null != fetchedAt) {
-      tmp(11276).clearQuestAdDecision(MOBILE_HOME_DOCK_AREA, fetchedAt.ttlMillis);
-      const tmpResult1 = tmp(11276);
+      tmp(11281).clearQuestAdDecision(MOBILE_HOME_DOCK_AREA, fetchedAt.ttlMillis);
+      const tmpResult1 = tmp(11281);
     }
-    obj2 = _modDef11300;
+    obj2 = _modDef11305;
   }
 }
 ({ useEffect: c3, useRef: c4 } = noop);

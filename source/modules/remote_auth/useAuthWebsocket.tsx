@@ -1,10 +1,10 @@
-// Module ID: 15989
-// Function ID: 15990
+// Module ID: 15992
+// Function ID: 15993
 // Name: useAuthWebsocket
-// Dependencies: [5, 32, 19, 1074, 3, 15988, 559, 6964, 13633, 15990, 1109, 1272, 6593, 15992, 2]
+// Dependencies: [5, 32, 19, 1074, 3, 15991, 559, 6964, 13637, 15993, 1109, 1272, 6593, 15995, 2]
 // Exports: useAuthWebsocket
 
-// Module 15989 (useAuthWebsocket)
+// Module 15992 (useAuthWebsocket)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;

@@ -1,10 +1,10 @@
-// Module ID: 12631
-// Function ID: 12632
+// Module ID: 12635
+// Function ID: 12636
 // Name: ChatBeginningRowJoinRequest
-// Dependencies: [19, 17, 4199, 1371, 1074, 21, 4560, 576, 12632, 504, 12633, 5584, 4556, 1114, 4384, 5433, 4975, 2]
+// Dependencies: [19, 17, 4199, 1371, 1074, 21, 4560, 576, 12636, 504, 12637, 5584, 4556, 1114, 4384, 5433, 4975, 2]
 // Exports: default
 
-// Module 12631 (ChatBeginningRowJoinRequest)
+// Module 12635 (ChatBeginningRowJoinRequest)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

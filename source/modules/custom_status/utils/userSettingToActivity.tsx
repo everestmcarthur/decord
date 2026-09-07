@@ -1,10 +1,10 @@
-// Module ID: 11110
-// Function ID: 11111
+// Module ID: 11115
+// Function ID: 11116
 // Name: _activityFromSetting
 // Dependencies: [19, 5459, 1074, 4213, 1935, 504, 2]
 // Exports: getActivityFromCustomStatus, useCustomStatusActivity
 
-// Module 11110 (_activityFromSetting)
+// Module 11115 (_activityFromSetting)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import ME from "ME" /* 1074 */;

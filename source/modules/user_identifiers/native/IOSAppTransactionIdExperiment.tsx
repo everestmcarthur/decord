@@ -1,10 +1,10 @@
-// Module ID: 17405
-// Function ID: 17406
+// Module ID: 17408
+// Function ID: 17409
 // Name: isIOSAppTransactionIdTrackingEnabled
 // Dependencies: [1433, 2]
 // Exports: isIOSAppTransactionIdTrackingEnabled
 
-// Module 17405 (isIOSAppTransactionIdTrackingEnabled)
+// Module 17408 (isIOSAppTransactionIdTrackingEnabled)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 

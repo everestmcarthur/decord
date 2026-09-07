@@ -1,14 +1,14 @@
-// Module ID: 13855
-// Function ID: 13856
+// Module ID: 13858
+// Function ID: 13859
 // Name: ErrorMessage
-// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 1114, 4556, 6613, 13856, 9046, 9042, 4258, 1242, 4272, 7085, 4975, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 1114, 4556, 6613, 13859, 9051, 9047, 4258, 1242, 4272, 7085, 4975, 2]
 
-// Module 13855 (ErrorMessage)
+// Module 13858 (ErrorMessage)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import TextField from "TextField" /* 6613 */;
-import apexExperimentDefault from "apexExperiment" /* 13856 */;
+import apexExperimentDefault from "apexExperiment" /* 13859 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -135,7 +135,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      obj = sourcePage(9046);
+      obj = sourcePage(9051);
       const validateDiscordTagResult = obj.validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         obj = { status: null, field: null, message: null };
@@ -150,14 +150,14 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         const obj2 = { discordTag: null, context: null, errorUxConfig: null, note: null };
         obj2[0] = tmp2;
         obj2[1] = { location: "Search - Add Friend Search" };
-        obj2[2] = sourcePage(9042).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED;
+        obj2[2] = sourcePage(9047).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED;
         let tmp9;
         if (trimmed1.length > 0) {
           tmp9 = trimmed1;
         }
         obj2[3] = tmp9;
-        const obj5 = ref(9042);
-        ref(9042).sendRequest(obj2).then(() => {
+        const obj5 = ref(9047);
+        ref(9047).sendRequest(obj2).then(() => {
           let obj = { validatedText: "", hint: null };
           const intl = sourcePage(1114).intl;
           obj[1] = intl.string(sourcePage(1114).t["6p7Mhh"]);
@@ -200,8 +200,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
             if (num == null) {
               num = -1;
             }
-            obj[2] = sourcePage(9046).humanizeAbortCode(num, substr);
-            obj = sourcePage(9046);
+            obj[2] = sourcePage(9051).humanizeAbortCode(num, substr);
+            obj = sourcePage(9051);
             let num2;
             if (body != null) {
               const body3 = body.body;
@@ -213,12 +213,12 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
               num2 = -1;
             }
             obj[3] = obj.humanizeAbortCodeForA11y(num2, substr);
-            const obj4 = sourcePage(9046);
+            const obj4 = sourcePage(9051);
             const tmp3 = substr;
           }
           closure_1_6(obj);
         });
-        const sendRequestResult = ref(9042).sendRequest(obj2);
+        const sendRequestResult = ref(9047).sendRequest(obj2);
       }
     }
   }

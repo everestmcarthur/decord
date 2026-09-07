@@ -1,13 +1,13 @@
-// Module ID: 16266
-// Function ID: 16267
+// Module ID: 16269
+// Function ID: 16270
 // Name: fetchMobileGameCommunities
-// Dependencies: [15620, 1074, 559, 1090, 573, 1272, 1471, 2]
+// Dependencies: [15623, 1074, 559, 1090, 573, 1272, 1471, 2]
 // Exports: dismissGuild, fetchMobileGameCommunities, fetchMobileGameCommunitiesIfStale
 
-// Module 16266 (fetchMobileGameCommunities)
+// Module 16269 (fetchMobileGameCommunities)
 import setDefault from "set" /* 1090 */;
 import parseDefault from "parse" /* 1471 */;
-import closure_3 from "set" /* 15620 */;
+import closure_3 from "set" /* 15623 */;
 import { Endpoints } from "ME" /* 1074 */;
 import importDefaultResult from "fails" /* 559 */;
 import importDefaultResult1 from "dispatcher" /* 573 */;
@@ -69,7 +69,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
               let obj = { url: constants.MOBILE_GAME_COMMUNITIES, query: callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
               let value = HTTP.get(obj);
               let obj2 = callback(dependencyMap[6]);
-              value.then(() => { ... }, () => { ... }).catch(/* F123678 */ function() { ... });
+              value.then(() => { ... }, () => { ... }).catch(/* F123707 */ function() { ... });
             });
           }
         }).catch(() => {
@@ -137,7 +137,7 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
                   let obj = { url: constants.MOBILE_GAME_COMMUNITIES, query: callback(dependencyMap[6]).stringify({ game_ids: arr, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
                   let value = HTTP.get(obj);
                   let obj2 = callback(dependencyMap[6]);
-                  value.then(() => { ... }, () => { ... }).catch(/* F123678 */ function() { ... });
+                  value.then(() => { ... }, () => { ... }).catch(/* F123707 */ function() { ... });
                 });
               }
             }).catch(() => {

@@ -1,18 +1,18 @@
 // Module ID: 10565
 // Function ID: 10566
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 96, 98, 10561, 10437, 10446]
+// Dependencies: [41, 42, 93, 95, 98, 10566, 10440, 10444]
 
 // Module 10565 (_isNativeReflectConstruct)
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10446 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10444 */;
+import REGEX_PARTS from "REGEX_PARTS" /* 10566 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
-import closure_5 from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const RUTimeExpressionParser = require;
+const RUTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,106 +32,56 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class RUTimeExpressionParser {
-  constructor(arg0) {
+let closure_6 = "(?:(?:\u043E\u043A\u043E\u043B\u043E|\u043F\u0440\u0438\u043C\u0435\u0440\u043D\u043E)\\s*(?:~\\s*)?)?(" + REGEX_PARTS.TIME_UNITS_PATTERN + ")" + REGEX_PARTS.REGEX_PARTS.rightBoundary;
+class RUTimeUnitWithinFormatParser {
+  constructor() {
     self = this;
-    tmp = closure_2(this, RUTimeExpressionParser);
-    items = [];
-    items[0] = global;
+    tmp = closure_2(this, RUTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(RUTimeExpressionParser);
+    obj = closure_4(RUTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
-let items = [
+_inherits(RUTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const items = [
   {
-    key: "patternFlags",
-    value: function patternFlags() {
-      return RUTimeExpressionParser(10561).REGEX_PARTS.flags;
+    key: "patternLeftBoundary",
+    value: function patternLeftBoundary() {
+      return RUTimeUnitWithinFormatParser(10566).REGEX_PARTS.leftBoundary;
     }
   },
   {
-    key: "primaryPatternLeftBoundary",
-    value: function primaryPatternLeftBoundary() {
-      return "(^|\\s|T|(?:[^\\p{L}\\p{N}_]))";
-    }
-  },
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|\u0434\u043E|\u0438|\u043F\u043E|\\?)\\s*";
-    }
-  },
-  {
-    key: "primaryPrefix",
-    value: function primaryPrefix() {
-      return "(?:(?:\u0432|\u0441)\\s*)??";
-    }
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:\u0443\u0442\u0440\u0430|\u0432\u0435\u0447\u0435\u0440\u0430|\u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0434\u043D\u044F))?(?!\\/)" + RUTimeExpressionParser(10561).REGEX_PARTS.rightBoundary;
-    }
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      const self = this;
-      const tmp = callback3(callback2(self.prototype), "extractPrimaryTimeComponents", this);
-      closure_1 = tmp;
-      let fn = tmp;
-      if (typeof tmp === "function") {
-        fn = (items) => callback.apply(self, items);
+    key: "innerPattern",
+    value: function innerPattern(option) {
+      let _RegExp = RegExp;
+      if (option.option.forwardDate) {
+        _RegExp = new _RegExp(tmp, RUTimeUnitWithinFormatParser(10566).REGEX_PARTS.flags);
+      } else {
+        const _HermesInternal = HermesInternal;
+        const combined = "(?:\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435|\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0438)\\s*" + tmp;
+        _RegExp = new _RegExp(combined, RUTimeUnitWithinFormatParser(10566).REGEX_PARTS.flags);
       }
-      const items = [arg0, arg1];
-      const fnResult = fn(items);
-      if (fnResult) {
-        const first = arg1[0];
-        if (first.endsWith("\u0432\u0435\u0447\u0435\u0440\u0430")) {
-          let value = fnResult.get("hour");
-          if (value >= 6) {
-            if (value < 12) {
-              fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", RUTimeExpressionParser(10437).Meridiem.PM);
-            }
-          }
-          if (value < 6) {
-            fnResult.assign("meridiem", RUTimeExpressionParser(10437).Meridiem.AM);
-          }
-        }
-        const first1 = arg1[0];
-        if (first1.endsWith("\u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0434\u043D\u044F")) {
-          fnResult.assign("meridiem", RUTimeExpressionParser(10437).Meridiem.PM);
-          value = fnResult.get("hour");
-          let tmp14 = value >= 0;
-          if (tmp14) {
-            tmp14 = value <= 6;
-          }
-          if (tmp14) {
-            fnResult.assign("hour", fnResult.get("hour") + 12);
-          }
-        }
-        const first2 = arg1[0];
-        if (first2.endsWith("\u0443\u0442\u0440\u0430")) {
-          fnResult.assign("meridiem", RUTimeExpressionParser(10437).Meridiem.AM);
-          if (fnResult.get("hour") < 12) {
-            fnResult.assign("hour", fnResult.get("hour"));
-          }
-        }
-      }
-      return fnResult;
+      return _RegExp;
+    }
+  },
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference) {
+      const ParsingComponents = RUTimeUnitWithinFormatParser(10440).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, RUTimeUnitWithinFormatParser(10566).parseDuration(arg1[1]));
     }
   }
 ];
 
-export default _createClass(RUTimeExpressionParser, items);
+export default _createClass(RUTimeUnitWithinFormatParser, items);

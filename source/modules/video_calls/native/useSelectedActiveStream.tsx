@@ -1,10 +1,10 @@
-// Module ID: 13793
-// Function ID: 13794
+// Module ID: 13796
+// Function ID: 13797
 // Name: useSelectedActiveStream
 // Dependencies: [4576, 4582, 504, 2]
 // Exports: default
 
-// Module 13793 (useSelectedActiveStream)
+// Module 13796 (useSelectedActiveStream)
 import closure_2 from "getParticipants" /* 4576 */;
 import closure_3 from "reset" /* 4582 */;
 

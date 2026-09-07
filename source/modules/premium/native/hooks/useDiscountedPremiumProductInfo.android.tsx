@@ -1,10 +1,10 @@
-// Module ID: 9379
-// Function ID: 9380
+// Module ID: 9384
+// Function ID: 9385
 // Name: useDiscountedPremiumProductInfo
-// Dependencies: [19, 1085, 9380, 7240, 7234, 2]
+// Dependencies: [19, 1085, 9385, 7240, 7234, 2]
 // Exports: useDiscountedPremiumProductInfo
 
-// Module 9379 (useDiscountedPremiumProductInfo)
+// Module 9384 (useDiscountedPremiumProductInfo)
 import closure_2 from "noop" /* 19 */;
 import { CurrencyCodes } from "sum" /* 1085 */;
 

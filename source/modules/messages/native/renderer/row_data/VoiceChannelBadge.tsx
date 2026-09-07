@@ -1,14 +1,14 @@
-// Module ID: 13182
-// Function ID: 13183
+// Module ID: 13186
+// Function ID: 13187
 // Name: createVoiceChannelBadge
-// Dependencies: [17, 1957, 4199, 4579, 1074, 13183, 5028, 4771, 2]
+// Dependencies: [17, 1957, 4199, 4579, 1074, 13187, 5028, 4771, 2]
 // Exports: createVoiceChannelBadge
 
-// Module 13182 (createVoiceChannelBadge)
+// Module 13186 (createVoiceChannelBadge)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;
-import experiment from "experiment" /* 13183 */;
+import experiment from "experiment" /* 13187 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_5 from "updateVoiceState" /* 4579 */;

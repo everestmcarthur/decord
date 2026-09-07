@@ -1,10 +1,10 @@
-// Module ID: 15723
-// Function ID: 15724
+// Module ID: 15726
+// Function ID: 15727
 // Name: TakeActionButtons
-// Dependencies: [5, 32, 19, 17, 4209, 1371, 11363, 21, 4560, 576, 504, 11390, 11393, 1483, 9042, 8404, 11370, 8629, 4259, 1114, 4520, 4258, 4975, 11401, 8665, 5048, 8581, 4255, 4556, 2]
+// Dependencies: [5, 32, 19, 17, 4209, 1371, 11368, 21, 4560, 576, 504, 11395, 11398, 1483, 9047, 8404, 11375, 8634, 4259, 1114, 4520, 4258, 4975, 11406, 8670, 5048, 8584, 4255, 4556, 2]
 // Exports: default
 
-// Module 15723 (TakeActionButtons)
+// Module 15726 (TakeActionButtons)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -13,7 +13,7 @@ import { useState } from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_8 from "markAllUserIdListsStale" /* 4209 */;
 import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 11363 */;
+import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 11368 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -104,7 +104,7 @@ export default function TakeActionButtons(senderId) {
             closure_0 = tmp4;
             if (null != closure_1_9.getUser(closure_1_0)) {
               closure_1_6(true);
-              let obj2 = closure_1_0(8629);
+              let obj2 = closure_1_0(8634);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
@@ -134,7 +134,7 @@ export default function TakeActionButtons(senderId) {
           callback2(false);
           obj = v0(8404);
           const result = obj.showReportSuccessToast(closure_0, v0);
-          callback(closure_1_0(11370).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          callback(closure_1_0(11375).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
         }
         dependencyMap = 3;
         obj2 = { value: null, done: true };

@@ -1,10 +1,10 @@
-// Module ID: 9447
-// Function ID: 9448
+// Module ID: 9452
+// Function ID: 9453
 // Name: _beginConsoleTransfer
-// Dependencies: [5, 1074, 9448, 9455, 4527, 9456, 1896, 1250, 9460, 2]
+// Dependencies: [5, 1074, 9453, 9460, 4527, 9461, 1896, 1250, 9465, 2]
 // Exports: beginConsoleTransfer
 
-// Module 9447 (_beginConsoleTransfer)
+// Module 9452 (_beginConsoleTransfer)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import set from "set" /* 2 */;
 

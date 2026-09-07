@@ -1,14 +1,14 @@
-// Module ID: 15583
-// Function ID: 15584
+// Module ID: 15586
+// Function ID: 15587
 // Name: BeakerIcon
-// Dependencies: [19, 21, 576, 4261, 15584, 2]
+// Dependencies: [19, 21, 576, 4261, 15587, 2]
 // Exports: BeakerIcon
 
-// Module 15583 (BeakerIcon)
+// Module 15586 (BeakerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 15584 */;
+import registerAsset from "registerAsset" /* 15587 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

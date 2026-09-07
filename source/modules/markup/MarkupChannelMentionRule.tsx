@@ -130,7 +130,7 @@ function parseChannel(canViewChannel) {
           obj.content = items3;
           let obj6 = obj;
         } else if (null != arg3) {
-          const obj4 = { type: "link", content: null, target: null, title: "call" };
+          const obj4 = { type: "link", content: null, target: null, title: "accessible" };
           const obj5 = { type: "text", content: null };
           obj5[1] = arg3;
           const items4 = [obj5];
@@ -335,7 +335,7 @@ obj = {
   parse(arg0, arg1, channelId) {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     if (null == tmp3) {
-      let obj = { type: "link", content: null, target: null, title: "call" };
+      let obj = { type: "link", content: null, target: null, title: "accessible" };
       obj = { type: "text", content: null };
       obj[1] = tmp;
       const items = [obj];
@@ -410,7 +410,7 @@ obj[2] = {
       }
     }
     const content = [{ type: "text", content: target }];
-    return { type: "link", content, target, title: "call" };
+    return { type: "link", content, target, title: "accessible" };
   }
 };
 let obj1 = {
@@ -457,7 +457,7 @@ let obj1 = {
       }
     }
     const content = [{ type: "text", content: target }];
-    return { type: "link", content, target, title: "call" };
+    return { type: "link", content, target, title: "accessible" };
   }
 };
 const result = require("set").fileFinishedImporting("modules/markup/MarkupChannelMentionRule.tsx");

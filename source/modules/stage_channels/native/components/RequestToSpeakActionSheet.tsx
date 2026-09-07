@@ -1,13 +1,13 @@
-// Module ID: 9915
-// Function ID: 9916
+// Module ID: 9920
+// Function ID: 9921
 // Name: RequestToSpeakRow
-// Dependencies: [32, 19, 17, 502, 1957, 5414, 21, 4560, 576, 9916, 7201, 1114, 504, 4707, 9917, 9919, 5605, 5422, 8411, 8413, 4527, 8398, 1178, 9921, 4262, 7162, 7182, 5431, 5425, 7150, 6627, 4973, 5687, 4556, 9922, 2]
+// Dependencies: [32, 19, 17, 502, 1957, 5414, 21, 4560, 576, 9921, 7201, 1114, 504, 4707, 9922, 9924, 5605, 5422, 8411, 8413, 4527, 8398, 1178, 9926, 4262, 7162, 7182, 5431, 5425, 7150, 6627, 4973, 5687, 4556, 9927, 2]
 // Exports: default
 
-// Module 9915 (RequestToSpeakRow)
+// Module 9920 (RequestToSpeakRow)
 import ThemesDefault from "Themes" /* 576 */;
 import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4707 */;
-import registerAssetDefault from "registerAsset" /* 9921 */;
+import registerAssetDefault from "registerAsset" /* 9926 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -20,7 +20,7 @@ import createCacheKey from "createCacheKey" /* 4560 */;
 const require = arg1;
 function RequestToSpeakRow(channel) {
   let _require;
-  let obj = _require(9916);
+  let obj = _require(9921);
   [tmp2, c0] = callback(obj.useRequestToSpeakPermission(channel.channel.id), 2);
   obj = { label: null, subLabel: null, value: null, onValueChange: null };
   const intl = _require(1114).intl;
@@ -63,9 +63,9 @@ function ManageSelfSpeakerRow(channel) {
     stringResult = string(t["8Joh+p"]);
   }
   if (tmp8) {
-    let MicrophoneArrowRightIcon = tmp(9917).GroupArrowDownIcon;
+    let MicrophoneArrowRightIcon = tmp(9922).GroupArrowDownIcon;
   } else {
-    MicrophoneArrowRightIcon = tmp(9919).MicrophoneArrowRightIcon;
+    MicrophoneArrowRightIcon = tmp(9924).MicrophoneArrowRightIcon;
   }
   obj = {
     onPress() {
@@ -180,13 +180,13 @@ export default function RequestToSpeakActionSheet(channelId) {
     obj11[0] = stateFromStores;
     const _Math = Math;
     obj11[1] = Math.max(first1 - first - 8, 0);
-    items4[1] = callback2(tmp3(9922), obj11);
+    items4[1] = callback2(tmp3(9927), obj11);
     obj2[1] = items4;
     obj1[2] = callback3(tmp(4973).Stack, obj2);
     obj[2] = callback2(tmp(6627).BottomSheetScrollView, obj1);
     obj[1] = callback2(tmp(7150).BottomSheet, obj);
     tmp14 = callback2(tmp(7162).AnalyticsLocationProvider, obj);
-    const tmp3Result = tmp3(9922);
+    const tmp3Result = tmp3(9927);
   }
   return tmp14;
 };

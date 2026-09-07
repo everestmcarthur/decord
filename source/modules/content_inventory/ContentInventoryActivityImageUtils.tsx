@@ -1,10 +1,10 @@
-// Module ID: 12999
-// Function ID: 13000
+// Module ID: 13003
+// Function ID: 13004
 // Name: useComputedImagesForActivity
-// Dependencies: [19, 4788, 1074, 1920, 8341, 8139, 1114, 13000, 7309, 10892, 1396, 13002, 5283, 13003, 7168, 504, 1242, 8344, 2]
+// Dependencies: [19, 4788, 1074, 1920, 8341, 8139, 1114, 13004, 7309, 10897, 1396, 13006, 5283, 13007, 7168, 504, 1242, 8344, 2]
 // Exports: getApplicationImage, useImageForActivity, useImageForContentEntry
 
-// Module 12999 (useComputedImagesForActivity)
+// Module 13003 (useComputedImagesForActivity)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -13,9 +13,9 @@ import items3 from "items3" /* 1920 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7168 */;
 import importDefaultResult1 from "importDefaultResult1" /* 7309 */;
 import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8344 */;
-import unpackStageChannelParty from "unpackStageChannelParty" /* 10892 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 13000 */;
-import isOnXboxDefault from "isOnXbox" /* 13002 */;
+import unpackStageChannelParty from "unpackStageChannelParty" /* 10897 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 13004 */;
+import isOnXboxDefault from "isOnXbox" /* 13006 */;
 import closure_4 from "addApplication" /* 4788 */;
 import ME from "ME" /* 1074 */;
 
@@ -28,7 +28,7 @@ function useComputedImagesForActivity(activity, getIconURL) {
     let obj8 = obj;
   } else {
     if (obj17.isStageActivity(activity)) {
-      const result = tmp15(10892).unpackStageChannelParty(activity);
+      const result = tmp15(10897).unpackStageChannelParty(activity);
       let guildIconURL;
       if (null != result) {
         obj = { id: null, icon: null, size: null };
@@ -51,12 +51,12 @@ function useComputedImagesForActivity(activity, getIconURL) {
         obj1[0] = guildIconURL;
         tmp14 = obj1;
       }
-      const obj2 = { largeImage: null, smallImage: "a" };
+      const obj2 = { largeImage: null, smallImage: "Array" };
       obj2[0] = tmp14;
       obj8 = obj2;
-      const tmp15Result = tmp15(10892);
+      const tmp15Result = tmp15(10897);
     } else if (isOnXboxDefault(activity)) {
-      const obj3 = { largeImage: null, smallImage: "a" };
+      const obj3 = { largeImage: null, smallImage: "Array" };
       const obj4 = { src: null, alt: null };
       let tmp2Result = tmp2(5283);
       obj4[0] = tmp2Result.get(constants.XBOX).icon.customPNG;
@@ -66,8 +66,8 @@ function useComputedImagesForActivity(activity, getIconURL) {
       obj8 = obj3;
     } else {
       if (null == smallImage) {
-        if (tmp2(13003)(activity)) {
-          const obj5 = { largeImage: null, smallImage: "a" };
+        if (tmp2(13007)(activity)) {
+          const obj5 = { largeImage: null, smallImage: "Array" };
           const obj6 = { src: null, alt: null };
           tmp2Result = tmp2(5283);
           obj6[0] = tmp2Result.get(constants.PLAYSTATION).icon.lightPNG;
@@ -91,7 +91,7 @@ function useComputedImagesForActivity(activity, getIconURL) {
           obj7[1] = smallImage;
           obj8 = obj7;
         } else {
-          obj8 = { largeImage: null, smallImage: "a" };
+          obj8 = { largeImage: null, smallImage: "Array" };
           obj8[0] = smallImage;
         }
       } else {
@@ -210,7 +210,7 @@ function useRichImageForActivity(activity, activityApplication) {
     const application_id = activity.application_id;
   }
   if (null == activity) {
-    return { largeImage: "hash", smallImage: "call" };
+    return { largeImage: "push", smallImage: "channel" };
   } else {
     let large_image;
     if (activity != null) {
@@ -372,20 +372,20 @@ export const useImageForContentEntry = function useImageForContentEntry(tracking
       obj[1] = tmp3.smallImage;
       let obj4 = obj;
     } else if (null != tmp7) {
-      obj1 = { largeImage: null, smallImage: "a" };
+      obj1 = { largeImage: null, smallImage: "Array" };
       obj1[0] = tmp7;
       obj4 = obj1;
     } else {
       if (null != coverURL) {
         if (showCoverImage) {
-          const obj2 = { largeImage: null, smallImage: "a" };
+          const obj2 = { largeImage: null, smallImage: "Array" };
           const obj3 = { src: null };
           obj3[0] = coverURL;
           obj2[0] = obj3;
           obj4 = obj2;
         }
       }
-      obj4 = { largeImage: null, smallImage: "a" };
+      obj4 = { largeImage: null, smallImage: "Array" };
       obj4[0] = useComputedImagesForActivity(activity, obj).largeImage;
     }
     const obj5 = { activity: null, application: null, largeImageSrc: null, trackingSource: null };

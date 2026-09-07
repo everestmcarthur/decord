@@ -1,14 +1,14 @@
-// Module ID: 12323
-// Function ID: 12324
+// Module ID: 12327
+// Function ID: 12328
 // Name: GuildTemplatesItem
-// Dependencies: [19, 17, 12305, 12310, 21, 4560, 12324, 1178, 12325, 1483, 1611, 12309, 4556, 1114, 5687, 6938, 2]
+// Dependencies: [19, 17, 12309, 12314, 21, 4560, 12328, 1178, 12329, 1483, 1611, 12313, 4556, 1114, 5687, 6938, 2]
 // Exports: default
 
-// Module 12323 (GuildTemplatesItem)
+// Module 12327 (GuildTemplatesItem)
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import DirectoryEntryTypes from "DirectoryEntryTypes" /* 12305 */;
-import { GuildDirectoryCreate } from "GuildDirectoryCreate" /* 12310 */;
+import DirectoryEntryTypes from "DirectoryEntryTypes" /* 12309 */;
+import { GuildDirectoryCreate } from "GuildDirectoryCreate" /* 12314 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

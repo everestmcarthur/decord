@@ -1,10 +1,10 @@
-// Module ID: 9305
-// Function ID: 9306
+// Module ID: 9310
+// Function ID: 9311
 // Name: getIsPrivate
-// Dependencies: [32, 5, 19, 7305, 502, 1957, 4901, 4781, 7687, 1113, 1074, 4553, 7269, 7682, 7274, 1114, 9306, 11, 1272, 7777, 9307, 7684, 1384, 5129, 9309, 7767, 4740, 7456, 4904, 573, 4411, 1090, 7753, 9394, 2]
+// Dependencies: [32, 5, 19, 7305, 502, 1957, 4901, 4781, 7687, 1113, 1074, 4553, 7269, 7682, 7274, 1114, 9311, 11, 1272, 7777, 9312, 7684, 1384, 5129, 9314, 7767, 4740, 7456, 4904, 573, 4411, 1090, 7753, 9399, 2]
 // Exports: createThread, useCreateForumPostCommon, useCreateThreadCommon, usePrivateThreadMode
 
-// Module 9305 (getIsPrivate)
+// Module 9310 (getIsPrivate)
 import useCanStartPrivateThread from "useCanStartPrivateThread" /* 7269 */;
 import rebuildDefault from "rebuild" /* 7682 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -391,8 +391,8 @@ function _createThread_() {
                           reason = body6.reason;
                         }
                         obj6[4] = reason;
-                        let result = lib(9309).handleUploadMessageAttachmentsErrors(obj6);
-                        const obj27 = lib(9309);
+                        let result = lib(9314).handleUploadMessageAttachmentsErrors(obj6);
+                        const obj27 = lib(9314);
                       }
                     }
                     let obj10 = lib(7753);
@@ -412,7 +412,7 @@ function _createThread_() {
                       throwTypeErrorResult = dependencyMap;
                       throwTypeErrorResult = lib;
                       throwTypeErrorResult = closure_6;
-                      throwTypeErrorResult = callback(9394)(lib.id, closure_6);
+                      throwTypeErrorResult = callback(9399)(lib.id, closure_6);
                     }
                   } else {
                     let obj8 = callback(4904);

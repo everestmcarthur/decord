@@ -1,21 +1,21 @@
-// Module ID: 17447
-// Function ID: 17448
+// Module ID: 17450
+// Function ID: 17451
 // Name: _shouldSkipContactSyncStep
-// Dependencies: [5, 17, 15958, 5281, 1371, 1074, 12678, 4770, 12680, 1115, 9820, 573, 1484, 12683, 4417, 17448, 4763, 1100, 12746, 2]
+// Dependencies: [5, 17, 15961, 5281, 1371, 1074, 12682, 4770, 12684, 1115, 9825, 573, 1484, 12687, 4417, 17451, 4763, 1100, 12750, 2]
 // Exports: continueToNextStep, getKeyForOnboardingStep
 
-// Module 17447 (_shouldSkipContactSyncStep)
+// Module 17450 (_shouldSkipContactSyncStep)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import _modDef4763 from "module_4763" /* 4763 */;
-import trackNUFStep from "trackNUFStep" /* 12683 */;
-import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 17448 */;
+import trackNUFStep from "trackNUFStep" /* 12687 */;
+import NEW_USER_MODAL_KEY from "NEW_USER_MODAL_KEY" /* 17451 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 15958 */;
+import closure_5 from "initialize" /* 15961 */;
 import closure_6 from "set" /* 5281 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12678 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12682 */;
 import { NotificationAuthorizationStatus as closure_11 } from "NativePermissionStatus" /* 4770 */;
 
 require = arg1;
@@ -49,13 +49,13 @@ function _shouldSkipContactSyncStep() {
             return obj;
           } else {
             const callback = tmp4;
-            let obj2 = closure_1_0(12680);
+            let obj2 = closure_1_0(12684);
             const result = obj2.isContactSyncAvailable();
             if (result) {
               c1 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(12680).checkContactPermissions();
+              obj1[0] = closure_1_0(12684).checkContactPermissions();
               return obj1;
             } else {
               dependencyMap = 3;
@@ -93,12 +93,12 @@ function lastStepComplete(STEP_GUILD_TEMPLATE) {
   trackNUFStep.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
   const obj = trackNUFStep;
   if (obj2.isModalOpen(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY)) {
-    _modDef4763.popWithKey(tmp(17448).NEW_USER_MODAL_KEY);
+    _modDef4763.popWithKey(tmp(17451).NEW_USER_MODAL_KEY);
     const obj3 = _modDef4763;
   }
   let tmpResult = tmp(1100);
   tmpResult.transitionTo(constants.ME, { navigationReplace: true });
-  tmpResult = tmp(12746);
+  tmpResult = tmp(12750);
   const result = tmpResult.setNewUserFlowCompleted();
 }
 function getNextOnboardingStep(flag, first1, first) {
@@ -215,7 +215,7 @@ function _getNextOnboardingStep() {
               return obj5;
             } else if (arg1) {
               callback = dependencyMap;
-              obj3 = flag(12683);
+              obj3 = flag(12687);
               const obj6 = { skip: null };
               obj6[0] = flag;
               obj3.trackNUFStep(closure_3, key, obj6);

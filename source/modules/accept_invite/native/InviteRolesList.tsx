@@ -1,10 +1,10 @@
-// Module ID: 12720
-// Function ID: 12721
+// Module ID: 12724
+// Function ID: 12725
 // Name: InviteRolesList
-// Dependencies: [19, 17, 21, 4560, 2019, 4973, 4556, 1114, 10947, 2]
+// Dependencies: [19, 17, 21, 4560, 2019, 4973, 4556, 1114, 10952, 2]
 // Exports: default
 
-// Module 12720 (InviteRolesList)
+// Module 12724 (InviteRolesList)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

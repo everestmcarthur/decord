@@ -1,16 +1,16 @@
-// Module ID: 12540
-// Function ID: 12541
+// Module ID: 12544
+// Function ID: 12545
 // Name: GuildPowerupsDeactivateAlert
-// Dependencies: [17, 21, 4560, 576, 12541, 12542, 12543, 4910, 6610, 1114, 2428, 4910, 4556, 2]
+// Dependencies: [17, 21, 4560, 576, 12545, 12546, 12547, 4910, 6610, 1114, 2428, 4910, 4556, 2]
 // Exports: default
 
-// Module 12540 (GuildPowerupsDeactivateAlert)
+// Module 12544 (GuildPowerupsDeactivateAlert)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
 import messagesProxyDefault from "messagesProxy" /* 2428 */;
-import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12541 */;
-import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12542 */;
+import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12545 */;
+import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12546 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -34,8 +34,8 @@ export default function GuildPowerupsDeactivateAlert(arg0) {
   ({ onDeactivate: c1, error } = useGuildPowerupOnDeactivateDefault(guildId, powerup));
   const tmp2 = importDefault;
   const tmp4 = useGuildPowerupOnDeactivateDefault(guildId, powerup);
-  let obj = _require(12543);
-  const logPowerupModalOpened = obj.useLogPowerupModalOpened(guildId, powerup, _require(12543).ModalType.DEACTIVATE);
+  let obj = _require(12547);
+  const logPowerupModalOpened = obj.useLogPowerupModalOpened(guildId, powerup, _require(12547).ModalType.DEACTIVATE);
   obj = { header: null, title: null, content: null, actions: null, extraContent: null };
   obj = { style: tmp.headerContainer, children: null };
   const arr = useDeactivateWarningTextDefault(guildId, powerup);

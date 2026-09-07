@@ -1,10 +1,10 @@
-// Module ID: 11376
-// Function ID: 11377
+// Module ID: 11381
+// Function ID: 11382
 // Name: SafetyTipsContainer
-// Dependencies: [19, 17, 21, 4560, 576, 4973, 5692, 4556, 1114, 8579, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4973, 5692, 4556, 1114, 8582, 2]
 // Exports: default
 
-// Module 11376 (SafetyTipsContainer)
+// Module 11381 (SafetyTipsContainer)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

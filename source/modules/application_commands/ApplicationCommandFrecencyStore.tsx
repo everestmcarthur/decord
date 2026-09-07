@@ -1,10 +1,10 @@
-// Module ID: 9292
-// Function ID: 9293
+// Module ID: 9297
+// Function ID: 9298
 // Name: handleUserSettingsProtoStoreChange
 // Dependencies: [1221, 4999, 1350, 1084, 4597, 12, 504, 573, 2]
 // Exports: getFilteredTopCommands, getTopRealCommands
 
-// Module 9292 (handleUserSettingsProtoStoreChange)
+// Module 9297 (handleUserSettingsProtoStoreChange)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

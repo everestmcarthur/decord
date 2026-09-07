@@ -1,10 +1,10 @@
-// Module ID: 16776
-// Function ID: 16777
+// Module ID: 16779
+// Function ID: 16780
 // Name: UserSettingsFriendRequests
 // Dependencies: [19, 17, 1074, 21, 1935, 6995, 5687, 1114, 7201, 1384, 2]
 // Exports: default
 
-// Module 16776 (UserSettingsFriendRequests)
+// Module 16779 (UserSettingsFriendRequests)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;

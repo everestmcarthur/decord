@@ -1,10 +1,10 @@
-// Module ID: 13061
-// Function ID: 13062
+// Module ID: 13065
+// Function ID: 13066
 // Name: UserCheckIcon
 // Dependencies: [19, 21, 576, 4261, 8075, 2]
 // Exports: UserCheckIcon
 
-// Module 13061 (UserCheckIcon)
+// Module 13065 (UserCheckIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;

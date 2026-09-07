@@ -1,10 +1,10 @@
-// Module ID: 10948
-// Function ID: 10949
+// Module ID: 10953
+// Function ID: 10954
 // Name: InstantInviteUsesLabel
 // Dependencies: [19, 21, 4556, 2]
 // Exports: default
 
-// Module 10948 (InstantInviteUsesLabel)
+// Module 10953 (InstantInviteUsesLabel)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4556 */;
 import { jsxs } from "jsxProd" /* 21 */;

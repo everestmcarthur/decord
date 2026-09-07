@@ -1,7 +1,7 @@
 // Module ID: 7446
 // Function ID: 7447
 // Name: useShouldShowPremiumTrialUserSettingsAvatarBadge
-// Dependencies: [1373, 7447, 4380, 1943, 13298, 4218, 1114, 2]
+// Dependencies: [1373, 7447, 4380, 1943, 13302, 4218, 1114, 2]
 // Exports: useNitroTrialCtaOverride, usePremiumTrialOfferPremiumType, useShouldShowPremiumTrialUserSettingsAvatarBadge
 
 // Module 7446 (useShouldShowPremiumTrialUserSettingsAvatarBadge)
@@ -52,7 +52,7 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
   if (null == subscriptionTrial) {
     return null;
   } else {
-    let tmpResult = tmp(13298);
+    let tmpResult = tmp(13302);
     obj = { location: null };
     obj[0] = user_profile_premium_upsell_card;
     if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj)) {

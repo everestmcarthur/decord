@@ -1,10 +1,10 @@
-// Module ID: 13018
-// Function ID: 13019
+// Module ID: 13022
+// Function ID: 13023
 // Name: isOnMetaHorizon
 // Dependencies: [1920, 1074, 2]
 // Exports: default
 
-// Module 13018 (isOnMetaHorizon)
+// Module 13022 (isOnMetaHorizon)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import items3 from "items3" /* 1920 */;

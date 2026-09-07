@@ -1,10 +1,10 @@
-// Module ID: 9306
-// Function ID: 9307
+// Module ID: 9311
+// Function ID: 9312
 // Name: getAutoArchiveOptions
 // Dependencies: [1113, 1090, 1114, 595, 4153, 2]
 // Exports: getAutoArchiveDuration, getAutoArchiveDurationText
 
-// Module 9306 (getAutoArchiveOptions)
+// Module 9311 (getAutoArchiveOptions)
 import set from "set" /* 2 */;
 import memoizeDefault from "memoize" /* 595 */;
 import setDefault from "set" /* 1090 */;

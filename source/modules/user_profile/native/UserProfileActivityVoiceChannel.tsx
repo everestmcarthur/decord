@@ -1,10 +1,10 @@
-// Module ID: 13024
-// Function ID: 13025
+// Module ID: 13028
+// Function ID: 13029
 // Name: UserProfileActivityVoiceChannel
-// Dependencies: [17, 4199, 1085, 21, 4560, 1115, 7162, 8190, 4962, 13025, 4713, 504, 5097, 5101, 1114, 5584, 5123, 4259, 7209, 4556, 9770, 4767, 4527, 13026, 1896, 8179, 13027, 1178, 2]
+// Dependencies: [17, 4199, 1085, 21, 4560, 1115, 7162, 8190, 4962, 13029, 4713, 504, 5097, 5101, 1114, 5584, 5123, 4259, 7209, 4556, 9775, 4767, 4527, 13030, 1896, 8179, 13031, 1178, 2]
 // Exports: default
 
-// Module 13024 (UserProfileActivityVoiceChannel)
+// Module 13028 (UserProfileActivityVoiceChannel)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import sum from "sum" /* 1085 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4199 */;

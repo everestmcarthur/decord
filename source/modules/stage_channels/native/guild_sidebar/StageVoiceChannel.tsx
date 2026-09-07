@@ -1,11 +1,11 @@
-// Module ID: 16237
-// Function ID: 16238
-// Dependencies: [19, 17, 7527, 4199, 4575, 4741, 4584, 1962, 1074, 10118, 21, 1114, 4560, 576, 504, 5417, 16238, 5431, 5425, 5057, 5569, 1874, 8393, 10913, 4713, 9471, 16116, 16227, 16121, 2]
+// Module ID: 16240
+// Function ID: 16241
+// Dependencies: [19, 17, 7527, 4199, 4575, 4741, 4584, 1962, 1074, 10123, 21, 1114, 4560, 576, 504, 5417, 16241, 5431, 5425, 5057, 5569, 1874, 8393, 10918, 4713, 9476, 16119, 16230, 16124, 2]
 
-// Module 16237
+// Module 16240
 import ThemesDefault from "Themes" /* 576 */;
 import computeChannelNameDefault from "computeChannelName" /* 4713 */;
-import transformParticipantToSortedVoiceStateDefault from "transformParticipantToSortedVoiceState" /* 16238 */;
+import transformParticipantToSortedVoiceStateDefault from "transformParticipantToSortedVoiceState" /* 16241 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "handleConnectionOpen" /* 7527 */;
@@ -65,12 +65,12 @@ const memoResult = importAllResult.memo((channel) => {
     const result = channel(closure_1_3[23]).openChannelLongPressActionSheet(channel.id);
   }, items3);
   const tmp10 = computeChannelNameDefault(channel, false);
-  tmp2Result = tmp2(9471);
+  tmp2Result = tmp2(9476);
   const isConnectedToVoiceChannel = tmp2Result.useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  let tmp5Result = tmp5(16116);
+  let tmp5Result = tmp5(16119);
   const intl = tmp2(1114).intl;
   if (null != channel.userLimit) {
     if (channel.userLimit > 0) {
@@ -102,7 +102,7 @@ const memoResult = importAllResult.memo((channel) => {
     obj2[0] = channel;
     obj2[1] = selected;
     obj2[2] = collapsed;
-    tmp5Result = tmp5(16227);
+    tmp5Result = tmp5(16230);
     if (!hasMedia) {
       let tmp20 = channel.userLimit > 0;
       if (tmp20) {
@@ -122,7 +122,7 @@ const memoResult = importAllResult.memo((channel) => {
       obj4[1] = collapsed;
       obj4[2] = arr3;
       obj4[3] = stageParticipantsCount;
-      obj3[1] = tmp12(tmp5(16121), obj4);
+      obj3[1] = tmp12(tmp5(16124), obj4);
       tmp12Result = tmp12(View, obj3);
     }
     obj.children = tmp12Result;

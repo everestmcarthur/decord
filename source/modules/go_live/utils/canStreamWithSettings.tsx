@@ -1,13 +1,13 @@
-// Module ID: 9955
-// Function ID: 9956
+// Module ID: 9960
+// Function ID: 9961
 // Name: canStreamWithSettings
-// Dependencies: [4607, 9956, 9957, 2]
+// Dependencies: [4607, 9961, 9962, 2]
 // Exports: default
 
-// Module 9955 (canStreamWithSettings)
+// Module 9960 (canStreamWithSettings)
 import set from "set" /* 2 */;
-import getGoLiveAutoQualityExperimentConfig from "getGoLiveAutoQualityExperimentConfig" /* 9956 */;
-import canUseStreamSettingDefault from "canUseStreamSetting" /* 9957 */;
+import getGoLiveAutoQualityExperimentConfig from "getGoLiveAutoQualityExperimentConfig" /* 9961 */;
+import canUseStreamSettingDefault from "canUseStreamSetting" /* 9962 */;
 import RESOLUTION_720 from "RESOLUTION_720" /* 4607 */;
 
 ({ ApplicationStreamSettingRequirements: c3, ApplicationStreamPresets: c4 } = RESOLUTION_720);

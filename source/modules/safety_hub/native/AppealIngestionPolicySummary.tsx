@@ -1,10 +1,10 @@
-// Module ID: 11899
-// Function ID: 11900
+// Module ID: 11904
+// Function ID: 11905
 // Name: AppealIngestionPolicySummary
 // Dependencies: [19, 17, 21, 4560, 576, 8418, 4409, 4556, 1114, 2]
 // Exports: default
 
-// Module 11899 (AppealIngestionPolicySummary)
+// Module 11904 (AppealIngestionPolicySummary)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

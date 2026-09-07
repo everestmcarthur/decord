@@ -1,10 +1,10 @@
-// Module ID: 11831
-// Function ID: 11832
+// Module ID: 11836
+// Function ID: 11837
 // Name: _setGuildRaidAlerts
-// Dependencies: [5, 1979, 8016, 1074, 1242, 4740, 9063, 4153, 1272, 10102, 2]
+// Dependencies: [5, 1979, 8016, 1074, 1242, 4740, 9068, 4153, 1272, 10107, 2]
 // Exports: handleReportRaid, handleResolveRaid, setGuildIncidentActions, setGuildRaidAlerts, trackReportRaidViewed
 
-// Module 11831 (_setGuildRaidAlerts)
+// Module 11836 (_setGuildRaidAlerts)
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -194,7 +194,7 @@ function _handleResolveRaid() {
               guild = guild.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = callback2(10102)(guild);
+                tmp8 = callback2(10107)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {
@@ -285,7 +285,7 @@ function _handleReportRaid() {
               const guild = closure_1_4.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = v0(10102)(guild);
+                tmp8 = v0(10107)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {

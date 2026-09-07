@@ -1,17 +1,17 @@
-// Module ID: 15670
-// Function ID: 15671
+// Module ID: 15673
+// Function ID: 15674
 // Name: MFAOptionScreen
-// Dependencies: [19, 17, 21, 6944, 15671, 7123, 4973, 4556, 15672, 6975, 2]
+// Dependencies: [19, 17, 21, 6944, 15674, 7123, 4973, 4556, 15675, 6975, 2]
 // Exports: default
 
-// Module 15670 (MFAOptionScreen)
+// Module 15673 (MFAOptionScreen)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4556 */;
 import Stack from "Stack" /* 4973 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 6944 */;
 import BackgroundImageDefault from "BackgroundImage" /* 6975 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import _modDef15671 from "module_15671" /* 15671 */;
+import _modDef15674 from "module_15674" /* 15674 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -24,7 +24,7 @@ export default function MFAOptionScreen(arg0) {
   ({ headerImage, subtitle, screenProps, error } = arg0);
   ({ headerText, input, submit, mfaMethod, content } = arg0);
   const tmp3 = useWideAuthViewDefault();
-  let obj = _modDef15671;
+  let obj = _modDef15674;
   const screenStyles = obj.useScreenStyles(tmp3);
   const first = screenProps.mfaChallenge.methods[0];
   let type;
@@ -63,7 +63,7 @@ export default function MFAOptionScreen(arg0) {
   if (tmp10Result1) {
     const obj6 = { props: null };
     obj6[0] = screenProps;
-    tmp10Result1 = tmp10(tmp(15672), obj6);
+    tmp10Result1 = tmp10(tmp(15675), obj6);
   }
   items3[1] = tmp10Result1;
   obj5[1] = items3;

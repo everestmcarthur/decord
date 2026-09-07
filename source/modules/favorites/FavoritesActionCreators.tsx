@@ -1,19 +1,19 @@
-// Module ID: 10223
-// Function ID: 10224
+// Module ID: 10228
+// Function ID: 10229
 // Name: getNextPositionFromChannels
-// Dependencies: [5, 1949, 1961, 1957, 4199, 2011, 4381, 1960, 1970, 1074, 1085, 1187, 1218, 12, 10224, 10227, 4904, 1114, 1940, 11, 10233, 10234, 1982, 1100, 10237, 10238, 10240, 2]
+// Dependencies: [5, 1949, 1961, 1957, 4199, 2011, 4381, 1960, 1970, 1074, 1085, 1187, 1218, 12, 10229, 10232, 4904, 1114, 1940, 11, 10238, 10239, 1982, 1100, 10242, 10243, 10245, 2]
 // Exports: addFavoriteCategory, addFavoriteChannels, addFavoriteChannelsToCategory, autoAddJoinedThreadToFavorites, removeFavoriteCategory, resetFavoritesGuild, setFavoriteCategoriesCollapsed, setFavoriteChannelNickname, setFavoritesAutoAddJoinedThreads, setFavoritesGuildVisibility, setFavoritesGuildVisibilityFromSettings, toggleFavoriteGuildMuted, updateFavoriteChannelParent, updateFavoriteChannels
 
-// Module 10223 (getNextPositionFromChannels)
+// Module 10228 (getNextPositionFromChannels)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import create from "create" /* 1187 */;
 import updateUserGuildSettings from "updateUserGuildSettings" /* 1940 */;
 import setDefault from "set" /* 4904 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10224 */;
-import handleDCShownToUser from "handleDCShownToUser" /* 10237 */;
-import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 10238 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10229 */;
+import handleDCShownToUser from "handleDCShownToUser" /* 10242 */;
+import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 10243 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { resetFatigueCooldown } from "withContent" /* 1949 */;
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1961 */;
@@ -156,7 +156,7 @@ function getReachedLimit(arg0, arg1) {
 function showLimitReachedAlert(limit) {
   limit = limit.limit;
   if (limit.canUpsell) {
-    tmp(10227)(limit);
+    tmp(10232)(limit);
   } else {
     let obj = { title: null, body: null };
     const intl = getSystemLocale.intl;
@@ -429,7 +429,7 @@ function _addFavoriteChannelsToParent() {
                         flag = true;
                         let tmp47 = callback;
                         let tmp48 = dependencyMap;
-                        let obj3 = callback(10233);
+                        let obj3 = callback(10238);
                         let tmp50 = channel;
                         let type;
                         let tmp49 = dependencyMap;
@@ -457,7 +457,7 @@ function _addFavoriteChannelsToParent() {
                         favoriteChannels.guildVisible = BoolValue.create({ value: true });
                         let tmp63 = callback;
                         let tmp64 = dependencyMap;
-                        let obj4 = callback(10233);
+                        let obj4 = callback(10238);
                         let str = "auto";
                         let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                       }

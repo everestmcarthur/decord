@@ -1,10 +1,10 @@
-// Module ID: 10748
-// Function ID: 10749
+// Module ID: 10753
+// Function ID: 10754
 // Name: GiftingBadgeInfoActionSheet
-// Dependencies: [19, 17, 4552, 8192, 1074, 21, 4560, 576, 1611, 504, 8184, 1242, 7150, 4556, 1114, 2492, 10749, 2]
+// Dependencies: [19, 17, 4552, 8192, 1074, 21, 4560, 576, 1611, 504, 8184, 1242, 7150, 4556, 1114, 2492, 10754, 2]
 // Exports: default
 
-// Module 10748 (GiftingBadgeInfoActionSheet)
+// Module 10753 (GiftingBadgeInfoActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import messagesProxyDefault from "messagesProxy" /* 2492 */;

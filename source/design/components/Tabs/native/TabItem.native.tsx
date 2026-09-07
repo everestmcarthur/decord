@@ -1,10 +1,10 @@
-// Module ID: 12615
-// Function ID: 12616
+// Module ID: 12619
+// Function ID: 12620
 // Name: TabItemCount
 // Dependencies: [19, 17, 21, 4296, 4560, 576, 4974, 4556, 1115, 1114, 2]
 // Exports: TabItem
 
-// Module 12615 (TabItemCount)
+// Module 12619 (TabItemCount)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;

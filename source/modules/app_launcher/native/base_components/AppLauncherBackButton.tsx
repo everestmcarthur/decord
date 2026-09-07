@@ -1,10 +1,10 @@
-// Module ID: 12131
-// Function ID: 12132
+// Module ID: 12135
+// Function ID: 12136
 // Name: AppLauncherBackButton
 // Dependencies: [19, 21, 1484, 8097, 5629, 5681, 1114, 2]
 // Exports: default
 
-// Module 12131 (AppLauncherBackButton)
+// Module 12135 (AppLauncherBackButton)
 import noopAll from "noop" /* 19 */;
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1484 */;
 import IconButton from "IconButton" /* 8097 */;

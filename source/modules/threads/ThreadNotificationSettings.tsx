@@ -1,10 +1,10 @@
-// Module ID: 10088
-// Function ID: 10089
+// Module ID: 10093
+// Function ID: 10094
 // Name: computeThreadNotificationSetting
 // Dependencies: [1957, 4741, 4201, 1113, 1074, 1384, 504, 2]
 // Exports: useThreadNotificationSetting
 
-// Module 10088 (computeThreadNotificationSetting)
+// Module 10093 (computeThreadNotificationSetting)
 import hasFlag from "hasFlag" /* 1384 */;
 import closure_2 from "ensureGuildLoaded" /* 1957 */;
 import closure_3 from "updateUserGuildSettingsInternal" /* 4741 */;

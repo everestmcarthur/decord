@@ -1,9 +1,9 @@
-// Module ID: 17323
-// Function ID: 17324
+// Module ID: 17326
+// Function ID: 17327
 // Name: disconnect
 // Dependencies: [1956, 1957, 4579, 4584, 7456, 1114, 5411, 7118, 4447, 2]
 
-// Module 17323 (disconnect)
+// Module 17326 (disconnect)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import start from "start" /* 4447 */;
 import _modDef5411 from "module_5411" /* 5411 */;

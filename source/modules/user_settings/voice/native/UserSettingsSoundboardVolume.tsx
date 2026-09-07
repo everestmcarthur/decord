@@ -1,14 +1,14 @@
-// Module ID: 9989
-// Function ID: 9990
+// Module ID: 9994
+// Function ID: 9995
 // Name: SoundboardVolume
-// Dependencies: [19, 17, 1074, 21, 4560, 7344, 7162, 9979, 1114, 5605, 9986, 7338, 4556, 2024, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 7344, 7162, 9984, 1114, 5605, 9991, 7338, 4556, 2024, 2]
 // Exports: default
 
-// Module 9989 (SoundboardVolume)
+// Module 9994 (SoundboardVolume)
 import noopAll from "noop" /* 19 */;
 import combinedDefault from "combined" /* 2024 */;
 import contextDefault from "context" /* 7162 */;
-import VolumeSliderDefault from "VolumeSlider" /* 9986 */;
+import VolumeSliderDefault from "VolumeSlider" /* 9991 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -55,5 +55,5 @@ export default function SoundboardVolume() {
   obj1[0] = items;
   obj[1] = callback2(closure_6, obj1);
   obj[2] = callback(analyticsLocations(5605).TableRow, obj);
-  return callback(analyticsLocations(9979).UserSettingsTableRowGroup, obj);
+  return callback(analyticsLocations(9984).UserSettingsTableRowGroup, obj);
 };

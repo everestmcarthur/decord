@@ -1,10 +1,10 @@
-// Module ID: 13165
-// Function ID: 13166
+// Module ID: 13169
+// Function ID: 13170
 // Name: HeadlessCollectiblesPurchaseRunner
-// Dependencies: [19, 7424, 13166, 2]
+// Dependencies: [19, 7424, 13170, 2]
 // Exports: HeadlessCollectiblesPurchaseRunner
 
-// Module 13165 (HeadlessCollectiblesPurchaseRunner)
+// Module 13169 (HeadlessCollectiblesPurchaseRunner)
 import closure_2 from "noop" /* 19 */;
 import { useNativeCheckoutStore } from "context" /* 7424 */;
 
@@ -29,7 +29,7 @@ export const HeadlessCollectiblesPurchaseRunner = function HeadlessCollectiblesP
   obj[3] = id;
   obj[4] = onBuySettled;
   obj[5] = stageCollectibleChangeForEditProfile;
-  handleBuyNow = attempt(13166)(obj).handleBuyNow;
+  handleBuyNow = attempt(13170)(obj).handleBuyNow;
   closure_4 = React.useRef(0);
   const items = [attempt, handleBuyNow, tmp, tmp2];
   const effect = React.useEffect(() => {

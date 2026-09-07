@@ -1,14 +1,14 @@
-// Module ID: 8840
-// Function ID: 8841
+// Module ID: 8845
+// Function ID: 8846
 // Name: HeartOutlineIcon
-// Dependencies: [19, 21, 576, 4261, 8841, 2]
+// Dependencies: [19, 21, 576, 4261, 8846, 2]
 // Exports: HeartOutlineIcon
 
-// Module 8840 (HeartOutlineIcon)
+// Module 8845 (HeartOutlineIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8841 */;
+import registerAsset from "registerAsset" /* 8846 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

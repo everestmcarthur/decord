@@ -1,15 +1,15 @@
-// Module ID: 16015
-// Function ID: 16016
+// Module ID: 16018
+// Function ID: 16019
 // Name: LeftPanelContent
-// Dependencies: [32, 19, 17, 1074, 21, 16016, 5586, 4560, 576, 4420, 1611, 16017, 16018, 16019, 16103, 16281, 4296, 16022, 16361, 4423, 11533, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 16019, 5586, 4560, 576, 4420, 1611, 16020, 16021, 16022, 16106, 16284, 4296, 16025, 16364, 4423, 11538, 2]
 
-// Module 16015 (LeftPanelContent)
+// Module 16018 (LeftPanelContent)
 import ThemesDefault from "Themes" /* 576 */;
 import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4423 */;
-import setLevels from "setLevels" /* 11533 */;
-import setLevelsDefault from "setLevels" /* 11533 */;
-import context from "context" /* 16022 */;
-import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16361 */;
+import setLevels from "setLevels" /* 11538 */;
+import setLevelsDefault from "setLevels" /* 11538 */;
+import context from "context" /* 16025 */;
+import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16364 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

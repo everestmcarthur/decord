@@ -1,14 +1,14 @@
-// Module ID: 15591
-// Function ID: 15592
+// Module ID: 15594
+// Function ID: 15595
 // Name: TreehouseIcon
-// Dependencies: [19, 21, 576, 4261, 15592, 2]
+// Dependencies: [19, 21, 576, 4261, 15595, 2]
 // Exports: TreehouseIcon
 
-// Module 15591 (TreehouseIcon)
+// Module 15594 (TreehouseIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 15592 */;
+import registerAsset from "registerAsset" /* 15595 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// Module ID: 17225
-// Function ID: 17226
+// Module ID: 17228
+// Function ID: 17229
 // Name: MediaInfo
-// Dependencies: [32, 19, 17, 1957, 4781, 4209, 1371, 1074, 17088, 21, 4560, 576, 4262, 504, 4713, 8264, 4556, 17226, 4987, 7456, 7244, 4296, 4561, 1114, 8902, 5628, 4513, 1242, 14536, 4186, 17223, 8276, 8274, 15058, 2]
+// Dependencies: [32, 19, 17, 1957, 4781, 4209, 1371, 1074, 17091, 21, 4560, 576, 4262, 504, 4713, 8264, 4556, 17229, 4987, 7456, 7244, 4296, 4561, 1114, 8907, 5628, 4513, 1242, 14539, 4186, 17226, 8276, 8274, 15061, 2]
 // Exports: default
 
-// Module 17225 (MediaInfo)
+// Module 17228 (MediaInfo)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -14,7 +14,7 @@ import closure_9 from "reinjectEphemerals" /* 4781 */;
 import closure_10 from "markAllUserIdListsStale" /* 4209 */;
 import closure_11 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
-import { SquarePIPReferenceDimensions } from "VoicePanelPIPModes" /* 17088 */;
+import { SquarePIPReferenceDimensions } from "VoicePanelPIPModes" /* 17091 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -91,7 +91,7 @@ function MediaInfo(message) {
           obj2[0] = { flex: 1 };
           const obj3 = { spacing: 20, speed: 0.2, children: null };
           obj3[2] = tmp14;
-          const items3 = [tmp13(tmp2(17226).Marquee, obj3), ];
+          const items3 = [tmp13(tmp2(17229).Marquee, obj3), ];
           const obj4 = { start: null, end: null, locations: null, colors: null, style: null };
           obj4[0] = { x: 0, y: 0 };
           obj4[1] = { x: 1, y: 0 };
@@ -177,7 +177,7 @@ function PiPControls(message) {
   }
   obj = { style: items1, children: null };
   items1 = [tmp.pipControls, animatedStyle];
-  const items2 = [callback2(message(8902).BackgroundBlurFill, { blurAmount: 0.05 }), , ];
+  const items2 = [callback2(message(8907).BackgroundBlurFill, { blurAmount: 0.05 }), , ];
   const items3 = [, ];
   ({ pipButton: arr4[0], backButton: arr4[1] } = tmp);
   items2[1] = callback2(closure_6, { disabled: !visible, style: items3, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: stringResult, children: callback2(message(5628).ArrowLargeLeftIcon, { size: "sm" }) });

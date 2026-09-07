@@ -1,10 +1,10 @@
-// Module ID: 17530
-// Function ID: 17531
+// Module ID: 17533
+// Function ID: 17534
 // Name: componentDidMount
-// Dependencies: [19, 1975, 1957, 2012, 4480, 4199, 4209, 1371, 9064, 1074, 21, 4560, 576, 1114, 4271, 4258, 5624, 7377, 9063, 11329, 1384, 7195, 4905, 4994, 6606, 4713, 5687, 5605, 7992, 17336, 7201, 5685, 5688, 16157, 2024, 17531, 1396, 11347, 1178, 7085, 5549, 8593, 4973, 7040, 1483, 504, 2]
+// Dependencies: [19, 1975, 1957, 2012, 4480, 4199, 4209, 1371, 9069, 1074, 21, 4560, 576, 1114, 4271, 4258, 5624, 7377, 9068, 11334, 1384, 7195, 4905, 4994, 6606, 4713, 5687, 5605, 7992, 17339, 7201, 5685, 5688, 16160, 2024, 17534, 1396, 11352, 1178, 7085, 5549, 8598, 4973, 7040, 1483, 504, 2]
 // Exports: default
 
-// Module 17530 (componentDidMount)
+// Module 17533 (componentDidMount)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import hasFlag from "hasFlag" /* 1384 */;
@@ -18,11 +18,11 @@ import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import TextInput from "TextInput" /* 6606 */;
 import NavScrim from "NavScrim" /* 7040 */;
 import TextArea from "TextArea" /* 7085 */;
-import Form from "Form" /* 8593 */;
-import _modDef9063 from "module_9063" /* 9063 */;
-import canSeeChannelSummaries from "canSeeChannelSummaries" /* 11347 */;
-import apexExperiment from "apexExperiment" /* 16157 */;
-import getSourceDefault from "getSource" /* 17531 */;
+import Form from "Form" /* 8598 */;
+import _modDef9068 from "module_9068" /* 9068 */;
+import canSeeChannelSummaries from "canSeeChannelSummaries" /* 11352 */;
+import apexExperiment from "apexExperiment" /* 16160 */;
+import getSourceDefault from "getSource" /* 17534 */;
 import { isGuildOwnerWithRequiredMfaLevel as closure_3 } from "GuildNSFWContentLevel" /* 1975 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import comparator from "comparator" /* 2012 */;
@@ -30,7 +30,7 @@ import closure_7 from "handleInviteData" /* 4480 */;
 import closure_8 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_9 from "markAllUserIdListsStale" /* 4209 */;
 import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import closure_11 from "handleFormInit" /* 9064 */;
+import closure_11 from "handleFormInit" /* 9069 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -88,12 +88,12 @@ class GuildSettingsModalOverview extends PureComponent {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.handleNameChange = function handleNameChange(name) {
-      let obj = callback(9063);
+      let obj = callback(9068);
       obj = { name };
       obj.updateGuild(obj);
     };
     applyArgumentsResult.handleDescriptionChange = function handleDescriptionChange(description) {
-      let obj = callback(9063);
+      let obj = callback(9068);
       obj = { description };
       obj.updateGuild(obj);
     };
@@ -205,7 +205,7 @@ class GuildSettingsModalOverview extends PureComponent {
       closure_1_1(closure_1_2[18]).deleteGuild(applyArgumentsResult.props.guild.id);
     };
     applyArgumentsResult.handleSplashChange = function handleSplashChange(splash) {
-      let obj = callback(9063);
+      let obj = callback(9068);
       obj = { splash };
       obj.updateGuild(obj);
     };
@@ -219,7 +219,7 @@ class GuildSettingsModalOverview extends PureComponent {
       closure_1_1(closure_1_2[18]).updateGuild({ features: set });
     };
     applyArgumentsResult.handleBannerChange = function handleBannerChange(banner) {
-      let obj = callback(9063);
+      let obj = callback(9068);
       obj = { banner };
       obj.updateGuild(obj);
     };
@@ -228,7 +228,7 @@ class GuildSettingsModalOverview extends PureComponent {
       closure_1_1(closure_1_2[18]).saveGuild(id, { name, icon, afkChannelId, afkTimeout, systemChannelId, systemChannelFlags, safetyAlertsChannelId, defaultMessageNotifications, splash, banner, description, features, premiumProgressBarEnabled });
     };
     applyArgumentsResult.handleBoostProgressBarToggle = function handleBoostProgressBarToggle(premiumProgressBarEnabled) {
-      let obj = callback(9063);
+      let obj = callback(9068);
       obj = { premiumProgressBarEnabled };
       obj.updateGuild(obj);
     };
@@ -278,7 +278,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
   }
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  _modDef9063.cancelChanges(this.props.guild.id);
+  _modDef9068.cancelChanges(this.props.guild.id);
 };
 prototype["getError"] = function getError(arg0) {
   const errors = this.props.errors;
@@ -293,10 +293,10 @@ prototype["getError"] = function getError(arg0) {
 prototype["handleSystemChannelFlagsChange"] = function handleSystemChannelFlagsChange(SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, arg1) {
   const obj = hasFlag;
   const setFlagResult = hasFlag.setFlag(this.props.guild.systemChannelFlags, SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, arg1);
-  _modDef9063.updateGuild({ systemChannelFlags: setFlagResult });
+  _modDef9068.updateGuild({ systemChannelFlags: setFlagResult });
 };
 prototype["handleDefaultNotificationsChange"] = function handleDefaultNotificationsChange(defaultMessageNotifications) {
-  let obj = _modDef9063;
+  let obj = _modDef9068;
   obj = { defaultMessageNotifications };
   obj.updateGuild(obj);
 };
@@ -385,7 +385,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     hasFlagResult1 = tmp(1384).hasFlag(guild.systemChannelFlags, constants4.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
     const tmpResult1 = tmp(1384);
   }
-  let result1 = tmp(17336).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
+  let result1 = tmp(17339).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
   if (!result1) {
     result1 = tmp(1384).hasFlag(guild.systemChannelFlags, constants4.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     const tmpResult3 = tmp(1384);
@@ -407,7 +407,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   obj1[0] = intl5.string(tmp(1114).t["+f0bXQ"]);
   obj1[1] = !canManage;
   const tmp15 = closure_20;
-  const tmpResult2 = tmp(17336);
+  const tmpResult2 = tmp(17339);
   obj1[2] = !tmp(1384).hasFlag(guild.systemChannelFlags, constants4.SUPPRESS_JOIN_NOTIFICATIONS);
   obj1[3] = self.handleSystemJoinMessages;
   items[1] = callback2(tmp(7201).TableSwitchRow, obj1);

@@ -1,10 +1,10 @@
-// Module ID: 16314
-// Function ID: 16315
+// Module ID: 16317
+// Function ID: 16318
 // Name: FavoritesGuildCoachmarkGraphic
 // Dependencies: [17, 21, 4560, 576, 5692, 1178, 2]
 // Exports: default
 
-// Module 16314 (FavoritesGuildCoachmarkGraphic)
+// Module 16317 (FavoritesGuildCoachmarkGraphic)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;

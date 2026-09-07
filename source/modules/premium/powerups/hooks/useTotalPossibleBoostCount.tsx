@@ -1,10 +1,10 @@
-// Module ID: 16222
-// Function ID: 16223
+// Module ID: 16225
+// Function ID: 16226
 // Name: useTotalPossibleBoostCount
 // Dependencies: [19, 4450, 1074, 2]
 // Exports: default
 
-// Module 16222 (useTotalPossibleBoostCount)
+// Module 16225 (useTotalPossibleBoostCount)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;

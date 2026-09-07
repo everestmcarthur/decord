@@ -1,13 +1,13 @@
-// Module ID: 13110
-// Function ID: 13111
+// Module ID: 13114
+// Function ID: 13115
 // Name: chunk
-// Dependencies: [13109, 8220, 8219, 13111, 573, 2]
+// Dependencies: [13113, 8220, 8219, 13115, 573, 2]
 
-// Module 13110 (chunk)
+// Module 13114 (chunk)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import _maybeFetchProductsWithSkus from "_maybeFetchProductsWithSkus" /* 8219 */;
-import _maybeFetchCollectionsWithProducts from "_maybeFetchCollectionsWithProducts" /* 13111 */;
-import closure_2 from "getFetchState" /* 13109 */;
+import _maybeFetchCollectionsWithProducts from "_maybeFetchCollectionsWithProducts" /* 13115 */;
+import closure_2 from "getFetchState" /* 13113 */;
 import closure_3 from "getFetchState" /* 8220 */;
 import set from "set" /* 2 */;
 

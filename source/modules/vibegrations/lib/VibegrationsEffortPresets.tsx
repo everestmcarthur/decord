@@ -1,10 +1,10 @@
-// Module ID: 16599
-// Function ID: 16600
+// Module ID: 16602
+// Function ID: 16603
 // Name: items
-// Dependencies: [1114, 3547, 16600, 2]
+// Dependencies: [1114, 3547, 16603, 2]
 // Exports: describeVibegrationsModelSettings, matchVibegrationsEffortPreset, vibegrationsSettingsForTier
 
-// Module 16599 (items)
+// Module 16602 (items)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 3547 */;
@@ -28,8 +28,8 @@ const items = [
     }
   },
   {
-    model: "claude-fable-5-1",
-    thinking: "high",
+    model: "gpt-6-astra",
+    thinking: "medium",
     summary() {
       const intl = getSystemLocale.intl;
       return intl.string(messagesProxyDefault.Ly6zYL);
@@ -77,7 +77,7 @@ export const describeVibegrationsModelSettings = function describeVibegrationsMo
   if (label == null) {
     label = model;
   }
-  let tmp3 = model(16600).THINKING_LABELS[thinking];
+  let tmp3 = model(16603).THINKING_LABELS[thinking];
   if (tmp3 == null) {
     tmp3 = thinking;
   }

@@ -1,16 +1,16 @@
-// Module ID: 12025
-// Function ID: 12026
+// Module ID: 12029
+// Function ID: 12030
 // Name: ForumPostListFooter
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 11966, 7272, 12018, 12026, 12019, 11414, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 11970, 7272, 12022, 12030, 12023, 11419, 2]
 // Exports: default
 
-// Module 12025 (ForumPostListFooter)
+// Module 12029 (ForumPostListFooter)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME from "GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME" /* 7272 */;
-import MaxForumPostReactions from "MaxForumPostReactions" /* 11414 */;
-import useTypingUserIds from "useTypingUserIds" /* 11966 */;
-import num2Default from "num2" /* 12018 */;
+import MaxForumPostReactions from "MaxForumPostReactions" /* 11419 */;
+import useTypingUserIds from "useTypingUserIds" /* 11970 */;
+import num2Default from "num2" /* 12022 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticsObjects } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -38,7 +38,7 @@ export default function ForumPostListFooter(parentChannel) {
   if (isGameInvitesPost) {
     obj = { channel: null };
     obj[0] = thread;
-    isGameInvitesPost = tmp8(tmp9(12026), obj);
+    isGameInvitesPost = tmp8(tmp9(12030), obj);
   }
   items[1] = isGameInvitesPost;
   if (tmp6Result) {
@@ -50,7 +50,7 @@ export default function ForumPostListFooter(parentChannel) {
     obj3[0] = thread;
     obj3[1] = typingUserIds;
     obj3[2] = hasUnreads;
-    items1[1] = tmp8(tmp9(12019), obj3);
+    items1[1] = tmp8(tmp9(12023), obj3);
     obj1[0] = items1;
     tmp6Result = tmp6(closure_6, obj1);
   }

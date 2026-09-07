@@ -1,22 +1,22 @@
-// Module ID: 17642
-// Function ID: 17643
+// Module ID: 17645
+// Function ID: 17646
 // Name: componentDidMount
-// Dependencies: [19, 17, 17643, 1979, 9064, 1074, 21, 4560, 576, 5624, 7377, 1114, 17644, 7759, 4556, 17523, 6606, 17645, 1483, 504, 7040, 2]
+// Dependencies: [19, 17, 17646, 1979, 9069, 1074, 21, 4560, 576, 5624, 7377, 1114, 17647, 7759, 4556, 17526, 6606, 17648, 1483, 504, 7040, 2]
 // Exports: default
 
-// Module 17642 (componentDidMount)
+// Module 17645 (componentDidMount)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import TextInput from "TextInput" /* 6606 */;
 import getInviteURLDefault from "getInviteURL" /* 7759 */;
-import getErrorMessageFromErrorCode from "getErrorMessageFromErrorCode" /* 17523 */;
-import _modDef17644 from "module_17644" /* 17644 */;
-import registerAssetDefault from "registerAsset" /* 17645 */;
+import getErrorMessageFromErrorCode from "getErrorMessageFromErrorCode" /* 17526 */;
+import _modDef17647 from "module_17647" /* 17647 */;
+import registerAssetDefault from "registerAsset" /* 17648 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "FormStates" /* 17643 */;
+import closure_5 from "FormStates" /* 17646 */;
 import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "handleFormInit" /* 9064 */;
+import closure_7 from "handleFormInit" /* 9069 */;
 import { GuildFeatures } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -122,7 +122,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
   }
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  _modDef17644.closeModal();
+  _modDef17647.closeModal();
 };
 prototype["render"] = function render() {
   const self = this;

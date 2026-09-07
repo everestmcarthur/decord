@@ -1,16 +1,16 @@
-// Module ID: 13100
-// Function ID: 13101
+// Module ID: 13104
+// Function ID: 13105
 // Name: EmptyGuildList
-// Dependencies: [32, 19, 17, 21, 4560, 576, 1178, 1114, 13101, 13102, 13098, 4556, 6981, 11151, 13103, 7149, 7150, 7050, 9822, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 1178, 1114, 13105, 13106, 13102, 4556, 6981, 11156, 13107, 7149, 7150, 7050, 9827, 2]
 // Exports: default
 
-// Module 13100 (EmptyGuildList)
+// Module 13104 (EmptyGuildList)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
-import isGuildMemberDefault from "isGuildMember" /* 9822 */;
-import registerAssetDefault from "registerAsset" /* 13101 */;
-import registerAssetDefault2 from "registerAsset" /* 13102 */;
+import isGuildMemberDefault from "isGuildMember" /* 9827 */;
+import registerAssetDefault from "registerAsset" /* 13105 */;
+import registerAssetDefault2 from "registerAsset" /* 13106 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -34,7 +34,7 @@ function GuildList(recipientId) {
   dependencyMap = undefined;
   let callback;
   dependencyMap = callback4();
-  let obj = recipientId(13098);
+  let obj = recipientId(13102);
   [arr, arr2] = callback(obj.useServerInviteRows(recipientId, recipientId.query), 2);
   if (0 === arr.length) {
     if (0 === arr2.length) {
@@ -78,7 +78,7 @@ function GuildList(recipientId) {
       return guild.guild.id;
     };
     obj[6] = EmptyGuildList;
-    return closure_6(tmp(11151).UserProfileStackedActionSheetSectionList, obj);
+    return closure_6(tmp(11156).UserProfileStackedActionSheetSectionList, obj);
   }
   obj1 = { title: null, data: null };
   const intl = tmp(1114).intl;

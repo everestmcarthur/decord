@@ -1,10 +1,10 @@
-// Module ID: 12599
-// Function ID: 12600
+// Module ID: 12603
+// Function ID: 12604
 // Name: MuteAppDMActionSheet
-// Dependencies: [19, 17, 21, 4560, 576, 7150, 9776, 4556, 1114, 4975, 7119, 7114, 4527, 4259, 1178, 7949, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 7150, 9781, 4556, 1114, 4975, 7119, 7114, 4527, 4259, 1178, 7949, 2]
 // Exports: default
 
-// Module 12599 (MuteAppDMActionSheet)
+// Module 12603 (MuteAppDMActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -33,7 +33,7 @@ export default function MuteAppDMActionSheet(channel) {
   channel = channel.channel;
   let obj = { startExpanded: true, children: null };
   obj = { style: tmp.content, children: null };
-  obj = { style: tmp.iconContainer, children: callback(View, { style: tmp.iconBackground, "aria-hidden": true, children: callback(_require(9776).BellIcon, { size: "md", color: "interactive-text-default" }) }) };
+  obj = { style: tmp.iconContainer, children: callback(View, { style: tmp.iconBackground, "aria-hidden": true, children: callback(_require(9781).BellIcon, { size: "md", color: "interactive-text-default" }) }) };
   const items = [callback(View, obj), , , , ];
   let obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
   let intl = _require(1114).intl;

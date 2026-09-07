@@ -1,12 +1,12 @@
-// Module ID: 11770
-// Function ID: 11771
+// Module ID: 11775
+// Function ID: 11776
 // Name: QuestRewardTile
-// Dependencies: [19, 21, 11290, 11285, 11771, 2]
+// Dependencies: [19, 21, 11295, 11290, 11776, 2]
 // Exports: default
 
-// Module 11770 (QuestRewardTile)
+// Module 11775 (QuestRewardTile)
 import noopDefault from "noop" /* 19 */;
-import _modDef11771 from "module_11771" /* 11771 */;
+import _modDef11776 from "module_11776" /* 11776 */;
 import { useMemo } from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -36,5 +36,5 @@ export default function QuestRewardTile(quest) {
   }
   obj[2] = tmp8;
   const merged1 = Object.assign(merged);
-  return jsx(_modDef11771, { assetUrl: tmp2Result.url, isAnimatedAsset: tmp2Result.isAnimated, accessibilityLabel: null });
+  return jsx(_modDef11776, { assetUrl: tmp2Result.url, isAnimatedAsset: tmp2Result.isAnimated, accessibilityLabel: null });
 };

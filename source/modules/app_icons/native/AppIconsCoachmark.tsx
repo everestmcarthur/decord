@@ -1,14 +1,14 @@
-// Module ID: 16925
-// Function ID: 16926
+// Module ID: 16928
+// Function ID: 16929
 // Name: AppIconsCoachmarkActionSheet
-// Dependencies: [19, 17, 1371, 1954, 21, 4560, 576, 504, 4218, 4527, 7150, 16926, 1178, 9963, 4556, 1114, 4975, 13363, 2]
+// Dependencies: [19, 17, 1371, 1954, 21, 4560, 576, 504, 4218, 4527, 7150, 16929, 1178, 9968, 4556, 1114, 4975, 13367, 2]
 // Exports: default
 
-// Module 16925 (AppIconsCoachmarkActionSheet)
+// Module 16928 (AppIconsCoachmarkActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
-import registerAssetDefault from "registerAsset" /* 9963 */;
-import registerAssetDefault2 from "registerAsset" /* 16926 */;
+import registerAssetDefault from "registerAsset" /* 9968 */;
+import registerAssetDefault2 from "registerAsset" /* 16929 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;

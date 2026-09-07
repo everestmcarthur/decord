@@ -1,12 +1,12 @@
-// Module ID: 13135
-// Function ID: 13136
+// Module ID: 13139
+// Function ID: 13140
 // Name: ProductDetailsActionSheetPreview
-// Dependencies: [32, 19, 17, 21, 4560, 576, 1889, 13136, 13138, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 1889, 13140, 13142, 2]
 // Exports: default
 
-// Module 13135 (ProductDetailsActionSheetPreview)
+// Module 13139 (ProductDetailsActionSheetPreview)
 import ThemesDefault from "Themes" /* 576 */;
-import memoDefault from "memo" /* 13136 */;
+import memoDefault from "memo" /* 13140 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -50,7 +50,7 @@ export default function ProductDetailsActionSheetPreview(onBundleActiveItemChang
     obj1[1] = tmp3;
     obj1[2] = handlePreviewPress;
     obj1[3] = onTrackPress;
-    obj[1] = tmp7(_require(13138).IndividualProductPreview, obj1);
+    obj[1] = tmp7(_require(13142).IndividualProductPreview, obj1);
     tmp7Result = tmp7(tmp8, obj);
   }
   obj[2] = tmp7Result;

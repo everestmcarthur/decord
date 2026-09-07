@@ -1,9 +1,9 @@
-// Module ID: 14550
-// Function ID: 14551
+// Module ID: 14553
+// Function ID: 14554
 // Name: _getKeyForFileId
-// Dependencies: [5, 32, 4210, 502, 1957, 4781, 1074, 14551, 3, 1090, 510, 4153, 4242, 7752, 7456, 573, 11747, 11676, 1896, 1898, 5272, 9941, 2]
+// Dependencies: [5, 32, 4210, 502, 1957, 4781, 1074, 14554, 3, 1090, 510, 4153, 4242, 7752, 7456, 573, 11752, 11681, 1896, 1898, 5272, 9946, 2]
 
-// Module 14550 (_getKeyForFileId)
+// Module 14553 (_getKeyForFileId)
 import timestampDefault from "timestamp" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
@@ -18,7 +18,7 @@ import closure_6 from "fetchFingerprint" /* 502 */;
 import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import closure_8 from "reinjectEphemerals" /* 4781 */;
 import { MessageStates } from "ME" /* 1074 */;
-import createLock from "createLock" /* 14551 */;
+import createLock from "createLock" /* 14554 */;
 
 require = arg1;
 function _getKeyForFileId(arg0) {

@@ -1,16 +1,16 @@
-// Module ID: 17740
-// Function ID: 17741
+// Module ID: 17743
+// Function ID: 17744
 // Name: GuildRoleSubscriptionTierCreationModal
-// Dependencies: [5, 32, 19, 17729, 15205, 21, 15227, 4258, 1114, 17741, 17724, 17742, 2]
+// Dependencies: [5, 32, 19, 17732, 15208, 21, 15230, 4258, 1114, 17744, 17727, 17745, 2]
 // Exports: default
 
-// Module 17740 (GuildRoleSubscriptionTierCreationModal)
-import getRoleEmojisAll from "getRoleEmojis" /* 15227 */;
+// Module 17743 (GuildRoleSubscriptionTierCreationModal)
+import getRoleEmojisAll from "getRoleEmojis" /* 15230 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
-import closure_7 from "usePriceTiers" /* 17729 */;
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 15205 */;
+import closure_7 from "usePriceTiers" /* 17732 */;
+import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 15208 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -124,7 +124,7 @@ export default function GuildRoleSubscriptionTierCreationModal(guildId) {
     return items;
   }, []);
   obj = { guildId, editStateId: first, groupListingId, children: null };
-  obj = { guildId, children: jsx(groupListingId(17742), obj1) };
-  obj[3] = jsx(guildId(17724).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: jsx(groupListingId(17742), obj1) });
-  return jsx(guildId(17741).EditStateContextProvider, { guildId, children: jsx(groupListingId(17742), obj1) });
+  obj = { guildId, children: jsx(groupListingId(17745), obj1) };
+  obj[3] = jsx(guildId(17727).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: jsx(groupListingId(17745), obj1) });
+  return jsx(guildId(17744).EditStateContextProvider, { guildId, children: jsx(groupListingId(17745), obj1) });
 };

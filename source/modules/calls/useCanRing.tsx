@@ -1,12 +1,12 @@
-// Module ID: 9174
-// Function ID: 9175
+// Module ID: 9179
+// Function ID: 9180
 // Name: useCanRingToGuildVoiceChannel
-// Dependencies: [502, 5278, 1957, 2021, 5413, 4199, 4600, 4209, 4579, 1074, 504, 9175, 5416, 5007, 2]
+// Dependencies: [502, 5278, 1957, 2021, 5413, 4199, 4600, 4209, 4579, 1074, 504, 9180, 5416, 5007, 2]
 // Exports: canRingUsersInChannel, useCanRing
 
-// Module 9174 (useCanRingToGuildVoiceChannel)
+// Module 9179 (useCanRingToGuildVoiceChannel)
 import getChannelRoleSubscriptionStatusDefault from "getChannelRoleSubscriptionStatus" /* 5007 */;
-import experimentDefault from "experiment" /* 9175 */;
+import experimentDefault from "experiment" /* 9180 */;
 import closure_3 from "fetchFingerprint" /* 502 */;
 import closure_4 from "callConnect" /* 5278 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;

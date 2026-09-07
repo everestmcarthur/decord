@@ -1,10 +1,10 @@
-// Module ID: 9745
-// Function ID: 9746
+// Module ID: 9750
+// Function ID: 9751
 // Name: AppChannelApplicationIcon
 // Dependencies: [19, 21, 4560, 576, 5587, 1396, 2]
 // Exports: default
 
-// Module 9745 (AppChannelApplicationIcon)
+// Module 9750 (AppChannelApplicationIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;

@@ -1,10 +1,10 @@
-// Module ID: 14687
-// Function ID: 14688
+// Module ID: 14690
+// Function ID: 14691
 // Name: SafetySettingsNotice
-// Dependencies: [19, 17, 8399, 21, 4560, 576, 14688, 4515, 4556, 1114, 2]
+// Dependencies: [19, 17, 8399, 21, 4560, 576, 14691, 4515, 4556, 1114, 2]
 // Exports: default
 
-// Module 14687 (SafetySettingsNotice)
+// Module 14690 (SafetySettingsNotice)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

@@ -1,16 +1,16 @@
-// Module ID: 9095
-// Function ID: 9096
+// Module ID: 9100
+// Function ID: 9101
 // Name: _getFilterBlob
-// Dependencies: [5, 1371, 9096, 6987, 1074, 9098, 4615, 9101, 1396, 9106, 9097, 9100, 9107, 2]
+// Dependencies: [5, 1371, 9101, 6987, 1074, 9103, 4615, 9106, 1396, 9111, 9102, 9105, 9112, 2]
 // Exports: applyBackgroundOptionPreview, applyInitialVideoBackgroundOption
 
-// Module 9095 (_getFilterBlob)
-import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9098 */;
-import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9100 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9107 */;
+// Module 9100 (_getFilterBlob)
+import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9103 */;
+import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9105 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9112 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "handleSyncedStoresUpdate" /* 9096 */;
+import closure_5 from "handleSyncedStoresUpdate" /* 9101 */;
 import VideoFilterType from "VideoFilterType" /* 6987 */;
 import { NOOP } from "ME" /* 1074 */;
 
@@ -153,12 +153,12 @@ function _applyBackgroundOption() {
                       c8 = 2;
                       c9 = 1;
                       obj3 = { value: null, done: false };
-                      obj3[0] = callback2(9106)(videoFilterAssetURL);
+                      obj3[0] = callback2(9111)(videoFilterAssetURL);
                       return obj3;
                     }
                   }
                 }
-                const tmp24 = callback2(9101)()[tmp61];
+                const tmp24 = callback2(9106)()[tmp61];
                 const isVideo = tmp24.isVideo;
                 closure_3 = isVideo;
                 if (isVideo == null) {

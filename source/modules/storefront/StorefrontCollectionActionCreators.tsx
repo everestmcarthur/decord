@@ -1,14 +1,14 @@
-// Module ID: 13111
-// Function ID: 13112
+// Module ID: 13115
+// Function ID: 13116
 // Name: _maybeFetchCollectionsWithProducts
-// Dependencies: [5, 2025, 13109, 7561, 1074, 1090, 573, 4802, 4462, 2]
+// Dependencies: [5, 2025, 13113, 7561, 1074, 1090, 573, 4802, 4462, 2]
 // Exports: maybeFetchCollectionsAfter, maybeFetchCollectionsForApplication, maybeFetchCollectionsForApplicationPage, maybeFetchCollectionsWithProducts
 
-// Module 13111 (_maybeFetchCollectionsWithProducts)
+// Module 13115 (_maybeFetchCollectionsWithProducts)
 import setDefault from "set" /* 1090 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_getSystemLocale" /* 2025 */;
-import closure_5 from "getFetchState" /* 13109 */;
+import closure_5 from "getFetchState" /* 13113 */;
 import closure_6 from "fromServer" /* 7561 */;
 import { Endpoints } from "ME" /* 1074 */;
 

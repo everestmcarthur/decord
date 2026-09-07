@@ -1,10 +1,10 @@
-// Module ID: 11987
-// Function ID: 11988
+// Module ID: 11991
+// Function ID: 11992
 // Name: useChatInputRefs
-// Dependencies: [19, 7780, 5502, 4901, 7681, 7687, 1371, 9485, 1074, 5000, 4553, 5598, 4425, 12, 11988, 11990, 11991, 11994, 11995, 9304, 7777, 4427, 1609, 1481, 1115, 4428, 1874, 1242, 11667, 7456, 11669, 11996, 7682, 11997, 4899, 12029, 6625, 2]
+// Dependencies: [19, 7780, 5502, 4901, 7681, 7687, 1371, 9490, 1074, 5000, 4553, 5598, 4425, 12, 11992, 11994, 11995, 11998, 11999, 9309, 7777, 4427, 1609, 1481, 1115, 4428, 1874, 1242, 11672, 7456, 11674, 12000, 7682, 12001, 4899, 12033, 6625, 2]
 // Exports: default
 
-// Module 11987 (useChatInputRefs)
+// Module 11991 (useChatInputRefs)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleInit" /* 7780 */;
 import closure_5 from "loadSavedGuildStickers" /* 5502 */;
@@ -13,7 +13,7 @@ import { DraftType } from "handleChanged" /* 4901 */;
 import closure_8 from "initialize" /* 7681 */;
 import closure_9 from "setCooldown" /* 7687 */;
 import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import { updateChatInputContainerHeight as closure_11 } from "updateChatInputContainerHeight" /* 9485 */;
+import { updateChatInputContainerHeight as closure_11 } from "updateChatInputContainerHeight" /* 9490 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 import { COMMAND_SENTINEL } from "regExp" /* 5000 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
@@ -346,7 +346,7 @@ export default function useChatInputRefs(chatInputProps) {
           threadCreationCallback = closure_1_14.current.threadCreationCallback;
           if (null != threadCreationCallback) {
             const text = chatInputTextFieldHeight(ref[14]).getText(closure_1_9.current, closure_1_11.current, (text) => {
-              obj = chatInputProps(11997);
+              obj = chatInputProps(12001);
               obj = { text, params: null };
               obj = {};
               const merged = Object.assign(closure_2_14.current);
@@ -357,7 +357,7 @@ export default function useChatInputRefs(chatInputProps) {
                 obj1 = { text: null, threadCreationCallback: null };
                 obj1[0] = result.content;
                 obj1[1] = threadCreationCallback;
-                const result1 = chatInputProps(11997).chatInputCreateThread(obj1);
+                const result1 = chatInputProps(12001).chatInputCreateThread(obj1);
                 const current = closure_2_17.current;
                 if (current != null) {
                   const applicationCommandManager = current.getApplicationCommandManager();
@@ -365,7 +365,7 @@ export default function useChatInputRefs(chatInputProps) {
                     const result2 = applicationCommandManager.clearTimestampMentions();
                   }
                 }
-                const tmpResult = chatInputProps(11997);
+                const tmpResult = chatInputProps(12001);
               }
             });
             tmp.current.sending = false;
@@ -397,7 +397,7 @@ export default function useChatInputRefs(chatInputProps) {
                   }
                 } else {
                   closure_1.cancel();
-                  obj = threadCreationCallback(11997);
+                  obj = threadCreationCallback(12001);
                   obj = { text: null, params: null };
                   obj[0] = arg0;
                   obj = {};

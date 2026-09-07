@@ -1,10 +1,10 @@
-// Module ID: 10341
-// Function ID: 10342
+// Module ID: 10346
+// Function ID: 10347
 // Name: handleJoinGuild
 // Dependencies: [5520, 2]
 // Exports: handleJoinGuild
 
-// Module 10341 (handleJoinGuild)
+// Module 10346 (handleJoinGuild)
 import set from "set" /* 2 */;
 import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 5520 */;
 

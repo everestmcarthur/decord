@@ -1,17 +1,17 @@
-// Module ID: 12417
-// Function ID: 12418
+// Module ID: 12421
+// Function ID: 12422
 // Name: validateMultiAccountTokens
-// Dependencies: [5, 502, 12413, 1074, 3, 1099, 573, 1272, 1242, 6593, 2]
+// Dependencies: [5, 502, 12417, 1074, 3, 1099, 573, 1272, 1242, 6593, 2]
 // Exports: invalidatePushSyncTokens, moveAccount, removeAccount, reportAccountSwitchTimeout, switchAccount, updatePushSyncToken, validateMultiAccountTokens
 
-// Module 12417 (validateMultiAccountTokens)
+// Module 12421 (validateMultiAccountTokens)
 import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import setSecondaryTokenAll from "setSecondaryToken" /* 1099 */;
 import handleLogoutDefault from "handleLogout" /* 6593 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "fetchFingerprint" /* 502 */;
-import closure_6 from "initialize" /* 12413 */;
+import closure_6 from "initialize" /* 12417 */;
 import ME from "ME" /* 1074 */;
 
 const require = arg1;

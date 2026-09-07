@@ -1,19 +1,19 @@
-// Module ID: 12430
-// Function ID: 12431
+// Module ID: 12434
+// Function ID: 12435
 // Name: LeftSlot
-// Dependencies: [32, 19, 17, 11962, 21, 4560, 576, 4262, 4271, 12174, 1609, 12247, 4296, 12246, 12245, 2]
+// Dependencies: [32, 19, 17, 11966, 21, 4560, 576, 4262, 4271, 12178, 1609, 12251, 4296, 12250, 12249, 2]
 
-// Module 12430 (LeftSlot)
+// Module 12434 (LeftSlot)
 import ThemesDefault from "Themes" /* 576 */;
 import ManaContext from "ManaContext" /* 4271 */;
 import _modDef4296 from "module_4296" /* 4296 */;
-import renderChatInputActionButtonGiftAndThreadDefault from "renderChatInputActionButtonGiftAndThread" /* 12245 */;
-import FadeTransitionItem from "FadeTransitionItem" /* 12246 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12247 */;
+import renderChatInputActionButtonGiftAndThreadDefault from "renderChatInputActionButtonGiftAndThread" /* 12249 */;
+import FadeTransitionItem from "FadeTransitionItem" /* 12250 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12251 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_6 } from "TextAreaCta" /* 11962 */;
+import { CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS as closure_6 } from "TextAreaCta" /* 11966 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -27,7 +27,7 @@ function LeftSlot(state) {
   items = [wrapperStyle, { width: slotWidth }, animatedStyle];
   const tmp = useChatInputFloatingBounceDefault(obj);
   const merged = Object.assign(FadeTransitionItem.interactivityProps(isInteractive));
-  obj.children = callback2(renderChatInputActionButtonGiftAndThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "PX_16", shouldShowThread: "setRequestSession" });
+  obj.children = callback2(renderChatInputActionButtonGiftAndThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "PX_16", shouldShowThread: "mp3" });
   return callback2(_modDef4296.View, obj);
 }
 let c4 = importAllResult;
@@ -80,7 +80,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   }
   const items1 = [tmp14Result, ];
   obj1 = { active: keyboardType === channel(1609).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
-  items1[1] = callback2(onPressAction(12174), obj1);
+  items1[1] = callback2(onPressAction(12178), obj1);
   obj[1] = items1;
   return closure_8(View, obj);
 });

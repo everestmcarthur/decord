@@ -1,10 +1,10 @@
-// Module ID: 11555
-// Function ID: 11556
+// Module ID: 11560
+// Function ID: 11561
 // Name: optIntoAllChannelsForExistingMember
 // Dependencies: [1221, 2012, 2021, 4741, 4187, 7535, 1384, 7113, 7105, 1187, 2]
 // Exports: hasClearedGuildOnboardingNotice, hasNotSetUpChannelOptIn, toggleShowAllChannels
 
-// Module 11555 (optIntoAllChannelsForExistingMember)
+// Module 11560 (optIntoAllChannelsForExistingMember)
 import create from "create" /* 1187 */;
 import hasFlag from "hasFlag" /* 1384 */;
 import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 7535 */;

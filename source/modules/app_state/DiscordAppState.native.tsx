@@ -1,8 +1,8 @@
-// Module ID: 11300
-// Function ID: 11301
+// Module ID: 11305
+// Function ID: 11306
 // Dependencies: [1895, 504, 2]
 
-// Module 11300
+// Module 11305
 import initialize from "initialize" /* 504 */;
 import closure_2 from "getState" /* 1895 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 15123
-// Function ID: 15124
+// Module ID: 15126
+// Function ID: 15127
 // Name: useWatchTaskPressHandler
-// Dependencies: [5, 19, 5444, 15099, 15120, 4527, 11486, 15124, 11192, 11193, 11197, 5451, 7728, 5447, 7718, 2]
+// Dependencies: [5, 19, 5444, 15102, 15123, 4527, 11491, 15127, 11197, 11198, 11202, 5451, 7728, 5447, 7718, 2]
 // Exports: useMobileActivityPressHandler, useWatchTaskPressHandler
 
-// Module 15123 (useWatchTaskPressHandler)
+// Module 15126 (useWatchTaskPressHandler)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { QuestDockMode } from "QuestsExperimentLocations" /* 5444 */;
@@ -150,10 +150,10 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
           return obj2;
         } else {
           let captureAdUserAction = closure_1_0;
-          if (obj12.shouldMigrateToAdAnalyticsInterface(closure_1_0(11192).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_mobile_activity")) {
-            captureAdUserAction = captureAdUserAction(11193).captureAdUserAction;
+          if (obj12.shouldMigrateToAdAnalyticsInterface(closure_1_0(11197).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_mobile_activity")) {
+            captureAdUserAction = captureAdUserAction(11198).captureAdUserAction;
             let obj3 = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null };
-            obj3[0] = closure_1_0(11197).AdUserActionType.CLICK_INTERNAL;
+            obj3[0] = closure_1_0(11202).AdUserActionType.CLICK_INTERNAL;
             obj3[1] = closure_1_0(5451).AdCreativeType.QUEST;
             obj3[2] = closure_0;
             obj3[3] = closure_1_0(7728).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY;
@@ -170,7 +170,7 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
             }
             obj3[7] = questContentPosition;
             captureAdUserAction(obj3);
-            const captureAdUserActionResult = captureAdUserAction(11193);
+            const captureAdUserActionResult = captureAdUserAction(11198);
             obj6 = closure_4;
             obj7 = closure_1_4;
           } else {
@@ -195,7 +195,7 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
             const captureAdUserActionResult2 = captureAdUserAction(7718);
           }
           dependencyMap = 3;
-          obj12 = closure_1_0(11192);
+          obj12 = closure_1_0(11197);
         }
       } catch (tmp36) {
         dependencyMap = tmp;

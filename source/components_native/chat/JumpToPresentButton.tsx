@@ -1,16 +1,16 @@
-// Module ID: 12267
-// Function ID: 12268
+// Module ID: 12271
+// Function ID: 12272
 // Name: JumpToPresentButton
-// Dependencies: [19, 17, 9485, 5277, 4781, 21, 4560, 576, 1115, 4262, 504, 9681, 1114, 12268, 12269, 12270, 2]
+// Dependencies: [19, 17, 9490, 5277, 4781, 21, 4560, 576, 1115, 4262, 504, 9686, 1114, 12272, 12273, 12274, 2]
 // Exports: default
 
-// Module 12267 (JumpToPresentButton)
+// Module 12271 (JumpToPresentButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import updateChatInputContainerHeight from "updateChatInputContainerHeight" /* 9485 */;
-import closure_6 from "updateChatInputContainerHeight" /* 9485 */;
+import updateChatInputContainerHeight from "updateChatInputContainerHeight" /* 9490 */;
+import closure_6 from "updateChatInputContainerHeight" /* 9490 */;
 import closure_7 from "_handleConnectionOpen" /* 5277 */;
 import closure_8 from "reinjectEphemerals" /* 4781 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -64,10 +64,10 @@ export default function JumpToPresentButton(channelId) {
     }
     return tmp;
   });
-  const isVoicePanelMounted = channelId(9681).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(9681);
-  const isVoicePanelOpen = channelId(9681).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(9681);
+  const isVoicePanelMounted = channelId(9686).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(9686);
+  const isVoicePanelOpen = channelId(9686).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(9686);
   const items1 = [closure_8];
   const stateFromStores = channelId(504).useStateFromStores(items1, () => null != closure_1_8.getMessages(channelId).jumpReturnTargetId);
   if (!tmp5) {
@@ -92,12 +92,12 @@ export default function JumpToPresentButton(channelId) {
   if (tmp5) {
     obj = { accessibilityLabel: null, icon: null, onPress: null };
     obj[0] = stringResult;
-    obj[1] = screenIndex(12269);
+    obj[1] = screenIndex(12273);
     obj[2] = channelId.onJumpToPresent;
-    let tmp12Result = tmp12(screenIndex(12268), obj);
-    const tmp16 = screenIndex(12268);
+    let tmp12Result = tmp12(screenIndex(12272), obj);
+    const tmp16 = screenIndex(12272);
   } else {
-    tmp12Result = tmp12(tmp3(12270).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = tmp12(tmp3(12274).MemoedVoicePanelDismissChatButton, {});
   }
   obj[1] = tmp12Result;
   return <View style={items3}>{null}</View>;

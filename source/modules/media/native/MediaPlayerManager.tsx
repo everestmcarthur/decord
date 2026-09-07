@@ -1,10 +1,10 @@
-// Module ID: 14536
-// Function ID: 14537
+// Module ID: 14539
+// Function ID: 14540
 // Name: _initialize
-// Dependencies: [17, 1956, 4768, 1957, 4781, 4199, 1895, 1074, 9505, 14537, 1085, 3, 560, 1249, 1898, 4418, 573, 1115, 558, 7456, 10089, 2]
+// Dependencies: [17, 1956, 4768, 1957, 4781, 4199, 1895, 1074, 9510, 14540, 1085, 3, 560, 1249, 1898, 4418, 573, 1115, 558, 7456, 10094, 2]
 // Exports: isPlaybackComplete
 
-// Module 14536 (_initialize)
+// Module 14539 (_initialize)
 import set2 from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
@@ -13,7 +13,7 @@ import sum from "sum" /* 1085 */;
 import batchUpdates from "batchUpdates" /* 1249 */;
 import initializeDefault from "initialize" /* 1898 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
-import ActivityPanelModes2 from "ActivityPanelModes" /* 9505 */;
+import ActivityPanelModes2 from "ActivityPanelModes" /* 9510 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "participantFromServer" /* 1956 */;
 import closure_6 from "withEqualityFn" /* 4768 */;
@@ -21,7 +21,7 @@ import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import closure_8 from "reinjectEphemerals" /* 4781 */;
 import closure_9 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_10 from "getState" /* 1895 */;
-import MediaPlaybackPanelModes from "MediaPlaybackPanelModes" /* 14537 */;
+import MediaPlaybackPanelModes from "MediaPlaybackPanelModes" /* 14540 */;
 import keys from "keys" /* 560 */;
 
 ({ NativeEventEmitter: c3, NativeModules: c4 } = get_ActivityIndicator);
@@ -32,20 +32,9 @@ const Permissions = sum.Permissions;
 let closure_16 = new timestampDefault("MediaPlayerManager");
 let obj = keys.create((arg0) => {
   closure_0 = arg0;
-  obj = {
-    activeMediaPlayerSource: "HermesInternal",
-    mediaSourceMessage: "flex",
-    canAccessMedia: "ip",
-    isPlaying: false,
-    wasPipClosedByUser: null,
-    progress: null,
-    rate: "PX_16",
-    showPip: "setRequestSession",
-    closePip() {
-      callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
-    },
-    displayedMediaItemIdsPerChannel: "\u{1F937}\u{1F3FE}",
-    currentlyDisplayedChannelId: true
+  obj = { activeMediaPlayerSource: "HermesInternal", mediaSourceMessage: "flex", canAccessMedia: "ip", isPlaying: false, wasPipClosedByUser: null, progress: null, rate: "PX_16", showPip: "mp3", closePip: "audio/mpeg", displayedMediaItemIdsPerChannel: "A digital audio file format that uses compression to reduce file size while maintaining high quality sound", currentlyDisplayedChannelId: null };
+  obj[8] = function closePip() {
+    callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
   };
   obj[9] = {};
   return obj;

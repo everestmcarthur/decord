@@ -1,10 +1,10 @@
-// Module ID: 10400
-// Function ID: 10401
+// Module ID: 10405
+// Function ID: 10406
 // Name: StickerPackInformationPopout
 // Dependencies: [19, 17, 21, 4560, 576, 4899, 1114, 4556, 5123, 2]
 // Exports: default, doesStickerPackHavePopoutInformation
 
-// Module 10400 (StickerPackInformationPopout)
+// Module 10405 (StickerPackInformationPopout)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4899 */;

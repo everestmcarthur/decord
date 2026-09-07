@@ -1,10 +1,10 @@
-// Module ID: 12157
-// Function ID: 12158
+// Module ID: 12161
+// Function ID: 12162
 // Name: getFirstInvalidOption
 // Dependencies: [2]
 // Exports: getFirstInvalidOption
 
-// Module 12157 (getFirstInvalidOption)
+// Module 12161 (getFirstInvalidOption)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/application_commands/native/ApplicationCommandValidationUtils.tsx");

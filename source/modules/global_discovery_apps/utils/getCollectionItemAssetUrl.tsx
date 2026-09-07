@@ -1,10 +1,10 @@
-// Module ID: 12124
-// Function ID: 12125
+// Module ID: 12128
+// Function ID: 12129
 // Name: getCollectionItemAssetUrl
 // Dependencies: [1074, 1430, 1396, 2]
 // Exports: getCollectionItemAssetUrl
 
-// Module 12124 (getCollectionItemAssetUrl)
+// Module 12128 (getCollectionItemAssetUrl)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import getAvatarURL from "getAvatarURL" /* 1396 */;

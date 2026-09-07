@@ -1,14 +1,14 @@
-// Module ID: 14972
-// Function ID: 14973
+// Module ID: 14975
+// Function ID: 14976
 // Name: ClipsIcon
-// Dependencies: [19, 21, 576, 4261, 14973, 2]
+// Dependencies: [19, 21, 576, 4261, 14976, 2]
 // Exports: ClipsIcon
 
-// Module 14972 (ClipsIcon)
+// Module 14975 (ClipsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 14973 */;
+import registerAsset from "registerAsset" /* 14976 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

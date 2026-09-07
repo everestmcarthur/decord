@@ -1,13 +1,13 @@
-// Module ID: 10280
-// Function ID: 10281
+// Module ID: 10285
+// Function ID: 10286
 // Name: trackOnEmojiPickerOpened
-// Dependencies: [19, 5459, 1957, 2011, 1074, 1374, 1219, 10281, 10282, 4740, 4217, 2]
+// Dependencies: [19, 5459, 1957, 2011, 1074, 1374, 1219, 10286, 10287, 4740, 4217, 2]
 // Exports: useTrackOnEmojiPickerOpenedForReactions
 
-// Module 10280 (trackOnEmojiPickerOpened)
+// Module 10285 (trackOnEmojiPickerOpened)
 import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
-import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 10281 */;
-import useEmojiHotrail from "useEmojiHotrail" /* 10282 */;
+import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 10286 */;
+import useEmojiHotrail from "useEmojiHotrail" /* 10287 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "getEmojiToGroupId" /* 5459 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;

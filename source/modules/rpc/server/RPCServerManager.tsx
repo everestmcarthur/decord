@@ -1,13 +1,13 @@
-// Module ID: 14458
-// Function ID: 14459
+// Module ID: 14461
+// Function ID: 14462
 // Name: loadServer
-// Dependencies: [32, 9510, 7703, 1957, 2021, 1979, 1908, 4600, 4583, 4209, 2011, 1371, 4579, 4465, 1074, 1920, 9511, 4585, 1115, 573, 1242, 14459, 504, 1369, 9559, 9565, 14464, 9560, 7724, 2]
+// Dependencies: [32, 9515, 7703, 1957, 2021, 1979, 1908, 4600, 4583, 4209, 2011, 1371, 4579, 4465, 1074, 1920, 9516, 4585, 1115, 573, 1242, 14462, 504, 1369, 9564, 9570, 14467, 9565, 7724, 2]
 
-// Module 14458 (loadServer)
+// Module 14461 (loadServer)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import set2 from "set" /* 1115 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "map" /* 9510 */;
+import closure_4 from "map" /* 9515 */;
 import closure_5 from "initializeState" /* 7703 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
 import closure_7 from "trackCommunicationDisabled" /* 2021 */;
@@ -22,7 +22,7 @@ import closure_15 from "updateVoiceState" /* 4579 */;
 import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4465 */;
 import ME from "ME" /* 1074 */;
 import { ActivityLayoutMode } from "items3" /* 1920 */;
-import { FrameLayoutModes } from "FrameLayoutModes" /* 9511 */;
+import { FrameLayoutModes } from "FrameLayoutModes" /* 9516 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
 
 require = arg1;
@@ -548,7 +548,7 @@ prototype["init"] = function init() {
     callback(1242).track(constants.AUTHORIZED_APP_CONNECTED, obj);
   };
   this.rpcServer.onDisconnect = (id, reason) => {
-    let obj = callback(14459);
+    let obj = callback(14462);
     obj.releaseSocket(id.id);
     obj = { type: "RPC_APP_DISCONNECTED", socketId: id.id, application: id.application, source: id.source, reason };
     callback(573).dispatch(obj);

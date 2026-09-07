@@ -1,10 +1,10 @@
-// Module ID: 16339
-// Function ID: 16340
+// Module ID: 16342
+// Function ID: 16343
 // Name: getGuildBarNeighbors
 // Dependencies: [5438, 5440, 2]
 // Exports: default
 
-// Module 16339 (getGuildBarNeighbors)
+// Module 16342 (getGuildBarNeighbors)
 import GuildsNodeType from "GuildsNodeType" /* 5440 */;
 import closure_2 from "insertUnsortedGuilds" /* 5438 */;
 

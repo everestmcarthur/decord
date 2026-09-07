@@ -1,10 +1,10 @@
-// Module ID: 11029
-// Function ID: 11030
+// Module ID: 11034
+// Function ID: 11035
 // Name: getTierForProgress
 // Dependencies: [8192, 2]
 // Exports: getNextTierForProgress, getRemainingGiftsToNextTier, getTierForProgress
 
-// Module 11029 (getTierForProgress)
+// Module 11034 (getTierForProgress)
 import set from "set" /* 2 */;
 import initialize from "initialize" /* 8192 */;
 

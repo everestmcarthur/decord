@@ -1,10 +1,10 @@
-// Module ID: 9035
-// Function ID: 9036
+// Module ID: 9040
+// Function ID: 9041
 // Name: ChannelPreview
 // Dependencies: [19, 17, 1979, 21, 4560, 576, 504, 4409, 4556, 1114, 5584, 2]
 // Exports: default
 
-// Module 9035 (ChannelPreview)
+// Module 9040 (ChannelPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;

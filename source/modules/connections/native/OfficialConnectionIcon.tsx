@@ -1,16 +1,16 @@
-// Module ID: 11566
-// Function ID: 11567
+// Module ID: 11571
+// Function ID: 11572
 // Name: OfficialConnectionIcon
-// Dependencies: [19, 17, 1074, 21, 4560, 7186, 576, 1091, 1178, 11567, 11568, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 7186, 576, 1091, 1178, 11572, 11573, 2]
 // Exports: default
 
-// Module 11566 (OfficialConnectionIcon)
+// Module 11571 (OfficialConnectionIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import useRoleIcon from "useRoleIcon" /* 7186 */;
-import registerAssetDefault from "registerAsset" /* 11567 */;
-import registerAssetDefault2 from "registerAsset" /* 11568 */;
+import registerAssetDefault from "registerAsset" /* 11572 */;
+import registerAssetDefault2 from "registerAsset" /* 11573 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;

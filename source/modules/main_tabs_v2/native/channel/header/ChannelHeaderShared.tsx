@@ -1,10 +1,10 @@
-// Module ID: 13269
-// Function ID: 13270
+// Module ID: 13273
+// Function ID: 13274
 // Name: TitleWrapper
-// Dependencies: [32, 19, 17, 4209, 1371, 21, 4560, 576, 5123, 1115, 10899, 4556, 1178, 13270, 10910, 4262, 5028, 13271, 1114, 4713, 2]
+// Dependencies: [32, 19, 17, 4209, 1371, 21, 4560, 576, 5123, 1115, 10904, 4556, 1178, 13274, 10915, 4262, 5028, 13275, 1114, 4713, 2]
 // Exports: renderChannelIcon, renderChannelIconRaw, renderChannelTitle, renderEmptyIcon, renderGroupDMIcon, renderMemberCountText, renderParentChannelSubTitle, renderTitleWrapper, renderUserAvatar
 
-// Module 13269 (TitleWrapper)
+// Module 13273 (TitleWrapper)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
@@ -12,10 +12,10 @@ import map from "map" /* 4262 */;
 import Text from "Text" /* 4556 */;
 import computeChannelName from "computeChannelName" /* 4713 */;
 import getChannelIcon from "getChannelIcon" /* 5028 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 10899 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10910 */;
-import registerAssetDefault from "registerAsset" /* 13270 */;
-import _modDef13271 from "module_13271" /* 13271 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 10904 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10915 */;
+import registerAssetDefault from "registerAsset" /* 13274 */;
+import _modDef13275 from "module_13275" /* 13275 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -119,7 +119,7 @@ function GroupDMIcon(channel) {
 function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: false, isMobileOnline: "done", isVROnline: "flowing", style: "hourglass", autoStatusCutout: "hours" };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: false, isMobileOnline: null, isVROnline: true, style: null, autoStatusCutout: false };
   obj[3] = Button.AvatarSizes.REFRESH_MEDIUM_32;
   let tmp3 = null;
   if (!user.isSystemUser()) {
@@ -165,7 +165,7 @@ function MemberCountText(arg0) {
   }
   obj[1] = memberCount;
   obj[3] = leadingAccessoryWidth;
-  const children = [closure_8(_modDef13271, obj), ];
+  const children = [closure_8(_modDef13275, obj), ];
   let tmp4Result = null;
   if (withSeparator) {
     tmp4Result = tmp4(Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: "\u2022" });

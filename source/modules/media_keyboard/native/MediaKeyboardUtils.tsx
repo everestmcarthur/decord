@@ -1,18 +1,18 @@
-// Module ID: 10635
-// Function ID: 10636
+// Module ID: 10640
+// Function ID: 10641
 // Name: handleLimitedPickerDialog
-// Dependencies: [5, 1185, 1957, 4901, 2011, 4900, 1607, 1074, 4770, 5128, 9307, 5136, 5138, 5139, 1242, 5150, 1115, 4539, 10636, 1109, 10661, 4971, 11222, 11223, 12, 2]
+// Dependencies: [5, 1185, 1957, 4901, 2011, 4900, 1607, 1074, 4770, 5128, 9312, 5136, 5138, 5139, 1242, 5150, 1115, 4539, 10641, 1109, 10666, 4971, 11227, 11228, 12, 2]
 // Exports: addAttachmentForCommand, addImagesFromPicker, animatedIndexThreshold, cropResultToUploadItem, getMediaKeyboardDraftType, handleCameraDialog, handleSelectGift, handleSelectThread, handleViewAllDialog, mediaNodeToUploadItem
 
-// Module 10635 (handleLimitedPickerDialog)
+// Module 10640 (handleLimitedPickerDialog)
 import applyDefault from "apply" /* 12 */;
 import set from "set" /* 1115 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import cancel from "cancel" /* 5128 */;
 import openImagePickerUnhandled from "openImagePickerUnhandled" /* 5138 */;
 import NativePermissionsRequestOptionsDefault from "NativePermissionsRequestOptions" /* 5139 */;
-import _modDef9307 from "module_9307" /* 9307 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11222 */;
+import _modDef9312 from "module_9312" /* 9312 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11227 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
@@ -206,7 +206,7 @@ function _handleAttachFile() {
               v0 = 2;
               v02 = 1;
               const obj4 = { value: null, done: false };
-              obj4[0] = lib(11223).handleDocumentSelection(obj3);
+              obj4[0] = lib(11228).handleDocumentSelection(obj3);
               return obj4;
             }
           } else {
@@ -233,7 +233,7 @@ function _handleAttachFile() {
                         closure_0 = arg0;
                         c6 = 0;
                         c7 = 0;
-                        return (/* F125698 */ function*() { ... })();
+                        return (/* F125727 */ function*() { ... })();
                       });
                       return function() {
                         const self = this;
@@ -286,12 +286,12 @@ function handleSelectKeyboardItem(channelId, item, isIncluded, arg3) {
   if (isIncluded) {
     const findUploadResult = closure_8.findUpload(channelId, DraftType.ChannelMessage, (closure_0) => image(closure_1_2[11]).doesImageMatchUpload(image, closure_0));
     if (null != findUploadResult) {
-      _modDef9307.remove(channelId, findUploadResult.id, tmp13.ChannelMessage);
-      const obj5 = _modDef9307;
+      _modDef9312.remove(channelId, findUploadResult.id, tmp13.ChannelMessage);
+      const obj5 = _modDef9312;
     }
     tmp13 = DraftType;
   } else {
-    let obj = _modDef9307;
+    let obj = _modDef9312;
     obj = { channelId: null, file: null, draftType: null };
     obj[0] = channelId;
     image = item.node.image;
@@ -342,7 +342,7 @@ function showSimpleMediaKeyboard(channel) {
   } else if (tmp.INTERACTION_MODAL === CHAT) {
     InteractionModal = DraftType.InteractionModal;
   }
-  let obj = _require(10636);
+  let obj = _require(10641);
   obj = {
     channel,
     draftType: InteractionModal,
@@ -707,8 +707,8 @@ function showSimpleMediaKeyboard(channel) {
         }
       });
     },
-    onClose: _require(10636).hideMediaKeyboardActionSheet,
-    onBack: _require(10636).hideMediaKeyboardActionSheet
+    onClose: _require(10641).hideMediaKeyboardActionSheet,
+    onBack: _require(10641).hideMediaKeyboardActionSheet
   };
   let result = obj.showMediaKeyboardActionSheet(obj);
 }
@@ -741,10 +741,10 @@ export const addImagesFromPicker = function addImagesFromPicker(id, items, IMAGE
     obj[0] = mapped;
     obj[1] = id;
     obj[2] = DraftType.ChannelMessage;
-    _modDef9307.addFiles(obj);
-    const obj3 = _modDef9307;
+    _modDef9312.addFiles(obj);
+    const obj3 = _modDef9312;
   } else {
-    obj = _modDef9307;
+    obj = _modDef9312;
     obj = { files: null, channelId: null, draftType: null };
     obj[0] = items;
     obj[1] = id;
@@ -775,8 +775,8 @@ export const addAttachmentForCommand = function addAttachmentForCommand(channelI
   } else if (tmp2.INTERACTION_MODAL === target) {
     InteractionModal = DraftType.InteractionModal;
   }
-  _modDef9307.remove(channelId, closure_1_1.option.name, InteractionModal);
-  const obj4 = _modDef9307;
+  _modDef9312.remove(channelId, closure_1_1.option.name, InteractionModal);
+  const obj4 = _modDef9312;
   obj = { channelId, file: null, draftType: null, allowOptimization: false };
   obj1 = {};
   const merged = Object.assign(result1);
@@ -785,7 +785,7 @@ export const addAttachmentForCommand = function addAttachmentForCommand(channelI
   obj1.filename = filename;
   obj[1] = obj1;
   obj[2] = InteractionModal;
-  _modDef9307.addFile(obj);
+  _modDef9312.addFile(obj);
 };
 export const handleCameraDialog = function handleCameraDialog(arg0) {
   ({ channel: require, previewType: importDefault, onDismissKeyboard: dependencyMap, onRestoreKeyboard: closure_3, onSelectFiles: closure_4 } = arg0);
@@ -1014,7 +1014,7 @@ export const handleSelectGift = function handleSelectGift(analyticsLocations, ch
     };
   }
   obj1[4] = fn;
-  _require(10661).openGiftModal(obj1);
+  _require(10666).openGiftModal(obj1);
 };
 export const handleSelectThread = function handleSelectThread(channel, chatInput) {
   let obj = expandEventPropertiesDefault;

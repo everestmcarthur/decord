@@ -1,10 +1,10 @@
-// Module ID: 15978
-// Function ID: 15979
+// Module ID: 15981
+// Function ID: 15982
 // Name: getWumpTrashSource
-// Dependencies: [19, 17, 21, 8233, 15979, 15980, 4411, 2]
+// Dependencies: [19, 17, 21, 8233, 15982, 15983, 4411, 2]
 // Exports: WumpTrash, getWumpTrashSource, useWumpTrashSource
 
-// Module 15978 (getWumpTrashSource)
+// Module 15981 (getWumpTrashSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import getIllustrationSource from "getIllustrationSource" /* 8233 */;
@@ -19,10 +19,10 @@ export const getWumpTrashSource = function getWumpTrashSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(15979);
+      return callback(15982);
     },
     darker() {
-      return callback(15980);
+      return callback(15983);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -31,10 +31,10 @@ export const useWumpTrashSource = function useWumpTrashSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(15979);
+      return callback(15982);
     },
     darker() {
-      return callback(15980);
+      return callback(15983);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -43,10 +43,10 @@ export const WumpTrash = function WumpTrash(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(15979);
+      return callback(15982);
     },
     darker() {
-      return callback(15980);
+      return callback(15983);
     }
   };
   obj = {};

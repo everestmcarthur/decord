@@ -1,10 +1,10 @@
-// Module ID: 11435
-// Function ID: 11436
+// Module ID: 11440
+// Function ID: 11441
 // Name: BlockedPaymentsCountryDisplay
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 4495, 1178, 1114, 2024, 4411, 11436, 11437, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 4495, 1178, 1114, 2024, 4411, 11441, 11442, 2]
 // Exports: default
 
-// Module 11435 (BlockedPaymentsCountryDisplay)
+// Module 11440 (BlockedPaymentsCountryDisplay)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -48,9 +48,9 @@ export default function BlockedPaymentsCountryDisplay() {
   const obj5 = combinedDefault;
   const tmp8 = closure_4;
   if (obj7.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(11436);
+    let tmp2Result = tmp2(11441);
   } else {
-    tmp2Result = tmp2(11437);
+    tmp2Result = tmp2(11442);
   }
   obj2[1] = tmp2Result;
   items[2] = tmp7(tmp8, obj2);

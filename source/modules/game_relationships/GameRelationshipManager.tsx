@@ -1,9 +1,9 @@
-// Module ID: 14545
-// Function ID: 14546
+// Module ID: 14548
+// Function ID: 14549
 // Name: _initialize
 // Dependencies: [7658, 1074, 1898, 573, 7163, 2]
 
-// Module 14545 (_initialize)
+// Module 14548 (_initialize)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import initializeDefault from "initialize" /* 1898 */;
 import closure_2 from "recountRelationshipTypes" /* 7658 */;

@@ -1,10 +1,10 @@
-// Module ID: 11810
-// Function ID: 11811
+// Module ID: 11815
+// Function ID: 11816
 // Name: useExperimentAssignment
 // Dependencies: [32, 4476, 1236, 504, 4481, 2]
 // Exports: getExperimentServerAssignment, useExperimentAssignment, useExperimentServerAssignment
 
-// Module 11810 (useExperimentAssignment)
+// Module 11815 (useExperimentAssignment)
 import trackExposureToExperiment from "trackExposureToExperiment" /* 4481 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "getHash" /* 4476 */;

@@ -1,17 +1,17 @@
-// Module ID: 14891
-// Function ID: 14892
+// Module ID: 14894
+// Function ID: 14895
 // Name: Row
-// Dependencies: [19, 17, 7538, 21, 5071, 11920, 4260, 13375, 5073, 11922, 4523, 11030, 4560, 576, 4556, 11919, 1114, 2396, 8646, 7593, 8421, 8422, 11926, 4975, 4763, 5624, 11928, 2]
+// Dependencies: [19, 17, 7538, 21, 5071, 11925, 4260, 13379, 5073, 11927, 4523, 11035, 4560, 576, 4556, 11924, 1114, 2396, 8651, 7593, 8421, 8422, 11931, 4975, 4763, 5624, 11933, 2]
 // Exports: default
 
-// Module 14891 (Row)
+// Module 14894 (Row)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;
 import Text from "Text" /* 4556 */;
 import _modDef4763 from "module_4763" /* 4763 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
-import Modal from "Modal" /* 11928 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8651 */;
+import Modal from "Modal" /* 11933 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -34,7 +34,7 @@ function Row(arg0) {
 }
 function FamilyCenterModalDataTooltipScreen() {
   const tmp = callback4();
-  obj = _require(11919);
+  obj = _require(11924);
   const intl = _require(1114).intl;
   const intl2 = _require(1114).intl;
   const ageSpecificText = obj.useAgeSpecificText(intl.string(messagesProxyDefault.n6LOrh), intl2.string(messagesProxyDefault.JNLpDZ));
@@ -61,7 +61,7 @@ function FamilyCenterModalDataTooltipScreen() {
   obj4[1] = intl3.string(_require(1114).t["NX+WJN"]);
   obj4[2] = _modDef4763.pop;
   obj3[0] = callback(_require(4975).Button, obj4);
-  items1[1] = callback(_require(11926).ModalFooter, obj3);
+  items1[1] = callback(_require(11931).ModalFooter, obj3);
   obj[0] = items1;
   return callback2(_require(8421).ModalScreen, obj);
 }

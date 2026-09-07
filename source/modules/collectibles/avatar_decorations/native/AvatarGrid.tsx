@@ -1,10 +1,10 @@
-// Module ID: 13176
-// Function ID: 13177
+// Module ID: 13180
+// Function ID: 13181
 // Name: GridAvatar
 // Dependencies: [19, 17, 4552, 4600, 21, 4560, 576, 504, 1178, 8247, 2]
 // Exports: default
 
-// Module 13176 (GridAvatar)
+// Module 13180 (GridAvatar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;

@@ -1,10 +1,10 @@
-// Module ID: 17594
-// Function ID: 17595
+// Module ID: 17597
+// Function ID: 17598
 // Name: getGuildTagPalettePresetColorLabel
 // Dependencies: [7944, 1114, 1369, 2]
 // Exports: default
 
-// Module 17594 (getGuildTagPalettePresetColorLabel)
+// Module 17597 (getGuildTagPalettePresetColorLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;

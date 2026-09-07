@@ -1,10 +1,10 @@
-// Module ID: 15775
-// Function ID: 15776
+// Module ID: 15778
+// Function ID: 15779
 // Name: UserSettingsDesignSystemTabs
-// Dependencies: [32, 19, 17, 21, 4560, 576, 4556, 4262, 4409, 9792, 4973, 12614, 12759, 12616, 4975, 7201, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 4556, 4262, 4409, 9797, 4973, 12618, 12763, 12620, 4975, 7201, 2]
 // Exports: default
 
-// Module 15775 (UserSettingsDesignSystemTabs)
+// Module 15778 (UserSettingsDesignSystemTabs)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -78,7 +78,7 @@ export default function UserSettingsDesignSystemTabs() {
     }
     return items;
   }, items);
-  let obj = first(9792);
+  let obj = first(9797);
   const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp[0], defaultIndex: 1 });
   callback = React.useCallback((nativeEvent) => {
     first(nativeEvent.nativeEvent.layout.width);
@@ -89,18 +89,18 @@ export default function UserSettingsDesignSystemTabs() {
   let obj2 = first(4409);
   items1[1] = obj2.hexWithOpacity(token, 0);
   obj = { style: callback3().container, onLayout: callback, children: null };
-  const items2 = [callback2(first(12614).Tabs, { state: segmentedControlState, grow: first1 }), ];
+  const items2 = [callback2(first(12618).Tabs, { state: segmentedControlState, grow: first1 }), ];
   let tmp20Result = first2;
   if (first2) {
     obj = { state: null, colors: null };
     obj[0] = segmentedControlState;
     obj[1] = items1;
-    tmp20Result = tmp20(first(12759), obj);
+    tmp20Result = tmp20(first(12763), obj);
   }
   obj1 = { children: null };
   obj2 = { spacing: 24, children: null };
   items2[1] = tmp20Result;
-  const items3 = [closure_7(closure_5, { children: items2 }), callback2(first(12616).SegmentedControlPages, { state: segmentedControlState }), , ];
+  const items3 = [closure_7(closure_5, { children: items2 }), callback2(first(12620).SegmentedControlPages, { state: segmentedControlState }), , ];
   const obj3 = { spacing: 8, direction: "horizontal", children: null };
   const items4 = [
     callback2(first(4975).Button, {

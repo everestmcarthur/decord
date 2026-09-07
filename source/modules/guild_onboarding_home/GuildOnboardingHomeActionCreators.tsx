@@ -1,10 +1,10 @@
-// Module ID: 12284
-// Function ID: 12285
+// Module ID: 12288
+// Function ID: 12289
 // Name: _fetchGuildHomeSettings
-// Dependencies: [5, 2014, 1957, 4747, 4748, 1074, 573, 1272, 12285, 1242, 4571, 11, 2]
+// Dependencies: [5, 2014, 1957, 4747, 4748, 1074, 573, 1272, 12289, 1242, 4571, 11, 2]
 // Exports: clearNewMemberActions, completeNewMemberAction, fetchGuildHomeSettings, fetchNewMemberActions, selectHomeResourceChannel, selectNewMemberActionChannel
 
-// Module 12284 (_fetchGuildHomeSettings)
+// Module 12288 (_fetchGuildHomeSettings)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import transitionToChannel from "transitionToChannel" /* 4571 */;
@@ -39,8 +39,8 @@ function _fetchGuildHomeSettings() {
       obj4[1] = callback;
       obj2.dispatch(obj4);
       lib = yield "HermesInternal";
-      dependencyMap = callback(12285).settingsFromServer(lib.body);
-      const obj8 = callback(12285);
+      dependencyMap = callback(12289).settingsFromServer(lib.body);
+      const obj8 = callback(12289);
       const obj6 = { type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS", guildId: null, homeSettings: null };
       obj6[1] = callback;
       obj6[2] = dependencyMap;
@@ -131,8 +131,8 @@ function _fetchNewMemberActions() {
             return obj5;
           } else {
             lib = arg1;
-            dependencyMap = callback(12285).actionsFromServer(lib.body);
-            const obj11 = callback(12285);
+            dependencyMap = callback(12289).actionsFromServer(lib.body);
+            const obj11 = callback(12289);
             const obj6 = { type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: null, memberActions: null };
             obj6[1] = callback;
             obj6[2] = dependencyMap;

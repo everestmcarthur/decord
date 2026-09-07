@@ -1,17 +1,17 @@
-// Module ID: 13223
-// Function ID: 13224
+// Module ID: 13227
+// Function ID: 13228
 // Name: createQuestsEmbed
-// Dependencies: [17, 1183, 7703, 5444, 1074, 7736, 1115, 1114, 7724, 11775, 5447, 4411, 11285, 1608, 13224, 7699, 7718, 7722, 7945, 2]
+// Dependencies: [17, 1183, 7703, 5444, 1074, 7736, 1115, 1114, 7724, 11780, 5447, 4411, 11290, 1608, 13228, 7699, 7718, 7722, 7945, 2]
 // Exports: createQuestsEmbed
 
-// Module 13223 (createQuestsEmbed)
+// Module 13227 (createQuestsEmbed)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;
 import isMetaQuest from "isMetaQuest" /* 1608 */;
 import InviteSendStates from "InviteSendStates" /* 7736 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
-import registerAssetDefault from "registerAsset" /* 13224 */;
+import registerAssetDefault from "registerAsset" /* 13228 */;
 import closure_4 from "handleThemeChange" /* 1183 */;
 import closure_5 from "initializeState" /* 7703 */;
 import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
@@ -202,8 +202,8 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
           obj10[3] = tmp2(5447).QuestContent.QUEST_EMBED_MOBILE;
           obj10[4] = thirdPartyTaskDetails;
           obj10[6] = currentUser;
-          formatToPlainStringResult1 = tmp2(11775).getQuestsInstructionsToWinReward(obj10);
-          const tmp2Result10 = tmp2(11775);
+          formatToPlainStringResult1 = tmp2(11780).getQuestsInstructionsToWinReward(obj10);
+          const tmp2Result10 = tmp2(11780);
         }
         const formatToPlainStringResult = intl3.formatToPlainString(tmp2(1114).t.EAYZAr, obj8);
         const colors2 = acceptLabelGreenColor.colors;
@@ -212,11 +212,11 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         obj11.headerColor = colors2.headerColor;
         obj11.titleText = formatToPlainStringResult;
         ({ titleColor: obj13.titleColor, bodyTextColor: obj13.subtitleColor, bodyTextColor: obj13.bodyTextColor } = colors2);
-        obj11.thumbnailUrl = tmp2(11285).getQuestAsset(result, tmp2(11285).QuestAssetType.GAME_TILE, tmp29).url;
+        obj11.thumbnailUrl = tmp2(11290).getQuestAsset(result, tmp2(11290).QuestAssetType.GAME_TILE, tmp29).url;
         obj11.embedCanBeTapped = true;
         obj11.canBeAccepted = true;
         obj11.type = InviteTypes.GUILD;
-        const tmp2Result11 = tmp2(11285);
+        const tmp2Result11 = tmp2(11290);
         const obj12 = {};
         const tmp2Result12 = tmp2(1115);
         const merged9 = Object.assign(obj11);

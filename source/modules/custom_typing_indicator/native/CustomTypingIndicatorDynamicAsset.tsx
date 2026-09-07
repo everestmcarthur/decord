@@ -1,10 +1,10 @@
-// Module ID: 11970
-// Function ID: 11971
+// Module ID: 11974
+// Function ID: 11975
 // Name: CustomTypingIndicatorDynamicAsset
-// Dependencies: [19, 17, 21, 4560, 4973, 5587, 4556, 1114, 11971, 2]
+// Dependencies: [19, 17, 21, 4560, 4973, 5587, 4556, 1114, 11975, 2]
 // Exports: default
 
-// Module 11970 (CustomTypingIndicatorDynamicAsset)
+// Module 11974 (CustomTypingIndicatorDynamicAsset)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -42,7 +42,7 @@ export default function CustomTypingIndicatorDynamicAsset(arg0) {
   obj = { variant: textVariant, color: textColor, lineClamp, includeFontPadding: true, style: items1, children: null };
   items1 = [tmpResult.text, textStyle];
   const intl = _require(1114).intl;
-  obj[5] = intl.format(_require(11971).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), { name });
+  obj[5] = intl.format(_require(11975).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), { name });
   items[1] = callback(_require(4556).Text, obj);
   obj[5] = items;
   return callback2(_require(4973).Stack, obj);

@@ -1,8 +1,8 @@
-// Module ID: 13271
-// Function ID: 13272
+// Module ID: 13275
+// Function ID: 13276
 // Dependencies: [19, 17, 21, 4560, 576, 1116, 1114, 4556, 2]
 
-// Module 13271
+// Module 13275
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;

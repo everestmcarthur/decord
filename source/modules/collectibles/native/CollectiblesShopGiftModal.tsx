@@ -1,10 +1,10 @@
-// Module ID: 11008
-// Function ID: 11009
+// Module ID: 11013
+// Function ID: 11014
 // Name: CollectiblesShopGiftModalContent
-// Dependencies: [19, 7542, 1074, 1085, 21, 9365, 1115, 4231, 11009, 11007, 10822, 10804, 10826, 11010, 11013, 10743, 8197, 8184, 504, 7162, 7182, 1925, 7541, 10825, 1114, 2]
+// Dependencies: [19, 7542, 1074, 1085, 21, 9370, 1115, 4231, 11014, 11012, 10827, 10809, 10831, 11015, 11018, 10748, 8197, 8184, 504, 7162, 7182, 1925, 7541, 10830, 1114, 2]
 // Exports: default
 
-// Module 11008 (CollectiblesShopGiftModalContent)
+// Module 11013 (CollectiblesShopGiftModalContent)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "updateCategoriesAndProducts" /* 7542 */;
 import { COLLECTIBLES_APPLICATION_ID as closure_5 } from "ME" /* 1074 */;

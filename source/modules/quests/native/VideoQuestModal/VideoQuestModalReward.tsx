@@ -1,10 +1,10 @@
-// Module ID: 15149
-// Function ID: 15150
-// Dependencies: [19, 21, 4560, 15126, 11483, 11767, 4973, 576, 15131, 4556, 1114, 2]
+// Module ID: 15152
+// Function ID: 15153
+// Dependencies: [19, 21, 4560, 15129, 11488, 11772, 4973, 576, 15134, 4556, 1114, 2]
 
-// Module 15149
+// Module 15152
 import ThemesDefault from "Themes" /* 576 */;
-import COMPLETION_GLOW_SHADOW_RADIUSDefault from "COMPLETION_GLOW_SHADOW_RADIUS" /* 15131 */;
+import COMPLETION_GLOW_SHADOW_RADIUSDefault from "COMPLETION_GLOW_SHADOW_RADIUS" /* 15134 */;
 import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -27,9 +27,9 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(style) {
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = style);
-  let obj = quest(15126);
+  let obj = quest(15129);
   quest = obj.useVideoQuestModalContext().quest;
-  obj1 = quest(11483);
+  obj1 = quest(11488);
   const items = [quest.id];
   const questTaskDetails = obj1.useQuestTaskDetails(quest);
   const callback = importAllResult.useCallback(() => {

@@ -1,13 +1,13 @@
-// Module ID: 9295
-// Function ID: 9296
+// Module ID: 9300
+// Function ID: 9301
 // Name: computePermissions
-// Dependencies: [19, 2014, 1961, 1975, 502, 1957, 2021, 1979, 4199, 1371, 1074, 9296, 504, 1086, 1894, 2]
+// Dependencies: [19, 2014, 1961, 1975, 502, 1957, 2021, 1979, 4199, 1371, 1074, 9301, 504, 1086, 1894, 2]
 // Exports: buildPermissionContext, computeCommandContextType, getContextGuildId, usePermissionContext
 
-// Module 9295 (computePermissions)
+// Module 9300 (computePermissions)
 import fromStringAll from "fromString" /* 1086 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
-import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 9296 */;
+import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 9301 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "initialize" /* 2014 */;
 import { ChannelRecordBase } from "createChannelRecord" /* 1961 */;

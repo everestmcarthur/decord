@@ -1,10 +1,10 @@
-// Module ID: 13251
-// Function ID: 13252
+// Module ID: 13255
+// Function ID: 13256
 // Name: ConversationFocusScreen
-// Dependencies: [19, 17, 7596, 21, 4560, 576, 1486, 504, 7909, 7923, 1114, 4556, 4975, 13252, 2]
+// Dependencies: [19, 17, 7596, 21, 4560, 576, 1486, 504, 7909, 7923, 1114, 4556, 4975, 13256, 2]
 // Exports: default
 
-// Module 13251 (ConversationFocusScreen)
+// Module 13255 (ConversationFocusScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

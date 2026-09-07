@@ -1,15 +1,15 @@
-// Module ID: 16659
-// Function ID: 16660
+// Module ID: 16662
+// Function ID: 16663
 // Name: GuildChannelLabel
-// Dependencies: [19, 17, 7878, 21, 4560, 576, 4713, 16660, 5028, 16662, 16652, 2]
+// Dependencies: [19, 17, 7878, 21, 4560, 576, 4713, 16663, 5028, 16665, 16655, 2]
 
-// Module 16659 (GuildChannelLabel)
+// Module 16662 (GuildChannelLabel)
 import ThemesDefault from "Themes" /* 576 */;
 import computeChannelNameDefault from "computeChannelName" /* 4713 */;
 import getChannelIcon from "getChannelIcon" /* 5028 */;
-import SearchListRow from "SearchListRow" /* 16652 */;
-import ChannelContentComponent from "ChannelContentComponent" /* 16660 */;
-import LaunchpadChannelIcon from "LaunchpadChannelIcon" /* 16662 */;
+import SearchListRow from "SearchListRow" /* 16655 */;
+import ChannelContentComponent from "ChannelContentComponent" /* 16663 */;
+import LaunchpadChannelIcon from "LaunchpadChannelIcon" /* 16665 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { CHANNEL_LIST_SEARCH_LAYOUT as closure_5 } from "MessageEmbedTypes" /* 7878 */;
 import { jsx } from "jsxProd" /* 21 */;

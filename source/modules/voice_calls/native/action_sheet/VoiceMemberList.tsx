@@ -1,13 +1,13 @@
-// Module ID: 13784
-// Function ID: 13785
+// Module ID: 13787
+// Function ID: 13788
 // Name: ItemSeparator
-// Dependencies: [32, 5, 19, 17, 1956, 1385, 4582, 4199, 1371, 4584, 1074, 1182, 7151, 1085, 21, 4560, 13780, 9937, 504, 8593, 13466, 1114, 10031, 11590, 9820, 4556, 9619, 7162, 1874, 5411, 9533, 4767, 13785, 13786, 1477, 13793, 4417, 12, 4527, 8179, 4271, 13794, 7072, 2]
+// Dependencies: [32, 5, 19, 17, 1956, 1385, 4582, 4199, 1371, 4584, 1074, 1182, 7151, 1085, 21, 4560, 13783, 9942, 504, 8598, 13470, 1114, 10036, 11595, 9825, 4556, 9624, 7162, 1874, 5411, 9538, 4767, 13788, 13789, 1477, 13796, 4417, 12, 4527, 8179, 4271, 13797, 7072, 2]
 
-// Module 13784 (ItemSeparator)
+// Module 13787 (ItemSeparator)
 import Text from "Text" /* 4556 */;
-import Form from "Form" /* 8593 */;
-import registerAssetDefault from "registerAsset" /* 10031 */;
-import _modDef13780 from "module_13780" /* 13780 */;
+import Form from "Form" /* 8598 */;
+import registerAssetDefault from "registerAsset" /* 10036 */;
+import _modDef13783 from "module_13783" /* 13783 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
@@ -189,7 +189,7 @@ function VoiceSectionRow(arg0) {
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = ME);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
 let closure_24 = createCacheKey.createStyles({ container: { flex: 1, flexShrink: 1 }, sectionContainer: { paddingTop: 16, paddingHorizontal: 16 }, sectionTitle: { lineHeight: 16 }, voiceChannelContainer: { overflow: "hidden", flexGrow: 1, flexShrink: 1, minHeight: 1 }, headerFormDivider: { marginLeft: 0 }, rowFormDivider: { marginHorizontal: 16 } });
-let closure_25 = importAllResult.memo((channel) => callback2(_modDef13780, { channel: channel.channel }));
+let closure_25 = importAllResult.memo((channel) => callback2(_modDef13783, { channel: channel.channel }));
 let closure_26 = importAllResult.memo((channel) => {
   channel = channel.channel;
   channel(504);
@@ -205,8 +205,8 @@ let closure_26 = importAllResult.memo((channel) => {
       const intl = tmp4(1114).intl;
       obj[0] = intl.string(tmp4(1114).t["6Qgrev"]);
       obj[2] = registerAssetDefault;
-      obj[3] = tmp4(13466).CircularIconButton.Sizes.MEDIUM_32;
-      obj[0] = callback2(tmp4(13466).CircularIconButton, obj);
+      obj[3] = tmp4(13470).CircularIconButton.Sizes.MEDIUM_32;
+      obj[0] = callback2(tmp4(13470).CircularIconButton, obj);
       const intl2 = tmp4(1114).intl;
       obj[1] = intl2.string(tmp4(1114).t["6Qgrev"]);
       obj[2] = function onPress() {
@@ -219,7 +219,7 @@ let closure_26 = importAllResult.memo((channel) => {
           const result = obj.showInstantInviteActionSheet(tmp, obj);
         }
       };
-      items[1] = callback2(tmp4(8593).FormRow, obj);
+      items[1] = callback2(tmp4(8598).FormRow, obj);
       obj[0] = items;
       tmp7 = callback3(importAllResult.Fragment, obj);
     }

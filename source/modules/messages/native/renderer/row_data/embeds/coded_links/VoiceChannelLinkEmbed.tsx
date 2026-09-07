@@ -1,10 +1,10 @@
-// Module ID: 13222
-// Function ID: 13223
+// Module ID: 13226
+// Function ID: 13227
 // Name: createVoiceChannelLinkEmbed
 // Dependencies: [32, 17, 1975, 1957, 1979, 4199, 4209, 1371, 1074, 7736, 7945, 1396, 1115, 1114, 5028, 4713, 2]
 // Exports: createVoiceChannelLinkEmbed
 
-// Module 13222 (createVoiceChannelLinkEmbed)
+// Module 13226 (createVoiceChannelLinkEmbed)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import set from "set" /* 1115 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;

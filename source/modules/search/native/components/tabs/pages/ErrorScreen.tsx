@@ -1,8 +1,8 @@
-// Module ID: 16638
-// Function ID: 16639
+// Module ID: 16641
+// Function ID: 16642
 // Dependencies: [19, 17, 21, 4560, 6981, 4272, 4556, 2]
 
-// Module 16638
+// Module 16641
 import Text from "Text" /* 4556 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
 import importAllResult from "noop" /* 19 */;

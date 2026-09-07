@@ -1,10 +1,10 @@
-// Module ID: 15752
-// Function ID: 15753
+// Module ID: 15755
+// Function ID: 15756
 // Name: UserSettingsDesignSystemText
 // Dependencies: [19, 17, 21, 4262, 576, 4973, 5687, 4557, 5605, 4556, 2]
 // Exports: default
 
-// Module 15752 (UserSettingsDesignSystemText)
+// Module 15755 (UserSettingsDesignSystemText)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;

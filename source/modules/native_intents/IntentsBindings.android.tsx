@@ -1,9 +1,9 @@
-// Module ID: 17860
-// Function ID: 17861
+// Module ID: 17863
+// Function ID: 17864
 // Name: set
 // Dependencies: [2]
 
-// Module 17860 (set)
+// Module 17863 (set)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");

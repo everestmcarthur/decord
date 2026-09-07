@@ -1,9 +1,9 @@
-// Module ID: 8847
-// Function ID: 8848
+// Module ID: 8852
+// Function ID: 8853
 // Name: memoResult1
-// Dependencies: [19, 17, 7237, 1074, 21, 4560, 576, 8765, 7553, 8848, 7554, 8850, 8861, 4556, 1114, 8837, 1115, 8862, 8662, 8178, 8830, 1889, 4218, 4262, 4409, 8864, 504, 4987, 8865, 2]
+// Dependencies: [19, 17, 7237, 1074, 21, 4560, 576, 8770, 7553, 8853, 7554, 8855, 8866, 4556, 1114, 8842, 1115, 8867, 8667, 8178, 8835, 1889, 4218, 4262, 4409, 8869, 504, 4987, 8870, 2]
 
-// Module 8847 (memoResult1)
+// Module 8852 (memoResult1)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
@@ -12,8 +12,8 @@ import hexToRgba from "hexToRgba" /* 4409 */;
 import Text from "Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import useCurrentUser from "useCurrentUser" /* 8178 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8830 */;
-import getCardProductName from "getCardProductName" /* 8864 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8835 */;
+import getCardProductName from "getCardProductName" /* 8869 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "updateProduct" /* 7237 */;
@@ -274,7 +274,7 @@ const memoResult1 = importAllResult.memo(function CardDetailsV2(arg0) {
     const items4 = [tmp17(closure_11, obj2), ];
     obj3 = { product: null };
     obj3[0] = product;
-    items4[1] = tmp17(tmp7(8865), obj3);
+    items4[1] = tmp17(tmp7(8870), obj3);
     obj1[1] = items4;
     tmp15Result = tmp15(View, obj1);
   }

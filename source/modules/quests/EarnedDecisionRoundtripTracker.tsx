@@ -1,9 +1,9 @@
-// Module ID: 11301
-// Function ID: 11302
+// Module ID: 11306
+// Function ID: 11307
 // Name: trackRoundtrip
 // Dependencies: [4609, 1074, 7459, 1242, 7677, 7462, 2]
 
-// Module 11301 (trackRoundtrip)
+// Module 11306 (trackRoundtrip)
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 7459 */;
 import isForegrounded from "isForegrounded" /* 7462 */;

@@ -1,12 +1,12 @@
-// Module ID: 12708
-// Function ID: 12709
-// Dependencies: [6980, 4763, 12709, 1896, 12704, 2]
+// Module ID: 12712
+// Function ID: 12713
+// Dependencies: [6980, 4763, 12713, 1896, 12708, 2]
 
-// Module 12708
+// Module 12712
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
-import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12704 */;
+import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12708 */;
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 6980 */;
 
 ({ CreateGuildModalStates: c3, IN_APP_GUILD_TEMPLATES_MODAL_KEY: c4 } = NUXGuildTemplatesAnalytics);
@@ -16,7 +16,7 @@ export default {
   openCreateGuildModal(onSuccess) {
     let obj = _modDef4763;
     obj = { onSuccess };
-    obj.pushLazy(asyncRequireImpl(12709, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl(12713, dependencyMap.paths), obj, closure_4);
   },
   closeCreateGuildModal() {
     _modDef4763.popWithKey(closure_4);
@@ -29,11 +29,11 @@ export default {
   openGuildInviteScreen(channel) {
     let obj = _modDef4763;
     obj = { channel };
-    obj.pushLazy(asyncRequireImpl(12709, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl(12713, dependencyMap.paths), obj, closure_4);
   },
   openGuildJoinServerScreen() {
     let obj = _modDef4763;
     obj = { initialState: constants.JOIN_SERVER };
-    obj.pushLazy(asyncRequireImpl(12709, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl(12713, dependencyMap.paths), obj, closure_4);
   }
 };

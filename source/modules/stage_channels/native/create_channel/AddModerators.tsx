@@ -1,10 +1,10 @@
-// Module ID: 9763
-// Function ID: 9764
+// Module ID: 9768
+// Function ID: 9769
 // Name: AddModerators
-// Dependencies: [32, 19, 17, 1979, 8401, 21, 4560, 576, 1483, 38, 9735, 5415, 1894, 1114, 5624, 7377, 4556, 1178, 9764, 1965, 2]
+// Dependencies: [32, 19, 17, 1979, 8401, 21, 4560, 576, 1483, 38, 9740, 5415, 1894, 1114, 5624, 7377, 4556, 1178, 9769, 1965, 2]
 // Exports: default
 
-// Module 9763 (AddModerators)
+// Module 9768 (AddModerators)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

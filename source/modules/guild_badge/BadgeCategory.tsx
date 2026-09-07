@@ -1,12 +1,12 @@
-// Module ID: 8742
-// Function ID: 8743
+// Module ID: 8747
+// Function ID: 8748
 // Name: BadgeCategory
-// Dependencies: [8743, 2]
+// Dependencies: [8748, 2]
 // Exports: getBadgeCategory
 
-// Module 8742 (BadgeCategory)
+// Module 8747 (BadgeCategory)
 import set from "set" /* 2 */;
-import GuildVisibility from "GuildVisibility" /* 8743 */;
+import GuildVisibility from "GuildVisibility" /* 8748 */;
 
 const obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", VERIFIED_AND_PARTNERED: 2, [2]: "VERIFIED_AND_PARTNERED", COMMUNITY: 3, [3]: "COMMUNITY", DISCOVERABLE: 4, [4]: "DISCOVERABLE", STAFF: 5, [5]: "STAFF", NONE: 6, [6]: "NONE" };
 const result = set.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");

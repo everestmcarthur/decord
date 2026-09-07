@@ -1,10 +1,10 @@
-// Module ID: 12662
-// Function ID: 12663
+// Module ID: 12666
+// Function ID: 12667
 // Name: GuildDirectoryNicknameUpsell
-// Dependencies: [5, 32, 19, 17, 1979, 12651, 21, 4560, 5682, 576, 504, 6981, 7120, 4461, 5584, 4556, 1114, 6605, 1178, 4975, 12652, 12661, 5624, 7000, 5598, 2]
+// Dependencies: [5, 32, 19, 17, 1979, 12655, 21, 4560, 5682, 576, 504, 6981, 7120, 4461, 5584, 4556, 1114, 6605, 1178, 4975, 12656, 12665, 5624, 7000, 5598, 2]
 // Exports: default
 
-// Module 12662 (GuildDirectoryNicknameUpsell)
+// Module 12666 (GuildDirectoryNicknameUpsell)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -21,7 +21,7 @@ import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildPrompts } from "GuildPrompts" /* 12651 */;
+import { GuildPrompts } from "GuildPrompts" /* 12655 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

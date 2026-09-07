@@ -1,10 +1,10 @@
-// Module ID: 14627
-// Function ID: 14628
+// Module ID: 14630
+// Function ID: 14631
 // Name: EditProfileEffectInner
-// Dependencies: [32, 19, 17, 7558, 7548, 1074, 21, 4560, 576, 8186, 8170, 7162, 7182, 1242, 8171, 8167, 8164, 7150, 4556, 1114, 8172, 10734, 504, 14628, 8166, 8187, 14629, 13174, 13175, 8173, 11108, 4987, 2]
+// Dependencies: [32, 19, 17, 7558, 7548, 1074, 21, 4560, 576, 8186, 8170, 7162, 7182, 1242, 8171, 8167, 8164, 7150, 4556, 1114, 8172, 10739, 504, 14631, 8166, 8187, 14632, 13178, 13179, 8173, 11113, 4987, 2]
 // Exports: default
 
-// Module 14627 (EditProfileEffectInner)
+// Module 14630 (EditProfileEffectInner)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -125,7 +125,7 @@ function ProfileEffectSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [callback(purchase(11108), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
+  const items1 = [callback(purchase(11113), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
   obj = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj[3] = items2;

@@ -1,21 +1,21 @@
-// Module ID: 12645
-// Function ID: 12646
+// Module ID: 12649
+// Function ID: 12650
 // Name: LockPill
-// Dependencies: [32, 19, 17, 4552, 1957, 11960, 11961, 1074, 11962, 21, 4296, 1178, 4556, 12, 8453, 4560, 576, 5441, 504, 4262, 5586, 1114, 4561, 5068, 10249, 12646, 6981, 12407, 4962, 4971, 1109, 11873, 9639, 12261, 12647, 8097, 4519, 12256, 12239, 4505, 10005, 2]
+// Dependencies: [32, 19, 17, 4552, 1957, 11964, 11965, 1074, 11966, 21, 4296, 1178, 4556, 12, 8456, 4560, 576, 5441, 504, 4262, 5586, 1114, 4561, 5068, 10254, 12650, 6981, 12411, 4962, 4971, 1109, 11878, 9644, 12265, 12651, 8097, 4519, 12260, 12243, 4505, 10010, 2]
 
-// Module 12645 (LockPill)
+// Module 12649 (LockPill)
 import ThemesDefault from "Themes" /* 576 */;
 import result2 from "result" /* 5441 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import closure_8 from "ensureGuildLoaded" /* 1957 */;
-import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11960 */;
-import { VoiceMessageAnimationState } from "VoiceMessageAnimationState" /* 11961 */;
+import { useVoiceMessagesUIStore } from "VoiceMessageRecordingStatus" /* 11964 */;
+import { VoiceMessageAnimationState } from "VoiceMessageAnimationState" /* 11965 */;
 import { ComponentActionsKeyed } from "ME" /* 1074 */;
-import { CHAT_INPUT_HEIGHT } from "TextAreaCta" /* 11962 */;
+import { CHAT_INPUT_HEIGHT } from "TextAreaCta" /* 11966 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importDefaultResult from "module_4296" /* 4296 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

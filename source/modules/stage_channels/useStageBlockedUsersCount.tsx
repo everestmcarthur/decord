@@ -1,10 +1,10 @@
-// Module ID: 8620
-// Function ID: 8621
+// Module ID: 8625
+// Function ID: 8626
 // Name: useStageBlockedUsersCount
 // Dependencies: [5418, 504, 5425, 2]
 // Exports: getStageBlockedUsersCount, getStageIgnoredUsersCount, useStageBlockedUsers, useStageBlockedUsersCount, useStageIgnoredUsers, useStageIgnoredUsersCount
 
-// Module 8620 (useStageBlockedUsersCount)
+// Module 8625 (useStageBlockedUsersCount)
 import sortKey from "sortKey" /* 5425 */;
 import closure_2 from "getActiveStageChannelIds" /* 5418 */;
 

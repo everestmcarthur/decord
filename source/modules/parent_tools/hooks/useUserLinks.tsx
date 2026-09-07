@@ -1,10 +1,10 @@
-// Module ID: 8645
-// Function ID: 8646
+// Module ID: 8650
+// Function ID: 8651
 // Name: useUserIdsForLinkStatus
-// Dependencies: [19, 1371, 7537, 7538, 563, 8646, 8647, 7593, 2]
+// Dependencies: [19, 1371, 7537, 7538, 563, 8651, 8652, 7593, 2]
 // Exports: getActiveLinkUserIds, useAcceptedRequestsCount, useActiveLinkUserIds, useActiveLinkUsers, useActivityWindowTimeStamp, useHasActiveLinks, useHasActiveParentLinks, useHasMaxConnections, useLinkTimestampText, usePendingRequestCount, useRequiresParentalConsent, useUserIdsForLinkStatus, useUserQRLinkUrl, useUsersForLinkStatus
 
-// Module 8645 (useUserIdsForLinkStatus)
+// Module 8650 (useUserIdsForLinkStatus)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
@@ -195,7 +195,7 @@ export const useUserQRLinkUrl = function useUserQRLinkUrl() {
 export const useHasMaxConnections = function useHasMaxConnections() {
   const ACTIVE = constants.ACTIVE;
   let stateFromStores;
-  const tmp = stateFromStores(8646)();
+  const tmp = stateFromStores(8651)();
   const items = [closure_5];
   stateFromStores = ACTIVE(563).useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, ACTIVE];
@@ -281,8 +281,8 @@ export const useAcceptedRequestsCount = function useAcceptedRequestsCount() {
 };
 export const useActivityWindowTimeStamp = function useActivityWindowTimeStamp(activityWindowTimestampFormatter) {
   const _require = activityWindowTimestampFormatter;
-  closure_1 = _require(8647).useSelectedTeenId();
-  const obj = _require(8647);
+  closure_1 = _require(8652).useSelectedTeenId();
+  const obj = _require(8652);
   const tmp = _require;
   const items = [closure_5];
   const stateFromStores = _require(563).useStateFromStores(items, () => {

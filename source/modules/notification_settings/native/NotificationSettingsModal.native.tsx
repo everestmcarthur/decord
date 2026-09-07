@@ -1,10 +1,10 @@
-// Module ID: 17791
-// Function ID: 17792
+// Module ID: 17794
+// Function ID: 17795
 // Name: ConnectedNotificationSettings
-// Dependencies: [109, 19, 17, 1961, 1957, 7111, 4480, 1979, 17506, 4209, 4741, 1371, 1074, 21, 4560, 576, 4271, 4740, 4527, 10144, 1896, 7119, 7114, 10152, 10156, 10163, 5685, 1114, 5688, 5687, 7201, 4556, 1178, 4255, 2024, 10151, 5605, 10146, 5611, 12753, 4202, 4744, 5028, 4713, 8593, 4973, 10147, 1483, 504, 7112, 7040, 5624, 17792, 10143, 7000, 2]
+// Dependencies: [109, 19, 17, 1961, 1957, 7111, 4480, 1979, 17509, 4209, 4741, 1371, 1074, 21, 4560, 576, 4271, 4740, 4527, 10149, 1896, 7119, 7114, 10157, 10161, 10168, 5685, 1114, 5688, 5687, 7201, 4556, 1178, 4255, 2024, 10156, 5605, 10151, 5611, 12757, 4202, 4744, 5028, 4713, 8598, 4973, 10152, 1483, 504, 7112, 7040, 5624, 17795, 10148, 7000, 2]
 // Exports: default
 
-// Module 17791 (ConnectedNotificationSettings)
+// Module 17794 (ConnectedNotificationSettings)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -16,12 +16,12 @@ import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import TableRadioRow from "TableRadioRow" /* 5688 */;
 import NavigationStack from "NavigationStack" /* 7000 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
-import Form2 from "Form" /* 8593 */;
-import MutedUntilTextDefault from "MutedUntilText" /* 10146 */;
-import NotificationSettingsMuteBanner from "NotificationSettingsMuteBanner" /* 10151 */;
-import NotificationSettingsPresets from "NotificationSettingsPresets" /* 10152 */;
-import NotificationSettingsMessageNotification from "NotificationSettingsMessageNotification" /* 10156 */;
-import NotificationSettingsMessageUnread from "NotificationSettingsMessageUnread" /* 10163 */;
+import Form2 from "Form" /* 8598 */;
+import MutedUntilTextDefault from "MutedUntilText" /* 10151 */;
+import NotificationSettingsMuteBanner from "NotificationSettingsMuteBanner" /* 10156 */;
+import NotificationSettingsPresets from "NotificationSettingsPresets" /* 10157 */;
+import NotificationSettingsMessageNotification from "NotificationSettingsMessageNotification" /* 10161 */;
+import NotificationSettingsMessageUnread from "NotificationSettingsMessageUnread" /* 10168 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -30,7 +30,7 @@ import closure_8 from "ensureGuildLoaded" /* 1957 */;
 import closure_9 from "setIndex" /* 7111 */;
 import closure_10 from "handleInviteData" /* 4480 */;
 import closure_11 from "createGuildRecordFromRust" /* 1979 */;
-import closure_12 from "FormStates" /* 17506 */;
+import closure_12 from "FormStates" /* 17509 */;
 import closure_13 from "markAllUserIdListsStale" /* 4209 */;
 import closure_14 from "updateUserGuildSettingsInternal" /* 4741 */;
 import closure_15 from "mergeGuildAvatar" /* 1371 */;
@@ -59,7 +59,7 @@ function ConnectedNotificationSettings(guildId) {
   }), items1);
   const tmp3 = callback(stateFromStoresObject, closure_3);
   obj = { children: null };
-  obj = { guildId, channels: memo, navigation, shouldUseNewNotificationSystem: guildId(10147).useShouldUseNewNotificationSystem("NotificationSettingsModalNative") };
+  obj = { guildId, channels: memo, navigation, shouldUseNewNotificationSystem: guildId(10152).useShouldUseNewNotificationSystem("NotificationSettingsModalNative") };
   const merged = Object.assign(tmp3);
   const items2 = [callback2(NotificationSettings, obj), callback2(guildId(7040).NavScrim, {})];
   obj[0] = items2;
@@ -344,7 +344,7 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     if (muted) {
       const obj3 = { muteConfig: null, type: null };
       obj3[0] = muteConfig;
-      obj3[1] = tmp7(10146).MuteSettingType.SERVER;
+      obj3[1] = tmp7(10151).MuteSettingType.SERVER;
       tmp10Result = callback2(MutedUntilTextDefault, obj3, "muted-until");
       const tmp14 = MutedUntilTextDefault;
     }
@@ -358,7 +358,7 @@ prototype["renderChannels"] = function renderChannels() {
   const intl = self(1114).intl;
   obj[0] = intl.string(self(1114).t.O4TIvi);
   obj = { icon: null, label: null, onPress: null };
-  obj = { IconComponent: self(12753).PlusMediumIcon };
+  obj = { IconComponent: self(12757).PlusMediumIcon };
   obj[0] = callback2(self(5611).TableRowIcon, obj);
   const intl2 = self(1114).intl;
   obj[1] = intl2.string(self(1114).t.quib7R);
@@ -460,7 +460,7 @@ prototype["render"] = function render() {
 prototype["getOverriddenChannels"] = function getOverriddenChannels() {
   const props = this.props;
   const channels = props.channels;
-  let obj = set(10147);
+  let obj = set(10152);
   obj = { ignoreNotificationSetting: false, ignoreMute: this.props.shouldUseNewNotificationSystem, ignoreUnreadSetting: !this.props.shouldUseNewNotificationSystem };
   set = new Set(obj.filterOverrides(props.channelOverrides, obj));
   const mapped = channels.map((channel) => {
@@ -496,7 +496,7 @@ export default function NotificationSettingsModal() {
     const obj3 = callback(5624);
     obj[1] = callback(5624).getHeaderBackButton();
     obj[2] = function render(guildId, navigation) {
-      return callback2(callback(17792), { guildId: guildId.guildId, navigation });
+      return callback2(callback(17795), { guildId: guildId.guildId, navigation });
     };
     obj[constants.ADD_OVERRIDE] = obj;
     obj1 = { headerLeft: null, title: null, render: null };
@@ -505,7 +505,7 @@ export default function NotificationSettingsModal() {
     const intl3 = callback(1114).intl;
     obj1[1] = intl3.string(callback(1114).t.h850Ss);
     obj1[2] = function render(channelId) {
-      return callback2(callback(10143), { channelId: channelId.channelId, inGuildContext: true });
+      return callback2(callback(10148), { channelId: channelId.channelId, inGuildContext: true });
     };
     obj[constants.CHANNEL_OVERRIDE] = obj1;
     return obj;

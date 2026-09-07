@@ -1,10 +1,10 @@
-// Module ID: 16895
-// Function ID: 16896
+// Module ID: 16898
+// Function ID: 16899
 // Name: RestrictedMessageRequestPreview
-// Dependencies: [32, 19, 17, 1957, 4781, 1371, 21, 4560, 576, 1611, 504, 16896, 16898, 12439, 2]
+// Dependencies: [32, 19, 17, 1957, 4781, 1371, 21, 4560, 576, 1611, 504, 16899, 16901, 12443, 2]
 // Exports: default
 
-// Module 16895 (RestrictedMessageRequestPreview)
+// Module 16898 (RestrictedMessageRequestPreview)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -115,10 +115,10 @@ export default function RestrictedMessageRequestPreview(channelId) {
       obj1 = { channel: null, user: null };
       obj1[0] = stateFromStores;
       obj1[1] = stateFromStores1;
-      const items8 = [callback(tmp2(16896), obj1), ];
+      const items8 = [callback(tmp2(16899), obj1), ];
       obj2 = { channelId: null };
       obj2[0] = channelId;
-      items8[1] = callback(tmp2(16898), obj2);
+      items8[1] = callback(tmp2(16901), obj2);
       obj[5] = items8;
       const items9 = [closure_11(closure_5, obj), ];
       const obj3 = { style: null, children: null };
@@ -129,7 +129,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
       obj3[0] = items10;
       const obj5 = { channel: null };
       obj5[0] = stateFromStores;
-      obj3[1] = callback(tmp2(12439), obj5);
+      obj3[1] = callback(tmp2(12443), obj5);
       items9[1] = callback(first1, obj3);
       obj[1] = items9;
       tmp13Result = tmp13(tmp14, obj);

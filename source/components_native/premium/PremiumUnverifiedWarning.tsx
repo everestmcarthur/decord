@@ -1,9 +1,9 @@
-// Module ID: 13569
-// Function ID: 13570
+// Module ID: 13573
+// Function ID: 13574
 // Name: render
 // Dependencies: [19, 1371, 21, 4560, 576, 4271, 1178, 1114, 504, 2]
 
-// Module 13569 (render)
+// Module 13573 (render)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;

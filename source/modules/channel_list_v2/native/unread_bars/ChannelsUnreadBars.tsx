@@ -1,9 +1,9 @@
-// Module ID: 16181
-// Function ID: 16182
+// Module ID: 16184
+// Function ID: 16185
 // Name: shouldSkipSection
-// Dependencies: [32, 19, 17, 4552, 4201, 1957, 7636, 4575, 4741, 10118, 4742, 21, 4560, 7528, 4982, 7072, 15100, 551, 558, 504, 4296, 16132, 6945, 4528, 4529, 16182, 2]
+// Dependencies: [32, 19, 17, 4552, 4201, 1957, 7636, 4575, 4741, 10123, 4742, 21, 4560, 7528, 4982, 7072, 15103, 551, 558, 504, 4296, 16135, 6945, 4528, 4529, 16185, 2]
 
-// Module 16181 (shouldSkipSection)
+// Module 16184 (shouldSkipSection)
 import getFontScale from "getFontScale" /* 4982 */;
 import renderDefaultEmpty from "renderDefaultEmpty" /* 7072 */;
 import computeSubtitle from "computeSubtitle" /* 7528 */;
@@ -16,7 +16,7 @@ import closure_8 from "ensureGuildLoaded" /* 1957 */;
 import closure_9 from "updateGuildUnreadSentinel" /* 7636 */;
 import closure_10 from "generateOldThreadCutoff" /* 4575 */;
 import closure_11 from "updateUserGuildSettingsInternal" /* 4741 */;
-import { getScaledChannelRowHeight } from "hairlineWidth" /* 10118 */;
+import { getScaledChannelRowHeight } from "hairlineWidth" /* 10123 */;
 import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

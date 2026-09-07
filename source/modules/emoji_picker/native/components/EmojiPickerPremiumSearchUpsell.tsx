@@ -1,10 +1,10 @@
-// Module ID: 10313
-// Function ID: 10314
+// Module ID: 10318
+// Function ID: 10319
 // Name: EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT
-// Dependencies: [19, 17, 1371, 1074, 1373, 21, 4560, 576, 1242, 9966, 9313, 9965, 7853, 9967, 4218, 4527, 9392, 9362, 8662, 1178, 10314, 4556, 1114, 5123, 2]
+// Dependencies: [19, 17, 1371, 1074, 1373, 21, 4560, 576, 1242, 9971, 9318, 9970, 7853, 9972, 4218, 4527, 9397, 9367, 8667, 1178, 10319, 4556, 1114, 5123, 2]
 // Exports: useEmojiPickerPremiumSearchUpsellClick, useEmojiPickerPremiumSearchUpsellViewed
 
-// Module 10313 (EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT)
+// Module 10318 (EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT)
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

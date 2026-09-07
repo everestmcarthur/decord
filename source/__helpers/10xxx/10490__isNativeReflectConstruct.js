@@ -1,17 +1,17 @@
 // Module ID: 10490
 // Function ID: 10491
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 96, 98, 10446]
+// Dependencies: [41, 42, 93, 95, 98, 10483, 10437, 10439, 10440, 10444]
 
 // Module 10490 (_isNativeReflectConstruct)
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10446 */;
-import FRTimeExpressionParser from "_classCallCheck" /* 41 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10444 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
-import closure_3 from "_get" /* 96 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const DETimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,57 +31,62 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FRTimeExpressionParser {
+class DETimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = FRTimeExpressionParser(this, FRTimeExpressionParser);
-    tmp2 = closure_2;
-    obj = closure_2(FRTimeExpressionParser);
-    tmp3 = closure_1;
+    tmp = closure_2(this, DETimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(DETimeUnitAgoFormatParser);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(FRTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
-let items = [
+_inherits(DETimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const items = [
   {
-    key: "primaryPrefix",
-    value: function primaryPrefix() {
-      return "(?:(?:[\u00E0a])\\s*)?";
+    key: "innerPattern",
+    value: function innerPattern() {
+      const regExp = new RegExp("(?:\\s*((?:n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?|vor|in)\\s*)?(" + DETimeUnitAgoFormatParser(10483).NUMBER_PATTERN + ")?(?:\\s*(n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?)?\\s*(" + DETimeUnitAgoFormatParser(10437).matchAnyPattern(DETimeUnitAgoFormatParser(10483).TIME_UNIT_DICTIONARY) + ")", "i");
+      return regExp;
     }
   },
   {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*";
-    }
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      let fnResult = null;
-      if (!str.match(/^\s*\d{4}\s*$/)) {
-        let self = this;
-        self = this;
-        let fn = callback2(callback(self.prototype), "extractPrimaryTimeComponents", this);
-        if (typeof fn === "function") {
-          fn = (items) => fn.apply(self, items);
-        }
-        const items = [arg0, arg1];
-        fnResult = fn(items);
+    key: "innerExtract",
+    value: function innerExtract(reference) {
+      let num = 1;
+      if (arg1[2]) {
+        num = DETimeUnitAgoFormatParser(10483).parseNumberPattern(arg1[2]);
       }
-      return fnResult;
+      const obj = {};
+      obj[DETimeUnitAgoFormatParser(10483).TIME_UNIT_DICTIONARY[arg1[4].toLowerCase(arg1[4])]] = num;
+      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
+      if (formatted) {
+        let isMatch = /vor/.test(formatted);
+        if (!isMatch) {
+          isMatch = /letzte/.test(formatted);
+          const obj3 = /letzte/;
+        }
+        if (!isMatch) {
+          isMatch = /vergangen/.test(formatted);
+          const obj4 = /vergangen/;
+        }
+        let reverseDurationResult = obj;
+        if (isMatch) {
+          reverseDurationResult = tmp3(10439).reverseDuration(obj);
+        }
+        const ParsingComponents = tmp3(10440).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      const str2 = arg1[1] || arg1[3] || "";
     }
   }
 ];
 
-export default _createClass(FRTimeExpressionParser, items);
+export default _createClass(DETimeUnitAgoFormatParser, items);

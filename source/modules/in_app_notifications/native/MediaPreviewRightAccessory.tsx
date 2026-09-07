@@ -1,10 +1,10 @@
-// Module ID: 10174
-// Function ID: 10175
+// Module ID: 10179
+// Function ID: 10180
 // Name: VideoBadge
-// Dependencies: [19, 17, 4552, 10095, 21, 4560, 576, 8274, 4556, 4262, 1115, 4965, 5081, 6970, 563, 7600, 10175, 10131, 8125, 8263, 1476, 5587, 7292, 7297, 8307, 10176, 1178, 8813, 2]
+// Dependencies: [19, 17, 4552, 10100, 21, 4560, 576, 8274, 4556, 4262, 1115, 4965, 5081, 6970, 563, 7600, 10180, 10136, 8125, 8263, 1476, 5587, 7292, 7297, 8307, 10181, 1178, 8818, 2]
 // Exports: MediaPreviewRightAccessory
 
-// Module 10174 (VideoBadge)
+// Module 10179 (VideoBadge)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;
@@ -14,10 +14,10 @@ import preloadDefault from "preload" /* 5587 */;
 import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7600 */;
 import PlayIcon from "PlayIcon" /* 8274 */;
 import VideoComponentDefault from "VideoComponent" /* 8307 */;
-import SolidCutoutDefault from "SolidCutout" /* 8813 */;
-import VoiceMessageIcon from "VoiceMessageIcon" /* 10131 */;
-import useEnabledHarmTypesBitmaskForChannelAndAuthorId from "useEnabledHarmTypesBitmaskForChannelAndAuthorId" /* 10175 */;
-import StickerDefault from "Sticker" /* 10176 */;
+import SolidCutoutDefault from "SolidCutout" /* 8818 */;
+import VoiceMessageIcon from "VoiceMessageIcon" /* 10136 */;
+import useEnabledHarmTypesBitmaskForChannelAndAuthorId from "useEnabledHarmTypesBitmaskForChannelAndAuthorId" /* 10180 */;
+import StickerDefault from "Sticker" /* 10181 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
@@ -100,11 +100,11 @@ function SinglePreviewableMedia(arg0) {
     obj[1] = icon;
     return callback(View, obj);
   } else {
-    if (tmp2(10131).PreviewableMediaTypes.AUDIO !== type) {
-      if (tmp2(10131).PreviewableMediaTypes.FILE !== type) {
-        if (tmp2(10131).PreviewableMediaTypes.IMAGE !== type) {
-          if (tmp2(10131).PreviewableMediaTypes.VIDEO !== type) {
-            if (tmp2(10131).PreviewableMediaTypes.GIF === type) {
+    if (tmp2(10136).PreviewableMediaTypes.AUDIO !== type) {
+      if (tmp2(10136).PreviewableMediaTypes.FILE !== type) {
+        if (tmp2(10136).PreviewableMediaTypes.IMAGE !== type) {
+          if (tmp2(10136).PreviewableMediaTypes.VIDEO !== type) {
+            if (tmp2(10136).PreviewableMediaTypes.GIF === type) {
               const video = media.video;
               if (video != null) {
                 const url = video.url;
@@ -164,7 +164,7 @@ function SinglePreviewableMedia(arg0) {
                 }
                 url2 = thumbnail.url;
               }
-            } else if (tmp2(10131).PreviewableMediaTypes.STICKER === type) {
+            } else if (tmp2(10136).PreviewableMediaTypes.STICKER === type) {
               const obj9 = { style: null, children: null };
               const items2 = [tmp.mediaThumbnailContainer, ];
               const obj10 = { width: null, height: null };
@@ -203,7 +203,7 @@ function SinglePreviewableMedia(arg0) {
                 obj13[3] = 2 * size;
                 obj13[4] = 2 * size;
                 let str3;
-                if (type === tmp2(10131).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(10136).PreviewableMediaTypes.VIDEO) {
                   str3 = "png";
                 }
                 obj13[6] = str3;
@@ -224,7 +224,7 @@ function SinglePreviewableMedia(arg0) {
                 obj17[1] = tmp.mediaThumbnail;
                 const items4 = [callback(preloadDefault, obj17), ];
                 let tmp24Result = null;
-                if (type === tmp2(10131).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(10136).PreviewableMediaTypes.VIDEO) {
                   tmp24Result = tmp24(VideoBadge, {});
                 }
                 items4[1] = tmp24Result;
@@ -256,7 +256,7 @@ function MultiplePreviewableMedia(arg0) {
     const BADGE_PADDING = callback(1178).BADGE_PADDING;
     const sum = BADGE_PADDING + 5;
     const roundToNearestPixelResult = closure_4.roundToNearestPixel(20 + 2 * BADGE_PADDING);
-    const obj = { shape: callback(8813).CutoutShape.RoundedRect, x: 56 - roundToNearestPixelResult + sum, y: -sum, width: roundToNearestPixelResult, height: roundToNearestPixelResult, cornerRadius: closure_4.roundToNearestPixel(roundToNearestPixelResult / 2) };
+    const obj = { shape: callback(8818).CutoutShape.RoundedRect, x: 56 - roundToNearestPixelResult + sum, y: -sum, width: roundToNearestPixelResult, height: roundToNearestPixelResult, cornerRadius: closure_4.roundToNearestPixel(roundToNearestPixelResult / 2) };
     return obj;
   }, []);
   obj = { cutouts: items, children: null };

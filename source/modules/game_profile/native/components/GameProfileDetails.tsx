@@ -1,10 +1,10 @@
-// Module ID: 8877
-// Function ID: 8878
+// Module ID: 8882
+// Function ID: 8883
 // Name: GameProfileWebsiteButton
-// Dependencies: [19, 17, 8358, 21, 4560, 576, 4255, 8715, 1114, 1894, 4242, 8878, 8885, 4556, 2]
+// Dependencies: [19, 17, 8358, 21, 4560, 576, 4255, 8720, 1114, 1894, 4242, 8883, 8890, 4556, 2]
 // Exports: default
 
-// Module 8877 (GameProfileWebsiteButton)
+// Module 8882 (GameProfileWebsiteButton)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -133,7 +133,7 @@ export default function GameProfileDetails(game) {
               if (obj != null) {
                 const websites = obj.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((arg0) => callback2(8885)(arg0, callback2(576).colors.ICON_SUBTLE));
+                  const mapped3 = websites.map((arg0) => callback2(8890)(arg0, callback2(576).colors.ICON_SUBTLE));
                   found = mapped3.filter((arg0) => null != arg0);
                 }
               }
@@ -180,7 +180,7 @@ export default function GameProfileDetails(game) {
               obj4[0] = stringResult;
               const obj5 = { style: null, children: null };
               obj5[0] = lib.platformsContainer;
-              obj5[1] = platforms.map((platform) => callback3(callback(8878).GameUpdatePlatformIcon, { platform, size: "md", color: callback2(576).colors.ICON_SUBTLE }, platform));
+              obj5[1] = platforms.map((platform) => callback3(callback(8883).GameUpdatePlatformIcon, { platform, size: "md", color: callback2(576).colors.ICON_SUBTLE }, platform));
               obj4[1] = closure_1_8(closure_1_5, obj5);
               items.push(obj4);
             }

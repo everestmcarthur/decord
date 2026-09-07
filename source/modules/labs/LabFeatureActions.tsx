@@ -1,10 +1,10 @@
-// Module ID: 15533
-// Function ID: 15534
+// Module ID: 15536
+// Function ID: 15537
 // Name: toggleLabFeature
 // Dependencies: [8353, 573, 2]
 // Exports: toggleLabFeature
 
-// Module 15533 (toggleLabFeature)
+// Module 15536 (toggleLabFeature)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_2 from "getUserAgnosticState" /* 8353 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 15025
-// Function ID: 15026
+// Module ID: 15028
+// Function ID: 15029
 // Name: BountiesModalProgress
 // Dependencies: [32, 19, 17, 21, 4560, 576, 4296, 4561, 4564, 2]
 // Exports: default
 
-// Module 15025 (BountiesModalProgress)
+// Module 15028 (BountiesModalProgress)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

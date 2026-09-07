@@ -1,10 +1,10 @@
-// Module ID: 16838
-// Function ID: 16839
+// Module ID: 16841
+// Function ID: 16842
 // Name: LinkedLobbyFormSection
-// Dependencies: [19, 1961, 1957, 1074, 21, 1483, 7168, 5687, 1114, 5605, 1178, 1396, 4560, 576, 504, 8593, 4973, 16726, 16839, 2]
+// Dependencies: [19, 1961, 1957, 1074, 21, 1483, 7168, 5687, 1114, 5605, 1178, 1396, 4560, 576, 504, 8598, 4973, 16729, 16842, 2]
 // Exports: default
 
-// Module 16838 (LinkedLobbyFormSection)
+// Module 16841 (LinkedLobbyFormSection)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -82,7 +82,7 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
       obj2[0] = intl.string(tmp(1114).t.jp25Id);
       const intl2 = tmp(1114).intl;
       obj2[1] = intl2.string(tmp(1114).t.mKIOkI);
-      obj2[2] = tmp6(tmp(16726).WebhookIcon, {});
+      obj2[2] = tmp6(tmp(16729).WebhookIcon, {});
       obj2[4] = function onPress() {
         return arr.push(closure_1_5.WEBHOOKS);
       };
@@ -94,7 +94,7 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
         obj3[0] = intl3.string(tmp(1114).t.OrV60r);
         const intl4 = tmp(1114).intl;
         obj3[1] = intl4.string(tmp(1114).t.rQREJl);
-        obj3[2] = tmp6(tmp(16839).ChannelsFollowedIcon, {});
+        obj3[2] = tmp6(tmp(16842).ChannelsFollowedIcon, {});
         obj3[4] = function onPress() {
           return arr.push(closure_1_5.CHANNELS_FOLLOWED);
         };
@@ -117,7 +117,7 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
     items2[1] = canUnlinkLobby;
     obj[2] = items2;
     obj[1] = closure_7(tmp(4973).Stack, obj);
-    tmp6Result = tmp6(tmp(8593).Form, obj);
+    tmp6Result = tmp6(tmp(8598).Form, obj);
   }
   return tmp6Result;
 };

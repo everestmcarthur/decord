@@ -1,10 +1,10 @@
-// Module ID: 17635
-// Function ID: 17636
+// Module ID: 17638
+// Function ID: 17639
 // Name: HeaderSection
-// Dependencies: [19, 17, 7128, 17610, 1074, 5408, 21, 4560, 576, 5407, 12, 6610, 4556, 1114, 4973, 5123, 2024, 5685, 5688, 17636, 4975, 11204, 4527, 17638, 1896, 17639, 17641, 504, 8593, 17624, 2]
+// Dependencies: [19, 17, 7128, 17613, 1074, 5408, 21, 4560, 576, 5407, 12, 6610, 4556, 1114, 4973, 5123, 2024, 5685, 5688, 17639, 4975, 11209, 4527, 17641, 1896, 17642, 17644, 504, 8598, 17627, 2]
 // Exports: default
 
-// Module 17635 (HeaderSection)
+// Module 17638 (HeaderSection)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -13,11 +13,11 @@ import Text from "Text" /* 4556 */;
 import Stack from "Stack" /* 4973 */;
 import Button from "Button" /* 4975 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11204 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11209 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "getRoleMemberCount" /* 7128 */;
-import closure_6 from "handleSetSection" /* 17610 */;
+import closure_6 from "handleSetSection" /* 17613 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;
 import OperatorTypes from "OperatorTypes" /* 5408 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -376,7 +376,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   obj3 = {
     handleConnectionTapped(connectionType) {
       const items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId: "accessible", operator: "assign", value: 1090584578 };
+      const obj = { connectionType, connectionMetadataField: "Array", applicationId: "accessible", operator: "end", value: 1090584578 };
       obj[2] = arg1;
       items.push(obj);
       if (AND === guild(stateFromStoresArray[9]).ConnectionConfigurationRuleOperator.AND) {

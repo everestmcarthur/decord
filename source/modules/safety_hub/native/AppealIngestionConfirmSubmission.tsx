@@ -1,17 +1,17 @@
-// Module ID: 11903
-// Function ID: 11904
+// Module ID: 11908
+// Function ID: 11909
 // Name: AppealIngestionConfirmSubmission
-// Dependencies: [19, 17, 8430, 1074, 21, 4560, 504, 11880, 1114, 11886, 11904, 8418, 4556, 4527, 11902, 1896, 573, 11889, 11899, 2]
+// Dependencies: [19, 17, 8430, 1074, 21, 4560, 504, 11885, 1114, 11891, 11909, 8418, 4556, 4527, 11907, 1896, 573, 11894, 11904, 2]
 // Exports: default
 
-// Module 11903 (AppealIngestionConfirmSubmission)
+// Module 11908 (AppealIngestionConfirmSubmission)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8418 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11880 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 11886 */;
-import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 11904 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11885 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 11891 */;
+import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 11909 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 1074 */;
@@ -67,17 +67,17 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
     if (tmp11Result) {
       obj1 = { flaggedContent: null };
       obj1[0] = flagged_content;
-      tmp11Result = tmp11(tmp13(11889), obj1);
+      tmp11Result = tmp11(tmp13(11894), obj1);
     }
     const obj2 = { children: null };
     items5[2] = tmp11Result;
     const obj3 = { classification: null };
     obj3[0] = safetyHubClassification.classification;
-    items5[3] = tmp11(tmp13(11899), obj3);
+    items5[3] = tmp11(tmp13(11904), obj3);
     obj[1] = items5;
     items3[1] = tmp10(tmp12, obj);
     obj2[0] = items3;
-    return tmp10(tmp2(11886).AppealIngestionModalScreen, obj2);
+    return tmp10(tmp2(11891).AppealIngestionModalScreen, obj2);
   } else {
     const obj4 = { variant: "heading-md/normal", color: "text-link", style: null, onPress: null, children: null };
     obj4[2] = tmp.detailsAction;

@@ -1,9 +1,9 @@
-// Module ID: 12076
-// Function ID: 12077
+// Module ID: 12080
+// Function ID: 12081
 // Name: ApplicationCollectionPlatforms
 // Dependencies: [2]
 
-// Module 12076 (ApplicationCollectionPlatforms)
+// Module 12080 (ApplicationCollectionPlatforms)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationCollectionPlatforms.tsx");

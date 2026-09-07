@@ -1,13 +1,13 @@
-// Module ID: 9134
-// Function ID: 9135
+// Module ID: 9139
+// Function ID: 9140
 // Name: initialize
-// Dependencies: [9135, 504, 11, 573, 2]
+// Dependencies: [9140, 504, 11, 573, 2]
 
-// Module 9134 (initialize)
+// Module 9139 (initialize)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
-import set from "set" /* 9135 */;
+import set from "set" /* 9140 */;
 
 require = arg1;
 let closure_3 = {};

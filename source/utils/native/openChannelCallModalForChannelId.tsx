@@ -1,10 +1,10 @@
-// Module ID: 9536
-// Function ID: 9537
+// Module ID: 9541
+// Function ID: 9542
 // Name: openChannelCallModalForChannelId
 // Dependencies: [1957, 8393, 4767, 2]
 // Exports: default
 
-// Module 9536 (openChannelCallModalForChannelId)
+// Module 9541 (openChannelCallModalForChannelId)
 import openChannelCallModal from "openChannelCallModal" /* 4767 */;
 import connectToStage from "connectToStage" /* 8393 */;
 import closure_2 from "ensureGuildLoaded" /* 1957 */;

@@ -1,10 +1,10 @@
-// Module ID: 15210
-// Function ID: 15211
+// Module ID: 15213
+// Function ID: 15214
 // Name: useRestorePurchases
 // Dependencies: [5, 32, 19, 3, 7419, 2]
 // Exports: default
 
-// Module 15210 (useRestorePurchases)
+// Module 15213 (useRestorePurchases)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;

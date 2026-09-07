@@ -1,10 +1,10 @@
-// Module ID: 12427
-// Function ID: 12428
+// Module ID: 12431
+// Function ID: 12432
 // Name: findWordSpan
 // Dependencies: [32, 19, 5459, 5000, 1374, 504, 5442, 2]
 // Exports: default
 
-// Module 12427 (findWordSpan)
+// Module 12431 (findWordSpan)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "getEmojiToGroupId" /* 5459 */;

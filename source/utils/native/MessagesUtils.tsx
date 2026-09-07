@@ -1,8 +1,8 @@
-// Module ID: 11956
-// Function ID: 11957
+// Module ID: 11960
+// Function ID: 11961
 // Dependencies: [1074, 7326, 4548, 7890, 4708, 2]
 
-// Module 11956
+// Module 11960
 import set from "set" /* 2 */;
 import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7326 */;
 import ME from "ME" /* 1074 */;

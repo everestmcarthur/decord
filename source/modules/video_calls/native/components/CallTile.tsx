@@ -1,25 +1,25 @@
-// Module ID: 10057
-// Function ID: 10058
+// Module ID: 10062
+// Function ID: 10063
 // Name: StreamPreviewTile
-// Dependencies: [19, 17, 4582, 1371, 9467, 4581, 21, 4560, 4409, 576, 7162, 1611, 504, 4761, 8179, 9594, 10024, 9623, 9631, 10058, 10063, 10064, 9442, 9464, 10065, 1178, 9474, 4296, 4561, 10066, 2]
+// Dependencies: [19, 17, 4582, 1371, 9472, 4581, 21, 4560, 4409, 576, 7162, 1611, 504, 4761, 8179, 9599, 10029, 9628, 9636, 10063, 10068, 10069, 9447, 9469, 10070, 1178, 9479, 4296, 4561, 10071, 2]
 
-// Module 10057 (StreamPreviewTile)
+// Module 10062 (StreamPreviewTile)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import _modDef4296 from "module_4296" /* 4296 */;
-import registerAssetDefault from "registerAsset" /* 9442 */;
-import registerAssetDefault2 from "registerAsset" /* 9464 */;
-import StreamPreviewContainerDefault from "StreamPreviewContainer" /* 10058 */;
-import registerAssetDefault3 from "registerAsset" /* 10063 */;
-import registerAssetDefault4 from "registerAsset" /* 10064 */;
-import registerAssetDefault5 from "registerAsset" /* 10065 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 10066 */;
+import registerAssetDefault from "registerAsset" /* 9447 */;
+import registerAssetDefault2 from "registerAsset" /* 9469 */;
+import StreamPreviewContainerDefault from "StreamPreviewContainer" /* 10063 */;
+import registerAssetDefault3 from "registerAsset" /* 10068 */;
+import registerAssetDefault4 from "registerAsset" /* 10069 */;
+import registerAssetDefault5 from "registerAsset" /* 10070 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 10071 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "reset" /* 4582 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9467 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9472 */;
 import ParticipantTypes from "ParticipantTypes" /* 4581 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

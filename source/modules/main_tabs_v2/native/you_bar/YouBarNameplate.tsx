@@ -1,10 +1,10 @@
-// Module ID: 16384
-// Function ID: 16385
-// Dependencies: [19, 4552, 15098, 21, 4262, 576, 15184, 504, 4296, 4974, 8818, 2]
+// Module ID: 16387
+// Function ID: 16388
+// Dependencies: [19, 4552, 15101, 21, 4262, 576, 15187, 504, 4296, 4974, 8823, 2]
 
-// Module 16384
+// Module 16387
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { YOU_BAR_SPRING_CONFIG } from "CONNECTION_BANNER_HEIGHT" /* 15098 */;
+import { YOU_BAR_SPRING_CONFIG } from "CONNECTION_BANNER_HEIGHT" /* 15101 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -18,7 +18,7 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
   ({ nameplate, barWidth } = isQuestRendered);
   let obj = isQuestRendered(4262);
   token = obj.useToken(token(576).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(15184)(token);
+  const tmp4 = token(15187)(token);
   dependencyMap = tmp4;
   obj1 = isQuestRendered(504);
   const items = [closure_3];
@@ -55,7 +55,7 @@ const memoResult = importAllResult.memo(function YouBarNameplate(isQuestRendered
     str = "always";
   }
   obj2[2] = str;
-  obj1[2] = jsx(token(8818), { nameplate, isFocused: true, animate: null });
+  obj1[2] = jsx(token(8823), { nameplate, isFocused: true, animate: null });
   return jsx(token(4296).View, { style: items1, pointerEvents: "none", children: null });
 });
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarNameplate.tsx");

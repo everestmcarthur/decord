@@ -1,13 +1,13 @@
-// Module ID: 17408
-// Function ID: 17409
+// Module ID: 17411
+// Function ID: 17412
 // Name: _initialize
-// Dependencies: [7460, 1074, 3, 7118, 17409, 1340, 7475, 2]
+// Dependencies: [7460, 1074, 3, 7118, 17412, 1340, 7475, 2]
 
-// Module 17408 (_initialize)
+// Module 17411 (_initialize)
 import timestampDefault from "timestamp" /* 3 */;
 import clientLaunchId from "clientLaunchId" /* 1340 */;
 import initializeDefault from "initialize" /* 7118 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17409 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17412 */;
 import closure_3 from "result" /* 7460 */;
 import ME from "ME" /* 1074 */;
 
@@ -49,7 +49,7 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 prototype["deliverPendingSessions"] = function deliverPendingSessions() {
   const self = this;
   if (!this._isDelivering) {
-    let obj = self(17409);
+    let obj = self(17412);
     if (null != obj) {
       tmp._isDelivering = true;
       const pendingReports = obj.getPendingReports();

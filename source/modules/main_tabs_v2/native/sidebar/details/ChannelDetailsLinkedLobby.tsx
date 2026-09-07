@@ -1,10 +1,10 @@
-// Module ID: 16731
-// Function ID: 16732
+// Module ID: 16734
+// Function ID: 16735
 // Name: ChannelDetailsLinkedLobby
 // Dependencies: [19, 17, 1074, 21, 4560, 576, 7168, 4556, 1114, 2024, 2]
 // Exports: default
 
-// Module 16731 (ChannelDetailsLinkedLobby)
+// Module 16734 (ChannelDetailsLinkedLobby)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

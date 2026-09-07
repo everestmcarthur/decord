@@ -1,20 +1,20 @@
-// Module ID: 13252
-// Function ID: 13253
+// Module ID: 13256
+// Function ID: 13257
 // Name: componentDidMount
-// Dependencies: [19, 17, 4552, 4251, 1957, 1371, 7933, 21, 4560, 576, 4271, 11538, 7932, 11252, 11952, 4242, 1114, 11270, 11271, 12, 4571, 11616, 11584, 11547, 4792, 1874, 11657, 7971, 11254, 7764, 11546, 11548, 11583, 12665, 12667, 11894, 1115, 7123, 5123, 4556, 1935, 504, 1477, 7329, 4771, 2]
+// Dependencies: [19, 17, 4552, 4251, 1957, 1371, 7933, 21, 4560, 576, 4271, 11543, 7932, 11257, 11956, 4242, 1114, 11275, 11276, 12, 4571, 11621, 11589, 11552, 4792, 1874, 11662, 7971, 11259, 7764, 11551, 11553, 11588, 12669, 12671, 11899, 1115, 7123, 5123, 4556, 1935, 504, 1477, 7329, 4771, 2]
 // Exports: ChatPreview
 
-// Module 13252 (componentDidMount)
+// Module 13256 (componentDidMount)
 import ThemesDefault from "Themes" /* 576 */;
 import set from "set" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import Text from "Text" /* 4556 */;
 import PressableBase from "PressableBase" /* 5123 */;
 import setOptionsDefault from "setOptions" /* 7932 */;
-import getPreviousMessagesDefault from "getPreviousMessages" /* 11538 */;
-import DCDChatListDefault from "DCDChatList" /* 11894 */;
-import GuildNSFWDefault from "GuildNSFW" /* 12665 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 12667 */;
+import getPreviousMessagesDefault from "getPreviousMessages" /* 11543 */;
+import DCDChatListDefault from "DCDChatList" /* 11899 */;
+import GuildNSFWDefault from "GuildNSFW" /* 12669 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 12671 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
@@ -97,7 +97,7 @@ class ChatPreviewBase extends PureComponent {
           let arr = items;
           const first = items[0];
           if (null != first) {
-            if (messages(11952)(c0, first[first.length - 1], props)) {
+            if (messages(11956)(c0, first[first.length - 1], props)) {
               items = [props];
               arr = arr.unshift(items);
             } else {
@@ -220,7 +220,7 @@ class ChatPreviewBase extends PureComponent {
         const jumpTargetId = tmp3.jumpTargetId;
         let tmp23;
         if (!tmp7) {
-          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "flex", shouldInitialScroll: "Array", animated: 0.999, scrollPosition: 0.999, focusTargetId: 0.793 };
+          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "flex", shouldInitialScroll: "Array", animated: 1065.6, scrollPosition: -236.8, focusTargetId: 0 };
           obj[0] = tmp22;
           obj[1] = jumpTargetId;
           obj[2] = jumpTargetId;

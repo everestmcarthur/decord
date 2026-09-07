@@ -1,10 +1,10 @@
-// Module ID: 8715
-// Function ID: 8716
+// Module ID: 8720
+// Function ID: 8721
 // Name: GameGenres
 // Dependencies: [32, 1074, 4386, 1114, 4802, 1115, 4153, 2]
 // Exports: canUserInstall, getGenreIdFromURLSlug, getGenreText, getGenreURLSlugFromId, getReadablePreorderReleaseDate, getSKUIdFromURL, isThirdPartySKU
 
-// Module 8715 (GameGenres)
+// Module 8720 (GameGenres)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import set from "set" /* 1115 */;
 import hooksDefault from "hooks" /* 4153 */;

@@ -1,15 +1,15 @@
-// Module ID: 10733
-// Function ID: 10734
+// Module ID: 10738
+// Function ID: 10739
 // Name: useFetchClaimableGiftingPromotionRewardSkuIds
-// Dependencies: [32, 19, 10665, 1373, 504, 10734, 10738, 10739, 10740, 10741, 10742, 4380, 1943, 2]
+// Dependencies: [32, 19, 10670, 1373, 504, 10739, 10743, 10744, 10745, 10746, 10747, 4380, 1943, 2]
 // Exports: combinePromotionStyles, createBackgroundStyle, createGradientStyle, getRewardAssetIdMap, shouldShowGiftPromotionReminderNotice, useFetchClaimableGiftingPromotionRewardSkuIds, useIsPlanEligibleForGiftingPromotion, useShouldAutoSelectGiftingPromotionReward, useShouldShowSelectFreeSkuStep
 
-// Module 10733 (useFetchClaimableGiftingPromotionRewardSkuIds)
-import apexExperiment from "apexExperiment" /* 10740 */;
-import apexExperiment2 from "apexExperiment" /* 10741 */;
+// Module 10738 (useFetchClaimableGiftingPromotionRewardSkuIds)
+import apexExperiment from "apexExperiment" /* 10745 */;
+import apexExperiment2 from "apexExperiment" /* 10746 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "createEmptyPromotionsByType" /* 10665 */;
+import closure_4 from "createEmptyPromotionsByType" /* 10670 */;
 import { SubscriptionPlans } from "GuildFeatures" /* 1373 */;
 
 require = arg1;
@@ -22,7 +22,7 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
   let items = [hasPreviouslyFetched];
   stateFromStoresArray = first(504).useStateFromStoresArray(items, () => hasPreviouslyFetched.getGiftPromotionRewardSkuIds());
   const obj = first(504);
-  const fetchPurchases = first(10734).useFetchPurchases();
+  const fetchPurchases = first(10739).useFetchPurchases();
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   const fetchPurchasesError = fetchPurchases.fetchPurchasesError;
@@ -44,10 +44,10 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
       }
     }
   }, items1);
-  const someResult = stateFromStoresArray.some((arg0) => arg0 === first(10738).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID);
+  const someResult = stateFromStoresArray.some((arg0) => arg0 === first(10743).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID);
   closure_7 = someResult;
-  const obj3 = first(10734);
-  const fetchSummer2026GogoPromoEligibility = first(10739).useFetchSummer2026GogoPromoEligibility(someResult);
+  const obj3 = first(10739);
+  const fetchSummer2026GogoPromoEligibility = first(10744).useFetchSummer2026GogoPromoEligibility(someResult);
   const isEligible = fetchSummer2026GogoPromoEligibility.isEligible;
   const hasFetched = fetchSummer2026GogoPromoEligibility.hasFetched;
   const items2 = [first, isEligible, hasFetched, someResult];
@@ -198,7 +198,7 @@ export const combinePromotionStyles = function combinePromotionStyles(background
 export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
   const GiftPromotionReminderExperiment = apexExperiment2.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
-    if (null == marketingComponentByType.getMarketingComponentByType(tmp(10742).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
+    if (null == marketingComponentByType.getMarketingComponentByType(tmp(10747).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
       return false;
     } else {
       const giftPromotion = obj.getGiftPromotion();

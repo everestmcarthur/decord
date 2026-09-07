@@ -1,13 +1,13 @@
-// Module ID: 10329
-// Function ID: 10330
+// Module ID: 10334
+// Function ID: 10335
 // Name: MessageStandardEmojiActionSheet
-// Dependencies: [19, 17, 1074, 21, 4560, 1115, 1256, 7150, 1242, 10330, 10337, 10338, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 1115, 1256, 7150, 1242, 10335, 10342, 10343, 2]
 // Exports: default
 
-// Module 10329 (MessageStandardEmojiActionSheet)
+// Module 10334 (MessageStandardEmojiActionSheet)
 import noopAll from "noop" /* 19 */;
-import EmojiDefault from "Emoji" /* 10330 */;
-import CustomEmojiContentDefault from "CustomEmojiContent" /* 10338 */;
+import EmojiDefault from "Emoji" /* 10335 */;
+import CustomEmojiContentDefault from "CustomEmojiContent" /* 10343 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -36,7 +36,7 @@ function MessageStandardEmojiActionSheet(emojiNode) {
 function MessageCustomEmojiActionSheet(emojiNode) {
   emojiNode = emojiNode.emojiNode;
   let _require;
-  let obj = _require(10337);
+  let obj = _require(10342);
   obj = { emojiId: emojiNode.id };
   const emojiAndSource = obj.useEmojiAndSource(obj);
   if (emojiAndSource.isFetching) {

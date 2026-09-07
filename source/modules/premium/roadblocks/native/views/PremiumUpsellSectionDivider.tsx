@@ -1,16 +1,16 @@
-// Module ID: 10306
-// Function ID: 10307
+// Module ID: 10311
+// Function ID: 10312
 // Name: PremiumUpsellSectionDivider
-// Dependencies: [19, 17, 7432, 21, 4560, 576, 10307, 4987, 1093, 5095, 2]
+// Dependencies: [19, 17, 7432, 21, 4560, 576, 10312, 4987, 1093, 5095, 2]
 // Exports: default
 
-// Module 10306 (PremiumUpsellSectionDivider)
+// Module 10311 (PremiumUpsellSectionDivider)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import keys from "keys" /* 1093 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import LockIcon2 from "LockIcon" /* 5095 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10307 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10312 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { Gradients } from "items" /* 7432 */;
 import jsxProd from "jsxProd" /* 21 */;

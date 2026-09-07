@@ -1,10 +1,10 @@
-// Module ID: 12993
-// Function ID: 12994
+// Module ID: 12997
+// Function ID: 12998
 // Name: UserProfileMutualGuilds
-// Dependencies: [19, 17, 8183, 21, 4560, 8190, 12602, 12994, 4527, 12601, 1896, 7342, 5123, 12618, 5584, 4556, 12603, 2]
+// Dependencies: [19, 17, 8183, 21, 4560, 8190, 12606, 12998, 4527, 12605, 1896, 7342, 5123, 12622, 5584, 4556, 12607, 2]
 // Exports: default
 
-// Module 12993 (UserProfileMutualGuilds)
+// Module 12997 (UserProfileMutualGuilds)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8183 */;
@@ -23,8 +23,8 @@ export default function UserProfileMutualGuilds(user) {
   const tmp = callback3();
   let obj = user(8190);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  const mutualGuilds = trackUserProfileAction(12602)(user).mutualGuilds;
-  if (trackUserProfileAction(12994)(user)) {
+  const mutualGuilds = trackUserProfileAction(12606)(user).mutualGuilds;
+  if (trackUserProfileAction(12998)(user)) {
     if (null != mutualGuilds) {
       if (0 !== mutualGuilds.length) {
         const substr = mutualGuilds.slice(0, 3);
@@ -55,9 +55,9 @@ export default function UserProfileMutualGuilds(user) {
           const obj = { guild, size: user(5584).GuildIconSizes.XXSMALL };
           return callback(trackUserProfileAction(5584), obj, guild.id);
         });
-        const items = [callback(tmp2(12618).GuildIconPile, obj1), ];
+        const items = [callback(tmp2(12622).GuildIconPile, obj1), ];
         const obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
-        obj2[2] = trackUserProfileAction(12603)(mutualGuilds.length);
+        obj2[2] = trackUserProfileAction(12607)(mutualGuilds.length);
         items[1] = callback(tmp2(4556).Text, obj2);
         obj[3] = items;
         obj[1] = callback2(tmp2(5123).PressableOpacity, obj);

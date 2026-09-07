@@ -1,13 +1,13 @@
-// Module ID: 11417
-// Function ID: 11418
+// Module ID: 11422
+// Function ID: 11423
 // Name: UnreadSettingNoticeConnected
-// Dependencies: [19, 17, 1084, 21, 4560, 576, 11418, 4556, 1114, 5123, 11419, 2]
+// Dependencies: [19, 17, 1084, 21, 4560, 576, 11423, 4556, 1114, 5123, 11424, 2]
 // Exports: default
 
-// Module 11417 (UnreadSettingNoticeConnected)
+// Module 11422 (UnreadSettingNoticeConnected)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11418 */;
+import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11423 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ChannelNotificationSettingsFlags as closure_4 } from "MAX_FAVORITES" /* 1084 */;
 import jsxProd from "jsxProd" /* 21 */;

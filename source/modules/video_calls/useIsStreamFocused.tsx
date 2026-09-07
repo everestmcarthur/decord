@@ -1,10 +1,10 @@
-// Module ID: 9654
-// Function ID: 9655
+// Module ID: 9659
+// Function ID: 9660
 // Name: useIsStreamFocused
 // Dependencies: [4576, 4581, 504, 2]
 // Exports: useIsStreamFocused
 
-// Module 9654 (useIsStreamFocused)
+// Module 9659 (useIsStreamFocused)
 import closure_2 from "getParticipants" /* 4576 */;
 import { isStreamParticipant } from "ParticipantTypes" /* 4581 */;
 

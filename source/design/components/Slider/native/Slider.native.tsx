@@ -1,10 +1,10 @@
-// Module ID: 14178
-// Function ID: 14179
+// Module ID: 14181
+// Function ID: 14182
 // Name: Slider
 // Dependencies: [19, 17, 21, 4560, 576, 4528, 4529, 8278, 2]
 // Exports: Slider
 
-// Module 14178 (Slider)
+// Module 14181 (Slider)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

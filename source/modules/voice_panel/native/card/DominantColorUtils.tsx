@@ -1,10 +1,10 @@
-// Module ID: 8826
-// Function ID: 8827
+// Module ID: 8831
+// Function ID: 8832
 // Name: getCachedSourceFromURI
 // Dependencies: [32, 19, 17, 1437, 4409, 576, 558, 2]
 // Exports: getCachedSourceFromURI, useDominantColorFromImage, useDominantRGBFromImage
 
-// Module 8826 (getCachedSourceFromURI)
+// Module 8831 (getCachedSourceFromURI)
 import ThemesDefault from "Themes" /* 576 */;
 import privDefault from "priv" /* 1437 */;
 import closure_3 from "_slicedToArray" /* 32 */;

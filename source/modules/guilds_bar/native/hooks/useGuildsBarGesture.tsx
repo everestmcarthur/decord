@@ -1,10 +1,10 @@
-// Module ID: 16283
-// Function ID: 16284
+// Module ID: 16286
+// Function ID: 16287
 // Name: getDropIndex
-// Dependencies: [5, 19, 17, 1979, 5438, 16284, 16285, 4296, 551, 4528, 4411, 12, 1232, 1114, 7072, 16022, 4262, 576, 4184, 10993, 1249, 5520, 9358, 8667, 1115, 1611, 4962, 16286, 16287, 15099, 6655, 2]
+// Dependencies: [5, 19, 17, 1979, 5438, 16287, 16288, 4296, 551, 4528, 4411, 12, 1232, 1114, 7072, 16025, 4262, 576, 4184, 10998, 1249, 5520, 9363, 8672, 1115, 1611, 4962, 16289, 16290, 15102, 6655, 2]
 // Exports: default
 
-// Module 16283 (getDropIndex)
+// Module 16286 (getDropIndex)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import _modDef1232 from "module_1232" /* 1232 */;
 import AccessibilityAnnouncer3 from "AccessibilityAnnouncer" /* 4411 */;
@@ -16,8 +16,8 @@ import { Dimensions } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "createGuildRecordFromRust" /* 1979 */;
 import closure_7 from "insertUnsortedGuilds" /* 5438 */;
 import { GuildsNodeType } from "insertUnsortedGuilds" /* 5438 */;
-import importDefaultResult from "withEqualityFn" /* 16284 */;
-import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16285 */;
+import importDefaultResult from "withEqualityFn" /* 16287 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 16288 */;
 import module_4296 from "module_4296" /* 4296 */;
 import apply from "apply" /* 12 */;
 import importDefaultResult1 from "debounce" /* 551 */;
@@ -638,7 +638,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state.setStateShallow({ dragSpecs: "hash", overSpecs: "call" });
+    state.setStateShallow({ dragSpecs: "push", overSpecs: "channel" });
     const value = gestureState.get();
     if (null != value.mode) {
       const obj5 = {};
@@ -763,7 +763,7 @@ export default function useGuildsBarGesture() {
             }
           }
         }
-        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: -1 };
+        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: "Array" };
         obj5[0] = obj;
         obj5[2] = sum;
         setStateShallow(obj5);

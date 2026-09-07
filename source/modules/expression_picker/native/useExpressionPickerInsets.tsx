@@ -1,10 +1,10 @@
-// Module ID: 10283
-// Function ID: 10284
+// Module ID: 10288
+// Function ID: 10289
 // Name: useExpressionPickerInsets
 // Dependencies: [19, 1074, 1611, 6981, 576, 2]
 // Exports: default
 
-// Module 10283 (useExpressionPickerInsets)
+// Module 10288 (useExpressionPickerInsets)
 import closure_2 from "noop" /* 19 */;
 import { EXPRESSION_FOOTER_HEIGHT } from "ME" /* 1074 */;
 

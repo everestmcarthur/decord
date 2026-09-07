@@ -1,16 +1,16 @@
-// Module ID: 12009
-// Function ID: 12010
+// Module ID: 12013
+// Function ID: 12014
 // Name: ForumPostMediaAndroid
-// Dependencies: [32, 19, 17, 1183, 1182, 21, 4560, 576, 5587, 4965, 12010, 7600, 12011, 1115, 7296, 5123, 8411, 8413, 12012, 4411, 1935, 10219, 1476, 2]
+// Dependencies: [32, 19, 17, 1183, 1182, 21, 4560, 576, 5587, 4965, 12014, 7600, 12015, 1115, 7296, 5123, 8411, 8413, 12016, 4411, 1935, 10224, 1476, 2]
 // Exports: ForumPostGridMedia, ForumPostMediaThumbnail, useSharedMediaProps
 
-// Module 12009 (ForumPostMediaAndroid)
+// Module 12013 (ForumPostMediaAndroid)
 import ThemesDefault from "Themes" /* 576 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import isBlurDisabledDefault from "isBlurDisabled" /* 4965 */;
 import preloadDefault from "preload" /* 5587 */;
-import SpoilerDefault from "Spoiler" /* 12010 */;
-import getForumPostShouldObscure from "getForumPostShouldObscure" /* 12012 */;
+import SpoilerDefault from "Spoiler" /* 12014 */;
+import getForumPostShouldObscure from "getForumPostShouldObscure" /* 12016 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -78,9 +78,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     obj = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = callback2(ref(12011), obj);
+    let tmp6Result = callback2(ref(12015), obj);
     let tmp12 = callback2;
-    const tmp19 = ref(12011);
+    const tmp19 = ref(12015);
   } else {
     if (tmp3Result.isAndroid()) {
       obj = {};

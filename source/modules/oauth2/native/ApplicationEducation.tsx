@@ -1,15 +1,15 @@
-// Module ID: 9420
-// Function ID: 9421
+// Module ID: 9425
+// Function ID: 9426
 // Name: ApplicationEducationEntry
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 9243, 8339, 1114, 4260, 9421, 9223, 7380, 4556, 9423, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 9248, 8339, 1114, 4260, 9426, 9228, 7380, 4556, 9428, 2]
 // Exports: default
 
-// Module 9420 (ApplicationEducationEntry)
+// Module 9425 (ApplicationEducationEntry)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import set from "set" /* 8339 */;
-import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 9243 */;
+import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 9248 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { MAX_FRIENDS } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -69,7 +69,7 @@ export default function ApplicationEducation(arg0) {
     }
     obj[1] = formatToPlainString2Result;
     const obj3 = { iconComponent: null, text: null };
-    obj3[0] = tmp4(9421).ChatSmileIcon;
+    obj3[0] = tmp4(9426).ChatSmileIcon;
     const intl7 = tmp4(1114).intl;
     const string3 = intl7.string;
     const t5 = tmp4(1114).t;
@@ -80,7 +80,7 @@ export default function ApplicationEducation(arg0) {
     }
     obj3[1] = string3Result;
     const obj4 = { iconComponent: null, text: null };
-    obj4[0] = tmp4(9223).GameControllerIcon;
+    obj4[0] = tmp4(9228).GameControllerIcon;
     const intl8 = tmp4(1114).intl;
     const string4 = intl8.string;
     const t6 = tmp4(1114).t;
@@ -129,7 +129,7 @@ export default function ApplicationEducation(arg0) {
       }
       obj6[1] = formatToPlainStringResult2;
       const obj9 = { iconComponent: null, text: null };
-      obj9[0] = tmp4(9223).GameControllerIcon;
+      obj9[0] = tmp4(9228).GameControllerIcon;
       const intl3 = tmp4(1114).intl;
       const string = intl3.string;
       const t2 = tmp4(1114).t;
@@ -168,7 +168,7 @@ export default function ApplicationEducation(arg0) {
       const obj13 = { children: null };
       const items1 = [tmp27, items.map((iconComponent) => callback(closure_9, { iconComponent: iconComponent.iconComponent, text: iconComponent.text }, arg1))];
       obj11[1] = items1;
-      const items2 = [closure_6(View, obj11), callback(tmp4(9423).AuthorizeFormSeparator, {})];
+      const items2 = [closure_6(View, obj11), callback(tmp4(9428).AuthorizeFormSeparator, {})];
       obj13[0] = items2;
       tmp30Result = tmp30(closure_7, obj13);
       const tmp31 = closure_7;

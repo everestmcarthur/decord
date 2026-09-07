@@ -1,16 +1,16 @@
-// Module ID: 8830
-// Function ID: 8831
+// Module ID: 8835
+// Function ID: 8836
 // Name: useCanPurchaseFrames
-// Dependencies: [1371, 1373, 8212, 8831, 1885, 1379, 504, 2]
+// Dependencies: [1371, 1373, 8212, 8836, 1885, 1379, 504, 2]
 // Exports: default, isUserPaidTier2, useCanViewProfileFramesInCollectiblesShop, useIsProfileFramesEarlyAccessPhase
 
-// Module 8830 (useCanPurchaseFrames)
+// Module 8835 (useCanPurchaseFrames)
 import initialize from "initialize" /* 504 */;
 import create from "create" /* 1379 */;
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1885 */;
 import apexExperiment from "apexExperiment" /* 8212 */;
-import apexExperiment2 from "apexExperiment" /* 8831 */;
-import apexExperimentDefault from "apexExperiment" /* 8831 */;
+import apexExperiment2 from "apexExperiment" /* 8836 */;
+import apexExperimentDefault from "apexExperiment" /* 8836 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;
 import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 

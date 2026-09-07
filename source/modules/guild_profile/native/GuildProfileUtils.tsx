@@ -1,10 +1,10 @@
-// Module ID: 9192
-// Function ID: 9193
+// Module ID: 9197
+// Function ID: 9198
 // Name: useProfilePrimaryColor
 // Dependencies: [32, 4552, 1396, 8132, 7552, 2]
 // Exports: getProfilePrimaryColor, useProfilePrimaryColor
 
-// Module 9192 (useProfilePrimaryColor)
+// Module 9197 (useProfilePrimaryColor)
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 import hasFetchedColors from "hasFetchedColors" /* 8132 */;
 import hasFetchedColorsDefault from "hasFetchedColors" /* 8132 */;

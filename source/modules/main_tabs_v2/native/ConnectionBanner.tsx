@@ -1,10 +1,10 @@
-// Module ID: 16396
-// Function ID: 16397
+// Module ID: 16399
+// Function ID: 16400
 // Name: ConnectionBannerIcon
-// Dependencies: [32, 19, 17, 13686, 15098, 1074, 21, 4560, 576, 1114, 4262, 16397, 16399, 4556, 672, 4296, 5664, 4987, 504, 1242, 15097, 4974, 13687, 2]
+// Dependencies: [32, 19, 17, 13690, 15101, 1074, 21, 4560, 576, 1114, 4262, 16400, 16402, 4556, 672, 4296, 5664, 4987, 504, 1242, 15100, 4974, 13691, 2]
 // Exports: default
 
-// Module 16396 (ConnectionBannerIcon)
+// Module 16399 (ConnectionBannerIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;
 import _modDef4296 from "module_4296" /* 4296 */;
@@ -14,9 +14,9 @@ import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5664
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "updateState" /* 13686 */;
-import { ConnectivityIndicatorState as closure_8 } from "updateState" /* 13686 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 15098 */;
+import closure_7 from "updateState" /* 13690 */;
+import { ConnectivityIndicatorState as closure_8 } from "updateState" /* 13690 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 15101 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -39,14 +39,14 @@ function ConnectionBannerIcon(state) {
     obj1[0] = tmp.leadingSlot;
     const obj2 = { size: "xs", color: null };
     obj2[1] = tmp5(576).colors.INTERACTIVE_ICON_DEFAULT;
-    obj1[1] = callback2(tmp2(16397).ConnectionUnknownIcon, obj2);
+    obj1[1] = callback2(tmp2(16400).ConnectionUnknownIcon, obj2);
     return callback2(closure_6, obj1);
   } else if (tmp7.BACK_ONLINE === state) {
     obj = { style: null, children: null };
     obj[0] = tmp.leadingSlot;
     const obj3 = { size: "xs", color: null };
     obj3[1] = tmp5(576).colors.ICON_FEEDBACK_POSITIVE;
-    obj[1] = callback2(tmp2(16399).ConnectionFineIcon, obj3);
+    obj[1] = callback2(tmp2(16402).ConnectionFineIcon, obj3);
     return callback2(closure_6, obj);
   }
 }
@@ -207,11 +207,11 @@ let closure_26 = { code: "function ConnectionBannerTsx2(){const{progress,CONNECT
 let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(13687).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(13691).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
   dependencyMap = undefined;
-  let obj = stateFromStores(13687);
+  let obj = stateFromStores(13691);
   const items = [closure_7];
   stateFromStores = hidden(504).useStateFromStores(items, () => state.getState());
   dependencyMap = React.useRef(null);

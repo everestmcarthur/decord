@@ -1,18 +1,18 @@
-// Module ID: 16725
-// Function ID: 16726
+// Module ID: 16728
+// Function ID: 16729
 // Name: getSearchQueryChannelIds
-// Dependencies: [2021, 4209, 1371, 12339, 7878, 1074, 1114, 11688, 4503, 9431, 10638, 10112, 10110, 5087, 12528, 10114, 11825, 9435, 16726, 12340, 4404, 2]
+// Dependencies: [2021, 4209, 1371, 12343, 7878, 1074, 1114, 11693, 4503, 9436, 10643, 10117, 10115, 5087, 12532, 10119, 11830, 9440, 16729, 12344, 4404, 2]
 // Exports: getSearchFilterAuthorTypeIcon, getSearchFilterHasIcon, getSearchQueryChannelIds, getSearchQueryUserIds, toSearchListChannelItem, toSearchListUserItem
 
-// Module 16725 (getSearchQueryChannelIds)
+// Module 16728 (getSearchQueryChannelIds)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11688 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 12340 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11693 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 12344 */;
 import closure_3 from "trackCommunicationDisabled" /* 2021 */;
 import closure_4 from "markAllUserIdListsStale" /* 4209 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import closure_6 from "prototype" /* 12339 */;
+import closure_6 from "prototype" /* 12343 */;
 import { SearchListItemTypes } from "MessageEmbedTypes" /* 7878 */;
 import { RelationshipTypes } from "ME" /* 1074 */;
 
@@ -46,19 +46,19 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
     } else {
       const intl4 = tmp(1114).intl;
       if (intl4.string(tmp(1114).t["20uQR3"]) === text) {
-        return tmp(9431).EmbedIcon;
+        return tmp(9436).EmbedIcon;
       } else {
         const intl5 = tmp(1114).intl;
         if (intl5.string(tmp(1114).t.L4lxyE) === text) {
-          return tmp(10638).PollsIcon;
+          return tmp(10643).PollsIcon;
         } else {
           const intl6 = tmp(1114).intl;
           if (intl6.string(tmp(1114).t["AV/v6i"]) === text) {
-            return tmp(10112).AttachmentIcon;
+            return tmp(10117).AttachmentIcon;
           } else {
             const intl7 = tmp(1114).intl;
             if (intl7.string(tmp(1114).t.XM9XGP) === text) {
-              return tmp(10110).VideoIcon;
+              return tmp(10115).VideoIcon;
             } else {
               const intl8 = tmp(1114).intl;
               if (intl8.string(tmp(1114).t.TNLcpx) === text) {
@@ -66,11 +66,11 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
               } else {
                 const intl9 = tmp(1114).intl;
                 if (intl9.string(tmp(1114).t.F8Wf0e) === text) {
-                  return tmp(12528).SoundboardIcon;
+                  return tmp(12532).SoundboardIcon;
                 } else {
                   const intl2 = tmp(1114).intl;
                   if (intl2.string(tmp(1114).t.PJgX2h) === text) {
-                    return tmp(10114).StickerIcon;
+                    return tmp(10119).StickerIcon;
                   }
                 }
               }
@@ -84,15 +84,15 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
 export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeIcon(text) {
   const intl = getSystemLocale.intl;
   if (intl.string(getSystemLocale.t.tPZo4p) === text) {
-    return tmp(11825).UserIcon;
+    return tmp(11830).UserIcon;
   } else {
     const intl3 = tmp(1114).intl;
     if (intl3.string(tmp(1114).t.JL7sRS) === text) {
-      return tmp(9435).RobotIcon;
+      return tmp(9440).RobotIcon;
     } else {
       const intl2 = tmp(1114).intl;
       if (intl2.string(tmp(1114).t.WjkIKU) === text) {
-        return tmp(16726).WebhookIcon;
+        return tmp(16729).WebhookIcon;
       }
     }
   }

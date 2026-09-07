@@ -1,9 +1,9 @@
-// Module ID: 13981
-// Function ID: 13982
+// Module ID: 13984
+// Function ID: 13985
 // Name: set
 // Dependencies: [2]
 
-// Module 13981 (set)
+// Module 13984 (set)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");

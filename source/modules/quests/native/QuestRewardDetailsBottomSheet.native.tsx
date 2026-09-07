@@ -1,12 +1,12 @@
-// Module ID: 11769
-// Function ID: 11770
+// Module ID: 11774
+// Function ID: 11775
 // Name: QuestRewardDetailsBottomSheet
-// Dependencies: [19, 17, 1371, 21, 4560, 576, 11767, 4527, 11483, 11290, 7708, 1114, 504, 7150, 4973, 11770, 4556, 2]
+// Dependencies: [19, 17, 1371, 21, 4560, 576, 11772, 4527, 11488, 11295, 7708, 1114, 504, 7150, 4973, 11775, 4556, 2]
 // Exports: default
 
-// Module 11769 (QuestRewardDetailsBottomSheet)
+// Module 11774 (QuestRewardDetailsBottomSheet)
 import ThemesDefault from "Themes" /* 576 */;
-import useQuests from "useQuests" /* 11483 */;
+import useQuests from "useQuests" /* 11488 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
@@ -38,11 +38,11 @@ function QuestRewardDetailsBottomSheet(quest) {
   let obj = quest(504);
   const items2 = [closure_5];
   const stateFromStores = obj.useStateFromStores(items2, () => currentUser.getCurrentUser());
-  obj1 = quest(11290);
+  obj1 = quest(11295);
   const defaultRewardName = obj1.getDefaultRewardName(quest.config, stateFromStores);
   obj = { direction: "vertical", spacing: memo(576).space.PX_16, style: tmp.wrapper, children: null };
   obj = { align: "center", direction: "horizontal", spacing: memo(576).space.PX_16, children: null };
-  const items3 = [callback(memo(11770), { quest, height: 56, width: 56, withAnimation: true }), ];
+  const items3 = [callback(memo(11775), { quest, height: 56, width: 56, withAnimation: true }), ];
   obj1 = { direction: "vertical", spacing: memo(576).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj2 = { variant: "eyebrow", color: "text-subtle", children: null };
   let intl = quest(1114).intl;
@@ -80,8 +80,8 @@ let result = require("set").fileFinishedImporting("modules/quests/native/QuestRe
 
 export default function QuestRewardDetailsBottomSheetConnected(questId) {
   const callback = React.useCallback(() => {
-    const result = callback(11767).showQuestUnavailableAlert();
-    const obj = callback(11767);
+    const result = callback(11772).showQuestUnavailableAlert();
+    const obj = callback(11772);
     callback2(4527).hideActionSheet();
   }, []);
   let obj = useQuests;

@@ -1,17 +1,17 @@
-// Module ID: 15997
-// Function ID: 15998
+// Module ID: 16000
+// Function ID: 16001
 // Name: _initialize
-// Dependencies: [5, 17, 12409, 1074, 4770, 12705, 1898, 573, 1953, 15998, 1115, 12412, 9820, 12746, 12704, 7342, 7760, 2]
+// Dependencies: [5, 17, 12413, 1074, 4770, 12709, 1898, 573, 1953, 16001, 1115, 12416, 9825, 12750, 12708, 7342, 7760, 2]
 
-// Module 15997 (_initialize)
+// Module 16000 (_initialize)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import initializeDefault from "initialize" /* 1898 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { PermissionStateType } from "set" /* 12409 */;
+import { PermissionStateType } from "set" /* 12413 */;
 import { ME } from "ME" /* 1074 */;
 import { NotificationAuthorizationStatus as closure_8 } from "NativePermissionStatus" /* 4770 */;
-import { NewUserTypes } from "NewUserTypes" /* 12705 */;
+import { NewUserTypes } from "NewUserTypes" /* 12709 */;
 
 const require = arg1;
 ({ NativeModules: c4, Keyboard: c5 } = get_ActivityIndicator);
@@ -117,10 +117,10 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        let tmpResult = tmp(12746);
+        let tmpResult = tmp(12750);
         tmpResult.setNewUser(constants.ORGANIC_REGISTERED);
       }
-      tmpResult = tmp(12704);
+      tmpResult = tmp(12708);
       tmpResult.startOnboarding();
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {

@@ -1,10 +1,10 @@
-// Module ID: 9768
-// Function ID: 9769
+// Module ID: 9773
+// Function ID: 9774
 // Name: PreviewBody
-// Dependencies: [19, 17, 1957, 1074, 21, 4560, 576, 1115, 504, 4713, 9705, 9769, 4556, 1114, 9770, 1178, 9771, 9704, 7123, 9772, 4975, 9665, 4905, 9787, 1896, 2]
+// Dependencies: [19, 17, 1957, 1074, 21, 4560, 576, 1115, 504, 4713, 9710, 9774, 4556, 1114, 9775, 1178, 9776, 9709, 7123, 9777, 4975, 9670, 4905, 9792, 1896, 2]
 // Exports: default
 
-// Module 9768 (PreviewBody)
+// Module 9773 (PreviewBody)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -31,14 +31,14 @@ function PreviewBody(event) {
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channel_id), items1);
   const tmp6 = channel_id(4713)(stateFromStores);
   dependencyMap = tmp6;
-  obj1 = _require(9705);
+  obj1 = _require(9710);
   locationFromEvent = obj1.getLocationFromEvent(event);
   let tmp8 = tmp6;
   if (tmp6 == null) {
     tmp8 = locationFromEvent;
   }
   locationFromEvent = tmp8;
-  eventLocationIconSource = _require(9769).getEventLocationIconSource(event, stateFromStores, true);
+  eventLocationIconSource = _require(9774).getEventLocationIconSource(event, stateFromStores, true);
   obj = { style: tmp.header, children: null };
   obj = { style: tmp.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1114).intl;
@@ -51,7 +51,7 @@ function PreviewBody(event) {
     const obj2 = { channelName: null };
     const obj3 = { channel: null };
     obj3[0] = stateFromStores;
-    obj2[0] = channel_id(9770)(obj3);
+    obj2[0] = channel_id(9775)(obj3);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.sxcQPE, obj2);
   }
   obj1[1] = formatToPlainStringResult;
@@ -75,8 +75,8 @@ function PreviewBody(event) {
       if (dependencyMap == null) {
         let result = null;
         if (null != locationFromEvent) {
-          result = lib(9771).guildEventLocationParser(tmp12, true);
-          const tmp9Result = lib(9771);
+          result = lib(9776).guildEventLocationParser(tmp12, true);
+          const tmp9Result = lib(9776);
         }
         tmp11 = result;
       }

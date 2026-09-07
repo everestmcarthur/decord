@@ -1,14 +1,14 @@
-// Module ID: 16164
-// Function ID: 16165
+// Module ID: 16167
+// Function ID: 16168
 // Name: PreviewOverlay
-// Dependencies: [19, 17, 21, 4560, 576, 4414, 16165, 4495, 4987, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4414, 16168, 4495, 4987, 2]
 // Exports: default
 
-// Module 16164 (PreviewOverlay)
+// Module 16167 (PreviewOverlay)
 import ThemesDefault from "Themes" /* 576 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 16165 */;
+import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 16168 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

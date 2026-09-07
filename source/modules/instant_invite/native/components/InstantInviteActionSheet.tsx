@@ -1,17 +1,17 @@
-// Module ID: 9828
-// Function ID: 9829
+// Module ID: 9833
+// Function ID: 9834
 // Name: Loading
-// Dependencies: [32, 19, 17, 1962, 9821, 1979, 4199, 7736, 1074, 21, 4560, 576, 9829, 1611, 7162, 7182, 7168, 504, 4545, 7759, 9820, 4527, 8179, 9830, 1187, 9832, 7150, 7149, 1114, 1178, 9849, 9853, 9855, 7050, 9847, 9891, 9892, 2]
+// Dependencies: [32, 19, 17, 1962, 9826, 1979, 4199, 7736, 1074, 21, 4560, 576, 9834, 1611, 7162, 7182, 7168, 504, 4545, 7759, 9825, 4527, 8179, 9835, 1187, 9837, 7150, 7149, 1114, 1178, 9854, 9858, 9860, 7050, 9852, 9896, 9897, 2]
 // Exports: default
 
-// Module 9828 (Loading)
+// Module 9833 (Loading)
 import ThemesDefault from "Themes" /* 576 */;
-import _modDef9829 from "module_9829" /* 9829 */;
+import _modDef9834 from "module_9834" /* 9834 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
-import closure_8 from "updateWithLatestInvite" /* 9821 */;
+import closure_8 from "updateWithLatestInvite" /* 9826 */;
 import closure_9 from "createGuildRecordFromRust" /* 1979 */;
 import closure_10 from "getUncachedChannelPermissions" /* 4199 */;
 import { InviteTargetTypes } from "InviteSendStates" /* 7736 */;
@@ -31,7 +31,7 @@ function Loading() {
     let tmp4 = dependencyMap;
     let obj = { row: null };
     obj[0] = num;
-    let arr = items.push(callback2(_modDef9829, obj, num));
+    let arr = items.push(callback2(_modDef9834, obj, num));
     num = num + 1;
   } while (num < 10);
   obj = { children: null };

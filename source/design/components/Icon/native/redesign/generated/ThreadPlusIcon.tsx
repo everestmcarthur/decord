@@ -1,14 +1,14 @@
-// Module ID: 12237
-// Function ID: 12238
+// Module ID: 12241
+// Function ID: 12242
 // Name: ThreadPlusIcon
-// Dependencies: [19, 21, 576, 4261, 12238, 2]
+// Dependencies: [19, 21, 576, 4261, 12242, 2]
 // Exports: ThreadPlusIcon
 
-// Module 12237 (ThreadPlusIcon)
+// Module 12241 (ThreadPlusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 12238 */;
+import registerAsset from "registerAsset" /* 12242 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

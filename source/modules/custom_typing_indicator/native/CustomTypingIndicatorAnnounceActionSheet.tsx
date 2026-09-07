@@ -1,10 +1,10 @@
-// Module ID: 11969
-// Function ID: 11970
+// Module ID: 11973
+// Function ID: 11974
 // Name: CustomTypingIndicatorAnnounceActionSheet
-// Dependencies: [19, 17, 1074, 1954, 21, 4560, 576, 7382, 7150, 7123, 7154, 11970, 1379, 11972, 11973, 11974, 11975, 11976, 11977, 11978, 1178, 1114, 4556, 3549, 4975, 2]
+// Dependencies: [19, 17, 1074, 1954, 21, 4560, 576, 7382, 7150, 7123, 7154, 11974, 1379, 11976, 11977, 11978, 11979, 11980, 11981, 11982, 1178, 1114, 4556, 3549, 4975, 2]
 // Exports: default
 
-// Module 11969 (CustomTypingIndicatorAnnounceActionSheet)
+// Module 11973 (CustomTypingIndicatorAnnounceActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -85,10 +85,10 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   items4 = [, ];
   ({ row: arr5[0], outerRow: arr5[1] } = tmp2);
   const obj4 = { name: "Cap", suggestion: markAsDismissed(1379).TypingSuggestion.UNSPECIFIED, emojiSize: 24, spacing: 8, textVariant: "text-md/medium", textColor: "text-subtle", lineClamp: 1, emojiSource: null, style: null };
-  const items5 = [ref(11972), ref(11973), ref(11972)];
+  const items5 = [ref(11976), ref(11977), ref(11976)];
   obj4[7] = items5;
   obj4[8] = tmp2.outerStack;
-  obj3[1] = callback(ref(11970), obj4);
+  obj3[1] = callback(ref(11974), obj4);
   const items6 = [callback(View, obj3), , ];
   const obj5 = { style: items7, children: null };
   items7 = [, ];
@@ -103,23 +103,23 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
       markAsDismissed(closure_1_6.USER_DISMISS);
     }
   };
-  const tmp6 = ref(11970);
+  const tmp6 = ref(11974);
   obj6[1] = markAsDismissed(1379).TypingSuggestion.YAPPING;
   obj6[7] = tmp2.innerStack;
-  const items8 = [ref(11974), ref(11975), ref(11974)];
+  const items8 = [ref(11978), ref(11979), ref(11978)];
   obj6[8] = items8;
-  obj5[1] = callback(ref(11970), obj6);
+  obj5[1] = callback(ref(11974), obj6);
   items6[1] = callback(View, obj5);
   const obj7 = { style: items9, children: null };
   items9 = [, ];
   ({ row: arr10[0], outerRow: arr10[1] } = tmp2);
   const obj8 = { name: "Loky", suggestion: null, emojiSize: 24, spacing: 8, textVariant: "text-md/medium", textColor: "text-subtle", lineClamp: 1, style: null, emojiSource: null };
-  const tmp7 = ref(11970);
+  const tmp7 = ref(11974);
   obj8[1] = markAsDismissed(1379).TypingSuggestion.OVERSHARING;
   obj8[7] = tmp2.outerStack;
-  const items10 = [ref(11976), ref(11977), ref(11978)];
+  const items10 = [ref(11980), ref(11981), ref(11982)];
   obj8[8] = items10;
-  obj7[1] = callback(ref(11970), obj8);
+  obj7[1] = callback(ref(11974), obj8);
   items6[2] = callback(View, obj7);
   obj2[1] = items6;
   items3[1] = callback2(View, obj2);

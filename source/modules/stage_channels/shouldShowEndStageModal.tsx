@@ -1,10 +1,10 @@
-// Module ID: 9914
-// Function ID: 9915
+// Module ID: 9919
+// Function ID: 9920
 // Name: shouldShowEndStageModal
 // Dependencies: [502, 5418, 5421, 1962, 5425, 2]
 // Exports: default
 
-// Module 9914 (shouldShowEndStageModal)
+// Module 9919 (shouldShowEndStageModal)
 import closure_2 from "fetchFingerprint" /* 502 */;
 import closure_3 from "getActiveStageChannelIds" /* 5418 */;
 import closure_4 from "buildStageChannelUserRoles" /* 5421 */;

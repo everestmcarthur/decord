@@ -1,13 +1,13 @@
-// Module ID: 16944
-// Function ID: 16945
+// Module ID: 16947
+// Function ID: 16948
 // Name: CatEarsBackdrop
-// Dependencies: [19, 17, 1076, 7151, 1954, 21, 4560, 576, 1477, 6627, 1611, 4296, 16945, 4556, 1114, 16946, 7541, 7182, 7150, 16947, 5692, 4975, 2]
+// Dependencies: [19, 17, 1076, 7151, 1954, 21, 4560, 576, 1477, 6627, 1611, 4296, 16948, 4556, 1114, 16949, 7541, 7182, 7150, 16950, 5692, 4975, 2]
 // Exports: default
 
-// Module 16944 (CatEarsBackdrop)
+// Module 16947 (CatEarsBackdrop)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
-import metadataDefault from "metadata" /* 16947 */;
+import metadataDefault from "metadata" /* 16950 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 1076 */;
@@ -44,7 +44,7 @@ function CatEarsBackdrop() {
   items1 = [tmp.mascotLayer, ];
   obj1 = { top: -138 * result1, left: tmp6, right: tmp6 };
   items1[1] = obj1;
-  const obj2 = { source: { uri: top(16945) }, style: tmp.mascotImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+  const obj2 = { source: { uri: top(16948) }, style: tmp.mascotImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   obj[1] = callback(closure_4, obj2);
   obj[1] = callback(closure_5, obj);
   return callback(top(4296).View, obj);
@@ -88,7 +88,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   importDefault = undefined;
   dependencyMap = undefined;
   const tmp = callback3();
-  let obj = markAsDismissed(16946);
+  let obj = markAsDismissed(16949);
   const intl = markAsDismissed(1114).intl;
   const string = intl.string;
   const t = markAsDismissed(1114).t;

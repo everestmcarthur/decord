@@ -1,12 +1,12 @@
-// Module ID: 9841
-// Function ID: 9842
+// Module ID: 9846
+// Function ID: 9847
 // Name: queryGamesAutocomplete
-// Dependencies: [5108, 551, 8899, 5109, 2]
+// Dependencies: [5108, 551, 8904, 5109, 2]
 // Exports: queryGamesAutocomplete
 
-// Module 9841 (queryGamesAutocomplete)
+// Module 9846 (queryGamesAutocomplete)
 import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH" /* 5109 */;
-import fetchStore from "fetchStore" /* 8899 */;
+import fetchStore from "fetchStore" /* 8904 */;
 import closure_2 from "set" /* 5108 */;
 import importDefaultResult from "debounce" /* 551 */;
 

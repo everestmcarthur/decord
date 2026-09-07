@@ -1,13 +1,13 @@
-// Module ID: 16500
-// Function ID: 16501
+// Module ID: 16503
+// Function ID: 16504
 // Name: ContentInventoryEntryRow
-// Dependencies: [19, 4209, 21, 504, 8130, 16501, 16510, 2]
+// Dependencies: [19, 4209, 21, 504, 8130, 16504, 16513, 2]
 // Exports: default
 
-// Module 16500 (ContentInventoryEntryRow)
+// Module 16503 (ContentInventoryEntryRow)
 import noopAll from "noop" /* 19 */;
-import itemsDefault from "items" /* 16501 */;
-import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 16510 */;
+import itemsDefault from "items" /* 16504 */;
+import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 16513 */;
 import closure_3 from "markAllUserIdListsStale" /* 4209 */;
 import { jsx } from "jsxProd" /* 21 */;
 

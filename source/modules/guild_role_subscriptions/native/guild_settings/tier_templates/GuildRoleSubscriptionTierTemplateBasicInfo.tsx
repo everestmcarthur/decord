@@ -1,10 +1,10 @@
-// Module ID: 17785
-// Function ID: 17786
+// Module ID: 17788
+// Function ID: 17789
 // Name: GuildRoleSubscriptionTierTemplateBasicInfo
-// Dependencies: [19, 17, 1373, 1085, 21, 4560, 576, 5587, 1178, 4556, 1114, 7234, 15231, 4976, 2]
+// Dependencies: [19, 17, 1373, 1085, 21, 4560, 576, 5587, 1178, 4556, 1114, 7234, 15234, 4976, 2]
 // Exports: GuildRoleSubscriptionTierTemplateBasicInfo
 
-// Module 17785 (GuildRoleSubscriptionTierTemplateBasicInfo)
+// Module 17788 (GuildRoleSubscriptionTierTemplateBasicInfo)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import preloadDefault from "preload" /* 5587 */;
@@ -42,7 +42,7 @@ export const GuildRoleSubscriptionTierTemplateBasicInfo = function GuildRoleSubs
   const obj3 = { price: null, interval: null };
   let obj6 = template(7234);
   obj3[0] = obj6.formatPrice(price_tier, CurrencyCodes.USD);
-  obj3[1] = template(15231).formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
+  obj3[1] = template(15234).formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
   obj2[2] = intl.format(template(1114).t.CgmBaG, obj3);
   items1[2] = callback(template(4556).Text, obj2);
   obj1[1] = items1;

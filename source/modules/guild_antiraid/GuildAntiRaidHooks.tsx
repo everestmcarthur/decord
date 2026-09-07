@@ -1,10 +1,10 @@
-// Module ID: 10098
-// Function ID: 10099
+// Module ID: 10103
+// Function ID: 10104
 // Name: getFirstGuildIncidentId
-// Dependencies: [1221, 1979, 4199, 4381, 1371, 10080, 8016, 1074, 563, 11, 8015, 1086, 4204, 10099, 2]
+// Dependencies: [1221, 1979, 4199, 4381, 1371, 10085, 8016, 1074, 563, 11, 8015, 1086, 4204, 10104, 2]
 // Exports: getDisabledActions, shouldShowRaidInAppNotification, shouldShowRaidNotificationNagbar, useDisabledActions, useFirstGuildIncidentId, useGuildIncidentsState, useShowAntiRaidInGuildNotifSettings
 
-// Module 10098 (getFirstGuildIncidentId)
+// Module 10103 (getFirstGuildIncidentId)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import fromStringAll from "fromString" /* 1086 */;
 import applyOverwritesAll from "applyOverwrites" /* 4204 */;
@@ -14,7 +14,7 @@ import closure_5 from "createGuildRecordFromRust" /* 1979 */;
 import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_7 from "handleConnectionOpen" /* 4381 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "computeAlertSettings" /* 10080 */;
+import closure_9 from "computeAlertSettings" /* 10085 */;
 import { IncidentAlertModeratorPermissions as closure_10 } from "GUILD_REPORT_RAID_MOBILE_KEY" /* 8016 */;
 import ME from "ME" /* 1074 */;
 

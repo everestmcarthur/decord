@@ -1,14 +1,14 @@
-// Module ID: 12245
-// Function ID: 12246
+// Module ID: 12249
+// Function ID: 12250
 // Name: renderChatInputActionButtonGiftAndThread
-// Dependencies: [19, 17, 11962, 21, 4560, 12246, 12239, 1114, 12237, 12248, 4262, 576, 4271, 2]
+// Dependencies: [19, 17, 11966, 21, 4560, 12250, 12243, 1114, 12241, 12252, 4262, 576, 4271, 2]
 
-// Module 12245 (renderChatInputActionButtonGiftAndThread)
+// Module 12249 (renderChatInputActionButtonGiftAndThread)
 import ThemesDefault from "Themes" /* 576 */;
-import FadeTransitionItemDefault from "FadeTransitionItem" /* 12246 */;
+import FadeTransitionItemDefault from "FadeTransitionItem" /* 12250 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { ChatInputActionType } from "TextAreaCta" /* 11962 */;
+import { ChatInputActionType } from "TextAreaCta" /* 11966 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -24,13 +24,13 @@ function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, clea
     const intl = onPress(1114).intl;
     obj[1] = intl.string(onPress(1114).t["4WNcpu"]);
     obj[2] = !canStartThreads;
-    obj[3] = onPress(12237).ThreadPlusIcon;
+    obj[3] = onPress(12241).ThreadPlusIcon;
     obj[4] = function onPress(arg0) {
       return onPress(arg0, closure_1_5.THREAD);
     };
     obj[5] = styleButton;
-    let tmpResult = tmp(tmp2(12239), obj);
-    const tmp2Result = tmp2(12239);
+    let tmpResult = tmp(tmp2(12243), obj);
+    const tmp2Result = tmp2(12243);
   } else {
     obj = { accessible: null, channel: null, onPress: null, style: null, styleButton: null };
     obj[0] = accessible;
@@ -38,7 +38,7 @@ function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, clea
     obj[2] = onPress;
     obj[3] = styleButtonWrapper;
     obj[4] = styleButton;
-    tmpResult = tmp(tmp2(12248), obj);
+    tmpResult = tmp(tmp2(12252), obj);
   }
   obj[2] = tmpResult;
   return jsx(FadeTransitionItemDefault, { cleanup, state, children: null }, arg0);

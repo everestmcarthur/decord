@@ -1,10 +1,10 @@
-// Module ID: 11516
-// Function ID: 11517
+// Module ID: 11521
+// Function ID: 11522
 // Name: getApplicationIdsForGame
 // Dependencies: [4788, 1916, 2]
 // Exports: default
 
-// Module 11516 (getApplicationIdsForGame)
+// Module 11521 (getApplicationIdsForGame)
 import closure_0 from "addApplication" /* 4788 */;
 import closure_1 from "createGamesFromMessage" /* 1916 */;
 

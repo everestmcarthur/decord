@@ -1,16 +1,17 @@
 // Module ID: 8501
 // Function ID: 8502
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 19, 8469]
+// Dependencies: [41, 42, 93, 95, 98, 8472, 8495]
 
 // Module 8501 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8495 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
-const FeDistantLight = arg1;
+const FeConvolveMatrix = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +31,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeDistantLight {
+class FeConvolveMatrix {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeDistantLight);
+    tmp = closure_2(this, FeConvolveMatrix);
     tmp2 = closure_4;
-    obj = closure_4(FeDistantLight);
+    obj = closure_4(FeConvolveMatrix);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -50,18 +51,19 @@ class FeDistantLight {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeDistantLight, require("noop").Component);
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      const result = FeDistantLight(8469).warnUnimplementedFilter();
-      return null;
-    }
+_inheritsDefault(FeConvolveMatrix, _isNativeReflectConstructDefault);
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeConvolveMatrix(8472).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(FeDistantLight, items);
-importDefaultResultResult.displayName = "FeDistantLight";
-importDefaultResultResult.defaultProps = {};
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeConvolveMatrix, items);
+importDefaultResultResult.displayName = "FeConvolveMatrix";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

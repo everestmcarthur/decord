@@ -1,15 +1,15 @@
-// Module ID: 12002
-// Function ID: 12003
+// Module ID: 12006
+// Function ID: 12007
 // Name: ForumPostGridHeader
-// Dependencies: [19, 17, 7273, 1964, 21, 4560, 12003, 12005, 12014, 12015, 12016, 2]
+// Dependencies: [19, 17, 7273, 1964, 21, 4560, 12007, 12009, 12018, 12019, 12020, 2]
 // Exports: default
 
-// Module 12002 (ForumPostGridHeader)
+// Module 12006 (ForumPostGridHeader)
 import noopAll from "noop" /* 19 */;
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12003 */;
-import ForumPostUsername from "ForumPostUsername" /* 12005 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12014 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 12016 */;
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12007 */;
+import ForumPostUsername from "ForumPostUsername" /* 12009 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12018 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 12020 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 7273 */;
 import { ChannelFlags } from "set" /* 1964 */;
@@ -35,7 +35,7 @@ export default function ForumPostGridHeader(arg0) {
   }
   const items = [hasFlagResult, callback(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }), callback(ForumPostTimestampDefault, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO, textStyle: tmp.timestampText }), ];
   if (isNew) {
-    isNew = tmp8(tmp10(12015), {});
+    isNew = tmp8(tmp10(12019), {});
   }
   items[3] = isNew;
   obj[1] = items;

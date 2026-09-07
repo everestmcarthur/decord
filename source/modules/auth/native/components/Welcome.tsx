@@ -1,10 +1,10 @@
-// Module ID: 15948
-// Function ID: 15949
+// Module ID: 15951
+// Function ID: 15952
 // Name: InviteCard
-// Dependencies: [19, 17, 15949, 4476, 7457, 12413, 1385, 4544, 8739, 1074, 7326, 7736, 21, 4560, 576, 12659, 1114, 38, 1178, 4404, 4556, 13219, 6945, 13862, 1483, 1611, 504, 4992, 7475, 1242, 510, 6593, 5598, 15950, 15945, 1484, 5433, 4975, 4271, 5682, 11896, 2]
+// Dependencies: [19, 17, 15952, 4476, 7457, 12417, 1385, 4544, 8744, 1074, 7326, 7736, 21, 4560, 576, 12663, 1114, 38, 1178, 4404, 4556, 13223, 6945, 13865, 1483, 1611, 504, 4992, 7475, 1242, 510, 6593, 5598, 15953, 15948, 1484, 5433, 4975, 4271, 5682, 11901, 2]
 // Exports: default
 
-// Module 15948 (InviteCard)
+// Module 15951 (InviteCard)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -12,18 +12,18 @@ import Button from "Button" /* 1178 */;
 import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import Text from "Text" /* 4556 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 6945 */;
-import renderDefault from "render" /* 12659 */;
-import registerAssetDefault from "registerAsset" /* 13219 */;
-import registerAsset from "registerAsset" /* 13862 */;
+import renderDefault from "render" /* 12663 */;
+import registerAssetDefault from "registerAsset" /* 13223 */;
+import registerAsset from "registerAsset" /* 13865 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "isUnderageAnonymous" /* 15949 */;
+import closure_7 from "isUnderageAnonymous" /* 15952 */;
 import closure_8 from "getHash" /* 4476 */;
 import closure_9 from "handleGuildTemplateResolveSuccess" /* 7457 */;
-import closure_10 from "initialize" /* 12413 */;
+import closure_10 from "initialize" /* 12417 */;
 import closure_11 from "createdAt" /* 1385 */;
 import closure_12 from "updateInvite" /* 4544 */;
-import closure_13 from "getDisplayedInviteCode" /* 8739 */;
+import closure_13 from "getDisplayedInviteCode" /* 8744 */;
 import ME from "ME" /* 1074 */;
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7326 */;
 import { InviteTypes } from "InviteSendStates" /* 7736 */;
@@ -49,7 +49,7 @@ function InviteCard(invite) {
       let tmp18 = callback;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      obj = { user: null, guildId: "a" };
+      obj = { user: null, guildId: "Array" };
       const tmp12 = new closure_11(inviter);
       obj[0] = tmp12;
       tmp14 = callback(Button.Avatar, obj);
@@ -62,7 +62,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      obj = { user: null, guildId: "a" };
+      obj = { user: null, guildId: "Array" };
       const tmp33 = new closure_11(inviter);
       obj[0] = tmp33;
       const intl3 = getSystemLocale.intl;

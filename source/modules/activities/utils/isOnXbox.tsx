@@ -1,10 +1,10 @@
-// Module ID: 13002
-// Function ID: 13003
+// Module ID: 13006
+// Function ID: 13007
 // Name: isOnXbox
 // Dependencies: [1920, 1074, 2]
 // Exports: default
 
-// Module 13002 (isOnXbox)
+// Module 13006 (isOnXbox)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import items3 from "items3" /* 1920 */;

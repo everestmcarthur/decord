@@ -1,10 +1,10 @@
-// Module ID: 12560
-// Function ID: 12561
+// Module ID: 12564
+// Function ID: 12565
 // Name: GuildPowerupsWarning
-// Dependencies: [19, 17, 21, 4560, 576, 8095, 12561, 6610, 4556, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 8095, 12565, 6610, 4556, 2]
 // Exports: default
 
-// Module 12560 (GuildPowerupsWarning)
+// Module 12564 (GuildPowerupsWarning)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

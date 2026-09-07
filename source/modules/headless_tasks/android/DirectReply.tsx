@@ -1,9 +1,9 @@
-// Module ID: 17938
-// Function ID: 17939
+// Module ID: 17941
+// Function ID: 17942
 // Name: promise
-// Dependencies: [5, 17, 4553, 3, 17932, 7456, 2]
+// Dependencies: [5, 17, 4553, 3, 17935, 7456, 2]
 
-// Module 17938 (promise)
+// Module 17941 (promise)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -27,7 +27,7 @@ export default (arg0) => {
           closure_0 = arg0;
           c3 = 0;
           c4 = 0;
-          return (/* F125842 */ function*() { ... })();
+          return (/* F125872 */ function*() { ... })();
         });
         closure_0 = tmp;
         const apply = tmp.apply;

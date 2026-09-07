@@ -1,13 +1,13 @@
-// Module ID: 9490
-// Function ID: 9491
+// Module ID: 9495
+// Function ID: 9496
 // Name: usePipVideoOrStream
-// Dependencies: [1956, 4576, 9491, 4582, 502, 1957, 1908, 4583, 4581, 504, 4612, 4417, 9466, 2]
+// Dependencies: [1956, 4576, 9496, 4582, 502, 1957, 1908, 4583, 4581, 504, 4612, 4417, 9471, 2]
 // Exports: default, useHasPipParticipant
 
-// Module 9490 (usePipVideoOrStream)
+// Module 9495 (usePipVideoOrStream)
 import closure_3 from "participantFromServer" /* 1956 */;
 import closure_4 from "getParticipants" /* 4576 */;
-import closure_5 from "updateSpeaker" /* 9491 */;
+import closure_5 from "updateSpeaker" /* 9496 */;
 import closure_6 from "reset" /* 4582 */;
 import closure_7 from "fetchFingerprint" /* 502 */;
 import closure_8 from "ensureGuildLoaded" /* 1957 */;

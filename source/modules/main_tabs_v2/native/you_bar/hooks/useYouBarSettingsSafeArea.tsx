@@ -1,10 +1,10 @@
-// Module ID: 13350
-// Function ID: 13351
+// Module ID: 13354
+// Function ID: 13355
 // Name: useYouBarSettingsCustomHeaderPaddingTop
 // Dependencies: [1611, 6945, 1116, 2]
 // Exports: useYouBarSettingsCustomHeaderPaddingTop, useYouBarSettingsOutsideSafeAreaTop
 
-// Module 13350 (useYouBarSettingsCustomHeaderPaddingTop)
+// Module 13354 (useYouBarSettingsCustomHeaderPaddingTop)
 import set from "set" /* 2 */;
 import PlatformTypes from "PlatformTypes" /* 1116 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;

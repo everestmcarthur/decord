@@ -1,10 +1,10 @@
-// Module ID: 12285
-// Function ID: 12286
+// Module ID: 12289
+// Function ID: 12290
 // Name: newMemberActionFromServer
 // Dependencies: [1957, 1074, 1369, 4204, 2]
 // Exports: actionsFromServer, isChannelValidForNewMemberAction, isChannelValidForResourceChannel, isSettingsValid, isWelcomeMessageEmpty, settingsFromServer, settingsToServer
 
-// Module 12285 (newMemberActionFromServer)
+// Module 12289 (newMemberActionFromServer)
 import applyOverwritesAll from "applyOverwrites" /* 4204 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import ME from "ME" /* 1074 */;

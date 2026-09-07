@@ -1,10 +1,10 @@
-// Module ID: 12509
-// Function ID: 12510
+// Module ID: 12513
+// Function ID: 12514
 // Name: experiment
 // Dependencies: [4474, 4473, 2]
 // Exports: useIsGameServerPricingEnabled
 
-// Module 12509 (experiment)
+// Module 12513 (experiment)
 import set from "set" /* 2 */;
 import experiment2 from "experiment" /* 4473 */;
 import createExperiment from "createExperiment" /* 4474 */;

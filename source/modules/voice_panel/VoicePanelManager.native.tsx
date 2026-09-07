@@ -1,9 +1,9 @@
-// Module ID: 17800
-// Function ID: 17801
+// Module ID: 17803
+// Function ID: 17804
 // Name: prototype
 // Dependencies: [4583, 4768, 7118, 2]
 
-// Module 17800 (prototype)
+// Module 17803 (prototype)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_0 from "createRTCConnection" /* 4583 */;
 import closure_1 from "withEqualityFn" /* 4768 */;

@@ -1,10 +1,10 @@
-// Module ID: 11076
-// Function ID: 11077
+// Module ID: 11081
+// Function ID: 11082
 // Name: PremiumGiftingPromotionSuccessActions
-// Dependencies: [19, 17, 21, 4560, 576, 10699, 1483, 10743, 11042, 10662, 11077, 10754, 1114, 2460, 4975, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 10704, 1483, 10748, 11047, 10667, 11082, 10759, 1114, 2460, 4975, 2]
 // Exports: default
 
-// Module 11076 (PremiumGiftingPromotionSuccessActions)
+// Module 11081 (PremiumGiftingPromotionSuccessActions)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

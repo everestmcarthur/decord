@@ -1,10 +1,10 @@
-// Module ID: 16287
-// Function ID: 16288
+// Module ID: 16290
+// Function ID: 16291
 // Name: getGuildFolderMenuItems
-// Dependencies: [5, 5438, 1074, 7081, 1114, 13960, 1896, 7380, 16288, 2]
+// Dependencies: [5, 5438, 1074, 7081, 1114, 13963, 1896, 7380, 16291, 2]
 // Exports: getGuildFolderMenuItems
 
-// Module 16287 (getGuildFolderMenuItems)
+// Module 16290 (getGuildFolderMenuItems)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "insertUnsortedGuilds" /* 5438 */;
 import { AnalyticsSections } from "ME" /* 1074 */;

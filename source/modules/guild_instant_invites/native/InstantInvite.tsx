@@ -1,13 +1,13 @@
-// Module ID: 10932
-// Function ID: 10933
+// Module ID: 10937
+// Function ID: 10938
 // Name: LinkedChannelInvite
-// Dependencies: [19, 17, 1961, 1074, 21, 4560, 7168, 10933, 10934, 4905, 1114, 10935, 1100, 10937, 5607, 4973, 7172, 4556, 8666, 8097, 10941, 10942, 10943, 10946, 10948, 2]
+// Dependencies: [19, 17, 1961, 1074, 21, 4560, 7168, 10938, 10939, 4905, 1114, 10940, 1100, 10942, 5607, 4973, 7172, 4556, 8671, 8097, 10946, 10947, 10948, 10951, 10953, 2]
 // Exports: LinkedChannelInvite
 
-// Module 10932 (LinkedChannelInvite)
-import memoResult1Default from "memoResult1" /* 10942 */;
-import InviteRolesDisplayDefault from "InviteRolesDisplay" /* 10946 */;
-import InstantInviteUsesLabelDefault from "InstantInviteUsesLabel" /* 10948 */;
+// Module 10937 (LinkedChannelInvite)
+import memoResult1Default from "memoResult1" /* 10947 */;
+import InviteRolesDisplayDefault from "InviteRolesDisplay" /* 10951 */;
+import InstantInviteUsesLabelDefault from "InstantInviteUsesLabel" /* 10953 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord" /* 1961 */;
@@ -29,7 +29,7 @@ const memoResult = importAllResult.memo((onInviteRevoked) => {
   }
   const items = [invite];
   const memo = importAllResult.useMemo(() => closure_1_5(invite.channel), items);
-  let obj = invite(10943);
+  let obj = invite(10948);
   const items1 = [invite.roles];
   const inviteActions = obj.useInviteActions({ invite, onInviteRevoked: onInviteRevoked.onInviteRevoked });
   const memo1 = importAllResult.useMemo(() => {
@@ -41,11 +41,11 @@ const memoResult = importAllResult.memo((onInviteRevoked) => {
   obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
   const items2 = [
     callback(invite(4556).Text, obj),
-    callback(invite(8666).ContextMenu, {
+    callback(invite(8671).ContextMenu, {
       items: inviteActions,
       children(ref) {
         const merged = Object.assign(ref, Object.create(null));
-        const obj = { size: "sm", variant: "secondary", icon: callback(10937).more, accessibilityLabel: null, ref: null };
+        const obj = { size: "sm", variant: "secondary", icon: callback(10942).more, accessibilityLabel: null, ref: null };
         const intl = invite(1114).intl;
         obj[3] = intl.string(invite(1114).t.DEoVWZ);
         obj[4] = ref.ref;
@@ -60,7 +60,7 @@ const memoResult = importAllResult.memo((onInviteRevoked) => {
     items: inviteActions,
     children(ref) {
       const merged = Object.assign(ref, Object.create(null));
-      const obj = { size: "sm", variant: "secondary", icon: callback(10937).more, accessibilityLabel: null, ref: null };
+      const obj = { size: "sm", variant: "secondary", icon: callback(10942).more, accessibilityLabel: null, ref: null };
       const intl = invite(1114).intl;
       obj[3] = intl.string(invite(1114).t.DEoVWZ);
       obj[4] = ref.ref;
@@ -69,7 +69,7 @@ const memoResult = importAllResult.memo((onInviteRevoked) => {
     }
   };
   const tmp = callback3();
-  items3[1] = callback(invite(10941).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
+  items3[1] = callback(invite(10946).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   if (tmp9Result) {
     const obj3 = { roleIds: null, guildId: null };
     obj3[0] = memo1;
@@ -126,16 +126,16 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
     application_id = linkedLobby2.application_id;
   }
   const getOrFetchApplication = obj.useGetOrFetchApplication(application_id);
-  canUnlinkLobbyChannel = channel(10933).useCanUnlinkLobbyChannel(channel);
+  canUnlinkLobbyChannel = channel(10938).useCanUnlinkLobbyChannel(channel);
   let str;
-  const tmp3Result = channel(10933);
+  const tmp3Result = channel(10938);
   if (getOrFetchApplication != null) {
     str = getOrFetchApplication.name;
   }
   if (str == null) {
     str = "";
   }
-  const tmp9Result = canUnlinkLobbyChannel(10934)(channel.id, str);
+  const tmp9Result = canUnlinkLobbyChannel(10939)(channel.id, str);
   dependencyMap = tmp9Result;
   let items = [canUnlinkLobbyChannel, tmp9Result];
   callback = callback.useCallback(() => {
@@ -158,7 +158,7 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
     let obj = { label: null, IconComponent: null, action: null };
     const intl = channel(1114).intl;
     obj[0] = intl.string(channel(1114).t.aW2YlJ);
-    obj[1] = channel(10935).ArrowSmallRightIcon;
+    obj[1] = channel(10940).ArrowSmallRightIcon;
     obj[2] = function action() {
       closure_1_0(closure_1_2[12]).transitionTo(closure_1_6.CHANNEL(closure_0.guild_id, closure_0.id));
     };
@@ -166,14 +166,14 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
     obj = { label: null, iconSource: null, variant: "destructive", action: null };
     const intl2 = channel(1114).intl;
     obj[0] = intl2.string(channel(1114).t.JmUENg);
-    obj[1] = canUnlinkLobbyChannel(10937).revoke;
+    obj[1] = canUnlinkLobbyChannel(10942).revoke;
     obj[3] = callback;
     items[1] = obj;
     return items;
   }, items1);
   obj = { style: tmp.gameWrapper, children: null };
   obj = { game: getOrFetchApplication, size: null };
-  const tmp9 = canUnlinkLobbyChannel(10934);
+  const tmp9 = canUnlinkLobbyChannel(10939);
   obj[1] = channel(7172).GameIconSizes.SIZE_24;
   const items2 = [callback(canUnlinkLobbyChannel(7172), obj), ];
   obj1 = { ellipsizeMode: "tail", lineClamp: 1, variant: "text-lg/bold", style: tmp.gameText, children: null };
@@ -187,11 +187,11 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
   obj[1] = items2;
   const items3 = [
     closure_8(View, obj),
-    callback(channel(8666).ContextMenu, {
+    callback(channel(8671).ContextMenu, {
       items: memo,
       children(ref) {
         const merged = Object.assign(ref, Object.create(null));
-        const obj = { size: "sm", variant: "secondary", icon: canUnlinkLobbyChannel(10937).more, accessibilityLabel: null, ref: null };
+        const obj = { size: "sm", variant: "secondary", icon: canUnlinkLobbyChannel(10942).more, accessibilityLabel: null, ref: null };
         const intl = channel(1114).intl;
         obj[3] = intl.string(channel(1114).t.DEoVWZ);
         obj[4] = ref.ref;
@@ -201,21 +201,21 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
     })
   ];
   obj2[2] = items3;
-  const items4 = [closure_8(channel(4973).Stack, obj2), callback(channel(10941).InstantInviteDetails, { channel }), ];
+  const items4 = [closure_8(channel(4973).Stack, obj2), callback(channel(10946).InstantInviteDetails, { channel }), ];
   const obj4 = { style: tmp.creatorWrapper, children: null };
   let tmp15Result = null;
   if (null != linked_by) {
     const obj5 = { start: true, end: true, userId: null, guildId: null };
     obj5[2] = linked_by;
     obj5[3] = channel.guild_id;
-    tmp15Result = tmp15(tmp8(10942), obj5);
+    tmp15Result = tmp15(tmp8(10947), obj5);
   }
   const obj6 = { children: null };
   const obj3 = {
     items: memo,
     children(ref) {
       const merged = Object.assign(ref, Object.create(null));
-      const obj = { size: "sm", variant: "secondary", icon: canUnlinkLobbyChannel(10937).more, accessibilityLabel: null, ref: null };
+      const obj = { size: "sm", variant: "secondary", icon: canUnlinkLobbyChannel(10942).more, accessibilityLabel: null, ref: null };
       const intl = channel(1114).intl;
       obj[3] = intl.string(channel(1114).t.DEoVWZ);
       obj[4] = ref.ref;

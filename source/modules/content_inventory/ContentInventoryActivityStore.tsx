@@ -1,9 +1,9 @@
-// Module ID: 13001
-// Function ID: 13002
+// Module ID: 13005
+// Function ID: 13006
 // Name: entryToKey
 // Dependencies: [4600, 8336, 1074, 8130, 8135, 8356, 8341, 8337, 12, 504, 573, 2]
 
-// Module 13001 (entryToKey)
+// Module 13005 (entryToKey)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

@@ -1,10 +1,10 @@
-// Module ID: 9575
-// Function ID: 9576
+// Module ID: 9580
+// Function ID: 9581
 // Name: authorizeCallback
-// Dependencies: [9574, 4763, 9249, 1896, 1365, 9576, 4525, 1093, 4255, 2]
+// Dependencies: [9579, 4763, 9254, 1896, 1365, 9581, 4525, 1093, 4255, 2]
 // Exports: default
 
-// Module 9575 (authorizeCallback)
+// Module 9580 (authorizeCallback)
 import set from "set" /* 2 */;
 import keys from "keys" /* 1093 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
@@ -12,7 +12,7 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4255 from "module_4255" /* 4255 */;
 import NativeModules from "NativeModules" /* 4525 */;
 import _modDef4763 from "module_4763" /* 4763 */;
-import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 9574 */;
+import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 9579 */;
 
 ({ OAUTH2_SUCCESS_RESULT_MODAL_KEY: c3, OAUTH2_ERROR_RESULT_MODAL_KEY: c4 } = OAUTH2_AUTHORIZE_MODAL_KEY);
 const re5 = /oauth2\/authorized/;
@@ -36,7 +36,7 @@ export default function authorizeCallback(arg0) {
             let obj = { application: null, guild: null };
             obj[0] = tmp;
             obj[1] = tmp2;
-            tmp8Result.pushLazy(asyncRequireImpl(9576, tmp9.paths), obj, closure_3);
+            tmp8Result.pushLazy(asyncRequireImpl(9581, tmp9.paths), obj, closure_3);
           } else if (null != pathname.match(closure_6)) {
             if (!canceled) {
               let str;
@@ -60,8 +60,8 @@ export default function authorizeCallback(arg0) {
               }
               obj = { error: null };
               obj[0] = str;
-              tmp8Result1.pushLazy(asyncRequireImpl(9249, tmp9.paths), obj, closure_4);
-              const tmp17 = asyncRequireImpl(9249, tmp9.paths);
+              tmp8Result1.pushLazy(asyncRequireImpl(9254, tmp9.paths), obj, closure_4);
+              const tmp17 = asyncRequireImpl(9254, tmp9.paths);
             }
           }
         }
@@ -81,6 +81,6 @@ export default function authorizeCallback(arg0) {
     const tmp8Result2 = _modDef4255;
   } else if (!canceled) {
     obj = _modDef4763;
-    obj.pushLazy(asyncRequireImpl(9249, dependencyMap.paths), undefined, closure_4);
+    obj.pushLazy(asyncRequireImpl(9254, dependencyMap.paths), undefined, closure_4);
   }
 };

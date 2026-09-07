@@ -1,13 +1,13 @@
-// Module ID: 17861
-// Function ID: 17862
+// Module ID: 17864
+// Function ID: 17865
 // Name: handleChannelSelect
-// Dependencies: [1957, 4781, 2011, 17862, 17863, 1250, 7118, 2]
+// Dependencies: [1957, 4781, 2011, 17865, 17866, 1250, 7118, 2]
 
-// Module 17861 (handleChannelSelect)
+// Module 17864 (handleChannelSelect)
 import encodeProperties from "encodeProperties" /* 1250 */;
 import initializeDefault from "initialize" /* 7118 */;
-import isNavigationTTIEnabled from "isNavigationTTIEnabled" /* 17862 */;
-import getLastBundleDefault from "getLastBundle" /* 17863 */;
+import isNavigationTTIEnabled from "isNavigationTTIEnabled" /* 17865 */;
+import getLastBundleDefault from "getLastBundle" /* 17866 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "reinjectEphemerals" /* 4781 */;
 import closure_5 from "handleConnectionOpen" /* 2011 */;

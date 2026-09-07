@@ -1,10 +1,10 @@
-// Module ID: 12775
-// Function ID: 12776
+// Module ID: 12779
+// Function ID: 12780
 // Name: SpecialNavigationPath
 // Dependencies: [1074, 4392, 2]
 // Exports: getSelectedSpecialNavigationPath, useSelectedSpecialNavigationPath
 
-// Module 12775 (SpecialNavigationPath)
+// Module 12779 (SpecialNavigationPath)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import _extends from "_extends" /* 4392 */;

@@ -1,10 +1,10 @@
-// Module ID: 14495
-// Function ID: 14496
+// Module ID: 14498
+// Function ID: 14499
 // Name: transformSubscriptionListingToSku
-// Dependencies: [5, 1074, 573, 9538, 7257, 2]
+// Dependencies: [5, 1074, 573, 9543, 7257, 2]
 // Exports: dismissApplicationSubscriptionExpirationNotice, fetchAllSubscriptionListingsDataForApplication, fetchEntitlementsForGuild
 
-// Module 14495 (transformSubscriptionListingToSku)
+// Module 14498 (transformSubscriptionListingToSku)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 1074 */;

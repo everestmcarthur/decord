@@ -1,16 +1,16 @@
-// Module ID: 10295
-// Function ID: 10296
+// Module ID: 10300
+// Function ID: 10301
 // Name: NsfwGateGuild
-// Dependencies: [19, 17, 2021, 1371, 10296, 1074, 21, 4560, 576, 1114, 2024, 1242, 9296, 6975, 10297, 4556, 4975, 2]
+// Dependencies: [19, 17, 2021, 1371, 10301, 1074, 21, 4560, 576, 1114, 2024, 1242, 9301, 6975, 10302, 4556, 4975, 2]
 // Exports: default
 
-// Module 10295 (NsfwGateGuild)
+// Module 10300 (NsfwGateGuild)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "trackCommunicationDisabled" /* 2021 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { NsfwGateSource } from "NsfwGateSource" /* 10296 */;
+import { NsfwGateSource } from "NsfwGateSource" /* 10301 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -69,7 +69,7 @@ export default function NsfwGateGuild(guildId) {
   }, items);
   obj = { style: tmp.container, children: null };
   const items1 = [callback(currentUser(6975), {}), , , , , ];
-  obj = { source: currentUser(10297), style: tmp.image };
+  obj = { source: currentUser(10302), style: tmp.image };
   items1[1] = callback(closure_5, obj);
   obj1 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult };
   items1[2] = callback(guildId(4556).Text, obj1);

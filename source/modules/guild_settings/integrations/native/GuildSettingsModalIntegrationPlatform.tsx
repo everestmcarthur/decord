@@ -1,14 +1,14 @@
-// Module ID: 17599
-// Function ID: 17600
+// Module ID: 17602
+// Function ID: 17603
 // Name: getDerivedStateFromProps
-// Dependencies: [19, 17, 9064, 1074, 21, 4560, 576, 17560, 17600, 5283, 1396, 4411, 5687, 5605, 7201, 1114, 9063, 4905, 4994, 4262, 1483, 504, 4495, 5624, 7377, 7382, 2024, 8593, 4973, 4556, 7040, 2]
+// Dependencies: [19, 17, 9069, 1074, 21, 4560, 576, 17563, 17603, 5283, 1396, 4411, 5687, 5605, 7201, 1114, 9068, 4905, 4994, 4262, 1483, 504, 4495, 5624, 7377, 7382, 2024, 8598, 4973, 4556, 7040, 2]
 // Exports: default
 
-// Module 17599 (getDerivedStateFromProps)
+// Module 17602 (getDerivedStateFromProps)
 import ThemesDefault from "Themes" /* 576 */;
 import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5283 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleFormInit" /* 9064 */;
+import closure_6 from "handleFormInit" /* 9069 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -94,17 +94,17 @@ IntegrationItem.prototype["render"] = function render() {
   const props = this.props;
   const integration = props.integration;
   ({ onPress: importDefault, styles } = props);
-  const SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS = integration(17560).SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS;
+  const SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS = integration(17563).SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS;
   if (SUPPORTED_SETTINGS_INTEGRATION_PLATFORMS.includes(integration.type)) {
     const type = integration.type;
-    if (tmp(17600).IntegrationTypes.YOUTUBE === type) {
+    if (tmp(17603).IntegrationTypes.YOUTUBE === type) {
       const account = integration.account;
       let name;
       if (account != null) {
         name = account.name;
       }
       let combined = name;
-    } else if (tmp(17600).IntegrationTypes.TWITCH === type) {
+    } else if (tmp(17603).IntegrationTypes.TWITCH === type) {
       const _HermesInternal = HermesInternal;
       let str = "twitch.tv/";
       combined = "twitch.tv/" + integration.name;
@@ -183,7 +183,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
   closure_7 = undefined;
   function onSave() {
     if (null != guild) {
-      let obj = closeGuildSettings(9063);
+      let obj = closeGuildSettings(9068);
       obj = { features: null };
       obj[0] = tmp.features;
       obj.saveGuild(tmp.id, obj);
@@ -290,7 +290,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     items2[1] = closure_11(tmp(4556).Text, obj6);
     obj3[2] = items2;
     obj2[2] = closure_12(tmp(4973).Stack, obj3);
-    const items3 = [closure_11(tmp(8593).Form, obj2), closure_11(tmp(7040).NavScrim, {})];
+    const items3 = [closure_11(tmp(8598).Form, obj2), closure_11(tmp(7040).NavScrim, {})];
     obj5[0] = items3;
     return closure_12(closure_13, obj5);
   }

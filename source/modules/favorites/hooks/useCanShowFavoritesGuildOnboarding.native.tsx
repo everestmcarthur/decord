@@ -1,10 +1,10 @@
-// Module ID: 10239
-// Function ID: 10240
+// Module ID: 10244
+// Function ID: 10245
 // Name: useCanShowFavoritesGuildOnboarding
 // Dependencies: [4251, 2011, 504, 4417, 2]
 // Exports: default
 
-// Module 10239 (useCanShowFavoritesGuildOnboarding)
+// Module 10244 (useCanShowFavoritesGuildOnboarding)
 import initialize from "initialize" /* 504 */;
 import coerceMainRoute from "coerceMainRoute" /* 4417 */;
 import closure_2 from "setContent" /* 4251 */;

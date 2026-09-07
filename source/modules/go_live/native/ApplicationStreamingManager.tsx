@@ -1,14 +1,14 @@
-// Module ID: 17853
-// Function ID: 17854
+// Module ID: 17856
+// Function ID: 17857
 // Name: platformShowStreamFull
-// Dependencies: [19, 4606, 4607, 4585, 21, 3, 17854, 4905, 17855, 1896, 9958, 9089, 2]
+// Dependencies: [19, 4606, 4607, 4585, 21, 3, 17857, 4905, 17858, 1896, 9963, 9094, 2]
 
-// Module 17853 (platformShowStreamFull)
+// Module 17856 (platformShowStreamFull)
 import timestampDefault from "timestamp" /* 3 */;
 import noopAll from "noop" /* 19 */;
 import _modDef4905 from "module_4905" /* 4905 */;
-import apexExperimentDefault from "apexExperiment" /* 9958 */;
-import updateRegionDefault from "updateRegion" /* 17854 */;
+import apexExperimentDefault from "apexExperiment" /* 9963 */;
+import updateRegionDefault from "updateRegion" /* 17857 */;
 import closure_3 from "ApplicationStreamPresets" /* 4606 */;
 import { ApplicationStreamPresets } from "RESOLUTION_720" /* 4607 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
@@ -49,7 +49,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
       state[0] = ApplicationStreamPresets.PRESET_CUSTOM;
     }
     ({ preset, resolution, fps, soundshareEnabled } = state);
-    setGoLiveSource = setGoLiveSource(9089).setGoLiveSource;
+    setGoLiveSource = setGoLiveSource(9094).setGoLiveSource;
     obj = { desktopSettings: null, qualityOptions: null, context: null };
     obj = { sourceId: null, sound: null };
     obj[0] = sourceId;
@@ -62,7 +62,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     obj[1] = obj1;
     obj[2] = MediaEngineContextTypes.STREAM;
     setGoLiveSource(obj);
-    const setGoLiveSourceResult = setGoLiveSource(9089);
+    const setGoLiveSourceResult = setGoLiveSource(9094);
   } else {
     const _HermesInternal = HermesInternal;
     obj.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");

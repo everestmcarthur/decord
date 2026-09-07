@@ -1,12 +1,12 @@
-// Module ID: 17003
-// Function ID: 17004
+// Module ID: 17006
+// Function ID: 17007
 // Name: ExternalPipViewVideoUnavailable
-// Dependencies: [32, 19, 17, 1957, 1371, 4581, 21, 4560, 576, 9598, 4515, 4556, 1114, 504, 1178, 9605, 4262, 17004, 9616, 17005, 9610, 2]
+// Dependencies: [32, 19, 17, 1957, 1371, 4581, 21, 4560, 576, 9603, 4515, 4556, 1114, 504, 1178, 9610, 4262, 17007, 9621, 17008, 9615, 2]
 
-// Module 17003 (ExternalPipViewVideoUnavailable)
+// Module 17006 (ExternalPipViewVideoUnavailable)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 17005 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 17008 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -24,7 +24,7 @@ function ExternalPipViewVideoUnavailable(wasStream) {
   if (wasStream) {
     obj = { style: null };
     obj[0] = tmp.unavaiableImage;
-    let tmp4Result = tmp4(tmp5(9598).StreamEnded, obj);
+    let tmp4Result = tmp4(tmp5(9603).StreamEnded, obj);
     let tmp8 = tmp4;
     let tmp10 = tmp5;
   } else {
@@ -72,7 +72,7 @@ function ExternalPipViewVideoStream(streamId) {
   let first;
   dependencyMap = undefined;
   let callback;
-  let obj = streamId(9605);
+  let obj = streamId(9610);
   first = 300;
   dependencyMap = undefined;
   callback = undefined;
@@ -126,7 +126,7 @@ function ExternalPipViewVideoStream(streamId) {
       obj.updateVideoSize(tmp, obj, 1);
     }
   }, items3);
-  const children = [callback2(first(9616), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
+  const children = [callback2(first(9621), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
   let tmp14Result = null;
   if (null == first) {
     tmp14Result = null;

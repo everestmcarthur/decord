@@ -1,10 +1,10 @@
-// Module ID: 9794
-// Function ID: 9795
+// Module ID: 9799
+// Function ID: 9800
 // Name: SegmentedControlItem
 // Dependencies: [19, 17, 21, 4560, 576, 8265, 4296, 4974, 1115, 1114, 4556, 2]
 // Exports: SegmentedControlItem
 
-// Module 9794 (SegmentedControlItem)
+// Module 9799 (SegmentedControlItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

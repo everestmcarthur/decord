@@ -1,10 +1,10 @@
-// Module ID: 11501
-// Function ID: 11502
+// Module ID: 11506
+// Function ID: 11507
 // Name: AppStoreOverlayBottomSheet
-// Dependencies: [32, 19, 21, 4560, 1477, 8170, 4992, 7718, 4249, 11498, 11502, 7150, 7154, 6627, 2]
+// Dependencies: [32, 19, 21, 4560, 1477, 8170, 4992, 7718, 4249, 11503, 11507, 7150, 7154, 6627, 2]
 // Exports: default
 
-// Module 11501 (AppStoreOverlayBottomSheet)
+// Module 11506 (AppStoreOverlayBottomSheet)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;

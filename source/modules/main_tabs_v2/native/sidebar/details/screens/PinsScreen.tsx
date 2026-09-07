@@ -1,10 +1,10 @@
-// Module ID: 16862
-// Function ID: 16863
-// Dependencies: [19, 17, 1957, 7878, 21, 4560, 576, 1486, 504, 12299, 16716, 2]
+// Module ID: 16865
+// Function ID: 16866
+// Dependencies: [19, 17, 1957, 7878, 21, 4560, 576, 1486, 504, 12303, 16719, 2]
 
-// Module 16862
+// Module 16865
 import ThemesDefault from "Themes" /* 576 */;
-import InitialPinsScreenDefault from "InitialPinsScreen" /* 16716 */;
+import InitialPinsScreenDefault from "InitialPinsScreen" /* 16719 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import { SearchTabs } from "MessageEmbedTypes" /* 7878 */;
@@ -30,7 +30,7 @@ const memoResult = importAllResult.memo(() => {
     return guild_id;
   });
   const obj2 = channelId(504);
-  const channelDetailsSearchContext = channelId(12299).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(12303).useChannelDetailsSearchContext(channelId, stateFromStores);
   obj = { style: callback().container, children: jsx(InitialPinsScreenDefault, obj) };
   obj = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
   return <View searchContext={channelDetailsSearchContext} isFocused tab={SearchTabs.PINS} />;

@@ -1,15 +1,15 @@
-// Module ID: 10389
-// Function ID: 10390
+// Module ID: 10394
+// Function ID: 10395
 // Name: useStickerCategories
-// Dependencies: [19, 17, 1979, 1371, 10390, 1074, 1219, 10387, 5268, 10391, 10392, 1609, 2]
+// Dependencies: [19, 17, 1979, 1371, 10395, 1074, 1219, 10392, 5268, 10396, 10397, 1609, 2]
 // Exports: dropPreloadedSticker, openStickerPickerToPackId, preloadSticker, useStickerCategories
 
-// Module 10389 (useStickerCategories)
+// Module 10394 (useStickerCategories)
 import closure_3 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createGuildRecordFromRust" /* 1979 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import { useStickerPickerStore } from "useStickerPickerStore" /* 10390 */;
+import { useStickerPickerStore } from "useStickerPickerStore" /* 10395 */;
 import { GuildNSFWContentLevel } from "ME" /* 1074 */;
 import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1219 */;
 
@@ -48,9 +48,9 @@ export const useStickerCategories = function useStickerCategories(channel) {
         }
       }
       if (type.type === callback(5268).StickerCategoryTypes.FAVORITE) {
-        let tmp4 = lib(10391);
+        let tmp4 = lib(10396);
       } else {
-        tmp4 = lib(10392);
+        tmp4 = lib(10397);
       }
       const obj = {};
       const merged = Object.assign(type);

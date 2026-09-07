@@ -1,14 +1,14 @@
-// Module ID: 16095
-// Function ID: 16096
+// Module ID: 16098
+// Function ID: 16099
 // Name: MESSAGES_ITEM_EMPTY_STATE_HEIGHT
-// Dependencies: [19, 17, 21, 4560, 576, 4418, 16054, 4556, 1114, 4975, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4418, 16057, 4556, 1114, 4975, 2]
 
-// Module 16095 (MESSAGES_ITEM_EMPTY_STATE_HEIGHT)
+// Module 16098 (MESSAGES_ITEM_EMPTY_STATE_HEIGHT)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import Button from "Button" /* 4975 */;
-import registerAssetDefault from "registerAsset" /* 16054 */;
+import registerAssetDefault from "registerAsset" /* 16057 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

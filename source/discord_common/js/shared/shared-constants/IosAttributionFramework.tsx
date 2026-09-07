@@ -1,9 +1,9 @@
-// Module ID: 11494
-// Function ID: 11495
+// Module ID: 11499
+// Function ID: 11500
 // Name: IosAttributionFramework
 // Dependencies: [2]
 
-// Module 11494 (IosAttributionFramework)
+// Module 11499 (IosAttributionFramework)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/IosAttributionFramework.tsx");

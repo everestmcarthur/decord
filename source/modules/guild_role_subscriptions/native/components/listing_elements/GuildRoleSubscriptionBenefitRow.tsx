@@ -1,15 +1,15 @@
-// Module ID: 15242
-// Function ID: 15243
+// Module ID: 15245
+// Function ID: 15246
 // Name: BenefitRow
-// Dependencies: [19, 17, 1957, 21, 4560, 4213, 15240, 1178, 4556, 504, 4713, 1114, 5028, 2]
+// Dependencies: [19, 17, 1957, 21, 4560, 4213, 15243, 1178, 4556, 504, 4713, 1114, 5028, 2]
 // Exports: ChannelBenefitRow, IntangibleBenefitRow
 
-// Module 15242 (BenefitRow)
+// Module 15245 (BenefitRow)
 import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1178 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;
 import Text from "Text" /* 4556 */;
-import EmojiIconDefault from "EmojiIcon" /* 15240 */;
+import EmojiIconDefault from "EmojiIcon" /* 15243 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import jsxProd from "jsxProd" /* 21 */;

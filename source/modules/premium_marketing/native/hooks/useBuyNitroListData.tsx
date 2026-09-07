@@ -1,10 +1,10 @@
-// Module ID: 13359
-// Function ID: 13360
+// Module ID: 13363
+// Function ID: 13364
 // Name: useBuyNitroListData
-// Dependencies: [19, 1074, 7162, 1242, 13360, 2]
+// Dependencies: [19, 1074, 7162, 1242, 13364, 2]
 // Exports: default
 
-// Module 13359 (useBuyNitroListData)
+// Module 13363 (useBuyNitroListData)
 import closure_2 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 
@@ -16,7 +16,7 @@ export default function useBuyNitroListData(selection) {
   let analyticsLocations = setTier;
   dependencyMap = undefined;
   let React;
-  const tmp = analyticsLocations(13360)(selection.tier);
+  const tmp = analyticsLocations(13364)(selection.tier);
   const ref = React.useRef(null);
   dependencyMap = ref;
   React = React.useRef(false);

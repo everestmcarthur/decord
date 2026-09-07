@@ -1,17 +1,17 @@
-// Module ID: 12101
-// Function ID: 12102
+// Module ID: 12105
+// Function ID: 12106
 // Name: useTrackAppLauncherItemImpressionOnFirstView
-// Dependencies: [19, 11215, 1484, 8768, 1250, 2]
+// Dependencies: [19, 11220, 1484, 8773, 1250, 2]
 // Exports: useTrackAppLauncherItemImpressionOnFirstView
 
-// Module 12101 (useTrackAppLauncherItemImpressionOnFirstView)
+// Module 12105 (useTrackAppLauncherItemImpressionOnFirstView)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
 
 export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackAppLauncherItemImpressionOnFirstView() {
-  let obj = entrypoint(11215);
+  let obj = entrypoint(11220);
   entrypoint = obj.useAppLauncherContext().entrypoint;
   dependencyMap = React.useRef(new Set());
   const set = new Set();

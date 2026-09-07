@@ -1,11 +1,11 @@
-// Module ID: 8782
-// Function ID: 8783
+// Module ID: 8787
+// Function ID: 8788
 // Name: fromServer
-// Dependencies: [5511, 8779, 2]
+// Dependencies: [5511, 8784, 2]
 // Exports: isSKUWishlistItemRecord
 
-// Module 8782 (fromServer)
-import fromServerDefault from "fromServer" /* 8779 */;
+// Module 8787 (fromServer)
+import fromServerDefault from "fromServer" /* 8784 */;
 import closure_0 from "createFromServer" /* 5511 */;
 
 fromServerDefault;

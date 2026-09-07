@@ -1,15 +1,15 @@
-// Module ID: 11658
-// Function ID: 11659
+// Module ID: 11663
+// Function ID: 11664
 // Name: LongPressMessageActionSheet
-// Dependencies: [32, 19, 7938, 11659, 11660, 4210, 502, 1979, 4199, 4553, 1074, 21, 7162, 7182, 4740, 11657, 7976, 11661, 7855, 504, 7269, 11662, 11663, 1935, 7267, 11664, 4785, 1384, 11665, 8116, 11666, 7200, 11667, 7198, 1608, 11729, 11730, 1114, 10180, 4507, 4518, 4503, 10250, 11734, 11688, 5073, 11736, 10244, 11738, 8757, 5094, 10953, 11740, 11742, 8662, 11744, 11707, 4523, 9435, 5071, 5090, 4509, 10629, 7973, 8664, 10818, 2528, 5081, 7276, 7289, 11746, 4710, 7292, 7761, 11619, 2]
+// Dependencies: [32, 19, 7938, 11664, 11665, 4210, 502, 1979, 4199, 4553, 1074, 21, 7162, 7182, 4740, 11662, 7976, 11666, 7855, 504, 7269, 11667, 11668, 1935, 7267, 11669, 4785, 1384, 11670, 8116, 11671, 7200, 11672, 7198, 1608, 11734, 11735, 1114, 10185, 4507, 4518, 4503, 10255, 11739, 11693, 5073, 11741, 10249, 11743, 8762, 5094, 10958, 11745, 11747, 8667, 11749, 11712, 4523, 9440, 5071, 5090, 4509, 10634, 7973, 8669, 10823, 2528, 5081, 7276, 7289, 11751, 4710, 7292, 7761, 11624, 2]
 // Exports: default
 
-// Module 11658 (LongPressMessageActionSheet)
+// Module 11663 (LongPressMessageActionSheet)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "handleMessageSendFailedAutomod" /* 7938 */;
-import closure_6 from "handleSelectedGuildChange" /* 11659 */;
-import closure_7 from "getTimeSafe" /* 11660 */;
+import closure_6 from "handleSelectedGuildChange" /* 11664 */;
+import closure_7 from "getTimeSafe" /* 11665 */;
 import { isMessageComponentsV2 } from "hasFlag" /* 4210 */;
 import closure_9 from "fetchFingerprint" /* 502 */;
 import closure_10 from "createGuildRecordFromRust" /* 1979 */;

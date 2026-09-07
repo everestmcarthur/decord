@@ -1,8 +1,8 @@
-// Module ID: 16620
-// Function ID: 16621
-// Dependencies: [19, 1957, 1074, 21, 16621, 7777, 7274, 1481, 1609, 504, 9305, 1114, 6606, 5586, 2]
+// Module ID: 16623
+// Function ID: 16624
+// Dependencies: [19, 1957, 1074, 21, 16624, 7777, 7274, 1481, 1609, 504, 9310, 1114, 6606, 5586, 2]
 
-// Module 16620
+// Module 16623
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import { MAX_CHANNEL_NAME_LENGTH } from "ME" /* 1074 */;
@@ -16,7 +16,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
   const optional = chatInputRef.optional;
   let ref;
   dependencyMap = arg1;
-  let obj = chatInputRef(16621);
+  let obj = chatInputRef(16624);
   obj = { content: threadSettingsDraft.name };
   ref = ref.useRef(threadSettingsDraft.name);
   const items = [threadSettingsDraft.parentChannelId];
@@ -77,8 +77,8 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
   const stateFromStores = chatInputRef(504).useStateFromStores(items4, () => closure_1_4.getChannel(threadSettingsDraft.parentChannelId));
   let str = "";
   if (null != stateFromStores) {
-    str = tmp(9305).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
-    const tmpResult = tmp(9305);
+    str = tmp(9310).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
+    const tmpResult = tmp(9310);
   }
   const intl = tmp(1114).intl;
   const string = intl.string;

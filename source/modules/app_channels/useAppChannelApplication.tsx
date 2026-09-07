@@ -1,10 +1,10 @@
-// Module ID: 11611
-// Function ID: 11612
+// Module ID: 11616
+// Function ID: 11617
 // Name: useAppChannelApplication
 // Dependencies: [1074, 7163, 2]
 // Exports: useAppChannelApplication
 
-// Module 11611 (useAppChannelApplication)
+// Module 11616 (useAppChannelApplication)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import fetchApplication from "fetchApplication" /* 7163 */;

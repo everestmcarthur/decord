@@ -1,10 +1,10 @@
-// Module ID: 11089
-// Function ID: 11090
+// Module ID: 11094
+// Function ID: 11095
 // Name: usePreviewCollectibleProduct
-// Dependencies: [32, 19, 8160, 7547, 1887, 7548, 7549, 8171, 11088, 1889, 8164, 2]
+// Dependencies: [32, 19, 8160, 7547, 1887, 7548, 7549, 8171, 11093, 1889, 8164, 2]
 // Exports: usePreviewCollectibleProduct
 
-// Module 11089 (usePreviewCollectibleProduct)
+// Module 11094 (usePreviewCollectibleProduct)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleFormOpen" /* 8160 */;
@@ -25,7 +25,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
   const items = [product, arg1, firstProfileEffect, firstAvatarDecoration, firstNameplate, firstProfileFrame, arg2];
   const effect = firstProfileEffect.useEffect(() => {
     let obj = product;
-    obj1 = product(11088);
+    obj1 = product(11093);
     product = obj1.currentPreviewGeneration();
     const pendingChanges = firstAvatarDecoration.getPendingChanges();
     dependencyMap = { avatarDecoration: pendingChanges.pendingAvatarDecoration, profileEffect: pendingChanges.pendingProfileEffect, nameplate: pendingChanges.pendingNameplate, profileFrame: pendingChanges.pendingProfileFrame };
@@ -85,8 +85,8 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
       return () => {
         let tmp = dependencyMap;
         if (dependencyMap) {
-          tmp = callback === callback(11088).currentPreviewGeneration();
-          const obj = callback(11088);
+          tmp = callback === callback(11093).currentPreviewGeneration();
+          const obj = callback(11093);
         }
         if (tmp) {
           callback(8164).setPendingChanges(dependencyMap);

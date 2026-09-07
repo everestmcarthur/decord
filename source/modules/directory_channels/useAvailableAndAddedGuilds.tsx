@@ -1,17 +1,17 @@
-// Module ID: 12318
-// Function ID: 12319
+// Module ID: 12322
+// Function ID: 12323
 // Name: useAvailableAndAddedGuilds
-// Dependencies: [5, 32, 19, 1979, 4199, 5438, 12312, 1074, 504, 4992, 12316, 2]
+// Dependencies: [5, 32, 19, 1979, 4199, 5438, 12316, 1074, 504, 4992, 12320, 2]
 // Exports: default
 
-// Module 12318 (useAvailableAndAddedGuilds)
+// Module 12322 (useAvailableAndAddedGuilds)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import closure_7 from "createGuildRecordFromRust" /* 1979 */;
 import closure_8 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_9 from "insertUnsortedGuilds" /* 5438 */;
-import closure_10 from "isFetching" /* 12312 */;
+import closure_10 from "isFetching" /* 12316 */;
 import { Permissions } from "ME" /* 1074 */;
 
 const require = arg1;

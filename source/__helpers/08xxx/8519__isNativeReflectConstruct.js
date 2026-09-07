@@ -1,17 +1,17 @@
 // Module ID: 8519
 // Function ID: 8520
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 8469, 8492]
+// Dependencies: [41, 42, 93, 95, 98, 8472, 8495]
 
 // Module 8519 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8492 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8495 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
-const FeTurbulence = arg1;
+const FeSpecularLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,12 +31,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeTurbulence {
+class FeSpecularLighting {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeTurbulence);
+    tmp = closure_2(this, FeSpecularLighting);
     tmp2 = closure_4;
-    obj = closure_4(FeTurbulence);
+    obj = closure_4(FeSpecularLighting);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -51,17 +51,17 @@ class FeTurbulence {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeTurbulence, _isNativeReflectConstructDefault);
+_inheritsDefault(FeSpecularLighting, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
-    const result = FeTurbulence(8469).warnUnimplementedFilter();
+    const result = FeSpecularLighting(8472).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeTurbulence, items);
-importDefaultResultResult.displayName = "FeTurbulence";
+const importDefaultResultResult = importDefaultResult(FeSpecularLighting, items);
+importDefaultResultResult.displayName = "FeSpecularLighting";
 obj = {};
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = obj;

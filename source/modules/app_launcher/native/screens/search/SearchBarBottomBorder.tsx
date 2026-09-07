@@ -1,10 +1,10 @@
-// Module ID: 12097
-// Function ID: 12098
+// Module ID: 12101
+// Function ID: 12102
 // Name: usePinnedSearchBarBottomBorder
 // Dependencies: [19, 21, 4560, 576, 4296, 4974, 4978, 2]
 // Exports: usePinnedSearchBarBottomBorder
 
-// Module 12097 (usePinnedSearchBarBottomBorder)
+// Module 12101 (usePinnedSearchBarBottomBorder)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

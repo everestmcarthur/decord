@@ -1,17 +1,17 @@
-// Module ID: 15542
-// Function ID: 15543
+// Module ID: 15545
+// Function ID: 15546
 // Name: ChangeLogScreen
-// Dependencies: [19, 17, 1074, 2010, 21, 4560, 576, 4271, 1242, 8261, 15543, 5587, 8307, 1114, 5123, 9050, 10397, 1178, 8090, 1477, 8091, 1484, 5624, 4153, 8092, 4556, 4763, 7000, 2]
+// Dependencies: [19, 17, 1074, 2010, 21, 4560, 576, 4271, 1242, 8261, 15546, 5587, 8307, 1114, 5123, 9055, 10402, 1178, 8090, 1477, 8091, 1484, 5624, 4153, 8092, 4556, 4763, 7000, 2]
 // Exports: default
 
-// Module 15542 (ChangeLogScreen)
+// Module 15545 (ChangeLogScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import _modDef4763 from "module_4763" /* 4763 */;
 import NavigationStack from "NavigationStack" /* 7000 */;
 import LHeadingDefault from "LHeading" /* 8090 */;
 import VideoComponentDefault from "VideoComponent" /* 8307 */;
-import _modDef15543 from "module_15543" /* 15543 */;
+import _modDef15546 from "module_15546" /* 15546 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
@@ -281,7 +281,7 @@ prototype["renderVideo"] = function renderVideo() {
       obj1[3] = function onReady() {
         return self.setState({ ytVideoReady: true });
       };
-      const items = [callback(_modDef15543, obj1), ];
+      const items = [callback(_modDef15546, obj1), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj2 = { style: null, source: null };
@@ -321,14 +321,14 @@ prototype["renderVideo"] = function renderVideo() {
     obj7[2] = tmp.videoOverlay;
     obj7[3] = self.playVideo;
     const obj8 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: null, onPress: null, style: null, iconSize: null, iconStyle: null };
-    obj8[2] = tmp15(10397);
+    obj8[2] = tmp15(10402);
     obj8[3] = self.playVideo;
     obj8[4] = tmp.playButton;
     obj8[5] = tmp18(1178).IconSizes.CUSTOM;
     obj8[6] = tmp.playIcon;
-    obj7[4] = tmp12(tmp15(9050), obj8);
+    obj7[4] = tmp12(tmp15(9055), obj8);
     tmp12Result = tmp12(tmp18(5123).PressableOpacity, obj7);
-    const tmp15Result = tmp15(9050);
+    const tmp15Result = tmp15(9055);
   }
   items1[1] = tmp12Result;
   obj5[2] = items1;

@@ -1,14 +1,14 @@
-// Module ID: 17091
-// Function ID: 17092
+// Module ID: 17094
+// Function ID: 17095
 // Name: usePanelOpenState
-// Dependencies: [32, 19, 4768, 12273, 1074, 4296, 1109, 12789, 4386, 4399, 12782, 9508, 2]
+// Dependencies: [32, 19, 4768, 12277, 1074, 4296, 1109, 12793, 4386, 4399, 12786, 9513, 2]
 // Exports: default
 
-// Module 17091 (usePanelOpenState)
+// Module 17094 (usePanelOpenState)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "withEqualityFn" /* 4768 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 12273 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 12277 */;
 import ME from "ME" /* 1074 */;
 
 const require = arg1;
@@ -87,12 +87,12 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       ComponentDispatch2.unsubscribe(closure_2_7.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
-  const tmp3 = callback(doCloseChannel.useState(() => callback2(12789).getHistory().location.pathname), 2);
+  const tmp3 = callback(doCloseChannel.useState(() => callback2(12793).getHistory().location.pathname), 2);
   const first = tmp3[0];
   closure_6 = tmp3[1];
   const items1 = [arg0, first];
   const effect1 = doCloseChannel.useEffect(() => {
-    closure_0 = callback2(12789).addRouteChangeListener((pathname) => {
+    closure_0 = callback2(12793).addRouteChangeListener((pathname) => {
       if (closure_5 !== pathname.pathname) {
         callback2(tmp);
         let obj = callback(closure_1_2[8]);

@@ -1,15 +1,15 @@
-// Module ID: 11441
-// Function ID: 11442
+// Module ID: 11446
+// Function ID: 11447
 // Name: getSubscriptionPlans
-// Dependencies: [32, 19, 4223, 1074, 1373, 38, 11442, 4218, 7257, 504, 11444, 4153, 2]
+// Dependencies: [32, 19, 4223, 1074, 1373, 38, 11447, 4218, 7257, 504, 11449, 4153, 2]
 // Exports: didBeginPurchaseFlowOnFractionalPremium, getOrFetchSubscriptionPlan, getSubscriptionPauseDurations, getSubscriptionPlans, getSubscriptionSKUs, subscriptionCanDowngrade, subscriptionCanSwitchImmediately, useGetOrFetchSubscriptionPlan
 
-// Module 11441 (getSubscriptionPlans)
+// Module 11446 (getSubscriptionPlans)
 import _modDef38 from "module_38" /* 38 */;
 import hooksDefault from "hooks" /* 4153 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
-import prototype from "prototype" /* 11442 */;
-import PauseDuration from "PauseDuration" /* 11444 */;
+import prototype from "prototype" /* 11447 */;
+import PauseDuration from "PauseDuration" /* 11449 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "addSubscriptionPlan" /* 4223 */;

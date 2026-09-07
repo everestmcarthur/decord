@@ -1,9 +1,9 @@
-// Module ID: 12443
-// Function ID: 12444
+// Module ID: 12447
+// Function ID: 12448
 // Name: MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL
 // Dependencies: [2]
 
-// Module 12443 (MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL)
+// Module 12447 (MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/message_request/MessageRequestConstants.tsx");

@@ -1,11 +1,11 @@
-// Module ID: 10374
-// Function ID: 10375
+// Module ID: 10379
+// Function ID: 10380
 // Name: FavoritesSearch
-// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 10369, 6622, 4296, 4561, 4564, 8097, 7052, 1114, 7050, 10367, 5123, 10375, 4556, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 10374, 6622, 4296, 4561, 4564, 8097, 7052, 1114, 7050, 10372, 5123, 10380, 4556, 2]
 
-// Module 10374 (FavoritesSearch)
+// Module 10379 (FavoritesSearch)
 import ThemesDefault from "Themes" /* 576 */;
-import GIF_PROVIDER from "GIF_PROVIDER" /* 10367 */;
+import GIF_PROVIDER from "GIF_PROVIDER" /* 10372 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -159,7 +159,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
     obj1[3] = intl4.formatToPlainString(tmp2(1114).t.UTypEu, obj2);
     const obj3 = { color: null, size: "sm" };
     obj3[0] = ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE;
-    const items = [tmp6(tmp2(10375).ChevronLargeLeftIcon, obj3), ];
+    const items = [tmp6(tmp2(10380).ChevronLargeLeftIcon, obj3), ];
     if (categoryType === tmp8.TRENDING_GIFS) {
       const intl3 = tmp2(1114).intl;
       let stringResult = intl3.string(tmp2(1114).t.TsWCdW);

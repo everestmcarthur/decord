@@ -1,10 +1,10 @@
-// Module ID: 17287
-// Function ID: 17288
+// Module ID: 17290
+// Function ID: 17291
 // Name: CaptchaModal
-// Dependencies: [19, 17, 15946, 15947, 21, 4560, 6944, 1484, 17288, 7150, 4973, 5692, 4556, 1114, 4975, 11277, 17289, 15954, 2]
+// Dependencies: [19, 17, 15949, 15950, 21, 4560, 6944, 1484, 17291, 7150, 4973, 5692, 4556, 1114, 4975, 11282, 17292, 15957, 2]
 // Exports: default
 
-// Module 17287 (CaptchaModal)
+// Module 17290 (CaptchaModal)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1484 */;
 import Text from "Text" /* 4556 */;
@@ -14,8 +14,8 @@ import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
 import Background from "Background" /* 7150 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore" /* 15946 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15947 */;
+import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore" /* 15949 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15950 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -59,7 +59,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  callback = onReject(17288)({ onReject, analyticsType: memo });
+  callback = onReject(17291)({ onReject, analyticsType: memo });
   const effect = React.useEffect(() => {
     closure_4.dismiss();
   }, []);

@@ -1,9 +1,9 @@
-// Module ID: 9468
-// Function ID: 9469
+// Module ID: 9473
+// Function ID: 9474
 // Name: BOX_MODE_ACTIONSHEET_WIDTH
 // Dependencies: [1074, 2]
 
-// Module 9468 (BOX_MODE_ACTIONSHEET_WIDTH)
+// Module 9473 (BOX_MODE_ACTIONSHEET_WIDTH)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 

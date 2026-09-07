@@ -1,10 +1,10 @@
-// Module ID: 15172
-// Function ID: 15173
+// Module ID: 15175
+// Function ID: 15176
 // Name: QuestCardPreview
-// Dependencies: [21, 11778, 5447, 15173, 1114, 15090, 576, 2]
+// Dependencies: [21, 11783, 5447, 15176, 1114, 15093, 576, 2]
 // Exports: QuestCardPreview
 
-// Module 15172 (QuestCardPreview)
+// Module 15175 (QuestCardPreview)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -13,7 +13,7 @@ const result = set.fileFinishedImporting("modules/user_settings/quests/native/Qu
 
 export const QuestCardPreview = function QuestCardPreview(quest) {
   quest = quest.quest;
-  return jsx(quest(11778).QuestContentImpressionTrackerNative, {
+  return jsx(quest(11783).QuestContentImpressionTrackerNative, {
     questOrQuests: quest,
     questContent: quest(5447).QuestContent.INTERNAL_PREVIEW_TOOL,
     sourceQuestContent: quest(5447).QuestContent.INTERNAL_PREVIEW_TOOL,

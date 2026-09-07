@@ -1,13 +1,13 @@
-// Module ID: 10156
-// Function ID: 10157
+// Module ID: 10161
+// Function ID: 10162
 // Name: NotificationSettingsMessageNotification
-// Dependencies: [19, 17, 21, 4560, 576, 10157, 4556, 1114, 5123, 10158, 10155, 4527, 10160, 1896, 10149, 10162, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 10162, 4556, 1114, 5123, 10163, 10160, 4527, 10165, 1896, 10154, 10167, 2]
 // Exports: NotificationSettingsChannelMessageNotification, NotificationSettingsGuildMessageNotification
 
-// Module 10156 (NotificationSettingsMessageNotification)
+// Module 10161 (NotificationSettingsMessageNotification)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage" /* 10158 */;
+import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage" /* 10163 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -89,7 +89,7 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
   let obj = {
     context: "guild",
     style: style.style,
-    setting: _require(10155).useGuildPresetSettings(style.guildId).notification,
+    setting: _require(10160).useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { guildId: style.guildId };
@@ -103,7 +103,7 @@ export const NotificationSettingsChannelMessageNotification = function Notificat
   let obj = {
     context: "channel",
     style: style.style,
-    setting: _require(10149).useChannelPresetSettings(style.channel).notification,
+    setting: _require(10154).useChannelPresetSettings(style.channel).notification,
     onCustomize() {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { channel: style.channel };

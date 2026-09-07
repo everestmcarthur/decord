@@ -1,10 +1,10 @@
-// Module ID: 9690
-// Function ID: 9691
+// Module ID: 9695
+// Function ID: 9696
 // Name: openNotificationSettings
 // Dependencies: [17, 1115, 5148, 2]
 // Exports: default
 
-// Module 9690 (openNotificationSettings)
+// Module 9695 (openNotificationSettings)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import enforcingDefault from "enforcing" /* 5148 */;

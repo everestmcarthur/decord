@@ -1,19 +1,19 @@
-// Module ID: 13552
-// Function ID: 13553
+// Module ID: 13556
+// Function ID: 13557
 // Name: PremiumPlanSelectYearlyUpsellModal
-// Dependencies: [32, 19, 17, 2025, 7237, 13543, 1373, 1085, 21, 4560, 5524, 5441, 7409, 504, 1880, 4994, 13553, 1178, 1114, 4218, 4975, 2]
+// Dependencies: [32, 19, 17, 2025, 7237, 13547, 1373, 1085, 21, 4560, 5524, 5441, 7409, 504, 1880, 4994, 13557, 1178, 1114, 4218, 4975, 2]
 // Exports: default
 
-// Module 13552 (PremiumPlanSelectYearlyUpsellModal)
+// Module 13556 (PremiumPlanSelectYearlyUpsellModal)
 import componentDidMountDefault from "componentDidMount" /* 4994 */;
 import createTextStyleDefault from "createTextStyle" /* 5524 */;
-import registerAssetDefault from "registerAsset" /* 13553 */;
+import registerAssetDefault from "registerAsset" /* 13557 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "_getSystemLocale" /* 2025 */;
 import closure_8 from "updateProduct" /* 7237 */;
-import { usePremiumPlanSelectStore } from "usePremiumPlanSelectStore" /* 13543 */;
+import { usePremiumPlanSelectStore } from "usePremiumPlanSelectStore" /* 13547 */;
 import { PREMIUM_YEARLY_DISCOUNT_PERCENT as closure_10 } from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

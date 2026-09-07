@@ -1,10 +1,10 @@
-// Module ID: 13057
-// Function ID: 13058
+// Module ID: 13061
+// Function ID: 13062
 // Name: UserProfileEditNoteModal
-// Dependencies: [32, 19, 21, 1483, 4763, 7000, 1116, 1114, 4556, 5624, 13058, 2]
+// Dependencies: [32, 19, 21, 1483, 4763, 7000, 1116, 1114, 4556, 5624, 13062, 2]
 // Exports: default
 
-// Module 13057 (UserProfileEditNoteModal)
+// Module 13061 (UserProfileEditNoteModal)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,10 +1,10 @@
-// Module ID: 17005
-// Function ID: 17006
+// Module ID: 17008
+// Function ID: 17009
 // Name: useExternalPipParticipant
 // Dependencies: [32, 19, 4576, 502, 1908, 4583, 4581, 504, 2]
 // Exports: default
 
-// Module 17005 (useExternalPipParticipant)
+// Module 17008 (useExternalPipParticipant)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "getParticipants" /* 4576 */;
@@ -64,7 +64,7 @@ export default function useExternalPipParticipant() {
       id2 = tmp6.id;
     }
     if (stateFromStores1.current !== id2) {
-      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "isArray", focusedParticipantType: -11665405 };
+      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "options", focusedParticipantType: true };
       obj[2] = _undefined.current;
     } else {
       let type1;

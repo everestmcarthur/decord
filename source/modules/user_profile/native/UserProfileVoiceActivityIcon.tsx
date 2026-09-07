@@ -1,10 +1,10 @@
-// Module ID: 10894
-// Function ID: 10895
+// Module ID: 10899
+// Function ID: 10900
 // Name: UserProfileVoiceActivityIcon
 // Dependencies: [19, 4199, 1085, 21, 504, 7880, 5062, 5096, 5097, 5099, 5098, 5101, 2]
 // Exports: default
 
-// Module 10894 (UserProfileVoiceActivityIcon)
+// Module 10899 (UserProfileVoiceActivityIcon)
 import noopAll from "noop" /* 19 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4199 */;

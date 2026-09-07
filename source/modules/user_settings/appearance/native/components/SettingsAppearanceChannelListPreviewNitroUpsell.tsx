@@ -1,15 +1,15 @@
-// Module ID: 15301
-// Function ID: 15302
+// Module ID: 15304
+// Function ID: 15305
 // Name: SettingsAppearanceChannelListPreviewNitroUpsellComponent
-// Dependencies: [19, 17, 4552, 1074, 21, 4296, 4987, 4974, 4978, 4560, 576, 7162, 7182, 9392, 9362, 4975, 1114, 1178, 504, 9969, 2]
+// Dependencies: [19, 17, 4552, 1074, 21, 4296, 4987, 4974, 4978, 4560, 576, 7162, 7182, 9397, 9367, 4975, 1114, 1178, 504, 9974, 2]
 
-// Module 15301 (SettingsAppearanceChannelListPreviewNitroUpsellComponent)
+// Module 15304 (SettingsAppearanceChannelListPreviewNitroUpsellComponent)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4974 */;
 import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4978 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9969 */;
+import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9974 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;

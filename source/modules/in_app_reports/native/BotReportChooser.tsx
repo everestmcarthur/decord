@@ -1,10 +1,10 @@
-// Module ID: 12991
-// Function ID: 12992
+// Module ID: 12995
+// Function ID: 12996
 // Name: ReportAppProfile
-// Dependencies: [19, 4788, 21, 7198, 4556, 1114, 7200, 4527, 8629, 504, 7163, 2]
+// Dependencies: [19, 4788, 21, 7198, 4556, 1114, 7200, 4527, 8634, 504, 7163, 2]
 // Exports: default
 
-// Module 12991 (ReportAppProfile)
+// Module 12995 (ReportAppProfile)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

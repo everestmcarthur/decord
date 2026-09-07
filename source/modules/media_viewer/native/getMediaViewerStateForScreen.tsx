@@ -1,10 +1,10 @@
-// Module ID: 12983
-// Function ID: 12984
+// Module ID: 12987
+// Function ID: 12988
 // Name: getMediaViewerStateForScreen
 // Dependencies: [8263, 2]
 // Exports: default
 
-// Module 12983 (getMediaViewerStateForScreen)
+// Module 12987 (getMediaViewerStateForScreen)
 import set from "set" /* 2 */;
 import isValidImageAttachment from "isValidImageAttachment" /* 8263 */;
 

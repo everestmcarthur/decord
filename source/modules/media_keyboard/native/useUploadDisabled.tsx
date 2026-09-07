@@ -1,10 +1,10 @@
-// Module ID: 12236
-// Function ID: 12237
+// Module ID: 12240
+// Function ID: 12241
 // Name: useUploadDisabled
 // Dependencies: [4901, 4199, 4900, 1074, 504, 7221, 2]
 // Exports: default
 
-// Module 12236 (useUploadDisabled)
+// Module 12240 (useUploadDisabled)
 import set from "set" /* 2 */;
 import handleChanged from "handleChanged" /* 4901 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4199 */;

@@ -1,12 +1,12 @@
-// Module ID: 17755
-// Function ID: 17756
+// Module ID: 17758
+// Function ID: 17759
 // Name: ChannelRow
-// Dependencies: [32, 19, 17, 1957, 7111, 4199, 1074, 4742, 21, 4560, 576, 5524, 4713, 4527, 16116, 5587, 17692, 504, 7198, 4556, 1114, 7050, 5123, 4763, 9732, 1896, 9735, 9737, 1178, 13605, 6627, 2]
+// Dependencies: [32, 19, 17, 1957, 7111, 4199, 1074, 4742, 21, 4560, 576, 5524, 4713, 4527, 16119, 5587, 17695, 504, 7198, 4556, 1114, 7050, 5123, 4763, 9737, 1896, 9740, 9742, 1178, 13609, 6627, 2]
 // Exports: default
 
-// Module 17755 (ChannelRow)
+// Module 17758 (ChannelRow)
 import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 13605 */;
+import registerAssetDefault from "registerAsset" /* 13609 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -32,11 +32,11 @@ function ChannelRow(channel) {
     onChannelSelected(channel);
   }, items);
   let obj = { style: tmp.channelRow, onPress: callback, accessible: true, accessibilityLabel: tmp4, channel, selected, disableHighlightOnPress: true, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS };
-  const children = [closure_11(onChannelSelected(16116), obj), ];
+  const children = [closure_11(onChannelSelected(16119), obj), ];
   if (selected) {
     obj = { style: null, source: null };
     obj[0] = tmp.selectedIcon;
-    obj[1] = tmp2(17692);
+    obj[1] = tmp2(17695);
     selected = tmp8(tmp2(5587), obj);
     const tmp2Result = tmp2(5587);
   }

@@ -1,18 +1,18 @@
-// Module ID: 17828
-// Function ID: 17829
+// Module ID: 17831
+// Function ID: 17832
 // Name: _navigateToGuild
-// Dependencies: [5, 2025, 13704, 9066, 1074, 1114, 1369, 7341, 1242, 17827, 1256, 2]
+// Dependencies: [5, 2025, 13708, 9071, 1074, 1114, 1369, 7341, 1242, 17830, 1256, 2]
 // Exports: fromDiscoverableGuildSearchResult, fromDiscoverableGuildServer, getCategoryIdFromServerTab, getGlobalDiscoveryServersBannerDescription, getGlobalDiscoveryServersBannerTitle, getGlobalDiscoveryServersTabSectionTitle, getGlobalDiscoveryServersTabTitle, getLanguageCodeFallback, handleTabPressPrefetch, isStaleFeaturedGuilds, makeAnalyticsID, navigateToGuild
 
-// Module 17828 (_navigateToGuild)
+// Module 17831 (_navigateToGuild)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import v1 from "v1" /* 1256 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import prototypeDefault from "prototype" /* 17827 */;
+import prototypeDefault from "prototype" /* 17830 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_getSystemLocale" /* 2025 */;
-import closure_6 from "map" /* 13704 */;
-import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9066 */;
+import closure_6 from "map" /* 13708 */;
+import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9071 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 
 require = arg1;
@@ -262,7 +262,7 @@ export const fromDiscoverableGuildServer = function fromDiscoverableGuildServer(
   return obj;
 };
 export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildSearchResult(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "accessible", discoverySplash: "kMaxLength", emojis: "isArrayBuffer" };
+  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "disabled", discoverySplash: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007291122019556398, emojis: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010437241210144224 };
   ({ approximate_presence_count: obj[7], approximate_member_count: obj[8], discovery_splash: obj[11] } = id);
   obj[12] = [];
   return obj;

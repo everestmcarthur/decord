@@ -1,18 +1,18 @@
-// Module ID: 12043
-// Function ID: 12044
+// Module ID: 12047
+// Function ID: 12048
 // Name: result
-// Dependencies: [32, 1957, 4480, 1371, 12044, 12045, 4999, 1090, 504, 11, 1943, 7388, 4380, 2]
+// Dependencies: [32, 1957, 4480, 1371, 12048, 12049, 4999, 1090, 504, 11, 1943, 7388, 4380, 2]
 // Exports: default
 
-// Module 12043 (result)
+// Module 12047 (result)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import setDefault from "set" /* 1090 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import closure_5 from "handleInviteData" /* 4480 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import closure_7 from "initialize" /* 12044 */;
-import closure_8 from "initialize" /* 12045 */;
+import closure_7 from "initialize" /* 12048 */;
+import closure_8 from "initialize" /* 12049 */;
 import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4999 */;
 
 const require = arg1;

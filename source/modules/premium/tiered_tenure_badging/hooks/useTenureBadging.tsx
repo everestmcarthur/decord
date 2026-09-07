@@ -1,13 +1,13 @@
-// Module ID: 11184
-// Function ID: 11185
+// Module ID: 11189
+// Function ID: 11190
 // Name: usePremiumSince
-// Dependencies: [7621, 1371, 4224, 1373, 504, 11185, 1885, 7634, 11186, 2]
+// Dependencies: [7621, 1371, 4224, 1373, 504, 11190, 1885, 7634, 11191, 2]
 // Exports: usePremiumSinceForUser, useTieredTenureBadge, useTieredTenureBadgeData, useTieredTenureBadgeDataForUser, useTieredTenureBadgesFromSubscriptionData, useTieredTenureEarnedOnDate
 
-// Module 11184 (usePremiumSince)
+// Module 11189 (usePremiumSince)
 import initialize from "initialize" /* 504 */;
 import getTieredTenureBadgeData from "getTieredTenureBadgeData" /* 7634 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11185 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11190 */;
 import closure_2 from "createUserWidgetFromServer" /* 7621 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;
 import closure_4 from "reset" /* 4224 */;
@@ -148,7 +148,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let tmpResult = tmp(11185);
+  let tmpResult = tmp(11190);
   const tieredTenureBadgeForUser = tmpResult.useTieredTenureBadgeForUser(id);
   let tmp6 = null;
   if (null != tieredTenureBadgeForUser) {
@@ -204,7 +204,7 @@ export const useTieredTenureBadgeData = function useTieredTenureBadgeData() {
           obj.status = obj.WITHHELD;
           return obj;
         }
-        tmpResult5 = tmp(11186);
+        tmpResult5 = tmp(11191);
       }
       const tmpResult4 = tmp(7634);
     }

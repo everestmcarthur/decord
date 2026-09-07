@@ -1,10 +1,10 @@
-// Module ID: 11085
-// Function ID: 11086
+// Module ID: 11090
+// Function ID: 11091
 // Name: useHandleUseNow
-// Dependencies: [5, 32, 19, 1076, 1889, 1114, 8171, 11086, 8167, 6984, 2]
+// Dependencies: [5, 32, 19, 1076, 1889, 1114, 8171, 11091, 8167, 6984, 2]
 // Exports: useHandleUseNow
 
-// Module 11085 (useHandleUseNow)
+// Module 11090 (useHandleUseNow)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

@@ -1,9 +1,9 @@
-// Module ID: 9895
-// Function ID: 9896
+// Module ID: 9900
+// Function ID: 9901
 // Name: sum
 // Dependencies: [1957, 1090, 7835, 3, 7456, 4573, 2]
 
-// Module 9895 (sum)
+// Module 9900 (sum)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 1090 */;
 import trackInviteDefault from "trackInvite" /* 7456 */;

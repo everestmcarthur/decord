@@ -1,18 +1,16 @@
 // Module ID: 10616
 // Function ID: 10617
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 10601, 10434, 10435, 10439]
+// Dependencies: [41, 42, 93, 95, 98, 10458]
 
 // Module 10616 (_isNativeReflectConstruct)
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10439 */;
-import WEEKDAY_DICTIONARY from "WEEKDAY_DICTIONARY" /* 10601 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10458 */;
+import ENMergeDateTimeRefiner from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,14 +30,29 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(questo|ultimo|passato|prossimo|dopo|questa|ultima|passata|prossima|\\+|-)\\s*(" + WEEKDAY_DICTIONARY.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
-class ENTimeUnitCasualRelativeFormatParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: null };
+      obj[0] = __esModule;
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class ENMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = closure_2(this, ENTimeUnitCasualRelativeFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
-    tmp3 = closure_3;
+    tmp = ENMergeDateTimeRefiner(this, ENMergeDateTimeRefiner);
+    tmp2 = closure_2;
+    obj = closure_2(ENMergeDateTimeRefiner);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -53,29 +66,15 @@ class ENTimeUnitCasualRelativeFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENMergeDateTimeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
-    key: "innerPattern",
-    value: function innerPattern() {
+    key: "patternBetween",
+    value: function patternBetween() {
+      const regExp = new RegExp("^\\s*(T|alle|dopo|prima|il|di|del|delle|,|-)?\\s*$");
       return regExp;
-    }
-  },
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(10601).parseDuration(arg1[2]);
-      if ("last" !== formatted) {
-        if ("past" !== formatted) {
-          let reverseDurationResult = parseDurationResult;
-        }
-        const ParsingComponents = tmp2(10435).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-      }
-      reverseDurationResult = tmp2(10434).reverseDuration(parseDurationResult);
     }
   }
 ];
 
-export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(ENMergeDateTimeRefiner, items);

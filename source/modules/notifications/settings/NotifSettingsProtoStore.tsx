@@ -1,14 +1,14 @@
-// Module ID: 13680
-// Function ID: 13681
+// Module ID: 13684
+// Function ID: 13685
 // Name: initialize
-// Dependencies: [13681, 1223, 504, 573, 2]
+// Dependencies: [13685, 1223, 504, 573, 2]
 
-// Module 13680 (initialize)
+// Module 13684 (initialize)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import b64ToProto from "b64ToProto" /* 1223 */;
-import create from "create" /* 13681 */;
+import create from "create" /* 13685 */;
 
 let DeclarativeSettings = create.DeclarativeSettings;
 let closure_2 = DeclarativeSettings.create();

@@ -1,10 +1,10 @@
-// Module ID: 9237
-// Function ID: 9238
+// Module ID: 9242
+// Function ID: 9243
 // Name: filterScopes
-// Dependencies: [1957, 4381, 1074, 9238, 8339, 5456, 4204, 1086, 2]
+// Dependencies: [1957, 4381, 1074, 9243, 8339, 5456, 4204, 1086, 2]
 // Exports: filterScopes, parseOAuth2AuthorizeProps
 
-// Module 9237 (filterScopes)
+// Module 9242 (filterScopes)
 import fromStringAll from "fromString" /* 1086 */;
 import applyOverwritesAll from "applyOverwrites" /* 4204 */;
 import keysSorter from "keysSorter" /* 5456 */;

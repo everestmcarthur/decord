@@ -1,10 +1,10 @@
-// Module ID: 11795
-// Function ID: 11796
+// Module ID: 11800
+// Function ID: 11801
 // Name: GuildTemplateResolving
-// Dependencies: [19, 17, 1961, 2016, 1074, 7326, 21, 4560, 576, 5524, 5577, 1178, 11796, 1114, 38, 1611, 2017, 4556, 11798, 6605, 4975, 8599, 12, 9713, 11803, 11804, 10947, 1091, 2]
+// Dependencies: [19, 17, 1961, 2016, 1074, 7326, 21, 4560, 576, 5524, 5577, 1178, 11801, 1114, 38, 1611, 2017, 4556, 11803, 6605, 4975, 8604, 12, 9718, 11808, 11809, 10952, 1091, 2]
 // Exports: default
 
-// Module 11795 (GuildTemplateResolving)
+// Module 11800 (GuildTemplateResolving)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -13,9 +13,9 @@ import Button from "Button" /* 1178 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ActivityIndicator from "ActivityIndicator" /* 5577 */;
 import _modDef6605 from "module_6605" /* 6605 */;
-import DividerDefault from "Divider" /* 8599 */;
-import getInvalidLinkSource from "getInvalidLinkSource" /* 11796 */;
-import renderIconDefault from "renderIcon" /* 11798 */;
+import DividerDefault from "Divider" /* 8604 */;
+import getInvalidLinkSource from "getInvalidLinkSource" /* 11801 */;
+import renderIconDefault from "renderIcon" /* 11803 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { isGuildVocalChannelType } from "createChannelRecord" /* 1961 */;
 import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 2016 */;

@@ -1,10 +1,10 @@
-// Module ID: 14647
-// Function ID: 14648
+// Module ID: 14650
+// Function ID: 14651
 // Name: useTabSelectedGuildId
 // Dependencies: [4381, 5438, 563, 2]
 // Exports: default
 
-// Module 14647 (useTabSelectedGuildId)
+// Module 14650 (useTabSelectedGuildId)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
 import closure_2 from "handleConnectionOpen" /* 4381 */;
 import closure_3 from "insertUnsortedGuilds" /* 5438 */;

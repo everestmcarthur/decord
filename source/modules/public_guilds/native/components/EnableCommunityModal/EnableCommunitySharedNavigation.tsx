@@ -1,13 +1,13 @@
-// Module ID: 17663
-// Function ID: 17664
+// Module ID: 17666
+// Function ID: 17667
 // Name: EnableCommunityModalSteps
-// Dependencies: [19, 17, 9064, 1074, 21, 4560, 504, 1483, 4962, 4971, 573, 17661, 7039, 7123, 4975, 1114, 2]
+// Dependencies: [19, 17, 9069, 1074, 21, 4560, 504, 1483, 4962, 4971, 573, 17664, 7039, 7123, 4975, 1114, 2]
 // Exports: EnableCommunityModalScreen
 
-// Module 17663 (EnableCommunityModalSteps)
+// Module 17666 (EnableCommunityModalSteps)
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleFormInit" /* 9064 */;
+import closure_6 from "handleFormInit" /* 9069 */;
 import { GuildFeatures } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

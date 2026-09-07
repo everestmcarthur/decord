@@ -1,9 +1,9 @@
-// Module ID: 14455
-// Function ID: 14456
+// Module ID: 14458
+// Function ID: 14459
 // Name: migrateHotspotLocation
-// Dependencies: [1957, 1074, 12414, 1187, 1942, 7213, 510, 1223, 504, 1218, 1943, 7521, 2]
+// Dependencies: [1957, 1074, 12418, 1187, 1942, 7213, 510, 1223, 504, 1218, 1943, 7521, 2]
 
-// Module 14455 (migrateHotspotLocation)
+// Module 14458 (migrateHotspotLocation)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import create from "create" /* 1187 */;
@@ -13,7 +13,7 @@ import DismissibleContent from "DismissibleContent" /* 1943 */;
 import HotspotStore2 from "HotspotStore" /* 7213 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import { ChannelNoticeTypes } from "ME" /* 1074 */;
-import { MULTIACCOUNT_TOOLTIP_SEEN_KEY as closure_5 } from "MAX_ACCOUNTS" /* 12414 */;
+import { MULTIACCOUNT_TOOLTIP_SEEN_KEY as closure_5 } from "MAX_ACCOUNTS" /* 12418 */;
 
 require = arg1;
 function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULTIACCOUNT_TOOLTIP) {

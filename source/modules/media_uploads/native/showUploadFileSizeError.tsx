@@ -1,10 +1,10 @@
-// Module ID: 9310
-// Function ID: 9311
+// Module ID: 9315
+// Function ID: 9316
 // Name: showUploadFileSizeError
-// Dependencies: [1185, 1371, 1074, 4553, 1373, 1885, 7843, 5179, 4740, 9311, 9312, 5130, 5138, 9313, 1093, 7182, 1114, 4457, 5129, 4904, 2]
+// Dependencies: [1185, 1371, 1074, 4553, 1373, 1885, 7843, 5179, 4740, 9316, 9317, 5130, 5138, 9318, 1093, 7182, 1114, 4457, 5129, 4904, 2]
 // Exports: default
 
-// Module 9310 (showUploadFileSizeError)
+// Module 9315 (showUploadFileSizeError)
 import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
@@ -49,8 +49,8 @@ export default function showUploadFileSizeError(arg0) {
   const tmp2Result1 = items(4740);
   const tmp7 = constants;
   obj = { guildId, channelId: null, userIndividualFileSizeLimit: null, numAttachments: null, preCompressionFileSizes: null, preCompressionAggregateSize: null, postCompressionFileSizes: null, postCompressionAggregateSize: null, attachmentMimeTypes: null, errorType: null, kestrelVariant: null };
-  const tmp2Result2 = items(9311);
-  obj[1] = items(9312).getUploaderChannelId(file);
+  const tmp2Result2 = items(9316);
+  obj[1] = items(9317).getUploaderChannelId(file);
   obj[2] = baseMaxSize;
   obj[3] = file.attachmentsCount;
   obj[4] = items1;
@@ -63,7 +63,7 @@ export default function showUploadFileSizeError(arg0) {
     ERROR_SOURCE_UNKNOWN = FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN;
   }
   obj[9] = ERROR_SOURCE_UNKNOWN;
-  const tmp2Result3 = items(9312);
+  const tmp2Result3 = items(9317);
   obj[10] = items(5179).getKestrelVariantName(kestrelConfig);
   tmp2Result1.trackWithMetadata(constants.FILE_SIZE_LIMIT_EXCEEDED, tmp2Result2.buildFileSizeLimitEventProperties(obj));
   let num = 0;
@@ -149,6 +149,6 @@ export default function showUploadFileSizeError(arg0) {
     obj6[0] = constants3.UPLOAD_ERROR_UPSELL;
     obj4[3] = obj6;
     obj4[4] = num;
-    const result = items1(9313).handleShowUpsellAlert(obj4);
+    const result = items1(9318).handleShowUpsellAlert(obj4);
   }
 };

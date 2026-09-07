@@ -1,10 +1,10 @@
-// Module ID: 11806
-// Function ID: 11807
+// Module ID: 11811
+// Function ID: 11812
 // Name: regExp
-// Dependencies: [4527, 11807, 1896, 11480, 11481, 7890, 4481, 2]
+// Dependencies: [4527, 11812, 1896, 11485, 11486, 7890, 4481, 2]
 // Exports: handleCodedLinkExperimentEmbedTap
 
-// Module 11806 (regExp)
+// Module 11811 (regExp)
 import set from "set" /* 2 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 
@@ -17,10 +17,10 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
   if (null != experimentTreatmentFromEmbedURL) {
     const _Number = Number;
     if (!Number.isNaN(experimentTreatmentFromEmbedURL)) {
-      let obj = _require(11480);
+      let obj = _require(11485);
       const legacyExperiments = obj.getLegacyExperiments();
       ({ experiments, overridesInfo } = legacyExperiments);
-      const apexExperiments = _require(11481).getApexExperiments();
+      const apexExperiments = _require(11486).getApexExperiments();
       let tmp5 = experiments[experimentFromEmbedURL];
       if (tmp5 == null) {
         tmp5 = apexExperiments.experiments[experimentFromEmbedURL];
@@ -47,9 +47,9 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
           const tmpResult1 = tmp(4481);
         }
       }
-      const obj2 = _require(11481);
+      const obj2 = _require(11486);
     }
   }
   obj = { id: experimentFromEmbedURL };
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(_require(1896)(11807, dependencyMap.paths), "ExperimentOverrideSheet", obj);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(_require(1896)(11812, dependencyMap.paths), "ExperimentOverrideSheet", obj);
 };

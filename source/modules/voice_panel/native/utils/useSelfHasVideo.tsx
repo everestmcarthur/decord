@@ -1,10 +1,10 @@
-// Module ID: 17085
-// Function ID: 17086
+// Module ID: 17088
+// Function ID: 17089
 // Name: useSelfHasVideo
-// Dependencies: [4576, 502, 1908, 504, 9622, 2]
+// Dependencies: [4576, 502, 1908, 504, 9627, 2]
 // Exports: default
 
-// Module 17085 (useSelfHasVideo)
+// Module 17088 (useSelfHasVideo)
 import closure_2 from "getParticipants" /* 4576 */;
 import closure_3 from "fetchFingerprint" /* 502 */;
 import closure_4 from "_detectH265HardwareDecode" /* 1908 */;

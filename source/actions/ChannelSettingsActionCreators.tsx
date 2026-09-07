@@ -1,15 +1,15 @@
-// Module ID: 8625
-// Function ID: 8626
+// Module ID: 8630
+// Function ID: 8631
 // Name: init
-// Dependencies: [5, 8626, 1957, 1074, 573, 4418, 7765, 1272, 7323, 2]
+// Dependencies: [5, 8631, 1957, 1074, 573, 4418, 7765, 1272, 7323, 2]
 // Exports: deleteChannel, init, open, removeLinkedLobby, saveChannel, selectPermissionOverwrite, setSection, updateChannel, updateVoiceChannelStatus
 
-// Module 8625 (init)
+// Module 8630 (init)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import sendRequest from "sendRequest" /* 1272 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "normalizeChannelPropertyForCompare" /* 8626 */;
+import closure_4 from "normalizeChannelPropertyForCompare" /* 8631 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import ME from "ME" /* 1074 */;
 

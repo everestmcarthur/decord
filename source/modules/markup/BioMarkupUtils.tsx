@@ -1,10 +1,10 @@
-// Module ID: 9419
-// Function ID: 9420
+// Module ID: 9424
+// Function ID: 9425
 // Name: parseBioReact
 // Dependencies: [4997, 4998, 4551, 1437, 7987, 4550, 4257, 12, 2]
 // Exports: getOrParseBioAST, parseBioReact, parseBioReactWithCachedAST
 
-// Module 9419 (parseBioReact)
+// Module 9424 (parseBioReact)
 import privDefault from "priv" /* 1437 */;
 import tDefault from "t" /* 4257 */;
 import MarkupTextDefault from "MarkupText" /* 4551 */;

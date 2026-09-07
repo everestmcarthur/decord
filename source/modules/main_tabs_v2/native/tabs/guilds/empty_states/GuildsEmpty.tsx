@@ -1,16 +1,16 @@
-// Module ID: 16269
-// Function ID: 16270
+// Module ID: 16272
+// Function ID: 16273
 // Name: handleJoinGuild
-// Dependencies: [32, 19, 17, 502, 1979, 4381, 1074, 21, 4560, 576, 4556, 12708, 16270, 1114, 4973, 4975, 1484, 563, 8768, 1250, 1982, 4419, 5126, 15100, 2]
+// Dependencies: [32, 19, 17, 502, 1979, 4381, 1074, 21, 4560, 576, 4556, 12712, 16273, 1114, 4973, 4975, 1484, 563, 8773, 1250, 1982, 4419, 5126, 15103, 2]
 
-// Module 16269 (handleJoinGuild)
+// Module 16272 (handleJoinGuild)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import Stack from "Stack" /* 4973 */;
 import Button from "Button" /* 4975 */;
-import _modDef12708 from "module_12708" /* 12708 */;
-import registerAssetDefault from "registerAsset" /* 16270 */;
+import _modDef12712 from "module_12712" /* 12712 */;
+import registerAssetDefault from "registerAsset" /* 16273 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -23,10 +23,10 @@ import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
 function handleJoinGuild() {
-  const result = _modDef12708.openGuildJoinServerScreen();
+  const result = _modDef12712.openGuildJoinServerScreen();
 }
 function handleCreateGuild() {
-  _modDef12708.openCreateGuildModal();
+  _modDef12712.openCreateGuildModal();
 }
 class GuildsEmptyContent {
   constructor(arg0) {
@@ -123,7 +123,7 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
   }
   selectedGuildId = tmp6;
   obj = { type: navigation(1250).ImpressionTypes.VIEW, name: navigation(1250).ImpressionNames.GUILDS_EMPTY_NUX };
-  selectedGuildId(8768)(obj);
+  selectedGuildId(8773)(obj);
   const items1 = [tmp6, navigation];
   const effect = importAllResult.useEffect(() => {
     if (null != selectedGuildId) {
@@ -162,7 +162,7 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
   }, items1);
   let tmp2Result = tmp2(5126);
   const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  tmp2Result = tmp2(15100);
+  tmp2Result = tmp2(15103);
   let tmp14Result = null;
   if (stateFromStores) {
     obj = { style: null, children: null };

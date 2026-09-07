@@ -1,9 +1,9 @@
-// Module ID: 17368
-// Function ID: 17369
+// Module ID: 17371
+// Function ID: 17372
 // Name: syncLocalState
-// Dependencies: [5, 502, 1908, 4583, 4578, 4579, 4577, 9233, 4585, 3, 38, 9089, 10009, 7118, 4447, 9448, 1369, 4904, 1114, 17369, 9451, 2]
+// Dependencies: [5, 502, 1908, 4583, 4578, 4579, 4577, 9238, 4585, 3, 38, 9094, 10014, 7118, 4447, 9453, 1369, 4904, 1114, 17372, 9456, 2]
 
-// Module 17368 (syncLocalState)
+// Module 17371 (syncLocalState)
 import timestampDefault from "timestamp" /* 3 */;
 import start from "start" /* 4447 */;
 import initializeDefault from "initialize" /* 7118 */;
@@ -14,7 +14,7 @@ import closure_6 from "createRTCConnection" /* 4583 */;
 import closure_7 from "handleUpdate" /* 4578 */;
 import closure_8 from "updateVoiceState" /* 4579 */;
 import closure_9 from "set" /* 4577 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9233 */;
+import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9238 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
 
 require = arg1;
@@ -240,7 +240,7 @@ let prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      let obj = callback(9448);
+      let obj = callback(9453);
       obj.disconnectRemote();
       obj = { title: null, body: null };
       const intl = callback(1114).intl;

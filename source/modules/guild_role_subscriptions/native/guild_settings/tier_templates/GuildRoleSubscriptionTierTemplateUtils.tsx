@@ -1,10 +1,10 @@
-// Module ID: 17787
-// Function ID: 17788
+// Module ID: 17790
+// Function ID: 17791
 // Name: getPrivateChannelIconComponent
 // Dependencies: [1094, 5078, 5098, 5096, 5086, 5085, 5093, 2]
 // Exports: getPrivateChannelIconComponent
 
-// Module 17787 (getPrivateChannelIconComponent)
+// Module 17790 (getPrivateChannelIconComponent)
 import set from "set" /* 2 */;
 import set2 from "set" /* 1094 */;
 

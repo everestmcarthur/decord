@@ -1,10 +1,10 @@
-// Module ID: 10891
-// Function ID: 10892
+// Module ID: 10896
+// Function ID: 10897
 // Name: isListeningOnSpotify
 // Dependencies: [1074, 8340, 5283, 2]
 // Exports: default
 
-// Module 10891 (isListeningOnSpotify)
+// Module 10896 (isListeningOnSpotify)
 import set from "set" /* 2 */;
 import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5283 */;
 import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8340 */;

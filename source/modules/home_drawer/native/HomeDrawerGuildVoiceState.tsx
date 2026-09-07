@@ -1,16 +1,16 @@
-// Module ID: 16319
-// Function ID: 16320
+// Module ID: 16322
+// Function ID: 16323
 // Name: VoiceUsers
-// Dependencies: [19, 17, 2012, 4209, 4741, 4584, 1074, 21, 4560, 576, 13027, 1178, 4556, 1114, 10062, 5587, 4987, 16318, 504, 12, 13709, 2]
+// Dependencies: [19, 17, 2012, 4209, 4741, 4584, 1074, 21, 4560, 576, 13031, 1178, 4556, 1114, 10067, 5587, 4987, 16321, 504, 12, 13713, 2]
 // Exports: GuildVoiceState, useVoiceUsers
 
-// Module 16319 (VoiceUsers)
+// Module 16322 (VoiceUsers)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10062 */;
-import AvatarPile from "AvatarPile" /* 13027 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10067 */;
+import AvatarPile from "AvatarPile" /* 13031 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "comparator" /* 2012 */;

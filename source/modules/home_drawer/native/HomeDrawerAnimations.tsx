@@ -1,9 +1,9 @@
-// Module ID: 16024
-// Function ID: 16025
+// Module ID: 16027
+// Function ID: 16028
 // Name: HOME_DRAWER_SETTLE_TIMING
 // Dependencies: [4296, 2]
 
-// Module 16024 (HOME_DRAWER_SETTLE_TIMING)
+// Module 16027 (HOME_DRAWER_SETTLE_TIMING)
 import set from "set" /* 2 */;
 import _mod4296 from "module_4296" /* 4296 */;
 

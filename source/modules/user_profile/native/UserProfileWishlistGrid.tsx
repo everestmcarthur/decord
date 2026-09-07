@@ -1,20 +1,20 @@
-// Module ID: 13084
-// Function ID: 13085
+// Module ID: 13088
+// Function ID: 13089
 // Name: WishlistEmptyState
-// Dependencies: [5, 19, 17, 7542, 11035, 8777, 8780, 8778, 1371, 5510, 7621, 8183, 1074, 1076, 1373, 21, 3, 4560, 576, 13085, 4271, 4411, 8190, 4527, 7541, 7182, 4556, 1114, 4975, 12753, 13086, 7162, 9366, 10746, 504, 13087, 8174, 13068, 13088, 4418, 4259, 11597, 4218, 7240, 4905, 10661, 1116, 10798, 7231, 10797, 8179, 4231, 11007, 7316, 4233, 8176, 13089, 1896, 4515, 8097, 10250, 11033, 2]
+// Dependencies: [5, 19, 17, 7542, 11040, 8782, 8785, 8783, 1371, 5510, 7621, 8183, 1074, 1076, 1373, 21, 3, 4560, 576, 13089, 4271, 4411, 8190, 4527, 7541, 7182, 4556, 1114, 4975, 12757, 13090, 7162, 9371, 10751, 504, 13091, 8174, 13072, 13092, 4418, 4259, 11602, 4218, 7240, 4905, 10666, 1116, 10803, 7231, 10802, 8179, 4231, 11012, 7316, 4233, 8176, 13093, 1896, 4515, 8097, 10255, 11038, 2]
 // Exports: default
 
-// Module 13084 (WishlistEmptyState)
+// Module 13088 (WishlistEmptyState)
 import timestampDefault from "timestamp" /* 3 */;
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "updateCategoriesAndProducts" /* 7542 */;
-import closure_7 from "initialize" /* 11035 */;
-import closure_8 from "get" /* 8777 */;
-import { isCollectiblesWishlistItemRecord as closure_9 } from "createCollectiblesItemFromServerResponse" /* 8780 */;
-import { getWishlistProductLines } from "fromServer" /* 8778 */;
+import closure_7 from "initialize" /* 11040 */;
+import closure_8 from "get" /* 8782 */;
+import { isCollectiblesWishlistItemRecord as closure_9 } from "createCollectiblesItemFromServerResponse" /* 8785 */;
+import { getWishlistProductLines } from "fromServer" /* 8783 */;
 import closure_11 from "mergeGuildAvatar" /* 1371 */;
 import closure_12 from "addSku" /* 5510 */;
 import closure_13 from "createUserWidgetFromServer" /* 7621 */;

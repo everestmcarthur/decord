@@ -1,14 +1,14 @@
-// Module ID: 12361
-// Function ID: 12362
-// Dependencies: [1074, 12362, 12339, 12340, 573, 2]
+// Module ID: 12365
+// Function ID: 12366
+// Dependencies: [1074, 12366, 12343, 12344, 573, 2]
 
-// Module 12361
+// Module 12365
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import ME from "ME" /* 1074 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 12340 */;
-import handleSearchQuery from "handleSearchQuery" /* 12362 */;
-import prototype from "prototype" /* 12339 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 12344 */;
+import handleSearchQuery from "handleSearchQuery" /* 12366 */;
+import prototype from "prototype" /* 12343 */;
 
 const SearchTypes = ME.SearchTypes;
 const result = set.fileFinishedImporting("modules/search/native/SearchPlatformActionCreators.tsx");

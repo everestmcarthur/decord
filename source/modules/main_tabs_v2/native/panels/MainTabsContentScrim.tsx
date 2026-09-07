@@ -1,10 +1,10 @@
-// Module ID: 16527
-// Function ID: 16528
+// Module ID: 16530
+// Function ID: 16531
 // Name: MainTabsContentScrim
 // Dependencies: [17, 21, 4560, 576, 4296, 2]
 // Exports: MainTabsContentScrim
 
-// Module 16527 (MainTabsContentScrim)
+// Module 16530 (MainTabsContentScrim)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

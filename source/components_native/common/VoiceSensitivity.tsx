@@ -1,10 +1,10 @@
-// Module ID: 9984
-// Function ID: 9985
+// Module ID: 9989
+// Function ID: 9990
 // Name: VoiceSensitivity
-// Dependencies: [5, 32, 19, 17, 1908, 5419, 1895, 1074, 4770, 21, 4560, 576, 4409, 1477, 504, 5139, 4615, 4272, 1114, 1178, 8593, 8278, 1115, 2]
+// Dependencies: [5, 32, 19, 17, 1908, 5419, 1895, 1074, 4770, 21, 4560, 576, 4409, 1477, 504, 5139, 4615, 4272, 1114, 1178, 8598, 8278, 1115, 2]
 // Exports: default
 
-// Module 9984 (VoiceSensitivity)
+// Module 9989 (VoiceSensitivity)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;

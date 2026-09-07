@@ -1,13 +1,13 @@
 // Module ID: 7450
 // Function ID: 7451
 // Name: emitChanges
-// Dependencies: [7451, 7452, 8063, 7454, 1371, 7394, 4224, 1373, 1085, 504, 13297, 4218, 573, 2]
+// Dependencies: [7451, 7452, 8063, 7454, 1371, 7394, 4224, 1373, 1085, 504, 13301, 4218, 573, 2]
 
 // Module 7450 (emitChanges)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
-import apexExperiment from "apexExperiment" /* 13297 */;
+import apexExperiment from "apexExperiment" /* 13301 */;
 import closure_2 from "createFromServer" /* 7451 */;
 import closure_3 from "emitChanges" /* 7452 */;
 import closure_4 from "createFromServer" /* 8063 */;
@@ -89,7 +89,7 @@ function handleReferralTrialStoreUpdate() {
 }
 ({ ANNUAL_DISCOUNT_IDS: c9, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: c10, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: unpackModuleId, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = GuildFeatures);
 let closure_17 = performance.now();
-let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "flexDirection", userDiscountOffers: null, userDiscounts: "\u{1F9D1}\u{1F3FC}\u200D\u{1F9B1}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 12.1, cooldownExpirationTimestamps: "TRANSPARENT" };
+let obj = { userOffersLastFetchedAtDate: "r", userTrialOffers: "flexDirection", userDiscountOffers: null, userDiscounts: "\u{1F9D1}\u{1F3FD}\u200D\u{1F9B1}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 12.1, cooldownExpirationTimestamps: "roll_of_paper" };
 obj[1] = {};
 obj[2] = {};
 obj[7] = { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 };

@@ -1,12 +1,12 @@
-// Module ID: 10736
-// Function ID: 10737
+// Module ID: 10741
+// Function ID: 10742
 // Name: useMaybeFetchCollectiblesCategories
-// Dependencies: [4559, 504, 10737, 2]
+// Dependencies: [4559, 504, 10742, 2]
 // Exports: default
 
-// Module 10736 (useMaybeFetchCollectiblesCategories)
+// Module 10741 (useMaybeFetchCollectiblesCategories)
 import initialize from "initialize" /* 504 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10737 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10742 */;
 import closure_2 from "getUserAgnosticState" /* 4559 */;
 
 require = arg1;

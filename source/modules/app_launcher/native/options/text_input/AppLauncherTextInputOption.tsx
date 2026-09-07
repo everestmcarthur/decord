@@ -1,10 +1,10 @@
-// Module ID: 12172
-// Function ID: 12173
+// Module ID: 12176
+// Function ID: 12177
 // Name: AppLauncherTextInputOption
-// Dependencies: [32, 19, 17, 1374, 21, 4560, 576, 11215, 1894, 10278, 12169, 9409, 1178, 12173, 1115, 12174, 1874, 11121, 2]
+// Dependencies: [32, 19, 17, 1374, 21, 4560, 576, 11220, 1894, 10283, 12173, 9414, 1178, 12177, 1115, 12178, 1874, 11126, 2]
 // Exports: default
 
-// Module 12172 (AppLauncherTextInputOption)
+// Module 12176 (AppLauncherTextInputOption)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -51,7 +51,7 @@ export default function AppLauncherTextInputOption(guildId) {
   }), 2);
   first = tmp2[0];
   React = tmp2[1];
-  let obj = onChangeText(11215);
+  let obj = onChangeText(11220);
   closure_5 = React.useRef({ start: 0, end: 0 });
   ref = React.useRef(null);
   let tmp14Result = option.type === onChangeText(1894).ApplicationCommandOptionType.STRING;
@@ -107,17 +107,17 @@ export default function AppLauncherTextInputOption(guildId) {
       const obj = onChangeText(closure_1_2[9]);
     }
   }, items2);
-  obj1 = onChangeText(12169);
+  obj1 = onChangeText(12173);
   const animationDelayedAutoFocus = obj1.useAnimationDelayedAutoFocus(autoFocus, () => {
     const current = ref.current;
     if (current != null) {
       current.focus();
     }
   });
-  if (obj.useAppLauncherContext().entrypoint === onChangeText(9409).AppLauncherEntrypoint.VOICE) {
+  if (obj.useAppLauncherContext().entrypoint === onChangeText(9414).AppLauncherEntrypoint.VOICE) {
     let TextInput = tmp4(1178).TextInput;
   } else {
-    TextInput = guildId(12173);
+    TextInput = guildId(12177);
   }
   const items3 = [tmp.container, , ];
   if (hasError) {
@@ -160,7 +160,7 @@ export default function AppLauncherTextInputOption(guildId) {
       obj = { pickerIntention: ref.CHAT, autoFocus: false, startExpanded: false, onPressEmoji: closure_9, guildId, onClose: closure_10 };
       const result1 = onChangeText(closure_1_2[17]).openEmojiPickerActionSheet(obj);
     };
-    tmp14Result = tmp14(guildId(12174), obj1);
+    tmp14Result = tmp14(guildId(12178), obj1);
   }
   items4[1] = tmp14Result;
   obj[1] = items4;

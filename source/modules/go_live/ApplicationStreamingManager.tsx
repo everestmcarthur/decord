@@ -1,9 +1,9 @@
-// Module ID: 17854
-// Function ID: 17855
+// Module ID: 17857
+// Function ID: 17858
 // Name: updateRegion
-// Dependencies: [4582, 502, 1957, 4480, 4610, 2011, 4599, 1371, 4602, 1074, 12, 4702, 1090, 4612, 4447, 573, 7118, 9110, 17834, 2]
+// Dependencies: [4582, 502, 1957, 4480, 4610, 2011, 4599, 1371, 4602, 1074, 12, 4702, 1090, 4612, 4447, 573, 7118, 9115, 17837, 2]
 
-// Module 17854 (updateRegion)
+// Module 17857 (updateRegion)
 import setDefault from "set" /* 1090 */;
 import mergeGuildAvatarDefault from "mergeGuildAvatar" /* 1371 */;
 import watchStream from "watchStream" /* 4702 */;

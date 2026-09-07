@@ -1,8 +1,8 @@
-// Module ID: 9063
-// Function ID: 9064
-// Dependencies: [5, 2014, 4200, 502, 2021, 1979, 9064, 1074, 3, 573, 1272, 7323, 9072, 5169, 6985, 4753, 1250, 4412, 1114, 1100, 5552, 2]
+// Module ID: 9068
+// Function ID: 9069
+// Dependencies: [5, 2014, 4200, 502, 2021, 1979, 9069, 1074, 3, 573, 1272, 7323, 9077, 5169, 6985, 4753, 1250, 4412, 1114, 1100, 5552, 2]
 
-// Module 9063
+// Module 9068
 import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import encodeProperties from "encodeProperties" /* 1250 */;
@@ -14,7 +14,7 @@ import closure_5 from "initialize" /* 4200 */;
 import closure_6 from "fetchFingerprint" /* 502 */;
 import closure_7 from "trackCommunicationDisabled" /* 2021 */;
 import closure_8 from "createGuildRecordFromRust" /* 1979 */;
-import closure_9 from "handleFormInit" /* 9064 */;
+import closure_9 from "handleFormInit" /* 9069 */;
 import ME from "ME" /* 1074 */;
 
 require = arg1;
@@ -236,7 +236,7 @@ let obj = {
     const merged = Object.assign(tmp);
     let toServerGuildProfileResult = profile;
     if (null != profile) {
-      let obj3 = _require(9072);
+      let obj3 = _require(9077);
       toServerGuildProfileResult = obj3.toServerGuildProfile(profile);
     }
     obj.profile = toServerGuildProfileResult;

@@ -1,10 +1,10 @@
-// Module ID: 11718
-// Function ID: 11719
+// Module ID: 11723
+// Function ID: 11724
 // Name: buildPlatformPollResources
-// Dependencies: [12, 11719, 4560, 576, 7946, 7144, 5618, 1399, 2]
+// Dependencies: [12, 11724, 4560, 576, 7946, 7144, 5618, 1399, 2]
 // Exports: buildPlatformPollResources, getAvatarUrl
 
-// Module 11718 (buildPlatformPollResources)
+// Module 11723 (buildPlatformPollResources)
 import ensureAvatarSource from "ensureAvatarSource" /* 1399 */;
 import registerAssetDefault from "registerAsset" /* 5618 */;
 import registerAssetDefault2 from "registerAsset" /* 7144 */;

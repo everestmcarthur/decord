@@ -1,16 +1,16 @@
-// Module ID: 16807
-// Function ID: 16808
+// Module ID: 16810
+// Function ID: 16811
 // Name: ConnectedCreateThreadHeaderButton
-// Dependencies: [19, 17, 1957, 10916, 1074, 16643, 21, 7913, 563, 7269, 11222, 7863, 1114, 12773, 1242, 8625, 16808, 7000, 5630, 4418, 1611, 16859, 1115, 16860, 16861, 16862, 16863, 16703, 2]
+// Dependencies: [19, 17, 1957, 10921, 1074, 16646, 21, 7913, 563, 7269, 11227, 7863, 1114, 12777, 1242, 8630, 16811, 7000, 5630, 4418, 1611, 16862, 1115, 16863, 16864, 16865, 16866, 16706, 2]
 
-// Module 16807 (ConnectedCreateThreadHeaderButton)
-import registerAssetDefault from "registerAsset" /* 12773 */;
+// Module 16810 (ConnectedCreateThreadHeaderButton)
+import registerAssetDefault from "registerAsset" /* 12777 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import { ChannelDetailsNavigatorScreens as closure_6 } from "ChannelDetailsNavigatorScreens" /* 10916 */;
+import { ChannelDetailsNavigatorScreens as closure_6 } from "ChannelDetailsNavigatorScreens" /* 10921 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
-import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16643 */;
+import { SearchNavigatorScreens } from "SearchNavigatorScreens" /* 16646 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
 

@@ -1,18 +1,18 @@
-// Module ID: 15973
-// Function ID: 15974
+// Module ID: 15976
+// Function ID: 15977
 // Name: PasswordStrength
-// Dependencies: [109, 32, 19, 6943, 15946, 21, 4560, 576, 4296, 15970, 1114, 4556, 15964, 6957, 504, 4778, 6606, 4267, 6968, 6970, 2]
+// Dependencies: [109, 32, 19, 6943, 15949, 21, 4560, 576, 4296, 15973, 1114, 4556, 15967, 6957, 504, 4778, 6606, 4267, 6968, 6970, 2]
 
-// Module 15973 (PasswordStrength)
+// Module 15976 (PasswordStrength)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
-import PasswordScore from "PasswordScore" /* 15970 */;
+import PasswordScore from "PasswordScore" /* 15973 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import closure_7 from "handleSetLocationMetadata" /* 6943 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15946 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15949 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import { FadeIn, FadeOut, LinearTransition, Easing } from "module_4296" /* 4296 */;
@@ -30,13 +30,13 @@ function PasswordStrength(passwordScore) {
             const intl2 = tmp9(1114).intl;
             let str = intl2.string(tmp9(1114).t["w/8TuV"]);
             let strong = tmp.weak;
-          } else if (passwordScore === tmp9(15970).PasswordScore.MEDIUM) {
+          } else if (passwordScore === tmp9(15973).PasswordScore.MEDIUM) {
             const intl = tmp9(1114).intl;
             str = intl.string(tmp9(1114).t["2fmTpT"]);
             strong = tmp.medium;
           } else {
             str = "";
-            if (passwordScore === tmp9(15970).PasswordScore.STRONG) {
+            if (passwordScore === tmp9(15973).PasswordScore.STRONG) {
               const intl4 = tmp9(1114).intl;
               str = intl4.string(tmp9(1114).t.Xraqqc);
               strong = tmp.strong;

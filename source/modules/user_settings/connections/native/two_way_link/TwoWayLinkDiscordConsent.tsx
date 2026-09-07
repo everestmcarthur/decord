@@ -1,10 +1,10 @@
-// Module ID: 9234
-// Function ID: 9235
+// Module ID: 9239
+// Function ID: 9240
 // Name: TwoWayLinkDiscordConsent
-// Dependencies: [5, 32, 19, 17, 21, 3, 4560, 9226, 5406, 9235, 38, 5578, 7123, 4975, 1114, 2]
+// Dependencies: [5, 32, 19, 17, 21, 3, 4560, 9231, 5406, 9240, 38, 5578, 7123, 4975, 1114, 2]
 // Exports: TwoWayLinkDiscordConsent
 
-// Module 9234 (TwoWayLinkDiscordConsent)
+// Module 9239 (TwoWayLinkDiscordConsent)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;

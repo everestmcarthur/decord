@@ -1,14 +1,14 @@
-// Module ID: 8696
-// Function ID: 8697
+// Module ID: 8701
+// Function ID: 8702
 // Name: EpicGamesNeutralIcon
-// Dependencies: [19, 21, 576, 4261, 8697, 2]
+// Dependencies: [19, 21, 576, 4261, 8702, 2]
 // Exports: EpicGamesNeutralIcon
 
-// Module 8696 (EpicGamesNeutralIcon)
+// Module 8701 (EpicGamesNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8697 */;
+import registerAsset from "registerAsset" /* 8702 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

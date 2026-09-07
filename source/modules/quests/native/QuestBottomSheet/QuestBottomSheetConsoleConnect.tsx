@@ -1,10 +1,10 @@
-// Module ID: 15163
-// Function ID: 15164
+// Module ID: 15166
+// Function ID: 15167
 // Name: NonInlineConsoleConnection
-// Dependencies: [19, 17, 1074, 21, 576, 4560, 11483, 11774, 11486, 11496, 4527, 7382, 15120, 1896, 11192, 11193, 11197, 5451, 7728, 5447, 9252, 5687, 5605, 8881, 1114, 8708, 2]
+// Dependencies: [19, 17, 1074, 21, 576, 4560, 11488, 11779, 11491, 11501, 4527, 7382, 15123, 1896, 11197, 11198, 11202, 5451, 7728, 5447, 9257, 5687, 5605, 8886, 1114, 8713, 2]
 // Exports: default
 
-// Module 15163 (NonInlineConsoleConnection)
+// Module 15166 (NonInlineConsoleConnection)
 import ThemesDefault from "Themes" /* 576 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import closure_3 from "noop" /* 19 */;
@@ -32,7 +32,7 @@ function ConsoleRow(onPress) {
   const type = merged.type;
   if (constants.PLAYSTATION === type) {
     let obj = { arrow: true, icon: null, label: null, subLabel: null, onPress: null };
-    obj[1] = callback(onPress(8881).PlaystationNeutralIcon, {});
+    obj[1] = callback(onPress(8886).PlaystationNeutralIcon, {});
     const intl3 = onPress(1114).intl;
     obj[2] = intl3.string(onPress(1114).t.JafL6p);
     let stringResult;
@@ -47,7 +47,7 @@ function ConsoleRow(onPress) {
     return callback(onPress(5605).TableRow, obj);
   } else if (tmp2.XBOX === type) {
     obj = { arrow: true, icon: null, label: null, subLabel: null, onPress: null };
-    obj[1] = callback(onPress(8708).XboxNeutralIcon, {});
+    obj[1] = callback(onPress(8713).XboxNeutralIcon, {});
     const intl = onPress(1114).intl;
     obj[2] = intl.string(onPress(1114).t.Nfvo72);
     let stringResult1;
@@ -86,11 +86,11 @@ export default function QuestBottomSheetConsoleConnect(quest) {
     obj = { questId: quest.id, initialStep: closure_1, sourceQuestContent: closure_2 };
     obj.openLazy(quest(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), "QuestBottomSheet", obj);
   }
-  let obj = quest(11483);
+  let obj = quest(11488);
   xboxAndPlaystationAccounts = obj.useConnectedAccounts().xboxAndPlaystationAccounts;
-  closure_4 = quest(11774).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(11774);
-  closure_5 = quest(11486).useQuestImpressionId();
+  closure_4 = quest(11779).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(11779);
+  closure_5 = quest(11491).useQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
   obj = {
     consoles: xboxAndPlaystationAccounts.useMemo(() => {

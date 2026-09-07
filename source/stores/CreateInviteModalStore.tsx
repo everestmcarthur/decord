@@ -1,14 +1,14 @@
-// Module ID: 9821
-// Function ID: 9822
+// Module ID: 9826
+// Function ID: 9827
 // Name: updateWithLatestInvite
-// Dependencies: [1957, 1979, 8379, 1074, 9822, 9824, 38, 504, 573, 2]
+// Dependencies: [1957, 1979, 8379, 1074, 9827, 9829, 38, 504, 573, 2]
 
-// Module 9821 (updateWithLatestInvite)
+// Module 9826 (updateWithLatestInvite)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
-import isGuildMemberDefault from "isGuildMember" /* 9822 */;
-import getDefaultInviteExpiration from "getDefaultInviteExpiration" /* 9824 */;
+import isGuildMemberDefault from "isGuildMember" /* 9827 */;
+import getDefaultInviteExpiration from "getDefaultInviteExpiration" /* 9829 */;
 import closure_9 from "ensureGuildLoaded" /* 1957 */;
 import closure_10 from "createGuildRecordFromRust" /* 1979 */;
 import closure_11 from "map" /* 8379 */;

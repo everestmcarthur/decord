@@ -1,14 +1,14 @@
-// Module ID: 10050
-// Function ID: 10051
+// Module ID: 10055
+// Function ID: 10056
 // Name: VoiceStatus
-// Dependencies: [19, 17, 1908, 4579, 5421, 21, 4560, 576, 504, 10007, 9626, 9627, 1178, 10051, 10052, 6969, 2]
+// Dependencies: [19, 17, 1908, 4579, 5421, 21, 4560, 576, 504, 10012, 9631, 9632, 1178, 10056, 10057, 6969, 2]
 // Exports: BlockedStatus, IgnoredStatus
 
-// Module 10050 (VoiceStatus)
+// Module 10055 (VoiceStatus)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import registerAssetDefault from "registerAsset" /* 6969 */;
-import registerAssetDefault2 from "registerAsset" /* 10052 */;
+import registerAssetDefault2 from "registerAsset" /* 10057 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
@@ -52,15 +52,15 @@ const memoResult = importAllResult.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(10007);
+    let tmp5 = channelId(10012);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(9626);
+    tmp5 = channelId(9631);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(9627);
+      tmp5 = channelId(9632);
       flag3 = false;
     }
   }
@@ -87,7 +87,7 @@ const memoResult1 = importAllResult.memo((userId) => {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => closure_1_6.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(10051);
+    tmp4 = channelId(10056);
   }
   let tmp6 = null;
   if (null != tmp4) {

@@ -1,13 +1,13 @@
-// Module ID: 13703
-// Function ID: 13704
+// Module ID: 13707
+// Function ID: 13708
 // Name: reset
-// Dependencies: [13702, 13704, 504, 573, 2]
+// Dependencies: [13706, 13708, 504, 573, 2]
 
-// Module 13703 (reset)
+// Module 13707 (reset)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "map" /* 13702 */;
-import closure_1 from "map" /* 13704 */;
+import closure_0 from "map" /* 13706 */;
+import closure_1 from "map" /* 13708 */;
 
 function reset() {
   closure_2 = [];

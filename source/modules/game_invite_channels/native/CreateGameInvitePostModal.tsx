@@ -1,10 +1,10 @@
-// Module ID: 12771
-// Function ID: 12772
+// Module ID: 12775
+// Function ID: 12776
 // Name: CreateGameInvitePostContent
-// Dependencies: [32, 19, 17, 1957, 21, 4560, 576, 7162, 504, 5630, 12770, 6981, 12772, 4571, 4527, 11248, 1896, 1114, 5123, 5680, 4556, 3483, 7085, 7272, 5687, 5605, 7201, 4975, 2]
+// Dependencies: [32, 19, 17, 1957, 21, 4560, 576, 7162, 504, 5630, 12774, 6981, 12776, 4571, 4527, 11253, 1896, 1114, 5123, 5680, 4556, 3483, 7085, 7272, 5687, 5605, 7201, 4975, 2]
 // Exports: default
 
-// Module 12771 (CreateGameInvitePostContent)
+// Module 12775 (CreateGameInvitePostContent)
 import ThemesDefault from "Themes" /* 576 */;
 import contextDefault from "context" /* 7162 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -32,7 +32,7 @@ function CreateGameInvitePostContent(parentChannel) {
   dependencyMap = tmp7[1];
   let items = [first];
   const memo = React.useMemo(() => new Set(first.map((id) => id.id)), items);
-  let obj = parentChannel(12772);
+  let obj = parentChannel(12776);
   obj = {
     parentChannel,
     description: tmp5,

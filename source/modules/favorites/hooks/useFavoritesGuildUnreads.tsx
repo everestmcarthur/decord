@@ -1,10 +1,10 @@
-// Module ID: 16311
-// Function ID: 16312
+// Module ID: 16314
+// Function ID: 16315
 // Name: useFavoritesGuildUnreads
 // Dependencies: [5506, 4201, 1957, 7636, 4199, 4575, 4741, 504, 11, 2]
 // Exports: default
 
-// Module 16311 (useFavoritesGuildUnreads)
+// Module 16314 (useFavoritesGuildUnreads)
 import closure_3 from "rebuild" /* 5506 */;
 import closure_4 from "storeThread" /* 4201 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;

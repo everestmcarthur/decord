@@ -1,9 +1,9 @@
-// Module ID: 16654
-// Function ID: 16655
+// Module ID: 16657
+// Function ID: 16658
 // Name: SearchHistoryRemoveIcon
-// Dependencies: [5, 19, 17, 1957, 4575, 1371, 7878, 21, 4560, 576, 12361, 5123, 5680, 16642, 12358, 16652, 4556, 7051, 563, 16653, 8181, 4573, 16651, 16655, 16663, 1114, 2]
+// Dependencies: [5, 19, 17, 1957, 4575, 1371, 7878, 21, 4560, 576, 12365, 5123, 5680, 16645, 12362, 16655, 4556, 7051, 563, 16656, 8181, 4573, 16654, 16658, 16666, 1114, 2]
 
-// Module 16654 (SearchHistoryRemoveIcon)
+// Module 16657 (SearchHistoryRemoveIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
@@ -32,7 +32,7 @@ function SearchHistoryTextRow(searchContext) {
   let onPressSearchHistoryText;
   const tmp = callback3();
   dependencyMap = tmp;
-  let obj = searchContext(16642);
+  let obj = searchContext(16645);
   onPressSearchHistoryText = obj.useOnPressSearchHistoryText({ searchContext });
   const items = [onPressSearchHistoryText, searchContext, , , ];
   ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
@@ -60,7 +60,7 @@ function SearchHistoryTextRow(searchContext) {
   obj[2] = closure_10(SearchHistoryRemoveIcon, { searchContext, searchHistoryItem });
   obj[3] = tmp.textIconContainer;
   obj[4] = closure_10(View, { style: tmp.iconContainer, children: closure_10(searchContext(7051).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }) });
-  return closure_10(searchContext(16652).SearchListRow, obj);
+  return closure_10(searchContext(16655).SearchListRow, obj);
 }
 function SearchHistoryGroupDMRow(searchContext) {
   searchContext = searchContext.searchContext;

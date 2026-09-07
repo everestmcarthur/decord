@@ -1,13 +1,13 @@
-// Module ID: 8875
-// Function ID: 8876
+// Module ID: 8880
+// Function ID: 8881
 // Name: Spacer
-// Dependencies: [19, 17, 21, 576, 4560, 8676, 8686, 8680, 1114, 4556, 8876, 1477, 8874, 8720, 2]
+// Dependencies: [19, 17, 21, 576, 4560, 8681, 8691, 8685, 1114, 4556, 8881, 1477, 8879, 8725, 2]
 // Exports: default
 
-// Module 8875 (Spacer)
+// Module 8880 (Spacer)
 import ThemesDefault from "Themes" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import useSimilarGamesDefault from "useSimilarGames" /* 8876 */;
+import useSimilarGamesDefault from "useSimilarGames" /* 8881 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -136,7 +136,7 @@ export default function GameProfileSimilarGames(trackAction) {
     obj[1] = callback(trackAction(4556).Text, obj);
     const items = [callback(closure_6, obj), ];
     obj1 = { horizontal: true, renderScrollComponent: null, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null };
-    obj1[1] = tmp2(8720);
+    obj1[1] = tmp2(8725);
     obj1[2] = closure_12;
     obj1[3] = function renderItem() {
       return closure_1_7(closure_1_17, { cardWidth: c1 });
@@ -144,7 +144,7 @@ export default function GameProfileSimilarGames(trackAction) {
     obj1[5] = Spacer;
     obj1[6] = ListPadding;
     obj1[7] = ListPadding;
-    items[1] = callback(trackAction(8874).FlashList, obj1);
+    items[1] = callback(trackAction(8879).FlashList, obj1);
     obj[1] = items;
     let tmp7 = callback2(closure_6, obj);
   } else {
@@ -160,7 +160,7 @@ export default function GameProfileSimilarGames(trackAction) {
       obj3[1] = callback(trackAction(4556).Text, obj4);
       const items1 = [callback(closure_6, obj3), ];
       const obj5 = { horizontal: true, renderScrollComponent: null, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null, decelerationRate: "fast", snapToInterval: null };
-      obj5[1] = tmp2(8720);
+      obj5[1] = tmp2(8725);
       obj5[2] = similarGames;
       obj5[3] = function renderItem(game) {
         return closure_1_7(closure_1_16, { game: game.item, trackAction, cardWidth: c1 });
@@ -169,7 +169,7 @@ export default function GameProfileSimilarGames(trackAction) {
       obj5[6] = ListPadding;
       obj5[7] = ListPadding;
       obj5[9] = result + tmp5;
-      items1[1] = callback(trackAction(8874).FlashList, obj5);
+      items1[1] = callback(trackAction(8879).FlashList, obj5);
       obj2[1] = items1;
       tmp7 = callback2(closure_6, obj2);
     }

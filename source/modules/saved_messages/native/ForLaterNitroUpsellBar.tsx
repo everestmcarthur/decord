@@ -1,10 +1,10 @@
-// Module ID: 13294
-// Function ID: 13295
+// Module ID: 13298
+// Function ID: 13299
 // Name: ForLaterNitroUpsellBar
-// Dependencies: [19, 1373, 7852, 21, 7162, 11706, 12221, 4218, 1114, 2]
+// Dependencies: [19, 1373, 7852, 21, 7162, 11711, 12225, 4218, 1114, 2]
 // Exports: default
 
-// Module 13294 (ForLaterNitroUpsellBar)
+// Module 13298 (ForLaterNitroUpsellBar)
 import closure_3 from "noop" /* 19 */;
 import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 7852 */;

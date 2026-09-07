@@ -1,14 +1,14 @@
-// Module ID: 13011
-// Function ID: 13012
+// Module ID: 13015
+// Function ID: 13016
 // Name: FlashIcon
-// Dependencies: [19, 21, 576, 4261, 13012, 2]
+// Dependencies: [19, 21, 576, 4261, 13016, 2]
 // Exports: FlashIcon
 
-// Module 13011 (FlashIcon)
+// Module 13015 (FlashIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 13012 */;
+import registerAsset from "registerAsset" /* 13016 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

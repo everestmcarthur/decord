@@ -1,10 +1,10 @@
-// Module ID: 12189
-// Function ID: 12190
+// Module ID: 12193
+// Function ID: 12194
 // Name: GroupDMNitroCapInfoActionSheet
-// Dependencies: [19, 17, 11593, 21, 4560, 576, 4527, 7150, 4556, 1114, 4975, 2]
+// Dependencies: [19, 17, 11598, 21, 4560, 576, 4527, 7150, 4556, 1114, 4975, 2]
 // Exports: default
 
-// Module 12189 (GroupDMNitroCapInfoActionSheet)
+// Module 12193 (GroupDMNitroCapInfoActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
@@ -12,7 +12,7 @@ import Button from "Button" /* 4975 */;
 import Background from "Background" /* 7150 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_GROUP_DM_NITRO_PARTICIPANTS as closure_5 } from "MAX_GROUP_DM_NITRO_PARTICIPANTS" /* 11593 */;
+import { MAX_GROUP_DM_NITRO_PARTICIPANTS as closure_5 } from "MAX_GROUP_DM_NITRO_PARTICIPANTS" /* 11598 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 12524
-// Function ID: 12525
+// Module ID: 12528
+// Function ID: 12529
 // Name: GuildPowerupCardFooterActive
-// Dependencies: [17, 21, 4560, 4520, 576, 4556, 6610, 1114, 2428, 12525, 12500, 8095, 9375, 2]
+// Dependencies: [17, 21, 4560, 4520, 576, 4556, 6610, 1114, 2428, 12529, 12504, 8095, 9380, 2]
 // Exports: GuildPowerupsCardFooter
 
-// Module 12524 (GuildPowerupCardFooterActive)
+// Module 12528 (GuildPowerupCardFooterActive)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -14,8 +14,8 @@ import CircleCheckIcon from "CircleCheckIcon" /* 4520 */;
 import Text from "Text" /* 4556 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
 import apexExperiment from "apexExperiment" /* 8095 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12500 */;
-import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 12525 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12504 */;
+import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 12529 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

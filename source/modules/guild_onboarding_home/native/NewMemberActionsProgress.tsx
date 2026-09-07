@@ -1,10 +1,10 @@
-// Module ID: 16210
-// Function ID: 16211
+// Module ID: 16213
+// Function ID: 16214
 // Name: ProgressBar
-// Dependencies: [19, 17, 2021, 4747, 4748, 1964, 4187, 21, 4560, 576, 4987, 563, 1384, 5123, 1100, 4556, 1114, 1178, 9939, 2]
+// Dependencies: [19, 17, 2021, 4747, 4748, 1964, 4187, 21, 4560, 576, 4987, 563, 1384, 5123, 1100, 4556, 1114, 1178, 9944, 2]
 // Exports: NewMemberActionsProgress
 
-// Module 16210 (ProgressBar)
+// Module 16213 (ProgressBar)
 import ThemesDefault from "Themes" /* 576 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import closure_3 from "noop" /* 19 */;

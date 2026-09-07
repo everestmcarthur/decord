@@ -1,9 +1,9 @@
-// Module ID: 11323
-// Function ID: 11324
+// Module ID: 11328
+// Function ID: 11329
 // Name: styles
 // Dependencies: [4560, 576, 2]
 
-// Module 11323 (styles)
+// Module 11328 (styles)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

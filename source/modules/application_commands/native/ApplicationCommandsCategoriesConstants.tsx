@@ -1,9 +1,9 @@
-// Module ID: 12395
-// Function ID: 12396
+// Module ID: 12399
+// Function ID: 12400
 // Name: ICON_SIZE
 // Dependencies: [2]
 
-// Module 12395 (ICON_SIZE)
+// Module 12399 (ICON_SIZE)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategoriesConstants.tsx");

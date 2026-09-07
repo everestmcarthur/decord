@@ -1,13 +1,13 @@
-// Module ID: 15770
-// Function ID: 15771
+// Module ID: 15773
+// Function ID: 15774
 // Name: route
-// Dependencies: [7975, 1074, 11468, 15769, 2]
+// Dependencies: [7975, 1074, 11473, 15772, 2]
 
-// Module 15770 (route)
+// Module 15773 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 obj = {
   useTitle() {
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM_BACKGROUND_BLUR_VIEW,
   getComponent() {
-    return require(15769) /* DemoModal */.default;
+    return require(15772) /* DemoModal */.default;
   }
 };
 const route = createToggle.createRoute(obj);

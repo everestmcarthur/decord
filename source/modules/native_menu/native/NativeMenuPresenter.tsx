@@ -1,13 +1,13 @@
-// Module ID: 16913
-// Function ID: 16914
+// Module ID: 16916
+// Function ID: 16917
 // Name: MenuContainer
-// Dependencies: [19, 9684, 504, 10650, 4972, 2]
+// Dependencies: [19, 9689, 504, 10655, 4972, 2]
 // Exports: default
 
-// Module 16913 (MenuContainer)
+// Module 16916 (MenuContainer)
 import useBackPressHandlerDefault from "useBackPressHandler" /* 4972 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 9684 */;
+import closure_4 from "initialize" /* 9689 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/native_menu/native/NativeMenuPresenter.tsx");

@@ -1,10 +1,10 @@
-// Module ID: 14600
-// Function ID: 14601
+// Module ID: 14603
+// Function ID: 14604
 // Name: ColorBox
-// Dependencies: [32, 19, 17, 21, 4560, 576, 4296, 14598, 4987, 6655, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 4296, 14601, 4987, 6655, 2]
 // Exports: default
 
-// Module 14600 (ColorBox)
+// Module 14603 (ColorBox)
 import ThemesDefault from "Themes" /* 576 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -29,7 +29,7 @@ function ColorBox(hue) {
       return obj.hslToRgbWorklet(obj);
     }
   }
-  obj = { hslToRgbWorklet: hue(14598).hslToRgbWorklet, hue };
+  obj = { hslToRgbWorklet: hue(14601).hslToRgbWorklet, hue };
   S.__closure = obj;
   S.__workletHash = 8814597686728;
   S.__initData = closure_9;

@@ -1,20 +1,20 @@
-// Module ID: 9691
-// Function ID: 9692
+// Module ID: 9696
+// Function ID: 9697
 // Name: FocusedControlsExpanded
-// Dependencies: [32, 19, 17, 9467, 9468, 1074, 21, 1115, 4560, 576, 5524, 1178, 1611, 4296, 9692, 1093, 1114, 7154, 4380, 1943, 4561, 6655, 9694, 1477, 9498, 1109, 4271, 4965, 4411, 9695, 2]
+// Dependencies: [32, 19, 17, 9472, 9473, 1074, 21, 1115, 4560, 576, 5524, 1178, 1611, 4296, 9697, 1093, 1114, 7154, 4380, 1943, 4561, 6655, 9699, 1477, 9503, 1109, 4271, 4965, 4411, 9700, 2]
 // Exports: default
 
-// Module 9691 (FocusedControlsExpanded)
+// Module 9696 (FocusedControlsExpanded)
 import ThemesDefault from "Themes" /* 576 */;
 import _mod4296 from "module_4296" /* 4296 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4561 */;
-import CallPTTButtonLooksDefault from "CallPTTButtonLooks" /* 9695 */;
+import CallPTTButtonLooksDefault from "CallPTTButtonLooks" /* 9700 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9467 */;
-import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9468 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 9472 */;
+import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9473 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -63,7 +63,7 @@ function FocusedControlsExpanded(children) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = callback3();
-  let obj = positionY(9692);
+  let obj = positionY(9697);
   const canShowTooltip = obj.useCanShowTooltip(positionY(1093).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
   positionY(4296);
   const fn = function o() {
@@ -620,7 +620,7 @@ export default function FocusedControlsBottomControls(omitPTT) {
   let tmp4Result = null;
   if (!flag) {
     obj = { look: null, style: null, sendCallback: null, stopCallback: null };
-    obj[0] = _require(9695).CallPTTButtonLooks.BLUR;
+    obj[0] = _require(9700).CallPTTButtonLooks.BLUR;
     obj[1] = tmp.ptbButton;
     obj[2] = closure_8;
     obj[3] = closure_9;

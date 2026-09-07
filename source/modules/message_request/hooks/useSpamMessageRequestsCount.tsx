@@ -1,10 +1,10 @@
-// Module ID: 16885
-// Function ID: 16886
+// Module ID: 16888
+// Function ID: 16889
 // Name: useSpamMessageRequestCount
 // Dependencies: [7220, 504, 2]
 // Exports: useSpamMessageRequestCount
 
-// Module 16885 (useSpamMessageRequestCount)
+// Module 16888 (useSpamMessageRequestCount)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "processChannel" /* 7220 */;
 

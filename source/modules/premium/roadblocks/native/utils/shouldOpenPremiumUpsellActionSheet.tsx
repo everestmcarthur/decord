@@ -1,10 +1,10 @@
-// Module ID: 9320
-// Function ID: 9321
+// Module ID: 9325
+// Function ID: 9326
 // Name: maybeOpenPremiumUpsellActionSheet
-// Dependencies: [7850, 1093, 7853, 9321, 2]
+// Dependencies: [7850, 1093, 7853, 9326, 2]
 // Exports: default
 
-// Module 9320 (maybeOpenPremiumUpsellActionSheet)
+// Module 9325 (maybeOpenPremiumUpsellActionSheet)
 import set from "set" /* 2 */;
 import keys from "keys" /* 1093 */;
 import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7850 */;
@@ -23,7 +23,7 @@ export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {
     openPremiumUpsellActionSheetDefault(tmp(7853).EntitlementFeatureNames.ANIMATED_EMOJIS);
     return true;
   } else if (tmp(1093).UpsellTypes.GLOBAL_STICKER === initialUpsellKey) {
-    let flag4 = tmp(9321).getMobileStickerPickerUpsellRestyleEnabled("native.shouldOpenPremiumUpsellActionSheet");
+    let flag4 = tmp(9326).getMobileStickerPickerUpsellRestyleEnabled("native.shouldOpenPremiumUpsellActionSheet");
     if (flag4) {
       openPremiumUpsellActionSheetDefault(tmp(7853).EntitlementFeatureNames.STICKERS_EVERYWHERE);
       flag4 = true;

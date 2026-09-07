@@ -1,9 +1,9 @@
-// Module ID: 9016
-// Function ID: 9017
+// Module ID: 9021
+// Function ID: 9022
 // Name: parse
 // Dependencies: [4257, 4996, 2]
 
-// Module 9016 (parse)
+// Module 9021 (parse)
 import tDefault from "t" /* 4257 */;
 import AST_KEY from "AST_KEY" /* 4996 */;
 

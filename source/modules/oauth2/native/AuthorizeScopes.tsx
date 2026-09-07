@@ -1,10 +1,10 @@
-// Module ID: 9424
-// Function ID: 9425
+// Module ID: 9429
+// Function ID: 9430
 // Name: Scope
-// Dependencies: [19, 17, 21, 4560, 1114, 6616, 576, 4520, 4556, 5598, 9238, 9245, 8339, 2]
+// Dependencies: [19, 17, 21, 4560, 1114, 6616, 576, 4520, 4556, 5598, 9243, 9250, 8339, 2]
 // Exports: default
 
-// Module 9424 (Scope)
+// Module 9429 (Scope)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -86,7 +86,7 @@ export default function AuthorizeScopes(accountScopes) {
     } else {
       tmp4 = tmp14;
     }
-    let hasItem = integrationType === tmp4(9245).ApplicationIntegrationType.USER_INSTALL;
+    let hasItem = integrationType === tmp4(9250).ApplicationIntegrationType.USER_INSTALL;
     if (hasItem) {
       hasItem = requestedScopes.includes(tmp4(8339).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }

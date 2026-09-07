@@ -1,10 +1,10 @@
-// Module ID: 16167
-// Function ID: 16168
+// Module ID: 16170
+// Function ID: 16171
 // Name: useIsCurrentUserEligibleForPowerupUpsells
 // Dependencies: [2021, 5438, 1371, 4455, 1373, 1885, 504, 2]
 // Exports: default, getIsCurrentUserEligibleForPowerupUpsells
 
-// Module 16167 (useIsCurrentUserEligibleForPowerupUpsells)
+// Module 16170 (useIsCurrentUserEligibleForPowerupUpsells)
 import closure_2 from "trackCommunicationDisabled" /* 2021 */;
 import closure_3 from "insertUnsortedGuilds" /* 5438 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;

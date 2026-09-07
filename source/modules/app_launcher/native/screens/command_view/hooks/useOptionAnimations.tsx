@@ -1,10 +1,10 @@
-// Module ID: 12161
-// Function ID: 12162
+// Module ID: 12165
+// Function ID: 12166
 // Name: OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION
 // Dependencies: [32, 19, 4561, 4296, 2]
 // Exports: useOptionEnteringAnimation
 
-// Module 12161 (OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION)
+// Module 12165 (OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION)
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4561 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;

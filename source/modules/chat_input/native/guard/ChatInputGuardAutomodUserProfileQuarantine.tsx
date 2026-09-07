@@ -1,9 +1,9 @@
-// Module ID: 12464
-// Function ID: 12465
-// Dependencies: [19, 502, 2021, 4187, 21, 504, 4205, 11861, 1114, 12448, 12465, 2]
+// Module ID: 12468
+// Function ID: 12469
+// Dependencies: [19, 502, 2021, 4187, 21, 504, 4205, 11866, 1114, 12452, 12469, 2]
 
-// Module 12464
-import ChatInputGuardDefault from "ChatInputGuard" /* 12448 */;
+// Module 12468
+import ChatInputGuardDefault from "ChatInputGuard" /* 12452 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 502 */;
 import closure_5 from "trackCommunicationDisabled" /* 2021 */;
@@ -49,7 +49,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfil
   obj = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
   const obj2 = guildId(4205);
   tmp6 = GuildMemberFlags;
-  obj[3] = jsx(guildId(12465).ChatXIcon, {});
+  obj[3] = jsx(guildId(12469).ChatXIcon, {});
   obj[4] = stringResult1;
   return jsx(ChatInputGuardDefault, { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
 });

@@ -1,22 +1,22 @@
-// Module ID: 15183
-// Function ID: 15184
+// Module ID: 15186
+// Function ID: 15187
 // Name: QuestDockWithGestureAnimation
-// Dependencies: [5, 32, 109, 19, 17, 15093, 5444, 15095, 1074, 1085, 21, 4560, 576, 15102, 15092, 15096, 15099, 4962, 4296, 8265, 1611, 15100, 4262, 15184, 4974, 15094, 4978, 4959, 15185, 7073, 1114, 15186, 15187, 15188, 4963, 11483, 5447, 15189, 7602, 7607, 7728, 15182, 504, 11484, 7872, 11276, 4271, 15091, 1242, 15190, 15191, 15198, 15199, 15201, 11778, 15202, 15203, 5451, 2]
+// Dependencies: [5, 32, 109, 19, 17, 15096, 5444, 15098, 1074, 1085, 21, 4560, 576, 15105, 15095, 15099, 15102, 4962, 4296, 8265, 1611, 15103, 4262, 15187, 4974, 15097, 4978, 4959, 15188, 7073, 1114, 15189, 15190, 15191, 4963, 11488, 5447, 15192, 7602, 7607, 7728, 15185, 504, 11489, 7872, 11281, 4271, 15094, 1242, 15193, 15194, 15201, 15202, 15204, 11783, 15205, 15206, 5451, 2]
 
-// Module 15183 (QuestDockWithGestureAnimation)
+// Module 15186 (QuestDockWithGestureAnimation)
 import ThemesDefault from "Themes" /* 576 */;
 import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5447 */;
-import useQuests from "useQuests" /* 11483 */;
-import _modDef15202 from "module_15202" /* 15202 */;
-import _modDef15203 from "module_15203" /* 15203 */;
+import useQuests from "useQuests" /* 11488 */;
+import _modDef15205 from "module_15205" /* 15205 */;
+import _modDef15206 from "module_15206" /* 15206 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_11 from "QuestDockMode" /* 15093 */;
+import closure_11 from "QuestDockMode" /* 15096 */;
 import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15095 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15098 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 import { ThemeTypes } from "sum" /* 1085 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -751,8 +751,8 @@ function QuestDockBountyContent(bounty) {
     iconUrl: bounty.productIcon,
     layoutVariant: "insetHeader",
     theme: ThemeTypes.DARK,
-    collapsedContent: callback3(_modDef15202, {}),
-    expandedContent: callback3(_modDef15203, {}),
+    collapsedContent: callback3(_modDef15205, {}),
+    expandedContent: callback3(_modDef15206, {}),
     backgroundContent: null,
     renderImpressionTracker(children) {
       return closure_1_21(bounty(closure_1_2[54]).BillableAdPlacementImpressionTrackerNative, { adContentId: bounty.id, adCreativeType: bounty(closure_1_2[57]).AdCreativeType.BOUNTY, overrideVisibility: false, questContent: bounty(closure_1_2[36]).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: bounty(closure_1_2[36]).QuestContent.QUEST_BAR_MOBILE, children: children.children });
@@ -762,7 +762,7 @@ function QuestDockBountyContent(bounty) {
     }
   };
   obj[1] = callback3(QuestDockWithEntranceAnimation, obj);
-  return callback3(bounty(15102).QuestDockBountyProvider, obj);
+  return callback3(bounty(15105).QuestDockBountyProvider, obj);
 }
 let closure_3 = ["mode"];
 const error = importAllResult;

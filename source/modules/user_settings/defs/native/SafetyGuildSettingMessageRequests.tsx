@@ -1,9 +1,9 @@
-// Module ID: 15878
-// Function ID: 15879
+// Module ID: 15881
+// Function ID: 15882
 // Name: showMessageRequestRestrictionModal
-// Dependencies: [1979, 15869, 7975, 11469, 1935, 4904, 1114, 4994, 15879, 8411, 8413, 6995, 15876, 14824, 11468, 2]
+// Dependencies: [1979, 15872, 7975, 11474, 1935, 4904, 1114, 4994, 15882, 8411, 8413, 6995, 15879, 14827, 11473, 2]
 
-// Module 15878 (showMessageRequestRestrictionModal)
+// Module 15881 (showMessageRequestRestrictionModal)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import setDefault from "set" /* 4904 */;
@@ -11,13 +11,13 @@ import componentDidMountDefault from "componentDidMount" /* 4994 */;
 import getSanitizedRestrictedGuilds from "getSanitizedRestrictedGuilds" /* 6995 */;
 import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8411 */;
 import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8413 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14824 */;
-import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15876 */;
-import shouldAgeVerifyForDMDefaultOff from "shouldAgeVerifyForDMDefaultOff" /* 15879 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14827 */;
+import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15879 */;
+import shouldAgeVerifyForDMDefaultOff from "shouldAgeVerifyForDMDefaultOff" /* 15882 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15869 */;
-import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11469 */;
-import createToggle from "createToggle" /* 11468 */;
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15872 */;
+import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 11474 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 function showMessageRequestRestrictionModal(arg0) {

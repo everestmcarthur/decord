@@ -1,14 +1,14 @@
-// Module ID: 10667
-// Function ID: 10668
+// Module ID: 10672
+// Function ID: 10673
 // Name: createFromServer
-// Dependencies: [1386, 1224, 10668, 1090, 1241, 2]
+// Dependencies: [1386, 1224, 10673, 1090, 1241, 2]
 
-// Module 10667 (createFromServer)
+// Module 10672 (createFromServer)
 import setDefault from "set" /* 1090 */;
 import BINARY_READ_OPTIONS from "BINARY_READ_OPTIONS" /* 1224 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
 import toJSDefault from "toJS" /* 1386 */;
-import create from "create" /* 10668 */;
+import create from "create" /* 10673 */;
 
 require = arg1;
 toJSDefault;

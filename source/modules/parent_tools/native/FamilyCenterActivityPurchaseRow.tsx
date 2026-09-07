@@ -1,15 +1,15 @@
-// Module ID: 14901
-// Function ID: 14902
+// Module ID: 14904
+// Function ID: 14905
 // Name: FamilyCenterActivityPurchaseRow
-// Dependencies: [19, 17, 21, 4560, 576, 8173, 14902, 7234, 14903, 4556, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 8173, 14905, 7234, 14906, 4556, 2]
 // Exports: default
 
-// Module 14901 (FamilyCenterActivityPurchaseRow)
+// Module 14904 (FamilyCenterActivityPurchaseRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8173 */;
-import getCollectibleTypeName from "getCollectibleTypeName" /* 14902 */;
-import AvatarDecorationPreviewImageDefault from "AvatarDecorationPreviewImage" /* 14903 */;
+import getCollectibleTypeName from "getCollectibleTypeName" /* 14905 */;
+import AvatarDecorationPreviewImageDefault from "AvatarDecorationPreviewImage" /* 14906 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

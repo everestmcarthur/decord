@@ -1,16 +1,16 @@
-// Module ID: 17733
-// Function ID: 17734
+// Module ID: 17736
+// Function ID: 17737
 // Name: Header
-// Dependencies: [19, 17, 21, 4560, 576, 7123, 4556, 15217, 1114, 1611, 4975, 1483, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 7123, 4556, 15220, 1114, 1611, 4975, 1483, 2]
 // Exports: default
 
-// Module 17733 (Header)
+// Module 17736 (Header)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import Text from "Text" /* 4556 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import FormSeparatorDefault from "FormSeparator" /* 15217 */;
+import FormSeparatorDefault from "FormSeparator" /* 15220 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

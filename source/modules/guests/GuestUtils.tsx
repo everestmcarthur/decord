@@ -1,8 +1,8 @@
-// Module ID: 11311
-// Function ID: 11312
+// Module ID: 11316
+// Function ID: 11317
 // Dependencies: [4187, 1384, 8392, 2]
 
-// Module 11311
+// Module 11316
 import set from "set" /* 2 */;
 import hasFlag from "hasFlag" /* 1384 */;
 import GuildMemberFlags2 from "GuildMemberFlags" /* 4187 */;

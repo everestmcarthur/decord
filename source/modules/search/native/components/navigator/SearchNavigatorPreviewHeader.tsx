@@ -1,9 +1,9 @@
-// Module ID: 16860
-// Function ID: 16861
-// Dependencies: [19, 17, 21, 4560, 13263, 2]
+// Module ID: 16863
+// Function ID: 16864
+// Dependencies: [19, 17, 21, 4560, 13267, 2]
 
-// Module 16860
-import ChannelHeaderDefault from "ChannelHeader" /* 13263 */;
+// Module 16863
+import ChannelHeaderDefault from "ChannelHeader" /* 13267 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

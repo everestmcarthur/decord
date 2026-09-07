@@ -1,10 +1,10 @@
-// Module ID: 13692
-// Function ID: 13693
+// Module ID: 13696
+// Function ID: 13697
 // Name: apexExperiment
 // Dependencies: [4477, 1433, 4474, 8352, 2]
 // Exports: isEligibleForContentInventoryV1, isEligibleForImpressionCapping
 
-// Module 13692 (apexExperiment)
+// Module 13696 (apexExperiment)
 import set from "set" /* 2 */;
 import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;

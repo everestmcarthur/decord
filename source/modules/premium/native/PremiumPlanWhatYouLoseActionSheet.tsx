@@ -1,10 +1,10 @@
-// Module ID: 13334
-// Function ID: 13335
+// Module ID: 13338
+// Function ID: 13339
 // Name: WhatYouLoseItem
-// Dependencies: [19, 17, 1373, 21, 4560, 576, 5587, 4556, 4218, 7162, 13335, 38, 13339, 1114, 13340, 13295, 13341, 13342, 4527, 7150, 7431, 4975, 10663, 2]
+// Dependencies: [19, 17, 1373, 21, 4560, 576, 5587, 4556, 4218, 7162, 13339, 38, 13343, 1114, 13344, 13299, 13345, 13346, 4527, 7150, 7431, 4975, 10668, 2]
 // Exports: default
 
-// Module 13334 (WhatYouLoseItem)
+// Module 13338 (WhatYouLoseItem)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import preloadDefault from "preload" /* 5587 */;

@@ -1,10 +1,10 @@
-// Module ID: 15567
-// Function ID: 15568
+// Module ID: 15570
+// Function ID: 15571
 // Name: Code
-// Dependencies: [5, 32, 19, 17, 1347, 1074, 21, 4560, 576, 4556, 4424, 1611, 10193, 504, 9, 7475, 8361, 8874, 4973, 5687, 5604, 1348, 5605, 9053, 2]
+// Dependencies: [5, 32, 19, 17, 1347, 1074, 21, 4560, 576, 4556, 4424, 1611, 10198, 504, 9, 7475, 8361, 8879, 4973, 5687, 5604, 1348, 5605, 9058, 2]
 // Exports: default
 
-// Module 15567 (Code)
+// Module 15570 (Code)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -46,7 +46,7 @@ export default function UserSettingsStartupTimings() {
   const useResult = React.use(num);
   React = useResult;
   let items = [useResult, first, first1];
-  const memo = React.useMemo(() => first(10193)(closure_5, !first, first1).split("\n"), items);
+  const memo = React.useMemo(() => first(10198)(closure_5, !first, first1).split("\n"), items);
   obj1 = _require(504);
   let items1 = [closure_7];
   closure_6 = obj1.useStateFromStores(items1, () => alertStartupMetrics.alertStartupMetrics);
@@ -112,7 +112,7 @@ export default function UserSettingsStartupTimings() {
           return obj2;
         } else {
           closure_0 = arg1;
-          closure_1 = closure_1_1(10193)(closure_0);
+          closure_1 = closure_1_1(10198)(closure_0);
           obj = closure_1_0(8361);
           obj3 = { message: null };
           obj3[0] = closure_1;
@@ -264,7 +264,7 @@ export default function UserSettingsStartupTimings() {
       },
       checked: !first1
     };
-    obj24[2] = callback(lib(5605).TableRow, { icon: callback(lib(9053).ShareIcon, {}), label: "Copy timings to clipboard.", arrow: true, onPress: closure_14 });
+    obj24[2] = callback(lib(5605).TableRow, { icon: callback(lib(9058).ShareIcon, {}), label: "Copy timings to clipboard.", arrow: true, onPress: closure_14 });
     items[4] = callback(lib(5687).TableRowGroup, obj24);
     obj[2] = items;
     const items12 = [callback2(lib(4973).Stack, obj), callback(closure_6, { style: lib.border })];
@@ -275,6 +275,6 @@ export default function UserSettingsStartupTimings() {
   obj[3] = function renderItem(children) {
     return callback(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj[1] = callback2(_require(8874).FlashList, obj);
+  obj[1] = callback2(_require(8879).FlashList, obj);
   return callback2(closure_6, obj);
 };

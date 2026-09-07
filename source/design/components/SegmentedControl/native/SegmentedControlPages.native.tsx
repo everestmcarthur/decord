@@ -1,10 +1,10 @@
-// Module ID: 12616
-// Function ID: 12617
+// Module ID: 12620
+// Function ID: 12621
 // Name: SegmentedControlPage
-// Dependencies: [32, 19, 17, 21, 4296, 12617, 1115, 6655, 4971, 4923, 2]
+// Dependencies: [32, 19, 17, 21, 4296, 12621, 1115, 6655, 4971, 4923, 2]
 // Exports: SegmentedControlPages
 
-// Module 12616 (SegmentedControlPage)
+// Module 12620 (SegmentedControlPage)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;

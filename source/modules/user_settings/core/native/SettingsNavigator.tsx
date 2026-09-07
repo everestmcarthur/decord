@@ -1,17 +1,17 @@
-// Module ID: 16903
-// Function ID: 16904
+// Module ID: 16906
+// Function ID: 16907
 // Name: SettingHeaderBadge
-// Dependencies: [32, 19, 17, 2025, 14691, 1074, 21, 7913, 4560, 576, 15406, 1178, 4556, 1484, 13410, 16904, 6995, 563, 7162, 7182, 14693, 7475, 14694, 7000, 14172, 4262, 5123, 1114, 16403, 16905, 14582, 16906, 38, 2]
+// Dependencies: [32, 19, 17, 2025, 14694, 1074, 21, 7913, 4560, 576, 15409, 1178, 4556, 1484, 13414, 16907, 6995, 563, 7162, 7182, 14696, 7475, 14697, 7000, 14175, 4262, 5123, 1114, 16406, 16908, 14585, 16909, 38, 2]
 
-// Module 16903 (SettingHeaderBadge)
+// Module 16906 (SettingHeaderBadge)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
-import SettingsBadgeType from "SettingsBadgeType" /* 15406 */;
+import SettingsBadgeType from "SettingsBadgeType" /* 15409 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "_getSystemLocale" /* 2025 */;
-import closure_7 from "zustandStore" /* 14691 */;
+import closure_7 from "zustandStore" /* 14694 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;

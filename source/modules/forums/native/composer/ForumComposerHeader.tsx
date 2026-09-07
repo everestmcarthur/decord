@@ -1,10 +1,10 @@
-// Module ID: 10266
-// Function ID: 10267
+// Module ID: 10271
+// Function ID: 10272
 // Name: ForumComposerHeader
 // Dependencies: [19, 17, 21, 4560, 576, 4713, 5123, 1114, 5680, 5088, 4556, 5075, 2]
 // Exports: default
 
-// Module 10266 (ForumComposerHeader)
+// Module 10271 (ForumComposerHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

@@ -1,14 +1,14 @@
-// Module ID: 15361
-// Function ID: 15362
+// Module ID: 15364
+// Function ID: 15365
 // Name: EmojiAngryFaceWithHornsIcon
-// Dependencies: [19, 21, 576, 4261, 15362, 2]
+// Dependencies: [19, 21, 576, 4261, 15365, 2]
 // Exports: EmojiAngryFaceWithHornsIcon
 
-// Module 15361 (EmojiAngryFaceWithHornsIcon)
+// Module 15364 (EmojiAngryFaceWithHornsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 15362 */;
+import registerAsset from "registerAsset" /* 15365 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

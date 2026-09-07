@@ -1,12 +1,12 @@
-// Module ID: 14194
-// Function ID: 14195
+// Module ID: 14197
+// Function ID: 14198
 // Name: setDerivedQosData
-// Dependencies: [3, 13637, 2]
+// Dependencies: [3, 13641, 2]
 // Exports: setDerivedQosData
 
-// Module 14194 (setDerivedQosData)
+// Module 14197 (setDerivedQosData)
 import timestampDefault from "timestamp" /* 3 */;
-import enforcingDefault from "enforcing" /* 13637 */;
+import enforcingDefault from "enforcing" /* 13641 */;
 
 let closure_2 = new timestampDefault("DerivedQosDataStorage");
 const tmp2 = new timestampDefault("DerivedQosDataStorage");

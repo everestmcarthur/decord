@@ -1,21 +1,33 @@
 // Module ID: 14052
 // Function ID: 14053
 // Name: Range
-// Dependencies: [14045]
+// Dependencies: [14048, 14019]
 
 // Module 14052 (Range)
-import Range from "Range" /* 14045 */;
 
-
-export default (arg0, arg1) => {
+export default (arr) => {
+  const _require = arg2;
+  dependencyMap = null;
+  c2 = null;
+  closure_3 = null;
   try {
-    const tmp8 = new Range(arg0, arg1);
-    let str = tmp8.range;
-    if (!str) {
-      str = "*";
-    }
-    return str;
+    let tmp9 = new _require(14048)(arg1, arg2);
+    closure_3 = tmp9;
+    const item = arr.forEach((arg0) => {
+      if (regex.test(arg0)) {
+        let tmp = closure_1;
+        if (closure_1) {
+          tmp = -1 !== _null2.compare(arg0);
+        }
+        if (!tmp) {
+          closure_1 = arg0;
+          const tmp9 = new callback(_null[1])(closure_1, callback);
+          _null2 = tmp9;
+        }
+      }
+    });
+    return dependencyMap;
   } catch (err) {
-    return null;
+    return tmp;
   }
 };

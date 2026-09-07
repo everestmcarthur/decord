@@ -1,10 +1,10 @@
-// Module ID: 10033
-// Function ID: 10034
+// Module ID: 10038
+// Function ID: 10039
 // Name: useMyCurrentStageChannelRole
 // Dependencies: [502, 2011, 5421, 504, 2]
 // Exports: default
 
-// Module 10033 (useMyCurrentStageChannelRole)
+// Module 10038 (useMyCurrentStageChannelRole)
 import closure_2 from "fetchFingerprint" /* 502 */;
 import closure_3 from "handleConnectionOpen" /* 2011 */;
 import closure_4 from "buildStageChannelUserRoles" /* 5421 */;

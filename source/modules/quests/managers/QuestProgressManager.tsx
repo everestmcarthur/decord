@@ -1,9 +1,9 @@
-// Module ID: 17892
-// Function ID: 17893
+// Module ID: 17895
+// Function ID: 17896
 // Name: isQuestProgressable
-// Dependencies: [5, 32, 1956, 9510, 1915, 4582, 1931, 4584, 7703, 17032, 5444, 9511, 1090, 7709, 7699, 11515, 5445, 11276, 5447, 7728, 4691, 4690, 7118, 5452, 7724, 4612, 1369, 4689, 7722, 573, 2]
+// Dependencies: [5, 32, 1956, 9515, 1915, 4582, 1931, 4584, 7703, 17035, 5444, 9516, 1090, 7709, 7699, 11520, 5445, 11281, 5447, 7728, 4691, 4690, 7118, 5452, 7724, 4612, 1369, 4689, 7722, 573, 2]
 
-// Module 17892 (isQuestProgressable)
+// Module 17895 (isQuestProgressable)
 import _slicedToArrayDefault from "_slicedToArray" /* 32 */;
 import setDefault from "set" /* 1090 */;
 import _openRobloxURLWithRootPlaceId from "_openRobloxURLWithRootPlaceId" /* 4690 */;
@@ -13,18 +13,18 @@ import initializeDefault from "initialize" /* 7118 */;
 import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7699 */;
 import isSponsoredPlayQuest from "isSponsoredPlayQuest" /* 7722 */;
 import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7724 */;
-import questMatchesActivity from "questMatchesActivity" /* 11515 */;
+import questMatchesActivity from "questMatchesActivity" /* 11520 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "participantFromServer" /* 1956 */;
-import closure_5 from "map" /* 9510 */;
+import closure_5 from "map" /* 9515 */;
 import closure_6 from "initialize" /* 1915 */;
 import closure_7 from "reset" /* 4582 */;
 import closure_8 from "gameFromServer" /* 1931 */;
 import closure_9 from "getVoiceStatesForGuild" /* 4584 */;
 import closure_10 from "initializeState" /* 7703 */;
-import closure_11 from "set" /* 17032 */;
+import closure_11 from "set" /* 17035 */;
 import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
-import { isLaunched } from "FrameLayoutModes" /* 9511 */;
+import { isLaunched } from "FrameLayoutModes" /* 9516 */;
 import getQuestLogger from "getQuestLogger" /* 7709 */;
 
 require = arg1;
@@ -56,7 +56,7 @@ function handleEmbeddedActivityLaunchSuccess(applicationId) {
       if (features.includes(QuestVariants.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
         let tmp9 = tmp5;
         let tmp10 = tmp7;
-        let tmp6Result = tmp6(11276);
+        let tmp6Result = tmp6(11281);
         obj = { questContent: null, questContentCTA: null, sourceQuestContent: null };
         obj[0] = tmp6(5447).QuestContent.RUNNING_ACTIVITY;
         obj[1] = tmp6(7728).QuestContentCTA.START_QUEST;

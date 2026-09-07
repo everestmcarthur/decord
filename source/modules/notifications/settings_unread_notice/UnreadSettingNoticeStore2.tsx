@@ -1,15 +1,15 @@
-// Module ID: 11412
-// Function ID: 11413
+// Module ID: 11417
+// Function ID: 11418
 // Name: startInterval
-// Dependencies: [502, 1957, 1979, 2011, 4741, 1074, 4742, 1084, 1090, 11, 1384, 504, 10149, 573, 2]
+// Dependencies: [502, 1957, 1979, 2011, 4741, 1074, 4742, 1084, 1090, 11, 1384, 504, 10154, 573, 2]
 
-// Module 11412 (startInterval)
+// Module 11417 (startInterval)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import setDefault from "set" /* 1090 */;
 import hasFlag from "hasFlag" /* 1384 */;
-import useChannelPresetSettings from "useChannelPresetSettings" /* 10149 */;
+import useChannelPresetSettings from "useChannelPresetSettings" /* 10154 */;
 import closure_3 from "fetchFingerprint" /* 502 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import closure_5 from "createGuildRecordFromRust" /* 1979 */;

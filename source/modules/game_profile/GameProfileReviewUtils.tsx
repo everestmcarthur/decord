@@ -1,10 +1,10 @@
-// Module ID: 8724
-// Function ID: 8725
+// Module ID: 8729
+// Function ID: 8730
 // Name: getSteamReviewScoreDescriptionColor
 // Dependencies: [1934, 1114, 2]
 // Exports: canShowLocalizedSteamReview, getSteamReviewScoreDescriptionColor, getSteamReviewScoreDescriptionIntl
 
-// Module 8724 (getSteamReviewScoreDescriptionColor)
+// Module 8729 (getSteamReviewScoreDescriptionColor)
 import set from "set" /* 2 */;
 import GameTheme from "GameTheme" /* 1934 */;
 

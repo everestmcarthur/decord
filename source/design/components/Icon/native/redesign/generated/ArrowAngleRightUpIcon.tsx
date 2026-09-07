@@ -1,14 +1,14 @@
-// Module ID: 11689
-// Function ID: 11690
+// Module ID: 11694
+// Function ID: 11695
 // Name: ArrowAngleRightUpIcon
-// Dependencies: [19, 21, 576, 4261, 11690, 2]
+// Dependencies: [19, 21, 576, 4261, 11695, 2]
 // Exports: ArrowAngleRightUpIcon
 
-// Module 11689 (ArrowAngleRightUpIcon)
+// Module 11694 (ArrowAngleRightUpIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 11690 */;
+import registerAsset from "registerAsset" /* 11695 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

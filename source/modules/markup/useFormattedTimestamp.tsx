@@ -1,10 +1,10 @@
-// Module ID: 10130
-// Function ID: 10131
+// Module ID: 10135
+// Function ID: 10136
 // Name: items
 // Dependencies: [32, 19, 1090, 7440, 4153, 5022, 2]
 // Exports: default
 
-// Module 10130 (items)
+// Module 10135 (items)
 import setDefault from "set" /* 1090 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

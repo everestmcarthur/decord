@@ -1,16 +1,16 @@
-// Module ID: 14497
-// Function ID: 14498
+// Module ID: 14500
+// Function ID: 14501
 // Name: fetchStoreListingsForApplications
-// Dependencies: [4788, 5510, 14498, 1074, 4802, 1272, 573, 8854, 2]
+// Dependencies: [4788, 5510, 14501, 1074, 4802, 1272, 573, 8859, 2]
 // Exports: fetchAllStoreListingsForApplication, fetchStoreListingForSku, fetchStoreListingsForApplications
 
-// Module 14497 (fetchStoreListingsForApplications)
+// Module 14500 (fetchStoreListingsForApplications)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import sendRequest from "sendRequest" /* 1272 */;
 import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4802 */;
 import closure_3 from "addApplication" /* 4788 */;
 import closure_4 from "addSku" /* 5510 */;
-import closure_5 from "addRegularStoreListing" /* 14498 */;
+import closure_5 from "addRegularStoreListing" /* 14501 */;
 import { Endpoints } from "ME" /* 1074 */;
 
 require = arg1;
@@ -77,7 +77,7 @@ export const fetchStoreListingForSku = function fetchStoreListingForSku(skuId) {
   const value = closure_4.get(skuId);
   let result = null != value;
   if (result) {
-    let obj = _require(8854);
+    let obj = _require(8859);
     result = obj.isTestModeForApplication(value.applicationId);
   }
   importDefault = result;

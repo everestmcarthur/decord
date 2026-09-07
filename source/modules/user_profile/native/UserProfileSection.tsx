@@ -1,10 +1,10 @@
-// Module ID: 11582
-// Function ID: 11583
+// Module ID: 11587
+// Function ID: 11588
 // Name: UserProfileSection
-// Dependencies: [19, 17, 21, 4560, 576, 4271, 7184, 4409, 8599, 4556, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4271, 7184, 4409, 8604, 4556, 2]
 // Exports: default
 
-// Module 11582 (UserProfileSection)
+// Module 11587 (UserProfileSection)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import ManaContext from "ManaContext" /* 4271 */;
@@ -36,7 +36,7 @@ export default function UserProfileSection(title) {
   const merged1 = Object.assign(tmp2.contentContainer);
   if (null != primaryColor) {
     if (null != profileThemeValues) {
-      let borderColor = tmp3(4409).hexOpacityToRgba(tmp3(8599).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
+      let borderColor = tmp3(4409).hexOpacityToRgba(tmp3(8604).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
       const tmp3Result = tmp3(4409);
     }
     obj.borderColor = borderColor;

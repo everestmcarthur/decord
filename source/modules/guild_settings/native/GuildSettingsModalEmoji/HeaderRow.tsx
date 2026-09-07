@@ -1,17 +1,17 @@
-// Module ID: 17568
-// Function ID: 17569
+// Module ID: 17571
+// Function ID: 17572
 // Name: HeaderRow
-// Dependencies: [5, 32, 19, 17, 17562, 1074, 1374, 21, 4560, 576, 9671, 10336, 1242, 1114, 1256, 5138, 4975, 4556, 504, 2]
+// Dependencies: [5, 32, 19, 17, 17565, 1074, 1374, 21, 4560, 576, 9676, 10341, 1242, 1114, 1256, 5138, 4975, 4556, 504, 2]
 // Exports: ConnectedHeaderRow
 
-// Module 17568 (HeaderRow)
+// Module 17571 (HeaderRow)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 17562 */;
+import closure_8 from "initialize" /* 17565 */;
 import ME from "ME" /* 1074 */;
 import { EMOJI_MAX_FILESIZE_KB } from "set" /* 1374 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -196,7 +196,7 @@ function HeaderRow(guild) {
   [tmp5, c5] = callback(React.useState(null), 2);
   const tmp4 = callback(React.useState(null), 2);
   [c6, c7] = callback(React.useState(""), 2);
-  let obj = guild(9671);
+  let obj = guild(9676);
   let canCreateExpressions = obj.useManageResourcePermissions(guild).canCreateExpressions;
   let intl = guild(1114).intl;
   obj = { id: null, text: null };

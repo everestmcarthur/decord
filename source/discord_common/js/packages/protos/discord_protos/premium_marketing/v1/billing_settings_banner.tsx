@@ -1,14 +1,14 @@
-// Module ID: 10690
-// Function ID: 10691
+// Module ID: 10695
+// Function ID: 10696
 // Name: create
-// Dependencies: [32, 1188, 10680, 10672, 10670, 10671, 2]
+// Dependencies: [32, 1188, 10685, 10677, 10675, 10676, 2]
 
-// Module 10690 (create)
+// Module 10695 (create)
 import _mod1188 from "module_1188" /* 1188 */;
-import create from "create" /* 10670 */;
-import create2 from "create" /* 10671 */;
-import create3 from "create" /* 10672 */;
-import create4 from "create" /* 10680 */;
+import create from "create" /* 10675 */;
+import create2 from "create" /* 10676 */;
+import create3 from "create" /* 10677 */;
+import create4 from "create" /* 10685 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1188" /* 1188 */;
 
@@ -23,7 +23,7 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(10680).ThemeAwareAsset;
+            return callback(10685).ThemeAwareAsset;
           }
     };
     items[3] = {
@@ -31,7 +31,7 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "button",
       kind: "message",
       T() {
-            return callback(10672).CTAButton;
+            return callback(10677).CTAButton;
           }
     };
     items[4] = {
@@ -39,7 +39,7 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(10670).LocalizedString;
+            return callback(10675).LocalizedString;
           }
     };
     obj = { no: 6, name: "body_localized", kind: "message", T: null };
@@ -55,7 +55,7 @@ class BillingSettingsBanner$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(10671).HelpArticle;
+            return callback(10676).HelpArticle;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.BillingSettingsBanner", items, T);
@@ -224,7 +224,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(10680).ThemeAwareAsset;
+      return callback(10685).ThemeAwareAsset;
     }
   },
   {
@@ -232,7 +232,7 @@ let items = [
     name: "button",
     kind: "message",
     T() {
-      return callback(10672).CTAButton;
+      return callback(10677).CTAButton;
     }
   },
   {
@@ -240,7 +240,7 @@ let items = [
     name: "header_localized",
     kind: "message",
     T() {
-      return callback(10670).LocalizedString;
+      return callback(10675).LocalizedString;
     }
   },
 ,
@@ -259,7 +259,7 @@ items[6] = {
   name: "help_article",
   kind: "message",
   T() {
-    return callback(10671).HelpArticle;
+    return callback(10676).HelpArticle;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.BillingSettingsBanner", items, tmp, T, BillingSettingsBanner$Type, prototype, items);

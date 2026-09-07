@@ -1,16 +1,16 @@
-// Module ID: 16755
-// Function ID: 16756
+// Module ID: 16758
+// Function ID: 16759
 // Name: GroupDMRecipientLimitTitle
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 1115, 11591, 4262, 1114, 4556, 8662, 12188, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 1115, 11596, 4262, 1114, 4556, 8667, 12192, 2]
 // Exports: default
 
-// Module 16755 (GroupDMRecipientLimitTitle)
+// Module 16758 (GroupDMRecipientLimitTitle)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import map from "map" /* 4262 */;
 import Text from "Text" /* 4556 */;
-import GroupDMNitroAcquisitionStrategy from "GroupDMNitroAcquisitionStrategy" /* 11591 */;
+import GroupDMNitroAcquisitionStrategy from "GroupDMNitroAcquisitionStrategy" /* 11596 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { MAX_GROUP_DM_PARTICIPANTS } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -74,7 +74,7 @@ export default function GroupDMRecipientLimitTitle(arg0) {
     obj1 = { size: "xxs", color: null, style: null, accessible: false };
     obj1[1] = token2;
     obj1[2] = tmp.nitroWheelIcon;
-    tmp15Result = tmp15(tmp2(8662).NitroWheelIcon, obj1);
+    tmp15Result = tmp15(tmp2(8667).NitroWheelIcon, obj1);
   }
   obj2 = { children: null };
   const items1 = [tmp15Result, ];
@@ -94,7 +94,7 @@ export default function GroupDMRecipientLimitTitle(arg0) {
     obj5[2] = tmp5(576).space.PX_16;
     obj5[3] = tmp5(576).space.PX_16;
     obj4[3] = obj5;
-    obj4[4] = tmp5(12188);
+    obj4[4] = tmp5(12192);
     obj4[5] = tmp13Result;
     tmp15Result = tmp15(closure_3, obj4);
   } else {

@@ -1,15 +1,15 @@
-// Module ID: 13262
-// Function ID: 13263
+// Module ID: 13266
+// Function ID: 13267
 // Name: VoicePanelVideoGuardErrorAlert
-// Dependencies: [19, 21, 4910, 4910, 1114, 4556, 13260, 2]
+// Dependencies: [19, 21, 4910, 4910, 1114, 4556, 13264, 2]
 // Exports: default
 
-// Module 13262 (VoicePanelVideoGuardErrorAlert)
+// Module 13266 (VoicePanelVideoGuardErrorAlert)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
-import VIDEO_GUARD_BLOG_POST_URL from "VIDEO_GUARD_BLOG_POST_URL" /* 13260 */;
+import VIDEO_GUARD_BLOG_POST_URL from "VIDEO_GUARD_BLOG_POST_URL" /* 13264 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,13 +1,13 @@
-// Module ID: 12093
-// Function ID: 12094
+// Module ID: 12097
+// Function ID: 12098
 // Name: RecommendationAppRow
-// Dependencies: [19, 21, 1396, 12083, 2]
+// Dependencies: [19, 21, 1396, 12087, 2]
 // Exports: default
 
-// Module 12093 (RecommendationAppRow)
+// Module 12097 (RecommendationAppRow)
 import noopAll from "noop" /* 19 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import AppRowLabel from "AppRowLabel" /* 12083 */;
+import AppRowLabel from "AppRowLabel" /* 12087 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

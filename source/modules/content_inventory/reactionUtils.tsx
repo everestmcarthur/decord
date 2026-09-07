@@ -1,10 +1,10 @@
-// Module ID: 16503
-// Function ID: 16504
+// Module ID: 16506
+// Function ID: 16507
 // Name: sendMessageWithEmbed
 // Dependencies: [7682, 7456, 2]
 // Exports: sendMessageWithEmbed, sendMessageWithoutContentInventoryEntry
 
-// Module 16503 (sendMessageWithEmbed)
+// Module 16506 (sendMessageWithEmbed)
 import set from "set" /* 2 */;
 import trackInviteDefault from "trackInvite" /* 7456 */;
 import rebuildDefault from "rebuild" /* 7682 */;

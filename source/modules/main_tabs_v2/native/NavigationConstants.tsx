@@ -1,9 +1,9 @@
-// Module ID: 15941
-// Function ID: 15942
+// Module ID: 15944
+// Function ID: 15945
 // Name: StackNavigationAnimationSettings
 // Dependencies: [2]
 
-// Module 15941 (StackNavigationAnimationSettings)
+// Module 15944 (StackNavigationAnimationSettings)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/NavigationConstants.tsx");

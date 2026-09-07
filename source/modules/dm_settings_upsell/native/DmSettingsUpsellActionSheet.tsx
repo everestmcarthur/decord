@@ -1,10 +1,10 @@
-// Module ID: 17343
-// Function ID: 17344
+// Module ID: 17346
+// Function ID: 17347
 // Name: DmSettingsUpsellActionSheet
-// Dependencies: [19, 17, 1979, 21, 4560, 576, 504, 17340, 17344, 7198, 11374, 4556, 1114, 5584, 4975, 6995, 1935, 4259, 9566, 4527, 13907, 2]
+// Dependencies: [19, 17, 1979, 21, 4560, 576, 504, 17343, 17347, 7198, 11379, 4556, 1114, 5584, 4975, 6995, 1935, 4259, 9571, 4527, 13910, 2]
 // Exports: default
 
-// Module 17343 (DmSettingsUpsellActionSheet)
+// Module 17346 (DmSettingsUpsellActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -49,7 +49,7 @@ export default function DmSettingsUpsellActionSheet(guildId) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj1 = { source: null, style: null };
-    obj1[0] = stateFromStores(11374);
+    obj1[0] = stateFromStores(11379);
     obj1[1] = tmp.headerImage;
     const items2 = [callback(closure_5, obj1), , , , , , ];
     let obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: null, children: null };
@@ -91,7 +91,7 @@ export default function DmSettingsUpsellActionSheet(guildId) {
       let obj = guildId(closure_1_2[15]);
       RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds)).then(() => {
         let obj = callback2(4259);
-        obj = { key: "DM_SETTINGS_UPSELL_SUCCESS_TOAST", icon: callback2(9566), content: null };
+        obj = { key: "DM_SETTINGS_UPSELL_SUCCESS_TOAST", icon: callback2(9571), content: null };
         const intl = callback(1114).intl;
         obj[2] = intl.string(callback(1114).t.rlYD1W);
         obj.open(obj);

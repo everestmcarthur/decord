@@ -1,10 +1,10 @@
-// Module ID: 9996
-// Function ID: 9997
+// Module ID: 10001
+// Function ID: 10002
 // Name: getWindowsAudioEffectsExperimentConfig
 // Dependencies: [1236, 1433, 504, 2]
 // Exports: getWindowsAudioEffectsExperimentConfig, useWindowsAudioEffectsExperimentConfig
 
-// Module 9996 (getWindowsAudioEffectsExperimentConfig)
+// Module 10001 (getWindowsAudioEffectsExperimentConfig)
 import closure_2 from "initialize" /* 1236 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 

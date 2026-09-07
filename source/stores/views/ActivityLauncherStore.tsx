@@ -1,12 +1,12 @@
-// Module ID: 11456
-// Function ID: 11457
+// Module ID: 11461
+// Function ID: 11462
 // Name: handleActivityStateChanged
-// Dependencies: [11457, 5279, 1074, 4447, 573, 504, 2]
+// Dependencies: [11462, 5279, 1074, 4447, 573, 504, 2]
 
-// Module 11456 (handleActivityStateChanged)
+// Module 11461 (handleActivityStateChanged)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_3 from "updateActivities" /* 11457 */;
+import closure_3 from "updateActivities" /* 11462 */;
 import closure_4 from "filterPlayingActivities" /* 5279 */;
 import ME from "ME" /* 1074 */;
 

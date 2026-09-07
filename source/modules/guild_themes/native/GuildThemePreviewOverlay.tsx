@@ -1,13 +1,13 @@
-// Module ID: 16165
-// Function ID: 16166
+// Module ID: 16168
+// Function ID: 16169
 // Name: GuildThemePreviewOverlay
-// Dependencies: [19, 21, 8453, 2]
+// Dependencies: [19, 21, 8456, 2]
 // Exports: default
 
-// Module 16165 (GuildThemePreviewOverlay)
+// Module 16168 (GuildThemePreviewOverlay)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
-import inlineStylesDefault from "inlineStyles" /* 8453 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
+import inlineStylesDefault from "inlineStyles" /* 8456 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

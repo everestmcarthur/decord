@@ -1,9 +1,9 @@
-// Module ID: 16921
-// Function ID: 16922
+// Module ID: 16924
+// Function ID: 16925
 // Name: render
-// Dependencies: [19, 21, 16918, 4994, 1114, 2]
+// Dependencies: [19, 21, 16921, 4994, 1114, 2]
 
-// Module 16921 (render)
+// Module 16924 (render)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import componentDidMountDefault from "componentDidMount" /* 4994 */;
 import { jsx } from "jsxProd" /* 21 */;

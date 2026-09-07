@@ -1,15 +1,15 @@
-// Module ID: 11861
-// Function ID: 11862
+// Module ID: 11866
+// Function ID: 11867
 // Name: getPromiseableActionHandlers
-// Dependencies: [19, 11862, 21, 4763, 11866, 1896, 4905, 11869, 2]
+// Dependencies: [19, 11867, 21, 4763, 11871, 1896, 4905, 11874, 2]
 // Exports: getPromiseableActionHandlers, openAutomodProfileQuarantineAlert, openConfirmRemoveMentionRaid, openRaidResolveModal, openSubmitFeedback
 
-// Module 11861 (getPromiseableActionHandlers)
+// Module 11866 (getPromiseableActionHandlers)
 import noopAll from "noop" /* 19 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
 import _modDef4905 from "module_4905" /* 4905 */;
-import AutomodEventType from "AutomodEventType" /* 11862 */;
+import AutomodEventType from "AutomodEventType" /* 11867 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -29,7 +29,7 @@ export const openSubmitFeedback = function openSubmitFeedback(messageId, content
     automodDecision: obj
   };
   obj = { messageId, messageContent: content, decisionId, channel };
-  obj.pushLazy(asyncRequireImpl(11866, dependencyMap.paths), obj, closure_4);
+  obj.pushLazy(asyncRequireImpl(11871, dependencyMap.paths), obj, closure_4);
 };
 export function openRaidResolveModal() {
 

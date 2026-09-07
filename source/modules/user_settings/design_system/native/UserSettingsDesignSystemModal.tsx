@@ -1,10 +1,10 @@
-// Module ID: 15793
-// Function ID: 15794
+// Module ID: 15796
+// Function ID: 15797
 // Name: DemoModal
-// Dependencies: [32, 19, 17, 21, 4560, 576, 7000, 5624, 4763, 7377, 1114, 6606, 4255, 11928, 14174, 8421, 8422, 4556, 11926, 14176, 10996, 10995, 5687, 7201, 4975, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 7000, 5624, 4763, 7377, 1114, 6606, 4255, 11933, 14177, 8421, 8422, 4556, 11931, 14179, 11001, 11000, 5687, 7201, 4975, 2]
 // Exports: default
 
-// Module 15793 (DemoModal)
+// Module 15796 (DemoModal)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import _modDef4763 from "module_4763" /* 4763 */;
@@ -12,8 +12,8 @@ import Button from "Button" /* 4975 */;
 import NavigationStack from "NavigationStack" /* 7000 */;
 import ModalScreen from "ModalScreen" /* 8421 */;
 import ModalContent from "ModalContent" /* 8422 */;
-import Modal from "Modal" /* 11928 */;
-import StepModal from "StepModal" /* 14174 */;
+import Modal from "Modal" /* 11933 */;
+import StepModal from "StepModal" /* 14177 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -283,7 +283,7 @@ function DemoScreen(arg0) {
     if (tmp8Result) {
       const obj2 = { children: null };
       obj2[0] = disclaimer;
-      tmp8Result = tmp8(tmp3(14176).ModalDisclaimer, obj2);
+      tmp8Result = tmp8(tmp3(14179).ModalDisclaimer, obj2);
     }
     const items2 = [tmp8Result, , ];
     tmp8Result = null != action;
@@ -291,7 +291,7 @@ function DemoScreen(arg0) {
       const obj3 = { variant: "primary", text: null, onPress: null };
       obj3[1] = action;
       obj3[2] = onAction;
-      tmp8Result = tmp8(tmp3(10996).ModalActionButton, obj3);
+      tmp8Result = tmp8(tmp3(11001).ModalActionButton, obj3);
     }
     items2[1] = tmp8Result;
     let tmp8Result1 = null != secondaryAction;
@@ -299,12 +299,12 @@ function DemoScreen(arg0) {
       const obj4 = { variant: "secondary", text: null, onPress: null };
       obj4[1] = secondaryAction;
       obj4[2] = onSecondaryAction;
-      tmp8Result1 = tmp8(tmp3(10996).ModalActionButton, obj4);
+      tmp8Result1 = tmp8(tmp3(11001).ModalActionButton, obj4);
     }
     const obj5 = { children: null };
     items2[2] = tmp8Result1;
     obj5[0] = items2;
-    footer = tmp2(tmp3(11926).ModalFooter, obj5);
+    footer = tmp2(tmp3(11931).ModalFooter, obj5);
   }
   children[1] = footer;
   return closure_8(ModalScreen.ModalScreen, { children });
@@ -317,7 +317,7 @@ function SwitchesScreen(onAction) {
   [arr2, c1] = callback(React.useState(parts.map(() => false)), 2);
   let obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
   obj = { isVisible: arr2.some((arg0) => arg0), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction };
-  obj[2] = callback2(parts(10995).ModalFloatingAction, obj);
+  obj[2] = callback2(parts(11000).ModalFloatingAction, obj);
   obj = { style: tmp.tableRows, children: null };
   const tmp2 = callback(React.useState(parts.map(() => false)), 2);
   obj[1] = callback2(parts(5687).TableRowGroup, {
@@ -340,7 +340,7 @@ function SwitchesScreen(onAction) {
       }, arg1);
     })
   });
-  const items = [callback2(closure_5, obj), callback2(parts(10995).ModalFloatingActionSpacer, {})];
+  const items = [callback2(closure_5, obj), callback2(parts(11000).ModalFloatingActionSpacer, {})];
   obj[3] = items;
   return callback3(DemoScreen, obj);
 }

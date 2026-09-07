@@ -1,13 +1,13 @@
-// Module ID: 16028
-// Function ID: 16029
+// Module ID: 16031
+// Function ID: 16032
 // Name: MessageRequestAnimation
-// Dependencies: [19, 17, 7219, 7220, 21, 4560, 504, 16029, 4975, 1114, 8097, 13253, 9883, 2]
+// Dependencies: [19, 17, 7219, 7220, 21, 4560, 504, 16032, 4975, 1114, 8097, 13257, 9888, 2]
 // Exports: default
 
-// Module 16028 (MessageRequestAnimation)
+// Module 16031 (MessageRequestAnimation)
 import initialize from "initialize" /* 504 */;
-import registerAssetDefault from "registerAsset" /* 9883 */;
-import ButtonBadgeDefault from "ButtonBadge" /* 13253 */;
+import registerAssetDefault from "registerAsset" /* 9888 */;
+import ButtonBadgeDefault from "ButtonBadge" /* 13257 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "processChannel" /* 7219 */;
@@ -36,7 +36,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return callback(ref(16029).MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return callback(ref(16032).MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ buttonContainer: { position: "relative" } });
@@ -83,7 +83,7 @@ export default function MessageRequestsButton(alternateVariant) {
       const merged2 = Object.assign(merged);
       tmp21 = callback(tmp3(8097).IconButton, obj1);
     }
-    const items2 = [tmp21, str > 0 && tmp16(tmp3(13253).ButtonBadge, { badgePosition: "right" })];
+    const items2 = [tmp21, str > 0 && tmp16(tmp3(13257).ButtonBadge, { badgePosition: "right" })];
     obj[2] = items2;
     return closure_8(View, obj);
   } else {

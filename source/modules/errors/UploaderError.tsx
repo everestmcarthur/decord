@@ -1,9 +1,9 @@
-// Module ID: 11999
-// Function ID: 12000
+// Module ID: 12003
+// Function ID: 12004
 // Name: prototype
 // Dependencies: [4462, 2]
 
-// Module 11999 (prototype)
+// Module 12003 (prototype)
 import prototypeDefault from "prototype" /* 4462 */;
 
 prototypeDefault;

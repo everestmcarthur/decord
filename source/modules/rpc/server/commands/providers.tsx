@@ -1,10 +1,10 @@
-// Module ID: 14490
-// Function ID: 14491
+// Module ID: 14493
+// Function ID: 14494
 // Name: AM_HARMONY_PRD_APPLICATION_ID
-// Dependencies: [5, 5281, 4465, 1074, 1920, 1085, 9557, 9559, 5283, 9554, 573, 1109, 9252, 5406, 2]
+// Dependencies: [5, 5281, 4465, 1074, 1920, 1085, 9562, 9564, 5283, 9559, 573, 1109, 9257, 5406, 2]
 
-// Module 14490 (AM_HARMONY_PRD_APPLICATION_ID)
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
+// Module 14493 (AM_HARMONY_PRD_APPLICATION_ID)
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9562 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "set" /* 5281 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
@@ -38,9 +38,9 @@ obj = {
     let _require = provider;
     const connection_redirect = args.connection_redirect;
     dependencyMap = undefined;
-    let obj = _require(9559);
+    let obj = _require(9564);
     const result = obj.validatePostMessageTransport(socket.transport);
-    obj1 = _require(9559);
+    obj1 = _require(9564);
     const validateApplicationResult = obj1.validateApplication(socket.application);
     const value = connection_redirect(5283).get(provider);
     dependencyMap = value;
@@ -48,13 +48,13 @@ obj = {
       obj = { errorCode: null };
       obj[0] = constants2.INVALID_PROVIDER;
       const _HermesInternal = HermesInternal;
-      let tmp4Result = tmp4(9554);
+      let tmp4Result = tmp4(9559);
       tmp4Result = new tmp4Result(obj, "Platform not found for provider \"" + provider + "\"");
       throw tmp4Result;
     } else if (provider !== constants.AMAZON_MUSIC) {
       obj = { errorCode: null };
       obj[0] = constants2.UNAUTHORIZED_FOR_APPLICATION;
-      const tmp22 = new tmp4(9554)(obj, "Command not available for this application");
+      const tmp22 = new tmp4(9559)(obj, "Command not available for this application");
       throw tmp22;
     } else if (set.has(validateApplicationResult)) {
       _require = undefined;
@@ -129,7 +129,7 @@ obj = {
                     obj1[0] = closure_1_2.type;
                     obj1[1] = closure_2_6.ACTIVITY_RPC;
                     obj1[2] = callback2;
-                    connection_redirect(9252)(obj1);
+                    connection_redirect(9257)(obj1);
                     const obj6 = connection_redirect(573);
                   } else {
                     c5 = 1;
@@ -165,7 +165,7 @@ obj = {
                 }
                 const obj4 = { errorCode: null };
                 obj4[0] = closure_2_9.OAUTH2_ERROR;
-                const tmp21 = new connection_redirect(9554)(obj4, "Refreshing access token did not return a new access token");
+                const tmp21 = new connection_redirect(9559)(obj4, "Refreshing access token did not return a new access token");
                 throw tmp21;
               }
               c7 = 3;
@@ -195,7 +195,7 @@ obj = {
     } else {
       obj1 = { errorCode: null };
       obj1[0] = constants2.UNAUTHORIZED_FOR_APPLICATION;
-      const tmp10 = new tmp4(9554)(obj1, "Command not available for this application");
+      const tmp10 = new tmp4(9559)(obj1, "Command not available for this application");
       throw tmp10;
     }
     let obj3 = connection_redirect(5283);
@@ -269,29 +269,29 @@ let closure_3 = importDefaultResult((arg0) => {
             obj1[0] = arg1;
             return obj1;
           } else {
-            const result = socket(9559).validatePostMessageTransport(socket.transport);
-            const obj14 = socket(9559);
-            dependencyMap = socket(9559).validateApplication(socket.application);
-            const obj15 = socket(9559);
+            const result = socket(9564).validatePostMessageTransport(socket.transport);
+            const obj14 = socket(9564);
+            dependencyMap = socket(9564).validateApplication(socket.application);
+            const obj15 = socket(9564);
             type = provider(5283).get(provider);
             if (null == type) {
               const obj2 = { errorCode: null };
               obj2[0] = closure_9.INVALID_PROVIDER;
               const _HermesInternal = HermesInternal;
-              let tmp59 = provider(9554);
+              let tmp59 = provider(9559);
               tmp59 = new tmp59(obj2, "Platform not found for provider \"" + provider + "\"");
               throw tmp59;
             } else if (provider !== constants.AMAZON_MUSIC) {
               const obj3 = { errorCode: null };
               obj3[0] = closure_9.UNAUTHORIZED_FOR_APPLICATION;
-              const tmp53 = new provider(9554)(obj3, "Command not available for this application");
+              const tmp53 = new provider(9559)(obj3, "Command not available for this application");
               throw tmp53;
             } else if (set.has(dependencyMap)) {
               id = account.getAccount(null, provider);
               if (null == id) {
                 const obj4 = { errorCode: null };
                 obj4[0] = closure_9.NO_CONNECTION_FOUND;
-                const tmp44 = new provider(9554)(obj4, "No connection found");
+                const tmp44 = new provider(9559)(obj4, "No connection found");
                 throw tmp44;
               } else {
                 let obj5 = provider(5406);
@@ -304,7 +304,7 @@ let closure_3 = importDefaultResult((arg0) => {
             } else {
               const obj6 = { errorCode: null };
               obj6[0] = closure_9.UNAUTHORIZED_FOR_APPLICATION;
-              const tmp24 = new provider(9554)(obj6, "Command not available for this application");
+              const tmp24 = new provider(9559)(obj6, "Command not available for this application");
               throw tmp24;
             }
             const obj16 = provider(5283);
@@ -322,7 +322,7 @@ let closure_3 = importDefaultResult((arg0) => {
           if (null == account) {
             const obj8 = { errorCode: null };
             obj8[0] = closure_9.OAUTH2_ERROR;
-            const tmp15 = new provider(9554)(obj8, "Refreshing access token did not return a new access token");
+            const tmp15 = new provider(9559)(obj8, "Refreshing access token did not return a new access token");
             throw tmp15;
           } else {
             obj = { access_token: null };

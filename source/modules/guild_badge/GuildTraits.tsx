@@ -1,10 +1,10 @@
-// Module ID: 8743
-// Function ID: 8744
+// Module ID: 8748
+// Function ID: 8749
 // Name: GuildVisibility
 // Dependencies: [1074, 1971, 2]
 // Exports: getGuildTraits, isDiscoverableGuild, isPremiumGuild
 
-// Module 8743 (GuildVisibility)
+// Module 8748 (GuildVisibility)
 import set2 from "set" /* 2 */;
 import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
 import ME from "ME" /* 1074 */;

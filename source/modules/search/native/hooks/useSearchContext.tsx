@@ -1,10 +1,10 @@
-// Module ID: 12299
-// Function ID: 12300
+// Module ID: 12303
+// Function ID: 12304
 // Name: useGuildSearchContext
 // Dependencies: [19, 1957, 1074, 38, 563, 2]
 // Exports: getChannelDetailsSearchContext, useChannelDetailsSearchContext, useGuildChannelSearchContext, useGuildSearchContext
 
-// Module 12299 (useGuildSearchContext)
+// Module 12303 (useGuildSearchContext)
 import _modDef38 from "module_38" /* 38 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;

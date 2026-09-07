@@ -1,10 +1,10 @@
-// Module ID: 13538
-// Function ID: 13539
+// Module ID: 13542
+// Function ID: 13543
 // Name: GuildBoostingGuildListItem
-// Dependencies: [19, 17, 1979, 5438, 1074, 21, 4560, 576, 4495, 504, 4469, 9050, 7342, 6990, 5584, 4556, 10410, 1114, 13507, 2]
+// Dependencies: [19, 17, 1979, 5438, 1074, 21, 4560, 576, 4495, 504, 4469, 9055, 7342, 6990, 5584, 4556, 10415, 1114, 13511, 2]
 // Exports: default
 
-// Module 13538 (GuildBoostingGuildListItem)
+// Module 13542 (GuildBoostingGuildListItem)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -36,7 +36,7 @@ function GuildBoostingGuildListItem(guildId) {
       const obj = guildId(closure_1_2[12]);
       closure_1_1(closure_1_2[13]).close();
     };
-    let tmp2Result = tmp2(9050);
+    let tmp2Result = tmp2(9055);
     obj = { guild: null, size: null, style: null, selected: false };
     obj[0] = stateFromStores;
     tmp2Result = tmp2(5584);
@@ -51,7 +51,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.subscriptionInfo;
     const obj4 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
-    obj4[0] = tmp2(10410);
+    obj4[0] = tmp2(10415);
     obj4[1] = tmp.premiumGuildImage;
     const items3 = [callback(closure_4, obj4), ];
     const obj5 = { variant: "text-xs/medium", children: null };
@@ -67,7 +67,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj7 = { guild: null, theme: null };
     obj7[0] = stateFromStores;
     obj7[1] = tmp4;
-    items1[2] = callback(tmp2(13507), obj7);
+    items1[2] = callback(tmp2(13511), obj7);
     obj[4] = items1;
     tmp9 = callback2(tmp2Result, obj);
   }

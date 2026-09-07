@@ -1,9 +1,9 @@
-// Module ID: 12213
-// Function ID: 12214
+// Module ID: 12217
+// Function ID: 12218
 // Name: handleScheduledMessageRemovalStart
 // Dependencies: [504, 573, 2]
 
-// Module 12213 (handleScheduledMessageRemovalStart)
+// Module 12217 (handleScheduledMessageRemovalStart)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import set from "set" /* 2 */;

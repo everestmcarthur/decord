@@ -1,10 +1,10 @@
-// Module ID: 14636
-// Function ID: 14637
+// Module ID: 14639
+// Function ID: 14640
 // Name: EditNameplateInner
-// Dependencies: [32, 19, 17, 7558, 1887, 2021, 1074, 21, 4560, 576, 8170, 7162, 7182, 1242, 8164, 8171, 7150, 4556, 1114, 8172, 10734, 504, 14637, 8166, 14638, 13174, 13175, 8173, 8817, 4987, 11220, 2]
+// Dependencies: [32, 19, 17, 7558, 1887, 2021, 1074, 21, 4560, 576, 8170, 7162, 7182, 1242, 8164, 8171, 7150, 4556, 1114, 8172, 10739, 504, 14640, 8166, 14641, 13178, 13179, 8173, 8822, 4987, 11225, 2]
 // Exports: default
 
-// Module 14636 (EditNameplateInner)
+// Module 14639 (EditNameplateInner)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -136,7 +136,7 @@ function NameplateActionSheetPreview(arg0) {
   }
   obj[1] = formatToPlainStringResult;
   obj = { style: tmp.nameplateGradientContainer, children: null };
-  const items1 = [callback2(tmp10(8817).NameplateDummyUserPreview, { width: 100 }), callback2(tmp10(8817).NameplateDummyUserPreview, { width: 140 }), ];
+  const items1 = [callback2(tmp10(8822).NameplateDummyUserPreview, { width: 100 }), callback2(tmp10(8822).NameplateDummyUserPreview, { width: 140 }), ];
   obj1 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.1 }, end: { x: 0, y: 0.8 }, colors: null };
   const items2 = [tmp.nameplatePreviewGradient.color, ];
   let tmp2Result = tmp2(4987);
@@ -144,9 +144,9 @@ function NameplateActionSheetPreview(arg0) {
   obj1[3] = items2;
   items1[2] = callback2(tmp2Result, obj1);
   obj[1] = items1;
-  const items3 = [closure_11(View, obj), callback2(tmp10(11220).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }), ];
+  const items3 = [closure_11(View, obj), callback2(tmp10(11225).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }), ];
   const obj2 = { style: tmp.nameplateGradientContainer, children: null };
-  const items4 = [callback2(tmp10(8817).NameplateDummyUserPreview, { width: 140 }), callback2(tmp10(8817).NameplateDummyUserPreview, { width: 100 }), ];
+  const items4 = [callback2(tmp10(8822).NameplateDummyUserPreview, { width: 140 }), callback2(tmp10(8822).NameplateDummyUserPreview, { width: 100 }), ];
   const obj3 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.2 }, end: { x: 0, y: 0.9 }, colors: null };
   tmp2Result = tmp2(4987);
   const items5 = ["" + tmp.nameplatePreviewGradient.color + "00", tmp.nameplatePreviewGradient.color];

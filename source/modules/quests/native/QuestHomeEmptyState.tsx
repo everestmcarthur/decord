@@ -1,10 +1,10 @@
-// Module ID: 15063
-// Function ID: 15064
+// Module ID: 15066
+// Function ID: 15067
 // Name: QuestHomeEmptyState
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 1114, 4262, 4420, 7123, 1115, 4556, 15064, 4987, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 1114, 4262, 4420, 7123, 1115, 4556, 15067, 4987, 2]
 // Exports: default
 
-// Module 15063 (QuestHomeEmptyState)
+// Module 15066 (QuestHomeEmptyState)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -70,7 +70,7 @@ export default function QuestHomeEmptyState(subtitle) {
     const obj6 = { children: null };
     const obj7 = { style: null, source: null, resizeMode: "cover" };
     obj7[0] = tmp5.emptyImage;
-    obj7[1] = tmp7(15064);
+    obj7[1] = tmp7(15067);
     const items2 = [tmp9(closure_4, obj7), ];
     const obj8 = { style: null, end: null, start: null, colors: null };
     obj8[0] = tmp5.gradient;

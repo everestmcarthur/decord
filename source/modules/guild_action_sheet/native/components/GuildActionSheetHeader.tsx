@@ -1,16 +1,16 @@
-// Module ID: 13967
-// Function ID: 13968
+// Module ID: 13970
+// Function ID: 13971
 // Name: CommunityPill
-// Dependencies: [19, 17, 13968, 1979, 7278, 1074, 21, 4560, 576, 1116, 1114, 8744, 8743, 8886, 8747, 5123, 4259, 1178, 4556, 6945, 504, 1971, 13969, 13970, 1477, 5584, 1396, 1430, 7872, 4262, 5587, 8740, 13271, 2]
+// Dependencies: [19, 17, 13971, 1979, 7278, 1074, 21, 4560, 576, 1116, 1114, 8749, 8748, 8891, 8752, 5123, 4259, 1178, 4556, 6945, 504, 1971, 13972, 13973, 1477, 5584, 1396, 1430, 7872, 4262, 5587, 8745, 13275, 2]
 // Exports: default
 
-// Module 13967 (CommunityPill)
+// Module 13970 (CommunityPill)
 import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 8744 */;
-import registerAssetDefault2 from "registerAsset" /* 8747 */;
+import registerAssetDefault from "registerAsset" /* 8749 */;
+import registerAssetDefault2 from "registerAsset" /* 8752 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 13968 */;
+import closure_6 from "initialize" /* 13971 */;
 import closure_7 from "createGuildRecordFromRust" /* 1979 */;
 import closure_8 from "handleConnectionOpenOrResumed" /* 7278 */;
 import { GuildFeatures } from "ME" /* 1074 */;
@@ -26,10 +26,10 @@ function CommunityPill(guildVisibility) {
   const intl = GlobeEarthIcon(1114).intl;
   importDefault = intl.string(GlobeEarthIcon(1114).t.TME4LJ);
   let tmp4Result = registerAssetDefault;
-  if (guildVisibility.guildVisibility === GlobeEarthIcon(8743).GuildVisibility.PUBLIC) {
+  if (guildVisibility.guildVisibility === GlobeEarthIcon(8748).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1114).intl;
     importDefault = intl2.string(tmp2(1114).t.op2cJ6);
-    GlobeEarthIcon = tmp2(8886).GlobeEarthIcon;
+    GlobeEarthIcon = tmp2(8891).GlobeEarthIcon;
     tmp4Result = registerAssetDefault2;
   }
   let obj = {

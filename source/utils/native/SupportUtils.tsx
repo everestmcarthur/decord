@@ -1,10 +1,10 @@
-// Module ID: 15535
-// Function ID: 15536
+// Module ID: 15538
+// Function ID: 15539
 // Name: _emailSupport
 // Dependencies: [5, 2025, 1364, 4539, 4255, 2024, 2]
 // Exports: emailSupport
 
-// Module 15535 (_emailSupport)
+// Module 15538 (_emailSupport)
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_getSystemLocale" /* 2025 */;
 

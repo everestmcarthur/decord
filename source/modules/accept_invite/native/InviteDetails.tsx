@@ -1,10 +1,10 @@
-// Module ID: 12718
-// Function ID: 12719
+// Module ID: 12722
+// Function ID: 12723
 // Name: shouldShowInviter
-// Dependencies: [32, 19, 17, 12413, 1385, 1371, 1074, 12719, 21, 4560, 576, 5441, 7735, 1178, 12659, 4404, 1114, 5590, 4556, 1396, 5587, 1242, 504, 12720, 9772, 4975, 5433, 2]
+// Dependencies: [32, 19, 17, 12417, 1385, 1371, 1074, 12723, 21, 4560, 576, 5441, 7735, 1178, 12663, 4404, 1114, 5590, 4556, 1396, 5587, 1242, 504, 12724, 9777, 4975, 5433, 2]
 // Exports: default
 
-// Module 12718 (shouldShowInviter)
+// Module 12722 (shouldShowInviter)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
@@ -12,16 +12,16 @@ import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import Text from "Text" /* 4556 */;
 import getGuildBadgeSourceDefault from "getGuildBadgeSource" /* 5590 */;
 import InviteTypes from "InviteTypes" /* 7735 */;
-import renderDefault from "render" /* 12659 */;
-import InviteRolesListDefault from "InviteRolesList" /* 12720 */;
+import renderDefault from "render" /* 12663 */;
+import InviteRolesListDefault from "InviteRolesList" /* 12724 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 12413 */;
+import closure_6 from "initialize" /* 12417 */;
 import closure_7 from "createdAt" /* 1385 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
-import { INVITE_ROUTING_HUB_GUILD_ID as closure_11 } from "HubEmailConnectionSteps" /* 12719 */;
+import { INVITE_ROUTING_HUB_GUILD_ID as closure_11 } from "HubEmailConnectionSteps" /* 12723 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -71,7 +71,7 @@ function InviteDestinationIcon(invite) {
     if (null != invite.inviter) {
       let tmp2Result = null;
       if (null != invite.inviter) {
-        obj = { avatarStyle: null, user: null, guildId: "Array", size: false };
+        obj = { avatarStyle: null, user: null, guildId: "Array", size: true };
         obj[0] = tmp.avatar;
         const tmp14 = new closure_7(invite.inviter);
         obj[1] = tmp14;
@@ -377,13 +377,13 @@ export default function InviteDetails(invite) {
     obj4[0] = tmp.embedDetailsCard;
     const obj5 = { event: null };
     obj5[0] = guild_scheduled_event;
-    const items3 = [tmp10(tmp4(9772).GuildEventCardHeader, obj5), , ];
+    const items3 = [tmp10(tmp4(9777).GuildEventCardHeader, obj5), , ];
     const obj6 = { event: null };
     obj6[0] = guild_scheduled_event;
-    items3[1] = tmp10(tmp4(9772).GuildEventCardMetaInfo, obj6);
+    items3[1] = tmp10(tmp4(9777).GuildEventCardMetaInfo, obj6);
     const obj7 = { event: null };
     obj7[0] = guild_scheduled_event;
-    items3[2] = tmp10(tmp4(9772).GuildEventCardGuildInfo, obj7);
+    items3[2] = tmp10(tmp4(9777).GuildEventCardGuildInfo, obj7);
     obj4[1] = items3;
     tmp8Result = tmp8(View, obj4);
   }

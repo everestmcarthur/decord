@@ -1,10 +1,10 @@
-// Module ID: 9608
-// Function ID: 9609
+// Module ID: 9613
+// Function ID: 9614
 // Name: useVideoReadyTimeout
-// Dependencies: [19, 1090, 4447, 9607, 4615, 9609, 9612, 2]
+// Dependencies: [19, 1090, 4447, 9612, 4615, 9614, 9617, 2]
 // Exports: default
 
-// Module 9608 (useVideoReadyTimeout)
+// Module 9613 (useVideoReadyTimeout)
 import setDefault from "set" /* 1090 */;
 import closure_2 from "noop" /* 19 */;
 

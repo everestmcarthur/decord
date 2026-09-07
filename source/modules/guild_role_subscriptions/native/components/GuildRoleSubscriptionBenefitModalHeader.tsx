@@ -1,18 +1,18 @@
-// Module ID: 17756
-// Function ID: 17757
+// Module ID: 17759
+// Function ID: 17760
 // Name: GuildRoleSubscriptionBenefitModalHeader
-// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 5524, 15227, 7123, 9050, 4556, 1114, 1178, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 5524, 15230, 7123, 9055, 4556, 1114, 1178, 2]
 // Exports: default
 
-// Module 17756 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 17759 (GuildRoleSubscriptionBenefitModalHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import renderDefault from "render" /* 9050 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 15227 */;
+import renderDefault from "render" /* 9055 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 15230 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { Fonts } from "ME" /* 1074 */;

@@ -1,10 +1,10 @@
-// Module ID: 11073
-// Function ID: 11074
+// Module ID: 11078
+// Function ID: 11079
 // Name: PremiumGiftSuccessBody
-// Dependencies: [19, 17, 5510, 1373, 1074, 21, 4560, 576, 10699, 1483, 10743, 4799, 10662, 8361, 4975, 1114, 4218, 7190, 4258, 10830, 4556, 8902, 4508, 2]
+// Dependencies: [19, 17, 5510, 1373, 1074, 21, 4560, 576, 10704, 1483, 10748, 4799, 10667, 8361, 4975, 1114, 4218, 7190, 4258, 10835, 4556, 8907, 4508, 2]
 // Exports: PremiumGiftSuccessActions, default
 
-// Module 11073 (PremiumGiftSuccessBody)
+// Module 11078 (PremiumGiftSuccessBody)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -34,7 +34,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   let giftCodeURL;
   let tmp = callback3();
-  let obj = giftCodeRecord(10699);
+  let obj = giftCodeRecord(10704);
   const nativeGiftContext = obj.useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
   obj1 = giftCodeRecord(4799);
@@ -64,7 +64,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     tmp = giftCodeRecord;
     const result = giftCodeRecord(closure_1_2[18]).presentCopiedToClipboard();
   }, items);
-  obj[0] = callback(giftCodeURL(10830), { giftStyle });
+  obj[0] = callback(giftCodeURL(10835), { giftStyle });
   const items1 = [callback(View, obj), , , , ];
   obj = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = tmp2(1114).intl;
@@ -84,7 +84,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   obj4 = { style: tmp.inputLabel, variant: "heading-md/bold", children: null };
   const intl3 = tmp2(1114).intl;
   obj4[2] = intl3.string(giftCodeRecord(1114).t["qS+yMo"]);
-  const items2 = [callback(giftCodeRecord(4556).Text, obj4), callback(giftCodeRecord(8902).InputButton, { text: giftCodeURL, icon: giftCodeURL(4508), iconPosition: "end", onPress: callback })];
+  const items2 = [callback(giftCodeRecord(4556).Text, obj4), callback(giftCodeRecord(8907).InputButton, { text: giftCodeURL, icon: giftCodeURL(4508), iconPosition: "end", onPress: callback })];
   obj3[1] = items2;
   items1[3] = closure_10(View, obj3);
   const obj6 = { style: tmp.disclaimer, variant: "text-xs/normal", children: null };

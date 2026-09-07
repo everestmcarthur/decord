@@ -1,13 +1,13 @@
-// Module ID: 10077
-// Function ID: 10078
+// Module ID: 10082
+// Function ID: 10083
 // Name: NotificationsContainer
-// Dependencies: [19, 17, 4200, 1957, 2011, 1074, 1954, 21, 4560, 4420, 10078, 504, 9583, 8272, 4380, 1943, 11323, 11324, 9695, 2]
+// Dependencies: [19, 17, 4200, 1957, 2011, 1074, 1954, 21, 4560, 4420, 10083, 504, 9588, 8272, 4380, 1943, 11328, 11329, 9700, 2]
 // Exports: ChannelContainer
 
-// Module 10077 (NotificationsContainer)
+// Module 10082 (NotificationsContainer)
 import initialize from "initialize" /* 504 */;
 import useChatLayoutDefault from "useChatLayout" /* 4420 */;
-import NotificationsDefault from "Notifications" /* 10078 */;
+import NotificationsDefault from "Notifications" /* 10083 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "initialize" /* 4200 */;
@@ -54,7 +54,7 @@ export const ChannelContainer = function ChannelContainer(children) {
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp5 = !isStageChannel;
   if (isStageChannel) {
-    tmp5 = channelId(9583)(stateFromStoresObject.voiceChannelId);
+    tmp5 = channelId(9588)(stateFromStoresObject.voiceChannelId);
   }
   let tmpResult = tmp(504);
   const items1 = [closure_5];
@@ -97,7 +97,7 @@ export const ChannelContainer = function ChannelContainer(children) {
       const result = obj.UNSAFE_markDismissibleContentAsDismissed(closure_1_0(_undefined[15]).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, obj);
     }
   }, items2);
-  tmpResult = tmp(11323);
+  tmpResult = tmp(11328);
   const channelStyles = tmpResult.useChannelStyles();
   obj = { style: channelStyles.scene, children: null };
   obj = { style: channelStyles.flex, children: null };
@@ -111,14 +111,14 @@ export const ChannelContainer = function ChannelContainer(children) {
     if (stateFromStores) {
       obj1 = { channel: null };
       obj1[0] = channel;
-      tmp15 = callback(tmp4(11324), obj1);
+      tmp15 = callback(tmp4(11329), obj1);
     }
   }
   const items3 = [tmp15, children.children, ];
   if (tmp5) {
     const obj2 = { style: null };
     obj2[0] = channelStyles.callPTTButton;
-    tmp5 = callback(tmp4(9695), obj2);
+    tmp5 = callback(tmp4(9700), obj2);
   }
   items3[2] = tmp5;
   obj[1] = items3;

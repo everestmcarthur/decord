@@ -1,24 +1,24 @@
-// Module ID: 11869
-// Function ID: 11870
+// Module ID: 11874
+// Function ID: 11875
 // Name: ChatBlockedAlert
-// Dependencies: [32, 109, 19, 17, 502, 2021, 1979, 11862, 1074, 4187, 21, 4560, 576, 4994, 1114, 1178, 11870, 4556, 11871, 7382, 563, 4205, 4992, 1242, 2]
+// Dependencies: [32, 109, 19, 17, 502, 2021, 1979, 11867, 1074, 4187, 21, 4560, 576, 4994, 1114, 1178, 11875, 4556, 11876, 7382, 563, 4205, 4992, 1242, 2]
 // Exports: default
 
-// Module 11869 (ChatBlockedAlert)
+// Module 11874 (ChatBlockedAlert)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import registerAssetDefault from "registerAsset" /* 11870 */;
+import registerAssetDefault from "registerAsset" /* 11875 */;
 import closure_6 from "_slicedToArray" /* 32 */;
 import closure_7 from "_objectWithoutProperties" /* 109 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_9 from "fetchFingerprint" /* 502 */;
 import closure_10 from "trackCommunicationDisabled" /* 2021 */;
 import closure_11 from "createGuildRecordFromRust" /* 1979 */;
-import { QUARANTINE_USER_ALERT_KEY } from "AutomodEventType" /* 11862 */;
+import { QUARANTINE_USER_ALERT_KEY } from "AutomodEventType" /* 11867 */;
 import ME from "ME" /* 1074 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -60,8 +60,8 @@ function PerServerProfileAlert(arg0) {
     stringResult = intl.string(getSystemLocale.t.TBeZmG);
   }
   const tmp = callback2(arg0, closure_4);
-  const tmp2Result = tmp2(11871);
-  [require, tmp8] = callback(tmp2(11871).useOpenFixQuarantinedProfileModal({ guildId }), 2);
+  const tmp2Result = tmp2(11876);
+  [require, tmp8] = callback(tmp2(11876).useOpenFixQuarantinedProfileModal({ guildId }), 2);
   if (!tmp8) {
     const intl3 = tmp2(1114).intl;
     stringResult = intl3.string(tmp2(1114).t.FFj5Dt);

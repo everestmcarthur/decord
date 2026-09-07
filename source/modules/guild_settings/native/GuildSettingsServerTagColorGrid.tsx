@@ -1,10 +1,10 @@
-// Module ID: 17593
-// Function ID: 17594
+// Module ID: 17596
+// Function ID: 17597
 // Name: GuildSettingsServerTagColorGrid
-// Dependencies: [19, 17, 7944, 21, 576, 4560, 1114, 4973, 4556, 17591, 17594, 13915, 15158, 15350, 2]
+// Dependencies: [19, 17, 7944, 21, 576, 4560, 1114, 4973, 4556, 17594, 17597, 13918, 15161, 15353, 2]
 // Exports: default
 
-// Module 17593 (GuildSettingsServerTagColorGrid)
+// Module 17596 (GuildSettingsServerTagColorGrid)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

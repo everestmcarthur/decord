@@ -1,13 +1,13 @@
-// Module ID: 17590
-// Function ID: 17591
+// Module ID: 17593
+// Function ID: 17594
 // Name: useGuildTagBadgeCollection
-// Dependencies: [19, 9064, 4449, 7944, 504, 2]
+// Dependencies: [19, 9069, 4449, 7944, 504, 2]
 // Exports: default
 
-// Module 17590 (useGuildTagBadgeCollection)
+// Module 17593 (useGuildTagBadgeCollection)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_3 from "handleFormInit" /* 9064 */;
+import closure_3 from "handleFormInit" /* 9069 */;
 import closure_4 from "calculateAppliedBoosts" /* 4449 */;
 import items from "items" /* 7944 */;
 

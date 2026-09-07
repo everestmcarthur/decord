@@ -1,15 +1,15 @@
-// Module ID: 16534
-// Function ID: 16535
+// Module ID: 16537
+// Function ID: 16538
 // Name: UnavailableNotice
-// Dependencies: [19, 17, 21, 4560, 576, 5587, 16243, 4556, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 5587, 16246, 4556, 2]
 // Exports: default
 
-// Module 16534 (UnavailableNotice)
+// Module 16537 (UnavailableNotice)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 16243 */;
+import registerAssetDefault from "registerAsset" /* 16246 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

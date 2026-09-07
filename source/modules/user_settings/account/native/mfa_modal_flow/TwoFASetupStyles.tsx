@@ -1,9 +1,9 @@
-// Module ID: 14786
-// Function ID: 14787
+// Module ID: 14789
+// Function ID: 14790
 // Name: styles
 // Dependencies: [1074, 4560, 5524, 576, 2]
 
-// Module 14786 (styles)
+// Module 14789 (styles)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import ME from "ME" /* 1074 */;

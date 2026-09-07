@@ -1,16 +1,16 @@
-// Module ID: 11122
-// Function ID: 11123
+// Module ID: 11127
+// Function ID: 11128
 // Name: EmojiPickerActionSheet
-// Dependencies: [32, 19, 17, 1371, 10290, 1074, 1374, 21, 4560, 576, 7763, 4296, 10285, 6981, 1611, 1115, 7162, 7182, 10288, 4527, 11121, 11123, 4556, 1114, 7050, 11125, 4218, 11136, 1896, 4528, 4529, 10275, 7150, 4432, 10289, 10328, 10347, 2]
+// Dependencies: [32, 19, 17, 1371, 10295, 1074, 1374, 21, 4560, 576, 7763, 4296, 10290, 6981, 1611, 1115, 7162, 7182, 10293, 4527, 11126, 11128, 4556, 1114, 7050, 11130, 4218, 11141, 1896, 4528, 4529, 10280, 7150, 4432, 10294, 10333, 10352, 2]
 // Exports: default
 
-// Module 11122 (EmojiPickerActionSheet)
+// Module 11127 (EmojiPickerActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import { EmojiPickerSource } from "IMAGE_SIZE" /* 10290 */;
+import { EmojiPickerSource } from "IMAGE_SIZE" /* 10295 */;
 import { EXPRESSION_FOOTER_HEIGHT } from "ME" /* 1074 */;
 import { EmojiIntention } from "set" /* 1374 */;
 import jsxProd from "jsxProd" /* 21 */;

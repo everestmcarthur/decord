@@ -1,13 +1,13 @@
-// Module ID: 16797
-// Function ID: 16798
-// Dependencies: [32, 19, 7452, 13413, 1954, 21, 8056, 504, 7388, 1943, 16792, 16794, 8662, 1114, 2]
+// Module ID: 16800
+// Function ID: 16801
+// Dependencies: [32, 19, 7452, 13417, 1954, 21, 8056, 504, 7388, 1943, 16795, 16797, 8667, 1114, 2]
 
-// Module 16797
+// Module 16800
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import closure_5 from "emitChanges" /* 7452 */;
-import closure_6 from "zustandStore" /* 13413 */;
-import { NitroHomeSectionId } from "zustandStore" /* 13413 */;
+import closure_6 from "zustandStore" /* 13417 */;
+import { NitroHomeSectionId } from "zustandStore" /* 13417 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo(function SubscriberNitroIcon(onPress) {
       }
     }
   }
-  obj = { cooldownDurationMs: tmp(16792).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
+  obj = { cooldownDurationMs: tmp(16795).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
   const tmp5 = callback(tmpResult.useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
   dependencyMap = tmp6;
   const tmp7 = tmp5[0] === onPress(1943).DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION;
@@ -53,12 +53,12 @@ const memoResult = importAllResult.memo(function SubscriberNitroIcon(onPress) {
     }
     onPress();
   }, items2);
-  obj = { IconComponent: onPress(8662).NitroWheelIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
+  obj = { IconComponent: onPress(8667).NitroWheelIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
   const intl = tmp(1114).intl;
   obj[1] = intl.string(onPress(1114).t.Ipxkog);
   obj[2] = callback;
   obj[3] = tmp7;
-  return jsx(showReferralNotificationDot(16794), { IconComponent: onPress(8662).NitroWheelIcon, accessibilityLabel: null, onPress: null, showRedDot: null });
+  return jsx(showReferralNotificationDot(16797), { IconComponent: onPress(8667).NitroWheelIcon, accessibilityLabel: null, onPress: null, showRedDot: null });
 });
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIconNitroSubscriber.tsx");
 

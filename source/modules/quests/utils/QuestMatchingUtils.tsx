@@ -1,15 +1,15 @@
-// Module ID: 11515
-// Function ID: 11516
+// Module ID: 11520
+// Function ID: 11521
 // Name: questMatchesActivity
-// Dependencies: [32, 4788, 11457, 5444, 1074, 1920, 7724, 7699, 7722, 11516, 2]
+// Dependencies: [32, 4788, 11462, 5444, 1074, 1920, 7724, 7699, 7722, 11521, 2]
 // Exports: allPlayOnDesktopQuestsByApplicationId, getEligibleQuestsForApplicationId, getQuestApplicationIdsForRunningGame, getQuestByApplicationId, getQuestsFromActivities
 
-// Module 11515 (questMatchesActivity)
+// Module 11520 (questMatchesActivity)
 import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7699 */;
-import getApplicationIdsForGameDefault from "getApplicationIdsForGame" /* 11516 */;
+import getApplicationIdsForGameDefault from "getApplicationIdsForGame" /* 11521 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "addApplication" /* 4788 */;
-import closure_5 from "updateActivities" /* 11457 */;
+import closure_5 from "updateActivities" /* 11462 */;
 import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
 import { ActivityGamePlatforms } from "ME" /* 1074 */;
 import { XBOX_ACTIVITY_APPLICATION_ID as closure_10 } from "items3" /* 1920 */;

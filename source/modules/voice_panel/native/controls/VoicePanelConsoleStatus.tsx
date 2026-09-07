@@ -1,14 +1,14 @@
-// Module ID: 17179
-// Function ID: 17180
+// Module ID: 17182
+// Function ID: 17183
 // Name: VoicePanelConsoleStatus
-// Dependencies: [19, 12273, 12276, 12271, 21, 4560, 576, 12272, 17173, 4296, 4271, 17180, 17178, 4974, 5589, 1178, 4556, 5123, 9448, 1114, 17181, 2]
+// Dependencies: [19, 12277, 12280, 12275, 21, 4560, 576, 12276, 17176, 4296, 4271, 17183, 17181, 4974, 5589, 1178, 4556, 5123, 9453, 1114, 17184, 2]
 // Exports: renderVoicePanelConsoleStatus
 
-// Module 17179 (VoicePanelConsoleStatus)
+// Module 17182 (VoicePanelConsoleStatus)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 12276 */;
-import { CONTROLS_HEIGHT } from "VoicePanelControlsModes" /* 12271 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 12280 */;
+import { CONTROLS_HEIGHT } from "VoicePanelControlsModes" /* 12275 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

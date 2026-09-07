@@ -1,10 +1,10 @@
-// Module ID: 13180
-// Function ID: 13181
+// Module ID: 13184
+// Function ID: 13185
 // Name: transformMessageAttachments
-// Dependencies: [7933, 1074, 1384, 11275, 4710, 8108, 1115, 8107, 1114, 8127, 8264, 5135, 8125, 2]
+// Dependencies: [7933, 1074, 1384, 11280, 4710, 8108, 1115, 8107, 1114, 8127, 8264, 5135, 8125, 2]
 // Exports: default
 
-// Module 13180 (transformMessageAttachments)
+// Module 13184 (transformMessageAttachments)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import Changeset from "Changeset" /* 7933 */;

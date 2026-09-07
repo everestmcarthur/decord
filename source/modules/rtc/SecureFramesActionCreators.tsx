@@ -1,15 +1,15 @@
-// Module ID: 9153
-// Function ID: 9154
+// Module ID: 9158
+// Function ID: 9159
 // Name: savePersistentCodesEnabled
-// Dependencies: [5, 502, 1957, 4579, 9152, 1074, 573, 9150, 4461, 4904, 1114, 9154, 5411, 2]
+// Dependencies: [5, 502, 1957, 4579, 9157, 1074, 573, 9155, 4461, 4904, 1114, 9159, 5411, 2]
 
-// Module 9153 (savePersistentCodesEnabled)
+// Module 9158 (savePersistentCodesEnabled)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 502 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import closure_6 from "updateVoiceState" /* 4579 */;
-import { SECURE_FRAMES_PUBLIC_KEY_VERSION as closure_7 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9152 */;
+import { SECURE_FRAMES_PUBLIC_KEY_VERSION as closure_7 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9157 */;
 import { ChannelTypes } from "ME" /* 1074 */;
 
 const require = arg1;
@@ -192,7 +192,7 @@ function _updatePersistentCodesEnabled() {
               })();
               dependencyMap = tmp19;
               if (null != tmp19) {
-                let obj2 = v0(9154);
+                let obj2 = v0(9159);
                 const intl = callback(1114).intl;
                 const string = intl.string;
                 const t = callback(1114).t;

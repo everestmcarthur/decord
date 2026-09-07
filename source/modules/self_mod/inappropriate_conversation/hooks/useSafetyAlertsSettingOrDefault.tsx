@@ -1,12 +1,12 @@
-// Module ID: 10970
-// Function ID: 10971
+// Module ID: 10975
+// Function ID: 10976
 // Name: useSafetyAlertsSettingOrDefault
-// Dependencies: [1221, 1371, 504, 8644, 10971, 2]
+// Dependencies: [1221, 1371, 504, 8649, 10976, 2]
 // Exports: useSafetyAlertsSettingOrDefault
 
-// Module 10970 (useSafetyAlertsSettingOrDefault)
+// Module 10975 (useSafetyAlertsSettingOrDefault)
 import initialize from "initialize" /* 504 */;
-import useUserIsTeen from "useUserIsTeen" /* 8644 */;
+import useUserIsTeen from "useUserIsTeen" /* 8649 */;
 import closure_2 from "handleConnectionClosedOrResumed" /* 1221 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;
 

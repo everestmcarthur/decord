@@ -1,10 +1,10 @@
-// Module ID: 9190
-// Function ID: 9191
+// Module ID: 9195
+// Function ID: 9196
 // Name: GuildProfileBackground
-// Dependencies: [19, 17, 1979, 1074, 21, 4269, 4271, 4560, 576, 504, 1971, 1477, 1396, 9191, 4495, 4262, 9192, 4987, 9193, 4556, 9195, 9202, 2]
+// Dependencies: [19, 17, 1979, 1074, 21, 4269, 4271, 4560, 576, 504, 1971, 1477, 1396, 9196, 4495, 4262, 9197, 4987, 9198, 4556, 9200, 9207, 2]
 // Exports: default, getBackgroundForProfile
 
-// Module 9190 (GuildProfileBackground)
+// Module 9195 (GuildProfileBackground)
 import ThemesDefault from "Themes" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import map from "map" /* 4262 */;
@@ -12,10 +12,10 @@ import isThemeLight from "isThemeLight" /* 4269 */;
 import ManaContext from "ManaContext" /* 4271 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import useProfilePrimaryColor from "useProfilePrimaryColor" /* 9192 */;
-import stylesDefault from "styles" /* 9193 */;
-import ClickableGameIconDefault from "ClickableGameIcon" /* 9195 */;
-import TraitEmojiDefault from "TraitEmoji" /* 9202 */;
+import useProfilePrimaryColor from "useProfilePrimaryColor" /* 9197 */;
+import stylesDefault from "styles" /* 9198 */;
+import ClickableGameIconDefault from "ClickableGameIcon" /* 9200 */;
+import TraitEmojiDefault from "TraitEmoji" /* 9207 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "createGuildRecordFromRust" /* 1979 */;
@@ -41,7 +41,7 @@ function GuildProfileBackground(guildProfile) {
     if (null != guildProfile.customBanner) {
       obj = { id: null, splash: null, size: null };
       ({ id: obj3[0], customBanner: obj3[1] } = guildProfile);
-      obj[2] = tmp3(9191)() * useWindowDimensionsDefault().width;
+      obj[2] = tmp3(9196)() * useWindowDimensionsDefault().width;
       obj = { style: null, source: null };
       obj[0] = tmp4.imageBanner;
       obj[1] = tmp3(1396).getGuildDiscoverySplashSource(obj);

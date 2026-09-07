@@ -1,10 +1,10 @@
-// Module ID: 8861
-// Function ID: 8862
+// Module ID: 8866
+// Function ID: 8867
 // Name: CollectiblesShopPricePlaceholder
 // Dependencies: [19, 21, 4560, 576, 4296, 4561, 2]
 // Exports: CollectiblesShopPricePlaceholder
 
-// Module 8861 (CollectiblesShopPricePlaceholder)
+// Module 8866 (CollectiblesShopPricePlaceholder)
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import closure_3 from "noop" /* 19 */;

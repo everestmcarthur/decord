@@ -1,13 +1,13 @@
-// Module ID: 14807
-// Function ID: 14808
+// Module ID: 14810
+// Function ID: 14811
 // Name: route
-// Dependencies: [4209, 7975, 1074, 504, 1114, 11468, 6968, 14808, 2]
+// Dependencies: [4209, 7975, 1074, 504, 1114, 11473, 6968, 14811, 2]
 
-// Module 14807 (route)
+// Module 14810 (route)
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import closure_2 from "markAllUserIdListsStale" /* 4209 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 createToggle = {
@@ -30,7 +30,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.IGNORED_USERS,
   getComponent() {
-    return require(14808) /* IgnoredUsersList */.default;
+    return require(14811) /* IgnoredUsersList */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

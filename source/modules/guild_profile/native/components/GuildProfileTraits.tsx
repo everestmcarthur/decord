@@ -1,10 +1,10 @@
-// Module ID: 9202
-// Function ID: 9203
+// Module ID: 9207
+// Function ID: 9208
 // Name: TraitEmoji
 // Dependencies: [19, 17, 21, 4560, 576, 1396, 4217, 7130, 4556, 2]
 // Exports: default
 
-// Module 9202 (TraitEmoji)
+// Module 9207 (TraitEmoji)
 import ThemesDefault from "Themes" /* 576 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4217 */;

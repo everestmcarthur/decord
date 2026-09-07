@@ -1,11 +1,11 @@
 // Module ID: 10557
 // Function ID: 10558
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 10450]
+// Dependencies: [41, 42, 93, 95, 98, 10455]
 
 // Module 10557 (_isNativeReflectConstruct)
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10450 */;
-import ZHHansMergeDateRangeRefiner from "_classCallCheck" /* 41 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10455 */;
+import ZHHantMergeDateRangeRefiner from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import closure_1 from "_possibleConstructorReturn" /* 93 */;
 import closure_2 from "_getPrototypeOf" /* 95 */;
@@ -46,12 +46,12 @@ if (!fn) {
     return tmp;
   };
 }
-class ZHHansMergeDateRangeRefiner {
+class ZHHantMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = ZHHansMergeDateRangeRefiner(this, ZHHansMergeDateRangeRefiner);
+    tmp = ZHHantMergeDateRangeRefiner(this, ZHHantMergeDateRangeRefiner);
     tmp2 = closure_2;
-    obj = closure_2(ZHHansMergeDateRangeRefiner);
+    obj = closure_2(ZHHantMergeDateRangeRefiner);
     tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -66,14 +66,14 @@ class ZHHansMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHansMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
+_inherits(ZHHantMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
     key: "patternBetween",
     value: function patternBetween() {
-      return /^\s*(至|到|-|~|～|－|ー)\s*$/i;
+      return /^\s*(至|到|\-|\~|～|－|ー)\s*$/i;
     }
   }
 ];
 
-export default _createClass(ZHHansMergeDateRangeRefiner, items);
+export default _createClass(ZHHantMergeDateRangeRefiner, items);

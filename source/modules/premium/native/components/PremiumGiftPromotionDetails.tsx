@@ -1,13 +1,13 @@
-// Module ID: 10754
-// Function ID: 10755
+// Module ID: 10759
+// Function ID: 10760
 // Name: PremiumGiftPromotionDetailsBase
-// Dependencies: [32, 19, 17, 4552, 21, 576, 4560, 4556, 504, 8808, 1116, 10755, 5587, 1889, 8772, 2]
+// Dependencies: [32, 19, 17, 4552, 21, 576, 4560, 4556, 504, 8813, 1116, 10760, 5587, 1889, 8777, 2]
 // Exports: PremiumGiftPromotionCollectibleRewardDetails, default
 
-// Module 10754 (PremiumGiftPromotionDetailsBase)
+// Module 10759 (PremiumGiftPromotionDetailsBase)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
-import CollectiblesPreview from "CollectiblesPreview" /* 8772 */;
+import CollectiblesPreview from "CollectiblesPreview" /* 8777 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

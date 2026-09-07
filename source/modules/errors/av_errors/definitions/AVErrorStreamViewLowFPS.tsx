@@ -1,9 +1,9 @@
-// Module ID: 17836
-// Function ID: 17837
+// Module ID: 17839
+// Function ID: 17840
 // Name: AVErrorStreamViewLowFPSDefinition
-// Dependencies: [4576, 4582, 502, 4599, 1074, 17837, 4612, 9109, 9110, 17834, 2]
+// Dependencies: [4576, 4582, 502, 4599, 1074, 17840, 4612, 9114, 9115, 17837, 2]
 
-// Module 17836 (AVErrorStreamViewLowFPSDefinition)
+// Module 17839 (AVErrorStreamViewLowFPSDefinition)
 import closure_2 from "getParticipants" /* 4576 */;
 import closure_3 from "reset" /* 4582 */;
 import closure_4 from "fetchFingerprint" /* 502 */;

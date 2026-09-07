@@ -1,10 +1,10 @@
-// Module ID: 17690
-// Function ID: 17691
+// Module ID: 17693
+// Function ID: 17694
 // Name: formatDurationFromDays
 // Dependencies: [1114, 2]
 // Exports: default
 
-// Module 17690 (formatDurationFromDays)
+// Module 17693 (formatDurationFromDays)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 

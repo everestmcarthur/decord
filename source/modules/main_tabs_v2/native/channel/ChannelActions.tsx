@@ -1,7 +1,7 @@
 // Module ID: 7875
 // Function ID: 7876
 // Name: JoinCallIcon
-// Dependencies: [19, 17, 5507, 1961, 1957, 4579, 7876, 1074, 7877, 21, 4560, 7880, 576, 7882, 5101, 7884, 7885, 7902, 504, 7269, 7903, 7904, 7272, 7247, 13253, 10180, 13254, 1114, 3547, 4767, 13255, 7051, 12300, 7898, 1115, 4425, 12299, 12358, 11466, 1109, 4418, 11656, 5073, 10963, 13256, 4771, 13257, 13259, 2]
+// Dependencies: [19, 17, 5507, 1961, 1957, 4579, 7876, 1074, 7877, 21, 4560, 7880, 576, 7882, 5101, 7884, 7885, 7902, 504, 7269, 7903, 7904, 7272, 7247, 13257, 10185, 13258, 1114, 3547, 4767, 13259, 7051, 12304, 7898, 1115, 4425, 12303, 12362, 11471, 1109, 4418, 11661, 5073, 10968, 13260, 4771, 13261, 13263, 2]
 // Exports: default
 
 // Module 7875 (JoinCallIcon)
@@ -10,7 +10,7 @@ import ThemesDefault from "Themes" /* 576 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
 import PhoneCallIcon from "PhoneCallIcon" /* 7880 */;
 import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7882 */;
-import _modDef13259 from "module_13259" /* 13259 */;
+import _modDef13263 from "module_13263" /* 13263 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "handleThreadCreateOrUpdate" /* 5507 */;
 import { THREADED_CHANNEL_TYPES } from "createChannelRecord" /* 1961 */;
@@ -338,7 +338,7 @@ export default function ChannelActions(channelId) {
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp4Result = tmp4(channelId(13257).ForumChannelCloseSearchButton, obj);
+    let tmp4Result = tmp4(channelId(13261).ForumChannelCloseSearchButton, obj);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {
@@ -352,7 +352,7 @@ export default function ChannelActions(channelId) {
     const obj2 = { channelId: null, screenIndex: null };
     obj2[0] = channelId;
     obj2[1] = screenIndex;
-    tmp4Result = tmp4(_modDef13259, obj2);
+    tmp4Result = tmp4(_modDef13263, obj2);
   }
   obj[1] = tmp4Result;
   return <View style={containerStyle}>{null}</View>;

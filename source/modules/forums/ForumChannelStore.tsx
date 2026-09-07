@@ -1,10 +1,10 @@
-// Module ID: 12001
-// Function ID: 12002
+// Module ID: 12005
+// Function ID: 12006
 // Name: set
 // Dependencies: [1957, 1967, 1966, 1968, 1249, 38, 7772, 560, 504, 2]
 // Exports: useForumChannelStore, useForumChannelStoreApi
 
-// Module 12001 (set)
+// Module 12005 (set)
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import keys from "keys" /* 560 */;
 import set from "set" /* 2 */;

@@ -1,11 +1,11 @@
-// Module ID: 9552
-// Function ID: 9553
+// Module ID: 9557
+// Function ID: 9558
 // Name: map
-// Dependencies: [5, 32, 1956, 4465, 1074, 1090, 9553, 568, 1109, 1242, 4189, 9554, 9556, 1896, 9557, 2]
+// Dependencies: [5, 32, 1956, 4465, 1074, 1090, 9558, 568, 1109, 1242, 4189, 9559, 9561, 1896, 9562, 2]
 
-// Module 9552 (map)
+// Module 9557 (map)
 import setDefault from "set" /* 1090 */;
-import HANDSHAKEDefault from "HANDSHAKE" /* 9553 */;
+import HANDSHAKEDefault from "HANDSHAKE" /* 9558 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "participantFromServer" /* 1956 */;
@@ -526,25 +526,25 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframe
       if (null != value) {
         let obj = { closeCode: null };
         obj[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp35 = new tmp7(9554)(obj, "Already connected");
+        const tmp35 = new tmp7(9559)(obj, "Already connected");
         throw tmp35;
       } else {
         return self.handleHandshake(iframeId, tmp6, arg3);
       }
-    } else if (tmp7(9553).FRAME === tmp5) {
+    } else if (tmp7(9558).FRAME === tmp5) {
       if (null == value) {
         obj = { closeCode: null };
         obj[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp27 = new tmp7(9554)(obj, "Not connected");
+        const tmp27 = new tmp7(9559)(obj, "Not connected");
         throw tmp27;
       } else {
         return self.handleFrame(iframeId, value, tmp6);
       }
-    } else if (tmp7(9553).CLOSE === tmp5) {
+    } else if (tmp7(9558).CLOSE === tmp5) {
       if (null == value) {
         obj1 = { closeCode: null };
         obj1[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp20 = new tmp7(9554)(obj1, "Not connected");
+        const tmp20 = new tmp7(9559)(obj1, "Not connected");
         throw tmp20;
       } else {
         return self.handleClose(value, tmp6);
@@ -552,7 +552,7 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframe
     } else {
       obj = { closeCode: null };
       obj[0] = constants2.CLOSE_UNSUPPORTED;
-      const tmp13 = new tmp7(9554)(obj, "Invalid opcode");
+      const tmp13 = new tmp7(9559)(obj, "Invalid opcode");
       throw tmp13;
     }
     const tmp4 = callback2(arg2, 2);

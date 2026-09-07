@@ -1,10 +1,10 @@
-// Module ID: 12426
-// Function ID: 12427
+// Module ID: 12430
+// Function ID: 12431
 // Name: MAX_SUGGESTIONS_LARGE
-// Dependencies: [32, 19, 4552, 1074, 21, 1178, 4296, 4974, 4271, 4561, 504, 12391, 12427, 12428, 9313, 2]
+// Dependencies: [32, 19, 4552, 1074, 21, 1178, 4296, 4974, 4271, 4561, 504, 12395, 12431, 12432, 9318, 2]
 // Exports: EmojiEntranceAnimation, getEmojiEntranceKey, sortEmojisForDisplay, useEmojiSuggestionBarState, useSuggestionBarHeight
 
-// Module 12426 (MAX_SUGGESTIONS_LARGE)
+// Module 12430 (MAX_SUGGESTIONS_LARGE)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;

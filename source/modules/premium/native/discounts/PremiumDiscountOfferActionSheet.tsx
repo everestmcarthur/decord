@@ -1,10 +1,10 @@
-// Module ID: 16934
-// Function ID: 16935
+// Module ID: 16937
+// Function ID: 16938
 // Name: markAsDismissed
-// Dependencies: [19, 1373, 1074, 1954, 21, 7162, 7182, 1242, 8062, 9392, 7422, 7150, 16935, 2]
+// Dependencies: [19, 1373, 1074, 1954, 21, 7162, 7182, 1242, 8062, 9397, 7422, 7150, 16938, 2]
 // Exports: default
 
-// Module 16934 (markAsDismissed)
+// Module 16937 (markAsDismissed)
 import closure_3 from "noop" /* 19 */;
 import GuildFeatures from "GuildFeatures" /* 1373 */;
 import ME from "ME" /* 1074 */;

@@ -1,10 +1,10 @@
-// Module ID: 10211
-// Function ID: 10212
+// Module ID: 10216
+// Function ID: 10217
 // Name: BugReporterFeatureActionSheet
-// Dependencies: [32, 19, 17, 21, 4560, 576, 4556, 10187, 5605, 4527, 5689, 6981, 12, 5517, 7049, 10212, 7150, 7149, 1114, 7050, 7055, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 4556, 10192, 5605, 4527, 5689, 6981, 12, 5517, 7049, 10217, 7150, 7149, 1114, 7050, 7055, 2]
 // Exports: default
 
-// Module 10211 (BugReporterFeatureActionSheet)
+// Module 10216 (BugReporterFeatureActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -35,9 +35,9 @@ let closure_10 = importAllResult.memo((item) => {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  let obj = item(10187);
+  let obj = item(10192);
   const featureId = obj.getFeatureId(item);
-  const featureId1 = item(10187).getFeatureId(feature);
+  const featureId1 = item(10192).getFeatureId(feature);
   obj = {
     start,
     end,

@@ -1,10 +1,10 @@
-// Module ID: 15761
-// Function ID: 15762
+// Module ID: 15764
+// Function ID: 15765
 // Name: UserSettingsDesignSystemButtonGroup
 // Dependencies: [19, 17, 21, 4560, 4973, 4556, 5433, 4975, 8097, 7381, 2]
 // Exports: default
 
-// Module 15761 (UserSettingsDesignSystemButtonGroup)
+// Module 15764 (UserSettingsDesignSystemButtonGroup)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4556 */;
 import Stack from "Stack" /* 4973 */;

@@ -1,10 +1,10 @@
-// Module ID: 11357
-// Function ID: 11358
+// Module ID: 11362
+// Function ID: 11363
 // Name: useChannelSafeAreaBottomStyles
-// Dependencies: [19, 5277, 4200, 1957, 1908, 4583, 1074, 1964, 4560, 576, 11358, 5007, 4427, 563, 1609, 1115, 4262, 7872, 2]
+// Dependencies: [19, 5277, 4200, 1957, 1908, 4583, 1074, 1964, 4560, 576, 11363, 5007, 4427, 563, 1609, 1115, 4262, 7872, 2]
 // Exports: default
 
-// Module 11357 (useChannelSafeAreaBottomStyles)
+// Module 11362 (useChannelSafeAreaBottomStyles)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "_handleConnectionOpen" /* 5277 */;

@@ -1,10 +1,10 @@
-// Module ID: 9363
-// Function ID: 9364
+// Module ID: 9368
+// Function ID: 9369
 // Name: PremiumTypes
-// Dependencies: [32, 19, 17, 4552, 4223, 4224, 1074, 1373, 1085, 21, 4560, 576, 5524, 9364, 4218, 7234, 4556, 1114, 8049, 3063, 1379, 38, 7447, 8060, 8058, 7393, 7446, 7162, 504, 9370, 1608, 7409, 9379, 7438, 8833, 9381, 9382, 9384, 9391, 4975, 8662, 7422, 2]
+// Dependencies: [32, 19, 17, 4552, 4223, 4224, 1074, 1373, 1085, 21, 4560, 576, 5524, 9369, 4218, 7234, 4556, 1114, 8049, 3063, 1379, 38, 7447, 8060, 8058, 7393, 7446, 7162, 504, 9375, 1608, 7409, 9384, 7438, 8838, 9386, 9387, 9389, 9396, 4975, 8667, 7422, 2]
 // Exports: default
 
-// Module 9363 (PremiumTypes)
+// Module 9368 (PremiumTypes)
 import noopAll from "noop" /* 19 */;
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -13,10 +13,10 @@ import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
 import Text from "Text" /* 4556 */;
 import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 7234 */;
 import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 7393 */;
-import usePremiumPlanPriceDefault from "usePremiumPlanPrice" /* 9364 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9370 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9384 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9391 */;
+import usePremiumPlanPriceDefault from "usePremiumPlanPrice" /* 9369 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9375 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9389 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9396 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
@@ -168,7 +168,7 @@ function PriceText(fractionalPremiumInfo) {
         if (tmp4 != null) {
           source = tmp4.source;
         }
-        if (source === tmp7(9364).PremiumPlanPriceSource.API) {
+        if (source === tmp7(9369).PremiumPlanPriceSource.API) {
           let percentage3 = activeDiscountInfo.percentage;
           if (percentage3 == null) {
             percentage3 = closure_10;
@@ -371,7 +371,7 @@ export default function PremiumFeaturesCard(premiumType) {
   _modDef38(null != premiumBundleWithPredicate, "could not find a premium item");
   const tmp8Result4 = premiumType(7409);
   const items3 = [premiumBundleWithPredicate];
-  const discountedPriceString = premiumType(9379).useDiscountedPremiumProductInfo(premiumDiscountOffer, items3).discountedPriceString;
+  const discountedPriceString = premiumType(9384).useDiscountedPremiumProductInfo(premiumDiscountOffer, items3).discountedPriceString;
   let tmp32 = tmp24;
   if (null != first && stateFromStores && tmp19[1] && !isBoostOnly) {
     let flag4 = false;
@@ -393,14 +393,14 @@ export default function PremiumFeaturesCard(premiumType) {
   obj2 = { premiumType, style, children: null };
   obj3 = { style: tmp3.card, children: null };
   const obj4 = { style: tmp3.logoContainer, children: null };
-  const tmp8Result5 = premiumType(9379);
+  const tmp8Result5 = premiumType(9384);
   if (flag3) {
-    let tmp37Result = tmp37(tmp4(9381), { width: 185, height: 20, alwaysWhite: true });
+    let tmp37Result = tmp37(tmp4(9386), { width: 185, height: 20, alwaysWhite: true });
   } else {
     const obj5 = { premiumType: null, style: null };
     obj5[0] = premiumType;
     obj5[1] = tmp3.logo;
-    tmp37Result = tmp37(tmp4(9382), obj5);
+    tmp37Result = tmp37(tmp4(9387), obj5);
   }
   obj4[1] = tmp37Result;
   const items5 = [callback2(analyticsLocations, obj4), callback2(PremiumFeaturesWumpusDefault, { premiumType }), , , ];
@@ -477,7 +477,7 @@ export default function PremiumFeaturesCard(premiumType) {
           const obj15 = { style: null, color: null, size: "sm" };
           obj15[0] = tmp3.buttonIcon;
           obj15[1] = tmp4(576).colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT;
-          const tmp37Result2 = tmp37(tmp8(8662).NitroWheelIcon, obj15);
+          const tmp37Result2 = tmp37(tmp8(8667).NitroWheelIcon, obj15);
         }
         obj14[1] = tmp37Result2;
         let str;

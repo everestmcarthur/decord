@@ -1,10 +1,10 @@
-// Module ID: 16450
-// Function ID: 16451
+// Module ID: 16453
+// Function ID: 16454
 // Name: SettingsButton
-// Dependencies: [32, 19, 17, 4552, 502, 1979, 8347, 8335, 16451, 1954, 21, 4560, 576, 16452, 8097, 14999, 8351, 4527, 16454, 1896, 4515, 16465, 4556, 1114, 6945, 7123, 5125, 4378, 5123, 16401, 16403, 5680, 8350, 1477, 1611, 1484, 7475, 504, 16391, 16485, 16488, 7389, 1943, 16475, 1483, 8348, 7859, 7860, 15091, 1094, 16489, 16495, 16500, 16513, 16514, 16515, 16516, 16517, 16518, 16519, 16520, 7872, 16521, 8874, 1115, 11896, 4413, 16522, 16453, 4271, 2]
+// Dependencies: [32, 19, 17, 4552, 502, 1979, 8347, 8335, 16454, 1954, 21, 4560, 576, 16455, 8097, 15002, 8351, 4527, 16457, 1896, 4515, 16468, 4556, 1114, 6945, 7123, 5125, 4378, 5123, 16404, 16406, 5680, 8350, 1477, 1611, 1484, 7475, 504, 16394, 16488, 16491, 7389, 1943, 16478, 1483, 8348, 7859, 7860, 15094, 1094, 16492, 16498, 16503, 16516, 16517, 16518, 16519, 16520, 16521, 16522, 16523, 7872, 16524, 8879, 1115, 11901, 4413, 16525, 16456, 4271, 2]
 // Exports: ICYMITab
 
-// Module 16450 (SettingsButton)
+// Module 16453 (SettingsButton)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -18,10 +18,10 @@ import useIsWindowLargeDefault from "useIsWindowLarge" /* 6945 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
 import IconButton from "IconButton" /* 8097 */;
 import generateHydrationId from "generateHydrationId" /* 8350 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 14999 */;
-import goBack from "goBack" /* 16401 */;
-import IconWithBadge from "IconWithBadge" /* 16403 */;
-import jsxDefault from "jsx" /* 16522 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15002 */;
+import goBack from "goBack" /* 16404 */;
+import IconWithBadge from "IconWithBadge" /* 16406 */;
+import jsxDefault from "jsx" /* 16525 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -30,11 +30,11 @@ import closure_8 from "fetchFingerprint" /* 502 */;
 import closure_9 from "createGuildRecordFromRust" /* 1979 */;
 import closure_10 from "initialize" /* 8347 */;
 import closure_11 from "filterStaffGuild" /* 8335 */;
-import { NUM_GUILDS_EXTENDED_ONBOARDING as closure_12 } from "NUM_GUILDS_EXTENDED_ONBOARDING" /* 16451 */;
+import { NUM_GUILDS_EXTENDED_ONBOARDING as closure_12 } from "NUM_GUILDS_EXTENDED_ONBOARDING" /* 16454 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
-import createICYMIStyles from "createICYMIStyles" /* 16452 */;
+import createICYMIStyles from "createICYMIStyles" /* 16455 */;
 
 require = arg1;
 function SettingsButton() {
@@ -63,7 +63,7 @@ function InfoButton() {
       const obj = callback2(8351);
       callback2(8351).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
       const obj2 = callback2(8351);
-      callback(16465).pushICYMIInfoModal({ extendedOnboarding: true });
+      callback(16468).pushICYMIInfoModal({ extendedOnboarding: true });
     }
   });
 }
@@ -454,6 +454,6 @@ export const ICYMITab = function ICYMITab(route) {
   items2[1] = closure_14(_require(4271).ThemeContextProvider, { gradient: tmp3, children: closure_14(ICYMI, { inNestedNavigator }, "" + stateFromStores) });
   obj3.children = items2;
   obj2[0] = tmp14(tmp11, obj3);
-  obj1[0] = closure_14(_require(16453).ICYMIContextProvider, obj2);
+  obj1[0] = closure_14(_require(16456).ICYMIContextProvider, obj2);
   return closure_14(tmpResult, obj1);
 };

@@ -1,13 +1,13 @@
 // Module ID: 4213
 // Function ID: 4214
 // Name: parseRawEmojiObject
-// Dependencies: [4214, 4215, 4216, 4217, 12, 13984, 2]
+// Dependencies: [4214, 4215, 4216, 4217, 12, 13987, 2]
 // Exports: asUnicodeEmoji
 
 // Module 4213 (parseRawEmojiObject)
 import applyDefault from "apply" /* 12 */;
 import EmojiTypes from "EmojiTypes" /* 4216 */;
-import _mod13984 from "module_13984" /* 13984 */;
+import _mod13987 from "module_13987" /* 13987 */;
 import closure_3 from "defaultImageSrcGenerator" /* 4214 */;
 import closure_13 from "module_917631" /* 917631 */;
 import closure_14 from "module_127988" /* 127988 */;
@@ -487,7 +487,7 @@ let obj = {
     }
     const call = hasOwnProperty.call;
     if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp3, key10009)) {
-      str = _mod13984[key10009];
+      str = _mod13987[key10009];
     }
     let combined = str;
     if (flag) {

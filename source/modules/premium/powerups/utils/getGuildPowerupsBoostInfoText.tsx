@@ -1,10 +1,10 @@
-// Module ID: 12554
-// Function ID: 12555
+// Module ID: 12558
+// Function ID: 12559
 // Name: getGuildPowerupsBoostInfoText
 // Dependencies: [4450, 1114, 2428, 2]
 // Exports: getGuildPowerupsBoostInfoText
 
-// Module 12554 (getGuildPowerupsBoostInfoText)
+// Module 12558 (getGuildPowerupsBoostInfoText)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2428 */;

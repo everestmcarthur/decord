@@ -1,7 +1,7 @@
 // Module ID: 5430
 // Function ID: 5431
 // Name: StageBoostingActionSheet
-// Dependencies: [19, 4552, 1979, 4199, 5414, 1074, 1373, 21, 504, 1965, 1114, 4527, 1242, 5431, 5425, 4992, 5433, 4975, 5434, 10230, 5692, 5587, 8592, 2]
+// Dependencies: [19, 4552, 1979, 4199, 5414, 1074, 1373, 21, 504, 1965, 1114, 4527, 1242, 5431, 5425, 4992, 5433, 4975, 5434, 10235, 5692, 5587, 8597, 2]
 // Exports: default
 
 // Module 5430 (StageBoostingActionSheet)
@@ -161,12 +161,12 @@ export default function StageBoostingActionSheet(channel) {
       tmp23Result = tmp23(tmp(5692).HoldingGemSpotIllustration, { accessible: false });
     } else {
       const obj5 = { source: null };
-      obj5[0] = tmp21(8592);
+      obj5[0] = tmp21(8597);
       tmp23Result = tmp23(tmp21(5587), obj5);
       const tmp21Result = tmp21(5587);
     }
     obj4[2] = tmp23Result;
     obj4[3] = tmp23Result;
-    return tmp23(tmp(10230).PromoSheet, obj4);
+    return tmp23(tmp(10235).PromoSheet, obj4);
   }
 };

@@ -1,14 +1,14 @@
-// Module ID: 11429
-// Function ID: 11430
+// Module ID: 11434
+// Function ID: 11435
 // Name: updateGiftCode
-// Dependencies: [10700, 1074, 4447, 4153, 4799, 573, 11430, 504, 2]
+// Dependencies: [10705, 1074, 4447, 4153, 4799, 573, 11435, 504, 2]
 
-// Module 11429 (updateGiftCode)
+// Module 11434 (updateGiftCode)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import hooksDefault from "hooks" /* 4153 */;
 import _resolveGiftCode from "_resolveGiftCode" /* 4799 */;
-import closure_3 from "frozen" /* 10700 */;
+import closure_3 from "frozen" /* 10705 */;
 import ME from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 

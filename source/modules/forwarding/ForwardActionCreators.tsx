@@ -1,8 +1,8 @@
-// Module ID: 11687
-// Function ID: 11688
-// Dependencies: [32, 5, 1957, 4199, 1074, 4553, 8348, 7682, 1096, 7684, 1384, 7456, 11684, 4803, 2]
+// Module ID: 11692
+// Function ID: 11693
+// Dependencies: [32, 5, 1957, 4199, 1074, 4553, 8348, 7682, 1096, 7684, 1384, 7456, 11689, 4803, 2]
 
-// Module 11687
+// Module 11692
 import allSettledDefault from "allSettled" /* 4803 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
@@ -138,7 +138,7 @@ let obj = {
                   result = "" === dependencyMap;
                 }
                 if (!result) {
-                  obj1 = closure_1_0(11684);
+                  obj1 = closure_1_0(11689);
                   result = obj1.isRatelimitedInChannel(channel, closure_1_6);
                 }
                 if (!result) {

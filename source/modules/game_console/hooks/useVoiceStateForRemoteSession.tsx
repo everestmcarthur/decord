@@ -1,10 +1,10 @@
-// Module ID: 9215
-// Function ID: 9216
+// Module ID: 9220
+// Function ID: 9221
 // Name: useVoiceStateForRemoteSession
 // Dependencies: [502, 4579, 4577, 504, 2]
 // Exports: default
 
-// Module 9215 (useVoiceStateForRemoteSession)
+// Module 9220 (useVoiceStateForRemoteSession)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "fetchFingerprint" /* 502 */;
 import closure_3 from "updateVoiceState" /* 4579 */;

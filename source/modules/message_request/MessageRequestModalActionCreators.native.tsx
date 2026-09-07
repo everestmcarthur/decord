@@ -1,10 +1,10 @@
-// Module ID: 12446
-// Function ID: 12447
+// Module ID: 12450
+// Function ID: 12451
 // Name: openAcceptMessageRequestConfirmModal
-// Dependencies: [12443, 1074, 1242, 4905, 1114, 4994, 4527, 12447, 1896, 2]
+// Dependencies: [12447, 1074, 1242, 4905, 1114, 4994, 4527, 12451, 1896, 2]
 // Exports: onMarkAsNotSpamConfirmationModal, openAcceptMessageRequestConfirmModal
 
-// Module 12446 (openAcceptMessageRequestConfirmModal)
+// Module 12450 (openAcceptMessageRequestConfirmModal)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -13,7 +13,7 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 import _modDef4905 from "module_4905" /* 4905 */;
 import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL" /* 12443 */;
+import MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL" /* 12447 */;
 
 let closure_3 = MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL.MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL;
 const AnalyticEvents = ME.AnalyticEvents;
@@ -40,5 +40,5 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
 };
 export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirmationModal(arg0) {
   ({ onConfirm, onCancel, channel } = arg0);
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12447, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12451, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
 };

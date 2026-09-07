@@ -1,18 +1,18 @@
-// Module ID: 12052
-// Function ID: 12053
+// Module ID: 12056
+// Function ID: 12057
 // Name: Placeholder
-// Dependencies: [32, 19, 17, 1956, 12053, 1074, 21, 4560, 576, 9289, 1369, 7168, 12054, 11215, 504, 9409, 4740, 4296, 4561, 1114, 9439, 12055, 12051, 1894, 8902, 12056, 4556, 8666, 11153, 5123, 12057, 7523, 5587, 12060, 2]
+// Dependencies: [32, 19, 17, 1956, 12057, 1074, 21, 4560, 576, 9294, 1369, 7168, 12058, 11220, 504, 9414, 4740, 4296, 4561, 1114, 9444, 12059, 12055, 1894, 8907, 12060, 4556, 8671, 11158, 5123, 12061, 7523, 5587, 12064, 2]
 // Exports: default
 
-// Module 12052 (Placeholder)
+// Module 12056 (Placeholder)
 import ThemesDefault from "Themes" /* 576 */;
-import usePlaceholderWidth from "usePlaceholderWidth" /* 12054 */;
+import usePlaceholderWidth from "usePlaceholderWidth" /* 12058 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "participantFromServer" /* 1956 */;
-import closure_8 from "initialize" /* 12053 */;
-import { FrecencySectionSelection } from "initialize" /* 12053 */;
+import closure_8 from "initialize" /* 12057 */;
+import { FrecencySectionSelection } from "initialize" /* 12057 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -102,7 +102,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12051).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(12055).getAppLauncherIconSource(app.section.application);
     let obj = { style: null, disabled: null, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
     obj[0] = disabled ? tmp.appContainerDisabled : tmp.appContainer;
     obj[1] = disabled;
@@ -135,7 +135,7 @@ function FrecentApp(app) {
     obj = { submitting: null, style: null };
     obj[0] = submitting;
     obj[1] = tmp.submittingOverlay;
-    items[1] = callback2(app(12060).SubmittingOverlay, obj);
+    items[1] = callback2(app(12064).SubmittingOverlay, obj);
     obj[6] = items;
     return closure_12(app(5123).PressableOpacity, obj, app.applicationId);
   }

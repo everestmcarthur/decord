@@ -1,10 +1,10 @@
-// Module ID: 15678
-// Function ID: 15679
+// Module ID: 15681
+// Function ID: 15682
 // Name: SmsScreen
-// Dependencies: [5, 32, 19, 17, 1074, 21, 6944, 15671, 1114, 1272, 15675, 15670, 6606, 4975, 15673, 2]
+// Dependencies: [5, 32, 19, 17, 1074, 21, 6944, 15674, 1114, 1272, 15678, 15673, 6606, 4975, 15676, 2]
 // Exports: default
 
-// Module 15678 (SmsScreen)
+// Module 15681 (SmsScreen)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -251,7 +251,7 @@ export default function SmsScreen(mfaChallenge) {
     }
     return applyArgumentsResult;
   }
-  let obj = finish(15671);
+  let obj = finish(15674);
   const screenStyles = obj.useScreenStyles(finish(6944)());
   const tmp4 = first(React.useState(null), 2);
   dependencyMap = tmp4[1];
@@ -295,7 +295,7 @@ export default function SmsScreen(mfaChallenge) {
   obj[0] = intl2.string(mfaChallenge(1114).t.o4JNrO);
   obj[1] = tmp10;
   obj = { style: screenStyles.inputContainer, children: null };
-  obj1 = { autoFocus: true, autoCapitalize: "characters", maxLength: mfaChallenge(15675).SMS_CODE_LENGTH, autoComplete: "sms-otp", textContentType: "oneTimeCode", keyboardType: "number-pad", onChange: handleChange, label: null, placeholder: null, errorMessage: null };
+  obj1 = { autoFocus: true, autoCapitalize: "characters", maxLength: mfaChallenge(15678).SMS_CODE_LENGTH, autoComplete: "sms-otp", textContentType: "oneTimeCode", keyboardType: "number-pad", onChange: handleChange, label: null, placeholder: null, errorMessage: null };
   const intl3 = mfaChallenge(1114).intl;
   obj1[7] = intl3.string(mfaChallenge(1114).t["/sHnXc"]);
   const intl4 = mfaChallenge(1114).intl;
@@ -319,7 +319,7 @@ export default function SmsScreen(mfaChallenge) {
   obj[1] = items1;
   obj[2] = _handleChange(c6, obj);
   let obj3 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
-  const tmp15 = finish(15670);
+  const tmp15 = finish(15673);
   const intl6 = mfaChallenge(1114).intl;
   obj3[1] = intl6.string(mfaChallenge(1114).t.geKm7t);
   let tmp17 = tmp6;
@@ -334,10 +334,10 @@ export default function SmsScreen(mfaChallenge) {
     tmp6 = tmp12;
   }
   if (!tmp6) {
-    tmp6 = first.length !== tmp8(15675).SMS_CODE_LENGTH;
+    tmp6 = first.length !== tmp8(15678).SMS_CODE_LENGTH;
   }
   obj3[4] = tmp6;
-  obj[3] = handleChange(finish(15673), obj3);
+  obj[3] = handleChange(finish(15676), obj3);
   obj[4] = { mfaChallenge, finish };
   return handleChange(tmp15, obj);
 };

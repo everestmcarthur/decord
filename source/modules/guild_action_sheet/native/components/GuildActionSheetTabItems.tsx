@@ -1,10 +1,10 @@
-// Module ID: 13973
-// Function ID: 13974
+// Module ID: 13976
+// Function ID: 13977
 // Name: GuildActionSheetTabItems
-// Dependencies: [19, 1957, 2012, 2011, 1074, 21, 13961, 4469, 504, 9823, 9820, 5433, 8097, 1114, 9375, 576, 4740, 4527, 5434, 10031, 7949, 7119, 7381, 9063, 2]
+// Dependencies: [19, 1957, 2012, 2011, 1074, 21, 13964, 4469, 504, 9828, 9825, 5433, 8097, 1114, 9380, 576, 4740, 4527, 5434, 10036, 7949, 7119, 7381, 9068, 2]
 // Exports: default
 
-// Module 13973 (GuildActionSheetTabItems)
+// Module 13976 (GuildActionSheetTabItems)
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import closure_6 from "comparator" /* 2012 */;
@@ -21,13 +21,13 @@ export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
   let stateFromStores;
   closure_2 = undefined;
-  let obj = guild(13961);
+  let obj = guild(13964);
   let canAccessSettings = obj.useGuildActionSheetPermissions(guild).canAccessSettings;
   const total = stateFromStores(4469)(guild.id).total;
   obj1 = guild(504);
   const items = [closure_6];
   stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.getChannels(guild.id));
-  let obj2 = guild(9823);
+  let obj2 = guild(9828);
   let shouldRenderInviteResult = obj2.shouldRenderInvite(stateFromStores, guild);
   const items1 = [stateFromStores, guild];
   closure_2 = React.useCallback(() => {
@@ -53,7 +53,7 @@ export default function GuildActionSheetTabItems(guild) {
   }
   obj1 = { variant: "secondary", label: formatToPlainStringResult, icon: null, grow: true, onPress: null };
   obj2 = { color: tmp3(576).unsafe_rawColors.GUILD_BOOSTING_PINK };
-  obj1[2] = closure_12(guild(9375).BoostGemIcon, obj2);
+  obj1[2] = closure_12(guild(9380).BoostGemIcon, obj2);
   obj1[4] = function onPress() {
     let obj = stateFromStores(closure_1_3[16]);
     obj = { section: closure_1_10.GUILD_POPOUT, object: closure_1_9.BOOST_GEM_ICON };
@@ -67,7 +67,7 @@ export default function GuildActionSheetTabItems(guild) {
     let obj3 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
     const intl3 = tmp(1114).intl;
     obj3[1] = intl3.string(tmp(1114).t.VINpSK);
-    obj3[2] = tmp3(10031);
+    obj3[2] = tmp3(10036);
     obj3[4] = function onPress() {
       stateFromStores(closure_1_3[17]).hideActionSheet();
       callback();

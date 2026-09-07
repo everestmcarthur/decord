@@ -1,16 +1,16 @@
-// Module ID: 17347
-// Function ID: 17348
+// Module ID: 17350
+// Function ID: 17351
 // Name: handleAppStateUpdate
-// Dependencies: [32, 5, 12413, 7478, 7479, 1090, 3, 7118, 17348, 7755, 1115, 1986, 1987, 2003, 2]
+// Dependencies: [32, 5, 12417, 7478, 7479, 1090, 3, 7118, 17351, 7755, 1115, 1986, 1987, 2003, 2]
 
-// Module 17347 (handleAppStateUpdate)
+// Module 17350 (handleAppStateUpdate)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 1090 */;
 import initializeDefault from "initialize" /* 7118 */;
-import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 17348 */;
+import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 17351 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 12413 */;
+import closure_5 from "initialize" /* 12417 */;
 import handleSelectedChannelStoreChanged from "handleSelectedChannelStoreChanged" /* 7478 */;
 import closure_8 from "handleSelectedChannelStoreChanged" /* 7478 */;
 import closure_9 from "result" /* 7479 */;

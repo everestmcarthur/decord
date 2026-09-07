@@ -1,10 +1,10 @@
-// Module ID: 8910
-// Function ID: 8911
+// Module ID: 8915
+// Function ID: 8916
 // Name: useCollapsibleFloatingActionButtonState
 // Dependencies: [19, 4296, 2]
 // Exports: useCollapsibleFloatingActionButtonScroll, useCollapsibleFloatingActionButtonState
 
-// Module 8910 (useCollapsibleFloatingActionButtonState)
+// Module 8915 (useCollapsibleFloatingActionButtonState)
 import _mod4296 from "module_4296" /* 4296 */;
 import closure_2 from "noop" /* 19 */;
 

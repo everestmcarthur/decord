@@ -1,10 +1,10 @@
-// Module ID: 9040
-// Function ID: 9041
+// Module ID: 9045
+// Function ID: 9046
 // Name: RemediationsElement
 // Dependencies: [19, 17, 21, 4560, 576, 5687, 1114, 2]
 // Exports: default
 
-// Module 9040 (RemediationsElement)
+// Module 9045 (RemediationsElement)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

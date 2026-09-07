@@ -1,24 +1,24 @@
-// Module ID: 17436
-// Function ID: 17437
+// Module ID: 17439
+// Function ID: 17440
 // Name: DefaultAvatarButton
-// Dependencies: [19, 17, 21, 17437, 17438, 17439, 17440, 17441, 17442, 17443, 17444, 1114, 4560, 576, 4556, 5123, 5587, 2]
+// Dependencies: [19, 17, 21, 17440, 17441, 17442, 17443, 17444, 17445, 17446, 17447, 1114, 4560, 576, 4556, 5123, 5587, 2]
 // Exports: default
 
-// Module 17436 (DefaultAvatarButton)
+// Module 17439 (DefaultAvatarButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import PressableBase from "PressableBase" /* 5123 */;
 import preloadDefault from "preload" /* 5587 */;
-import setDefault from "set" /* 17437 */;
-import setDefault2 from "set" /* 17438 */;
-import setDefault3 from "set" /* 17439 */;
-import setDefault4 from "set" /* 17440 */;
-import setDefault5 from "set" /* 17441 */;
-import setDefault6 from "set" /* 17442 */;
-import setDefault7 from "set" /* 17443 */;
-import setDefault8 from "set" /* 17444 */;
+import setDefault from "set" /* 17440 */;
+import setDefault2 from "set" /* 17441 */;
+import setDefault3 from "set" /* 17442 */;
+import setDefault4 from "set" /* 17443 */;
+import setDefault5 from "set" /* 17444 */;
+import setDefault6 from "set" /* 17445 */;
+import setDefault7 from "set" /* 17446 */;
+import setDefault8 from "set" /* 17447 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

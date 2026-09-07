@@ -1,8 +1,8 @@
-// Module ID: 12976
-// Function ID: 12977
-// Dependencies: [32, 19, 1074, 21, 8297, 8272, 8266, 8263, 12977, 1115, 2]
+// Module ID: 12980
+// Function ID: 12981
+// Dependencies: [32, 19, 1074, 21, 8297, 8272, 8266, 8263, 12981, 1115, 2]
 
-// Module 12976
+// Module 12980
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { YOUTUBE_EMBED_PAGE_TYPE } from "ME" /* 1074 */;
@@ -139,7 +139,7 @@ const memoResult = importAllResult.memo((visible) => {
       if ("embed_not_allowed" === tmp6[0]) {
         obj = { videoId: null };
         obj[0] = youtubeVideoIdFromURI.videoId;
-        return ref(tmp7(12977), obj);
+        return ref(tmp7(12981), obj);
       }
     }
     tmp2Result = tmp2(1115);

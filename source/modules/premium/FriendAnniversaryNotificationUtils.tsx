@@ -1,10 +1,10 @@
-// Module ID: 15499
-// Function ID: 15500
+// Module ID: 15502
+// Function ID: 15503
 // Name: onFriendAnniversaryNotificationSettingsChanged
 // Dependencies: [1074, 4212, 1935, 1242, 2]
 // Exports: onFriendAnniversaryNotificationSettingsChanged
 
-// Module 15499 (onFriendAnniversaryNotificationSettingsChanged)
+// Module 15502 (onFriendAnniversaryNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

@@ -1,10 +1,10 @@
-// Module ID: 12703
-// Function ID: 12704
+// Module ID: 12707
+// Function ID: 12708
 // Name: AddPhoneScreen
-// Dependencies: [5, 32, 19, 17, 1371, 12677, 21, 4560, 5682, 576, 1483, 4556, 1114, 7044, 7045, 12676, 563, 7038, 38, 7078, 6993, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 12681, 21, 4560, 5682, 576, 1483, 4556, 1114, 7044, 7045, 12680, 563, 7038, 38, 7078, 6993, 2]
 // Exports: AddPhoneScreen, VerifyPasswordScreen, VerifyPhoneScreen
 
-// Module 12703 (AddPhoneScreen)
+// Module 12707 (AddPhoneScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import AddPhoneDefault from "AddPhone" /* 7044 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -12,7 +12,7 @@ import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { useContactSyncModalStore } from "ContactSyncModes" /* 12677 */;
+import { useContactSyncModalStore } from "ContactSyncModes" /* 12681 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

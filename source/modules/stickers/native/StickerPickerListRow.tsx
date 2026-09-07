@@ -1,17 +1,17 @@
-// Module ID: 10401
-// Function ID: 10402
+// Module ID: 10406
+// Function ID: 10407
 // Name: STICKER_SIZE
-// Dependencies: [32, 19, 17, 1371, 1938, 10273, 1219, 21, 4560, 1115, 1935, 4528, 4529, 4899, 7337, 5268, 10176, 10402, 1232, 5123, 2]
+// Dependencies: [32, 19, 17, 1371, 1938, 10278, 1219, 21, 4560, 1115, 1935, 4528, 4529, 4899, 7337, 5268, 10181, 10407, 1232, 5123, 2]
 // Exports: default
 
-// Module 10401 (STICKER_SIZE)
+// Module 10406 (STICKER_SIZE)
 import noopAll from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 10402 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 10407 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
 import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 1938 */;
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10273 */;
+import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10278 */;
 import { PADDING_VERTICAL } from "ExpressionPickerViewType" /* 1219 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -84,7 +84,7 @@ export default function StickerPickerListRow(stickers) {
           ({ id: obj4[0], name: obj4[1], format_type: obj4[2] } = tmp12);
           let tmp20 = stickers;
           let tmp21 = dependencyMap;
-          let obj4 = stickers(10176);
+          let obj4 = stickers(10181);
           let tmp22 = closure_7;
           obj[3] = obj4.getStickerAssetUrl(tmp12, closure_7, first);
           obj[4] = first;

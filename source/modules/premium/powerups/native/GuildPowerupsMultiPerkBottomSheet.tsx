@@ -1,25 +1,25 @@
-// Module ID: 12547
-// Function ID: 12548
+// Module ID: 12551
+// Function ID: 12552
 // Name: GuildPowerupsMultiPerkCard
-// Dependencies: [17, 21, 4560, 576, 672, 4269, 4495, 12513, 12499, 12496, 12519, 12548, 12520, 12534, 12535, 12539, 12523, 1178, 1114, 4556, 12524, 4975, 2428, 1611, 12549, 7150, 6627, 12552, 12545, 2]
+// Dependencies: [17, 21, 4560, 576, 672, 4269, 4495, 12517, 12503, 12500, 12523, 12552, 12524, 12538, 12539, 12543, 12527, 1178, 1114, 4556, 12528, 4975, 2428, 1611, 12553, 7150, 6627, 12556, 12549, 2]
 // Exports: default
 
-// Module 12547 (GuildPowerupsMultiPerkCard)
+// Module 12551 (GuildPowerupsMultiPerkCard)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
 import nDefault from "n" /* 672 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import useThemeDefault from "useTheme" /* 4495 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12496 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12499 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12513 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12520 */;
-import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 12534 */;
-import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 12535 */;
-import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 12539 */;
-import useGuildPowerupColorConfigDefault from "useGuildPowerupColorConfig" /* 12548 */;
-import usePowerupGroupConfigDefault from "usePowerupGroupConfig" /* 12549 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12500 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12503 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12517 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12524 */;
+import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 12538 */;
+import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 12539 */;
+import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 12543 */;
+import useGuildPowerupColorConfigDefault from "useGuildPowerupColorConfig" /* 12552 */;
+import usePowerupGroupConfigDefault from "usePowerupGroupConfig" /* 12553 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -32,9 +32,9 @@ function GuildPowerupsMultiPerkCard(arg0) {
   const tmp4 = callback2(obj.isThemeLight(useThemeDefault()));
   const tmp5 = useHasAllocateBoostPermissionDefault(guildId);
   const tmp6 = usePowerupActiveStatusDefault(guildId, powerup);
-  obj1 = _require(12519);
+  obj1 = _require(12523);
   const calculatePowerupCardStatus = obj1.useCalculatePowerupCardStatus(powerup, tmp6, useGuildPowerupRollbackEnabledDefault(guildId, powerup, "GuildPowerupsMultiPerkBottomSheet"));
-  let obj2 = _require(12499);
+  let obj2 = _require(12503);
   const result = obj2.isPowerupActiveStatusActive(tmp6);
   _require = result;
   const tmp10 = useGetGuildPowerupBannerImageDefault(powerup, true, forceStaticImage);
@@ -70,7 +70,7 @@ function GuildPowerupsMultiPerkCard(arg0) {
   obj = { style: items1, children: null };
   items1[3] = "removing" === type2 && tmp4.imageContainerRemoving;
   let str = tmp10;
-  let tmp3Result = tmp3(12523);
+  let tmp3Result = tmp3(12527);
   if (tmp10 == null) {
     str = "";
   }
@@ -94,11 +94,11 @@ function GuildPowerupsMultiPerkCard(arg0) {
   if (null != calculatePowerupCardStatus) {
     const obj6 = { status: null };
     obj6[0] = calculatePowerupCardStatus;
-    let tmp18Result = tmp18(tmp(12524).GuildPowerupCardFooterStatus, obj6);
+    let tmp18Result = tmp18(tmp(12528).GuildPowerupCardFooterStatus, obj6);
   } else {
     const obj7 = { cost: null };
     obj7[0] = powerup.cost;
-    tmp18Result = tmp18(tmp(12524).GuildPowerupCardFooterCost, obj7);
+    tmp18Result = tmp18(tmp(12528).GuildPowerupCardFooterCost, obj7);
   }
   items4[1] = tmp18Result;
   obj4[1] = items4;
@@ -198,14 +198,14 @@ export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
     obj[0] = useSafeAreaInsetsDefault().bottom;
     obj[0] = obj;
     ({ title: obj4[0], description: obj4[1] } = tmp4);
-    const items = [callback(tmp2(12552), { title: null, description: null }), , ];
+    const items = [callback(tmp2(12556), { title: null, description: null }), , ];
     tmp6Result = null != tmp4.disabledReason;
     if (tmp6Result) {
       const obj2 = { style: null, children: null };
       obj2[0] = tmp.disabledReasonContainer;
       const obj3 = { text: null };
       obj3[0] = tmp4.disabledReason;
-      obj2[1] = tmp6(tmp2(12545), obj3);
+      obj2[1] = tmp6(tmp2(12549), obj3);
       tmp6Result = tmp6(View, obj2);
     }
     items[1] = tmp6Result;

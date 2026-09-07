@@ -1,12 +1,12 @@
-// Module ID: 10076
-// Function ID: 10077
-// Dependencies: [19, 17, 9467, 21, 4560, 576, 9941, 1611, 9589, 12, 9471, 4495, 5125, 10077, 9481, 11340, 5123, 1114, 1178, 11579, 12774, 2]
+// Module ID: 10081
+// Function ID: 10082
+// Dependencies: [19, 17, 9472, 21, 4560, 576, 9946, 1611, 9594, 12, 9476, 4495, 5125, 10082, 9486, 11345, 5123, 1114, 1178, 11584, 12778, 2]
 
-// Module 10076
+// Module 10081
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useIsVoiceChatFocused } from "VoiceChatDrawerState" /* 9467 */;
+import { useIsVoiceChatFocused } from "VoiceChatDrawerState" /* 9472 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -45,7 +45,7 @@ const memoResult = importAllResult.memo((channel) => {
   const tmp6 = guild_id(1611)();
   const top = tmp6.top;
   ({ left, right } = tmp6);
-  obj1 = id(9589);
+  obj1 = id(9594);
   const voiceChatNavigationContext = obj1.useVoiceChatNavigationContext();
   let openVoice;
   if (voiceChatNavigationContext != null) {
@@ -54,8 +54,8 @@ const memoResult = importAllResult.memo((channel) => {
   if (openVoice == null) {
     openVoice = tmp4(12).noop;
   }
-  const isConnectedToVoiceChannel = id(9471).useIsConnectedToVoiceChannel(channel.channel);
-  const tmp7Result = id(9471);
+  const isConnectedToVoiceChannel = id(9476).useIsConnectedToVoiceChannel(channel.channel);
+  const tmp7Result = id(9476);
   let str = "no-hide-descendants";
   const ref = obj.useRef(null);
   if (tmp2) {
@@ -84,9 +84,9 @@ const memoResult = importAllResult.memo((channel) => {
       str2 = "dark-content";
     }
     obj2[2] = str2;
-    tmp16Result = tmp16(tmp4(9481), obj2);
+    tmp16Result = tmp16(tmp4(9486), obj2);
     const tmp19 = !tmp2;
-    const tmp4Result = tmp4(9481);
+    const tmp4Result = tmp4(9486);
   }
   const items3 = [tmp16Result, , , , ];
   const items4 = [tmp.safeAreaTop, ];
@@ -105,7 +105,7 @@ const memoResult = importAllResult.memo((channel) => {
   }
   items5[1] = { display: str5 };
   items3[2] = callback(View, { style: items5 });
-  items3[3] = callback(guild_id(11340), { guildId: guild_id, channelId: id, chatInputRef: ref, screenIndex: "voice-panel" });
+  items3[3] = callback(guild_id(11345), { guildId: guild_id, channelId: id, chatInputRef: ref, screenIndex: "voice-panel" });
   const items6 = [tmp.chatHeader, ];
   const obj4 = { top, display: null };
   let str6;
@@ -120,14 +120,14 @@ const memoResult = importAllResult.memo((channel) => {
   obj6[2] = intl.string(id(1114).t["13/7kX"]);
   obj6[3] = tmp.chatHeaderBackIconContainer;
   const tmp12 = guild_id(4495)();
-  obj6[4] = callback(id(1178).Icon, { source: guild_id(11579), size: id(1178).Icon.Sizes.MEDIUM });
+  obj6[4] = callback(id(1178).Icon, { source: guild_id(11584), size: id(1178).Icon.Sizes.MEDIUM });
   const items7 = [callback(id(5123).PressableOpacity, obj6), ];
-  const obj7 = { source: guild_id(11579), size: id(1178).Icon.Sizes.MEDIUM };
-  items7[1] = callback(View, { style: tmp.chatHeaderTitleContainer, children: callback(id(12774).ChannelTitle, { guildId: guild_id, channelId: id }) });
+  const obj7 = { source: guild_id(11584), size: id(1178).Icon.Sizes.MEDIUM };
+  items7[1] = callback(View, { style: tmp.chatHeaderTitleContainer, children: callback(id(12778).ChannelTitle, { guildId: guild_id, channelId: id }) });
   obj5[1] = items7;
   items3[4] = closure_7(View, obj5);
   obj1[2] = items3;
-  items2[1] = closure_7(id(10077).ChannelContainer, obj1);
+  items2[1] = closure_7(id(10082).ChannelContainer, obj1);
   obj[3] = items2;
   return closure_7(View, obj);
 });

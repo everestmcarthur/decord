@@ -1,10 +1,10 @@
-// Module ID: 10947
-// Function ID: 10948
+// Module ID: 10952
+// Function ID: 10953
 // Name: RolePill
 // Dependencies: [19, 17, 1074, 21, 4560, 576, 1935, 7186, 7190, 4258, 5123, 7204, 4556, 2]
 // Exports: default
 
-// Module 10947 (RolePill)
+// Module 10952 (RolePill)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

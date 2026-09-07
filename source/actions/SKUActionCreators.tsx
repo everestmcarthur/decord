@@ -1,13 +1,13 @@
-// Module ID: 10816
-// Function ID: 10817
+// Module ID: 10821
+// Function ID: 10822
 // Name: _fetchSKU
-// Dependencies: [5, 8786, 5510, 1074, 573, 4802, 1272, 4241, 8854, 7589, 4461, 4240, 4233, 4884, 4893, 1369, 2]
+// Dependencies: [5, 8791, 5510, 1074, 573, 4802, 1272, 4241, 8859, 7589, 4461, 4240, 4233, 4884, 4893, 1369, 2]
 // Exports: clearPurchaseError, fetchPublishedSKU, fetchSKU, fetchTestSKUsForApplication, grantChannelBranchEntitlement, orderSKU, previewPurchaseSku, purchaseSKU, resendPaymentVerificationEmail, showPurchaseConfirmationStep, updateSKUPaymentIsGift
 
-// Module 10816 (_fetchSKU)
+// Module 10821 (_fetchSKU)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getPromotionIdOverride" /* 8786 */;
+import closure_4 from "getPromotionIdOverride" /* 8791 */;
 import closure_5 from "addSku" /* 5510 */;
 import ME from "ME" /* 1074 */;
 
@@ -825,12 +825,12 @@ function _purchaseSKU() {
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
                 const obj27 = callback2(573);
-                c11 = callback(8854).isTestModeForApplication(callback);
+                c11 = callback(8859).isTestModeForApplication(callback);
                 c8 = 1;
                 obj2 = { gift: isGift, sku_subscription_plan_id: obj1.subscriptionPlanId };
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                const obj28 = callback(8854);
+                const obj28 = callback(8859);
                 c10 = 2;
                 c11 = 1;
                 const obj3 = { value: null, done: false };

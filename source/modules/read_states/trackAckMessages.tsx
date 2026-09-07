@@ -1,10 +1,10 @@
-// Module ID: 13838
-// Function ID: 13839
+// Module ID: 13841
+// Function ID: 13842
 // Name: trackAckMessages
 // Dependencies: [1957, 7636, 1979, 4741, 1074, 4740, 2]
 // Exports: default
 
-// Module 13838 (trackAckMessages)
+// Module 13841 (trackAckMessages)
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
 import closure_2 from "ensureGuildLoaded" /* 1957 */;
 import closure_3 from "updateGuildUnreadSentinel" /* 7636 */;

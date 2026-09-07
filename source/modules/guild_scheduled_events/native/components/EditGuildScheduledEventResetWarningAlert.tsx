@@ -1,10 +1,10 @@
-// Module ID: 9787
-// Function ID: 9788
+// Module ID: 9792
+// Function ID: 9793
 // Name: EditGuildScheduledEventResetWarningAlert
 // Dependencies: [19, 21, 4994, 1114, 2]
 // Exports: default
 
-// Module 9787 (EditGuildScheduledEventResetWarningAlert)
+// Module 9792 (EditGuildScheduledEventResetWarningAlert)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import componentDidMountDefault from "componentDidMount" /* 4994 */;

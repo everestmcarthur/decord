@@ -1,10 +1,10 @@
-// Module ID: 17886
-// Function ID: 17887
+// Module ID: 17889
+// Function ID: 17890
 // Name: SENT_TIMESTAMP_FORMATTER
 // Dependencies: [1114, 2690, 7593, 2]
 // Exports: formatPendingRequestSentText
 
-// Module 17886 (SENT_TIMESTAMP_FORMATTER)
+// Module 17889 (SENT_TIMESTAMP_FORMATTER)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2690 */;

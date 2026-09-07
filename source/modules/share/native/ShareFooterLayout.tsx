@@ -1,10 +1,10 @@
-// Module ID: 11693
-// Function ID: 11694
+// Module ID: 11698
+// Function ID: 11699
 // Name: ShareFooterLayout
 // Dependencies: [19, 17, 21, 4560, 576, 6981, 4296, 4974, 4978, 4556, 2]
 // Exports: default
 
-// Module 11693 (ShareFooterLayout)
+// Module 11698 (ShareFooterLayout)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;

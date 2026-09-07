@@ -1,10 +1,10 @@
-// Module ID: 9631
-// Function ID: 9632
+// Module ID: 9636
+// Function ID: 9637
 // Name: ActivityTileInner
-// Dependencies: [5, 32, 19, 17, 1956, 1371, 1074, 1182, 1920, 21, 1178, 4560, 576, 504, 1369, 7168, 4712, 4404, 9632, 7162, 7182, 9619, 1114, 9531, 9533, 9634, 9530, 5123, 9635, 9651, 4556, 4976, 4271, 2]
+// Dependencies: [5, 32, 19, 17, 1956, 1371, 1074, 1182, 1920, 21, 1178, 4560, 576, 504, 1369, 7168, 4712, 4404, 9637, 7162, 7182, 9624, 1114, 9536, 9538, 9639, 9535, 5123, 9640, 9656, 4556, 4976, 4271, 2]
 // Exports: default
 
-// Module 9631 (ActivityTileInner)
+// Module 9636 (ActivityTileInner)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import ManaContext from "ManaContext" /* 4271 */;
@@ -81,7 +81,7 @@ function ActivityTileInner(participant) {
                 v0 = 1;
                 dependencyMap = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = v0(9533)(obj1);
+                obj2[0] = v0(9538)(obj1);
                 return obj2;
               } else {
                 dependencyMap = 3;
@@ -92,7 +92,7 @@ function ActivityTileInner(participant) {
             dependencyMap = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            obj = closure_1_0(9634);
+            obj = closure_1_0(9639);
             const result = obj.setOrientationLockState(closure_3);
           }
           dependencyMap = 3;

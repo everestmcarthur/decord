@@ -1,17 +1,18 @@
 // Module ID: 10613
 // Function ID: 10614
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 10426, 10438, 10439]
+// Dependencies: [41, 42, 93, 95, 98, 10606, 10439, 10440, 10444]
 
 // Module 10613 (_isNativeReflectConstruct)
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10439 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10444 */;
+import WEEKDAY_DICTIONARY from "WEEKDAY_DICTIONARY" /* 10606 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ITCasualTimeParser = require;
+const ENTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,71 +32,43 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const re6 = /(?:questo|questa)?\s{0,3}(mattina|pomeriggio|sera|notte|mezzanotte|mezzogiorno)(?=\W|$)/i;
-class ITCasualTimeParser {
-  constructor() {
+const regExp = new RegExp("(" + WEEKDAY_DICTIONARY.TIME_UNITS_PATTERN + ")\\s{0,5}(?:fa|prima|precedente)(?=(?:\\W|$))", "i");
+const regExp1 = new RegExp("(" + WEEKDAY_DICTIONARY.TIME_UNITS_PATTERN + ")\\s{0,5}fa(?=(?:\\W|$))", "i");
+class ENTimeUnitAgoFormatParser {
+  constructor(arg0) {
     self = this;
-    tmp = closure_2(this, ITCasualTimeParser);
+    tmp = closure_2(this, ENTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ITCasualTimeParser);
+    obj = closure_4(ENTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
 }
-_inherits(ITCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const items = [
   {
     key: "innerPattern",
     value: function innerPattern() {
-      return closure_6;
+      return this.strictMode ? regExp1 : regExp;
     }
   },
   {
     key: "innerExtract",
-    value: function innerExtract(refDate) {
-      refDate = refDate.refDate;
-      const parsingComponents = refDate.createParsingComponents();
-      const formatted = arg1[1].toLowerCase();
-      if ("pomeriggio" === formatted) {
-        parsingComponents.imply("meridiem", ITCasualTimeParser(10426).Meridiem.PM);
-        parsingComponents.imply("hour", 15);
-      } else {
-        if ("sera" !== formatted) {
-          if ("notte" !== formatted) {
-            if ("mezzanotte" === formatted) {
-              const _Date = Date;
-              const date = new Date(refDate.getTime());
-              date.setDate(date.getDate() + 1);
-              ITCasualTimeParser(10438).assignSimilarDate(parsingComponents, date);
-              ITCasualTimeParser(10438).implySimilarTime(parsingComponents, date);
-              parsingComponents.imply("hour", 0);
-              parsingComponents.imply("minute", 0);
-              parsingComponents.imply("second", 0);
-            } else if ("mattina" === formatted) {
-              parsingComponents.imply("meridiem", ITCasualTimeParser(10426).Meridiem.AM);
-              parsingComponents.imply("hour", 6);
-            } else if ("mezzogiorno" === formatted) {
-              parsingComponents.imply("meridiem", ITCasualTimeParser(10426).Meridiem.AM);
-              parsingComponents.imply("hour", 12);
-            }
-          }
-        }
-        parsingComponents.imply("meridiem", ITCasualTimeParser(10426).Meridiem.PM);
-        parsingComponents.imply("hour", 20);
-      }
-      return parsingComponents;
+    value: function innerExtract(reference) {
+      const parseDurationResult = ENTimeUnitAgoFormatParser(10606).parseDuration(arg1[1]);
+      const ParsingComponents = ENTimeUnitAgoFormatParser(10440).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, ENTimeUnitAgoFormatParser(10439).reverseDuration(ENTimeUnitAgoFormatParser(10606).parseDuration(arg1[1])));
     }
   }
 ];
 
-export default _createClass(ITCasualTimeParser, items);
+export default _createClass(ENTimeUnitAgoFormatParser, items);

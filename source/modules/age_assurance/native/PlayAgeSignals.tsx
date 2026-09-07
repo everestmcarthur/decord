@@ -1,10 +1,10 @@
-// Module ID: 8572
-// Function ID: 8573
+// Module ID: 8575
+// Function ID: 8576
 // Name: _getAgeSignals
-// Dependencies: [5, 8573, 8574, 2]
+// Dependencies: [5, 8576, 8577, 2]
 // Exports: getAgeSignals
 
-// Module 8572 (_getAgeSignals)
+// Module 8575 (_getAgeSignals)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;

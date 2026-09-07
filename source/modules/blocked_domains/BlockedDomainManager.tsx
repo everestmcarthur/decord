@@ -1,9 +1,9 @@
-// Module ID: 17322
-// Function ID: 17323
+// Module ID: 17325
+// Function ID: 17326
 // Name: _initialize
 // Dependencies: [7118, 1351, 2]
 
-// Module 17322 (_initialize)
+// Module 17325 (_initialize)
 import isBlockedDomain from "isBlockedDomain" /* 1351 */;
 import initializeDefault from "initialize" /* 7118 */;
 

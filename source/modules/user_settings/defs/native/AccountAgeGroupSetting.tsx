@@ -1,9 +1,9 @@
-// Module ID: 14715
-// Function ID: 14716
+// Module ID: 14718
+// Function ID: 14719
 // Name: route
-// Dependencies: [17, 7975, 1074, 21, 4560, 576, 14716, 14717, 14718, 1943, 5605, 11468, 1114, 14719, 14682, 14720, 2]
+// Dependencies: [17, 7975, 1074, 21, 4560, 576, 14719, 14720, 14721, 1943, 5605, 11473, 1114, 14722, 14685, 14723, 2]
 
-// Module 14715 (route)
+// Module 14718 (route)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -12,14 +12,14 @@ import getSystemLocale from "getSystemLocale" /* 1114 */;
 import DismissibleContent from "DismissibleContent" /* 1943 */;
 import TableRowInner from "TableRowInner" /* 5605 */;
 import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import useIsTinyBroncoSettingsEnabled from "useIsTinyBroncoSettingsEnabled" /* 14682 */;
-import AgeGroupState from "AgeGroupState" /* 14716 */;
-import isTinyBroncoAnnouncementCountry from "isTinyBroncoAnnouncementCountry" /* 14717 */;
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14718 */;
+import useIsTinyBroncoSettingsEnabled from "useIsTinyBroncoSettingsEnabled" /* 14685 */;
+import AgeGroupState from "AgeGroupState" /* 14719 */;
+import isTinyBroncoAnnouncementCountry from "isTinyBroncoAnnouncementCountry" /* 14720 */;
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14721 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
-import createToggle from "createToggle" /* 11468 */;
-import useAlwaysShow from "useAlwaysShow" /* 14719 */;
+import createToggle from "createToggle" /* 11473 */;
+import useAlwaysShow from "useAlwaysShow" /* 14722 */;
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
@@ -60,7 +60,7 @@ obj1[4] = useIsTinyBroncoSettingsEnabled.useIsTinyBroncoSettingsEnabled;
 obj1[5] = {
   route: ME.UserSettingsSections.AGE_GROUP,
   getComponent() {
-    return require(14720) /* SettingsAgeGroupHeader */.default;
+    return require(14723) /* SettingsAgeGroupHeader */.default;
   }
 };
 const route = createToggle.createRoute(obj1);

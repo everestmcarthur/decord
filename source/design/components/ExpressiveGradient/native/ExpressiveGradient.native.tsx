@@ -1,10 +1,10 @@
-// Module ID: 10231
-// Function ID: 10232
+// Module ID: 10236
+// Function ID: 10237
 // Name: ExpressiveGradient
 // Dependencies: [19, 17, 21, 576, 4262, 672, 4987, 2]
 // Exports: ExpressiveGradient
 
-// Module 10231 (ExpressiveGradient)
+// Module 10236 (ExpressiveGradient)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import nDefault from "n" /* 672 */;

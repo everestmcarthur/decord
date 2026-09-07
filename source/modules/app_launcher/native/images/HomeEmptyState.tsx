@@ -1,13 +1,13 @@
-// Module ID: 12112
-// Function ID: 12113
+// Module ID: 12116
+// Function ID: 12117
 // Name: SvgComponent
-// Dependencies: [19, 21, 8453, 2]
+// Dependencies: [19, 21, 8456, 2]
 // Exports: default
 
-// Module 12112 (SvgComponent)
+// Module 12116 (SvgComponent)
 import noopAll from "noop" /* 19 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
-import inlineStylesDefault from "inlineStyles" /* 8453 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
+import inlineStylesDefault from "inlineStyles" /* 8456 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;

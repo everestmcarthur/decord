@@ -1,10 +1,10 @@
-// Module ID: 10147
-// Function ID: 10148
+// Module ID: 10152
+// Function ID: 10153
 // Name: getMuteTimeOptions
 // Dependencies: [4741, 1074, 1084, 1114, 11, 1384, 4202, 504, 2]
 // Exports: filterOverrides, getMuteTimeOptions, shouldShowUseNewNotificationSystem, useShouldUseNewNotificationSystem
 
-// Module 10147 (getMuteTimeOptions)
+// Module 10152 (getMuteTimeOptions)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

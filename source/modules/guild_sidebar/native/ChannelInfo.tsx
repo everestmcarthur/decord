@@ -1,15 +1,15 @@
-// Module ID: 16227
-// Function ID: 16228
+// Module ID: 16230
+// Function ID: 16231
 // Name: LimitAndDurationInfo
-// Dependencies: [19, 7532, 1979, 4199, 4575, 4579, 1074, 21, 4560, 504, 12059, 7885, 16228, 16229, 4706, 1178, 16231, 16232, 16118, 5417, 12294, 16119, 16233, 13008, 2]
+// Dependencies: [19, 7532, 1979, 4199, 4575, 4579, 1074, 21, 4560, 504, 12063, 7885, 16231, 16232, 4706, 1178, 16234, 16235, 16121, 5417, 12298, 16122, 16236, 13012, 2]
 // Exports: default
 
-// Module 16227 (LimitAndDurationInfo)
+// Module 16230 (LimitAndDurationInfo)
 import noopAll from "noop" /* 19 */;
-import useEmbeddedAppsDefault from "useEmbeddedApps" /* 12059 */;
-import ActiveTimestamp from "ActiveTimestamp" /* 13008 */;
-import showChannelBadgeDefault from "showChannelBadge" /* 16228 */;
-import useStartTime from "useStartTime" /* 16233 */;
+import useEmbeddedAppsDefault from "useEmbeddedApps" /* 12063 */;
+import ActiveTimestamp from "ActiveTimestamp" /* 13012 */;
+import showChannelBadgeDefault from "showChannelBadge" /* 16231 */;
+import useStartTime from "useStartTime" /* 16236 */;
 import closure_3 from "guildHasCommunity" /* 7532 */;
 import closure_4 from "createGuildRecordFromRust" /* 1979 */;
 import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
@@ -50,7 +50,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj[1] = hasVideo;
     obj[2] = channel;
-    let tmp6Result = tmp6(channel(16119).ConnectedUserLimit, obj);
+    let tmp6Result = tmp6(channel(16122).ConnectedUserLimit, obj);
   } else {
     obj1 = { channel: null };
     obj1[0] = channel;
@@ -99,9 +99,9 @@ export default function ChannelInfo(channel) {
     }
     obj[3] = tmp18;
     obj[4] = muted;
-    let tmp11Result = jsx(tmp4(16229), { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null });
+    let tmp11Result = jsx(tmp4(16232), { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null });
     const tmp16 = jsx;
-    const tmp4Result = tmp4(16229);
+    const tmp4Result = tmp4(16232);
   } else {
     if (null != isChannelCollapsed) {
       if (isChannelCollapsed) {
@@ -120,12 +120,12 @@ export default function ChannelInfo(channel) {
     }
     if (null != enableActivities) {
       if (enableActivities) {
-        tmpResult = tmp(16231);
+        tmpResult = tmp(16234);
         if (tmpResult.showChannelItemEmbeddedActivities(tmp5)) {
           obj = { embeddedApps: null, muted: null };
           obj[0] = tmp5;
           obj[1] = muted;
-          tmp11Result = jsx(tmp4(16232), { embeddedApps: null, muted: null });
+          tmp11Result = jsx(tmp4(16235), { embeddedApps: null, muted: null });
         }
       }
     }
@@ -134,7 +134,7 @@ export default function ChannelInfo(channel) {
         if (isSubscriptionGated) {
           obj1 = { locked: null };
           obj1[0] = needSubscriptionToAccess;
-          tmp11Result = jsx(tmp4(16118), { locked: null });
+          tmp11Result = jsx(tmp4(16121), { locked: null });
         }
       }
     }

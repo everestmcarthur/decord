@@ -1,10 +1,10 @@
-// Module ID: 11343
-// Function ID: 11344
+// Module ID: 11348
+// Function ID: 11349
 // Name: isSelectedFromHomeChannel
 // Dependencies: [7280, 2011, 1964, 4418, 4417, 2]
 // Exports: default
 
-// Module 11343 (isSelectedFromHomeChannel)
+// Module 11348 (isSelectedFromHomeChannel)
 import handleConnectionOpenDefault from "handleConnectionOpen" /* 2011 */;
 import coerceMainRoute from "coerceMainRoute" /* 4417 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;

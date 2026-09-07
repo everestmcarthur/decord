@@ -1,13 +1,13 @@
-// Module ID: 14767
-// Function ID: 14768
+// Module ID: 14770
+// Function ID: 14771
 // Name: SettingsAccountStandingScreen
-// Dependencies: [21, 14768, 2]
+// Dependencies: [21, 14771, 2]
 // Exports: default
 
-// Module 14767 (SettingsAccountStandingScreen)
+// Module 14770 (SettingsAccountStandingScreen)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import handleLogInClickDefault from "handleLogInClick" /* 14768 */;
+import handleLogInClickDefault from "handleLogInClick" /* 14771 */;
 
 const jsx = jsxProd.jsx;
 const result = set.fileFinishedImporting("modules/user_settings/standing/native/SettingsAccountStandingScreen.tsx");

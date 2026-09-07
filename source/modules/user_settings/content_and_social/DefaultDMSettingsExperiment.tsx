@@ -1,10 +1,10 @@
-// Module ID: 15879
-// Function ID: 15880
+// Module ID: 15882
+// Function ID: 15883
 // Name: shouldAgeVerifyForDMDefaultOff
 // Dependencies: [5423, 5424, 4773, 2]
 // Exports: shouldAgeVerifyForDMDefaultOff
 
-// Module 15879 (shouldAgeVerifyForDMDefaultOff)
+// Module 15882 (shouldAgeVerifyForDMDefaultOff)
 import set from "set" /* 2 */;
 import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4773 */;
 import isFeatureAgeGated from "isFeatureAgeGated" /* 5423 */;

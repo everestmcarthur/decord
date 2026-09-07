@@ -35,10 +35,10 @@ function rebuild(arr) {
   c3 = "";
   const items = [];
   const item = arr.forEach((content) => {
-    (function handleEmoji(closure_0, type, f82703) {
-      if (null != f82703) {
+    (function handleEmoji(closure_0, type, f82719) {
+      if (null != f82719) {
         if ("customEmoticon" === type.type) {
-          f82703(type.emoji, false);
+          f82719(type.emoji, false);
         }
         if ("emoticon" === type.type) {
           const result = callback(4213).translateSurrogatesToInlineEmoji(type.content);
@@ -55,7 +55,7 @@ function rebuild(arr) {
                   }
                   if (byId) {
                     let tmp11 = type.isShortcut || false;
-                    let tmp12 = f82703(byId, tmp11);
+                    let tmp12 = f82719(byId, tmp11);
                   }
                   let tmp13 = regex;
                   match = regex.exec(result);
@@ -73,7 +73,7 @@ function rebuild(arr) {
           const obj = callback(4213);
         }
       }
-    })(callback, content, f82703);
+    })(callback, content, f82719);
     if (typeof content.content === "string") {
       const type = content.type;
       if ("emoji" === type) {
@@ -98,8 +98,8 @@ function rebuild(arr) {
           }
         }
         if (true === tmp.isNotification) {
-          _var = _var + callback(f82703[27]).isolate(content.content);
-          let obj2 = callback(f82703[27]);
+          _var = _var + callback(f82719[27]).isolate(content.content);
+          let obj2 = callback(f82719[27]);
         } else {
           _var = _var + content.content;
         }
@@ -287,10 +287,10 @@ function unparseWithMeta(content, id, isNotification) {
   c3 = "";
   const items = [];
   const item = translateSurrogatesToInlineEmoji(4257).parserFor(omitResult)(content, obj).forEach((content) => {
-    (function handleEmoji(closure_0, type, f82703) {
-      if (null != f82703) {
+    (function handleEmoji(closure_0, type, f82719) {
+      if (null != f82719) {
         if ("customEmoticon" === type.type) {
-          f82703(type.emoji, false);
+          f82719(type.emoji, false);
         }
         if ("emoticon" === type.type) {
           const result = callback(4213).translateSurrogatesToInlineEmoji(type.content);
@@ -307,7 +307,7 @@ function unparseWithMeta(content, id, isNotification) {
                   }
                   if (byId) {
                     let tmp11 = type.isShortcut || false;
-                    let tmp12 = f82703(byId, tmp11);
+                    let tmp12 = f82719(byId, tmp11);
                   }
                   let tmp13 = regex;
                   match = regex.exec(result);
@@ -325,7 +325,7 @@ function unparseWithMeta(content, id, isNotification) {
           const obj = callback(4213);
         }
       }
-    })(callback, content, f82703);
+    })(callback, content, f82719);
     if (typeof content.content === "string") {
       const type = content.type;
       if ("emoji" === type) {
@@ -350,8 +350,8 @@ function unparseWithMeta(content, id, isNotification) {
           }
         }
         if (true === tmp.isNotification) {
-          _var = _var + callback(f82703[27]).isolate(content.content);
-          let obj2 = callback(f82703[27]);
+          _var = _var + callback(f82719[27]).isolate(content.content);
+          let obj2 = callback(f82719[27]);
         } else {
           _var = _var + content.content;
         }
@@ -1116,9 +1116,9 @@ const obj16 = {
     let obj = { content, tts: false, invalidEmojis: [], validNonShortcutEmojis: [] };
     importDefault = obj;
     closure_0 = tmp;
-    importDefault = importDefault(f82703[20]).translateInlineEmojiToSurrogates;
-    f82703 = (emoji) => {
-      let obj = lib(f82703[30]);
+    importDefault = importDefault(f82719[20]).translateInlineEmojiToSurrogates;
+    f82719 = (emoji) => {
+      let obj = lib(f82719[30]);
       obj = { emoji, channel: closure_0, intention: closure_1_17.CHAT };
       if (obj.isEmojiPremiumLocked(obj)) {
         const invalidEmojis = lib.invalidEmojis;
@@ -1131,10 +1131,10 @@ const obj16 = {
     c3 = "";
     closure_4 = [];
     const item = callback(obj.content, tmp).forEach((content) => {
-      (function handleEmoji(closure_0, type, f82703) {
-        if (null != f82703) {
+      (function handleEmoji(closure_0, type, f82719) {
+        if (null != f82719) {
           if ("customEmoticon" === type.type) {
-            f82703(type.emoji, false);
+            f82719(type.emoji, false);
           }
           if ("emoticon" === type.type) {
             const result = callback(4213).translateSurrogatesToInlineEmoji(type.content);
@@ -1151,7 +1151,7 @@ const obj16 = {
                     }
                     if (byId) {
                       let tmp11 = type.isShortcut || false;
-                      let tmp12 = f82703(byId, tmp11);
+                      let tmp12 = f82719(byId, tmp11);
                     }
                     let tmp13 = regex;
                     match = regex.exec(result);
@@ -1169,7 +1169,7 @@ const obj16 = {
             const obj = callback(4213);
           }
         }
-      })(callback, content, f82703);
+      })(callback, content, f82719);
       if (typeof content.content === "string") {
         const type = content.type;
         if ("emoji" === type) {
@@ -1194,8 +1194,8 @@ const obj16 = {
             }
           }
           if (true === tmp.isNotification) {
-            _var = _var + callback(f82703[27]).isolate(content.content);
-            let obj2 = callback(f82703[27]);
+            _var = _var + callback(f82719[27]).isolate(content.content);
+            let obj2 = callback(f82719[27]);
           } else {
             _var = _var + content.content;
           }
@@ -1239,10 +1239,10 @@ export const parseAndRebuild = function parseAndRebuild(arg0, arg1, arg2) {
   c3 = "";
   closure_4 = [];
   const item = callback(arg0, arg1).forEach((content) => {
-    (function handleEmoji(closure_0, type, f82703) {
-      if (null != f82703) {
+    (function handleEmoji(closure_0, type, f82719) {
+      if (null != f82719) {
         if ("customEmoticon" === type.type) {
-          f82703(type.emoji, false);
+          f82719(type.emoji, false);
         }
         if ("emoticon" === type.type) {
           const result = callback(4213).translateSurrogatesToInlineEmoji(type.content);
@@ -1259,7 +1259,7 @@ export const parseAndRebuild = function parseAndRebuild(arg0, arg1, arg2) {
                   }
                   if (byId) {
                     let tmp11 = type.isShortcut || false;
-                    let tmp12 = f82703(byId, tmp11);
+                    let tmp12 = f82719(byId, tmp11);
                   }
                   let tmp13 = regex;
                   match = regex.exec(result);
@@ -1277,7 +1277,7 @@ export const parseAndRebuild = function parseAndRebuild(arg0, arg1, arg2) {
           const obj = callback(4213);
         }
       }
-    })(callback, content, f82703);
+    })(callback, content, f82719);
     if (typeof content.content === "string") {
       const type = content.type;
       if ("emoji" === type) {
@@ -1302,8 +1302,8 @@ export const parseAndRebuild = function parseAndRebuild(arg0, arg1, arg2) {
           }
         }
         if (true === tmp.isNotification) {
-          _var = _var + callback(f82703[27]).isolate(content.content);
-          let obj2 = callback(f82703[27]);
+          _var = _var + callback(f82719[27]).isolate(content.content);
+          let obj2 = callback(f82719[27]);
         } else {
           _var = _var + content.content;
         }

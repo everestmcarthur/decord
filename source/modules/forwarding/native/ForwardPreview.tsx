@@ -1,18 +1,18 @@
-// Module ID: 11694
-// Function ID: 11695
+// Module ID: 11699
+// Function ID: 11700
 // Name: MessagePreview
-// Dependencies: [19, 17, 21, 4560, 576, 4495, 8126, 7932, 8652, 11695, 1894, 11696, 12, 11697, 1114, 11699, 10132, 5087, 10112, 5587, 1476, 8813, 4556, 2914, 8143, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4495, 8126, 7932, 8657, 11700, 1894, 11701, 12, 11702, 1114, 11704, 10137, 5087, 10117, 5587, 1476, 8818, 4556, 2914, 8143, 2]
 // Exports: ForwardPreview
 
-// Module 11694 (MessagePreview)
+// Module 11699 (MessagePreview)
 import ThemesDefault from "Themes" /* 576 */;
 import getSrcWithWidthAndHeightDefault from "getSrcWithWidthAndHeight" /* 1476 */;
 import messagesProxyDefault from "messagesProxy" /* 2914 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import preloadDefault from "preload" /* 5587 */;
-import DCDChatItemDefault from "DCDChatItem" /* 8652 */;
-import SolidCutoutDefault from "SolidCutout" /* 8813 */;
-import useForwardPreviewContent from "useForwardPreviewContent" /* 11695 */;
+import DCDChatItemDefault from "DCDChatItem" /* 8657 */;
+import SolidCutoutDefault from "SolidCutout" /* 8818 */;
+import useForwardPreviewContent from "useForwardPreviewContent" /* 11700 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -94,7 +94,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     if (num == null) {
       num = 0;
     }
-    tmp6 = tmp2(11696).CHECKPOINT_PERSONA_COLORS[num];
+    tmp6 = tmp2(11701).CHECKPOINT_PERSONA_COLORS[num];
   }
   if (tmp6 != null) {
     const primaryColor = tmp6.primaryColor;
@@ -117,7 +117,7 @@ export const ForwardPreview = function ForwardPreview(message) {
         obj[0] = num2;
         obj[1] = num3;
         let formatToPlainStringResult = intl4.formatToPlainString(tmp2(1114).t.Lr0Top, obj);
-        let AttachmentIcon = tmp2(11699).ImagesIcon;
+        let AttachmentIcon = tmp2(11704).ImagesIcon;
       }
       if (num3 > 0) {
         if (length === num3) {
@@ -136,7 +136,7 @@ export const ForwardPreview = function ForwardPreview(message) {
           const items1 = [callback(preloadDefault, obj1), ];
           const obj3 = { style: null, size: "md", color: "white" };
           obj3[0] = tmp.playIcon;
-          items1[1] = callback(tmp2(10132).CirclePlayIcon, obj3);
+          items1[1] = callback(tmp2(10137).CirclePlayIcon, obj3);
           obj[1] = items1;
           let tmp7 = callback2(View, obj);
           let tmp8 = AttachmentIcon;
@@ -194,7 +194,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       const obj10 = { count: null };
       obj10[0] = num3;
       formatToPlainStringResult = intl3.formatToPlainString(tmp2(1114).t.SJ6pPX, obj10);
-      AttachmentIcon = tmp2(10132).CirclePlayIcon;
+      AttachmentIcon = tmp2(10137).CirclePlayIcon;
     } else if (num2 > 0) {
       const intl2 = tmp2(1114).intl;
       const obj11 = { count: null };
@@ -202,7 +202,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       if (1 === num2) {
         let ImagesIcon = tmp2(5087).ImageIcon;
       } else {
-        ImagesIcon = tmp2(11699).ImagesIcon;
+        ImagesIcon = tmp2(11704).ImagesIcon;
       }
       AttachmentIcon = ImagesIcon;
       formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.h4pFfU, obj11);
@@ -212,7 +212,7 @@ export const ForwardPreview = function ForwardPreview(message) {
       const obj12 = { count: null };
       obj12[0] = length;
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1114).t["89ihS8"], obj12);
-      AttachmentIcon = tmp2(10112).AttachmentIcon;
+      AttachmentIcon = tmp2(10117).AttachmentIcon;
     }
   } else {
     tmp7 = null;
@@ -224,7 +224,7 @@ export const ForwardPreview = function ForwardPreview(message) {
     tmp33 = tmp7;
     if (null != tmp7) {
       obj13 = { shape: null, x: 28, y: 28, width: 32, height: 32, cornerRadius: 12 };
-      obj13[0] = tmp2(8813).CutoutShape.RoundedRect;
+      obj13[0] = tmp2(8818).CutoutShape.RoundedRect;
       const obj14 = { style: null, children: null };
       obj14[0] = tmp.attachmentPreviewOverflow;
       const obj15 = { cutouts: null, children: null };

@@ -1,11 +1,11 @@
-// Module ID: 17000
-// Function ID: 17001
+// Module ID: 17003
+// Function ID: 17004
 // Name: FreezeAfterLayoutPipView
-// Dependencies: [32, 19, 8290, 21, 17001, 9610, 17003, 2]
+// Dependencies: [32, 19, 8290, 21, 17004, 9615, 17006, 2]
 // Exports: default
 
-// Module 17000 (FreezeAfterLayoutPipView)
-import ExternalPipViewVideoUnavailableDefault from "ExternalPipViewVideoUnavailable" /* 17003 */;
+// Module 17003 (FreezeAfterLayoutPipView)
+import ExternalPipViewVideoUnavailableDefault from "ExternalPipViewVideoUnavailable" /* 17006 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "module_8290" /* 8290 */;

@@ -1,12 +1,12 @@
-// Module ID: 16767
-// Function ID: 16768
+// Module ID: 16770
+// Function ID: 16771
 // Name: handleFindFriends
-// Dependencies: [32, 5, 19, 17, 7658, 4209, 1371, 12699, 1074, 12678, 21, 4560, 576, 12676, 8378, 4258, 1114, 7759, 12680, 1115, 7162, 7182, 4992, 1242, 8179, 563, 12, 4404, 16046, 7168, 5125, 9855, 5577, 10866, 5605, 4260, 5090, 16768, 16769, 16771, 16772, 2]
+// Dependencies: [32, 5, 19, 17, 7658, 4209, 1371, 12703, 1074, 12682, 21, 4560, 576, 12680, 8378, 4258, 1114, 7759, 12684, 1115, 7162, 7182, 4992, 1242, 8179, 563, 12, 4404, 16049, 7168, 5125, 9860, 5577, 10871, 5605, 4260, 5090, 16771, 16772, 16774, 16775, 2]
 // Exports: default
 
-// Module 16767 (handleFindFriends)
+// Module 16770 (handleFindFriends)
 import ThemesDefault from "Themes" /* 576 */;
-import handleNameInputScreenOrSuggestions from "handleNameInputScreenOrSuggestions" /* 12676 */;
+import handleNameInputScreenOrSuggestions from "handleNameInputScreenOrSuggestions" /* 12680 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
@@ -14,9 +14,9 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "recountRelationshipTypes" /* 7658 */;
 import closure_9 from "markAllUserIdListsStale" /* 4209 */;
 import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import { Sections } from "SuggestedFriendSource" /* 12699 */;
+import { Sections } from "SuggestedFriendSource" /* 12703 */;
 import ME from "ME" /* 1074 */;
-import { ContactPermissions } from "ContactSyncLandingPage" /* 12678 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 12682 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

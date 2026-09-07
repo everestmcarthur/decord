@@ -1,10 +1,10 @@
-// Module ID: 16169
-// Function ID: 16170
+// Module ID: 16172
+// Function ID: 16173
 // Name: GuildThemeMemberCoachmark
-// Dependencies: [19, 4552, 4449, 4450, 1954, 21, 4560, 576, 504, 4453, 12520, 16170, 4469, 5434, 1114, 2428, 12523, 11127, 2]
+// Dependencies: [19, 4552, 4449, 4450, 1954, 21, 4560, 576, 504, 4453, 12524, 16173, 4469, 5434, 1114, 2428, 12527, 11132, 2]
 // Exports: default
 
-// Module 16169 (GuildThemeMemberCoachmark)
+// Module 16172 (GuildThemeMemberCoachmark)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
@@ -47,9 +47,9 @@ export default function GuildThemeMemberCoachmark(guildId) {
   const items2 = [guildPowerupBannerImage];
   stateFromStores1 = guildId(504).useStateFromStores(items2, () => guildPowerupBannerImage.useReducedMotion);
   const obj2 = guildId(504);
-  guildPowerupBannerImage = guildId(12520).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+  guildPowerupBannerImage = guildId(12524).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(16170);
+    guildPowerupBannerImage = markAsDismissed(16173);
   }
   const diff = callback - markAsDismissed(4469)(guildId).available;
   c5 = diff;
@@ -81,7 +81,7 @@ export default function GuildThemeMemberCoachmark(guildId) {
     obj[9] = callback1;
     return obj;
   }, items5);
-  const obj3 = guildId(12520);
-  const coachmark = tmp2(11127).useCoachmark(guildId.targetRef, memo);
+  const obj3 = guildId(12524);
+  const coachmark = tmp2(11132).useCoachmark(guildId.targetRef, memo);
   return null;
 };

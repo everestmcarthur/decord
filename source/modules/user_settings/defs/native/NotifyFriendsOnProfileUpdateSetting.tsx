@@ -1,16 +1,16 @@
-// Module ID: 15911
-// Function ID: 15912
+// Module ID: 15914
+// Function ID: 15915
 // Name: toggle
-// Dependencies: [7975, 11468, 1114, 2594, 1935, 15912, 2]
+// Dependencies: [7975, 11473, 1114, 2594, 1935, 15915, 2]
 
-// Module 15911 (toggle)
+// Module 15914 (toggle)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import messagesProxyDefault from "messagesProxy" /* 2594 */;
 import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import onNotifyFriendsOnProfileUpdateSettingsChanged from "onNotifyFriendsOnProfileUpdateSettingsChanged" /* 15912 */;
-import createToggle from "createToggle" /* 11468 */;
+import onNotifyFriendsOnProfileUpdateSettingsChanged from "onNotifyFriendsOnProfileUpdateSettingsChanged" /* 15915 */;
+import createToggle from "createToggle" /* 11473 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {

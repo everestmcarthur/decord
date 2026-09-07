@@ -1,10 +1,10 @@
-// Module ID: 10360
-// Function ID: 10361
+// Module ID: 10365
+// Function ID: 10366
 // Name: EmojiPickerCategoriesUnicodeShortcutItem
-// Dependencies: [32, 19, 17, 1074, 21, 4560, 4296, 9495, 5123, 1114, 10349, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4560, 4296, 9500, 5123, 1114, 10354, 2]
 // Exports: default
 
-// Module 10360 (EmojiPickerCategoriesUnicodeShortcutItem)
+// Module 10365 (EmojiPickerCategoriesUnicodeShortcutItem)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

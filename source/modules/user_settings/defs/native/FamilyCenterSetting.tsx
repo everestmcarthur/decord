@@ -1,17 +1,17 @@
-// Module ID: 14864
-// Function ID: 14865
+// Module ID: 14867
+// Function ID: 14868
 // Name: route
-// Dependencies: [19, 1074, 21, 14865, 14866, 8588, 576, 1114, 2396, 11468, 5089, 14869, 2]
+// Dependencies: [19, 1074, 21, 14868, 14869, 8593, 576, 1114, 2396, 11473, 5089, 14872, 2]
 
-// Module 14864 (route)
+// Module 14867 (route)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14865 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 14866 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14868 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 14869 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 noopAll;
@@ -43,7 +43,7 @@ createToggle = {
           obj[1] = ThemesDefault.colors.ICON_FEEDBACK_WARNING;
           const intl = tmp(1114).intl;
           obj[3] = intl.string(messagesProxyDefault.wucWfE);
-          tmp6 = jsx(tmp(8588).WarningIcon, { size: "sm", color: null, accessible: true, accessibilityLabel: null });
+          tmp6 = jsx(tmp(8593).WarningIcon, { size: "sm", color: null, accessible: true, accessibilityLabel: null });
         }
       }
     }
@@ -54,7 +54,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER,
   getComponent() {
-    return require(14869) /* FamilyCenterLoading */.default;
+    return require(14872) /* FamilyCenterLoading */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

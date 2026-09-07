@@ -1,10 +1,10 @@
-// Module ID: 15709
-// Function ID: 15710
+// Module ID: 15712
+// Function ID: 15713
 // Name: showAgeVerificationTestModal
 // Dependencies: [5, 19, 17, 21, 4560, 576, 8417, 8411, 4259, 8413, 1611, 5687, 5605, 6958, 5612, 2]
 // Exports: default
 
-// Module 15709 (showAgeVerificationTestModal)
+// Module 15712 (showAgeVerificationTestModal)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;

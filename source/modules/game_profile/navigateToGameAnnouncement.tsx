@@ -1,10 +1,10 @@
-// Module ID: 8762
-// Function ID: 8763
+// Module ID: 8767
+// Function ID: 8768
 // Name: _navigateToGameAnnouncement
 // Dependencies: [5, 1979, 1074, 38, 7341, 8378, 1100, 2]
 // Exports: default
 
-// Module 8762 (_navigateToGameAnnouncement)
+// Module 8767 (_navigateToGameAnnouncement)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createGuildRecordFromRust" /* 1979 */;
 import ME from "ME" /* 1074 */;

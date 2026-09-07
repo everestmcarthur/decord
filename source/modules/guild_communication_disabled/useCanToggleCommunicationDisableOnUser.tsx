@@ -1,10 +1,10 @@
-// Module ID: 9403
-// Function ID: 9404
+// Module ID: 9408
+// Function ID: 9409
 // Name: canToggleCommunicationDisableOnUser
 // Dependencies: [1975, 1979, 4199, 1371, 1074, 4204, 504, 2]
 // Exports: default
 
-// Module 9403 (canToggleCommunicationDisableOnUser)
+// Module 9408 (canToggleCommunicationDisableOnUser)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;

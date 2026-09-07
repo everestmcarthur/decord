@@ -1,9 +1,9 @@
-// Module ID: 14797
-// Function ID: 14798
+// Module ID: 14800
+// Function ID: 14801
 // Name: renderContent
 // Dependencies: [19, 21, 1272, 4973, 4556, 6606, 4994, 5578, 2]
 
-// Module 14797 (renderContent)
+// Module 14800 (renderContent)
 import componentDidMountDefault from "componentDidMount" /* 4994 */;
 import _modDef5578 from "module_5578" /* 5578 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -11,7 +11,7 @@ import importAllResult from "noop" /* 19 */;
 
 let require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = { input: "", error: "add" };
+let closure_5 = { input: "", error: "channel" };
 const PureComponent = importAllResult.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {

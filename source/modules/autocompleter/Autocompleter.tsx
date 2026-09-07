@@ -1,9 +1,9 @@
-// Module ID: 9836
-// Function ID: 9837
+// Module ID: 9841
+// Function ID: 9842
 // Name: getAutocompleterBoosterMap
-// Dependencies: [9837, 9838, 2012, 4209, 1371, 5515, 5442, 9839, 1940, 5519, 9841, 1925, 4543, 4548, 4257, 1365, 12, 5518, 2]
+// Dependencies: [9842, 9843, 2012, 4209, 1371, 5515, 5442, 9844, 1940, 5519, 9846, 1925, 4543, 4548, 4257, 1365, 12, 5518, 2]
 
-// Module 9836 (getAutocompleterBoosterMap)
+// Module 9841 (getAutocompleterBoosterMap)
 import isNullOrEmpty from "isNullOrEmpty" /* 1925 */;
 import tDefault from "t" /* 4257 */;
 import getPathsFromURL from "getPathsFromURL" /* 4543 */;
@@ -11,9 +11,9 @@ import CodedLinkType from "CodedLinkType" /* 4548 */;
 import NOOP from "NOOP" /* 5442 */;
 import NOOPDefault from "NOOP" /* 5442 */;
 import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5519 */;
-import getTransformedUserDefault from "getTransformedUser" /* 9839 */;
-import closure_3 from "handleUserUpdate" /* 9837 */;
-import closure_4 from "fromPath" /* 9838 */;
+import getTransformedUserDefault from "getTransformedUser" /* 9844 */;
+import closure_3 from "handleUserUpdate" /* 9842 */;
+import closure_4 from "fromPath" /* 9843 */;
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 2012 */;
 import closure_6 from "markAllUserIdListsStale" /* 4209 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
@@ -562,7 +562,7 @@ prototype["queryApplications"] = function queryApplications(arg0, arg1) {
 };
 prototype["queryGameProfiles"] = function queryGameProfiles(query, _limit) {
   if (this._include(AutocompleterResultTypes.GAME_PROFILE)) {
-    let result = _require(9841).queryGamesAutocomplete(query);
+    let result = _require(9846).queryGamesAutocomplete(query);
     if (result == null) {
       result = [];
     }

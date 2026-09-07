@@ -1,14 +1,14 @@
-// Module ID: 11749
-// Function ID: 11750
+// Module ID: 11754
+// Function ID: 11755
 // Name: asString
-// Dependencies: [5, 1915, 11750, 5280, 8340, 1074, 1090, 5283, 11751, 11752, 2]
+// Dependencies: [5, 1915, 11755, 5280, 8340, 1074, 1090, 5283, 11756, 11757, 2]
 // Exports: ensureSpotifyPlayable, ensureSpotifyPremium, getSpotifyMetadataFromActivity, isSpotifyPlayable, isSpotifyPremium
 
-// Module 11749 (asString)
+// Module 11754 (asString)
 import setDefault from "set" /* 1090 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "initialize" /* 1915 */;
-import closure_5 from "isProtocolRegistered" /* 11750 */;
+import closure_5 from "isProtocolRegistered" /* 11755 */;
 import closure_6 from "upsertAccount" /* 5280 */;
 import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8340 */;
 import { PlatformTypes } from "ME" /* 1074 */;
@@ -159,7 +159,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     if (observedAppRunning.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(11751).setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(11756).setActiveDevice(socket.accountId, device.id);
         obj = { socket: null, device: null };
         obj[0] = socket;
         obj[1] = device;
@@ -228,7 +228,7 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
     if (socket.isPremium) {
       let resolved = Promise.resolve();
     } else {
-      const profile = socket(11751).getProfile(socket.accountId, socket.accessToken);
+      const profile = socket(11756).getProfile(socket.accountId, socket.accessToken);
       resolved = profile.then(() => {
         if (!socket.isPremium) {
           const _Error = Error;
@@ -236,7 +236,7 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
           return Promise.reject(error);
         }
       });
-      const obj = socket(11751);
+      const obj = socket(11756);
     }
     return resolved;
   }

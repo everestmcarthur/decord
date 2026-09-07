@@ -1,10 +1,10 @@
-// Module ID: 14641
-// Function ID: 14642
+// Module ID: 14644
+// Function ID: 14645
 // Name: useUserAvailableGuildsWithTags
 // Dependencies: [2021, 1979, 504, 8165, 2]
 // Exports: useUserAvailableGuildsWithTags
 
-// Module 14641 (useUserAvailableGuildsWithTags)
+// Module 14644 (useUserAvailableGuildsWithTags)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "trackCommunicationDisabled" /* 2021 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;

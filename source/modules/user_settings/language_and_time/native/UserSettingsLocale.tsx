@@ -1,9 +1,9 @@
-// Module ID: 15423
-// Function ID: 15424
+// Module ID: 15426
+// Function ID: 15427
 // Name: handleLanguageChange
-// Dependencies: [5, 19, 17, 2026, 2025, 21, 4560, 576, 9358, 504, 7123, 5685, 1114, 5688, 15424, 2]
+// Dependencies: [5, 19, 17, 2026, 2025, 21, 4560, 576, 9363, 504, 7123, 5685, 1114, 5688, 15427, 2]
 
-// Module 15423 (handleLanguageChange)
+// Module 15426 (handleLanguageChange)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

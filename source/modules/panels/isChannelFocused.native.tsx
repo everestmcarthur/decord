@@ -1,10 +1,10 @@
-// Module ID: 10089
-// Function ID: 10090
+// Module ID: 10094
+// Function ID: 10095
 // Name: getFocusedChannelId
 // Dependencies: [32, 19, 4576, 7328, 4768, 4419, 4417, 4418, 4420, 2]
 // Exports: isChannelFocused, isChannelFocusedForReadStateAck, useIsChannelFocused
 
-// Module 10089 (getFocusedChannelId)
+// Module 10094 (getFocusedChannelId)
 import coerceMainRoute from "coerceMainRoute" /* 4417 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
 import getInitialGuildStateDefault from "getInitialGuildState" /* 4419 */;

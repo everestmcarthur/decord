@@ -1,17 +1,16 @@
 // Module ID: 8518
 // Function ID: 8519
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 8469, 8492]
+// Dependencies: [41, 42, 93, 95, 98, 19, 8472]
 
 // Module 8518 (_isNativeReflectConstruct)
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8492 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 
-const FeTile = arg1;
+const FePointLight = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,12 +30,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeTile {
+class FePointLight {
   constructor() {
     self = this;
-    tmp = closure_2(this, FeTile);
+    tmp = closure_2(this, FePointLight);
     tmp2 = closure_4;
-    obj = closure_4(FeTile);
+    obj = closure_4(FePointLight);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -51,19 +50,18 @@ class FeTile {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeTile, _isNativeReflectConstructDefault);
-let obj = {
-  key: "render",
-  value: function render() {
-    const result = FeTile(8469).warnUnimplementedFilter();
-    return null;
+_inheritsDefault(FePointLight, require("noop").Component);
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      const result = FePointLight(8472).warnUnimplementedFilter();
+      return null;
+    }
   }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeTile, items);
-importDefaultResultResult.displayName = "FeTile";
-obj = {};
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(FePointLight, items);
+importDefaultResultResult.displayName = "FePointLight";
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

@@ -1,10 +1,10 @@
-// Module ID: 9664
-// Function ID: 9665
+// Module ID: 9669
+// Function ID: 9670
 // Name: getNextShownUpcomingEventNoticeType
 // Dependencies: [1963, 4153, 11, 2]
 // Exports: getNextShownUpcomingEventNoticeType
 
-// Module 9664 (getNextShownUpcomingEventNoticeType)
+// Module 9669 (getNextShownUpcomingEventNoticeType)
 import set from "set" /* 2 */;
 import hooksDefault from "hooks" /* 4153 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;

@@ -1,10 +1,10 @@
-// Module ID: 15121
-// Function ID: 15122
+// Module ID: 15124
+// Function ID: 15125
 // Name: QuestBottomSheetHeader
-// Dependencies: [32, 19, 17, 1371, 21, 4560, 576, 11483, 7724, 15091, 504, 11290, 7722, 1114, 15120, 5447, 15102, 15092, 4962, 4971, 4556, 5123, 8672, 2]
+// Dependencies: [32, 19, 17, 1371, 21, 4560, 576, 11488, 7724, 15094, 504, 11295, 7722, 1114, 15123, 5447, 15105, 15095, 4962, 4971, 4556, 5123, 8677, 2]
 // Exports: default
 
-// Module 15121 (QuestBottomSheetHeader)
+// Module 15124 (QuestBottomSheetHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -34,9 +34,9 @@ export default function QuestBottomSheetHeader(arg0) {
   let isScreenReaderEnabled;
   let ref;
   let tmp = hasWatchVideoOnMobileTasks();
-  let obj = isScreenReaderEnabled(15102);
+  let obj = isScreenReaderEnabled(15105);
   const questCreative = obj.useQuestCreative(quest);
-  obj1 = isScreenReaderEnabled(15092);
+  obj1 = isScreenReaderEnabled(15095);
   isScreenReaderEnabled = quest;
   ref = step;
   dependencyMap = undefined;
@@ -56,7 +56,7 @@ export default function QuestBottomSheetHeader(arg0) {
   }
   dependencyMap = tmp7;
   gameTitle = quest.config.messages.gameTitle;
-  let tmp2Result = tmp2(11483);
+  let tmp2Result = tmp2(11488);
   const questTaskDetails = tmp2Result.useQuestTaskDetails(quest);
   tmp2Result = tmp2(7724);
   const hasWatchVideoTasksResult = tmp2Result.hasWatchVideoTasks(quest);
@@ -65,7 +65,7 @@ export default function QuestBottomSheetHeader(arg0) {
   const isInGameQuestResult = isScreenReaderEnabled(7724).isInGameQuest(quest);
   c5 = isInGameQuestResult;
   const tmp2Result1 = isScreenReaderEnabled(7724);
-  first = gameTitle(isScreenReaderEnabled(11483).useTaskPlatformScreen(quest, questTaskDetails), 1)[0];
+  first = gameTitle(isScreenReaderEnabled(11488).useTaskPlatformScreen(quest, questTaskDetails), 1)[0];
   targetMinutes = questTaskDetails.targetMinutes;
   const items = [quest];
   memo = React.useMemo(() => {
@@ -73,14 +73,14 @@ export default function QuestBottomSheetHeader(arg0) {
     obj = { quest: isScreenReaderEnabled };
     return obj.hasStreamOnDesktopTask(obj);
   }, items);
-  const tmp2Result2 = isScreenReaderEnabled(11483);
-  hasWatchVideoOnMobileTasks = isScreenReaderEnabled(15091).useHasWatchVideoOnMobileTasks(quest.config);
-  const tmp2Result3 = isScreenReaderEnabled(15091);
+  const tmp2Result2 = isScreenReaderEnabled(11488);
+  hasWatchVideoOnMobileTasks = isScreenReaderEnabled(15094).useHasWatchVideoOnMobileTasks(quest.config);
+  const tmp2Result3 = isScreenReaderEnabled(15094);
   const items1 = [first];
   const stateFromStores = isScreenReaderEnabled(504).useStateFromStores(items1, () => first.getCurrentUser());
   const tmp2Result4 = isScreenReaderEnabled(504);
-  defaultRewardNameWithArticle = isScreenReaderEnabled(11290).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
-  const tmp2Result5 = isScreenReaderEnabled(11290);
+  defaultRewardNameWithArticle = isScreenReaderEnabled(11295).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
+  const tmp2Result5 = isScreenReaderEnabled(11295);
   const isSponsoredPlayQuestResult = isScreenReaderEnabled(7722).isSponsoredPlayQuest(quest);
   c11 = isSponsoredPlayQuestResult;
   const items2 = [null != completedAt, hasWatchVideoTasksResult, step, first, memo, gameTitle, defaultRewardNameWithArticle, targetMinutes, hasWatchVideoOnMobileTasks, isInGameQuestResult, isSponsoredPlayQuestResult, quest.config];
@@ -110,10 +110,10 @@ export default function QuestBottomSheetHeader(arg0) {
           return defaultInGameTask.messages.taskDescription;
         }
       }
-      if (ref === isScreenReaderEnabled(15120).QuestBottomSheetStep.TASK_SELECT) {
+      if (ref === isScreenReaderEnabled(15123).QuestBottomSheetStep.TASK_SELECT) {
         const intl5 = isScreenReaderEnabled(1114).intl;
         let stringResult = intl5.string(isScreenReaderEnabled(1114).t.drVw4T);
-      } else if (ref === isScreenReaderEnabled(15120).QuestBottomSheetStep.CONSOLE_CONNECT) {
+      } else if (ref === isScreenReaderEnabled(15123).QuestBottomSheetStep.CONSOLE_CONNECT) {
         const intl4 = isScreenReaderEnabled(1114).intl;
         stringResult = intl4.string(isScreenReaderEnabled(1114).t.svdwbA);
       } else if (c11) {
@@ -190,7 +190,7 @@ export default function QuestBottomSheetHeader(arg0) {
     obj1[3] = tmp.actionSheetButton;
     let obj2 = { color: null };
     obj2[0] = ref(576).colors.INTERACTIVE_TEXT_DEFAULT;
-    obj1[4] = targetMinutes(tmp2(8672).MoreHorizontalIcon, obj2);
+    obj1[4] = targetMinutes(tmp2(8677).MoreHorizontalIcon, obj2);
     withActionSheet = targetMinutes(tmp2(5123).PressableOpacity, obj1);
   }
   items6[1] = withActionSheet;

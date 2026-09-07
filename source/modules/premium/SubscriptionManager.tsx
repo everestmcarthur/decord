@@ -1,9 +1,9 @@
-// Module ID: 17491
-// Function ID: 17492
+// Module ID: 17494
+// Function ID: 17495
 // Name: prototype
 // Dependencies: [5, 1371, 4220, 4224, 7394, 1373, 7118, 1885, 4884, 7400, 2]
 
-// Module 17491 (prototype)
+// Module 17494 (prototype)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;

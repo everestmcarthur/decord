@@ -1,7 +1,7 @@
 // Module ID: 7912
 // Function ID: 7913
 // Name: HeaderWithBorder
-// Dependencies: [19, 21, 4262, 576, 7863, 1115, 7913, 7000, 7923, 7924, 1114, 7925, 13250, 13251, 4418, 2]
+// Dependencies: [19, 21, 4262, 576, 7863, 1115, 7913, 7000, 7923, 7924, 1114, 7925, 13254, 13255, 4418, 2]
 // Exports: default, openConversationNavigator
 
 // Module 7912 (HeaderWithBorder)
@@ -81,7 +81,7 @@ export default function ConversationNavigator(route) {
         return obj;
       },
       getComponent() {
-        return channelId(13251).default;
+        return channelId(13255).default;
       }
     })
   ];

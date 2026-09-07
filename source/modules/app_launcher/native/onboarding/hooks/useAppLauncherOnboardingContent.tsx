@@ -1,13 +1,13 @@
-// Module ID: 12037
-// Function ID: 12038
+// Module ID: 12041
+// Function ID: 12042
 // Name: useAppLauncherOnboardingContent
-// Dependencies: [32, 9291, 1957, 1954, 4380, 1943, 504, 12038, 12043, 7388, 2]
+// Dependencies: [32, 9296, 1957, 1954, 4380, 1943, 504, 12042, 12047, 7388, 2]
 // Exports: default
 
-// Module 12037 (useAppLauncherOnboardingContent)
-import resultDefault from "result" /* 12043 */;
+// Module 12041 (useAppLauncherOnboardingContent)
+import resultDefault from "result" /* 12047 */;
 import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "handleUserSettingsProtoStoreChange" /* 9291 */;
+import closure_4 from "handleUserSettingsProtoStoreChange" /* 9296 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import { DismissibleContentGroupName as closure_6 } from "ContentDismissActionType" /* 1954 */;
 
@@ -45,7 +45,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
         result = result1;
       }
       obj[1] = !result;
-      const activityApplications = tmp(12038).useActivityApplications(obj);
+      const activityApplications = tmp(12042).useActivityApplications(obj);
       let flag = false;
       for (const item10042 of activityApplications) {
         if (null != stateFromStores.getEntry(item10042.id)) {

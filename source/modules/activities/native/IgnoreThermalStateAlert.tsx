@@ -1,10 +1,10 @@
-// Module ID: 9586
-// Function ID: 9587
+// Module ID: 9591
+// Function ID: 9592
 // Name: IgnoreThermalStateAlert
-// Dependencies: [19, 21, 4560, 4994, 1114, 9504, 4556, 2]
+// Dependencies: [19, 21, 4560, 4994, 1114, 9509, 4556, 2]
 // Exports: IgnoreThermalStateAlert
 
-// Module 9586 (IgnoreThermalStateAlert)
+// Module 9591 (IgnoreThermalStateAlert)
 import noopAll from "noop" /* 19 */;
 import componentDidMountDefault from "componentDidMount" /* 4994 */;
 import jsxProd from "jsxProd" /* 21 */;

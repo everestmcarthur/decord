@@ -1,11 +1,11 @@
-// Module ID: 15819
-// Function ID: 15820
+// Module ID: 15822
+// Function ID: 15823
 // Name: FeaturedFirstCardCoachmarkAnchor
-// Dependencies: [19, 17, 21, 15820, 2]
+// Dependencies: [19, 17, 21, 15823, 2]
 // Exports: default
 
-// Module 15819 (FeaturedFirstCardCoachmarkAnchor)
-import WishlistButtonCoachmarkDefault from "WishlistButtonCoachmark" /* 15820 */;
+// Module 15822 (FeaturedFirstCardCoachmarkAnchor)
+import WishlistButtonCoachmarkDefault from "WishlistButtonCoachmark" /* 15823 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

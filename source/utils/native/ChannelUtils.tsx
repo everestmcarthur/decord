@@ -1347,7 +1347,7 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "Setter":
     break;
-    case "useDeferredValue":
+    case "useDefaultThreadName":
     break;
     case "MarkupParserNodeTypeError":
     break;
@@ -1375,14 +1375,6 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "NSFW_SPACE_WARNING_MODAL_CLICKED":
     break;
-    case "AppDatabaseManager":
-    break;
-    case "Database":
-    break;
-    case "tab":
-    break;
-    case "base":
-    break;
     case "rm":
     break;
     case "m":
@@ -1405,9 +1397,9 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "perGuildMaxCount":
     break;
-    case "go_live_notifications":
+    case "PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL":
     break;
-    case "paymentGatewaySubscriptionId":
+    case "paymentGatewayPlanId":
     break;
     case "integrationOwner":
     break;
@@ -1483,11 +1475,7 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "ap":
     break;
-    case "remoteSessionId":
-    break;
-    case "GameLibrarySettings":
-    break;
-    case "rar":
+    case "unit_type":
     break;
     case "ToIntlMathematicalValue":
     break;
@@ -1507,7 +1495,13 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "be":
     break;
-    case "getStartedHeaderContainer":
+    case "canReportMessage":
+    break;
+    case "canReportMessageToMods":
+    break;
+    case "showReportModalForGuildScheduledEvent":
+    break;
+    case "GuildScheduledEventEntityTypes":
     break;
     case "$ZodObject":
     break;
@@ -1523,6 +1517,8 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "IT":
     break;
+    case "xdays":
+    break;
     case "MEDIA_PICKER_SEND_BUTTON_SPRING":
     break;
     case "marginHorizontal":
@@ -1535,17 +1531,13 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "_":
     break;
-    case "_shouldShowModal":
+    case "getTrendingType":
     break;
-    case "shouldShow":
+    case "TrendingType":
     break;
-    case "ModalFadeTransition":
+    case "beforeItem":
     break;
-    case "emojiReactionFrecency":
-    break;
-    case "emojiReactionFrecencyWithoutFetchingLatest":
-    break;
-    case "testModeApplicationId":
+    case "tempBanned":
     break;
     case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
     break;
@@ -1571,11 +1563,7 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
     break;
-    case "handlePasskeyUpsellShow":
-    break;
-    case "ShowQRCodeModal":
-    break;
-    case "ModalAnimation":
+    case "inTestModeForApplication":
     break;
     case "invalidEmojis":
     break;
@@ -1601,9 +1589,9 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "BinaryReader":
     break;
-    case "Touchable":
+    case "file_cabinet":
     break;
-    case "TouchableHaptic":
+    case "cab":
     break;
     case "$ZodSet":
     break;
@@ -1657,9 +1645,17 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "INTERACTIVE_MUTED":
     break;
-    case "inner_width":
+    case "baseCost":
     break;
-    case "widthChars":
+    case "cachedPrimarySuffix":
+    break;
+    case "unlocked":
+    break;
+    case "unlockedEmojis":
+    break;
+    case "lockedEmojis":
+    break;
+    case "isActionPickSupported":
     break;
     case "buttonLabel":
     break;
@@ -1673,19 +1669,19 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "ext":
     break;
-    case "isReported":
+    case "isRenewableEndDateSortEnabled":
     break;
     case "AccessibilityFocusView":
     break;
     case "V":
     break;
     case "W":
-      tmp23 = registerAssetDefault2;
-      return tmp23;
+    break;
     case "ir":
     break;
     case "re":
-    break;
+      tmp23 = registerAssetDefault2;
+      return tmp23;
     case "reType":
     break;
     case "pe":
@@ -1814,7 +1810,7 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "ss":
     break;
-    case "setForegroundProcess":
+    case "isDeaf":
     break;
     case "_w":
     break;
@@ -1832,9 +1828,13 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "sh":
     break;
-    case "growthbookTags":
+    case "guildDismissibleContentStates":
     break;
     case "initialScrollToTop":
+    break;
+    case "flag_de":
+    break;
+    case "de":
     break;
     default:
       return null;

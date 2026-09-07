@@ -1,9 +1,9 @@
-// Module ID: 14766
-// Function ID: 14767
+// Module ID: 14769
+// Function ID: 14770
 // Name: ACCOUNT_STANDING_SHORT_STATUS
 // Dependencies: [8420, 1114, 2]
 
-// Module 14766 (ACCOUNT_STANDING_SHORT_STATUS)
+// Module 14769 (ACCOUNT_STANDING_SHORT_STATUS)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import ContentIdType from "ContentIdType" /* 8420 */;

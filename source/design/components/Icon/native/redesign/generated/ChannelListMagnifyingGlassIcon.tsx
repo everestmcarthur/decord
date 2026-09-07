@@ -1,14 +1,14 @@
-// Module ID: 13843
-// Function ID: 13844
+// Module ID: 13846
+// Function ID: 13847
 // Name: ChannelListMagnifyingGlassIcon
-// Dependencies: [19, 21, 576, 4261, 13844, 2]
+// Dependencies: [19, 21, 576, 4261, 13847, 2]
 // Exports: ChannelListMagnifyingGlassIcon
 
-// Module 13843 (ChannelListMagnifyingGlassIcon)
+// Module 13846 (ChannelListMagnifyingGlassIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 13844 */;
+import registerAsset from "registerAsset" /* 13847 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// Module ID: 13446
-// Function ID: 13447
+// Module ID: 13450
+// Function ID: 13451
 // Name: apexExperiment
 // Dependencies: [1433, 2]
 // Exports: usePremiumReferralIncentivesVariant
 
-// Module 13446 (apexExperiment)
+// Module 13450 (apexExperiment)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 

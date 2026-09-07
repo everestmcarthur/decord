@@ -1,20 +1,20 @@
-// Module ID: 12667
-// Function ID: 12668
+// Module ID: 12671
+// Function ID: 12672
 // Name: ChannelSpoiler
-// Dependencies: [32, 19, 17, 4576, 1957, 1979, 12271, 21, 4560, 576, 504, 4713, 12272, 4761, 5520, 4418, 5028, 4556, 1114, 4973, 4550, 5123, 12666, 8413, 2]
+// Dependencies: [32, 19, 17, 4576, 1957, 1979, 12275, 21, 4560, 576, 504, 4713, 12276, 4761, 5520, 4418, 5028, 4556, 1114, 4973, 4550, 5123, 12670, 8413, 2]
 // Exports: default
 
-// Module 12667 (ChannelSpoiler)
+// Module 12671 (ChannelSpoiler)
 import ThemesDefault from "Themes" /* 576 */;
 import computeChannelNameDefault from "computeChannelName" /* 4713 */;
-import GatedContentDefault from "GatedContent" /* 12666 */;
+import GatedContentDefault from "GatedContent" /* 12670 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "getParticipants" /* 4576 */;
 import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import closure_8 from "createGuildRecordFromRust" /* 1979 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12271 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12275 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -44,7 +44,7 @@ export default function ChannelSpoiler(channelId) {
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = obj3.useContext(tmp6(12272)).setControlsMode;
+  setControlsMode = obj3.useContext(tmp6(12276)).setControlsMode;
   const items2 = [, , , ];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;

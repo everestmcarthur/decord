@@ -1,10 +1,10 @@
-// Module ID: 17655
-// Function ID: 17656
+// Module ID: 17658
+// Function ID: 17659
 // Name: GuildSettingsModalCommunity
-// Dependencies: [19, 1957, 2012, 4199, 4209, 1371, 9064, 16477, 1074, 21, 4560, 576, 4262, 1483, 504, 9063, 1114, 7377, 5624, 4713, 4527, 9426, 1896, 8593, 4973, 5687, 5605, 2]
+// Dependencies: [19, 1957, 2012, 4199, 4209, 1371, 9069, 16480, 1074, 21, 4560, 576, 4262, 1483, 504, 9068, 1114, 7377, 5624, 4713, 4527, 9431, 1896, 8598, 4973, 5687, 5605, 2]
 // Exports: default
 
-// Module 17655 (GuildSettingsModalCommunity)
+// Module 17658 (GuildSettingsModalCommunity)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
@@ -13,8 +13,8 @@ import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "comparator" /* 2012 
 import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_8 from "markAllUserIdListsStale" /* 4209 */;
 import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import closure_10 from "handleFormInit" /* 9064 */;
-import { calculateLocaleOptions } from "GuildPrimaryCategory" /* 16477 */;
+import closure_10 from "handleFormInit" /* 9069 */;
+import { calculateLocaleOptions } from "GuildPrimaryCategory" /* 16480 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -193,7 +193,7 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj[0] = intl.string(preferredLocale(navigation[16]).t.Yr6nGx);
     obj[1] = callback1();
     obj[2] = function onItemSelect(rulesChannelId) {
-      let obj = callback(9063);
+      let obj = callback(9068);
       obj = { rulesChannelId };
       obj.updateGuild(obj);
       callback(4527).hideActionSheet();
@@ -213,7 +213,7 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj[0] = intl.string(preferredLocale(navigation[16]).t.VqhxxN);
     obj[1] = callback1();
     obj[2] = function onItemSelect(publicUpdatesChannelId) {
-      let obj = callback(9063);
+      let obj = callback(9068);
       obj = { publicUpdatesChannelId };
       obj.updateGuild(obj);
       callback(4527).hideActionSheet();

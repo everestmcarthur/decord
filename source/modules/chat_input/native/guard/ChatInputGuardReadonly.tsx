@@ -1,9 +1,9 @@
-// Module ID: 12467
-// Function ID: 12468
+// Module ID: 12471
+// Function ID: 12472
 // Name: sortChannelsByLastMessageId
-// Dependencies: [19, 1961, 1957, 2012, 4199, 4575, 4209, 1371, 11962, 1074, 21, 12288, 504, 1369, 1114, 4713, 4740, 1100, 11, 12448, 2]
+// Dependencies: [19, 1961, 1957, 2012, 4199, 4575, 4209, 1371, 11966, 1074, 21, 12292, 504, 1369, 1114, 4713, 4740, 1100, 11, 12452, 2]
 
-// Module 12467 (sortChannelsByLastMessageId)
+// Module 12471 (sortChannelsByLastMessageId)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import { isTextChannel } from "createChannelRecord" /* 1961 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
@@ -13,7 +13,7 @@ import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_8 from "generateOldThreadCutoff" /* 4575 */;
 import closure_9 from "markAllUserIdListsStale" /* 4209 */;
 import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import { TextAreaCta } from "TextAreaCta" /* 11962 */;
+import { TextAreaCta } from "TextAreaCta" /* 11966 */;
 import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;

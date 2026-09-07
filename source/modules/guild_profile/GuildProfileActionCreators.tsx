@@ -1,17 +1,17 @@
-// Module ID: 9188
-// Function ID: 9189
+// Module ID: 9193
+// Function ID: 9194
 // Name: _fetchGuildTopGames
-// Dependencies: [5, 4382, 2021, 9065, 1074, 573, 1272, 5548, 4461, 1242, 2]
+// Dependencies: [5, 4382, 2021, 9070, 1074, 573, 1272, 5548, 4461, 1242, 2]
 // Exports: fetchGuildTopGames, getGuildProfile, saveGuildProfile, setGuildProfileVisibility, trackGuildProfileViewed
 
-// Module 9188 (_fetchGuildTopGames)
+// Module 9193 (_fetchGuildTopGames)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleGatewayJoinRequestUpdate" /* 4382 */;
 import closure_5 from "trackCommunicationDisabled" /* 2021 */;
-import closure_6 from "handleUpdateStart" /* 9065 */;
-import { GuildProfileFetchStatus } from "handleUpdateStart" /* 9065 */;
+import closure_6 from "handleUpdateStart" /* 9070 */;
+import { GuildProfileFetchStatus } from "handleUpdateStart" /* 9070 */;
 import ME from "ME" /* 1074 */;
 
 const require = arg1;

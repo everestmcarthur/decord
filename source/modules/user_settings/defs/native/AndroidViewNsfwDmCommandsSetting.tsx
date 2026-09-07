@@ -1,17 +1,17 @@
-// Module ID: 14840
-// Function ID: 14841
+// Module ID: 14843
+// Function ID: 14844
 // Name: toggle
-// Dependencies: [7975, 9296, 4771, 9297, 4773, 1115, 8411, 8413, 1935, 11468, 1114, 2]
+// Dependencies: [7975, 9301, 4771, 9302, 4773, 1115, 8411, 8413, 1935, 11473, 1114, 2]
 
-// Module 14840 (toggle)
+// Module 14843 (toggle)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4771 */;
 import MobileUserSettings from "MobileUserSettings" /* 7975 */;
 import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8411 */;
-import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 9296 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 9297 */;
-import createToggle from "createToggle" /* 11468 */;
+import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 9301 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 9302 */;
+import createToggle from "createToggle" /* 11473 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {

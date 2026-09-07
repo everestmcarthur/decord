@@ -1,9 +1,9 @@
-// Module ID: 17414
-// Function ID: 17415
+// Module ID: 17417
+// Function ID: 17418
 // Name: handleConnectionOpen
 // Dependencies: [1371, 1950, 1074, 7118, 7382, 6593, 2]
 
-// Module 17414 (handleConnectionOpen)
+// Module 17417 (handleConnectionOpen)
 import handleLogoutDefault from "handleLogout" /* 6593 */;
 import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;

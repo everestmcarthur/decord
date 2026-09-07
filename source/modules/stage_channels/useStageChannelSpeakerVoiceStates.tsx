@@ -1,10 +1,10 @@
-// Module ID: 16238
-// Function ID: 16239
+// Module ID: 16241
+// Function ID: 16242
 // Name: transformParticipantToSortedVoiceState
 // Dependencies: [32, 1960, 1957, 4584, 5418, 504, 1982, 11, 1369, 5425, 5432, 2]
 // Exports: default
 
-// Module 16238 (transformParticipantToSortedVoiceState)
+// Module 16241 (transformParticipantToSortedVoiceState)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "initializeFromUserSettings" /* 1960 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;

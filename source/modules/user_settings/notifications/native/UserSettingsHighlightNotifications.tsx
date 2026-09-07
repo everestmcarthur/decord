@@ -1,10 +1,10 @@
-// Module ID: 15520
-// Function ID: 15521
+// Module ID: 15523
+// Function ID: 15524
 // Name: Row
-// Dependencies: [19, 1979, 5438, 4741, 1074, 21, 7119, 7114, 504, 5584, 7201, 8593, 2]
+// Dependencies: [19, 1979, 5438, 4741, 1074, 21, 7119, 7114, 504, 5584, 7201, 8598, 2]
 // Exports: default
 
-// Module 15520 (Row)
+// Module 15523 (Row)
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "createGuildRecordFromRust" /* 1979 */;
@@ -63,7 +63,7 @@ export default function UserSettingsHighlightNotifications() {
   if (0 !== stateFromStoresArray.length) {
     obj = { children: null };
     obj[0] = tmp3;
-    tmp4 = jsx(stateFromStoresArray(8593).Form, { children: null });
+    tmp4 = jsx(stateFromStoresArray(8598).Form, { children: null });
   }
   return tmp4;
 };

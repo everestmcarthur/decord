@@ -1,10 +1,10 @@
-// Module ID: 13677
-// Function ID: 13678
+// Module ID: 13681
+// Function ID: 13682
 // Name: defineSimpleDispatch
-// Dependencies: [109, 1961, 4460, 1385, 1957, 2021, 1371, 4579, 4223, 4224, 1074, 3, 13646, 13628, 9, 504, 13678, 1223, 13679, 7492, 13683, 573, 1392, 12, 7782, 1882, 1388, 7860, 7763, 13759, 4884, 7257, 8181, 8197, 4893, 4785, 4721, 1881, 13760, 2]
+// Dependencies: [109, 1961, 4460, 1385, 1957, 2021, 1371, 4579, 4223, 4224, 1074, 3, 13650, 13632, 9, 504, 13682, 1223, 13683, 7492, 13687, 573, 1392, 12, 7782, 1882, 1388, 7860, 7763, 13763, 4884, 7257, 8181, 8197, 4893, 4785, 4721, 1881, 13764, 2]
 // Exports: default
 
-// Module 13677 (defineSimpleDispatch)
+// Module 13681 (defineSimpleDispatch)
 import timestampDefault from "timestamp" /* 3 */;
 import serializeDefault from "serialize" /* 9 */;
 import applyDefault from "apply" /* 12 */;
@@ -15,8 +15,8 @@ import fetchSubscriptionPlansForSKUAll from "fetchSubscriptionPlansForSKU" /* 72
 import convertServerThreadMemberDefault from "convertServerThreadMember" /* 7782 */;
 import _fetchProfileAll from "_fetchProfile" /* 8181 */;
 import urlUserId from "urlUserId" /* 8197 */;
-import hydrateGuildAll from "hydrateGuild" /* 13678 */;
-import splitAgeRestrictedActivitiesDefault from "splitAgeRestrictedActivities" /* 13760 */;
+import hydrateGuildAll from "hydrateGuild" /* 13682 */;
+import splitAgeRestrictedActivitiesDefault from "splitAgeRestrictedActivities" /* 13764 */;
 import closure_5 from "_objectWithoutProperties" /* 109 */;
 import { createChannelRecordFromServer as closure_6 } from "createChannelRecord" /* 1961 */;
 import closure_7 from "createFromServer" /* 4460 */;
@@ -29,7 +29,7 @@ import closure_13 from "updateVoiceState" /* 4579 */;
 import closure_14 from "addSubscriptionPlan" /* 4223 */;
 import closure_15 from "reset" /* 4224 */;
 import { ActivityTypes } from "ME" /* 1074 */;
-import importDefaultResult from "flush" /* 13646 */;
+import importDefaultResult from "flush" /* 13650 */;
 
 require = arg1;
 function defineSimpleDispatch(arg0, arg1) {
@@ -552,8 +552,8 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
       Emitter.batched(() => {
         const hydrateReady = closure_1_1(closure_1_3[14]).hydrateReady;
         const measureResult = hydrateReady.measure(() => {
-          obj = callback(13678);
-          return obj.hydrateReadyPayloadPrioritized(obj, obj(13628).socket.identifyStartTime, closure_1);
+          obj = callback(13682);
+          return obj.hydrateReadyPayloadPrioritized(obj, obj(13632).socket.identifyStartTime, closure_1);
         });
         obj = measureResult;
         const private_channels = measureResult.private_channels;
@@ -581,7 +581,7 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
           result1 = closure_1_0(tmp2[18]).b64ToDeclarativeSettingsProto(obj.notification_settings.declarative_settings_proto);
           const obj2 = closure_1_0(tmp2[18]);
         }
-        closure_1_1(closure_1_3[19])("AllGatewayConnectionStores", () => obj(13683));
+        closure_1_1(closure_1_3[19])("AllGatewayConnectionStores", () => obj(13687));
         const dispatchReady = tmp(tmp2[14]).dispatchReady;
         dispatchReady.measure(() => {
           obj = { type: "CONNECTION_OPEN", sessionId: obj.session_id, authSessionIdHash: obj.auth_session_id_hash, staticAuthSessionId: obj.static_client_session_id, user: obj.user, users: obj.users, guilds: closure_2, initialPrivateChannels: obj, unavailableGuilds: closure_1, readState: obj.read_state, userGuildSettings: obj.user_guild_settings, tutorial: obj.tutorial, relationships: null, gameRelationships: null, friendSuggestionCount: null, analyticsToken: null, experiments: null, connectedAccounts: null, guildExperiments: null, apexExperiments: null, requiredAction: null, consents: null, sessions: null, pendingPayments: null, countryCode: null, guildJoinRequests: null, userSettingsProto: null, apiCodeVersion: null, auth: null, notificationSettings: null, geoRestrictedGuilds: null, explicitContentScanVersion: null, failedStates: null, linkedUsers: null, regionalFeatureConfig: null, qosToken: null };
@@ -705,9 +705,9 @@ defineSimpleDispatch(["EXPERIMENT_SESSION_OVERRIDE_DELETE"], (experimentName) =>
   obj.dispatch(obj);
 });
 defineSimpleDispatch(["RESUMED"], () => {
-  const localPresenceState = obj(13628).localPresenceState;
+  const localPresenceState = obj(13632).localPresenceState;
   localPresenceState.forceUpdate();
-  const localVoiceState = obj(13628).localVoiceState;
+  const localVoiceState = obj(13632).localVoiceState;
   localVoiceState.forceUpdate();
   obj = { type: "CONNECTION_RESUMED" };
   const obj2 = dispatcherDefault;
@@ -2919,7 +2919,7 @@ defineSimpleDispatch(["NOTIFICATION_SETTINGS_UPDATE"], (declarative_settings_pro
   }
   let result;
   if (null != prop) {
-    obj = obj(13679);
+    obj = obj(13683);
     result = obj.b64ToDeclarativeSettingsProto(declarative_settings_proto.declarative_settings_proto);
   }
   obj = { type: "NOTIFICATION_SETTINGS_UPDATE", settings: obj };

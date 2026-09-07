@@ -1,10 +1,10 @@
-// Module ID: 11660
-// Function ID: 11661
+// Module ID: 11665
+// Function ID: 11666
 // Name: getTimeSafe
 // Dependencies: [1371, 4195, 7860, 4783, 504, 573, 2]
 // Exports: getComparator
 
-// Module 11660 (getTimeSafe)
+// Module 11665 (getTimeSafe)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;

@@ -1,12 +1,12 @@
-// Module ID: 17579
-// Function ID: 17580
-// Dependencies: [5, 32, 19, 17, 5459, 5502, 1074, 1374, 1938, 21, 4560, 576, 6981, 11146, 5598, 4213, 5138, 17580, 10388, 4899, 4556, 1114, 4457, 2024, 4975, 4973, 5123, 10176, 17581, 11121, 7130, 1396, 8757, 6606, 7085, 2]
+// Module ID: 17582
+// Function ID: 17583
+// Dependencies: [5, 32, 19, 17, 5459, 5502, 1074, 1374, 1938, 21, 4560, 576, 6981, 11151, 5598, 4213, 5138, 17583, 10393, 4899, 4556, 1114, 4457, 2024, 4975, 4973, 5123, 10181, 17584, 11126, 7130, 1396, 8762, 6606, 7085, 2]
 
-// Module 17579
+// Module 17582
 import ThemesDefault from "Themes" /* 576 */;
 import useInitialValueDefault from "useInitialValue" /* 5598 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
-import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 11146 */;
+import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 11151 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
@@ -518,7 +518,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   if (null != tmp16Result) {
     const obj11 = { sticker: null, size: null, animated: true };
     obj11[0] = tmp16Result;
-    tmp14Result = tmp14(10176);
+    tmp14Result = tmp14(10181);
     obj11[1] = tmp14(576).space.PX_96;
     let tmp32Result = tmp32(tmp14Result, obj11);
   } else if (null != first) {
@@ -529,7 +529,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     obj12[1] = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj12);
   } else {
-    tmp32Result = tmp32(tmp31(17581).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(17584).StickerPlusIcon, { size: "lg" });
   }
   obj10[5] = tmp32Result;
   items4[1] = callback(stickerId(5123).PressableHighlight, obj10);
@@ -562,7 +562,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     tmp32Result = tmp32(tmp14(7130), obj16);
     const tmp14Result1 = tmp14(7130);
   } else {
-    tmp32Result = tmp32(tmp31(8757).ReactionIcon, { size: "md", color: "text-subtle" });
+    tmp32Result = tmp32(tmp31(8762).ReactionIcon, { size: "md", color: "text-subtle" });
   }
   const items5 = [tmp32Result, ];
   if (null != first1) {

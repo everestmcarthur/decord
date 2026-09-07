@@ -1,10 +1,10 @@
-// Module ID: 10337
-// Function ID: 10338
+// Module ID: 10342
+// Function ID: 10343
 // Name: useEmojiAndSource
 // Dependencies: [5, 32, 19, 1979, 5459, 5585, 1074, 4216, 563, 2]
 // Exports: useEmojiAndSource
 
-// Module 10337 (useEmojiAndSource)
+// Module 10342 (useEmojiAndSource)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

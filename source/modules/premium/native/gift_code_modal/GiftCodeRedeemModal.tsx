@@ -1,13 +1,13 @@
-// Module ID: 11438
-// Function ID: 11439
+// Module ID: 11443
+// Function ID: 11444
 // Name: GiftCodeRedeemModal
-// Dependencies: [19, 11429, 1371, 21, 5624, 4763, 11439, 11452, 11453, 504, 11440, 7000, 2]
+// Dependencies: [19, 11434, 1371, 21, 5624, 4763, 11444, 11457, 11458, 504, 11445, 7000, 2]
 // Exports: default
 
-// Module 11438 (GiftCodeRedeemModal)
+// Module 11443 (GiftCodeRedeemModal)
 import noopAll from "noop" /* 19 */;
-import useGiftCodeErrorMessageDefault from "useGiftCodeErrorMessage" /* 11440 */;
-import closure_3 from "updateGiftCode" /* 11429 */;
+import useGiftCodeErrorMessageDefault from "useGiftCodeErrorMessage" /* 11445 */;
+import closure_3 from "updateGiftCode" /* 11434 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import { jsx } from "jsxProd" /* 21 */;
 import HeaderBackImage from "HeaderBackImage" /* 5624 */;
@@ -61,7 +61,7 @@ export default function GiftCodeRedeemModal(code) {
     obj2[1] = tmp2(5624).getHeaderCloseButton(() => callback(4763).pop());
     obj2[2] = function render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(11453), {});
+      return callback2(callback(11458), {});
     };
     obj[obj.ERROR] = obj2;
     if (null == stateFromStores) {

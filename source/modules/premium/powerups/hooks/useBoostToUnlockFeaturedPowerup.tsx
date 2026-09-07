@@ -1,10 +1,10 @@
-// Module ID: 12504
-// Function ID: 12505
+// Module ID: 12508
+// Function ID: 12509
 // Name: items
 // Dependencies: [32, 19, 1979, 4449, 4450, 1074, 4453, 504, 4469, 2]
 // Exports: default
 
-// Module 12504 (items)
+// Module 12508 (items)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "createGuildRecordFromRust" /* 1979 */;

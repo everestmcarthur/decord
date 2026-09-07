@@ -1,9 +1,9 @@
-// Module ID: 17929
-// Function ID: 17930
+// Module ID: 17932
+// Function ID: 17933
 // Name: resolved
-// Dependencies: [5277, 502, 1895, 3, 2003, 17321, 2]
+// Dependencies: [5277, 502, 1895, 3, 2003, 17324, 2]
 
-// Module 17929 (resolved)
+// Module 17932 (resolved)
 import timestampDefault from "timestamp" /* 3 */;
 import databaseNameDefault from "databaseName" /* 2003 */;
 import closure_3 from "_handleConnectionOpen" /* 5277 */;

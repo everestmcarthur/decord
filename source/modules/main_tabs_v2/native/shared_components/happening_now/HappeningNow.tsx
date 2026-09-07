@@ -1,17 +1,17 @@
-// Module ID: 16058
-// Function ID: 16059
+// Module ID: 16061
+// Function ID: 16062
 // Name: renderCard
-// Dependencies: [32, 19, 17, 15294, 1074, 21, 7074, 4560, 576, 6655, 6964, 16059, 1242, 4992, 1484, 16060, 7162, 7182, 16067, 16068, 4296, 11354, 12, 8874, 1114, 16069, 16070, 16087, 16089, 16090, 16073, 16086, 16091, 16085, 16072, 1369, 2]
+// Dependencies: [32, 19, 17, 15297, 1074, 21, 7074, 4560, 576, 6655, 6964, 16062, 1242, 4992, 1484, 16063, 7162, 7182, 16070, 16071, 4296, 11359, 12, 8879, 1114, 16072, 16073, 16090, 16092, 16093, 16076, 16089, 16094, 16088, 16075, 1369, 2]
 
-// Module 16058 (renderCard)
+// Module 16061 (renderCard)
 import ThemesDefault from "Themes" /* 576 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 16069 */;
-import HappeningNowCardUnifiedVCDefault from "HappeningNowCardUnifiedVC" /* 16072 */;
+import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 16072 */;
+import HappeningNowCardUnifiedVCDefault from "HappeningNowCardUnifiedVC" /* 16075 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15294 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15297 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createFakeSharedValue from "createFakeSharedValue" /* 7074 */;

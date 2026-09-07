@@ -1,19 +1,19 @@
-// Module ID: 15308
-// Function ID: 15309
+// Module ID: 15311
+// Function ID: 15312
 // Name: toggle
-// Dependencies: [4379, 1184, 1183, 1221, 7975, 1074, 504, 1114, 15309, 9358, 11468, 2]
+// Dependencies: [4379, 1184, 1183, 1221, 7975, 1074, 504, 1114, 15312, 9363, 11473, 2]
 
-// Module 15308 (toggle)
+// Module 15311 (toggle)
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 9358 */;
-import track from "track" /* 15309 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 9363 */;
+import track from "track" /* 15312 */;
 import closure_3 from "reset" /* 4379 */;
 import closure_4 from "initialize" /* 1184 */;
 import closure_5 from "handleThemeChange" /* 1183 */;
 import closure_6 from "handleConnectionClosedOrResumed" /* 1221 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 createToggle = {

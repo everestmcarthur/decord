@@ -1,16 +1,16 @@
-// Module ID: 14799
-// Function ID: 14800
+// Module ID: 14802
+// Function ID: 14803
 // Name: route
-// Dependencies: [19, 14656, 1371, 7975, 1074, 4904, 1114, 6597, 504, 11468, 14659, 2]
+// Dependencies: [19, 14659, 1371, 7975, 1074, 4904, 1114, 6597, 504, 11473, 14662, 2]
 
-// Module 14799 (route)
+// Module 14802 (route)
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import _fetchWebAuthnConditionalChallenge from "_fetchWebAuthnConditionalChallenge" /* 6597 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "hasFetchedCredentials" /* 14656 */;
+import closure_4 from "hasFetchedCredentials" /* 14659 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 createToggle = {
@@ -58,7 +58,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.WEBAUTHN_VIEW,
   getComponent() {
-    return require(14659) /* UserSettingsWebAuthn */.default;
+    return require(14662) /* UserSettingsWebAuthn */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -1,10 +1,10 @@
-// Module ID: 16455
-// Function ID: 16456
+// Module ID: 16458
+// Function ID: 16459
 // Name: ICYMICustomScoresModal
-// Dependencies: [19, 21, 7913, 4560, 576, 7000, 7863, 1114, 10925, 16456, 16457, 2]
+// Dependencies: [19, 21, 7913, 4560, 576, 7000, 7863, 1114, 10930, 16459, 16460, 2]
 // Exports: default
 
-// Module 16455 (ICYMICustomScoresModal)
+// Module 16458 (ICYMICustomScoresModal)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -48,11 +48,11 @@ export default function ICYMICustomScoresModal() {
       const intl = lib(1114).intl;
       obj[0] = intl.string(lib(1114).t.jVshKt);
       obj[1] = lib(7863).getRenderModalCloseImage(navigation.navigation);
-      const merged = Object.assign(callback(10925)());
+      const merged = Object.assign(callback(10930)());
       return obj;
     },
     getComponent() {
-      return lib(16456).default;
+      return lib(16459).default;
     }
   };
   const items = [
@@ -64,7 +64,7 @@ export default function ICYMICustomScoresModal() {
         return obj;
       },
       getComponent() {
-        return lib(16457).default;
+        return lib(16460).default;
       }
     })
   ];

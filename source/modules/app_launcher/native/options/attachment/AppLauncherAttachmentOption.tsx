@@ -1,13 +1,13 @@
-// Module ID: 12175
-// Function ID: 12176
+// Module ID: 12179
+// Function ID: 12180
 // Name: AttachmentPreviewAppLauncher
-// Dependencies: [19, 17, 4901, 4900, 21, 4560, 576, 10196, 10137, 1894, 12158, 504, 9307, 12176, 1114, 5128, 11237, 2]
+// Dependencies: [19, 17, 4901, 4900, 21, 4560, 576, 10201, 10142, 1894, 12162, 504, 9312, 12180, 1114, 5128, 11242, 2]
 // Exports: default
 
-// Module 12175 (AttachmentPreviewAppLauncher)
+// Module 12179 (AttachmentPreviewAppLauncher)
 import ThemesDefault from "Themes" /* 576 */;
-import FileIcon from "FileIcon" /* 10137 */;
-import AttachmentIconDefault from "AttachmentIcon" /* 10196 */;
+import FileIcon from "FileIcon" /* 10142 */;
+import AttachmentIconDefault from "AttachmentIcon" /* 10201 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { DraftType } from "handleChanged" /* 4901 */;

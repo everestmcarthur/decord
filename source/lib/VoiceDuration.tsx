@@ -1,9 +1,9 @@
-// Module ID: 13819
-// Function ID: 13820
+// Module ID: 13822
+// Function ID: 13823
 // Name: start
 // Dependencies: [4589, 4631, 2]
 
-// Module 13819 (start)
+// Module 13822 (start)
 import set2 from "set" /* 2 */;
 import sleep from "sleep" /* 4589 */;
 

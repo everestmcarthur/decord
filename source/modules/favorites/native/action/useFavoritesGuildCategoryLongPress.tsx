@@ -1,10 +1,10 @@
-// Module ID: 16108
-// Function ID: 16109
+// Module ID: 16111
+// Function ID: 16112
 // Name: useFavoritesGuildCategoryLongPress
-// Dependencies: [19, 1074, 1982, 1114, 16109, 2]
+// Dependencies: [19, 1074, 1982, 1114, 16112, 2]
 // Exports: default
 
-// Module 16108 (useFavoritesGuildCategoryLongPress)
+// Module 16111 (useFavoritesGuildCategoryLongPress)
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
 import closure_3 from "noop" /* 19 */;
 import { ChannelTypes } from "ME" /* 1074 */;

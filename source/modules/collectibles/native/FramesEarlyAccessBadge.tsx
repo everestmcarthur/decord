@@ -1,18 +1,18 @@
-// Module ID: 13133
-// Function ID: 13134
+// Module ID: 13137
+// Function ID: 13138
 // Name: BadgeWithTooltip
-// Dependencies: [32, 19, 17, 21, 4560, 576, 4495, 1114, 11128, 4411, 8662, 4556, 8830, 7156, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 4495, 1114, 11133, 4411, 8667, 4556, 8835, 7156, 2]
 // Exports: default
 
-// Module 13133 (BadgeWithTooltip)
+// Module 13137 (BadgeWithTooltip)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import Text from "Text" /* 4556 */;
 import Layer from "Layer" /* 7156 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8830 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8835 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -51,7 +51,7 @@ function BadgeWithTooltip(tooltipPosition) {
   }, []);
   const items = [tooltipPosition, stringResult, first, callback];
   const memo = callback.useMemo(() => ({ position: tooltipPosition, label: c3, visible: first, onPress: callback }), items);
-  let obj = tooltipPosition(11128);
+  let obj = tooltipPosition(11133);
   const tooltip = obj.useTooltip(ref, memo);
   const items1 = [first];
   const effect = callback.useEffect(() => {
@@ -76,7 +76,7 @@ function BadgeWithTooltip(tooltipPosition) {
   const stringResult1 = intl2.string(tooltipPosition(1114).t["1m6qcO"]);
   obj = { ref, onPress: callback1, hitSlop: closure_9, accessibilityRole: "button", accessibilityLabel: stringResult1, accessibilityHint: stringResult, style: items2, children: null };
   items2 = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
-  const items3 = [callback2(tooltipPosition(8662).NitroWheelIcon, { size: "xs", color: str }), ];
+  const items3 = [callback2(tooltipPosition(8667).NitroWheelIcon, { size: "xs", color: str }), ];
   obj = { variant: "text-sm/bold", color: str, style: tmp3.text, children: stringResult1 };
   items3[1] = callback2(tooltipPosition(4556).Text, obj);
   obj[7] = items3;

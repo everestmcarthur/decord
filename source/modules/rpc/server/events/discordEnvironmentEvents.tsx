@@ -1,10 +1,10 @@
-// Module ID: 14522
-// Function ID: 14523
+// Module ID: 14525
+// Function ID: 14526
 // Name: RPC_AUTHENTICATED_SCOPE
-// Dependencies: [109, 4552, 4465, 1074, 9637, 12, 2]
+// Dependencies: [109, 4552, 4465, 1074, 9642, 12, 2]
 // Exports: createDiscordEnvironmentEvents
 
-// Module 14522 (RPC_AUTHENTICATED_SCOPE)
+// Module 14525 (RPC_AUTHENTICATED_SCOPE)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;

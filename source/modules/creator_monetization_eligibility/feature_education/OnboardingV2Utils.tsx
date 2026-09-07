@@ -1,10 +1,10 @@
-// Module ID: 16251
-// Function ID: 16252
+// Module ID: 16254
+// Function ID: 16255
 // Name: items
 // Dependencies: [1975, 1979, 1371, 1074, 504, 7260, 2]
 // Exports: canSeeCreatorMonetizationOnboardingV2Upsell, useCanSeeCreatorMonetizationOnboardingV2Upsell
 
-// Module 16251 (items)
+// Module 16254 (items)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;

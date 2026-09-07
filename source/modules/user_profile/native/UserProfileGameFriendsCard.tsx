@@ -1,10 +1,10 @@
-// Module ID: 13078
-// Function ID: 13079
+// Module ID: 13082
+// Function ID: 13083
 // Name: UserProfileGameFriendsCard
-// Dependencies: [19, 21, 4560, 7168, 1114, 12628, 7207, 4556, 2]
+// Dependencies: [19, 21, 4560, 7168, 1114, 12632, 7207, 4556, 2]
 // Exports: default
 
-// Module 13078 (UserProfileGameFriendsCard)
+// Module 13082 (UserProfileGameFriendsCard)
 import noopAll from "noop" /* 19 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7168 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7207 */;
@@ -33,7 +33,7 @@ export default function UserProfileGameFriendsCard(arg0) {
       const intl2 = found(1114).intl;
       let obj = { applicationName: null };
       obj[0] = function applicationName() {
-        return lib(textmdnormal(12628), { application: found[0], textVariant: textmdnormal, iconSize: 16 }, found[0].id);
+        return lib(textmdnormal(12632), { application: found[0], textVariant: textmdnormal, iconSize: 16 }, found[0].id);
       };
       let formatResult = intl2.format(found(1114).t.wQ6urw, obj);
       let tmp6 = found;
@@ -41,10 +41,10 @@ export default function UserProfileGameFriendsCard(arg0) {
       const intl = found(1114).intl;
       obj = { applicationName: null, applicationName2: null };
       obj[0] = function applicationName() {
-        return lib(textmdnormal(12628), { application: found[0], textVariant: textmdnormal, iconSize: 16 }, found[0].id);
+        return lib(textmdnormal(12632), { application: found[0], textVariant: textmdnormal, iconSize: 16 }, found[0].id);
       };
       obj[1] = function applicationName2() {
-        return lib(textmdnormal(12628), { application: found[1], textVariant: textmdnormal, iconSize: 16 }, found[1].id);
+        return lib(textmdnormal(12632), { application: found[1], textVariant: textmdnormal, iconSize: 16 }, found[1].id);
       };
       formatResult = intl.format(found(1114).t.C98CSN, obj);
       tmp6 = found;
@@ -57,7 +57,7 @@ export default function UserProfileGameFriendsCard(arg0) {
         return lib.map((application) => closure_1_3(closure_1_1(closure_1_2[5]), { application, useComma: true, textVariant: closure_1, iconSize: 16 }, application.id));
       };
       obj[1] = function applicationNameLast() {
-        return lib(textmdnormal(12628), { application: dependencyMap, textVariant: textmdnormal, iconSize: 16 });
+        return lib(textmdnormal(12632), { application: dependencyMap, textVariant: textmdnormal, iconSize: 16 });
       };
       formatResult = intl4.format(found(1114).t.UxpwAh, obj);
       tmp6 = found;

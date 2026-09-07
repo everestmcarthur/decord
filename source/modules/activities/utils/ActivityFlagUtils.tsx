@@ -1,10 +1,10 @@
-// Module ID: 11462
-// Function ID: 11463
+// Module ID: 11467
+// Function ID: 11468
 // Name: computeActivityFlags
 // Dependencies: [1074, 1935, 510, 1384, 7739, 2]
 // Exports: computeActivityFlags, isContextlessEmbeddedActivity
 
-// Module 11462 (computeActivityFlags)
+// Module 11467 (computeActivityFlags)
 import set from "set" /* 2 */;
 import Storage2 from "Storage" /* 510 */;
 import hasFlag from "hasFlag" /* 1384 */;

@@ -1,19 +1,19 @@
-// Module ID: 12579
-// Function ID: 12580
+// Module ID: 12583
+// Function ID: 12584
 // Name: GuildPowerupsRecentActivityRow
-// Dependencies: [17, 4552, 21, 4560, 576, 8095, 12580, 4242, 504, 7961, 9375, 12582, 12584, 1178, 4556, 12586, 1114, 2]
+// Dependencies: [17, 4552, 21, 4560, 576, 8095, 12584, 4242, 504, 7961, 9380, 12586, 12588, 1178, 4556, 12590, 1114, 2]
 // Exports: default
 
-// Module 12579 (GuildPowerupsRecentActivityRow)
+// Module 12583 (GuildPowerupsRecentActivityRow)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import resetCache from "resetCache" /* 4242 */;
 import apexExperiment from "apexExperiment" /* 8095 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12580 */;
-import useMaybeGetSortedBoostsDefault from "useMaybeGetSortedBoosts" /* 12580 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12586 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12584 */;
+import useMaybeGetSortedBoostsDefault from "useMaybeGetSortedBoosts" /* 12584 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12590 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -42,11 +42,11 @@ function GuildPowerupsRecentActivityRow(row) {
     tmpResult = tmp(7961);
     const isRoleStyleAndRoleColorsEligibleForERC = tmpResult.useIsRoleStyleAndRoleColorsEligibleForERC(boost.guildId, boost.userId, stateFromStores, processColorStringsArray);
     if ("gave" === phase) {
-      let BoostGemSlashIcon = tmp(9375).BoostGemIcon;
+      let BoostGemSlashIcon = tmp(9380).BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = tmp(12582).BoostTier1Icon;
+      BoostGemSlashIcon = tmp(12586).BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = tmp(12584).BoostGemSlashIcon;
+      BoostGemSlashIcon = tmp(12588).BoostGemSlashIcon;
     }
     obj = { style: null, children: null };
     obj[0] = tmp4.boostRowContainer;

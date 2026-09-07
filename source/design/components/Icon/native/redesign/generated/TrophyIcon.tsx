@@ -1,10 +1,10 @@
-// Module ID: 8717
-// Function ID: 8718
+// Module ID: 8722
+// Function ID: 8723
 // Name: TrophyIcon
 // Dependencies: [19, 21, 576, 4261, 8137, 2]
 // Exports: TrophyIcon
 
-// Module 8717 (TrophyIcon)
+// Module 8722 (TrophyIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;

@@ -1,13 +1,13 @@
-// Module ID: 12287
-// Function ID: 12288
+// Module ID: 12291
+// Function ID: 12292
 // Name: ActionChannelInfo
-// Dependencies: [32, 19, 17, 4552, 5459, 1957, 2021, 1074, 1374, 21, 4560, 576, 563, 4713, 4556, 1114, 1178, 11804, 5587, 1396, 4213, 12288, 12285, 4296, 4561, 12289, 5123, 1100, 12286, 7222, 2]
+// Dependencies: [32, 19, 17, 4552, 5459, 1957, 2021, 1074, 1374, 21, 4560, 576, 563, 4713, 4556, 1114, 1178, 11809, 5587, 1396, 4213, 12292, 12289, 4296, 4561, 12293, 5123, 1100, 12290, 7222, 2]
 
-// Module 12287 (ActionChannelInfo)
+// Module 12291 (ActionChannelInfo)
 import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 11804 */;
-import newMemberActionFromServer from "newMemberActionFromServer" /* 12285 */;
-import useMemberActionsForChannel from "useMemberActionsForChannel" /* 12288 */;
+import registerAssetDefault from "registerAsset" /* 11809 */;
+import newMemberActionFromServer from "newMemberActionFromServer" /* 12289 */;
+import useMemberActionsForChannel from "useMemberActionsForChannel" /* 12292 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

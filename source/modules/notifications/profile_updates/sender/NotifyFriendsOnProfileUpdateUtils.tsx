@@ -1,10 +1,10 @@
-// Module ID: 15912
-// Function ID: 15913
+// Module ID: 15915
+// Function ID: 15916
 // Name: onNotifyFriendsOnProfileUpdateSettingsChanged
 // Dependencies: [4212, 1074, 1935, 1242, 2]
 // Exports: onNotifyFriendsOnProfileUpdateSettingsChanged
 
-// Module 15912 (onNotifyFriendsOnProfileUpdateSettingsChanged)
+// Module 15915 (onNotifyFriendsOnProfileUpdateSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

@@ -1,14 +1,14 @@
-// Module ID: 15231
-// Function ID: 15232
+// Module ID: 15234
+// Function ID: 15235
 // Name: getBenefitKey
-// Dependencies: [15205, 1373, 1114, 2]
+// Dependencies: [15208, 1373, 1114, 2]
 // Exports: formatPlanInterval, formatPlanIntervalDuration, getBenefitKey, isChannelBenefit, isIntangibleBenefit
 
-// Module 15231 (getBenefitKey)
+// Module 15234 (getBenefitKey)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import GuildFeatures from "GuildFeatures" /* 1373 */;
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 15205 */;
+import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 15208 */;
 
 let closure_2 = MAX_SUBSCRIPTION_TIERS.GuildRoleSubscriptionBenefitTypes;
 const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;

@@ -1,11 +1,11 @@
-// Module ID: 9985
-// Function ID: 9986
+// Module ID: 9990
+// Function ID: 9991
 // Name: UserSettingsVoiceOutputOptions
-// Dependencies: [19, 17, 4582, 502, 1908, 4585, 21, 4560, 504, 38, 9089, 9979, 1114, 5605, 9986, 2]
+// Dependencies: [19, 17, 4582, 502, 1908, 4585, 21, 4560, 504, 38, 9094, 9984, 1114, 5605, 9991, 2]
 // Exports: default
 
-// Module 9985 (UserSettingsVoiceOutputOptions)
-import VolumeSliderDefault from "VolumeSlider" /* 9986 */;
+// Module 9990 (UserSettingsVoiceOutputOptions)
+import VolumeSliderDefault from "VolumeSlider" /* 9991 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "reset" /* 4582 */;
@@ -91,5 +91,5 @@ export default function UserSettingsVoiceOutputOptions() {
   }
   items4[1] = tmp9Result;
   obj[2] = items4;
-  return closure_10(stateFromStores1(9979).UserSettingsTableRowGroup, obj);
+  return closure_10(stateFromStores1(9984).UserSettingsTableRowGroup, obj);
 };

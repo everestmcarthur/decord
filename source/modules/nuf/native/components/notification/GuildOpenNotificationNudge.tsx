@@ -1,20 +1,20 @@
-// Module ID: 16524
-// Function ID: 16525
+// Module ID: 16527
+// Function ID: 16528
 // Name: GuildOpenNotificationNudge
-// Dependencies: [32, 19, 2021, 1979, 4381, 4741, 12409, 12410, 1074, 21, 504, 16525, 1114, 15481, 12411, 7106, 4399, 7388, 1943, 12412, 4527, 16524, 1896, 2]
+// Dependencies: [32, 19, 2021, 1979, 4381, 4741, 12413, 12414, 1074, 21, 504, 16528, 1114, 15484, 12415, 7106, 4399, 7388, 1943, 12416, 4527, 16527, 1896, 2]
 // Exports: default, useGuildOpenNudge
 
-// Module 16524 (GuildOpenNotificationNudge)
-import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 16525 */;
+// Module 16527 (GuildOpenNotificationNudge)
+import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 16528 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "trackCommunicationDisabled" /* 2021 */;
 import closure_6 from "createGuildRecordFromRust" /* 1979 */;
 import closure_7 from "handleConnectionOpen" /* 4381 */;
 import closure_8 from "updateUserGuildSettingsInternal" /* 4741 */;
-import closure_9 from "set" /* 12409 */;
-import { PermissionPromptType } from "set" /* 12409 */;
-import EventActionType from "EventActionType" /* 12410 */;
+import closure_9 from "set" /* 12413 */;
+import { PermissionPromptType } from "set" /* 12413 */;
+import EventActionType from "EventActionType" /* 12414 */;
 import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -63,9 +63,9 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     return guildId;
   });
   let obj = stateFromStores(504);
-  let obj2 = stateFromStores3(15481);
-  const canSeePushNotificationNudge = stateFromStores(12411).useCanSeePushNotificationNudge();
-  const obj3 = stateFromStores(12411);
+  let obj2 = stateFromStores3(15484);
+  const canSeePushNotificationNudge = stateFromStores(12415).useCanSeePushNotificationNudge();
+  const obj3 = stateFromStores(12415);
   const items1 = [closure_8];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => {
     let isMutedResult = null == stateFromStores;

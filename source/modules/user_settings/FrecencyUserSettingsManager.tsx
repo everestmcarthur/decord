@@ -1,15 +1,15 @@
-// Module ID: 17367
-// Function ID: 17368
+// Module ID: 17370
+// Function ID: 17371
 // Name: handleConnectionOpen
-// Dependencies: [5, 9292, 9291, 5459, 5012, 5501, 5509, 1221, 1084, 1350, 1090, 7118, 1940, 1222, 1223, 12, 2]
+// Dependencies: [5, 9297, 9296, 5459, 5012, 5501, 5509, 1221, 1084, 1350, 1090, 7118, 1940, 1222, 1223, 12, 2]
 
-// Module 17367 (handleConnectionOpen)
+// Module 17370 (handleConnectionOpen)
 import setDefault from "set" /* 1090 */;
 import updateUserGuildSettings from "updateUserGuildSettings" /* 1940 */;
 import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleUserSettingsProtoStoreChange" /* 9292 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 9291 */;
+import closure_4 from "handleUserSettingsProtoStoreChange" /* 9297 */;
+import closure_5 from "handleUserSettingsProtoStoreChange" /* 9296 */;
 import closure_6 from "getEmojiToGroupId" /* 5459 */;
 import closure_7 from "handleSoundCreateOrUpdate" /* 5012 */;
 import closure_8 from "handleStickersStoreUpdate" /* 5501 */;

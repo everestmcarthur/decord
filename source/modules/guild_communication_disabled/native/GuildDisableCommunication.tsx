@@ -1,9 +1,9 @@
-// Module ID: 11841
-// Function ID: 11842
+// Module ID: 11846
+// Function ID: 11847
 // Name: items
-// Dependencies: [5, 32, 19, 17, 2023, 1074, 21, 1114, 4560, 576, 6981, 11146, 4992, 1242, 11842, 4259, 4712, 9566, 4556, 5685, 5688, 7085, 4975, 2]
+// Dependencies: [5, 32, 19, 17, 2023, 1074, 21, 1114, 4560, 576, 6981, 11151, 4992, 1242, 11847, 4259, 4712, 9571, 4556, 5685, 5688, 7085, 4975, 2]
 
-// Module 11841 (items)
+// Module 11846 (items)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
@@ -12,7 +12,7 @@ import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
 import context from "context" /* 5685 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
 import TextArea from "TextArea" /* 7085 */;
-import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 11146 */;
+import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 11151 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
@@ -114,7 +114,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
               return obj;
             } else {
               closure_1 = tmp4;
-              let obj3 = closure_1_1(11842);
+              let obj3 = closure_1_1(11847);
               dependencyMap = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
@@ -141,7 +141,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
             obj3 = { user: null };
             obj3[0] = c0;
             obj[1] = intl.formatToPlainString(closure_1_0(1114).t.O9C3Nt, obj3);
-            obj[2] = closure_1_1(9566);
+            obj[2] = closure_1_1(9571);
             obj8.open(obj);
             dependencyMap();
             c3 = 3;

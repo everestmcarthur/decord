@@ -1,11 +1,11 @@
-// Module ID: 15186
-// Function ID: 15187
-// Dependencies: [19, 17, 5444, 15095, 21, 4560, 15096, 4296, 4974, 7073, 2]
+// Module ID: 15189
+// Function ID: 15190
+// Dependencies: [19, 17, 5444, 15098, 21, 4560, 15099, 4296, 4974, 7073, 2]
 
-// Module 15186
+// Module 15189
 import importAllResult from "noop" /* 19 */;
 import { QuestDockMode } from "QuestsExperimentLocations" /* 5444 */;
-import { QUEST_DOCK_MODE_CHANGE_PHYSICS as closure_5 } from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15095 */;
+import { QUEST_DOCK_MODE_CHANGE_PHYSICS as closure_5 } from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15098 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -27,7 +27,7 @@ const memoResult = importAllResult.memo(function QuestDockContentCollapsed(child
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = importAllResult.useContext(hideOnExpand(15096).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = importAllResult.useContext(hideOnExpand(15099).QuestDockGestureContext).activeQuestDockMode;
   let obj = hideOnExpand(4296);
   const fn = function l() {
     let obj = hideOnExpand(closure_1_2[8]);

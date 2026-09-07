@@ -1,10 +1,10 @@
-// Module ID: 16625
-// Function ID: 16626
+// Module ID: 16628
+// Function ID: 16629
 // Name: inBoundingBox
-// Dependencies: [19, 4296, 12338, 1611, 1115, 6655, 2]
+// Dependencies: [19, 4296, 12342, 1611, 1115, 6655, 2]
 // Exports: useSearchSuggestionsGesture
 
-// Module 16625 (inBoundingBox)
+// Module 16628 (inBoundingBox)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

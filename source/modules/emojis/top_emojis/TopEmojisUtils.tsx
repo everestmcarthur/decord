@@ -1,11 +1,11 @@
-// Module ID: 10278
-// Function ID: 10279
+// Module ID: 10283
+// Function ID: 10284
 // Name: maybeFetchTopEmojisByGuild
-// Dependencies: [1371, 5459, 5462, 10279, 2]
+// Dependencies: [1371, 5459, 5462, 10284, 2]
 // Exports: maybeFetchTopEmojisByGuild
 
-// Module 10278 (maybeFetchTopEmojisByGuild)
-import fetchTopEmojis from "fetchTopEmojis" /* 10279 */;
+// Module 10283 (maybeFetchTopEmojisByGuild)
+import fetchTopEmojis from "fetchTopEmojis" /* 10284 */;
 import closure_2 from "mergeGuildAvatar" /* 1371 */;
 import closure_3 from "getEmojiToGroupId" /* 5459 */;
 import closure_4 from "initialize" /* 5462 */;

@@ -1,9 +1,9 @@
-// Module ID: 15068
-// Function ID: 15069
+// Module ID: 15071
+// Function ID: 15072
 // Name: CARD_WIDTH
-// Dependencies: [32, 19, 17, 4552, 7702, 21, 4560, 576, 1116, 504, 11285, 4262, 5607, 8308, 5587, 9439, 4556, 1114, 4975, 4520, 2]
+// Dependencies: [32, 19, 17, 4552, 7702, 21, 4560, 576, 1116, 504, 11290, 4262, 5607, 8308, 5587, 9444, 4556, 1114, 4975, 4520, 2]
 
-// Module 15068 (CARD_WIDTH)
+// Module 15071 (CARD_WIDTH)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;

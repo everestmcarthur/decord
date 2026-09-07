@@ -1,7 +1,7 @@
 // Module ID: 8370
 // Function ID: 8371
 // Name: isLinkTrusted
-// Dependencies: [8371, 1957, 1979, 8372, 4781, 4209, 2011, 1074, 4257, 4904, 1114, 1242, 8373, 8374, 8375, 8377, 4249, 12948, 12952, 5001, 12953, 12955, 2]
+// Dependencies: [8371, 1957, 1979, 8372, 4781, 4209, 2011, 1074, 4257, 4904, 1114, 1242, 8373, 8374, 8375, 8377, 4249, 12952, 12956, 5001, 12957, 12959, 2]
 // Exports: handleClick, isLinkTrusted
 
 // Module 8370 (isLinkTrusted)
@@ -212,7 +212,7 @@ export const handleClick = function handleClick(href, preventDefault) {
       }
       tmp3(8375).trackLinkClicked(tmp8);
       if (null == onClick) {
-        const obj3 = { skipExtensionCheck: "a", analyticsLocations: 150, messageId: "center", channelId: "center" };
+        const obj3 = { skipExtensionCheck: "a", analyticsLocations: false, messageId: false, channelId: "a" };
         obj3[1] = items;
         obj3[2] = messageId;
         obj3[3] = channelId;
@@ -227,14 +227,14 @@ export const handleClick = function handleClick(href, preventDefault) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        tmp3(12948).show(tmp8);
+        tmp3(12952).show(tmp8);
       } else {
         let trustedResult = trusted;
         if (typeof trusted === "function") {
           trustedResult = trusted();
         }
         if (!trustedResult) {
-          const TRUSTED_URLS = _require(12952).TRUSTED_URLS;
+          const TRUSTED_URLS = _require(12956).TRUSTED_URLS;
           trustedResult = TRUSTED_URLS.has(tmp8);
         }
         const protocol = _require(8373).getProtocol(tmp8);
@@ -266,12 +266,12 @@ export const handleClick = function handleClick(href, preventDefault) {
           if (tmp56) {
             obj4 = { url: null, trustUrl: null, onConfirm: null, onCancel: null, isProtocol: true, contextKey: null };
             obj4[0] = tmp8;
-            obj4[1] = tmp53(12955).trustProtocol;
+            obj4[1] = tmp53(12959).trustProtocol;
             obj4[2] = handleConfirm;
             obj4[3] = onCancel;
             obj4[5] = arg3;
-            tmp3(12953).show(obj4);
-            const tmp3Result4 = tmp3(12953);
+            tmp3(12957).show(obj4);
+            const tmp3Result4 = tmp3(12957);
           } else {
             const punycodeLinkResult = tmp53(5001).punycodeLink(tmp8);
             let displayTarget = tmp8;
@@ -281,12 +281,12 @@ export const handleClick = function handleClick(href, preventDefault) {
             const tmp53Result = tmp53(5001);
             const obj5 = { url: null, trustUrl: null, onConfirm: null, onCancel: null, isProtocol: false, contextKey: null };
             obj5[0] = displayTarget;
-            obj5[1] = tmp53(12955).trustDomain;
+            obj5[1] = tmp53(12959).trustDomain;
             obj5[2] = handleConfirm;
             obj5[3] = onCancel;
             obj5[5] = arg3;
-            tmp3(12953).show(obj5);
-            const tmp3Result5 = tmp3(12953);
+            tmp3(12957).show(obj5);
+            const tmp3Result5 = tmp3(12957);
           }
         }
         if (null == preventDefault) {

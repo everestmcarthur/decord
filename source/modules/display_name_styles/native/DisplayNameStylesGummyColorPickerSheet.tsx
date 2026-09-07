@@ -1,10 +1,10 @@
-// Module ID: 15344
-// Function ID: 15345
+// Module ID: 15347
+// Function ID: 15348
 // Name: DisplayNameStylesGummyColorPickerSheet
-// Dependencies: [32, 19, 17, 1389, 1074, 21, 1388, 4560, 576, 10902, 1390, 558, 15345, 4528, 15346, 1242, 4527, 7150, 7149, 4975, 1114, 14617, 10250, 2]
+// Dependencies: [32, 19, 17, 1389, 1074, 21, 1388, 4560, 576, 10907, 1390, 558, 15348, 4528, 15349, 1242, 4527, 7150, 7149, 4975, 1114, 14620, 10255, 2]
 // Exports: default
 
-// Module 15344 (DisplayNameStylesGummyColorPickerSheet)
+// Module 15347 (DisplayNameStylesGummyColorPickerSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -54,7 +54,7 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   let callback2;
   const tmp = callback3();
   dependencyMap = tmp;
-  let obj = selectedColors(10902);
+  let obj = selectedColors(10907);
   let tmp5 = selectedColors.length > 0;
   const displayNameStylesEffectConfig = obj.useDisplayNameStylesEffectConfig(selectedColors(1390).DisplayNameEffect.GUMMY);
   if (tmp5) {
@@ -82,7 +82,7 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   }), 2);
   first1 = tmp9[0];
   closure_7 = tmp9[1];
-  const tmp12Result = onSelectColors(15345)(selectedColors(1390).DisplayNameEffect.GUMMY);
+  const tmp12Result = onSelectColors(15348)(selectedColors(1390).DisplayNameEffect.GUMMY);
   const findIndexResult = tmp12Result.findIndex((colors) => selectedColors(closure_2[11]).areArraysShallowEqual(colors.colors, first1));
   c8 = findIndexResult;
   let items = [first];
@@ -146,14 +146,14 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   } else {
     const obj7 = { colors: null };
     obj7[0] = first1;
-    tmp18Result = tmp18(tmp11(14617), obj7);
+    tmp18Result = tmp18(tmp11(14620), obj7);
   }
   const items4 = [tmp18Result, ];
   const obj8 = { style: tmp.customIconOverlay, pointerEvents: "none", children: null };
   tmp11 = onSelectColors;
-  const tmp12 = onSelectColors(15345);
+  const tmp12 = onSelectColors(15348);
   const tmp21 = first1;
-  obj8[2] = callback2(closure_5, { style: tmp.customIconScrim, children: callback2(selectedColors(10250).PencilIcon, { color: "white", size: "sm" }) });
+  obj8[2] = callback2(closure_5, { style: tmp.customIconScrim, children: callback2(selectedColors(10255).PencilIcon, { color: "white", size: "sm" }) });
   items4[1] = callback2(closure_5, obj8);
   obj5[5] = items4;
   obj4[1] = closure_10(tmp21, obj5);

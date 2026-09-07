@@ -1,9 +1,9 @@
-// Module ID: 11972
-// Function ID: 11973
+// Module ID: 11976
+// Function ID: 11977
 // Name: metadata
 // Dependencies: [2]
 
-// Module 11972 (metadata)
+// Module 11976 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiAngryExample-1x.png.js");

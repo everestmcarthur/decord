@@ -1,11 +1,11 @@
-// Module ID: 12942
-// Function ID: 12943
+// Module ID: 12946
+// Function ID: 12947
 // Name: getAssetURL
-// Dependencies: [12943, 8139, 12940, 2]
+// Dependencies: [12947, 8139, 12944, 2]
 
-// Module 12942 (getAssetURL)
+// Module 12946 (getAssetURL)
 import set from "set" /* 2 */;
-import CustomLinkType from "CustomLinkType" /* 12943 */;
+import CustomLinkType from "CustomLinkType" /* 12947 */;
 
 let result = set.fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
 class CustomActivityLinkRecord {
@@ -41,8 +41,8 @@ CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
   if (this.type === CustomLinkType.CustomLinkType.MANAGED) {
     let tmpResult = tmp(8139);
     let assetImage = tmpResult.getAssetImage(self.applicationId, self.assetId, 512);
-  } else if (self.type === tmp(12943).CustomLinkType.QUICK) {
-    tmpResult = tmp(12940);
+  } else if (self.type === tmp(12947).CustomLinkType.QUICK) {
+    tmpResult = tmp(12944);
     assetImage = tmpResult.getQuickLinkImage(self.assetPath);
   }
   return assetImage;

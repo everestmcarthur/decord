@@ -1,16 +1,16 @@
-// Module ID: 15192
-// Function ID: 15193
+// Module ID: 15195
+// Function ID: 15196
 // Name: QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED
-// Dependencies: [32, 19, 17, 5444, 15095, 21, 4560, 576, 4974, 15096, 1116, 4262, 15184, 4296, 7073, 15193, 15161, 5123, 4556, 1114, 11105, 15195, 8672, 2]
+// Dependencies: [32, 19, 17, 5444, 15098, 21, 4560, 576, 4974, 15099, 1116, 4262, 15187, 4296, 7073, 15196, 15164, 5123, 4556, 1114, 11110, 15198, 8677, 2]
 
-// Module 15192 (QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)
+// Module 15195 (QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)
 import ThemesDefault from "Themes" /* 576 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4974 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { QuestDockMode } from "QuestsExperimentLocations" /* 5444 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15095 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15098 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -67,7 +67,7 @@ const memoResult = importAllResult.memo(function QuestDockBackgroundBlurHeader(a
   let token;
   importAllResult = undefined;
   ({ onDisclosurePress, onSubmenuPress } = arg0);
-  const context = importAllResult.useContext(activeQuestDockMode(15096).QuestDockGestureContext);
+  const context = importAllResult.useContext(activeQuestDockMode(15099).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   questDockWrapperSpecs = context.questDockWrapperSpecs;
   [tmp5, c2] = token(importAllResult.useState(false), 2);
@@ -82,7 +82,7 @@ const memoResult = importAllResult.memo(function QuestDockBackgroundBlurHeader(a
   }, []);
   let obj = activeQuestDockMode(4262);
   token = obj.useToken(questDockWrapperSpecs(576).modules.mobile.QUEST_DOCK_BORDER_RADIUS);
-  const tmp9 = questDockWrapperSpecs(15184)(token);
+  const tmp9 = questDockWrapperSpecs(15187)(token);
   importAllResult = tmp9;
   obj1 = activeQuestDockMode(4296);
   class G {
@@ -270,7 +270,7 @@ const memoResult = importAllResult.memo(function QuestDockBackgroundBlurHeader(a
       obj5[0] = blurHash;
       obj5[1] = animatedStyle5;
       obj5[2] = tmp20;
-      let tmp23 = callback(tmp7(15193), obj5);
+      let tmp23 = callback(tmp7(15196), obj5);
       let tmp22 = callback;
     }
     const items1 = [tmp23, children, ];
@@ -308,7 +308,7 @@ const memoResult = importAllResult.memo(function QuestDockBackgroundBlurHeader(a
       obj14 = { color: null, style: null };
       obj14[0] = tmp7(576).colors.INTERACTIVE_TEXT_ACTIVE;
       obj14[1] = tmp17.actionDisclosuresIcon;
-      items6[1] = tmp22(tmp(11105).CircleQuestionIcon, obj14);
+      items6[1] = tmp22(tmp(11110).CircleQuestionIcon, obj14);
       obj12[0] = items6;
       obj11[3] = tmp18(closure_13, obj12);
       let tmp22Result = tmp22(tmp(5123).PressableOpacity, obj11);
@@ -323,7 +323,7 @@ const memoResult = importAllResult.memo(function QuestDockBackgroundBlurHeader(a
       obj15[1] = tmp22(tmp(4556).Text, obj16);
       tmp22Result = tmp22(tmp25, obj15);
     }
-    const items8 = [tmp22Result, tmp22(tmp7(15195), {}), ];
+    const items8 = [tmp22Result, tmp22(tmp7(15198), {}), ];
     const obj17 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     class G {
       constructor() {
@@ -389,7 +389,7 @@ const memoResult = importAllResult.memo(function QuestDockBackgroundBlurHeader(a
     obj17[3] = tmp17.tertiaryContent;
     const obj18 = { color: null };
     obj18[0] = tmp7(576).colors.INTERACTIVE_TEXT_ACTIVE;
-    obj17[4] = tmp22(tmp(8672).MoreHorizontalIcon, obj18);
+    obj17[4] = tmp22(tmp(8677).MoreHorizontalIcon, obj18);
     items8[2] = tmp22(tmp(5123).PressableOpacity, obj17);
     obj10[1] = items8;
     obj9[3] = tmp18(tmp7(7073), obj10);
@@ -400,7 +400,7 @@ const memoResult = importAllResult.memo(function QuestDockBackgroundBlurHeader(a
     return tmp18(tmp19, obj4);
   }
   tmp22 = callback;
-  tmp23 = callback(tmp7(15161), { animatedStyle: animatedStyle5, animatedLayout: tmp20 });
+  tmp23 = callback(tmp7(15164), { animatedStyle: animatedStyle5, animatedLayout: tmp20 });
 });
 let result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBackgroundBlurHeader.tsx");
 

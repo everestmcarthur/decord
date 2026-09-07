@@ -1,9 +1,9 @@
-// Module ID: 17346
-// Function ID: 17347
+// Module ID: 17349
+// Function ID: 17350
 // Name: handleDeletedEntityIds
 // Dependencies: [5459, 5502, 1957, 2015, 1979, 5277, 3, 7118, 573, 504, 7651, 1241, 11, 2]
 
-// Module 17346 (handleDeletedEntityIds)
+// Module 17349 (handleDeletedEntityIds)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

@@ -1,16 +1,18 @@
 // Module ID: 10467
 // Function ID: 10468
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 10451]
+// Dependencies: [41, 42, 93, 95, 98, 10436, 10439, 10440, 10444]
 
 // Module 10467 (_isNativeReflectConstruct)
-import Filter from "Filter" /* 10451 */;
-import ENUnlikelyFormatFilter from "_classCallCheck" /* 41 */;
+import WEEKDAY_DICTIONARY from "WEEKDAY_DICTIONARY" /* 10436 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10444 */;
+import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_1 from "_possibleConstructorReturn" /* 93 */;
-import closure_2 from "_getPrototypeOf" /* 95 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const ENTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +32,19 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ENUnlikelyFormatFilter {
+const regExp = new RegExp("(this|last|past|next|after|\\+|-)\\s*(" + WEEKDAY_DICTIONARY.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+const regExp1 = new RegExp("(this|last|past|next|after|\\+|-)\\s*(" + WEEKDAY_DICTIONARY.TIME_UNITS_NO_ABBR_PATTERN + ")(?=\\W|$)", "i");
+class ENTimeUnitCasualRelativeFormatParser {
   constructor() {
+    flag = global;
+    if (global === undefined) {
+      flag = true;
+    }
     self = this;
-    tmp = ENUnlikelyFormatFilter(this, ENUnlikelyFormatFilter);
-    tmp2 = closure_2;
-    obj = closure_2(ENUnlikelyFormatFilter);
-    tmp3 = closure_1;
+    tmp = closure_2(this, ENTimeUnitCasualRelativeFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -44,50 +52,38 @@ class ENUnlikelyFormatFilter {
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.allowAbbreviations = flag;
+    return tmp3Result;
   }
 }
-_inherits(ENUnlikelyFormatFilter, Filter.Filter);
+_inherits(ENTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const items = [
   {
-    key: "isValid",
-    value: function isValid(text, text2) {
-      closure_0 = text2;
-      const str2 = text2.text.trim();
-      if (str2 === str3.trim()) {
-        return true;
+    key: "innerPattern",
+    value: function innerPattern() {
+      return this.allowAbbreviations ? regExp : regExp1;
+    }
+  },
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(10436).parseDuration(arg1[2]);
+      if (parseDurationResult) {
+        if ("last" !== formatted) {
+          if ("past" !== formatted) {
+            let reverseDurationResult = parseDurationResult;
+          }
+          const ParsingComponents = tmp2(10440).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+        }
+        reverseDurationResult = tmp2(10439).reverseDuration(parseDurationResult);
       } else {
-        if ("may" === str2.toLowerCase()) {
-          const str4 = text.text;
-          const str5 = text.text.substring(0, text2.index);
-          if (!str6.match(/\b(in)$/i)) {
-            text.debug(() => {
-              console.log("Removing unlikely result: " + closure_0);
-            });
-            return false;
-          }
-          str6 = text.text.substring(0, text2.index).trim();
-        }
-        const formatted = str2.toLowerCase();
-        const endsWithResult = formatted.endsWith("the second");
-        let flag2 = !endsWithResult;
-        if (endsWithResult) {
-          flag2 = false;
-          if (str9.trim().length > 0) {
-            text.debug(() => {
-              console.log("Removing unlikely result: " + closure_0);
-            });
-            flag2 = false;
-          }
-          const str8 = text.text;
-          str9 = text.text.substring(text2.index + text2.text.length);
-        }
-        return flag2;
+        return null;
       }
-      const str = text2.text;
-      str3 = text.text;
     }
   }
 ];
 
-export default _createClass(ENUnlikelyFormatFilter, items);
+export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);

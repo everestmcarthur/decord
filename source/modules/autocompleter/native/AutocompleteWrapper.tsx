@@ -1,12 +1,12 @@
-// Module ID: 12385
-// Function ID: 12386
+// Module ID: 12389
+// Function ID: 12390
 // Name: getStickersItemLayout
-// Dependencies: [32, 19, 17, 7780, 5459, 5277, 5502, 1074, 4999, 10263, 5000, 10424, 1374, 21, 7038, 10425, 4560, 1115, 576, 12386, 1477, 6981, 5682, 504, 4262, 10119, 12388, 12389, 1935, 5686, 10423, 12390, 7334, 10262, 5516, 10333, 12391, 7521, 1894, 7683, 11991, 1609, 4740, 12392, 12393, 9313, 5022, 12231, 4296, 12394, 7523, 12401, 4556, 1114, 8599, 12402, 12403, 2]
+// Dependencies: [32, 19, 17, 7780, 5459, 5277, 5502, 1074, 4999, 10268, 5000, 10429, 1374, 21, 7038, 10430, 4560, 1115, 576, 12390, 1477, 6981, 5682, 504, 4262, 10124, 12392, 12393, 1935, 5686, 10428, 12394, 7334, 10267, 5516, 10338, 12395, 7521, 1894, 7683, 11995, 1609, 4740, 12396, 12397, 9318, 5022, 12235, 4296, 12398, 7523, 12405, 4556, 1114, 8604, 12406, 12407, 2]
 
-// Module 12385 (getStickersItemLayout)
+// Module 12389 (getStickersItemLayout)
 import ThemesDefault from "Themes" /* 576 */;
 import set from "set" /* 1115 */;
-import AutocompleteLabel from "AutocompleteLabel" /* 12386 */;
+import AutocompleteLabel from "AutocompleteLabel" /* 12390 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -16,9 +16,9 @@ import closure_9 from "_handleConnectionOpen" /* 5277 */;
 import closure_10 from "loadSavedGuildStickers" /* 5502 */;
 import ME from "ME" /* 1074 */;
 import { BOOLEAN_CHOICES } from "TRUE_OPTION_NAME" /* 4999 */;
-import AUTOCOMPLETE_ROW_HEIGHT from "AUTOCOMPLETE_ROW_HEIGHT" /* 10263 */;
+import AUTOCOMPLETE_ROW_HEIGHT from "AUTOCOMPLETE_ROW_HEIGHT" /* 10268 */;
 import regExp from "regExp" /* 5000 */;
-import { AutocompleteTypes } from "AutocompleteTypes" /* 10424 */;
+import { AutocompleteTypes } from "AutocompleteTypes" /* 10429 */;
 import { EmojiInteractionPoint } from "set" /* 1374 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

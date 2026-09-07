@@ -1,9 +1,9 @@
-// Module ID: 11965
-// Function ID: 11966
+// Module ID: 11969
+// Function ID: 11970
 // Name: handleTypingStart
 // Dependencies: [502, 1957, 7687, 1074, 1090, 7221, 1272, 573, 504, 2]
 
-// Module 11965 (handleTypingStart)
+// Module 11969 (handleTypingStart)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import setDefault from "set" /* 1090 */;

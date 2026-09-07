@@ -1,15 +1,15 @@
-// Module ID: 13022
-// Function ID: 13023
+// Module ID: 13026
+// Function ID: 13027
 // Name: UserProfileActivityTimebar
-// Dependencies: [19, 17, 21, 4560, 576, 13023, 4556, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 13027, 4556, 2]
 // Exports: default
 
-// Module 13022 (UserProfileActivityTimebar)
+// Module 13026 (UserProfileActivityTimebar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
-import useActivityTimer from "useActivityTimer" /* 13023 */;
-import useActivityTimerDefault from "useActivityTimer" /* 13023 */;
+import useActivityTimer from "useActivityTimer" /* 13027 */;
+import useActivityTimerDefault from "useActivityTimer" /* 13027 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

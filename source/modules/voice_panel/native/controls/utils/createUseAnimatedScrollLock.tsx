@@ -1,10 +1,10 @@
-// Module ID: 12103
-// Function ID: 12104
+// Module ID: 12107
+// Function ID: 12108
 // Name: context
 // Dependencies: [19, 1115, 4296, 2]
 // Exports: createUseAnimatedScrollLock
 
-// Module 12103 (context)
+// Module 12107 (context)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 1115 */;
 

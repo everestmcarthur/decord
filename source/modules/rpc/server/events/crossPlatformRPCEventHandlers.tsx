@@ -1,14 +1,14 @@
-// Module ID: 14519
-// Function ID: 14520
+// Module ID: 14522
+// Function ID: 14523
 // Name: messageEventsValidation
-// Dependencies: [4788, 1915, 1975, 4582, 1957, 2021, 1979, 1908, 4583, 1371, 4579, 4465, 1074, 9557, 9559, 9554, 4771, 14459, 8339, 12, 14464, 1086, 558, 9560, 14520, 14521, 2]
+// Dependencies: [4788, 1915, 1975, 4582, 1957, 2021, 1979, 1908, 4583, 1371, 4579, 4465, 1074, 9562, 9564, 9559, 4771, 14462, 8339, 12, 14467, 1086, 558, 9565, 14523, 14524, 2]
 
-// Module 14519 (messageEventsValidation)
+// Module 14522 (messageEventsValidation)
 import fromStringAll from "fromString" /* 1086 */;
-import prototypeDefault from "prototype" /* 9554 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9559 */;
-import getCapabilitiesForSocketDefault from "getCapabilitiesForSocket" /* 14459 */;
+import prototypeDefault from "prototype" /* 9559 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9562 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9564 */;
+import getCapabilitiesForSocketDefault from "getCapabilitiesForSocket" /* 14462 */;
 import closure_4 from "addApplication" /* 4788 */;
 import closure_5 from "initialize" /* 1915 */;
 import { getGuildIconURL } from "GuildNSFWContentLevel" /* 1975 */;
@@ -258,9 +258,9 @@ obj8[RPC_SCOPE_CONFIG.ANY] = items4;
 obj7[0] = obj8;
 obj7[1] = function handler() {
   return (arg0) => {
-    const obj = { state: callback(9559).getVoiceConnectionState(store.getState()), hostname: store.getHostname(), pings: store.getPings(), average_ping: store.getAveragePing(), last_ping: store.getLastPing() };
+    const obj = { state: callback(9564).getVoiceConnectionState(store.getState()), hostname: store.getHostname(), pings: store.getPings(), average_ping: store.getAveragePing(), last_ping: store.getLastPing() };
     ({ prevState, dispatch } = arg0);
-    const obj2 = callback(9559);
+    const obj2 = callback(9564);
     if (!obj3.isEqual(obj, prevState)) {
       dispatch(obj);
     }
@@ -295,7 +295,7 @@ obj[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    const result = socket(14459).validateEventSubscription(socket, session_id);
+    const result = socket(14462).validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;
       let obj = socket(closure_1_3[17]);
@@ -502,7 +502,7 @@ obj39[1] = function handler() {
       tmp = tmp2;
     }
     if (!tmp) {
-      prevState.dispatch(callback(9560)(obj.currentUser));
+      prevState.dispatch(callback(9565)(obj.currentUser));
     }
     return obj;
   };
@@ -574,7 +574,7 @@ obj45[1] = function handler() {
     }
     let tmp8 = null;
     if (null != application) {
-      tmp8 = callback(14521)(application);
+      tmp8 = callback(14524)(application);
     }
     if (streamerActiveStreamMetadata != null) {
       const sourceName = streamerActiveStreamMetadata.sourceName;

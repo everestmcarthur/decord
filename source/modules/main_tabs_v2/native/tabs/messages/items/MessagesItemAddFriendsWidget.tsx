@@ -1,16 +1,16 @@
-// Module ID: 16098
-// Function ID: 16099
+// Module ID: 16101
+// Function ID: 16102
 // Name: getFriendInviteCode
-// Dependencies: [5, 19, 17, 1074, 21, 13253, 576, 4560, 8378, 4258, 1114, 9820, 7759, 4418, 5123, 4556, 13854, 16099, 2]
+// Dependencies: [5, 19, 17, 1074, 21, 13257, 576, 4560, 8378, 4258, 1114, 9825, 7759, 4418, 5123, 4556, 13857, 16102, 2]
 
-// Module 16098 (getFriendInviteCode)
+// Module 16101 (getFriendInviteCode)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import PressableBase from "PressableBase" /* 5123 */;
-import ButtonBadgeDefault from "ButtonBadge" /* 13253 */;
-import registerAssetDefault from "registerAsset" /* 13854 */;
-import registerAssetDefault2 from "registerAsset" /* 16099 */;
+import ButtonBadgeDefault from "ButtonBadge" /* 13257 */;
+import registerAssetDefault from "registerAsset" /* 13857 */;
+import registerAssetDefault2 from "registerAsset" /* 16102 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -172,7 +172,7 @@ function _handleShare() {
           return obj;
         } else {
           callback = arg1;
-          const obj5 = callback(9820);
+          const obj5 = callback(9825);
           const intl = callback(1114).intl;
           const obj2 = { link: null };
           obj2[0] = callback2(7759)(callback);

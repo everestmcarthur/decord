@@ -1,9 +1,9 @@
-// Module ID: 14539
-// Function ID: 14540
+// Module ID: 14542
+// Function ID: 14543
 // Name: _initialize
 // Dependencies: [502, 1908, 1898, 573, 2]
 
-// Module 14539 (_initialize)
+// Module 14542 (_initialize)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import initializeDefault from "initialize" /* 1898 */;
 import closure_2 from "fetchFingerprint" /* 502 */;

@@ -1,10 +1,10 @@
-// Module ID: 9041
-// Function ID: 9042
+// Module ID: 9046
+// Function ID: 9047
 // Name: IgnoreUserElement
-// Dependencies: [19, 1957, 4209, 1074, 21, 504, 4712, 4740, 9042, 9051, 1114, 6968, 2]
+// Dependencies: [19, 1957, 4209, 1074, 21, 504, 4712, 4740, 9047, 9056, 1114, 6968, 2]
 // Exports: default
 
-// Module 9041 (IgnoreUserElement)
+// Module 9046 (IgnoreUserElement)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import closure_5 from "markAllUserIdListsStale" /* 4209 */;

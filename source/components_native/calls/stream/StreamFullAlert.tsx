@@ -1,16 +1,16 @@
-// Module ID: 17855
-// Function ID: 17856
+// Module ID: 17858
+// Function ID: 17859
 // Name: StreamFullAlert
-// Dependencies: [19, 17, 21, 9110, 1114, 4994, 4556, 17856, 2]
+// Dependencies: [19, 17, 21, 9115, 1114, 4994, 4556, 17859, 2]
 // Exports: default
 
-// Module 17855 (StreamFullAlert)
+// Module 17858 (StreamFullAlert)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import mapped from "mapped" /* 9110 */;
-import registerAssetDefault from "registerAsset" /* 17856 */;
+import mapped from "mapped" /* 9115 */;
+import registerAssetDefault from "registerAsset" /* 17859 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 

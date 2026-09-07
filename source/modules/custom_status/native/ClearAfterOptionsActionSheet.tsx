@@ -1,10 +1,10 @@
-// Module ID: 11201
-// Function ID: 11202
+// Module ID: 11206
+// Function ID: 11207
 // Name: ClearAfterOptionsActionSheet
-// Dependencies: [32, 19, 17, 11115, 21, 4560, 576, 7150, 7149, 1114, 5685, 5688, 11202, 4975, 4527, 2]
+// Dependencies: [32, 19, 17, 11120, 21, 4560, 576, 7150, 7149, 1114, 5685, 5688, 11207, 4975, 4527, 2]
 // Exports: default
 
-// Module 11201 (ClearAfterOptionsActionSheet)
+// Module 11206 (ClearAfterOptionsActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 4975 */;
@@ -14,7 +14,7 @@ import Background from "Background" /* 7150 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { ClearAfterOptions } from "StatusTypes" /* 11115 */;
+import { ClearAfterOptions } from "StatusTypes" /* 11120 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -43,7 +43,7 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.E45wvP);
   obj[2] = initialValue;
-  obj[4] = ClearAfterOptions.map((value) => callback3(callback(5688).TableRadioRow, { value, label: callback2(11202)(value) }, value));
+  obj[4] = ClearAfterOptions.map((value) => callback3(callback(5688).TableRadioRow, { value, label: callback2(11207)(value) }, value));
   const items = [callback2(context.TableRadioGroup, obj), ];
   obj1 = { style: tmp.buttonWrapper, children: null };
   const obj2 = {

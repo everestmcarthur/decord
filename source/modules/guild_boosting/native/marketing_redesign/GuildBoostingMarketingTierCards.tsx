@@ -1,14 +1,14 @@
-// Module ID: 13587
-// Function ID: 13588
+// Module ID: 13591
+// Function ID: 13592
 // Name: TierFeatures
-// Dependencies: [32, 19, 17, 1074, 1373, 21, 8757, 1114, 10114, 12532, 5101, 5097, 10381, 13375, 9371, 4503, 13588, 4560, 576, 13582, 5441, 4296, 4561, 4556, 4495, 4411, 4987, 5123, 4454, 13589, 13591, 4409, 1178, 13593, 13594, 5581, 12564, 2]
+// Dependencies: [32, 19, 17, 1074, 1373, 21, 8762, 1114, 10119, 12536, 5101, 5097, 10386, 13379, 9376, 4503, 13592, 4560, 576, 13586, 5441, 4296, 4561, 4556, 4495, 4411, 4987, 5123, 4454, 13593, 13595, 4409, 1178, 13597, 13598, 5581, 12568, 2]
 // Exports: default
 
-// Module 13587 (TierFeatures)
+// Module 13591 (TierFeatures)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useThemeDefault from "useTheme" /* 4495 */;
-import CONTROL_RESOLUTION from "CONTROL_RESOLUTION" /* 13588 */;
+import CONTROL_RESOLUTION from "CONTROL_RESOLUTION" /* 13592 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -825,9 +825,9 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   const obj9 = { style: tmp.cardFooter, children: null };
   const items5 = [callback2(features(4556).Text, { color: "text-overlay-light", variant: "text-md/semibold", children: stringResult }), ];
   if (isExpanded) {
-    let ChevronLargeDownIcon = tmp7(13589).ChevronLargeUpIcon;
+    let ChevronLargeDownIcon = tmp7(13593).ChevronLargeUpIcon;
   } else {
-    ChevronLargeDownIcon = tmp7(13591).ChevronLargeDownIcon;
+    ChevronLargeDownIcon = tmp7(13595).ChevronLargeDownIcon;
   }
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
   const obj6 = { numSubscriptions: table[tier] };
@@ -883,25 +883,25 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
       obj13[4] = items11;
       items9[1] = tmp13(tmp2Result1, obj13);
       const obj14 = { source: null, style: null };
-      obj14[0] = tmp2(13593);
+      obj14[0] = tmp2(13597);
       const items12 = [, , ];
       ({ sparkleStar: arr14[0], sparkleStarPointed: arr14[1], sparkleStarPointed1: arr14[2] } = tmp);
       obj14[1] = items12;
       items9[2] = tmp13(tmp7(1178).Icon, obj14);
       const obj15 = { source: null, style: null };
-      obj15[0] = tmp2(13593);
+      obj15[0] = tmp2(13597);
       const items13 = [, , ];
       ({ sparkleStar: arr15[0], sparkleStarPointed: arr15[1], sparkleStarPointed2: arr15[2] } = tmp);
       obj15[1] = items13;
       items9[3] = tmp13(tmp7(1178).Icon, obj15);
       const obj16 = { source: null, style: null };
-      obj16[0] = tmp2(13593);
+      obj16[0] = tmp2(13597);
       const items14 = [, , ];
       ({ sparkleStar: arr16[0], sparkleStarPointed: arr16[1], sparkleStarPointed3: arr16[2] } = tmp);
       obj16[1] = items14;
       items9[4] = tmp13(tmp7(1178).Icon, obj16);
       const obj17 = { source: null, style: null };
-      obj17[0] = tmp2(13594);
+      obj17[0] = tmp2(13598);
       const items15 = [, , ];
       ({ sparkleStar: arr17[0], sparkleStarElongated: arr17[1], sparkleStarElongated1: arr17[2] } = tmp);
       obj17[1] = items15;
@@ -983,5 +983,5 @@ export default function GuildBoostingMarketingTierCards(guild) {
     const tier = features.tier;
     return closure_1_9(closure_1_16, { features: features.features, guild: closure_0, isExpanded: closure_2, onCardPress: handleCardPress, tier }, tier);
   });
-  return closure_9(_require(12564).MarketingCardsScroller, obj);
+  return closure_9(_require(12568).MarketingCardsScroller, obj);
 };

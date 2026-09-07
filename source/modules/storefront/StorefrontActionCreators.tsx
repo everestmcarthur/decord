@@ -1,18 +1,18 @@
-// Module ID: 8785
-// Function ID: 8786
+// Module ID: 8790
+// Function ID: 8791
 // Name: shouldFetchStorefrontPromotions
-// Dependencies: [5, 4220, 7232, 8786, 8787, 8788, 1074, 1090, 573, 1272, 7231, 2]
+// Dependencies: [5, 4220, 7232, 8791, 8792, 8793, 1074, 1090, 573, 1272, 7231, 2]
 // Exports: fetchStorefrontPricesForApplicationId, fetchStorefrontPricesForSkuIds, maybeFetchStorefrontPromotions, setStorefrontPromotionIdOverride
 
-// Module 8785 (shouldFetchStorefrontPromotions)
+// Module 8790 (shouldFetchStorefrontPromotions)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import setDefault from "set" /* 1090 */;
 import resetStoreStateDefault from "resetStoreState" /* 7232 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handlePaymentSourceCreateEnd" /* 4220 */;
-import closure_5 from "getPromotionIdOverride" /* 8786 */;
-import closure_6 from "handleReset" /* 8787 */;
-import closure_7 from "parseSkuIds" /* 8788 */;
+import closure_5 from "getPromotionIdOverride" /* 8791 */;
+import closure_6 from "handleReset" /* 8792 */;
+import closure_7 from "parseSkuIds" /* 8793 */;
 import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;

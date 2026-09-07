@@ -1,10 +1,10 @@
-// Module ID: 11453
-// Function ID: 11454
+// Module ID: 11458
+// Function ID: 11459
 // Name: GiftCodeRedeemError
-// Dependencies: [19, 17, 21, 4560, 576, 1484, 7123, 11454, 11455, 4556, 1114, 4975, 4763, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 1484, 7123, 11459, 11460, 4556, 1114, 4975, 4763, 2]
 // Exports: default
 
-// Module 11453 (GiftCodeRedeemError)
+// Module 11458 (GiftCodeRedeemError)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -37,9 +37,9 @@ export default function GiftCodeRedeemError(children) {
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = tmp9(11454);
+    let tmp9Result = tmp9(11459);
   } else {
-    tmp9Result = tmp9(11455);
+    tmp9Result = tmp9(11460);
   }
   const items = [closure_6(closure_3, { source: tmp9Result }), , ];
   obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };

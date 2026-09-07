@@ -1,10 +1,10 @@
-// Module ID: 11722
-// Function ID: 11723
-// Dependencies: [11718, 12, 2]
+// Module ID: 11727
+// Function ID: 11728
+// Dependencies: [11723, 12, 2]
 
-// Module 11722
+// Module 11727
 import set from "set" /* 2 */;
-import buildPlatformPollResources from "buildPlatformPollResources" /* 11718 */;
+import buildPlatformPollResources from "buildPlatformPollResources" /* 11723 */;
 import apply from "apply" /* 12 */;
 
 const memoizeResult = apply.memoize(function buildPollResources(arg0) {

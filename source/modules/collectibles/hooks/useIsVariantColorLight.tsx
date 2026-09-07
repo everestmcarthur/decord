@@ -1,10 +1,10 @@
-// Module ID: 8866
-// Function ID: 8867
+// Module ID: 8871
+// Function ID: 8872
 // Name: useIsVariantColorLight
 // Dependencies: [19, 1091, 2]
 // Exports: default
 
-// Module 8866 (useIsVariantColorLight)
+// Module 8871 (useIsVariantColorLight)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

@@ -1,10 +1,10 @@
-// Module ID: 14524
-// Function ID: 14525
+// Module ID: 14527
+// Function ID: 14528
 // Name: createVoiceSettingsEventHandlers
 // Dependencies: [4465, 1074, 8339, 12, 2]
 // Exports: default
 
-// Module 14524 (createVoiceSettingsEventHandlers)
+// Module 14527 (createVoiceSettingsEventHandlers)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;

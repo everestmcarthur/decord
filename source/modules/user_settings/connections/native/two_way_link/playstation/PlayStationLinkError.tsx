@@ -1,16 +1,16 @@
-// Module ID: 9265
-// Function ID: 9266
+// Module ID: 9270
+// Function ID: 9271
 // Name: PlayStationLinkError
-// Dependencies: [19, 9255, 1074, 21, 1483, 9266, 1114, 9267, 2]
+// Dependencies: [19, 9260, 1074, 21, 1483, 9271, 1114, 9272, 2]
 // Exports: PlayStationLinkError
 
-// Module 9265 (PlayStationLinkError)
+// Module 9270 (PlayStationLinkError)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import useConnectRetry from "useConnectRetry" /* 9266 */;
-import TwoWayLinkError from "TwoWayLinkError" /* 9267 */;
-import { PlayStationLinkModalScenes as closure_2 } from "PlayStationLinkModalScenes" /* 9255 */;
+import useConnectRetry from "useConnectRetry" /* 9271 */;
+import TwoWayLinkError from "TwoWayLinkError" /* 9272 */;
+import { PlayStationLinkModalScenes as closure_2 } from "PlayStationLinkModalScenes" /* 9260 */;
 import { AbortCodes } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 

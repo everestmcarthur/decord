@@ -1,9 +1,9 @@
-// Module ID: 12414
-// Function ID: 12415
+// Module ID: 12418
+// Function ID: 12419
 // Name: MAX_ACCOUNTS
 // Dependencies: [2]
 
-// Module 12414 (MAX_ACCOUNTS)
+// Module 12418 (MAX_ACCOUNTS)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/multi_account/Constants.tsx");

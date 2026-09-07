@@ -1,20 +1,19 @@
 // Module ID: 8505
 // Function ID: 8506
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8506, 8491, 8492]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8506, 8508, 8510, 8499, 8512, 8514, 8495]
 
 // Module 8505 (_isNativeReflectConstruct)
-import noopDefault from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8492 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8506 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_possibleConstructorReturn" /* 93 */;
-import closure_5 from "_getPrototypeOf" /* 95 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8495 */;
+import closure_2 from "_classCallCheck" /* 41 */;
+import closure_3 from "_possibleConstructorReturn" /* 93 */;
+import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import { jsx } from "jsxProd" /* 21 */;
+import closure_5 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-const FeOffset = arg1;
+const FeDropShadow = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,14 +33,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopDefault;
-class FeOffset {
+({ jsx: closure_6, jsxs: error } = jsxProd);
+class FeDropShadow {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeOffset);
-    tmp2 = closure_5;
-    obj = closure_5(FeOffset);
-    tmp3 = closure_4;
+    tmp = closure_2(this, FeDropShadow);
+    tmp2 = closure_4;
+    obj = closure_4(FeDropShadow);
+    tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -55,33 +54,36 @@ class FeOffset {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(FeOffset, _isNativeReflectConstructDefault);
+_inheritsDefault(FeDropShadow, _isNativeReflectConstructDefault);
 let obj = {
   key: "render",
   value: function render() {
     const self = this;
-    const merged = Object.assign(this.props);
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp = __INTERNAL_VIEW_CONFIGDefault;
-    const merged1 = Object.assign(self(8491).extractFilter(this.props));
-    const obj2 = self(8491);
-    const merged2 = Object.assign(self(8491).extractIn(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const props = this.props;
+    const _in = props.in;
+    let str = "SourceGraphic";
+    if (undefined !== _in) {
+      str = _in;
+    }
+    let obj = { children: null };
+    ({ dx, dy, result } = props);
+    const items = [callback3(FeDropShadow(8506), { in: str, stdDeviation: props.stdDeviation }), callback3(FeDropShadow(8508), { dx, dy, result: "offsetblur" }), , , ];
+    obj = { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity };
+    items[2] = callback3(FeDropShadow(8510), obj);
+    items[3] = callback3(FeDropShadow(8499), { in2: "offsetblur", operator: "in" });
+    obj = { result, children: null };
+    const items1 = [callback3(FeDropShadow(8514), {}), callback3(FeDropShadow(8514), { in: str })];
+    obj[1] = items1;
+    items[4] = callback4(FeDropShadow(8512), obj);
+    obj[0] = items;
+    return callback4(React.Fragment, obj);
   }
 };
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeOffset, items);
-importDefaultResultResult.displayName = "FeOffset";
+let items = [obj];
+const importDefaultResultResult = importDefaultResult(FeDropShadow, items);
+importDefaultResultResult.displayName = "FeDropShadow";
 obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.dx = 0;
-obj.dy = 0;
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

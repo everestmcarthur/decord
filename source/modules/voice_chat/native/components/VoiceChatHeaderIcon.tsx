@@ -1,17 +1,17 @@
-// Module ID: 10000
-// Function ID: 10001
+// Module ID: 10005
+// Function ID: 10006
 // Name: VoiceChatCallScreenHeaderIconInner
-// Dependencies: [19, 17, 4575, 1074, 21, 4560, 576, 5682, 504, 9924, 12, 4271, 5123, 1178, 2]
+// Dependencies: [19, 17, 4575, 1074, 21, 4560, 576, 5682, 504, 9929, 12, 4271, 5123, 1178, 2]
 // Exports: VoiceChatCallScreenHeaderIcon, default, useVoiceChatMentions
 
-// Module 10000 (VoiceChatCallScreenHeaderIconInner)
+// Module 10005 (VoiceChatCallScreenHeaderIconInner)
 import applyDefault from "apply" /* 12 */;
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import ManaContext from "ManaContext" /* 4271 */;
 import PressableBase from "PressableBase" /* 5123 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9924 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9929 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "generateOldThreadCutoff" /* 4575 */;
 import { ThemeTypes } from "ME" /* 1074 */;

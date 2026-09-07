@@ -1,10 +1,10 @@
-// Module ID: 12746
-// Function ID: 12747
+// Module ID: 12750
+// Function ID: 12751
 // Name: setNewUser
 // Dependencies: [573, 2]
 // Exports: setNewUser, setNewUserFlowCompleted
 
-// Module 12746 (setNewUser)
+// Module 12750 (setNewUser)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 

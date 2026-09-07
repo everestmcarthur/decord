@@ -1,17 +1,17 @@
-// Module ID: 12747
-// Function ID: 12748
+// Module ID: 12751
+// Function ID: 12752
 // Name: DiscoverabilityLandingScene
-// Dependencies: [19, 17, 12677, 1371, 1074, 21, 4560, 576, 5682, 1483, 504, 12684, 1093, 12704, 12748, 12697, 1250, 7000, 1114, 2]
+// Dependencies: [19, 17, 12681, 1371, 1074, 21, 4560, 576, 5682, 1483, 504, 12688, 1093, 12708, 12752, 12701, 1250, 7000, 1114, 2]
 
-// Module 12747 (DiscoverabilityLandingScene)
+// Module 12751 (DiscoverabilityLandingScene)
 import ThemesDefault from "Themes" /* 576 */;
 import keys from "keys" /* 1093 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import NavigationStack from "NavigationStack" /* 7000 */;
-import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 12697 */;
+import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 12701 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useContactSyncModalStore } from "ContactSyncModes" /* 12677 */;
+import { useContactSyncModalStore } from "ContactSyncModes" /* 12681 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -66,9 +66,9 @@ function DiscoverabilityNameScene() {
   }, items);
   let obj = { style: tmp.container, children: null };
   callback = React.useCallback((arg0) => {
-    const result = allowPhone(12704).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(12704);
-    const result1 = allowPhone(12704).closeDiscoverabilityModal(false);
+    const result = allowPhone(12708).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(12708);
+    const result1 = allowPhone(12708).closeDiscoverabilityModal(false);
   }, []);
   obj = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();

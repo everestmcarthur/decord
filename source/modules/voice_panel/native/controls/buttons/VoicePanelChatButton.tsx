@@ -1,10 +1,10 @@
-// Module ID: 17192
-// Function ID: 17193
+// Module ID: 17195
+// Function ID: 17196
 // Name: ChatButton
-// Dependencies: [19, 21, 4560, 576, 12272, 17184, 17130, 17171, 17185, 1114, 17193, 5589, 5071, 2]
+// Dependencies: [19, 21, 4560, 576, 12276, 17187, 17133, 17174, 17188, 1114, 17196, 5589, 5071, 2]
 // Exports: default
 
-// Module 17192 (ChatButton)
+// Module 17195 (ChatButton)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;

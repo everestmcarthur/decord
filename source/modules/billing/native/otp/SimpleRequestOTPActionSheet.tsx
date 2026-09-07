@@ -1,12 +1,12 @@
-// Module ID: 15693
-// Function ID: 15694
+// Module ID: 15696
+// Function ID: 15697
 // Name: GiftPurchaseSKUView
-// Dependencies: [5, 32, 19, 17, 1371, 5510, 1074, 1373, 21, 3, 1611, 10699, 504, 11042, 7541, 1885, 9367, 11014, 4527, 4905, 7554, 4973, 4556, 5607, 4975, 10829, 1256, 10663, 7150, 10822, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 5510, 1074, 1373, 21, 3, 1611, 10704, 504, 11047, 7541, 1885, 9372, 11019, 4527, 4905, 7554, 4973, 4556, 5607, 4975, 10834, 1256, 10668, 7150, 10827, 2]
 // Exports: default
 
-// Module 15693 (GiftPurchaseSKUView)
+// Module 15696 (GiftPurchaseSKUView)
 import timestampDefault from "timestamp" /* 3 */;
-import NativePaymentContextProvider from "NativePaymentContextProvider" /* 10822 */;
+import NativePaymentContextProvider from "NativePaymentContextProvider" /* 10827 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -148,12 +148,12 @@ function GiftPurchaseSKUView(selectedSkuId) {
   dependencyMap = tmp4[1];
   currentUser = memo1.getCurrentUser();
   callback = React.useRef({});
-  obj1 = selectedSkuId(10699);
+  obj1 = selectedSkuId(10704);
   const giftStyle = obj1.useNativeGiftContext().giftStyle;
   let obj2 = selectedSkuId(504);
   let items = [closure_8];
   const stateFromStores = obj2.useStateFromStores(items, () => closure_8.get(selectedSkuId));
-  let obj3 = selectedSkuId(11042);
+  let obj3 = selectedSkuId(11047);
   const fetchCollectiblesProduct = obj3.useFetchCollectiblesProduct(selectedSkuId);
   const product = fetchCollectiblesProduct.product;
   React = product;
@@ -315,7 +315,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
     },
     giftParams: { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } }
   };
-  closure_8 = tmp(11014)(obj);
+  closure_8 = tmp(11019)(obj);
   const items5 = [product];
   [tmp16, tmp17] = callback(obj.useMemo(() => {
     if (null == c5) {
@@ -359,7 +359,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   items7[1] = closure_12(selectedSkuId(5607).Card, obj3);
   const obj5 = { children: null };
   const items8 = ["Select style: ", giftStyle];
-  const items9 = [closure_11(selectedSkuId(4556).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items8 }), closure_12(first(10829), {})];
+  const items9 = [closure_11(selectedSkuId(4556).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items8 }), closure_12(first(10834), {})];
   obj5[0] = items9;
   items7[2] = closure_11(selectedSkuId(5607).Card, obj5);
   obj1[2] = items7;
@@ -388,7 +388,7 @@ function SimpleRequestOTPActionSheet(giftMessage) {
         obj[1] = giftRecipientId;
         obj[2] = giftMessage.giftMessage;
         obj[3] = callback2(GiftPurchaseSKUView, obj);
-        let tmp6Result = callback2(tmp(10699).NativeGiftContextProvider, obj);
+        let tmp6Result = callback2(tmp(10704).NativeGiftContextProvider, obj);
         let tmp8 = callback2;
       }
       obj1 = { children: null };

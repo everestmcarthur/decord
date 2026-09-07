@@ -1,10 +1,10 @@
-// Module ID: 17698
-// Function ID: 17699
+// Module ID: 17701
+// Function ID: 17702
 // Name: EarningPreview
-// Dependencies: [19, 17, 15205, 21, 4560, 576, 4411, 4495, 4556, 1114, 5587, 17699, 17700, 17701, 17702, 17703, 17704, 17705, 17706, 2]
+// Dependencies: [19, 17, 15208, 21, 4560, 576, 4411, 4495, 4556, 1114, 5587, 17702, 17703, 17704, 17705, 17706, 17707, 17708, 17709, 2]
 // Exports: default
 
-// Module 17698 (EarningPreview)
+// Module 17701 (EarningPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -12,14 +12,14 @@ import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import Text from "Text" /* 4556 */;
 import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 17699 */;
-import registerAssetDefault2 from "registerAsset" /* 17702 */;
-import registerAssetDefault3 from "registerAsset" /* 17703 */;
-import registerAssetDefault4 from "registerAsset" /* 17704 */;
-import registerAssetDefault5 from "registerAsset" /* 17705 */;
-import registerAssetDefault6 from "registerAsset" /* 17706 */;
+import registerAssetDefault from "registerAsset" /* 17702 */;
+import registerAssetDefault2 from "registerAsset" /* 17705 */;
+import registerAssetDefault3 from "registerAsset" /* 17706 */;
+import registerAssetDefault4 from "registerAsset" /* 17707 */;
+import registerAssetDefault5 from "registerAsset" /* 17708 */;
+import registerAssetDefault6 from "registerAsset" /* 17709 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 15205 */;
+import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "MAX_SUBSCRIPTION_TIERS" /* 15208 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -69,9 +69,9 @@ function ConsistentEarningBenefit() {
   ({ horizontalContainer: arr2[0], benefitAvatars: arr2[1] } = tmp4);
   const tmp3 = useThemeDefault();
   if (obj4.isThemeDark(tmp3)) {
-    let tmpResult = tmp(17700);
+    let tmpResult = tmp(17703);
   } else {
-    tmpResult = tmp(17701);
+    tmpResult = tmp(17704);
   }
   const items2 = [callback(BenefitAvatar, { avatarSource: tmpResult }), , ];
   obj4 = AccessibilityAnnouncer;

@@ -1,10 +1,10 @@
-// Module ID: 11726
-// Function ID: 11727
+// Module ID: 11731
+// Function ID: 11732
 // Name: _submitPollVote
 // Dependencies: [5, 1074, 1272, 4461, 2]
 // Exports: endPollEarly, submitPollVote
 
-// Module 11726 (_submitPollVote)
+// Module 11731 (_submitPollVote)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 1074 */;
 

@@ -1,19 +1,19 @@
-// Module ID: 15006
-// Function ID: 15007
+// Module ID: 15009
+// Function ID: 15010
 // Name: BountiesScrollPromptFooterContent
-// Dependencies: [19, 17, 4552, 5444, 21, 4560, 576, 4561, 4564, 504, 1611, 4296, 4271, 15007, 15008, 9969, 2]
+// Dependencies: [19, 17, 4552, 5444, 21, 4560, 576, 4561, 4564, 504, 1611, 4296, 4271, 15010, 15011, 9974, 2]
 // Exports: default
 
-// Module 15006 (BountiesScrollPromptFooterContent)
+// Module 15009 (BountiesScrollPromptFooterContent)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4561 */;
 import timingNone from "timingNone" /* 4564 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9969 */;
-import apexExperiment from "apexExperiment" /* 15007 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 15008 */;
+import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9974 */;
+import apexExperiment from "apexExperiment" /* 15010 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 15011 */;
 import closure_3 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;

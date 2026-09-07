@@ -1,10 +1,10 @@
-// Module ID: 9502
-// Function ID: 9503
+// Module ID: 9507
+// Function ID: 9508
 // Name: useIsActivitiesEnabledForCurrentPlatform
 // Dependencies: [4801, 2]
 // Exports: getIsActivitiesEnabledForCurrentPlatform, useIsActivitiesEnabledForCurrentPlatform
 
-// Module 9502 (useIsActivitiesEnabledForCurrentPlatform)
+// Module 9507 (useIsActivitiesEnabledForCurrentPlatform)
 import set from "set" /* 2 */;
 import isTablet from "isTablet" /* 4801 */;
 

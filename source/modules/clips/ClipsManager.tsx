@@ -1,9 +1,9 @@
-// Module ID: 17803
-// Function ID: 17804
+// Module ID: 17806
+// Function ID: 17807
 // Name: handleRTCConnectionState
-// Dependencies: [5, 4605, 502, 1908, 4583, 4599, 1914, 5132, 1074, 4602, 7118, 13675, 4615, 4612, 1242, 1935, 573, 13676, 4182, 1115, 13674, 2]
+// Dependencies: [5, 4605, 502, 1908, 4583, 4599, 1914, 5132, 1074, 4602, 7118, 13679, 4615, 4612, 1242, 1935, 573, 13680, 4182, 1115, 13678, 2]
 
-// Module 17803 (handleRTCConnectionState)
+// Module 17806 (handleRTCConnectionState)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import set from "set" /* 1115 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
@@ -12,9 +12,9 @@ import setDefault from "set" /* 4182 */;
 import isStreamKeyAll from "isStreamKey" /* 4612 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
 import initializeDefault from "initialize" /* 7118 */;
-import isClipsEnabled from "isClipsEnabled" /* 13674 */;
-import apexExperiment from "apexExperiment" /* 13675 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13676 */;
+import isClipsEnabled from "isClipsEnabled" /* 13678 */;
+import apexExperiment from "apexExperiment" /* 13679 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13680 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo" /* 4605 */;
 import closure_6 from "fetchFingerprint" /* 502 */;

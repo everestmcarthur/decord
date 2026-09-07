@@ -1,17 +1,17 @@
-// Module ID: 16515
-// Function ID: 16516
+// Module ID: 16518
+// Function ID: 16519
 // Name: ExploreServersRow
-// Dependencies: [5, 32, 19, 17, 21, 4296, 4556, 16452, 576, 8351, 16469, 16465, 4418, 4561, 4262, 13011, 1114, 4975, 16491, 4987, 1093, 672, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4296, 4556, 16455, 576, 8351, 16472, 16468, 4418, 4561, 4262, 13015, 1114, 4975, 16494, 4987, 1093, 672, 2]
 // Exports: default
 
-// Module 16515 (ExploreServersRow)
+// Module 16518 (ExploreServersRow)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16452 */;
+import createICYMIStyles from "createICYMIStyles" /* 16455 */;
 import importDefaultResult from "module_4296" /* 4296 */;
 
 const require = arg1;
@@ -100,7 +100,7 @@ export default function ExploreServersRow(visible) {
             v0 = 1;
             dependencyMap = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = closure_1_0(16469).maybeFetchGuildDiscoveryCategories();
+            obj2[0] = closure_1_0(16472).maybeFetchGuildDiscoveryCategories();
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -249,7 +249,7 @@ export default function ExploreServersRow(visible) {
   let obj2 = { children: null };
   obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.textContainer, children: null };
-  obj5 = { style: items1, children: callback3(visible(13011).FlashIcon, obj6) };
+  obj5 = { style: items1, children: callback3(visible(13015).FlashIcon, obj6) };
   items1 = [tmp.iconWrapper, animatedStyle];
   const items2 = [callback3(sharedValue(4296).View, obj5), , ];
   obj7 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: items3, children: null };
@@ -279,7 +279,7 @@ export default function ExploreServersRow(visible) {
   obj9[1] = items6;
   items5[1] = callback4(View, obj9);
   obj3[1] = items5;
-  const items7 = [callback4(View, obj3), callback3(visible(16491).Separator, {}), ];
+  const items7 = [callback4(View, obj3), callback3(visible(16494).Separator, {}), ];
   const obj12 = { style: tmp.gradient, start: visible(1093).VerticalGradient.START, end: visible(1093).VerticalGradient.END, colors: null, pointerEvents: "none" };
   obj6 = { size: "custom", style: tmp.icon, color: "background-brand" };
   const tmp11 = sharedValue(4987);

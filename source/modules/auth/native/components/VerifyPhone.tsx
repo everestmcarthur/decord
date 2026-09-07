@@ -1,15 +1,15 @@
-// Module ID: 15974
-// Function ID: 15975
+// Module ID: 15977
+// Function ID: 15978
 // Name: VerifyPhone
-// Dependencies: [5, 32, 19, 15946, 15947, 1074, 21, 15943, 15962, 4992, 7045, 1114, 7079, 15975, 7080, 2]
+// Dependencies: [5, 32, 19, 15949, 15950, 1074, 21, 15946, 15965, 4992, 7045, 1114, 7079, 15978, 7080, 2]
 // Exports: default
 
-// Module 15974 (VerifyPhone)
+// Module 15977 (VerifyPhone)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
-import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore" /* 15946 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15947 */;
+import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore" /* 15949 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15950 */;
 import { Links } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -35,9 +35,9 @@ export default function VerifyPhone(phone) {
   let tmp2 = callback(React.useState(null), 2);
   [tmp5, c6] = callback(React.useState(false), 2);
   callback2 = React.useRef(false);
-  context = React.useContext(_require(15943).TrackRegistrationContext);
+  context = React.useContext(_require(15946).TrackRegistrationContext);
   const tmp4 = callback(React.useState(false), 2);
-  onPhoneTokenReceived(15962)(callback2(sourceState));
+  onPhoneTokenReceived(15965)(callback2(sourceState));
   const items = [context];
   const effect = React.useEffect(() => {
     if (_undefined()) {
@@ -204,7 +204,7 @@ export default function VerifyPhone(phone) {
     return tmp2;
   }, items3);
   let obj = { title, description, error: tmp3, onCodeEntered: callback, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true };
-  const tmp7 = onPhoneTokenReceived(15962);
+  const tmp7 = onPhoneTokenReceived(15965);
   obj[4] = _require(7080).CodeType.NUMERIC;
   obj[5] = memo;
   obj[6] = tmp5;

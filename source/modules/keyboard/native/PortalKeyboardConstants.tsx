@@ -1,9 +1,9 @@
-// Module ID: 12036
-// Function ID: 12037
+// Module ID: 12040
+// Function ID: 12041
 // Name: KEYBOARD_ANIMATION_DURATION
 // Dependencies: [6627, 2]
 
-// Module 12036 (KEYBOARD_ANIMATION_DURATION)
+// Module 12040 (KEYBOARD_ANIMATION_DURATION)
 import set from "set" /* 2 */;
 import BottomSheetModal from "BottomSheetModal" /* 6627 */;
 

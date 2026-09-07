@@ -224,7 +224,7 @@ function _initiateAgeVerification() {
   }
   return applyArgumentsResult;
 }
-function initiateAgeVerificationV2(Icon, arg1) {
+function initiateAgeVerificationV2() {
   const self = this;
   const apply = _initiateAgeVerificationV.apply;
   if (typeof apply === "unknown") {

@@ -1,14 +1,14 @@
-// Module ID: 9448
-// Function ID: 9449
+// Module ID: 9453
+// Function ID: 9454
 // Name: disconnectRemote
-// Dependencies: [5, 4583, 4578, 4577, 1074, 1242, 573, 4904, 1114, 9092, 9449, 1272, 1232, 9450, 9451, 9454, 2]
+// Dependencies: [5, 4583, 4578, 4577, 1074, 1242, 573, 4904, 1114, 9097, 9454, 1272, 1232, 9455, 9456, 9459, 2]
 // Exports: connectToRemote, fetchDevices, persistSelectedDeviceId, remoteAudioSettingsUpdate, remoteDisconnect, remoteVoiceStateUpdate, transferToPlayStation, waitForSession
 
-// Module 9448 (disconnectRemote)
+// Module 9453 (disconnectRemote)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import sendRequest from "sendRequest" /* 1272 */;
-import snapVolumeToDefault from "snapVolumeToDefault" /* 9092 */;
+import snapVolumeToDefault from "snapVolumeToDefault" /* 9097 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createRTCConnection" /* 4583 */;
 import closure_5 from "handleUpdate" /* 4578 */;

@@ -1,10 +1,10 @@
-// Module ID: 8753
-// Function ID: 8754
+// Module ID: 8758
+// Function ID: 8759
 // Name: maybeCreateMessageRecordFromSnapshot
 // Dependencies: [7302, 2]
 // Exports: default
 
-// Module 8753 (maybeCreateMessageRecordFromSnapshot)
+// Module 8758 (maybeCreateMessageRecordFromSnapshot)
 import set from "set" /* 2 */;
 import isForwardMessageDefault from "isForwardMessage" /* 7302 */;
 

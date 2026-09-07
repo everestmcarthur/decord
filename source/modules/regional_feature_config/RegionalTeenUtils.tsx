@@ -1,10 +1,10 @@
-// Module ID: 12419
-// Function ID: 12420
+// Module ID: 12423
+// Function ID: 12424
 // Name: set
-// Dependencies: [19, 4775, 4778, 504, 10959, 8644, 2]
+// Dependencies: [19, 4775, 4778, 504, 10964, 8649, 2]
 // Exports: useIsTeenInCountrySet, useIsTeenInStrictCountry, useUserCountryCode
 
-// Module 12419 (set)
+// Module 12423 (set)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "getRegionalFeatureConfig" /* 4775 */;
 import set from "set" /* 2 */;
@@ -38,7 +38,7 @@ export const useIsTeenInCountrySet = function useIsTeenInCountrySet(set) {
     }
   }, items1);
   const obj = stateFromStores(504);
-  let userIsTeen = stateFromStores(8644).useUserIsTeen();
+  let userIsTeen = stateFromStores(8649).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }
@@ -59,7 +59,7 @@ export const useIsTeenInStrictCountry = function useIsTeenInStrictCountry() {
   }, items1);
   let obj = set;
   const obj2 = stateFromStores(504);
-  let userIsTeen = stateFromStores(8644).useUserIsTeen();
+  let userIsTeen = stateFromStores(8649).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }

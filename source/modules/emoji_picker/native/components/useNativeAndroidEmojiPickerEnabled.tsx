@@ -1,10 +1,10 @@
-// Module ID: 10292
-// Function ID: 10293
+// Module ID: 10297
+// Function ID: 10298
 // Name: useNativeAndroidEmojiPickerEnabled
 // Dependencies: [502, 1115, 2003, 2]
 // Exports: default
 
-// Module 10292 (useNativeAndroidEmojiPickerEnabled)
+// Module 10297 (useNativeAndroidEmojiPickerEnabled)
 import set from "set" /* 1115 */;
 import databaseNameDefault from "databaseName" /* 2003 */;
 import closure_3 from "fetchFingerprint" /* 502 */;

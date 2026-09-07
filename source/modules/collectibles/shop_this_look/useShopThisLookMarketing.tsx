@@ -1,10 +1,10 @@
-// Module ID: 13105
-// Function ID: 13106
+// Module ID: 13109
+// Function ID: 13110
 // Name: useShopThisLookMarketing
 // Dependencies: [32, 8216, 7388, 1943, 2]
 // Exports: useShopThisLookMarketing
 
-// Module 13105 (useShopThisLookMarketing)
+// Module 13109 (useShopThisLookMarketing)
 import DismissibleContent from "DismissibleContent" /* 1943 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7388 */;
 import useEquippedCollectibleSkuIds from "useEquippedCollectibleSkuIds" /* 8216 */;

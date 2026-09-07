@@ -1,12 +1,12 @@
-// Module ID: 12461
-// Function ID: 12462
-// Dependencies: [19, 2023, 21, 12462, 12448, 11853, 1114, 2]
+// Module ID: 12465
+// Function ID: 12466
+// Dependencies: [19, 2023, 21, 12466, 12452, 11858, 1114, 2]
 
-// Module 12461
+// Module 12465
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 11853 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12448 */;
-import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12462 */;
+import ClockWarningIcon from "ClockWarningIcon" /* 11858 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12452 */;
+import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12466 */;
 import { GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK as closure_3 } from "getFriendlyDurationString" /* 2023 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;

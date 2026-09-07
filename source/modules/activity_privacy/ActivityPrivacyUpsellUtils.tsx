@@ -1,10 +1,10 @@
-// Module ID: 14851
-// Function ID: 14852
+// Module ID: 14854
+// Function ID: 14855
 // Name: computeAffectedGuilds
 // Dependencies: [5509, 4480, 1979, 5438, 1187, 6995, 1114, 1935, 2]
 // Exports: applyBulkGuildRestrictionChange, computeProfileToActivityUpsell, getActivityRestrictionSettingName, getPermissiveness, getProfileToActivityUpsellStrings, getUpsellStrings, profileVisibilityToActivityRestriction, sortGuildIdsByFrecency
 
-// Module 14851 (computeAffectedGuilds)
+// Module 14854 (computeAffectedGuilds)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import create from "create" /* 1187 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;

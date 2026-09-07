@@ -1,17 +1,17 @@
-// Module ID: 12698
-// Function ID: 12699
+// Module ID: 12702
+// Function ID: 12703
 // Name: SuggestedFriendsSectionHeader
-// Dependencies: [32, 19, 17, 1074, 12699, 21, 4560, 576, 5682, 4982, 4556, 4404, 1396, 5604, 1178, 1114, 4262, 4409, 11, 8593, 8874, 4987, 1093, 4975, 1242, 2]
+// Dependencies: [32, 19, 17, 1074, 12703, 21, 4560, 576, 5682, 4982, 4556, 4404, 1396, 5604, 1178, 1114, 4262, 4409, 11, 8598, 8879, 4987, 1093, 4975, 1242, 2]
 // Exports: default
 
-// Module 12698 (SuggestedFriendsSectionHeader)
+// Module 12702 (SuggestedFriendsSectionHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
-import { SuggestedFriendSource } from "SuggestedFriendSource" /* 12699 */;
+import { SuggestedFriendSource } from "SuggestedFriendSource" /* 12703 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -181,7 +181,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   obj[0] = obj1;
   obj[1] = memo;
   obj[2] = callback1;
-  const items5 = [callback(friendSuggestions(8874).FlashList, obj), , ];
+  const items5 = [callback(friendSuggestions(8879).FlashList, obj), , ];
   obj2 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
   const someResult = keys.some((arg0) => first[arg0]);
   obj2[1] = friendSuggestions(1093).VerticalGradient.START;

@@ -1,17 +1,17 @@
-// Module ID: 12006
-// Function ID: 12007
+// Module ID: 12010
+// Function ID: 12011
 // Name: GIFIcon
-// Dependencies: [32, 19, 17, 21, 4560, 576, 1178, 12007, 12008, 11245, 4556, 1477, 1369, 12009, 7275, 7897, 12013, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 1178, 12011, 12012, 11250, 4556, 1477, 1369, 12013, 7275, 7897, 12017, 2]
 // Exports: default
 
-// Module 12006 (GIFIcon)
+// Module 12010 (GIFIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
 import Text from "Text" /* 4556 */;
-import registerAssetDefault from "registerAsset" /* 11245 */;
-import registerAssetDefault2 from "registerAsset" /* 12007 */;
-import registerAssetDefault3 from "registerAsset" /* 12008 */;
+import registerAssetDefault from "registerAsset" /* 11250 */;
+import registerAssetDefault2 from "registerAsset" /* 12011 */;
+import registerAssetDefault3 from "registerAsset" /* 12012 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

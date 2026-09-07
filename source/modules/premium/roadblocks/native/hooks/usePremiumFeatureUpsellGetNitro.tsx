@@ -1,10 +1,10 @@
-// Module ID: 9967
-// Function ID: 9968
+// Module ID: 9972
+// Function ID: 9973
 // Name: usePremiumFeatureUpsellGetNitro
 // Dependencies: [32, 19, 4224, 7450, 1373, 1074, 7162, 7422, 4884, 8062, 4258, 1114, 4425, 2]
 // Exports: default
 
-// Module 9967 (usePremiumFeatureUpsellGetNitro)
+// Module 9972 (usePremiumFeatureUpsellGetNitro)
 import contextDefault from "context" /* 7162 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;

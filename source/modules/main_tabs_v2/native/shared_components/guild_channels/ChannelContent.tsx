@@ -1,14 +1,14 @@
-// Module ID: 16660
-// Function ID: 16661
+// Module ID: 16663
+// Function ID: 16664
 // Name: ChannelContentComponent
-// Dependencies: [19, 17, 10118, 4742, 21, 4560, 1115, 10121, 5062, 16661, 5095, 8588, 16118, 4556, 2]
+// Dependencies: [19, 17, 10123, 4742, 21, 4560, 1115, 10126, 5062, 16664, 5095, 8593, 16121, 4556, 2]
 // Exports: renderChannelContent
 
-// Module 16660 (ChannelContentComponent)
+// Module 16663 (ChannelContentComponent)
 import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
-import getLayoutStyles from "getLayoutStyles" /* 10121 */;
-import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 16118 */;
-import _modDef16661 from "module_16661" /* 16661 */;
+import getLayoutStyles from "getLayoutStyles" /* 10126 */;
+import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 16121 */;
+import _modDef16664 from "module_16664" /* 16664 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
@@ -60,7 +60,7 @@ function ChannelContentComponent(arg0) {
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
   obj3[5] = layout;
-  const items1 = [closure_6(_modDef16661, obj3), ];
+  const items1 = [closure_6(_modDef16664, obj3), ];
   let tmp12Result = tmp10Result;
   if (!tmp10Result) {
     tmp12Result = isNSFWResult;
@@ -88,7 +88,7 @@ function ChannelContentComponent(arg0) {
     if (isNSFWResult) {
       const obj7 = { size: "xxs", color: "icon-muted", style: null };
       obj7[2] = tmp.channelTraitIcon;
-      isNSFWResult = tmp10(tmp2(8588).WarningIcon, obj7);
+      isNSFWResult = tmp10(tmp2(8593).WarningIcon, obj7);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {

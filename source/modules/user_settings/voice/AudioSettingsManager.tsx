@@ -1,14 +1,14 @@
-// Module ID: 17319
-// Function ID: 17320
+// Module ID: 17322
+// Function ID: 17323
 // Name: handleConnectionOpen
-// Dependencies: [32, 4577, 5012, 502, 1908, 4585, 9093, 11, 1187, 510, 1940, 9092, 12, 14071, 9448, 7118, 2]
+// Dependencies: [32, 4577, 5012, 502, 1908, 4585, 9098, 11, 1187, 510, 1940, 9097, 12, 14074, 9453, 7118, 2]
 
-// Module 17319 (handleConnectionOpen)
+// Module 17322 (handleConnectionOpen)
 import Storage2 from "Storage" /* 510 */;
 import updateUserGuildSettings from "updateUserGuildSettings" /* 1940 */;
 import initializeDefault from "initialize" /* 7118 */;
-import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9093 */;
-import getPendingAudioSettings from "getPendingAudioSettings" /* 14071 */;
+import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9098 */;
+import getPendingAudioSettings from "getPendingAudioSettings" /* 14074 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "set" /* 4577 */;
 import closure_5 from "handleSoundCreateOrUpdate" /* 5012 */;
@@ -37,7 +37,7 @@ function handleConnectionOpen() {
         let tmp8 = tmp5[1];
         let tmp9 = callback;
         let tmp10 = dependencyMap;
-        let obj = callback(9092);
+        let obj = callback(9097);
         let result = obj.coerceAudioContextForProto(first);
         if (null != result) {
           let tmp52 = result;
@@ -82,7 +82,7 @@ function handleConnectionOpen() {
             let merged = Object.assign(obj[first1]);
             let tmp31 = callback;
             let tmp32 = dependencyMap;
-            let obj4 = callback(9092);
+            let obj4 = callback(9097);
             let tmp33 = first;
             obj1.volume = obj4.snapVolumeToDefault(tmp25[1], tmp7);
             obj[first1] = obj1;

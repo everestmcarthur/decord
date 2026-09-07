@@ -145,7 +145,7 @@ const forwardRefResult = importAllResult.forwardRef(function PlatformPressableIn
   if (!disabled) {
     obj1 = {};
     const merged3 = Object.assign(hoverEffect);
-    tmp13 = callback2(f36956, obj1);
+    tmp13 = callback2(f36959, obj1);
   }
   const items3 = [tmp13, children];
   obj.children = items3;
@@ -153,7 +153,7 @@ const forwardRefResult = importAllResult.forwardRef(function PlatformPressableIn
 });
 forwardRefResult.displayName = "PlatformPressable";
 String.raw(HermesBuiltin.getTemplateObject(true, "\n  .", " {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-radius: inherit;\n    background-color: var(--overlay-color);\n    opacity: 0;\n    transition: opacity 0.15s;\n    pointer-events: none;\n  }\n\n  a:hover > .", ", button:hover > .", " {\n    opacity: var(--overlay-hover-opacity);\n  }\n\n  a:active > .", ", button:active > .", " {\n    opacity: var(--overlay-active-opacity);\n  }\n"), "__react-navigation_elements_Pressable_hover", "__react-navigation_elements_Pressable_hover", "__react-navigation_elements_Pressable_hover", "__react-navigation_elements_Pressable_hover", "__react-navigation_elements_Pressable_hover");
-const f36956 = (arg0) => {
+const f36959 = (arg0) => {
   ({ color, hoverOpacity, activeOpacity } = arg0);
   return null;
 };

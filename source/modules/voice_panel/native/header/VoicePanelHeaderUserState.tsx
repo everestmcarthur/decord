@@ -1,14 +1,14 @@
-// Module ID: 17105
-// Function ID: 17106
+// Module ID: 17108
+// Function ID: 17109
 // Name: useVoicePanelHeaderUserStateIcons
-// Dependencies: [19, 4576, 21, 4296, 8902, 4560, 576, 17106, 17104, 9119, 5589, 12272, 504, 4561, 2]
+// Dependencies: [19, 4576, 21, 4296, 8907, 4560, 576, 17109, 17107, 9124, 5589, 12276, 504, 4561, 2]
 
-// Module 17105 (useVoicePanelHeaderUserStateIcons)
+// Module 17108 (useVoicePanelHeaderUserStateIcons)
 import ThemesDefault from "Themes" /* 576 */;
 import setDefault from "set" /* 5589 */;
-import areStableParticipantsEqual from "areStableParticipantsEqual" /* 17104 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17106 */;
-import useVoicePanelCardUserStateIconsDefault from "useVoicePanelCardUserStateIcons" /* 17106 */;
+import areStableParticipantsEqual from "areStableParticipantsEqual" /* 17107 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17109 */;
+import useVoicePanelCardUserStateIconsDefault from "useVoicePanelCardUserStateIcons" /* 17109 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "getParticipants" /* 4576 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -48,13 +48,13 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
       obj[0] = tmp.floatingIcon;
       let tmp33 = nextResult;
       obj[1] = tmp9.videoIconState;
-      obj[2] = jsx(tmp11(9119).VideoIcon, { style: null, state: null });
-      let arr = items.push(jsx(tmp11(8902).BackgroundBlurView, { style: null, state: null }, "video"));
+      obj[2] = jsx(tmp11(9124).VideoIcon, { style: null, state: null });
+      let arr = items.push(jsx(tmp11(8907).BackgroundBlurView, { style: null, state: null }, "video"));
     }
     let tmp14 = nextResult;
     let tmp15 = tmp10;
     let tmp16 = tmp12;
-    if (tmp9.type === tmp11(17106).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON) {
+    if (tmp9.type === tmp11(17109).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON) {
       let tmp35 = jsx;
       let tmp37 = tmp10;
       let tmp38 = tmp12;
@@ -75,8 +75,8 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
       obj2[0] = tmp.floatingIcon;
       let tmp21 = nextResult;
       obj2[1] = tmp9.muteDeafenIconState;
-      obj1[2] = tmp36(tmp11(9119).MuteDeafenIcon, obj2);
-      arr = items.push(tmp35(tmp11(8902).BackgroundBlurView, obj1, "mute-deafen"));
+      obj1[2] = tmp36(tmp11(9124).MuteDeafenIcon, obj2);
+      arr = items.push(tmp35(tmp11(8907).BackgroundBlurView, obj1, "mute-deafen"));
     }
     continue;
   }
@@ -106,7 +106,7 @@ let obj1 = { width: 20, height: 20, borderRadius: ThemesDefault.radii.round, ali
 const memoResult = importAllResult.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
   isHeaderHidden = isHeaderHidden.isHeaderHidden;
   let channelId;
-  const context = importAllResult.useContext(channelId(12272));
+  const context = importAllResult.useContext(channelId(12276));
   channelId = context.channelId;
   const guildId = context.guildId;
   let obj = isHeaderHidden(504);
@@ -119,7 +119,7 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderUserState(isHea
     }
     return id;
   });
-  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(17104)(stateFromStores, channelId, guildId), guildId);
+  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(17107)(stateFromStores, channelId, guildId), guildId);
   isHeaderHidden(4296);
   const fn = function h() {
     let obj = isHeaderHidden(closure_1_2[13]);

@@ -1,10 +1,10 @@
-// Module ID: 13140
-// Function ID: 13141
+// Module ID: 13144
+// Function ID: 13145
 // Name: NameplateUser
-// Dependencies: [19, 17, 4552, 21, 4560, 576, 8171, 1886, 1114, 4556, 4987, 8178, 8258, 8166, 504, 4404, 4794, 10899, 10900, 1178, 10908, 5605, 2]
+// Dependencies: [19, 17, 4552, 21, 4560, 576, 8171, 1886, 1114, 4556, 4987, 8178, 8258, 8166, 504, 4404, 4794, 10904, 10905, 1178, 10913, 5605, 2]
 // Exports: default
 
-// Module 13140 (NameplateUser)
+// Module 13144 (NameplateUser)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import getNameplateData from "getNameplateData" /* 1886 */;
@@ -51,7 +51,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = React.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "unmarkNodeAsRemovable", autoStatusCutout: null, "aria-hidden": true };
+    const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}", autoStatusCutout: "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}", "aria-hidden": "function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;}" };
     obj[2] = currentUser(stateFromStores[19]).AvatarSizes.NORMAL;
     obj[3] = closure_1;
     obj[4] = !stateFromStores;

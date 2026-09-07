@@ -1,9 +1,9 @@
-// Module ID: 17821
-// Function ID: 17822
+// Module ID: 17824
+// Function ID: 17825
 // Name: updateSocialRpcNetworkConfig
 // Dependencies: [17, 2025, 502, 1242, 1272, 7118, 1115, 2]
 
-// Module 17821 (updateSocialRpcNetworkConfig)
+// Module 17824 (updateSocialRpcNetworkConfig)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 1115 */;

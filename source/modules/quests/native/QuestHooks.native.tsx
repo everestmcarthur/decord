@@ -1,21 +1,21 @@
-// Module ID: 15091
-// Function ID: 15092
+// Module ID: 15094
+// Function ID: 15095
 // Name: useDeliveredDockCreative
-// Dependencies: [5, 19, 4251, 4788, 7703, 5444, 11279, 9511, 1085, 15092, 504, 5447, 15116, 7701, 7699, 5451, 10089, 4417, 15102, 6945, 11483, 11484, 11285, 7724, 7162, 9506, 7722, 9529, 7163, 9507, 11519, 2]
+// Dependencies: [5, 19, 4251, 4788, 7703, 5444, 11284, 9516, 1085, 15095, 504, 5447, 15119, 7701, 7699, 5451, 10094, 4417, 15105, 6945, 11488, 11489, 11290, 7724, 7162, 9511, 7722, 9534, 7163, 9512, 11524, 2]
 // Exports: useHasWatchVideoOnMobileTasks, useIsMobileQuestDockRendered, useIsMobileQuestDockVisibleToUser, useMobileActivityQuest, useMobileQuestDock, useMobileQuestDockHeight, useQuestDockHeroAsset, useQuestGameLogotypeAssetUrl
 
-// Module 15091 (useDeliveredDockCreative)
+// Module 15094 (useDeliveredDockCreative)
 import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5447 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 6945 */;
-import maybeRefreshAd from "maybeRefreshAd" /* 15116 */;
+import maybeRefreshAd from "maybeRefreshAd" /* 15119 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "setContent" /* 4251 */;
 import closure_6 from "addApplication" /* 4788 */;
 import closure_7 from "initializeState" /* 7703 */;
 import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
-import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS" /* 11279 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 9511 */;
+import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS" /* 11284 */;
+import { MAIN_SURFACE } from "FrameLayoutModes" /* 9516 */;
 import { ThemeTypes } from "sum" /* 1085 */;
 
 require = arg1;
@@ -81,9 +81,9 @@ function useDeliveredDockCreative() {
   }, items3);
 }
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
-  const deliveredQuest = deliveredAdCreativeId(15102).getDeliveredQuest(mobileQuestDock);
+  const deliveredQuest = deliveredAdCreativeId(15105).getDeliveredQuest(mobileQuestDock);
   const tmp4 = useIsWindowLargeDefault();
-  const obj = deliveredAdCreativeId(15102);
+  const obj = deliveredAdCreativeId(15105);
   const items = [closure_7];
   let userStatus;
   const stateFromStores = deliveredAdCreativeId(504).useStateFromStores(items, () => null != questPreviewOverride.getQuestPreviewOverride(deliveredAdCreativeId(table[11]).QuestContent.QUEST_BAR_MOBILE), []);
@@ -102,14 +102,14 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(11483);
+  tmpResult = tmp(11488);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = deliveredAdCreativeId(504);
   const tmp5 = closure_7;
-  let isEligibleForQuests = deliveredAdCreativeId(11484).getIsEligibleForQuests();
-  const tmpResult1 = deliveredAdCreativeId(11484);
-  deliveredAdCreativeId = deliveredAdCreativeId(15102).getDeliveredAdCreativeId(mobileQuestDock);
-  const tmpResult2 = deliveredAdCreativeId(15102);
+  let isEligibleForQuests = deliveredAdCreativeId(11489).getIsEligibleForQuests();
+  const tmpResult1 = deliveredAdCreativeId(11489);
+  deliveredAdCreativeId = deliveredAdCreativeId(15105).getDeliveredAdCreativeId(mobileQuestDock);
+  const tmpResult2 = deliveredAdCreativeId(15105);
   const items1 = [tmp5];
   const items2 = [deliveredAdCreativeId];
   const type = mobileQuestDock.type;
@@ -159,8 +159,8 @@ export const useMobileQuestDock = function useMobileQuestDock() {
 export const useIsMobileQuestDockVisibleToUser = function useIsMobileQuestDockVisibleToUser(mobileQuestDock, isMobileQuestDockRenderedBase) {
   const _require = mobileQuestDock;
   let tmp = isMobileQuestDockRenderedBase;
-  const isChannelFocused = _require(10089).useIsChannelFocused();
-  const obj = _require(10089);
+  const isChannelFocused = _require(10094).useIsChannelFocused();
+  const obj = _require(10094);
   const currentNavigationRouteName = _require(4417).useCurrentNavigationRouteName();
   const obj2 = _require(4417);
   let tmp4 = null != _require(4417).coerceGuildsRoute({ name: currentNavigationRouteName });

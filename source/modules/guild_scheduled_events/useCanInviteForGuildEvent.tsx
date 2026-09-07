@@ -1,12 +1,12 @@
-// Module ID: 9773
-// Function ID: 9774
+// Module ID: 9778
+// Function ID: 9779
 // Name: canEveryoneRoleViewEvent
-// Dependencies: [1962, 1957, 2012, 1979, 4199, 7526, 1963, 1074, 4204, 9774, 504, 2]
+// Dependencies: [1962, 1957, 2012, 1979, 4199, 7526, 1963, 1074, 4204, 9779, 504, 2]
 // Exports: default
 
-// Module 9773 (canEveryoneRoleViewEvent)
+// Module 9778 (canEveryoneRoleViewEvent)
 import applyOverwritesAll from "applyOverwrites" /* 4204 */;
-import canViewInviteModal from "canViewInviteModal" /* 9774 */;
+import canViewInviteModal from "canViewInviteModal" /* 9779 */;
 import closure_3 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import closure_5 from "comparator" /* 2012 */;

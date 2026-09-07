@@ -1,9 +1,9 @@
-// Module ID: 14528
-// Function ID: 14529
+// Module ID: 14531
+// Function ID: 14532
 // Name: importDefaultResult1
-// Dependencies: [1957, 2012, 1979, 1908, 4199, 4583, 4209, 5419, 1371, 4579, 9980, 1074, 14529, 14530, 14531, 14532, 6992, 13787, 14533, 14534, 8623, 1114, 14535, 9991, 7756, 4713, 5442, 1242, 4740, 1898, 2]
+// Dependencies: [1957, 2012, 1979, 1908, 4199, 4583, 4209, 5419, 1371, 4579, 9985, 1074, 14532, 14533, 14534, 14535, 6992, 13790, 14536, 14537, 8628, 1114, 14538, 9996, 7756, 4713, 5442, 1242, 4740, 1898, 2]
 
-// Module 14528 (importDefaultResult1)
+// Module 14531 (importDefaultResult1)
 import initializeDefault from "initialize" /* 1898 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 2012 */;
@@ -15,9 +15,9 @@ import closure_9 from "markAllUserIdListsStale" /* 4209 */;
 import closure_10 from "anyoneHasFlagInContext" /* 5419 */;
 import closure_11 from "mergeGuildAvatar" /* 1371 */;
 import importDefaultResult2 from "updateVoiceState" /* 4579 */;
-import closure_13 from "getUserAgnosticState" /* 9980 */;
+import closure_13 from "getUserAgnosticState" /* 9985 */;
 import ME from "ME" /* 1074 */;
-import registerAsset from "registerAsset" /* 14529 */;
+import registerAsset from "registerAsset" /* 14532 */;
 import { intl, intl as intl2, intl as intl3, intl as intl4, intl as intl5, intl as intl6, intl as intl7, intl as intl8, intl as intl9, intl as intl10, intl as intl11 } from "getSystemLocale" /* 1114 */;
 
 const require = arg1;

@@ -1,9 +1,9 @@
-// Module ID: 17424
-// Function ID: 17425
+// Module ID: 17427
+// Function ID: 17428
 // Name: handleLogout
 // Dependencies: [7118, 7834, 2]
 
-// Module 17424 (handleLogout)
+// Module 17427 (handleLogout)
 import initializeDefault from "initialize" /* 7118 */;
 import itemsDefault from "items" /* 7834 */;
 

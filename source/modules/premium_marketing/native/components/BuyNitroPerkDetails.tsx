@@ -1,15 +1,15 @@
-// Module ID: 13385
-// Function ID: 13386
+// Module ID: 13389
+// Function ID: 13390
 // Name: openBuyNitroPerkDetails
-// Dependencies: [19, 17, 21, 4560, 13358, 10230, 1114, 4973, 576, 13386, 13387, 7182, 4527, 2]
+// Dependencies: [19, 17, 21, 4560, 13362, 10235, 1114, 4973, 576, 13390, 13391, 7182, 4527, 2]
 // Exports: openBuyNitroPerkDetails
 
-// Module 13385 (openBuyNitroPerkDetails)
+// Module 13389 (openBuyNitroPerkDetails)
 import ThemesDefault from "Themes" /* 576 */;
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import PremiumTypes from "PremiumTypes" /* 13358 */;
-import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13387 */;
+import PremiumTypes from "PremiumTypes" /* 13362 */;
+import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13391 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -42,7 +42,7 @@ let closure_8 = importAllResult.memo((perk) => {
       const obj2 = { planSelection: null, item: null, centered: true };
       obj2[0] = buyNitroPlanSelection;
       obj2[1] = buyNitroPlanSelection.selection.item;
-      tmp6Result = tmp6(tmp9(13386), obj2);
+      tmp6Result = tmp6(tmp9(13390), obj2);
     }
     const items = [tmp6Result, ];
     const obj3 = { planSelection: null, location: null, sourceAnalyticsLocations: null, applicationId: null, onHostSheetClose: null, onPaymentSuccess: null, onPaymentDismiss: null };
@@ -58,7 +58,7 @@ let closure_8 = importAllResult.memo((perk) => {
     items[1] = callback(BuyNitroPurchaseButtonDefault, obj3);
     obj1[1] = items;
     obj[3] = closure_5(tmp2(4973).Stack, obj1);
-    tmp6Result = tmp6(tmp2(10230).PromoSheet, obj);
+    tmp6Result = tmp6(tmp2(10235).PromoSheet, obj);
     const tmp8 = closure_5;
     const tmp9Result = BuyNitroPurchaseButtonDefault;
   }

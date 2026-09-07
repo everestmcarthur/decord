@@ -1,10 +1,10 @@
-// Module ID: 9624
-// Function ID: 9625
+// Module ID: 9629
+// Function ID: 9630
 // Name: recentlyUsedEmojis
 // Dependencies: [4581, 573, 1090, 12, 7349, 4411, 504, 2]
 // Exports: clearVoiceChannelEffectForUser
 
-// Module 9624 (recentlyUsedEmojis)
+// Module 9629 (recentlyUsedEmojis)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

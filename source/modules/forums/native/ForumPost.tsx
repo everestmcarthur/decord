@@ -1,16 +1,16 @@
-// Module ID: 12000
-// Function ID: 12001
+// Module ID: 12004
+// Function ID: 12005
 // Name: ForumPostGrid
-// Dependencies: [19, 1957, 4209, 12001, 21, 12002, 12006, 12017, 504, 38, 7304, 7885, 12020, 12021, 7897, 12027, 1967, 2]
+// Dependencies: [19, 1957, 4209, 12005, 21, 12006, 12010, 12021, 504, 38, 7304, 7885, 12024, 12025, 7897, 12031, 1967, 2]
 // Exports: ForumPostListDisabled
 
-// Module 12000 (ForumPostGrid)
-import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 12002 */;
-import GIFIconDefault from "GIFIcon" /* 12006 */;
-import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 12017 */;
+// Module 12004 (ForumPostGrid)
+import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 12006 */;
+import GIFIconDefault from "GIFIcon" /* 12010 */;
+import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 12021 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "markAllUserIdListsStale" /* 4209 */;
-import { useForumChannelStore } from "set" /* 12001 */;
+import { useForumChannelStore } from "set" /* 12005 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
@@ -170,8 +170,8 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
     obj[3] = tmp10;
     obj[4] = localDeviceMedia;
     obj[7] = loaded;
-    obj[1] = callback(tmp4(12021), obj);
-    tmp5 = callback(tmp(12020).ForumPostDisabledContainer, obj);
+    obj[1] = callback(tmp4(12025), obj);
+    tmp5 = callback(tmp(12024).ForumPostDisabledContainer, obj);
   }
   return tmp5;
 };

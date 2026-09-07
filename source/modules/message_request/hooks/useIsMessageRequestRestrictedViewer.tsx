@@ -1,10 +1,10 @@
-// Module ID: 12440
-// Function ID: 12441
+// Module ID: 12444
+// Function ID: 12445
 // Name: useIsMessageRequestRestrictedViewer
-// Dependencies: [4773, 5423, 7299, 12441, 2]
+// Dependencies: [4773, 5423, 7299, 12445, 2]
 // Exports: useIsMessageRequestRestrictedViewer
 
-// Module 12440 (useIsMessageRequestRestrictedViewer)
+// Module 12444 (useIsMessageRequestRestrictedViewer)
 import set from "set" /* 2 */;
 import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4773 */;
 import isFeatureAgeGated from "isFeatureAgeGated" /* 5423 */;

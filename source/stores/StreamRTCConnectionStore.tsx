@@ -1,7 +1,7 @@
 // Module ID: 4599
 // Function ID: 4600
 // Name: initialize
-// Dependencies: [1915, 502, 1908, 4600, 4583, 1074, 4602, 38, 4604, 12, 4612, 7738, 573, 4615, 1115, 504, 13801, 2]
+// Dependencies: [1915, 502, 1908, 4600, 4583, 1074, 4602, 38, 4604, 12, 4612, 7738, 573, 4615, 1115, 504, 13804, 2]
 
 // Module 4599 (initialize)
 import applyDefault from "apply" /* 12 */;
@@ -10,7 +10,7 @@ import initializeDefault from "initialize" /* 504 */;
 import isOwnerDefault from "isOwner" /* 4604 */;
 import isStreamKey from "isStreamKey" /* 4612 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
-import canSpectateDefault from "canSpectate" /* 13801 */;
+import canSpectateDefault from "canSpectate" /* 13804 */;
 import closure_4 from "initialize" /* 1915 */;
 import closure_5 from "fetchFingerprint" /* 502 */;
 import importDefaultResult from "_detectH265HardwareDecode" /* 1908 */;
@@ -292,7 +292,7 @@ if (importDefaultResult.isSupported()) {
   obj[9] = function handleStreamStop(appContext) {
     appContext = appContext.appContext;
     const streamKey = appContext.streamKey;
-    closure_11[streamKey] = { appContext, analyticsLocations: "a" };
+    closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
     const item = applyDefault.forEach(closure_18, (analyticsContext) => {
       analyticsContext = analyticsContext.analyticsContext;
       analyticsContext.setActionContext(appContext);

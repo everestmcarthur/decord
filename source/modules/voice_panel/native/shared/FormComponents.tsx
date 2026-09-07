@@ -1,15 +1,15 @@
-// Module ID: 9118
-// Function ID: 9119
+// Module ID: 9123
+// Function ID: 9124
 // Name: VoiceBadges
-// Dependencies: [19, 4600, 21, 4560, 576, 5589, 5687, 9119, 1178, 7162, 9120, 9131, 9174, 4794, 9176, 8179, 504, 7738, 9178, 9179, 9181, 4556, 1114, 5605, 4975, 9182, 9183, 4404, 9184, 9212, 2]
+// Dependencies: [19, 4600, 21, 4560, 576, 5589, 5687, 9124, 1178, 7162, 9125, 9136, 9179, 4794, 9181, 8179, 504, 7738, 9183, 9184, 9186, 4556, 1114, 5605, 4975, 9187, 9188, 4404, 9189, 9217, 2]
 // Exports: MemberRowItem, VoicePanelFormSection
 
-// Module 9118 (VoiceBadges)
+// Module 9123 (VoiceBadges)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import setDefault from "set" /* 5589 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import VideoDisabledSvgIcon from "VideoDisabledSvgIcon" /* 9119 */;
+import VideoDisabledSvgIcon from "VideoDisabledSvgIcon" /* 9124 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "sortActivity" /* 4600 */;
 import jsxProd from "jsxProd" /* 21 */;

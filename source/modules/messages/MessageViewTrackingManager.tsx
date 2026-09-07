@@ -1,9 +1,9 @@
-// Module ID: 11305
-// Function ID: 11306
+// Module ID: 11310
+// Function ID: 11311
 // Name: getAnalyticsConfig
 // Dependencies: [1074, 1250, 7182, 1369, 7118, 1437, 1242, 2]
 
-// Module 11305 (getAnalyticsConfig)
+// Module 11310 (getAnalyticsConfig)
 import set2 from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

@@ -1,9 +1,9 @@
-// Module ID: 15612
-// Function ID: 15613
+// Module ID: 15615
+// Function ID: 15616
 // Name: fromServer
 // Dependencies: [1386, 2]
 
-// Module 15612 (fromServer)
+// Module 15615 (fromServer)
 import toJSDefault from "toJS" /* 1386 */;
 
 toJSDefault;

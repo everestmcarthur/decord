@@ -1,10 +1,10 @@
-// Module ID: 14645
-// Function ID: 14646
+// Module ID: 14648
+// Function ID: 14649
 // Name: UserSettingsEditGuildProfile
-// Dependencies: [19, 17, 8160, 1371, 21, 4560, 576, 7162, 7182, 504, 14646, 9210, 8187, 14648, 5605, 5584, 10923, 4527, 14650, 1896, 14651, 2]
+// Dependencies: [19, 17, 8160, 1371, 21, 4560, 576, 7162, 7182, 504, 14649, 9215, 8187, 14651, 5605, 5584, 10928, 4527, 14653, 1896, 14654, 2]
 // Exports: default
 
-// Module 14645 (UserSettingsEditGuildProfile)
+// Module 14648 (UserSettingsEditGuildProfile)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

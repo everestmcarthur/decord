@@ -1,8 +1,8 @@
-// Module ID: 17607
-// Function ID: 17608
-// Dependencies: [4763, 17608, 1896, 2]
+// Module ID: 17610
+// Function ID: 17611
+// Dependencies: [4763, 17611, 1896, 2]
 
-// Module 17607
+// Module 17610
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
@@ -12,7 +12,7 @@ const result = set.fileFinishedImporting("modules/guild_settings/roles/native/Gu
 
 export default {
   open() {
-    _modDef4763.pushLazy(asyncRequireImpl(17608, dependencyMap.paths), undefined, GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
+    _modDef4763.pushLazy(asyncRequireImpl(17611, dependencyMap.paths), undefined, GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
   },
   close() {
     _modDef4763.popWithKey(GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);

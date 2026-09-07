@@ -1,10 +1,10 @@
-// Module ID: 11497
-// Function ID: 11498
+// Module ID: 11502
+// Function ID: 11503
 // Name: handleAppStateUpdate
 // Dependencies: [1074, 7118, 1115, 1093, 2]
 // Exports: clearAppStoreOverlayOpen, setAppStoreOverlayOpen
 
-// Module 11497 (handleAppStateUpdate)
+// Module 11502 (handleAppStateUpdate)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import set2 from "set" /* 1115 */;

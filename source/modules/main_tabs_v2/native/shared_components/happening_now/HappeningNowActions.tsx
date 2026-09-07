@@ -1,23 +1,23 @@
-// Module ID: 16091
-// Function ID: 16092
+// Module ID: 16094
+// Function ID: 16095
 // Name: HappeningNowCardCreateChannel
-// Dependencies: [19, 17, 2012, 1979, 2011, 15294, 1074, 21, 4560, 576, 1242, 9737, 16092, 1114, 9063, 16093, 9820, 16094, 12308, 12773, 15295, 4556, 2]
+// Dependencies: [19, 17, 2012, 1979, 2011, 15297, 1074, 21, 4560, 576, 1242, 9742, 16095, 1114, 9068, 16096, 9825, 16097, 12312, 12777, 15298, 4556, 2]
 // Exports: HappeningNowCardCreateChannel, HappeningNowCardCustomizeGuild, HappeningNowCardInvite, HappeningNowStudentHubAddServer
 
-// Module 16091 (HappeningNowCardCreateChannel)
+// Module 16094 (HappeningNowCardCreateChannel)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
-import registerAssetDefault from "registerAsset" /* 12773 */;
-import HAPPENING_NOW_CARD_MARGIN_RIGHTDefault from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 15295 */;
-import registerAssetDefault2 from "registerAsset" /* 16092 */;
-import registerAssetDefault3 from "registerAsset" /* 16093 */;
-import registerAssetDefault4 from "registerAsset" /* 16094 */;
+import registerAssetDefault from "registerAsset" /* 12777 */;
+import HAPPENING_NOW_CARD_MARGIN_RIGHTDefault from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 15298 */;
+import registerAssetDefault2 from "registerAsset" /* 16095 */;
+import registerAssetDefault3 from "registerAsset" /* 16096 */;
+import registerAssetDefault4 from "registerAsset" /* 16097 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "comparator" /* 2012 */;
 import closure_7 from "createGuildRecordFromRust" /* 1979 */;
 import closure_8 from "handleConnectionOpen" /* 2011 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15294 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15297 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

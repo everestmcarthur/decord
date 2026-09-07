@@ -1,9 +1,9 @@
-// Module ID: 9064
-// Function ID: 9065
+// Module ID: 9069
+// Function ID: 9070
 // Name: handleFormInit
-// Dependencies: [1972, 9065, 1961, 1975, 8380, 1385, 1979, 1371, 1074, 9066, 8035, 11, 9067, 1272, 573, 9069, 1971, 9070, 4153, 9071, 504, 12, 510, 2]
+// Dependencies: [1972, 9070, 1961, 1975, 8380, 1385, 1979, 1371, 1074, 9071, 8035, 11, 9072, 1272, 573, 9074, 1971, 9075, 4153, 9076, 504, 12, 510, 2]
 
-// Module 9064 (handleFormInit)
+// Module 9069 (handleFormInit)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -15,12 +15,12 @@ import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAddi
 import isValueEqual from "isValueEqual" /* 1972 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;
 import hooksDefault from "hooks" /* 4153 */;
-import DEFAULT_DISCOVERY_CATEGORY_ID2 from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9066 */;
-import canUseMobileServerTagSettings from "canUseMobileServerTagSettings" /* 9067 */;
-import fetchVanityUrl from "fetchVanityUrl" /* 9069 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9070 */;
-import _fetchGuildIntegrationsApplications from "_fetchGuildIntegrationsApplications" /* 9071 */;
-import closure_14 from "handleUpdateStart" /* 9065 */;
+import DEFAULT_DISCOVERY_CATEGORY_ID2 from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9071 */;
+import canUseMobileServerTagSettings from "canUseMobileServerTagSettings" /* 9072 */;
+import fetchVanityUrl from "fetchVanityUrl" /* 9074 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9075 */;
+import _fetchGuildIntegrationsApplications from "_fetchGuildIntegrationsApplications" /* 9076 */;
+import closure_14 from "handleUpdateStart" /* 9070 */;
 import closure_17 from "createFromServer" /* 8380 */;
 import closure_18 from "createdAt" /* 1385 */;
 import closure_19 from "createGuildRecordFromRust" /* 1979 */;

@@ -1,13 +1,13 @@
-// Module ID: 12049
-// Function ID: 12050
+// Module ID: 12053
+// Function ID: 12054
 // Name: ActivitiesBanner
-// Dependencies: [32, 19, 21, 12038, 12050, 12061, 1114, 2]
+// Dependencies: [32, 19, 21, 12042, 12054, 12065, 1114, 2]
 // Exports: default
 
-// Module 12049 (ActivitiesBanner)
+// Module 12053 (ActivitiesBanner)
 import noopAll from "noop" /* 19 */;
-import useActivityApplications from "useActivityApplications" /* 12038 */;
-import BannerBaseDefault from "BannerBase" /* 12061 */;
+import useActivityApplications from "useActivityApplications" /* 12042 */;
+import BannerBaseDefault from "BannerBase" /* 12065 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { jsx } from "jsxProd" /* 21 */;
 

@@ -1,12 +1,12 @@
-// Module ID: 10909
-// Function ID: 10910
+// Module ID: 10914
+// Function ID: 10915
 // Name: GroupDMRow
-// Dependencies: [19, 10860, 21, 4713, 10910, 1178, 10911, 4556, 5604, 5605, 2]
+// Dependencies: [19, 10865, 21, 4713, 10915, 1178, 10916, 4556, 5604, 5605, 2]
 // Exports: default
 
-// Module 10909 (GroupDMRow)
+// Module 10914 (GroupDMRow)
 import closure_3 from "noop" /* 19 */;
-import { UserRowModes } from "UserRowModes" /* 10860 */;
+import { UserRowModes } from "UserRowModes" /* 10865 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -36,8 +36,8 @@ export default function GroupDMRow(channel) {
     }
   }, items);
   let obj = { size: channel(1178).AvatarSizes.REFRESH_MEDIUM_32, channel };
-  const tmp6 = onPress(10910);
-  obj1 = channel(10911);
+  const tmp6 = onPress(10915);
+  obj1 = channel(10916);
   const recipientsLabel = obj1.useRecipientsLabel(channel);
   obj = {};
   const merged1 = Object.assign(merged);
@@ -49,7 +49,7 @@ export default function GroupDMRow(channel) {
     tmp5Result = tmp5(tmp7(4556).Text, obj);
   }
   obj.subLabel = tmp5Result;
-  obj.icon = jsx(onPress(10910), {});
+  obj.icon = jsx(onPress(10915), {});
   obj.onPress = callback;
   if (str == null) {
     str = "";

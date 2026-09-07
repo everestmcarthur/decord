@@ -1,10 +1,10 @@
-// Module ID: 9766
-// Function ID: 9767
+// Module ID: 9771
+// Function ID: 9772
 // Name: StageChannelAgeVerificationNoticeContent
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 4773, 1114, 4556, 4249, 2024, 8411, 8413, 4515, 8588, 1178, 5422, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 4773, 1114, 4556, 4249, 2024, 8411, 8413, 4515, 8593, 1178, 5422, 2]
 // Exports: default
 
-// Module 9766 (StageChannelAgeVerificationNoticeContent)
+// Module 9771 (StageChannelAgeVerificationNoticeContent)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
@@ -12,7 +12,7 @@ import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
 import Text2 from "Text" /* 4556 */;
 import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4773 */;
 import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 5422 */;
-import WarningIcon2 from "WarningIcon" /* 8588 */;
+import WarningIcon2 from "WarningIcon" /* 8593 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;

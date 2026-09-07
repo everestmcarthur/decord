@@ -1,16 +1,16 @@
-// Module ID: 17377
-// Function ID: 17378
+// Module ID: 17380
+// Function ID: 17381
 // Name: handleInviteData
-// Dependencies: [1074, 12934, 1384, 8392, 12935, 7118, 2]
+// Dependencies: [1074, 12938, 1384, 8392, 12939, 7118, 2]
 
-// Module 17377 (handleInviteData)
+// Module 17380 (handleInviteData)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import hasFlag from "hasFlag" /* 1384 */;
 import initializeDefault from "initialize" /* 7118 */;
 import set2 from "set" /* 8392 */;
-import _modDef12934 from "module_12934" /* 12934 */;
-import inviteGuildHasPendingMemberDisabledVerification from "inviteGuildHasPendingMemberDisabledVerification" /* 12935 */;
+import _modDef12938 from "module_12938" /* 12938 */;
+import inviteGuildHasPendingMemberDisabledVerification from "inviteGuildHasPendingMemberDisabledVerification" /* 12939 */;
 
 function handleInviteData(invite) {
   const guild = invite.invite.guild;
@@ -27,8 +27,8 @@ function handleInviteData(invite) {
       }
     }
     if (hasItem) {
-      _modDef12934.onOpenHubInvite(invite.invite);
-      const obj5 = _modDef12934;
+      _modDef12938.onOpenHubInvite(invite.invite);
+      const obj5 = _modDef12938;
     }
   }
   let new_member = invite.invite.new_member;

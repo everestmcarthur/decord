@@ -1,10 +1,10 @@
-// Module ID: 13976
-// Function ID: 13977
+// Module ID: 13979
+// Function ID: 13980
 // Name: GuildProgressBar
-// Dependencies: [19, 17, 21, 4560, 12474, 576, 4296, 4561, 4564, 2]
+// Dependencies: [19, 17, 21, 4560, 12478, 576, 4296, 4561, 4564, 2]
 // Exports: default
 
-// Module 13976 (GuildProgressBar)
+// Module 13979 (GuildProgressBar)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

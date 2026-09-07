@@ -1,10 +1,10 @@
-// Module ID: 15335
-// Function ID: 15336
+// Module ID: 15338
+// Function ID: 15339
 // Name: useDisplayNameStylesPendingName
 // Dependencies: [8160, 2021, 4404, 504, 2]
 // Exports: useDisplayNameStylesPendingName
 
-// Module 15335 (useDisplayNameStylesPendingName)
+// Module 15338 (useDisplayNameStylesPendingName)
 import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import closure_3 from "handleFormOpen" /* 8160 */;
 import closure_4 from "trackCommunicationDisabled" /* 2021 */;

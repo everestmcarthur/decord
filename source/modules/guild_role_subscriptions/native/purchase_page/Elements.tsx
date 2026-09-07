@@ -1,18 +1,18 @@
-// Module ID: 16541
-// Function ID: 16542
+// Module ID: 16544
+// Function ID: 16545
 // Name: TruncatedText
-// Dependencies: [32, 19, 17, 4223, 21, 4560, 576, 4556, 1114, 5123, 1178, 16542, 9366, 15227, 563, 9369, 7234, 2]
+// Dependencies: [32, 19, 17, 4223, 21, 4560, 576, 4556, 1114, 5123, 1178, 16545, 9371, 15230, 563, 9374, 7234, 2]
 // Exports: ArrowButton, TruncatedText, useFormattedSubscriptionPlan
 
-// Module 16541 (TruncatedText)
+// Module 16544 (TruncatedText)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import PressableBase from "PressableBase" /* 5123 */;
-import notSupportedDefault from "notSupported" /* 9366 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9369 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 15227 */;
-import registerAssetDefault from "registerAsset" /* 16542 */;
+import notSupportedDefault from "notSupported" /* 9371 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9374 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 15230 */;
+import registerAssetDefault from "registerAsset" /* 16545 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

@@ -1,10 +1,10 @@
-// Module ID: 11005
-// Function ID: 11006
+// Module ID: 11010
+// Function ID: 11011
 // Name: PurchaseSuccessModalBase
-// Dependencies: [32, 718, 19, 17, 4552, 5510, 7229, 1074, 21, 4560, 576, 4296, 4974, 4561, 4528, 1477, 504, 5126, 7226, 4556, 4975, 1114, 4987, 7123, 5631, 5680, 8825, 7168, 7165, 11006, 7182, 1242, 4992, 10797, 3417, 8734, 4404, 2]
+// Dependencies: [32, 718, 19, 17, 4552, 5510, 7229, 1074, 21, 4560, 576, 4296, 4974, 4561, 4528, 1477, 504, 5126, 7226, 4556, 4975, 1114, 4987, 7123, 5631, 5680, 8830, 7168, 7165, 11011, 7182, 1242, 4992, 10802, 3417, 8739, 4404, 2]
 // Exports: SocialLayerStorefrontProductGiftPurchaseSuccessModal, SocialLayerStorefrontProductSelfPurchaseSuccessModal
 
-// Module 11005 (PurchaseSuccessModalBase)
+// Module 11010 (PurchaseSuccessModalBase)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "_toArray" /* 718 */;

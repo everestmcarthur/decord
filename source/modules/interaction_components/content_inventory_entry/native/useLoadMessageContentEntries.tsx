@@ -1,10 +1,10 @@
-// Module ID: 11530
-// Function ID: 11531
+// Module ID: 11535
+// Function ID: 11536
 // Name: fetchColors
-// Dependencies: [32, 5, 19, 4788, 1920, 9028, 8181, 7163, 8132, 38, 8139, 1894, 8129, 7302, 2]
+// Dependencies: [32, 5, 19, 4788, 1920, 9033, 8181, 7163, 8132, 38, 8139, 1894, 8129, 7302, 2]
 // Exports: default
 
-// Module 11530 (fetchColors)
+// Module 11535 (fetchColors)
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
@@ -517,7 +517,7 @@ function _loadContentEntryParts() {
                       if (closure_1_2.type === arr(closure_1_2[11]).ComponentType.CONTENT_INVENTORY_ENTRY) {
                         function _fetchEntryParts() {
                           const self = this;
-                          const tmp = closure_1_4(/* F125903 */ function() { ... });
+                          const tmp = closure_1_4(/* F125934 */ function() { ... });
                           closure_1 = tmp;
                           const apply = tmp.apply;
                           if (typeof apply === "unknown") {

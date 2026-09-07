@@ -1,16 +1,16 @@
-// Module ID: 14709
-// Function ID: 14710
+// Module ID: 14712
+// Function ID: 14713
 // Name: isRateLimited
 // Dependencies: [1437, 1090, 504, 573, 2]
 
-// Module 14709 (isRateLimited)
+// Module 14712 (isRateLimited)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import setDefault from "set" /* 1090 */;
 import privDefault from "priv" /* 1437 */;
 
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
-let obj = { validations: new privDefault({ max: 100, maxAge: 60000 }), currentUsernameInvalid: false, retryAfterTime: null, suggestions: { migration: { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false }, registration: { suggestion: { username: "Array" }, source: "PX_16", fetched: "2026-05-mana-type-consolidation" } } };
+let obj = { validations: new privDefault({ max: 100, maxAge: 60000 }), currentUsernameInvalid: false, retryAfterTime: null, suggestions: { migration: { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false }, registration: { suggestion: { username: "Array" }, source: "PX_16", fetched: "2026-03-icymi-staff-debugging-utility" } } };
 const Store = initializeDefault.Store;
 class UniqueUsernamesStore extends Store {
 }
@@ -87,7 +87,7 @@ obj = {
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
     obj.suggestions.migration = { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false };
-    obj.suggestions.registration = { suggestion: { username: "Array" }, source: "PX_16", fetched: "2026-05-mana-type-consolidation" };
+    obj.suggestions.registration = { suggestion: { username: "Array" }, source: "PX_16", fetched: "2026-03-icymi-staff-debugging-utility" };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {
     suggestion = suggestion.suggestion;

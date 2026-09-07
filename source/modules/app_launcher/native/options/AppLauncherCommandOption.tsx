@@ -1,19 +1,19 @@
-// Module ID: 12163
-// Function ID: 12164
+// Module ID: 12167
+// Function ID: 12168
 // Name: AppLauncherCommandOption
-// Dependencies: [19, 17, 1482, 21, 4560, 576, 1894, 12164, 12170, 12172, 12175, 12177, 12178, 12180, 5516, 12183, 12184, 12190, 5123, 6616, 2]
+// Dependencies: [19, 17, 1482, 21, 4560, 576, 1894, 12168, 12174, 12176, 12179, 12181, 12182, 12184, 5516, 12187, 12188, 12194, 5123, 6616, 2]
 // Exports: default
 
-// Module 12163 (AppLauncherCommandOption)
+// Module 12167 (AppLauncherCommandOption)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 12164 */;
-import AttachmentPreviewAppLauncherDefault from "AttachmentPreviewAppLauncher" /* 12175 */;
-import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 12177 */;
-import MentionableIconDefault from "MentionableIcon" /* 12178 */;
-import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 12183 */;
-import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 12184 */;
-import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 12190 */;
+import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 12168 */;
+import AttachmentPreviewAppLauncherDefault from "AttachmentPreviewAppLauncher" /* 12179 */;
+import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 12181 */;
+import MentionableIconDefault from "MentionableIcon" /* 12182 */;
+import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 12187 */;
+import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 12188 */;
+import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 12194 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AppLauncherOptionAutoFocusType as closure_4 } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -294,7 +294,7 @@ export default function AppLauncherCommandOption(option) {
     obj8[3] = command;
     obj8[4] = optionValues;
     let first6;
-    let tmp64Result = tmp64(12170);
+    let tmp64Result = tmp64(12174);
     if (optionValues.current[name.name] != tmp44) {
       first6 = tmp52[0];
     }
@@ -327,7 +327,7 @@ export default function AppLauncherCommandOption(option) {
     obj9[1] = name;
     obj9[2] = channel.guild_id;
     let first7;
-    tmp64Result = tmp64(12172);
+    tmp64Result = tmp64(12176);
     if (optionValues.current[name.name] != tmp44) {
       first7 = tmp46[0];
     }

@@ -1,16 +1,16 @@
-// Module ID: 17930
-// Function ID: 17931
+// Module ID: 17933
+// Function ID: 17934
 // Name: sendReply
-// Dependencies: [5, 17228, 4476, 5558, 502, 1957, 1979, 3, 4424, 10194, 17411, 573, 1359, 1364, 1242, 6593, 8378, 4571, 15570, 1188, 2]
+// Dependencies: [5, 17231, 4476, 5558, 502, 1957, 1979, 3, 4424, 10199, 17414, 573, 1359, 1364, 1242, 6593, 8378, 4571, 15573, 1188, 2]
 
-// Module 17930 (sendReply)
+// Module 17933 (sendReply)
 import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 1359 */;
 import enforcingDefault from "enforcing" /* 4424 */;
-import enforcingDefault2 from "enforcing" /* 17411 */;
+import enforcingDefault2 from "enforcing" /* 17414 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import { applicationReady } from "linkFromAppsFlyer" /* 17228 */;
+import { applicationReady } from "linkFromAppsFlyer" /* 17231 */;
 import closure_6 from "getHash" /* 4476 */;
 import closure_8 from "fetchFingerprint" /* 502 */;
 import closure_9 from "ensureGuildLoaded" /* 1957 */;
@@ -323,7 +323,7 @@ function _apiLogin() {
               obj = iter;
               obj = callback2(table[11]);
               callback2 = iter;
-              const f125841 = () => { ... };
+              const f125871 = () => { ... };
               function handler() { ... }
               const subscription = obj.subscribe(iter, handler);
             }
@@ -364,7 +364,7 @@ function subscribeOnce(subscribe) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f125841(arg0);
+    return f125871(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
@@ -378,7 +378,7 @@ let obj = {
     enforcingDefault.logToDevice(json);
   },
   () => {
-    obj = callback(10194);
+    obj = callback(10199);
     const result = obj.resetComponentProfiler();
     obj = { type: "response", status: "success", message: "reset-component-profiler" };
     const merged = Object.assign(undefined);
@@ -386,7 +386,7 @@ let obj = {
     enforcingDefault.logToDevice(json);
   },
   () => {
-    obj = callback(10194);
+    obj = callback(10199);
     const result = obj.pauseComponentProfiler();
     obj = { type: "response", status: "success", message: "pause-component-profiler" };
     const merged = Object.assign(undefined);
@@ -394,7 +394,7 @@ let obj = {
     enforcingDefault.logToDevice(json);
   },
   () => {
-    obj = callback(10194);
+    obj = callback(10199);
     const result = obj.resumeComponentProfiler();
     obj = { type: "response", status: "success", message: "resume-component-profiler" };
     const merged = Object.assign(undefined);
@@ -402,11 +402,11 @@ let obj = {
     enforcingDefault.logToDevice(json);
   },
   () => {
-    obj = { stats: callback(10194).dumpStats() };
+    obj = { stats: callback(10199).dumpStats() };
     obj = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    const obj2 = callback(10194);
+    const obj2 = callback(10199);
     enforcingDefault.logToDevice(json);
   },
   () => {

@@ -1,10 +1,10 @@
-// Module ID: 14845
-// Function ID: 14846
+// Module ID: 14848
+// Function ID: 14849
 // Name: onClose
-// Dependencies: [5, 32, 19, 17, 12678, 21, 4763, 4560, 576, 5682, 12680, 12684, 4259, 1114, 5597, 12697, 5624, 7000, 2]
+// Dependencies: [5, 32, 19, 17, 12682, 21, 4763, 4560, 576, 5682, 12684, 12688, 4259, 1114, 5597, 12701, 5624, 7000, 2]
 // Exports: default
 
-// Module 14845 (onClose)
+// Module 14848 (onClose)
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4763 from "module_4763" /* 4763 */;
 import NavigationStack from "NavigationStack" /* 7000 */;
@@ -12,7 +12,7 @@ import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { ContactSyncScenes } from "ContactSyncLandingPage" /* 12678 */;
+import { ContactSyncScenes } from "ContactSyncLandingPage" /* 12682 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import HeaderBackImage from "HeaderBackImage" /* 5624 */;
@@ -44,7 +44,7 @@ function ContactSyncNameInputScreen() {
         closure_1 = tmp3;
         callback(true);
         c3 = 1;
-        yield closure_1_1(12684).updateName(callback);
+        yield closure_1_1(12688).updateName(callback);
         if (1 === tmp7) {
           c3 = 0;
           obj1 = closure_1_1(4259);

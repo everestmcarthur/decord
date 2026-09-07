@@ -1,12 +1,12 @@
-// Module ID: 9743
-// Function ID: 9744
+// Module ID: 9748
+// Function ID: 9749
 // Name: compareOptions
-// Dependencies: [19, 9511, 9744, 7163, 2]
+// Dependencies: [19, 9516, 9749, 7163, 2]
 // Exports: useAppChannelApplicationOptions
 
-// Module 9743 (compareOptions)
+// Module 9748 (compareOptions)
 import closure_2 from "noop" /* 19 */;
-import { EmbeddedSurfaceType } from "FrameLayoutModes" /* 9511 */;
+import { EmbeddedSurfaceType } from "FrameLayoutModes" /* 9516 */;
 
 const require = arg1;
 function compareOptions(status, status2) {

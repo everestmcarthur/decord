@@ -1,10 +1,10 @@
-// Module ID: 10955
-// Function ID: 10956
+// Module ID: 10960
+// Function ID: 10961
 // Name: copyGuildChannelOrThreadLink
 // Dependencies: [4705, 7190, 4258, 2]
 // Exports: copyGuildChannelOrThreadLink
 
-// Module 10955 (copyGuildChannelOrThreadLink)
+// Module 10960 (copyGuildChannelOrThreadLink)
 import set from "set" /* 2 */;
 import presentAddedFriendToast from "presentAddedFriendToast" /* 4258 */;
 import allowChannelAccess from "allowChannelAccess" /* 4705 */;

@@ -1,10 +1,10 @@
-// Module ID: 9398
-// Function ID: 9399
+// Module ID: 9403
+// Function ID: 9404
 // Name: ExplicitMediaObscuredFalsePositiveActionSheet
-// Dependencies: [19, 7293, 7601, 21, 563, 9399, 9400, 9397, 7610, 4527, 7600, 2]
+// Dependencies: [19, 7293, 7601, 21, 563, 9404, 9405, 9402, 7610, 4527, 7600, 2]
 // Exports: default
 
-// Module 9398 (ExplicitMediaObscuredFalsePositiveActionSheet)
+// Module 9403 (ExplicitMediaObscuredFalsePositiveActionSheet)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "getFpMessageInfo" /* 7293 */;
 import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_5 } from "USER_SETTING_ACTION_SHEET_KEY" /* 7601 */;
@@ -28,18 +28,18 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
   React = attachments1.map((filename) => filename.filename);
   obj = {
     onSuccess() {
-      channelId(9400).handleSuccess(closure_1_5);
-      const obj = channelId(9400);
-      const result = messageId(9397).disableFalsePositiveButton(channelId, messageId);
+      channelId(9405).handleSuccess(closure_1_5);
+      const obj = channelId(9405);
+      const result = messageId(9402).disableFalsePositiveButton(channelId, messageId);
     },
     onError() {
-      return channelId(9400).handleError();
+      return channelId(9405).handleError();
     },
     report() {
       return channelId(7610).reportFailedSendFalsePositive(channelId, messageId, dependencyMap, closure_3);
     }
   };
-  const explicitMediaActions = channelId(9399).useExplicitMediaActions(obj);
+  const explicitMediaActions = channelId(9404).useExplicitMediaActions(obj);
   reportFalsePositive = explicitMediaActions.reportFalsePositive;
   if (stateFromStores.attachments.length <= 0) {
     messageId(4527).hideActionSheet();
@@ -50,5 +50,5 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
     reportFalsePositive();
   }, items1);
   obj = { channelId, messageId, isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading, onConfirmPress: callback, analyticsContext: tmp(7600).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW };
-  return jsx(channelId(9400).ExplicitMediaFalsePositiveActionSheet, { channelId, messageId, isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading, onConfirmPress: callback, analyticsContext: tmp(7600).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW });
+  return jsx(channelId(9405).ExplicitMediaFalsePositiveActionSheet, { channelId, messageId, isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading, onConfirmPress: callback, analyticsContext: tmp(7600).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW });
 };

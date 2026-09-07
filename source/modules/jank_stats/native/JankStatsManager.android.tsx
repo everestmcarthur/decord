@@ -1,14 +1,14 @@
-// Module ID: 17410
-// Function ID: 17411
+// Module ID: 17413
+// Function ID: 17414
 // Name: handleAppStateUpdate
-// Dependencies: [1074, 7118, 17411, 1242, 7475, 2]
+// Dependencies: [1074, 7118, 17414, 1242, 7475, 2]
 
-// Module 17410 (handleAppStateUpdate)
+// Module 17413 (handleAppStateUpdate)
 import set from "set" /* 2 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import initializeDefault from "initialize" /* 7118 */;
 import getDeviceMetadata from "getDeviceMetadata" /* 7475 */;
-import enforcingDefault from "enforcing" /* 17411 */;
+import enforcingDefault from "enforcing" /* 17414 */;
 import ME from "ME" /* 1074 */;
 
 ({ AppStates: c3, AnalyticEvents: c4 } = ME);

@@ -1,29 +1,29 @@
-// Module ID: 12668
-// Function ID: 12669
+// Module ID: 12672
+// Function ID: 12673
 // Name: keyExtractor
-// Dependencies: [19, 17, 1979, 4575, 12312, 12305, 12310, 1074, 21, 4560, 576, 12669, 12670, 12335, 12336, 4556, 12671, 1114, 4975, 7051, 11896, 12672, 12307, 5123, 12308, 12753, 504, 1611, 7475, 9, 7110, 4392, 12316, 1242, 12754, 12300, 12758, 2]
+// Dependencies: [19, 17, 1979, 4575, 12316, 12309, 12314, 1074, 21, 4560, 576, 12673, 12674, 12339, 12340, 4556, 12675, 1114, 4975, 7051, 11901, 12676, 12311, 5123, 12312, 12757, 504, 1611, 7475, 9, 7110, 4392, 12320, 1242, 12758, 12304, 12762, 2]
 // Exports: default
 
-// Module 12668 (keyExtractor)
+// Module 12672 (keyExtractor)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import Button from "Button" /* 4975 */;
 import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7051 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11896 */;
-import useCanManageGuildDirectoryEntry from "useCanManageGuildDirectoryEntry" /* 12307 */;
-import _modDef12335 from "module_12335" /* 12335 */;
-import _modDef12336 from "module_12336" /* 12336 */;
-import RowType from "RowType" /* 12670 */;
-import registerAsset from "registerAsset" /* 12671 */;
-import HubProgressHeaderDefault from "HubProgressHeader" /* 12672 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11901 */;
+import useCanManageGuildDirectoryEntry from "useCanManageGuildDirectoryEntry" /* 12311 */;
+import _modDef12339 from "module_12339" /* 12339 */;
+import _modDef12340 from "module_12340" /* 12340 */;
+import RowType from "RowType" /* 12674 */;
+import registerAsset from "registerAsset" /* 12675 */;
+import HubProgressHeaderDefault from "HubProgressHeader" /* 12676 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "createGuildRecordFromRust" /* 1979 */;
 import closure_9 from "generateOldThreadCutoff" /* 4575 */;
-import closure_10 from "isFetching" /* 12312 */;
-import { DirectoryEntryCategories } from "DirectoryEntryTypes" /* 12305 */;
-import GuildDirectoryCreate from "GuildDirectoryCreate" /* 12310 */;
+import closure_10 from "isFetching" /* 12316 */;
+import { DirectoryEntryCategories } from "DirectoryEntryTypes" /* 12309 */;
+import GuildDirectoryCreate from "GuildDirectoryCreate" /* 12314 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -60,9 +60,9 @@ function renderItem(item) {
   } else if (RowType.RowType.ENTRY === type) {
     obj = { entry: null };
     obj[0] = item.entry;
-    return callback(_modDef12335, obj);
+    return callback(_modDef12339, obj);
   } else {
-    return callback(_modDef12336, {});
+    return callback(_modDef12340, {});
   }
   const tmp2 = require;
 }
@@ -129,7 +129,7 @@ function GuildDirectoryFooter(hideFooter) {
       obj[0] = tmp.footer;
       obj1 = { style: null, children: null };
       obj1[0] = tmp.addIcon;
-      obj1[1] = callback(tmp2(12753).PlusMediumIcon, {});
+      obj1[1] = callback(tmp2(12757).PlusMediumIcon, {});
       const items = [callback(closure_5, obj1), ];
       const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl2 = tmp2(1114).intl;
@@ -192,9 +192,9 @@ export default function GuildDirectory(channel) {
   obj1 = React;
   dependencyMap = React.useRef(null);
   let bottom = guildId(1611)().bottom;
-  let obj2 = channel(12669);
+  let obj2 = channel(12673);
   const hubProgressBarCompletedSteps = obj2.useHubProgressBarCompletedSteps(onPressSearch);
-  let obj3 = channel(12669);
+  let obj3 = channel(12673);
   if (null == obj3.getNextHubProgressStep(hubProgressBarCompletedSteps)) {
     let sum = _location;
   } else {
@@ -332,8 +332,8 @@ export default function GuildDirectory(channel) {
         obj2 = { guild: null, channel: null };
         obj2[0] = onPressSearch;
         obj2[1] = channel;
-        items9[1] = callback(guildId(12754), obj2);
-        items9[2] = callback(tmp2(11896).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
+        items9[1] = callback(guildId(12758), obj2);
+        items9[2] = callback(tmp2(11901).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
         obj[1] = items9;
         let tmp23 = callback2(currentCategoryId, obj);
       }

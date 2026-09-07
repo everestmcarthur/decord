@@ -1,10 +1,10 @@
-// Module ID: 11878
-// Function ID: 11879
+// Module ID: 11883
+// Function ID: 11884
 // Name: ClassificationDetailModal
-// Dependencies: [19, 21, 4560, 576, 4763, 5624, 11879, 11909, 11910, 11881, 1484, 7000, 1114, 2]
+// Dependencies: [19, 21, 4560, 576, 4763, 5624, 11884, 11914, 11915, 11886, 1484, 7000, 1114, 2]
 // Exports: default
 
-// Module 11878 (ClassificationDetailModal)
+// Module 11883 (ClassificationDetailModal)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_4 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -29,7 +29,7 @@ export default function ClassificationDetailModal(classificationId) {
   let safetyHubInitialized;
   const tmp = callback();
   dependencyMap = tmp;
-  let obj = classificationId(11910);
+  let obj = classificationId(11915);
   safetyHubInitialized = obj.useSafetyHubInitialized();
   const items = [safetyHubInitialized];
   const effect = safetyHubInitialized.useEffect(() => {
@@ -67,7 +67,7 @@ export default function ClassificationDetailModal(classificationId) {
           onError() {
             let arr = callback2(4763);
             arr = arr.pop();
-            callback(11909).openAccountStanding();
+            callback(11914).openAccountStanding();
           }
         });
       }

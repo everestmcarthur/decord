@@ -1,10 +1,10 @@
-// Module ID: 15085
-// Function ID: 15086
+// Module ID: 15088
+// Function ID: 15089
 // Name: sharedValue
-// Dependencies: [19, 21, 4560, 576, 8764, 4296, 4561, 2]
+// Dependencies: [19, 21, 4560, 576, 8769, 4296, 4561, 2]
 // Exports: default
 
-// Module 15085 (sharedValue)
+// Module 15088 (sharedValue)
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import closure_3 from "noop" /* 19 */;
@@ -24,12 +24,12 @@ let result = require("set").fileFinishedImporting("modules/collectibles/native/S
 export default function _default(width) {
   let COLLECTIBLES_SHOP_CARD_WIDTH = width.width;
   if (COLLECTIBLES_SHOP_CARD_WIDTH === undefined) {
-    COLLECTIBLES_SHOP_CARD_WIDTH = sharedValue(8764).COLLECTIBLES_SHOP_CARD_WIDTH;
+    COLLECTIBLES_SHOP_CARD_WIDTH = sharedValue(8769).COLLECTIBLES_SHOP_CARD_WIDTH;
   }
   let COLLECTIBLES_SHOP_CARD_HEIGHT = width.height;
   sharedValue = undefined;
   if (COLLECTIBLES_SHOP_CARD_HEIGHT == null) {
-    COLLECTIBLES_SHOP_CARD_HEIGHT = sharedValue(8764).COLLECTIBLES_SHOP_CARD_HEIGHT;
+    COLLECTIBLES_SHOP_CARD_HEIGHT = sharedValue(8769).COLLECTIBLES_SHOP_CARD_HEIGHT;
   }
   const tmp3 = closure_5;
   const tmp3Result = closure_5(COLLECTIBLES_SHOP_CARD_WIDTH, COLLECTIBLES_SHOP_CARD_HEIGHT);

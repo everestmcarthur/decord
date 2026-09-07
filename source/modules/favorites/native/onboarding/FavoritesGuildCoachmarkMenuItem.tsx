@@ -1,12 +1,12 @@
-// Module ID: 16234
-// Function ID: 16235
+// Module ID: 16237
+// Function ID: 16238
 // Name: FavoritesGuildCoachmarkMenuItemContent
-// Dependencies: [19, 1960, 1074, 1954, 21, 10240, 7156, 504, 1114, 3225, 11127, 2]
+// Dependencies: [19, 1960, 1074, 1954, 21, 10245, 7156, 504, 1114, 3225, 11132, 2]
 // Exports: default
 
-// Module 16234 (FavoritesGuildCoachmarkMenuItemContent)
+// Module 16237 (FavoritesGuildCoachmarkMenuItemContent)
 import Layer from "Layer" /* 7156 */;
-import items12 from "items1" /* 10240 */;
+import items12 from "items1" /* 10245 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "initializeFromUserSettings" /* 1960 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
@@ -37,7 +37,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, callback, callback1];
   const memo = callback.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M7 2v1h2V2H7ZM9 1v1h4V1H9ZM13 2v1h1V2h-1ZM14 3v1h1V3h-1ZM15 4v5h1V4h-1ZM14 9v2h1V9h-1ZM13 11v1h1v-1h-1ZM11 12v1h2v-1h-2ZM9 13v1h2v-1H9ZM7 14v1h2v-1H7Z", onButtonPress: "#000" };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M15 4h-1v5h1V4ZM14 9h-1v2h1V9ZM3 9H2v2h1V9ZM13 11h-2v1h2v-1ZM11 12H9v1h2v-1ZM9 13H7v1h2v-1ZM7 12H5v1h2v-1ZM5 11H3v1h2v-1Z", onButtonPress: null };
     const intl = stateFromStores(markPopoverAsDismissed[8]).intl;
     const tmp4 = shouldShowPopover(markPopoverAsDismissed[9]);
     if (stateFromStores) {

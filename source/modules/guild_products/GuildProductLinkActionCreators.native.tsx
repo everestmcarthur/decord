@@ -1,10 +1,10 @@
-// Module ID: 12944
-// Function ID: 12945
+// Module ID: 12948
+// Function ID: 12949
 // Name: openGuildProductLink
 // Dependencies: [4905, 1114, 2]
 // Exports: openGuildProductLink
 
-// Module 12944 (openGuildProductLink)
+// Module 12948 (openGuildProductLink)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import _modDef4905 from "module_4905" /* 4905 */;

@@ -1,17 +1,17 @@
-// Module ID: 12005
-// Function ID: 12006
+// Module ID: 12009
+// Function ID: 12010
 // Name: ForumPostUsername
-// Dependencies: [19, 17, 4552, 12001, 21, 4560, 7885, 1967, 11527, 12006, 504, 7961, 1178, 4556, 2]
+// Dependencies: [19, 17, 4552, 12005, 21, 4560, 7885, 1967, 11532, 12010, 504, 7961, 1178, 4556, 2]
 // Exports: ForumPostAuthor, ForumPostMessageAuthor
 
-// Module 12005 (ForumPostUsername)
+// Module 12009 (ForumPostUsername)
 import noopAll from "noop" /* 19 */;
 import set from "set" /* 1967 */;
 import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 7885 */;
-import useChatWidthDefault from "useChatWidth" /* 11527 */;
+import useChatWidthDefault from "useChatWidth" /* 11532 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { useForumChannelStore } from "set" /* 12001 */;
+import { useForumChannelStore } from "set" /* 12005 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -24,7 +24,7 @@ function ForumPostUsername(arg0) {
   if (useForumChannelStore(thread.parent_id).layoutType === set.ForumLayout.GRID) {
     num = 72;
   }
-  const diff = useChatWidthDefault() - tmp2(12006).GRID_HORIZONTAL_PADDING - num;
+  const diff = useChatWidthDefault() - tmp2(12010).GRID_HORIZONTAL_PADDING - num;
   let tmp2Result = tmp2(504);
   const items = [closure_4];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => roleStyle.roleStyle);

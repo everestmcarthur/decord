@@ -1,13 +1,13 @@
-// Module ID: 10990
-// Function ID: 10991
+// Module ID: 10995
+// Function ID: 10996
 // Name: handleChannelDelete
-// Dependencies: [32, 2011, 4381, 1964, 10991, 1116, 504, 573, 2]
+// Dependencies: [32, 2011, 4381, 1964, 10996, 1116, 504, 573, 2]
 
-// Module 10990 (handleChannelDelete)
+// Module 10995 (handleChannelDelete)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import PlatformTypes from "PlatformTypes" /* 1116 */;
-import apexExperimentDefault from "apexExperiment" /* 10991 */;
+import apexExperimentDefault from "apexExperiment" /* 10996 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "handleConnectionOpen" /* 2011 */;
 import closure_5 from "handleConnectionOpen" /* 4381 */;

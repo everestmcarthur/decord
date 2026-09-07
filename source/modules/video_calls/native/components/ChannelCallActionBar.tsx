@@ -1,21 +1,21 @@
-// Module ID: 9945
-// Function ID: 9946
+// Module ID: 9950
+// Function ID: 9951
 // Name: VideoButton
-// Dependencies: [19, 17, 1956, 4576, 4577, 4582, 502, 1908, 9486, 4581, 4585, 21, 4560, 9496, 9946, 504, 9088, 5417, 9947, 9082, 9585, 9497, 1114, 9950, 9951, 9471, 9975, 9976, 4761, 4702, 4612, 9515, 9977, 7271, 9465, 7162, 7182, 9500, 9978, 10002, 10012, 2]
+// Dependencies: [19, 17, 1956, 4576, 4577, 4582, 502, 1908, 9491, 4581, 4585, 21, 4560, 9501, 9951, 504, 9093, 5417, 9952, 9087, 9590, 9502, 1114, 9955, 9956, 9476, 9980, 9981, 4761, 4702, 4612, 9520, 9982, 7271, 9470, 7162, 7182, 9505, 9983, 10007, 10017, 2]
 // Exports: default, useActionBarPrimaryButton, useActionBarSecondButtons
 
-// Module 9945 (VideoButton)
+// Module 9950 (VideoButton)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import context from "context" /* 7162 */;
 import contextDefault from "context" /* 7162 */;
 import useIsRemoteDefault from "useIsRemote" /* 7271 */;
-import useIsConnectedToVoiceChannel from "useIsConnectedToVoiceChannel" /* 9471 */;
-import ActionButtonAll from "ActionButton" /* 9497 */;
-import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 9500 */;
-import stopScreenshareDefault from "stopScreenshare" /* 9951 */;
-import registerAssetDefault from "registerAsset" /* 9975 */;
-import registerAssetDefault2 from "registerAsset" /* 9976 */;
-import registerAssetDefault3 from "registerAsset" /* 9977 */;
+import useIsConnectedToVoiceChannel from "useIsConnectedToVoiceChannel" /* 9476 */;
+import ActionButtonAll from "ActionButton" /* 9502 */;
+import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 9505 */;
+import stopScreenshareDefault from "stopScreenshare" /* 9956 */;
+import registerAssetDefault from "registerAsset" /* 9980 */;
+import registerAssetDefault2 from "registerAsset" /* 9981 */;
+import registerAssetDefault3 from "registerAsset" /* 9982 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "participantFromServer" /* 1956 */;
@@ -24,7 +24,7 @@ import closure_8 from "set" /* 4577 */;
 import closure_9 from "reset" /* 4582 */;
 import closure_10 from "fetchFingerprint" /* 502 */;
 import closure_11 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_12 from "initialize" /* 9486 */;
+import closure_12 from "initialize" /* 9491 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
 import { Features } from "DesktopSources" /* 4585 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -300,7 +300,7 @@ function useActionBarSecondButton(channel) {
 function useActionBarPrimaryButtons(channel) {
   channel = channel.channel;
   closure_1 = undefined;
-  let obj = channel(9471);
+  let obj = channel(9476);
   const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   const items = [closure_7, closure_10];
   closure_1 = channel(504).useStateFromStores(items, () => {
@@ -375,7 +375,7 @@ export default function ChannelCallActionBar(arg0) {
   if (shouldShowConnectingScreen) {
     obj1 = { channel: null };
     obj1[0] = channel;
-    let tmp13Result = tmp11(tmp9(9978).CallConnectingActionBar, obj1);
+    let tmp13Result = tmp11(tmp9(9983).CallConnectingActionBar, obj1);
   } else {
     let tmp11Result = null;
     if (!tmp4) {
@@ -406,12 +406,12 @@ export default function ChannelCallActionBar(arg0) {
     const obj5 = { channel: null, isSmallSize: null };
     obj5[0] = channel;
     obj5[1] = isFiveButtonLayout;
-    items[2] = tmp11(tmp9(10002).ChannelCallMicButton, obj5);
+    items[2] = tmp11(tmp9(10007).ChannelCallMicButton, obj5);
     if (tmp7.END_REMOTE === END_REMOTE) {
       const obj6 = { channel: null, isSmallSize: null };
       obj6[0] = channel;
       obj6[1] = isFiveButtonLayout;
-      let tmp11Result2 = tmp11(tmp9(10012).DisconnectRemoteButton, obj6);
+      let tmp11Result2 = tmp11(tmp9(10017).DisconnectRemoteButton, obj6);
     } else if (tmp7.END_STREAM === END_REMOTE) {
       const obj7 = { channel: null, isSmallSize: null };
       obj7[0] = channel;

@@ -1,10 +1,10 @@
-// Module ID: 15568
-// Function ID: 15569
+// Module ID: 15571
+// Function ID: 15572
 // Name: UserSettingsPushNotificationLogs
-// Dependencies: [5, 32, 19, 17, 1074, 21, 4560, 576, 6622, 510, 10191, 1611, 7050, 5123, 1114, 8361, 10192, 9053, 8874, 4556, 2]
+// Dependencies: [5, 32, 19, 17, 1074, 21, 4560, 576, 6622, 510, 10196, 1611, 7050, 5123, 1114, 8361, 10197, 9058, 8879, 4556, 2]
 // Exports: default
 
-// Module 15568 (UserSettingsPushNotificationLogs)
+// Module 15571 (UserSettingsPushNotificationLogs)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -199,7 +199,7 @@ export default function UserSettingsPushNotificationLogs() {
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_1(10191)();
+            obj1[0] = closure_1_1(10196)();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -214,7 +214,7 @@ export default function UserSettingsPushNotificationLogs() {
           closure_0 = arg1;
           obj = closure_1_0(8361);
           const obj3 = { message: null };
-          obj3[0] = closure_1_1(10192)(closure_0, false);
+          obj3[0] = closure_1_1(10197)(closure_0, false);
           obj.showShareActionSheet(obj3, "push-notification-logs");
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -225,7 +225,7 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj[3] = callback3(first(9053).ShareIcon, {});
+  obj[3] = callback3(first(9058).ShareIcon, {});
   items1[1] = callback3(first(5123).PressableOpacity, obj);
   obj[1] = items1;
   let items2 = [callback4(View, obj), ];
@@ -252,7 +252,7 @@ export default function UserSettingsPushNotificationLogs() {
     obj[1] = items;
     return closure_1_8(closure_1_6, obj, item.index);
   };
-  items2[1] = callback3(first(8874).FlashList, obj1);
+  items2[1] = callback3(first(8879).FlashList, obj1);
   obj[1] = items2;
   return callback4(View, obj);
 };

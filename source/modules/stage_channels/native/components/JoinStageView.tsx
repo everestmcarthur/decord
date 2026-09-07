@@ -1,17 +1,17 @@
-// Module ID: 9940
-// Function ID: 9941
+// Module ID: 9945
+// Function ID: 9946
 // Name: JoinStageView
-// Dependencies: [19, 21, 5431, 5425, 9675, 1114, 8400, 9898, 2]
+// Dependencies: [19, 21, 5431, 5425, 9680, 1114, 8400, 9903, 2]
 // Exports: default
 
-// Module 9940 (JoinStageView)
+// Module 9945 (JoinStageView)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import sortKey from "sortKey" /* 5425 */;
 import useStageParticipants from "useStageParticipants" /* 5431 */;
 import fillChunk from "fillChunk" /* 8400 */;
-import stylesDefault from "styles" /* 9675 */;
-import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 9898 */;
+import stylesDefault from "styles" /* 9680 */;
+import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 9903 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

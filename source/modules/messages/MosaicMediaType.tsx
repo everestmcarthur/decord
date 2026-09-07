@@ -1,14 +1,14 @@
-// Module ID: 11697
-// Function ID: 11698
+// Module ID: 11702
+// Function ID: 11703
 // Name: isVisualMedia
-// Dependencies: [1074, 4710, 1384, 11698, 2]
+// Dependencies: [1074, 4710, 1384, 11703, 2]
 // Exports: getMosaicMediaTypeForAttachment, getMosaicMediaTypeForUnfurledMediaItem, isVisualMedia
 
-// Module 11697 (isVisualMedia)
+// Module 11702 (isVisualMedia)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4710 */;
-import set2 from "set" /* 11698 */;
+import set2 from "set" /* 11703 */;
 
 const MessageAttachmentFlags = ME.MessageAttachmentFlags;
 const re3 = /\.(mp3|m4a|ogg|opus|wav|flac)$/i;

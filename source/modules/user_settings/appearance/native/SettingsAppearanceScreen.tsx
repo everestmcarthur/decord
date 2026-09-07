@@ -1,13 +1,13 @@
-// Module ID: 15262
-// Function ID: 15263
-// Dependencies: [19, 4379, 1184, 1183, 15263, 7975, 1074, 21, 1483, 1115, 7863, 1114, 10120, 1249, 3225, 2024, 4992, 15264, 563, 11468, 14689, 2]
+// Module ID: 15265
+// Function ID: 15266
+// Dependencies: [19, 4379, 1184, 1183, 15266, 7975, 1074, 21, 1483, 1115, 7863, 1114, 10125, 1249, 3225, 2024, 4992, 15267, 563, 11473, 14692, 2]
 
-// Module 15262
+// Module 15265
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "reset" /* 4379 */;
 import closure_5 from "initialize" /* 1184 */;
 import closure_6 from "handleThemeChange" /* 1183 */;
-import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE" /* 15263 */;
+import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE" /* 15266 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -18,8 +18,8 @@ let c3 = importAllResult;
 const memoResult = importAllResult.memo(() => {
   nativeStackNavigation(4992)(() => {
     if (closure_5.shouldSync("appearance")) {
-      const userCustomThemes = lib(15264).fetchUserCustomThemes();
-      const obj = lib(15264);
+      const userCustomThemes = lib(15267).fetchUserCustomThemes();
+      const obj = lib(15267);
     }
   });
   let items = [closure_6, closure_4];
@@ -64,7 +64,7 @@ const memoResult = importAllResult.memo(() => {
     callback(table[13]).batchUpdates(() => state.setState(closure_7));
   }, []);
   const node = importAllResult.useMemo(() => {
-    let obj = lib(11468);
+    let obj = lib(11473);
     obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = lib(1114).intl;
@@ -110,7 +110,7 @@ const memoResult = importAllResult.memo(() => {
     return obj.createList(obj);
   }, []);
   let obj2 = _require(1483);
-  return jsx(nativeStackNavigation(14689), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(14692), { node }, "" + theme + "-" + gradientPresetId);
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 

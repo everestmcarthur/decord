@@ -1,8 +1,8 @@
-// Module ID: 9288
-// Function ID: 9289
-// Dependencies: [32, 19, 17, 21, 4560, 576, 4296, 9289, 9419, 5126, 8272, 5586, 4556, 1114, 4561, 4564, 5664, 4987, 1093, 2]
+// Module ID: 9293
+// Function ID: 9294
+// Dependencies: [32, 19, 17, 21, 4560, 576, 4296, 9294, 9424, 5126, 8272, 5586, 4556, 1114, 4561, 4564, 5664, 4987, 1093, 2]
 
-// Module 9288
+// Module 9293
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   let isScreenLandscape;
   closure_18 = undefined;
   let tmp = callback();
-  let obj = sharedValue(9289);
+  let obj = sharedValue(9294);
   obj1 = importAllResult;
   const ref = importAllResult.useRef(null);
   sharedValue = ref;
@@ -68,9 +68,9 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   fn.__workletHash = 23826674246;
   fn.__initData = closure_13;
   const animatedStyle = obj3.useAnimatedStyle(fn);
-  let obj4 = sharedValue(9289);
+  let obj4 = sharedValue(9294);
   const sectionName = obj4.getSectionName(application);
-  let obj5 = sharedValue(9289);
+  let obj5 = sharedValue(9294);
   str = obj5.getSectionDescription(application);
   let tmp28Result1 = null != str;
   if (tmp28Result1) {
@@ -93,8 +93,8 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   const memo = obj1.useMemo(() => {
     let result = null;
     if (null != str) {
-      result = sharedValue(9419).parseBioReactWithCachedAST(tmp);
-      const obj = sharedValue(9419);
+      result = sharedValue(9424).parseBioReactWithCachedAST(tmp);
+      const obj = sharedValue(9424);
     }
     return result;
   }, items);

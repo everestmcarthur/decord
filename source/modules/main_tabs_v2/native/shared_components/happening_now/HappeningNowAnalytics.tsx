@@ -1,10 +1,10 @@
-// Module ID: 16059
-// Function ID: 16060
+// Module ID: 16062
+// Function ID: 16063
 // Name: convertNullableArrayToItemAndItemIndex
 // Dependencies: [32, 502, 11, 2]
 // Exports: getAffinityProperties
 
-// Module 16059 (convertNullableArrayToItemAndItemIndex)
+// Module 16062 (convertNullableArrayToItemAndItemIndex)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "fetchFingerprint" /* 502 */;

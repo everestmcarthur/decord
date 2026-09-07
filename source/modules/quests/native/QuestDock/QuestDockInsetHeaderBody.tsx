@@ -1,21 +1,21 @@
-// Module ID: 15200
-// Function ID: 15201
+// Module ID: 15203
+// Function ID: 15204
 // Name: QUEST_DOCK_EXPANDED_PADDING_BOTTOM
-// Dependencies: [19, 17, 15095, 21, 576, 4560, 11771, 11770, 15092, 1611, 15164, 15161, 4556, 1178, 2]
+// Dependencies: [19, 17, 15098, 21, 576, 4560, 11776, 11775, 15095, 1611, 15167, 15164, 4556, 1178, 2]
 // Exports: QuestDockBodyQuestRewardTile, QuestDockBodyRewardTile
 
-// Module 15200 (QUEST_DOCK_EXPANDED_PADDING_BOTTOM)
+// Module 15203 (QUEST_DOCK_EXPANDED_PADDING_BOTTOM)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import Text from "Text" /* 4556 */;
-import QuestRewardTileDefault from "QuestRewardTile" /* 11770 */;
-import _modDef11771 from "module_11771" /* 11771 */;
-import useIsQuestDockExpanded from "useIsQuestDockExpanded" /* 15092 */;
-import _modDef15161 from "module_15161" /* 15161 */;
-import PremiumRewardFillGradientDefault from "PremiumRewardFillGradient" /* 15164 */;
+import QuestRewardTileDefault from "QuestRewardTile" /* 11775 */;
+import _modDef11776 from "module_11776" /* 11776 */;
+import useIsQuestDockExpanded from "useIsQuestDockExpanded" /* 15095 */;
+import _modDef15164 from "module_15164" /* 15164 */;
+import PremiumRewardFillGradientDefault from "PremiumRewardFillGradient" /* 15167 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15095 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15098 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
@@ -61,7 +61,7 @@ const memoResult = importAllResult.memo(function QuestDockInsetHeaderBody(showBo
   items[1] = obj;
   obj[2] = items;
   obj1 = { style: tmp.rewardContentWrapper, children: null };
-  const items1 = [callback(_modDef15161, {}), ];
+  const items1 = [callback(_modDef15164, {}), ];
   const obj2 = { style: tmp.rewardContent, children: null };
   const items2 = [rewardTile, ];
   const obj3 = { style: tmp.rewardContentCopy, children: null };
@@ -102,7 +102,7 @@ export const QuestDockBodyRewardTile = function QuestDockBodyRewardTile(arg0) {
   obj.height = PX_80;
   obj.width = PX_80;
   obj.style = tmp.rewardTile;
-  return callback(_modDef11771, obj);
+  return callback(_modDef11776, obj);
 };
 export const QuestDockBodyQuestRewardTile = function QuestDockBodyQuestRewardTile(arg0) {
   const obj = {};

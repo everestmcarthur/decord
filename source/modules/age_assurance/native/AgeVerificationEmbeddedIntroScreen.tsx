@@ -1,13 +1,13 @@
-// Module ID: 8583
-// Function ID: 8584
+// Module ID: 8586
+// Function ID: 8587
 // Name: AgeVerificationEmbeddedIntroScreen
-// Dependencies: [19, 1074, 21, 4560, 576, 8418, 8576, 8584, 8421, 8422, 4973, 5692, 4556, 4773, 8586, 1114, 2946, 8411, 2024, 2]
+// Dependencies: [19, 1074, 21, 4560, 576, 8418, 8579, 8587, 8421, 8422, 4973, 5692, 4556, 4773, 8589, 1114, 2946, 8411, 2024, 2]
 // Exports: default
 
-// Module 8583 (AgeVerificationEmbeddedIntroScreen)
+// Module 8586 (AgeVerificationEmbeddedIntroScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import messagesProxyDefault from "messagesProxy" /* 2946 */;
-import useAgeVerificationMethodsDefault from "useAgeVerificationMethods" /* 8584 */;
+import useAgeVerificationMethodsDefault from "useAgeVerificationMethods" /* 8587 */;
 import closure_3 from "noop" /* 19 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -46,7 +46,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   obj3[3] = items2;
   items1[1] = callback2(navigation(4973).Stack, obj3);
   obj2[3] = items1;
-  const items3 = [callback2(navigation(4973).Stack, obj2), callback(navigation(8586).AgeVerificationMethodsContainer, { ageVerificationMethods: useAgeVerificationMethodsDefault({ onClose, classificationId, onGoogleWalletSelect: callback }).ageVerificationMethods, modalSessionId })];
+  const items3 = [callback2(navigation(4973).Stack, obj2), callback(navigation(8589).AgeVerificationMethodsContainer, { ageVerificationMethods: useAgeVerificationMethodsDefault({ onClose, classificationId, onGoogleWalletSelect: callback }).ageVerificationMethods, modalSessionId })];
   obj1[3] = items3;
   const items4 = [callback2(navigation(4973).Stack, obj1), ];
   const obj6 = { variant: "text-xs/medium", color: "text-muted", style: tmp.helpLink, children: null };

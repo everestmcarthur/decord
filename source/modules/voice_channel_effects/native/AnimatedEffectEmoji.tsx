@@ -1,10 +1,10 @@
-// Module ID: 9630
-// Function ID: 9631
+// Module ID: 9635
+// Function ID: 9636
 // Name: Emoji
 // Dependencies: [19, 17, 4552, 21, 1090, 4560, 576, 5587, 1178, 504, 4296, 4561, 7349, 2]
 // Exports: default
 
-// Module 9630 (Emoji)
+// Module 9635 (Emoji)
 import ThemesDefault from "Themes" /* 576 */;
 import setDefault from "set" /* 1090 */;
 import Button from "Button" /* 1178 */;

@@ -1,19 +1,16 @@
 // Module ID: 8520
 // Function ID: 8521
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8521, 8477]
+// Dependencies: [41, 42, 93, 95, 98, 19, 8472]
 
 // Module 8520 (_isNativeReflectConstruct)
-import noopDefault from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8477 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
-import { jsx } from "jsxProd" /* 21 */;
 
-const Filter = importDefault;
+const FeSpotLight = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -33,13 +30,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-noopDefault;
-class Filter {
+class FeSpotLight {
   constructor() {
     self = this;
-    tmp = closure_2(this, Filter);
+    tmp = closure_2(this, FeSpotLight);
     tmp2 = closure_4;
-    obj = closure_4(Filter);
+    obj = closure_4(FeSpotLight);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -54,31 +50,18 @@ class Filter {
     return tmp3(self, constructResult);
   }
 }
-_inheritsDefault(Filter, _isNativeReflectConstructDefault);
+_inheritsDefault(FeSpotLight, require("noop").Component);
 const items = [
   {
     key: "render",
     value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const merged = Object.assign(obj);
-      obj.children = this.props.children;
-      return jsx(self(8521), {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
+      const result = FeSpotLight(8472).warnUnimplementedFilter();
+      return null;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Filter, items);
-importDefaultResultResult.displayName = "Filter";
-importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
+const importDefaultResultResult = importDefaultResult(FeSpotLight, items);
+importDefaultResultResult.displayName = "FeSpotLight";
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

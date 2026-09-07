@@ -1,10 +1,10 @@
-// Module ID: 16458
-// Function ID: 16459
+// Module ID: 16461
+// Function ID: 16462
 // Name: ItemDetailsActionSheet
-// Dependencies: [19, 17, 1957, 1979, 8335, 21, 4560, 576, 504, 4713, 5626, 5584, 1178, 8350, 7198, 10998, 16459, 5687, 5605, 2]
+// Dependencies: [19, 17, 1957, 1979, 8335, 21, 4560, 576, 504, 4713, 5626, 5584, 1178, 8350, 7198, 11003, 16462, 5687, 5605, 2]
 // Exports: default
 
-// Module 16458 (ItemDetailsActionSheet)
+// Module 16461 (ItemDetailsActionSheet)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -76,14 +76,14 @@ export default function ItemDetailsActionSheet(arg0) {
   if (str == null) {
     str = "";
   }
-  obj2 = { showGradient: true, startExpanded: true, header: tmp16(tmp(10998).ActionSheetIconHeader, obj1), children: null };
+  obj2 = { showGradient: true, startExpanded: true, header: tmp16(tmp(11003).ActionSheetIconHeader, obj1), children: null };
   obj1[2] = str;
   let tmp16Result = result;
   if (result) {
     const obj3 = { channel: null, guild: null };
     obj3[0] = stateFromStores;
     obj3[1] = stateFromStores1;
-    tmp16Result = tmp16(tmp(16459).ChannelScoreSettings, obj3);
+    tmp16Result = tmp16(tmp(16462).ChannelScoreSettings, obj3);
   }
   const items3 = [tmp16Result, , ];
   let tmp15Result = null != stateFromStores2 && null != stateFromStores1;
@@ -97,7 +97,7 @@ export default function ItemDetailsActionSheet(arg0) {
     const items4 = [result, ];
     const obj6 = { guild: null };
     obj6[0] = stateFromStores1;
-    items4[1] = tmp16(tmp(16459).GuildScoreSettings, obj6);
+    items4[1] = tmp16(tmp(16462).GuildScoreSettings, obj6);
     obj5[0] = items4;
     tmp15Result = tmp15(closure_8, obj5);
     const tmp19 = closure_8;

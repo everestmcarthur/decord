@@ -1,9 +1,9 @@
-// Module ID: 17330
-// Function ID: 17331
+// Module ID: 17333
+// Function ID: 17334
 // Name: handleGuildCreate
-// Dependencies: [5, 502, 1957, 4902, 1979, 5277, 1074, 1964, 3, 1090, 7118, 1242, 573, 7652, 13668, 1384, 1256, 2]
+// Dependencies: [5, 502, 1957, 4902, 1979, 5277, 1074, 1964, 3, 1090, 7118, 1242, 573, 7652, 13672, 1384, 1256, 2]
 
-// Module 17330 (handleGuildCreate)
+// Module 17333 (handleGuildCreate)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 1090 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
@@ -482,7 +482,7 @@ function _getResyncGuilds() {
 }
 function scheduleIntegrityCheck(guild_id) {
   const _require = guild_id;
-  let obj = _require(13668);
+  let obj = _require(13672);
   if (obj.isChannelMetadataIntegrityCheckEnabled("scheduleIntegrityCheck")) {
     if (null != dependencyMap3[guild_id]) {
       let _clearTimeout = clearTimeout;

@@ -1,17 +1,17 @@
-// Module ID: 15167
-// Function ID: 15168
+// Module ID: 15170
+// Function ID: 15171
 // Name: Footer
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 4527, 7382, 9967, 4255, 2024, 4975, 1114, 1611, 7154, 4271, 4556, 11293, 3353, 7150, 15164, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 4527, 7382, 9972, 4255, 2024, 4975, 1114, 1611, 7154, 4271, 4556, 11298, 3353, 7150, 15167, 2]
 // Exports: default
 
-// Module 15167 (Footer)
+// Module 15170 (Footer)
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ManaContext from "ManaContext" /* 4271 */;
 import Text from "Text" /* 4556 */;
 import Button2 from "Button" /* 4975 */;
 import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7154 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9967 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9972 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;
@@ -110,7 +110,7 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   multiplier = multiplier.multiplier;
   const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
   dependencyMap = undefined;
-  let obj = multiplier(11293);
+  let obj = multiplier(11298);
   const result = obj.shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
   dependencyMap = result;
   const items = [orbMultiplierEligibility];
@@ -148,9 +148,9 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
     return formatResult;
   }, items1);
   obj = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles: closure_11, children: null };
-  obj = { visible: orbMultiplierEligibility === multiplier(11293).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(11293).QuestOrbMultiplierEligibilityType.UPSELL, children: null };
-  const tmp4 = orbMultiplierEligibility === multiplier(11293).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(11293).QuestOrbMultiplierEligibilityType.UPSELL;
+  obj = { visible: orbMultiplierEligibility === multiplier(11298).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(11298).QuestOrbMultiplierEligibilityType.UPSELL, children: null };
+  const tmp4 = orbMultiplierEligibility === multiplier(11298).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(11298).QuestOrbMultiplierEligibilityType.UPSELL;
   obj[1] = callback(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-  obj[4] = callback(orbMultiplierEligibility(15164), obj);
+  obj[4] = callback(orbMultiplierEligibility(15167), obj);
   return callback(multiplier(7150).BottomSheet, obj);
 };

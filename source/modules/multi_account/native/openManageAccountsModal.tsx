@@ -1,15 +1,15 @@
-// Module ID: 16374
-// Function ID: 16375
+// Module ID: 16377
+// Function ID: 16378
 // Name: openManageAccountsModal
-// Dependencies: [12414, 4527, 4763, 16375, 1896, 2]
+// Dependencies: [12418, 4527, 4763, 16378, 1896, 2]
 // Exports: default
 
-// Module 16374 (openManageAccountsModal)
+// Module 16377 (openManageAccountsModal)
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 import _modDef4763 from "module_4763" /* 4763 */;
-import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 12414 */;
+import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 12418 */;
 
 const SWITCH_ACCOUNTS_MODAL_KEY = MAX_ACCOUNTS.SWITCH_ACCOUNTS_MODAL_KEY;
 const result = set.fileFinishedImporting("modules/multi_account/native/openManageAccountsModal.tsx");
@@ -18,5 +18,5 @@ export default function openManageAccountsModal(initialRouteName) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj.hideActionSheet();
   obj = { initialRouteName };
-  _modDef4763.pushLazy(asyncRequireImpl(16375, dependencyMap.paths), obj, SWITCH_ACCOUNTS_MODAL_KEY);
+  _modDef4763.pushLazy(asyncRequireImpl(16378, dependencyMap.paths), obj, SWITCH_ACCOUNTS_MODAL_KEY);
 };

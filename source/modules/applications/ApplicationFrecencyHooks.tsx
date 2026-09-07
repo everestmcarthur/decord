@@ -1,12 +1,12 @@
-// Module ID: 12121
-// Function ID: 12122
+// Module ID: 12125
+// Function ID: 12126
 // Name: useSortApplicationsViaFrecency
-// Dependencies: [19, 9291, 1084, 1940, 504, 11, 7521, 2]
+// Dependencies: [19, 9296, 1084, 1940, 504, 11, 7521, 2]
 // Exports: useSortApplicationsViaFrecency
 
-// Module 12121 (useSortApplicationsViaFrecency)
+// Module 12125 (useSortApplicationsViaFrecency)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUserSettingsProtoStoreChange" /* 9291 */;
+import closure_4 from "handleUserSettingsProtoStoreChange" /* 9296 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 1084 */;
 
 const require = arg1;

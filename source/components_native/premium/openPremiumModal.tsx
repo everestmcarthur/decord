@@ -1,10 +1,10 @@
-// Module ID: 9392
-// Function ID: 9393
+// Module ID: 9397
+// Function ID: 9398
 // Name: openPremiumModal
 // Dependencies: [4763, 7412, 1896, 2]
 // Exports: default
 
-// Module 9392 (openPremiumModal)
+// Module 9397 (openPremiumModal)
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;

@@ -1,10 +1,10 @@
-// Module ID: 15717
-// Function ID: 15718
+// Module ID: 15720
+// Function ID: 15721
 // Name: DevToolsShopScreen
-// Dependencies: [19, 17, 4559, 21, 4560, 576, 6981, 504, 15616, 1943, 4973, 5687, 5605, 7202, 15690, 7201, 2]
+// Dependencies: [19, 17, 4559, 21, 4560, 576, 6981, 504, 15619, 1943, 4973, 5687, 5605, 7202, 15693, 7201, 2]
 // Exports: default
 
-// Module 15717 (DevToolsShopScreen)
+// Module 15720 (DevToolsShopScreen)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -15,7 +15,7 @@ import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
 import FormSwitch from "FormSwitch" /* 7202 */;
-import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15616 */;
+import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15619 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "getUserAgnosticState" /* 4559 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -56,7 +56,7 @@ export default function DevToolsShopScreen() {
   obj4 = {
     value: stateFromStores,
     onValueChange(arg0) {
-      return callback(15690).toggle("shop_disable_cache", arg0);
+      return callback(15693).toggle("shop_disable_cache", arg0);
     }
   };
   const tmp6Result = useToggleDismissibleContentDismissStateDefault(DismissibleContent.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING);

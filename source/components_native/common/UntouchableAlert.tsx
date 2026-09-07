@@ -1,9 +1,9 @@
-// Module ID: 15245
-// Function ID: 15246
+// Module ID: 15248
+// Function ID: 15249
 // Name: componentDidMount
 // Dependencies: [19, 17, 21, 4560, 4271, 5577, 2]
 
-// Module 15245 (componentDidMount)
+// Module 15248 (componentDidMount)
 import ActivityIndicator from "ActivityIndicator" /* 5577 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;

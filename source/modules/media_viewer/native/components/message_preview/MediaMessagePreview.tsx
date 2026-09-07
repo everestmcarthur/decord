@@ -1,10 +1,10 @@
-// Module ID: 12973
-// Function ID: 12974
+// Module ID: 12977
+// Function ID: 12978
 // Name: MeasureMessage
-// Dependencies: [32, 19, 17, 7277, 7281, 1957, 4781, 8360, 1074, 21, 7932, 8126, 4560, 8293, 8652, 576, 504, 11314, 1114, 11, 12974, 11547, 11252, 7764, 11584, 6655, 11894, 11616, 4571, 2]
+// Dependencies: [32, 19, 17, 7277, 7281, 1957, 4781, 8360, 1074, 21, 7932, 8126, 4560, 8293, 8657, 576, 504, 11319, 1114, 11, 12978, 11552, 11257, 7764, 11589, 6655, 11899, 11621, 4571, 2]
 // Exports: default
 
-// Module 12973 (MeasureMessage)
+// Module 12977 (MeasureMessage)
 import ThemesDefault from "Themes" /* 576 */;
 import setOptionsDefault from "setOptions" /* 7932 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -308,7 +308,7 @@ export default function MediaMessagePreview(channelId) {
           }
         }
         obj = channelId(onClose[27]);
-        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: "sm", message: "icon-muted", messageChannel: true, selectedChannelId: "image", tapLinkData: null };
+        obj = { allowWithinModal: true, chatInputRef: "Boolean", handleTransitionToThread: "BuyNitroPurchaseFlow", message: "absolute", messageChannel: null, selectedChannelId: "call", tapLinkData: "Path" };
         obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
           channel = channel.getChannel(arg1);
           if (null != channel) {

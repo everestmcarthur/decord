@@ -1,9 +1,9 @@
-// Module ID: 17494
-// Function ID: 17495
+// Module ID: 17497
+// Function ID: 17498
 // Name: handleChannelDelete
 // Dependencies: [502, 1957, 7118, 504, 573, 7898, 2]
 
-// Module 17494 (handleChannelDelete)
+// Module 17497 (handleChannelDelete)
 import initializeDefault from "initialize" /* 7118 */;
 import withErrorHandlingDefault from "withErrorHandling" /* 7898 */;
 import closure_2 from "fetchFingerprint" /* 502 */;

@@ -1,14 +1,14 @@
-// Module ID: 17353
-// Function ID: 17354
+// Module ID: 17356
+// Function ID: 17357
 // Name: StreamFeedbackActionSheet
-// Dependencies: [19, 502, 1074, 11626, 21, 7738, 504, 1114, 2658, 11629, 17354, 1242, 17218, 17355, 4527, 17356, 1896, 4258, 2]
+// Dependencies: [19, 502, 1074, 11631, 21, 7738, 504, 1114, 2658, 11634, 17357, 1242, 17221, 17358, 4527, 17359, 1896, 4258, 2]
 // Exports: default
 
-// Module 17353 (StreamFeedbackActionSheet)
+// Module 17356 (StreamFeedbackActionSheet)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "fetchFingerprint" /* 502 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
-import FeedbackRating from "FeedbackRating" /* 11626 */;
+import FeedbackRating from "FeedbackRating" /* 11631 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -44,14 +44,14 @@ export default function StreamFeedbackActionSheet(stream) {
   const intl5 = tmp(1114).intl;
   obj[2] = intl5.string(stream(1114).t["6Y1t5P"]);
   const stringResult1 = intl2.string(stream(1114).t["0uxA2V"]);
-  obj[3] = stream(11629).getStreamFeedbackOptions({ isStreamer: stateFromStores });
+  obj[3] = stream(11634).getStreamFeedbackOptions({ isStreamer: stateFromStores });
   obj = { value: constants.FREEFORM, label: null };
   const intl6 = tmp(1114).intl;
   obj[1] = intl6.string(stream(1114).t.emlT91);
   obj[4] = obj;
   obj1 = { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null };
   const tmp11 = jsx;
-  const tmpResult = stream(11629);
+  const tmpResult = stream(11634);
   if (stateFromStores) {
     stringResult2 = stringResult1;
   }
@@ -132,5 +132,5 @@ export default function StreamFeedbackActionSheet(stream) {
       const obj4 = stream(paths[17]);
     }
   };
-  return tmp11(tmp10(17354), obj1);
+  return tmp11(tmp10(17357), obj1);
 };

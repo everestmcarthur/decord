@@ -1,10 +1,10 @@
-// Module ID: 12657
-// Function ID: 12658
+// Module ID: 12661
+// Function ID: 12662
 // Name: WelcomeChannelRow
-// Dependencies: [19, 17, 5459, 1957, 1979, 4199, 12654, 12658, 1074, 1374, 1085, 21, 4560, 576, 5524, 504, 4713, 1100, 4527, 5587, 1396, 4213, 4556, 1178, 11804, 8593, 573, 12656, 1242, 7198, 12659, 1114, 2]
+// Dependencies: [19, 17, 5459, 1957, 1979, 4199, 12658, 12662, 1074, 1374, 1085, 21, 4560, 576, 5524, 504, 4713, 1100, 4527, 5587, 1396, 4213, 4556, 1178, 11809, 8598, 573, 12660, 1242, 7198, 12663, 1114, 2]
 // Exports: default
 
-// Module 12657 (WelcomeChannelRow)
+// Module 12661 (WelcomeChannelRow)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -12,9 +12,9 @@ import closure_6 from "getEmojiToGroupId" /* 5459 */;
 import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import closure_8 from "createGuildRecordFromRust" /* 1979 */;
 import closure_9 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_10 from "handleInviteData" /* 12654 */;
-import { NO_WELCOME_SCREEN } from "handleInviteData" /* 12654 */;
-import { WELCOME_SCREEN_TYPE } from "WELCOME_SCREEN_TYPE" /* 12658 */;
+import closure_10 from "handleInviteData" /* 12658 */;
+import { NO_WELCOME_SCREEN } from "handleInviteData" /* 12658 */;
+import { WELCOME_SCREEN_TYPE } from "WELCOME_SCREEN_TYPE" /* 12662 */;
 import ME from "ME" /* 1074 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1374 */;
 import { Permissions } from "sum" /* 1085 */;
@@ -252,8 +252,8 @@ export default function GuildWelcomeActionSheet(guildId) {
       obj1 = { style: null, guild: null, size: null, textScale: 2 };
       obj1[0] = tmp.guildIcon;
       obj1[1] = stateFromStores;
-      obj1[2] = onHide(12659).Sizes.MEDIUM;
-      const items9 = [callback(onHide(12659), obj1), , , , ];
+      obj1[2] = onHide(12663).Sizes.MEDIUM;
+      const items9 = [callback(onHide(12663), obj1), , , , ];
       const obj2 = { style: null, variant: "heading-xl/extrabold", color: "text-default", children: null };
       obj2[0] = tmp.header;
       const intl = tmp2(1114).intl;
@@ -271,7 +271,7 @@ export default function GuildWelcomeActionSheet(guildId) {
       const obj5 = { style: null, variant: "eyebrow", color: "text-default", children: null };
       obj5[0] = tmp.channelsTitle;
       const intl2 = tmp2(1114).intl;
-      const tmp17 = onHide(12659);
+      const tmp17 = onHide(12663);
       obj5[3] = intl2.string(tmp2(1114).t["haj5+i"]).toUpperCase();
       items9[3] = callback(tmp2(4556).Text, obj5);
       let welcome_channels = welcomeScreen.welcome_channels;

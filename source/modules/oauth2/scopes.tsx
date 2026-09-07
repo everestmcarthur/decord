@@ -1,10 +1,10 @@
-// Module ID: 9238
-// Function ID: 9239
+// Module ID: 9243
+// Function ID: 9244
 // Name: items
 // Dependencies: [1114, 8339, 2]
 // Exports: getScopeNames, getSecurityMessage, isSocialLayerUmbrellaScope
 
-// Module 9238 (items)
+// Module 9243 (items)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import set2 from "set" /* 8339 */;

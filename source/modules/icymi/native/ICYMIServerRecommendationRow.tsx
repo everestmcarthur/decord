@@ -1,16 +1,16 @@
-// Module ID: 16517
-// Function ID: 16518
+// Module ID: 16520
+// Function ID: 16521
 // Name: CutoutGuildBanner
-// Dependencies: [32, 5, 19, 17, 4552, 1979, 8335, 1074, 21, 16452, 576, 504, 1396, 1971, 8813, 5587, 5584, 8351, 4259, 1114, 5520, 4556, 4975, 16491, 7055, 2]
+// Dependencies: [32, 5, 19, 17, 4552, 1979, 8335, 1074, 21, 16455, 576, 504, 1396, 1971, 8818, 5587, 5584, 8351, 4259, 1114, 5520, 4556, 4975, 16494, 7055, 2]
 // Exports: ICYMIServerRecommendationRow
 
-// Module 16517 (CutoutGuildBanner)
+// Module 16520 (CutoutGuildBanner)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
 import _modDef7055 from "module_7055" /* 7055 */;
-import SolidCutoutDefault from "SolidCutout" /* 8813 */;
+import SolidCutoutDefault from "SolidCutout" /* 8818 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
@@ -20,7 +20,7 @@ import closure_8 from "createGuildRecordFromRust" /* 1979 */;
 import closure_9 from "filterStaffGuild" /* 8335 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16452 */;
+import createICYMIStyles from "createICYMIStyles" /* 16455 */;
 
 require = arg1;
 function CutoutGuildBanner(guild) {
@@ -46,7 +46,7 @@ function CutoutGuildBanner(guild) {
   obj = { style: tmp.bannerImage, children: null };
   const memo = React.useMemo(() => guild(closure_1_2[13]).fromClientDiscoverableGuild(guild), items1);
   obj = { cutouts: null, children: null };
-  obj1 = { shape: guild(8813).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
+  obj1 = { shape: guild(8818).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
   const items2 = [obj1];
   obj[0] = items2;
   if (null != guild.banner) {
@@ -347,7 +347,7 @@ export const ICYMIServerRecommendationRow = function ICYMIServerRecommendationRo
     obj3[0] = stateFromStoresArray;
     items1[2] = callback3(RecommendedGuildsRow, obj3);
     obj[1] = items1;
-    const items2 = [callback4(View, obj), callback3(tmp(16491).Separator, {})];
+    const items2 = [callback4(View, obj), callback3(tmp(16494).Separator, {})];
     obj[0] = items2;
     tmp4 = callback4(closure_16, obj);
   }

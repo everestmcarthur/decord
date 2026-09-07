@@ -1,25 +1,25 @@
-// Module ID: 15943
-// Function ID: 15944
+// Module ID: 15946
+// Function ID: 15947
 // Name: getInitialAuthRouteStack
-// Dependencies: [32, 19, 17, 12413, 1074, 21, 15944, 15945, 5624, 15954, 7002, 6951, 4560, 576, 15995, 6944, 1625, 6975, 15996, 6973, 7000, 1116, 1114, 15997, 7475, 16001, 2]
+// Dependencies: [32, 19, 17, 12417, 1074, 21, 15947, 15948, 5624, 15957, 7002, 6951, 4560, 576, 15998, 6944, 1625, 6975, 15999, 6973, 7000, 1116, 1114, 16000, 7475, 16004, 2]
 
-// Module 15943 (getInitialAuthRouteStack)
+// Module 15946 (getInitialAuthRouteStack)
 import ThemesDefault from "Themes" /* 576 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1625 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 6944 */;
 import BackgroundImageDefault from "BackgroundImage" /* 6975 */;
 import createStackNavigator from "createStackNavigator" /* 7002 */;
-import setRegistrationHandoff from "setRegistrationHandoff" /* 15944 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15995 */;
-import registerAsset from "registerAsset" /* 15996 */;
-import usePortraitOrientationOnlyDefault from "usePortraitOrientationOnly" /* 16001 */;
+import setRegistrationHandoff from "setRegistrationHandoff" /* 15947 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15998 */;
+import registerAsset from "registerAsset" /* 15999 */;
+import usePortraitOrientationOnlyDefault from "usePortraitOrientationOnly" /* 16004 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initialize" /* 12413 */;
+import closure_7 from "initialize" /* 12417 */;
 import { AuthStates } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
-import headerTitle from "headerTitle" /* 15945 */;
+import headerTitle from "headerTitle" /* 15948 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
 require = arg1;
@@ -221,7 +221,7 @@ const context = importAllResult.createContext(() => {
 let obj2 = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function Auth() {
   const effect = importAllResult.useEffect(() => {
-    callback2(15997).initialize();
+    callback2(16000).initialize();
     return () => callback(table[23]).terminate();
   }, []);
   const layoutEffect = importAllResult.useLayoutEffect(() => callback(7475).trackAppUIViewed(), []);

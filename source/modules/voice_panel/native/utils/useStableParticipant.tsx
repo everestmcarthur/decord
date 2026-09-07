@@ -1,10 +1,10 @@
-// Module ID: 17104
-// Function ID: 17105
+// Module ID: 17107
+// Function ID: 17108
 // Name: areStableParticipantsEqual
-// Dependencies: [4576, 502, 1908, 1371, 4581, 558, 504, 4712, 8217, 9622, 2]
+// Dependencies: [4576, 502, 1908, 1371, 4581, 558, 504, 4712, 8217, 9627, 2]
 // Exports: default, isStableActivityParticipant, isStableParticipantWithUser, isStableStreamParticipant, isStableUserParticipant, stableParticipantHasVideo
 
-// Module 17104 (areStableParticipantsEqual)
+// Module 17107 (areStableParticipantsEqual)
 import shallowEqualDefault from "shallowEqual" /* 558 */;
 import closure_3 from "getParticipants" /* 4576 */;
 import closure_4 from "fetchFingerprint" /* 502 */;
@@ -38,7 +38,7 @@ export default function useStableParticipant(arg0, arg1, arg2) {
       if (null == participant) {
         const user = closure_1_6.getUser(tmp);
         if (null != user) {
-          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 0, isSelf: 1 };
+          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 0.272, isSelf: 0.331 };
           obj[0] = closure_1_7.USER;
           obj[1] = tmp;
           obj[2] = user;
@@ -50,7 +50,7 @@ export default function useStableParticipant(arg0, arg1, arg2) {
           return obj;
         }
       } else {
-        const tmp15 = callback2(9622)(participant);
+        const tmp15 = callback2(9627)(participant);
         const type = participant.type;
         if (closure_1_7.ACTIVITY === type) {
           obj = { type: null, id: null, applicationId: null };

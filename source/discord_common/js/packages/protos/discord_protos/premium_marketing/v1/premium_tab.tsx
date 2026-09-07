@@ -1,11 +1,11 @@
-// Module ID: 10673
-// Function ID: 10674
+// Module ID: 10678
+// Function ID: 10679
 // Name: create
-// Dependencies: [32, 1188, 10670, 2]
+// Dependencies: [32, 1188, 10675, 2]
 
-// Module 10673 (create)
+// Module 10678 (create)
 import _mod1188 from "module_1188" /* 1188 */;
-import create from "create" /* 10670 */;
+import create from "create" /* 10675 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1188" /* 1188 */;
 
@@ -30,7 +30,7 @@ class PremiumTab$Type extends MessageType {
       name: "acknowledged_badge_label_localized",
       kind: "message",
       T() {
-            return callback(10670).LocalizedString;
+            return callback(10675).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.PremiumTab", items, T);
@@ -175,7 +175,7 @@ items[5] = {
   name: "acknowledged_badge_label_localized",
   kind: "message",
   T() {
-    return callback(10670).LocalizedString;
+    return callback(10675).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.PremiumTab", items, tmp, T, PremiumTab$Type, prototype, items);

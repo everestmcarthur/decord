@@ -1,13 +1,13 @@
-// Module ID: 10038
-// Function ID: 10039
+// Module ID: 10043
+// Function ID: 10044
 // Name: updateStats
-// Dependencies: [32, 1908, 1371, 1074, 4585, 10039, 4615, 573, 504, 2]
+// Dependencies: [32, 1908, 1371, 1074, 4585, 10044, 4615, 573, 504, 2]
 // Exports: getLastGraphValue, keySection, parseSection
 
-// Module 10038 (updateStats)
+// Module 10043 (updateStats)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
-import openAll from "open" /* 10039 */;
+import openAll from "open" /* 10044 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
@@ -207,7 +207,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: false };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: true };
   let resolution;
   if (found != null) {
     resolution = found.resolution;

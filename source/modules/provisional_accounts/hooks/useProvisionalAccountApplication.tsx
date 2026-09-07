@@ -1,10 +1,10 @@
-// Module ID: 12630
-// Function ID: 12631
+// Module ID: 12634
+// Function ID: 12635
 // Name: useProvisionalAccountApplication
 // Dependencies: [7658, 504, 7168, 2]
 // Exports: default
 
-// Module 12630 (useProvisionalAccountApplication)
+// Module 12634 (useProvisionalAccountApplication)
 import closure_2 from "recountRelationshipTypes" /* 7658 */;
 
 const require = arg1;

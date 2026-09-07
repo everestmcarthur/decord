@@ -1,18 +1,18 @@
-// Module ID: 16410
-// Function ID: 16411
+// Module ID: 16413
+// Function ID: 16414
 // Name: NotificationCenterBannerImpl
-// Dependencies: [32, 19, 17, 1074, 1954, 12410, 21, 4560, 576, 1242, 9059, 4556, 1114, 4975, 12411, 5123, 5680, 15481, 7388, 1943, 2]
+// Dependencies: [32, 19, 17, 1074, 1954, 12414, 21, 4560, 576, 1242, 9064, 4556, 1114, 4975, 12415, 5123, 5680, 15484, 7388, 1943, 2]
 // Exports: default
 
-// Module 16410 (NotificationCenterBannerImpl)
+// Module 16413 (NotificationCenterBannerImpl)
 import ThemesDefault from "Themes" /* 576 */;
-import apexExperimentDefault from "apexExperiment" /* 15481 */;
+import apexExperimentDefault from "apexExperiment" /* 15484 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import EventActionType from "EventActionType" /* 12410 */;
+import EventActionType from "EventActionType" /* 12414 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -28,7 +28,7 @@ function NotificationCenterBannerImpl(onDismiss) {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.iconContainer, children: null };
   obj = { size: "md", color: ThemesDefault.colors.ICON_STRONG };
-  obj[1] = callback4(onDismiss(9059).BellSlashIcon, obj);
+  obj[1] = callback4(onDismiss(9064).BellSlashIcon, obj);
   const items = [callback4(View, obj), , ];
   obj1 = { style: tmp.contentContainer, children: null };
   const obj2 = { variant: "text-md/semibold", color: "text-default", children: null };
@@ -44,7 +44,7 @@ function NotificationCenterBannerImpl(onDismiss) {
   const intl3 = onDismiss(1114).intl;
   obj6[2] = intl3.string(onDismiss(1114).t.a4bgO0);
   obj6[3] = function onPress() {
-    let obj = onDismiss(12411);
+    let obj = onDismiss(12415);
     const pushNotificationPermission = obj.requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_8);
     obj = { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER };
     callback(1242).track(constants.CONTEXTUAL_REMINDER_ACTION, obj);
@@ -89,8 +89,8 @@ const result = require("set").fileFinishedImporting("modules/notification_center
 
 export default function NotificationCenterPermissionNudge() {
   let obj = apexExperimentDefault;
-  const canSeePushNotificationNudge = _require(12411).useCanSeePushNotificationNudge();
-  const obj2 = _require(12411);
+  const canSeePushNotificationNudge = _require(12415).useCanSeePushNotificationNudge();
+  const obj2 = _require(12415);
   let prop = null;
   if (!obj.useConfig({ location: "NotificationCenterPermissionNudge" }).inHoldout) {
     prop = null;

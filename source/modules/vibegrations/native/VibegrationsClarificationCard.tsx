@@ -1,10 +1,10 @@
-// Module ID: 16606
-// Function ID: 16607
+// Module ID: 16609
+// Function ID: 16610
 // Name: VibegrationsClarificationCard
-// Dependencies: [32, 19, 17, 21, 4560, 576, 16607, 4556, 1114, 3547, 5607, 4975, 14170, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 16610, 4556, 1114, 3547, 5607, 4975, 14173, 2]
 // Exports: default
 
-// Module 16606 (VibegrationsClarificationCard)
+// Module 16609 (VibegrationsClarificationCard)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -193,7 +193,7 @@ export default function VibegrationsClarificationCard(clarification) {
     });
   };
   obj6[5] = callback2;
-  obj5[1] = callback(clarification(14170).GhostInput, obj6);
+  obj5[1] = callback(clarification(14173).GhostInput, obj6);
   items5[1] = callback(closure_5, obj5);
   obj3[1] = items5;
   items4[3] = closure_7(closure_5, obj3);

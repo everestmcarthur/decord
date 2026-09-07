@@ -1,14 +1,14 @@
-// Module ID: 16560
-// Function ID: 16561
+// Module ID: 16563
+// Function ID: 16564
 // Name: OnboardingHomeResourcesSheet
-// Dependencies: [19, 16558, 21, 4262, 576, 16559, 12284, 4527, 7198, 7200, 1396, 5587, 2]
+// Dependencies: [19, 16561, 21, 4262, 576, 16562, 12288, 4527, 7198, 7200, 1396, 5587, 2]
 // Exports: default
 
-// Module 16560 (OnboardingHomeResourcesSheet)
+// Module 16563 (OnboardingHomeResourcesSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16559 */;
-import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_3 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 16558 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16562 */;
+import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_3 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 16561 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

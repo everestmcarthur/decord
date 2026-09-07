@@ -1,9 +1,9 @@
-// Module ID: 10342
-// Function ID: 10343
+// Module ID: 10347
+// Function ID: 10348
 // Name: ExpressionGuildDetails
-// Dependencies: [19, 17, 5585, 21, 4560, 576, 5584, 1396, 5587, 4556, 1114, 5123, 10341, 5590, 1178, 2]
+// Dependencies: [19, 17, 5585, 21, 4560, 576, 5584, 1396, 5587, 4556, 1114, 5123, 10346, 5590, 1178, 2]
 
-// Module 10342 (ExpressionGuildDetails)
+// Module 10347 (ExpressionGuildDetails)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;

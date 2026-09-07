@@ -1,10 +1,10 @@
-// Module ID: 17054
-// Function ID: 17055
+// Module ID: 17057
+// Function ID: 17058
 // Name: useFloatingCTAProps
-// Dependencies: [32, 19, 17, 4576, 17055, 7526, 1957, 1963, 21, 4495, 12272, 17037, 9662, 563, 9671, 9665, 9780, 4527, 9698, 17056, 9782, 8595, 9785, 1114, 5680, 17057, 10032, 17058, 7389, 8265, 4380, 6610, 1943, 17059, 12528, 7824, 2]
+// Dependencies: [32, 19, 17, 4576, 17058, 7526, 1957, 1963, 21, 4495, 12276, 17040, 9667, 563, 9676, 9670, 9785, 4527, 9703, 17059, 9787, 8600, 9790, 1114, 5680, 17060, 10037, 17061, 7389, 8265, 4380, 6610, 1943, 17062, 12532, 7824, 2]
 // Exports: useShouldShowFloatingCTA
 
-// Module 17054 (useFloatingCTAProps)
+// Module 17057 (useFloatingCTAProps)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import DismissibleContent from "DismissibleContent" /* 1943 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4380 */;
@@ -13,7 +13,7 @@ import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "getParticipants" /* 4576 */;
-import closure_7 from "initialize" /* 17055 */;
+import closure_7 from "initialize" /* 17058 */;
 import { isGuildScheduledEventActive as closure_8 } from "scheduledEventSort" /* 7526 */;
 import closure_9 from "ensureGuildLoaded" /* 1957 */;
 import { GuildScheduledEventEntityTypes as closure_10 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
@@ -169,7 +169,7 @@ function getBadConnectionCTAProps(arg0) {
   const intl2 = _require(1114).intl;
   obj[1] = intl2.string(_require(1114).t["gQ14+g"]);
   obj = { IconComponent: _require(6610).CircleErrorIcon, variant: "translucent" };
-  obj[2] = jsx(_require(8595).RowButton.Icon, { IconComponent: _require(6610).CircleErrorIcon, variant: "translucent" });
+  obj[2] = jsx(_require(8600).RowButton.Icon, { IconComponent: _require(6610).CircleErrorIcon, variant: "translucent" });
   obj[3] = function onPress() {
     let tmp;
     if (callback != null) {
@@ -207,7 +207,7 @@ function getDismissableCTAProps(arg0) {
     return getBadConnectionCTAProps();
   } else if (tmp(1943).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA === dismissableContent) {
     obj = { icon: null, onPress: null, label: null, trailing: null };
-    obj[0] = jsx(tmp(12528).SoundboardIcon, { color: "interactive-icon-default" });
+    obj[0] = jsx(tmp(12532).SoundboardIcon, { color: "interactive-icon-default" });
     obj[1] = function onPress() {
       if (null != closure_0) {
         obj = closure_1_0(closure_1_2[33]);

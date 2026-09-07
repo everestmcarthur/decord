@@ -1,33 +1,33 @@
-// Module ID: 13416
-// Function ID: 13417
+// Module ID: 13420
+// Function ID: 13421
 // Name: frozen
-// Dependencies: [19, 17, 1373, 1074, 21, 4982, 13417, 4218, 7382, 7182, 1114, 13418, 13419, 13420, 13421, 13422, 13423, 13424, 13425, 13426, 13427, 13428, 13429, 13430, 13431, 13432, 13433, 13434, 4556, 2024, 4560, 576, 5587, 13435, 4975, 2]
+// Dependencies: [19, 17, 1373, 1074, 21, 4982, 13421, 4218, 7382, 7182, 1114, 13422, 13423, 13424, 13425, 13426, 13427, 13428, 13429, 13430, 13431, 13432, 13433, 13434, 13435, 13436, 13437, 13438, 4556, 2024, 4560, 576, 5587, 13439, 4975, 2]
 // Exports: default, usePerkCardHeight, usePremiumPerkCard
 
-// Module 13416 (frozen)
+// Module 13420 (frozen)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import combinedDefault from "combined" /* 2024 */;
 import getFontScale from "getFontScale" /* 4982 */;
 import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 13418 */;
-import registerAssetDefault2 from "registerAsset" /* 13419 */;
-import registerAssetDefault3 from "registerAsset" /* 13420 */;
-import registerAssetDefault4 from "registerAsset" /* 13421 */;
-import registerAssetDefault5 from "registerAsset" /* 13422 */;
-import registerAssetDefault6 from "registerAsset" /* 13423 */;
-import registerAssetDefault7 from "registerAsset" /* 13424 */;
-import registerAssetDefault8 from "registerAsset" /* 13425 */;
-import registerAssetDefault9 from "registerAsset" /* 13426 */;
-import registerAssetDefault10 from "registerAsset" /* 13427 */;
-import registerAssetDefault11 from "registerAsset" /* 13428 */;
-import registerAssetDefault12 from "registerAsset" /* 13429 */;
-import registerAssetDefault13 from "registerAsset" /* 13430 */;
-import registerAssetDefault14 from "registerAsset" /* 13431 */;
-import registerAssetDefault15 from "registerAsset" /* 13432 */;
-import registerAssetDefault16 from "registerAsset" /* 13433 */;
-import metadataDefault from "metadata" /* 13434 */;
-import PillTextDefault from "PillText" /* 13435 */;
+import registerAssetDefault from "registerAsset" /* 13422 */;
+import registerAssetDefault2 from "registerAsset" /* 13423 */;
+import registerAssetDefault3 from "registerAsset" /* 13424 */;
+import registerAssetDefault4 from "registerAsset" /* 13425 */;
+import registerAssetDefault5 from "registerAsset" /* 13426 */;
+import registerAssetDefault6 from "registerAsset" /* 13427 */;
+import registerAssetDefault7 from "registerAsset" /* 13428 */;
+import registerAssetDefault8 from "registerAsset" /* 13429 */;
+import registerAssetDefault9 from "registerAsset" /* 13430 */;
+import registerAssetDefault10 from "registerAsset" /* 13431 */;
+import registerAssetDefault11 from "registerAsset" /* 13432 */;
+import registerAssetDefault12 from "registerAsset" /* 13433 */;
+import registerAssetDefault13 from "registerAsset" /* 13434 */;
+import registerAssetDefault14 from "registerAsset" /* 13435 */;
+import registerAssetDefault15 from "registerAsset" /* 13436 */;
+import registerAssetDefault16 from "registerAsset" /* 13437 */;
+import metadataDefault from "metadata" /* 13438 */;
+import PillTextDefault from "PillText" /* 13439 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { PremiumTypes } from "GuildFeatures" /* 1373 */;
@@ -180,7 +180,7 @@ export const usePerkCardHeight = function usePerkCardHeight(NARROW) {
   return getFontScale.useFontScale() > 1 ? frozen[NARROW].scaledFontHeight : frozen[NARROW].height;
 };
 export const usePremiumPerkCard = function usePremiumPerkCard() {
-  obj = subscriptionPlansLoaded(13417);
+  obj = subscriptionPlansLoaded(13421);
   subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
   obj1 = subscriptionPlansLoaded(4218);
   const maxFileSizeForPremiumType = obj1.getMaxFileSizeForPremiumType(PremiumTypes.TIER_2);

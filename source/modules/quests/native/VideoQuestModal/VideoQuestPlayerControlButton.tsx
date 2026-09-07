@@ -1,9 +1,9 @@
-// Module ID: 15031
-// Function ID: 15032
+// Module ID: 15034
+// Function ID: 15035
 // Name: VideoQuestPlayerControlButton
 // Dependencies: [19, 21, 4560, 576, 672, 5123, 4965, 2]
 
-// Module 15031 (VideoQuestPlayerControlButton)
+// Module 15034 (VideoQuestPlayerControlButton)
 import ThemesDefault from "Themes" /* 576 */;
 import isBlurDisabledDefault from "isBlurDisabled" /* 4965 */;
 import PressableBase from "PressableBase" /* 5123 */;

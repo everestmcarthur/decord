@@ -1,16 +1,16 @@
-// Module ID: 16079
-// Function ID: 16080
+// Module ID: 16082
+// Function ID: 16083
 // Name: HappeningNowVoiceCardSubtitle
-// Dependencies: [19, 17, 1957, 1074, 21, 4560, 504, 4713, 15295, 9770, 1114, 8259, 10891, 2]
+// Dependencies: [19, 17, 1957, 1074, 21, 4560, 504, 4713, 15298, 9775, 1114, 8259, 10896, 2]
 // Exports: HappeningNowActivityCardSubtitle, HappeningNowVoiceCardSubtitle
 
-// Module 16079 (HappeningNowVoiceCardSubtitle)
+// Module 16082 (HappeningNowVoiceCardSubtitle)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import computeChannelNameDefault from "computeChannelName" /* 4713 */;
 import _isStreamingDefault from "_isStreaming" /* 8259 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9770 */;
-import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 15295 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9775 */;
+import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 15298 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import { ActivityTypes } from "ME" /* 1074 */;
@@ -36,7 +36,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     obj[0] = stateFromStores;
     tmp8 = getChannelA11yLabelDefault(obj);
   }
-  obj[1] = jsx(voiceState(15295).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: computeChannelNameDefault(stateFromStores) });
+  obj[1] = jsx(voiceState(15298).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: computeChannelNameDefault(stateFromStores) });
   return <View style={callback().cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
@@ -70,7 +70,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     tmp3 = null;
     if (null != name) {
       if (!_isStreamingDefault(activity)) {
-        if (tmp4(10891)(activity)) {
+        if (tmp4(10896)(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {
               const _HermesInternal = HermesInternal;

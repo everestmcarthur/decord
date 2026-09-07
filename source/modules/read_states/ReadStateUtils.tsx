@@ -1,10 +1,10 @@
-// Module ID: 9845
-// Function ID: 9846
+// Module ID: 9850
+// Function ID: 9851
 // Name: getHasImportantUnread
 // Dependencies: [4575, 4741, 4742, 504, 2]
 // Exports: getHasImportantUnread, useHasImportantUnread
 
-// Module 9845 (getHasImportantUnread)
+// Module 9850 (getHasImportantUnread)
 import closure_2 from "generateOldThreadCutoff" /* 4575 */;
 import closure_3 from "updateUserGuildSettingsInternal" /* 4741 */;
 import { UnreadSetting } from "ReadStateTypes" /* 4742 */;

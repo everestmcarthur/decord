@@ -1,9 +1,9 @@
-// Module ID: 13229
-// Function ID: 13230
+// Module ID: 13233
+// Function ID: 13234
 // Name: updateParty
 // Dependencies: [502, 4209, 5279, 1074, 12, 504, 573, 2]
 
-// Module 13229 (updateParty)
+// Module 13233 (updateParty)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

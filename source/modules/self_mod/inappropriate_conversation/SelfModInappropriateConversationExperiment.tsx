@@ -1,10 +1,10 @@
-// Module ID: 10968
-// Function ID: 10969
+// Module ID: 10973
+// Function ID: 10974
 // Name: InappropriateConversationExperiment
 // Dependencies: [1434, 2]
 // Exports: isEligibleForInappropriateConversationWarning, useIsEligibleForInappropriateConversationWarning
 
-// Module 10968 (InappropriateConversationExperiment)
+// Module 10973 (InappropriateConversationExperiment)
 import getUnitIdDefault from "getUnitId" /* 1434 */;
 
 const tmp2 = getUnitIdDefault({ name: "2026-04-inappropriate-conversations-prescan", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

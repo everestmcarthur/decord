@@ -1,10 +1,10 @@
-// Module ID: 10218
-// Function ID: 10219
+// Module ID: 10223
+// Function ID: 10224
 // Name: BurstReactionButton
-// Dependencies: [19, 17, 21, 4560, 576, 10219, 5123, 1114, 4556, 7763, 11254, 11314, 1935, 11259, 1091, 1396, 4211, 7130, 11316, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 10224, 5123, 1114, 4556, 7763, 11259, 11319, 1935, 11264, 1091, 1396, 4211, 7130, 11321, 2]
 // Exports: AddReactionButton, AdditionalReactionCount, ForumPostReactionButton
 
-// Module 10218 (BurstReactionButton)
+// Module 10223 (BurstReactionButton)
 import ThemesDefault from "Themes" /* 576 */;
 import int2hslRaw from "int2hslRaw" /* 1091 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -14,10 +14,10 @@ import Text from "Text" /* 4556 */;
 import PressableBase from "PressableBase" /* 5123 */;
 import EmojiDefault from "Emoji" /* 7130 */;
 import ReactionTypes from "ReactionTypes" /* 7763 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10219 */;
-import handleOutOfSuperReactions from "handleOutOfSuperReactions" /* 11254 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 11259 */;
-import AnimatedCountDefault from "AnimatedCount" /* 11316 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10224 */;
+import handleOutOfSuperReactions from "handleOutOfSuperReactions" /* 11259 */;
+import useEmojiColorPalette from "useEmojiColorPalette" /* 11264 */;
+import AnimatedCountDefault from "AnimatedCount" /* 11321 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

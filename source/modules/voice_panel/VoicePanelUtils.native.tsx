@@ -1,10 +1,10 @@
-// Module ID: 9681
-// Function ID: 9682
+// Module ID: 9686
+// Function ID: 9687
 // Name: isVoicePanelEnabled
 // Dependencies: [1957, 4583, 4768, 4769, 563, 2]
 // Exports: isVoicePanelEnabled, useIsAnyVoicePanelOpen, useIsVoicePanelFullscreen, useIsVoicePanelMounted, useIsVoicePanelOpen, useIsVoicePanelShowing
 
-// Module 9681 (isVoicePanelEnabled)
+// Module 9686 (isVoicePanelEnabled)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
 import useIsStageVoicePanelEnabled from "useIsStageVoicePanelEnabled" /* 4769 */;
 import closure_2 from "ensureGuildLoaded" /* 1957 */;

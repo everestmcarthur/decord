@@ -1,10 +1,10 @@
-// Module ID: 11209
-// Function ID: 11210
+// Module ID: 11214
+// Function ID: 11215
 // Name: useFriendsSinceDate
 // Dependencies: [2025, 4209, 1074, 563, 5407, 2]
 // Exports: useFriendsSinceDate
 
-// Module 11209 (useFriendsSinceDate)
+// Module 11214 (useFriendsSinceDate)
 import closure_2 from "_getSystemLocale" /* 2025 */;
 import closure_3 from "markAllUserIdListsStale" /* 4209 */;
 import { RelationshipTypes } from "ME" /* 1074 */;

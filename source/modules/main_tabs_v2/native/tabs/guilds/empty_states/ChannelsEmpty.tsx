@@ -1,11 +1,11 @@
-// Module ID: 16254
-// Function ID: 16255
-// Dependencies: [19, 17, 4199, 1074, 21, 4560, 4556, 576, 563, 9063, 9737, 15100, 8595, 1178, 16255, 1114, 16256, 4976, 2]
+// Module ID: 16257
+// Function ID: 16258
+// Dependencies: [19, 17, 4199, 1074, 21, 4560, 4556, 576, 563, 9068, 9742, 15103, 8600, 1178, 16258, 1114, 16259, 4976, 2]
 
-// Module 16254
+// Module 16257
 import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 16255 */;
-import registerAssetDefault2 from "registerAsset" /* 16256 */;
+import registerAssetDefault from "registerAsset" /* 16258 */;
+import registerAssetDefault2 from "registerAsset" /* 16259 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
   const callback1 = importAllResult.useCallback(() => {
     closure_1_1(closure_1_2[10]).open(null, guild.id, null, null);
   }, items3);
-  obj1 = guild(15100);
+  obj1 = guild(15103);
   obj = { style: null, children: null };
   const items4 = [tmp.wrapper, ];
   obj = { paddingBottom: obj1.useYouBarTotalHeight(16) };
@@ -62,7 +62,7 @@ const memoResult = importAllResult.memo(function ChannelsEmpty(guild) {
     const intl = tmp2(1114).intl;
     obj2[1] = intl.string(tmp2(1114).t["Yhi9/N"]);
     obj2[2] = callback;
-    obj1[1] = callback(tmp2(8595).RowButton, obj2);
+    obj1[1] = callback(tmp2(8600).RowButton, obj2);
     canCustomizeGuild = callback(tmp8, obj1);
   }
   const items5 = [canCustomizeGuild, ];

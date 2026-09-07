@@ -1,17 +1,17 @@
-// Module ID: 14704
-// Function ID: 14705
+// Module ID: 14707
+// Function ID: 14708
 // Name: route
-// Dependencies: [19, 1371, 7975, 1074, 21, 504, 4404, 11871, 4556, 11468, 1114, 14705, 2]
+// Dependencies: [19, 1371, 7975, 1074, 21, 504, 4404, 11876, 4556, 11473, 1114, 14708, 2]
 
-// Module 14704 (route)
+// Module 14707 (route)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
-import useCurrentUserHasAutomodQuarantinedProfile from "useCurrentUserHasAutomodQuarantinedProfile" /* 11871 */;
+import useCurrentUserHasAutomodQuarantinedProfile from "useCurrentUserHasAutomodQuarantinedProfile" /* 11876 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 noopAll;
@@ -48,7 +48,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
   getComponent() {
-    return require(14705) /* UsernameStatusMessage */.default;
+    return require(14708) /* UsernameStatusMessage */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

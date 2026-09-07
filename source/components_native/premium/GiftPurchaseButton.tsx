@@ -1,10 +1,10 @@
-// Module ID: 13567
-// Function ID: 13568
+// Module ID: 13571
+// Function ID: 13572
 // Name: GiftPurchaseButton
-// Dependencies: [5, 19, 17, 4224, 7237, 21, 4981, 4556, 504, 7240, 11047, 7162, 10746, 4905, 1114, 4218, 10661, 4976, 13568, 2]
+// Dependencies: [5, 19, 17, 4224, 7237, 21, 4981, 4556, 504, 7240, 11052, 7162, 10751, 4905, 1114, 4218, 10666, 4976, 13572, 2]
 // Exports: default
 
-// Module 13567 (GiftPurchaseButton)
+// Module 13571 (GiftPurchaseButton)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -135,7 +135,7 @@ export default function GiftPurchaseButton(style) {
           obj5[3] = premiumTypeFromPlanId;
           obj5[4] = c4;
           obj5[5] = closure_0;
-          closure_1_0(10661).openGiftModal(obj5);
+          closure_1_0(10666).openGiftModal(obj5);
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }

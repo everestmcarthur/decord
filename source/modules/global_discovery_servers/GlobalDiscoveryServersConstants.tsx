@@ -1,10 +1,10 @@
-// Module ID: 9066
-// Function ID: 9067
+// Module ID: 9071
+// Function ID: 9072
 // Name: DEFAULT_DISCOVERY_CATEGORY_ID
 // Dependencies: [1090, 1114, 2]
 // Exports: getLanguageOptions
 
-// Module 9066 (DEFAULT_DISCOVERY_CATEGORY_ID)
+// Module 9071 (DEFAULT_DISCOVERY_CATEGORY_ID)
 import setDefault from "set" /* 1090 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import set from "set" /* 2 */;

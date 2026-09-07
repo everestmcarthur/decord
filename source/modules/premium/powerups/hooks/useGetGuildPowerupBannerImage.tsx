@@ -1,10 +1,10 @@
-// Module ID: 12520
-// Function ID: 12521
+// Module ID: 12524
+// Function ID: 12525
 // Name: useGetGuildPowerupBannerImage
 // Dependencies: [4552, 504, 2]
 // Exports: default, getGuildPowerupBannerImage
 
-// Module 12520 (useGetGuildPowerupBannerImage)
+// Module 12524 (useGetGuildPowerupBannerImage)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 

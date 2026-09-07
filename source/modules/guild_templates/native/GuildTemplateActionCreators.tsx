@@ -1,9 +1,9 @@
-// Module ID: 11792
-// Function ID: 11793
+// Module ID: 11797
+// Function ID: 11798
 // Name: showModal
-// Dependencies: [7324, 4763, 11793, 1896, 573, 2]
+// Dependencies: [7324, 4763, 11798, 1896, 573, 2]
 
-// Module 11792 (showModal)
+// Module 11797 (showModal)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
@@ -16,7 +16,7 @@ const merged = Object.assign(mapDefault);
 obj.showModal = function showModal(code) {
   let obj = _modDef4763;
   obj = { code };
-  obj.pushLazy(asyncRequireImpl(11793, dependencyMap.paths), obj, GUILD_TEMPLATE_MODAL_KEY);
+  obj.pushLazy(asyncRequireImpl(11798, dependencyMap.paths), obj, GUILD_TEMPLATE_MODAL_KEY);
   obj = { type: "GUILD_TEMPLATE_MODAL_SHOW", code };
   dispatcherDefault.dispatch(obj);
   const obj3 = dispatcherDefault;

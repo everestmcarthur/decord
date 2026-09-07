@@ -1,9 +1,9 @@
-// Module ID: 9291
-// Function ID: 9292
+// Module ID: 9296
+// Function ID: 9297
 // Name: handleUserSettingsProtoStoreChange
 // Dependencies: [1956, 1221, 1350, 1084, 1894, 4597, 12, 504, 573, 2]
 
-// Module 9291 (handleUserSettingsProtoStoreChange)
+// Module 9296 (handleUserSettingsProtoStoreChange)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

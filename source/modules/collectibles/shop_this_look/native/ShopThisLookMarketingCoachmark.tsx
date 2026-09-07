@@ -1,10 +1,10 @@
-// Module ID: 13116
-// Function ID: 13117
+// Module ID: 13120
+// Function ID: 13121
 // Name: ShopThisLookMarketingCoachmarkImage
-// Dependencies: [19, 17, 1954, 7208, 21, 4560, 5817, 13114, 1114, 11127, 2]
+// Dependencies: [19, 17, 1954, 7208, 21, 4560, 5817, 13118, 1114, 11132, 2]
 // Exports: default
 
-// Module 13116 (ShopThisLookMarketingCoachmarkImage)
+// Module 13120 (ShopThisLookMarketingCoachmarkImage)
 import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 5817 */;
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

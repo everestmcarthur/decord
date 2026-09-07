@@ -1,13 +1,13 @@
-// Module ID: 15459
-// Function ID: 15460
+// Module ID: 15462
+// Function ID: 15463
 // Name: VideoUploadQualityNitroUpsell
-// Dependencies: [19, 17, 1371, 4224, 7975, 1074, 21, 4560, 576, 1483, 563, 4218, 4556, 1114, 5607, 1178, 10398, 6990, 11468, 14689, 2]
+// Dependencies: [19, 17, 1371, 4224, 7975, 1074, 21, 4560, 576, 1483, 563, 4218, 4556, 1114, 5607, 1178, 10403, 6990, 11473, 14692, 2]
 // Exports: default
 
-// Module 15459 (VideoUploadQualityNitroUpsell)
+// Module 15462 (VideoUploadQualityNitroUpsell)
 import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 10398 */;
-import _modDef14689 from "module_14689" /* 14689 */;
+import registerAssetDefault from "registerAsset" /* 10403 */;
+import _modDef14692 from "module_14692" /* 14692 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
@@ -165,5 +165,5 @@ export default function SettingsChatScreen(route) {
     obj[1] = initialSetting;
     return obj.createList(obj);
   }, items);
-  return callback(_modDef14689, { node });
+  return callback(_modDef14692, { node });
 };

@@ -1,7 +1,7 @@
 // Module ID: 4582
 // Function ID: 4583
 // Name: reset
-// Dependencies: [4577, 1915, 502, 1957, 1979, 1908, 4199, 4583, 2011, 4579, 1074, 4602, 1090, 4612, 13828, 13829, 13830, 1896, 7726, 504, 13801, 573, 2]
+// Dependencies: [4577, 1915, 502, 1957, 1979, 1908, 4199, 4583, 2011, 4579, 1074, 4602, 1090, 4612, 13831, 13832, 13833, 1896, 7726, 504, 13804, 573, 2]
 
 // Module 4582 (reset)
 import initializeDefault from "initialize" /* 504 */;
@@ -9,8 +9,8 @@ import dispatcherDefault from "dispatcher" /* 573 */;
 import setDefault from "set" /* 1090 */;
 import isStreamKey from "isStreamKey" /* 4612 */;
 import canStreamInChannel from "canStreamInChannel" /* 7726 */;
-import canSpectateDefault from "canSpectate" /* 13801 */;
-import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 13829 */;
+import canSpectateDefault from "canSpectate" /* 13804 */;
+import getTitleFromPickedStreamContentDefault from "getTitleFromPickedStreamContent" /* 13832 */;
 import closure_8 from "set" /* 4577 */;
 import closure_9 from "initialize" /* 1915 */;
 import closure_10 from "fetchFingerprint" /* 502 */;
@@ -810,11 +810,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       } else if (reason === tmp3.SAFETY_GUILD_RATE_LIMITED) {
         let obj = guildId(4612);
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        guildId(1896)(13830, dependencyMap.paths).then((arg0) => {
+        guildId(1896)(13833, dependencyMap.paths).then((arg0) => {
           arg0.default(guildId);
         });
         FAILED = tmp22.ENDED;
-        const promise = guildId(1896)(13830, dependencyMap.paths);
+        const promise = guildId(1896)(13833, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = tmp22.FAILED;

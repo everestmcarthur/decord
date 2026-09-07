@@ -1,14 +1,14 @@
-// Module ID: 17555
-// Function ID: 17556
+// Module ID: 17558
+// Function ID: 17559
 // Name: ApplicationHook
-// Dependencies: [19, 17, 1183, 1385, 4209, 1371, 1074, 21, 4560, 576, 1399, 1396, 5283, 4411, 7168, 4556, 1115, 4271, 17538, 1114, 4404, 1178, 1971, 4713, 4705, 4153, 1369, 1091, 10627, 7130, 5607, 17547, 5123, 4527, 8179, 14602, 504, 2]
+// Dependencies: [19, 17, 1183, 1385, 4209, 1371, 1074, 21, 4560, 576, 1399, 1396, 5283, 4411, 7168, 4556, 1115, 4271, 17541, 1114, 4404, 1178, 1971, 4713, 4705, 4153, 1369, 1091, 10632, 7130, 5607, 17550, 5123, 4527, 8179, 14605, 504, 2]
 
-// Module 17555 (ApplicationHook)
+// Module 17558 (ApplicationHook)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7168 */;
-import getPermissionChangesAll from "getPermissionChanges" /* 17538 */;
+import getPermissionChangesAll from "getPermissionChanges" /* 17541 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import importDefaultResult from "handleThemeChange" /* 1183 */;
@@ -566,7 +566,7 @@ prototype["render"] = function render() {
   obj1[3] = str3;
   obj1[4] = onHeaderClick;
   const obj2 = { style: tmp.rowContainer, children: null };
-  const items2 = [callback(user(17547), { action: log.action }), , , ];
+  const items2 = [callback(user(17550), { action: log.action }), , , ];
   const obj4 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
   const intl = tmp10(1114).intl;
   obj4[1] = intl.string(tmp10(1114).t.iXAna6);
@@ -631,7 +631,7 @@ prototype["render"] = function render() {
           const items4 = [tmp.arrow, rotate90];
           obj8[0] = items4;
           obj8[1] = tmp10(1178).Icon.Sizes.CUSTOM;
-          obj8[2] = tmp18(14602);
+          obj8[2] = tmp18(14605);
           tmp17Result = tmp17(tmp10(1178).Icon, obj8);
         }
         items2[3] = tmp17Result;

@@ -1,10 +1,10 @@
-// Module ID: 11614
-// Function ID: 11615
+// Module ID: 11619
+// Function ID: 11620
 // Name: isLinkTrusted
 // Dependencies: [8370, 7987, 2]
 // Exports: isLinkTrusted
 
-// Module 11614 (isLinkTrusted)
+// Module 11619 (isLinkTrusted)
 import set from "set" /* 2 */;
 import isLinkTrusted from "isLinkTrusted" /* 8370 */;
 

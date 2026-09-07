@@ -1,12 +1,12 @@
-// Module ID: 11889
-// Function ID: 11890
+// Module ID: 11894
+// Function ID: 11895
 // Name: AppealIngestionActivitySummary
-// Dependencies: [19, 17, 21, 4560, 11890, 2]
+// Dependencies: [19, 17, 21, 4560, 11895, 2]
 // Exports: default
 
-// Module 11889 (AppealIngestionActivitySummary)
+// Module 11894 (AppealIngestionActivitySummary)
 import noopAll from "noop" /* 19 */;
-import ClassificationEvidenceDefault from "ClassificationEvidence" /* 11890 */;
+import ClassificationEvidenceDefault from "ClassificationEvidence" /* 11895 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

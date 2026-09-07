@@ -1,20 +1,20 @@
-// Module ID: 11717
-// Function ID: 11718
+// Module ID: 11722
+// Function ID: 11723
 // Name: reactionForId
-// Dependencies: [4552, 5459, 1957, 2021, 4781, 1371, 11427, 1074, 4745, 4213, 4217, 1396, 8754, 4205, 4188, 11718, 1114, 7761, 11720, 1115, 11721, 11722, 2]
+// Dependencies: [4552, 5459, 1957, 2021, 4781, 1371, 11432, 1074, 4745, 4213, 4217, 1396, 8759, 4205, 4188, 11723, 1114, 7761, 11725, 1115, 11726, 11727, 2]
 // Exports: default, isPollMessageDirectlyInteractive
 
-// Module 11717 (reactionForId)
+// Module 11722 (reactionForId)
 import isCommunicationDisabled from "isCommunicationDisabled" /* 4188 */;
 import GuildMemberFlags from "GuildMemberFlags" /* 4205 */;
-import formatExpirationLabel from "formatExpirationLabel" /* 8754 */;
+import formatExpirationLabel from "formatExpirationLabel" /* 8759 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import closure_4 from "getEmojiToGroupId" /* 5459 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import closure_6 from "trackCommunicationDisabled" /* 2021 */;
 import closure_7 from "reinjectEphemerals" /* 4781 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import { getPollState } from "useMessagePollInteractions" /* 11427 */;
+import { getPollState } from "useMessagePollInteractions" /* 11432 */;
 import ME from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 

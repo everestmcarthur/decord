@@ -1,14 +1,14 @@
-// Module ID: 11991
-// Function ID: 11992
+// Module ID: 11995
+// Function ID: 11996
 // Name: findTokenLocations
-// Dependencies: [32, 17, 4552, 5459, 2015, 4199, 1074, 5000, 1374, 11992, 4217, 11993, 1924, 1925, 8131, 5022, 7334, 10262, 1935, 576, 4713, 2]
+// Dependencies: [32, 17, 4552, 5459, 2015, 4199, 1074, 5000, 1374, 11996, 4217, 11997, 1924, 1925, 8131, 5022, 7334, 10267, 1935, 576, 4713, 2]
 // Exports: formatTimestampPillText, getChannelHighlightNodes, getEmojiHighlightNodes, getGameHighlightNodes, getGameMentionInputNodes, getMatchedOptions, getMatchedOptionsWithValue, getRoleHighlightNodes, getSilentHighlightNodes, getTextBeforeFirstOption, getTimestampHighlightNodes, getTimestampMentionInputNodes, getUsernameHighlightNodes, serializeComposerGameMentions, serializeComposerTimestampMentions, uniqueTimestampPillText
 
-// Module 11991 (findTokenLocations)
+// Module 11995 (findTokenLocations)
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1924 */;
 import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4217 */;
 import registerAssetDefault from "registerAsset" /* 8131 */;
-import addRule from "addRule" /* 11992 */;
+import addRule from "addRule" /* 11996 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
@@ -348,7 +348,7 @@ export const getEmojiHighlightNodes = function getEmojiHighlightNodes(channel, a
 };
 export const getUsernameHighlightNodes = function getUsernameHighlightNodes(channel, arg1) {
   const items = [];
-  let obj = _require(11993);
+  let obj = _require(11997);
   const users = obj.getUsers(channel);
   _require = (arg0) => arg0;
   let match = regex3.exec(arg1);
@@ -537,7 +537,7 @@ export const getTimestampMentionInputNodes = function getTimestampMentionInputNo
       do {
         let tmp3 = _require;
         let tmp4 = dependencyMap;
-        let obj = _require(10262);
+        let obj = _require(10267);
         let tmp5 = index;
         if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
           arr = items.push(index);
@@ -560,7 +560,7 @@ export const getGameMentionInputNodes = function getGameMentionInputNodes(arr) {
       do {
         let tmp3 = _require;
         let tmp4 = dependencyMap;
-        let obj = _require(10262);
+        let obj = _require(10267);
         let tmp5 = index;
         if (obj.isWhitespaceSeparatingBoundary(arr, index)) {
           arr = items.push(index);
@@ -603,7 +603,7 @@ export const getChannelHighlightNodes = function getChannelHighlightNodes(channe
   let _loop5Result;
   const _require = arg1;
   let items = [];
-  dependencyMap = _require(11993).getChannels(channel);
+  dependencyMap = _require(11997).getChannels(channel);
   c3 = 0;
   function _loop5() {
     let arr = lib;

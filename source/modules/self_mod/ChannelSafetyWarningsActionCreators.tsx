@@ -1,15 +1,15 @@
-// Module ID: 11371
-// Function ID: 11372
+// Module ID: 11376
+// Function ID: 11377
 // Name: dismissChannelSafetyWarnings
-// Dependencies: [10915, 1074, 573, 1272, 2]
+// Dependencies: [10920, 1074, 573, 1272, 2]
 // Exports: acknowledgeChannelSafetyWarningTooltip, clearChannelSafetyWarnings, dismissChannelSafetyWarnings, markAsStrangerDanger, reportFalsePositive, setChannelSafetyWarningFeedback
 
-// Module 11371 (dismissChannelSafetyWarnings)
+// Module 11376 (dismissChannelSafetyWarnings)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import ME from "ME" /* 1074 */;
 import sendRequest from "sendRequest" /* 1272 */;
-import handleConnectionOpen from "handleConnectionOpen" /* 10915 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 10920 */;
 
 const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
 const Endpoints = ME.Endpoints;

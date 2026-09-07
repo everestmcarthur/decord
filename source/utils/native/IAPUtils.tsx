@@ -1,18 +1,18 @@
-// Module ID: 11047
-// Function ID: 11048
+// Module ID: 11052
+// Function ID: 11053
 // Name: serializePurchaseResponse
-// Dependencies: [5, 17, 4559, 4776, 1371, 7237, 1074, 1373, 11048, 3, 38, 1115, 11067, 7240, 12, 1256, 4233, 504, 11068, 1364, 4539, 11069, 2]
+// Dependencies: [5, 17, 4559, 4776, 1371, 7237, 1074, 1373, 11053, 3, 38, 1115, 11072, 7240, 12, 1256, 4233, 504, 11073, 1364, 4539, 11074, 2]
 // Exports: makeIAPRequest, manageSubscription, shouldMockIAPForceEnable, useCanPurchaseIAP
 
-// Module 11047 (serializePurchaseResponse)
+// Module 11052 (serializePurchaseResponse)
 import timestampDefault from "timestamp" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import set2 from "set" /* 1115 */;
 import v1 from "v1" /* 1256 */;
 import getConstantsAll from "getConstants" /* 1364 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
-import productSK2ToIAPProductDefault from "productSK2ToIAPProduct" /* 11067 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 11068 */;
+import productSK2ToIAPProductDefault from "productSK2ToIAPProduct" /* 11072 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 11073 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4776 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
@@ -303,7 +303,7 @@ function _fetchStoreFront() {
               c4 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(11048).getStorefront();
+              obj1[0] = closure_1_0(11053).getStorefront();
               return obj1;
             } else {
               c5 = 3;
@@ -356,7 +356,7 @@ function _fetchStoreFront() {
 }
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = ME);
 ({ InAppUtils: unpackModuleId, RNIapIosSk2: closure_12 } = require("get ActivityIndicator").NativeModules);
-let items = [require("module_11048").ErrorCode.E_USER_CANCELLED, ME.StoreKitErrors.PAYMENT_CANCELED];
+let items = [require("module_11053").ErrorCode.E_USER_CANCELLED, ME.StoreKitErrors.PAYMENT_CANCELED];
 let set = new Set(items);
 new timestampDefault("IAPUtils.tsx");
 let _default = {

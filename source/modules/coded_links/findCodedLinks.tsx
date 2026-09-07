@@ -1,7 +1,7 @@
 // Module ID: 4543
 // Function ID: 4544
 // Name: getPathsFromURL
-// Dependencies: [4544, 1074, 1076, 4547, 1367, 4548, 4549, 1362, 7890, 4545, 7735, 9237, 8339, 7691, 5456, 2]
+// Dependencies: [4544, 1074, 1076, 4547, 1367, 4548, 4549, 1362, 7890, 4545, 7735, 9242, 8339, 7691, 5456, 2]
 // Exports: default, findCodedLink, isSuspiciousCodedLink, parseGameServerShareCode, parseQuestsEmbedCode, parseUserProfileEmbedCode, remainingPathFromDiscordHostMatch
 
 // Module 4543 (getPathsFromURL)

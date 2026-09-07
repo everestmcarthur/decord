@@ -1,9 +1,9 @@
-// Module ID: 13707
-// Function ID: 13708
+// Module ID: 13711
+// Function ID: 13712
 // Name: markAllStale
-// Dependencies: [1956, 1236, 7526, 1962, 1961, 4582, 502, 1957, 1979, 4199, 4209, 2011, 4741, 4579, 1074, 13708, 1094, 9662, 13709, 11, 5416, 4189, 9546, 504, 558, 573, 2]
+// Dependencies: [1956, 1236, 7526, 1962, 1961, 4582, 502, 1957, 1979, 4199, 4209, 2011, 4741, 4579, 1074, 13712, 1094, 9667, 13713, 11, 5416, 4189, 9551, 504, 558, 573, 2]
 
-// Module 13707 (markAllStale)
+// Module 13711 (markAllStale)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import shallowEqualDefault from "shallowEqual" /* 558 */;
@@ -123,7 +123,7 @@ function computeGuildMediaState(closure_0) {
       }
       continue;
     }
-    obj = { skipMutedVcs: callback(13708).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"), currentUserId: id.getId(), selectedVoiceChannelId: voiceChannelId, selectedVoiceGuildId: null, selectedVoiceChannelHasVideo: null, isSelectedVoiceChannelStage: null, blockedOrIgnoredUserIds: null, streamChannelIdsByGuild: null };
+    obj = { skipMutedVcs: callback(13712).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"), currentUserId: id.getId(), selectedVoiceChannelId: voiceChannelId, selectedVoiceGuildId: null, selectedVoiceChannelHasVideo: null, isSelectedVoiceChannelStage: null, blockedOrIgnoredUserIds: null, streamChannelIdsByGuild: null };
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -159,7 +159,7 @@ function computeGuildMediaState(closure_0) {
     obj[1] = tmp2.selectedVoiceChannelHasVideo;
     obj[2] = null != activeStreamForUser.getActiveStreamForUser(tmp2.currentUserId, closure_0);
     obj[3] = tmp2.isSelectedVoiceChannelStage;
-    const guildActiveEvent = _require(9662).getGuildActiveEvent(closure_0);
+    const guildActiveEvent = _require(9667).getGuildActiveEvent(closure_0);
     let channel_id;
     if (guildActiveEvent != null) {
       channel_id = guildActiveEvent.channel_id;
@@ -259,7 +259,7 @@ function computeGuildMediaState(closure_0) {
           _location = first.location;
         }
         let embeddedActivityLocationChannelId = obj5.getEmbeddedActivityLocationChannelId(_location);
-        let tmp34Result = tmp34(9546);
+        let tmp34Result = tmp34(9551);
         let tmp38 = store;
         if (tmp34Result.isActivitiesInTextEnabled(store.getChannel(embeddedActivityLocationChannelId))) {
           let someResult2 = found.length > 0;
@@ -278,7 +278,7 @@ function computeGuildMediaState(closure_0) {
         obj[1] = flag;
         obj[2] = someResult;
         obj[3] = someResult1;
-        tmp34Result = tmp34(9662);
+        tmp34Result = tmp34(9667);
         obj[4] = null != tmp34Result.getGuildActiveEvent(arg0);
         obj[5] = someResult2;
         return obj;

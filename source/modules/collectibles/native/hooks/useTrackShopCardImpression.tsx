@@ -1,10 +1,10 @@
-// Module ID: 8766
-// Function ID: 8767
+// Module ID: 8771
+// Function ID: 8772
 // Name: useTrackShopCardImpression
-// Dependencies: [19, 8767, 7162, 1477, 8178, 7554, 8768, 1250, 7553, 7445, 2]
+// Dependencies: [19, 8772, 7162, 1477, 8178, 7554, 8773, 1250, 7553, 7445, 2]
 // Exports: useTrackShopCardImpression
 
-// Module 8766 (useTrackShopCardImpression)
+// Module 8771 (useTrackShopCardImpression)
 import closure_3 from "noop" /* 19 */;
 
 const require = arg1;

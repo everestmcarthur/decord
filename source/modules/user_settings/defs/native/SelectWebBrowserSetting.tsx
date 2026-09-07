@@ -1,15 +1,15 @@
-// Module ID: 15476
-// Function ID: 15477
+// Module ID: 15479
+// Function ID: 15480
 // Name: useWebBrowserSettingOptions
-// Dependencies: [7975, 4525, 1114, 1093, 1115, 11468, 2]
+// Dependencies: [7975, 4525, 1114, 1093, 1115, 11473, 2]
 // Exports: useWebBrowserSettingOptions
 
-// Module 15476 (useWebBrowserSettingOptions)
+// Module 15479 (useWebBrowserSettingOptions)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import NativeModules from "NativeModules" /* 4525 */;
 import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;

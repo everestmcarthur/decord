@@ -1,10 +1,10 @@
-// Module ID: 16272
-// Function ID: 16273
+// Module ID: 16275
+// Function ID: 16276
 // Name: getMissingFavoriteThreadIds
-// Dependencies: [32, 19, 1956, 5277, 7526, 5506, 4201, 1961, 7117, 1957, 7527, 4199, 4575, 2011, 4741, 1960, 4198, 1970, 7534, 1085, 7528, 1187, 7314, 10224, 12, 1369, 2]
+// Dependencies: [32, 19, 1956, 5277, 7526, 5506, 4201, 1961, 7117, 1957, 7527, 4199, 4575, 2011, 4741, 1960, 4198, 1970, 7534, 1085, 7528, 1187, 7314, 10229, 12, 1369, 2]
 // Exports: useFavoritesGuildChannelList
 
-// Module 16272 (getMissingFavoriteThreadIds)
+// Module 16275 (getMissingFavoriteThreadIds)
 import create from "create" /* 1187 */;
 import initializeDefault from "initialize" /* 7314 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -280,7 +280,7 @@ function computeFavoritesState(favoriteChannels) {
     },
     set: undefined
   });
-  const favoritesCategories = favoriteChannels(10224).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10229).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -651,7 +651,7 @@ export const useFavoritesGuildChannelList = function useFavoritesGuildChannelLis
   let hasAccess;
   dependencyMap = undefined;
   let callback;
-  hasAccess = _require(10224).useFavoritesAccess("FavoritesGuildChannelList").hasAccess;
+  hasAccess = _require(10229).useFavoritesAccess("FavoritesGuildChannelList").hasAccess;
   const tmp3 = callback(React.useState(() => closure_1_26(undefined, { withSuggestionsNotice: c0 })), 2);
   dependencyMap = tmp3[1];
   const isConnectedResult = importDefaultResult1.isConnected();

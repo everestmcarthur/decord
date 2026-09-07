@@ -1,20 +1,20 @@
-// Module ID: 9300
-// Function ID: 9301
+// Module ID: 9305
+// Function ID: 9306
 // Name: getOptionValue
-// Dependencies: [5, 1957, 4199, 1371, 4999, 1074, 9301, 2023, 4553, 7523, 1114, 9302, 1894, 1935, 9303, 9304, 7269, 9305, 1094, 9306, 7456, 7682, 5520, 4404, 1090, 9403, 4153, 4573, 38, 7245, 9404, 2]
+// Dependencies: [5, 1957, 4199, 1371, 4999, 1074, 9306, 2023, 4553, 7523, 1114, 9307, 1894, 1935, 9308, 9309, 7269, 9310, 1094, 9311, 7456, 7682, 5520, 4404, 1090, 9408, 4153, 4573, 38, 7245, 9409, 2]
 // Exports: getBuiltInCommands
 
-// Module 9300 (getOptionValue)
+// Module 9305 (getOptionValue)
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import useCanStartPrivateThread from "useCanStartPrivateThread" /* 7269 */;
-import _modDef9303 from "module_9303" /* 9303 */;
+import _modDef9308 from "module_9308" /* 9308 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
 import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4999 */;
 import ME from "ME" /* 1074 */;
-import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 9301 */;
+import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 9306 */;
 import { getDisableCommunicationDurationOptions as closure_11 } from "getFriendlyDurationString" /* 2023 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
 
@@ -403,7 +403,7 @@ obj13.execute = function execute(arr) {
       if (str == null) {
         str = "";
       }
-      const obj = _modDef9303;
+      const obj = _modDef9308;
       const id = guild.id;
       const id2 = channel.id;
       if (!str) {
@@ -463,7 +463,7 @@ Object.defineProperty(obj17, "displayDescription", {
   },
   set: undefined
 });
-Object.defineProperty(obj17, "maxLength", { get: () => require(9304) /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
+Object.defineProperty(obj17, "maxLength", { get: () => require(9309) /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
 obj17.required = true;
 items8[1] = obj17;
 obj15.options = items8;
@@ -539,8 +539,8 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             if (tmp11 == null) {
               closure_3 = "";
             }
-            obj1 = callback(9305);
-            let obj2 = callback(9306);
+            obj1 = callback(9310);
+            let obj2 = callback(9311);
             c6 = 2;
             c7 = 1;
             obj2 = { value: null, done: false };
@@ -1327,7 +1327,7 @@ Object.defineProperty(obj31, "displayDescription", {
   set: undefined
 });
 obj31.required = true;
-Object.defineProperty(obj31, "maxLength", { get: () => require(9304) /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
+Object.defineProperty(obj31, "maxLength", { get: () => require(9309) /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
 items12[1] = obj31;
 obj29.options = items12;
 obj29.execute = function execute(arr, channel) {

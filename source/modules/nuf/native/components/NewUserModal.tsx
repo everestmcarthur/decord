@@ -1,10 +1,10 @@
-// Module ID: 17449
-// Function ID: 17450
+// Module ID: 17452
+// Function ID: 17453
 // Name: NewUserModal
-// Dependencies: [32, 19, 17, 21, 7913, 4560, 576, 17450, 1896, 4906, 7000, 17447, 4763, 17448, 5630, 1115, 15999, 17451, 12696, 12685, 17452, 17454, 2]
+// Dependencies: [32, 19, 17, 21, 7913, 4560, 576, 17453, 1896, 4906, 7000, 17450, 4763, 17451, 5630, 1115, 16002, 17454, 12700, 12689, 17455, 17457, 2]
 // Exports: default
 
-// Module 17449 (NewUserModal)
+// Module 17452 (NewUserModal)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -47,7 +47,7 @@ export default function NewUserModal(arg0) {
     if (flag == null) {
       flag = false;
     }
-    const nextOnboardingStep = lib(17447).getNextOnboardingStep(flag, first1, first);
+    const nextOnboardingStep = lib(17450).getNextOnboardingStep(flag, first1, first);
     nextOnboardingStep.then((onboardingStepIndex) => {
       onboardingStepIndex = onboardingStepIndex.onboardingStepIndex;
       ({ lastShownStepIndex, continueNavigation } = onboardingStepIndex);
@@ -104,7 +104,7 @@ export default function NewUserModal(arg0) {
   obj = {
     name: "enable-notification",
     getComponent() {
-      return lib(15999).RedesignNotificationScreen;
+      return lib(16002).RedesignNotificationScreen;
     },
     initialParams: { onComplete: callback }
   };
@@ -112,7 +112,7 @@ export default function NewUserModal(arg0) {
   obj1 = {
     name: "choose-avatar",
     getComponent() {
-      return lib(17451).default;
+      return lib(17454).default;
     },
     options() {
       return {
@@ -140,7 +140,7 @@ export default function NewUserModal(arg0) {
     name: "contact-sync",
     options: { headerShown: false },
     getComponent() {
-      return lib(12685).ContactSyncOnboardingModal;
+      return lib(12689).ContactSyncOnboardingModal;
     },
     initialParams: { onComplete: callback }
   });
@@ -148,14 +148,14 @@ export default function NewUserModal(arg0) {
     name: "discoverability",
     options: { headerShown: false },
     getComponent() {
-      return lib(17452).default;
+      return lib(17455).default;
     },
     initialParams: { onComplete: callback }
   });
   items1[4] = callback(Navigator.Screen, {
     name: "connect-guardian",
     getComponent() {
-      return lib(17454).default;
+      return lib(17457).default;
     },
     initialParams: { onComplete: callback }
   });

@@ -1,15 +1,15 @@
-// Module ID: 10021
-// Function ID: 10022
+// Module ID: 10026
+// Function ID: 10027
 // Name: GestureContainer
-// Dependencies: [19, 17, 9467, 9473, 21, 4560, 576, 1477, 4296, 6655, 4763, 4561, 1178, 2]
+// Dependencies: [19, 17, 9472, 9478, 21, 4560, 576, 1477, 4296, 6655, 4763, 4561, 1178, 2]
 // Exports: default
 
-// Module 10021 (GestureContainer)
+// Module 10026 (GestureContainer)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useChannelCallStore } from "VoiceChatDrawerState" /* 9467 */;
-import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 9473 */;
+import { useChannelCallStore } from "VoiceChatDrawerState" /* 9472 */;
+import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 9478 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

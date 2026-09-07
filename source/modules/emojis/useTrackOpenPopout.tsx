@@ -1,10 +1,10 @@
-// Module ID: 10332
-// Function ID: 10333
+// Module ID: 10337
+// Function ID: 10338
 // Name: useTrackOpenPopout
-// Dependencies: [19, 1957, 2011, 1374, 1074, 4740, 4992, 10333, 1242, 2]
+// Dependencies: [19, 1957, 2011, 1374, 1074, 4740, 4992, 10338, 1242, 2]
 // Exports: useTrackOpenPopout
 
-// Module 10332 (useTrackOpenPopout)
+// Module 10337 (useTrackOpenPopout)
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
 import closure_3 from "noop" /* 19 */;

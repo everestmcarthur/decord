@@ -1,10 +1,10 @@
-// Module ID: 11681
-// Function ID: 11682
+// Module ID: 11686
+// Function ID: 11687
 // Name: trackForwardStart
 // Dependencies: [19, 1957, 1074, 1242, 4740, 12, 2]
 // Exports: trackForwardCancel, trackForwardCopyLink, trackForwardSent, trackForwardStart, useTrackForwardAddRecipientOnce, useTrackForwardEditContextMessageOnce, useTrackForwardEditSearchOnce
 
-// Module 11681 (trackForwardStart)
+// Module 11686 (trackForwardStart)
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
 import closure_3 from "noop" /* 19 */;

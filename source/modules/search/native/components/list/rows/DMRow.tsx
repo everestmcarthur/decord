@@ -1,13 +1,13 @@
-// Module ID: 16651
-// Function ID: 16652
+// Module ID: 16654
+// Function ID: 16655
 // Name: FriendPresence
-// Dependencies: [5, 32, 19, 17, 4552, 4600, 4209, 1074, 21, 4560, 576, 4556, 4404, 10876, 504, 9438, 1178, 9753, 13502, 16652, 2]
+// Dependencies: [5, 32, 19, 17, 4552, 4600, 4209, 1074, 21, 4560, 576, 4556, 4404, 10881, 504, 9443, 1178, 9758, 13506, 16655, 2]
 
-// Module 16651 (FriendPresence)
+// Module 16654 (FriendPresence)
 import ThemesDefault from "Themes" /* 576 */;
 import nameFromUser from "nameFromUser" /* 4404 */;
 import Text from "Text" /* 4556 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10876 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10881 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;

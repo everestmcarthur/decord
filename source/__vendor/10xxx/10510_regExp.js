@@ -1,19 +1,19 @@
 // Module ID: 10510
 // Function ID: 10511
 // Name: regExp
-// Dependencies: [41, 42, 10502, 10459]
+// Dependencies: [41, 42, 10507, 10464]
 
 // Module 10510 (regExp)
-import alphaNum from "alphaNum" /* 10502 */;
+import alphaNum from "alphaNum" /* 10507 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-const JPWeekdayWithParenthesesParser = require;
+const JPWeekdayParser = require;
 const keys = Object.keys(alphaNum.WEEKDAY_OFFSET);
-const regExp = new RegExp("(?:\\(|\\\uFF08)(?<weekday>" + keys.join("|") + ")(?:\\)|\\\uFF09)", "i");
-class JPWeekdayWithParenthesesParser {
+const regExp = new RegExp("((?<prefix>\u524D\u306E|\u6B21\u306E|\u4ECA\u9031))?(?<weekday>" + keys.join("|") + ")(?:\u66DC\u65E5|\u66DC)", "i");
+class JPWeekdayParser {
   constructor() {
-    tmp = closure_2(this, JPWeekdayWithParenthesesParser);
+    tmp = closure_2(this, JPWeekdayParser);
     return;
   }
 }
@@ -26,15 +26,26 @@ const items = [
   },
   {
     key: "extract",
-    value: function extract(reference) {
-      const tmp3 = JPWeekdayWithParenthesesParser(10502).WEEKDAY_OFFSET[arg1.groups.weekday];
-      let parsingComponentsAtWeekday = null;
-      if (undefined !== tmp3) {
-        parsingComponentsAtWeekday = JPWeekdayWithParenthesesParser(10459).createParsingComponentsAtWeekday(reference.reference, tmp3);
+    value: function extract(reference, groups) {
+      const tmp3 = JPWeekdayParser(10507).WEEKDAY_OFFSET[groups.groups.weekday];
+      if (undefined === tmp3) {
+        return null;
+      } else {
+        let str2 = "last";
+        if (!groups.groups.prefix || "".match(/前の/)) {
+          str2 = "next";
+          if (!str.match(/次の/)) {
+            str2 = null;
+            if (str.match(/今週/)) {
+              str2 = "this";
+            }
+          }
+        }
+        return tmp(10464).createParsingComponentsAtWeekday(reference.reference, tmp3, str2);
       }
-      return parsingComponentsAtWeekday;
+      tmp = JPWeekdayParser;
     }
   }
 ];
 
-export default _createClass(JPWeekdayWithParenthesesParser, items);
+export default _createClass(JPWeekdayParser, items);

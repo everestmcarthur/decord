@@ -1,17 +1,17 @@
-// Module ID: 12649
-// Function ID: 12650
+// Module ID: 12653
+// Function ID: 12654
 // Name: useIsHubRealNamePromptShowing
-// Dependencies: [19, 12650, 2021, 1979, 1371, 1074, 12651, 504, 12652, 2]
+// Dependencies: [19, 12654, 2021, 1979, 1371, 1074, 12655, 504, 12656, 2]
 // Exports: default
 
-// Module 12649 (useIsHubRealNamePromptShowing)
+// Module 12653 (useIsHubRealNamePromptShowing)
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 12650 */;
+import closure_4 from "initialize" /* 12654 */;
 import closure_5 from "trackCommunicationDisabled" /* 2021 */;
 import closure_6 from "createGuildRecordFromRust" /* 1979 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
 import { GuildFeatures } from "ME" /* 1074 */;
-import { GuildPrompts } from "GuildPrompts" /* 12651 */;
+import { GuildPrompts } from "GuildPrompts" /* 12655 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");

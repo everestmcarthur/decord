@@ -1,10 +1,10 @@
-// Module ID: 12305
-// Function ID: 12306
+// Module ID: 12309
+// Function ID: 12310
 // Name: DirectoryEntryTypes
 // Dependencies: [1074, 1114, 4204, 1086, 2]
 // Exports: getHubCategories, getHubGuildTemplatesMap
 
-// Module 12305 (DirectoryEntryTypes)
+// Module 12309 (DirectoryEntryTypes)
 import set from "set" /* 2 */;
 import fromStringAll from "fromString" /* 1086 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

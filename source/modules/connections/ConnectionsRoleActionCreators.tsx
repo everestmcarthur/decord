@@ -1,10 +1,10 @@
-// Module ID: 11573
-// Function ID: 11574
+// Module ID: 11578
+// Function ID: 11579
 // Name: _putRoleConnectionsConfigurations
 // Dependencies: [5, 1074, 1272, 573, 7129, 2]
 // Exports: fetchRoleConnectionsConfiguration, fetchUserApplicationRoleConnections, putRoleConnectionsConfigurations
 
-// Module 11573 (_putRoleConnectionsConfigurations)
+// Module 11578 (_putRoleConnectionsConfigurations)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 1074 */;
 

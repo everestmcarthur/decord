@@ -1,10 +1,10 @@
-// Module ID: 16284
-// Function ID: 16285
+// Module ID: 16287
+// Function ID: 16288
 // Name: withEqualityFn
 // Dependencies: [5438, 1244, 4296, 1249, 1232, 4184, 2]
 // Exports: useFolderBGHeightOffset, useItemDragState
 
-// Module 16284 (withEqualityFn)
+// Module 16287 (withEqualityFn)
 import set from "set" /* 2 */;
 import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5438 */;
 import identity from "identity" /* 1244 */;
@@ -15,7 +15,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   closure_1 = arg1;
-  obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: _require(4296).makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "Success", scrollPosition: "oO.O", windowSize: "success", setStateShallow: null, dropStart: 0, dropComplete: "No Video Devices" };
+  obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: _require(4296).makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: true, scrollPosition: "none", windowSize: null, setStateShallow: null, dropStart: null, dropComplete: "bindJoinStream" };
   const obj2 = _require(4296);
   obj[4] = _require(4296).makeMutable(obj);
   const obj3 = _require(4296);
@@ -58,7 +58,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "isArray" }));
+      callback(tmp2[3]).batchUpdates(() => newDropSpec({ dropSpecs: newDropSpec, dragSpecs: "Array", overSpecs: "options" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;

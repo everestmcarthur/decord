@@ -1,14 +1,14 @@
-// Module ID: 15617
-// Function ID: 15618
+// Module ID: 15620
+// Function ID: 15621
 // Name: DoubleCheckmarkIcon
-// Dependencies: [19, 21, 576, 4261, 15618, 2]
+// Dependencies: [19, 21, 576, 4261, 15621, 2]
 // Exports: DoubleCheckmarkIcon
 
-// Module 15617 (DoubleCheckmarkIcon)
+// Module 15620 (DoubleCheckmarkIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 15618 */;
+import registerAsset from "registerAsset" /* 15621 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

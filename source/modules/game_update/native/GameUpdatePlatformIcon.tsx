@@ -1,10 +1,10 @@
-// Module ID: 8878
-// Function ID: 8879
+// Module ID: 8883
+// Function ID: 8884
 // Name: GameUpdatePlatformIcon
-// Dependencies: [19, 21, 8342, 8879, 8708, 8881, 8883, 6960, 8442, 2]
+// Dependencies: [19, 21, 8342, 8884, 8713, 8886, 8888, 6960, 8449, 2]
 // Exports: GameUpdatePlatformIcon
 
-// Module 8878 (GameUpdatePlatformIcon)
+// Module 8883 (GameUpdatePlatformIcon)
 import noopAll from "noop" /* 19 */;
 import PlatformType from "PlatformType" /* 8342 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -23,22 +23,22 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
     let obj = { size: null, color: null };
     obj[0] = size;
     obj[1] = color;
-    return jsx(tmp(8879).ScreenIcon, { size: null, color: null });
+    return jsx(tmp(8884).ScreenIcon, { size: null, color: null });
   } else if (tmp(8342).PlatformType.XBOX === platform) {
     obj = { size: null, color: null };
     obj[0] = size;
     obj[1] = color;
-    return jsx(tmp(8708).XboxNeutralIcon, { size: null, color: null });
+    return jsx(tmp(8713).XboxNeutralIcon, { size: null, color: null });
   } else if (tmp(8342).PlatformType.PLAYSTATION === platform) {
     obj1 = { size: null, color: null };
     obj1[0] = size;
     obj1[1] = color;
-    return jsx(tmp(8881).PlaystationNeutralIcon, { size: null, color: null });
+    return jsx(tmp(8886).PlaystationNeutralIcon, { size: null, color: null });
   } else if (tmp(8342).PlatformType.NINTENDO === platform) {
     const obj2 = { size: null, color: null };
     obj2[0] = size;
     obj2[1] = color;
-    return jsx(tmp(8883).NintendoSwitchNeutralIcon, { size: null, color: null });
+    return jsx(tmp(8888).NintendoSwitchNeutralIcon, { size: null, color: null });
   } else if (tmp(8342).PlatformType.ANDROID === platform) {
     const obj3 = { size: null, color: null };
     obj3[0] = size;
@@ -48,7 +48,7 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
     obj = { size: null, color: null };
     obj[0] = size;
     obj[1] = color;
-    return jsx(tmp(8442).AppleNeutralIcon, { size: null, color: null });
+    return jsx(tmp(8449).AppleNeutralIcon, { size: null, color: null });
   } else {
     return null;
   }

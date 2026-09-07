@@ -1,10 +1,10 @@
-// Module ID: 17394
-// Function ID: 17395
+// Module ID: 17397
+// Function ID: 17398
 // Name: LabelLayoutComponent
 // Dependencies: [19, 17, 21, 8112, 1894, 6607, 2]
 // Exports: default
 
-// Module 17394 (LabelLayoutComponent)
+// Module 17397 (LabelLayoutComponent)
 import noopAll from "noop" /* 19 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
 import Input from "Input" /* 6607 */;

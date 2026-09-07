@@ -1,10 +1,10 @@
-// Module ID: 11365
-// Function ID: 11366
+// Module ID: 11370
+// Function ID: 11371
 // Name: useIsSpamMessageRequest
 // Dependencies: [7220, 504, 2]
 // Exports: useIsSpamMessageRequest
 
-// Module 11365 (useIsSpamMessageRequest)
+// Module 11370 (useIsSpamMessageRequest)
 import closure_2 from "processChannel" /* 7220 */;
 
 const require = arg1;

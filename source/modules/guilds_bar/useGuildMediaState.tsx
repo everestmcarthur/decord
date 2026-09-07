@@ -1,10 +1,10 @@
-// Module ID: 16330
-// Function ID: 16331
+// Module ID: 16333
+// Function ID: 16334
 // Name: canConnectToChannel
-// Dependencies: [1956, 1962, 1961, 4582, 502, 1957, 1979, 4199, 4209, 2011, 4741, 4579, 1074, 1094, 504, 13708, 9662, 4189, 13709, 9546, 11, 5416, 2]
+// Dependencies: [1956, 1962, 1961, 4582, 502, 1957, 1979, 4199, 4209, 2011, 4741, 4579, 1074, 1094, 504, 13712, 9667, 4189, 13713, 9551, 11, 5416, 2]
 // Exports: default
 
-// Module 16330 (canConnectToChannel)
+// Module 16333 (canConnectToChannel)
 import set from "set" /* 1094 */;
 import closure_3 from "participantFromServer" /* 1956 */;
 import closure_4 from "handleStageInstanceCreateOrUpdate" /* 1962 */;

@@ -1,12 +1,12 @@
-// Module ID: 9032
-// Function ID: 9033
+// Module ID: 9037
+// Function ID: 9038
 // Name: isNonEmptyBoardWidget
-// Dependencies: [19, 7633, 7630, 7623, 9033, 9034, 2]
+// Dependencies: [19, 7633, 7630, 7623, 9038, 9039, 2]
 // Exports: useDisplayableBoardWidgets
 
-// Module 9032 (isNonEmptyBoardWidget)
+// Module 9037 (isNonEmptyBoardWidget)
 import toSubmission from "toSubmission" /* 7633 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 9034 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 9039 */;
 import closure_3 from "noop" /* 19 */;
 
 require = arg1;
@@ -29,7 +29,7 @@ function isNonEmptyBoardWidget(games) {
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
 
 export const useDisplayableBoardWidgets = function useDisplayableBoardWidgets(id) {
-  isMobileGameCollectionExperimentEnabled = isMobileGameCollectionExperimentEnabled(9033).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
+  isMobileGameCollectionExperimentEnabled = isMobileGameCollectionExperimentEnabled(9038).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
   const tmp2 = useUserProfileWidgetsDefault(id);
   importDefault = tmp2;
   const items = [isMobileGameCollectionExperimentEnabled, tmp2];

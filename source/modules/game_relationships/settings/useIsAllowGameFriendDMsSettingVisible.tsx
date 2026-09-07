@@ -1,10 +1,10 @@
-// Module ID: 15886
-// Function ID: 15887
+// Module ID: 15889
+// Function ID: 15890
 // Name: useIsAllowGameFriendDMsSettingVisible
 // Dependencies: [7658, 504, 2]
 // Exports: useIsAllowGameFriendDMsSettingVisible
 
-// Module 15886 (useIsAllowGameFriendDMsSettingVisible)
+// Module 15889 (useIsAllowGameFriendDMsSettingVisible)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "recountRelationshipTypes" /* 7658 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 9780
-// Function ID: 9781
+// Module ID: 9785
+// Function ID: 9786
 // Name: useGuildScheduledEventUserCount
-// Dependencies: [19, 7526, 504, 9781, 2]
+// Dependencies: [19, 7526, 504, 9786, 2]
 // Exports: default
 
-// Module 9780 (useGuildScheduledEventUserCount)
+// Module 9785 (useGuildScheduledEventUserCount)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import closure_4 from "scheduledEventSort" /* 7526 */;

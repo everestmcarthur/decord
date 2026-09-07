@@ -1,8 +1,8 @@
-// Module ID: 16569
-// Function ID: 16570
-// Dependencies: [32, 19, 17, 1979, 4199, 1371, 21, 4560, 576, 16215, 504, 7265, 1114, 16570, 16571, 16577, 4384, 1483, 8666, 16572, 7377, 9800, 9792, 12614, 12614, 12616, 2]
+// Module ID: 16572
+// Function ID: 16573
+// Dependencies: [32, 19, 17, 1979, 4199, 1371, 21, 4560, 576, 16218, 504, 7265, 1114, 16573, 16574, 16580, 4384, 1483, 8671, 16575, 7377, 9805, 9797, 12618, 12618, 12620, 2]
 
-// Module 16569
+// Module 16572
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
@@ -113,7 +113,7 @@ const memoResult = importAllResult.memo((guildId) => {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.create(null));
-        const obj = { source: callback2(9800), accessibilityLabel: null, ref: null };
+        const obj = { source: callback2(9805), accessibilityLabel: null, ref: null };
         const intl = callback(1114).intl;
         obj[1] = intl.string(callback(1114).t.ogxXGq);
         obj[2] = ref.ref;

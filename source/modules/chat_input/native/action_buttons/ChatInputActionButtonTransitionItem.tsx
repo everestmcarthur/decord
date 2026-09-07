@@ -1,16 +1,16 @@
-// Module ID: 12246
-// Function ID: 12247
+// Module ID: 12250
+// Function ID: 12251
 // Name: FadeTransitionItem
-// Dependencies: [19, 17, 11962, 21, 4271, 4296, 4561, 12247, 2]
+// Dependencies: [19, 17, 11966, 21, 4271, 4296, 4561, 12251, 2]
 // Exports: default, interactivityProps
 
-// Module 12246 (FadeTransitionItem)
+// Module 12250 (FadeTransitionItem)
 import ManaContext from "ManaContext" /* 4271 */;
 import _modDef4296 from "module_4296" /* 4296 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12247 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12251 */;
 import closure_3 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { CHAT_INPUT_TIMING_CONFIG } from "TextAreaCta" /* 11962 */;
+import { CHAT_INPUT_TIMING_CONFIG } from "TextAreaCta" /* 11966 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

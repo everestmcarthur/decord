@@ -1,10 +1,10 @@
-// Module ID: 13029
-// Function ID: 13030
+// Module ID: 13033
+// Function ID: 13034
 // Name: n
 // Dependencies: [4974, 2]
 // Exports: TYPING_ENTERING, TYPING_EXITING
 
-// Module 13029 (n)
+// Module 13033 (n)
 import set from "set" /* 2 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4974 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 10219
-// Function ID: 10220
+// Module ID: 10224
+// Function ID: 10225
 // Name: useNativeForumPostHandlers
-// Dependencies: [19, 4251, 1957, 4209, 1371, 7277, 7308, 1074, 1113, 7763, 38, 4713, 5028, 1365, 7897, 9942, 8261, 1115, 4528, 4529, 7767, 4571, 4425, 10220, 11254, 11252, 2]
+// Dependencies: [19, 4251, 1957, 4209, 1371, 7277, 7308, 1074, 1113, 7763, 38, 4713, 5028, 1365, 7897, 9947, 8261, 1115, 4528, 4529, 7767, 4571, 4425, 10225, 11259, 11257, 2]
 // Exports: default
 
-// Module 10219 (useNativeForumPostHandlers)
+// Module 10224 (useNativeForumPostHandlers)
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "setContent" /* 4251 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;

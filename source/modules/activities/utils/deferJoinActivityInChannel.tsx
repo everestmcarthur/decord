@@ -1,10 +1,10 @@
-// Module ID: 12931
-// Function ID: 12932
+// Module ID: 12935
+// Function ID: 12936
 // Name: deferJoinActivityApplication
 // Dependencies: [573, 2]
 // Exports: default
 
-// Module 12931 (deferJoinActivityApplication)
+// Module 12935 (deferJoinActivityApplication)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 

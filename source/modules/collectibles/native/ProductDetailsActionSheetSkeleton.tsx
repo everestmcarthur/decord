@@ -1,10 +1,10 @@
-// Module ID: 13167
-// Function ID: 13168
+// Module ID: 13171
+// Function ID: 13172
 // Name: ProductDetailsActionSheetSkeleton
 // Dependencies: [19, 17, 21, 4560, 576, 4980, 4296, 4561, 2]
 // Exports: default
 
-// Module 13167 (ProductDetailsActionSheetSkeleton)
+// Module 13171 (ProductDetailsActionSheetSkeleton)
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import closure_3 from "noop" /* 19 */;

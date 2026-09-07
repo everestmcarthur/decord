@@ -1,19 +1,19 @@
-// Module ID: 9657
-// Function ID: 9658
+// Module ID: 9662
+// Function ID: 9663
 // Name: CallWithVoiceChat
-// Dependencies: [5, 32, 19, 17, 9658, 9468, 1074, 9574, 21, 4560, 1477, 9589, 4296, 9659, 10076, 9471, 4771, 4763, 9578, 1896, 1109, 9937, 12665, 4413, 9683, 1115, 4271, 4443, 7000, 2]
+// Dependencies: [5, 32, 19, 17, 9663, 9473, 1074, 9579, 21, 4560, 1477, 9594, 4296, 9664, 10081, 9476, 4771, 4763, 9583, 1896, 1109, 9942, 12669, 4413, 9688, 1115, 4271, 4443, 7000, 2]
 // Exports: default
 
-// Module 9657 (CallWithVoiceChat)
+// Module 9662 (CallWithVoiceChat)
 import contextDefault from "context" /* 4443 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "module_9658" /* 9658 */;
-import { ChannelCallScreens } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9468 */;
+import closure_8 from "module_9663" /* 9663 */;
+import { ChannelCallScreens } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9473 */;
 import { ComponentActions } from "ME" /* 1074 */;
-import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_11 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 9574 */;
+import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_11 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 9579 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -26,7 +26,7 @@ function CallWithVoiceChat(channel) {
   let tmp = callback3();
   const result = 2 * translateX(1477)().width;
   _require = result;
-  let obj = _require(9589);
+  let obj = _require(9594);
   const voiceChatNavigationContext = obj.useVoiceChatNavigationContext();
   translateX = undefined;
   if (voiceChatNavigationContext != null) {
@@ -113,7 +113,7 @@ function CallWithVoiceChat(channel) {
   if (channel.isGuildStageVoice()) {
     const obj3 = { channel: null };
     obj3[0] = channel;
-    tmp16 = callback2(tmp2(9659), obj3);
+    tmp16 = callback2(tmp2(9664), obj3);
   }
   const items1 = [tmp16, ];
   const items2 = [animatedStyle1, StyleSheet.absoluteFill];
@@ -125,7 +125,7 @@ function CallWithVoiceChat(channel) {
   if (tmp11[0]) {
     const obj5 = { channel: null };
     obj5[0] = channel;
-    tmp18Result = tmp18(tmp2(10076), obj5);
+    tmp18Result = tmp18(tmp2(10081), obj5);
   }
   obj4[1] = tmp18Result;
   items3[1] = callback2(closure_6, obj4);
@@ -136,7 +136,7 @@ function MainCallScreen(channel) {
   channel = channel.channel;
   let isConnectedToVoiceChannel;
   let id;
-  let obj = isConnectedToVoiceChannel(9471);
+  let obj = isConnectedToVoiceChannel(9476);
   isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   id = React.useId();
   const items = [isConnectedToVoiceChannel, id];
@@ -256,14 +256,14 @@ function MainCallScreen(channel) {
       }
     };
   }, []);
-  isConnectedToVoiceChannel(9937);
+  isConnectedToVoiceChannel(9942);
   if (isChannelContentGated) {
     obj = { onReturnToSafety: null, guildId: null, channelId: null };
     obj[0] = id(4763).pop;
     ({ guild_id: obj6[1], id: obj6[2] } = channel);
-    let tmp14Result = callback2(id(12665), obj);
+    let tmp14Result = callback2(id(12669), obj);
     let tmp11 = callback2;
-    const tmp20 = id(12665);
+    const tmp20 = id(12669);
   } else {
     if (!tmp10) {
       if (!channel.isVocalThread()) {
@@ -279,7 +279,7 @@ function MainCallScreen(channel) {
     if (channel.isGuildStageVoice()) {
       let obj2 = { channel: null };
       obj2[0] = channel;
-      tmp14Result = tmp14(id(9659), obj2);
+      tmp14Result = tmp14(id(9664), obj2);
     }
     obj1[1] = tmp14Result;
     tmp14Result = tmp14(closure_6, obj1);
@@ -288,7 +288,7 @@ function MainCallScreen(channel) {
   }
   tmp = callback3();
   const tmp21 = id(4413)();
-  const tmp22 = id(9683);
+  const tmp22 = id(9688);
   const tmp2Result = isConnectedToVoiceChannel(1115);
   const tmp23 = isConnectedToVoiceChannel(1115).isAndroid() || !isConnectedToVoiceChannel;
   return tmp11(tmp22, { forceHide: isConnectedToVoiceChannel(1115).isAndroid() || !isConnectedToVoiceChannel, showWhenParticipantOnScreen: !isConnectedToVoiceChannel, children: tmp11(isConnectedToVoiceChannel(4271).ThemeContextProvider, { gradient: tmp21, children: tmp14Result }) });

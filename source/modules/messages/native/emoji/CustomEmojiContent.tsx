@@ -1,10 +1,10 @@
-// Module ID: 10338
-// Function ID: 10339
+// Module ID: 10343
+// Function ID: 10344
 // Name: CustomEmojiContent
-// Dependencies: [19, 17, 5460, 4381, 1371, 1074, 21, 4560, 576, 4218, 1242, 9392, 4527, 10331, 504, 7162, 5464, 4216, 4192, 10285, 7189, 1935, 10339, 7382, 10332, 10235, 10241, 4556, 1114, 10336, 4259, 10340, 1896, 8672, 1178, 4975, 5587, 10341, 8593, 10342, 10343, 2]
+// Dependencies: [19, 17, 5460, 4381, 1371, 1074, 21, 4560, 576, 4218, 1242, 9397, 4527, 10336, 504, 7162, 5464, 4216, 4192, 10290, 7189, 1935, 10344, 7382, 10337, 10240, 10246, 4556, 1114, 10341, 4259, 10345, 1896, 8677, 1178, 4975, 5587, 10346, 8598, 10347, 10348, 2]
 // Exports: default
 
-// Module 10338 (CustomEmojiContent)
+// Module 10343 (CustomEmojiContent)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

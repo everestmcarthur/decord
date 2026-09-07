@@ -1,10 +1,10 @@
-// Module ID: 9359
-// Function ID: 9360
+// Module ID: 9364
+// Function ID: 9365
 // Name: getUserMaxFileSize
 // Dependencies: [1372, 1074, 1373, 1885, 5130, 2]
 // Exports: getUserMaxFileSize
 
-// Module 9359 (getUserMaxFileSize)
+// Module 9364 (getUserMaxFileSize)
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1885 */;
 import closure_2 from "setActualFromUser" /* 1372 */;
 import ME from "ME" /* 1074 */;

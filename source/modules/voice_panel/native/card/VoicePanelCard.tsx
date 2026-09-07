@@ -1,9 +1,9 @@
-// Module ID: 17132
-// Function ID: 17133
+// Module ID: 17135
+// Function ID: 17136
 // Name: SelfStreamCard
-// Dependencies: [32, 19, 17, 4582, 4583, 5419, 12273, 12271, 17088, 12276, 1074, 4581, 12274, 21, 4296, 4556, 4987, 1178, 4560, 576, 4702, 4612, 5589, 1114, 4975, 12272, 504, 9595, 4615, 13038, 9597, 9594, 17133, 9607, 8826, 8251, 4561, 4974, 7073, 5587, 4262, 17134, 10993, 9495, 4271, 7162, 17092, 17104, 17087, 17135, 17136, 8179, 6655, 17137, 12275, 17138, 17139, 17140, 17141, 17142, 17152, 2]
+// Dependencies: [32, 19, 17, 4582, 4583, 5419, 12277, 12275, 17091, 12280, 1074, 4581, 12278, 21, 4296, 4556, 4987, 1178, 4560, 576, 4702, 4612, 5589, 1114, 4975, 12276, 504, 9600, 4615, 13042, 9602, 9599, 17136, 9612, 8831, 8251, 4561, 4974, 7073, 5587, 4262, 17137, 10998, 9500, 4271, 7162, 17095, 17107, 17090, 17138, 17139, 8179, 6655, 17140, 12279, 17141, 17142, 17143, 17144, 17145, 17155, 2]
 
-// Module 17132 (SelfStreamCard)
+// Module 17135 (SelfStreamCard)
 import ThemesDefault from "Themes" /* 576 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4974 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
@@ -13,13 +13,13 @@ import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "reset" /* 4582 */;
 import closure_7 from "createRTCConnection" /* 4583 */;
 import closure_8 from "anyoneHasFlagInContext" /* 5419 */;
-import VoicePanelModes from "VoicePanelModes" /* 12273 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12271 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 17088 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 12276 */;
+import VoicePanelModes from "VoicePanelModes" /* 12277 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12275 */;
+import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 17091 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 12280 */;
 import { ApplicationStreamStates } from "ME" /* 1074 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
-import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 12274 */;
+import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE" /* 12278 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importDefaultResult from "module_4296" /* 4296 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -1450,7 +1450,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp25 = callback;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: 5480021339453484000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, layoutPhysics: -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007293463806579032 };
+  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "accessible", layout: "enabled", layoutPhysics: "Array" };
   obj8[3] = layoutTransition;
   obj8[4] = physics;
   tmp26Result = callback(closure_37, obj8);

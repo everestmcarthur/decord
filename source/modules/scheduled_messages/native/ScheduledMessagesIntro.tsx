@@ -1,18 +1,18 @@
-// Module ID: 12219
-// Function ID: 12220
+// Module ID: 12223
+// Function ID: 12224
 // Name: MenuRow
-// Dependencies: [17, 21, 4560, 576, 12220, 4556, 1114, 10112, 12209, 10951, 2]
+// Dependencies: [17, 21, 4560, 576, 12224, 4556, 1114, 10117, 12213, 10956, 2]
 // Exports: default
 
-// Module 12219 (MenuRow)
+// Module 12223 (MenuRow)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
-import AttachmentIcon from "AttachmentIcon" /* 10112 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10951 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12209 */;
-import registerAssetDefault from "registerAsset" /* 12220 */;
+import AttachmentIcon from "AttachmentIcon" /* 10117 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10956 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12213 */;
+import registerAssetDefault from "registerAsset" /* 12224 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

@@ -1,17 +1,17 @@
-// Module ID: 14791
-// Function ID: 14792
+// Module ID: 14794
+// Function ID: 14795
 // Name: TwoFASetupSuccess
-// Dependencies: [5, 32, 19, 17, 21, 4560, 576, 6597, 1114, 14781, 6949, 14782, 14792, 4556, 1178, 4975, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4560, 576, 6597, 1114, 14784, 6949, 14785, 14795, 4556, 1178, 4975, 2]
 // Exports: default
 
-// Module 14791 (TwoFASetupSuccess)
+// Module 14794 (TwoFASetupSuccess)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import Button2 from "Button" /* 4975 */;
-import TwoFAModalSetupSections from "TwoFAModalSetupSections" /* 14782 */;
-import registerAsset from "registerAsset" /* 14792 */;
+import TwoFAModalSetupSections from "TwoFAModalSetupSections" /* 14785 */;
+import registerAsset from "registerAsset" /* 14795 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;

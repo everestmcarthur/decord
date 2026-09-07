@@ -1,13 +1,13 @@
-// Module ID: 16142
-// Function ID: 16143
+// Module ID: 16145
+// Function ID: 16146
 // Name: FavoritesGuildChannelSortModal
-// Dependencies: [19, 16143, 1961, 1074, 21, 16144, 1611, 1114, 16145, 16141, 7000, 2]
+// Dependencies: [19, 16146, 1961, 1074, 21, 16147, 1611, 1114, 16148, 16144, 7000, 2]
 // Exports: default
 
-// Module 16142 (FavoritesGuildChannelSortModal)
+// Module 16145 (FavoritesGuildChannelSortModal)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "sortCategoryList" /* 16143 */;
+import closure_4 from "sortCategoryList" /* 16146 */;
 import { ALL_CHANNEL_TYPES } from "createChannelRecord" /* 1961 */;
 import { FAVORITES } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -21,9 +21,9 @@ export default function FavoritesGuildChannelSortModal() {
     const items = [...closure_5];
     callback(table[5]).startReordering.apply(items);
     return () => {
-      callback(16144).stopReordering();
-      const obj = callback(16144);
-      callback(16144).terminate();
+      callback(16147).stopReordering();
+      const obj = callback(16147);
+      callback(16147).terminate();
     };
   }, []);
   const bottom = useSafeAreaInsetsDefault().bottom;

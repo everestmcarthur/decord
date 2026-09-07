@@ -1,10 +1,10 @@
-// Module ID: 10908
-// Function ID: 10909
+// Module ID: 10913
+// Function ID: 10914
 // Name: UserNameplateRow
-// Dependencies: [32, 19, 21, 4560, 576, 5606, 4262, 5607, 8818, 5605, 5602, 2]
+// Dependencies: [32, 19, 21, 4560, 576, 5606, 4262, 5607, 8823, 5605, 5602, 2]
 // Exports: UserNameplateRow
 
-// Module 10908 (UserNameplateRow)
+// Module 10913 (UserNameplateRow)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -74,7 +74,7 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
   obj[8] = flag;
   obj[9] = tmp2.card;
   const merged1 = Object.assign(merged);
-  const items2 = [callback2(onPressOut(8818), { nameplate, isPressed: tmp7[0], invertPressOpacity: true, fullOpacity: isPreviewRow, animate: isPreviewRow }), callback2(onPressIn(5605).TableRowInner, { height: "100%", label, subLabel, icon, trailing, arrow, disabled: flag, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps })];
+  const items2 = [callback2(onPressOut(8823), { nameplate, isPressed: tmp7[0], invertPressOpacity: true, fullOpacity: isPreviewRow, animate: isPreviewRow }), callback2(onPressIn(5605).TableRowInner, { height: "100%", label, subLabel, icon, trailing, arrow, disabled: flag, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps })];
   obj.children = items2;
   let tmp12Result = tmp12(tmp3(5607).Card, obj);
   if (!context) {

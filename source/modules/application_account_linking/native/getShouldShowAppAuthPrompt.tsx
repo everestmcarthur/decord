@@ -1,10 +1,10 @@
-// Module ID: 11763
-// Function ID: 11764
+// Module ID: 11768
+// Function ID: 11769
 // Name: getShouldShowAppAuthPrompt
 // Dependencies: [7107, 7167, 7170, 2]
 // Exports: getShouldShowAppAuthPrompt
 
-// Module 11763 (getShouldShowAppAuthPrompt)
+// Module 11768 (getShouldShowAppAuthPrompt)
 import getAuthorizationApp from "getAuthorizationApp" /* 7167 */;
 import tokensToAppTokensMapDefault from "tokensToAppTokensMap" /* 7170 */;
 import closure_3 from "recomputeFromAppTokens" /* 7107 */;

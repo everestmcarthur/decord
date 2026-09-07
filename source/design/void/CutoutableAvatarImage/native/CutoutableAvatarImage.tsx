@@ -1,22 +1,22 @@
-// Module ID: 13028
-// Function ID: 13029
+// Module ID: 13032
+// Function ID: 13033
 // Name: StaticNativeCutoutAvatarImage
-// Dependencies: [19, 17, 13029, 21, 3, 1396, 13030, 13031, 8813, 5587, 4296, 4974, 1256, 8453, 558, 2]
+// Dependencies: [19, 17, 13033, 21, 3, 1396, 13034, 13035, 8818, 5587, 4296, 4974, 1256, 8456, 558, 2]
 
-// Module 13028 (StaticNativeCutoutAvatarImage)
+// Module 13032 (StaticNativeCutoutAvatarImage)
 import timestampDefault from "timestamp" /* 3 */;
 import shallowEqualDefault from "shallowEqual" /* 558 */;
 import v1 from "v1" /* 1256 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 import preloadDefault from "preload" /* 5587 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
-import inlineStylesDefault from "inlineStyles" /* 8453 */;
-import SolidCutoutDefault from "SolidCutout" /* 8813 */;
-import getChannelIconURL from "getChannelIconURL" /* 13030 */;
-import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 13031 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
+import inlineStylesDefault from "inlineStyles" /* 8456 */;
+import SolidCutoutDefault from "SolidCutout" /* 8818 */;
+import getChannelIconURL from "getChannelIconURL" /* 13034 */;
+import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 13035 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { CHANNEL_SPRING_CONFIG } from "n" /* 13029 */;
+import { CHANNEL_SPRING_CONFIG } from "n" /* 13033 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -66,14 +66,14 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
     const cutouts = [obj];
     return { cutouts };
   };
-  obj = { cutout, CutoutShape: cutout(8813).CutoutShape, withSpring: cutout(4974).withSpring, CHANNEL_SPRING_CONFIG };
+  obj = { cutout, CutoutShape: cutout(8818).CutoutShape, withSpring: cutout(4974).withSpring, CHANNEL_SPRING_CONFIG };
   fn.__closure = obj;
   fn.__workletHash = 12529564164821;
   fn.__initData = closure_15;
   const animatedProps = obj.useAnimatedProps(fn);
   obj = { style, animatedProps, children: callback(preloadDefault, { style: items, source: getReactNativeSVGImageSourceDefault(source), usesSmallCache: true }) };
   items = [obj.image, imageStyle];
-  return callback(cutout(8813).ClipViewAnimated, obj);
+  return callback(cutout(8818).ClipViewAnimated, obj);
 }
 function NativeCutoutAvatarImage(animate) {
   if (true === animate.animate) {

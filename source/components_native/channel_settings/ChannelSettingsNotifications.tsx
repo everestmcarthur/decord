@@ -1,10 +1,10 @@
-// Module ID: 10143
-// Function ID: 10144
+// Module ID: 10148
+// Function ID: 10149
 // Name: ChannelSettingsNotificationsGuard
-// Dependencies: [19, 1961, 1957, 4480, 4209, 4741, 1371, 1074, 21, 1114, 4560, 576, 4271, 4740, 7119, 4527, 10144, 1896, 7114, 4713, 5687, 5605, 10146, 7201, 5685, 5688, 4556, 8593, 4973, 504, 10147, 10148, 2]
+// Dependencies: [19, 1961, 1957, 4480, 4209, 4741, 1371, 1074, 21, 1114, 4560, 576, 4271, 4740, 7119, 4527, 10149, 1896, 7114, 4713, 5687, 5605, 10151, 7201, 5685, 5688, 4556, 8598, 4973, 504, 10152, 10153, 2]
 // Exports: default
 
-// Module 10143 (ChannelSettingsNotificationsGuard)
+// Module 10148 (ChannelSettingsNotificationsGuard)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
@@ -14,9 +14,9 @@ import Stack from "Stack" /* 4973 */;
 import TableRowInner from "TableRowInner" /* 5605 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
-import Form from "Form" /* 8593 */;
-import MutedUntilTextDefault from "MutedUntilText" /* 10146 */;
-import NotificationSettingsChannelDefault from "NotificationSettingsChannel" /* 10148 */;
+import Form from "Form" /* 8598 */;
+import MutedUntilTextDefault from "MutedUntilText" /* 10151 */;
+import NotificationSettingsChannelDefault from "NotificationSettingsChannel" /* 10153 */;
 import importAllResult from "noop" /* 19 */;
 import createChannelRecord from "createChannelRecord" /* 1961 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
@@ -216,10 +216,10 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     const obj4 = { muteConfig: null, type: null };
     obj4[0] = props.muteConfig;
     if (channel.type === constants3.GUILD_CATEGORY) {
-      MuteSettingType = tmp(10146).MuteSettingType;
+      MuteSettingType = tmp(10151).MuteSettingType;
       let CHANNEL = MuteSettingType.CATEGORY;
     } else {
-      CHANNEL = tmp(10146).MuteSettingType.CHANNEL;
+      CHANNEL = tmp(10151).MuteSettingType.CHANNEL;
     }
     obj4[1] = CHANNEL;
     tmp5(MutedUntilTextDefault, obj4);
@@ -435,7 +435,7 @@ export default function ChannelSettingsNotificationsSplit(arg0) {
   let obj = dependencyMap;
   const items = [closure_6];
   const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_6.getChannel(channelId.channelId));
-  _require(10147);
+  _require(10152);
   if (null == stateFromStores) {
     return null;
   } else {

@@ -1,10 +1,10 @@
-// Module ID: 17925
-// Function ID: 17926
+// Module ID: 17928
+// Function ID: 17929
 // Name: onTimersDelayCallback
 // Dependencies: [1074, 3, 1242, 551, 1356, 2]
 // Exports: setupLibdiscoreTimersMonitor
 
-// Module 17925 (onTimersDelayCallback)
+// Module 17928 (onTimersDelayCallback)
 import set from "set" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;

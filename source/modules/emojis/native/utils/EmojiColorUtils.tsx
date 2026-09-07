@@ -1,10 +1,10 @@
-// Module ID: 16078
-// Function ID: 16079
+// Module ID: 16081
+// Function ID: 16082
 // Name: _getEmojiCacheKey
 // Dependencies: [5, 17, 1437, 2]
 // Exports: getEmojiDominantColors
 
-// Module 16078 (_getEmojiCacheKey)
+// Module 16081 (_getEmojiCacheKey)
 import privDefault from "priv" /* 1437 */;
 import closure_0 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;

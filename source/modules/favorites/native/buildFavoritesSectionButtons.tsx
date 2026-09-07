@@ -1,18 +1,18 @@
-// Module ID: 10222
-// Function ID: 10223
+// Module ID: 10227
+// Function ID: 10228
 // Name: _addChannelToFavorites
-// Dependencies: [5, 21, 10223, 1896, 4527, 10228, 10227, 1114, 3225, 8662, 10235, 10241, 1178, 2]
+// Dependencies: [5, 21, 10228, 1896, 4527, 10233, 10232, 1114, 3225, 8667, 10240, 10246, 1178, 2]
 // Exports: default
 
-// Module 10222 (_addChannelToFavorites)
+// Module 10227 (_addChannelToFavorites)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import messagesProxyDefault from "messagesProxy" /* 3225 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10227 */;
-import StarIcon from "StarIcon" /* 10235 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 10241 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10232 */;
+import StarIcon from "StarIcon" /* 10240 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 10246 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -160,7 +160,7 @@ function _removeChannelFromFavorites() {
 }
 function openNoAccessUpsell() {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj.openLazy(asyncRequireImpl(10228, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
+  obj.openLazy(asyncRequireImpl(10233, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
 }
 let result = require("set").fileFinishedImporting("modules/favorites/native/buildFavoritesSectionButtons.tsx");
 

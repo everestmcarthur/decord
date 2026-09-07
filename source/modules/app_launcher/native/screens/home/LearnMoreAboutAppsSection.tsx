@@ -1,16 +1,16 @@
-// Module ID: 12095
-// Function ID: 12096
+// Module ID: 12099
+// Function ID: 12100
 // Name: LearnMoreAboutAppsSection
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 4255, 2024, 1114, 12096, 9409, 4556, 5123, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 4255, 2024, 1114, 12100, 9414, 4556, 5123, 2]
 // Exports: default
 
-// Module 12095 (LearnMoreAboutAppsSection)
+// Module 12099 (LearnMoreAboutAppsSection)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import PressableBase from "PressableBase" /* 5123 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9409 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12096 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9414 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12100 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;

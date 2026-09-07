@@ -1,10 +1,10 @@
-// Module ID: 12080
-// Function ID: 12081
+// Module ID: 12084
+// Function ID: 12085
 // Name: useCustomKeyboardBottomSheetConfig
-// Dependencies: [19, 4552, 1115, 1877, 4427, 1609, 1477, 11356, 5598, 11355, 2]
+// Dependencies: [19, 4552, 1115, 1877, 4427, 1609, 1477, 11361, 5598, 11360, 2]
 // Exports: default
 
-// Module 12080 (useCustomKeyboardBottomSheetConfig)
+// Module 12084 (useCustomKeyboardBottomSheetConfig)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 

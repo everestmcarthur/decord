@@ -1,18 +1,18 @@
-// Module ID: 10699
-// Function ID: 10700
+// Module ID: 10704
+// Function ID: 10705
 // Name: NativeGiftContextProvider
-// Dependencies: [5, 32, 19, 8192, 10665, 10700, 1371, 1074, 7238, 1373, 1085, 21, 3, 7428, 7429, 4233, 10701, 1114, 10702, 4218, 7240, 10703, 504, 10733, 10743, 8197, 8184, 4905, 1242, 7182, 10744, 573, 1115, 10663, 2]
+// Dependencies: [5, 32, 19, 8192, 10670, 10705, 1371, 1074, 7238, 1373, 1085, 21, 3, 7428, 7429, 4233, 10706, 1114, 10707, 4218, 7240, 10708, 504, 10738, 10748, 8197, 8184, 4905, 1242, 7182, 10749, 573, 1115, 10668, 2]
 // Exports: NativeGiftContextProvider
 
-// Module 10699 (NativeGiftContextProvider)
+// Module 10704 (NativeGiftContextProvider)
 import timestampDefault from "timestamp" /* 3 */;
 import createDefinedContextDefault from "createDefinedContext" /* 7428 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importDefaultResult from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import closure_6 from "initialize" /* 8192 */;
-import closure_7 from "createEmptyPromotionsByType" /* 10665 */;
-import closure_8 from "frozen" /* 10700 */;
+import closure_7 from "createEmptyPromotionsByType" /* 10670 */;
+import closure_8 from "frozen" /* 10705 */;
 import closure_9 from "mergeGuildAvatar" /* 1371 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 import { GPlayBillingResult as unpackModuleId } from "GPlayConnectionState" /* 7238 */;
@@ -273,7 +273,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     constants = undefined;
     table = undefined;
     closure_15 = undefined;
-    obj = { orderId: "a", planId: 150, planSelection: "center", giftInfo: "center" };
+    obj = { orderId: "a", planId: false, planSelection: false, giftInfo: "a" };
     obj = { premiumType: null, planInterval: null };
     obj[0] = first;
     obj[1] = first1;

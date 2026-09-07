@@ -1,10 +1,10 @@
-// Module ID: 9161
-// Function ID: 9162
+// Module ID: 9166
+// Function ID: 9167
 // Name: trackRTCPanelViewed
 // Dependencies: [1957, 1074, 4740, 8191, 1242, 2]
 // Exports: trackE2EECallVerificationCopied, trackE2EECallVerificationShareClicked, trackE2EEPublicKeyMismatch, trackE2EESettingsDeviceDelete, trackE2EESettingsUserDelete, trackE2EEStreamVerificationCopied, trackE2EEStreamVerificationShareClicked, trackE2EEUserVerificationCopied, trackE2EEUserVerificationFailed, trackE2EEUserVerificationShareClicked, trackE2EEUserVerificationViewed, trackE2EEUserVerified, trackRTCPanelViewed
 
-// Module 9161 (trackRTCPanelViewed)
+// Module 9166 (trackRTCPanelViewed)
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
 import getProfileProperties from "getProfileProperties" /* 8191 */;

@@ -1,10 +1,10 @@
-// Module ID: 16706
-// Function ID: 16707
+// Module ID: 16709
+// Function ID: 16710
 // Name: MessageContent
 // Dependencies: [19, 17, 4552, 2021, 1371, 7306, 1074, 1085, 21, 4560, 576, 504, 7781, 5004, 5520, 4556, 1114, 4404, 7311, 4793, 11, 1178, 7888, 7961, 2]
 // Exports: ThreadSubtext
 
-// Module 16706 (MessageContent)
+// Module 16709 (MessageContent)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;

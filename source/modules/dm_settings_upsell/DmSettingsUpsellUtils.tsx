@@ -1,10 +1,10 @@
-// Module ID: 17344
-// Function ID: 17345
+// Module ID: 17347
+// Function ID: 17348
 // Name: trackEvent
 // Dependencies: [1074, 1242, 2]
 // Exports: trackEvent
 
-// Module 17344 (trackEvent)
+// Module 17347 (trackEvent)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

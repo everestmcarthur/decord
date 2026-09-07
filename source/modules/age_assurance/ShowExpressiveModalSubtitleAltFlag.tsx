@@ -1,10 +1,10 @@
-// Module ID: 8444
-// Function ID: 8445
+// Module ID: 8451
+// Function ID: 8452
 // Name: useShouldShowExpressiveModalSubtitleAlt
 // Dependencies: [8430, 1433, 8418, 504, 2]
 // Exports: shouldShowExpressiveModalSubtitleAlt, useShouldShowExpressiveModalSubtitleAlt
 
-// Module 8444 (useShouldShowExpressiveModalSubtitleAlt)
+// Module 8451 (useShouldShowExpressiveModalSubtitleAlt)
 import initialize from "initialize" /* 504 */;
 import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8418 */;
 import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;

@@ -1,10 +1,10 @@
-// Module ID: 11952
-// Function ID: 11953
+// Module ID: 11956
+// Function ID: 11957
 // Name: isNewMessageGroup
 // Dependencies: [1074, 1090, 7270, 11, 4242, 2]
 // Exports: isNewGroupItem
 
-// Module 11952 (isNewMessageGroup)
+// Module 11956 (isNewMessageGroup)
 import set from "set" /* 2 */;
 import setDefault from "set" /* 1090 */;
 import resetCache from "resetCache" /* 4242 */;

@@ -1,10 +1,10 @@
-// Module ID: 16912
-// Function ID: 16913
+// Module ID: 16915
+// Function ID: 16916
 // Name: BurstReactionAnimationContainerInner
-// Dependencies: [32, 19, 17, 1954, 21, 4560, 576, 7784, 4528, 4529, 573, 4296, 4561, 10625, 1943, 1178, 7826, 4556, 1114, 4271, 2]
+// Dependencies: [32, 19, 17, 1954, 21, 4560, 576, 7784, 4528, 4529, 573, 4296, 4561, 10630, 1943, 1178, 7826, 4556, 1114, 4271, 2]
 // Exports: default
 
-// Module 16912 (BurstReactionAnimationContainerInner)
+// Module 16915 (BurstReactionAnimationContainerInner)
 import ThemesDefault from "Themes" /* 576 */;
 import ManaContext from "ManaContext" /* 4271 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -131,8 +131,8 @@ function BurstReactionAnimationContainerInner() {
       obj[1] = closure_1_8(first(4296).View, obj);
       return closure_1_8(callback(1178).OverlayView, obj);
     };
-    tmp8 = callback(first(10625), obj);
-    let tmp11 = first(10625);
+    tmp8 = callback(first(10630), obj);
+    let tmp11 = first(10630);
   }
   return tmp8;
 }

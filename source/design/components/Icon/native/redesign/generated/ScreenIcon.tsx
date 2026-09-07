@@ -1,14 +1,14 @@
-// Module ID: 8879
-// Function ID: 8880
+// Module ID: 8884
+// Function ID: 8885
 // Name: ScreenIcon
-// Dependencies: [19, 21, 576, 4261, 8880, 2]
+// Dependencies: [19, 21, 576, 4261, 8885, 2]
 // Exports: ScreenIcon
 
-// Module 8879 (ScreenIcon)
+// Module 8884 (ScreenIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8880 */;
+import registerAsset from "registerAsset" /* 8885 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

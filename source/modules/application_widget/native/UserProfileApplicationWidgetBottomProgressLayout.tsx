@@ -1,13 +1,13 @@
-// Module ID: 9019
-// Function ID: 9020
+// Module ID: 9024
+// Function ID: 9025
 // Name: UserProfileApplicationWidgetBottomProgressLayout
-// Dependencies: [19, 17, 21, 4560, 576, 8926, 9014, 4556, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 8931, 9019, 4556, 2]
 // Exports: default
 
-// Module 9019 (UserProfileApplicationWidgetBottomProgressLayout)
+// Module 9024 (UserProfileApplicationWidgetBottomProgressLayout)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8926 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8931 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -61,7 +61,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   }
   const items2 = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.NUMBER];
   let iter2 = resolveFieldValue(max, items2);
-  let tmp3Result = tmp3(8926);
+  let tmp3Result = tmp3(8931);
   obj = { style: tmp.root, children: null };
   const progressPercentage = tmp3Result.resolveProgressPercentage(iter, iter2);
   if (null != fieldValue) {
@@ -75,7 +75,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   } else {
     const obj2 = { style: null };
     obj2[0] = tmp.image;
-    tmp14 = callback(tmp3(9014).ImageSkeleton, obj2);
+    tmp14 = callback(tmp3(9019).ImageSkeleton, obj2);
     tmp15 = callback;
   }
   const items3 = [tmp14, ];
@@ -112,7 +112,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
     obj10[2] = singleStringOrSkeleton.text;
     let tmp15Result = tmp15(tmp3(4556).Text, obj10);
   } else {
-    tmp15Result = tmp15(tmp3(9014).TextSkeleton, { variant: "heading-sm/medium" });
+    tmp15Result = tmp15(tmp3(9019).TextSkeleton, { variant: "heading-sm/medium" });
   }
   const items6 = [tmp15Result, ];
   if ("value" === singleStringOrSkeleton1.status) {
@@ -120,7 +120,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
     obj11[3] = singleStringOrSkeleton1.text;
     tmp15Result = tmp15(tmp3(4556).Text, obj11);
   } else {
-    tmp15Result = tmp15(tmp3(9014).TextSkeleton, { variant: "text-xs/medium" });
+    tmp15Result = tmp15(tmp3(9019).TextSkeleton, { variant: "text-xs/medium" });
   }
   items6[1] = tmp15Result;
   obj9[1] = items6;
@@ -134,14 +134,14 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
       str = "/";
       let iter2Result = iter2(iter.value, "/", iter);
     } else {
-      tmp3Result = tmp3(8926);
+      tmp3Result = tmp3(8931);
       const _HermesInternal = HermesInternal;
       iter2Result = "" + tmp3Result.decimalToClampedPercentage(iter.value) + "%";
     }
     obj12[3] = iter2Result;
     tmp15(tmp3(4556).Text, obj12);
   } else {
-    items7[1] = tmp15(tmp3(9014).TextSkeleton, { variant: "text-sm/medium", widthChars: 4 });
+    items7[1] = tmp15(tmp3(9019).TextSkeleton, { variant: "text-sm/medium", widthChars: 4 });
     obj8[1] = items7;
     items5[1] = tmp11(tmp12, obj8);
     obj3[1] = items5;

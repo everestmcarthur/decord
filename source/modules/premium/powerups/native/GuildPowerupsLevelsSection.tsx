@@ -1,13 +1,13 @@
-// Module ID: 12563
-// Function ID: 12564
+// Module ID: 12567
+// Function ID: 12568
 // Name: PX_16
-// Dependencies: [19, 17, 21, 576, 1116, 4560, 12552, 1114, 2428, 12564, 12565, 2]
+// Dependencies: [19, 17, 21, 576, 1116, 4560, 12556, 1114, 2428, 12568, 12569, 2]
 // Exports: default
 
-// Module 12563 (PX_16)
+// Module 12567 (PX_16)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import items2 from "items" /* 12564 */;
+import items2 from "items" /* 12568 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -51,7 +51,7 @@ export default function GuildPowerupsLevelsSection(arg0) {
   obj[0] = intl.string(listings(2428)["TXY/b0"]);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(listings(2428).aJv4PB);
-  const items1 = [callback(listings(12552), obj), ];
+  const items1 = [callback(listings(12556), obj), ];
   obj = {
     cardMarginRight: PX_16,
     cardWidth: 250,

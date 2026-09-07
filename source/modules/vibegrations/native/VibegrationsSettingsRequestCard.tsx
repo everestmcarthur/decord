@@ -1,14 +1,14 @@
-// Module ID: 16610
-// Function ID: 16611
+// Module ID: 16613
+// Function ID: 16614
 // Name: VibegrationsSettingsRequestCard
-// Dependencies: [19, 17, 16589, 21, 4560, 576, 504, 4527, 16611, 4556, 1114, 3547, 4975, 2]
+// Dependencies: [19, 17, 16592, 21, 4560, 576, 504, 4527, 16614, 4556, 1114, 3547, 4975, 2]
 // Exports: default
 
-// Module 16610 (VibegrationsSettingsRequestCard)
+// Module 16613 (VibegrationsSettingsRequestCard)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "rejectPendingPublish" /* 16589 */;
+import closure_5 from "rejectPendingPublish" /* 16592 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

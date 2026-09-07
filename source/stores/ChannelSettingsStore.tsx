@@ -1,9 +1,9 @@
-// Module ID: 8626
-// Function ID: 8627
+// Module ID: 8631
+// Function ID: 8632
 // Name: normalizeChannelPropertyForCompare
 // Dependencies: [1961, 8380, 1385, 1957, 1074, 1113, 4211, 4213, 1966, 1967, 1272, 573, 12, 1971, 4153, 504, 2]
 
-// Module 8626 (normalizeChannelPropertyForCompare)
+// Module 8631 (normalizeChannelPropertyForCompare)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

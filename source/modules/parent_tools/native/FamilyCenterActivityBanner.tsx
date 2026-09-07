@@ -1,19 +1,19 @@
-// Module ID: 14875
-// Function ID: 14876
+// Module ID: 14878
+// Function ID: 14879
 // Name: FamilyCenterActivityBannerButton
-// Dependencies: [19, 17, 21, 4560, 8645, 8646, 14876, 576, 11919, 1114, 2396, 14883, 14884, 4556, 2]
+// Dependencies: [19, 17, 21, 4560, 8650, 8651, 14879, 576, 11924, 1114, 2396, 14886, 14887, 4556, 2]
 // Exports: default
 
-// Module 14875 (FamilyCenterActivityBannerButton)
+// Module 14878 (FamilyCenterActivityBannerButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;
 import Text from "Text" /* 4556 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8645 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11919 */;
-import FamilyCenterTeenQRCodeButtonInner from "FamilyCenterTeenQRCodeButtonInner" /* 14876 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8650 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8651 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11924 */;
+import FamilyCenterTeenQRCodeButtonInner from "FamilyCenterTeenQRCodeButtonInner" /* 14879 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -72,7 +72,7 @@ export default function FamilyCenterActivityBanner() {
   obj = { style: tmp4.container, children: null };
   obj = { source: null, style: null };
   const ageSpecificText1 = obj2.useAgeSpecificText(intl3.format(messagesProxyDefault.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(messagesProxyDefault.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
-  obj[0] = tmp(tmp3 ? 14883 : 14884);
+  obj[0] = tmp(tmp3 ? 14886 : 14887);
   obj[1] = tmp4.art;
   const items = [closure_5(closure_4, obj), , , ];
   obj1 = { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText };

@@ -1,16 +1,16 @@
-// Module ID: 12398
-// Function ID: 12399
+// Module ID: 12402
+// Function ID: 12403
 // Name: ApplicationCommandsCategories
-// Dependencies: [19, 17, 2021, 12395, 21, 4560, 576, 504, 12231, 5587, 5123, 1114, 4528, 4529, 2]
+// Dependencies: [19, 17, 2021, 12399, 21, 4560, 576, 504, 12235, 5587, 5123, 1114, 4528, 4529, 2]
 // Exports: default
 
-// Module 12398 (ApplicationCommandsCategories)
+// Module 12402 (ApplicationCommandsCategories)
 import ThemesDefault from "Themes" /* 576 */;
 import preloadDefault from "preload" /* 5587 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "trackCommunicationDisabled" /* 2021 */;
-import ICON_SIZE from "ICON_SIZE" /* 12395 */;
+import ICON_SIZE from "ICON_SIZE" /* 12399 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

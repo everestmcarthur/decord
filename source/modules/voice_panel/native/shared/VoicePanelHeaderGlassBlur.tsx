@@ -1,9 +1,9 @@
-// Module ID: 12281
-// Function ID: 12282
+// Module ID: 12285
+// Function ID: 12286
 // Name: StyleSheet
 // Dependencies: [19, 17, 21, 4560, 1115, 4296, 4974, 4495, 7073, 4964, 4411, 5589, 2]
 
-// Module 12281 (StyleSheet)
+// Module 12285 (StyleSheet)
 import useThemeDefault from "useTheme" /* 4495 */;
 import animatedComponentDefault from "animatedComponent" /* 4964 */;
 import setDefault from "set" /* 5589 */;

@@ -1,21 +1,21 @@
-// Module ID: 9484
-// Function ID: 9485
+// Module ID: 9489
+// Function ID: 9490
 // Name: CameraPreview
-// Dependencies: [32, 19, 17, 1956, 4576, 9485, 4582, 502, 9486, 9467, 9468, 1074, 4581, 21, 6655, 4296, 1178, 504, 9487, 9474, 9496, 9475, 5126, 1611, 9493, 8332, 8272, 9488, 5682, 4561, 9584, 1114, 9585, 9587, 9588, 9490, 9470, 9476, 9654, 9655, 2]
+// Dependencies: [32, 19, 17, 1956, 4576, 9490, 4582, 502, 9491, 9472, 9473, 1074, 4581, 21, 6655, 4296, 1178, 504, 9492, 9479, 9501, 9480, 5126, 1611, 9498, 8332, 8272, 9493, 5682, 4561, 9589, 1114, 9590, 9592, 9593, 9495, 9475, 9481, 9659, 9660, 2]
 // Exports: default
 
-// Module 9484 (CameraPreview)
+// Module 9489 (CameraPreview)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "participantFromServer" /* 1956 */;
 import closure_8 from "getParticipants" /* 4576 */;
-import { useBestActiveChatInputContainerHeight as closure_9 } from "updateChatInputContainerHeight" /* 9485 */;
+import { useBestActiveChatInputContainerHeight as closure_9 } from "updateChatInputContainerHeight" /* 9490 */;
 import closure_10 from "reset" /* 4582 */;
 import closure_11 from "fetchFingerprint" /* 502 */;
-import closure_12 from "initialize" /* 9486 */;
-import { useChannelCallStore } from "VoiceChatDrawerState" /* 9467 */;
-import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9468 */;
+import closure_12 from "initialize" /* 9491 */;
+import { useChannelCallStore } from "VoiceChatDrawerState" /* 9472 */;
+import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9473 */;
 import { ApplicationStreamStates } from "ME" /* 1074 */;
 import ParticipantTypes from "ParticipantTypes" /* 4581 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -43,15 +43,15 @@ function CameraPreview(arg0) {
   obj = ref(504);
   const items = [closure_12];
   stateFromStores = obj.useStateFromStores(items, () => lib.isReactingToThermalState());
-  const tmp6 = reveal(stateFromStores(9487)(), 2);
+  const tmp6 = reveal(stateFromStores(9492)(), 2);
   dependencyMap = tmp7;
   obj1 = React;
-  reveal = React.useContext(ref(9474).RevealContext).reveal;
-  let tmp8 = stateFromStores(9496)();
+  reveal = React.useContext(ref(9479).RevealContext).reveal;
+  let tmp8 = stateFromStores(9501)();
   React = tmp8;
   let tmp9 = callback();
   closure_5 = tmp9;
-  const tmp10 = stateFromStores(9475)(channel.id);
+  const tmp10 = stateFromStores(9480)(channel.id);
   closure_6 = tmp10;
   let obj2 = ref(5126);
   const isScreenLandscape = obj2.useIsScreenLandscape();
@@ -59,7 +59,7 @@ function CameraPreview(arg0) {
   bottom = rect.bottom;
   top = rect.top;
   ({ left, right } = rect);
-  let obj3 = ref(9493);
+  let obj3 = ref(9498);
   obj = { channelId: channel.id };
   let isViewingActivity = obj3.useIsViewingActivity(obj);
   let obj5 = ref(504);
@@ -88,7 +88,7 @@ function CameraPreview(arg0) {
       tmp2 = closure_6;
     }
     if (tmp2) {
-      dependencyMap(ref(9488).DEFAULT_PIP_POSITION);
+      dependencyMap(ref(9493).DEFAULT_PIP_POSITION);
     }
   }, items2);
   let tmp5Result = tmp5(obj1.useState(top + closure_16), 2);
@@ -135,7 +135,7 @@ function CameraPreview(arg0) {
   if (constants2.HIDE_PIP === tmp27) {
     obj1 = { text: null, onClick: null };
     function handleHidePip() {
-      const result = ref(9584).setPipEnabledWhileFocusedOnActivityOrStream(false);
+      const result = ref(9589).setPipEnabledWhileFocusedOnActivityOrStream(false);
     }
     const intl2 = tmp(1114).intl;
     obj1[0] = intl2.string(tmp(1114).t.L3I0Jr);
@@ -146,7 +146,7 @@ function CameraPreview(arg0) {
     obj2 = { text: null, onClick: null };
     const intl = tmp(1114).intl;
     obj2[0] = intl.string(tmp(1114).t["1fRDnT"]);
-    obj2[1] = tmp(9585).openIgnoreThermalStateAlert;
+    obj2[1] = tmp(9590).openIgnoreThermalStateAlert;
     const items5 = [obj2];
     items6 = items5;
   } else {
@@ -167,14 +167,14 @@ function CameraPreview(arg0) {
   const obj6 = { style: items8, pointerEvents: "box-none", children: null };
   items8 = [{ flex: 1, marginLeft: left + c15, marginRight: right + c15 }, animatedStyle];
   const obj8 = { channel, preferredPosition: tmp6[0], onMove: tmp6[1], isInCallScreen: true, marginTop: first, marginBottom: first1, children: null };
-  let tmp4Result = tmp4(9488);
+  let tmp4Result = tmp4(9493);
   const obj9 = { ref, disabled: null, trigger: null, rows: null, onOpen: null, onClose: null };
-  tmp4Result = tmp4(9587);
+  tmp4Result = tmp4(9592);
   if (isViewingActivity) {
     isViewingActivity = stateFromStores;
   }
   obj9[1] = !isViewingActivity;
-  obj9[2] = callback2(stateFromStores(9588), { channel, selfParticipant, pipParticipant: nonSelfPipParticipant });
+  obj9[2] = callback2(stateFromStores(9593), { channel, selfParticipant, pipParticipant: nonSelfPipParticipant });
   obj9[3] = items6;
   obj9[4] = function onOpen() {
     _undefined(stateFromStores ? closure_1_26.HANDLE_THERMAL_EVENT : closure_1_26.HIDE_PIP);
@@ -217,7 +217,7 @@ export default function CameraPreviewContainer(channel) {
   dependencyMap = undefined;
   closure_3 = undefined;
   let id;
-  const tmp3 = flag(9470)(channel);
+  const tmp3 = flag(9475)(channel);
   dependencyMap = tmp3;
   obj = channel(504);
   const items = [closure_8, closure_11, closure_10];
@@ -279,9 +279,9 @@ export default function CameraPreviewContainer(channel) {
   if (!tmp9) {
     tmp12 = stateFromStores1;
   }
-  let tmp4Result = tmp4(9654);
+  let tmp4Result = tmp4(9659);
   const isStreamFocused = tmp4Result.useIsStreamFocused(channel.id);
-  tmp4Result = tmp4(9493);
+  tmp4Result = tmp4(9498);
   obj = { channelId: channel.id };
   const isViewingActivity = tmp4Result.useIsViewingActivity(obj);
   const obj3 = channel(504);
@@ -394,7 +394,7 @@ export default function CameraPreviewContainer(channel) {
   const tmp4Result3 = channel(504);
   const items5 = [closure_8];
   const stateFromStores5 = channel(504).useStateFromStores(items5, () => closure_1_8.getSelectedParticipant(channel.id));
-  const tmp19 = flag(9490)(channel.id);
+  const tmp19 = flag(9495)(channel.id);
   let tmp20 = null;
   if (null != tmp19) {
     tmp20 = null;
@@ -432,7 +432,7 @@ export default function CameraPreviewContainer(channel) {
   if (flag2) {
     flag2 = channel.isGuildStageVoice();
   }
-  flag(9655)(channel);
+  flag(9660)(channel);
   if (tmp9) {
     if (!stateFromStores6) {
       let tmp25 = null;

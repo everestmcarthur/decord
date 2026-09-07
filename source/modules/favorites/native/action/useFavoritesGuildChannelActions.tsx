@@ -1,10 +1,10 @@
-// Module ID: 10974
-// Function ID: 10975
+// Module ID: 10979
+// Function ID: 10980
 // Name: useFavoritesGuildChannelActions
-// Dependencies: [502, 2021, 1960, 10224, 1982, 504, 10240, 2]
+// Dependencies: [502, 2021, 1960, 10229, 1982, 504, 10245, 2]
 // Exports: default
 
-// Module 10974 (useFavoritesGuildChannelActions)
+// Module 10979 (useFavoritesGuildChannelActions)
 import closure_2 from "fetchFingerprint" /* 502 */;
 import closure_3 from "trackCommunicationDisabled" /* 2021 */;
 import closure_4 from "initializeFromUserSettings" /* 1960 */;
@@ -14,7 +14,7 @@ const result = require("set").fileFinishedImporting("modules/favorites/native/ac
 
 export default function useFavoritesGuildChannelActions(channelId, FavoritesGuildActionSheet) {
   const _require = channelId;
-  let obj = _require(10224);
+  let obj = _require(10229);
   const favoritesAccess = obj.useFavoritesAccess(FavoritesGuildActionSheet);
   ({ hasAccess, isExperimentEnabled } = favoritesAccess);
   let isFavoritableChannelResult = _require(1982).isFavoritableChannel(channelId);
@@ -23,8 +23,8 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   const items = [closure_4];
   const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_4.isFavorite(channelId.id));
   const obj3 = _require(504);
-  const isFavoritesGuildSelected = _require(10224).useIsFavoritesGuildSelected();
-  const obj4 = _require(10224);
+  const isFavoritesGuildSelected = _require(10229).useIsFavoritesGuildSelected();
+  const obj4 = _require(10229);
   const items1 = [closure_3, closure_2];
   if (isFavoritableChannelResult) {
     isFavoritableChannelResult = obj5.useStateFromStores(items1, () => {
@@ -46,7 +46,7 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   if (tmp7) {
     tmp7 = !isFavoritesGuildSelected;
   }
-  const favoritesBetaTagDismissibleContent = tmp(10240).useFavoritesBetaTagDismissibleContent(tmp7);
+  const favoritesBetaTagDismissibleContent = tmp(10245).useFavoritesBetaTagDismissibleContent(tmp7);
   obj = { isExperimentEnabled, hasFavoritesAccess: hasAccess, canFavoriteChannel: isFavoritableChannelResult, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag, dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag };
   return obj;
 };

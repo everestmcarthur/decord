@@ -1,10 +1,10 @@
-// Module ID: 12322
-// Function ID: 12323
+// Module ID: 12326
+// Function ID: 12327
 // Name: GuildDirectoryAddAlert
 // Dependencies: [19, 17, 21, 4560, 576, 4994, 1114, 5584, 4556, 2]
 // Exports: default
 
-// Module 12322 (GuildDirectoryAddAlert)
+// Module 12326 (GuildDirectoryAddAlert)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

@@ -1,10 +1,10 @@
-// Module ID: 8818
-// Function ID: 8819
+// Module ID: 8823
+// Function ID: 8824
 // Name: NameplateInner
-// Dependencies: [19, 4552, 21, 4560, 504, 4495, 4296, 4561, 1886, 8819, 4987, 1115, 8808, 5587, 2]
+// Dependencies: [19, 4552, 21, 4560, 504, 4495, 4296, 4561, 1886, 8824, 4987, 1115, 8813, 5587, 2]
 // Exports: default
 
-// Module 8818 (NameplateInner)
+// Module 8823 (NameplateInner)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -79,7 +79,7 @@ function NameplateInner(isFocused) {
   tmpResult = tmp(1886);
   const backgroundGradientColors = tmpResult.getBackgroundGradientColors(nameplate.palette, sharedValue(4495)());
   const tmp6 = sharedValue(4495)();
-  const nameplateAssets = flag6(8819).getNameplateAssets(nameplate);
+  const nameplateAssets = flag6(8824).getNameplateAssets(nameplate);
   let str = nameplateAssets.staticImageUrl;
   let tmp12 = true === flag7;
   if (tmp12) {
@@ -117,13 +117,13 @@ function NameplateInner(isFocused) {
   }
   const items4 = [tmp15Result, ];
   const tmp13 = closure_6;
-  const tmpResult1 = flag6(8819);
+  const tmpResult1 = flag6(8824);
   if (tmpResult2.isAndroid()) {
     if (tmp12) {
       const obj2 = { url: null, style: null, autoplay: true };
       obj2[0] = str;
       obj2[1] = tmp4.img;
-      let tmp17 = callback(tmp(8808).APNGPlayer, obj2);
+      let tmp17 = callback(tmp(8813).APNGPlayer, obj2);
     }
     items4[1] = tmp17;
     obj[1] = items4;

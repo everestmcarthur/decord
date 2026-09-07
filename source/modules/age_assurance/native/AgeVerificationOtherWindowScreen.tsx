@@ -1,10 +1,10 @@
-// Module ID: 8451
-// Function ID: 8452
+// Module ID: 8454
+// Function ID: 8455
 // Name: AgeVerificationOtherWindowScreen
 // Dependencies: [19, 21, 4560, 1114, 2946, 8421, 8422, 4973, 6960, 576, 4556, 2]
 // Exports: default
 
-// Module 8451 (AgeVerificationOtherWindowScreen)
+// Module 8454 (AgeVerificationOtherWindowScreen)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

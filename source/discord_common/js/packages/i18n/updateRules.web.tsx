@@ -1,10 +1,10 @@
-// Module ID: 17277
-// Function ID: 17278
+// Module ID: 17280
+// Function ID: 17281
 // Name: updateRules
 // Dependencies: [19, 21, 4257, 2]
 // Exports: default
 
-// Module 17277 (updateRules)
+// Module 17280 (updateRules)
 import noopAll from "noop" /* 19 */;
 import t from "t" /* 4257 */;
 import { jsx } from "jsxProd" /* 21 */;

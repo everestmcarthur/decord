@@ -1,14 +1,14 @@
-// Module ID: 17122
-// Function ID: 17123
+// Module ID: 17125
+// Function ID: 17126
 // Name: useSpeakerTooltips
-// Dependencies: [32, 19, 17119, 12271, 1954, 21, 17123, 17058, 9681, 12272, 4296, 7388, 17095, 1114, 1943, 17125, 11127, 2]
+// Dependencies: [32, 19, 17122, 12275, 1954, 21, 17126, 17061, 9686, 12276, 4296, 7388, 17098, 1114, 1943, 17128, 11132, 2]
 // Exports: default
 
-// Module 17122 (useSpeakerTooltips)
+// Module 17125 (useSpeakerTooltips)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import useConsoleVoiceUpsellStore from "useConsoleVoiceUpsellStore" /* 17119 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12271 */;
+import useConsoleVoiceUpsellStore from "useConsoleVoiceUpsellStore" /* 17122 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12275 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import { jsx } from "jsxProd" /* 21 */;
 

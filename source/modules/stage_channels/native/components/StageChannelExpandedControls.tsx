@@ -1,11 +1,11 @@
-// Module ID: 10013
-// Function ID: 10014
-// Dependencies: [19, 17, 4582, 502, 1979, 21, 4560, 4409, 576, 9583, 9471, 504, 5417, 9088, 10014, 2]
+// Module ID: 10018
+// Function ID: 10019
+// Dependencies: [19, 17, 4582, 502, 1979, 21, 4560, 4409, 576, 9588, 9476, 504, 5417, 9093, 10019, 2]
 
-// Module 10013
+// Module 10018
 import ThemesDefault from "Themes" /* 576 */;
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9088 */;
-import useCanCurrentUserSpeakInChannelDefault from "useCanCurrentUserSpeakInChannel" /* 9583 */;
+import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9093 */;
+import useCanCurrentUserSpeakInChannelDefault from "useCanCurrentUserSpeakInChannel" /* 9588 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "reset" /* 4582 */;
 import closure_5 from "fetchFingerprint" /* 502 */;
@@ -27,7 +27,7 @@ const memoResult = importAllResult.memo((channel) => {
   importDefault = undefined;
   const tmp = callback();
   const tmp2 = importDefault;
-  let obj = channel(9471);
+  let obj = channel(9476);
   const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   obj1 = channel(504);
   const items = [closure_6];
@@ -50,7 +50,7 @@ const memoResult = importAllResult.memo((channel) => {
   const obj4 = channel(504);
   const stageHasMedia = channel(5417).useStageHasMedia(channel.id);
   const items5 = [];
-  items5.push(jsx(channel(10014).StreamVolumeItem, {}));
+  items5.push(jsx(channel(10019).StreamVolumeItem, {}));
   if (tmp11) {
     obj = { channel: null, disabled: null };
     obj[0] = channel;
@@ -66,11 +66,11 @@ const memoResult = importAllResult.memo((channel) => {
       tmp12 = reachedLimit;
     }
     obj[1] = tmp12;
-    items5.push(tmp9(tmp5(10014).ScreenshareButton, obj));
+    items5.push(tmp9(tmp5(10019).ScreenshareButton, obj));
   }
   obj = { channelId: channel.id, isConnectedToVoiceChannel };
-  items5.push(jsx(channel(10014).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
-  items5.push(jsx(channel(10014).DeafenButton, { channel }));
+  items5.push(jsx(channel(10019).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
+  items5.push(jsx(channel(10019).DeafenButton, { channel }));
   obj1 = { style: tmp.container, children: items5.map((children) => callback(closure_3, { children }, arg1)) };
   return <View style={tmp.container}>{items5.map((children) => callback(closure_3, { children }, arg1))}</View>;
 });

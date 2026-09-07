@@ -1,10 +1,11 @@
 // Module ID: 14038
 // Function ID: 14039
 // Name: SemVer
-// Dependencies: [14030]
+// Dependencies: [14036]
 
 // Module 14038 (SemVer)
-import SemVer from "SemVer" /* 14030 */;
 
-
-export default (arg0, arg1, arg2) => 0 === SemVer(arg0, arg1, arg2);
+export default (arr) => {
+  closure_0 = arg1;
+  return arr.sort((arg0, arg1) => callback(closure_1_1[0])(arg1, arg0, callback));
+};

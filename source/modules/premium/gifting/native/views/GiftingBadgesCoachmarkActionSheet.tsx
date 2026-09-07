@@ -1,15 +1,15 @@
-// Module ID: 16938
-// Function ID: 16939
+// Module ID: 16941
+// Function ID: 16942
 // Name: HasBadgeCoachmark
-// Dependencies: [19, 17, 8192, 1954, 21, 4560, 576, 4527, 4418, 7150, 10749, 4556, 1114, 2492, 4975, 10661, 7182, 16939, 11030, 504, 8184, 2]
+// Dependencies: [19, 17, 8192, 1954, 21, 4560, 576, 4527, 4418, 7150, 10754, 4556, 1114, 2492, 4975, 10666, 7182, 16942, 11035, 504, 8184, 2]
 // Exports: default
 
-// Module 16938 (HasBadgeCoachmark)
+// Module 16941 (HasBadgeCoachmark)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import messagesProxyDefault from "messagesProxy" /* 2492 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10749 */;
-import metadataDefault from "metadata" /* 16939 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10754 */;
+import metadataDefault from "metadata" /* 16942 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "initialize" /* 8192 */;
@@ -115,7 +115,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   const intl3 = markAsDismissed(1114).intl;
   obj7[1] = intl3.string(messagesProxyDefault.DZnomS);
   const obj2 = { uri: metadataDefault };
-  obj7[2] = callback(markAsDismissed(11030).GiftIcon, { size: "sm", color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj7[2] = callback(markAsDismissed(11035).GiftIcon, { size: "sm", color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   obj7[3] = callback;
   obj6[1] = callback(markAsDismissed(4975).Button, obj7);
   items2[2] = callback(closure_5, obj6);

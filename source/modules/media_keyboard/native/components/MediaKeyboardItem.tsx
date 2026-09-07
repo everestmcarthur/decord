@@ -1,23 +1,23 @@
-// Module ID: 10648
-// Function ID: 10649
+// Module ID: 10653
+// Function ID: 10654
 // Name: NewCaption
-// Dependencies: [19, 17, 4900, 10649, 21, 4296, 4560, 576, 4409, 1178, 10397, 4556, 504, 5136, 10650, 1114, 5168, 5138, 10651, 10652, 4561, 1477, 10653, 5087, 10112, 2]
+// Dependencies: [19, 17, 4900, 10654, 21, 4296, 4560, 576, 4409, 1178, 10402, 4556, 504, 5136, 10655, 1114, 5168, 5138, 10656, 10657, 4561, 1477, 10658, 5087, 10117, 2]
 // Exports: isAttachFilesNode, isMediaCameraNode, isSpecialMediaGridNode, isViewAllPhotosNode
 
-// Module 10648 (NewCaption)
+// Module 10653 (NewCaption)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import Text from "Text" /* 4556 */;
 import ImageIcon from "ImageIcon" /* 5087 */;
-import AttachmentIcon from "AttachmentIcon" /* 10112 */;
-import registerAssetDefault from "registerAsset" /* 10397 */;
-import CameraIcon from "CameraIcon" /* 10653 */;
+import AttachmentIcon from "AttachmentIcon" /* 10117 */;
+import registerAssetDefault from "registerAsset" /* 10402 */;
+import CameraIcon from "CameraIcon" /* 10658 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "map" /* 4900 */;
-import frozen from "frozen" /* 10649 */;
+import frozen from "frozen" /* 10654 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importDefaultResult from "module_4296" /* 4296 */;

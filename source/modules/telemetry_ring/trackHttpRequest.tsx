@@ -1,14 +1,14 @@
-// Module ID: 17283
-// Function ID: 17284
+// Module ID: 17286
+// Function ID: 17287
 // Name: trackHttpRequest
-// Dependencies: [1074, 17284, 17285, 1242, 2]
+// Dependencies: [1074, 17287, 17288, 1242, 2]
 // Exports: default
 
-// Module 17283 (trackHttpRequest)
+// Module 17286 (trackHttpRequest)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest" /* 17285 */;
+import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest" /* 17288 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 const result = set.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");

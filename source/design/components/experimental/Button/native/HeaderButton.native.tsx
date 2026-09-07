@@ -1,9 +1,9 @@
-// Module ID: 8905
-// Function ID: 8906
+// Module ID: 8910
+// Function ID: 8911
 // Name: HeaderButton
 // Dependencies: [19, 21, 4980, 4556, 4560, 4976, 2]
 
-// Module 8905 (HeaderButton)
+// Module 8910 (HeaderButton)
 import noopAll from "noop" /* 19 */;
 import CollapsingText from "CollapsingText" /* 4976 */;
 import { jsx } from "jsxProd" /* 21 */;

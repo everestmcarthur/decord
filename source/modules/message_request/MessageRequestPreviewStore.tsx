@@ -1,9 +1,9 @@
-// Module ID: 12595
-// Function ID: 12596
+// Module ID: 12599
+// Function ID: 12600
 // Name: isMessagePreviewEnabledForChannel
 // Dependencies: [1371, 7219, 7220, 4783, 504, 573, 2]
 
-// Module 12595 (isMessagePreviewEnabledForChannel)
+// Module 12599 (isMessagePreviewEnabledForChannel)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;

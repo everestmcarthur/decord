@@ -1,10 +1,10 @@
-// Module ID: 12024
-// Function ID: 12025
+// Module ID: 12028
+// Function ID: 12029
 // Name: useNativeForumPostContent
 // Dependencies: [1074, 4560, 1114, 7270, 4899, 2]
 // Exports: default
 
-// Module 12024 (useNativeForumPostContent)
+// Module 12028 (useNativeForumPostContent)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

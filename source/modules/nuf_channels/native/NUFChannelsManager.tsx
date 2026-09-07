@@ -1,9 +1,9 @@
-// Module ID: 13767
-// Function ID: 13768
+// Module ID: 13770
+// Function ID: 13771
 // Name: _initialize
-// Dependencies: [2021, 1979, 4381, 1371, 1074, 4187, 510, 4404, 7118, 4418, 4417, 1384, 4527, 13768, 1896, 2]
+// Dependencies: [2021, 1979, 4381, 1371, 1074, 4187, 510, 4404, 7118, 4418, 4417, 1384, 4527, 13771, 1896, 2]
 
-// Module 13767 (_initialize)
+// Module 13770 (_initialize)
 import Storage3 from "Storage" /* 510 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
 import initializeDefault from "initialize" /* 7118 */;

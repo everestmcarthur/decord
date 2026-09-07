@@ -1,9 +1,9 @@
-// Module ID: 9022
-// Function ID: 9023
+// Module ID: 9027
+// Function ID: 9028
 // Name: handleFeaturedOrDeveloperFetchSuccess
 // Dependencies: [12, 504, 573, 2]
 
-// Module 9022 (handleFeaturedOrDeveloperFetchSuccess)
+// Module 9027 (handleFeaturedOrDeveloperFetchSuccess)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 

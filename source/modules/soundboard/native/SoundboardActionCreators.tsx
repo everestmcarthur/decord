@@ -1,10 +1,10 @@
-// Module ID: 17059
-// Function ID: 17060
+// Module ID: 17062
+// Function ID: 17063
 // Name: openSoundboardSoundPickerActionSheet
-// Dependencies: [1074, 4527, 17060, 1896, 1109, 4380, 1943, 2]
+// Dependencies: [1074, 4527, 17063, 1896, 1109, 4380, 1943, 2]
 // Exports: openSoundboardSoundPickerActionSheet, showSoundboardSoundPickerActionSheet
 
-// Module 17059 (openSoundboardSoundPickerActionSheet)
+// Module 17062 (openSoundboardSoundPickerActionSheet)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
@@ -18,7 +18,7 @@ let result = set.fileFinishedImporting("modules/soundboard/native/SoundboardActi
 
 export const openSoundboardSoundPickerActionSheet = function openSoundboardSoundPickerActionSheet(arg0) {
   ({ channel, analyticsSource, initialScrollLocation } = arg0);
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(17060, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource, initialScrollLocation });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(17063, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource, initialScrollLocation });
 };
 export const showSoundboardSoundPickerActionSheet = function showSoundboardSoundPickerActionSheet(arg0) {
   ({ channel, analyticsSource } = arg0);
@@ -28,5 +28,5 @@ export const showSoundboardSoundPickerActionSheet = function showSoundboardSound
   const result = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
   obj = { channel, analyticsSource };
   ({ channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation } = obj);
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(17060, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(17063, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation });
 };

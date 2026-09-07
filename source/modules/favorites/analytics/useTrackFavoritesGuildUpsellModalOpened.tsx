@@ -1,10 +1,10 @@
-// Module ID: 10229
-// Function ID: 10230
+// Module ID: 10234
+// Function ID: 10235
 // Name: useTrackFavoritesGuildUpsellModalOpened
 // Dependencies: [19, 1074, 7162, 7182, 1242, 2]
 // Exports: default
 
-// Module 10229 (useTrackFavoritesGuildUpsellModalOpened)
+// Module 10234 (useTrackFavoritesGuildUpsellModalOpened)
 import contextDefault from "context" /* 7162 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
 import closure_2 from "noop" /* 19 */;

@@ -1,16 +1,16 @@
-// Module ID: 11879
-// Function ID: 11880
+// Module ID: 11884
+// Function ID: 11885
 // Name: ClassificationHeader
-// Dependencies: [19, 17, 2025, 8430, 8419, 1074, 21, 4560, 576, 4556, 8420, 1114, 504, 9050, 4255, 9402, 4975, 11880, 11882, 8429, 8413, 1242, 11883, 7602, 7607, 11885, 7123, 11890, 8418, 2]
+// Dependencies: [19, 17, 2025, 8430, 8419, 1074, 21, 4560, 576, 4556, 8420, 1114, 504, 9055, 4255, 9407, 4975, 11885, 11887, 8429, 8413, 1242, 11888, 7602, 7607, 11890, 7123, 11895, 8418, 2]
 // Exports: default
 
-// Module 11879 (ClassificationHeader)
+// Module 11884 (ClassificationHeader)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import Button from "Button" /* 4975 */;
-import renderDefault from "render" /* 9050 */;
+import renderDefault from "render" /* 9055 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "_getSystemLocale" /* 2025 */;
@@ -175,7 +175,7 @@ function ClassificationPolicyCard(classificationDescription) {
   items = [tmp.classificationPolicyCard];
   obj = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = renderDefault;
-  obj[1] = callback(policyExplainerLink(9402).ShieldIcon, { size: "sm", color: ThemesDefault.colors.TEXT_LINK });
+  obj[1] = callback(policyExplainerLink(9407).ShieldIcon, { size: "sm", color: ThemesDefault.colors.TEXT_LINK });
   const items1 = [callback(closure_4, obj), ];
   const obj2 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };

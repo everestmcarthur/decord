@@ -1,15 +1,15 @@
-// Module ID: 16224
-// Function ID: 16225
+// Module ID: 16227
+// Function ID: 16228
 // Name: handlePress
-// Dependencies: [19, 10118, 4742, 21, 4560, 576, 4259, 1114, 4515, 4713, 10913, 16116, 2]
+// Dependencies: [19, 10123, 4742, 21, 4560, 576, 4259, 1114, 4515, 4713, 10918, 16119, 2]
 
-// Module 16224 (handlePress)
+// Module 16227 (handlePress)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import dispatcherDefault from "dispatcher" /* 4259 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
 import computeChannelNameDefault from "computeChannelName" /* 4713 */;
-import getChannelModeDefault from "getChannelMode" /* 16116 */;
+import getChannelModeDefault from "getChannelMode" /* 16119 */;
 import importAllResult from "noop" /* 19 */;
 import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
 import { jsx } from "jsxProd" /* 21 */;

@@ -1,10 +1,10 @@
-// Module ID: 9965
-// Function ID: 9966
+// Module ID: 9970
+// Function ID: 9971
 // Name: isSoundboardSectionNitroLocked
 // Dependencies: [5020, 7853, 1093, 38, 2]
 // Exports: getUpsellType, isSoundboardSectionNitroLocked
 
-// Module 9965 (isSoundboardSectionNitroLocked)
+// Module 9970 (isSoundboardSectionNitroLocked)
 import set from "set" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
 import SoundButtonOverlay from "SoundButtonOverlay" /* 5020 */;

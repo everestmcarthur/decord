@@ -1,9 +1,9 @@
-// Module ID: 9491
-// Function ID: 9492
+// Module ID: 9496
+// Function ID: 9497
 // Name: updateSpeaker
 // Dependencies: [4582, 502, 1908, 5419, 4576, 4581, 4612, 12, 504, 573, 2]
 
-// Module 9491 (updateSpeaker)
+// Module 9496 (updateSpeaker)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import isStreamKey from "isStreamKey" /* 4612 */;

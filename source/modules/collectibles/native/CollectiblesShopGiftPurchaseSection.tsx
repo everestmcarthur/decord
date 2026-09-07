@@ -1,10 +1,10 @@
-// Module ID: 11013
-// Function ID: 11014
+// Module ID: 11018
+// Function ID: 11019
 // Name: CollectiblesShopGiftPurchaseSection
-// Dependencies: [5, 32, 19, 17, 8192, 7424, 1074, 1373, 21, 4560, 576, 6981, 10743, 504, 8184, 7162, 11004, 1242, 11014, 573, 4763, 4905, 11015, 1896, 1115, 10756, 4556, 1114, 4975, 2]
+// Dependencies: [5, 32, 19, 17, 8192, 7424, 1074, 1373, 21, 4560, 576, 6981, 10748, 504, 8184, 7162, 11009, 1242, 11019, 573, 4763, 4905, 11020, 1896, 1115, 10761, 4556, 1114, 4975, 2]
 // Exports: default
 
-// Module 11013 (CollectiblesShopGiftPurchaseSection)
+// Module 11018 (CollectiblesShopGiftPurchaseSection)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;

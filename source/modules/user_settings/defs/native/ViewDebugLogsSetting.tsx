@@ -1,9 +1,9 @@
-// Module ID: 15561
-// Function ID: 15562
+// Module ID: 15564
+// Function ID: 15565
 // Name: ViewDebugLogsActionSheetRow
-// Dependencies: [19, 17, 21, 4527, 7200, 4763, 10924, 7198, 7149, 1114, 15562, 15564, 4523, 15567, 1115, 10961, 15568, 11468, 13843, 1935, 2]
+// Dependencies: [19, 17, 21, 4527, 7200, 4763, 10929, 7198, 7149, 1114, 15565, 15567, 4523, 15570, 1115, 10966, 15571, 11473, 13846, 1935, 2]
 
-// Module 15561 (ViewDebugLogsActionSheetRow)
+// Module 15564 (ViewDebugLogsActionSheetRow)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import noop from "noop" /* 19 */;
@@ -14,10 +14,10 @@ import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 *
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
 import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7200 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13843 */;
-import WrenchIcon from "WrenchIcon" /* 15562 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13846 */;
+import WrenchIcon from "WrenchIcon" /* 15565 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 function ViewDebugLogsActionSheetRow(icon) {
   const title = icon.title;
@@ -47,24 +47,24 @@ function ViewDebugLogsActionSheet() {
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.XpPGhL);
   obj[3] = function render() {
-    return callback2(callback(15564), {});
+    return callback2(callback(15567), {});
   };
   const items = [callback(ViewDebugLogsActionSheetRow, obj), , ];
   obj1 = { icon: callback(ClockIcon.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
   const intl3 = getSystemLocale.intl;
   obj1[1] = intl3.string(getSystemLocale.t.b0nJvk);
   obj1[3] = function render() {
-    return callback2(closure_3, { children: callback2(callback(15567), {}) });
+    return callback2(closure_3, { children: callback2(callback(15570), {}) });
   };
   items[1] = callback(ViewDebugLogsActionSheetRow, obj1);
   let tmpResult = null;
   if (obj5.isAndroid()) {
     const obj2 = { icon: null, title: null, screenKey: "pushNotificationLogs", render: null };
-    obj2[0] = tmp(tmp2(10961).ChannelNotificationIcon, {});
+    obj2[0] = tmp(tmp2(10966).ChannelNotificationIcon, {});
     const intl4 = tmp2(1114).intl;
     obj2[1] = intl4.string(tmp2(1114).t.Ljj0ps);
     obj2[3] = function render() {
-      return callback2(callback(15568), {});
+      return callback2(callback(15571), {});
     };
     tmpResult = tmp(ViewDebugLogsActionSheetRow, obj2);
   }

@@ -1,10 +1,10 @@
-// Module ID: 16884
-// Function ID: 16885
+// Module ID: 16887
+// Function ID: 16888
 // Name: useMessageRequestsCount
 // Dependencies: [7219, 504, 2]
 // Exports: useMessageRequestsCount
 
-// Module 16884 (useMessageRequestsCount)
+// Module 16887 (useMessageRequestsCount)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "processChannel" /* 7219 */;
 

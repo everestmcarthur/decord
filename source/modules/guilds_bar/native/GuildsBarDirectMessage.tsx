@@ -1,8 +1,8 @@
-// Module ID: 16341
-// Function ID: 16342
-// Dependencies: [19, 502, 5278, 1957, 7636, 4209, 1371, 1074, 21, 4560, 576, 16294, 504, 9770, 1114, 16296, 4571, 10913, 16342, 10910, 1178, 5587, 2]
+// Module ID: 16344
+// Function ID: 16345
+// Dependencies: [19, 502, 5278, 1957, 7636, 4209, 1371, 1074, 21, 4560, 576, 16297, 504, 9775, 1114, 16299, 4571, 10918, 16345, 10915, 1178, 5587, 2]
 
-// Module 16341
+// Module 16344
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 502 */;
@@ -107,7 +107,7 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
   if (channel != null) {
     isMultiUserDMResult = channel.isMultiUserDM();
   }
-  obj = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: false, externalChildren: "done", expandedChildren: "flowing", children: "hourglass" };
+  obj = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: false, externalChildren: null, expandedChildren: true, children: null };
   obj[6] = memo1;
   obj[7] = cutouts;
   obj[8] = badge;
@@ -139,7 +139,7 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
     }
   }
   obj[10] = tmp11Result;
-  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: false, externalChildren: "done", expandedChildren: "flowing", children: "hourglass" });
+  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: false, externalChildren: null, expandedChildren: true, children: null });
 });
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDirectMessage.tsx");
 

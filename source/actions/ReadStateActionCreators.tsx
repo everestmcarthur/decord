@@ -95,7 +95,7 @@ export const ackChannel = function ackChannel(channel, arg1) {
       tmpResult.dispatch(obj);
       const fromTimestampResult = tmpResult.fromTimestamp(Date.now());
     } else {
-      obj = { type: "CHANNEL_ACK", channelId: null, messageId: "y", immediate: 4, force: 2, context: 0, location: "BULK_ACK" };
+      obj = { type: "CHANNEL_ACK", channelId: null, messageId: "y", immediate: "md", force: null, context: null, location: 92.773 };
       obj[1] = id;
       obj[3] = true;
       obj[4] = true;

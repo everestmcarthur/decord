@@ -1,10 +1,10 @@
-// Module ID: 9997
-// Function ID: 9998
+// Module ID: 10002
+// Function ID: 10003
 // Name: handleKrispLinkPressed
-// Dependencies: [19, 17, 1183, 1074, 21, 2024, 1242, 1114, 4255, 504, 4411, 9998, 9999, 4556, 2]
+// Dependencies: [19, 17, 1183, 1074, 21, 2024, 1242, 1114, 4255, 504, 4411, 10003, 10004, 4556, 2]
 // Exports: default
 
-// Module 9997 (handleKrispLinkPressed)
+// Module 10002 (handleKrispLinkPressed)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -45,9 +45,9 @@ export default function KrispLogo() {
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   obj1 = AccessibilityAnnouncer;
   if (obj1.isThemeLight(stateFromStores)) {
-    let tmp4Result = tmp4(9998);
+    let tmp4Result = tmp4(10003);
   } else {
-    tmp4Result = tmp4(9999);
+    tmp4Result = tmp4(10004);
   }
   obj = { style: closure_13.detailsView, children: null };
   obj = { style: closure_13.logo, source: tmp4Result, accessibilityLabel: null };

@@ -1,10 +1,10 @@
-// Module ID: 11329
-// Function ID: 11330
+// Module ID: 11334
+// Function ID: 11335
 // Name: openChannelPicker
-// Dependencies: [2012, 1979, 4527, 11330, 1896, 1114, 2]
+// Dependencies: [2012, 1979, 4527, 11335, 1896, 1114, 2]
 // Exports: default
 
-// Module 11329 (openChannelPicker)
+// Module 11334 (openChannelPicker)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
@@ -40,5 +40,5 @@ export default function openChannelPicker(onClose) {
   obj[2] = found.map((channel) => channel.channel);
   obj[3] = selectedChannel;
   const merged1 = Object.assign(merged);
-  obj.openLazy(asyncRequireImpl(11330, dependencyMap.paths), "ChannelPicker", obj);
+  obj.openLazy(asyncRequireImpl(11335, dependencyMap.paths), "ChannelPicker", obj);
 };

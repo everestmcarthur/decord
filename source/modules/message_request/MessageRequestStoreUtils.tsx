@@ -1,10 +1,10 @@
-// Module ID: 16882
-// Function ID: 16883
+// Module ID: 16885
+// Function ID: 16886
 // Name: sortChannelIds
 // Dependencies: [11, 2]
 // Exports: sortChannelIds
 
-// Module 16882 (sortChannelIds)
+// Module 16885 (sortChannelIds)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/message_request/MessageRequestStoreUtils.tsx");

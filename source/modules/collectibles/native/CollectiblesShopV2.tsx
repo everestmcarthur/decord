@@ -1,11 +1,11 @@
-// Module ID: 15807
-// Function ID: 15808
+// Module ID: 15810
+// Function ID: 15811
 // Name: CollectiblesShopInternal
-// Dependencies: [32, 19, 17, 4559, 1183, 1371, 7542, 1076, 1074, 21, 4560, 7182, 13410, 15808, 504, 5598, 1256, 10734, 15809, 1115, 7553, 9366, 8178, 8776, 4411, 7162, 1483, 8848, 4231, 15811, 1242, 7590, 8187, 15812, 15814, 15837, 1232, 8767, 10822, 15840, 15841, 15817, 15842, 7603, 2]
+// Dependencies: [32, 19, 17, 4559, 1183, 1371, 7542, 1076, 1074, 21, 4560, 7182, 13414, 15811, 504, 5598, 1256, 10739, 15812, 1115, 7553, 9371, 8178, 8781, 4411, 7162, 1483, 8853, 4231, 15814, 1242, 7590, 8187, 15815, 15817, 15840, 1232, 8772, 10827, 15843, 15844, 15820, 15845, 7603, 2]
 
-// Module 15807 (CollectiblesShopInternal)
+// Module 15810 (CollectiblesShopInternal)
 import _modDef1232 from "module_1232" /* 1232 */;
-import notSupportedDefault from "notSupported" /* 9366 */;
+import notSupportedDefault from "notSupported" /* 9371 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

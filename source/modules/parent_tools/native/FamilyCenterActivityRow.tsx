@@ -1,15 +1,15 @@
-// Module ID: 14900
-// Function ID: 14901
+// Module ID: 14903
+// Function ID: 14904
 // Name: memoResult1
-// Dependencies: [19, 17, 1371, 7537, 7538, 1074, 21, 4560, 576, 1178, 38, 563, 11, 4556, 4404, 7593, 5584, 5590, 1114, 2396, 14901, 14904, 14905, 2]
+// Dependencies: [19, 17, 1371, 7537, 7538, 1074, 21, 4560, 576, 1178, 38, 563, 11, 4556, 4404, 7593, 5584, 5590, 1114, 2396, 14904, 14907, 14908, 2]
 // Exports: default
 
-// Module 14900 (memoResult1)
+// Module 14903 (memoResult1)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7593 */;
-import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14901 */;
-import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14905 */;
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14904 */;
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14908 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
@@ -47,7 +47,7 @@ const memoResult = importAllResult.memo((action) => {
     obj[0] = tmp.container;
     obj = { style: null, children: null };
     obj[0] = tmp.avatarContainer;
-    obj1 = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Warning" };
+    obj1 = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Heartbeat" };
     obj1[0] = tmp.avatar;
     obj1[1] = stateFromStores;
     obj1[4] = stateFromStores.avatarDecoration;
@@ -182,7 +182,7 @@ export default function FamilyCenterActivityRow(action) {
       if (null == giftInfo) {
         return null;
       } else {
-        const giftRowDisplayInfo = tmp(14904).getGiftRowDisplayInfo(giftInfo);
+        const giftRowDisplayInfo = tmp(14907).getGiftRowDisplayInfo(giftInfo);
         ({ skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt } = giftRowDisplayInfo);
         obj = { skuId: null, subscriptionPlanId: null, price: null, gifterUserId: null, claimed: null, offeredAt: null, claimedAt: null };
         obj[0] = skuId;

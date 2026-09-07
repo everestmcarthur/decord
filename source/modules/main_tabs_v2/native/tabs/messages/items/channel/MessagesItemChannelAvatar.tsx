@@ -1,16 +1,16 @@
-// Module ID: 16034
-// Function ID: 16035
-// Dependencies: [19, 4552, 502, 4600, 11965, 1371, 10118, 21, 4560, 576, 1178, 504, 10910, 2]
+// Module ID: 16037
+// Function ID: 16038
+// Dependencies: [19, 4552, 502, 4600, 11969, 1371, 10123, 21, 4560, 576, 1178, 504, 10915, 2]
 
-// Module 16034
+// Module 16037
 import ThemesDefault from "Themes" /* 576 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10910 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10915 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import closure_4 from "fetchFingerprint" /* 502 */;
 import closure_5 from "sortActivity" /* 4600 */;
-import closure_6 from "handleTypingStart" /* 11965 */;
+import closure_6 from "handleTypingStart" /* 11969 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10118 */;
+import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10123 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
@@ -112,7 +112,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "accessible", size: "<string:307298308>", animate: "<string:906248450>", typing: "<string:1715535874>", autoStatusCutout: "<string:1358955583>" };
+      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "imagebutton", size: null, animate: "Double tap to focus", typing: null, autoStatusCutout: null };
       obj[0] = stateFromStores2;
       obj[1] = stateFromStores2.avatarDecoration;
       obj[3] = stateFromStores3;
@@ -127,7 +127,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
       obj[8] = REFRESH_MEDIUM_32;
       obj[9] = stateFromStores1;
       obj[10] = stateFromStores;
-      tmp11Result = jsx(tmp3(1178).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "accessible", size: "<string:307298308>", animate: "<string:906248450>", typing: "<string:1715535874>", autoStatusCutout: "<string:1358955583>" });
+      tmp11Result = jsx(tmp3(1178).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "imagebutton", size: null, animate: "Double tap to focus", typing: null, autoStatusCutout: null });
       const tmp11 = jsx;
     }
   }

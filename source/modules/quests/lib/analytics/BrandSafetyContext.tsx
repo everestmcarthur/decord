@@ -1,14 +1,14 @@
-// Module ID: 11194
-// Function ID: 11195
+// Module ID: 11199
+// Function ID: 11200
 // Name: getBrandSafetyContext
-// Dependencies: [11195, 1957, 1979, 4209, 4381, 1371, 11196, 7699, 1396, 4713, 2]
+// Dependencies: [11200, 1957, 1979, 4209, 4381, 1371, 11201, 7699, 1396, 4713, 2]
 // Exports: getBrandSafetyContext
 
-// Module 11194 (getBrandSafetyContext)
+// Module 11199 (getBrandSafetyContext)
 import set from "set" /* 2 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 11196 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 11195 */;
+import MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 11201 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 11200 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import closure_6 from "createGuildRecordFromRust" /* 1979 */;
 import closure_7 from "markAllUserIdListsStale" /* 4209 */;

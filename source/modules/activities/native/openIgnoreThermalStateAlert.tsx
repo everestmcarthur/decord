@@ -1,10 +1,10 @@
-// Module ID: 9585
-// Function ID: 9586
+// Module ID: 9590
+// Function ID: 9591
 // Name: openIgnoreThermalStateAlert
-// Dependencies: [19, 21, 4905, 9586, 1896, 2]
+// Dependencies: [19, 21, 4905, 9591, 1896, 2]
 // Exports: openIgnoreThermalStateAlert
 
-// Module 9585 (openIgnoreThermalStateAlert)
+// Module 9590 (openIgnoreThermalStateAlert)
 import noopAll from "noop" /* 19 */;
 import _modDef4905 from "module_4905" /* 4905 */;
 import { jsx } from "jsxProd" /* 21 */;

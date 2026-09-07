@@ -1,9 +1,9 @@
-// Module ID: 12382
-// Function ID: 12383
+// Module ID: 12386
+// Function ID: 12387
 // Name: num2
-// Dependencies: [19, 17, 4552, 7151, 1374, 21, 4560, 1115, 576, 504, 5123, 7130, 1396, 10285, 1477, 4217, 7968, 11121, 7763, 8757, 2]
+// Dependencies: [19, 17, 4552, 7151, 1374, 21, 4560, 1115, 576, 504, 5123, 7130, 1396, 10290, 1477, 4217, 7968, 11126, 7763, 8762, 2]
 
-// Module 12382 (num2)
+// Module 12386 (num2)
 import ThemesDefault from "Themes" /* 576 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 import EmojiDefault from "Emoji" /* 7130 */;
@@ -125,7 +125,7 @@ export default importAllResult.memo((selectedEmoji) => {
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const found = frequentlyUsedReactionEmojis.filter((emoji) => {
     let obj = onPressEmoji(substr[15]);
-    obj = { emoji, channel: "Array", intention: -1 };
+    obj = { emoji, channel: "Array", intention: "Array" };
     obj[2] = constants.DEFAULT_REACT_EMOJI;
     return !obj.isEmojiFilteredOrLocked(obj);
   });

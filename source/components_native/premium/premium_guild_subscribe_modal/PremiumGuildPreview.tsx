@@ -1,10 +1,10 @@
-// Module ID: 13608
-// Function ID: 13609
+// Module ID: 13612
+// Function ID: 13613
 // Name: PremiumGuildTierPill
-// Dependencies: [19, 17, 1183, 1074, 21, 4560, 576, 5441, 4411, 13609, 13610, 13611, 13612, 13613, 13614, 13615, 13616, 1178, 4454, 504, 5584, 2]
+// Dependencies: [19, 17, 1183, 1074, 21, 4560, 576, 5441, 4411, 13613, 13614, 13615, 13616, 13617, 13618, 13619, 13620, 1178, 4454, 504, 5584, 2]
 // Exports: default
 
-// Module 13608 (PremiumGuildTierPill)
+// Module 13612 (PremiumGuildTierPill)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -13,14 +13,14 @@ import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4454 */;
 import GuildIconSizes from "GuildIconSizes" /* 5584 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import registerAssetDefault from "registerAsset" /* 13609 */;
-import registerAssetDefault2 from "registerAsset" /* 13610 */;
-import registerAssetDefault3 from "registerAsset" /* 13611 */;
-import registerAssetDefault4 from "registerAsset" /* 13612 */;
-import registerAssetDefault5 from "registerAsset" /* 13613 */;
-import registerAssetDefault6 from "registerAsset" /* 13614 */;
-import registerAssetDefault7 from "registerAsset" /* 13615 */;
-import registerAssetDefault8 from "registerAsset" /* 13616 */;
+import registerAssetDefault from "registerAsset" /* 13613 */;
+import registerAssetDefault2 from "registerAsset" /* 13614 */;
+import registerAssetDefault3 from "registerAsset" /* 13615 */;
+import registerAssetDefault4 from "registerAsset" /* 13616 */;
+import registerAssetDefault5 from "registerAsset" /* 13617 */;
+import registerAssetDefault6 from "registerAsset" /* 13618 */;
+import registerAssetDefault7 from "registerAsset" /* 13619 */;
+import registerAssetDefault8 from "registerAsset" /* 13620 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "handleThemeChange" /* 1183 */;
 import { BoostedGuildTiers } from "ME" /* 1074 */;

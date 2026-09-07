@@ -1,10 +1,10 @@
-// Module ID: 9425
-// Function ID: 9426
+// Module ID: 9430
+// Function ID: 9431
 // Name: styles
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 4527, 9426, 1896, 1114, 1086, 4556, 1178, 8593, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 4527, 9431, 1896, 1114, 1086, 4556, 1178, 8598, 2]
 // Exports: default
 
-// Module 9425 (styles)
+// Module 9430 (styles)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -70,7 +70,7 @@ export default function GuildSelector(disabled) {
     const intl2 = tmp7(1114).intl;
     name = intl2.string(tmp7(1114).t.oM4E1A);
   }
-  items1[2] = callback(selectedGuildId(8593).FormRow, { label: name, disabled: disabled.disabled, trailing: callback(selectedGuildId(8593).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
+  items1[2] = callback(selectedGuildId(8598).FormRow, { label: name, disabled: disabled.disabled, trailing: callback(selectedGuildId(8598).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
   const obj2 = { style: tmp.label, children: null };
   const intl3 = tmp7(1114).intl;
   obj2[1] = intl3.format(selectedGuildId(1114).t.t9Jm9o, {});

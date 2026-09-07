@@ -1,11 +1,11 @@
-// Module ID: 14499
-// Function ID: 14500
+// Module ID: 14502
+// Function ID: 14503
 // Name: createFromServer
-// Dependencies: [1386, 1385, 14500, 2]
+// Dependencies: [1386, 1385, 14503, 2]
 
-// Module 14499 (createFromServer)
+// Module 14502 (createFromServer)
 import toJSDefault from "toJS" /* 1386 */;
-import transformStoreAssetFromServer from "transformStoreAssetFromServer" /* 14500 */;
+import transformStoreAssetFromServer from "transformStoreAssetFromServer" /* 14503 */;
 import closure_2 from "createdAt" /* 1385 */;
 
 require = arg1;

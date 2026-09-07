@@ -1,9 +1,9 @@
-// Module ID: 11372
-// Function ID: 11373
+// Module ID: 11377
+// Function ID: 11378
 // Name: SafetyWarningBanner
-// Dependencies: [19, 17, 21, 4560, 576, 7602, 7607, 11370, 1114, 1178, 11373, 11374, 4556, 4975, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 7602, 7607, 11375, 1114, 1178, 11378, 11379, 4556, 4975, 2]
 
-// Module 11372 (SafetyWarningBanner)
+// Module 11377 (SafetyWarningBanner)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

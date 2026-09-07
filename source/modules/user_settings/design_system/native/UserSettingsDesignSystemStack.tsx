@@ -1,10 +1,10 @@
-// Module ID: 15789
-// Function ID: 15790
+// Module ID: 15792
+// Function ID: 15793
 // Name: StackBlock
 // Dependencies: [19, 17, 21, 4560, 576, 4973, 5607, 4556, 2]
 // Exports: default
 
-// Module 15789 (StackBlock)
+// Module 15792 (StackBlock)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;

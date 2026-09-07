@@ -1,7 +1,7 @@
 // Module ID: 4773
 // Function ID: 4774
 // Name: useAgeVerificationRunner
-// Dependencies: [5, 32, 19, 4774, 4775, 502, 4781, 1371, 8446, 8412, 1074, 1098, 8399, 8413, 5424, 5423, 1894, 504, 13763, 11927, 573, 8411, 8404, 8417, 8272, 1114, 2946, 13764, 2]
+// Dependencies: [5, 32, 19, 4774, 4775, 502, 4781, 1371, 8453, 8412, 1074, 1098, 8399, 8413, 5424, 5423, 1894, 504, 8436, 11932, 573, 8411, 8404, 8417, 8272, 1114, 2946, 13767, 2]
 // Exports: ageGateSourceHasLightboxBackdrop, getAgeVerificationGetStartedSubtitle, getAgeVerificationGetStartedTitle, isAgeVerificationMessageWithConnectToTeenCta, isAgeVerificationMessageWithManualReviewCta, isAgeVerificationMessageWithRetryCta, isAgeVerified, isAssignedByDiscord, isFullscreenAgeVerificationEntryPoint, isVerifiedAdult, isVerifiedTeen, maybePerformReactiveCheck, shouldShowTiggerPawtect, useInitiateAgeVerification, useInitiateAgeVerificationV2, useIsAgeVerified, useIsAssignedByDiscord, useIsExplicitlyVerifiedAdult, useIsVerifiedAdult, useIsVerifiedTeen, useMaybePerformReactiveCheckForSource, useShouldShowTiggerPawtect, useShowAssignedAgeGroupSettings, useWatchAgeVerificationStatusChange
 
 // Module 4773 (useAgeVerificationRunner)
@@ -12,8 +12,8 @@ import messagesProxyDefault from "messagesProxy" /* 2946 */;
 import isFeatureAgeGated2 from "isFeatureAgeGated" /* 5423 */;
 import AgeGatedFeature from "AgeGatedFeature" /* 5424 */;
 import usePreviousDefault from "usePrevious" /* 8272 */;
-import apexExperiment from "apexExperiment" /* 11927 */;
-import isManualAgeAssuranceFallbackEnabled from "isManualAgeAssuranceFallbackEnabled" /* 13763 */;
+import isManualAgeAssuranceFallbackEnabled from "isManualAgeAssuranceFallbackEnabled" /* 8436 */;
+import apexExperiment from "apexExperiment" /* 11932 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -22,7 +22,7 @@ import closure_7 from "getRegionalFeatureConfig" /* 4775 */;
 import closure_8 from "fetchFingerprint" /* 502 */;
 import closure_9 from "reinjectEphemerals" /* 4781 */;
 import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import closure_11 from "initialize" /* 8446 */;
+import closure_11 from "initialize" /* 8453 */;
 import { FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS as closure_12 } from "set" /* 8412 */;
 import ME from "ME" /* 1074 */;
 import result from "result" /* 1098 */;

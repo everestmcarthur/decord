@@ -1,8 +1,8 @@
-// Module ID: 9737
-// Function ID: 9738
-// Dependencies: [1961, 1957, 4571, 4763, 9732, 1896, 2]
+// Module ID: 9742
+// Function ID: 9743
+// Dependencies: [1961, 1957, 4571, 4763, 9737, 1896, 2]
 
-// Module 9737
+// Module 9742
 import set from "set" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1961 */;
 import _modDef4763 from "module_4763" /* 4763 */;
@@ -36,10 +36,10 @@ export default {
           const obj = self(closure_1_2[2]);
         }
       };
-      obj2.pushLazy(self(1896)(9732, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      obj2.pushLazy(self(1896)(9737, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
       const tmp2 = arg2;
       let tmp3 = arg3;
-      const tmp9 = self(1896)(9732, dependencyMap.paths);
+      const tmp9 = self(1896)(9737, dependencyMap.paths);
     }
   },
   close() {

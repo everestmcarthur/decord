@@ -1,9 +1,9 @@
-// Module ID: 16496
-// Function ID: 16497
+// Module ID: 16499
+// Function ID: 16500
 // Name: ICYMIMessageRowPreview
-// Dependencies: [19, 1074, 21, 7897, 7879, 7934, 7302, 4495, 4560, 576, 1935, 7932, 8652, 8126, 1114, 2]
+// Dependencies: [19, 1074, 21, 7897, 7879, 7934, 7302, 4495, 4560, 576, 1935, 7932, 8657, 8126, 1114, 2]
 
-// Module 16496 (ICYMIMessageRowPreview)
+// Module 16499 (ICYMIMessageRowPreview)
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
@@ -58,7 +58,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     messageSizeCacheRef,
     maxHeight
   };
-  return setting2(messageOptions(8652), obj);
+  return setting2(messageOptions(8657), obj);
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo((message) => {

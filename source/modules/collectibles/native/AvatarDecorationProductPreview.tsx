@@ -1,10 +1,10 @@
-// Module ID: 13139
-// Function ID: 13140
+// Module ID: 13143
+// Function ID: 13144
 // Name: AvatarDecorationProductPreview
 // Dependencies: [19, 17, 21, 4560, 8178, 8171, 1114, 1178, 2]
 // Exports: default
 
-// Module 13139 (AvatarDecorationProductPreview)
+// Module 13143 (AvatarDecorationProductPreview)
 import noopAll from "noop" /* 19 */;
 import firstAvatarDecoration2 from "firstAvatarDecoration" /* 8171 */;
 import useCurrentUser from "useCurrentUser" /* 8178 */;

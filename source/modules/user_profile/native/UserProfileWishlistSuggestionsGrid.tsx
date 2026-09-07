@@ -1,19 +1,19 @@
-// Module ID: 13090
-// Function ID: 13091
+// Module ID: 13094
+// Function ID: 13095
 // Name: UserProfileWishlistSuggestionsGridContent
-// Dependencies: [19, 17, 4552, 8777, 8183, 7208, 1074, 1076, 21, 576, 4560, 13085, 504, 13091, 8190, 13086, 7162, 5598, 1256, 13092, 8776, 4527, 7541, 7182, 4975, 12138, 1114, 13093, 4296, 4556, 8097, 5680, 13094, 2]
+// Dependencies: [19, 17, 4552, 8782, 8183, 7208, 1074, 1076, 21, 576, 4560, 13089, 504, 13095, 8190, 13090, 7162, 5598, 1256, 13096, 8781, 4527, 7541, 7182, 4975, 12142, 1114, 13097, 4296, 4556, 8097, 5680, 13098, 2]
 // Exports: default
 
-// Module 13090 (UserProfileWishlistSuggestionsGridContent)
+// Module 13094 (UserProfileWishlistSuggestionsGridContent)
 import ThemesDefault from "Themes" /* 576 */;
 import contextDefault from "context" /* 7162 */;
-import useIsMobileWishlistSuggestionsEnabled from "useIsMobileWishlistSuggestionsEnabled" /* 13085 */;
-import useCardGridLayoutDefault from "useCardGridLayout" /* 13086 */;
-import useWishlistSuggestionsDismissibleContentDefault from "useWishlistSuggestionsDismissibleContent" /* 13091 */;
+import useIsMobileWishlistSuggestionsEnabled from "useIsMobileWishlistSuggestionsEnabled" /* 13089 */;
+import useCardGridLayoutDefault from "useCardGridLayout" /* 13090 */;
+import useWishlistSuggestionsDismissibleContentDefault from "useWishlistSuggestionsDismissibleContent" /* 13095 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_6 from "get" /* 8777 */;
+import closure_6 from "get" /* 8782 */;
 import { TrackUserProfileWishlistActions as closure_7 } from "USER_PROFILE_TOOLTIP_DELAY" /* 8183 */;
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7208 */;
 import { SKUProductLines } from "ME" /* 1074 */;
@@ -94,8 +94,8 @@ function WishlistSuggestionsGridContents(arg0) {
   }, items1);
   obj = { minCardSize: 80, maxCardSize: 120, containerWidth, maxWidth, sidePadding: closure_8 + PX_16 + 1, gap: closure_9 };
   const analyticsLocations = contextDefault().analyticsLocations;
-  let obj3 = stateFromStores(13092);
-  obj = { userId, wishlist, numWishlistItemsToRecommend: 15, maxWishlistItemsToShow: 9, source: stateFromStores(8776).WishlistFetchSource.USER_PROFILE };
+  let obj3 = stateFromStores(13096);
+  obj = { userId, wishlist, numWishlistItemsToRecommend: 15, maxWishlistItemsToShow: 9, source: stateFromStores(8781).WishlistFetchSource.USER_PROFILE };
   const items2 = obj3.useAddToWishlistGridItems(obj).items;
   const items3 = [trackUserProfileWishlistAction];
   const callback = React.useCallback(() => {
@@ -115,7 +115,7 @@ function WishlistSuggestionsGridContents(arg0) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp3.shopButtonContainer;
     let obj2 = { size: "md", variant: "secondary", icon: null, text: null, onPress: null };
-    obj2[2] = callback(tmp(12138).ShopIcon, { size: "sm" });
+    obj2[2] = callback(tmp(12142).ShopIcon, { size: "sm" });
     const intl3 = tmp(1114).intl;
     obj2[3] = intl3.string(tmp(1114).t.RSyoZu);
     obj2[4] = callback;
@@ -173,11 +173,11 @@ function WishlistSuggestionsGridContents(arg0) {
     obj11[1] = wishlist;
     obj11[2] = analyticsLocations;
     obj11[3] = useCardGridLayoutDefault(obj).cardWidth;
-    items6[1] = callback(tmp6(13094), obj11);
+    items6[1] = callback(tmp6(13098), obj11);
     const obj12 = { style: null, children: null };
     obj12[0] = tmp3.shopButtonContainer;
     const obj13 = { size: "md", variant: "secondary", icon: null, text: null, onPress: null };
-    obj13[2] = callback(tmp(12138).ShopIcon, { size: "sm" });
+    obj13[2] = callback(tmp(12142).ShopIcon, { size: "sm" });
     const intl2 = tmp(1114).intl;
     obj13[3] = intl2.string(tmp(1114).t.RSyoZu);
     obj13[4] = callback;
@@ -185,7 +185,7 @@ function WishlistSuggestionsGridContents(arg0) {
     items6[2] = callback(View, obj12);
     obj5[4] = items6;
     obj3[1] = closure_13(tmp6(4296).View, obj5);
-    tmp12Result = tmp12(tmp(13093).WishlistAnalyticsProvider, obj3);
+    tmp12Result = tmp12(tmp(13097).WishlistAnalyticsProvider, obj3);
   }
   return tmp12Result;
 }

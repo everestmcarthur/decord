@@ -1,14 +1,14 @@
-// Module ID: 9075
-// Function ID: 9076
+// Module ID: 9080
+// Function ID: 9081
 // Name: SettingsUpsellsTableRow
-// Dependencies: [32, 19, 17, 1957, 1074, 21, 4560, 576, 4992, 8633, 9051, 7380, 504, 8640, 5687, 1114, 4556, 7382, 4740, 2]
+// Dependencies: [32, 19, 17, 1957, 1074, 21, 4560, 576, 4992, 8638, 9056, 7380, 504, 8645, 5687, 1114, 4556, 7382, 4740, 2]
 // Exports: default
 
-// Module 9075 (SettingsUpsellsTableRow)
+// Module 9080 (SettingsUpsellsTableRow)
 import ThemesDefault from "Themes" /* 576 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
 import SettingsIcon from "SettingsIcon" /* 7380 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 9051 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 9056 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -25,7 +25,7 @@ function SettingsUpsellsTableRow(arg0) {
   const tmp = callback(React.useState(false), 2);
   dependencyMap = tmp[1];
   useMountLayoutEffectDefault(() => {
-    callback2(closure_1_0(8633).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_VIEWED);
+    callback2(closure_1_0(8638).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_VIEWED);
   });
   const obj = {
     title,
@@ -35,7 +35,7 @@ function SettingsUpsellsTableRow(arg0) {
     onPress() {
       callback();
       dependencyMap(true);
-      callback2(closure_1_0(8633).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_APPLY_CLICKED);
+      callback2(closure_1_0(8638).TrackIarSettingsUpsellsActionType.SETTINGS_UPSELLS_APPLY_CLICKED);
     },
     icon: callback2(SettingsIcon.SettingsIcon, {})
   };

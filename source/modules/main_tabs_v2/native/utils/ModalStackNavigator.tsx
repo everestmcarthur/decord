@@ -1,8 +1,8 @@
-// Module ID: 10924
-// Function ID: 10925
-// Dependencies: [19, 21, 7913, 7000, 7863, 10925, 1115, 2]
+// Module ID: 10929
+// Function ID: 10930
+// Dependencies: [19, 21, 7913, 7000, 7863, 10930, 1115, 2]
 
-// Module 10924
+// Module 10929
 import NavigationStack from "NavigationStack" /* 7000 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
@@ -28,7 +28,7 @@ const memoResult = importAllResult.memo(function ModalStackNavigator(children) {
         headerTitleAlign: "center"
       };
       let merged = Object.assign(dependencyMap);
-      let merged1 = Object.assign(closure_1_1(10925)());
+      let merged1 = Object.assign(closure_1_1(10930)());
       return obj;
     },
     children: <closure_4.Screen {...obj} />

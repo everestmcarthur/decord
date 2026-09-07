@@ -1,10 +1,10 @@
-// Module ID: 15357
-// Function ID: 15358
+// Module ID: 15360
+// Function ID: 15361
 // Name: CustomTypingIndicatorEditScreen
-// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4560, 576, 1379, 1114, 3549, 1483, 1484, 504, 4218, 7162, 1242, 11971, 1392, 4679, 4527, 15358, 1896, 15359, 8167, 8164, 6984, 4461, 14605, 9392, 11980, 4712, 4556, 15360, 5687, 5605, 2024, 4973, 4975, 8834, 7929, 15405, 9970, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 1074, 21, 4560, 576, 1379, 1114, 3549, 1483, 1484, 504, 4218, 7162, 1242, 11975, 1392, 4679, 4527, 15361, 1896, 15362, 8167, 8164, 6984, 4461, 14608, 9397, 11984, 4712, 4556, 15363, 5687, 5605, 2024, 4973, 4975, 8839, 7929, 15408, 9975, 2]
 // Exports: default
 
-// Module 15357 (CustomTypingIndicatorEditScreen)
+// Module 15360 (CustomTypingIndicatorEditScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;

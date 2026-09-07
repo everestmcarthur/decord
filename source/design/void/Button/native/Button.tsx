@@ -1,14 +1,14 @@
 // Module ID: 1181
 // Function ID: 1182
 // Name: getTextStyles
-// Dependencies: [19, 17, 1074, 1182, 21, 4560, 576, 4409, 5441, 1115, 12660, 8612, 4411, 5686, 4975, 2]
+// Dependencies: [19, 17, 1074, 1182, 21, 4560, 576, 4409, 5441, 1115, 12664, 8617, 4411, 5686, 4975, 2]
 // Exports: getRedesignSize, getRedesignVariant
 
 // Module 1181 (getTextStyles)
 import ThemesDefault from "Themes" /* 576 */;
 import set from "set" /* 1115 */;
-import _modDef8612 from "module_8612" /* 8612 */;
-import getClass from "getClass" /* 12660 */;
+import _modDef8617 from "module_8617" /* 8617 */;
+import getClass from "getClass" /* 12664 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { getThemedRippleConfig } from "semanticColor" /* 1182 */;
@@ -102,7 +102,7 @@ class ButtonText {
       obj[2] = size;
       obj[3] = disabled;
       num = 0;
-      tmp5 = require("module_8612");
+      tmp5 = require("module_8617");
       items = [, ];
       items[0] = getTextStyles(obj, tmp);
       items[1] = style;

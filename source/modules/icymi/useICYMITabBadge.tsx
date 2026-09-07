@@ -1,10 +1,10 @@
-// Module ID: 16391
-// Function ID: 16392
+// Module ID: 16394
+// Function ID: 16395
 // Name: useICYMITabBadge
 // Dependencies: [8335, 504, 2]
 // Exports: default, icymiTabBadgeShown
 
-// Module 16391 (useICYMITabBadge)
+// Module 16394 (useICYMITabBadge)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "filterStaffGuild" /* 8335 */;
 

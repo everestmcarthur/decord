@@ -1,10 +1,10 @@
-// Module ID: 15818
-// Function ID: 15819
+// Module ID: 15821
+// Function ID: 15822
 // Name: useTrackProductCardImpression
-// Dependencies: [19, 7542, 1074, 8767, 504, 8178, 4218, 7554, 1242, 2]
+// Dependencies: [19, 7542, 1074, 8772, 504, 8178, 4218, 7554, 1242, 2]
 // Exports: useTrackProductCardImpression
 
-// Module 15818 (useTrackProductCardImpression)
+// Module 15821 (useTrackProductCardImpression)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "updateCategoriesAndProducts" /* 7542 */;
 import { AnalyticEvents } from "ME" /* 1074 */;

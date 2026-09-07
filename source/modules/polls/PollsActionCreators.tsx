@@ -1,11 +1,11 @@
-// Module ID: 11714
-// Function ID: 11715
+// Module ID: 11719
+// Function ID: 11720
 // Name: getPollVoteEventProperties
-// Dependencies: [5, 4200, 7595, 502, 1957, 4901, 5413, 4781, 4900, 11427, 1074, 38, 4904, 1114, 5520, 11715, 11717, 4740, 12, 504, 573, 7763, 11726, 4411, 11720, 7456, 9309, 4461, 2]
+// Dependencies: [5, 4200, 7595, 502, 1957, 4901, 5413, 4781, 4900, 11432, 1074, 38, 4904, 1114, 5520, 11720, 11722, 4740, 12, 504, 573, 7763, 11731, 4411, 11725, 7456, 9314, 4461, 2]
 
-// Module 11714 (getPollVoteEventProperties)
+// Module 11719 (getPollVoteEventProperties)
 import setDefault from "set" /* 4904 */;
-import showVotesForAnswerAll from "showVotesForAnswer" /* 11715 */;
+import showVotesForAnswerAll from "showVotesForAnswer" /* 11720 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "initialize" /* 4200 */;
 import closure_6 from "processMessage" /* 7595 */;
@@ -15,7 +15,7 @@ import { DraftType } from "handleChanged" /* 4901 */;
 import closure_10 from "recomputeGuild" /* 5413 */;
 import closure_11 from "reinjectEphemerals" /* 4781 */;
 import closure_12 from "map" /* 4900 */;
-import useMessagePollInteractions from "useMessagePollInteractions" /* 11427 */;
+import useMessagePollInteractions from "useMessagePollInteractions" /* 11432 */;
 import ME from "ME" /* 1074 */;
 
 const require = arg1;
@@ -1122,7 +1122,7 @@ function _endPollEarly() {
                 obj4[0] = arg1;
                 return obj4;
               } else if (arg1) {
-                obj1 = callback3(11726);
+                obj1 = callback3(11731);
                 const obj5 = { channelId: null, messageId: null };
                 obj5[0] = callback;
                 obj5[1] = callback2;

@@ -1,10 +1,10 @@
-// Module ID: 16009
-// Function ID: 16010
+// Module ID: 16012
+// Function ID: 16013
 // Name: ChannelScreenAnimatedFrame
-// Dependencies: [19, 17, 7864, 21, 4560, 576, 4296, 4561, 1178, 16007, 7872, 7123, 2]
+// Dependencies: [19, 17, 7864, 21, 4560, 576, 4296, 4561, 1178, 16010, 7872, 7123, 2]
 // Exports: default
 
-// Module 16009 (ChannelScreenAnimatedFrame)
+// Module 16012 (ChannelScreenAnimatedFrame)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

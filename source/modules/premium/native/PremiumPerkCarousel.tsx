@@ -1,10 +1,10 @@
-// Module ID: 13459
-// Function ID: 13460
+// Module ID: 13463
+// Function ID: 13464
 // Name: PremiumPerkCarousel
-// Dependencies: [32, 19, 17, 21, 4560, 13416, 4556, 9361, 1178, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 13420, 4556, 9366, 1178, 2]
 // Exports: default
 
-// Module 13459 (PremiumPerkCarousel)
+// Module 13463 (PremiumPerkCarousel)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

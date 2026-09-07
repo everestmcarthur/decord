@@ -1,10 +1,10 @@
-// Module ID: 13096
-// Function ID: 13097
+// Module ID: 13100
+// Function ID: 13101
 // Name: UserProfilePrivateBanner
 // Dependencies: [19, 17, 7208, 21, 4560, 576, 1091, 5095, 4556, 1114, 2]
 // Exports: default
 
-// Module 13096 (UserProfilePrivateBanner)
+// Module 13100 (UserProfilePrivateBanner)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import int2hslRaw from "int2hslRaw" /* 1091 */;

@@ -1,12 +1,12 @@
-// Module ID: 14515
-// Function ID: 14516
+// Module ID: 14518
+// Function ID: 14519
 // Name: authorizeWithPrompt
-// Dependencies: [32, 5, 4788, 1918, 1371, 4465, 1074, 9561, 1090, 510, 9554, 8856, 9245, 9538, 9244, 9240, 9247, 4204, 1086, 1272, 573, 14476, 8339, 1471, 2]
+// Dependencies: [32, 5, 4788, 1918, 1371, 4465, 1074, 9566, 1090, 510, 9559, 8861, 9250, 9543, 9249, 9245, 9252, 4204, 1086, 1272, 573, 14479, 8339, 1471, 2]
 // Exports: default
 
-// Module 14515 (authorizeWithPrompt)
+// Module 14518 (authorizeWithPrompt)
 import setDefault from "set" /* 1090 */;
-import prototypeDefault from "prototype" /* 9554 */;
+import prototypeDefault from "prototype" /* 9559 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "addApplication" /* 4788 */;
@@ -14,7 +14,7 @@ import closure_7 from "createExecutable" /* 1918 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
 import ME from "ME" /* 1074 */;
-import importDefaultResult from "_processQueue" /* 9561 */;
+import importDefaultResult from "_processQueue" /* 9566 */;
 
 const require = arg1;
 function authorizeWithPrompt() {
@@ -143,7 +143,7 @@ function _authorizeWithPrompt() {
                     throwTypeErrorResult = new.target;
                     throwTypeErrorResult = new.target;
                     throwTypeErrorResult = obj2;
-                    throwTypeErrorResult = new response_type(9554)(obj2, "Request aborted");
+                    throwTypeErrorResult = new response_type(9559)(obj2, "Request aborted");
                     throw throwTypeErrorResult;
                   } else {
                     throwTypeErrorResult = c7;
@@ -158,7 +158,7 @@ function _authorizeWithPrompt() {
                       throwTypeErrorResult = new.target;
                       throwTypeErrorResult = new.target;
                       throwTypeErrorResult = obj3;
-                      throwTypeErrorResult = new response_type(9554)(obj3, "No Client ID provided");
+                      throwTypeErrorResult = new response_type(9559)(obj3, "No Client ID provided");
                       throw throwTypeErrorResult;
                     } else {
                       throwTypeErrorResult = c7;
@@ -175,7 +175,7 @@ function _authorizeWithPrompt() {
                           throwTypeErrorResult = new.target;
                           throwTypeErrorResult = new.target;
                           throwTypeErrorResult = obj4;
-                          throwTypeErrorResult = new response_type(9554)(obj4, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
+                          throwTypeErrorResult = new response_type(9559)(obj4, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
                           throw throwTypeErrorResult;
                         }
                       }
@@ -207,7 +207,7 @@ function _authorizeWithPrompt() {
                         throwTypeErrorResult = new.target;
                         throwTypeErrorResult = new.target;
                         throwTypeErrorResult = obj5;
-                        throwTypeErrorResult = new response_type(9554)(obj5, "Client is not logged in");
+                        throwTypeErrorResult = new response_type(9559)(obj5, "Client is not logged in");
                         throw throwTypeErrorResult;
                       } else {
                         throwTypeErrorResult = c7;
@@ -248,7 +248,7 @@ function _authorizeWithPrompt() {
                             createFromServer = c7.createFromServer;
                             throwTypeErrorResult = callback;
                             throwTypeErrorResult = dependencyMap;
-                            let obj19 = callback(9538);
+                            let obj19 = callback(9543);
                             throwTypeErrorResult = callback;
                             throwTypeErrorResult = c15;
                             c11 = 3;
@@ -282,16 +282,16 @@ function _authorizeWithPrompt() {
                         obj7[7] = closure_1_19;
                         throwTypeErrorResult = closure_1_15;
                         obj7[8] = closure_1_15;
-                        const items = [callback(9244).fetchAuthorization(obj7), ];
+                        const items = [callback(9249).fetchAuthorization(obj7), ];
                         throwTypeErrorResult = callback;
                         throwTypeErrorResult = dependencyMap;
-                        const obj22 = callback(9244);
+                        const obj22 = callback(9249);
                         throwTypeErrorResult = closure_0;
-                        items[1] = callback(9240).getDisclosures(closure_0);
+                        items[1] = callback(9245).getDisclosures(closure_0);
                         throwTypeErrorResult = Promise.all(items);
                         c11 = 4;
                         c12 = 1;
-                        const obj24 = callback(9240);
+                        const obj24 = callback(9245);
                       }
                     }
                   }
@@ -309,7 +309,7 @@ function _authorizeWithPrompt() {
                 throwTypeErrorResult = c15;
                 obj8[0] = c15.OAUTH2_ERROR;
                 let str3;
-                throwTypeErrorResult = response_type(9554);
+                throwTypeErrorResult = response_type(9559);
                 if (body != null) {
                   str3 = body.message;
                 }
@@ -341,7 +341,7 @@ function _authorizeWithPrompt() {
                     throwTypeErrorResult = currentUser;
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = dependencyMap;
-                    USER_INSTALL = callback(9245).ApplicationIntegrationType.GUILD_INSTALL;
+                    USER_INSTALL = callback(9250).ApplicationIntegrationType.GUILD_INSTALL;
                   }
                   throwTypeErrorResult = c7;
                 }
@@ -377,7 +377,7 @@ function _authorizeWithPrompt() {
                     throwTypeErrorResult = c11;
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = dependencyMap;
-                    if (c11 === callback(9247).OAuth2Prompts.NONE) {
+                    if (c11 === callback(9252).OAuth2Prompts.NONE) {
                       if (null != closure_20) {
                         if (closure_20.authorized) {
                           if (allAcked) {
@@ -385,7 +385,7 @@ function _authorizeWithPrompt() {
                             c9 = 2;
                             throwTypeErrorResult = callback;
                             throwTypeErrorResult = dependencyMap;
-                            let obj12 = callback(9244);
+                            let obj12 = callback(9249);
                             const obj11 = { authorize: true, clientId: null, scopes: null, responseType: null, redirectUri: null, codeChallenge: null, codeChallengeMethod: null, state: null, nonce: null, integrationType: null };
                             throwTypeErrorResult = callback;
                             obj11[1] = callback;
@@ -433,7 +433,7 @@ function _authorizeWithPrompt() {
                   const obj13 = { errorCode: null };
                   obj13[0] = c15.OAUTH2_ERROR;
                   let str2;
-                  let tmp29 = response_type(9554);
+                  let tmp29 = response_type(9559);
                   if (body != null) {
                     str2 = body.message;
                   }
@@ -479,7 +479,7 @@ function _authorizeWithPrompt() {
                     if (aborted) {
                       obj = { errorCode: null };
                       obj[0] = c15.UNKNOWN_ERROR;
-                      const tmp20 = new response_type(9554)(obj, "Request aborted");
+                      const tmp20 = new response_type(9559)(obj, "Request aborted");
                       throw tmp20;
                     }
                   }
@@ -510,7 +510,7 @@ function _authorizeWithPrompt() {
                 let hasItem = null != closure_20.integration_type;
                 if (hasItem) {
                   const _Object = Object;
-                  const values = Object.values(callback(9245).ApplicationIntegrationType);
+                  const values = Object.values(callback(9250).ApplicationIntegrationType);
                   hasItem = values.includes(closure_20.integration_type);
                 }
                 if (hasItem) {
@@ -532,7 +532,7 @@ function _authorizeWithPrompt() {
               throwTypeErrorResult = currentUser;
               throwTypeErrorResult = callback;
               throwTypeErrorResult = dependencyMap;
-              USER_INSTALL = callback(9245).ApplicationIntegrationType.USER_INSTALL;
+              USER_INSTALL = callback(9250).ApplicationIntegrationType.USER_INSTALL;
             }
           } catch (throwTypeErrorResult) {
             c10 = throwTypeErrorResult;
@@ -799,7 +799,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
       }
     }
   };
-  obj[constants.AUTHENTICATE] = _require(14476).createRPCCommand(constants.AUTHENTICATE, obj);
+  obj[constants.AUTHENTICATE] = _require(14479).createRPCCommand(constants.AUTHENTICATE, obj);
   obj[constants.AUTHORIZE] = {
     handler(socket) {
       socket = socket.socket;

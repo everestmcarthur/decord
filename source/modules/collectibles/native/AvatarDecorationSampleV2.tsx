@@ -1,10 +1,10 @@
-// Module ID: 8810
-// Function ID: 8811
+// Module ID: 8815
+// Function ID: 8816
 // Name: AvatarDecorationSampleV2
-// Dependencies: [19, 17, 21, 4560, 576, 38, 1889, 8811, 8812, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 38, 1889, 8816, 8817, 2]
 // Exports: default
 
-// Module 8810 (AvatarDecorationSampleV2)
+// Module 8815 (AvatarDecorationSampleV2)
 import noopAll from "noop" /* 19 */;
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -44,12 +44,12 @@ export default function AvatarDecorationSampleV2(arg0) {
   let obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = tmp2(8811);
+    avatarSource = tmp2(8816);
   }
   obj = { children: null };
   obj[2] = avatarSource;
   const items1 = [closure_5(closure_3, obj), ];
-  obj = { style: tmp.avatarDecoration, accessibilityLabel: item.label, children: tmp8(tmp2(8812), { avatarDecoration: item, size, animate }) };
+  obj = { style: tmp.avatarDecoration, accessibilityLabel: item.label, children: tmp8(tmp2(8817), { avatarDecoration: item, size, animate }) };
   items1[1] = closure_5(closure_4, obj);
   obj[0] = items1;
   return closure_7(closure_6, obj);

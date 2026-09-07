@@ -1,14 +1,14 @@
-// Module ID: 16135
-// Function ID: 16136
+// Module ID: 16138
+// Function ID: 16139
 // Name: ChannelListStickyHeader
-// Dependencies: [19, 17, 1074, 21, 4296, 4560, 576, 16104, 1982, 1114, 16136, 13907, 16134, 5610, 4262, 10235, 4556, 8740, 1178, 7209, 16150, 12297, 16155, 16156, 2]
+// Dependencies: [19, 17, 1074, 21, 4296, 4560, 576, 16107, 1982, 1114, 16139, 13910, 16137, 5610, 4262, 10240, 4556, 8745, 1178, 7209, 16153, 12301, 16158, 16159, 2]
 // Exports: default
 
-// Module 16135 (ChannelListStickyHeader)
+// Module 16138 (ChannelListStickyHeader)
 import ThemesDefault from "Themes" /* 576 */;
-import GuildBadgeV2Default from "GuildBadgeV2" /* 8740 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16104 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16134 */;
+import GuildBadgeV2Default from "GuildBadgeV2" /* 8745 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16107 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16137 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { JoinGuildSources } from "ME" /* 1074 */;
@@ -133,7 +133,7 @@ export default function ChannelListStickyHeader(guild) {
     obj1 = { style: null, size: "sm", color: null };
     obj1[0] = tmp.headerIcon;
     obj1[2] = tmp2(576).colors.MOBILE_TEXT_HEADING_PRIMARY;
-    tmp22 = callback(tmp6(10235).StarIcon, obj1);
+    tmp22 = callback(tmp6(10240).StarIcon, obj1);
   }
   const items2 = [tmp22, , , ];
   const tmp16 = closure_8;
@@ -193,7 +193,7 @@ export default function ChannelListStickyHeader(guild) {
   const items6 = [tmp15Result, ];
   tmp24Result = null;
   if (isFavoritesGuildIdResult) {
-    tmp24Result = tmp24(tmp6(16150).FavoritesGuildHeaderActionButton, {});
+    tmp24Result = tmp24(tmp6(16153).FavoritesGuildHeaderActionButton, {});
   }
   items6[1] = tmp24Result;
   obj11[1] = items6;
@@ -202,7 +202,7 @@ export default function ChannelListStickyHeader(guild) {
   if (flag) {
     const obj12 = { guild: null, useButtonComponent: true, useEventsButton: true };
     obj12[0] = guild;
-    tmp24Result1 = tmp24(tmp2(12297), obj12);
+    tmp24Result1 = tmp24(tmp2(12301), obj12);
   }
   items7[1] = tmp24Result1;
   if (tmp24Result2) {
@@ -211,7 +211,7 @@ export default function ChannelListStickyHeader(guild) {
     const obj14 = { guildId: null, joinSource: null };
     obj14[0] = guild.id;
     obj14[1] = JoinGuildSources.CHANNEL_LIST_STICKY_HEADER_LURKER;
-    obj13[1] = tmp24(tmp2(16155), obj14);
+    obj13[1] = tmp24(tmp2(16158), obj14);
     tmp24Result2 = tmp24(tmp21, obj13);
   }
   items7[2] = tmp24Result2;
@@ -221,7 +221,7 @@ export default function ChannelListStickyHeader(guild) {
     const obj16 = { targetRef: null, guild: null };
     obj16[0] = ref;
     obj16[1] = guild;
-    tmp24Result3 = tmp24(tmp2(16156), obj16);
+    tmp24Result3 = tmp24(tmp2(16159), obj16);
   }
   items7[4] = tmp24Result3;
   obj10[1] = items7;

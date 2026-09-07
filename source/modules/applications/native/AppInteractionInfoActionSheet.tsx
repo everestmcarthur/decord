@@ -1,10 +1,10 @@
-// Module ID: 11727
-// Function ID: 11728
+// Module ID: 11732
+// Function ID: 11733
 // Name: AppInteractionInfoActionSheet
-// Dependencies: [19, 17, 1385, 1979, 1371, 21, 4560, 1611, 11728, 9245, 504, 8181, 5584, 4556, 1114, 5123, 8179, 1178, 7150, 2]
+// Dependencies: [19, 17, 1385, 1979, 1371, 21, 4560, 1611, 11733, 9250, 504, 8181, 5584, 4556, 1114, 5123, 8179, 1178, 7150, 2]
 // Exports: default
 
-// Module 11727 (AppInteractionInfoActionSheet)
+// Module 11732 (AppInteractionInfoActionSheet)
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createdAt" /* 1385 */;
@@ -31,15 +31,15 @@ export default function AppInteractionInfoActionSheet(message) {
   const items = [onBack];
   const interactionMetadata = message.interactionMetadata;
   let tmp5;
-  const memo = React.useMemo(() => closure_1_8(onBack(11728), { onBack }), items);
+  const memo = React.useMemo(() => closure_1_8(onBack(11733), { onBack }), items);
   if (interactionMetadata != null) {
-    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9245).ApplicationIntegrationType.USER_INSTALL];
+    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9250).ApplicationIntegrationType.USER_INSTALL];
   }
   dependencyMap = tmp5;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp7;
   if (interactionMetadata2 != null) {
-    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9245).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9250).ApplicationIntegrationType.GUILD_INSTALL];
   }
   React = tmp7;
   const interactionMetadata3 = message.interactionMetadata;

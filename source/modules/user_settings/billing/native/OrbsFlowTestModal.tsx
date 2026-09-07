@@ -1,16 +1,16 @@
-// Module ID: 15694
-// Function ID: 15695
+// Module ID: 15697
+// Function ID: 15698
 // Name: BalanceWidgetMenuSection
-// Dependencies: [32, 19, 17, 21, 7913, 7000, 7863, 10925, 4560, 576, 4973, 4556, 15695, 4527, 11101, 1896, 1114, 6606, 4975, 11091, 11100, 6981, 7156, 15697, 2]
+// Dependencies: [32, 19, 17, 21, 7913, 7000, 7863, 10930, 4560, 576, 4973, 4556, 15698, 4527, 11106, 1896, 1114, 6606, 4975, 11096, 11105, 6981, 7156, 15700, 2]
 
-// Module 15694 (BalanceWidgetMenuSection)
+// Module 15697 (BalanceWidgetMenuSection)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import Stack from "Stack" /* 4973 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
 import Layer from "Layer" /* 7156 */;
-import BalanceWidgetDefault from "BalanceWidget" /* 15695 */;
-import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15697 */;
+import BalanceWidgetDefault from "BalanceWidget" /* 15698 */;
+import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15700 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

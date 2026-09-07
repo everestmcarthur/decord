@@ -1,14 +1,14 @@
-// Module ID: 14991
-// Function ID: 14992
+// Module ID: 14994
+// Function ID: 14995
 // Name: route
-// Dependencies: [1074, 11468, 1114, 9375, 13500, 2]
+// Dependencies: [1074, 11473, 1114, 9380, 13504, 2]
 
-// Module 14991 (route)
+// Module 14994 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import BoostGemIcon from "BoostGemIcon" /* 9375 */;
-import createToggle from "createToggle" /* 11468 */;
+import BoostGemIcon from "BoostGemIcon" /* 9380 */;
+import createToggle from "createToggle" /* 11473 */;
 
 obj = {
   useTitle() {
@@ -22,7 +22,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.GUILD_BOOSTING,
   getComponent() {
-    return require(13500) /* componentDidMount */.default;
+    return require(13504) /* componentDidMount */.default;
   }
 };
 const route = createToggle.createRoute(obj);

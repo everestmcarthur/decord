@@ -1,9 +1,9 @@
-// Module ID: 11460
-// Function ID: 11461
+// Module ID: 11465
+// Function ID: 11466
 // Name: makeTwitchRequest
 // Dependencies: [5, 5281, 4405, 1074, 1090, 1272, 5406, 573, 8139, 5283, 1332, 504, 2]
 
-// Module 11460 (makeTwitchRequest)
+// Module 11465 (makeTwitchRequest)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import setDefault from "set" /* 1090 */;

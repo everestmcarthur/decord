@@ -1,20 +1,20 @@
-// Module ID: 10349
-// Function ID: 10350
-// Dependencies: [19, 5463, 21, 8717, 10235, 4523, 8757, 10350, 10352, 9223, 10354, 10356, 8774, 8664, 8662, 2]
+// Module ID: 10354
+// Function ID: 10355
+// Dependencies: [19, 5463, 21, 8722, 10240, 4523, 8762, 10355, 10357, 9228, 10359, 10361, 8779, 8669, 8667, 2]
 
-// Module 10349
+// Module 10354
 import ClockIcon from "ClockIcon" /* 4523 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
-import FlagIcon from "FlagIcon" /* 8664 */;
-import TrophyIcon from "TrophyIcon" /* 8717 */;
-import ReactionIcon from "ReactionIcon" /* 8757 */;
-import HeartIcon from "HeartIcon" /* 8774 */;
-import GameControllerIcon from "GameControllerIcon" /* 9223 */;
-import StarIcon from "StarIcon" /* 10235 */;
-import NatureIcon from "NatureIcon" /* 10350 */;
-import FoodIcon from "FoodIcon" /* 10352 */;
-import BicycleIcon from "BicycleIcon" /* 10354 */;
-import ObjectIcon from "ObjectIcon" /* 10356 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
+import FlagIcon from "FlagIcon" /* 8669 */;
+import TrophyIcon from "TrophyIcon" /* 8722 */;
+import ReactionIcon from "ReactionIcon" /* 8762 */;
+import HeartIcon from "HeartIcon" /* 8779 */;
+import GameControllerIcon from "GameControllerIcon" /* 9228 */;
+import StarIcon from "StarIcon" /* 10240 */;
+import NatureIcon from "NatureIcon" /* 10355 */;
+import FoodIcon from "FoodIcon" /* 10357 */;
+import BicycleIcon from "BicycleIcon" /* 10359 */;
+import ObjectIcon from "ObjectIcon" /* 10361 */;
 import { EmojiCategories } from "EmojiCategoryTypes" /* 5463 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;

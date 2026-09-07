@@ -1,16 +1,7 @@
 // Module ID: 14345
 // Function ID: 14346
-// Dependencies: [14346]
+// Dependencies: []
 
 // Module 14345
-import _mod14346 from "module_14346" /* 14346 */;
 
-
-export default (arg0) => {
-  const tmp = _mod14346(arg0);
-  let num = 0;
-  if (tmp > 0) {
-    num = min(tmp, 9007199254740991);
-  }
-  return num;
-};
+export default {};

@@ -1,10 +1,10 @@
-// Module ID: 8679
-// Function ID: 8680
+// Module ID: 8684
+// Function ID: 8685
 // Name: useResolveGame
 // Dependencies: [19, 7168, 7309, 2]
 // Exports: default
 
-// Module 8679 (useResolveGame)
+// Module 8684 (useResolveGame)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

@@ -1,10 +1,10 @@
-// Module ID: 8577
-// Function ID: 8578
+// Module ID: 8580
+// Function ID: 8581
 // Name: GetStartedScreen
-// Dependencies: [5, 19, 17, 8412, 1074, 8419, 21, 4560, 576, 1611, 4773, 8578, 5692, 4556, 5687, 8579, 1114, 8411, 2024, 8413, 4975, 8580, 2]
+// Dependencies: [5, 19, 17, 8412, 1074, 8419, 21, 4560, 576, 1611, 4773, 8581, 5692, 4556, 5687, 8582, 1114, 8411, 2024, 8413, 4975, 8583, 2]
 // Exports: default
 
-// Module 8577 (GetStartedScreen)
+// Module 8580 (GetStartedScreen)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -46,7 +46,7 @@ export default function GetStartedScreen(onComplete) {
   let obj = modalSessionId(4773);
   const initiateAgeVerification = obj.useInitiateAgeVerification({ onComplete: onComplete.onClose, entryPoint });
   ({ initiateAgeVerification: c1, loading } = initiateAgeVerification);
-  obj1 = modalSessionId(8578);
+  obj1 = modalSessionId(8581);
   const isManualAgeVerificationHidden = obj1.useIsManualAgeVerificationHidden("age_verification_get_started_modal");
   obj = { children: null };
   obj = { style: tmp.getStartedContainer, children: null };
@@ -74,7 +74,7 @@ export default function GetStartedScreen(onComplete) {
         tmpResult = tmp(modalSessionId(4556).Text, obj);
       }
       obj[2] = tmpResult;
-      return callback(_undefined(8579), obj, arg1);
+      return callback(_undefined(8582), obj, arg1);
     })
   };
   items1[1] = callback3(modalSessionId(5687).TableRowGroup, obj4);
@@ -183,7 +183,7 @@ export default function GetStartedScreen(onComplete) {
   };
   const tmp2 = importDefault;
   const tmp8 = closure_11;
-  obj14[4] = callback3(modalSessionId(8580).LinkExternalSmallIcon, { color: ThemesDefault.colors.WHITE });
+  obj14[4] = callback3(modalSessionId(8583).LinkExternalSmallIcon, { color: ThemesDefault.colors.WHITE });
   obj14[5] = loading;
   obj13[1] = callback3(modalSessionId(4975).Button, obj14);
   items4[1] = callback3(closure_5, obj13);

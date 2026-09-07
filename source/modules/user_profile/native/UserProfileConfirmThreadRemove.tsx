@@ -1,10 +1,10 @@
-// Module ID: 12626
-// Function ID: 12627
+// Module ID: 12630
+// Function ID: 12631
 // Name: UserProfileConfirmThreadRemove
 // Dependencies: [19, 21, 4404, 4910, 1114, 4910, 2]
 // Exports: default
 
-// Module 12626 (UserProfileConfirmThreadRemove)
+// Module 12630 (UserProfileConfirmThreadRemove)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import nameFromUserDefault from "nameFromUser" /* 4404 */;

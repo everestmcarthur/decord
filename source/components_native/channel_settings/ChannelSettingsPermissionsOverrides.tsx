@@ -1,10 +1,10 @@
-// Module ID: 16829
-// Function ID: 16830
+// Module ID: 16832
+// Function ID: 16833
 // Name: ChannelSettingsPermissionsOverrides
-// Dependencies: [32, 5, 19, 17, 1975, 1957, 2015, 1979, 4199, 4209, 1371, 1074, 21, 4560, 576, 1483, 1611, 504, 11611, 11610, 4204, 1086, 9740, 4573, 1894, 4404, 4904, 1114, 4255, 2024, 1965, 16830, 7863, 4556, 4713, 10942, 5605, 1178, 5687, 16834, 1115, 16835, 2]
+// Dependencies: [32, 5, 19, 17, 1975, 1957, 2015, 1979, 4199, 4209, 1371, 1074, 21, 4560, 576, 1483, 1611, 504, 11616, 11615, 4204, 1086, 9745, 4573, 1894, 4404, 4904, 1114, 4255, 2024, 1965, 16833, 7863, 4556, 4713, 10947, 5605, 1178, 5687, 16837, 1115, 16838, 2]
 // Exports: default
 
-// Module 16829 (ChannelSettingsPermissionsOverrides)
+// Module 16832 (ChannelSettingsPermissionsOverrides)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
@@ -55,9 +55,9 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   let items = [first];
   const stateFromStores = obj1.useStateFromStores(items, () => first.getChannel(closure_0));
   callback2 = stateFromStores;
-  let obj2 = _require(11611);
+  let obj2 = _require(11616);
   const appChannelApplication = obj2.useAppChannelApplication(stateFromStores);
-  let obj3 = _require(11610);
+  let obj3 = _require(11615);
   const appChannelBotUserId = obj3.useAppChannelBotUserId(stateFromStores);
   React = appChannelBotUserId;
   let tmp9 = null;
@@ -148,7 +148,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
                         c4 = 1;
                         c5 = 1;
                         const obj2 = { value: null, done: false };
-                        obj2[0] = callback(9740).checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, throwTypeErrorResult);
+                        obj2[0] = callback(9745).checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, throwTypeErrorResult);
                         return obj2;
                       }
                     }
@@ -361,7 +361,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     obj[0] = id;
     obj[1] = stateFromStores.guild_id;
     obj[4] = tmp13;
-    let tmp12Result = tmp12(tmp5(10942), obj);
+    let tmp12Result = tmp12(tmp5(10947), obj);
   } else {
     role = role.getRole(stateFromStores.guild_id, id);
     let str;

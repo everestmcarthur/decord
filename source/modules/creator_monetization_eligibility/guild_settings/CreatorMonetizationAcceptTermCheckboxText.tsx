@@ -1,10 +1,10 @@
-// Module ID: 17714
-// Function ID: 17715
+// Module ID: 17717
+// Function ID: 17718
 // Name: getCreatorMonetizationAcceptTermsCheckboxText
 // Dependencies: [1074, 1114, 2024, 2]
 // Exports: getCreatorMonetizationAcceptTermsCheckboxText
 
-// Module 17714 (getCreatorMonetizationAcceptTermsCheckboxText)
+// Module 17717 (getCreatorMonetizationAcceptTermsCheckboxText)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

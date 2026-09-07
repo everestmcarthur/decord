@@ -1,11 +1,11 @@
-// Module ID: 12665
-// Function ID: 12666
+// Module ID: 12669
+// Function ID: 12670
 // Name: GuildNSFW
-// Dependencies: [109, 19, 1979, 1098, 21, 504, 4771, 4773, 5520, 8411, 8413, 1114, 12666, 2]
+// Dependencies: [109, 19, 1979, 1098, 21, 504, 4771, 4773, 5520, 8411, 8413, 1114, 12670, 2]
 // Exports: default
 
-// Module 12665 (GuildNSFW)
-import GatedContentDefault from "GatedContent" /* 12666 */;
+// Module 12669 (GuildNSFW)
+import GatedContentDefault from "GatedContent" /* 12670 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "noop" /* 19 */;
 import closure_6 from "createGuildRecordFromRust" /* 1979 */;

@@ -1,16 +1,16 @@
-// Module ID: 9510
-// Function ID: 9511
+// Module ID: 9515
+// Function ID: 9516
 // Name: map
-// Dependencies: [9511, 9505, 1085, 9512, 504, 573, 2]
+// Dependencies: [9516, 9510, 1085, 9517, 504, 573, 2]
 
-// Module 9510 (map)
+// Module 9515 (map)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import sum from "sum" /* 1085 */;
-import ActivityPanelModes2 from "ActivityPanelModes" /* 9505 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 9512 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9511 */;
+import ActivityPanelModes2 from "ActivityPanelModes" /* 9510 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 9517 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 9516 */;
 
 ({ FrameIntent: obj1, FrameLayoutModes: c3, getFrameIntentForSurface: c4, isLaunched: c5, makeFrameId: closure_6 } = FrameLayoutModes);
 const ActivityPanelModes = ActivityPanelModes2.ActivityPanelModes;

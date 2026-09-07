@@ -1,14 +1,14 @@
-// Module ID: 11295
-// Function ID: 11296
+// Module ID: 11300
+// Function ID: 11301
 // Name: getContextualEntrypointHeading
-// Dependencies: [5444, 1114, 5451, 11192, 11193, 11197, 7718, 7190, 2]
+// Dependencies: [5444, 1114, 5451, 11197, 11198, 11202, 7718, 7190, 2]
 // Exports: copyShareLink, getContextualEntrypointHeading, getCtaLink, getDefaultReward, getDisclosureText, getExternalCtaLabel, getFilterGroupHeadingText, getFilterTypeText, getQuestUrl, getSortMethodText
 
-// Module 11295 (getContextualEntrypointHeading)
+// Module 11300 (getContextualEntrypointHeading)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import _copy from "_copy" /* 7190 */;
-import apexExperiment from "apexExperiment" /* 11192 */;
+import apexExperiment from "apexExperiment" /* 11197 */;
 import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
 
 ({ QuestHomeSortMethods: obj1, RewardFilterTypes: c3, TaskFilterTypes: c4 } = QuestsExperimentLocations);
@@ -165,9 +165,9 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
   ctaContent = ctaContent.ctaContent;
   let obj = apexExperiment;
   if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "copy_share_link")) {
-    let tmpResult = tmp(11193);
+    let tmpResult = tmp(11198);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
-    obj[0] = tmp(11197).AdUserActionType.CLICK_INTERNAL;
+    obj[0] = tmp(11202).AdUserActionType.CLICK_INTERNAL;
     obj[1] = tmp(5451).AdCreativeType.QUEST;
     obj[2] = id;
     obj[3] = ctaContent;

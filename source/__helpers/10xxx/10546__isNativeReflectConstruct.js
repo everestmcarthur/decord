@@ -1,17 +1,18 @@
 // Module ID: 10546
 // Function ID: 10547
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 10547, 10439]
+// Dependencies: [41, 42, 93, 95, 98, 10545, 10439, 10444]
 
 // Module 10546 (_isNativeReflectConstruct)
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10439 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10444 */;
+import zhStringToNumber from "zhStringToNumber" /* 10545 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ZHHantDateParser = require;
+const ZHHansDeadlineFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,12 +32,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ZHHantDateParser {
+const keys = Object.keys(zhStringToNumber.NUMBER);
+const regExp = new RegExp("(\\d+|[" + keys.join("") + "]+|\u534A|\u51E0)(?:\\s*)(?:\u4E2A)?(\u79D2(?:\u949F)?|\u5206\u949F|\u5C0F\u65F6|\u949F|\u65E5|\u5929|\u661F\u671F|\u793C\u62DC|\u6708|\u5E74)(?:(?:\u4E4B|\u8FC7)?\u540E|(?:\u4E4B)?\u5185)", "i");
+class ZHHansDeadlineFormatParser {
   constructor() {
     self = this;
-    tmp = closure_2(this, ZHHantDateParser);
+    tmp = closure_2(this, ZHHansDeadlineFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ZHHantDateParser);
+    obj = closure_4(ZHHansDeadlineFormatParser);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -51,19 +54,11 @@ class ZHHantDateParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ZHHantDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ZHHansDeadlineFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const items = [
   {
     key: "innerPattern",
     value: function innerPattern() {
-      const keys = Object.keys(ZHHantDateParser(10547).NUMBER);
-      const text = `(\\d{2,4}|[${obj.join("")}`;
-      const keys1 = Object.keys(ZHHantDateParser(10547).NUMBER);
-      const text1 = `${`(\\d{2,4}|[${obj.join("")}`}]{4}|[${obj2.join("")}`;
-      const keys2 = Object.keys(ZHHantDateParser(10547).NUMBER);
-      const text2 = `${tmp2}]{2})?(?:\\s*)(?:年)?(?:[\\s|,|，]*)(\\d{1,2}|[${obj3.join("")}`;
-      const keys3 = Object.keys(ZHHantDateParser(10547).NUMBER);
-      const regExp = new RegExp(text2 + "]{1,2})(?:\\s*)(?:\u6708)(?:\\s*)(\\d{1,2}|[" + keys3.join("") + "]{1,2})?(?:\\s*)(?:\u65E5|\u865F)?");
       return regExp;
     }
   },
@@ -71,45 +66,75 @@ const items = [
     key: "innerExtract",
     value: function innerExtract(createParsingResult, index) {
       const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const parsed = parseInt(index[2]);
-      let zhStringToNumberResult = parsed;
-      if (isNaN(parsed)) {
-        zhStringToNumberResult = ZHHantDateParser(10547).zhStringToNumber(index[2]);
+      let num = parseInt(index[1]);
+      if (isNaN(num)) {
+        num = ZHHansDeadlineFormatParser(10545).zhStringToNumber(index[1]);
       }
-      const start = parsingResult.start;
-      start.assign("month", zhStringToNumberResult);
-      if (index[3]) {
-        const _parseInt = parseInt;
-        const parsed1 = parseInt(index[3]);
-        const _isNaN = isNaN;
-        let zhStringToNumberResult1 = parsed1;
-        if (isNaN(parsed1)) {
-          zhStringToNumberResult1 = ZHHantDateParser(10547).zhStringToNumber(index[3]);
+      if (isNaN(num)) {
+        num = 3;
+        if ("\u51E0" !== index[1]) {
+          num = 0.5;
+          if ("\u534A" !== tmp4) {
+            return null;
+          }
         }
-        const start3 = parsingResult.start;
-        start3.assign("day", zhStringToNumberResult1);
+      }
+      let obj = {};
+      if (index[2][0].match(/[日天星礼月年]/)) {
+        if ("\u65E5" != str3) {
+          if ("\u5929" != str3) {
+            if ("\u661F" != str3) {
+              if ("\u793C" != str3) {
+                if ("\u6708" == str3) {
+                  obj.month = num;
+                } else if ("\u5E74" == str3) {
+                  obj.year = num;
+                }
+              }
+            }
+            obj.week = num;
+          }
+          const addDurationResult = ZHHansDeadlineFormatParser(10439).addDuration(createParsingResult.refDate, obj);
+          const start7 = parsingResult.start;
+          obj = start7.assign("year", addDurationResult.getFullYear());
+          const start8 = parsingResult.start;
+          obj = start8.assign("month", addDurationResult.getMonth() + 1);
+          const start9 = parsingResult.start;
+          start9.assign("day", addDurationResult.getDate());
+          return parsingResult;
+        }
+        obj.day = num;
       } else {
+        if ("\u79D2" == str3) {
+          obj.second = num;
+        } else if ("\u5206" == str3) {
+          obj.minute = num;
+        } else {
+          let tmp6 = "\u5C0F" != str3;
+          if (tmp6) {
+            tmp6 = "\u949F" != str3;
+          }
+          if (!tmp6) {
+            obj.hour = num;
+          }
+        }
+        const addDurationResult1 = ZHHansDeadlineFormatParser(10439).addDuration(createParsingResult.refDate, obj);
+        const start = parsingResult.start;
+        start.imply("year", addDurationResult1.getFullYear());
         const start2 = parsingResult.start;
-        const refDate = createParsingResult.refDate;
-        start2.imply("day", refDate.getDate());
-      }
-      if (index[1]) {
-        const _parseInt2 = parseInt;
-        let parsed2 = parseInt(index[1]);
-        const _isNaN2 = isNaN;
-        if (isNaN(parsed2)) {
-          parsed2 = ZHHantDateParser(10547).zhStringToYear(index[1]);
-        }
-        const start5 = parsingResult.start;
-        start5.assign("year", parsed2);
-      } else {
+        start2.imply("month", addDurationResult1.getMonth() + 1);
+        const start3 = parsingResult.start;
+        start3.imply("day", addDurationResult1.getDate());
         const start4 = parsingResult.start;
-        const refDate2 = createParsingResult.refDate;
-        start4.imply("year", refDate2.getFullYear());
+        start4.assign("hour", addDurationResult1.getHours());
+        const start5 = parsingResult.start;
+        start5.assign("minute", addDurationResult1.getMinutes());
+        const start6 = parsingResult.start;
+        start6.assign("second", addDurationResult1.getSeconds());
+        return parsingResult;
       }
-      return parsingResult;
     }
   }
 ];
 
-export default _createClass(ZHHantDateParser, items);
+export default _createClass(ZHHansDeadlineFormatParser, items);

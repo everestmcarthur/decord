@@ -1,10 +1,10 @@
-// Module ID: 12609
-// Function ID: 12610
+// Module ID: 12613
+// Function ID: 12614
 // Name: getMutualFriendsLabel
 // Dependencies: [1114, 2]
 // Exports: default
 
-// Module 12609 (getMutualFriendsLabel)
+// Module 12613 (getMutualFriendsLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 

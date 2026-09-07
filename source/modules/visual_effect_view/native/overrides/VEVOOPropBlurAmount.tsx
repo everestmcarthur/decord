@@ -1,10 +1,10 @@
-// Module ID: 15927
-// Function ID: 15928
-// Dependencies: [32, 19, 4966, 21, 4560, 8593, 7202, 15928, 2]
+// Module ID: 15930
+// Function ID: 15931
+// Dependencies: [32, 19, 4966, 21, 4560, 8598, 7202, 15931, 2]
 
-// Module 15927
+// Module 15930
 import FormSwitch from "FormSwitch" /* 7202 */;
-import Form from "Form" /* 8593 */;
+import Form from "Form" /* 8598 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import useVisualEffectViewOverrides from "useVisualEffectViewOverrides" /* 4966 */;
@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurAmount() {
   if (str == null) {
     str = "";
   }
-  obj = { label: "Blur Amount " + str, leadingStyle: tmp.enabledSwitchStyle, leading: tmp7(FormSwitch.FormSwitch, obj), subLabel: tmp7(first(15928), obj1), disabled: !tmp3 };
+  obj = { label: "Blur Amount " + str, leadingStyle: tmp.enabledSwitchStyle, leading: tmp7(FormSwitch.FormSwitch, obj), subLabel: tmp7(first(15931), obj1), disabled: !tmp3 };
   obj = {
     value: tmp3,
     onValueChange(arg0) {

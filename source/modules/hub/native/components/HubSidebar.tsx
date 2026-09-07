@@ -1,14 +1,14 @@
-// Module ID: 16211
-// Function ID: 16212
+// Module ID: 16214
+// Function ID: 16215
 // Name: HubItem
-// Dependencies: [19, 17, 2012, 2011, 1074, 10118, 21, 4560, 576, 12379, 1178, 504, 16212, 16213, 15593, 1114, 4571, 12753, 12308, 4497, 9820, 2]
+// Dependencies: [19, 17, 2012, 2011, 1074, 10123, 21, 4560, 576, 12383, 1178, 504, 16215, 16216, 15596, 1114, 4571, 12757, 12312, 4497, 9825, 2]
 // Exports: default
 
-// Module 16211 (HubItem)
+// Module 16214 (HubItem)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import BaseChannelSubtitle from "BaseChannelSubtitle" /* 12379 */;
-import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 12379 */;
+import BaseChannelSubtitle from "BaseChannelSubtitle" /* 12383 */;
+import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 12383 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "comparator" /* 2012 */;
 import closure_5 from "handleConnectionOpen" /* 2011 */;
@@ -30,8 +30,8 @@ function HubItem(arg0) {
   }
   let obj = { style: callback2().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
   const tmp = callback2();
-  obj[6] = callback(tmp5(12379).BaseChannelName, { name: label, mode: DEFAULT });
-  obj[7] = callback(tmp5(12379).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj[6] = callback(tmp5(12383).BaseChannelName, { name: label, mode: DEFAULT });
+  obj[7] = callback(tmp5(12383).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     obj = { value: null };
@@ -70,7 +70,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(16212);
+  guild(16215);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -81,10 +81,10 @@ export default function HubSidebar(guild) {
     obj[0] = row;
     obj = { guild: null };
     obj[0] = guild;
-    const items4 = [callback(stateFromStores(16213), obj), , , ];
+    const items4 = [callback(stateFromStores(16216), obj), , , ];
     obj1 = { active: null, IconComponent: null, label: null, handleItemClick: null, unreadCount: null };
     obj1[0] = stateFromStores1;
-    obj1[1] = tmp(15593).CompassIcon;
+    obj1[1] = tmp(15596).CompassIcon;
     const intl = tmp(1114).intl;
     obj1[2] = intl.string(tmp(1114).t.K50GHd);
     obj1[3] = function handleItemClick() {
@@ -93,11 +93,11 @@ export default function HubSidebar(guild) {
     obj1[4] = tmp7;
     items4[1] = callback(HubItem, obj1);
     obj2 = { IconComponent: null, label: null, handleItemClick: null };
-    obj2[0] = tmp(12753).PlusMediumIcon;
+    obj2[0] = tmp(12757).PlusMediumIcon;
     const intl2 = tmp(1114).intl;
     obj2[1] = intl2.string(tmp(1114).t.emRpdS);
     obj2[2] = function handleItemClick() {
-      let obj = stateFromStores(12308);
+      let obj = stateFromStores(12312);
       obj = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: stateFromStores.id };
       return obj.open(obj);
     };
@@ -107,7 +107,7 @@ export default function HubSidebar(guild) {
     const intl3 = tmp(1114).intl;
     obj3[1] = intl3.string(tmp(1114).t.MJQOuJ);
     obj3[2] = function handleItemClick() {
-      const result = guild(9820).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, closure_1_6.GUILD_HEADER);
+      const result = guild(9825).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, closure_1_6.GUILD_HEADER);
     };
     items4[3] = callback(HubItem, obj3);
     obj[1] = items4;

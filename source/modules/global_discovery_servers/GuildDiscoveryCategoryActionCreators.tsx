@@ -1,14 +1,14 @@
-// Module ID: 16469
-// Function ID: 16470
+// Module ID: 16472
+// Function ID: 16473
 // Name: _maybeFetchGuildDiscoveryCategories
-// Dependencies: [5, 2025, 16470, 1074, 1272, 573, 2]
+// Dependencies: [5, 2025, 16473, 1074, 1272, 573, 2]
 // Exports: addGuildCategory, deleteGuildCategory, fetchMetadataForGuild, fetchSlugForGuild, maybeFetchGuildDiscoveryCategories, saveGuildMetadata, updateGuildDiscoveryMetadataAbout, updateGuildDiscoveryMetadataIsPublished, updateGuildDiscoveryMetadataReasonsToJoin, updateGuildDiscoveryMetadataSocialLinks, updateGuildEmojiDiscoverabilityEnabled, updateGuildKeywords, updateGuildPrimaryCategory
 
-// Module 16469 (_maybeFetchGuildDiscoveryCategories)
+// Module 16472 (_maybeFetchGuildDiscoveryCategories)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_getSystemLocale" /* 2025 */;
-import closure_5 from "getPrimaryCategories" /* 16470 */;
+import closure_5 from "getPrimaryCategories" /* 16473 */;
 import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;

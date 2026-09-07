@@ -1,7 +1,7 @@
 // Module ID: 1183
 // Function ID: 1184
 // Name: handleThemeChange
-// Dependencies: [1184, 1185, 1221, 1186, 1084, 1074, 1220, 1227, 14084, 504, 1940, 573, 2]
+// Dependencies: [1184, 1185, 1221, 1186, 1084, 1074, 1220, 1227, 14087, 504, 1940, 573, 2]
 
 // Module 1183 (handleThemeChange)
 import initializeDefault from "initialize" /* 504 */;
@@ -9,7 +9,7 @@ import dispatcherDefault from "dispatcher" /* 573 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1220 */;
 import resolveThemeDefault from "resolveTheme" /* 1227 */;
 import updateUserGuildSettings from "updateUserGuildSettings" /* 1940 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 14084 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 14087 */;
 import closure_3 from "initialize" /* 1184 */;
 import closure_4 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
 import closure_5 from "handleConnectionClosedOrResumed" /* 1221 */;
@@ -155,7 +155,7 @@ obj = {
       let flag = tmp7 !== closure_13;
       if (flag) {
         closure_13 = tmp7;
-        tmp2(14084)(closure_13);
+        tmp2(14087)(closure_13);
         flag = true;
       }
       tmp = flag;

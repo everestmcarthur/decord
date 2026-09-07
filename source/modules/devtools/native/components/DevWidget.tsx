@@ -1,15 +1,15 @@
-// Module ID: 15925
-// Function ID: 15926
+// Module ID: 15928
+// Function ID: 15929
 // Name: DraggableContainer
-// Dependencies: [19, 7719, 574, 21, 4560, 576, 4296, 11353, 12033, 6655, 4974, 4978, 5123, 14581, 15575, 15926, 15574, 2]
+// Dependencies: [19, 7719, 574, 21, 4560, 576, 4296, 11358, 12037, 6655, 4974, 4978, 5123, 14584, 15578, 15929, 15577, 2]
 // Exports: default
 
-// Module 15925 (DraggableContainer)
+// Module 15928 (DraggableContainer)
 import ThemesDefault from "Themes" /* 576 */;
 import _mod4296 from "module_4296" /* 4296 */;
 import PressableBase from "PressableBase" /* 5123 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 15575 */;
-import VisualEffectViewOverrideOverlay_Default from "VisualEffectViewOverrideOverlay_" /* 15926 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 15578 */;
+import VisualEffectViewOverrideOverlay_Default from "VisualEffectViewOverrideOverlay_" /* 15929 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "initialize" /* 7719 */;
 import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES" /* 574 */;

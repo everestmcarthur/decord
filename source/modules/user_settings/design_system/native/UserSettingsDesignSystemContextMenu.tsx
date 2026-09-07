@@ -1,21 +1,21 @@
-// Module ID: 15777
-// Function ID: 15778
+// Module ID: 15780
+// Function ID: 15781
 // Name: DemoContextMenu
-// Dependencies: [19, 17, 21, 12773, 7094, 7966, 11253, 4524, 15778, 15779, 11564, 4560, 576, 12, 8666, 4975, 5607, 4556, 2]
+// Dependencies: [19, 17, 21, 12777, 7094, 7966, 11258, 4524, 15781, 15782, 11569, 4560, 576, 12, 8671, 4975, 5607, 4556, 2]
 // Exports: default
 
-// Module 15777 (DemoContextMenu)
+// Module 15780 (DemoContextMenu)
 import ThemesDefault from "Themes" /* 576 */;
 import registerAssetDefault from "registerAsset" /* 4524 */;
 import Text from "Text" /* 4556 */;
 import PressableCard from "PressableCard" /* 5607 */;
 import registerAssetDefault2 from "registerAsset" /* 7094 */;
 import registerAssetDefault3 from "registerAsset" /* 7966 */;
-import registerAssetDefault4 from "registerAsset" /* 11253 */;
-import registerAssetDefault5 from "registerAsset" /* 11564 */;
-import registerAssetDefault6 from "registerAsset" /* 12773 */;
-import registerAssetDefault7 from "registerAsset" /* 15778 */;
-import registerAssetDefault8 from "registerAsset" /* 15779 */;
+import registerAssetDefault4 from "registerAsset" /* 11258 */;
+import registerAssetDefault5 from "registerAsset" /* 11569 */;
+import registerAssetDefault6 from "registerAsset" /* 12777 */;
+import registerAssetDefault7 from "registerAsset" /* 15781 */;
+import registerAssetDefault8 from "registerAsset" /* 15782 */;
 import closure_2 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -55,7 +55,7 @@ function DemoContextMenu(align) {
         obj = { length: dependencyMap };
         const obj2 = callback(12);
         return Array.from(obj).map((arg0, arg1) => {
-          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: "<string:3444637699>", variant: "<string:1365331342>", action: "<string:659423233>" };
+          const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: "c\u1EB7p \u0111\u00F4i", variant: "h\u1EB9n h\u00F2", action: "n\u1EE5 h\u00F4n" };
           obj[2] = length2[arg1 % length2.length];
           let str = "default";
           if (arg1 === closure_0 - 1) {
@@ -78,7 +78,7 @@ function DemoContextMenu(align) {
       obj[0] = closure_1;
       arr = Array.from(obj);
       mapped = arr.map((arg0, arg1) => {
-        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: "<string:3444637699>", variant: "<string:1365331342>", action: "<string:659423233>" };
+        const obj = { label: length[arg1 % length.length], IconComponent: "a", iconSource: "c\u1EB7p \u0111\u00F4i", variant: "h\u1EB9n h\u00F2", action: "n\u1EE5 h\u00F4n" };
         obj[2] = length2[arg1 % length2.length];
         let str = "default";
         if (arg1 === closure_0 - 1) {

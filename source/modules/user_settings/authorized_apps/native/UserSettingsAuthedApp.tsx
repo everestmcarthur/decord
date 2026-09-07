@@ -1,16 +1,16 @@
-// Module ID: 14941
-// Function ID: 14942
+// Module ID: 14944
+// Function ID: 14945
 // Name: WarningLabel
-// Dependencies: [19, 17, 1956, 7107, 1957, 4209, 4741, 2025, 1074, 10916, 11382, 21, 4560, 576, 4515, 4556, 1483, 1484, 1114, 7170, 9515, 9243, 504, 12598, 1396, 4906, 12597, 4527, 11383, 1896, 1250, 9042, 8404, 6990, 6995, 8370, 4418, 7119, 7114, 11, 12056, 9419, 5687, 7201, 5605, 2]
+// Dependencies: [19, 17, 1956, 7107, 1957, 4209, 4741, 2025, 1074, 10921, 11387, 21, 4560, 576, 4515, 4556, 1483, 1484, 1114, 7170, 9520, 9248, 504, 12602, 1396, 4906, 12601, 4527, 11388, 1896, 1250, 9047, 8404, 6990, 6995, 8370, 4418, 7119, 7114, 11, 12060, 9424, 5687, 7201, 5605, 2]
 // Exports: default, handleDeleteApp
 
-// Module 14941 (WarningLabel)
+// Module 14944 (WarningLabel)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
 import Text from "Text" /* 4556 */;
 import tokensToAppTokensMapDefault from "tokensToAppTokensMap" /* 7170 */;
-import postMessageToWebViewDefault from "postMessageToWebView" /* 9515 */;
+import postMessageToWebViewDefault from "postMessageToWebView" /* 9520 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "participantFromServer" /* 1956 */;
@@ -20,8 +20,8 @@ import closure_9 from "markAllUserIdListsStale" /* 4209 */;
 import closure_10 from "updateUserGuildSettingsInternal" /* 4741 */;
 import closure_11 from "_getSystemLocale" /* 2025 */;
 import ME from "ME" /* 1074 */;
-import { ChannelDetailsNavigatorScreens as closure_15 } from "ChannelDetailsNavigatorScreens" /* 10916 */;
-import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_16 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 11382 */;
+import { ChannelDetailsNavigatorScreens as closure_15 } from "ChannelDetailsNavigatorScreens" /* 10921 */;
+import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_16 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 11387 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

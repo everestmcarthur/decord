@@ -1,17 +1,17 @@
-// Module ID: 9509
-// Function ID: 9510
+// Module ID: 9514
+// Function ID: 9515
 // Name: _launchFrame
-// Dependencies: [5, 9510, 9511, 9505, 9513, 573, 9504, 9514, 9527, 9567, 2]
+// Dependencies: [5, 9515, 9516, 9510, 9518, 573, 9509, 9519, 9532, 9572, 2]
 // Exports: attachFrameIframe, detachFrameIframe, launchFrame, refreshProxyTicket, resetFrameLayoutModes, setFramePrefersPictureInPictureOnNavigateAway, updateFramePanelMode
 
-// Module 9509 (_launchFrame)
+// Module 9514 (_launchFrame)
 import dispatcherDefault from "dispatcher" /* 573 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9513 */;
-import getFramesManagerDefault from "getFramesManager" /* 9567 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9518 */;
+import getFramesManagerDefault from "getFramesManager" /* 9572 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 9510 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9511 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9505 */;
+import closure_4 from "map" /* 9515 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 9516 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9510 */;
 
 require = arg1;
 function _launchFrame() {
@@ -91,7 +91,7 @@ function _launchFrame() {
                 return obj3;
               } else {
                 if (lib(callback2) === constants.MAIN) {
-                  let obj7 = callback(9513);
+                  let obj7 = callback(9518);
                   const result = obj7.leaveCurrentEmbeddedActivity();
                   callback4();
                 }
@@ -102,7 +102,7 @@ function _launchFrame() {
                 obj4[3] = callback2;
                 obj8.dispatch(obj4);
                 frame = 1;
-                let obj10 = callback(9504);
+                let obj10 = callback(9509);
                 constants = 4;
                 frame2 = 1;
                 let obj5 = { value: null, done: false };
@@ -113,8 +113,8 @@ function _launchFrame() {
           } else if (2 === tmp7) {
             frame = 0;
             closure_10 = c3;
-            lib = callback2(9514)();
-            obj5 = callback(9527);
+            lib = callback2(9519)();
+            obj5 = callback(9532);
             constants = 3;
             frame2 = 1;
             const obj6 = { value: null, done: false };
@@ -338,8 +338,8 @@ function _refreshProxyTicket() {
           } else if (2 === tmp9) {
             frame = 1;
             c5 = closure_3;
-            closure_3 = applicationId(9514)();
-            let obj8 = callback(9527);
+            closure_3 = applicationId(9519)();
+            let obj8 = callback(9532);
             c5 = 3;
             c6 = 1;
             const obj4 = { value: null, done: false };

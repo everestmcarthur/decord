@@ -1,10 +1,10 @@
-// Module ID: 10997
-// Function ID: 10998
+// Module ID: 11002
+// Function ID: 11003
 // Name: getFavoritesAddButtonLabel
 // Dependencies: [1114, 3225, 2]
 // Exports: getFavoritesAddButtonLabel
 
-// Module 10997 (getFavoritesAddButtonLabel)
+// Module 11002 (getFavoritesAddButtonLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 3225 */;

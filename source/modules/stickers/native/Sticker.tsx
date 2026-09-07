@@ -1,16 +1,16 @@
-// Module ID: 10176
-// Function ID: 10177
+// Module ID: 10181
+// Function ID: 10182
 // Name: Sticker
-// Dependencies: [19, 17, 1183, 21, 5268, 4899, 1114, 7999, 10177, 5587, 4411, 7131, 7132, 2]
+// Dependencies: [19, 17, 1183, 21, 5268, 4899, 1114, 7999, 10182, 5587, 4411, 7131, 7132, 2]
 // Exports: default, getStickerAssetUrl
 
-// Module 10176 (Sticker)
+// Module 10181 (Sticker)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import StickerFormat from "StickerFormat" /* 5268 */;
 import preloadDefault from "preload" /* 5587 */;
 import NativeLottieViewDefault from "NativeLottieView" /* 7999 */;
-import _modDef10177 from "module_10177" /* 10177 */;
+import _modDef10182 from "module_10182" /* 10182 */;
 import { PixelRatio } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "handleThemeChange" /* 1183 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -86,7 +86,7 @@ export default function Sticker(opaque) {
       const obj5 = {};
       const tmpResult3 = tmp(4899);
       const merged = Object.assign(obj3);
-      return jsx(_modDef10177, {});
+      return jsx(_modDef10182, {});
     }
     const obj6 = { resizeMode: "contain", style: null, placeholder: null, source: null, accessible: true, accessibilityLabel: null };
     const obj7 = { height: null, width: null, opacity: null };

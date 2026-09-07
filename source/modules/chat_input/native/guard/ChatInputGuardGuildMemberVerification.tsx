@@ -1,15 +1,15 @@
-// Module ID: 12456
-// Function ID: 12457
-// Dependencies: [19, 17, 4552, 11962, 1074, 21, 4560, 5545, 4384, 12457, 1114, 4740, 5527, 12458, 5680, 5569, 504, 12448, 5529, 12459, 2]
+// Module ID: 12460
+// Function ID: 12461
+// Dependencies: [19, 17, 4552, 11966, 1074, 21, 4560, 5545, 4384, 12461, 1114, 4740, 5527, 12462, 5680, 5569, 504, 12452, 5529, 12463, 2]
 
-// Module 12456
+// Module 12460
 import playDefault from "play" /* 5529 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12448 */;
-import registerAssetDefault from "registerAsset" /* 12457 */;
-import registerAssetDefault2 from "registerAsset" /* 12458 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12452 */;
+import registerAssetDefault from "registerAsset" /* 12461 */;
+import registerAssetDefault2 from "registerAsset" /* 12462 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { TextAreaCta } from "TextAreaCta" /* 11962 */;
+import { TextAreaCta } from "TextAreaCta" /* 11966 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -73,7 +73,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardGuildMemberVerifi
   } else {
     obj = { style: null, source: null, autoPlay: null };
     obj[0] = tmp.lottieAnimation;
-    obj[1] = tmp2(12459);
+    obj[1] = tmp2(12463);
     obj[2] = !stateFromStores;
     tmp13Result = tmp13(playDefault, obj);
     const tmp14Result = playDefault;

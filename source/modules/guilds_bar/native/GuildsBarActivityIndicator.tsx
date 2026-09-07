@@ -1,10 +1,10 @@
-// Module ID: 16333
-// Function ID: 16334
+// Module ID: 16336
+// Function ID: 16337
 // Name: getMediaIcon
-// Dependencies: [19, 21, 4560, 576, 4262, 5589, 1178, 9785, 9783, 5097, 8622, 8879, 16334, 10110, 16335, 5101, 16336, 5106, 5033, 16329, 2]
+// Dependencies: [19, 21, 4560, 576, 4262, 5589, 1178, 9790, 9788, 5097, 8627, 8884, 16337, 10115, 16338, 5101, 16339, 5106, 5033, 16332, 2]
 // Exports: useActivityIndicatorState
 
-// Module 16333 (getMediaIcon)
+// Module 16336 (getMediaIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import map from "map" /* 4262 */;
@@ -13,15 +13,15 @@ import StageIcon from "StageIcon" /* 5097 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
 import AppsIcon from "AppsIcon" /* 5106 */;
 import setDefault from "set" /* 5589 */;
-import registerAssetDefault2 from "registerAsset" /* 8622 */;
-import ScreenIcon from "ScreenIcon" /* 8879 */;
-import registerAssetDefault3 from "registerAsset" /* 9783 */;
-import CalendarIcon from "CalendarIcon" /* 9785 */;
-import VideoIcon from "VideoIcon" /* 10110 */;
-import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 16329 */;
-import registerAssetDefault4 from "registerAsset" /* 16334 */;
-import registerAssetDefault5 from "registerAsset" /* 16335 */;
-import registerAssetDefault6 from "registerAsset" /* 16336 */;
+import registerAssetDefault2 from "registerAsset" /* 8627 */;
+import ScreenIcon from "ScreenIcon" /* 8884 */;
+import registerAssetDefault3 from "registerAsset" /* 9788 */;
+import CalendarIcon from "CalendarIcon" /* 9790 */;
+import VideoIcon from "VideoIcon" /* 10115 */;
+import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 16332 */;
+import registerAssetDefault4 from "registerAsset" /* 16337 */;
+import registerAssetDefault5 from "registerAsset" /* 16338 */;
+import registerAssetDefault6 from "registerAsset" /* 16339 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

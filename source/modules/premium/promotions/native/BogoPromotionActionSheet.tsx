@@ -1,10 +1,10 @@
-// Module ID: 16930
-// Function ID: 16931
+// Module ID: 16933
+// Function ID: 16934
 // Name: BogoPromotionActionSheet
-// Dependencies: [19, 17, 1373, 1074, 1954, 21, 4560, 576, 7162, 7422, 7150, 5587, 4556, 1114, 2024, 9970, 2]
+// Dependencies: [19, 17, 1373, 1074, 1954, 21, 4560, 576, 7162, 7422, 7150, 5587, 4556, 1114, 2024, 9975, 2]
 // Exports: default
 
-// Module 16930 (BogoPromotionActionSheet)
+// Module 16933 (BogoPromotionActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -68,7 +68,7 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1114).intl;
   obj5[0] = intl3.string(markAsDismissed(1114).t.J61px0);
   obj5[1] = callback;
-  obj4[1] = callback(analyticsLocations(9970), obj5);
+  obj4[1] = callback(analyticsLocations(9975), obj5);
   items3[3] = callback(View, obj4);
   obj[1] = items3;
   obj[1] = callback2(View, obj);

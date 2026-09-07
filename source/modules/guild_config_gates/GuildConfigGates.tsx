@@ -1,11 +1,11 @@
-// Module ID: 17639
-// Function ID: 17640
+// Module ID: 17642
+// Function ID: 17643
 // Name: importDefaultResult1
-// Dependencies: [5, 17640, 1074, 504, 1272, 573, 2]
+// Dependencies: [5, 17643, 1074, 504, 1272, 573, 2]
 // Exports: useApplicationIdentityLinkedRolesEnabled, useGuildVerificationRoleEnabled
 
-// Module 17639 (importDefaultResult1)
-import importDefaultResult1 from "hasLoaded" /* 17640 */;
+// Module 17642 (importDefaultResult1)
+import importDefaultResult1 from "hasLoaded" /* 17643 */;
 import { Endpoints } from "ME" /* 1074 */;
 import initialize from "initialize" /* 504 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;

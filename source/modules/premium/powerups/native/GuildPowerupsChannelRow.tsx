@@ -1,15 +1,15 @@
-// Module ID: 16217
-// Function ID: 16218
+// Module ID: 16220
+// Function ID: 16221
 // Name: GuildPowerupsChannelRowIndicator
-// Dependencies: [19, 17, 10118, 21, 12495, 6610, 576, 1178, 4560, 16172, 16011, 7157, 12491, 12510, 12379, 12479, 7182, 7156, 1114, 2428, 16218, 12291, 2]
+// Dependencies: [19, 17, 10123, 21, 12499, 6610, 576, 1178, 4560, 16175, 16014, 7157, 12495, 12514, 12383, 12483, 7182, 7156, 1114, 2428, 16221, 12295, 2]
 // Exports: default
 
-// Module 16217 (GuildPowerupsChannelRowIndicator)
+// Module 16220 (GuildPowerupsChannelRowIndicator)
 import ThemesDefault from "Themes" /* 576 */;
 import add from "add" /* 7157 */;
-import GUILD_POWERUP_NOTIFICATION_COOLDOWN from "GUILD_POWERUP_NOTIFICATION_COOLDOWN" /* 12495 */;
-import SidebarCoachmarkOverlayLayer from "SidebarCoachmarkOverlayLayer" /* 16011 */;
-import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 16172 */;
+import GUILD_POWERUP_NOTIFICATION_COOLDOWN from "GUILD_POWERUP_NOTIFICATION_COOLDOWN" /* 12499 */;
+import SidebarCoachmarkOverlayLayer from "SidebarCoachmarkOverlayLayer" /* 16014 */;
+import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 16175 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -26,7 +26,7 @@ function GuildPowerupsChannelRowIndicator(indicator) {
       let obj = { color: null, size: "sm" };
       obj[0] = ThemesDefault.colors.STATUS_WARNING;
       return callback(tmp4(6610).CircleErrorIcon, obj);
-    } else if (tmp4(12495).GuildPowerupNotificationIndicatorType.UNREAD === type) {
+    } else if (tmp4(12499).GuildPowerupNotificationIndicatorType.UNREAD === type) {
       obj = { value: null, isMentionLowImportance: true };
       obj[0] = indicator.count;
       return callback(tmp4(1178).Badge, obj);
@@ -65,7 +65,7 @@ export default function GuildPowerupsChannelRow(guildId) {
   let dismissNewBadgeIfShown;
   let obj = React;
   const ref = React.useRef(null);
-  const tmp5 = dismissNewBadgeIfShown(12491)(guildId);
+  const tmp5 = dismissNewBadgeIfShown(12495)(guildId);
   let indicator;
   const tmp = callback2();
   if (tmp5 != null) {
@@ -79,13 +79,13 @@ export default function GuildPowerupsChannelRow(guildId) {
     }
     tmp8 = null != popout;
   }
-  const tmp6Result = dismissNewBadgeIfShown(12510)(guildId, tmp8);
+  const tmp6Result = dismissNewBadgeIfShown(12514)(guildId, tmp8);
   dismissNewBadgeIfShown = tmp6Result.dismissNewBadgeIfShown;
   let showUnread;
   if (tmp5 != null) {
     showUnread = tmp5.showUnread;
   }
-  const ChannelModes = guildId(12379).ChannelModes;
+  const ChannelModes = guildId(12383).ChannelModes;
   if (true === showUnread) {
     let DEFAULT = ChannelModes.UNREAD_IMPORTANT;
     let tmp14 = tmp13;
@@ -111,7 +111,7 @@ export default function GuildPowerupsChannelRow(guildId) {
   const tmp17 = closure_6;
   const tmp18 = View;
   const tmp19 = GuildPowerupsCoachmark;
-  const tmp6 = dismissNewBadgeIfShown(12510);
+  const tmp6 = dismissNewBadgeIfShown(12514);
   const intl = tmp14(1114).intl;
   obj1[5] = intl.string(dismissNewBadgeIfShown(2428).yv3DJJ);
   obj1[6] = { selected: false };
@@ -119,11 +119,11 @@ export default function GuildPowerupsChannelRow(guildId) {
   const intl2 = tmp14(1114).intl;
   obj2[0] = intl2.string(dismissNewBadgeIfShown(2428).yv3DJJ);
   obj2[1] = DEFAULT;
-  obj1[7] = closure_5(tmp14(12379).BaseChannelName, obj2);
-  const tmp3Result = dismissNewBadgeIfShown(12379);
-  obj1[8] = closure_5(tmp14(12379).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(16218).BoostTier2Icon });
+  obj1[7] = closure_5(tmp14(12383).BaseChannelName, obj2);
+  const tmp3Result = dismissNewBadgeIfShown(12383);
+  obj1[8] = closure_5(tmp14(12383).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(16221).BoostTier2Icon });
   if (tmp6Result.showNewBadgeOnRow) {
-    let tmp16Result = tmp16(tmp14(12291).NewBadge, {});
+    let tmp16Result = tmp16(tmp14(12295).NewBadge, {});
   } else {
     let indicator1;
     if (tmp5 != null) {

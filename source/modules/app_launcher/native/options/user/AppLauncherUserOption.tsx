@@ -1,12 +1,12 @@
-// Module ID: 12184
-// Function ID: 12185
+// Module ID: 12188
+// Function ID: 12189
 // Name: AppLauncherUserOption
-// Dependencies: [32, 19, 4552, 21, 4560, 576, 504, 12176, 1874, 4527, 12185, 1896, 12185, 1178, 12179, 10917, 12182, 4556, 2]
+// Dependencies: [32, 19, 4552, 21, 4560, 576, 504, 12180, 1874, 4527, 12189, 1896, 12189, 1178, 12183, 10922, 12186, 4556, 2]
 // Exports: default
 
-// Module 12184 (AppLauncherUserOption)
+// Module 12188 (AppLauncherUserOption)
 import ThemesDefault from "Themes" /* 576 */;
-import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12176 */;
+import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12180 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
@@ -93,17 +93,17 @@ export default function AppLauncherUserOption(option) {
     let tmp9Result = tmp9(tmp2(1178).Avatar, obj);
   } else {
     obj1 = { icon: null, wrapperStyle: null };
-    obj1[0] = tmp9(tmp2(10917).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
+    obj1[0] = tmp9(tmp2(10922).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
     obj1[1] = tmp.iconWrapper;
-    tmp9Result = tmp9(tmp10(12179), obj1);
-    const tmp10Result = tmp10(12179);
+    tmp9Result = tmp9(tmp10(12183), obj1);
+    const tmp10Result = tmp10(12183);
   }
   obj[5] = tmp9Result;
   if (null != tmp8) {
     let obj2 = { guildId: null, user: null };
     obj2[0] = guild_id;
     obj2[1] = tmp8;
-    tmp9Result = tmp9(tmp10(12182), obj2);
+    tmp9Result = tmp9(tmp10(12186), obj2);
   } else {
     tmp9Result = null;
     if (null != tmp6) {

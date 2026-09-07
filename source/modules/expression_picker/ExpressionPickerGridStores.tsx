@@ -1,10 +1,10 @@
-// Module ID: 10286
-// Function ID: 10287
+// Module ID: 10291
+// Function ID: 10292
 // Name: withEqualityFn
 // Dependencies: [1244, 4430, 1249, 2]
 // Exports: default
 
-// Module 10286 (withEqualityFn)
+// Module 10291 (withEqualityFn)
 import set from "set" /* 2 */;
 import identity from "identity" /* 1244 */;
 import createJSONStorage from "createJSONStorage" /* 4430 */;

@@ -1,10 +1,10 @@
-// Module ID: 15767
-// Function ID: 15768
+// Module ID: 15770
+// Function ID: 15771
 // Name: MyTableRow
-// Dependencies: [32, 19, 17, 4381, 1371, 1074, 21, 5605, 7380, 504, 1611, 4973, 5687, 4556, 1396, 1178, 7201, 5604, 5685, 5688, 5611, 14112, 14109, 14110, 14111, 8595, 4987, 2]
+// Dependencies: [32, 19, 17, 4381, 1371, 1074, 21, 5605, 7380, 504, 1611, 4973, 5687, 4556, 1396, 1178, 7201, 5604, 5685, 5688, 5611, 14115, 14112, 14113, 14114, 8600, 4987, 2]
 // Exports: default
 
-// Module 15767 (MyTableRow)
+// Module 15770 (MyTableRow)
 import initialize from "initialize" /* 504 */;
 import Button from "Button" /* 1178 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
@@ -20,11 +20,11 @@ import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import TableRadioRow from "TableRadioRow" /* 5688 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
 import SettingsIcon from "SettingsIcon" /* 7380 */;
-import RowButtonWrapper from "RowButtonWrapper" /* 8595 */;
-import registerAssetDefault from "registerAsset" /* 14109 */;
-import registerAssetDefault2 from "registerAsset" /* 14110 */;
-import registerAssetDefault3 from "registerAsset" /* 14111 */;
-import registerAssetDefault4 from "registerAsset" /* 14112 */;
+import RowButtonWrapper from "RowButtonWrapper" /* 8600 */;
+import registerAssetDefault from "registerAsset" /* 14112 */;
+import registerAssetDefault2 from "registerAsset" /* 14113 */;
+import registerAssetDefault3 from "registerAsset" /* 14114 */;
+import registerAssetDefault4 from "registerAsset" /* 14115 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

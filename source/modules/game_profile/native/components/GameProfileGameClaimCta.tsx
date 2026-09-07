@@ -1,10 +1,10 @@
-// Module ID: 8896
-// Function ID: 8897
+// Module ID: 8901
+// Function ID: 8902
 // Name: GameProfileGameClaimCta
-// Dependencies: [5, 19, 1074, 21, 8686, 7316, 1894, 4975, 1114, 2]
+// Dependencies: [5, 19, 1074, 21, 8691, 7316, 1894, 4975, 1114, 2]
 // Exports: default
 
-// Module 8896 (GameProfileGameClaimCta)
+// Module 8901 (GameProfileGameClaimCta)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import { RelativeMarketingURLs } from "ME" /* 1074 */;

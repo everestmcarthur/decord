@@ -1,10 +1,10 @@
-// Module ID: 17186
-// Function ID: 17187
+// Module ID: 17189
+// Function ID: 17190
 // Name: ConnectButton
-// Dependencies: [19, 1957, 21, 4560, 576, 12272, 17126, 504, 4771, 7329, 5411, 4906, 17187, 17190, 17191, 12933, 17185, 1114, 4556, 2]
+// Dependencies: [19, 1957, 21, 4560, 576, 12276, 17129, 504, 4771, 7329, 5411, 4906, 17190, 17193, 17194, 12937, 17188, 1114, 4556, 2]
 // Exports: default
 
-// Module 17186 (ConnectButton)
+// Module 17189 (ConnectButton)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;

@@ -1,12 +1,12 @@
-// Module ID: 17842
-// Function ID: 17843
+// Module ID: 17845
+// Function ID: 17846
 // Name: AVErrorStreamSoundshareFailedDefinition
-// Dependencies: [4582, 4608, 1074, 9110, 17834, 4612, 2]
+// Dependencies: [4582, 4608, 1074, 9115, 17837, 4612, 2]
 
-// Module 17842 (AVErrorStreamSoundshareFailedDefinition)
+// Module 17845 (AVErrorStreamSoundshareFailedDefinition)
 import isStreamKey from "isStreamKey" /* 4612 */;
-import mapped from "mapped" /* 9110 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17834 */;
+import mapped from "mapped" /* 9115 */;
+import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17837 */;
 import closure_2 from "reset" /* 4582 */;
 import closure_3 from "getHookError" /* 4608 */;
 import { MediaEngineHookTypes } from "ME" /* 1074 */;

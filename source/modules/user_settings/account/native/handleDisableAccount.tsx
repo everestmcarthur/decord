@@ -1,12 +1,12 @@
-// Module ID: 14811
-// Function ID: 14812
+// Module ID: 14814
+// Function ID: 14815
 // Name: handleDisableAccount
-// Dependencies: [1979, 1371, 1114, 6984, 14796, 4904, 2]
+// Dependencies: [1979, 1371, 1114, 6984, 14799, 4904, 2]
 // Exports: default
 
-// Module 14811 (handleDisableAccount)
+// Module 14814 (handleDisableAccount)
 import setDefault from "set" /* 4904 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14796 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14799 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 

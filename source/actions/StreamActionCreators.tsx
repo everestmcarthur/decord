@@ -1,7 +1,7 @@
 // Module ID: 4702
 // Function ID: 4703
 // Name: watchStream
-// Dependencies: [5, 4577, 4703, 4704, 4582, 502, 1957, 1979, 2011, 4579, 1074, 4602, 573, 4612, 38, 4705, 4716, 4761, 4762, 1272, 1090, 4753, 1250, 9109, 5411, 4573, 9182, 2]
+// Dependencies: [5, 4577, 4703, 4704, 4582, 502, 1957, 1979, 2011, 4579, 1074, 4602, 573, 4612, 38, 4705, 4716, 4761, 4762, 1272, 1090, 4753, 1250, 9114, 5411, 4573, 9187, 2]
 // Exports: changeStreamRegion, closeStream, fetchStreamPreview, joinPrivateChannelAndWatchStream, notifyStreamStart, setLayout, setStreamPaused, startStream, stopOwnStream, stopStream, toggleSelfStreamHidden, updateStreamSettings, watchStreamAndTransitionToStream
 
 // Module 4702 (watchStream)
@@ -13,7 +13,7 @@ import isStreamKey from "isStreamKey" /* 4612 */;
 import allowChannelAccess from "allowChannelAccess" /* 4705 */;
 import transitionToStreamDefault from "transitionToStream" /* 4762 */;
 import _modDef5411 from "module_5411" /* 5411 */;
-import isPremiumResolution from "isPremiumResolution" /* 9109 */;
+import isPremiumResolution from "isPremiumResolution" /* 9114 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "set" /* 4577 */;
 import closure_5 from "initialize" /* 4703 */;

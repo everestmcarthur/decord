@@ -1,8 +1,8 @@
-// Module ID: 15725
-// Function ID: 15726
-// Dependencies: [19, 17, 21, 4560, 576, 1483, 1611, 5687, 15578, 5605, 14581, 2]
+// Module ID: 15728
+// Function ID: 15729
+// Dependencies: [19, 17, 21, 4560, 576, 1483, 1611, 5687, 15581, 5605, 14584, 2]
 
-// Module 15725
+// Module 15728
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
@@ -22,7 +22,7 @@ const memoResult = importAllResult.memo(function DevToolsPerformanceTestingScree
   obj = { paddingBottom: useSafeAreaInsetsDefault().bottom + ThemesDefault.space.PX_16 };
   obj[1] = obj;
   obj1 = { hasIcons: true, children: null };
-  const entries = Object.entries(_require(15578).PerformanceTestingScreens);
+  const entries = Object.entries(_require(15581).PerformanceTestingScreens);
   obj1[1] = entries.map((arg0) => {
     [tmp, ] = arg0;
     return closure_1_4(callback(closure_1_2[9]).TableRow, {

@@ -1,14 +1,14 @@
-// Module ID: 14994
-// Function ID: 14995
+// Module ID: 14997
+// Function ID: 14998
 // Name: QuestsIcon
-// Dependencies: [19, 21, 576, 4261, 14995, 2]
+// Dependencies: [19, 21, 576, 4261, 14998, 2]
 // Exports: QuestsIcon
 
-// Module 14994 (QuestsIcon)
+// Module 14997 (QuestsIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 14995 */;
+import registerAsset from "registerAsset" /* 14998 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

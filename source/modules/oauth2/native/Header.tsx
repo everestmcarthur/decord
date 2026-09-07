@@ -1,10 +1,10 @@
-// Module ID: 9437
-// Function ID: 9438
+// Module ID: 9442
+// Function ID: 9443
 // Name: Header
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 1396, 1178, 4556, 9438, 1384, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 1396, 1178, 4556, 9443, 1384, 1114, 2]
 // Exports: default
 
-// Module 9437 (Header)
+// Module 9442 (Header)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
@@ -62,7 +62,7 @@ export default function Header(accountScopes) {
     const obj10 = { style: null, verified: null };
     obj10[0] = tmp.botTag;
     let hasFlagResult = null != bot.public_flags;
-    tmp2Result = tmp2(9438);
+    tmp2Result = tmp2(9443);
     if (hasFlagResult) {
       hasFlagResult = tmp9(1384).hasFlag(bot.public_flags, UserFlags.VERIFIED_BOT);
       const tmp9Result = tmp9(1384);

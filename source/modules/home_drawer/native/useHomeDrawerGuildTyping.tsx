@@ -1,15 +1,15 @@
-// Module ID: 16320
-// Function ID: 16321
+// Module ID: 16323
+// Function ID: 16324
 // Name: areHomeDrawerGuildTypingStatesEqual
-// Dependencies: [4201, 1961, 1957, 11965, 558, 16317, 16318, 504, 11, 2]
+// Dependencies: [4201, 1961, 1957, 11969, 558, 16320, 16321, 504, 11, 2]
 // Exports: useHomeDrawerGuildTyping
 
-// Module 16320 (areHomeDrawerGuildTypingStatesEqual)
+// Module 16323 (areHomeDrawerGuildTypingStatesEqual)
 import shallowEqual from "shallowEqual" /* 558 */;
 import closure_3 from "storeThread" /* 4201 */;
 import { isThread } from "createChannelRecord" /* 1961 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "handleTypingStart" /* 11965 */;
+import closure_6 from "handleTypingStart" /* 11969 */;
 
 require = arg1;
 function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) {
@@ -20,7 +20,7 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   }
   return result;
 }
-let obj = { typingChannelId: "Array", typingChannelName: "isArray", typingUserIds: -11665405 };
+let obj = { typingChannelId: "Array", typingChannelName: "options", typingUserIds: true };
 obj[2] = [];
 let result = require("set").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 

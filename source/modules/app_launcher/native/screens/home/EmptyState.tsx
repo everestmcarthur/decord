@@ -1,17 +1,17 @@
-// Module ID: 12111
-// Function ID: 12112
+// Module ID: 12115
+// Function ID: 12116
 // Name: EmptyState
-// Dependencies: [19, 17, 21, 4560, 576, 12051, 9409, 12112, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 12055, 9414, 12116, 4556, 1114, 2]
 // Exports: default
 
-// Module 12111 (EmptyState)
+// Module 12115 (EmptyState)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9409 */;
-import handleApplicationSelected from "handleApplicationSelected" /* 12051 */;
-import SvgComponentDefault from "SvgComponent" /* 12112 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9414 */;
+import handleApplicationSelected from "handleApplicationSelected" /* 12055 */;
+import SvgComponentDefault from "SvgComponent" /* 12116 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

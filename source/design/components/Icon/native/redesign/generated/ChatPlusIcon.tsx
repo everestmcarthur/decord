@@ -1,14 +1,14 @@
-// Module ID: 11600
-// Function ID: 11601
+// Module ID: 11605
+// Function ID: 11606
 // Name: ChatPlusIcon
-// Dependencies: [19, 21, 576, 4261, 11601, 2]
+// Dependencies: [19, 21, 576, 4261, 11606, 2]
 // Exports: ChatPlusIcon
 
-// Module 11600 (ChatPlusIcon)
+// Module 11605 (ChatPlusIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 11601 */;
+import registerAsset from "registerAsset" /* 11606 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

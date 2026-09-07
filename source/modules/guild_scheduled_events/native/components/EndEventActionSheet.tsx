@@ -1,10 +1,10 @@
-// Module ID: 9805
-// Function ID: 9806
+// Module ID: 9810
+// Function ID: 9811
 // Name: EndEventActionSheet
-// Dependencies: [19, 17, 1963, 1074, 21, 4560, 576, 9662, 4527, 9082, 8591, 1178, 1114, 4556, 4975, 9703, 2]
+// Dependencies: [19, 17, 1963, 1074, 21, 4560, 576, 9667, 4527, 9087, 8596, 1178, 1114, 4556, 4975, 9708, 2]
 // Exports: default
 
-// Module 9805 (EndEventActionSheet)
+// Module 9810 (EndEventActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -28,7 +28,7 @@ export default function EndEventActionSheet(channel) {
   channel = channel.channel;
   let activeEvent;
   const tmp = callback3();
-  let obj = channel(9662);
+  let obj = channel(9667);
   activeEvent = obj.useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
@@ -78,6 +78,6 @@ export default function EndEventActionSheet(channel) {
     items[3] = callback(View, obj5);
     obj[1] = items;
     obj[0] = callback2(View, obj);
-    return callback(activeEvent(8591), obj);
+    return callback(activeEvent(8596), obj);
   }
 };

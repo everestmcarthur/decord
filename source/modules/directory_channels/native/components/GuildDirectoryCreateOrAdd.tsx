@@ -1,22 +1,22 @@
-// Module ID: 12311
-// Function ID: 12312
+// Module ID: 12315
+// Function ID: 12316
 // Name: GuildDirectoryCreateOrAddHeader
-// Dependencies: [32, 19, 17, 12312, 12310, 21, 4560, 576, 504, 5605, 5584, 12313, 9792, 1114, 4556, 9793, 1611, 4975, 1483, 5586, 12318, 12309, 2]
+// Dependencies: [32, 19, 17, 12316, 12314, 21, 4560, 576, 504, 5605, 5584, 12317, 9797, 1114, 4556, 9798, 1611, 4975, 1483, 5586, 12322, 12313, 2]
 // Exports: default
 
-// Module 12311 (GuildDirectoryCreateOrAddHeader)
+// Module 12315 (GuildDirectoryCreateOrAddHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import Text from "Text" /* 4556 */;
 import Button from "Button" /* 4975 */;
-import useSegmentedControlState from "useSegmentedControlState" /* 9792 */;
-import SegmentedControl from "SegmentedControl" /* 9793 */;
+import useSegmentedControlState from "useSegmentedControlState" /* 9797 */;
+import SegmentedControl from "SegmentedControl" /* 9798 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "isFetching" /* 12312 */;
-import { GuildDirectoryCreate } from "GuildDirectoryCreate" /* 12310 */;
+import closure_8 from "isFetching" /* 12316 */;
+import { GuildDirectoryCreate } from "GuildDirectoryCreate" /* 12314 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -88,7 +88,7 @@ let closure_13 = importAllResult.memo((guild) => {
   let obj = guild(504);
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getDirectoryEntry(directoryChannelId, guild.id));
-  obj = { label: guild.name, icon: callback(directoryChannelId(5584), obj), trailing: callback(directoryChannelId(12313), { entry: stateFromStores }), start, end };
+  obj = { label: guild.name, icon: callback(directoryChannelId(5584), obj), trailing: callback(directoryChannelId(12317), { entry: stateFromStores }), start, end };
   obj = { style: callback3().guildIcon, guild };
   return callback(guild(5605).TableRow, obj);
 });

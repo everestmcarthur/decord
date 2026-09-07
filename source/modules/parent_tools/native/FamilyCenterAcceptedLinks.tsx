@@ -1,19 +1,19 @@
-// Module ID: 14915
-// Function ID: 14916
+// Module ID: 14918
+// Function ID: 14919
 // Name: FamilyCenterAcceptedLinkRow
-// Dependencies: [19, 17, 7538, 21, 4560, 576, 8646, 8645, 11919, 1114, 2396, 4556, 14916, 14918, 5123, 4763, 14921, 1896, 1178, 14923, 2]
+// Dependencies: [19, 17, 7538, 21, 4560, 576, 8651, 8650, 11924, 1114, 2396, 4556, 14919, 14921, 5123, 4763, 14924, 1896, 1178, 14926, 2]
 // Exports: default
 
-// Module 14915 (FamilyCenterAcceptedLinkRow)
+// Module 14918 (FamilyCenterAcceptedLinkRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;
 import Text from "Text" /* 4556 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8645 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11919 */;
-import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 14918 */;
-import registerAssetDefault from "registerAsset" /* 14923 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8650 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8651 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11924 */;
+import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 14921 */;
+import registerAssetDefault from "registerAsset" /* 14926 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import items from "items" /* 7538 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -85,9 +85,9 @@ export default function FamilyCenterAcceptedLinks() {
     const obj4 = { text: null };
     const intl3 = tmp5(1114).intl;
     obj4[0] = intl3.string(tmp2(2396).C4ScLD);
-    obj3[1] = tmp10(tmp2(14916), obj4);
+    obj3[1] = tmp10(tmp2(14919), obj4);
     let mapped = tmp10(tmp9, obj3);
-    const tmp2Result = tmp2(14916);
+    const tmp2Result = tmp2(14919);
   } else {
     mapped = activeLinkUsers.map((id) => callback(closure_10, { otherUser: id }, "accepted-" + id.id));
   }

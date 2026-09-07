@@ -1,14 +1,14 @@
-// Module ID: 10888
-// Function ID: 10889
+// Module ID: 10893
+// Function ID: 10894
 // Name: getActivityStatusText
-// Dependencies: [1074, 10889, 7739, 10890, 1114, 10891, 10892, 8344, 2]
+// Dependencies: [1074, 10894, 7739, 10895, 1114, 10896, 10897, 8344, 2]
 // Exports: default
 
-// Module 10888 (getActivityStatusText)
+// Module 10893 (getActivityStatusText)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7739 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10889 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10894 */;
 
 const ActivityTypes = ME.ActivityTypes;
 const result = set.fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");
@@ -75,7 +75,7 @@ export default function getActivityStatusText(name) {
     if (name != null) {
       status_display_type1 = name.status_display_type;
     }
-    if (status_display_type1 !== tmp15(10889).StatusDisplayTypes.STATE) {
+    if (status_display_type1 !== tmp15(10894).StatusDisplayTypes.STATE) {
       let status_display_type2;
       if (name != null) {
         status_display_type2 = name.status_display_type;
@@ -84,7 +84,7 @@ export default function getActivityStatusText(name) {
       if (tmp20) {
         tmp17 = tmp5;
       }
-      tmp20 = status_display_type2 === tmp15(10889).StatusDisplayTypes.DETAILS && null != tmp5;
+      tmp20 = status_display_type2 === tmp15(10894).StatusDisplayTypes.DETAILS && null != tmp5;
     } else {
       tmp17 = tmp8;
     }
@@ -92,7 +92,7 @@ export default function getActivityStatusText(name) {
     tmp17 = tmp2;
   }
   if (isEmbeddedActivityDefault(name)) {
-    const tmp28 = tmp21(10890)(tmp2);
+    const tmp28 = tmp21(10895)(tmp2);
     let obj = { text: null, tooltip: null };
     obj[0] = tmp28;
     obj[1] = tmp28;
@@ -113,7 +113,7 @@ export default function getActivityStatusText(name) {
         return obj;
       }
     }
-    if (tmp21(10891)(name)) {
+    if (tmp21(10896)(name)) {
       if (flag) {
         if (null != tmp8) {
           const parts = tmp8.split("; ");
@@ -217,6 +217,6 @@ export default function getActivityStatusText(name) {
       }
     }
     obj16 = {};
-    tmp15Result = tmp15(10892);
+    tmp15Result = tmp15(10897);
   }
 };

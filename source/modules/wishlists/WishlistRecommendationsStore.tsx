@@ -1,9 +1,9 @@
-// Module ID: 10793
-// Function ID: 10794
+// Module ID: 10798
+// Function ID: 10799
 // Name: handleUserSettingsStoreUpdate
 // Dependencies: [2025, 504, 573, 2]
 
-// Module 10793 (handleUserSettingsStoreUpdate)
+// Module 10798 (handleUserSettingsStoreUpdate)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_0 from "_getSystemLocale" /* 2025 */;

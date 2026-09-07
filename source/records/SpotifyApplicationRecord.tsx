@@ -1,9 +1,9 @@
-// Module ID: 13228
-// Function ID: 13229
+// Module ID: 13232
+// Function ID: 13233
 // Name: getIconURL
 // Dependencies: [1918, 5283, 2]
 
-// Module 13228 (getIconURL)
+// Module 13232 (getIconURL)
 import createExecutableDefault from "createExecutable" /* 1918 */;
 import importDefaultResult1 from "getPlatformUserUrl" /* 5283 */;
 

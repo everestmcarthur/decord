@@ -1,14 +1,14 @@
 // Module ID: 8177
 // Function ID: 8178
 // Name: PreviewProfileTrigger
-// Dependencies: [32, 19, 17, 7542, 1076, 1074, 1085, 21, 3, 4560, 576, 4980, 4271, 4411, 1114, 6970, 1889, 8178, 8179, 8176, 7553, 9365, 7162, 7182, 13132, 11089, 8767, 8768, 1250, 1242, 8830, 504, 13133, 13134, 8832, 8834, 7554, 8836, 8837, 6627, 8839, 13135, 13145, 13150, 1178, 13151, 13164, 7150, 13108, 10734, 8232, 4975, 13167, 8174, 2]
+// Dependencies: [32, 19, 17, 7542, 1076, 1074, 1085, 21, 3, 4560, 576, 4980, 4271, 4411, 1114, 6970, 1889, 8178, 8179, 8176, 7553, 9370, 7162, 7182, 13136, 11094, 8772, 8773, 1250, 1242, 8835, 504, 13137, 13138, 8837, 8839, 7554, 8841, 8842, 6627, 8844, 13139, 13149, 13154, 1178, 13155, 13168, 7150, 13112, 10739, 8232, 4975, 13171, 8174, 2]
 // Exports: default
 
 // Module 8177 (PreviewProfileTrigger)
 import timestampDefault from "timestamp" /* 3 */;
 import ThemesDefault from "Themes" /* 576 */;
 import apexExperiment from "apexExperiment" /* 8174 */;
-import context from "context" /* 8767 */;
+import context from "context" /* 8772 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import noop from "noop" /* 19 */;
@@ -101,12 +101,12 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   dependencyMap = undefined;
   let ref1;
   ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-  let obj = skuId(13108);
+  let obj = skuId(13112);
   const collectiblesShopProduct = obj.useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
-  obj1 = skuId(10734);
+  obj1 = skuId(10739);
   const getOrFetchPurchases = obj1.useGetOrFetchPurchases();
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
   ref1 = importAllResult.useRef(null);
@@ -155,7 +155,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     obj1[2] = callback(tmp(4975).Button, obj2);
     callback(tmp(1178).EmptyState, obj1);
   } else {
-    callback(initialVariantIndex(13167), {});
+    callback(initialVariantIndex(13171), {});
   }
 }
 function ProductDetailsActionSheetWithOrderCTX(arg0) {

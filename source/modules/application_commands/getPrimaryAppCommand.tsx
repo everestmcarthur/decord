@@ -1,18 +1,18 @@
-// Module ID: 9571
-// Function ID: 9572
+// Module ID: 9576
+// Function ID: 9577
 // Name: _getPrimaryAppCommand
-// Dependencies: [5, 19, 1957, 9290, 1894, 9298, 9294, 9245, 2]
+// Dependencies: [5, 19, 1957, 9295, 1894, 9303, 9299, 9250, 2]
 // Exports: default, isPrimaryAppCommandUsableInAppDM, useGetPrimaryAppCommand, useIsPrimaryAppCommandUsableInAppDM, useQueryForPrimaryAppCommand
 
-// Module 9571 (_getPrimaryAppCommand)
+// Module 9576 (_getPrimaryAppCommand)
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9245 */;
-import ScoreMethod from "ScoreMethod" /* 9298 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9250 */;
+import ScoreMethod from "ScoreMethod" /* 9303 */;
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import getIndexKey from "getIndexKey" /* 9290 */;
-import closure_7 from "getIndexKey" /* 9290 */;
+import getIndexKey from "getIndexKey" /* 9295 */;
+import closure_7 from "getIndexKey" /* 9295 */;
 
 require = arg1;
 function _getPrimaryAppCommand() {

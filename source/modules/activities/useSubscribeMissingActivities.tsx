@@ -1,13 +1,13 @@
-// Module ID: 11470
-// Function ID: 11471
+// Module ID: 11475
+// Function ID: 11476
 // Name: useSubscribeMissingActivities
-// Dependencies: [32, 19, 11471, 4600, 504, 11475, 2]
+// Dependencies: [32, 19, 11476, 4600, 504, 11480, 2]
 // Exports: default
 
-// Module 11470 (useSubscribeMissingActivities)
+// Module 11475 (useSubscribeMissingActivities)
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpenOrResumed" /* 11471 */;
+import closure_4 from "handleConnectionOpenOrResumed" /* 11476 */;
 import closure_5 from "sortActivity" /* 4600 */;
 
 const require = arg1;

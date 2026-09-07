@@ -1,15 +1,15 @@
-// Module ID: 8716
-// Function ID: 8717
+// Module ID: 8721
+// Function ID: 8722
 // Name: GameProfileRankPill
-// Dependencies: [19, 17, 21, 4560, 576, 8717, 4556, 1114, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 8722, 4556, 1114, 2]
 // Exports: default
 
-// Module 8716 (GameProfileRankPill)
+// Module 8721 (GameProfileRankPill)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
-import TrophyIcon from "TrophyIcon" /* 8717 */;
+import TrophyIcon from "TrophyIcon" /* 8722 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

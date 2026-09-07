@@ -1,10 +1,10 @@
-// Module ID: 8754
-// Function ID: 8755
+// Module ID: 8759
+// Function ID: 8760
 // Name: formatExpirationLabel
 // Dependencies: [4153, 1114, 2]
 // Exports: default
 
-// Module 8754 (formatExpirationLabel)
+// Module 8759 (formatExpirationLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import hooksDefault from "hooks" /* 4153 */;

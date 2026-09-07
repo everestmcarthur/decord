@@ -1,17 +1,17 @@
-// Module ID: 12710
-// Function ID: 12711
+// Module ID: 12714
+// Function ID: 12715
 // Name: GuildTemplatesHeader
-// Dependencies: [32, 19, 17, 12707, 6980, 1074, 21, 4560, 5682, 576, 4556, 1114, 1483, 1611, 4975, 12683, 1242, 12324, 12711, 7123, 5687, 2]
+// Dependencies: [32, 19, 17, 12711, 6980, 1074, 21, 4560, 5682, 576, 4556, 1114, 1483, 1611, 4975, 12687, 1242, 12328, 12715, 7123, 5687, 2]
 // Exports: default
 
-// Module 12710 (GuildTemplatesHeader)
+// Module 12714 (GuildTemplatesHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import GuildTemplateId from "GuildTemplateId" /* 12707 */;
+import GuildTemplateId from "GuildTemplateId" /* 12711 */;
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 6980 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -89,13 +89,13 @@ function GuildTemplatesItem(guildTemplate) {
   guildTemplate = guildTemplate.guildTemplate;
   const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
   const obj = {
-    Icon: guildTemplate(12711).GUILD_TEMPLATE_ICON_COMPONENTS[guildTemplate.id],
+    Icon: guildTemplate(12715).GUILD_TEMPLATE_ICON_COMPONENTS[guildTemplate.id],
     message: guildTemplate.label,
     onPress() {
       return onGuildTemplatePress(guildTemplate);
     }
   };
-  return callback3(onGuildTemplatePress(12324), obj);
+  return callback3(onGuildTemplatePress(12328), obj);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ getGuildTemplatesMap: error, GuildTemplateId: closure_8 } = GuildTemplateId);

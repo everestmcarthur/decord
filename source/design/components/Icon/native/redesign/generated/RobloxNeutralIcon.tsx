@@ -1,14 +1,14 @@
-// Module ID: 8698
-// Function ID: 8699
+// Module ID: 8703
+// Function ID: 8704
 // Name: RobloxNeutralIcon
-// Dependencies: [19, 21, 576, 4261, 8699, 2]
+// Dependencies: [19, 21, 576, 4261, 8704, 2]
 // Exports: RobloxNeutralIcon
 
-// Module 8698 (RobloxNeutralIcon)
+// Module 8703 (RobloxNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8699 */;
+import registerAsset from "registerAsset" /* 8704 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

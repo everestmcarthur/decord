@@ -1,10 +1,10 @@
-// Module ID: 16285
-// Function ID: 16286
+// Module ID: 16288
+// Function ID: 16289
 // Name: GUILD_ITEM_SIZE
 // Dependencies: [4262, 576, 2]
 // Exports: useGuildWrapperSize
 
-// Module 16285 (GUILD_ITEM_SIZE)
+// Module 16288 (GUILD_ITEM_SIZE)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;

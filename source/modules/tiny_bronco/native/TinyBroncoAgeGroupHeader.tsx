@@ -1,20 +1,20 @@
-// Module ID: 14721
-// Function ID: 14722
+// Module ID: 14724
+// Function ID: 14725
 // Name: handleOpenBlog
-// Dependencies: [32, 19, 17, 14683, 1954, 21, 4560, 576, 1943, 14716, 14722, 8411, 14717, 7388, 4515, 4556, 1114, 5123, 5680, 14754, 4975, 2]
+// Dependencies: [32, 19, 17, 14686, 1954, 21, 4560, 576, 1943, 14719, 14725, 8411, 14720, 7388, 4515, 4556, 1114, 5123, 5680, 14757, 4975, 2]
 // Exports: TinyBroncoAgeGroupHeader
 
-// Module 14721 (handleOpenBlog)
+// Module 14724 (handleOpenBlog)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8411 */;
-import AgeGroupState from "AgeGroupState" /* 14716 */;
-import messagesProxyDefault from "messagesProxy" /* 14722 */;
+import AgeGroupState from "AgeGroupState" /* 14719 */;
+import messagesProxyDefault from "messagesProxy" /* 14725 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { TINY_BRONCO_BLOG_URL } from "TINY_BRONCO_BLOG_URL" /* 14683 */;
+import { TINY_BRONCO_BLOG_URL } from "TINY_BRONCO_BLOG_URL" /* 14686 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -26,7 +26,7 @@ function handleOpenBlog() {
 function AccountStatusNotice(arg0) {
   let _require;
   const tmp = callback4();
-  let obj = _require(14717);
+  let obj = _require(14720);
   const shouldShowTinyBroncoAccountStatus = obj.useShouldShowTinyBroncoAccountStatus();
   obj1 = _require(7388);
   const tmp5 = callback(obj1.useSelectedDismissibleContent(shouldShowTinyBroncoAccountStatus ? items : closure_12), 2);
@@ -68,23 +68,23 @@ function AgeGroupDescription(ageGroup) {
     let obj = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl3 = tmp(1114).intl;
     obj = { handleOnAgeGatedContentHook: null };
-    obj[0] = tmp(14754).handleOpenAgeGatedContentSupportArticle;
+    obj[0] = tmp(14757).handleOpenAgeGatedContentSupportArticle;
     obj[2] = intl3.format(messagesProxyDefault.gi4ulu, obj);
     return callback2(tmp(4556).Text, obj);
-  } else if (tmp(14716).AgeGroupState.TEEN === ageGroup) {
+  } else if (tmp(14719).AgeGroupState.TEEN === ageGroup) {
     obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl2 = tmp(1114).intl;
     const obj2 = { handleOnAgeGatedContentHook: null, handleOnConfirmAgeHook: null };
-    obj2[0] = tmp(14754).handleOpenAgeGatedContentSupportArticle;
-    obj2[1] = tmp(14716).handleShowAgeVerification;
+    obj2[0] = tmp(14757).handleOpenAgeGatedContentSupportArticle;
+    obj2[1] = tmp(14719).handleShowAgeVerification;
     obj1[2] = intl2.format(messagesProxyDefault["221iML"], obj2);
     return callback2(tmp(4556).Text, obj1);
-  } else if (tmp(14716).AgeGroupState.UNVERIFIED === ageGroup) {
+  } else if (tmp(14719).AgeGroupState.UNVERIFIED === ageGroup) {
     obj = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl = tmp(1114).intl;
     obj3 = { handleOnAgeGatedContentHook: null, handleOnConfirmAgeHook: null };
-    obj3[0] = tmp(14754).handleOpenAgeGatedContentSupportArticle;
-    obj3[1] = tmp(14716).handleShowAgeVerification;
+    obj3[0] = tmp(14757).handleOpenAgeGatedContentSupportArticle;
+    obj3[1] = tmp(14719).handleShowAgeVerification;
     obj[2] = intl.format(messagesProxyDefault["W0/7DD"], obj3);
     return callback2(tmp(4556).Text, obj);
   }
@@ -93,17 +93,17 @@ function AgeGroupCallToAction(ageGroup) {
   ageGroup = ageGroup.ageGroup;
   if (AgeGroupState.AgeGroupState.ADULT === ageGroup) {
     return null;
-  } else if (tmp(14716).AgeGroupState.TEEN === ageGroup) {
+  } else if (tmp(14719).AgeGroupState.TEEN === ageGroup) {
     let obj = { grow: true, variant: "secondary", size: "md", text: null, onPress: null };
     const intl2 = tmp(1114).intl;
     obj[3] = intl2.string(messagesProxyDefault["+7NlgO"]);
-    obj[4] = tmp(14754).handleOpenAgeGatedContentSupportArticle;
+    obj[4] = tmp(14757).handleOpenAgeGatedContentSupportArticle;
     return callback2(tmp(4975).Button, obj);
-  } else if (tmp(14716).AgeGroupState.UNVERIFIED === ageGroup) {
+  } else if (tmp(14719).AgeGroupState.UNVERIFIED === ageGroup) {
     obj = { grow: true, variant: "secondary", size: "md", text: null, onPress: null };
     const intl = tmp(1114).intl;
     obj[3] = intl.string(messagesProxyDefault["cI+bc/"]);
-    obj[4] = tmp(14716).handleShowAgeVerification;
+    obj[4] = tmp(14719).handleShowAgeVerification;
     return callback2(tmp(4975).Button, obj);
   }
 }

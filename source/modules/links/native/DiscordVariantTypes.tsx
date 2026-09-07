@@ -1,9 +1,9 @@
-// Module ID: 16382
-// Function ID: 16383
+// Module ID: 16385
+// Function ID: 16386
 // Name: DISCORD_VARIANTS
 // Dependencies: [576, 2]
 
-// Module 16382 (DISCORD_VARIANTS)
+// Module 16385 (DISCORD_VARIANTS)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 

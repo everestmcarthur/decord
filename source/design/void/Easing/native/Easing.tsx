@@ -1,9 +1,9 @@
-// Module ID: 14120
-// Function ID: 14121
+// Module ID: 14123
+// Function ID: 14124
 // Name: STANDARD_EASING
 // Dependencies: [4296, 2]
 
-// Module 14120 (STANDARD_EASING)
+// Module 14123 (STANDARD_EASING)
 import set from "set" /* 2 */;
 import _mod4296 from "module_4296" /* 4296 */;
 import bezierResult1 from "module_0" /* 0 */;

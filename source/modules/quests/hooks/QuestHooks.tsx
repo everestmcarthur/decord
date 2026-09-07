@@ -1,10 +1,10 @@
-// Module ID: 11483
-// Function ID: 11484
+// Module ID: 11488
+// Function ID: 11489
 // Name: useQuests
-// Dependencies: [5, 32, 19, 7700, 2025, 1957, 5281, 1371, 7702, 7704, 7703, 5444, 1074, 1373, 504, 11484, 11276, 1115, 11300, 7699, 1090, 7722, 7724, 7727, 11290, 12, 1241, 11485, 11293, 11486, 2024, 11496, 5452, 11512, 7728, 7168, 11515, 11295, 11042, 5451, 11517, 1114, 1880, 4745, 5447, 7718, 4495, 4411, 11285, 4218, 11518, 1242, 1369, 11520, 11489, 11524, 1935, 4758, 4750, 2]
+// Dependencies: [5, 32, 19, 7700, 2025, 1957, 5281, 1371, 7702, 7704, 7703, 5444, 1074, 1373, 504, 11489, 11281, 1115, 11305, 7699, 1090, 7722, 7724, 7727, 11295, 12, 1241, 11490, 11298, 11491, 2024, 11501, 5452, 11517, 7728, 7168, 11520, 11300, 11047, 5451, 11522, 1114, 1880, 4745, 5447, 7718, 4495, 4411, 11290, 4218, 11523, 1242, 1369, 11525, 11494, 11529, 1935, 4758, 4750, 2]
 // Exports: useClaimedCollectibleRewardMessage, useClaimedQuests, useConnectedAccounts, useConnectedConsoleLinkOnClick, useCosponsoredLogotypeAsset, useExpiredQuestsMap, useFetchQuestHomeBounties, useFilteredQuests, useGetOrFetchApplicationForConsoleQuests, useIsPreviewerOnAnyQuest, useIsQuestAccessSuspended, useIsQuestEligibleForMembersListPopout, useIsQuestExpired, useIsQuestProgressingOnConsole, useIsQuestProgressingOnDesktop, useIsQuestProgressingVideoQuest, useLaunchInGameActivityQuest, useManuallyStartConsoleQuest, useNonNullableQuest, useOnOpenGameClick, useProgressState, useQuest, useQuestBarImpressionSurvey, useQuestBarOrDockModeChangeTracking, useQuestCollectibles, useQuestCompletionDetails, useQuestForMemberListSocialEntryPoint, useQuestFormattedDate, useQuestHomeBounties, useQuestHomeFilterOptions, useQuestHomeHeroShelf, useQuestHomeSortOptions, useQuestHomeSortingFilteringAnalytics, useQuestHowToHelpArticle, useQuestOrbRewardMultiplier, useQuestPreviewActions, useQuestWarningTips, useQuestsWithPreviewAccess, useSelectedTaskPlatform, useShouldShowBonusOrbsUX, useShouldShowPreviewToolTab, useShouldShowQuestPreviewOverrides, useShouldShowQuestsActivityPanelItem, useThirdPartyTaskDetails, useWaitingForConsoleConnection
 
-// Module 11483 (useQuests)
+// Module 11488 (useQuests)
 import initialize from "initialize" /* 504 */;
 import setDefault from "set" /* 1090 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
@@ -13,10 +13,10 @@ import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7168 */;
 import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7699 */;
 import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7724 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11042 */;
-import _getDefaultRewardName from "_getDefaultRewardName" /* 11290 */;
-import getContextualEntrypointHeading from "getContextualEntrypointHeading" /* 11295 */;
-import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 11518 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11047 */;
+import _getDefaultRewardName from "_getDefaultRewardName" /* 11295 */;
+import getContextualEntrypointHeading from "getContextualEntrypointHeading" /* 11300 */;
+import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 11523 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -65,7 +65,7 @@ function useQuests(arg0) {
   isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
   lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
   const obj4 = obj(504);
-  isEligibleForQuests = obj(11484).getIsEligibleForQuests();
+  isEligibleForQuests = obj(11489).getIsEligibleForQuests();
   const items3 = [obj.fetchPolicy, isEligibleForQuests, hasFetched, isFetchingCurrentQuests, lastFetchedCurrentQuests, obj.callerSource];
   const effect = isEligibleForQuests.useEffect(() => {
     const fetchPolicy = obj.fetchPolicy;
@@ -89,11 +89,11 @@ function useQuests(arg0) {
       }
       if (flag) {
         dependencyMap(true);
-        obj = obj(11276);
+        obj = obj(11281);
         const currentQuests = obj.fetchCurrentQuests();
         if (obj2.isMac()) {
-          const state = hasFetched(11300).getState();
-          const obj3 = hasFetched(11300);
+          const state = hasFetched(11305).getState();
+          const obj3 = hasFetched(11305);
         }
         obj2 = obj(1115);
       }
@@ -917,9 +917,9 @@ export const useShouldShowBonusOrbsUX = function useShouldShowBonusOrbsUX(quest,
     return isQuestExpiredResult;
   }, items1);
   obj = _require(504);
-  const result = _require(11290).hasVirtualCurrencyReward(quest.config);
-  const obj2 = _require(11290);
-  const result1 = _require(11290).hasPremiumOrbQuantity(quest.config);
+  const result = _require(11295).hasVirtualCurrencyReward(quest.config);
+  const obj2 = _require(11295);
+  const result1 = _require(11295).hasPremiumOrbQuantity(quest.config);
   let tmp4 = !stateFromStores;
   if (!stateFromStores) {
     tmp4 = result;
@@ -928,7 +928,7 @@ export const useShouldShowBonusOrbsUX = function useShouldShowBonusOrbsUX(quest,
     tmp4 = result1;
   }
   if (tmp4) {
-    tmp4 = questOrbMultiplierEligibility !== _require(11293).QuestOrbMultiplierEligibilityType.INELIGIBLE;
+    tmp4 = questOrbMultiplierEligibility !== _require(11298).QuestOrbMultiplierEligibilityType.INELIGIBLE;
   }
   return tmp4;
 };
@@ -1117,7 +1117,7 @@ export const useConnectedConsoleLinkOnClick = function useConnectedConsoleLinkOn
   }
   c3 = isConsoleQuestResult;
   let obj2 = accounts(7724);
-  closure_4 = tmp(11486).useGetQuestImpressionId();
+  closure_4 = tmp(11491).useGetQuestImpressionId();
   return () => {
     obj = accounts(closure_1_2[31]);
     if (c3) {
@@ -1702,7 +1702,7 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
   let tmp8Result = tmp8(1115);
   let tmp17 = tmp8Result.isWeb() && tmp12;
   if (tmp17) {
-    tmp8Result = tmp8(11496);
+    tmp8Result = tmp8(11501);
     tmp17 = !tmp8Result.isQuestSupportedOnWeb(userStatus);
   }
   const obj2 = _require(504);

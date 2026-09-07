@@ -1,12 +1,12 @@
-// Module ID: 16786
-// Function ID: 16787
+// Module ID: 16789
+// Function ID: 16790
 // Name: ReferralProgramCoachmarkImg
-// Dependencies: [32, 19, 17, 1074, 1954, 21, 4560, 5587, 16787, 4380, 1943, 8056, 7388, 1114, 576, 7382, 2]
+// Dependencies: [32, 19, 17, 1074, 1954, 21, 4560, 5587, 16790, 4380, 1943, 8056, 7388, 1114, 576, 7382, 2]
 // Exports: useReferralProgramCoachmark
 
-// Module 16786 (ReferralProgramCoachmarkImg)
+// Module 16789 (ReferralProgramCoachmarkImg)
 import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 16787 */;
+import registerAssetDefault from "registerAsset" /* 16790 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

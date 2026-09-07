@@ -1,10 +1,10 @@
-// Module ID: 8669
-// Function ID: 8670
+// Module ID: 8674
+// Function ID: 8675
 // Name: uid
 // Dependencies: [4764, 5598, 2]
 // Exports: UID, uid, useUID
 
-// Module 8669 (uid)
+// Module 8674 (uid)
 import set from "set" /* 2 */;
 import uniqueIdDefault from "uniqueId" /* 4764 */;
 import useInitialValueDefault from "useInitialValue" /* 5598 */;

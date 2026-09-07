@@ -1,14 +1,14 @@
-// Module ID: 9833
-// Function ID: 9834
+// Module ID: 9838
+// Function ID: 9839
 // Name: compareRowsByMatchScore
-// Dependencies: [9834, 7659, 1957, 4199, 4209, 1074, 7736, 9822, 5518, 1369, 504, 573, 2]
+// Dependencies: [9839, 7659, 1957, 4199, 4209, 1074, 7736, 9827, 5518, 1369, 504, 573, 2]
 
-// Module 9833 (compareRowsByMatchScore)
+// Module 9838 (compareRowsByMatchScore)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import sortByMatchScoreDefault from "sortByMatchScore" /* 5518 */;
-import isGuildMember from "isGuildMember" /* 9822 */;
-import closure_9 from "handleConnectionOpen" /* 9834 */;
+import isGuildMember from "isGuildMember" /* 9827 */;
+import closure_9 from "handleConnectionOpen" /* 9839 */;
 import closure_10 from "recomputeAffinities" /* 7659 */;
 import closure_11 from "ensureGuildLoaded" /* 1957 */;
 import closure_12 from "getUncachedChannelPermissions" /* 4199 */;
@@ -48,7 +48,7 @@ function _computeRows(query) {
   if (!tmp) {
     id = id.id;
   }
-  const mostRecentDMedUser = set1(9822).getMostRecentDMedUser(set, id);
+  const mostRecentDMedUser = set1(9827).getMostRecentDMedUser(set, id);
   let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
   if (!isBlockedOrIgnoredResult) {
     isBlockedOrIgnoredResult = closure_13.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -71,8 +71,8 @@ function _computeRows(query) {
     const substr = found2.slice(0, 3);
     const item = substr.forEach((id) => set1.add(id.id));
   }
-  const obj2 = set1(9822);
-  return set1(9822).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_8 });
+  const obj2 = set1(9827);
+  return set1(9827).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_8 });
 }
 ({ ChannelTypes: closure_14, Permissions: closure_15 } = ME);
 let set = new Set();

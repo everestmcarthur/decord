@@ -1,17 +1,17 @@
-// Module ID: 15047
-// Function ID: 15048
+// Module ID: 15050
+// Function ID: 15051
 // Name: BountiesScrollRecapFooter
-// Dependencies: [19, 17, 4552, 21, 4560, 576, 1115, 1114, 4556, 8837, 504, 4271, 2]
+// Dependencies: [19, 17, 4552, 21, 4560, 576, 1115, 1114, 4556, 8842, 504, 4271, 2]
 // Exports: BountiesScrollRecapFooter, BountiesScrollRecapFooterGradient
 
-// Module 15047 (BountiesScrollRecapFooter)
+// Module 15050 (BountiesScrollRecapFooter)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import ManaContext from "ManaContext" /* 4271 */;
 import Text from "Text" /* 4556 */;
-import OrbsIcon from "OrbsIcon" /* 8837 */;
+import OrbsIcon from "OrbsIcon" /* 8842 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import jsxProd from "jsxProd" /* 21 */;

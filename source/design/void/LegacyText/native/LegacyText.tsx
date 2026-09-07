@@ -1,9 +1,9 @@
-// Module ID: 8612
-// Function ID: 8613
-// Dependencies: [19, 17, 1074, 21, 4560, 8613, 2]
+// Module ID: 8617
+// Function ID: 8618
+// Dependencies: [19, 17, 1074, 21, 4560, 8618, 2]
 
-// Module 8612
-import useLegacyTextMigrationHighlight from "useLegacyTextMigrationHighlight" /* 8613 */;
+// Module 8617
+import useLegacyTextMigrationHighlight from "useLegacyTextMigrationHighlight" /* 8618 */;
 import { Text } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

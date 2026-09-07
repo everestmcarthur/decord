@@ -1,10 +1,10 @@
-// Module ID: 17608
-// Function ID: 17609
+// Module ID: 17611
+// Function ID: 17612
 // Name: RoleCreateScene
-// Dependencies: [5, 32, 19, 17, 1975, 2015, 1371, 9064, 17609, 1074, 21, 4560, 5682, 576, 1242, 4740, 4556, 1114, 17607, 504, 38, 4204, 1483, 6625, 5624, 5520, 4258, 17606, 4527, 16291, 1896, 4973, 6606, 5687, 5605, 14597, 1091, 4975, 17613, 17614, 9063, 17615, 6981, 4962, 4971, 7039, 4992, 7000, 2]
+// Dependencies: [5, 32, 19, 17, 1975, 2015, 1371, 9069, 17612, 1074, 21, 4560, 5682, 576, 1242, 4740, 4556, 1114, 17610, 504, 38, 4204, 1483, 6625, 5624, 5520, 4258, 17609, 4527, 16294, 1896, 4973, 6606, 5687, 5605, 14600, 1091, 4975, 17616, 17617, 9068, 17618, 6981, 4962, 4971, 7039, 4992, 7000, 2]
 // Exports: default
 
-// Module 17608 (RoleCreateScene)
+// Module 17611 (RoleCreateScene)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -17,8 +17,8 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { isGuildOwner } from "GuildNSFWContentLevel" /* 1975 */;
 import closure_10 from "createGuildRoleRecordFromRust" /* 2015 */;
 import closure_11 from "mergeGuildAvatar" /* 1371 */;
-import closure_12 from "handleFormInit" /* 9064 */;
-import title from "title" /* 17609 */;
+import closure_12 from "handleFormInit" /* 9069 */;
+import title from "title" /* 17612 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -96,13 +96,13 @@ function RoleCreateScene() {
               tmp3(4258).roleCreatedToast();
               const obj5 = tmp3(4258);
               const tmp13 = tmp3;
-              tmp3(17606).setRoleJustCreated(true);
+              tmp3(17609).setRoleJustCreated(true);
               let STEP_MEMBERS = closure_1_25.STEP_PERMISSIONS;
               const guild2 = obj.getProps().guild;
               tmp32(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
               const currentUser = closure_1_11.getCurrentUser();
               const tmp23 = closure_1_9(guild2, currentUser);
-              const obj6 = tmp3(17606);
+              const obj6 = tmp3(17609);
               const tmp18 = tmp32;
               obj = { permission: null, user: null, context: null };
               obj[0] = closure_1_20.ADMINISTRATOR;

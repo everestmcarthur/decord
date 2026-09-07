@@ -1,29 +1,29 @@
-// Module ID: 17538
-// Function ID: 17539
+// Module ID: 17541
+// Function ID: 17542
 // Name: getPermissionChanges
-// Dependencies: [5459, 7100, 4747, 1962, 5502, 17537, 1957, 2015, 4209, 1371, 17536, 1074, 1964, 11862, 7101, 1963, 3, 4589, 1114, 8392, 11, 17539, 1086, 1384, 4713, 1894, 4404, 14, 1091, 9822, 17540, 4242, 4153, 2]
+// Dependencies: [5459, 7100, 4747, 1962, 5502, 17540, 1957, 2015, 4209, 1371, 17539, 1074, 1964, 11867, 7101, 1963, 3, 4589, 1114, 8392, 11, 17542, 1086, 1384, 4713, 1894, 4404, 14, 1091, 9827, 17543, 4242, 4153, 2]
 // Exports: checkChangesToRender, findChangeByKey, getChangeStrings, getChangeTitle, getSimpleAuditLogChangeDetails, getSimpleAuditLogTitleContextFromChange, getSimpleAuditLogTitleFromChange, getStringForAddedChannelFlag, getStringForPermission, getStringForRemovedChannelFlag, shouldNotRenderChangeDetail, transformLogs
 
-// Module 17538 (getPermissionChanges)
+// Module 17541 (getPermissionChanges)
 import timestampDefault from "timestamp" /* 3 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import fromStringAll from "fromString" /* 1086 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set2 from "set" /* 17539 */;
+import set2 from "set" /* 17542 */;
 import closure_4 from "getEmojiToGroupId" /* 5459 */;
 import closure_5 from "handleUpdate" /* 7100 */;
 import closure_6 from "handleSettingsLoadSuccess" /* 4747 */;
 import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
 import closure_8 from "loadSavedGuildStickers" /* 5502 */;
-import { AuditLogChange } from "getTargetType" /* 17537 */;
+import { AuditLogChange } from "getTargetType" /* 17540 */;
 import closure_10 from "ensureGuildLoaded" /* 1957 */;
 import closure_11 from "createGuildRoleRecordFromRust" /* 2015 */;
 import closure_12 from "markAllUserIdListsStale" /* 4209 */;
 import closure_13 from "mergeGuildAvatar" /* 1371 */;
-import closure_14 from "AuditLogActions" /* 17536 */;
+import closure_14 from "AuditLogActions" /* 17539 */;
 import ME from "ME" /* 1074 */;
 import { ChannelFlags } from "set" /* 1964 */;
-import { AutomodTriggerType } from "AutomodEventType" /* 11862 */;
+import { AutomodTriggerType } from "AutomodEventType" /* 11867 */;
 import { GuildOnboardingMode } from "serverPromptToClientPrompt" /* 7101 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
 
@@ -1719,7 +1719,7 @@ export const getChangeTitle = function getChangeTitle(log) {
             found = dependencyMap;
             if (set2.GuildFeedItemTypes.MESSAGE === newValue) {
               return found(1114).t["PyEa+J"];
-            } else if (found(17539).GuildFeedItemTypes.FORUM_POST === newValue) {
+            } else if (found(17542).GuildFeedItemTypes.FORUM_POST === newValue) {
               return found(1114).t.hCuAb1;
             } else {
               return found(1114).t["UZ+U3A"];

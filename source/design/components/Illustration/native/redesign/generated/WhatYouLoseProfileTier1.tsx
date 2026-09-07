@@ -1,10 +1,10 @@
-// Module ID: 13335
-// Function ID: 13336
+// Module ID: 13339
+// Function ID: 13340
 // Name: getWhatYouLoseProfileTier1Source
-// Dependencies: [19, 17, 21, 8233, 13336, 13337, 13338, 4411, 2]
+// Dependencies: [19, 17, 21, 8233, 13340, 13341, 13342, 4411, 2]
 // Exports: WhatYouLoseProfileTier1, getWhatYouLoseProfileTier1Source, useWhatYouLoseProfileTier1Source
 
-// Module 13335 (getWhatYouLoseProfileTier1Source)
+// Module 13339 (getWhatYouLoseProfileTier1Source)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import getIllustrationSource from "getIllustrationSource" /* 8233 */;
@@ -19,13 +19,13 @@ export const getWhatYouLoseProfileTier1Source = function getWhatYouLoseProfileTi
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(13336);
+      return callback(13340);
     },
     darker() {
-      return callback(13337);
+      return callback(13341);
     },
     light() {
-      return callback(13338);
+      return callback(13342);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -34,13 +34,13 @@ export const useWhatYouLoseProfileTier1Source = function useWhatYouLoseProfileTi
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(13336);
+      return callback(13340);
     },
     darker() {
-      return callback(13337);
+      return callback(13341);
     },
     light() {
-      return callback(13338);
+      return callback(13342);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -49,13 +49,13 @@ export const WhatYouLoseProfileTier1 = function WhatYouLoseProfileTier1(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(13336);
+      return callback(13340);
     },
     darker() {
-      return callback(13337);
+      return callback(13341);
     },
     light() {
-      return callback(13338);
+      return callback(13342);
     }
   };
   obj = {};

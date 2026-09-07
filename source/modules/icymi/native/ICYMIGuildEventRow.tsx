@@ -1,10 +1,10 @@
-// Module ID: 16516
-// Function ID: 16517
+// Module ID: 16519
+// Function ID: 16520
 // Name: ICYMIGuildEventRow
-// Dependencies: [19, 17, 7526, 1957, 1979, 21, 16452, 576, 9668, 1114, 9665, 4713, 9705, 9769, 8351, 9789, 7342, 9780, 16493, 11, 4556, 9771, 5089, 1178, 504, 2]
+// Dependencies: [19, 17, 7526, 1957, 1979, 21, 16455, 576, 9673, 1114, 9670, 4713, 9710, 9774, 8351, 9794, 7342, 9785, 16496, 11, 4556, 9776, 5089, 1178, 504, 2]
 // Exports: default
 
-// Module 16516 (ICYMIGuildEventRow)
+// Module 16519 (ICYMIGuildEventRow)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -13,7 +13,7 @@ import closure_8 from "scheduledEventSort" /* 7526 */;
 import closure_9 from "ensureGuildLoaded" /* 1957 */;
 import closure_10 from "createGuildRecordFromRust" /* 1979 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16452 */;
+import createICYMIStyles from "createICYMIStyles" /* 16455 */;
 
 const require = arg1;
 function ICYMIGuildEventRow(event) {
@@ -22,7 +22,7 @@ function ICYMIGuildEventRow(event) {
   dependencyMap = undefined;
   let React;
   const tmp = callback4();
-  const tmp4 = guild(9668)(event, null);
+  const tmp4 = guild(9673)(event, null);
   const tmp5 = callback2(event);
   dependencyMap = tmp5;
   let toISOStringResult;
@@ -33,13 +33,13 @@ function ICYMIGuildEventRow(event) {
   React = toISOStringResult;
   const items = [toISOStringResult, tmp5];
   const tmp7 = guild(4713)(channel);
-  let obj = event(9705);
+  let obj = event(9710);
   const locationFromEvent = obj.getLocationFromEvent(event);
-  obj1 = event(9769);
+  obj1 = event(9774);
   const eventLocationIconSource = obj1.getEventLocationIconSource(event, channel, true);
-  let obj2 = event(9769);
+  let obj2 = event(9774);
   const eventLocationIconComponent = obj2.getEventLocationIconComponent(event, channel, true);
-  let obj3 = event(9665);
+  let obj3 = event(9670);
   const items1 = [event];
   const nextRecurrenceIdInEvent = obj3.getNextRecurrenceIdInEvent(event);
   const items2 = [guild.id, event.id];
@@ -50,7 +50,7 @@ function ICYMIGuildEventRow(event) {
     guild(8351).feedItemActioned(obj);
     const obj2 = guild(8351);
     obj = { eventId: event.id, event };
-    const result = event(9789).openGuildEventDetails(obj);
+    const result = event(9794).openGuildEventDetails(obj);
   }, items1);
   const callback1 = React.useCallback(() => {
     let obj = guild(8351);
@@ -65,7 +65,7 @@ function ICYMIGuildEventRow(event) {
     title = event.description.length > 0;
   }
   let guild_id;
-  let tmp2Result = tmp2(9780);
+  let tmp2Result = tmp2(9785);
   if (event != null) {
     guild_id = event.guild_id;
   }
@@ -74,7 +74,7 @@ function ICYMIGuildEventRow(event) {
     id = event.id;
   }
   obj = { actionLabel: null, id: null, interactionType: "guild_event", channelId: null, guildId: null, timestamp: null, onHeaderPress: null, onHeaderLongPress: null, children: null };
-  tmp2Result = tmp2(16493);
+  tmp2Result = tmp2(16496);
   let intl = tmp8(1114).intl;
   obj[0] = intl.string(event(1114).t["6pFsLQ"]);
   obj[1] = event.id;
@@ -104,8 +104,8 @@ function ICYMIGuildEventRow(event) {
         obj[0] = intl.string(event(1114).t.TxqPQR);
         let eventTimeData = obj;
       } else {
-        eventTimeData = tmp(9665).getEventTimeData(c3);
-        const tmpResult = tmp(9665);
+        eventTimeData = tmp(9670).getEventTimeData(c3);
+        const tmpResult = tmp(9670);
       }
       return eventTimeData;
     }, items).startDateTimeString
@@ -122,7 +122,7 @@ function ICYMIGuildEventRow(event) {
   }
   if (tmp19Result) {
     obj3 = { variant: "text-md/normal", color: "text-subtle", lineClamp: 5, children: null };
-    let tmp8Result = tmp8(9771);
+    let tmp8Result = tmp8(9776);
     const obj4 = { guildId: null };
     obj4[0] = guild.id;
     obj3[3] = tmp8Result.guildEventDetailsParser(event.description, true, obj4);
@@ -159,7 +159,7 @@ function ICYMIGuildEventRow(event) {
   if (tmp7 == null) {
     let result = null;
     if (null != locationFromEvent) {
-      tmp8Result = tmp8(9771);
+      tmp8Result = tmp8(9776);
       result = tmp8Result.guildEventLocationParser(locationFromEvent, true);
     }
     tmp27 = result;

@@ -1,10 +1,10 @@
-// Module ID: 8662
-// Function ID: 8663
+// Module ID: 8667
+// Function ID: 8668
 // Name: NitroWheelIcon
 // Dependencies: [19, 21, 576, 4261, 8051, 2]
 // Exports: NitroWheelIcon
 
-// Module 8662 (NitroWheelIcon)
+// Module 8667 (NitroWheelIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;

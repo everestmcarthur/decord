@@ -1,13 +1,13 @@
-// Module ID: 17022
-// Function ID: 17023
+// Module ID: 17025
+// Function ID: 17026
 // Name: triggerIOSHaptic
-// Dependencies: [12274, 4528, 2]
+// Dependencies: [12278, 4528, 2]
 // Exports: default
 
-// Module 17022 (triggerIOSHaptic)
+// Module 17025 (triggerIOSHaptic)
 import set from "set" /* 2 */;
 import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4528 */;
-import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 12274 */;
+import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 12278 */;
 
 const IS_IOS = MIN_PAN_GESTURE_MOVE.IS_IOS;
 let result = set.fileFinishedImporting("modules/panels/morphable/native/triggerIOSHaptic.tsx");

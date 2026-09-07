@@ -1,10 +1,10 @@
-// Module ID: 10867
-// Function ID: 10868
+// Module ID: 10872
+// Function ID: 10873
 // Name: styles
 // Dependencies: [19, 4560, 576, 1178, 5441, 7062, 2]
 // Exports: default
 
-// Module 10867 (styles)
+// Module 10872 (styles)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

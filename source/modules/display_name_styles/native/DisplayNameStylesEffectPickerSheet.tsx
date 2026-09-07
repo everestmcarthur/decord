@@ -1,16 +1,16 @@
-// Module ID: 15343
-// Function ID: 15344
+// Module ID: 15346
+// Function ID: 15347
 // Name: EffectTile
-// Dependencies: [32, 19, 17, 21, 4560, 576, 8170, 15338, 15339, 4528, 4527, 7150, 7149, 1114, 2786, 4975, 4973, 10902, 10899, 10900, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 8170, 15341, 15342, 4528, 4527, 7150, 7149, 1114, 2786, 4975, 4973, 10907, 10904, 10905, 2]
 // Exports: default
 
-// Module 15343 (EffectTile)
+// Module 15346 (EffectTile)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2786 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 10899 */;
-import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 10900 */;
-import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 10902 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 10904 */;
+import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 10905 */;
+import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 10907 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -81,9 +81,9 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   let callback2;
   let tmp = callback3();
   let obj = userId(8170);
-  obj1 = userId(15338);
+  obj1 = userId(15341);
   const visibleEffectOrder = obj1.useVisibleEffectOrder();
-  let obj2 = userId(15339);
+  let obj2 = userId(15342);
   const displayNameStylesNewEffects = obj2.useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   const tmp5 = callback(first.useState(selectedEffectId), 2);

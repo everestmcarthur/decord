@@ -1,13 +1,13 @@
-// Module ID: 17676
-// Function ID: 17677
+// Module ID: 17679
+// Function ID: 17680
 // Name: ChannelSetupScreen
-// Dependencies: [19, 17, 9064, 1957, 2012, 4209, 1371, 8035, 1074, 21, 4262, 576, 17665, 504, 4713, 1114, 17666, 4527, 9426, 1896, 9063, 17663, 4556, 4973, 5687, 5605, 2]
+// Dependencies: [19, 17, 9069, 1957, 2012, 4209, 1371, 8035, 1074, 21, 4262, 576, 17668, 504, 4713, 1114, 17669, 4527, 9431, 1896, 9068, 17666, 4556, 4973, 5687, 5605, 2]
 // Exports: default
 
-// Module 17676 (ChannelSetupScreen)
+// Module 17679 (ChannelSetupScreen)
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleFormInit" /* 9064 */;
+import closure_6 from "handleFormInit" /* 9069 */;
 import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import closure_8 from "comparator" /* 2012 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_9 } from "comparator" /* 2012 */;
@@ -96,7 +96,7 @@ export default function ChannelSetupScreen() {
     obj[0] = intl.string(guild(publicUpdatesChannel[15]).t.Yr6nGx);
     obj[1] = callback();
     obj[2] = function onItemSelect(rulesChannelId) {
-      let obj = callback(9063);
+      let obj = callback(9068);
       obj = { rulesChannelId };
       obj.updateGuild(obj);
       callback(4527).hideActionSheet();
@@ -118,7 +118,7 @@ export default function ChannelSetupScreen() {
     obj[0] = intl.string(guild(publicUpdatesChannel[15]).t.VqhxxN);
     obj[1] = callback();
     obj[2] = function onItemSelect(publicUpdatesChannelId) {
-      let obj = callback(9063);
+      let obj = callback(9068);
       obj = { publicUpdatesChannelId };
       obj.updateGuild(obj);
       callback(4527).hideActionSheet();

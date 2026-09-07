@@ -1,10 +1,10 @@
-// Module ID: 13387
-// Function ID: 13388
+// Module ID: 13391
+// Function ID: 13392
 // Name: BuyNitroPurchaseButton
-// Dependencies: [32, 19, 17, 7237, 1373, 21, 4560, 7182, 7406, 1114, 1115, 13388, 5598, 10663, 13356, 504, 7162, 13357, 4905, 4975, 13389, 13390, 2]
+// Dependencies: [32, 19, 17, 7237, 1373, 21, 4560, 7182, 7406, 1114, 1115, 13392, 5598, 10668, 13360, 504, 7162, 13361, 4905, 4975, 13393, 13394, 2]
 // Exports: default
 
-// Module 13387 (BuyNitroPurchaseButton)
+// Module 13391 (BuyNitroPurchaseButton)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

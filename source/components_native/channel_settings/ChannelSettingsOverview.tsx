@@ -1,10 +1,10 @@
-// Module ID: 16809
-// Function ID: 16810
+// Module ID: 16812
+// Function ID: 16813
 // Name: PinImage
-// Dependencies: [5, 19, 17, 4201, 1961, 1975, 8626, 1957, 2012, 1979, 4199, 4575, 16810, 4209, 1371, 16811, 1074, 1964, 7273, 1113, 1085, 21, 4560, 576, 504, 10953, 4271, 12, 16812, 4740, 1114, 5624, 7863, 8625, 4259, 9566, 9741, 7274, 4213, 1384, 4411, 16813, 9740, 4905, 4556, 9063, 4713, 4994, 4418, 4461, 16814, 6606, 7085, 1115, 5687, 7201, 4771, 5607, 14178, 16815, 9306, 4206, 9742, 16816, 5685, 5688, 1966, 1968, 2024, 4705, 5605, 7269, 9752, 9776, 11312, 4503, 1967, 16817, 7093, 10933, 14954, 10032, 7765, 4523, 4513, 5095, 10955, 4501, 4518, 4973, 11249, 8097, 8867, 5123, 16154, 8593, 1483, 2]
+// Dependencies: [5, 19, 17, 4201, 1961, 1975, 8631, 1957, 2012, 1979, 4199, 4575, 16813, 4209, 1371, 16814, 1074, 1964, 7273, 1113, 1085, 21, 4560, 576, 504, 10958, 4271, 12, 16815, 4740, 1114, 5624, 7863, 8630, 4259, 9571, 9746, 7274, 4213, 1384, 4411, 16816, 9745, 4905, 4556, 9068, 4713, 4994, 4418, 4461, 16817, 6606, 7085, 1115, 5687, 7201, 4771, 5607, 14181, 16818, 9311, 4206, 9747, 16819, 5685, 5688, 1966, 1968, 2024, 4705, 5605, 7269, 9757, 9781, 11317, 4503, 1967, 16820, 7093, 10938, 14957, 10037, 7765, 4523, 4513, 5095, 10960, 4501, 4518, 4973, 11254, 8097, 8872, 5123, 16157, 8598, 1483, 2]
 // Exports: default
 
-// Module 16809 (PinImage)
+// Module 16812 (PinImage)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -25,31 +25,31 @@ import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import TableRadioRow from "TableRadioRow" /* 5688 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
 import useCanStartPrivateThread from "useCanStartPrivateThread" /* 7269 */;
-import Form from "Form" /* 8593 */;
-import getAutoArchiveOptions from "getAutoArchiveOptions" /* 9306 */;
-import AppChannelApplicationSelectorDefault from "AppChannelApplicationSelector" /* 9742 */;
-import Slider from "Slider" /* 14178 */;
-import _modDef16812 from "module_16812" /* 16812 */;
-import getSecondsSliderLabel from "getSecondsSliderLabel" /* 16813 */;
-import getIsChannelNameSettingEditable from "getIsChannelNameSettingEditable" /* 16814 */;
-import AutoArchiveDurationOptions from "AutoArchiveDurationOptions" /* 16815 */;
-import getCannotSwapApplicationTextDefault from "getCannotSwapApplicationText" /* 16816 */;
+import Form from "Form" /* 8598 */;
+import getAutoArchiveOptions from "getAutoArchiveOptions" /* 9311 */;
+import AppChannelApplicationSelectorDefault from "AppChannelApplicationSelector" /* 9747 */;
+import Slider from "Slider" /* 14181 */;
+import _modDef16815 from "module_16815" /* 16815 */;
+import getSecondsSliderLabel from "getSecondsSliderLabel" /* 16816 */;
+import getIsChannelNameSettingEditable from "getIsChannelNameSettingEditable" /* 16817 */;
+import AutoArchiveDurationOptions from "AutoArchiveDurationOptions" /* 16818 */;
+import getCannotSwapApplicationTextDefault from "getCannotSwapApplicationText" /* 16819 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "storeThread" /* 4201 */;
 import createChannelRecord from "createChannelRecord" /* 1961 */;
 import { isGuildNSFW } from "GuildNSFWContentLevel" /* 1975 */;
-import closure_16 from "normalizeChannelPropertyForCompare" /* 8626 */;
+import closure_16 from "normalizeChannelPropertyForCompare" /* 8631 */;
 import closure_17 from "ensureGuildLoaded" /* 1957 */;
 import closure_18 from "comparator" /* 2012 */;
 import closure_19 from "createGuildRecordFromRust" /* 1979 */;
 import closure_20 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_21 from "generateOldThreadCutoff" /* 4575 */;
-import closure_22 from "initialize" /* 16810 */;
+import closure_22 from "initialize" /* 16813 */;
 import closure_23 from "markAllUserIdListsStale" /* 4209 */;
 import closure_24 from "mergeGuildAvatar" /* 1371 */;
-import { ChannelSettingsAutoFocusElement as closure_25 } from "ChannelSettingsAutoFocusElement" /* 16811 */;
+import { ChannelSettingsAutoFocusElement as closure_25 } from "ChannelSettingsAutoFocusElement" /* 16814 */;
 import ME from "ME" /* 1074 */;
 import set from "set" /* 1964 */;
 import { MAX_FORUM_TAGS } from "FORUM_GUIDELINES_ACTION_SHEET" /* 7273 */;
@@ -605,7 +605,7 @@ prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
   this.updateNavigation(undefined, this.state);
   if (tmp2) {
-    let obj = _modDef16812;
+    let obj = _modDef16815;
     const regions = obj.fetchRegions(self.props.guild.id);
   }
   obj = { settings_type: "channel", destination_pane: constants6.CHANNEL_SETTINGS };
@@ -871,7 +871,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj[2] = autoArchiveDuration;
       obj[3] = channel;
       obj[4] = this.handleAutoArchiveDurationChange;
-      return closure_47(tmp5(16815).AutoArchiveDurationOptions, obj);
+      return closure_47(tmp5(16818).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1181,7 +1181,7 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       obj4[1] = Math.min(channel.userLimit, tmp10);
       obj4[3] = tmp10;
       obj4[4] = this.handleUserLimitChange;
-      items2[1] = closure_47(tmp7(14178).Slider, obj4);
+      items2[1] = closure_47(tmp7(14181).Slider, obj4);
       obj[0] = items2;
       obj[2] = callback4(tmp7(5607).Card, obj);
       items.push(closure_47(tmp7(5687).TableRowGroup, obj, "channel-user-limit"));
@@ -1277,7 +1277,7 @@ prototype["renderPermissions"] = function renderPermissions() {
     }
     obj = { label: null, arrow: true, icon: null, onPress: null };
     obj[0] = stringResult;
-    ShieldUserIcon = ShieldUserIcon(9752).ShieldUserIcon;
+    ShieldUserIcon = ShieldUserIcon(9757).ShieldUserIcon;
     tmp2Result = tmp2(ShieldUserIcon, {});
     obj[2] = tmp2Result;
     obj[3] = function onPress() {
@@ -1307,7 +1307,7 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
     let obj = { label: null, arrow: true, icon: null, onPress: null };
     const intl = channel(1114).intl;
     obj[0] = intl.string(channel(1114).t.h850Ss);
-    obj[2] = callback3(channel(9776).BellIcon, {});
+    obj[2] = callback3(channel(9781).BellIcon, {});
     obj[3] = function onPress() {
       if (channel.isThread()) {
         let result = channel(closure_1_2[74]).showThreadNotificationsBottomSheet(channel);
@@ -1375,7 +1375,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     obj1[0] = stringResult;
     obj[1] = closure_47(self(5605).TableRow.TrailingText, obj1);
     if (channel.defaultForumLayout === GridSquareIcon(1967).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(16817).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(16820).GridSquareIcon;
       obj = {};
       let tmpResult = tmp(GridSquareIcon, obj);
     } else {
@@ -1530,7 +1530,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
     return closure_48(tmp4, obj3);
   } else {
     obj = { icon: null, label: null, onPress: null };
-    obj[0] = callback3(tmp2(10032).GroupPlusIcon, {});
+    obj[0] = callback3(tmp2(10037).GroupPlusIcon, {});
     const intl = tmp2(1114).intl;
     const string = intl.string;
     let ihLPiO = tmp2(1114).t;
@@ -1649,7 +1649,7 @@ prototype["renderForumTags"] = function renderForumTags() {
         const obj2 = { icon: null, size: "sm", onPress: null, accessibilityLabel: null };
         const obj3 = { size: "sm", color: null };
         obj3[1] = self(576).colors.WHITE;
-        obj2[0] = tmp10(tmp7(8867).PlusSmallIcon, obj3);
+        obj2[0] = tmp10(tmp7(8872).PlusSmallIcon, obj3);
         obj2[2] = function onPress() {
           return self.handlePressTag();
         };
@@ -1744,7 +1744,7 @@ prototype["renderCategory"] = function renderCategory() {
         tmp7 = self;
       }
       obj = { icon: null, label: null, trailing: null, arrow: null, onPress: null };
-      obj[0] = callback3(tmp7(16154).FolderPlusIcon, {});
+      obj[0] = callback3(tmp7(16157).FolderPlusIcon, {});
       const intl2 = tmp7(1114).intl;
       obj[1] = intl2.string(tmp7(1114).t.vHCZwr);
       obj = { text: null };

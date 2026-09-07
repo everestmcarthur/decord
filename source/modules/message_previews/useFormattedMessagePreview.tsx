@@ -1,10 +1,10 @@
-// Module ID: 10093
-// Function ID: 10094
+// Module ID: 10098
+// Function ID: 10099
 // Name: formatMessagePreview
 // Dependencies: [502, 4209, 1371, 1074, 1089, 504, 7981, 4793, 1114, 4710, 7302, 12, 7986, 8071, 2]
 // Exports: isMessageContentPreviewable, useFormattedMessagePreview
 
-// Module 10093 (formatMessagePreview)
+// Module 10098 (formatMessagePreview)
 import set from "set" /* 1089 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4793 */;

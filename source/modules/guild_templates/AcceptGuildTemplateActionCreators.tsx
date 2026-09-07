@@ -1,8 +1,8 @@
-// Module ID: 11805
-// Function ID: 11806
+// Module ID: 11810
+// Function ID: 11811
 // Dependencies: [5277, 1979, 1074, 573, 1272, 7342, 2]
 
-// Module 11805
+// Module 11810
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "_handleConnectionOpen" /* 5277 */;
 import closure_4 from "createGuildRecordFromRust" /* 1979 */;

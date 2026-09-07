@@ -1,24 +1,24 @@
-// Module ID: 9289
-// Function ID: 9290
+// Module ID: 9294
+// Function ID: 9295
 // Name: getShelfBadgeTypeIfActive
-// Dependencies: [109, 5, 9290, 1918, 9408, 1074, 4999, 4553, 1114, 8856, 9410, 1115, 1894, 7523, 9411, 7682, 7456, 4904, 1396, 9409, 9417, 7521, 9418, 2]
+// Dependencies: [109, 5, 9295, 1918, 9413, 1074, 4999, 4553, 1114, 8861, 9415, 1115, 1894, 7523, 9416, 7682, 7456, 4904, 1396, 9414, 9422, 7521, 9423, 2]
 // Exports: appLauncherShowsRecommendations, ensureRecommendationSectionsOnlyContainActivities, executeAppLauncherCommand, formatPrimaryEntryPointCommandName, getApplicationDetails, getEmbeddedActivityConfig, getInstallAppProps, getInstallAppPropsFromProfileApplication, getSectionDescription, getSectionName, getShelfBadgeNameIfActive, isAppAvailableInAppLauncher, isApplicationAdSupported, isApplicationMonetizedWithIAP, isEmbeddedApp, isPartnerApplication, isPromotedApplication, isRealApplication
 
-// Module 9289 (getShelfBadgeTypeIfActive)
+// Module 9294 (getShelfBadgeTypeIfActive)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import set from "set" /* 1115 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
 import buildCommand from "buildCommand" /* 7521 */;
-import getApplicationFlags from "getApplicationFlags" /* 8856 */;
-import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9409 */;
-import getPlatformDefault from "getPlatform" /* 9410 */;
-import canInstallApplication from "canInstallApplication" /* 9418 */;
+import getApplicationFlags from "getApplicationFlags" /* 8861 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9414 */;
+import getPlatformDefault from "getPlatform" /* 9415 */;
+import canInstallApplication from "canInstallApplication" /* 9423 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "getIndexKey" /* 9290 */;
+import closure_6 from "getIndexKey" /* 9295 */;
 import closure_7 from "createExecutable" /* 1918 */;
-import closure_8 from "handleDismissWithDismissed" /* 9408 */;
+import closure_8 from "handleDismissWithDismissed" /* 9413 */;
 import { ApplicationFlags } from "ME" /* 1074 */;
 import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4999 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;

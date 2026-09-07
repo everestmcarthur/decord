@@ -1,12 +1,12 @@
-// Module ID: 12315
-// Function ID: 12316
+// Module ID: 12319
+// Function ID: 12320
 // Name: GuildDirectoryEditDescription
-// Dependencies: [5, 19, 17, 21, 4560, 5682, 12316, 12314, 7123, 4556, 1114, 12317, 5624, 7000, 2]
+// Dependencies: [5, 19, 17, 21, 4560, 5682, 12320, 12318, 7123, 4556, 1114, 12321, 5624, 7000, 2]
 // Exports: default
 
-// Module 12315 (GuildDirectoryEditDescription)
+// Module 12319 (GuildDirectoryEditDescription)
 import noopAll from "noop" /* 19 */;
-import _modDef12314 from "module_12314" /* 12314 */;
+import _modDef12318 from "module_12318" /* 12318 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -50,7 +50,7 @@ function GuildDirectoryEditDescription(entry) {
                 return obj;
               } else {
                 closure_2 = tmp4;
-                let obj2 = closure_1_2(12316);
+                let obj2 = closure_1_2(12320);
                 dependencyMap = 1;
                 c4 = 1;
                 obj1 = { value: null, done: false };
@@ -66,7 +66,7 @@ function GuildDirectoryEditDescription(entry) {
               obj2[0] = arg1;
               return obj2;
             } else {
-              obj = callback(12314);
+              obj = callback(12318);
               obj.close();
               c4 = 3;
               return { value: "HermesInternal", done: null };
@@ -115,7 +115,7 @@ function GuildDirectoryEditDescription(entry) {
   obj3[1] = intl2.string(entry(1114).t["R3BPH+"]);
   obj3[2] = entry;
   obj3[3] = entry.channelId;
-  items[1] = callback(_onSubmit(12317), obj3);
+  items[1] = callback(_onSubmit(12321), obj3);
   obj[2] = items;
   obj[2] = callback2(closure_6, obj);
   return callback(entry(7123).SafeAreaPaddingView, obj);
@@ -139,7 +139,7 @@ export default function GuildDirectoryEditDescriptionModal(arg0) {
   obj = {};
   obj = {
     fullscreen: true,
-    headerLeft: _require(5624).getHeaderCloseButton(_modDef12314.close),
+    headerLeft: _require(5624).getHeaderCloseButton(_modDef12318.close),
     headerTitle() {
       return null;
     },

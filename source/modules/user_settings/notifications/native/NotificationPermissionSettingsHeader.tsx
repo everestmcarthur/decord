@@ -1,15 +1,15 @@
-// Module ID: 15483
-// Function ID: 15484
+// Module ID: 15486
+// Function ID: 15487
 // Name: NotificationPermissionSettingsHeader
-// Dependencies: [19, 17, 1074, 12410, 21, 4560, 576, 12411, 1242, 5607, 9059, 4556, 1114, 4975, 2]
+// Dependencies: [19, 17, 1074, 12414, 21, 4560, 576, 12415, 1242, 5607, 9064, 4556, 1114, 4975, 2]
 // Exports: default
 
-// Module 15483 (NotificationPermissionSettingsHeader)
+// Module 15486 (NotificationPermissionSettingsHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;
-import EventActionType from "EventActionType" /* 12410 */;
+import EventActionType from "EventActionType" /* 12414 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -30,7 +30,7 @@ const result = require("set").fileFinishedImporting("modules/user_settings/notif
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = callback3();
-  let obj = canSeePushNotificationNudge(12411);
+  let obj = canSeePushNotificationNudge(12415);
   canSeePushNotificationNudge = obj.useCanSeePushNotificationNudge();
   const items = [canSeePushNotificationNudge];
   const effect = React.useEffect(() => {
@@ -53,7 +53,7 @@ export default function NotificationPermissionSettingsHeader() {
     obj2[0] = tmp.iconCircle;
     const obj3 = { size: "md", color: null };
     obj3[1] = ThemesDefault.colors.ICON_STRONG;
-    obj2[1] = callback(tmp2(9059).BellSlashIcon, obj3);
+    obj2[1] = callback(tmp2(9064).BellSlashIcon, obj3);
     const items1 = [callback(View, obj2), , , ];
     const obj4 = { variant: "heading-lg/bold", color: "text-default", children: null };
     const intl = tmp2(1114).intl;

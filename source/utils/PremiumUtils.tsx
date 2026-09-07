@@ -1,7 +1,7 @@
 // Module ID: 4218
 // Function ID: 4219
 // Name: getPremiumPlanItem
-// Dependencies: [32, 19, 4219, 1371, 4220, 4221, 4223, 4224, 1074, 1373, 4232, 1085, 3, 4233, 4230, 1885, 38, 1114, 3063, 4153, 4242, 4249, 7234, 4231, 13461, 1090, 504, 11442, 5130, 4457, 13980, 7556, 1377, 1379, 9359, 2]
+// Dependencies: [32, 19, 4219, 1371, 4220, 4221, 4223, 4224, 1074, 1373, 4232, 1085, 3, 4233, 4230, 1885, 38, 1114, 3063, 4153, 4242, 4249, 7234, 4231, 13465, 1090, 504, 11447, 5130, 4457, 13983, 7556, 1377, 1379, 9364, 2]
 // Exports: calculateYearlyPlanDollarSavingsAmount, calculateYearlyPlanMonthlyRateAmount, castPremiumSubscriptionAsSkuId, coerceExistingItemsToNewItemInterval, experimentalGetPrice, extendDateWithUnconsumedFractionalPremium, formatInterval, formatIntervalDuration, formatPriceString, formatTrialCtaIntervalDurationFromTrialOffer, formatTrialOfferIntervalDuration, getBillingInformationString, getBillingReviewSubheader, getCountryPrices, getDaysRemainingUntilSubscriptionCurrentPeriodEnds, getDaysSincePremium, getDiscountIntervalString, getDisplayNameFromSku, getExternalPlanDisplayName, getExternalSubscriptionMethodUrl, getFormattedPlanPriceFromInvoice, getFormattedRateForPlan, getFractionalPremiumUnitsHours, getFractionalPremiumUnitsHoursFromSkuIds, getGuildBoostPlanItem, getInterval, getIntervalForInvoice, getIntervalString, getIntervalStringAsNoun, getItemsFromNewAdditionalPlans, getItemsWithUpsertedPremiumGuildPlan, getItemsWithUpsertedPremiumPlanId, getItemsWithoutPremiumPlanItem, getMaxFileSizeForPremiumType, getOfferNoticeThreshold, getPlanDescriptionFromInvoice, getPlanIdForPremiumType, getPlanIdFromInvoice, getPremiumBranding, getPremiumGuildHeaderDescription, getPremiumPlanItem, getPremiumPlanOptions, getPremiumSkuIdForSubscription, getPremiumType, getPremiumTypeDisplayName, getPremiumTypeFromPlanId, getPremiumTypeFromSubscription, getSavingsPercent, getStatusFromInvoice, getSubscriptionWithNewPlansTotalServerPrice, getSwitchingPlansDisabledMessage, getTierDisplayNameByPlanId, getUnactivatedFractionalPremiumDurationString, hasPremiumSubscriptionToDisplay, isBaseSubscriptionCanceled, isBoostOnlySubscription, isDiscountOffer, isNewUser, isNitroLockedState, isPremiumBaseSubscriptionPlan, isPremiumEligible, isPremiumGroupSubscriptionPlan, isPremiumGuildSubscriptionPlan, isPremiumSubscriptionPlan, isPrepaidPaymentSource, isSubscriptionPrepaidPaymentSource, isSubscriptionStatusFailedPayment, isSwitchingPlansDisabled, isTrialOffer, subscriptionHasPremiumGuildPlan, useHasPremiumSubscriptionToDisplay, useHasTier2Premium, usePlanSelectPriceState, withContextPlanPrices
 
 // Module 4218 (getPremiumPlanItem)
@@ -20,8 +20,8 @@ import formatSize from "formatSize" /* 4457 */;
 import getNitroFileUploadLimitBytes from "getNitroFileUploadLimitBytes" /* 5130 */;
 import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 7234 */;
 import apexExperiment from "apexExperiment" /* 7556 */;
-import roundFPCountdownUnits from "roundFPCountdownUnits" /* 13461 */;
-import ProductCatalogFeature from "ProductCatalogFeature" /* 13980 */;
+import roundFPCountdownUnits from "roundFPCountdownUnits" /* 13465 */;
+import ProductCatalogFeature from "ProductCatalogFeature" /* 13983 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { isNoneSubscription } from "createFromServer" /* 4219 */;
@@ -2000,7 +2000,7 @@ function getItemsWithUpsertedPlanIdForGroup(renewalMutations, basePlanId, arg2, 
     obj[0] = basePlanId;
     obj[1] = closure_31;
     obj[1] = obj;
-    const checkoutError = new _require(11442).CheckoutError(obj);
+    const checkoutError = new _require(11447).CheckoutError(obj);
     throw checkoutError;
   }
 }
@@ -2550,8 +2550,8 @@ obj = {
       isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, tmp(1379).Perk.SHOP_DISCOUNTS);
     }
     if (!isXboxGamePassPerksEnabled) {
-      tmpResult = tmp(13980);
-      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13980).COLLECTIBLES, currentUser);
+      tmpResult = tmp(13983);
+      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13983).COLLECTIBLES, currentUser);
     }
     return isXboxGamePassPerksEnabled;
   },
@@ -2566,8 +2566,8 @@ obj = {
       isXboxGamePassPerksEnabled = tmpResult.hasPerk(perks, tmp(1379).Perk.MORE_QUEST_ORBS);
     }
     if (!isXboxGamePassPerksEnabled) {
-      tmpResult = tmp(13980);
-      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13980).QUEST_ORB_MULTIPLIER, perks);
+      tmpResult = tmp(13983);
+      isXboxGamePassPerksEnabled = tmpResult.canUserUse(tmp(13983).QUEST_ORB_MULTIPLIER, perks);
     }
     return isXboxGamePassPerksEnabled;
   },

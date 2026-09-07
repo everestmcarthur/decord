@@ -1,11 +1,11 @@
-// Module ID: 15474
-// Function ID: 15475
+// Module ID: 15477
+// Function ID: 15478
 // Name: UserSettingsSwipeRightToLeft
-// Dependencies: [19, 7975, 21, 11468, 14689, 2]
+// Dependencies: [19, 7975, 21, 11473, 14692, 2]
 // Exports: default
 
-// Module 15474 (UserSettingsSwipeRightToLeft)
-import _modDef14689 from "module_14689" /* 14689 */;
+// Module 15477 (UserSettingsSwipeRightToLeft)
+import _modDef14692 from "module_14692" /* 14692 */;
 import closure_3 from "noop" /* 19 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -19,5 +19,5 @@ export default function UserSettingsSwipeRightToLeft() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(_modDef14689, { node });
+  return jsx(_modDef14692, { node });
 };

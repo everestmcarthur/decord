@@ -1,15 +1,15 @@
-// Module ID: 9057
-// Function ID: 9058
+// Module ID: 9062
+// Function ID: 9063
 // Name: getMuteSettingLabel
-// Dependencies: [4201, 1957, 1979, 4209, 4741, 1371, 1074, 1084, 1114, 4713, 7765, 7119, 7114, 9058, 2]
+// Dependencies: [4201, 1957, 1979, 4209, 4741, 1371, 1074, 1084, 1114, 4713, 7765, 7119, 7114, 9063, 2]
 // Exports: getMessageNotificationsText, getMuteOptions, getMuteSettingLabel, getMuteSettingSublabel, getMuteSettings, handleMuteSettingPress, handleUnmutePress
 
-// Module 9057 (getMuteSettingLabel)
+// Module 9062 (getMuteSettingLabel)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import computeChannelName from "computeChannelName" /* 4713 */;
 import UserNotificationSettings from "UserNotificationSettings" /* 7114 */;
 import _modDef7119 from "module_7119" /* 7119 */;
-import getMuteSettingsAll from "getMuteSettings" /* 9058 */;
+import getMuteSettingsAll from "getMuteSettings" /* 9063 */;
 import closure_4 from "storeThread" /* 4201 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import closure_6 from "createGuildRecordFromRust" /* 1979 */;

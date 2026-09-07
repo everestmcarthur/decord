@@ -1,13 +1,13 @@
-// Module ID: 11532
-// Function ID: 11533
+// Module ID: 11537
+// Function ID: 11538
 // Name: isSocialLayerApplication
-// Dependencies: [1074, 8856, 9238, 2]
+// Dependencies: [1074, 8861, 9243, 2]
 // Exports: default, isSocialLayerSDKAuthorization
 
-// Module 11532 (isSocialLayerApplication)
+// Module 11537 (isSocialLayerApplication)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
-import getApplicationFlags from "getApplicationFlags" /* 8856 */;
+import getApplicationFlags from "getApplicationFlags" /* 8861 */;
 
 const ApplicationFlags = ME.ApplicationFlags;
 const result = set.fileFinishedImporting("modules/applications/isSocialLayerApplication.tsx");

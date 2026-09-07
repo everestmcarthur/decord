@@ -1,10 +1,10 @@
-// Module ID: 10791
-// Function ID: 10792
+// Module ID: 10796
+// Function ID: 10797
 // Name: PremiumGiftWishlistBanner
-// Dependencies: [5, 19, 17, 7227, 1373, 1074, 1076, 8183, 21, 576, 4560, 8764, 8776, 10792, 10796, 7162, 7182, 1242, 8179, 10745, 10797, 4418, 4259, 1114, 7541, 11007, 4404, 4556, 11033, 11038, 2]
+// Dependencies: [5, 19, 17, 7227, 1373, 1074, 1076, 8183, 21, 576, 4560, 8769, 8781, 10797, 10801, 7162, 7182, 1242, 8179, 10750, 10802, 4418, 4259, 1114, 7541, 11012, 4404, 4556, 11038, 11043, 2]
 // Exports: PremiumGiftWishlistBanner
 
-// Module 10791 (PremiumGiftWishlistBanner)
+// Module 10796 (PremiumGiftWishlistBanner)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;

@@ -1,9 +1,9 @@
-// Module ID: 17485
-// Function ID: 17486
+// Module ID: 17488
+// Function ID: 17489
 // Name: handleVoiceChannelSelect
-// Dependencies: [4251, 1957, 4199, 2011, 5414, 7118, 4527, 5417, 9088, 1965, 5430, 1896, 2]
+// Dependencies: [4251, 1957, 4199, 2011, 5414, 7118, 4527, 5417, 9093, 1965, 5430, 1896, 2]
 
-// Module 17485 (handleVoiceChannelSelect)
+// Module 17488 (handleVoiceChannelSelect)
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 import useStageHasMedia from "useStageHasMedia" /* 5417 */;
 import initializeDefault from "initialize" /* 7118 */;
@@ -56,7 +56,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
                 const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
               }
             }
-            tmp5Result = tmp5(9088);
+            tmp5Result = tmp5(9093);
           }
           tmp6 = dependencyMap;
         }

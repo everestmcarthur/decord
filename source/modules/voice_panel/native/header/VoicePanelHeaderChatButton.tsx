@@ -1,16 +1,16 @@
-// Module ID: 17129
-// Function ID: 17130
+// Module ID: 17132
+// Function ID: 17133
 // Name: VoicePanelHeaderChatButton
-// Dependencies: [19, 1074, 21, 4560, 576, 1109, 17130, 5589, 17035, 5071, 1114, 2]
+// Dependencies: [19, 1074, 21, 4560, 576, 1109, 17133, 5589, 17038, 5071, 1114, 2]
 // Exports: default
 
-// Module 17129 (VoicePanelHeaderChatButton)
+// Module 17132 (VoicePanelHeaderChatButton)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import ChatIcon from "ChatIcon" /* 5071 */;
 import setDefault from "set" /* 5589 */;
-import _modDef17035 from "module_17035" /* 17035 */;
-import useChatBadgeDefault from "useChatBadge" /* 17130 */;
+import _modDef17038 from "module_17038" /* 17038 */;
+import useChatBadgeDefault from "useChatBadge" /* 17133 */;
 import closure_3 from "noop" /* 19 */;
 import { ComponentActions } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -41,7 +41,7 @@ export default function VoicePanelHeaderChatButton(channelId) {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["5KxXrK"]);
   obj[2] = callback;
-  const children = [callback(_modDef17035, obj), ];
+  const children = [callback(_modDef17038, obj), ];
   let tmp8Result = null != tmp5;
   if (tmp8Result) {
     obj = { style: null, children: null };

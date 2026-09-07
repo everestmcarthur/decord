@@ -1,10 +1,10 @@
-// Module ID: 11684
-// Function ID: 11685
+// Module ID: 11689
+// Function ID: 11690
 // Name: useSelectedDestinationChannel
-// Dependencies: [19, 5502, 1961, 1957, 4199, 4209, 1371, 1074, 10981, 1369, 504, 1094, 4899, 1894, 4771, 1114, 4897, 7688, 4404, 4713, 2]
+// Dependencies: [19, 5502, 1961, 1957, 4199, 4209, 1371, 1074, 10986, 1369, 504, 1094, 4899, 1894, 4771, 1114, 4897, 7688, 4404, 4713, 2]
 // Exports: getDestinationIsUnavailable, isRatelimitedInChannel, useDestinationNamesWithSlowmode, useSelectedDestinationChannel, useSelectedDestinationNames
 
-// Module 11684 (useSelectedDestinationChannel)
+// Module 11689 (useSelectedDestinationChannel)
 import canBypassSlowmodeHelper from "canBypassSlowmodeHelper" /* 7688 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "loadSavedGuildStickers" /* 5502 */;
@@ -21,7 +21,7 @@ require = arg1;
 const result = require("set").fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(10981).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(10986).getChannelIdFromDestinationId);
   found = mapped.find(found(1369).isNotNullish);
   const items = [closure_8];
   const items1 = [found];

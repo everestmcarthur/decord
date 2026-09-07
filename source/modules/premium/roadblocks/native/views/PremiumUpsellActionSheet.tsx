@@ -1,7 +1,7 @@
 // Module ID: 7851
 // Function ID: 7852
 // Name: AlwaysCompressImagesSwitch
-// Dependencies: [32, 19, 17, 4552, 1183, 1185, 4381, 1371, 1373, 1074, 4607, 7852, 7846, 21, 4560, 576, 4262, 4218, 7853, 5179, 5134, 7854, 7855, 1114, 5692, 4255, 2024, 7857, 7858, 4527, 7850, 7859, 7860, 13291, 13292, 12211, 12220, 13295, 1093, 504, 9358, 7201, 4556, 1115, 8808, 5587, 4987, 7162, 9313, 9965, 9966, 9321, 1242, 9967, 4425, 7198, 13296, 4975, 8051, 2]
+// Dependencies: [32, 19, 17, 4552, 1183, 1185, 4381, 1371, 1373, 1074, 4607, 7852, 7846, 21, 4560, 576, 4262, 4218, 7853, 5179, 5134, 7854, 7855, 1114, 5692, 4255, 2024, 7857, 7858, 4527, 7850, 7859, 7860, 13295, 13296, 12215, 12224, 13299, 1093, 504, 9363, 7201, 4556, 1115, 8813, 5587, 4987, 7162, 9318, 9970, 9971, 9326, 1242, 9972, 4425, 7198, 13300, 4975, 8051, 2]
 // Exports: default
 
 // Module 7851 (AlwaysCompressImagesSwitch)
@@ -10,7 +10,7 @@ import ThemesDefault from "Themes" /* 576 */;
 import set from "set" /* 1115 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import preloadDefault from "preload" /* 5587 */;
-import useAPNGPlayerControls from "useAPNGPlayerControls" /* 8808 */;
+import useAPNGPlayerControls from "useAPNGPlayerControls" /* 8813 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

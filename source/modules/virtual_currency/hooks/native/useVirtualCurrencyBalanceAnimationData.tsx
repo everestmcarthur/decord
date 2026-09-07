@@ -1,10 +1,10 @@
-// Module ID: 11092
-// Function ID: 11093
+// Module ID: 11097
+// Function ID: 11098
 // Name: useVirtualCurrencyBalanceAnimationData
 // Dependencies: [32, 19, 4552, 504, 8272, 2]
 // Exports: useVirtualCurrencyBalanceAnimationData
 
-// Module 11092 (useVirtualCurrencyBalanceAnimationData)
+// Module 11097 (useVirtualCurrencyBalanceAnimationData)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;

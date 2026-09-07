@@ -1,12 +1,12 @@
-// Module ID: 10334
-// Function ID: 10335
+// Module ID: 10339
+// Function ID: 10340
 // Name: useMaybeAddReactionMarketingEasterEggNote
-// Dependencies: [10335, 2]
+// Dependencies: [10340, 2]
 // Exports: default
 
-// Module 10334 (useMaybeAddReactionMarketingEasterEggNote)
+// Module 10339 (useMaybeAddReactionMarketingEasterEggNote)
 import set from "set" /* 2 */;
-import useMaybeAddPollsMarketingEasterEggNoteDefault from "useMaybeAddPollsMarketingEasterEggNote" /* 10335 */;
+import useMaybeAddPollsMarketingEasterEggNoteDefault from "useMaybeAddPollsMarketingEasterEggNote" /* 10340 */;
 
 const result = set.fileFinishedImporting("modules/messages/useMaybeAddReactionMarketingEasterEggNote.tsx");
 

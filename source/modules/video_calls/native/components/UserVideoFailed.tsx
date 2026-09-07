@@ -1,17 +1,17 @@
-// Module ID: 17141
-// Function ID: 17142
+// Module ID: 17144
+// Function ID: 17145
 // Name: UserVideoFailed
-// Dependencies: [17, 1074, 21, 4560, 576, 9110, 9601, 4556, 1114, 4975, 9612, 4615, 9089, 2]
+// Dependencies: [17, 1074, 21, 4560, 576, 9115, 9606, 4556, 1114, 4975, 9617, 4615, 9094, 2]
 // Exports: default
 
-// Module 17141 (UserVideoFailed)
+// Module 17144 (UserVideoFailed)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
 import ME from "ME" /* 1074 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
-import mapped from "mapped" /* 9110 */;
+import mapped from "mapped" /* 9115 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -40,7 +40,7 @@ export default function UserVideoFailed(arg0) {
   if (!removeSplashImage) {
     obj = { style: null };
     obj[0] = tmp2.placeholderImage;
-    tmp9 = callback(tmp3(9601).StreamFailed, obj);
+    tmp9 = callback(tmp3(9606).StreamFailed, obj);
   }
   obj1 = { children: null };
   const items1 = [tmp9, ];

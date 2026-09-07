@@ -1,10 +1,10 @@
-// Module ID: 11748
-// Function ID: 11749
+// Module ID: 11753
+// Function ID: 11754
 // Name: render
-// Dependencies: [19, 17, 8340, 21, 1364, 1272, 4255, 11749, 4975, 8142, 1114, 1178, 2]
+// Dependencies: [19, 17, 8340, 21, 1364, 1272, 4255, 11754, 4975, 8142, 1114, 1178, 2]
 // Exports: SpotifyPlayButton, attributeInstall, canOpenSpotifyUrl, openAlbum, openArtist, openTrack, openUrl
 
-// Module 11748 (render)
+// Module 11753 (render)
 import Button from "Button" /* 1178 */;
 import sendRequest from "sendRequest" /* 1272 */;
 import getConstantsAll from "getConstants" /* 1364 */;

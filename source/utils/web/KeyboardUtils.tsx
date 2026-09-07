@@ -1,14 +1,14 @@
-// Module ID: 14065
-// Function ID: 14066
+// Module ID: 14068
+// Function ID: 14069
 // Name: getCodeToKeyLanguageCorrection
-// Dependencies: [32, 7504, 1115, 12, 14066, 14067, 14068, 1369, 2]
+// Dependencies: [32, 7504, 1115, 12, 14069, 14070, 14071, 1369, 2]
 // Exports: areKeyCombosEqual, codeToKey, getEnv, getRawCodeFromKey, isKeyboardActivatedMouseEvent, toBrowserEvents, toCombo, toKeyNames, toString
 
-// Module 14065 (getCodeToKeyLanguageCorrection)
+// Module 14068 (getCodeToKeyLanguageCorrection)
 import set2 from "set" /* 1115 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import keyCodeDefault from "keyCode" /* 14066 */;
-import normalizeKey from "normalizeKey" /* 14067 */;
+import keyCodeDefault from "keyCode" /* 14069 */;
+import normalizeKey from "normalizeKey" /* 14070 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import items from "items" /* 7504 */;
 import set from "set" /* 1115 */;
@@ -23,7 +23,7 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
   }
   const BACKTICK_CODES = normalizeKey.BACKTICK_CODES;
   if (BACKTICK_CODES.has(keyCode)) {
-    let tmp2Result = tmp2(14067);
+    let tmp2Result = tmp2(14070);
     const layoutMap = tmp2Result.getLayoutMap();
     let value = layoutMap.get("Backquote");
     if (key === value) {
@@ -33,7 +33,7 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
       }
       return str7;
     } else {
-      tmp2Result = tmp2(14067);
+      tmp2Result = tmp2(14070);
       const obj = { key: null, code: "Backquote", keyCode: null };
       obj[0] = value;
       obj[2] = keyCode;
@@ -338,12 +338,12 @@ function toKeyNames(arr) {
       if (null != tmp17) {
         let combined = callback3(tmp15, tmp17, tmp16);
       } else {
-        const keyboardEventShapeFromKeycode = callback(14067).getKeyboardEventShapeFromKeycode(tmp15);
+        const keyboardEventShapeFromKeycode = callback(14070).getKeyboardEventShapeFromKeycode(tmp15);
         combined = null;
         if (null != keyboardEventShapeFromKeycode) {
           combined = callback3(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp16);
         }
-        const obj3 = callback(14067);
+        const obj3 = callback(14070);
       }
       if (combined == null) {
         const _HermesInternal4 = HermesInternal;
@@ -491,7 +491,7 @@ export const toCombo = function toCombo(shortcut) {
     }
     const str2 = shortcut.replace(/numpad plus/i, "");
     const str4 = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus");
-    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(14068).modKey).split("+");
+    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(14071).modKey).split("+");
     const mapped = parts.map((str) => str.trim().replace("plus", "+"));
     return mapped.reduce((arr) => {
       let tmp3 = closure_1_16((function toUglyKey(str) {
@@ -588,12 +588,12 @@ export const toString = function toString(arr) {
       if (null != tmp17) {
         let combined = callback3(tmp15, tmp17, tmp16);
       } else {
-        const keyboardEventShapeFromKeycode = callback(14067).getKeyboardEventShapeFromKeycode(tmp15);
+        const keyboardEventShapeFromKeycode = callback(14070).getKeyboardEventShapeFromKeycode(tmp15);
         combined = null;
         if (null != keyboardEventShapeFromKeycode) {
           combined = callback3(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp16);
         }
-        const obj3 = callback(14067);
+        const obj3 = callback(14070);
       }
       if (combined == null) {
         const _HermesInternal4 = HermesInternal;

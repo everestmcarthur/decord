@@ -1,16 +1,16 @@
-// Module ID: 17545
-// Function ID: 17546
+// Module ID: 17548
+// Function ID: 17549
 // Name: GuildSettingsModalAuditLogFilter
-// Dependencies: [32, 19, 17, 1371, 17536, 1074, 21, 4560, 576, 1114, 4404, 17538, 1611, 1483, 5517, 17546, 10942, 5689, 5605, 1178, 10029, 17547, 7050, 8232, 8874, 7040, 2]
+// Dependencies: [32, 19, 17, 1371, 17539, 1074, 21, 4560, 576, 1114, 4404, 17541, 1611, 1483, 5517, 17549, 10947, 5689, 5605, 1178, 10034, 17550, 7050, 8232, 8879, 7040, 2]
 // Exports: createAuditLogFilterActionData, createAuditLogFilterUserData, default
 
-// Module 17545 (GuildSettingsModalAuditLogFilter)
+// Module 17548 (GuildSettingsModalAuditLogFilter)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import closure_7 from "AuditLogActions" /* 17536 */;
+import closure_7 from "AuditLogActions" /* 17539 */;
 import { AuditLogFilterTypes } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -235,8 +235,8 @@ export const createAuditLogFilterUserData = function createAuditLogFilterUserDat
 };
 export const createAuditLogFilterActionData = function createAuditLogFilterActionData(closure_4) {
   const _require = closure_4;
-  const obj = _require(17538);
-  const mapped = _require(17538).ACTION_FILTER_ITEMS().map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
+  const obj = _require(17541);
+  const mapped = _require(17541).ACTION_FILTER_ITEMS().map((label, index) => ({ label: label.label, value: label.value, selected: closure_0 === label.value, index }));
   return mapped.sort((selected, selected2) => {
     let num = -1;
     if (!selected.selected) {

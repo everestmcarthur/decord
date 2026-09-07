@@ -1,13 +1,13 @@
-// Module ID: 16873
-// Function ID: 16874
+// Module ID: 16876
+// Function ID: 16877
 // Name: MessageRequestsNavigator
-// Dependencies: [19, 17, 21, 7913, 4560, 576, 7000, 7475, 1611, 7863, 1114, 10925, 16874, 16893, 16894, 2]
+// Dependencies: [19, 17, 21, 7913, 4560, 576, 7000, 7475, 1611, 7863, 1114, 10930, 16877, 16896, 16897, 2]
 // Exports: default
 
-// Module 16873 (MessageRequestsNavigator)
+// Module 16876 (MessageRequestsNavigator)
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10925 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10930 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -60,7 +60,7 @@ export default function MessageRequestsNavigator() {
   let merged = Object.assign(getNavigationModalPresentationDefault());
   obj1[1] = obj2;
   obj1[2] = function getComponent() {
-    return lib(16874).default;
+    return lib(16877).default;
   };
   const items1 = [callback(Screen, obj1), , ];
   const obj3 = { name: "spam", options: null, getComponent: null };
@@ -70,7 +70,7 @@ export default function MessageRequestsNavigator() {
   let merged1 = Object.assign(getNavigationModalPresentationDefault());
   obj3[1] = obj4;
   obj3[2] = function getComponent() {
-    return lib(16893).default;
+    return lib(16896).default;
   };
   items1[1] = callback(closure_7.Screen, obj3);
   const obj5 = { name: "preview", options: null, getComponent: null };
@@ -80,7 +80,7 @@ export default function MessageRequestsNavigator() {
   const merged2 = Object.assign(getNavigationModalPresentationDefault());
   obj5[1] = obj6;
   obj5[2] = function getComponent() {
-    return lib(16894).default;
+    return lib(16897).default;
   };
   items1[2] = callback(closure_7.Screen, obj5);
   obj[1] = items1;

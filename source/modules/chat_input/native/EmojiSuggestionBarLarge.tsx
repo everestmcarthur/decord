@@ -1,16 +1,16 @@
-// Module ID: 12425
-// Function ID: 12426
+// Module ID: 12429
+// Function ID: 12430
 // Name: EmojiSuggestionBarLargeAnimated
-// Dependencies: [32, 19, 17, 10290, 21, 4560, 576, 12426, 4296, 10310, 10328, 4271, 2]
+// Dependencies: [32, 19, 17, 10295, 21, 4560, 576, 12430, 4296, 10315, 10333, 4271, 2]
 
-// Module 12425 (EmojiSuggestionBarLargeAnimated)
+// Module 12429 (EmojiSuggestionBarLargeAnimated)
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;
-import MAX_SUGGESTIONS_LARGE from "MAX_SUGGESTIONS_LARGE" /* 12426 */;
+import MAX_SUGGESTIONS_LARGE from "MAX_SUGGESTIONS_LARGE" /* 12430 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { IMAGE_SIZE } from "IMAGE_SIZE" /* 10290 */;
+import { IMAGE_SIZE } from "IMAGE_SIZE" /* 10295 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -36,7 +36,7 @@ function EmojiSuggestionBarLargeAnimated(arg0) {
   if (truncResult > 11) {
     length = sortEmojisForDisplayResult.length;
   }
-  let tmp9Result = tmp9(12426);
+  let tmp9Result = tmp9(12430);
   suggestionBarHeight = tmp9Result.useSuggestionBarHeight(transitionState, cleanUp, 52);
   tmp9Result = tmp9(4296);
   const fn = function f() {

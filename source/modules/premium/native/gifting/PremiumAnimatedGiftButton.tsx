@@ -1,10 +1,10 @@
-// Module ID: 12249
-// Function ID: 12250
+// Module ID: 12253
+// Function ID: 12254
 // Name: PremiumAnimatedGiftButton
 // Dependencies: [19, 4552, 21, 4560, 576, 4262, 504, 1115, 4296, 5123, 5529, 2]
 // Exports: PremiumAnimatedGiftButton
 
-// Module 12249 (PremiumAnimatedGiftButton)
+// Module 12253 (PremiumAnimatedGiftButton)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { useRef } from "noop" /* 19 */;

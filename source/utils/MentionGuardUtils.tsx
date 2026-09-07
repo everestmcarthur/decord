@@ -1,9 +1,9 @@
-// Module ID: 10258
-// Function ID: 10259
+// Module ID: 10263
+// Function ID: 10264
 // Name: parsedItemUsesEveryoneRole
 // Dependencies: [32, 7279, 4199, 1074, 38, 7682, 2]
 
-// Module 10258 (parsedItemUsesEveryoneRole)
+// Module 10263 (parsedItemUsesEveryoneRole)
 import _modDef38 from "module_38" /* 38 */;
 import rebuildDefault from "rebuild" /* 7682 */;
 import closure_2 from "_slicedToArray" /* 32 */;

@@ -1,10 +1,10 @@
-// Module ID: 17638
-// Function ID: 17639
+// Module ID: 17641
+// Function ID: 17642
 // Name: IdentityApplicationRow
-// Dependencies: [32, 19, 17, 21, 11563, 5605, 1178, 4495, 7149, 1114, 7503, 1396, 4411, 4527, 9792, 7198, 9793, 6627, 7123, 5687, 2]
+// Dependencies: [32, 19, 17, 21, 11568, 5605, 1178, 4495, 7149, 1114, 7503, 1396, 4411, 4527, 9797, 7198, 9798, 6627, 7123, 5687, 2]
 // Exports: default
 
-// Module 17638 (IdentityApplicationRow)
+// Module 17641 (IdentityApplicationRow)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
@@ -12,7 +12,7 @@ import BottomSheetModal from "BottomSheetModal" /* 6627 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
-import request from "request" /* 11563 */;
+import request from "request" /* 11568 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -159,7 +159,7 @@ export default function SelectConnectionActionSheet(arg0) {
     const intl4 = tmp3(1114).intl;
     items.push(intl4.string(tmp3(1114).t.y3ZnnU));
   }
-  tmp3Result = tmp3(9792);
+  tmp3Result = tmp3(9797);
   obj = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: tmp5[1], items: items.map((id) => ({ id, label: id, page: null })) };
   const segmentedControlState = tmp3Result.useSegmentedControlState(obj);
   if (1 === first) {
@@ -178,7 +178,7 @@ export default function SelectConnectionActionSheet(arg0) {
     obj1 = { children: null };
     const obj2 = { state: null };
     obj2[0] = segmentedControlState;
-    obj1[0] = tmp2(tmp3(9793).SegmentedControl, obj2);
+    obj1[0] = tmp2(tmp3(9798).SegmentedControl, obj2);
     let tmp2Result = tmp2(closure_5, obj1);
   } else {
     tmp2Result = null;

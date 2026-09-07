@@ -1,9 +1,9 @@
-// Module ID: 12483
-// Function ID: 12484
+// Module ID: 12487
+// Function ID: 12488
 // Name: handleGameServerUpsert
 // Dependencies: [4451, 504, 573, 2]
 
-// Module 12483 (handleGameServerUpsert)
+// Module 12487 (handleGameServerUpsert)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

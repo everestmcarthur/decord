@@ -1,10 +1,10 @@
-// Module ID: 13472
-// Function ID: 13473
+// Module ID: 13476
+// Function ID: 13477
 // Name: Header
-// Dependencies: [19, 17, 21, 4560, 4495, 5587, 1114, 4411, 13397, 13473, 4556, 2]
+// Dependencies: [19, 17, 21, 4560, 4495, 5587, 1114, 4411, 13401, 13477, 4556, 2]
 // Exports: default
 
-// Module 13472 (Header)
+// Module 13476 (Header)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useThemeDefault from "useTheme" /* 4495 */;
@@ -32,9 +32,9 @@ export default function Header(style) {
   obj[1] = intl.string(getSystemLocale.t.lpNrPu);
   const tmp8 = preloadDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(13397);
+    let tmp2Result = tmp2(13401);
   } else {
-    tmp2Result = tmp2(13473);
+    tmp2Result = tmp2(13477);
   }
   obj[3] = tmp2Result;
   const items1 = [closure_4(tmp8, obj), ];

@@ -1,11 +1,11 @@
-// Module ID: 8764
-// Function ID: 8765
+// Module ID: 8769
+// Function ID: 8770
 // Name: CollectiblesShopCardInternalV2
-// Dependencies: [19, 17, 1183, 7542, 1076, 21, 4560, 576, 8765, 7553, 8766, 8178, 8769, 8770, 1114, 4259, 7162, 8827, 8829, 8830, 504, 4411, 5123, 7554, 1889, 8662, 4556, 8832, 8834, 8836, 8837, 8839, 8844, 8847, 8767, 4527, 8176, 4218, 8842, 8869, 8870, 1256, 2]
+// Dependencies: [19, 17, 1183, 7542, 1076, 21, 4560, 576, 8770, 7553, 8771, 8178, 8774, 8775, 1114, 4259, 7162, 8832, 8834, 8835, 504, 4411, 5123, 7554, 1889, 8667, 4556, 8837, 8839, 8841, 8842, 8844, 8849, 8852, 8772, 4527, 8176, 4218, 8847, 8874, 8875, 1256, 2]
 
-// Module 8764 (CollectiblesShopCardInternalV2)
+// Module 8769 (CollectiblesShopCardInternalV2)
 import ThemesDefault from "Themes" /* 576 */;
-import context from "context" /* 8767 */;
+import context from "context" /* 8772 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "handleThemeChange" /* 1183 */;

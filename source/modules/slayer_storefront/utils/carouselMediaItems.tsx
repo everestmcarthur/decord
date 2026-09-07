@@ -1,10 +1,10 @@
-// Module ID: 10801
-// Function ID: 10802
+// Module ID: 10806
+// Function ID: 10807
 // Name: WEB_HERO_WIDTH_PX
 // Dependencies: [4802, 7226, 2]
 // Exports: convertCarouselItemsToMediaItems, getThumbnailSrc
 
-// Module 10801 (WEB_HERO_WIDTH_PX)
+// Module 10806 (WEB_HERO_WIDTH_PX)
 import set from "set" /* 2 */;
 import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4802 */;
 

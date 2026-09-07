@@ -1,15 +1,15 @@
-// Module ID: 10931
-// Function ID: 10932
+// Module ID: 10936
+// Function ID: 10937
 // Name: GroupDMInviteManagement
-// Dependencies: [5, 32, 19, 17, 8380, 8626, 1074, 21, 4560, 4992, 1272, 12, 576, 10932, 7039, 1178, 10949, 10950, 1114, 5624, 1250, 7000, 2]
+// Dependencies: [5, 32, 19, 17, 8380, 8631, 1074, 21, 4560, 4992, 1272, 12, 576, 10937, 7039, 1178, 10954, 10955, 1114, 5624, 1250, 7000, 2]
 
-// Module 10931 (GroupDMInviteManagement)
+// Module 10936 (GroupDMInviteManagement)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "createFromServer" /* 8380 */;
-import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare" /* 8626 */;
+import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare" /* 8631 */;
 import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -142,8 +142,8 @@ function GroupDMInviteManagement(channelId) {
     let tmp14 = jsx(channelId(7039).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
     let obj = { lightSource: null, darkSource: null, title: null, body: null };
-    obj[0] = tmp4(10949);
-    obj[1] = tmp4(10950);
+    obj[0] = tmp4(10954);
+    obj[1] = tmp4(10955);
     const intl = channelId(1114).intl;
     obj[2] = intl.string(channelId(1114).t["+nLJkZ"]);
     const intl2 = channelId(1114).intl;

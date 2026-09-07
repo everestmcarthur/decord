@@ -1,12 +1,12 @@
-// Module ID: 15141
-// Function ID: 15142
+// Module ID: 15144
+// Function ID: 15145
 // Name: logger
-// Dependencies: [4, 15142, 2]
+// Dependencies: [4, 15145, 2]
 
-// Module 15141 (logger)
+// Module 15144 (logger)
 import set from "set" /* 2 */;
 import log from "log" /* 4 */;
-import logger2 from "logger" /* 15142 */;
+import logger2 from "logger" /* 15145 */;
 
 const logger = new log.Logger("MobileMuxWrapper");
 let result = set.fileFinishedImporting("modules/video-qoe/MobileMuxWrapper.tsx");

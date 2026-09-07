@@ -1,10 +1,10 @@
-// Module ID: 10896
-// Function ID: 10897
+// Module ID: 10901
+// Function ID: 10902
 // Name: ActionButton
 // Dependencies: [19, 17, 21, 4981, 8097, 2]
 // Exports: default
 
-// Module 10896 (ActionButton)
+// Module 10901 (ActionButton)
 import noopAll from "noop" /* 19 */;
 import styleProperties from "styleProperties" /* 4981 */;
 import IconButton from "IconButton" /* 8097 */;

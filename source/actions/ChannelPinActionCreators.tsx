@@ -1,12 +1,12 @@
-// Module ID: 11674
-// Function ID: 11675
-// Dependencies: [5, 11675, 1074, 7765, 1272, 4461, 1114, 4904, 573, 2]
+// Module ID: 11679
+// Function ID: 11680
+// Dependencies: [5, 11680, 1074, 7765, 1272, 4461, 1114, 4904, 573, 2]
 
-// Module 11674
+// Module 11679
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleChannelDelete" /* 11675 */;
-import { FetchState } from "handleChannelDelete" /* 11675 */;
+import closure_4 from "handleChannelDelete" /* 11680 */;
+import { FetchState } from "handleChannelDelete" /* 11680 */;
 import ME from "ME" /* 1074 */;
 
 const require = arg1;

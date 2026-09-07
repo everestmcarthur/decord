@@ -1,10 +1,10 @@
-// Module ID: 16868
-// Function ID: 16869
+// Module ID: 16871
+// Function ID: 16872
 // Name: ContextMenuCommandRootScreen
-// Dependencies: [32, 19, 17, 1979, 4999, 21, 4560, 576, 504, 9416, 9298, 9411, 6981, 7049, 10119, 1114, 4556, 16869, 7050, 7055, 2]
+// Dependencies: [32, 19, 17, 1979, 4999, 21, 4560, 576, 504, 9421, 9303, 9416, 6981, 7049, 10124, 1114, 4556, 16872, 7050, 7055, 2]
 // Exports: default
 
-// Module 16868 (ContextMenuCommandRootScreen)
+// Module 16871 (ContextMenuCommandRootScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;

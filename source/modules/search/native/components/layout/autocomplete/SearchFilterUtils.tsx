@@ -1,21 +1,21 @@
-// Module ID: 16631
-// Function ID: 16632
+// Module ID: 16634
+// Function ID: 16635
 // Name: getSearchTokenLabel
-// Dependencies: [7878, 7877, 1074, 1114, 11825, 10112, 13843, 5090, 9785, 16632, 12209, 9435, 12341, 12361, 12338, 4527, 9717, 1896, 12358, 2]
+// Dependencies: [7878, 7877, 1074, 1114, 11830, 10117, 13846, 5090, 9790, 16635, 12213, 9440, 12345, 12365, 12342, 4527, 9722, 1896, 12362, 2]
 // Exports: getSearchFilterSuggestions, getSearchTokenIcon, getSearchTokenLabel, getSearchTokenPressHandler, getSearchTokenSubLabel
 
-// Module 16631 (getSearchTokenLabel)
+// Module 16634 (getSearchTokenLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import AtIcon from "AtIcon" /* 5090 */;
 import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 7877 */;
-import RobotIcon from "RobotIcon" /* 9435 */;
-import CalendarIcon from "CalendarIcon" /* 9785 */;
-import AttachmentIcon from "AttachmentIcon" /* 10112 */;
-import UserIcon from "UserIcon" /* 11825 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12209 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13843 */;
-import CalendarMinusIcon from "CalendarMinusIcon" /* 16632 */;
+import RobotIcon from "RobotIcon" /* 9440 */;
+import CalendarIcon from "CalendarIcon" /* 9790 */;
+import AttachmentIcon from "AttachmentIcon" /* 10117 */;
+import UserIcon from "UserIcon" /* 11830 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12213 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13846 */;
+import CalendarMinusIcon from "CalendarMinusIcon" /* 16635 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
 import ME from "ME" /* 1074 */;
 
@@ -213,7 +213,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(cl
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(12341));
+  const keys = Object.keys(items(12345));
   const item = keys.forEach((type) => {
     let obj = textInputValue(closure_1_2[12]);
     if (obj.isSearchFilterTokenType(type)) {

@@ -1,14 +1,14 @@
-// Module ID: 17314
-// Function ID: 17315
+// Module ID: 17317
+// Function ID: 17318
 // Name: handleAppStateUpdate
-// Dependencies: [5, 1371, 9323, 1074, 3, 9324, 7118, 1115, 13363, 4218, 1242, 2]
+// Dependencies: [5, 1371, 9328, 1074, 3, 9329, 7118, 1115, 13367, 4218, 1242, 2]
 
-// Module 17314 (handleAppStateUpdate)
+// Module 17317 (handleAppStateUpdate)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { getIconById } from "items" /* 9323 */;
+import { getIconById } from "items" /* 9328 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 
 let require = arg1;
@@ -146,9 +146,9 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
 prototype["resetIcon"] = function resetIcon(arg0, c0, ORPHANED) {
   const _require = arg0;
   closure_1 = ORPHANED;
-  let obj = _require(13363);
-  const setAppIconResult = _require(13363).setAppIcon(DEFAULT, c0);
-  _require(13363).setAppIcon(DEFAULT, c0).then(() => {
+  let obj = _require(13367);
+  const setAppIconResult = _require(13367).setAppIcon(DEFAULT, c0);
+  _require(13367).setAppIcon(DEFAULT, c0).then(() => {
     let obj = ORPHANED(closure_1_2[10]);
     obj = { previous_icon_id: closure_0, reset_to_icon_id: closure_1_8, reset_reason: ORPHANED };
     obj.track(closure_1_6.APP_ICON_AUTO_RESET, obj);

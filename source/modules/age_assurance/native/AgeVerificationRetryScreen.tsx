@@ -1,10 +1,10 @@
-// Module ID: 8582
-// Function ID: 8583
+// Module ID: 8585
+// Function ID: 8586
 // Name: GetStartedScreen
-// Dependencies: [5, 19, 17, 1074, 8419, 21, 4560, 576, 4773, 8413, 8578, 1114, 8411, 1115, 5692, 4556, 5687, 5605, 2024, 2]
+// Dependencies: [5, 19, 17, 1074, 8419, 21, 4560, 576, 4773, 8413, 8581, 1114, 8411, 1115, 5692, 4556, 5687, 5605, 2024, 2]
 // Exports: default
 
-// Module 8582 (GetStartedScreen)
+// Module 8585 (GetStartedScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;

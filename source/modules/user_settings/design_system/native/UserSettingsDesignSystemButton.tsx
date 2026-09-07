@@ -1,25 +1,25 @@
-// Module ID: 15754
-// Function ID: 15755
+// Module ID: 15757
+// Function ID: 15758
 // Name: ExampleButton
-// Dependencies: [32, 19, 17, 1230, 21, 15755, 4975, 15756, 8097, 7381, 9890, 14165, 9060, 7949, 9128, 4560, 576, 1483, 4527, 15757, 1896, 4973, 4556, 10652, 9880, 9886, 9888, 9887, 9885, 9884, 5433, 4271, 1091, 4987, 5607, 5125, 8909, 2]
+// Dependencies: [32, 19, 17, 1230, 21, 15758, 4975, 15759, 8097, 7381, 9895, 14168, 9065, 7949, 9133, 4560, 576, 1483, 4527, 15760, 1896, 4973, 4556, 10657, 9885, 9891, 9893, 9892, 9890, 9889, 5433, 4271, 1091, 4987, 5607, 5125, 8914, 2]
 // Exports: default
 
-// Module 15754 (ExampleButton)
+// Module 15757 (ExampleButton)
 import ThemesDefault from "Themes" /* 576 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import registerAssetDefault from "registerAsset" /* 7381 */;
 import registerAssetDefault2 from "registerAsset" /* 7949 */;
-import registerAssetDefault3 from "registerAsset" /* 9060 */;
-import registerAssetDefault4 from "registerAsset" /* 9128 */;
-import registerAssetDefault5 from "registerAsset" /* 9880 */;
-import registerAssetDefault6 from "registerAsset" /* 9884 */;
-import registerAssetDefault7 from "registerAsset" /* 9885 */;
-import registerAssetDefault8 from "registerAsset" /* 9886 */;
-import registerAssetDefault9 from "registerAsset" /* 9887 */;
-import registerAssetDefault10 from "registerAsset" /* 9888 */;
-import registerAssetDefault11 from "registerAsset" /* 10652 */;
-import keysDefault from "keys" /* 15755 */;
-import registerAssetDefault12 from "registerAsset" /* 15756 */;
+import registerAssetDefault3 from "registerAsset" /* 9065 */;
+import registerAssetDefault4 from "registerAsset" /* 9133 */;
+import registerAssetDefault5 from "registerAsset" /* 9885 */;
+import registerAssetDefault6 from "registerAsset" /* 9889 */;
+import registerAssetDefault7 from "registerAsset" /* 9890 */;
+import registerAssetDefault8 from "registerAsset" /* 9891 */;
+import registerAssetDefault9 from "registerAsset" /* 9892 */;
+import registerAssetDefault10 from "registerAsset" /* 9893 */;
+import registerAssetDefault11 from "registerAsset" /* 10657 */;
+import keysDefault from "keys" /* 15758 */;
+import registerAssetDefault12 from "registerAsset" /* 15759 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -189,13 +189,13 @@ function ExampleImageButton(arg0) {
     obj[4] = tmp.buttonSize;
     obj[5] = image;
   }
-  return closure_9(enableLoadingState(9890).ImageButton, obj);
+  return closure_9(enableLoadingState(9895).ImageButton, obj);
 }
 function ExampleToggleButton() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
   importDefault = tmp[1];
-  let obj = first(14165);
+  let obj = first(14168);
   obj = { on: null, off: null };
   obj = { text: "Unfollow", icon: registerAssetDefault3 };
   obj[0] = obj;
@@ -214,7 +214,7 @@ function ExampleIconToggleButton() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
   importDefault = tmp[1];
-  let obj = first(14165);
+  let obj = first(14168);
   obj = { on: null, off: null };
   obj = { variant: "destructive", accessibilityLabel: "Mute", icon: registerAssetDefault4 };
   obj[0] = obj;
@@ -781,7 +781,7 @@ export default function UserSettingsDesignSystemButton() {
     positionBottom: 32,
     accessibilityLabel: "Floating Action Button"
   };
-  items49[1] = callback2(_require(8909).FloatingActionButton, obj);
+  items49[1] = callback2(_require(8914).FloatingActionButton, obj);
   obj[0] = items49;
   return callback3(closure_11, obj);
 };

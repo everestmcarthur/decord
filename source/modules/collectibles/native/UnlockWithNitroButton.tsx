@@ -1,15 +1,15 @@
-// Module ID: 13163
-// Function ID: 13164
+// Module ID: 13167
+// Function ID: 13168
 // Name: UnlockWithNitroButton
-// Dependencies: [19, 7237, 7558, 1076, 21, 504, 7240, 13148, 1114, 4976, 4556, 8662, 2]
+// Dependencies: [19, 7237, 7558, 1076, 21, 504, 7240, 13152, 1114, 4976, 4556, 8667, 2]
 // Exports: UnlockWithNitroButton
 
-// Module 13163 (UnlockWithNitroButton)
+// Module 13167 (UnlockWithNitroButton)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import CollapsingText from "CollapsingText" /* 4976 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13148 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13152 */;
 import closure_3 from "updateProduct" /* 7237 */;
 import closure_4 from "map" /* 7558 */;
 import { ShopCtaEnum } from "items" /* 1076 */;

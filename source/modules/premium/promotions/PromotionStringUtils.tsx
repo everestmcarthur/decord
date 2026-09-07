@@ -1,10 +1,10 @@
-// Module ID: 13402
-// Function ID: 13403
+// Module ID: 13406
+// Function ID: 13407
 // Name: useFormatStringWithCommonPremiumParams
 // Dependencies: [4223, 1373, 504, 4218, 7234, 1114, 2024, 2]
 // Exports: getHelpArticleLinkProps, useFormatStringWithCommonPremiumParams
 
-// Module 13402 (useFormatStringWithCommonPremiumParams)
+// Module 13406 (useFormatStringWithCommonPremiumParams)
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import combinedDefault from "combined" /* 2024 */;

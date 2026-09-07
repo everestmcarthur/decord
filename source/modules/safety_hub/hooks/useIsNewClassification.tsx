@@ -1,10 +1,10 @@
-// Module ID: 14774
-// Function ID: 14775
+// Module ID: 14777
+// Function ID: 14778
 // Name: useIsNewClassification
 // Dependencies: [11, 2]
 // Exports: useIsNewClassification
 
-// Module 14774 (useIsNewClassification)
+// Module 14777 (useIsNewClassification)
 import set from "set" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 

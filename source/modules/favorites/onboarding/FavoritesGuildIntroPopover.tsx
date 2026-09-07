@@ -1,12 +1,12 @@
-// Module ID: 10238
-// Function ID: 10239
+// Module ID: 10243
+// Function ID: 10244
 // Name: hasOfferedFavoritesGuildOnboarding
-// Dependencies: [32, 19, 1949, 1960, 1074, 560, 1943, 10224, 504, 10239, 7388, 2]
+// Dependencies: [32, 19, 1949, 1960, 1074, 560, 1943, 10229, 504, 10244, 7388, 2]
 // Exports: hasOfferedFavoritesGuildOnboarding, isFavoritesIntroPopoverShown, resetHasOfferedFavoritesGuildOnboarding, useFavoritesIntroPopover, useIsFavoritesIntroPopoverShown
 
-// Module 10238 (hasOfferedFavoritesGuildOnboarding)
+// Module 10243 (hasOfferedFavoritesGuildOnboarding)
 import DismissibleContent from "DismissibleContent" /* 1943 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10239 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10244 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import withContent from "withContent" /* 1949 */;
@@ -21,9 +21,9 @@ let c4 = importAllResult;
 let closure_10 = keys.create(() => ({ shouldShowPopover: false, markPopoverAsDismissed: NOOP }));
 let c11 = false;
 const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
-  const favoritesAccess = _require(10224).useFavoritesAccess("FavoritesGuildIntroPopover");
+  const favoritesAccess = _require(10229).useFavoritesAccess("FavoritesGuildIntroPopover");
   ({ hasAccess, isFreemium } = favoritesAccess);
-  const obj = _require(10224);
+  const obj = _require(10229);
   const items = [closure_8];
   const stateFromStores = _require(504).useStateFromStores(items, () => false === obj.favoriteGuildVisibleSetting);
   const obj2 = _require(504);

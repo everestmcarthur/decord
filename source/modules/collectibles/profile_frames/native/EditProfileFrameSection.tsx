@@ -1,11 +1,11 @@
-// Module ID: 14633
-// Function ID: 14634
+// Module ID: 14636
+// Function ID: 14637
 // Name: PX_8
-// Dependencies: [19, 17, 7549, 8222, 21, 576, 4560, 13170, 14632, 13171, 7182, 8822, 2]
+// Dependencies: [19, 17, 7549, 8222, 21, 576, 4560, 13174, 14635, 13175, 7182, 8827, 2]
 
-// Module 14633 (PX_8)
+// Module 14636 (PX_8)
 import ThemesDefault from "Themes" /* 576 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13170 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13174 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { isProfileFrameRecord } from "fromServer" /* 7549 */;
@@ -86,9 +86,9 @@ const memoResult1 = importAllResult.memo((isSelected) => {
   obj = { profileFrame, previewWidth: size * closure_6, previewHeight: size - 2 * PX_8, profileBackgroundColor: null };
   const tmp = callback3();
   obj[3] = setSelectedProfileFrame(576).colors.BACKGROUND_BASE_LOW;
-  obj[1] = callback(setSelectedProfileFrame(8822), obj);
+  obj[1] = callback(setSelectedProfileFrame(8827), obj);
   obj[5] = callback(View, obj);
-  return callback(profileFrame(13171).EditCollectiblesListItemProduct, obj);
+  return callback(profileFrame(13175).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditProfileFrameItem";
 const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/EditProfileFrameSection.tsx");

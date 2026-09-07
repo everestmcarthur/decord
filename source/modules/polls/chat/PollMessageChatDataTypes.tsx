@@ -1,9 +1,9 @@
-// Module ID: 11721
-// Function ID: 11722
+// Module ID: 11726
+// Function ID: 11727
 // Name: NativeShadowType
 // Dependencies: [2]
 
-// Module 11721 (NativeShadowType)
+// Module 11726 (NativeShadowType)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/polls/chat/PollMessageChatDataTypes.tsx");

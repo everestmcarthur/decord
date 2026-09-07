@@ -1,10 +1,10 @@
-// Module ID: 14858
-// Function ID: 14859
+// Module ID: 14861
+// Function ID: 14862
 // Name: useIsHarvestRequestDisabled
-// Dependencies: [17, 1371, 7975, 1074, 21, 1244, 6984, 1249, 504, 4184, 14859, 1114, 4153, 11468, 14861, 2]
+// Dependencies: [17, 1371, 7975, 1074, 21, 1244, 6984, 1249, 504, 4184, 14862, 1114, 4153, 11473, 14864, 2]
 // Exports: fetchHarvestStatus, useIsHarvestRequestDisabled
 
-// Module 14858 (useIsHarvestRequestDisabled)
+// Module 14861 (useIsHarvestRequestDisabled)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -14,11 +14,11 @@ import hooksDefault from "hooks" /* 4153 */;
 import isIterable from "isIterable" /* 4184 */;
 import saveProfileAndAccountRequest from "saveProfileAndAccountRequest" /* 6984 */;
 import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import harvestDisabled from "harvestDisabled" /* 14859 */;
+import harvestDisabled from "harvestDisabled" /* 14862 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
 import identity from "identity" /* 1244 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 function useIsHarvestRequestDisabled() {
   const items = [closure_4];
@@ -105,7 +105,7 @@ obj = {
 obj = {
   route: UserSettingsSections.REQUEST_DATA,
   getComponent() {
-    return require(14861).default;
+    return require(14864).default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,16 +1,16 @@
-// Module ID: 12021
-// Function ID: 12022
+// Module ID: 12025
+// Function ID: 12026
 // Name: ForumPostList
-// Dependencies: [32, 19, 17, 1964, 21, 4560, 7275, 12003, 12013, 12022, 12025, 2]
+// Dependencies: [32, 19, 17, 1964, 21, 4560, 7275, 12007, 12017, 12026, 12029, 2]
 // Exports: default
 
-// Module 12021 (ForumPostList)
+// Module 12025 (ForumPostList)
 import noopAll from "noop" /* 19 */;
 import useAvailableTags from "useAvailableTags" /* 7275 */;
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12003 */;
-import ForumPostAppliedTagPills from "ForumPostAppliedTagPills" /* 12013 */;
-import ForumPostListBodyDefault from "ForumPostListBody" /* 12022 */;
-import ForumPostListFooterDefault from "ForumPostListFooter" /* 12025 */;
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12007 */;
+import ForumPostAppliedTagPills from "ForumPostAppliedTagPills" /* 12017 */;
+import ForumPostListBodyDefault from "ForumPostListBody" /* 12026 */;
+import ForumPostListFooterDefault from "ForumPostListFooter" /* 12029 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ChannelFlags } from "set" /* 1964 */;

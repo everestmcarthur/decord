@@ -1,16 +1,16 @@
-// Module ID: 10941
-// Function ID: 10942
+// Module ID: 10946
+// Function ID: 10947
 // Name: InstantInviteDetails
-// Dependencies: [19, 17, 1961, 4209, 1371, 21, 4560, 576, 5028, 5080, 4973, 4556, 4713, 4523, 1114, 10930, 2]
+// Dependencies: [19, 17, 1961, 4209, 1371, 21, 4560, 576, 5028, 5080, 4973, 4556, 4713, 4523, 1114, 10935, 2]
 // Exports: default
 
-// Module 10941 (InstantInviteDetails)
+// Module 10946 (InstantInviteDetails)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import computeChannelName from "computeChannelName" /* 4713 */;
 import Stack from "Stack" /* 4973 */;
 import getChannelIcon from "getChannelIcon" /* 5028 */;
-import componentDidMountDefault from "componentDidMount" /* 10930 */;
+import componentDidMountDefault from "componentDidMount" /* 10935 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord" /* 1961 */;

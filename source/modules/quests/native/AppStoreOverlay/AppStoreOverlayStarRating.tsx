@@ -1,14 +1,14 @@
-// Module ID: 11505
-// Function ID: 11506
+// Module ID: 11510
+// Function ID: 11511
 // Name: FractionalStar
-// Dependencies: [19, 17, 21, 4560, 576, 10241, 10235, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 10246, 10240, 2]
 // Exports: default
 
-// Module 11505 (FractionalStar)
+// Module 11510 (FractionalStar)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import StarIcon from "StarIcon" /* 10235 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 10241 */;
+import StarIcon from "StarIcon" /* 10240 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 10246 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

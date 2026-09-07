@@ -1,10 +1,10 @@
-// Module ID: 15103
-// Function ID: 15104
+// Module ID: 15106
+// Function ID: 15107
 // Name: QuestDockPreviewTools
-// Dependencies: [5, 19, 1074, 21, 15102, 5451, 11295, 1114, 5447, 7728, 11192, 11193, 11197, 7718, 7200, 9078, 8593, 11496, 4527, 7198, 7722, 15104, 11767, 5680, 11276, 15106, 11524, 11483, 8717, 15107, 15109, 15111, 6970, 7382, 4507, 7190, 11105, 15113, 2]
+// Dependencies: [5, 19, 1074, 21, 15105, 5451, 11300, 1114, 5447, 7728, 11197, 11198, 11202, 7718, 7200, 9083, 8598, 11501, 4527, 7198, 7722, 15107, 11772, 5680, 11281, 15109, 11529, 11488, 8722, 15110, 15112, 15114, 6970, 7382, 4507, 7190, 11110, 15116, 2]
 // Exports: default
 
-// Module 15103 (QuestDockPreviewTools)
+// Module 15106 (QuestDockPreviewTools)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { UserSettingsSections } from "ME" /* 1074 */;
@@ -17,65 +17,65 @@ function QuestDockPreviewTools(quest) {
   dependencyMap = undefined;
   c3 = undefined;
   c4 = undefined;
-  let obj = quest(11483);
+  let obj = quest(11488);
   const questPreviewActions = obj.useQuestPreviewActions(quest.id);
   ({ handleComplete: c1, handleProgress: c2, handleResetDismissibilityClick: c3, handleResetStatusClick: c4 } = questPreviewActions);
   obj = { title: null, hasIcons: true, children: null };
   const intl = quest(1114).intl;
   obj[0] = intl.string(quest(1114).t["Ape+mm"]);
-  obj = { icon: callback(quest(7200).ActionSheetRow.Icon, { IconComponent: quest(8717).TrophyIcon }), label: null, onPress: null };
+  obj = { icon: callback(quest(7200).ActionSheetRow.Icon, { IconComponent: quest(8722).TrophyIcon }), label: null, onPress: null };
   const obj2 = { text: null };
   const intl2 = quest(1114).intl;
   obj2[0] = intl2.string(quest(1114).t.jQEfRT);
-  obj[1] = callback(quest(8593).FormLabel, obj2);
+  obj[1] = callback(quest(8598).FormLabel, obj2);
   obj[2] = function onPress() {
     _undefined();
     _undefined(_undefined2[18]).hideActionSheet();
   };
   let items = [callback(quest(7200).ActionSheetRow, obj), , , , , , ];
   const obj3 = { icon: null, label: null, onPress: null };
-  obj1 = { IconComponent: quest(8717).TrophyIcon };
-  obj3[0] = callback(quest(7200).ActionSheetRow.Icon, { IconComponent: quest(15107).RedoIcon });
+  obj1 = { IconComponent: quest(8722).TrophyIcon };
+  obj3[0] = callback(quest(7200).ActionSheetRow.Icon, { IconComponent: quest(15110).RedoIcon });
   const obj5 = { text: null };
   const intl3 = quest(1114).intl;
   obj5[0] = intl3.string(quest(1114).t.cKSLr4);
-  obj3[1] = callback(quest(8593).FormLabel, obj5);
+  obj3[1] = callback(quest(8598).FormLabel, obj5);
   obj3[2] = function onPress() {
     _undefined2(0.9 * Math.random() + 0.03);
     _undefined(_undefined2[18]).hideActionSheet();
   };
   items[1] = callback(quest(7200).ActionSheetRow, obj3);
   const obj6 = { icon: null, label: null, onPress: null };
-  const obj4 = { IconComponent: quest(15107).RedoIcon };
-  obj6[0] = callback(quest(7200).ActionSheetRow.Icon, { IconComponent: quest(15109).UndoIcon });
+  const obj4 = { IconComponent: quest(15110).RedoIcon };
+  obj6[0] = callback(quest(7200).ActionSheetRow.Icon, { IconComponent: quest(15112).UndoIcon });
   const obj8 = { text: null };
   const intl4 = quest(1114).intl;
   obj8[0] = intl4.string(quest(1114).t.taqkwK);
-  obj6[1] = callback(quest(8593).FormLabel, obj8);
+  obj6[1] = callback(quest(8598).FormLabel, obj8);
   obj6[2] = function onPress() {
     _undefined4();
     _undefined(_undefined2[18]).hideActionSheet();
   };
   items[2] = callback(quest(7200).ActionSheetRow, obj6);
   const obj9 = { icon: null, label: null, onPress: null };
-  const obj7 = { IconComponent: quest(15109).UndoIcon };
-  obj9[0] = callback(quest(7200).ActionSheetRow.Icon, { IconComponent: quest(15111).UnsendIcon });
+  const obj7 = { IconComponent: quest(15112).UndoIcon };
+  obj9[0] = callback(quest(7200).ActionSheetRow.Icon, { IconComponent: quest(15114).UnsendIcon });
   const obj11 = { text: null };
   const intl5 = quest(1114).intl;
   obj11[0] = intl5.string(quest(1114).t.JF6W66);
-  obj9[1] = callback(quest(8593).FormLabel, obj11);
+  obj9[1] = callback(quest(8598).FormLabel, obj11);
   obj9[2] = function onPress() {
     _undefined3();
     _undefined(_undefined2[18]).hideActionSheet();
   };
   items[3] = callback(quest(7200).ActionSheetRow, obj9);
   const obj12 = { icon: null, label: null, onPress: null };
-  const obj10 = { IconComponent: quest(15111).UnsendIcon };
+  const obj10 = { IconComponent: quest(15114).UnsendIcon };
   obj12[0] = callback(quest(7200).ActionSheetRow.Icon, { IconComponent: quest(6970).EyeIcon });
   const obj14 = { text: null };
   const intl6 = quest(1114).intl;
   obj14[0] = intl6.string(quest(1114).t["lL6/zF"]);
-  obj12[1] = callback(quest(8593).FormLabel, obj14);
+  obj12[1] = callback(quest(8598).FormLabel, obj14);
   obj12[2] = function onPress() {
     const items = [quest.id];
     quest(_undefined2[24]).markAdContentUnseen(quest(_undefined2[5]).AdCreativeType.QUEST, items);
@@ -89,7 +89,7 @@ function QuestDockPreviewTools(quest) {
   const obj17 = { text: null };
   const intl7 = quest(1114).intl;
   obj17[0] = intl7.string(quest(1114).t.tx5Ax5);
-  obj15[1] = callback(quest(8593).FormLabel, obj17);
+  obj15[1] = callback(quest(8598).FormLabel, obj17);
   obj15[2] = function onPress() {
     let obj = quest(_undefined2[33]);
     obj = { screen: _undefined4.QUEST_PREVIEW_TOOL_2, params: obj };
@@ -104,7 +104,7 @@ function QuestDockPreviewTools(quest) {
   const obj20 = { text: null };
   const intl8 = quest(1114).intl;
   obj20[0] = intl8.string(quest(1114).t.oisrFi);
-  obj18[1] = callback(quest(8593).FormLabel, obj20);
+  obj18[1] = callback(quest(8598).FormLabel, obj20);
   obj18[2] = function onPress() {
     quest(_undefined2[35]).copy(quest.id);
     const obj = quest(_undefined2[35]);
@@ -122,7 +122,7 @@ function QuestDockShareRow(quest) {
   obj = { text: null };
   const intl = quest(1114).intl;
   obj[0] = intl.string(quest(1114).t.WqhZss);
-  obj[1] = callback(quest(8593).FormLabel, obj);
+  obj[1] = callback(quest(8598).FormLabel, obj);
   obj[2] = function onPress() {
     let obj = quest(closure_1_2[6]);
     obj = { content: quest(closure_1_2[8]).QuestContent.QUEST_BAR_MOBILE, ctaContent: quest(closure_1_2[9]).QuestContentCTA.CONTEXT_MENU_COPY_LINK, sourceQuestContent: quest(closure_1_2[8]).QuestContent.QUEST_BAR_MOBILE };
@@ -134,12 +134,12 @@ function QuestDockShareRow(quest) {
 function QuestDockDisclosureRow(creative) {
   creative = creative.creative;
   let obj = { icon: null, label: null, onPress: null };
-  obj = { IconComponent: creative(11105).CircleQuestionIcon };
+  obj = { IconComponent: creative(11110).CircleQuestionIcon };
   obj[0] = callback(creative(7200).ActionSheetRow.Icon, obj);
   obj = { text: null };
   const intl = creative(1114).intl;
   obj[0] = intl.string(creative(1114).t.GcsZKJ);
-  obj[1] = callback(creative(8593).FormLabel, obj);
+  obj[1] = callback(creative(8598).FormLabel, obj);
   obj[2] = function onPress() {
     let obj = closure_1_1(closure_1_2[37]);
     obj = { creative, isTargetedDisclosure: true, trackingCtx: null };
@@ -297,8 +297,8 @@ export default function QuestDockContextMenuActionSheet(creative) {
             closure_1_3(closure_1_0(7728).QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT);
             const type = closure_1_0.type;
             if (closure_1_0(5451).AdCreativeType.QUEST === type) {
-              const obj7 = closure_1_0(11276);
-              const dismissQuestContentResult = closure_1_0(11276).dismissQuestContent(tmp37.quest.id, closure_1_0(5447).QuestContent.QUEST_BAR_MOBILE);
+              const obj7 = closure_1_0(11281);
+              const dismissQuestContentResult = closure_1_0(11281).dismissQuestContent(tmp37.quest.id, closure_1_0(5447).QuestContent.QUEST_BAR_MOBILE);
               v0(4527).hideActionSheet();
               v0 = 1;
               dependencyMap = 1;
@@ -306,7 +306,7 @@ export default function QuestDockContextMenuActionSheet(creative) {
               obj1[0] = dismissQuestContentResult;
               return obj1;
             } else if (closure_1_0(5451).AdCreativeType.BOUNTY === type) {
-              let obj3 = closure_1_0(11524);
+              let obj3 = closure_1_0(11529);
               const dismissAdContentResult = obj3.dismissAdContent(v0, closure_1_0(5447).QuestContent.QUEST_BAR_MOBILE);
               v0(4527).hideActionSheet();
               v0 = 2;
@@ -324,7 +324,7 @@ export default function QuestDockContextMenuActionSheet(creative) {
             dependencyMap = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            obj1 = closure_1_0(15106);
+            obj1 = closure_1_0(15109);
             const result = obj1.displayQuestDismissalToast();
           }
         } else if (arg0 === 1) {

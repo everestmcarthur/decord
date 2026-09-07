@@ -1,10 +1,10 @@
-// Module ID: 9109
-// Function ID: 9110
+// Module ID: 9114
+// Function ID: 9115
 // Name: isPremiumResolution
 // Dependencies: [19, 4606, 502, 1979, 4583, 1371, 1074, 4607, 1373, 4585, 1114, 504, 4696, 1242, 2]
 // Exports: getFPSText, getMaxQuality, getPremiumRequirement, getResolutionText, isPremiumFPS, isPremiumRequirement, isPremiumResolution, trackStreamSettingsUpdate, useMaxQuality
 
-// Module 9109 (isPremiumResolution)
+// Module 9114 (isPremiumResolution)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import closure_3 from "noop" /* 19 */;

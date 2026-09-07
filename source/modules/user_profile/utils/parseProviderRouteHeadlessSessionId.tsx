@@ -1,10 +1,10 @@
-// Module ID: 13015
-// Function ID: 13016
+// Module ID: 13019
+// Function ID: 13020
 // Name: parseProviderRouteHeadlessSessionId
 // Dependencies: [32, 5283, 2]
 // Exports: default
 
-// Module 13015 (parseProviderRouteHeadlessSessionId)
+// Module 13019 (parseProviderRouteHeadlessSessionId)
 import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5283 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 

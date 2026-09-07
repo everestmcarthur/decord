@@ -1,10 +1,10 @@
-// Module ID: 14898
-// Function ID: 14899
+// Module ID: 14901
+// Function ID: 14902
 // Name: GuildRow
 // Dependencies: [7537, 21, 4560, 576, 504, 7593, 5605, 5584, 7198, 4556, 1114, 2396, 5687, 2]
 // Exports: default
 
-// Module 14898 (GuildRow)
+// Module 14901 (GuildRow)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;

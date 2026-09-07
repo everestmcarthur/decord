@@ -1,10 +1,10 @@
-// Module ID: 11010
-// Function ID: 11011
+// Module ID: 11015
+// Function ID: 11016
 // Name: ProfileEffectAssetPreview
-// Dependencies: [19, 17, 1076, 8798, 21, 4560, 576, 8226, 5587, 11011, 8201, 8822, 8171, 8797, 1886, 8818, 1889, 1077, 8846, 8845, 8810, 1114, 4556, 7553, 8848, 11012, 8178, 4218, 8864, 2]
+// Dependencies: [19, 17, 1076, 8803, 21, 4560, 576, 8226, 5587, 11016, 8201, 8827, 8171, 8802, 1886, 8823, 1889, 1077, 8851, 8850, 8815, 1114, 4556, 7553, 8853, 11017, 8178, 4218, 8869, 2]
 // Exports: default
 
-// Module 11010 (ProfileEffectAssetPreview)
+// Module 11015 (ProfileEffectAssetPreview)
 import ThemesDefault from "Themes" /* 576 */;
 import set from "set" /* 1077 */;
 import getNameplateData from "getNameplateData" /* 1886 */;
@@ -14,13 +14,13 @@ import preloadDefault from "preload" /* 5587 */;
 import useCurrentUser from "useCurrentUser" /* 8178 */;
 import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8201 */;
 import useProfileEffectDefault from "useProfileEffect" /* 8226 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8810 */;
-import NameplateInnerDefault from "NameplateInner" /* 8818 */;
-import metadataDefault from "metadata" /* 8845 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8815 */;
+import NameplateInnerDefault from "NameplateInner" /* 8823 */;
+import metadataDefault from "metadata" /* 8850 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items" /* 1076 */;
-import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO" /* 8798 */;
+import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO" /* 8803 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -34,7 +34,7 @@ function ProfileEffectAssetPreview(item) {
     obj[0] = tmp.profileEffectContainer;
     obj = { source: null, alt: null, style: null, resizeMode: "cover" };
     obj = { uri: null };
-    obj[0] = tmp2(11011);
+    obj[0] = tmp2(11016);
     obj[0] = obj;
     obj[1] = tmp4.accessibilityLabel;
     obj[2] = tmp.profileEffect;
@@ -62,8 +62,8 @@ function ProfileFrameAssetPreview(arg0) {
     obj[1] = width;
     obj[2] = height;
     obj[3] = tmp(576).colors.BACKGROUND_BASE_LOW;
-    tmp4 = callback(tmp(8822), obj);
-    const tmpResult = tmp(8822);
+    tmp4 = callback(tmp(8827), obj);
+    const tmpResult = tmp(8827);
   }
   return tmp4;
 }
@@ -99,7 +99,7 @@ function BundleAssetPreview(height) {
   obj = { style: memo, children: null };
   obj = { style: memo1, children: null };
   const memo2 = bundleWidth.useMemo(() => ({ width, height }), items2);
-  obj[1] = callback(height(8797), { deco: firstAvatarDecoration, pfx: firstProfileEffect, nameplate: firstNameplate, previewAssets: product.previewAssets, disableStaticBackground: true, size: "small", targetSize: memo2 });
+  obj[1] = callback(height(8802), { deco: firstAvatarDecoration, pfx: firstProfileEffect, nameplate: firstNameplate, previewAssets: product.previewAssets, disableStaticBackground: true, size: "small", targetSize: memo2 });
   obj[1] = callback(c4, obj);
   return callback(c4, obj);
 }
@@ -131,9 +131,9 @@ function CollectibleProductPreviewContent(userAvatarSource) {
   if (ALL.has(product.skuId)) {
     let obj = { skuId: null, width: null, height: null };
     obj[0] = product.skuId;
-    obj[1] = tmp2(8846).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
-    obj[2] = tmp2(8846).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
-    return callback(tmp2(8846).FractionalNitroCoinIllustration, obj);
+    obj[1] = tmp2(8851).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
+    obj[2] = tmp2(8851).FRACTIONAL_NITRO_COIN_SIZE.CHECKOUT;
+    return callback(tmp2(8851).FractionalNitroCoinIllustration, obj);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     obj = { source: null, style: null };
     obj1 = { uri: null };

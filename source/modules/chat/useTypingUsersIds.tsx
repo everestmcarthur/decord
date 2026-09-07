@@ -1,12 +1,12 @@
-// Module ID: 11966
-// Function ID: 11967
+// Module ID: 11970
+// Function ID: 11971
 // Name: useTypingUserIds
-// Dependencies: [4209, 11965, 1371, 504, 2]
+// Dependencies: [4209, 11969, 1371, 504, 2]
 // Exports: useTypingUserIds
 
-// Module 11966 (useTypingUserIds)
+// Module 11970 (useTypingUserIds)
 import closure_2 from "markAllUserIdListsStale" /* 4209 */;
-import closure_3 from "handleTypingStart" /* 11965 */;
+import closure_3 from "handleTypingStart" /* 11969 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 
 const require = arg1;

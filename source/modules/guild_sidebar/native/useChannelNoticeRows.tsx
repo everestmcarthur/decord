@@ -1,13 +1,13 @@
-// Module ID: 16259
-// Function ID: 16260
+// Module ID: 16262
+// Function ID: 16263
 // Name: useChannelNoticeRows
-// Dependencies: [32, 19, 12475, 2012, 1979, 1371, 7534, 1074, 1954, 563, 7163, 7165, 16260, 7388, 1943, 4380, 16184, 16261, 2]
+// Dependencies: [32, 19, 12479, 2012, 1979, 1371, 7534, 1074, 1954, 563, 7163, 7165, 16263, 7388, 1943, 4380, 16187, 16264, 2]
 // Exports: default
 
-// Module 16259 (useChannelNoticeRows)
+// Module 16262 (useChannelNoticeRows)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
-import closure_5 from "completeStep" /* 12475 */;
+import closure_5 from "completeStep" /* 12479 */;
 import closure_6 from "comparator" /* 2012 */;
 import closure_7 from "createGuildRecordFromRust" /* 1979 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;

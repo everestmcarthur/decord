@@ -1,10 +1,10 @@
-// Module ID: 9196
-// Function ID: 9197
+// Module ID: 9201
+// Function ID: 9202
 // Name: styles
-// Dependencies: [19, 17, 21, 4560, 576, 1396, 9197, 5123, 9198, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 1396, 9202, 5123, 9203, 2]
 // Exports: default
 
-// Module 9196 (styles)
+// Module 9201 (styles)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -63,7 +63,7 @@ export default function GameIcon(arg0) {
         source = closure_4;
         obj1 = { style: null, children: null };
         obj1[0] = fireIcon.gameIconMask;
-        FireIcon = FireIcon(9198).FireIcon;
+        FireIcon = FireIcon(9203).FireIcon;
         const obj2 = { style: null, color: null };
         fireIcon = fireIcon.fireIcon;
         obj2[0] = fireIcon;
@@ -91,7 +91,7 @@ export default function GameIcon(arg0) {
         const obj6 = { style: null, color: null };
         obj6[0] = fireIcon.fireIcon;
         obj6[1] = onPress(576).unsafe_rawColors.ORANGE_330;
-        obj5[1] = tmp16(FireIcon(9198).FireIcon, obj6);
+        obj5[1] = tmp16(FireIcon(9203).FireIcon, obj6);
         tmp16Result = tmp16(tmp15, obj5);
       }
       items3[1] = tmp16Result;

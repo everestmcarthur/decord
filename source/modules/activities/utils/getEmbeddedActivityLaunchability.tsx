@@ -1,12 +1,12 @@
-// Module ID: 9582
-// Function ID: 9583
+// Module ID: 9587
+// Function ID: 9588
 // Name: getEmbeddedActivityLaunchability
-// Dependencies: [1957, 1979, 4199, 4579, 1920, 1074, 9502, 504, 1114, 2]
+// Dependencies: [1957, 1979, 4199, 4579, 1920, 1074, 9507, 504, 1114, 2]
 // Exports: getEmbeddedActivityLaunchabilityForChannel, getEmbeddedActivityLaunchabilityLabel, useEmbeddedActivityLaunchability
 
-// Module 9582 (getEmbeddedActivityLaunchability)
+// Module 9587 (getEmbeddedActivityLaunchability)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9502 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9507 */;
 import closure_2 from "ensureGuildLoaded" /* 1957 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4199 */;

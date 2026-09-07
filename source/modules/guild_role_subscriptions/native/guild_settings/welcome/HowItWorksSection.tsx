@@ -1,19 +1,19 @@
-// Module ID: 17694
-// Function ID: 17695
+// Module ID: 17697
+// Function ID: 17698
 // Name: HowItWorksCard
-// Dependencies: [19, 17, 21, 4560, 576, 4556, 5587, 1114, 17695, 1178, 17696, 17697, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4556, 5587, 1114, 17698, 1178, 17699, 17700, 2]
 // Exports: default
 
-// Module 17694 (HowItWorksCard)
+// Module 17697 (HowItWorksCard)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 17695 */;
-import registerAssetDefault2 from "registerAsset" /* 17696 */;
-import registerAssetDefault3 from "registerAsset" /* 17697 */;
+import registerAssetDefault from "registerAsset" /* 17698 */;
+import registerAssetDefault2 from "registerAsset" /* 17699 */;
+import registerAssetDefault3 from "registerAsset" /* 17700 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

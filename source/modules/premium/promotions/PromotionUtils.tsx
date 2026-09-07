@@ -1,18 +1,18 @@
-// Module ID: 13355
-// Function ID: 13356
+// Module ID: 13359
+// Function ID: 13360
 // Name: claimedOutboundPromotionCodeFromServer
-// Dependencies: [5, 1221, 10666, 10665, 1373, 1074, 1920, 4411, 1272, 1115, 1242, 1384, 1943, 11, 1945, 10697, 2]
+// Dependencies: [5, 1221, 10671, 10670, 1373, 1074, 1920, 4411, 1272, 1115, 1242, 1384, 1943, 11, 1945, 10702, 2]
 // Exports: claimOutboundPromotion, getClaimedEndedOutboundPromotions, getClaimedOutboundPromotionCodeMap, getNextUnseenOutboundPromotionId, getOutboundPromotionRedemptionUrl, getPromotionImageURL, isDedicatedSurfacePromotion, isRecurringPromotion, shouldShowOutboundPromotionNotice, shouldShowOutboundPromotionOnPlatform
 
-// Module 13355 (claimedOutboundPromotionCodeFromServer)
+// Module 13359 (claimedOutboundPromotionCodeFromServer)
 import set2 from "set" /* 1115 */;
 import DismissibleContent from "DismissibleContent" /* 1943 */;
 import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1945 */;
-import CountryListMode from "CountryListMode" /* 10697 */;
+import CountryListMode from "CountryListMode" /* 10702 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1221 */;
-import closure_5 from "createFromServer" /* 10666 */;
-import closure_6 from "createEmptyPromotionsByType" /* 10665 */;
+import closure_5 from "createFromServer" /* 10671 */;
+import closure_6 from "createEmptyPromotionsByType" /* 10670 */;
 import { PromotionFlags } from "GuildFeatures" /* 1373 */;
 import ME from "ME" /* 1074 */;
 import { ActivityPlatform } from "items3" /* 1920 */;

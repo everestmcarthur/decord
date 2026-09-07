@@ -1,12 +1,12 @@
-// Module ID: 17846
-// Function ID: 17847
+// Module ID: 17849
+// Function ID: 17850
 // Name: AVErrorAudioCaptureSampleRateMismatchDefinition
-// Dependencies: [4598, 1908, 4583, 1090, 9110, 17834, 2]
+// Dependencies: [4598, 1908, 4583, 1090, 9115, 17837, 2]
 
-// Module 17846 (AVErrorAudioCaptureSampleRateMismatchDefinition)
+// Module 17849 (AVErrorAudioCaptureSampleRateMismatchDefinition)
 import setDefault from "set" /* 1090 */;
-import mapped from "mapped" /* 9110 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17834 */;
+import mapped from "mapped" /* 9115 */;
+import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17837 */;
 import closure_2 from "updateAveragedStatsHelper" /* 4598 */;
 import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_4 from "createRTCConnection" /* 4583 */;

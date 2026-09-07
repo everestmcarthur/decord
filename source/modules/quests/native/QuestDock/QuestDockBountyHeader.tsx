@@ -1,15 +1,15 @@
-// Module ID: 15202
-// Function ID: 15203
-// Dependencies: [19, 17, 5444, 15095, 21, 576, 4560, 15102, 1114, 15096, 4296, 4974, 15092, 15192, 5587, 7073, 4556, 15195, 5692, 2]
+// Module ID: 15205
+// Function ID: 15206
+// Dependencies: [19, 17, 5444, 15098, 21, 576, 4560, 15105, 1114, 15099, 4296, 4974, 15095, 15195, 5587, 7073, 4556, 15198, 5692, 2]
 
-// Module 15202
+// Module 15205
 import ThemesDefault from "Themes" /* 576 */;
-import QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPEDDefault from "QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED" /* 15192 */;
-import _modDef15195 from "module_15195" /* 15195 */;
+import QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPEDDefault from "QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED" /* 15195 */;
+import _modDef15198 from "module_15198" /* 15198 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { QuestDockMode } from "QuestsExperimentLocations" /* 5444 */;
-import { QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED as closure_6 } from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15095 */;
+import { QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED as closure_6 } from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15098 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -33,7 +33,7 @@ let closure_10 = { code: "function QuestDockBountyHeaderTsx1(){const{withSpring,
 let closure_11 = { code: "function QuestDockBountyHeaderTsx2(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};}" };
 let obj3 = { alignItems: "center", flexDirection: "row", flexShrink: 1, gap: ThemesDefault.space.PX_8 };
 const memoResult = importAllResult.memo(function QuestDockBountyHeader() {
-  let obj = activeQuestDockMode(15102);
+  let obj = activeQuestDockMode(15105);
   const questDockBounty = obj.useQuestDockBounty();
   const tmp4 = callback();
   let str = questDockBounty.productName;
@@ -42,7 +42,7 @@ const memoResult = importAllResult.memo(function QuestDockBountyHeader() {
   }
   const intl = tmp(1114).intl;
   const stringResult = intl.string(activeQuestDockMode(1114).t["4QEsIN"]);
-  activeQuestDockMode = importAllResult.useContext(tmp(15096).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = importAllResult.useContext(tmp(15099).QuestDockGestureContext).activeQuestDockMode;
   let tmpResult = tmp(4296);
   const fn = function n() {
     let obj = activeQuestDockMode(closure_1_2[11]);
@@ -73,13 +73,13 @@ const memoResult = importAllResult.memo(function QuestDockBountyHeader() {
   fn2.__workletHash = 3799310117358;
   fn2.__initData = closure_11;
   const animatedStyle1 = tmpResult.useAnimatedStyle(fn2);
-  const bountyCreative = activeQuestDockMode(15102).useBountyCreative(questDockBounty);
-  const tmpResult1 = activeQuestDockMode(15102);
-  const tmpResult2 = activeQuestDockMode(15092);
-  obj1 = { onSubmenuPress: activeQuestDockMode(15092).useActionSheetPressHandler(bountyCreative), children: null };
+  const bountyCreative = activeQuestDockMode(15105).useBountyCreative(questDockBounty);
+  const tmpResult1 = activeQuestDockMode(15105);
+  const tmpResult2 = activeQuestDockMode(15095);
+  obj1 = { onSubmenuPress: activeQuestDockMode(15095).useActionSheetPressHandler(bountyCreative), children: null };
   const obj2 = { style: tmp4.wrapper, accessible: true, accessibilityRole: "text", accessibilityLabel: null, children: null };
   let combined = stringResult;
-  const actionSheetPressHandler = activeQuestDockMode(15092).useActionSheetPressHandler(bountyCreative);
+  const actionSheetPressHandler = activeQuestDockMode(15095).useActionSheetPressHandler(bountyCreative);
   if ("" !== str) {
     const _HermesInternal = HermesInternal;
     combined = "" + str + ", " + stringResult;
@@ -105,7 +105,7 @@ const memoResult = importAllResult.memo(function QuestDockBountyHeader() {
   const obj7 = { style: items4, children: null };
   items4 = [tmp4.expandedContent, animatedStyle1];
   tmp11Result = tmp11(7073);
-  const items5 = [closure_7(_modDef15195, {}), ];
+  const items5 = [closure_7(_modDef15198, {}), ];
   const obj8 = { style: tmp4.expandedLabel, children: null };
   const items6 = [closure_7(activeQuestDockMode(5692).BountiesPosterIllocon, { size: 32, accessible: false }), closure_7(activeQuestDockMode(4556).Text, { style: tmp4.expandedLabelText, variant: "text-sm/medium", color: "text-default", lineClamp: 1, accessible: false, children: stringResult })];
   obj8[1] = items6;

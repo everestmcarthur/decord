@@ -1,17 +1,17 @@
-// Module ID: 17602
-// Function ID: 17603
+// Module ID: 17605
+// Function ID: 17606
 // Name: GuildSettingsModalSecurity
-// Dependencies: [19, 17, 1975, 1979, 1371, 9064, 1074, 21, 4560, 576, 504, 9063, 4556, 1114, 4975, 14792, 7040, 2]
+// Dependencies: [19, 17, 1975, 1979, 1371, 9069, 1074, 21, 4560, 576, 504, 9068, 4556, 1114, 4975, 14795, 7040, 2]
 // Exports: default
 
-// Module 17602 (GuildSettingsModalSecurity)
+// Module 17605 (GuildSettingsModalSecurity)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { isGuildOwnerWithRequiredMfaLevel as closure_6 } from "GuildNSFWContentLevel" /* 1975 */;
 import closure_7 from "createGuildRecordFromRust" /* 1979 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "handleFormInit" /* 9064 */;
+import closure_9 from "handleFormInit" /* 9069 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -111,7 +111,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   obj[1] = items4;
   const items5 = [closure_13(closure_4, obj), ];
   const obj6 = { style: tmp.center, children: null };
-  const items6 = [callback2(closure_5, { source: stateFromStores(14792), style: tmp.image, resizeMode: "contain" }), ];
+  const items6 = [callback2(closure_5, { source: stateFromStores(14795), style: tmp.image, resizeMode: "contain" }), ];
   const obj8 = { style: tmp.infoWrapper, children: null };
   const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp2(1114).intl;

@@ -1,10 +1,10 @@
-// Module ID: 17569
-// Function ID: 17570
+// Module ID: 17572
+// Function ID: 17573
 // Name: getEmptyServerSettingsEmojiSource
-// Dependencies: [19, 17, 21, 8233, 17570, 17571, 17572, 4411, 2]
+// Dependencies: [19, 17, 21, 8233, 17573, 17574, 17575, 4411, 2]
 // Exports: EmptyServerSettingsEmoji, getEmptyServerSettingsEmojiSource, useEmptyServerSettingsEmojiSource
 
-// Module 17569 (getEmptyServerSettingsEmojiSource)
+// Module 17572 (getEmptyServerSettingsEmojiSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import getIllustrationSource from "getIllustrationSource" /* 8233 */;
@@ -19,13 +19,13 @@ export const getEmptyServerSettingsEmojiSource = function getEmptyServerSettings
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(17570);
+      return callback(17573);
     },
     darker() {
-      return callback(17571);
+      return callback(17574);
     },
     light() {
-      return callback(17572);
+      return callback(17575);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -34,13 +34,13 @@ export const useEmptyServerSettingsEmojiSource = function useEmptyServerSettings
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(17570);
+      return callback(17573);
     },
     darker() {
-      return callback(17571);
+      return callback(17574);
     },
     light() {
-      return callback(17572);
+      return callback(17575);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -49,13 +49,13 @@ export const EmptyServerSettingsEmoji = function EmptyServerSettingsEmoji(arg0) 
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(17570);
+      return callback(17573);
     },
     darker() {
-      return callback(17571);
+      return callback(17574);
     },
     light() {
-      return callback(17572);
+      return callback(17575);
     }
   };
   obj = {};

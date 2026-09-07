@@ -1,10 +1,10 @@
-// Module ID: 13215
-// Function ID: 13216
+// Module ID: 13219
+// Function ID: 13220
 // Name: createEmbeddedActivityInviteEmbed
-// Dependencies: [32, 17, 1956, 8140, 4788, 502, 1957, 4544, 4209, 1371, 11309, 7736, 573, 8139, 7945, 5028, 1114, 4713, 13216, 2]
+// Dependencies: [32, 17, 1956, 8140, 4788, 502, 1957, 4544, 4209, 1371, 11314, 7736, 573, 8139, 7945, 5028, 1114, 4713, 13220, 2]
 // Exports: createEmbeddedActivityInviteEmbed
 
-// Module 13215 (createEmbeddedActivityInviteEmbed)
+// Module 13219 (createEmbeddedActivityInviteEmbed)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -18,7 +18,7 @@ import closure_10 from "ensureGuildLoaded" /* 1957 */;
 import closure_11 from "updateInvite" /* 4544 */;
 import closure_12 from "markAllUserIdListsStale" /* 4209 */;
 import closure_13 from "mergeGuildAvatar" /* 1371 */;
-import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 11309 */;
+import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 11314 */;
 import { InviteTargetTypes } from "InviteSendStates" /* 7736 */;
 
 const require = arg1;
@@ -110,7 +110,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           }
           if (null != id) {
             if (null != id2) {
-              tmp25Result = tmp25(13216);
+              tmp25Result = tmp25(13220);
               obj1 = { channelId: null, guildId: null, applicationId: null };
               obj1[0] = id;
               obj1[1] = id2;

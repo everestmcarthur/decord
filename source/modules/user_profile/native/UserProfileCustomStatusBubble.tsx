@@ -1,9 +1,9 @@
-// Module ID: 11112
-// Function ID: 11113
+// Module ID: 11117
+// Function ID: 11118
 // Name: StatusBubbleConnector
-// Dependencies: [32, 19, 17, 7208, 1374, 1085, 21, 4560, 576, 8453, 1935, 5587, 1396, 1115, 4556, 7130, 4262, 8190, 10880, 10119, 4527, 11113, 7182, 1114, 5123, 11204, 2]
+// Dependencies: [32, 19, 17, 7208, 1374, 1085, 21, 4560, 576, 8456, 1935, 5587, 1396, 1115, 4556, 7130, 4262, 8190, 10885, 10124, 4527, 11118, 7182, 1114, 5123, 11209, 2]
 
-// Module 11112 (StatusBubbleConnector)
+// Module 11117 (StatusBubbleConnector)
 import ThemesDefault from "Themes" /* 576 */;
 import set from "set" /* 1115 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
@@ -11,8 +11,8 @@ import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import Text from "Text" /* 4556 */;
 import preloadDefault from "preload" /* 5587 */;
 import EmojiDefault from "Emoji" /* 7130 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
-import inlineStylesDefault from "inlineStyles" /* 8453 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
+import inlineStylesDefault from "inlineStyles" /* 8456 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

@@ -1,9 +1,9 @@
-// Module ID: 15949
-// Function ID: 15950
+// Module ID: 15952
+// Function ID: 15953
 // Name: isUnderageAnonymous
 // Dependencies: [1098, 504, 573, 2]
 
-// Module 15949 (isUnderageAnonymous)
+// Module 15952 (isUnderageAnonymous)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

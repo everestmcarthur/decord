@@ -1,10 +1,10 @@
-// Module ID: 12288
-// Function ID: 12289
+// Module ID: 12292
+// Function ID: 12293
 // Name: useMemberActionsForChannel
 // Dependencies: [2021, 4747, 4748, 4187, 7223, 563, 1384, 2]
 // Exports: useAllActionsCompleted, useMemberActionsForChannel, useNextMemberAction
 
-// Module 12288 (useMemberActionsForChannel)
+// Module 12292 (useMemberActionsForChannel)
 import useIsNewMemberDefault from "useIsNewMember" /* 7223 */;
 import closure_3 from "trackCommunicationDisabled" /* 2021 */;
 import closure_4 from "handleSettingsLoadSuccess" /* 4747 */;

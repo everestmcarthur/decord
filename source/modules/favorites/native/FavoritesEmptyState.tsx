@@ -1,10 +1,10 @@
-// Module ID: 16735
-// Function ID: 16736
+// Module ID: 16738
+// Function ID: 16739
 // Name: FavoritesEmptyState
-// Dependencies: [19, 17, 21, 4560, 576, 10224, 10976, 4527, 10228, 1896, 10227, 5692, 4973, 4556, 1114, 3225, 4975, 12753, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 10229, 10981, 4527, 10233, 1896, 10232, 5692, 4973, 4556, 1114, 3225, 4975, 12757, 2]
 // Exports: default
 
-// Module 16735 (FavoritesEmptyState)
+// Module 16738 (FavoritesEmptyState)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 3225 */;
@@ -12,7 +12,7 @@ import Text from "Text" /* 4556 */;
 import Stack from "Stack" /* 4973 */;
 import Button from "Button" /* 4975 */;
 import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10224 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10229 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -54,7 +54,7 @@ export default function FavoritesEmptyState() {
     const obj3 = { variant: "primary", text: null, icon: null, onPress: null };
     const intl4 = tmp2(1114).intl;
     obj3[1] = intl4.string(tmp9(3225)["6kk0gM"]);
-    obj3[2] = tmp8(tmp2(12753).PlusMediumIcon, {});
+    obj3[2] = tmp8(tmp2(12757).PlusMediumIcon, {});
     obj3[3] = callback;
     let obj4 = obj3;
   } else {

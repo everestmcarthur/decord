@@ -1,10 +1,10 @@
-// Module ID: 13308
-// Function ID: 13309
+// Module ID: 13312
+// Function ID: 13313
 // Name: getMobileNitroMarketingRedesignExperiment
 // Dependencies: [1433, 2]
 // Exports: getMobileNitroMarketingRedesignExperiment
 
-// Module 13308 (getMobileNitroMarketingRedesignExperiment)
+// Module 13312 (getMobileNitroMarketingRedesignExperiment)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 

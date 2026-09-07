@@ -1,17 +1,17 @@
-// Module ID: 10285
-// Function ID: 10286
+// Module ID: 10290
+// Function ID: 10291
 // Name: initializeSearch
-// Dependencies: [19, 5459, 1979, 5438, 1371, 5463, 1074, 1374, 1219, 1373, 1256, 10286, 4740, 10278, 10281, 10282, 504, 1885, 10287, 1114, 4217, 4213, 1242, 12, 1090, 1940, 2]
+// Dependencies: [19, 5459, 1979, 5438, 1371, 5463, 1074, 1374, 1219, 1373, 1256, 10291, 4740, 10283, 10286, 10287, 504, 1885, 10292, 1114, 4217, 4213, 1242, 12, 1090, 1940, 2]
 // Exports: getAriaIdForEmojiCategory, getEmojiSubCategory, getSearchPlaceholder, getStringForEmojiCategory, getUnicodeEmojiCategories, initializeSearch, trackEmojiFavorited, trackEmojiFocus, trackEmojiSearchEmpty, trackEmojiSearchResultsViewed, trackEmojiSearchSelect, trackEmojiSearchStart, trackEmojiSelect, trackPremiumSettingsPaneOpened, useEmojiCategories, useEmojiInPriorityOrder, useEmojiSearchResults, useFavoriteEmojis, useFrequentlyUsedEmojis, useFrequentlyUsedReactionEmojis, useIsFavoriteEmoji
 
-// Module 10285 (initializeSearch)
+// Module 10290 (initializeSearch)
 import setDefault from "set" /* 1090 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import v1 from "v1" /* 1256 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;
 import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
-import withEqualityFn from "withEqualityFn" /* 10286 */;
+import withEqualityFn from "withEqualityFn" /* 10291 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "getEmojiToGroupId" /* 5459 */;
 import closure_5 from "createGuildRecordFromRust" /* 1979 */;

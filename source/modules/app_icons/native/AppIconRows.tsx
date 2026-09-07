@@ -1,13 +1,13 @@
-// Module ID: 15525
-// Function ID: 15526
+// Module ID: 15528
+// Function ID: 15529
 // Name: BackwardsCompatibleAppIconRows
-// Dependencies: [32, 19, 17, 1371, 21, 4560, 9324, 5687, 1114, 15526, 13363, 504, 1885, 2]
+// Dependencies: [32, 19, 17, 1371, 21, 4560, 9329, 5687, 1114, 15529, 13367, 504, 1885, 2]
 // Exports: default
 
-// Module 15525 (BackwardsCompatibleAppIconRows)
+// Module 15528 (BackwardsCompatibleAppIconRows)
 import initialize from "initialize" /* 504 */;
 import isPremiumAtLeast from "isPremiumAtLeast" /* 1885 */;
-import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 13363 */;
+import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 13367 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

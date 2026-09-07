@@ -1,18 +1,18 @@
-// Module ID: 11290
-// Function ID: 11291
+// Module ID: 11295
+// Function ID: 11296
 // Name: _getDefaultRewardName
-// Dependencies: [7542, 11291, 7708, 7699, 3796, 1114, 11292, 11293, 11294, 11295, 11296, 5447, 2]
+// Dependencies: [7542, 11296, 7708, 7699, 3796, 1114, 11297, 11298, 11299, 11300, 11301, 5447, 2]
 // Exports: getCollectibleQuestRewardDuration, getCollectibleQuestRewardExtendableExpirationDate, getCollectiblesQuestReward, getCollectiblesQuestRewardItem, getDefaultPlatform, getDefaultRewardName, getDefaultRewardNameWithArticle, getInGameQuestReward, getPlatformString, getQuestOrbMultiplier, getQuestOrbMultiplierForUser, getQuestOrbRewardQuantityForUser, getQuestPrimaryReward, getRewardCodeQuestReward, getVirtualCurrencyRewardOrbQuantity, getVirtualCurrencyRewardPremiumOrbQuantity, hasCollectiblesQuestReward, hasFractionalPremiumQuestReward, hasInGameQuestReward, hasPremiumOrbQuantity, hasQuestRewardCode, hasVirtualCurrencyReward, isCollectibleQuestRewardPermanentWithPremiumSubscription, isCollectibleQuestRewardPremiumExtendable, isTieredRewardCodeQuest
 
-// Module 11290 (_getDefaultRewardName)
+// Module 11295 (_getDefaultRewardName)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5447 */;
 import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7699 */;
 import QuestRewardTypes from "QuestRewardTypes" /* 7708 */;
-import getQuestOrbMultiplierEligibilityForUser from "getQuestOrbMultiplierEligibilityForUser" /* 11292 */;
-import getDurationStringOfFractionalPremium from "getDurationStringOfFractionalPremium" /* 11294 */;
-import getContextualEntrypointHeading from "getContextualEntrypointHeading" /* 11295 */;
-import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 11296 */;
+import getQuestOrbMultiplierEligibilityForUser from "getQuestOrbMultiplierEligibilityForUser" /* 11297 */;
+import getDurationStringOfFractionalPremium from "getDurationStringOfFractionalPremium" /* 11299 */;
+import getContextualEntrypointHeading from "getContextualEntrypointHeading" /* 11300 */;
+import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 11301 */;
 import closure_2 from "updateCategoriesAndProducts" /* 7542 */;
 import set from "set" /* 2 */;
 
@@ -51,7 +51,7 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
               let orbQuantity = orbQuantity2;
             }
             num = orbQuantity;
-            tmp15Result = tmp15(11293);
+            tmp15Result = tmp15(11298);
           }
           orbQuantity = found.orbQuantity;
           const obj5 = getQuestOrbMultiplierEligibilityForUser;
@@ -336,7 +336,7 @@ export const isCollectibleQuestRewardPermanentWithPremiumSubscription = function
     if (tmp11 != null) {
       expirationMode1 = tmp11.expirationMode;
     }
-    hasItem = expirationMode1 === tmp3(11291).QuestRewardExpirationMode.PREMIUM_PERMANENT;
+    hasItem = expirationMode1 === tmp3(11296).QuestRewardExpirationMode.PREMIUM_PERMANENT;
   }
   return hasItem;
 };
@@ -405,7 +405,7 @@ export const getQuestOrbMultiplierForUser = function getQuestOrbMultiplierForUse
     if (num == null) {
       num = 1;
     }
-    let tmp2Result = tmp2(11292);
+    let tmp2Result = tmp2(11297);
     const rewards1 = rewardsConfig.rewardsConfig.rewards;
     const questOrbMultiplierEligibilityForUser = tmp2Result.getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStandardSub);
     const found1 = rewards1.find((type) => type.type === callback(7708).QuestRewardTypes.VIRTUAL_CURRENCY);
@@ -419,7 +419,7 @@ export const getQuestOrbMultiplierForUser = function getQuestOrbMultiplierForUse
     }
     let num6 = 1;
     if (tmp9) {
-      tmp2Result = tmp2(11293);
+      tmp2Result = tmp2(11298);
       num6 = 1;
       if (tmp2Result.shouldReceiveQuestOrbMultiplier(questOrbMultiplierEligibilityForUser)) {
         num6 = num;

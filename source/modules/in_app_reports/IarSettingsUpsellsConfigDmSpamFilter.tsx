@@ -1,15 +1,15 @@
-// Module ID: 8641
-// Function ID: 8642
+// Module ID: 8646
+// Function ID: 8647
 // Name: items
-// Dependencies: [1114, 8630, 1094, 1935, 1187, 2]
+// Dependencies: [1114, 8635, 1094, 1935, 1187, 2]
 
-// Module 8641 (items)
+// Module 8646 (items)
 import set from "set" /* 2 */;
 import set2 from "set" /* 1094 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import create from "create" /* 1187 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import ReportNames from "ReportNames" /* 8630 */;
+import ReportNames from "ReportNames" /* 8635 */;
 
 const obj = {
   getTitle() {

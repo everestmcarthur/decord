@@ -1,10 +1,10 @@
-// Module ID: 11597
-// Function ID: 11598
+// Module ID: 11602
+// Function ID: 11603
 // Name: navigateToPremiumHomePage
 // Dependencies: [1074, 7382, 7587, 1100, 2]
 // Exports: navigateToNitroHomePage, navigateToPremiumHomePage
 
-// Module 11597 (navigateToPremiumHomePage)
+// Module 11602 (navigateToPremiumHomePage)
 import set from "set" /* 2 */;
 import transitionTo from "transitionTo" /* 1100 */;
 import openUserSettings from "openUserSettings" /* 7382 */;

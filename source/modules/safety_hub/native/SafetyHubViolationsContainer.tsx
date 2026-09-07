@@ -1,17 +1,17 @@
-// Module ID: 14773
-// Function ID: 14774
+// Module ID: 14776
+// Function ID: 14777
 // Name: SafetyHubViolationsHeader
-// Dependencies: [32, 19, 17, 8430, 8419, 1074, 21, 4560, 576, 9050, 8588, 4556, 1114, 13573, 11153, 8418, 11, 14774, 8420, 4763, 11878, 1896, 11882, 504, 1242, 11880, 2]
+// Dependencies: [32, 19, 17, 8430, 8419, 1074, 21, 4560, 576, 9055, 8593, 4556, 1114, 13577, 11158, 8418, 11, 14777, 8420, 4763, 11883, 1896, 11887, 504, 1242, 11885, 2]
 // Exports: ConnectedSafetyHubViolationsContainer
 
-// Module 14773 (SafetyHubViolationsHeader)
+// Module 14776 (SafetyHubViolationsHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8418 */;
-import WarningIcon from "WarningIcon" /* 8588 */;
-import renderDefault from "render" /* 9050 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11880 */;
+import WarningIcon from "WarningIcon" /* 8593 */;
+import renderDefault from "render" /* 9055 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11885 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -60,9 +60,9 @@ function SafetyHubViolationsHeader(count) {
   obj1[1] = items4;
   items2[1] = closure_12(closure_6, obj1);
   if (opened) {
-    let ChevronSmallDownIcon = tmp7(13573).ChevronSmallUpIcon;
+    let ChevronSmallDownIcon = tmp7(13577).ChevronSmallUpIcon;
   } else {
-    ChevronSmallDownIcon = tmp7(11153).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp7(11158).ChevronSmallDownIcon;
   }
   const items5 = [tmp.chevron];
   items2[2] = closure_11(ChevronSmallDownIcon, { size: "md", style: items5 });

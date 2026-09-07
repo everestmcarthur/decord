@@ -1,14 +1,14 @@
-// Module ID: 17830
-// Function ID: 17831
+// Module ID: 17833
+// Function ID: 17834
 // Name: handleReferralMessages
-// Dependencies: [4224, 7450, 1089, 11, 8062, 7118, 17423, 2]
+// Dependencies: [4224, 7450, 1089, 11, 8062, 7118, 17426, 2]
 
-// Module 17830 (handleReferralMessages)
+// Module 17833 (handleReferralMessages)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import set from "set" /* 1089 */;
 import initializeDefault from "initialize" /* 7118 */;
 import getPaymentGateway from "getPaymentGateway" /* 8062 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17423 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17426 */;
 import closure_3 from "reset" /* 4224 */;
 import closure_4 from "emitChanges" /* 7450 */;
 

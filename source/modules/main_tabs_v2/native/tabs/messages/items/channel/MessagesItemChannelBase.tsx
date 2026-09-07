@@ -1,9 +1,9 @@
-// Module ID: 16031
-// Function ID: 16032
+// Module ID: 16034
+// Function ID: 16035
 // Name: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING
-// Dependencies: [19, 17, 4600, 4575, 4209, 2011, 4741, 1371, 1074, 21, 4560, 576, 504, 16032, 8218, 1115, 4573, 4571, 10913, 5123, 9770, 8818, 16033, 7879, 8814, 16034, 8259, 16035, 2]
+// Dependencies: [19, 17, 4600, 4575, 4209, 2011, 4741, 1371, 1074, 21, 4560, 576, 504, 16035, 8218, 1115, 4573, 4571, 10918, 5123, 9775, 8823, 16036, 7879, 8819, 16037, 8259, 16038, 2]
 
-// Module 16031 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
+// Module 16034 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -78,7 +78,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
       obj[0] = store.getStatus(obj.getRecipientId());
       obj[1] = activities;
     } else {
-      obj = { status: "hash", activities: "call" };
+      obj = { status: "push", activities: "channel" };
     }
     return obj;
   });

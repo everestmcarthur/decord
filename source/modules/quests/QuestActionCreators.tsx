@@ -1,15 +1,15 @@
-// Module ID: 11276
-// Function ID: 11277
+// Module ID: 11281
+// Function ID: 11282
 // Name: _manuallyStartConsoleQuest
-// Dependencies: [5, 7700, 11195, 5439, 4609, 5438, 7703, 7705, 5444, 1074, 1272, 573, 4462, 5447, 1114, 7710, 1232, 4753, 1250, 11277, 11192, 11193, 11197, 5451, 7718, 11280, 7699, 11281, 7461, 7721, 11282, 4399, 11283, 11284, 11299, 1242, 7677, 11301, 11285, 1090, 11302, 2]
+// Dependencies: [5, 7700, 11200, 5439, 4609, 5438, 7703, 7705, 5444, 1074, 1272, 573, 4462, 5447, 1114, 7710, 1232, 4753, 1250, 11282, 11197, 11198, 11202, 5451, 7718, 11285, 7699, 11286, 7461, 7721, 11287, 4399, 11288, 11289, 11304, 1242, 7677, 11306, 11290, 1090, 11307, 2]
 // Exports: claimQuestReward, clearQuestAdDecision, completeQuestPreview, dismissProgressTrackingFailureNotice, dismissQuestActivityModal, dismissQuestContent, enrollInQuest, fetchClaimedQuests, fetchCurrentQuests, fetchEarnedQuestToDeliver, fetchQuest, fetchQuestHomeHero, fetchQuestHomeHeroPreview, fetchQuestPreview, fetchQuestRewardCode, fetchQuestToDeliver, fetchVideoTranscript, manualStopConsoleQuest, manuallyStartConsoleQuest, markAdContentSeen, markAdContentUnseen, markQuestDiscovered, overrideQuestForPlacement, questsVisibleMobileMessagesChanged, resetOptimisticProgress, resetQuestDismissibilityStatus, resetQuestPreviewStatus, resetRecentQuestCompletions, selectTaskPlatform, sendHeartbeat, setAutoEnroll, updateOptimisticProgress, updatePrevRestingQuestDockMode, updateQuestDockVisibilityEligibility, updateVideoProgress
 
-// Module 11276 (_manuallyStartConsoleQuest)
+// Module 11281 (_manuallyStartConsoleQuest)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import setDefault from "set" /* 1090 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "map" /* 7700 */;
-import { getVisibleGuildIdsMethod } from "SidebarVisibilityMethodStore" /* 11195 */;
+import { getVisibleGuildIdsMethod } from "SidebarVisibilityMethodStore" /* 11200 */;
 import closure_6 from "set" /* 5439 */;
 import closure_7 from "handleConnectionInfoChange" /* 4609 */;
 import closure_8 from "insertUnsortedGuilds" /* 5438 */;
@@ -1597,10 +1597,10 @@ function _fetchQuestToDeliver() {
                 const obj3 = { wasSuccessful: false, currentFetchedAt: null };
                 throwTypeErrorResult = dependencyMap;
                 obj3[1] = dependencyMap;
-                throwTypeErrorResult = callback2(11281).recordQuestRequestApiResponse("/quests/decision", obj3);
+                throwTypeErrorResult = callback2(11286).recordQuestRequestApiResponse("/quests/decision", obj3);
                 throwTypeErrorResult = callback2;
                 throwTypeErrorResult = dependencyMap;
-                const obj22 = callback2(11281);
+                const obj22 = callback2(11286);
                 throwTypeErrorResult = body;
                 let obj4 = {};
                 throwTypeErrorResult = callback2;
@@ -1685,7 +1685,7 @@ function _fetchQuestToDeliver() {
                   closure_4 = body;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
-                  const LessPersonalizedAdsExperiment = callback(11282).LessPersonalizedAdsExperiment;
+                  const LessPersonalizedAdsExperiment = callback(11287).LessPersonalizedAdsExperiment;
                   lib = LessPersonalizedAdsExperiment.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" });
                   throwTypeErrorResult = lib;
                   v0 = lib();
@@ -1805,7 +1805,7 @@ function _fetchQuestToDeliver() {
                 if (creative_type !== callback(5451).AdCreativeType.BOUNTY) {
                   creative = body.creative;
                 } else {
-                  const BountiesMobileQuestBarExperiment = callback(11283).BountiesMobileQuestBarExperiment;
+                  const BountiesMobileQuestBarExperiment = callback(11288).BountiesMobileQuestBarExperiment;
                   creative = null;
                 }
                 obj16 = null;
@@ -1823,7 +1823,7 @@ function _fetchQuestToDeliver() {
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = dependencyMap;
                     if (callback(5451).AdCreativeType.BOUNTY === creative_type) {
-                      obj = callback(11284);
+                      obj = callback(11289);
                       closure_16 = obj.bountyFromServer(creative.creative_content);
                       const obj15 = { type: null, bounty: null };
                       obj15[0] = callback(5451).AdCreativeType.BOUNTY;
@@ -1911,7 +1911,7 @@ function _fetchQuestToDeliver() {
                 obj17[10] = callback;
                 obj17[11] = dependencyMap;
                 obj4.dispatch(obj17);
-                obj7 = callback2(11281);
+                obj7 = callback2(11286);
                 const obj19 = { wasSuccessful: true, adRequestId: null, currentCreative: null, currentFetchedAt: null };
                 const _String = String;
                 obj19[1] = String(body.request_id);
@@ -1925,7 +1925,7 @@ function _fetchQuestToDeliver() {
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
                   if (callback === callback(5447).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA) {
-                    obj9 = callback2(11299);
+                    obj9 = callback2(11304);
                     obj9.startTracking(user.id);
                   }
                   throwTypeErrorResult = callback2;
@@ -2041,8 +2041,8 @@ function _fetchEarnedQuestToDeliver() {
                 if (0 !== found.length) {
                   const _Date = Date;
                   c3 = Date.now();
-                  const result = callback2(11301).recordEarnedRequestAttempt(tmp74, tmp75);
-                  const obj16 = callback2(11301);
+                  const result = callback2(11306).recordEarnedRequestAttempt(tmp74, tmp75);
+                  const obj16 = callback2(11306);
                   obj1 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content: null };
                   obj1[1] = tmp74;
                   callback2(573).dispatch(obj1);

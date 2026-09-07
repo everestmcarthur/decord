@@ -1,6 +1,6 @@
 // Module ID: 8240
 // Function ID: 8241
-// Dependencies: [19, 17, 7208, 7151, 21, 8241, 8190, 4712, 4404, 8242, 8230, 8243, 1611, 8227, 8238, 7190, 4258, 8244, 4296, 8256, 11152, 1114, 11207, 2]
+// Dependencies: [19, 17, 7208, 7151, 21, 8241, 8190, 4712, 4404, 8242, 8230, 8243, 1611, 8227, 8238, 7190, 4258, 8244, 4296, 8256, 11157, 1114, 11212, 2]
 
 // Module 8240
 import getNicknameDefault from "getNickname" /* 4712 */;
@@ -81,7 +81,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     const obj5 = { user: null, guildId: null, displayName: null, pronouns: null, badges: null, badgeContainerBackground: null, displayNameAccessibilityHint: null, onPressDisplayName: null, onPressUserTag: null, onPressPronouns: null, showBadgeToastOnPress: true };
     obj5[0] = user;
     let guild_id1;
-    tmpResult = tmp(11152);
+    tmpResult = tmp(11157);
     if (channel != null) {
       guild_id1 = channel.guild_id;
     }
@@ -122,7 +122,7 @@ const memoResult = importAllResult.memo(function NonUserBotProfileContent(scroll
     obj9[0] = containerBackground;
     items4[1] = obj9;
     obj8[3] = items4;
-    obj7[1] = callback(tmp(11207), obj8);
+    obj7[1] = callback(tmp(11212), obj8);
     items3[1] = callback(View, obj7);
     obj2[1] = items3;
     items1[1] = closure_8(View, obj2);

@@ -1,10 +1,10 @@
-// Module ID: 9742
-// Function ID: 9743
+// Module ID: 9747
+// Function ID: 9748
 // Name: AppChannelApplicationSelector
-// Dependencies: [19, 21, 9743, 1114, 5687, 5605, 9745, 4527, 9746, 1896, 9746, 2]
+// Dependencies: [19, 21, 9748, 1114, 5687, 5605, 9750, 4527, 9751, 1896, 9751, 2]
 // Exports: default
 
-// Module 9742 (AppChannelApplicationSelector)
+// Module 9747 (AppChannelApplicationSelector)
 import noopAll from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

@@ -1,15 +1,15 @@
-// Module ID: 13820
-// Function ID: 13821
+// Module ID: 13823
+// Function ID: 13824
 // Name: round
-// Dependencies: [4618, 13817, 4589, 7742, 4615, 7741, 12, 1115, 11, 1974, 2]
+// Dependencies: [4618, 13820, 4589, 7742, 4615, 7741, 12, 1115, 11, 1974, 2]
 
-// Module 13820 (round)
+// Module 13823 (round)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
 import onDefault from "on" /* 4618 */;
 import parseEncoder from "parseEncoder" /* 7741 */;
-import _initStatsDefault from "_initStats" /* 13817 */;
+import _initStatsDefault from "_initStats" /* 13820 */;
 
 require = arg1;
 function round(arg0) {

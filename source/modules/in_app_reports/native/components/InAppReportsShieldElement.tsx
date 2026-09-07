@@ -1,10 +1,10 @@
-// Module ID: 8648
-// Function ID: 8649
+// Module ID: 8653
+// Function ID: 8654
 // Name: ShieldElement
 // Dependencies: [19, 17, 21, 4560, 5692, 2]
 // Exports: default
 
-// Module 8648 (ShieldElement)
+// Module 8653 (ShieldElement)
 import noopAll from "noop" /* 19 */;
 import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
 import { View } from "get ActivityIndicator" /* 17 */;

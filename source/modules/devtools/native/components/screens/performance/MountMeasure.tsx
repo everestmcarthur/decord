@@ -1,10 +1,10 @@
-// Module ID: 15736
-// Function ID: 15737
+// Module ID: 15739
+// Function ID: 15740
 // Name: MountMeasure
 // Dependencies: [19, 17, 21, 4992, 2]
 // Exports: default
 
-// Module 15736 (MountMeasure)
+// Module 15739 (MountMeasure)
 import noopAll from "noop" /* 19 */;
 import useMountLayoutEffect from "useMountLayoutEffect" /* 4992 */;
 import { View } from "get ActivityIndicator" /* 17 */;

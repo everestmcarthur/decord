@@ -1,9 +1,9 @@
-// Module ID: 13284
-// Function ID: 13285
+// Module ID: 13288
+// Function ID: 13289
 // Name: ForLaterDeletedMessageCard
-// Dependencies: [5, 19, 17, 4199, 1074, 21, 4560, 576, 5607, 6610, 4556, 1114, 8097, 4519, 11704, 11711, 4763, 1242, 7860, 4153, 13285, 504, 13286, 13289, 12215, 12216, 2]
+// Dependencies: [5, 19, 17, 4199, 1074, 21, 4560, 576, 5607, 6610, 4556, 1114, 8097, 4519, 11709, 11716, 4763, 1242, 7860, 4153, 13289, 504, 13290, 13293, 12219, 12220, 2]
 
-// Module 13284 (ForLaterDeletedMessageCard)
+// Module 13288 (ForLaterDeletedMessageCard)
 import ThemesDefault from "Themes" /* 576 */;
 import registerAssetDefault from "registerAsset" /* 4519 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -69,7 +69,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
   const throttledNow = savedMessage.throttledNow;
   let savedMessageChannel;
   let tmp = callback3();
-  let obj = savedMessage(11711);
+  let obj = savedMessage(11716);
   savedMessageChannel = obj.useSavedMessageChannel(savedMessage);
   const items = [savedMessage, savedMessageChannel];
   callback = importAllResult.useCallback(callback(function*() {
@@ -249,7 +249,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
         obj[0] = savedMessage;
         obj[1] = callback;
         obj[2] = throttledNow;
-        const tmp8 = callback2(savedMessageChannel(13286), obj);
+        const tmp8 = callback2(savedMessageChannel(13290), obj);
         obj = { variant: "primary", border: "subtle", shadow: "none", style: null, onPress: null, children: null };
         obj[3] = tmp.card;
         obj[4] = callback;
@@ -259,7 +259,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
           obj1[0] = savedMessage;
           obj1[1] = throttledNow;
           obj1[2] = tmp8;
-          tmp6Result = tmp6(tmp2(13289).ForLaterCardReminderHeader, obj1);
+          tmp6Result = tmp6(tmp2(13293).ForLaterCardReminderHeader, obj1);
         }
         const items2 = [tmp6Result, , , ];
         let obj2 = { channel: null, actions: null };
@@ -269,13 +269,13 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
           tmp12 = tmp8;
         }
         obj2[1] = tmp12;
-        items2[1] = callback2(tmp2(12215).ForLaterCardHeader, obj2);
+        items2[1] = callback2(tmp2(12219).ForLaterCardHeader, obj2);
         let obj3 = { style: null };
         obj3[0] = tmp.cardDivider;
         items2[2] = callback2(View, obj3);
         const obj4 = { message: null, lineClamp: 2, maxHeight: 250 };
         obj4[0] = savedMessage.message;
-        items2[3] = callback2(tmp2(12216).ForLaterMessageRow, obj4);
+        items2[3] = callback2(tmp2(12220).ForLaterMessageRow, obj4);
         obj[5] = items2;
         return closure_11(tmp2(5607).Card, obj);
       }

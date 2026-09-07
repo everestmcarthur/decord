@@ -1,17 +1,17 @@
-// Module ID: 16943
-// Function ID: 16944
+// Module ID: 16946
+// Function ID: 16947
 // Name: IncentivizedAccountLinkConfirmationBottomSheet
-// Dependencies: [19, 17, 4552, 1074, 21, 504, 15832, 1115, 8809, 15833, 5587, 4975, 1114, 12956, 576, 4527, 4255, 2024, 10230, 3127, 2]
+// Dependencies: [19, 17, 4552, 1074, 21, 504, 15835, 1115, 8814, 15836, 5587, 4975, 1114, 12960, 576, 4527, 4255, 2024, 10235, 3127, 2]
 // Exports: default
 
-// Module 16943 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 16946 (IncentivizedAccountLinkConfirmationBottomSheet)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 4975 */;
-import PromoSheet from "PromoSheet" /* 10230 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 12956 */;
-import metadataDefault from "metadata" /* 15832 */;
+import PromoSheet from "PromoSheet" /* 10235 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 12960 */;
+import metadataDefault from "metadata" /* 15835 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;
@@ -40,8 +40,8 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   } else {
     if (tmpResult.isAndroid()) {
       let obj2 = { url: null, style: null };
-      let tmp4Result = tmp4(8809);
-      obj2[0] = tmp4(15833);
+      let tmp4Result = tmp4(8814);
+      obj2[0] = tmp4(15836);
       const obj3 = { width: null, height: null };
       obj3[0] = c7;
       obj3[1] = c7;
@@ -53,7 +53,7 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
       const obj4 = { source: null, resizeMode: "contain", style: null };
       const obj5 = { uri: null };
       tmp4Result = tmp4(5587);
-      obj5[0] = tmp4(15833);
+      obj5[0] = tmp4(15836);
       obj4[0] = obj5;
       const obj6 = { width: null, height: null };
       obj6[0] = c7;

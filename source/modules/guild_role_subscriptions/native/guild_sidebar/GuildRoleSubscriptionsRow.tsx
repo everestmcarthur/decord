@@ -1,13 +1,13 @@
-// Module ID: 16205
-// Function ID: 16206
+// Module ID: 16208
+// Function ID: 16209
 // Name: GuildRoleSubscriptionsRow
-// Dependencies: [19, 1074, 1964, 10118, 21, 4560, 576, 1100, 4527, 16206, 1896, 12379, 1114, 12779, 2]
+// Dependencies: [19, 1074, 1964, 10123, 21, 4560, 576, 1100, 4527, 16209, 1896, 12383, 1114, 12783, 2]
 // Exports: default
 
-// Module 16205 (GuildRoleSubscriptionsRow)
+// Module 16208 (GuildRoleSubscriptionsRow)
 import ThemesDefault from "Themes" /* 576 */;
-import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 12379 */;
-import registerAssetDefault from "registerAsset" /* 12779 */;
+import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 12383 */;
+import registerAssetDefault from "registerAsset" /* 12783 */;
 import closure_3 from "noop" /* 19 */;
 import { Routes } from "ME" /* 1074 */;
 import { StaticChannelRoute } from "set" /* 1964 */;
@@ -42,7 +42,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
     };
     obj.openLazy(id(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), rolesubscriptionschannelactionsheet, obj);
   }, items1);
-  const ChannelModes = id(12379).ChannelModes;
+  const ChannelModes = id(12383).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -60,8 +60,8 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1114).intl;
   obj[0] = intl2.string(tmp6(1114).t["KzCF/6"]);
   obj[1] = DEFAULT;
-  obj[7] = jsx(tmp6(12379).BaseChannelName, { name: null, mode: null });
+  obj[7] = jsx(tmp6(12383).BaseChannelName, { name: null, mode: null });
   obj = { disableColor: true, mode: DEFAULT, source: registerAssetDefault };
-  obj[8] = jsx(tmp6(12379).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: registerAssetDefault });
+  obj[8] = jsx(tmp6(12383).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: registerAssetDefault });
   return jsx(BaseChannelSubtitleDefault, { disableColor: true, mode: DEFAULT, source: registerAssetDefault });
 };

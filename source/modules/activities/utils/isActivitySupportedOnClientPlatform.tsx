@@ -1,10 +1,10 @@
-// Module ID: 9529
-// Function ID: 9530
+// Module ID: 9534
+// Function ID: 9535
 // Name: isActivitySupportedOnClientPlatform
 // Dependencies: [1115, 1894, 2]
 // Exports: default
 
-// Module 9529 (isActivitySupportedOnClientPlatform)
+// Module 9534 (isActivitySupportedOnClientPlatform)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");

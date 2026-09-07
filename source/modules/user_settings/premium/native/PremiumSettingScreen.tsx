@@ -1,10 +1,10 @@
-// Module ID: 14983
-// Function ID: 14984
+// Module ID: 14986
+// Function ID: 14987
 // Name: PremiumScreen
 // Dependencies: [19, 21, 6994, 1483, 6990, 7413, 2]
 // Exports: default
 
-// Module 14983 (PremiumScreen)
+// Module 14986 (PremiumScreen)
 import noopAll from "noop" /* 19 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import dispatcherDefault from "dispatcher" /* 6990 */;

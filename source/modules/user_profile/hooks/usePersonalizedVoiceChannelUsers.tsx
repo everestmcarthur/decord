@@ -1,10 +1,10 @@
-// Module ID: 13025
-// Function ID: 13026
+// Module ID: 13029
+// Function ID: 13030
 // Name: usePersonalizedVoiceChannelUsers
 // Dependencies: [7659, 6595, 1371, 4584, 1074, 504, 2]
 // Exports: default
 
-// Module 13025 (usePersonalizedVoiceChannelUsers)
+// Module 13029 (usePersonalizedVoiceChannelUsers)
 import closure_2 from "recomputeAffinities" /* 7659 */;
 import closure_3 from "hasConsented" /* 6595 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;

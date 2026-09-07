@@ -1,10 +1,10 @@
-// Module ID: 15299
-// Function ID: 15300
+// Module ID: 15302
+// Function ID: 15303
 // Name: getMaxColors
 // Dependencies: [19, 1085, 4492, 1231, 4410, 4409, 576, 1220, 4262, 1114, 2]
 // Exports: convertThemesToAnimatedThemes, useLaunchWelcomeSystemTheme
 
-// Module 15299 (getMaxColors)
+// Module 15302 (getMaxColors)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1220 */;
 import ClientThemeType from "ClientThemeType" /* 1231 */;

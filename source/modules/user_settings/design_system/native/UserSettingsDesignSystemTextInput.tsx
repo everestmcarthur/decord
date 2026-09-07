@@ -1,10 +1,10 @@
-// Module ID: 15783
-// Function ID: 15784
+// Module ID: 15786
+// Function ID: 15787
 // Name: Sample
-// Dependencies: [32, 19, 17, 21, 4560, 576, 5607, 4973, 6606, 5090, 14170, 7150, 7149, 7085, 4556, 5080, 6607, 7050, 8097, 7380, 6613, 4975, 4527, 6966, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 5607, 4973, 6606, 5090, 14173, 7150, 7149, 7085, 4556, 5080, 6607, 7050, 8097, 7380, 6613, 4975, 4527, 6966, 2]
 // Exports: default
 
-// Module 15783 (Sample)
+// Module 15786 (Sample)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import Stack from "Stack" /* 4973 */;
@@ -22,7 +22,7 @@ import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBa
 import Background from "Background" /* 7150 */;
 import SettingsIcon from "SettingsIcon" /* 7380 */;
 import IconButton from "IconButton" /* 8097 */;
-import GhostInput from "GhostInput" /* 14170 */;
+import GhostInput from "GhostInput" /* 14173 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;

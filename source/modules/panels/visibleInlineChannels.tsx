@@ -1,10 +1,10 @@
-// Module ID: 13839
-// Function ID: 13840
+// Module ID: 13842
+// Function ID: 13843
 // Name: map
 // Dependencies: [2]
 // Exports: isChannelVisibleInline, registerVisibleInlineChannel, unregisterVisibleInlineChannel
 
-// Module 13839 (map)
+// Module 13842 (map)
 import set2 from "set" /* 2 */;
 
 const map = new Map();

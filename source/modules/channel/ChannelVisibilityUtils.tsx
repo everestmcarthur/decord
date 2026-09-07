@@ -1,10 +1,10 @@
-// Module ID: 10087
-// Function ID: 10088
+// Module ID: 10092
+// Function ID: 10093
 // Name: isChannelCurrentlyVisible
 // Dependencies: [7280, 2011, 4381, 2]
 // Exports: isChannelCurrentlyVisible
 
-// Module 10087 (isChannelCurrentlyVisible)
+// Module 10092 (isChannelCurrentlyVisible)
 import closure_0 from "toggleSection" /* 7280 */;
 import closure_1 from "handleConnectionOpen" /* 2011 */;
 import closure_2 from "handleConnectionOpen" /* 4381 */;

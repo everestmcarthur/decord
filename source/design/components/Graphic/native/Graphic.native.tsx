@@ -1,10 +1,10 @@
-// Module ID: 10232
-// Function ID: 10233
+// Module ID: 10237
+// Function ID: 10238
 // Name: ImageGraphic
 // Dependencies: [19, 17, 21, 4560, 5587, 4271, 4377, 2]
 // Exports: Graphic
 
-// Module 10232 (ImageGraphic)
+// Module 10237 (ImageGraphic)
 import preloadDefault from "preload" /* 5587 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

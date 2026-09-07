@@ -1,21 +1,21 @@
-// Module ID: 17456
-// Function ID: 17457
+// Module ID: 17459
+// Function ID: 17460
 // Name: haveNotSeenPromptSince
-// Dependencies: [5, 17, 4201, 502, 1957, 4741, 12409, 12410, 1074, 4770, 4527, 17457, 1896, 1250, 4153, 12412, 10085, 1242, 1115, 7118, 15481, 1093, 2]
+// Dependencies: [5, 17, 4201, 502, 1957, 4741, 12413, 12414, 1074, 4770, 4527, 17460, 1896, 1250, 4153, 12416, 10090, 1242, 1115, 7118, 15484, 1093, 2]
 
-// Module 17456 (haveNotSeenPromptSince)
+// Module 17459 (haveNotSeenPromptSince)
 import hooksDefault from "hooks" /* 4153 */;
 import initializeDefault from "initialize" /* 7118 */;
-import getOrRefreshPushSyncToken from "getOrRefreshPushSyncToken" /* 12412 */;
+import getOrRefreshPushSyncToken from "getOrRefreshPushSyncToken" /* 12416 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "storeThread" /* 4201 */;
 import closure_6 from "fetchFingerprint" /* 502 */;
 import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import closure_8 from "updateUserGuildSettingsInternal" /* 4741 */;
-import closure_9 from "set" /* 12409 */;
-import { PermissionPromptType } from "set" /* 12409 */;
-import EventActionType from "EventActionType" /* 12410 */;
+import closure_9 from "set" /* 12413 */;
+import { PermissionPromptType } from "set" /* 12413 */;
+import EventActionType from "EventActionType" /* 12414 */;
 import ME from "ME" /* 1074 */;
 import { NotificationAuthorizationStatus as closure_16 } from "NativePermissionStatus" /* 4770 */;
 
@@ -188,8 +188,8 @@ function _logNotificationPermissionStatus2() {
           return obj;
         } else {
           callback = arg1;
-          callback2 = callback(10085).allowInAppNotifications();
-          const obj5 = callback(10085);
+          callback2 = callback(10090).allowInAppNotifications();
+          const obj5 = callback(10090);
           const obj2 = { os_enabled: null, foreground_app_enabled: null, background_app_enabled: null, notification_authorization_status: null };
           obj2[0] = callback === constants2.AUTHORIZED;
           obj2[1] = callback2;

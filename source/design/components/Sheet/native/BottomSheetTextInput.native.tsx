@@ -1,10 +1,10 @@
-// Module ID: 9756
-// Function ID: 9757
+// Module ID: 9761
+// Function ID: 9762
 // Name: BottomSheetTextInput
-// Dependencies: [19, 21, 6626, 6624, 9757, 2]
+// Dependencies: [19, 21, 6626, 6624, 9762, 2]
 // Exports: BottomSheetTextInput
 
-// Module 9756 (BottomSheetTextInput)
+// Module 9761 (BottomSheetTextInput)
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -34,7 +34,7 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
   };
   const tmp3 = ref(6626)({ onFocus, onBlur });
   const merged1 = Object.assign(merged);
-  return jsx(ref(9757), {
+  return jsx(ref(9762), {
     ref(current) {
       ref.current = current;
       if (typeof ref === "function") {

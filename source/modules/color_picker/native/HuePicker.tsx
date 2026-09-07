@@ -1,10 +1,10 @@
-// Module ID: 14601
-// Function ID: 14602
+// Module ID: 14604
+// Function ID: 14605
 // Name: HuePicker
-// Dependencies: [32, 19, 17, 21, 4560, 576, 6655, 14598, 4296, 4987, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 6655, 14601, 4296, 4987, 2]
 // Exports: default
 
-// Module 14601 (HuePicker)
+// Module 14604 (HuePicker)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

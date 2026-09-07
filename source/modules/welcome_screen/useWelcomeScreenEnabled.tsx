@@ -1,10 +1,10 @@
-// Module ID: 12655
-// Function ID: 12656
+// Module ID: 12659
+// Function ID: 12660
 // Name: useWelcomeScreenEnabled
 // Dependencies: [1961, 1957, 1979, 2011, 1074, 504, 2]
 // Exports: default
 
-// Module 12655 (useWelcomeScreenEnabled)
+// Module 12659 (useWelcomeScreenEnabled)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import createChannelRecord from "createChannelRecord" /* 1961 */;

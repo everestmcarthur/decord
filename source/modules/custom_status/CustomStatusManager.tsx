@@ -1,9 +1,9 @@
-// Module ID: 17338
-// Function ID: 17339
+// Module ID: 17341
+// Function ID: 17342
 // Name: timeout
-// Dependencies: [5279, 1074, 4447, 7118, 1935, 10091, 1940, 1218, 10090, 2]
+// Dependencies: [5279, 1074, 4447, 7118, 1935, 10096, 1940, 1218, 10095, 2]
 
-// Module 17338 (timeout)
+// Module 17341 (timeout)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "filterPlayingActivities" /* 5279 */;
 import ME from "ME" /* 1074 */;
@@ -97,7 +97,7 @@ let prototype = function CustomStatusManager() {
             obj1[0] = constants.CUSTOM_STATUS_MANAGER;
             obj[0] = obj1;
             obj[1] = obj;
-            callback(10091)(obj);
+            callback(10096)(obj);
             closure_6.stop();
           }
         }
@@ -139,9 +139,9 @@ let prototype = function CustomStatusManager() {
             callback(table[8]).setFocusMode(false);
           }, true);
         } else {
-          applyArgumentsResult(10090).setFocusMode(false);
+          applyArgumentsResult(10095).setFocusMode(false);
           closure_7.stop();
-          const tmpResult = applyArgumentsResult(10090);
+          const tmpResult = applyArgumentsResult(10095);
         }
       }
     }

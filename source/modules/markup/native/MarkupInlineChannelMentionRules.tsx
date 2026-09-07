@@ -1,10 +1,10 @@
-// Module ID: 10128
-// Function ID: 10129
+// Module ID: 10133
+// Function ID: 10134
 // Name: inlineChannelMentionReact
 // Dependencies: [19, 21, 8096, 1178, 1369, 2]
 // Exports: createInlineChannelReact, inlineChannelMentionReact, inlineChannelReact
 
-// Module 10128 (inlineChannelMentionReact)
+// Module 10133 (inlineChannelMentionReact)
 import noopAll from "noop" /* 19 */;
 import { jsxs } from "jsxProd" /* 21 */;
 

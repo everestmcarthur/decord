@@ -1,24 +1,24 @@
-// Module ID: 10105
-// Function ID: 10106
+// Module ID: 10110
+// Function ID: 10111
 // Name: NotificationWrapper
-// Dependencies: [32, 19, 17, 9684, 10095, 1074, 21, 4296, 4560, 10106, 10179, 10182, 10183, 10216, 10217, 11318, 11319, 11322, 10094, 504, 4992, 4561, 1242, 6655, 4974, 1178, 7123, 10141, 2]
+// Dependencies: [32, 19, 17, 9689, 10100, 1074, 21, 4296, 4560, 10111, 10184, 10187, 10188, 10221, 10222, 11323, 11324, 11327, 10099, 504, 4992, 4561, 1242, 6655, 4974, 1178, 7123, 10146, 2]
 // Exports: default
 
-// Module 10105 (NotificationWrapper)
-import _modDef10106 from "module_10106" /* 10106 */;
-import _modDef10179 from "module_10179" /* 10179 */;
-import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10182 */;
-import BugReporterNotification from "BugReporterNotification" /* 10183 */;
-import AlertNotificationDefault from "AlertNotification" /* 10216 */;
-import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10217 */;
-import NotificationAvatarDefault from "NotificationAvatar" /* 11318 */;
-import _modDef11319 from "module_11319" /* 11319 */;
-import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 11322 */;
+// Module 10110 (NotificationWrapper)
+import _modDef10111 from "module_10111" /* 10111 */;
+import _modDef10184 from "module_10184" /* 10184 */;
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10187 */;
+import BugReporterNotification from "BugReporterNotification" /* 10188 */;
+import AlertNotificationDefault from "AlertNotification" /* 10221 */;
+import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10222 */;
+import NotificationAvatarDefault from "NotificationAvatar" /* 11323 */;
+import _modDef11324 from "module_11324" /* 11324 */;
+import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 11327 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 9684 */;
-import set from "set" /* 10095 */;
+import closure_6 from "initialize" /* 9689 */;
+import set from "set" /* 10100 */;
 import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 import { Easing } from "module_4296" /* 4296 */;
@@ -31,11 +31,11 @@ function NotificationWrapper(notification) {
   if (constants.MESSAGE === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10106, { notification: null });
+    return jsx(_modDef10111, { notification: null });
   } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(_modDef10179, { notification: null });
+    return jsx(_modDef10184, { notification: null });
   } else if (tmp.FORUM_THREAD_CREATED === type) {
     obj1 = { notification: null };
     obj1[0] = notification;
@@ -70,7 +70,7 @@ function NotificationWrapper(notification) {
     }
     const obj6 = { notification: null };
     obj6[0] = notification;
-    return jsx(_modDef11319, { notification: null });
+    return jsx(_modDef11324, { notification: null });
   }
 }
 ({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = set);

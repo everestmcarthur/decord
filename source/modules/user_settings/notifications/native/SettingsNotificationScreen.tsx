@@ -1,18 +1,18 @@
-// Module ID: 15479
-// Function ID: 15480
+// Module ID: 15482
+// Function ID: 15483
 // Name: SystemNotificationsSubLabel
-// Dependencies: [19, 17, 15480, 7975, 21, 4560, 576, 8095, 12411, 15481, 15482, 4556, 1114, 5607, 6610, 7594, 11468, 15483, 15484, 14689, 2]
+// Dependencies: [19, 17, 15483, 7975, 21, 4560, 576, 8095, 12415, 15484, 15485, 4556, 1114, 5607, 6610, 7594, 11473, 15486, 15487, 14692, 2]
 
-// Module 15479 (SystemNotificationsSubLabel)
+// Module 15482 (SystemNotificationsSubLabel)
 import ThemesDefault from "Themes" /* 576 */;
 import apexExperiment from "apexExperiment" /* 8095 */;
-import _requestPushNotificationPermission from "_requestPushNotificationPermission" /* 12411 */;
-import _modDef14689 from "module_14689" /* 14689 */;
-import apexExperimentDefault from "apexExperiment" /* 15481 */;
-import hasAndroidNotificationChannels from "hasAndroidNotificationChannels" /* 15482 */;
+import _requestPushNotificationPermission from "_requestPushNotificationPermission" /* 12415 */;
+import _modDef14692 from "module_14692" /* 14692 */;
+import apexExperimentDefault from "apexExperiment" /* 15484 */;
+import hasAndroidNotificationChannels from "hasAndroidNotificationChannels" /* 15485 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { initializeAndroidNotificationSettingsStore as closure_5 } from "_initializeAndroidNotificationSettingsStore" /* 15480 */;
+import { initializeAndroidNotificationSettingsStore as closure_5 } from "_initializeAndroidNotificationSettingsStore" /* 15483 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -164,7 +164,7 @@ const memoResult = importAllResult.memo(() => {
   const effect1 = importAllResult.useEffect(() => {
     const result = isFamilyCenterV3Enabled(closure_1_2[18]).prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled);
   }, items1);
-  return callback(_modDef14689, { node });
+  return callback(_modDef14692, { node });
 });
 let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationScreen.tsx");
 

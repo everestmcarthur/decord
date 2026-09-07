@@ -1,10 +1,10 @@
-// Module ID: 16278
-// Function ID: 16279
+// Module ID: 16281
+// Function ID: 16282
 // Name: EmptyBody
-// Dependencies: [19, 17, 16202, 21, 4560, 576, 10224, 10976, 4527, 10228, 1896, 10227, 4556, 1114, 3225, 5080, 5101, 5071, 4973, 2]
+// Dependencies: [19, 17, 16205, 21, 4560, 576, 10229, 10981, 4527, 10233, 1896, 10232, 4556, 1114, 3225, 5080, 5101, 5071, 4973, 2]
 // Exports: default
 
-// Module 16278 (EmptyBody)
+// Module 16281 (EmptyBody)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 3225 */;
@@ -15,7 +15,7 @@ import TextIcon from "TextIcon" /* 5080 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { useHasFavoritesGuildSuggestions as closure_5 } from "items" /* 16202 */;
+import { useHasFavoritesGuildSuggestions as closure_5 } from "items" /* 16205 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

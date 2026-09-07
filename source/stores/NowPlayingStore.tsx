@@ -1,9 +1,9 @@
-// Module ID: 13747
-// Function ID: 13748
+// Module ID: 13751
+// Function ID: 13752
 // Name: _handlePresenceUpdate
-// Dependencies: [7659, 4600, 1371, 1074, 13748, 504, 573, 2]
+// Dependencies: [7659, 4600, 1371, 1074, 13752, 504, 573, 2]
 
-// Module 13747 (_handlePresenceUpdate)
+// Module 13751 (_handlePresenceUpdate)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_2 from "recomputeAffinities" /* 7659 */;

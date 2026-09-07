@@ -1,10 +1,10 @@
-// Module ID: 15663
-// Function ID: 15664
+// Module ID: 15666
+// Function ID: 15667
 // Name: handleNewUserOnboarding
-// Dependencies: [32, 5, 19, 17, 4552, 5277, 1372, 2025, 1183, 1185, 1371, 7719, 1074, 12705, 1373, 11363, 1186, 21, 4560, 576, 12746, 573, 12704, 9358, 14437, 1940, 1943, 4380, 4763, 15664, 1896, 11402, 14781, 14783, 13697, 4259, 15562, 1611, 504, 1935, 15680, 5687, 7201, 15574, 1178, 15267, 4411, 15327, 15681, 10250, 1114, 5605, 15421, 5612, 6958, 15682, 6968, 1232, 1351, 1115, 2]
+// Dependencies: [32, 5, 19, 17, 4552, 5277, 1372, 2025, 1183, 1185, 1371, 7719, 1074, 12709, 1373, 11368, 1186, 21, 4560, 576, 12750, 573, 12708, 9363, 14440, 1940, 1943, 4380, 4763, 15667, 1896, 11407, 14784, 14786, 13701, 4259, 15565, 1611, 504, 1935, 15683, 5687, 7201, 15577, 1178, 15270, 4411, 15330, 15684, 10255, 1114, 5605, 15424, 5612, 6958, 15685, 6968, 1232, 1351, 1115, 2]
 // Exports: default
 
-// Module 15663 (handleNewUserOnboarding)
+// Module 15666 (handleNewUserOnboarding)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import ThemesDefault from "Themes" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -12,10 +12,10 @@ import updateUserGuildSettings from "updateUserGuildSettings" /* 1940 */;
 import DismissibleContent from "DismissibleContent" /* 1943 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4380 */;
 import _modDef4763 from "module_4763" /* 4763 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 9358 */;
-import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12704 */;
-import setNewUser from "setNewUser" /* 12746 */;
-import setFontSize from "setFontSize" /* 14437 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 9363 */;
+import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12708 */;
+import setNewUser from "setNewUser" /* 12750 */;
+import setFontSize from "setFontSize" /* 14440 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
@@ -29,9 +29,9 @@ import closure_12 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
 import closure_13 from "mergeGuildAvatar" /* 1371 */;
 import closure_14 from "initialize" /* 7719 */;
 import { ThemeTypes } from "ME" /* 1074 */;
-import { NewUserTypes } from "NewUserTypes" /* 12705 */;
+import { NewUserTypes } from "NewUserTypes" /* 12709 */;
 import GuildFeatures from "GuildFeatures" /* 1373 */;
-import { VIBING_WUMPUS_MODAL_KEY } from "LOCATION_CONTEXT_MOBILE" /* 11363 */;
+import { VIBING_WUMPUS_MODAL_KEY } from "LOCATION_CONTEXT_MOBILE" /* 11368 */;
 import { SystemThemeState } from "SystemThemeState" /* 1186 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -64,7 +64,7 @@ function showVibingWumpus() {
 
     }
   };
-  obj.pushLazy(asyncRequireImpl(11402, dependencyMap.paths), obj, VIBING_WUMPUS_MODAL_KEY);
+  obj.pushLazy(asyncRequireImpl(11407, dependencyMap.paths), obj, VIBING_WUMPUS_MODAL_KEY);
 }
 function handleResetDoubleTapState() {
   const result = updateUserGuildSettings.removeDismissedContent(DismissibleContent.DismissibleContent.DOUBLE_TAP_TO_REACT_UPSELL);
@@ -80,7 +80,7 @@ function handleResetDoubleTapState() {
 function launchTotpSetupSuccess() {
   let arr = _modDef4763;
   arr = arr.pop();
-  const items = [asyncRequireImpl(14781, dependencyMap.paths), asyncRequireImpl(14783, dependencyMap.paths)];
+  const items = [asyncRequireImpl(14784, dependencyMap.paths), asyncRequireImpl(14786, dependencyMap.paths)];
   Promise.all(items).then((arg0) => {
     const iter = arg0[Symbol.iterator]();
     let nextResult;
@@ -147,7 +147,7 @@ function _handleShowAppRatingModal() {
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_1(13697)();
+            obj1[0] = closure_1_1(13701)();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -199,7 +199,7 @@ let closure_24 = createCacheKey.createStyles(createCacheKey);
 function launchMFA() {
   let arr = _modDef4763;
   arr = arr.pop();
-  asyncRequireImpl(15664, dependencyMap.paths).then((openMFAModal) => {
+  asyncRequireImpl(15667, dependencyMap.paths).then((openMFAModal) => {
     const items = [{ type: "webauthn", challenge: "{}" }, { type: "totp" }, { type: "backup" }, { type: "sms" }, { type: "password" }];
     openMFAModal.openMFAModal({ ticket: "ticket", methods: items }, () => {
 
@@ -234,7 +234,7 @@ export default function DevToolsQuickActionsScreen() {
   [][0] = locale;
   const stateFromStores = obj3.useStateFromStores(items3, () => useReducedMotion.useReducedMotion);
   if (tmp8) {
-    return callback3(tmp5(15680).default, {});
+    return callback3(tmp5(15683).default, {});
   } else {
     obj = { style: null, contentContainerStyle: null, children: null };
     obj[0] = tmp.container;
@@ -248,7 +248,7 @@ export default function DevToolsQuickActionsScreen() {
     obj2 = { label: "Show Dev Widget", value: null, onValueChange: null };
     obj2[1] = showDevWidget;
     obj2[2] = function onValueChange() {
-      let obj = locale(15574);
+      let obj = locale(15577);
       obj = { showDevWidget: !showDevWidget };
       return obj.updateDevToolsSettings(obj);
     };
@@ -265,13 +265,13 @@ export default function DevToolsQuickActionsScreen() {
     const obj5 = { label: null, disabled: null, icon: null, value: null, onValueChange: null };
     obj5[0] = str;
     obj5[1] = usingSystemTheme;
-    obj5[2] = tmp14(tmp5(15267).ThemeLightIcon, {});
+    obj5[2] = tmp14(tmp5(15270).ThemeLightIcon, {});
     let tmp5Result = tmp5(4411);
     obj5[3] = tmp5Result.isThemeLight(stateFromStoresObject.theme);
     obj5[4] = handleThemeChange;
     const items6 = [tmp14(tmp5(7201).TableSwitchRow, obj5), ];
     const obj6 = { label: "Reduced Motion", icon: null, value: null, onValueChange: null };
-    obj6[1] = tmp14(tmp5(15327).AccessibilityIcon, {});
+    obj6[1] = tmp14(tmp5(15330).AccessibilityIcon, {});
     obj6[2] = stateFromStores;
     obj6[3] = handleReducedMotionChange;
     items6[1] = tmp14(tmp5(7201).TableSwitchRow, obj6);
@@ -289,7 +289,7 @@ export default function DevToolsQuickActionsScreen() {
           const result = locale(table[48]).updateClientPremiumTypeOverride(arg0 ? closure_0 : closure_2_18, closure_1_2);
         },
         label,
-        icon: closure_1_21(locale(10250).PencilIcon, {}),
+        icon: closure_1_21(locale(10255).PencilIcon, {}),
         value: value === closure_3
       }, label);
     });
@@ -307,7 +307,7 @@ export default function DevToolsQuickActionsScreen() {
     const obj11 = { label: null, subLabel: "Toggle to a non-english locale for change log testing, etc.", onPress: null, icon: null, trailing: null };
     obj11[0] = str2;
     obj11[2] = tmp11;
-    obj11[3] = tmp14(tmp5(15421).LanguageIcon, {});
+    obj11[3] = tmp14(tmp5(15424).LanguageIcon, {});
     obj11[4] = tmp14(tmp5(5612).TableRowArrow, {});
     const items7 = [tmp14(tmp5(5605).TableRow, obj11), , , , , , , , , ];
     const obj12 = { label: "Reset Double Tap Emoji State", subLabel: "Clears double tap emoji and resets dismissible content.", onPress: null, icon: null, trailing: null };
@@ -319,7 +319,7 @@ export default function DevToolsQuickActionsScreen() {
     const intl2 = tmp5(1114).intl;
     obj13[0] = intl2.string(tmp5(1114).t.yoWDXU);
     obj13[2] = handleNewUserOnboarding;
-    obj13[3] = tmp14(tmp5(15562).WrenchIcon, {});
+    obj13[3] = tmp14(tmp5(15565).WrenchIcon, {});
     obj13[4] = tmp14(tmp5(5612).TableRowArrow, {});
     items7[2] = tmp14(tmp5(5605).TableRow, obj13);
     const obj14 = { label: "Launch MFA Challenge Modal", subLabel: "Dismisses dev tools when launching.", onPress: null, icon: null, trailing: null };
@@ -343,7 +343,7 @@ export default function DevToolsQuickActionsScreen() {
     obj17[4] = tmp14(tmp5(5612).TableRowArrow, {});
     items7[6] = tmp14(tmp5(5605).TableRow, obj17);
     const obj18 = { label: "Test captcha", onPress: null, icon: null, trailing: null };
-    obj18[1] = tmp5(15682).showCaptchaTestModal;
+    obj18[1] = tmp5(15685).showCaptchaTestModal;
     obj18[2] = tmp14(tmp5(6958).KeyIcon, {});
     obj18[3] = tmp14(tmp5(5612).TableRowArrow, {});
     items7[7] = tmp14(tmp5(5605).TableRow, obj18);
@@ -357,7 +357,7 @@ export default function DevToolsQuickActionsScreen() {
     items7[8] = tmp14(tmp5(7201).TableSwitchRow, obj19);
     const obj20 = { label: "Show App Rating Modal", subLabel: "Attempts to show the app rating modal and toasts the request outcome. The prompt may not visually appear on debug builds, or if the OS declines to render it (recent prompt, quota) -- a success toast only means the request was sent without error.", onPress: null, icon: null };
     obj20[2] = handleShowAppRatingModal;
-    obj20[3] = tmp14(tmp5(15562).WrenchIcon, {});
+    obj20[3] = tmp14(tmp5(15565).WrenchIcon, {});
     items7[9] = tmp14(tmp5(5605).TableRow, obj20);
     obj10[2] = items7;
     items5[6] = closure_22(tmp5(5687).TableRowGroup, obj10);
@@ -366,38 +366,38 @@ export default function DevToolsQuickActionsScreen() {
     items5[7] = tmp14(tmp5(1178).Spacer, obj21);
     const obj22 = { title: "Crash Actions", hasIcons: true, children: null };
     const obj23 = { icon: null, label: "Force Native Crash", onPress: null };
-    obj23[0] = tmp14(tmp5(15562).WrenchIcon, {});
+    obj23[0] = tmp14(tmp5(15565).WrenchIcon, {});
     obj23[2] = function onPress() {
       return showDevWidget(1232).crash();
     };
     const items8 = [tmp14(tmp5(5605).TableRow, obj23), , , , , ];
     const obj24 = { icon: null, label: "Force JS Crash", onPress: null };
-    obj24[0] = tmp14(tmp5(15562).WrenchIcon, {});
+    obj24[0] = tmp14(tmp5(15565).WrenchIcon, {});
     obj24[2] = function onPress() {
       error = new Error("Force JS Crash");
       throw error;
     };
     items8[1] = tmp14(tmp5(5605).TableRow, obj24);
     const obj25 = { icon: null, label: "Force JS Boundary Crash", onPress: null };
-    obj25[0] = tmp14(tmp5(15562).WrenchIcon, {});
+    obj25[0] = tmp14(tmp5(15565).WrenchIcon, {});
     obj25[2] = function onPress() {
       callback(true);
     };
     items8[2] = tmp14(tmp5(5605).TableRow, obj25);
     const obj26 = { icon: null, label: "Force libdiscore Crash", onPress: null };
-    obj26[0] = tmp14(tmp5(15562).WrenchIcon, {});
+    obj26[0] = tmp14(tmp5(15565).WrenchIcon, {});
     obj26[2] = function onPress() {
       locale(1351).crash();
     };
     items8[3] = tmp14(tmp5(5605).TableRow, obj26);
     const obj27 = { icon: null, label: "Force libdiscore Store Crash", subLabel: "Dispatches LIBDISCORE_SIMULATE_CRASH to NoteStore", onPress: null };
-    obj27[0] = tmp14(tmp5(15562).WrenchIcon, {});
+    obj27[0] = tmp14(tmp5(15565).WrenchIcon, {});
     obj27[3] = function onPress() {
       showDevWidget(573).dispatch({ type: "LIBDISCORE_SIMULATE_CRASH" });
     };
     items8[4] = tmp14(tmp5(5605).TableRow, obj27);
     const obj28 = { icon: null, label: "Force libdiscore Store Error", subLabel: "Dispatches LIBDISCORE_SIMULATE_STORE_ERROR with socket reset", onPress: null };
-    obj28[0] = tmp14(tmp5(15562).WrenchIcon, {});
+    obj28[0] = tmp14(tmp5(15565).WrenchIcon, {});
     obj28[3] = function onPress() {
       const socket2 = socket.getSocket();
       const obj = showDevWidget(573);
@@ -417,7 +417,7 @@ export default function DevToolsQuickActionsScreen() {
       const items9 = [tmp14(tmp5(1178).Spacer, obj30), ];
       const obj31 = { title: "Memory Actions", hasIcons: true, children: null };
       const obj32 = { icon: null, label: "Trigger Memory Warning", subLabel: "Simulates a memory warning to test cache-eviction behavior (e.g. SDWebImage).", onPress: null };
-      obj32[0] = tmp14(tmp5(15562).WrenchIcon, {});
+      obj32[0] = tmp14(tmp5(15565).WrenchIcon, {});
       obj32[3] = function onPress() {
         return showDevWidget(1232).triggerMemoryWarning();
       };

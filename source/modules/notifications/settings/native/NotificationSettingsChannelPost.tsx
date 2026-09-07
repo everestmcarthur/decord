@@ -1,10 +1,10 @@
-// Module ID: 10169
-// Function ID: 10170
+// Module ID: 10174
+// Function ID: 10175
 // Name: NotificationSettingsChannelPost
 // Dependencies: [19, 17, 4741, 21, 504, 5687, 1114, 5604, 7119, 2]
 // Exports: NotificationSettingsChannelPost
 
-// Module 10169 (NotificationSettingsChannelPost)
+// Module 10174 (NotificationSettingsChannelPost)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "updateUserGuildSettingsInternal" /* 4741 */;

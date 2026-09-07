@@ -1,10 +1,10 @@
-// Module ID: 9393
-// Function ID: 9394
+// Module ID: 9398
+// Function ID: 9399
 // Name: getAttachmentUploadAbortAlertContent
 // Dependencies: [1074, 1114, 5129, 2]
 // Exports: getAttachmentUploadAbortAlertContent
 
-// Module 9393 (getAttachmentUploadAbortAlertContent)
+// Module 9398 (getAttachmentUploadAbortAlertContent)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

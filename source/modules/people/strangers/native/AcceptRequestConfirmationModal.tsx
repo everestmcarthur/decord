@@ -1,10 +1,10 @@
-// Module ID: 10875
-// Function ID: 10876
+// Module ID: 10880
+// Function ID: 10881
 // Name: AcceptRequestConfirmationModal
 // Dependencies: [19, 17, 21, 4560, 576, 4994, 1114, 4904, 4556, 2]
 // Exports: default
 
-// Module 10875 (AcceptRequestConfirmationModal)
+// Module 10880 (AcceptRequestConfirmationModal)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import componentDidMountDefault from "componentDidMount" /* 4994 */;

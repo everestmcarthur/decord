@@ -1,10 +1,10 @@
-// Module ID: 9521
-// Function ID: 9522
+// Module ID: 9526
+// Function ID: 9527
 // Name: NativeModules
-// Dependencies: [17, 1115, 9522, 4539, 560, 1249, 2]
+// Dependencies: [17, 1115, 9527, 4539, 560, 1249, 2]
 
-// Module 9521 (NativeModules)
-import enforcingDefault from "enforcing" /* 9522 */;
+// Module 9526 (NativeModules)
+import enforcingDefault from "enforcing" /* 9527 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set from "set" /* 1115 */;
 import keys from "keys" /* 560 */;

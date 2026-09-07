@@ -1,10 +1,10 @@
-// Module ID: 13903
-// Function ID: 13904
+// Module ID: 13906
+// Function ID: 13907
 // Name: ShareAttachments
-// Dependencies: [19, 17, 21, 4296, 4987, 1178, 4560, 576, 4561, 4409, 1114, 10196, 5138, 2]
+// Dependencies: [19, 17, 21, 4296, 4987, 1178, 4560, 576, 4561, 4409, 1114, 10201, 5138, 2]
 // Exports: default
 
-// Module 13903 (ShareAttachments)
+// Module 13906 (ShareAttachments)
 import ThemesDefault from "Themes" /* 576 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import closure_3 from "noop" /* 19 */;

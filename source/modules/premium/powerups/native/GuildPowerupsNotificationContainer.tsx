@@ -1,17 +1,17 @@
-// Module ID: 12555
-// Function ID: 12556
+// Module ID: 12559
+// Function ID: 12560
 // Name: Tier3OverrideNotice
-// Dependencies: [17, 21, 4560, 576, 8095, 4556, 12556, 12557, 1114, 2428, 12560, 2]
+// Dependencies: [17, 21, 4560, 576, 8095, 4556, 12560, 12561, 1114, 2428, 12564, 2]
 // Exports: default
 
-// Module 12555 (Tier3OverrideNotice)
+// Module 12559 (Tier3OverrideNotice)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import apexExperiment from "apexExperiment" /* 8095 */;
-import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12556 */;
-import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12557 */;
+import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12560 */;
+import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12561 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -71,7 +71,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
       const obj2 = { guildId: null, powerupNames: null, warnings: null };
       obj2[0] = guildId;
       ({ expiringPowerupNames: obj5[1], warnings: obj5[2] } = tmp5);
-      shouldShow2 = tmp11(tmp2(12560), obj2);
+      shouldShow2 = tmp11(tmp2(12564), obj2);
     }
     items[2] = shouldShow2;
     obj[1] = items;

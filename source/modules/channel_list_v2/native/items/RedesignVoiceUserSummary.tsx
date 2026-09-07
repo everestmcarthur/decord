@@ -1,10 +1,10 @@
-// Module ID: 16131
-// Function ID: 16132
+// Module ID: 16134
+// Function ID: 16135
 // Name: RedesignVoiceUserSummary
-// Dependencies: [19, 2011, 4584, 21, 504, 4705, 16130, 2]
+// Dependencies: [19, 2011, 4584, 21, 504, 4705, 16133, 2]
 // Exports: default
 
-// Module 16131 (RedesignVoiceUserSummary)
+// Module 16134 (RedesignVoiceUserSummary)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleConnectionOpen" /* 2011 */;
 import closure_5 from "getVoiceStatesForGuild" /* 4584 */;

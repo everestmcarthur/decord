@@ -1,10 +1,10 @@
-// Module ID: 11821
-// Function ID: 11822
+// Module ID: 11826
+// Function ID: 11827
 // Name: StringSelectComponentActionSheet
-// Dependencies: [32, 19, 21, 4560, 576, 8119, 1894, 4527, 11822, 7130, 4556, 1114, 2]
+// Dependencies: [32, 19, 21, 4560, 576, 8119, 1894, 4527, 11827, 7130, 4556, 1114, 2]
 // Exports: default
 
-// Module 11821 (StringSelectComponentActionSheet)
+// Module 11826 (StringSelectComponentActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -149,5 +149,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj[12] = channelId;
   obj[13] = allowEmpty;
-  return tmp9(onSubmit(11822), obj);
+  return tmp9(onSubmit(11827), obj);
 };

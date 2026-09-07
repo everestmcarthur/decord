@@ -1,20 +1,20 @@
-// Module ID: 13034
-// Function ID: 13035
+// Module ID: 13038
+// Function ID: 13039
 // Name: getActivityJoinability
-// Dependencies: [1074, 11761, 11758, 9531, 9502, 7313, 13035, 1115, 11755, 11756, 11757, 2]
+// Dependencies: [1074, 11766, 11763, 9536, 9507, 7313, 13039, 1115, 11760, 11761, 11762, 2]
 // Exports: default
 
-// Module 13034 (getActivityJoinability)
+// Module 13038 (getActivityJoinability)
 import set from "set" /* 2 */;
 import set2 from "set" /* 1115 */;
 import hasFlagDefault from "hasFlag" /* 7313 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9502 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9531 */;
-import getEmbeddedActivityJoinabilityDefault from "getEmbeddedActivityJoinability" /* 9531 */;
-import getPartySize from "getPartySize" /* 11755 */;
-import getIsInParty from "getIsInParty" /* 11758 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11761 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13035 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9507 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9536 */;
+import getEmbeddedActivityJoinabilityDefault from "getEmbeddedActivityJoinability" /* 9536 */;
+import getPartySize from "getPartySize" /* 11760 */;
+import getIsInParty from "getIsInParty" /* 11763 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11766 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13039 */;
 import ME from "ME" /* 1074 */;
 
 ({ ActivityFlags: c3, ChannelTypes: c4, GuildFeatures: c5 } = ME);
@@ -118,7 +118,7 @@ export default function getActivityJoinability(arg0) {
           tmp30 = importDefault;
           tmp31 = constants;
         }
-        tmp27Result = tmp27(11757);
+        tmp27Result = tmp27(11762);
       }
       return obj.CANNOT_JOIN;
     }

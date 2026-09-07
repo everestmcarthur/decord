@@ -1,15 +1,15 @@
-// Module ID: 13507
-// Function ID: 13508
+// Module ID: 13511
+// Function ID: 13512
 // Name: BoostedGuildTierProgressCircle
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 13508, 13512, 13513, 13514, 4469, 4454, 12591, 4556, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 13512, 13516, 13517, 13518, 4469, 4454, 12595, 4556, 2]
 // Exports: default
 
-// Module 13507 (BoostedGuildTierProgressCircle)
+// Module 13511 (BoostedGuildTierProgressCircle)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4454 */;
 import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4469 */;
-import getTier048PxSource from "getTier048PxSource" /* 13508 */;
+import getTier048PxSource from "getTier048PxSource" /* 13512 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -66,11 +66,11 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (tmp13.TIER_1 === premiumTier) {
-          let tier048PxSource = tmp2(13512);
+          let tier048PxSource = tmp2(13516);
         } else if (tmp13.TIER_2 === premiumTier) {
-          tier048PxSource = tmp2(13513);
+          tier048PxSource = tmp2(13517);
         } else if (tmp13.TIER_3 === premiumTier) {
-          tier048PxSource = tmp2(13514);
+          tier048PxSource = tmp2(13518);
         }
       }
       const obj2 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no" };
@@ -86,7 +86,7 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       obj[2] = tmp10(tmp11, obj1);
       return tmp8(tmp9, obj);
     }
-    tmp19Result = tmp19(13508);
+    tmp19Result = tmp19(13512);
     tier048PxSource = tmp19Result.getTier048PxSource(theme);
     const obj10 = getGuildTierFromGuild;
   }

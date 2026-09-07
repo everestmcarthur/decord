@@ -1,10 +1,10 @@
-// Module ID: 11504
-// Function ID: 11505
+// Module ID: 11509
+// Function ID: 11510
 // Name: formatAppStoreRatingValue
 // Dependencies: [2]
 // Exports: formatAppStoreChartRank, formatAppStoreRatingCount, formatAppStoreRatingValue, getAppStoreStarFillAmounts
 
-// Module 11504 (formatAppStoreRatingValue)
+// Module 11509 (formatAppStoreRatingValue)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatCardUtils.tsx");

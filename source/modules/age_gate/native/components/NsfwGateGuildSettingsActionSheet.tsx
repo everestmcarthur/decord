@@ -1,10 +1,10 @@
-// Module ID: 13908
-// Function ID: 13909
+// Module ID: 13911
+// Function ID: 13912
 // Name: NsfwGateGuildSettingsActionSheet
-// Dependencies: [19, 21, 13909, 7198, 7149, 7200, 1114, 4527, 7119, 13910, 2]
+// Dependencies: [19, 21, 13912, 7198, 7149, 7200, 1114, 4527, 7119, 13913, 2]
 // Exports: default
 
-// Module 13908 (NsfwGateGuildSettingsActionSheet)
+// Module 13911 (NsfwGateGuildSettingsActionSheet)
 import noopAll from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -15,7 +15,7 @@ const result = require("set").fileFinishedImporting("modules/age_gate/native/com
 
 export default function NsfwGateGuildSettingsActionSheet(guild) {
   guild = guild.guild;
-  let obj = guild(13909);
+  let obj = guild(13912);
   const messageRequestPrivacyOption = obj.useMessageRequestPrivacyOption({ guild });
   obj = { header: callback(guild(7149).BottomSheetTitleHeader, obj), children: null };
   obj = { title: guild.name };
@@ -28,7 +28,7 @@ export default function NsfwGateGuildSettingsActionSheet(guild) {
     const obj = closure_1_1(closure_1_2[7]);
     closure_1_1(closure_1_2[8]).open(guild.id);
   };
-  const items = [callback(guild(7200).ActionSheetRow, obj2), callback(guild(13910).RestrictedGuildPrivacyOption, { guild }), messageRequestPrivacyOption, ];
+  const items = [callback(guild(7200).ActionSheetRow, obj2), callback(guild(13913).RestrictedGuildPrivacyOption, { guild }), messageRequestPrivacyOption, ];
   const obj3 = { variant: "danger", label: null, onPress: null };
   const intl2 = guild(1114).intl;
   obj3[1] = intl2.string(guild(1114).t.J2TBi3);

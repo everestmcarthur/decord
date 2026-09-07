@@ -1,12 +1,12 @@
-// Module ID: 10423
-// Function ID: 10424
+// Module ID: 10428
+// Function ID: 10429
 // Name: getAutocompleteOptions
-// Dependencies: [7779, 7780, 5108, 5502, 1957, 2021, 1979, 1074, 4999, 5000, 10424, 1374, 12, 9411, 5442, 1935, 9841, 7334, 10425, 10388, 7337, 1396, 1114, 2]
+// Dependencies: [7779, 7780, 5108, 5502, 1957, 2021, 1979, 1074, 4999, 5000, 10429, 1374, 12, 9416, 5442, 1935, 9846, 7334, 10430, 10393, 7337, 1396, 1114, 2]
 // Exports: getAutocompleteOptions
 
-// Module 10423 (getAutocompleteOptions)
+// Module 10428 (getAutocompleteOptions)
 import applyDefault from "apply" /* 12 */;
-import _executeCommandDefault from "_executeCommand" /* 9411 */;
+import _executeCommandDefault from "_executeCommand" /* 9416 */;
 import closure_3 from "handleInit" /* 7779 */;
 import closure_4 from "handleInit" /* 7780 */;
 import closure_5 from "set" /* 5108 */;
@@ -16,7 +16,7 @@ import closure_8 from "trackCommunicationDisabled" /* 2021 */;
 import closure_9 from "createGuildRecordFromRust" /* 1979 */;
 import ME from "ME" /* 1074 */;
 import regExp from "regExp" /* 5000 */;
-import { AutocompleteTypes } from "AutocompleteTypes" /* 10424 */;
+import { AutocompleteTypes } from "AutocompleteTypes" /* 10429 */;
 import set from "set" /* 1374 */;
 
 const require = arg1;

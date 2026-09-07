@@ -1,14 +1,14 @@
-// Module ID: 12692
-// Function ID: 12693
+// Module ID: 12696
+// Function ID: 12697
 // Name: ContactSyncLandingOnboardingRedesign
-// Dependencies: [5, 19, 17, 4770, 21, 4560, 576, 5682, 5139, 12693, 4556, 1114, 4975, 12694, 12686, 2]
+// Dependencies: [5, 19, 17, 4770, 21, 4560, 576, 5682, 5139, 12697, 4556, 1114, 4975, 12698, 12690, 2]
 // Exports: default
 
-// Module 12692 (ContactSyncLandingOnboardingRedesign)
+// Module 12696 (ContactSyncLandingOnboardingRedesign)
 import ThemesDefault from "Themes" /* 576 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12686 */;
-import registerAssetDefault from "registerAsset" /* 12693 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 12694 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12690 */;
+import registerAssetDefault from "registerAsset" /* 12697 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 12698 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

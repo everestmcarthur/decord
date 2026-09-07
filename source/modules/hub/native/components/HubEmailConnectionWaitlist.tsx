@@ -1,10 +1,10 @@
-// Module ID: 12734
-// Function ID: 12735
+// Module ID: 12738
+// Function ID: 12739
 // Name: HubEmailConnectionWaitlist
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 1483, 7377, 1114, 12735, 1178, 4556, 4975, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 1483, 7377, 1114, 12739, 1178, 4556, 4975, 2]
 // Exports: default
 
-// Module 12734 (HubEmailConnectionWaitlist)
+// Module 12738 (HubEmailConnectionWaitlist)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -41,7 +41,7 @@ export default function HubEmailConnectionWaitlist(school) {
     });
   }, items);
   obj = { style: tmp.container, children: null };
-  obj = { source: navigation(12735), style: tmp.header };
+  obj = { source: navigation(12739), style: tmp.header };
   const items1 = [callback(closure_5, obj), , , ];
   obj1 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1114).intl;

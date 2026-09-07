@@ -1,14 +1,14 @@
-// Module ID: 15838
-// Function ID: 15839
+// Module ID: 15841
+// Function ID: 15842
 // Name: MenuIcon
-// Dependencies: [19, 21, 576, 4261, 15839, 2]
+// Dependencies: [19, 21, 576, 4261, 15842, 2]
 // Exports: MenuIcon
 
-// Module 15838 (MenuIcon)
+// Module 15841 (MenuIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 15839 */;
+import registerAsset from "registerAsset" /* 15842 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// Module ID: 11664
-// Function ID: 11665
+// Module ID: 11669
+// Function ID: 11670
 // Name: isMessagePinnable
 // Dependencies: [4199, 1074, 7270, 7269, 2]
 // Exports: default
 
-// Module 11664 (isMessagePinnable)
+// Module 11669 (isMessagePinnable)
 import useCanStartPrivateThread from "useCanStartPrivateThread" /* 7269 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
 import closure_3 from "getUncachedChannelPermissions" /* 4199 */;

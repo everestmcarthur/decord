@@ -1,17 +1,17 @@
-// Module ID: 9642
-// Function ID: 9643
+// Module ID: 9647
+// Function ID: 9648
 // Name: getSafeArea
-// Dependencies: [5, 32, 19, 17, 8855, 1920, 1074, 4465, 21, 4560, 3, 1115, 9643, 1256, 8298, 9644, 9645, 1364, 9647, 9648, 1242, 1109, 563, 4904, 1114, 1272, 9649, 1365, 9517, 9550, 8272, 4761, 9515, 2]
+// Dependencies: [5, 32, 19, 17, 8860, 1920, 1074, 4465, 21, 4560, 3, 1115, 9648, 1256, 8298, 9649, 9650, 1364, 9652, 9653, 1242, 1109, 563, 4904, 1114, 1272, 9654, 1365, 9522, 9555, 8272, 4761, 9520, 2]
 // Exports: default, useHasInvalidUrlErrorState
 
-// Module 9642 (getSafeArea)
+// Module 9647 (getSafeArea)
 import timestampDefault from "timestamp" /* 3 */;
 import usePreviousDefault from "usePrevious" /* 8272 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
 import { Linking } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 8855 */;
+import closure_8 from "initialize" /* 8860 */;
 import items3 from "items3" /* 1920 */;
 import ME from "ME" /* 1074 */;
 import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4465 */;

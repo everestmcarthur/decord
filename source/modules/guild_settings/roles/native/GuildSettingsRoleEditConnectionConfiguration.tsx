@@ -1,17 +1,17 @@
-// Module ID: 17636
-// Function ID: 17637
+// Module ID: 17639
+// Function ID: 17640
 // Name: Header
-// Dependencies: [32, 19, 17, 1074, 5408, 21, 4560, 576, 4495, 11563, 1178, 1396, 4411, 5605, 1114, 5123, 5680, 7201, 17637, 1115, 4556, 5283, 5687, 2]
+// Dependencies: [32, 19, 17, 1074, 5408, 21, 4560, 576, 4495, 11568, 1178, 1396, 4411, 5605, 1114, 5123, 5680, 7201, 17640, 1115, 4556, 5283, 5687, 2]
 // Exports: default
 
-// Module 17636 (Header)
+// Module 17639 (Header)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import PressableBase from "PressableBase" /* 5123 */;
 import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5283 */;
 import TableRowInner from "TableRowInner" /* 5605 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
-import request from "request" /* 11563 */;
+import request from "request" /* 11568 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -195,7 +195,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  let obj = metadataField(17637);
+  let obj = metadataField(17640);
   const realizedOperatorForResult = obj.realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   let value;
@@ -204,7 +204,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let tmpResult = tmp(17637);
+  let tmpResult = tmp(17640);
   str = tmpResult.displayedValueFor(value, realizedOperatorForResult);
   str = str.toString();
   let mapped = React;
@@ -599,7 +599,7 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
     }
     if (configurationItems[0].configuration.connectionType === closure_11) {
       let obj = { hasIcons: true, children: null };
-      obj = { platform: null, integration: "a", applicationId: "<string:3444637699>", onRemove: "<string:1365331342>", locked: "<string:659423233>" };
+      obj = { platform: null, integration: "a", applicationId: "c\u1EB7p \u0111\u00F4i", onRemove: "h\u1EB9n h\u00F2", locked: "n\u1EE5 h\u00F4n" };
       obj[2] = applicationId;
       obj[3] = function onRemove() {
         return onConfigurationChange(null, configurationItems[0].index);

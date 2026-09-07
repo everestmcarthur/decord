@@ -1,10 +1,10 @@
-// Module ID: 11953
-// Function ID: 11954
+// Module ID: 11957
+// Function ID: 11958
 // Name: map
-// Dependencies: [502, 1074, 7752, 4783, 1384, 11954, 11955, 2]
+// Dependencies: [502, 1074, 7752, 4783, 1384, 11958, 11959, 2]
 // Exports: tryCreateInjectedMessage
 
-// Module 11953 (map)
+// Module 11957 (map)
 import hasFlag from "hasFlag" /* 1384 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
 import createMessageDefault from "createMessage" /* 7752 */;
@@ -48,7 +48,7 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
                 num = 0;
               }
               tmp4 = null;
-              if (!tmpResult.hasFlag(num, tmp(11954).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX)) {
+              if (!tmpResult.hasFlag(num, tmp(11958).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX)) {
                 tmp4 = null;
                 if (!obj.has(closure_0.id)) {
                   obj = { channelId: null, type: null, content: "", author: null, flags: null, state: null };
@@ -68,10 +68,10 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
                     num2 = 0;
                   }
                   const tmpResult1 = tmp(1384);
-                  const setFlagResult = tmp(1384).setFlag(num2, tmp(11954).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX, true);
-                  const result1 = tmp6(11955).updatePrivateChannelRecipientFlags(closure_0.id, setFlagResult);
+                  const setFlagResult = tmp(1384).setFlag(num2, tmp(11958).ChannelRecipientPrivateUserDataFlags.DISMISSED_IN_GAME_MESSAGE_NUX, true);
+                  const result1 = tmp6(11959).updatePrivateChannelRecipientFlags(closure_0.id, setFlagResult);
                   tmp4 = messageRecord1;
-                  const tmp6Result = tmp6(11955);
+                  const tmp6Result = tmp6(11959);
                 }
               }
             }

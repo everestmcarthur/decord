@@ -1,10 +1,10 @@
-// Module ID: 9200
-// Function ID: 9201
+// Module ID: 9205
+// Function ID: 9206
 // Name: useGuildProfileGames
 // Dependencies: [19, 1917, 1916, 502, 504, 7309, 1369, 2]
 // Exports: default, useAllGuildProfileGames
 
-// Module 9200 (useGuildProfileGames)
+// Module 9205 (useGuildProfileGames)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "getOfficialApplicationId" /* 1917 */;
 import closure_4 from "createGamesFromMessage" /* 1916 */;

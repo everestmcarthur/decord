@@ -1,10 +1,10 @@
-// Module ID: 14010
-// Function ID: 14011
+// Module ID: 14013
+// Function ID: 14014
 // Name: getAudioFidelityExperimentConfig
 // Dependencies: [1433, 1369, 2]
 // Exports: getAudioFidelityExperimentConfig, getVoiceFidelityCaps
 
-// Module 14010 (getAudioFidelityExperimentConfig)
+// Module 14013 (getAudioFidelityExperimentConfig)
 import set from "set" /* 2 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;

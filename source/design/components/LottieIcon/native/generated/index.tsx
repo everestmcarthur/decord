@@ -1,8 +1,8 @@
-// Module ID: 16029
-// Function ID: 16030
-// Dependencies: [2, 14135, 14137, 14139, 14141, 14143, 9947, 14145, 14147, 14149, 14151, 14153, 14155, 14157, 14159, 14161, 14163, 11096, 11094]
+// Module ID: 16032
+// Function ID: 16033
+// Dependencies: [2, 14138, 14140, 14142, 14144, 14146, 9952, 14148, 14150, 14152, 14154, 14156, 14158, 14160, 14162, 14164, 14166, 11101, 11099]
 
-// Module 16029
+// Module 16032
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("design/components/LottieIcon/native/generated/index.tsx");

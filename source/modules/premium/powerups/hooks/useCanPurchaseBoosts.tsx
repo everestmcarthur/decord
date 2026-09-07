@@ -1,10 +1,10 @@
-// Module ID: 12505
-// Function ID: 12506
+// Module ID: 12509
+// Function ID: 12510
 // Name: useCanPurchaseBoosts
 // Dependencies: [1371, 1373, 7393, 504, 2]
 // Exports: default
 
-// Module 12505 (useCanPurchaseBoosts)
+// Module 12509 (useCanPurchaseBoosts)
 import initialize from "initialize" /* 504 */;
 import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 7393 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;

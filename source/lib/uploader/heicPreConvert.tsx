@@ -1,10 +1,10 @@
-// Module ID: 9308
-// Function ID: 9309
+// Module ID: 9313
+// Function ID: 9314
 // Name: itemNeedsHeicPreConversion
 // Dependencies: [32, 5, 5128, 5171, 5266, 1896, 5172, 5157, 2]
 // Exports: maybePreConvertHeicItem
 
-// Module 9308 (itemNeedsHeicPreConversion)
+// Module 9313 (itemNeedsHeicPreConversion)
 import cancel from "cancel" /* 5128 */;
 import set from "set" /* 5171 */;
 import closure_2 from "_slicedToArray" /* 32 */;

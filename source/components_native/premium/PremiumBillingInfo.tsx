@@ -1,16 +1,16 @@
-// Module ID: 13346
-// Function ID: 13347
+// Module ID: 13350
+// Function ID: 13351
 // Name: GoogleManagementLink
-// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 4231, 4556, 1114, 4218, 13343, 7162, 7182, 7404, 13347, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 4231, 4556, 1114, 4218, 13347, 7162, 7182, 7404, 13351, 2]
 // Exports: default
 
-// Module 13346 (GoogleManagementLink)
+// Module 13350 (GoogleManagementLink)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4231 */;
 import contextDefault from "context" /* 7162 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import createSubscriptionInvoicePreview from "createSubscriptionInvoicePreview" /* 13343 */;
+import createSubscriptionInvoicePreview from "createSubscriptionInvoicePreview" /* 13347 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;
@@ -83,7 +83,7 @@ export default function PremiumBillingInfo(subscription) {
     const items1 = [callback2(tmp2(4556).Text, obj3), , ];
     const obj4 = { style: null, variant: "text-sm/medium", children: null };
     obj4[0] = tmp.billingRenewalInfo;
-    tmp2Result = tmp2(13347);
+    tmp2Result = tmp2(13351);
     obj4[2] = tmp2Result.getBillingInformationStringNative(subscription, first, tmp6);
     items1[1] = callback2(tmp2(4556).Text, obj4);
     const obj5 = { style: null, subscription: null };

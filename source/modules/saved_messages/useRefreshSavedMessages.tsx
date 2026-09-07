@@ -1,10 +1,10 @@
-// Module ID: 13283
-// Function ID: 13284
+// Module ID: 13287
+// Function ID: 13288
 // Name: useRefreshSavedMessages
-// Dependencies: [19, 11705, 2]
+// Dependencies: [19, 11710, 2]
 // Exports: default
 
-// Module 13283 (useRefreshSavedMessages)
+// Module 13287 (useRefreshSavedMessages)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

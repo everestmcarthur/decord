@@ -1,10 +1,10 @@
-// Module ID: 16645
-// Function ID: 16646
+// Module ID: 16648
+// Function ID: 16649
 // Name: useSearchMediaSize
 // Dependencies: [7878, 2]
 // Exports: default
 
-// Module 16645 (useSearchMediaSize)
+// Module 16648 (useSearchMediaSize)
 import set from "set" /* 2 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
 

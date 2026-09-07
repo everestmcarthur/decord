@@ -1,10 +1,10 @@
-// Module ID: 14957
-// Function ID: 14958
+// Module ID: 14960
+// Function ID: 14961
 // Name: AddApplicationIdentityTableRow
-// Dependencies: [1074, 1921, 21, 4560, 1178, 4495, 1611, 7503, 7168, 7150, 7149, 1114, 6627, 5605, 4527, 9252, 1396, 4411, 7165, 7162, 7182, 2]
+// Dependencies: [1074, 1921, 21, 4560, 1178, 4495, 1611, 7503, 7168, 7150, 7149, 1114, 6627, 5605, 4527, 9257, 1396, 4411, 7165, 7162, 7182, 2]
 // Exports: default
 
-// Module 14957 (AddApplicationIdentityTableRow)
+// Module 14960 (AddApplicationIdentityTableRow)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import items2 from "items" /* 1921 */;

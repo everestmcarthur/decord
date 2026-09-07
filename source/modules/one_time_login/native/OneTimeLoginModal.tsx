@@ -1,10 +1,10 @@
-// Module ID: 13861
-// Function ID: 13862
+// Module ID: 13864
+// Function ID: 13865
 // Name: OneTimeLoginModal
-// Dependencies: [5, 19, 17, 502, 1371, 1074, 1230, 21, 4560, 576, 1611, 1477, 1116, 1242, 4763, 4417, 1100, 4906, 4910, 6610, 1114, 4910, 6593, 5125, 4378, 13862, 4556, 6942, 2]
+// Dependencies: [5, 19, 17, 502, 1371, 1074, 1230, 21, 4560, 576, 1611, 1477, 1116, 1242, 4763, 4417, 1100, 4906, 4910, 6610, 1114, 4910, 6593, 5125, 4378, 13865, 4556, 6942, 2]
 // Exports: default
 
-// Module 13861 (OneTimeLoginModal)
+// Module 13864 (OneTimeLoginModal)
 import ThemesDefault from "Themes" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -185,7 +185,7 @@ export default function OneTimeLoginModal(token) {
   obj1 = { style: tmp.container, children: null };
   let obj2 = { style: tmp.centerContent, children: null };
   const tmp11 = getMixedGradientColorDefault;
-  const items7 = [callback(callback3, { source: token(13862), style: tmp.logo }), ];
+  const items7 = [callback(callback3, { source: token(13865), style: tmp.logo }), ];
   let obj4 = { style: tmp.loadingContainer, children: null };
   const items8 = [callback(callback2, {}), ];
   let obj5 = { variant: "text-lg/semibold", children: null };

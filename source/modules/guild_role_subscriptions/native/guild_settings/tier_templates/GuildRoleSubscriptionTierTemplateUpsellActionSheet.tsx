@@ -1,10 +1,10 @@
-// Module ID: 16249
-// Function ID: 16250
+// Module ID: 16252
+// Function ID: 16253
 // Name: GuildRoleSubscriptionTierTemplateUpsellActionSheet
-// Dependencies: [32, 19, 17, 4552, 1074, 1954, 21, 4560, 576, 5126, 563, 7150, 1114, 8307, 4556, 4975, 9063, 4527, 2]
+// Dependencies: [32, 19, 17, 4552, 1074, 1954, 21, 4560, 576, 5126, 563, 7150, 1114, 8307, 4556, 4975, 9068, 4527, 2]
 // Exports: default
 
-// Module 16249 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 16252 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

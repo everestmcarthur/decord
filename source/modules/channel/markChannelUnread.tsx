@@ -1,11 +1,11 @@
-// Module ID: 10246
-// Function ID: 10247
+// Module ID: 10251
+// Function ID: 10252
 // Name: markChannelUnread
-// Dependencies: [4575, 10247, 504, 2]
+// Dependencies: [4575, 10252, 504, 2]
 // Exports: default, useCanMarkChannelUnread
 
-// Module 10246 (markChannelUnread)
-import _markUnreadDefault from "_markUnread" /* 10247 */;
+// Module 10251 (markChannelUnread)
+import _markUnreadDefault from "_markUnread" /* 10252 */;
 import closure_3 from "generateOldThreadCutoff" /* 4575 */;
 import { ReadState } from "generateOldThreadCutoff" /* 4575 */;
 

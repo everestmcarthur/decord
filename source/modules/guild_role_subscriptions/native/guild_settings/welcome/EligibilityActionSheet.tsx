@@ -1,12 +1,12 @@
-// Module ID: 17686
-// Function ID: 17687
+// Module ID: 17689
+// Function ID: 17690
 // Name: EligibilityActionSheet
-// Dependencies: [19, 1074, 21, 4560, 4527, 9063, 7382, 17687, 7150, 4556, 1114, 17691, 2]
+// Dependencies: [19, 1074, 21, 4560, 4527, 9068, 7382, 17690, 7150, 4556, 1114, 17694, 2]
 // Exports: default
 
-// Module 17686 (EligibilityActionSheet)
-import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 17687 */;
-import EligibilityChecklistRowDefault from "EligibilityChecklistRow" /* 17691 */;
+// Module 17689 (EligibilityActionSheet)
+import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 17690 */;
+import EligibilityChecklistRowDefault from "EligibilityChecklistRow" /* 17694 */;
 import closure_3 from "noop" /* 19 */;
 import { UserSettingsSections } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -27,8 +27,8 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
       onEnableMFAClick() {
         let obj = callback2(4527);
         obj.hideActionSheet(closure_7);
-        callback2(9063).close();
-        const obj2 = callback2(9063);
+        callback2(9068).close();
+        const obj2 = callback2(9068);
         obj = { screen: constants.ACCOUNT };
         callback(7382).openUserSettings(obj);
       },

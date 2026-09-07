@@ -1,9 +1,9 @@
-// Module ID: 11562
-// Function ID: 11563
+// Module ID: 11567
+// Function ID: 11568
 // Name: PlatformIcon
-// Dependencies: [5, 32, 19, 17, 7107, 2025, 1385, 502, 1957, 5281, 2021, 4199, 5408, 1074, 21, 4560, 576, 4495, 5283, 1396, 4411, 1178, 5028, 4713, 4556, 1114, 5407, 11563, 7165, 9438, 11564, 11565, 12, 4262, 11566, 38, 4259, 11253, 4992, 8593, 5406, 504, 5409, 5520, 1242, 4740, 4527, 7382, 11569, 9252, 573, 4763, 9578, 1896, 9245, 11573, 7150, 11574, 7204, 4975, 2]
+// Dependencies: [5, 32, 19, 17, 7107, 2025, 1385, 502, 1957, 5281, 2021, 4199, 5408, 1074, 21, 4560, 576, 4495, 5283, 1396, 4411, 1178, 5028, 4713, 4556, 1114, 5407, 11568, 7165, 9443, 11569, 11570, 12, 4262, 11571, 38, 4259, 11258, 4992, 8598, 5406, 504, 5409, 5520, 1242, 4740, 4527, 7382, 11574, 9257, 573, 4763, 9583, 1896, 9250, 11578, 7150, 11579, 7204, 4975, 2]
 
-// Module 11562 (PlatformIcon)
+// Module 11567 (PlatformIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
@@ -700,7 +700,7 @@ function ConnectedUserAccountOptions(account) {
       _undefined(closure_0);
       closure_1_1(closure_1_2[40]).setFriendSync(account.type, account.id, closure_0);
     };
-    tmp12 = callback2(account(8593).FormSwitchRow, obj);
+    tmp12 = callback2(account(8598).FormSwitchRow, obj);
   }
   let tmp15;
   if (set2.has(account.type)) {
@@ -714,7 +714,7 @@ function ConnectedUserAccountOptions(account) {
       callback3(closure_0);
       closure_1_1(closure_1_2[40]).setShowActivity(account.type, account.id, closure_0);
     };
-    tmp15 = callback2(account(8593).FormSwitchRow, obj);
+    tmp15 = callback2(account(8598).FormSwitchRow, obj);
   }
   let tmp18;
   if (true === value.hasMetadata) {
@@ -733,7 +733,7 @@ function ConnectedUserAccountOptions(account) {
       }
       const result = closure_1_1(closure_1_2[40]).setMetadataVisibility(type, id, num);
     };
-    tmp18 = callback2(account(8593).FormSwitchRow, obj2);
+    tmp18 = callback2(account(8598).FormSwitchRow, obj2);
   }
   const obj3 = { style: tmp.accountConnectedPrivacyOptionsContainer, children: null };
   const obj4 = { label: null, value: null, onValueChange: null };
@@ -750,7 +750,7 @@ function ConnectedUserAccountOptions(account) {
     }
     closure_1_1(closure_1_2[40]).setVisibility(type, id, num);
   };
-  const items = [callback2(account(8593).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
+  const items = [callback2(account(8598).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
   obj3[1] = items;
   return callback3(closure_8, obj3);
 }

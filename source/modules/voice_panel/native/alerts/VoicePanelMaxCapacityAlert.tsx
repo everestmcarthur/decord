@@ -1,12 +1,12 @@
-// Module ID: 17190
-// Function ID: 17191
+// Module ID: 17193
+// Function ID: 17194
 // Name: VoicePanelMaxCapacityAlert
-// Dependencies: [19, 1957, 21, 563, 4910, 4910, 17188, 1114, 2]
+// Dependencies: [19, 1957, 21, 563, 4910, 4910, 17191, 1114, 2]
 // Exports: default
 
-// Module 17190 (VoicePanelMaxCapacityAlert)
+// Module 17193 (VoicePanelMaxCapacityAlert)
 import noopAll from "noop" /* 19 */;
-import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17188 */;
+import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17191 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import { jsx } from "jsxProd" /* 21 */;
 

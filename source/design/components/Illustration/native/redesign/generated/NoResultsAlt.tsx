@@ -1,10 +1,10 @@
-// Module ID: 9760
-// Function ID: 9761
+// Module ID: 9765
+// Function ID: 9766
 // Name: getNoResultsAltSource
-// Dependencies: [19, 17, 21, 8233, 9761, 9762, 7054, 4411, 2]
+// Dependencies: [19, 17, 21, 8233, 9766, 9767, 7054, 4411, 2]
 // Exports: NoResultsAlt, getNoResultsAltSource, useNoResultsAltSource
 
-// Module 9760 (getNoResultsAltSource)
+// Module 9765 (getNoResultsAltSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import getIllustrationSource from "getIllustrationSource" /* 8233 */;
@@ -19,10 +19,10 @@ export const getNoResultsAltSource = function getNoResultsAltSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(9761);
+      return callback(9766);
     },
     darker() {
-      return callback(9762);
+      return callback(9767);
     },
     light() {
       return callback(7054);
@@ -34,10 +34,10 @@ export const useNoResultsAltSource = function useNoResultsAltSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9761);
+      return callback(9766);
     },
     darker() {
-      return callback(9762);
+      return callback(9767);
     },
     light() {
       return callback(7054);
@@ -49,10 +49,10 @@ export const NoResultsAlt = function NoResultsAlt(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(9761);
+      return callback(9766);
     },
     darker() {
-      return callback(9762);
+      return callback(9767);
     },
     light() {
       return callback(7054);

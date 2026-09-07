@@ -1,9 +1,9 @@
-// Module ID: 15528
-// Function ID: 15529
-// Dependencies: [19, 7975, 1074, 21, 1114, 11468, 14689, 2]
+// Module ID: 15531
+// Function ID: 15532
+// Dependencies: [19, 7975, 1074, 21, 1114, 11473, 14692, 2]
 
-// Module 15528
-import _modDef14689 from "module_14689" /* 14689 */;
+// Module 15531
+import _modDef14692 from "module_14692" /* 14692 */;
 import importAllResult from "noop" /* 19 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
 import { MarketingURLs } from "ME" /* 1074 */;
@@ -13,7 +13,7 @@ const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(() => {
   const node = importAllResult.useMemo(() => {
-    let obj = callback(11468);
+    let obj = callback(11473);
     obj = { sections: null };
     obj = { label: null, settings: null, subLabel: null };
     const intl = callback(1114).intl;
@@ -39,7 +39,7 @@ const memoResult = importAllResult.memo(() => {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return jsx(_modDef14689, { node });
+  return jsx(_modDef14692, { node });
 });
 const result = require("set").fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
 

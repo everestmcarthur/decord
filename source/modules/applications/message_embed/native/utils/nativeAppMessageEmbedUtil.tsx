@@ -1,10 +1,10 @@
-// Module ID: 11944
-// Function ID: 11945
+// Module ID: 11948
+// Function ID: 11949
 // Name: items
 // Dependencies: [4409, 576, 8132, 8133, 1396, 2]
 // Exports: getAppGradientColors, getAppIconSrc
 
-// Module 11944 (items)
+// Module 11948 (items)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;

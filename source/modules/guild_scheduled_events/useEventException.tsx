@@ -1,10 +1,10 @@
-// Module ID: 9669
-// Function ID: 9670
+// Module ID: 9674
+// Function ID: 9675
 // Name: useEventException
 // Dependencies: [7526, 504, 2]
 // Exports: default, getEventException
 
-// Module 9669 (useEventException)
+// Module 9674 (useEventException)
 import closure_2 from "scheduledEventSort" /* 7526 */;
 
 const require = arg1;

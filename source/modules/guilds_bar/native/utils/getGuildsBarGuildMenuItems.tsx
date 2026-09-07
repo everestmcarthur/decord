@@ -1,10 +1,10 @@
-// Module ID: 16286
-// Function ID: 16287
+// Module ID: 16289
+// Function ID: 16290
 // Name: getGuildsBarGuildMenuItems
-// Dependencies: [5, 1979, 4741, 1074, 10147, 7081, 1114, 13960, 1896, 9776, 7119, 7380, 13907, 12377, 4527, 10144, 12378, 7114, 2]
+// Dependencies: [5, 1979, 4741, 1074, 10152, 7081, 1114, 13963, 1896, 9781, 7119, 7380, 13910, 12381, 4527, 10149, 12382, 7114, 2]
 // Exports: default
 
-// Module 16286 (getGuildsBarGuildMenuItems)
+// Module 16289 (getGuildsBarGuildMenuItems)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "createGuildRecordFromRust" /* 1979 */;
 import closure_5 from "updateUserGuildSettingsInternal" /* 4741 */;
@@ -15,7 +15,7 @@ let result = require("set").fileFinishedImporting("modules/guilds_bar/native/uti
 
 export default function getGuildsBarGuildMenuItems(arg0) {
   const _require = arg0;
-  let obj = _require(10147);
+  let obj = _require(10152);
   let result = obj.shouldShowUseNewNotificationSystem("GuildPopoutMenu");
   obj = { IconComponent: _require(7081).EnvelopeIcon, label: null, action: null };
   const intl = _require(1114).intl;
@@ -77,7 +77,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     })();
   };
   let items = [obj, , ];
-  obj = { IconComponent: _require(9776).BellIcon, label: null, action: null };
+  obj = { IconComponent: _require(9781).BellIcon, label: null, action: null };
   const intl2 = _require(1114).intl;
   obj[1] = intl2.string(_require(1114).t.HcoRu0);
   obj[2] = function action() {
@@ -98,7 +98,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
     const splice = items.splice;
     const obj2 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj2[0] = tmp5(12378);
+      obj2[0] = tmp5(12382);
       const intl5 = tmp(1114).intl;
       obj2[1] = intl5.string(tmp(1114).t.De0BTC);
       obj2[2] = function action() {
@@ -109,7 +109,7 @@ export default function getGuildsBarGuildMenuItems(arg0) {
       };
       splice(1, 0, obj2);
     } else {
-      obj2[0] = tmp5(12377);
+      obj2[0] = tmp5(12381);
       const intl4 = tmp(1114).intl;
       obj2[1] = intl4.string(tmp(1114).t.vRzp7P);
       obj2[2] = function action() {

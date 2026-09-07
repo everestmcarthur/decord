@@ -1,10 +1,10 @@
-// Module ID: 11940
-// Function ID: 11941
+// Module ID: 11944
+// Function ID: 11945
 // Name: createAppMessageEmbed
-// Dependencies: [32, 1371, 8140, 4788, 1482, 9511, 11309, 7163, 11941, 7945, 1114, 11942, 9289, 8139, 9506, 11943, 11944, 1396, 1365, 11945, 7182, 11519, 7523, 9507, 4425, 1609, 9573, 7190, 4258, 1369, 2]
+// Dependencies: [32, 1371, 8140, 4788, 1482, 9516, 11314, 7163, 11945, 7945, 1114, 11946, 9294, 8139, 9511, 11947, 11948, 1396, 1365, 11949, 7182, 11524, 7523, 9512, 4425, 1609, 9578, 7190, 4258, 1369, 2]
 // Exports: createAppMessageEmbed, getAppLinkGateResult, handleTapAppMessageEmbed
 
-// Module 11940 (createAppMessageEmbed)
+// Module 11944 (createAppMessageEmbed)
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
 import presentAddedFriendToast from "presentAddedFriendToast" /* 4258 */;
@@ -13,19 +13,19 @@ import fetchApplication from "fetchApplication" /* 7163 */;
 import _copy from "_copy" /* 7190 */;
 import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7523 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
-import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 9289 */;
-import installApplication from "installApplication" /* 9573 */;
-import _launchActivityInBotDM from "_launchActivityInBotDM" /* 11519 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 11941 */;
-import _joinOrStartActivityInChannel from "_joinOrStartActivityInChannel" /* 11945 */;
+import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 9294 */;
+import installApplication from "installApplication" /* 9578 */;
+import _launchActivityInBotDM from "_launchActivityInBotDM" /* 11524 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 11945 */;
+import _joinOrStartActivityInChannel from "_joinOrStartActivityInChannel" /* 11949 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import closure_5 from "handleFetchEmbeddedActivityShelfSuccess" /* 8140 */;
 import { FetchState } from "handleFetchEmbeddedActivityShelfSuccess" /* 8140 */;
 import closure_7 from "addApplication" /* 4788 */;
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
-import { MAIN_SURFACE } from "FrameLayoutModes" /* 9511 */;
-import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 11309 */;
+import { MAIN_SURFACE } from "FrameLayoutModes" /* 9516 */;
+import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 11314 */;
 
 require = arg1;
 let closure_11 = ["embedded_cover"];
@@ -54,7 +54,7 @@ export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
     const contentClassificationVisibility = obj1.getContentClassificationVisibility(application.contentClassification, channel, nsfwAllowed);
     if (contentClassificationVisibility !== ContentClassificationVisibility.ContentClassificationVisibility.DISPLAY) {
       let intl = getEmbedThemeColorsDefault(theme).baseColors;
-      if (contentClassificationVisibility === tmp3(11941).ContentClassificationVisibility.BLOCK_UNDERAGE) {
+      if (contentClassificationVisibility === tmp3(11945).ContentClassificationVisibility.BLOCK_UNDERAGE) {
         const intl3 = tmp3(1114).intl;
         let stringResult = intl3.string(tmp3(1114).t.LPOzxB);
       } else {
@@ -64,7 +64,7 @@ export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
       obj = { state: "blocked", model: null };
       obj = {};
       const merged = Object.assign(intl);
-      obj.displayType = tmp3(11942).AppMessageEmbedDisplayType.BLOCKED;
+      obj.displayType = tmp3(11946).AppMessageEmbedDisplayType.BLOCKED;
       obj.appId = "";
       obj.messageId = message.id;
       obj.title = null;
@@ -118,14 +118,14 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
     }
     const items = [];
     if (isEmbeddedAppResult) {
-      tmp2Result = tmp2(9506);
+      tmp2Result = tmp2(9511);
       if (tmp2Result.canLaunchFrame(app)) {
         obj = { id: "play_frame", label: null };
         const intl6 = tmp2(1114).intl;
         obj[1] = intl6.string(tmp2(1114).t.RscU7I);
         items.push(obj);
       } else {
-        const playInContext = tmp2(11943).getPlayInContext(id, message.channel_id);
+        const playInContext = tmp2(11947).getPlayInContext(id, message.channel_id);
         const isCurrentlyInInstance = playInContext.isCurrentlyInInstance;
         if (playInContext.canLaunchInChannel) {
           const string = tmp2(1114).intl.string;
@@ -149,7 +149,7 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
           obj2[1] = intl3.string(tmp2(1114).t.JeK1Wg);
           items.push(obj2);
         }
-        const tmp2Result1 = tmp2(11943);
+        const tmp2Result1 = tmp2(11947);
       }
     }
     ({ id: id2, bot: bot2 } = app);
@@ -172,8 +172,8 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
       }
       let appIconSrc = null;
       if (null != icon) {
-        appIconSrc = tmp2(11944).getAppIconSrc(id, icon, bot);
-        const tmp2Result5 = tmp2(11944);
+        appIconSrc = tmp2(11948).getAppIconSrc(id, icon, bot);
+        const tmp2Result5 = tmp2(11948);
       }
       let staticBannerSrc = appIconSrc;
       if (appIconSrc == null) {
@@ -181,10 +181,10 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
       }
       const tmp2Result3 = tmp2(8139);
       const obj4 = {};
-      const appGradientColors = tmp2(11944).getAppGradientColors(staticBannerSrc);
+      const appGradientColors = tmp2(11948).getAppGradientColors(staticBannerSrc);
       const merged = Object.assign(baseColors);
       const merged1 = Object.assign(obj7);
-      obj4.displayType = tmp2(11942).AppMessageEmbedDisplayType.DISPLAY;
+      obj4.displayType = tmp2(11946).AppMessageEmbedDisplayType.DISPLAY;
       obj4.appId = app.id;
       obj4.messageId = message.id;
       obj4.title = null;
@@ -212,7 +212,7 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
       const tmp2Result7 = tmp2(1396);
     }
     obj7 = { bannerRatio: "bot", staticBannerSrc: null };
-    tmp2Result2 = tmp2(9289);
+    tmp2Result2 = tmp2(9294);
   }
   const intl = tmp2(1114).intl;
   formatToPlainStringResult = intl.string(tmp2(1114).t.RjceQU);
@@ -270,8 +270,8 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
     const items2 = [tmp2(7182).APP_MESSAGE_EMBED];
     obj2[1] = items2;
     obj1[2] = obj2;
-    tmp2(9507).launchFrame(obj1);
-    const tmp2Result = tmp2(9507);
+    tmp2(9512).launchFrame(obj1);
+    const tmp2Result = tmp2(9512);
   } else if ("view_in_app_launcher" === actionId) {
     const bestActiveInput = getBestActiveInput.getBestActiveInput();
     if (bestActiveInput != null) {

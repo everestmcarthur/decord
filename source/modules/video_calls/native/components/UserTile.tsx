@@ -1,20 +1,20 @@
-// Module ID: 9623
-// Function ID: 9624
+// Module ID: 9628
+// Function ID: 9629
 // Name: UserTile
-// Dependencies: [32, 19, 17, 9624, 502, 1957, 1908, 1074, 4581, 4585, 21, 4560, 576, 4409, 504, 8248, 1178, 9625, 4556, 1114, 9604, 9607, 8614, 9626, 9627, 9628, 9478, 9622, 9629, 9589, 9592, 6655, 9630, 2]
+// Dependencies: [32, 19, 17, 9629, 502, 1957, 1908, 1074, 4581, 4585, 21, 4560, 576, 4409, 504, 8248, 1178, 9630, 4556, 1114, 9609, 9612, 8619, 9631, 9632, 9633, 9483, 9627, 9634, 9594, 9597, 6655, 9635, 2]
 // Exports: default
 
-// Module 9623 (UserTile)
+// Module 9628 (UserTile)
 import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 8614 */;
-import registerAssetDefault2 from "registerAsset" /* 9626 */;
-import registerAssetDefault3 from "registerAsset" /* 9627 */;
-import registerAssetDefault4 from "registerAsset" /* 9628 */;
+import registerAssetDefault from "registerAsset" /* 8619 */;
+import registerAssetDefault2 from "registerAsset" /* 9631 */;
+import registerAssetDefault3 from "registerAsset" /* 9632 */;
+import registerAssetDefault4 from "registerAsset" /* 9633 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "recentlyUsedEmojis" /* 9624 */;
-import { clearVoiceChannelEffectForUser as closure_7 } from "recentlyUsedEmojis" /* 9624 */;
+import closure_6 from "recentlyUsedEmojis" /* 9629 */;
+import { clearVoiceChannelEffectForUser as closure_7 } from "recentlyUsedEmojis" /* 9629 */;
 import closure_8 from "fetchFingerprint" /* 502 */;
 import closure_9 from "ensureGuildLoaded" /* 1957 */;
 import closure_10 from "_detectH265HardwareDecode" /* 1908 */;

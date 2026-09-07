@@ -1,9 +1,9 @@
-// Module ID: 8660
-// Function ID: 8661
+// Module ID: 8665
+// Function ID: 8666
 // Name: parsePersonalWidgetReact
 // Dependencies: [4997, 12, 4998, 4551, 7987, 2]
 
-// Module 8660 (parsePersonalWidgetReact)
+// Module 8665 (parsePersonalWidgetReact)
 import MarkupTextDefault from "MarkupText" /* 4551 */;
 import parseLinkDefault from "parseLink" /* 4998 */;
 import importDefaultResult from "combineMarkupRules" /* 4997 */;

@@ -1,10 +1,10 @@
-// Module ID: 9597
-// Function ID: 9598
+// Module ID: 9602
+// Function ID: 9603
 // Name: VideoEmptyState
-// Dependencies: [19, 17, 1957, 1074, 21, 4560, 576, 9598, 1178, 1114, 9601, 9110, 504, 4992, 4702, 4612, 4556, 4976, 2]
+// Dependencies: [19, 17, 1957, 1074, 21, 4560, 576, 9603, 1178, 1114, 9606, 9115, 504, 4992, 4702, 4612, 4556, 4976, 2]
 // Exports: default
 
-// Module 9597 (VideoEmptyState)
+// Module 9602 (VideoEmptyState)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
@@ -39,7 +39,7 @@ export default function VideoEmptyState(style) {
     if (!removeSplashImage) {
       obj = { style: null };
       obj[0] = tmp2.placeholderImage;
-      tmp16 = callback(stream(9598).StreamEnded, obj);
+      tmp16 = callback(stream(9603).StreamEnded, obj);
     }
     obj = { children: null };
     const items = [tmp16, ];
@@ -57,7 +57,7 @@ export default function VideoEmptyState(style) {
     if (!removeSplashImage) {
       obj = { style: null };
       obj[0] = tmp2.placeholderImage;
-      tmp7 = callback(stream(9601).StreamFailed, obj);
+      tmp7 = callback(stream(9606).StreamFailed, obj);
     }
     let obj2 = { children: null };
     const items1 = [tmp7, ];
@@ -74,13 +74,13 @@ export default function VideoEmptyState(style) {
     tmp5Result = null;
   }
   if (null != avError) {
-    let obj7 = stream(9110);
+    let obj7 = stream(9115);
     let errorCode = obj7.getErrorInfo(avError).errorCode;
   } else {
     errorCode = null;
     if (type === tmp3.STREAM_FAILED) {
-      let obj6 = stream(9110);
-      errorCode = obj6.getErrorInfo(stream(9110).AVError.STREAM_FAILED_TO_START).errorCode;
+      let obj6 = stream(9115);
+      errorCode = obj6.getErrorInfo(stream(9115).AVError.STREAM_FAILED_TO_START).errorCode;
     }
   }
   let obj8 = stream(504);

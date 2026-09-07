@@ -1,12 +1,12 @@
-// Module ID: 10099
-// Function ID: 10100
+// Module ID: 10104
+// Function ID: 10105
 // Name: canReportRaid
-// Dependencies: [4199, 10080, 1074, 504, 8015, 10100, 2]
+// Dependencies: [4199, 10085, 1074, 504, 8015, 10105, 2]
 // Exports: canEnableRaidAlerts, canReportRaid, useCanEnableRaidAlerts, useCanReportRaid, useShowMentionRaidLimitUpsell
 
-// Module 10099 (canReportRaid)
+// Module 10104 (canReportRaid)
 import closure_2 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_3 from "computeAlertSettings" /* 10080 */;
+import closure_3 from "computeAlertSettings" /* 10085 */;
 import ME from "ME" /* 1074 */;
 
 const require = arg1;
@@ -95,6 +95,6 @@ export const useShowMentionRaidLimitUpsell = function useShowMentionRaidLimitUps
   if (id == null) {
     id = closure_4;
   }
-  const obj2 = _require(10100);
-  return _require(10100).useIsMentionRaidExperimentEnabled(id, false) && stateFromStores;
+  const obj2 = _require(10105);
+  return _require(10105).useIsMentionRaidExperimentEnabled(id, false) && stateFromStores;
 };

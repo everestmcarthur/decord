@@ -1,10 +1,10 @@
-// Module ID: 11027
-// Function ID: 11028
+// Module ID: 11032
+// Function ID: 11033
 // Name: CollectiblesShopGiftBadgePostPurchaseModal
-// Dependencies: [19, 17, 21, 4560, 576, 1611, 4763, 7541, 7182, 8421, 1114, 5680, 4556, 2492, 11028, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 1611, 4763, 7541, 7182, 8421, 1114, 5680, 4556, 2492, 11033, 2]
 // Exports: default
 
-// Module 11027 (CollectiblesShopGiftBadgePostPurchaseModal)
+// Module 11032 (CollectiblesShopGiftBadgePostPurchaseModal)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -12,7 +12,7 @@ import messagesProxyDefault from "messagesProxy" /* 2492 */;
 import Text from "Text" /* 4556 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
 import ModalScreen from "ModalScreen" /* 8421 */;
-import PostPurchaseFooterDefault from "PostPurchaseFooter" /* 11028 */;
+import PostPurchaseFooterDefault from "PostPurchaseFooter" /* 11033 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;

@@ -1,7 +1,7 @@
 // Module ID: 5279
 // Function ID: 5280
 // Name: filterPlayingActivities
-// Dependencies: [5280, 1221, 1931, 5410, 7397, 11457, 4600, 4578, 1074, 7399, 1935, 1384, 10891, 1332, 12, 504, 573, 2]
+// Dependencies: [5280, 1221, 1931, 5410, 7397, 11462, 4600, 4578, 1074, 7399, 1935, 1384, 10896, 1332, 12, 504, 573, 2]
 
 // Module 5279 (filterPlayingActivities)
 import applyDefault from "apply" /* 12 */;
@@ -10,13 +10,13 @@ import dispatcherDefault from "dispatcher" /* 573 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 1332 */;
 import hasFlag from "hasFlag" /* 1384 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10891 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10896 */;
 import closure_3 from "upsertAccount" /* 5280 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1221 */;
 import closure_5 from "gameFromServer" /* 1931 */;
 import closure_6 from "checkIdleAFK" /* 5410 */;
 import closure_7 from "setLibraryApplications" /* 7397 */;
-import closure_8 from "updateActivities" /* 11457 */;
+import closure_8 from "updateActivities" /* 11462 */;
 import closure_9 from "sortActivity" /* 4600 */;
 import { sortActivity } from "sortActivity" /* 4600 */;
 import closure_11 from "handleUpdate" /* 4578 */;

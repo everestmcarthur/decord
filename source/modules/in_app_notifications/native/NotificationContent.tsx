@@ -1,14 +1,14 @@
-// Module ID: 10171
-// Function ID: 10172
+// Module ID: 10176
+// Function ID: 10177
 // Name: NotificationContent
-// Dependencies: [19, 17, 21, 4560, 576, 10172, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 10177, 2]
 // Exports: default
 
-// Module 10171 (NotificationContent)
+// Module 10176 (NotificationContent)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import LocationText from "LocationText" /* 10172 */;
-import LocationTextDefault from "LocationText" /* 10172 */;
+import LocationText from "LocationText" /* 10177 */;
+import LocationTextDefault from "LocationText" /* 10177 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

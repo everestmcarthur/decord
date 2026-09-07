@@ -1,14 +1,14 @@
-// Module ID: 13676
-// Function ID: 13677
+// Module ID: 13680
+// Function ID: 13681
 // Name: isClientClipsCapable
-// Dependencies: [4585, 13675, 1115, 2]
+// Dependencies: [4585, 13679, 1115, 2]
 // Exports: default
 
-// Module 13676 (isClientClipsCapable)
+// Module 13680 (isClientClipsCapable)
 import set from "set" /* 2 */;
 import setAll from "set" /* 1115 */;
 import DesktopSources from "DesktopSources" /* 4585 */;
-import apexExperiment from "apexExperiment" /* 13675 */;
+import apexExperiment from "apexExperiment" /* 13679 */;
 
 const Features = DesktopSources.Features;
 const result = set.fileFinishedImporting("modules/clips/isClientClipsCapable.tsx");

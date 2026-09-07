@@ -1,10 +1,10 @@
-// Module ID: 16183
-// Function ID: 16184
+// Module ID: 16186
+// Function ID: 16187
 // Name: isFavoritesSection
 // Dependencies: [1074, 7528, 4740, 2]
 // Exports: isFavoritesSection, isNamedCategorySection, isRecentsSection, isVoiceChannelsSection, logChannelListEndReached
 
-// Module 16183 (isFavoritesSection)
+// Module 16186 (isFavoritesSection)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;

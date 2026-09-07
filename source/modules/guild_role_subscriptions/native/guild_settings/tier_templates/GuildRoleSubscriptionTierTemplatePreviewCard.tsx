@@ -1,16 +1,16 @@
-// Module ID: 17783
-// Function ID: 17784
+// Module ID: 17786
+// Function ID: 17787
 // Name: ContentHeader
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 4556, 4527, 17784, 1896, 17788, 1178, 17787, 1114, 7158, 1483, 15227, 17789, 1242, 4740, 15233, 17785, 10346, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 4556, 4527, 17787, 1896, 17791, 1178, 17790, 1114, 7158, 1483, 15230, 17792, 1242, 4740, 15236, 17788, 10351, 2]
 // Exports: default
 
-// Module 17783 (ContentHeader)
+// Module 17786 (ContentHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import registerAssetDefault from "registerAsset" /* 7158 */;
-import getPrivateChannelIconComponent from "getPrivateChannelIconComponent" /* 17787 */;
+import getPrivateChannelIconComponent from "getPrivateChannelIconComponent" /* 17790 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 1074 */;

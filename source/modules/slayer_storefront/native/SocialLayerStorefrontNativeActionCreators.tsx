@@ -1,17 +1,17 @@
-// Module ID: 10797
-// Function ID: 10798
+// Module ID: 10802
+// Function ID: 10803
 // Name: SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY
-// Dependencies: [5510, 21, 4905, 1114, 3417, 10798, 4763, 10799, 1896, 4231, 10803, 10824, 11005, 2]
+// Dependencies: [5510, 21, 4905, 1114, 3417, 10803, 4763, 10804, 1896, 4231, 10808, 10829, 11010, 2]
 // Exports: closeSocialLayerStorefrontGiftModal, closeSocialLayerStorefrontProductDetailsModal, openSocialLayerStorefrontGiftModal, openSocialLayerStorefrontProductDetailsModal, openSocialLayerStorefrontProductGiftPurchaseSuccessModal, openSocialLayerStorefrontProductSelfPurchaseSuccessModal, openSocialLayerStorefrontUnsupportedOnMobileAlert
 
-// Module 10797 (SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY)
+// Module 10802 (SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import messagesProxyDefault from "messagesProxy" /* 3417 */;
 import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4231 */;
 import _modDef4763 from "module_4763" /* 4763 */;
 import _modDef4905 from "module_4905" /* 4905 */;
-import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 10798 */;
+import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 10803 */;
 import closure_3 from "addSku" /* 5510 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -36,7 +36,7 @@ export const openSocialLayerStorefrontUnsupportedOnMobileAlert = function openSo
 export const openSocialLayerStorefrontProductDetailsModal = function openSocialLayerStorefrontProductDetailsModal(closure_0) {
   const socialLayerStorefrontConfig = _fetchSocialLayerStorefront.fetchSocialLayerStorefrontConfig();
   const obj = _fetchSocialLayerStorefront;
-  _modDef4763.pushLazy(asyncRequireImpl(10799, dependencyMap.paths), closure_0, c5, { presentation: "modal" });
+  _modDef4763.pushLazy(asyncRequireImpl(10804, dependencyMap.paths), closure_0, c5, { presentation: "modal" });
 };
 export const closeSocialLayerStorefrontProductDetailsModal = function closeSocialLayerStorefrontProductDetailsModal() {
   _modDef4763.popWithKey(c5);
@@ -45,9 +45,9 @@ export const openSocialLayerStorefrontGiftModal = function openSocialLayerStoref
   let obj = isPremiumGiftingSupported;
   if (obj.isSocialLayerStorefrontGiftingSupported()) {
     let tmp3Result = tmp3(4763);
-    tmp3Result.pushLazy(asyncRequireImpl(10824, dependencyMap.paths), skuId, c6);
+    tmp3Result.pushLazy(asyncRequireImpl(10829, dependencyMap.paths), skuId, c6);
   } else {
-    tmp3Result = tmp3(10803);
+    tmp3Result = tmp3(10808);
     const value = closure_3.get(skuId.skuId);
     let applicationId;
     if (value != null) {

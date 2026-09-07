@@ -1,17 +1,17 @@
-// Module ID: 17817
-// Function ID: 17818
+// Module ID: 17820
+// Function ID: 17821
 // Name: syncYYTextReplacementExperiment
-// Dependencies: [17, 2025, 502, 1115, 17818, 5275, 17819, 1242, 17820, 1272, 7118, 2]
+// Dependencies: [17, 2025, 502, 1115, 17821, 5275, 17822, 1242, 17823, 1272, 7118, 2]
 
-// Module 17817 (syncYYTextReplacementExperiment)
+// Module 17820 (syncYYTextReplacementExperiment)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 1115 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import sendRequest from "sendRequest" /* 1272 */;
 import initializeDefault from "initialize" /* 7118 */;
-import shouldEnableYYTextReplacement from "shouldEnableYYTextReplacement" /* 17818 */;
-import apexExperimentDefault from "apexExperiment" /* 17820 */;
+import shouldEnableYYTextReplacement from "shouldEnableYYTextReplacement" /* 17821 */;
+import apexExperimentDefault from "apexExperiment" /* 17823 */;
 import closure_4 from "_getSystemLocale" /* 2025 */;
 import closure_5 from "fetchFingerprint" /* 502 */;
 
@@ -33,7 +33,7 @@ function updateIOSExperiments() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        let tmpResult = tmp(17818);
+        let tmpResult = tmp(17821);
         const result = setShouldEnableYYTextReplacement(tmpResult.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
       }
     }

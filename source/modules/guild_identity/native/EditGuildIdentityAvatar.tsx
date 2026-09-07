@@ -1,10 +1,10 @@
-// Module ID: 14653
-// Function ID: 14654
+// Module ID: 14656
+// Function ID: 14657
 // Name: EditGuildIdentityAvatar
-// Dependencies: [19, 2021, 1371, 1074, 1373, 21, 4560, 504, 7162, 7182, 8159, 14609, 8169, 4218, 8166, 9313, 4527, 14610, 1896, 14611, 14611, 8157, 5123, 1114, 8257, 14612, 2]
+// Dependencies: [19, 2021, 1371, 1074, 1373, 21, 4560, 504, 7162, 7182, 8159, 14612, 8169, 4218, 8166, 9318, 4527, 14613, 1896, 14614, 14614, 8157, 5123, 1114, 8257, 14615, 2]
 // Exports: default
 
-// Module 14653 (EditGuildIdentityAvatar)
+// Module 14656 (EditGuildIdentityAvatar)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "trackCommunicationDisabled" /* 2021 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;

@@ -1,10 +1,10 @@
-// Module ID: 11866
-// Function ID: 11867
+// Module ID: 11871
+// Function ID: 11872
 // Name: Navbar
-// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 7123, 7377, 1114, 6992, 7518, 1611, 4556, 8593, 1178, 4975, 4740, 11867, 7517, 4258, 7000, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4560, 576, 7123, 7377, 1114, 6992, 7518, 1611, 4556, 8598, 1178, 4975, 4740, 11872, 7517, 4258, 7000, 2]
 // Exports: default
 
-// Module 11866 (Navbar)
+// Module 11871 (Navbar)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;

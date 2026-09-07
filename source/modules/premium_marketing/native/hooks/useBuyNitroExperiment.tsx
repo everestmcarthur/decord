@@ -1,10 +1,10 @@
-// Module ID: 13307
-// Function ID: 13308
+// Module ID: 13311
+// Function ID: 13312
 // Name: useBuyNitroExperiment
-// Dependencies: [32, 19, 7421, 5598, 13308, 2]
+// Dependencies: [32, 19, 7421, 5598, 13312, 2]
 // Exports: useBuyNitroExperiment
 
-// Module 13307 (useBuyNitroExperiment)
+// Module 13311 (useBuyNitroExperiment)
 import useInitialValueDefault from "useInitialValue" /* 5598 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

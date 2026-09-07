@@ -1,15 +1,15 @@
-// Module ID: 15067
-// Function ID: 15068
+// Module ID: 15070
+// Function ID: 15071
 // Name: EmptyState
-// Dependencies: [32, 19, 17, 7702, 5444, 1954, 21, 576, 15068, 4560, 11774, 1114, 5692, 4556, 15065, 1943, 7388, 573, 15069, 4528, 7718, 7728, 5447, 15002, 7038, 11192, 11193, 11197, 5451, 15078, 11778, 8874, 11483, 504, 15079, 15084, 2]
+// Dependencies: [32, 19, 17, 7702, 5444, 1954, 21, 576, 15071, 4560, 11779, 1114, 5692, 4556, 15068, 1943, 7388, 573, 15072, 4528, 7718, 7728, 5447, 15005, 7038, 11197, 11198, 11202, 5451, 15081, 11783, 8879, 11488, 504, 15082, 15087, 2]
 
-// Module 15067 (EmptyState)
+// Module 15070 (EmptyState)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
-import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression" /* 11774 */;
-import StarfieldBackgroundDefault from "StarfieldBackground" /* 15079 */;
-import ListEdgeSpacerDefault from "ListEdgeSpacer" /* 15084 */;
+import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression" /* 11779 */;
+import StarfieldBackgroundDefault from "StarfieldBackground" /* 15082 */;
+import ListEdgeSpacerDefault from "ListEdgeSpacer" /* 15087 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -364,7 +364,7 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  let obj = first(11483);
+  let obj = first(11488);
   const questHomeBounties = obj.useQuestHomeBounties().questHomeBounties;
   const tmp3 = callback4();
   first = undefined;
@@ -420,8 +420,8 @@ const memoResult = importAllResult.memo(function QuestHomeBounties(shopCarouselC
       if (verticalScrollEnabled) {
         let tmp14 = "none" !== placement && obtainableOrbRewards > 0;
         if (tmp14) {
-          tmp14 = orbShopProducts.length >= tmp(15069).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-          const tmp15 = orbShopProducts.length >= tmp(15069).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          tmp14 = orbShopProducts.length >= tmp(15072).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          const tmp15 = orbShopProducts.length >= tmp(15072).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         }
         if (!tmp14) {
           obj = { style: null, children: null };

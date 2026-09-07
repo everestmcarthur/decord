@@ -1,10 +1,10 @@
-// Module ID: 10922
-// Function ID: 10923
+// Module ID: 10927
+// Function ID: 10928
 // Name: useNavigatorBackHandler
 // Dependencies: [19, 1483, 1115, 2]
 // Exports: default
 
-// Module 10922 (useNavigatorBackHandler)
+// Module 10927 (useNavigatorBackHandler)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

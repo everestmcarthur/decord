@@ -1,17 +1,17 @@
-// Module ID: 12482
-// Function ID: 12483
+// Module ID: 12486
+// Function ID: 12487
 // Name: fetchGameServerCatalog
-// Dependencies: [2025, 1371, 12483, 4451, 1074, 573, 12484, 4802, 1272, 12486, 4472, 1242, 12487, 12485, 2]
+// Dependencies: [2025, 1371, 12487, 4451, 1074, 573, 12488, 4802, 1272, 12490, 4472, 1242, 12491, 12489, 2]
 // Exports: acceptGameServerToS, disableGameServerForGuild, enableGameServerForGuild, fetchGameServerCatalog, fetchGameServerGlobalCatalog, fetchGameServerInstances, fetchGameServerInstructions, fetchGameServerRegions, fetchMyGameServerRegions, fetchMyGameServers, optimisticallyMarkGameServerResizing, resetGameServerRegionState, updateGameServerForGuild, updateGameServerRegionPingState, updateMyGameServerName, wakeGameServer, wakeMyGameServer
 
-// Module 12482 (fetchGameServerCatalog)
+// Module 12486 (fetchGameServerCatalog)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import sendRequest from "sendRequest" /* 1272 */;
 import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4802 */;
 import closure_3 from "_getSystemLocale" /* 2025 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "handleGameServerUpsert" /* 12483 */;
+import closure_5 from "handleGameServerUpsert" /* 12487 */;
 import { GAME_SERVER_COLLECTION_ID } from "str11" /* 4451 */;
 import ME from "ME" /* 1074 */;
 
@@ -215,7 +215,7 @@ export const fetchGameServerRegions = function fetchGameServerRegions(arg0) {
     let obj = callback(573);
     obj = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null };
     body = body.body;
-    const mapped = body.map(callback(12487));
+    const mapped = body.map(callback(12491));
     obj[1] = mapped.sort((name, name2) => {
       name = name.name;
       return name.localeCompare(name2.name);
@@ -230,7 +230,7 @@ export const fetchMyGameServerRegions = function fetchMyGameServerRegions() {
     let obj = callback(573);
     obj = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null, creationDisabled: null };
     const regions = body.body.regions;
-    const mapped = regions.map(callback(12487));
+    const mapped = regions.map(callback(12491));
     obj[1] = mapped.sort((name, name2) => {
       name = name.name;
       return name.localeCompare(name2.name);
@@ -259,10 +259,10 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
     let obj = dispatcherDefault;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "LOCAL_PAYMENT_NOT_ENABLED" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "METHOD_CALLED_AFTER_TEARDOWN" };
     obj = {};
     const merged = Object.assign(found);
-    obj.status = _require(12485).GameServerStatus.STARTING;
+    obj.status = _require(12489).GameServerStatus.STARTING;
     obj[2] = obj;
     obj.dispatch(obj);
   }
@@ -275,7 +275,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
     let resolved = Promise.resolve();
   } else {
     let obj = dispatcherDefault;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "LOCAL_PAYMENT_NOT_ENABLED" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "METHOD_CALLED_AFTER_TEARDOWN" };
     obj = {};
     const merged = Object.assign(found);
     obj.name = name;
@@ -345,10 +345,10 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
     let obj = dispatcherDefault;
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "LOCAL_PAYMENT_NOT_ENABLED" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "METHOD_CALLED_AFTER_TEARDOWN" };
     obj = {};
     let merged = Object.assign(found);
-    obj.status = _require(12485).GameServerStatus.STARTING;
+    obj.status = _require(12489).GameServerStatus.STARTING;
     obj[2] = obj;
     obj.dispatch(obj);
   }
@@ -359,13 +359,13 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
     body = body.body;
     let obj = callback2(573);
     let tmp3 = body;
-    if (body.status === callback(12485).GameServerStatus.SLEEPING) {
+    if (body.status === callback(12489).GameServerStatus.SLEEPING) {
       obj = {};
       const merged = Object.assign(body);
-      obj.status = callback(12485).GameServerStatus.STARTING;
+      obj.status = callback(12489).GameServerStatus.STARTING;
       tmp3 = obj;
     }
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "LOCAL_PAYMENT_NOT_ENABLED" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "METHOD_CALLED_AFTER_TEARDOWN" };
     obj[2] = tmp3;
     obj.dispatch(obj);
   }).catch((arg0) => {

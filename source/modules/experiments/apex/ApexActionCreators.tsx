@@ -1,10 +1,10 @@
-// Module ID: 11482
-// Function ID: 11483
+// Module ID: 11487
+// Function ID: 11488
 // Name: _fetchApexExperimentsMetadata
 // Dependencies: [109, 5, 1236, 1074, 1272, 573, 7893, 1436, 504, 2]
 // Exports: fetchApexExperimentsMetadata, fetchInstallationExperiments, fetchUserExperimentAssignments
 
-// Module 11482 (_fetchApexExperimentsMetadata)
+// Module 11487 (_fetchApexExperimentsMetadata)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "initialize" /* 1236 */;

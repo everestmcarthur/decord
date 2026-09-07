@@ -1,10 +1,10 @@
-// Module ID: 9648
-// Function ID: 9649
+// Module ID: 9653
+// Function ID: 9654
 // Name: _createWebviewHtmlFile
 // Dependencies: [5, 17, 1115, 1152, 1232, 2]
 // Exports: createInjectedJavascriptForIOS, default
 
-// Module 9648 (_createWebviewHtmlFile)
+// Module 9653 (_createWebviewHtmlFile)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 

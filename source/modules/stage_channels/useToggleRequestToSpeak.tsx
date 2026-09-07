@@ -1,10 +1,10 @@
-// Module ID: 9930
-// Function ID: 9931
+// Module ID: 9935
+// Function ID: 9936
 // Name: useToggleRequestToSpeak
 // Dependencies: [32, 19, 502, 504, 4707, 5422, 8411, 8413, 8398, 2]
 // Exports: default
 
-// Module 9930 (useToggleRequestToSpeak)
+// Module 9935 (useToggleRequestToSpeak)
 import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4707 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

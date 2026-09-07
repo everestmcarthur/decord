@@ -1,10 +1,10 @@
-// Module ID: 16204
-// Function ID: 16205
+// Module ID: 16207
+// Function ID: 16208
 // Name: _handleFavoritesGuildAddSuggestedChannel
-// Dependencies: [5, 10981, 10223, 1114, 2]
+// Dependencies: [5, 10986, 10228, 1114, 2]
 // Exports: default
 
-// Module 16204 (_handleFavoritesGuildAddSuggestedChannel)
+// Module 16207 (_handleFavoritesGuildAddSuggestedChannel)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
@@ -63,7 +63,7 @@ function _handleFavoritesGuildAddSuggestedChannel() {
               } else {
                 callback = arg1;
                 if (null != callback) {
-                  obj1 = callback(10223);
+                  obj1 = callback(10228);
                   const obj3 = { channelIds: null, categoryName: null, source: "suggestions" };
                   const items = [callback];
                   obj3[0] = items;

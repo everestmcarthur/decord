@@ -1,10 +1,10 @@
-// Module ID: 9807
-// Function ID: 9808
+// Module ID: 9812
+// Function ID: 9813
 // Name: GuildEventsNoContent
-// Dependencies: [19, 17, 4199, 1074, 1085, 21, 4560, 5524, 576, 504, 8407, 9783, 9785, 4556, 1114, 9063, 2]
+// Dependencies: [19, 17, 4199, 1074, 1085, 21, 4560, 5524, 576, 504, 8407, 9788, 9790, 4556, 1114, 9068, 2]
 // Exports: default
 
-// Module 9807 (GuildEventsNoContent)
+// Module 9812 (GuildEventsNoContent)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -37,7 +37,7 @@ export default function GuildEventsNoContent(guild) {
   const items1 = [guild];
   let stateFromStores = obj.useStateFromStores(items, () => closure_1_4.can(closure_1_6.MANAGE_ROLES, guild), items1);
   obj = { style: tmp.container, children: null };
-  obj = { icon: onClose(9783), IconComponent: guild(9785).CalendarIcon };
+  obj = { icon: onClose(9788), IconComponent: guild(9790).CalendarIcon };
   const items2 = [callback(onClose(8407), obj), , , ];
   obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = guild(1114).intl;

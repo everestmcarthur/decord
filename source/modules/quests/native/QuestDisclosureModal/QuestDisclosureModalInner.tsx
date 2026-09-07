@@ -1,10 +1,10 @@
-// Module ID: 15115
-// Function ID: 15116
+// Module ID: 15118
+// Function ID: 15119
 // Name: QuestDisclosureModalInner
-// Dependencies: [17, 1074, 21, 4560, 576, 1935, 9286, 1114, 8886, 11825, 9223, 5692, 4556, 11295, 5607, 2024, 4975, 2]
+// Dependencies: [17, 1074, 21, 4560, 576, 1935, 9291, 1114, 8891, 11830, 9228, 5692, 4556, 11300, 5607, 2024, 4975, 2]
 // Exports: default
 
-// Module 15115 (QuestDisclosureModalInner)
+// Module 15118 (QuestDisclosureModalInner)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import ME from "ME" /* 1074 */;
@@ -42,24 +42,24 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   const setting = DropsOptedOut.useSetting();
   let obj = { icon: null, text: null };
   if (setting) {
-    obj[0] = tmp5(tmp2(9286).ServerIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(9291).ServerIcon, { size: "xs" });
     const intl4 = tmp2(1114).intl;
     obj[1] = intl4.string(tmp2(1114).t["2bL0wT"]);
     let items = [obj];
     let tmp6 = tmp5;
     items1 = items;
   } else {
-    obj[0] = tmp5(tmp2(8886).GlobeEarthIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(8891).GlobeEarthIcon, { size: "xs" });
     const intl = tmp2(1114).intl;
     obj[1] = intl.string(tmp2(1114).t.xQSdPv);
     items1 = [obj, , ];
     obj = { icon: null, text: null };
-    obj[0] = tmp5(tmp2(11825).UserIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(11830).UserIcon, { size: "xs" });
     const intl2 = tmp2(1114).intl;
     obj[1] = intl2.string(tmp2(1114).t.mYt7hQ);
     items1[1] = obj;
     obj = { icon: null, text: null };
-    obj[0] = tmp5(tmp2(9223).GameControllerIcon, { size: "xs" });
+    obj[0] = tmp5(tmp2(9228).GameControllerIcon, { size: "xs" });
     const intl3 = tmp2(1114).intl;
     obj[1] = intl3.string(tmp2(1114).t.XAsWxQ);
     items1[2] = obj;
@@ -72,7 +72,7 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   const tmp7 = closure_7;
   const tmp8 = closure_3;
   const tmp9 = closure_4;
-  obj3[2] = _require(11295).getDisclosureText({ adCreativeType, gamePublisher, gameTitle, isTargetedDisclosure, isContextualDisclosure: setting, cosponsorName, isVideoQuest });
+  obj3[2] = _require(11300).getDisclosureText({ adCreativeType, gamePublisher, gameTitle, isTargetedDisclosure, isContextualDisclosure: setting, cosponsorName, isVideoQuest });
   items2[1] = tmp6(_require(4556).Text, obj3);
   if (isTargetedDisclosure) {
     const obj4 = { radius: 16, style: null, children: null };
@@ -97,7 +97,7 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl5 = tmp2(1114).intl;
   const obj6 = { privacySettingsUrl: null };
-  const tmp2Result = _require(11295);
+  const tmp2Result = _require(11300);
   obj6[0] = items1(2024).getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
   obj5[2] = intl5.format(_require(1114).t.tzq9Wa, obj6);
   items2[3] = tmp6(_require(4556).Text, obj5);

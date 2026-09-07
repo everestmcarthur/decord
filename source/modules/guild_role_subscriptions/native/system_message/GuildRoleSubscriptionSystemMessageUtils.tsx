@@ -1,10 +1,10 @@
-// Module ID: 11828
-// Function ID: 11829
+// Module ID: 11833
+// Function ID: 11834
 // Name: handleRoleSubscriptionPurchaseSystemMessageCtaClicked
 // Dependencies: [1074, 7456, 7992, 4740, 2]
 // Exports: handleRoleSubscriptionPurchaseSystemMessageCtaClicked
 
-// Module 11828 (handleRoleSubscriptionPurchaseSystemMessageCtaClicked)
+// Module 11833 (handleRoleSubscriptionPurchaseSystemMessageCtaClicked)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;

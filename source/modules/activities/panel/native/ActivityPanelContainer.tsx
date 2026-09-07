@@ -1,11 +1,11 @@
-// Module ID: 17006
-// Function ID: 17007
-// Dependencies: [19, 1957, 2011, 1956, 21, 504, 4189, 1094, 17007, 17016, 2]
+// Module ID: 17009
+// Function ID: 17010
+// Dependencies: [19, 1957, 2011, 1956, 21, 504, 4189, 1094, 17010, 17019, 2]
 
-// Module 17006
+// Module 17009
 import initialize from "initialize" /* 504 */;
-import BaseActivityPanelControllerDefault from "BaseActivityPanelController" /* 17007 */;
-import renderActivityOrPIPDefault from "renderActivityOrPIP" /* 17016 */;
+import BaseActivityPanelControllerDefault from "BaseActivityPanelController" /* 17010 */;
+import renderActivityOrPIPDefault from "renderActivityOrPIP" /* 17019 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "handleConnectionOpen" /* 2011 */;
 import closure_5 from "participantFromServer" /* 1956 */;

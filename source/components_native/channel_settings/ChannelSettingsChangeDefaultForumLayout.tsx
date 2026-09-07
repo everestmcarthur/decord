@@ -1,10 +1,10 @@
-// Module ID: 16856
-// Function ID: 16857
+// Module ID: 16859
+// Function ID: 16860
 // Name: ChannelSettingsChangeDefaultForumLayout
-// Dependencies: [32, 19, 17, 1957, 21, 4560, 576, 8625, 5685, 1114, 1967, 5688, 16817, 7093, 4556, 5687, 5587, 16857, 16858, 504, 2]
+// Dependencies: [32, 19, 17, 1957, 21, 4560, 576, 8630, 5685, 1114, 1967, 5688, 16820, 7093, 4556, 5687, 5587, 16860, 16861, 504, 2]
 // Exports: default
 
-// Module 16856 (ChannelSettingsChangeDefaultForumLayout)
+// Module 16859 (ChannelSettingsChangeDefaultForumLayout)
 import ThemesDefault from "Themes" /* 576 */;
 import preloadDefault from "preload" /* 5587 */;
 import closure_3 from "_slicedToArray" /* 32 */;

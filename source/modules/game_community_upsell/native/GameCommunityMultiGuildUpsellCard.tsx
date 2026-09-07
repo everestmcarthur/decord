@@ -1,10 +1,10 @@
-// Module ID: 16268
-// Function ID: 16269
+// Module ID: 16271
+// Function ID: 16272
 // Name: GameCommunityMultiGuildUpsellCard
-// Dependencies: [5, 32, 19, 17, 4552, 4200, 1979, 1074, 21, 4560, 576, 504, 1396, 1430, 1477, 1242, 5520, 7342, 7341, 1114, 8813, 8740, 1178, 4556, 4975, 8666, 8097, 8672, 2]
+// Dependencies: [5, 32, 19, 17, 4552, 4200, 1979, 1074, 21, 4560, 576, 504, 1396, 1430, 1477, 1242, 5520, 7342, 7341, 1114, 8818, 8745, 1178, 4556, 4975, 8671, 8097, 8677, 2]
 // Exports: default
 
-// Module 16268 (GameCommunityMultiGuildUpsellCard)
+// Module 16271 (GameCommunityMultiGuildUpsellCard)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;

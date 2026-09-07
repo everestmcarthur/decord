@@ -1,22 +1,22 @@
-// Module ID: 11028
-// Function ID: 11029
+// Module ID: 11033
+// Function ID: 11034
 // Name: PostPurchaseFooter
-// Dependencies: [19, 17, 8192, 11029, 1954, 21, 4560, 576, 1611, 4763, 4418, 4975, 11030, 1114, 2492, 11031, 4556, 4528, 4529, 10749, 11032, 4380, 1943, 504, 8184, 2]
+// Dependencies: [19, 17, 8192, 11034, 1954, 21, 4560, 576, 1611, 4763, 4418, 4975, 11035, 1114, 2492, 11036, 4556, 4528, 4529, 10754, 11037, 4380, 1943, 504, 8184, 2]
 // Exports: default
 
-// Module 11028 (PostPurchaseFooter)
+// Module 11033 (PostPurchaseFooter)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import messagesProxyDefault from "messagesProxy" /* 2492 */;
 import Text from "Text" /* 4556 */;
-import GiftingBadgeProgressBarDefault from "GiftingBadgeProgressBar" /* 11031 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11032 */;
+import GiftingBadgeProgressBarDefault from "GiftingBadgeProgressBar" /* 11036 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11037 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "initialize" /* 8192 */;
-import getTierForProgress from "getTierForProgress" /* 11029 */;
+import getTierForProgress from "getTierForProgress" /* 11034 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -41,7 +41,7 @@ function PostPurchaseFooter(onSendGift) {
   }, []);
   obj = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   obj = { size: "sm", color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-  obj[2] = callback4(onSendGift(11030).GiftIcon, obj);
+  obj[2] = callback4(onSendGift(11035).GiftIcon, obj);
   const intl = onSendGift(1114).intl;
   obj[3] = intl.string(messagesProxyDefault.g86YiI);
   obj[4] = callback;
@@ -84,7 +84,7 @@ function LevelUpScreen(arg0) {
   if (tmp7Result) {
     obj1 = { icon: null, size: 140 };
     obj1[0] = newTier.simple_icon_url;
-    tmp7Result = tmp7(tmp(10749), obj1);
+    tmp7Result = tmp7(tmp(10754), obj1);
   }
   obj[1] = tmp7Result;
   const items = [closure_10(View, obj), ];

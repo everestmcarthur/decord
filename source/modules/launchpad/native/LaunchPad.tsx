@@ -1,13 +1,13 @@
-// Module ID: 16968
-// Function ID: 16969
+// Module ID: 16971
+// Function ID: 16972
 // Name: TabButton
-// Dependencies: [32, 19, 17, 4251, 7525, 7328, 5506, 1961, 502, 1957, 7720, 7636, 1979, 13753, 4575, 5438, 4741, 4579, 1074, 21, 576, 4560, 5123, 4556, 504, 4296, 4425, 7050, 1114, 13011, 9776, 15575, 1115, 14581, 10966, 9844, 4417, 9845, 9835, 1477, 1611, 9836, 12789, 1242, 16969, 16976, 15743, 16995, 16996, 2]
+// Dependencies: [32, 19, 17, 4251, 7525, 7328, 5506, 1961, 502, 1957, 7720, 7636, 1979, 13757, 4575, 5438, 4741, 4579, 1074, 21, 576, 4560, 5123, 4556, 504, 4296, 4425, 7050, 1114, 13015, 9781, 15578, 1115, 14584, 10971, 9849, 4417, 9850, 9840, 1477, 1611, 9841, 12793, 1242, 16972, 16979, 15746, 16998, 16999, 2]
 
-// Module 16968 (TabButton)
+// Module 16971 (TabButton)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import PressableBase from "PressableBase" /* 5123 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9844 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9849 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -22,7 +22,7 @@ import closure_16 from "ensureGuildLoaded" /* 1957 */;
 import closure_17 from "init" /* 7720 */;
 import closure_18 from "updateGuildUnreadSentinel" /* 7636 */;
 import closure_19 from "createGuildRecordFromRust" /* 1979 */;
-import closure_20 from "rebuildUnreads" /* 13753 */;
+import closure_20 from "rebuildUnreads" /* 13757 */;
 import closure_21 from "generateOldThreadCutoff" /* 4575 */;
 import closure_22 from "insertUnsortedGuilds" /* 5438 */;
 import closure_23 from "updateUserGuildSettingsInternal" /* 4741 */;

@@ -1,9 +1,9 @@
-// Module ID: 17093
-// Function ID: 17094
+// Module ID: 17096
+// Function ID: 17097
 // Name: NOOP
-// Dependencies: [32, 19, 17, 4576, 8290, 4768, 12273, 12271, 4581, 12274, 21, 3, 4974, 4560, 576, 4296, 1608, 12272, 1611, 6655, 9495, 11354, 17094, 4528, 17087, 4262, 12277, 9679, 17092, 17080, 10993, 9610, 7603, 7073, 7162, 7182, 1249, 17095, 7156, 17096, 17097, 9508, 17098, 17100, 17131, 17160, 17164, 17169, 2]
+// Dependencies: [32, 19, 17, 4576, 8290, 4768, 12277, 12275, 4581, 12278, 21, 3, 4974, 4560, 576, 4296, 1608, 12276, 1611, 6655, 9500, 11359, 17097, 4528, 17090, 4262, 12281, 9684, 17095, 17083, 10998, 9615, 7603, 7073, 7162, 7182, 1249, 17098, 7156, 17099, 17100, 9513, 17101, 17103, 17134, 17163, 17167, 17172, 2]
 
-// Module 17093 (NOOP)
+// Module 17096 (NOOP)
 import timestampDefault from "timestamp" /* 3 */;
 import ThemesDefault from "Themes" /* 576 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4974 */;
@@ -13,10 +13,10 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "getParticipants" /* 4576 */;
 import closure_8 from "module_8290" /* 8290 */;
 import closure_9 from "withEqualityFn" /* 4768 */;
-import VoicePanelModes from "VoicePanelModes" /* 12273 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12271 */;
+import VoicePanelModes from "VoicePanelModes" /* 12277 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12275 */;
 import { isActivityParticipant } from "ParticipantTypes" /* 4581 */;
-import { POP_RESISTANCE } from "MIN_PAN_GESTURE_MOVE" /* 12274 */;
+import { POP_RESISTANCE } from "MIN_PAN_GESTURE_MOVE" /* 12278 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import isMetaQuest from "isMetaQuest" /* 1608 */;
@@ -47,12 +47,12 @@ function AnimatedWrapper(children) {
   let pIPState;
   let animatedStyle;
   let animatedStyle1;
-  obj = wrapperOffset(9679);
+  obj = wrapperOffset(9684);
   height = obj.useGlobalStatusIndicatorState().height;
   const tmp3 = callback3();
   dependencyMap = tmp3;
   obj1 = connected;
-  const context = connected.useContext(height(12272));
+  const context = connected.useContext(height(12276));
   wrapperDimensions = context.wrapperDimensions;
   connected = context.connected;
   controlsSpecs = context.controlsSpecs;
@@ -70,7 +70,7 @@ function AnimatedWrapper(children) {
   fn.__workletHash = 3576504626753;
   fn.__initData = closure_57;
   derivedValue = obj2.useDerivedValue(fn);
-  let obj3 = wrapperOffset(17092);
+  let obj3 = wrapperOffset(17095);
   pIPState = obj3.usePIPState();
   let obj4 = wrapperOffset(4296);
   const fn2 = function l() {
@@ -141,7 +141,7 @@ function AnimatedWrapper(children) {
       }
     }
   };
-  obj = { cheapWorkletShallowEqual: wrapperOffset(9495).cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(11354), wrapperOffset, getMaxPanelWidth: wrapperOffset(17080).getMaxPanelWidth, getPanelX: wrapperOffset(17080).getPanelX, roundToNearestPixel: height(10993), windowDimensions };
+  obj = { cheapWorkletShallowEqual: wrapperOffset(9500).cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(11359), wrapperOffset, getMaxPanelWidth: wrapperOffset(17083).getMaxPanelWidth, getPanelX: wrapperOffset(17083).getPanelX, roundToNearestPixel: height(10998), windowDimensions };
   fn3.__closure = obj;
   fn3.__workletHash = 4997805261566;
   fn3.__initData = closure_59;
@@ -219,7 +219,7 @@ function AnimatedWrapper(children) {
     obj1[0] = items;
     return obj1;
   };
-  obj = { useReducedMotion, wrapperDimensions, wrapperOffset, connected, mode, VoicePanelModes: animatedStyle1, runOnJS: wrapperOffset(4296).runOnJS, updateSourceTrackingView: height(9610).updateSourceTrackingView, withSpring: wrapperOffset(4974).withSpring, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_17, DRAWER_SIZE_PHYSICS: obj2 };
+  obj = { useReducedMotion, wrapperDimensions, wrapperOffset, connected, mode, VoicePanelModes: animatedStyle1, runOnJS: wrapperOffset(4296).runOnJS, updateSourceTrackingView: height(9615).updateSourceTrackingView, withSpring: wrapperOffset(4974).withSpring, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_17, DRAWER_SIZE_PHYSICS: obj2 };
   fn4.__closure = obj;
   fn4.__workletHash = 62808828087;
   fn4.__initData = closure_60;

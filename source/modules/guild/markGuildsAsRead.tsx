@@ -1,10 +1,10 @@
-// Module ID: 13960
-// Function ID: 13961
+// Module ID: 13963
+// Function ID: 13964
 // Name: markGuildsAsRead
 // Dependencies: [7100, 5506, 1957, 2012, 4575, 1074, 4742, 12, 11, 1242, 7110, 2]
 // Exports: default
 
-// Module 13960 (markGuildsAsRead)
+// Module 13963 (markGuildsAsRead)
 import applyDefault from "apply" /* 12 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import closure_3 from "handleUpdate" /* 7100 */;

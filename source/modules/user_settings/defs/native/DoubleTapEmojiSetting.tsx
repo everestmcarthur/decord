@@ -1,9 +1,9 @@
-// Module ID: 15888
-// Function ID: 15889
+// Module ID: 15891
+// Function ID: 15892
 // Name: SettingsEmoji
-// Dependencies: [5, 19, 7975, 1074, 1374, 21, 4560, 576, 1935, 7968, 1396, 7130, 11121, 1242, 7182, 11124, 11468, 1114, 2]
+// Dependencies: [5, 19, 7975, 1074, 1374, 21, 4560, 576, 1935, 7968, 1396, 7130, 11126, 1242, 7182, 11129, 11473, 1114, 2]
 
-// Module 15888 (SettingsEmoji)
+// Module 15891 (SettingsEmoji)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -16,7 +16,7 @@ import { AnalyticEvents } from "ME" /* 1074 */;
 import { EmojiIntention } from "set" /* 1374 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 function SettingsEmoji(emoji) {
@@ -73,7 +73,7 @@ const pressable = createToggle.createPressable({
     }
   },
   onPress: function onPressSetting() {
-    let obj = _require(11121);
+    let obj = _require(11126);
     obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
       closure_0 = arg0;
@@ -212,7 +212,7 @@ let obj1 = {
     }
   },
   onPress: function onPressSetting() {
-    let obj = _require(11121);
+    let obj = _require(11126);
     obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
       closure_0 = arg0;

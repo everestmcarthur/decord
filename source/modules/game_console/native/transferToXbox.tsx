@@ -1,10 +1,10 @@
-// Module ID: 9460
-// Function ID: 9461
+// Module ID: 9465
+// Function ID: 9466
 // Name: _transferToXbox
-// Dependencies: [5, 19, 17, 1074, 21, 9451, 9448, 9461, 4905, 9462, 1896, 9454, 4702, 2]
+// Dependencies: [5, 19, 17, 1074, 21, 9456, 9453, 9466, 4905, 9467, 1896, 9459, 4702, 2]
 // Exports: default
 
-// Module 9460 (_transferToXbox)
+// Module 9465 (_transferToXbox)
 import noopAll from "noop" /* 19 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { Linking } from "get ActivityIndicator" /* 17 */;
@@ -52,7 +52,7 @@ function _transferToXbox() {
               dependencyMap = 1;
               c4 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_1(9451).maybeShowPTTAlert(closure_1_6.XBOX);
+              obj1[0] = closure_1_1(9456).maybeShowPTTAlert(closure_1_6.XBOX);
               return obj1;
             }
           } else if (1 === tmp5) {
@@ -68,7 +68,7 @@ function _transferToXbox() {
               dependencyMap = 2;
               c4 = 1;
               let obj3 = { value: null, done: false };
-              obj3[0] = callback2(9448).disconnectRemote();
+              obj3[0] = callback2(9453).disconnectRemote();
               return obj3;
             }
           } else if (2 === tmp5) {
@@ -81,7 +81,7 @@ function _transferToXbox() {
               obj4[0] = arg1;
               return obj4;
             } else {
-              let obj9 = callback2(9448);
+              let obj9 = callback2(9453);
               dependencyMap = 3;
               c4 = 1;
               const obj5 = { value: null, done: false };
@@ -101,7 +101,7 @@ function _transferToXbox() {
               callback = arg1;
               const obj7 = { nonce: null, forQRCode: false };
               obj7[0] = callback;
-              callback2 = callback(9461)(user, obj7);
+              callback2 = callback(9466)(user, obj7);
               dependencyMap = 4;
               c4 = 1;
               const obj8 = { value: null, done: false };
@@ -117,8 +117,8 @@ function _transferToXbox() {
             obj9[0] = arg1;
             return obj9;
           } else if (arg1) {
-            tmp47(9454)(user.id, constants.XBOX);
-            obj3 = callback2(9448);
+            tmp47(9459)(user.id, constants.XBOX);
+            obj3 = callback2(9453);
             obj3.waitForSession(constants.XBOX, user.id, callback);
             obj4 = callback2(4702);
             obj4.stopOwnStream(false);

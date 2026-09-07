@@ -1,13 +1,13 @@
-// Module ID: 8640
-// Function ID: 8641
+// Module ID: 8645
+// Function ID: 8646
 // Name: SettingsUpsellsConfigRegistry
-// Dependencies: [19, 8630, 8641, 8642, 8643, 1369, 2]
+// Dependencies: [19, 8635, 8646, 8647, 8648, 1369, 2]
 // Exports: useIarReportSettingsUpsells, useSettingsUpsellsConfigs
 
-// Module 8640 (SettingsUpsellsConfigRegistry)
-import itemsDefault from "items" /* 8641 */;
-import itemsDefault2 from "items" /* 8642 */;
-import itemsDefault3 from "items" /* 8643 */;
+// Module 8645 (SettingsUpsellsConfigRegistry)
+import itemsDefault from "items" /* 8646 */;
+import itemsDefault2 from "items" /* 8647 */;
+import itemsDefault3 from "items" /* 8648 */;
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

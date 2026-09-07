@@ -1,13 +1,13 @@
-// Module ID: 16565
-// Function ID: 16566
+// Module ID: 16568
+// Function ID: 16569
 // Name: ResourceChannelRow
-// Dependencies: [19, 17, 1957, 2012, 4781, 4199, 1074, 21, 4560, 576, 504, 7897, 12009, 16566, 7456, 12284, 1396, 5123, 4556, 4550, 16559, 1100, 1114, 16567, 4975, 2]
+// Dependencies: [19, 17, 1957, 2012, 4781, 4199, 1074, 21, 4560, 576, 504, 7897, 12013, 16569, 7456, 12288, 1396, 5123, 4556, 4550, 16562, 1100, 1114, 16570, 4975, 2]
 // Exports: default
 
-// Module 16565 (ResourceChannelRow)
+// Module 16568 (ResourceChannelRow)
 import ThemesDefault from "Themes" /* 576 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16559 */;
-import registerAssetDefault from "registerAsset" /* 16567 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16562 */;
+import registerAssetDefault from "registerAsset" /* 16570 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
@@ -47,9 +47,9 @@ function ResourceChannelRow(channelId) {
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  let tmp2Result = tmp2(12009);
+  let tmp2Result = tmp2(12013);
   let flag = tmp2Result.useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(16566)(firstResult);
+  const tmp11 = stateFromStores(16569)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -145,7 +145,7 @@ function ResourceChannelRow(channelId) {
               }
               obj9[4] = id;
               obj9[5] = tmp.thumbnail;
-              tmp19Result2 = tmp19(tmp2(12009).ForumPostMediaThumbnail, obj9);
+              tmp19Result2 = tmp19(tmp2(12013).ForumPostMediaThumbnail, obj9);
             }
           }
         }

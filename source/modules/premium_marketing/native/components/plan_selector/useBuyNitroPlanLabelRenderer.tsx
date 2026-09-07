@@ -1,10 +1,10 @@
-// Module ID: 13404
-// Function ID: 13405
+// Module ID: 13408
+// Function ID: 13409
 // Name: useBuyNitroPlanLabelRenderer
 // Dependencies: [19, 17, 2025, 1373, 21, 4560, 576, 4262, 1114, 1880, 4556, 4218, 2]
 // Exports: useBuyNitroPlanLabelRenderer
 
-// Module 13404 (useBuyNitroPlanLabelRenderer)
+// Module 13408 (useBuyNitroPlanLabelRenderer)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

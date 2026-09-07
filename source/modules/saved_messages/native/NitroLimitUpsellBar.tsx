@@ -1,17 +1,17 @@
-// Module ID: 12221
-// Function ID: 12222
+// Module ID: 12225
+// Function ID: 12226
 // Name: NitroLimitUpsellBar
-// Dependencies: [17, 21, 4560, 576, 8588, 9963, 4556, 1114, 9970, 4975, 2]
+// Dependencies: [17, 21, 4560, 576, 8593, 9968, 4556, 1114, 9975, 4975, 2]
 // Exports: default
 
-// Module 12221 (NitroLimitUpsellBar)
+// Module 12225 (NitroLimitUpsellBar)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
-import WarningIcon from "WarningIcon" /* 8588 */;
-import registerAssetDefault from "registerAsset" /* 9963 */;
-import _modDef9970 from "module_9970" /* 9970 */;
+import WarningIcon from "WarningIcon" /* 8593 */;
+import registerAssetDefault from "registerAsset" /* 9968 */;
+import _modDef9975 from "module_9975" /* 9975 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -52,7 +52,7 @@ export default function NitroLimitUpsellBar(isAtLimit) {
   obj1[3] = items1;
   items[1] = closure_6(Text.Text, obj1);
   if (isAtLimit) {
-    let Button = _modDef9970;
+    let Button = _modDef9975;
   } else {
     Button = tmp12(4975).Button;
   }

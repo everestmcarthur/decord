@@ -1,10 +1,10 @@
-// Module ID: 16823
-// Function ID: 16824
+// Module ID: 16826
+// Function ID: 16827
 // Name: ViewModerators
-// Dependencies: [5, 19, 2021, 2015, 1979, 1074, 8401, 21, 1242, 4527, 16824, 1896, 1483, 504, 5415, 9738, 1965, 1894, 4905, 1114, 4573, 9739, 4258, 1178, 9751, 4973, 5687, 5605, 11204, 2]
+// Dependencies: [5, 19, 2021, 2015, 1979, 1074, 8401, 21, 1242, 4527, 16827, 1896, 1483, 504, 5415, 9743, 1965, 1894, 4905, 1114, 4573, 9744, 4258, 1178, 9756, 4973, 5687, 5605, 11209, 2]
 // Exports: default, openAddModeratorsActionSheet
 
-// Module 16823 (ViewModerators)
+// Module 16826 (ViewModerators)
 import noopAll from "noop" /* 19 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -224,5 +224,5 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel, canSkip: flag };
-  obj2.openLazy(asyncRequireImpl(16824, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
+  obj2.openLazy(asyncRequireImpl(16827, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
 };

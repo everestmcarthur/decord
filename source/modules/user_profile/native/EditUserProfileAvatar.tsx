@@ -1,10 +1,10 @@
-// Module ID: 14608
-// Function ID: 14609
+// Module ID: 14611
+// Function ID: 14612
 // Name: EditUserProfileAvatar
-// Dependencies: [19, 4552, 21, 4560, 7162, 7182, 4218, 8159, 8169, 14609, 4527, 14610, 1896, 14611, 14611, 8157, 8166, 504, 4296, 4561, 8257, 5123, 1114, 14612, 1178, 2]
+// Dependencies: [19, 4552, 21, 4560, 7162, 7182, 4218, 8159, 8169, 14612, 4527, 14613, 1896, 14614, 14614, 8157, 8166, 504, 4296, 4561, 8257, 5123, 1114, 14615, 1178, 2]
 // Exports: default
 
-// Module 14608 (EditUserProfileAvatar)
+// Module 14611 (EditUserProfileAvatar)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import jsxProd from "jsxProd" /* 21 */;

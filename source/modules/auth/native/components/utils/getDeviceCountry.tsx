@@ -1,10 +1,10 @@
-// Module ID: 15965
-// Function ID: 15966
+// Module ID: 15968
+// Function ID: 15969
 // Name: getDeviceCountry
 // Dependencies: [17, 1115, 1117, 2]
 // Exports: getDeviceCountry
 
-// Module 15965 (getDeviceCountry)
+// Module 15968 (getDeviceCountry)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 1115 */;

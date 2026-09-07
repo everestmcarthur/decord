@@ -1,9 +1,9 @@
-// Module ID: 16863
-// Function ID: 16864
+// Module ID: 16866
+// Function ID: 16867
 // Name: UnmuteOptions
-// Dependencies: [19, 17, 1957, 1979, 4209, 1371, 1074, 21, 4560, 576, 7765, 7119, 7114, 9057, 5605, 1178, 10145, 4556, 1114, 4713, 10146, 1483, 11312, 10144, 1484, 563, 7863, 1611, 2]
+// Dependencies: [19, 17, 1957, 1979, 4209, 1371, 1074, 21, 4560, 576, 7765, 7119, 7114, 9062, 5605, 1178, 10150, 4556, 1114, 4713, 10151, 1483, 11317, 10149, 1484, 563, 7863, 1611, 2]
 
-// Module 16863 (UnmuteOptions)
+// Module 16866 (UnmuteOptions)
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -28,7 +28,7 @@ function UnmuteOptions(channel) {
     channel(closure_1_2[13]).handleUnmutePress(channel.id, channel.guild_id);
   }, items);
   obj = { icon: null, label: null, onPress: null, start: true, end: true };
-  obj = { disableColor: true, source: navigation(10145) };
+  obj = { disableColor: true, source: navigation(10150) };
   obj[0] = callback(channel(1178).Icon, obj);
   obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = channel(1114).intl;
@@ -44,8 +44,8 @@ function UnmuteOptions(channel) {
   const items1 = [callback(channel(5605).TableRow, obj), ];
   const obj3 = { muteConfig: channel.muteConfig, type: null };
   const obj6 = channel(4713);
-  const tmp6 = navigation(10146);
-  const MuteSettingType = channel(10146).MuteSettingType;
+  const tmp6 = navigation(10151);
+  const MuteSettingType = channel(10151).MuteSettingType;
   obj3[1] = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
   items1[1] = tmp5(tmp6, obj3);
   obj[1] = items1;

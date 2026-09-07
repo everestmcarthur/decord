@@ -1,18 +1,18 @@
-// Module ID: 16854
-// Function ID: 16855
+// Module ID: 16857
+// Function ID: 16858
 // Name: handleSetRegion
-// Dependencies: [718, 19, 1957, 16810, 21, 4560, 576, 4271, 1114, 8625, 5688, 5685, 8593, 504, 38, 2]
+// Dependencies: [718, 19, 1957, 16813, 21, 4560, 576, 4271, 1114, 8630, 5688, 5685, 8598, 504, 38, 2]
 // Exports: default
 
-// Module 16854 (handleSetRegion)
+// Module 16857 (handleSetRegion)
 import _modDef38 from "module_38" /* 38 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import TableRadioRow from "TableRadioRow" /* 5688 */;
-import Form from "Form" /* 8593 */;
+import Form from "Form" /* 8598 */;
 import closure_3 from "_toArray" /* 718 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "initialize" /* 16810 */;
+import closure_5 from "initialize" /* 16813 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
@@ -84,7 +84,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(8625).updateChannel({ rtcRegion: tmp });
+  self(8630).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     let obj = self(closure_1_2[9]);
     obj = { rtcRegion: c0 };

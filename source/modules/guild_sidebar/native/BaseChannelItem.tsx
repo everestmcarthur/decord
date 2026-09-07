@@ -1,17 +1,17 @@
-// Module ID: 12379
-// Function ID: 12380
+// Module ID: 12383
+// Function ID: 12384
 // Name: BaseChannelSubtitle
-// Dependencies: [19, 17, 10118, 4742, 21, 4560, 576, 4556, 1116, 1178, 10165, 8902, 12380, 2]
+// Dependencies: [19, 17, 10123, 4742, 21, 4560, 576, 4556, 1116, 1178, 10170, 8907, 12384, 2]
 // Exports: BaseChannelIcon, BaseChannelName, default, getChannelSubtitleTextProps, useChannelNameTextProps
 
-// Module 12379 (BaseChannelSubtitle)
+// Module 12383 (BaseChannelSubtitle)
 import ThemesDefault from "Themes" /* 576 */;
 import PlatformTypes from "PlatformTypes" /* 1116 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import hairlineWidth from "hairlineWidth" /* 10118 */;
+import hairlineWidth from "hairlineWidth" /* 10123 */;
 import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -134,9 +134,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj[1] = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(12380);
+      let AnimatedPressableHighlight = hideIcon(12384);
     } else {
-      AnimatedPressableHighlight = mode(8902).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8907).AnimatedPressableHighlight;
     }
     obj = {};
     const merged1 = Object.assign(merged);
@@ -153,9 +153,9 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj[2] = ALL_MESSAGES;
-    closure_8(hideIcon(10165), obj);
+    closure_8(hideIcon(10170), obj);
     const tmp6 = closure_8;
-    const tmp9 = hideIcon(10165);
+    const tmp9 = hideIcon(10170);
   }
 };
 export const ChannelModes = createCacheKey;

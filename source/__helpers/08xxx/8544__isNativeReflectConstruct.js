@@ -1,19 +1,19 @@
 // Module ID: 8544
 // Function ID: 8545
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8545, 8530, 8477]
+// Dependencies: [41, 42, 93, 95, 98, 19, 21, 8545, 8540, 8480]
 
 // Module 8544 (_isNativeReflectConstruct)
 import noopAll from "noop" /* 19 */;
 import _inheritsDefault from "_inherits" /* 98 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8477 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 8480 */;
 import closure_2 from "_classCallCheck" /* 41 */;
 import closure_3 from "_possibleConstructorReturn" /* 93 */;
 import closure_4 from "_getPrototypeOf" /* 95 */;
 import importDefaultResult from "_createClass" /* 42 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const RadialGradient = importDefault;
+const Polygon = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,70 +34,60 @@ function _isNativeReflectConstruct() {
   }
 }
 noopAll;
-class RadialGradient {
+class Polygon {
   constructor() {
     self = this;
-    tmp = closure_2(this, RadialGradient);
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_2(this, closure_0);
+    items1 = [...items];
     tmp2 = closure_4;
-    obj = closure_4(RadialGradient);
+    obj = closure_4(closure_0);
     tmp3 = closure_3;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + lib(closure_1_1[7])(points) + "z";
+      }
+      if (lib.root) {
+        const root = lib.root;
+        root.setNativeProps(points);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inheritsDefault(RadialGradient, _isNativeReflectConstructDefault);
-const items = [
+_inheritsDefault(Polygon, _isNativeReflectConstructDefault);
+let items = [
   {
     key: "render",
     value: function render() {
-      const self = this;
       const props = this.props;
-      ({ rx, ry, r, cx, cy, fx } = props);
-      if (undefined === fx) {
-        fx = cx;
+      const points = props.points;
+      const obj = { ref: this.refMethod, d: null };
+      let combined = points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        combined = "M" + Polygon(8545)(points) + "z";
       }
-      let fy = props.fy;
-      let obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
-      if (undefined === fy) {
-        fy = cy;
-      }
-      obj[1] = fy;
-      if (!rx) {
-        rx = r;
-      }
-      obj[2] = rx;
-      if (!ry) {
-        ry = r;
-      }
-      obj[3] = ry;
-      obj[4] = cx;
-      obj[5] = cy;
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(self(8530)(props, this));
-      return jsx(self(8545), {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
+      obj[1] = combined;
+      const merged = Object.assign(props);
+      return jsx(Polygon(8540), { ref: this.refMethod, d: null });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(RadialGradient, items);
-importDefaultResultResult.displayName = "RadialGradient";
-importDefaultResultResult.defaultProps = { cx: "50%", cy: "50%", r: "50%" };
+const importDefaultResultResult = importDefaultResult(Polygon, items);
+importDefaultResultResult.displayName = "Polygon";
+importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;

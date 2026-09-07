@@ -1,10 +1,10 @@
-// Module ID: 13220
-// Function ID: 13221
+// Module ID: 13224
+// Function ID: 13225
 // Name: createBuildOverrideEmbed
-// Dependencies: [17, 11425, 7736, 7945, 11789, 13221, 1364, 1114, 7936, 576, 4411, 11808, 11809, 13219, 2]
+// Dependencies: [17, 11430, 7736, 7945, 11794, 13225, 1364, 1114, 7936, 576, 4411, 11813, 11814, 13223, 2]
 // Exports: createBuildOverrideEmbed
 
-// Module 13220 (createBuildOverrideEmbed)
+// Module 13224 (createBuildOverrideEmbed)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -12,9 +12,9 @@ import getConstantsAll from "getConstants" /* 1364 */;
 import InviteSendStates from "InviteSendStates" /* 7736 */;
 import processColorOrThrow from "processColorOrThrow" /* 7936 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
-import getCurrentBuildOverride from "getCurrentBuildOverride" /* 11425 */;
-import setBuildOverrideForBranch from "setBuildOverrideForBranch" /* 11789 */;
-import closure_5 from "getCurrentBuildOverride" /* 11425 */;
+import getCurrentBuildOverride from "getCurrentBuildOverride" /* 11430 */;
+import setBuildOverrideForBranch from "setBuildOverrideForBranch" /* 11794 */;
+import closure_5 from "getCurrentBuildOverride" /* 11430 */;
 
 const Image = get_ActivityIndicator.Image;
 const State = getCurrentBuildOverride.State;
@@ -55,7 +55,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
       }
       tmp10 = id === id1;
     }
-    let tmpResult = tmp(13221);
+    let tmpResult = tmp(13225);
     obj = getConstantsAll;
     const tmpResultResult = tmpResult(buildOverride.override, ["discord_ios", "discord_android"], obj.getConstants().Version);
     if (currentBuildOverride.state !== tmp6.Invalid) {
@@ -74,7 +74,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               if (override != null) {
                 const targetBuildOverride2 = override.targetBuildOverride;
                 if (targetBuildOverride2 != null) {
-                  const tmp30 = targetBuildOverride2[tmp28(undefined, 11789).DEVICE_FIELD];
+                  const tmp30 = targetBuildOverride2[tmp28(undefined, 11794).DEVICE_FIELD];
                   if (tmp30 != null) {
                     type = tmp30.type;
                   }
@@ -89,7 +89,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               obj.titleColor = colors.titleColor;
               obj.subtitle = id;
               obj.subtitleColor = colors.subtitleColor;
-              obj.thumbnailUrl = Image.resolveAssetSource(tmp(13219)).uri;
+              obj.thumbnailUrl = Image.resolveAssetSource(tmp(13223)).uri;
               let str2 = "primary";
               if (tmp10) {
                 str2 = "destructive";
@@ -135,9 +135,9 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
     obj1.subtitleColor = subtitleColor;
     const obj4 = processColorOrThrow;
     if (tmp20Result.isThemeDark(closure_2)) {
-      tmpResult = tmp(11808);
+      tmpResult = tmp(11813);
     } else {
-      tmpResult = tmp(11809);
+      tmpResult = tmp(11814);
     }
     obj1.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj1.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

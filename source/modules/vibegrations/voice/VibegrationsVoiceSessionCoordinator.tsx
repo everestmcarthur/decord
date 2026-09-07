@@ -1,15 +1,15 @@
-// Module ID: 14459
-// Function ID: 14460
+// Module ID: 14462
+// Function ID: 14463
 // Name: getCapabilitiesForSocket
-// Dependencies: [14460, 9510, 502, 1908, 4583, 1371, 4579, 1074, 4585, 9554, 13826, 1256, 9089, 14461, 14462, 2]
+// Dependencies: [14463, 9515, 502, 1908, 4583, 1371, 4579, 1074, 4585, 9559, 13829, 1256, 9094, 14464, 14465, 2]
 
-// Module 14459 (getCapabilitiesForSocket)
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9089 */;
-import prototypeDefault from "prototype" /* 9554 */;
-import apexExperimentDefault from "apexExperiment" /* 13826 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14462 */;
-import closure_3 from "isFramePooled" /* 14460 */;
-import closure_4 from "map" /* 9510 */;
+// Module 14462 (getCapabilitiesForSocket)
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9094 */;
+import prototypeDefault from "prototype" /* 9559 */;
+import apexExperimentDefault from "apexExperiment" /* 13829 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14465 */;
+import closure_3 from "isFramePooled" /* 14463 */;
+import closure_4 from "map" /* 9515 */;
 import closure_5 from "fetchFingerprint" /* 502 */;
 import closure_6 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_7 from "createRTCConnection" /* 4583 */;
@@ -331,13 +331,13 @@ prototype["update"] = function update(id, id, arg2, arr) {
               obj.add(user_id);
               obj = { userId: null, position: null };
               obj[0] = user_id;
-              obj[1] = callback(14461).toListenerRelativePosition(callback, user_id.position);
+              obj[1] = callback(14464).toListenerRelativePosition(callback, user_id.position);
               return obj;
             }
           }
         }
         obj = { errorCode: closure_1_10.INVALID_PAYLOAD };
-        let tmp6 = set(9554);
+        let tmp6 = set(9559);
         tmp6 = new tmp6(obj, "Invalid spatial voice source " + user_id.user_id);
         throw tmp6;
       });

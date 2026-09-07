@@ -1,14 +1,14 @@
-// Module ID: 9637
-// Function ID: 9638
+// Module ID: 9642
+// Function ID: 9643
 // Name: frozen
-// Dependencies: [4552, 1183, 9638, 1935, 2]
+// Dependencies: [4552, 1183, 9643, 1935, 2]
 // Exports: getDiscordBaseTheme, getDiscordCustomTheme, getDiscordEnvQueryParams, getDiscordEnvironment, getDiscordFontScale, getDiscordUIDensity
 
-// Module 9637 (frozen)
+// Module 9642 (frozen)
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import closure_3 from "handleThemeChange" /* 1183 */;
-import RESPONSIVE_DENSITY_MEDIA_QUERY from "RESPONSIVE_DENSITY_MEDIA_QUERY" /* 9638 */;
+import RESPONSIVE_DENSITY_MEDIA_QUERY from "RESPONSIVE_DENSITY_MEDIA_QUERY" /* 9643 */;
 
 require = arg1;
 ({ RESPONSIVE_DENSITY_FALLBACK: c4, RESPONSIVE_DENSITY_MEDIA_QUERY: c5, resolveUIDensity: closure_6 } = RESPONSIVE_DENSITY_MEDIA_QUERY);

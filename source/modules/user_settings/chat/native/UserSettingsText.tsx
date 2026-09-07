@@ -1,15 +1,15 @@
-// Module ID: 15463
-// Function ID: 15464
+// Module ID: 15466
+// Function ID: 15467
 // Name: UserSettingsText
-// Dependencies: [19, 17, 1371, 4224, 1184, 1185, 1074, 21, 4560, 576, 1242, 1935, 9358, 4262, 504, 4218, 1483, 6990, 1178, 10398, 4556, 1114, 8593, 4973, 5687, 7201, 5685, 5688, 2]
+// Dependencies: [19, 17, 1371, 4224, 1184, 1185, 1074, 21, 4560, 576, 1242, 1935, 9363, 4262, 504, 4218, 1483, 6990, 1178, 10403, 4556, 1114, 8598, 4973, 5687, 7201, 5685, 5688, 2]
 // Exports: default, setDataSavingMode, setImageDescriptions, setLowQualityImageMode, setStickerAutocomplete, setVideoUploadQuality
 
-// Module 15463 (UserSettingsText)
+// Module 15466 (UserSettingsText)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 9358 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 9363 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import closure_5 from "reset" /* 4224 */;

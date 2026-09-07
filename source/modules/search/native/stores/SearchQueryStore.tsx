@@ -1,13 +1,13 @@
-// Module ID: 12339
-// Function ID: 12340
+// Module ID: 12343
+// Function ID: 12344
 // Name: prototype
-// Dependencies: [1957, 4209, 1371, 7878, 7877, 1074, 4713, 1114, 12340, 12352, 1933, 504, 573, 2]
+// Dependencies: [1957, 4209, 1371, 7878, 7877, 1074, 4713, 1114, 12344, 12356, 1933, 504, 573, 2]
 
-// Module 12339 (prototype)
+// Module 12343 (prototype)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 12340 */;
-import isCompleteDefault from "isComplete" /* 12352 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 12344 */;
+import isCompleteDefault from "isComplete" /* 12356 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "markAllUserIdListsStale" /* 4209 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
@@ -190,11 +190,11 @@ const prototype = function SearchQueryStateManager(type) {
       const intl = obj(1114).intl;
       const stringResult = intl.string(obj(1114).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj[2] = "" + stringResult + ": " + obj(12340).quoteChannelName(channelName);
+      obj[2] = "" + stringResult + ": " + obj(12344).quoteChannelName(channelName);
       obj[3] = type.channelId;
       obj[4] = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj];
-      const obj4 = obj(12340);
+      const obj4 = obj(12344);
     }
     items = items1;
   }

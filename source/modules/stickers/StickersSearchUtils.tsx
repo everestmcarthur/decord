@@ -1,10 +1,10 @@
-// Module ID: 10393
-// Function ID: 10394
+// Module ID: 10398
+// Function ID: 10399
 // Name: searchAllStickers
 // Dependencies: [5442, 7337, 2]
 // Exports: searchAllStickers, searchSendableStickers, searchUnsendableStickers
 
-// Module 10393 (searchAllStickers)
+// Module 10398 (searchAllStickers)
 import set from "set" /* 2 */;
 import NOOPDefault from "NOOP" /* 5442 */;
 

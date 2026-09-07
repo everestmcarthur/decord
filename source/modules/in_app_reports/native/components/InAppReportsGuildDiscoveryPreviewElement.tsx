@@ -1,10 +1,10 @@
-// Module ID: 9038
-// Function ID: 9039
+// Module ID: 9043
+// Function ID: 9044
 // Name: GuildDiscoveryPreviewElement
 // Dependencies: [19, 17, 4552, 21, 4560, 576, 504, 4409, 4556, 1114, 5584, 1971, 2]
 // Exports: default
 
-// Module 9038 (GuildDiscoveryPreviewElement)
+// Module 9043 (GuildDiscoveryPreviewElement)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;

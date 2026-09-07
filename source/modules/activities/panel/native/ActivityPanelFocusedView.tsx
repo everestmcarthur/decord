@@ -1,20 +1,20 @@
-// Module ID: 17023
-// Function ID: 17024
+// Module ID: 17026
+// Function ID: 17027
 // Name: BaseActivityPanelFocusedView
-// Dependencies: [19, 17, 4552, 1957, 1956, 1920, 9505, 17018, 1074, 12273, 21, 4560, 576, 1611, 504, 1477, 17013, 16689, 4296, 4271, 4561, 4974, 4959, 4189, 17015, 17024, 9504, 9635, 2]
+// Dependencies: [19, 17, 4552, 1957, 1956, 1920, 9510, 17021, 1074, 12277, 21, 4560, 576, 1611, 504, 1477, 17016, 16692, 4296, 4271, 4561, 4974, 4959, 4189, 17018, 17027, 9509, 9640, 2]
 // Exports: useBaseActivityPanelFocusedView
 
-// Module 17023 (BaseActivityPanelFocusedView)
+// Module 17026 (BaseActivityPanelFocusedView)
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
 import closure_6 from "participantFromServer" /* 1956 */;
 import { ActivityLayoutMode } from "items3" /* 1920 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 9505 */;
-import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 17018 */;
+import ActivityPanelModes from "ActivityPanelModes" /* 9510 */;
+import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 17021 */;
 import { ThemeTypes } from "ME" /* 1074 */;
-import { IS_IOS } from "VoicePanelModes" /* 12273 */;
+import { IS_IOS } from "VoicePanelModes" /* 12277 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

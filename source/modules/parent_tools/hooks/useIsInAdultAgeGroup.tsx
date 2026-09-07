@@ -1,10 +1,10 @@
-// Module ID: 8646
-// Function ID: 8647
+// Module ID: 8651
+// Function ID: 8652
 // Name: useIsInAdultAgeGroup
 // Dependencies: [7537, 504, 2]
 // Exports: default
 
-// Module 8646 (useIsInAdultAgeGroup)
+// Module 8651 (useIsInAdultAgeGroup)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "freshTeenActivityWithMap" /* 7537 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 10315
-// Function ID: 10316
+// Module ID: 10320
+// Function ID: 10321
 // Name: useShowNitroUpsellCallback
 // Dependencies: [19, 4296, 2]
 // Exports: default
 
-// Module 10315 (useShowNitroUpsellCallback)
+// Module 10320 (useShowNitroUpsellCallback)
 import closure_2 from "noop" /* 19 */;
 
 const require = arg1;

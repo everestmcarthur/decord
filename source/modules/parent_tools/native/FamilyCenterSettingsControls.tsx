@@ -1,13 +1,13 @@
-// Module ID: 14906
-// Function ID: 14907
+// Module ID: 14909
+// Function ID: 14910
 // Name: SpendingLimitRow
-// Dependencies: [19, 17, 7538, 1074, 21, 4560, 576, 4556, 1114, 2396, 4763, 14907, 1896, 14909, 5605, 8645, 14893, 7594, 1483, 14910, 4973, 5687, 4975, 7587, 4573, 14825, 7539, 14911, 2]
+// Dependencies: [19, 17, 7538, 1074, 21, 4560, 576, 4556, 1114, 2396, 4763, 14910, 1896, 14912, 5605, 8650, 14896, 7594, 1483, 14913, 4973, 5687, 4975, 7587, 4573, 14828, 7539, 14914, 2]
 // Exports: default
 
-// Module 14906 (SpendingLimitRow)
+// Module 14909 (SpendingLimitRow)
 import ThemesDefault from "Themes" /* 576 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8645 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8650 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { FamilyCenterSubPages } from "items" /* 7538 */;
@@ -19,7 +19,7 @@ require = arg1;
 function SpendingLimitRow(teenId) {
   teenId = teenId.teenId;
   const tmp = callback3();
-  let obj = teenId(14909);
+  let obj = teenId(14912);
   const spendingLimitDisplayState = obj.useSpendingLimitDisplayState(teenId.cap);
   const kind = spendingLimitDisplayState.kind;
   if ("off" === kind) {
@@ -177,9 +177,9 @@ function FamilyCenterSettingsTeenControls() {
 }
 function FamilyCenterSettingsParentalControls() {
   const tmp = callback3();
-  let obj = selectedTeenUser(14893);
+  let obj = selectedTeenUser(14896);
   selectedTeenUser = obj.useSelectedTeenUser();
-  obj1 = selectedTeenUser(14893);
+  obj1 = selectedTeenUser(14896);
   const shouldLoadSettingsForSelectedTeenUser = obj1.useShouldLoadSettingsForSelectedTeenUser();
   let obj2 = selectedTeenUser(7594);
   const isFamilyCenterV3Enabled = obj2.useIsFamilyCenterV3Enabled({ location: "FamilyCenterSettingsControls" });
@@ -195,7 +195,7 @@ function FamilyCenterSettingsParentalControls() {
   if (rules == null) {
     rules = [];
   }
-  const ParentalControlledSpendingLimit = tmp2(14825).ParentalControlledSpendingLimit;
+  const ParentalControlledSpendingLimit = tmp2(14828).ParentalControlledSpendingLimit;
   let id;
   if (selectedTeenUser != null) {
     id = selectedTeenUser.id;
@@ -216,7 +216,7 @@ function FamilyCenterSettingsParentalControls() {
       const obj = shouldLoadSettingsForSelectedTeenUser(navigation[26]);
     }
   }, items);
-  ({ subLabel, trailing } = shouldLoadSettingsForSelectedTeenUser(14910)(rules));
+  ({ subLabel, trailing } = shouldLoadSettingsForSelectedTeenUser(14913)(rules));
   obj = { style: tmp.parentalControlsContainer, children: null };
   obj = { variant: "text-sm/semibold", children: null };
   const intl = tmp2(1114).intl;

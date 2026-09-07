@@ -1,11 +1,11 @@
-// Module ID: 16338
-// Function ID: 16339
+// Module ID: 16341
+// Function ID: 16342
 // Name: getGuildsBarGuildAccessibilityActions
-// Dependencies: [1979, 5438, 1114, 9358, 4411, 16339, 5520, 2]
+// Dependencies: [1979, 5438, 1114, 9363, 4411, 16342, 5520, 2]
 // Exports: default
 
-// Module 16338 (getGuildsBarGuildAccessibilityActions)
-import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 16339 */;
+// Module 16341 (getGuildsBarGuildAccessibilityActions)
+import getGuildBarNeighborsDefault from "getGuildBarNeighbors" /* 16342 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;
 import closure_4 from "insertUnsortedGuilds" /* 5438 */;
 
@@ -48,7 +48,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
         const obj = callback2(5520);
         const tmp3 = callback2;
         const tmp4 = callback;
-        callback(9358).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
+        callback(9363).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
         if (null != callback2) {
           const AccessibilityAnnouncer = tmp4(4411).AccessibilityAnnouncer;
           AccessibilityAnnouncer.announce(tmp3);
@@ -70,7 +70,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
           obj2[0] = name;
           obj1[1] = intl4.formatToPlainString(ejhw4S(1114).t["08U1Sa"], obj2);
           obj1[2] = function action() {
-            const tmp5 = callback2(16339)(callback);
+            const tmp5 = callback2(16342)(callback);
             if (null != tmp5) {
               let node = null;
               if (null != tmp5.above) {
@@ -82,12 +82,12 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
               if (null != node) {
                 const tmp3Result = callback2(5520);
                 tmp3Result.moveById(tmp, node.id, true, true);
-                callback(9358).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
+                callback(9363).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
                 if (null != tmp2) {
                   const AccessibilityAnnouncer = tmp10(4411).AccessibilityAnnouncer;
                   AccessibilityAnnouncer.announce(tmp2);
                 }
-                const obj2 = callback(9358);
+                const obj2 = callback(9363);
                 tmp10 = callback;
               }
             }
@@ -102,7 +102,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
           obj4[0] = name;
           obj3[1] = intl5.formatToPlainString(gBM0Vf, obj4);
           obj3[2] = function action() {
-            const tmp4 = callback2(16339)(callback);
+            const tmp4 = callback2(16342)(callback);
             if (null != tmp4) {
               let node = null;
               if (null != tmp4.above) {
@@ -114,8 +114,8 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
               if (null != node) {
                 const tmp2Result = callback2(5520);
                 tmp2Result.moveById(tmp, node.id, false, false);
-                callback(9358).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
-                const obj2 = callback(9358);
+                callback(9363).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
+                const obj2 = callback(9363);
               }
             }
           };
@@ -127,7 +127,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
         const intl2 = ejhw4S(1114).intl;
         obj5[1] = intl2.string(ejhw4S(1114).t["yiH+Tx"]);
         obj5[2] = function action() {
-          const tmp4 = callback2(16339)(callback);
+          const tmp4 = callback2(16342)(callback);
           if (null != tmp4) {
             let node = null;
             if (null != tmp4.above) {
@@ -139,8 +139,8 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
             if (null != node) {
               const tmp2Result = callback2(5520);
               tmp2Result.moveById(tmp, node.id, false, false);
-              callback(9358).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
-              const obj2 = callback(9358);
+              callback(9363).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
+              const obj2 = callback(9363);
             }
           }
         };
@@ -161,7 +161,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
           obj7[0] = name2;
           obj6[1] = intl8.formatToPlainString(ejhw4S(1114).t["6lLC/B"], obj7);
           obj6[2] = function action() {
-            const tmp5 = callback2(16339)(callback);
+            const tmp5 = callback2(16342)(callback);
             if (null != tmp5) {
               let node = null;
               if (null != tmp5.below) {
@@ -173,12 +173,12 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
               if (null != node) {
                 const tmp3Result = callback2(5520);
                 tmp3Result.moveById(tmp, node.id, true, true);
-                callback(9358).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
+                callback(9363).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
                 if (null != tmp2) {
                   const AccessibilityAnnouncer = tmp10(4411).AccessibilityAnnouncer;
                   AccessibilityAnnouncer.announce(tmp2);
                 }
-                const obj2 = callback(9358);
+                const obj2 = callback(9363);
                 tmp10 = callback;
               }
             }
@@ -193,7 +193,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
           obj9[0] = name2;
           obj8[1] = intl9.formatToPlainString(YhxCkM, obj9);
           obj8[2] = function action() {
-            const tmp4 = callback2(16339)(callback);
+            const tmp4 = callback2(16342)(callback);
             if (null != tmp4) {
               let node = null;
               if (null != tmp4.below) {
@@ -205,8 +205,8 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
               if (null != node) {
                 const tmp2Result = callback2(5520);
                 tmp2Result.moveById(tmp, node.id, true, false);
-                callback(9358).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
-                const obj2 = callback(9358);
+                callback(9363).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
+                const obj2 = callback(9363);
               }
             }
           };
@@ -218,7 +218,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
         const intl6 = ejhw4S(1114).intl;
         obj10[1] = intl6.string(ejhw4S(1114).t["+V6oLI"]);
         obj10[2] = function action() {
-          const tmp4 = callback2(16339)(callback);
+          const tmp4 = callback2(16342)(callback);
           if (null != tmp4) {
             let node = null;
             if (null != tmp4.below) {
@@ -230,8 +230,8 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
             if (null != node) {
               const tmp2Result = callback2(5520);
               tmp2Result.moveById(tmp, node.id, true, false);
-              callback(9358).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
-              const obj2 = callback(9358);
+              callback(9363).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
+              const obj2 = callback(9363);
             }
           }
         };
@@ -253,18 +253,18 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
         obj12[0] = name3;
         obj11[1] = intl11.formatToPlainString(ejhw4S(1114).t.vnfRJG, obj12);
         obj11[2] = function action() {
-          const tmp5 = callback2(16339)(callback);
+          const tmp5 = callback2(16342)(callback);
           if (null != tmp5) {
             const containingFolder = tmp5.containingFolder;
             if (null != containingFolder) {
               const tmp3Result = callback2(5520);
               tmp3Result.moveById(tmp, containingFolder.id, false, false);
-              callback(9358).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
+              callback(9363).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
               if (null != tmp2) {
                 const AccessibilityAnnouncer = tmp9(4411).AccessibilityAnnouncer;
                 AccessibilityAnnouncer.announce(tmp2);
               }
-              const obj2 = callback(9358);
+              const obj2 = callback(9363);
               tmp9 = callback;
             }
           }
@@ -280,18 +280,18 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
         formatToPlainStringResult = intl12.formatToPlainString(ejhw4S, obj14);
         obj13[1] = formatToPlainStringResult;
         obj13[2] = function action() {
-          const tmp5 = callback2(16339)(callback);
+          const tmp5 = callback2(16342)(callback);
           if (null != tmp5) {
             const containingFolder = tmp5.containingFolder;
             if (null != containingFolder) {
               const tmp3Result = callback2(5520);
               tmp3Result.moveById(tmp, containingFolder.id, true, false);
-              callback(9358).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
+              callback(9363).saveGuildFolders(closure_1_4.getCompatibleGuildFolders());
               if (null != tmp2) {
                 const AccessibilityAnnouncer = tmp9(4411).AccessibilityAnnouncer;
                 AccessibilityAnnouncer.announce(tmp2);
               }
-              const obj2 = callback(9358);
+              const obj2 = callback(9363);
               tmp9 = callback;
             }
           }

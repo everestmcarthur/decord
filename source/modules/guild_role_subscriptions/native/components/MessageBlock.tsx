@@ -1,10 +1,10 @@
-// Module ID: 12224
-// Function ID: 12225
+// Module ID: 12228
+// Function ID: 12229
 // Name: MessageBlock
 // Dependencies: [19, 17, 21, 576, 4560, 1178, 2]
 // Exports: default
 
-// Module 12224 (MessageBlock)
+// Module 12228 (MessageBlock)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;

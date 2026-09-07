@@ -1,10 +1,10 @@
-// Module ID: 11888
-// Function ID: 11889
+// Module ID: 11893
+// Function ID: 11894
 // Name: useEmitAppealIngestionEvent
-// Dependencies: [19, 8430, 8419, 1074, 504, 11880, 11882, 1242, 2]
+// Dependencies: [19, 8430, 8419, 1074, 504, 11885, 11887, 1242, 2]
 // Exports: useEmitAppealIngestionEvent
 
-// Module 11888 (useEmitAppealIngestionEvent)
+// Module 11893 (useEmitAppealIngestionEvent)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
 import { SafetyHubAnalyticsActionSource as closure_5 } from "SafetyHubView" /* 8419 */;

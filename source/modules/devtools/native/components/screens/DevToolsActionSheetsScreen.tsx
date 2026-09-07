@@ -1,18 +1,18 @@
-// Module ID: 15721
-// Function ID: 15722
+// Module ID: 15724
+// Function ID: 15725
 // Name: ActionSheetSelector
-// Dependencies: [32, 19, 17, 21, 4560, 576, 12948, 12946, 4763, 15722, 1896, 4527, 7150, 7149, 5687, 5605, 8588, 4511, 4973, 5607, 4556, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 12952, 12950, 4763, 15725, 1896, 4527, 7150, 7149, 5687, 5605, 8593, 4511, 4973, 5607, 4556, 2]
 // Exports: default
 
-// Module 15721 (ActionSheetSelector)
+// Module 15724 (ActionSheetSelector)
 import ThemesDefault from "Themes" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
 import Background from "Background" /* 7150 */;
-import _modDef12946 from "module_12946" /* 12946 */;
-import _modDef12948 from "module_12948" /* 12948 */;
+import _modDef12950 from "module_12950" /* 12950 */;
+import _modDef12952 from "module_12952" /* 12952 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -39,7 +39,7 @@ function ActionSheetSelector(arg0) {
     children: items.map((type) => {
       closure_0 = type;
       const obj = {
-        icon: closure_1_7(closure_1_0(8588).WarningIcon, { size: "md" }),
+        icon: closure_1_7(closure_1_0(8593).WarningIcon, { size: "md" }),
         label: null,
         subLabel: null,
         onPress() {
@@ -76,7 +76,7 @@ let items = [
     label: "Blocked Domain",
     description: "Shows a warning for potentially malicious domains",
     show() {
-      return _modDef12948.show("https://example-phishing-site.com/malicious-page");
+      return _modDef12952.show("https://example-phishing-site.com/malicious-page");
     }
   },
   {
@@ -84,7 +84,7 @@ let items = [
     label: "Suspicious Download",
     description: "Warns users about potentially dangerous file downloads",
     show() {
-      return _modDef12946.show("https://suspicious-file.com/dangerous-file.exe");
+      return _modDef12950.show("https://suspicious-file.com/dangerous-file.exe");
     }
   },
   {
@@ -92,7 +92,7 @@ let items = [
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      return _modDef4763.pushLazy(asyncRequireImpl(15722, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
+      return _modDef4763.pushLazy(asyncRequireImpl(15725, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
     }
   }
 ];
@@ -102,7 +102,7 @@ const obj2 = {
   label: "Blocked Domain",
   description: "Shows a warning for potentially malicious domains",
   show() {
-    return _modDef12948.show("https://example-phishing-site.com/malicious-page");
+    return _modDef12952.show("https://example-phishing-site.com/malicious-page");
   }
 };
 const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsActionSheetsScreen.tsx");

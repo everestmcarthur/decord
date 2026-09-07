@@ -1,10 +1,10 @@
-// Module ID: 10175
-// Function ID: 10176
+// Module ID: 10180
+// Function ID: 10181
 // Name: useEnabledHarmTypesBitmaskForChannelAndAuthorId
 // Dependencies: [19, 1221, 1957, 4209, 1371, 7292, 504, 7300, 7295, 2]
 // Exports: useEnabledHarmTypesBitmaskForMessage
 
-// Module 10175 (useEnabledHarmTypesBitmaskForChannelAndAuthorId)
+// Module 10180 (useEnabledHarmTypesBitmaskForChannelAndAuthorId)
 import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 7292 */;
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;

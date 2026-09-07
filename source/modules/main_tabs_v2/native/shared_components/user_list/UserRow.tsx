@@ -1,12 +1,12 @@
-// Module ID: 10868
-// Function ID: 10869
+// Module ID: 10873
+// Function ID: 10874
 // Name: UserRowSubLabel
-// Dependencies: [19, 17, 4552, 4788, 7662, 1957, 4600, 4209, 10860, 1074, 21, 4560, 576, 4573, 38, 10869, 10870, 4258, 10871, 9042, 7663, 504, 1178, 4556, 4404, 10876, 7162, 8217, 1114, 10896, 4513, 4511, 4975, 1926, 7880, 5071, 8179, 1896, 8218, 10897, 9375, 5004, 7961, 4794, 9176, 10899, 9438, 10907, 9184, 5604, 10908, 5605, 2]
+// Dependencies: [19, 17, 4552, 4788, 7662, 1957, 4600, 4209, 10865, 1074, 21, 4560, 576, 4573, 38, 10874, 10875, 4258, 10876, 9047, 7663, 504, 1178, 4556, 4404, 10881, 7162, 8217, 1114, 10901, 4513, 4511, 4975, 1926, 7880, 5071, 8179, 1896, 8218, 10902, 9380, 5004, 7961, 4794, 9181, 10904, 9443, 10912, 9189, 5604, 10913, 5605, 2]
 
-// Module 10868 (UserRowSubLabel)
+// Module 10873 (UserRowSubLabel)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10876 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10881 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
@@ -15,7 +15,7 @@ import closure_7 from "initialize" /* 7662 */;
 import closure_8 from "ensureGuildLoaded" /* 1957 */;
 import closure_9 from "sortActivity" /* 4600 */;
 import closure_10 from "markAllUserIdListsStale" /* 4209 */;
-import { UserRowModes } from "UserRowModes" /* 10860 */;
+import { UserRowModes } from "UserRowModes" /* 10865 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -191,7 +191,7 @@ const memoResult = importAllResult.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== guildId.ACTIONS) {
-      let obj = { accessibilityActions: null, actions: "a" };
+      let obj = { accessibilityActions: null, actions: "Array" };
       obj[0] = items;
       return obj;
     } else {

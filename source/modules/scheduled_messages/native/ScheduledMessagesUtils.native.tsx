@@ -1,10 +1,10 @@
-// Module ID: 12211
-// Function ID: 12212
+// Module ID: 12215
+// Function ID: 12216
 // Name: editScheduledMessage
-// Dependencies: [5, 7777, 1114, 4153, 7845, 4763, 12212, 1896, 12222, 7847, 7844, 7848, 7195, 4527, 11713, 2]
+// Dependencies: [5, 7777, 1114, 4153, 7845, 4763, 12216, 1896, 12226, 7847, 7844, 7848, 7195, 4527, 11718, 2]
 // Exports: cancelScheduledMessage, openRescheduleMessageActionSheet, openScheduleMessageActionSheet, openScheduledMessageEditContentModal, pickScheduledMessageTime, sendScheduledMessageNow, showScheduledMessagesModal
 
-// Module 12211 (editScheduledMessage)
+// Module 12215 (editScheduledMessage)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import hooksDefault from "hooks" /* 4153 */;
@@ -330,12 +330,12 @@ export const pickScheduledMessageTime = function pickScheduledMessageTime(arg0) 
   openSendTimeActionSheet(obj);
 };
 export const showScheduledMessagesModal = function showScheduledMessagesModal() {
-  _modDef4763.pushLazy(asyncRequireImpl(12212, dependencyMap.paths), {}, "scheduled-messages-modal", { presentation: "modal" });
+  _modDef4763.pushLazy(asyncRequireImpl(12216, dependencyMap.paths), {}, "scheduled-messages-modal", { presentation: "modal" });
 };
 export const openScheduledMessageEditContentModal = function openScheduledMessageEditContentModal(closure_0) {
   let obj = _modDef4763;
   obj = { scheduledMessage: closure_0 };
-  obj.pushLazy(asyncRequireImpl(12222, dependencyMap.paths), obj, "scheduled-message-edit-content", { presentation: "modal" });
+  obj.pushLazy(asyncRequireImpl(12226, dependencyMap.paths), obj, "scheduled-message-edit-content", { presentation: "modal" });
 };
 export const openRescheduleMessageActionSheet = function openRescheduleMessageActionSheet(scheduledMessageId, sendAtTimestamp, channelId) {
   const _require = scheduledMessageId;

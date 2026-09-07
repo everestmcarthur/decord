@@ -1,13 +1,13 @@
-// Module ID: 9015
-// Function ID: 9016
+// Module ID: 9020
+// Function ID: 9021
 // Name: items
-// Dependencies: [4997, 12, 4998, 9016, 4551, 7987, 2]
+// Dependencies: [4997, 12, 4998, 9021, 4551, 7987, 2]
 // Exports: parseApplicationWidgetText, parseApplicationWidgetTextToAST
 
-// Module 9015 (items)
+// Module 9020 (items)
 import MarkupTextDefault from "MarkupText" /* 4551 */;
 import parseLinkDefault from "parseLink" /* 4998 */;
-import parseDefault from "parse" /* 9016 */;
+import parseDefault from "parse" /* 9021 */;
 import importDefaultResult from "combineMarkupRules" /* 4997 */;
 import importDefaultResult1 from "apply" /* 12 */;
 import importAllResult from "reactParserFor" /* 7987 */;

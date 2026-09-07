@@ -1,9 +1,9 @@
-// Module ID: 10916
-// Function ID: 10917
+// Module ID: 10921
+// Function ID: 10922
 // Name: ChannelDetailsNavigatorScreens
 // Dependencies: [7878, 2]
 
-// Module 10916 (ChannelDetailsNavigatorScreens)
+// Module 10921 (ChannelDetailsNavigatorScreens)
 import set from "set" /* 2 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
 

@@ -1,10 +1,10 @@
-// Module ID: 17376
-// Function ID: 17377
+// Module ID: 17379
+// Function ID: 17380
 // Name: GUILD_ROOM_SPATIAL_AUDIO_ENABLED
 // Dependencies: [502, 4718, 4722, 4723, 504, 4760, 2]
 // Exports: computeLivingRoomWorldPoints, livingRoomWorldPointToMediaEnginePoint, useGuildRoomSpatialAudio
 
-// Module 17376 (GUILD_ROOM_SPATIAL_AUDIO_ENABLED)
+// Module 17379 (GUILD_ROOM_SPATIAL_AUDIO_ENABLED)
 import initialize from "initialize" /* 504 */;
 import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4760 */;
 import closure_2 from "fetchFingerprint" /* 502 */;

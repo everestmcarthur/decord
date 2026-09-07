@@ -1,11 +1,11 @@
-// Module ID: 15017
-// Function ID: 15018
+// Module ID: 15020
+// Function ID: 15021
 // Name: BountyVideoEndAppStoreProvider
-// Dependencies: [19, 5444, 21, 15018, 11489, 11486, 15016, 5449, 7728, 4561, 4564, 7718, 5451, 11497, 2]
+// Dependencies: [19, 5444, 21, 15021, 11494, 11491, 15019, 5449, 7728, 4561, 4564, 7718, 5451, 11502, 2]
 // Exports: BountyVideoEndAppStoreProvider, canUseBountyVideoEndAppStoreOverlay, useBountyVideoEndAppStoreContext, useBountyVideoEndAppStoreOverlay
 
-// Module 15017 (BountyVideoEndAppStoreProvider)
-import fetchCustomAppStoreOverlayContent from "fetchCustomAppStoreOverlayContent" /* 15018 */;
+// Module 15020 (BountyVideoEndAppStoreProvider)
+import fetchCustomAppStoreOverlayContent from "fetchCustomAppStoreOverlayContent" /* 15021 */;
 import importAllResult from "noop" /* 19 */;
 import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5444 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -23,11 +23,11 @@ export const useBountyVideoEndAppStoreContext = function useBountyVideoEndAppSto
 export const canUseBountyVideoEndAppStoreOverlay = function canUseBountyVideoEndAppStoreOverlay(bounty, scrollAffordanceVariant) {
   if ("auto" !== scrollAffordanceVariant) {
     if (obj2.canOpenCustomAppStoreOverlayFromCta(bounty.cta)) {
-      const CustomAppStoreSqueezeBackExperiment = tmp6(11489).CustomAppStoreSqueezeBackExperiment;
+      const CustomAppStoreSqueezeBackExperiment = tmp6(11494).CustomAppStoreSqueezeBackExperiment;
       const obj = { location: null };
       obj[0] = QuestsExperimentLocations.VIDEO_MODAL_MOBILE;
       const config = CustomAppStoreSqueezeBackExperiment.getConfig(obj);
-      return config.enabled && tmp4 === tmp6(11489).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
+      return config.enabled && tmp4 === tmp6(11494).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
     }
     obj2 = fetchCustomAppStoreOverlayContent;
   }

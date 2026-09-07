@@ -1,17 +1,17 @@
-// Module ID: 16601
-// Function ID: 16602
+// Module ID: 16604
+// Function ID: 16605
 // Name: RoleColorCircle
-// Dependencies: [5, 32, 19, 17, 2015, 16587, 1074, 21, 4560, 576, 504, 7248, 4527, 1114, 3547, 7198, 4556, 7149, 9718, 7050, 6627, 5687, 5604, 7247, 16592, 6606, 5605, 4975, 2]
+// Dependencies: [5, 32, 19, 17, 2015, 16590, 1074, 21, 4560, 576, 504, 7248, 4527, 1114, 3547, 7198, 4556, 7149, 9723, 7050, 6627, 5687, 5604, 7247, 16597, 6606, 5605, 4975, 2]
 // Exports: default
 
-// Module 16601 (RoleColorCircle)
+// Module 16604 (RoleColorCircle)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_7 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_8 from "isProjectOwner" /* 16587 */;
+import closure_8 from "isProjectOwner" /* 16590 */;
 import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

@@ -1,10 +1,10 @@
-// Module ID: 12712
-// Function ID: 12713
+// Module ID: 12716
+// Function ID: 12717
 // Name: CreationIntent
-// Dependencies: [19, 17, 6980, 1074, 21, 4560, 5682, 576, 1483, 4962, 4971, 12683, 1242, 7123, 4556, 1114, 5687, 12324, 5692, 2]
+// Dependencies: [19, 17, 6980, 1074, 21, 4560, 5682, 576, 1483, 4962, 4971, 12687, 1242, 7123, 4556, 1114, 5687, 12328, 5692, 2]
 // Exports: default
 
-// Module 12712 (CreationIntent)
+// Module 12716 (CreationIntent)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useNavigation from "useNavigation" /* 1483 */;
@@ -127,7 +127,7 @@ export default function CreationIntent(arg0) {
   const items3 = [callback2(ref, obj1), , ];
   const obj4 = { style: tmp.sections, children: null };
   const obj5 = { hasIcons: true, children: null };
-  const tmp13 = trigger(12324);
+  const tmp13 = trigger(12328);
   const obj6 = { Icon: null, message: null, onPress: null };
   const tmp14 = AccountAgeTier10LargeBadge;
   if (closure_14) {
@@ -139,7 +139,7 @@ export default function CreationIntent(arg0) {
     };
     const items4 = [tmp8(tmp13, obj6), ];
     const obj7 = { Icon: null, message: null, onPress: null };
-    let tmp12Result = tmp12(12324);
+    let tmp12Result = tmp12(12328);
     obj7[0] = tmp2(5692).WorldIllocon;
     const intl6 = tmp2(1114).intl;
     obj7[1] = intl6.string(tmp2(1114).t.h9Q1lG);
@@ -158,7 +158,7 @@ export default function CreationIntent(arg0) {
     };
     const items5 = [tmp8(tmp13, obj6), ];
     const obj8 = { Icon: null, message: null, onPress: null };
-    tmp12Result = tmp12(12324);
+    tmp12Result = tmp12(12328);
     obj8[0] = tmp2(5692).ChairIllocon;
     const intl4 = tmp2(1114).intl;
     obj8[1] = intl4.string(tmp2(1114).t.uE7zcu);

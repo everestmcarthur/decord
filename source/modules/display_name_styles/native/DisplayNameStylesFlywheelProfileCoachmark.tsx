@@ -1,10 +1,10 @@
-// Module ID: 16801
-// Function ID: 16802
+// Module ID: 16804
+// Function ID: 16805
 // Name: CoachmarkImage
-// Dependencies: [19, 17, 1371, 1954, 21, 4560, 504, 4218, 1114, 2786, 11127, 5692, 2]
+// Dependencies: [19, 17, 1371, 1954, 21, 4560, 504, 4218, 1114, 2786, 11132, 5692, 2]
 // Exports: default
 
-// Module 16801 (CoachmarkImage)
+// Module 16804 (CoachmarkImage)
 import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -65,6 +65,6 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
     }
   }), items2);
   const obj2 = markAsDismissed(4218);
-  const coachmark = visible(11127).useCoachmark(visible.targetRef, memo);
+  const coachmark = visible(11132).useCoachmark(visible.targetRef, memo);
   return null;
 };

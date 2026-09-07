@@ -1,12 +1,12 @@
-// Module ID: 11002
-// Function ID: 11003
+// Module ID: 11007
+// Function ID: 11008
 // Name: SocialLayerStorefrontGiftProductDetails
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 7168, 10802, 1396, 8825, 4556, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 7168, 10807, 1396, 8830, 4556, 2]
 // Exports: default
 
-// Module 11002 (SocialLayerStorefrontGiftProductDetails)
+// Module 11007 (SocialLayerStorefrontGiftProductDetails)
 import ThemesDefault from "Themes" /* 576 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8825 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8830 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { PriceSetAssignmentPurchaseTypes as closure_6 } from "ME" /* 1074 */;
@@ -34,7 +34,7 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
   const tmp = callback2();
   let obj = getOrFetchApplication(7168);
   getOrFetchApplication = obj.useGetOrFetchApplication(sku.applicationId);
-  obj1 = getOrFetchApplication(10802);
+  obj1 = getOrFetchApplication(10807);
   obj = { sku, priceSetAssignmentPurchaseType: constants.GIFT };
   const userPrice = obj1.useFormattedSKUPrice(obj).userPrice;
   const items = [getOrFetchApplication];

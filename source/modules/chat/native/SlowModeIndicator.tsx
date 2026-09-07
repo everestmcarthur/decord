@@ -1,8 +1,8 @@
-// Module ID: 11983
-// Function ID: 11984
-// Dependencies: [19, 7687, 21, 4560, 576, 504, 7688, 4259, 11605, 5123, 4556, 2]
+// Module ID: 11987
+// Function ID: 11988
+// Dependencies: [19, 7687, 21, 4560, 576, 504, 7688, 4259, 11610, 5123, 4556, 2]
 
-// Module 11983
+// Module 11987
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "setCooldown" /* 7687 */;

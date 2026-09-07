@@ -1,15 +1,15 @@
-// Module ID: 17305
-// Function ID: 17306
+// Module ID: 17308
+// Function ID: 17309
 // Name: onClose
-// Dependencies: [19, 4381, 1098, 17306, 1074, 21, 1115, 4259, 17307, 1114, 7211, 5520, 4763, 1242, 1250, 5624, 17308, 17310, 17311, 15986, 10295, 4771, 4773, 7000, 2]
+// Dependencies: [19, 4381, 1098, 17309, 1074, 21, 1115, 4259, 17310, 1114, 7211, 5520, 4763, 1242, 1250, 5624, 17311, 17313, 17314, 15989, 10300, 4771, 4773, 7000, 2]
 // Exports: default
 
-// Module 17305 (onClose)
+// Module 17308 (onClose)
 import openAgeGateModal from "openAgeGateModal" /* 7211 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleConnectionOpen" /* 4381 */;
 import result from "result" /* 1098 */;
-import { ExistingUserAgeGateScreens as closure_7 } from "ExistingUserAgeGateScreens" /* 17306 */;
+import { ExistingUserAgeGateScreens as closure_7 } from "ExistingUserAgeGateScreens" /* 17309 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -115,7 +115,7 @@ export default function ExistingUserAgeGateModal(source) {
           fn = () => {
             let obj = arr(7211);
             obj.closeAgeGateModal();
-            obj = { key: "AGE_GATE_AGE_VERIFIED", icon: callback(17307), content: null };
+            obj = { key: "AGE_GATE_AGE_VERIFIED", icon: callback(17310), content: null };
             const intl = arr(1114).intl;
             obj[2] = intl.string(arr(1114).t.gUiIGZ);
             callback(4259).open(obj);
@@ -144,7 +144,7 @@ export default function ExistingUserAgeGateModal(source) {
         obj2[2] = { existing_user: true };
         obj2[3] = function render(arg0) {
           const merged = Object.assign(arg0);
-          return callback3(callback2(15986), {});
+          return callback3(callback2(15989), {});
         };
         obj[closure_1_7.Blocked] = obj2;
         const obj3 = { headerTitle: null, headerLeft: null, render: null };
@@ -152,7 +152,7 @@ export default function ExistingUserAgeGateModal(source) {
         const obj6 = source(closure_1_2[15]);
         obj3[1] = source(closure_1_2[15]).getHeaderBackButton(fn);
         obj3[2] = function render() {
-          return callback3(callback2(10295), { onClose: closure_10 });
+          return callback3(callback2(10300), { onClose: closure_10 });
         };
         obj[closure_1_7.NSFWGateGuild] = obj3;
         return obj;
@@ -246,7 +246,7 @@ export default function ExistingUserAgeGateModal(source) {
           fn = () => {
             let obj = arr(7211);
             obj.closeAgeGateModal();
-            obj = { key: "AGE_GATE_AGE_VERIFIED", icon: callback(17307), content: null };
+            obj = { key: "AGE_GATE_AGE_VERIFIED", icon: callback(17310), content: null };
             const intl = arr(1114).intl;
             obj[2] = intl.string(arr(1114).t.gUiIGZ);
             callback(4259).open(obj);
@@ -275,7 +275,7 @@ export default function ExistingUserAgeGateModal(source) {
         obj2[2] = { existing_user: true };
         obj2[3] = function render(arg0) {
           const merged = Object.assign(arg0);
-          return callback3(callback2(15986), {});
+          return callback3(callback2(15989), {});
         };
         obj[closure_1_7.Blocked] = obj2;
         const obj3 = { headerTitle: null, headerLeft: null, render: null };
@@ -283,7 +283,7 @@ export default function ExistingUserAgeGateModal(source) {
         const obj6 = source(closure_1_2[15]);
         obj3[1] = source(closure_1_2[15]).getHeaderBackButton(fn);
         obj3[2] = function render() {
-          return callback3(callback2(10295), { onClose: closure_10 });
+          return callback3(callback2(10300), { onClose: closure_10 });
         };
         obj[closure_1_7.NSFWGateGuild] = obj3;
         return obj;

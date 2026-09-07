@@ -1,11 +1,11 @@
-// Module ID: 9489
-// Function ID: 9490
+// Module ID: 9494
+// Function ID: 9495
 // Name: useShouldForcePipOrientation
-// Dependencies: [1956, 4576, 502, 1920, 4581, 9490, 504, 9476, 8332, 2]
+// Dependencies: [1956, 4576, 502, 1920, 4581, 9495, 504, 9481, 8332, 2]
 // Exports: useShouldForcePipOrientation
 
-// Module 9489 (useShouldForcePipOrientation)
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9490 */;
+// Module 9494 (useShouldForcePipOrientation)
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9495 */;
 import closure_3 from "participantFromServer" /* 1956 */;
 import closure_4 from "getParticipants" /* 4576 */;
 import closure_5 from "fetchFingerprint" /* 502 */;

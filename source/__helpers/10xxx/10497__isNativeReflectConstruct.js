@@ -1,17 +1,16 @@
 // Module ID: 10497
 // Function ID: 10498
 // Name: _isNativeReflectConstruct
-// Dependencies: [41, 42, 93, 95, 98, 10494, 10434, 10435, 10439]
+// Dependencies: [41, 42, 93, 95, 98, 10455]
 
 // Module 10497 (_isNativeReflectConstruct)
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10439 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 10455 */;
+import FRMergeDateRangeRefiner from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import closure_3 from "_possibleConstructorReturn" /* 93 */;
-import closure_4 from "_getPrototypeOf" /* 95 */;
+import closure_1 from "_possibleConstructorReturn" /* 93 */;
+import closure_2 from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FRTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,40 +30,50 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FRTimeUnitAgoFormatParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: null };
+      obj[0] = __esModule;
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class FRMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = closure_2(this, FRTimeUnitAgoFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(FRTimeUnitAgoFormatParser);
-    tmp3 = closure_3;
+    tmp = FRMergeDateRangeRefiner(this, FRMergeDateRangeRefiner);
+    tmp2 = closure_2;
+    obj = closure_2(FRMergeDateRangeRefiner);
+    tmp3 = closure_1;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(FRTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(FRMergeDateRangeRefiner, fn(_isNativeReflectConstruct2).default);
 const items = [
   {
-    key: "innerPattern",
-    value: function innerPattern() {
-      const regExp = new RegExp("il y a\\s*(" + FRTimeUnitAgoFormatParser(10494).TIME_UNITS_PATTERN + ")(?=(?:\\W|$))", "i");
-      return regExp;
-    }
-  },
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference) {
-      const parseDurationResult = FRTimeUnitAgoFormatParser(10494).parseDuration(arg1[1]);
-      const ParsingComponents = FRTimeUnitAgoFormatParser(10435).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, FRTimeUnitAgoFormatParser(10434).reverseDuration(FRTimeUnitAgoFormatParser(10494).parseDuration(arg1[1])));
+    key: "patternBetween",
+    value: function patternBetween() {
+      return /^\s*(à|a|au|-)\s*$/i;
     }
   }
 ];
 
-export default _createClass(FRTimeUnitAgoFormatParser, items);
+export default _createClass(FRMergeDateRangeRefiner, items);

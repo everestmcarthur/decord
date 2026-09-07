@@ -1,9 +1,9 @@
-// Module ID: 13996
-// Function ID: 13997
+// Module ID: 13999
+// Function ID: 14000
 // Name: mode
 // Dependencies: [1074, 504, 573, 2]
 
-// Module 13996 (mode)
+// Module 13999 (mode)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

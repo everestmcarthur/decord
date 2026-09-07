@@ -1,17 +1,17 @@
-// Module ID: 16121
-// Function ID: 16122
+// Module ID: 16124
+// Function ID: 16125
 // Name: AudienceItem
-// Dependencies: [19, 17, 2021, 21, 4560, 576, 10121, 7873, 504, 16122, 10119, 1114, 12530, 4556, 9178, 16126, 7311, 16129, 2]
+// Dependencies: [19, 17, 2021, 21, 4560, 576, 10126, 7873, 504, 16125, 10124, 1114, 12534, 4556, 9183, 16129, 7311, 16132, 2]
 // Exports: default, getAudienceItemHeight
 
-// Module 16121 (AudienceItem)
+// Module 16124 (AudienceItem)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7873 */;
-import map from "map" /* 10119 */;
-import getLayoutStyles from "getLayoutStyles" /* 10121 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 12530 */;
+import map from "map" /* 10124 */;
+import getLayoutStyles from "getLayoutStyles" /* 10126 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 12534 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "trackCommunicationDisabled" /* 2021 */;
@@ -92,7 +92,7 @@ let closure_12 = importAllResult.memo((voiceState) => {
   obj[9] = voiceState2.sessionId;
   obj[10] = channel;
   obj[11] = isGuest;
-  obj[1] = closure_6(channel(16122), obj, user.id);
+  obj[1] = closure_6(channel(16125), obj, user.id);
   return closure_6(tmp6, obj);
 });
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUsers.tsx");

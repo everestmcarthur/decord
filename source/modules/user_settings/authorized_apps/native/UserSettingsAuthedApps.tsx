@@ -1,10 +1,10 @@
-// Module ID: 14938
-// Function ID: 14939
+// Module ID: 14941
+// Function ID: 14942
 // Name: UserSettingsAuthedApps
-// Dependencies: [19, 17, 7107, 1074, 21, 576, 4560, 9241, 8886, 9431, 4515, 1611, 504, 1483, 1484, 7170, 4556, 1114, 5687, 1396, 5605, 12056, 6990, 6995, 2]
+// Dependencies: [19, 17, 7107, 1074, 21, 576, 4560, 9246, 8891, 9436, 4515, 1611, 504, 1483, 1484, 7170, 4556, 1114, 5687, 1396, 5605, 12060, 6990, 6995, 2]
 // Exports: DisclosureIcon, default
 
-// Module 14938 (UserSettingsAuthedApps)
+// Module 14941 (UserSettingsAuthedApps)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

@@ -1,18 +1,18 @@
-// Module ID: 16909
-// Function ID: 16910
+// Module ID: 16912
+// Function ID: 16913
 // Name: PictureInPictureGlobal
-// Dependencies: [32, 19, 17, 1956, 4576, 9485, 502, 1908, 1074, 4581, 21, 4560, 1178, 576, 9490, 504, 9476, 9475, 4767, 9489, 5126, 9492, 8332, 9590, 9594, 9604, 9623, 9631, 9535, 9591, 9488, 10089, 4296, 4561, 5682, 16910, 1611, 2]
+// Dependencies: [32, 19, 17, 1956, 4576, 9490, 502, 1908, 1074, 4581, 21, 4560, 1178, 576, 9495, 504, 9481, 9480, 4767, 9494, 5126, 9497, 8332, 9595, 9599, 9609, 9628, 9636, 9540, 9596, 9493, 10094, 4296, 4561, 5682, 16913, 1611, 2]
 // Exports: default
 
-// Module 16909 (PictureInPictureGlobal)
+// Module 16912 (PictureInPictureGlobal)
 import ThemesDefault from "Themes" /* 576 */;
-import PictureInPicturePositionsDefault from "PictureInPicturePositions" /* 9488 */;
+import PictureInPicturePositionsDefault from "PictureInPicturePositions" /* 9493 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "participantFromServer" /* 1956 */;
 import closure_9 from "getParticipants" /* 4576 */;
-import { useBestActiveChatInputContainerHeight as closure_10 } from "updateChatInputContainerHeight" /* 9485 */;
+import { useBestActiveChatInputContainerHeight as closure_10 } from "updateChatInputContainerHeight" /* 9490 */;
 import closure_11 from "fetchFingerprint" /* 502 */;
 import closure_12 from "_detectH265HardwareDecode" /* 1908 */;
 import { PictureInPicturePositions } from "ME" /* 1074 */;

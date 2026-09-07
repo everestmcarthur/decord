@@ -1,10 +1,10 @@
-// Module ID: 11882
-// Function ID: 11883
+// Module ID: 11887
+// Function ID: 11888
 // Name: useSafetyHubAccountStanding
 // Dependencies: [8430, 504, 2]
 // Exports: useSafetyHubAccountStanding
 
-// Module 11882 (useSafetyHubAccountStanding)
+// Module 11887 (useSafetyHubAccountStanding)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
 

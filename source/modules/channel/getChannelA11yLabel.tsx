@@ -1,10 +1,10 @@
-// Module ID: 9770
-// Function ID: 9771
+// Module ID: 9775
+// Function ID: 9776
 // Name: getChannelA11yLabel
 // Dependencies: [4209, 1371, 1074, 1114, 4713, 5062, 4404, 8135, 2]
 // Exports: default, getChannelA11yHint, getStatusLabel
 
-// Module 9770 (getChannelA11yLabel)
+// Module 9775 (getChannelA11yLabel)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import nameFromUser from "nameFromUser" /* 4404 */;
 import computeChannelName from "computeChannelName" /* 4713 */;

@@ -1,13 +1,13 @@
-// Module ID: 16961
-// Function ID: 16962
+// Module ID: 16964
+// Function ID: 16965
 // Name: useLaunchPadState
-// Dependencies: [19, 11464, 16962, 4296, 12033, 11353, 11354, 2]
+// Dependencies: [19, 11469, 16965, 4296, 12037, 11358, 11359, 2]
 // Exports: default
 
-// Module 16961 (useLaunchPadState)
+// Module 16964 (useLaunchPadState)
 import closure_3 from "noop" /* 19 */;
-import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 11464 */;
-import setLaunchPadPullTabExclusionRect from "setLaunchPadPullTabExclusionRect" /* 16962 */;
+import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 11469 */;
+import setLaunchPadPullTabExclusionRect from "setLaunchPadPullTabExclusionRect" /* 16965 */;
 
 const require = arg1;
 ({ LAUNCH_PAD_PULL_TAB_MAX_POSITION: c4, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: c5 } = LAUNCH_PAD_SPRING_CONFIG);

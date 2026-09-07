@@ -1,9 +1,9 @@
-// Module ID: 17617
-// Function ID: 17618
+// Module ID: 17620
+// Function ID: 17621
 // Name: updateGuildRole
 // Dependencies: [5, 1074, 1272, 7323, 573, 2]
 
-// Module 17617 (updateGuildRole)
+// Module 17620 (updateGuildRole)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 1074 */;

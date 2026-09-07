@@ -1,10 +1,10 @@
-// Module ID: 16697
-// Function ID: 16698
+// Module ID: 16700
+// Function ID: 16701
 // Name: HistoricalIndexingHeader
-// Dependencies: [19, 2025, 7878, 21, 4560, 12358, 5607, 4556, 1114, 2]
+// Dependencies: [19, 2025, 7878, 21, 4560, 12362, 5607, 4556, 1114, 2]
 // Exports: default
 
-// Module 16697 (HistoricalIndexingHeader)
+// Module 16700 (HistoricalIndexingHeader)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "_getSystemLocale" /* 2025 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;

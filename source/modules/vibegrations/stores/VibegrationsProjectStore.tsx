@@ -1,10 +1,10 @@
-// Module ID: 16587
-// Function ID: 16588
+// Module ID: 16590
+// Function ID: 16591
 // Name: isProjectOwner
 // Dependencies: [32, 1371, 7248, 504, 573, 2]
-// Exports: canPublishProject
+// Exports: canPublishProject, canRemixProject
 
-// Module 16587 (isProjectOwner)
+// Module 16590 (isProjectOwner)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import frozen from "frozen" /* 7248 */;
@@ -852,4 +852,22 @@ export const canPublishProject = function canPublishProject(owner_user_id) {
     const tmp6 = frozen.isProjectPublic(owner_user_id) && null != owner_user_id.guild_id;
   }
   return tmp3;
+};
+export const canRemixProject = function canRemixProject(owner_user_id) {
+  const currentUser = authStore.getCurrentUser();
+  let id;
+  if (currentUser != null) {
+    id = currentUser.id;
+  }
+  let isProjectSharedResult = owner_user_id.owner_user_id === id;
+  if (!isProjectSharedResult) {
+    isProjectSharedResult = frozen.isProjectShared(owner_user_id);
+    const obj = frozen;
+  }
+  if (!isProjectSharedResult) {
+    const obj2 = frozen;
+    isProjectSharedResult = frozen.isProjectPublic(owner_user_id) && null != owner_user_id.guild_id;
+    const tmp8 = frozen.isProjectPublic(owner_user_id) && null != owner_user_id.guild_id;
+  }
+  return isProjectSharedResult;
 };

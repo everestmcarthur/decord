@@ -1,10 +1,10 @@
-// Module ID: 9179
-// Function ID: 9180
+// Module ID: 9184
+// Function ID: 9185
 // Name: usePlayingGameActivities
-// Dependencies: [19, 502, 4600, 5279, 504, 9180, 2]
+// Dependencies: [19, 502, 4600, 5279, 504, 9185, 2]
 // Exports: default
 
-// Module 9179 (usePlayingGameActivities)
+// Module 9184 (usePlayingGameActivities)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "fetchFingerprint" /* 502 */;
 import closure_5 from "sortActivity" /* 4600 */;

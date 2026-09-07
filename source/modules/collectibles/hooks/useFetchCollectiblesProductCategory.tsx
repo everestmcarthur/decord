@@ -1,11 +1,11 @@
-// Module ID: 11082
-// Function ID: 11083
+// Module ID: 11087
+// Function ID: 11088
 // Name: useFetchCollectiblesProductCategory
-// Dependencies: [32, 7542, 10735, 563, 2]
+// Dependencies: [32, 7542, 10740, 563, 2]
 // Exports: useFetchCollectiblesProductCategory
 
-// Module 11082 (useFetchCollectiblesProductCategory)
-import setDefault from "set" /* 10735 */;
+// Module 11087 (useFetchCollectiblesProductCategory)
+import setDefault from "set" /* 10740 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "updateCategoriesAndProducts" /* 7542 */;
 

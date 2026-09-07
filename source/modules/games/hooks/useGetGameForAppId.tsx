@@ -1,10 +1,10 @@
-// Module ID: 9181
-// Function ID: 9182
+// Module ID: 9186
+// Function ID: 9187
 // Name: useGetGameForAppId
 // Dependencies: [19, 1916, 7168, 7309, 1369, 504, 2]
 // Exports: default, useGetGamesForAppIds
 
-// Module 9181 (useGetGameForAppId)
+// Module 9186 (useGetGameForAppId)
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7168 */;
 import importDefaultResult1 from "importDefaultResult1" /* 7309 */;
 import closure_3 from "noop" /* 19 */;

@@ -1,15 +1,15 @@
-// Module ID: 14720
-// Function ID: 14721
+// Module ID: 14723
+// Function ID: 14724
 // Name: SettingsAgeGroupHeader
-// Dependencies: [19, 17, 7975, 1074, 21, 4560, 576, 8411, 2024, 4556, 1114, 2946, 14682, 11468, 14721, 14689, 2]
+// Dependencies: [19, 17, 7975, 1074, 21, 4560, 576, 8411, 2024, 4556, 1114, 2946, 14685, 11473, 14724, 14692, 2]
 // Exports: default
 
-// Module 14720 (SettingsAgeGroupHeader)
+// Module 14723 (SettingsAgeGroupHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2946 */;
 import Text from "Text" /* 4556 */;
-import _modDef14689 from "module_14689" /* 14689 */;
+import _modDef14692 from "module_14692" /* 14692 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
@@ -43,7 +43,7 @@ let closure_9 = createCacheKey.createStyles(createCacheKey);
 const result = require("set").fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
-  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14682).useIsTinyBroncoSettingsEnabled();
+  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14685).useIsTinyBroncoSettingsEnabled();
   let items = [isTinyBroncoSettingsEnabled];
   const node = React.useMemo(() => {
     let obj = isTinyBroncoSettingsEnabled(closure_1_2[13]);
@@ -64,5 +64,5 @@ export default function SettingsAgeGroupScreen() {
     obj[1] = TinyBroncoAgeGroupHeader;
     return obj.createList(obj);
   }, items);
-  return callback(_modDef14689, { node });
+  return callback(_modDef14692, { node });
 };

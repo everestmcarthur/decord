@@ -1,16 +1,16 @@
-// Module ID: 17503
-// Function ID: 17504
+// Module ID: 17506
+// Function ID: 17507
 // Name: updateVoiceSettings
-// Dependencies: [502, 13995, 1957, 2011, 13996, 1074, 573, 7118, 2]
+// Dependencies: [502, 13998, 1957, 2011, 13999, 1074, 573, 7118, 2]
 
-// Module 17503 (updateVoiceSettings)
+// Module 17506 (updateVoiceSettings)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import initializeDefault from "initialize" /* 7118 */;
 import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "bitrate" /* 13995 */;
+import closure_3 from "bitrate" /* 13998 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import closure_5 from "handleConnectionOpen" /* 2011 */;
-import closure_6 from "mode" /* 13996 */;
+import closure_6 from "mode" /* 13999 */;
 import { VideoQualityMode } from "ME" /* 1074 */;
 
 function updateVoiceSettings() {

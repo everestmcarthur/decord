@@ -1,10 +1,10 @@
-// Module ID: 16161
-// Function ID: 16162
+// Module ID: 16164
+// Function ID: 16165
 // Name: GuildThemeNuxActionSheet
-// Dependencies: [5, 32, 19, 17, 4381, 4448, 1954, 21, 3, 4560, 576, 16162, 4491, 504, 4527, 1114, 7150, 16163, 4556, 5685, 5688, 1178, 4975, 2]
+// Dependencies: [5, 32, 19, 17, 4381, 4448, 1954, 21, 3, 4560, 576, 16165, 4491, 504, 4527, 1114, 7150, 16166, 4556, 5685, 5688, 1178, 4975, 2]
 // Exports: default
 
-// Module 16161 (GuildThemeNuxActionSheet)
+// Module 16164 (GuildThemeNuxActionSheet)
 import timestampDefault from "timestamp" /* 3 */;
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
@@ -49,8 +49,8 @@ export default function GuildThemeNuxActionSheet(guildId) {
   let stateFromStores;
   let callback1;
   const tmp = callback5();
-  [tmp5, c2] = callback2(React.useState(guildId(16162).getInitialGuildThemeNuxSelection), 2);
-  const tmp4 = callback2(React.useState(guildId(16162).getInitialGuildThemeNuxSelection), 2);
+  [tmp5, c2] = callback2(React.useState(guildId(16165).getInitialGuildThemeNuxSelection), 2);
+  const tmp4 = callback2(React.useState(guildId(16165).getInitialGuildThemeNuxSelection), 2);
   [tmp7, c3] = callback2(React.useState(null), 2);
   const tmp6 = callback2(React.useState(null), 2);
   [tmp9, c4] = callback2(React.useState(false), 2);
@@ -194,7 +194,7 @@ export default function GuildThemeNuxActionSheet(guildId) {
   obj[1] = intl2.string(guildId(1114).t.cpT0Cq);
   obj[2] = callback3;
   obj[3] = tmp.container;
-  const items7 = [callback3(markAsDismissed(16163), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
+  const items7 = [callback3(markAsDismissed(16166), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
   obj = { accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl3 = tmp2(1114).intl;
   obj[4] = intl3.string(guildId(1114).t.Q9zFy9);

@@ -1,10 +1,10 @@
-// Module ID: 15191
-// Function ID: 15192
-// Dependencies: [19, 17, 1085, 21, 4560, 15102, 15092, 15113, 5447, 7728, 4495, 4411, 15091, 15192, 4556, 1114, 5587, 15196, 15197, 15150, 2]
+// Module ID: 15194
+// Function ID: 15195
+// Dependencies: [19, 17, 1085, 21, 4560, 15105, 15095, 15116, 5447, 7728, 4495, 4411, 15094, 15195, 4556, 1114, 5587, 15199, 15200, 15153, 2]
 
-// Module 15191
+// Module 15194
 import useThemeDefault from "useTheme" /* 4495 */;
-import _modDef15150 from "module_15150" /* 15150 */;
+import _modDef15153 from "module_15153" /* 15153 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ThemeTypes } from "sum" /* 1085 */;
@@ -16,11 +16,11 @@ let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ primaryContent: { alignItems: "center", flexDirection: "row" }, wreathImage: { height: 35, marginRight: 4, width: 35 }, logo: { marginTop: 2 }, getRewardLabel: { opacity: 0.7 } });
 const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
-  let obj = questCreative(15102);
+  let obj = questCreative(15105);
   const questDockQuest = obj.useQuestDockQuest();
-  obj1 = questCreative(15102);
+  obj1 = questCreative(15105);
   questCreative = obj1.useQuestCreative(questDockQuest);
-  let obj2 = questCreative(15092);
+  let obj2 = questCreative(15095);
   const items = [questCreative];
   const callback = importAllResult.useCallback(() => {
     let obj = closure_1_1(closure_1_2[7]);
@@ -40,9 +40,9 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
   }
   const tmp11 = callback();
   tmp8 = useThemeDefault();
-  const questGameLogotypeAssetUrl = questCreative(15091).useQuestGameLogotypeAssetUrl(questDockQuest);
+  const questGameLogotypeAssetUrl = questCreative(15094).useQuestGameLogotypeAssetUrl(questDockQuest);
   const questBarHeroBlurhash = questDockQuest.config.assets.questBarHeroBlurhash;
-  let tmp7Result = tmp7(15192);
+  let tmp7Result = tmp7(15195);
   obj = { blurHash: questBarHeroBlurhash, collapsedContent: null, withPressableDisclosure: true, onDisclosurePress: null, onSubmenuPress: null, children: null };
   obj = { style: tmp11.getRewardLabel, variant: "text-sm/medium", color: "interactive-text-active", children: null };
   const intl = tmp(1114).intl;
@@ -53,14 +53,14 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
   obj1 = { style: tmp11.primaryContent, children: null };
   tmp7Result = tmp7(5587);
   if (LIGHT === tmp10.DARK) {
-    let tmp7Result1 = tmp7(15196);
+    let tmp7Result1 = tmp7(15199);
   } else {
-    tmp7Result1 = tmp7(15197);
+    tmp7Result1 = tmp7(15200);
   }
   obj2 = { source: tmp7Result1, resizeMode: "contain", style: tmp11.wreathImage };
   const items1 = [closure_6(tmp7Result, obj2), ];
   obj3 = { assetUrl: questGameLogotypeAssetUrl, height: 36, maxWidth: 120, style: tmp11.logo };
-  items1[1] = closure_6(_modDef15150, obj3);
+  items1[1] = closure_6(_modDef15153, obj3);
   obj1[1] = items1;
   obj[5] = closure_7(View, obj1);
   return closure_6(tmp7Result, obj);

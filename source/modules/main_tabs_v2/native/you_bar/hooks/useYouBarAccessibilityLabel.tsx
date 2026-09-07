@@ -1,10 +1,10 @@
-// Module ID: 16366
-// Function ID: 16367
+// Module ID: 16369
+// Function ID: 16370
 // Name: useYouBarAccessibilityLabel
-// Dependencies: [4582, 1957, 4199, 4600, 4209, 5279, 4579, 1074, 4404, 16367, 16368, 1935, 10880, 8165, 504, 10878, 10879, 10886, 1114, 10888, 2]
+// Dependencies: [4582, 1957, 4199, 4600, 4209, 5279, 4579, 1074, 4404, 16370, 16371, 1935, 10885, 8165, 504, 10883, 10884, 10891, 1114, 10893, 2]
 // Exports: useYouBarAccessibilityLabel
 
-// Module 16366 (useYouBarAccessibilityLabel)
+// Module 16369 (useYouBarAccessibilityLabel)
 import closure_3 from "reset" /* 4582 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
@@ -25,16 +25,16 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
     id = stateFromStores.id;
   }
   let obj = id(4404);
-  dependencyMap = _require(16367).useYouBarActivityStatusEnabled("YouBar");
-  const obj2 = _require(16367);
-  const isYouBarGuildTagEnabled = _require(16368).useIsYouBarGuildTagEnabled("YouBar");
+  dependencyMap = _require(16370).useYouBarActivityStatusEnabled("YouBar");
+  const obj2 = _require(16370);
+  const isYouBarGuildTagEnabled = _require(16371).useIsYouBarGuildTagEnabled("YouBar");
   const CustomStatusSetting = _require(1935).CustomStatusSetting;
   const setting = CustomStatusSetting.useSetting();
   let text;
   if (setting != null) {
     text = setting.text;
   }
-  let tmp3Result = tmp3(10880);
+  let tmp3Result = tmp3(10885);
   let tmp7 = null;
   if ("" !== text) {
     tmp7 = text;
@@ -55,15 +55,15 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
     tmp8 = tag;
   }
   tag = tmp8;
-  const obj3 = _require(16368);
+  const obj3 = _require(16371);
   let items = [closure_8, closure_3, closure_7, tag, closure_5, closure_9, closure_6];
   return _require(504).useStateFromStores(items, () => {
     if (null != callback) {
       const status = closure_1_8.getStatus();
-      let obj = callback(10878);
+      let obj = callback(10883);
       const items = [closure_3, closure_1_7];
       const discoverableApplicationStream = obj.getDiscoverableApplicationStream(id, items);
-      obj1 = callback(10879);
+      obj1 = callback(10884);
       obj = { userId: null };
       obj[0] = id;
       obj = { ChannelStore: null, PermissionStore: null, VoiceStateStore: null };
@@ -83,7 +83,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
               if (null != discoverableApplicationStream) {
                 let name;
                 if (activities != null) {
-                  const found = activities.find(id(10886));
+                  const found = activities.find(id(10891));
                   if (found != null) {
                     name = found.name;
                   }
@@ -105,7 +105,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                   });
                 }
                 if (null != found1) {
-                  text = id(10888)(found1, true).text;
+                  text = id(10893)(found1, true).text;
                 } else {
                   text = null;
                   if (null != voiceChannel) {

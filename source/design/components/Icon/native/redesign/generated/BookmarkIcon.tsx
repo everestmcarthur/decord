@@ -1,14 +1,14 @@
-// Module ID: 11707
-// Function ID: 11708
+// Module ID: 11712
+// Function ID: 11713
 // Name: BookmarkIcon
-// Dependencies: [19, 21, 576, 4261, 11708, 2]
+// Dependencies: [19, 21, 576, 4261, 11713, 2]
 // Exports: BookmarkIcon
 
-// Module 11707 (BookmarkIcon)
+// Module 11712 (BookmarkIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 11708 */;
+import registerAsset from "registerAsset" /* 11713 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// Module ID: 13132
-// Function ID: 13133
+// Module ID: 13136
+// Function ID: 13137
 // Name: useTrackPdpClick
-// Dependencies: [19, 1074, 8767, 8178, 7554, 1242, 2]
+// Dependencies: [19, 1074, 8772, 8178, 7554, 1242, 2]
 // Exports: useTrackPdpClick
 
-// Module 13132 (useTrackPdpClick)
+// Module 13136 (useTrackPdpClick)
 import closure_3 from "noop" /* 19 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 

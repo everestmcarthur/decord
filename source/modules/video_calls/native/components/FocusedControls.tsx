@@ -1,16 +1,16 @@
-// Module ID: 9677
-// Function ID: 9678
+// Module ID: 9682
+// Function ID: 9683
 // Name: FocusedControlsHeader
-// Dependencies: [19, 17, 1074, 21, 4560, 1178, 4296, 9678, 4561, 7123, 1477, 8453, 9679, 9683, 9474, 4962, 7162, 7182, 9633, 9691, 1242, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 1178, 4296, 9683, 4561, 7123, 1477, 8456, 9684, 9688, 9479, 4962, 7162, 7182, 9638, 9696, 1242, 2]
 
-// Module 9677 (FocusedControlsHeader)
+// Module 9682 (FocusedControlsHeader)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import _mod4296 from "module_4296" /* 4296 */;
 import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4962 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
-import useRevealProviderValue from "useRevealProviderValue" /* 9474 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9679 */;
-import nativeEventEmitter from "nativeEventEmitter" /* 9683 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
+import useRevealProviderValue from "useRevealProviderValue" /* 9479 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9684 */;
+import nativeEventEmitter from "nativeEventEmitter" /* 9688 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
@@ -49,7 +49,7 @@ function FocusedControlsHeader(reveal) {
   fn2.__initData = closure_12;
   const animatedStyle = obj1.useAnimatedStyle(fn2);
   obj = { style: animatedStyle, children: null };
-  obj1 = { top: !derivedValue(9678)(), left: isTouchingLeftScreenEdge, right: true, children: callback(closure_5, obj2) };
+  obj1 = { top: !derivedValue(9683)(), left: isTouchingLeftScreenEdge, right: true, children: callback(closure_5, obj2) };
   obj[1] = callback(reveal(7123).SafeAreaPaddingView, obj1);
   return callback(derivedValue(4296).View, obj);
 }
@@ -101,7 +101,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
   const globalStatusIndicatorState = obj.useGlobalStatusIndicatorState();
   obj1 = nativeEventEmitter;
   globalStatusIndicatorHeightSharedValue = obj1.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
-  const tmp6 = globalStatusIndicatorHeightSharedValue(9678)();
+  const tmp6 = globalStatusIndicatorHeightSharedValue(9683)();
   dependencyMap = tmp6;
   reveal = reveal.useContext(useRevealProviderValue.RevealContext).reveal;
   const isScreenReaderEnabled = SCREEN_READER_ENABLED_GETTER.useIsScreenReaderEnabled();
@@ -154,7 +154,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
   const animatedStyle = _mod4296.useAnimatedStyle(fn);
   const tmpResult1 = _mod4296;
   analyticsLocations = globalStatusIndicatorHeightSharedValue(7162)(tmp5(7182).FOCUSED_VOICE_CONTROLS).analyticsLocations;
-  callback = tmp5(9633)();
+  callback = tmp5(9638)();
   if (containerStyle == null) {
     containerStyle = derivedValue.absoluteFill;
   }
@@ -198,7 +198,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
       obj1[5] = onDrawerClose;
       obj1[6] = reveal;
       obj1[7] = children;
-      tmp17Result = callback(tmp5(9691), obj1);
+      tmp17Result = callback(tmp5(9696), obj1);
     }
   }
   items1[2] = tmp17Result;

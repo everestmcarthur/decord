@@ -1,10 +1,10 @@
-// Module ID: 16747
-// Function ID: 16748
+// Module ID: 16750
+// Function ID: 16751
 // Name: FriendsScreen
-// Dependencies: [19, 17, 7658, 4209, 21, 4560, 576, 1483, 7162, 7182, 1611, 504, 16748, 1874, 8179, 16749, 16752, 16444, 4505, 1114, 5605, 10994, 5692, 4975, 10861, 11896, 2]
+// Dependencies: [19, 17, 7658, 4209, 21, 4560, 576, 1483, 7162, 7182, 1611, 504, 16751, 1874, 8179, 16752, 16755, 16447, 4505, 1114, 5605, 10999, 5692, 4975, 10866, 11901, 2]
 // Exports: default
 
-// Module 16747 (FriendsScreen)
+// Module 16750 (FriendsScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

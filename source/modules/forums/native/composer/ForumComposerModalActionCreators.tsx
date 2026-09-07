@@ -1,10 +1,10 @@
-// Module ID: 10251
-// Function ID: 10252
+// Module ID: 10256
+// Function ID: 10257
 // Name: openCreateForumPostModal
-// Dependencies: [7767, 4763, 10252, 1896, 2]
+// Dependencies: [7767, 4763, 10257, 1896, 2]
 // Exports: closeCreateForumPostModal, openCreateForumPostModal
 
-// Module 10251 (openCreateForumPostModal)
+// Module 10256 (openCreateForumPostModal)
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
@@ -23,7 +23,7 @@ export const openCreateForumPostModal = function openCreateForumPostModal(guildI
     const result1 = tmp(7767).trackForumCreateNewPostStarted(obj);
     const tmpResult = tmp(7767);
   }
-  _modDef4763.pushLazy(asyncRequireImpl(10252, dependencyMap.paths), guildId, c3);
+  _modDef4763.pushLazy(asyncRequireImpl(10257, dependencyMap.paths), guildId, c3);
 };
 export const closeCreateForumPostModal = function closeCreateForumPostModal() {
   let flag = arg0;

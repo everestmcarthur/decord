@@ -1,10 +1,10 @@
-// Module ID: 9177
-// Function ID: 9178
+// Module ID: 9182
+// Function ID: 9183
 // Name: apexExperiment
 // Dependencies: [1433, 2]
 // Exports: useIsDisplayNameStylesFlywheelSettersEnabled, useIsDisplayNameStylesFlywheelViewersEnabled
 
-// Module 9177 (apexExperiment)
+// Module 9182 (apexExperiment)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 

@@ -1,16 +1,16 @@
-// Module ID: 11996
-// Function ID: 11997
+// Module ID: 12000
+// Function ID: 12001
 // Name: action
-// Dependencies: [32, 5459, 4781, 1074, 1935, 9303, 4257, 7764, 4211, 7456, 4740, 2]
+// Dependencies: [32, 5459, 4781, 1074, 1935, 9308, 4257, 7764, 4211, 7456, 4740, 2]
 // Exports: handleLegacyCommands
 
-// Module 11996 (action)
+// Module 12000 (action)
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import MAX_REACTIONS from "MAX_REACTIONS" /* 4211 */;
 import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
 import trackInviteDefault from "trackInvite" /* 7456 */;
 import checkReactionResponse from "checkReactionResponse" /* 7764 */;
-import _modDef9303 from "module_9303" /* 9303 */;
+import _modDef9308 from "module_9308" /* 9308 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "getEmojiToGroupId" /* 5459 */;
 import closure_5 from "reinjectEphemerals" /* 4781 */;
@@ -83,7 +83,7 @@ obj4 = {
   action(arg0, channel) {
     channel = channel.channel;
     if (null != channel.guild_id) {
-      obj = _modDef9303;
+      obj = _modDef9308;
       obj.changeNickname(channel.guild_id, channel.id, closure_8, arg0);
       return { content: "" };
     }

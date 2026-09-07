@@ -1,9 +1,9 @@
-// Module ID: 13995
-// Function ID: 13996
+// Module ID: 13998
+// Function ID: 13999
 // Name: bitrate
 // Dependencies: [4585, 504, 573, 2]
 
-// Module 13995 (bitrate)
+// Module 13998 (bitrate)
 import set from "set" /* 2 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

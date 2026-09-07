@@ -1,10 +1,10 @@
-// Module ID: 13515
-// Function ID: 13516
+// Module ID: 13519
+// Function ID: 13520
 // Name: handlePress
-// Dependencies: [17, 4232, 21, 4560, 576, 4527, 13516, 1896, 1114, 3063, 4556, 2]
+// Dependencies: [17, 4232, 21, 4560, 576, 4527, 13520, 1896, 1114, 3063, 4556, 2]
 // Exports: default
 
-// Module 13515 (handlePress)
+// Module 13519 (handlePress)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -23,7 +23,7 @@ function handlePress() {
   const intl = getSystemLocale.intl;
   obj = { premiumGroupProductName: callback() };
   obj[0] = intl.formatToPlainString(messagesProxyDefault["5xN/C1"], obj);
-  obj.openLazy(asyncRequireImpl(13516, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(13520, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 let closure_5 = SubscriptionStatusTypes.getPremiumGroupProductName;

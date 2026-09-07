@@ -1,14 +1,14 @@
-// Module ID: 15738
-// Function ID: 15739
+// Module ID: 15741
+// Function ID: 15742
 // Name: BugIcon
-// Dependencies: [19, 21, 576, 4261, 15739, 2]
+// Dependencies: [19, 21, 576, 4261, 15742, 2]
 // Exports: BugIcon
 
-// Module 15738 (BugIcon)
+// Module 15741 (BugIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 15739 */;
+import registerAsset from "registerAsset" /* 15742 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

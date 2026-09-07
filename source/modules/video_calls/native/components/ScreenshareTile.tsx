@@ -1,18 +1,18 @@
-// Module ID: 9591
-// Function ID: 9592
+// Module ID: 9596
+// Function ID: 9597
 // Name: ScreenShareTile
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 9592, 6655, 1178, 9593, 4556, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 9597, 6655, 1178, 9598, 4556, 1114, 2]
 // Exports: default
 
-// Module 9591 (ScreenShareTile)
+// Module 9596 (ScreenShareTile)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9592 */;
-import registerAssetDefault from "registerAsset" /* 9593 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9597 */;
+import registerAssetDefault from "registerAsset" /* 9598 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { NOOP } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;

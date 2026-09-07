@@ -1,10 +1,10 @@
-// Module ID: 10272
-// Function ID: 10273
+// Module ID: 10277
+// Function ID: 10278
 // Name: ExpressionPickerActionSheet
-// Dependencies: [19, 1957, 7151, 10273, 21, 4296, 4427, 1609, 504, 10274, 4527, 1477, 1611, 5682, 1115, 10275, 7150, 10276, 2]
+// Dependencies: [19, 1957, 7151, 10278, 21, 4296, 4427, 1609, 504, 10279, 4527, 1477, 1611, 5682, 1115, 10280, 7150, 10281, 2]
 // Exports: default
 
-// Module 10272 (ExpressionPickerActionSheet)
+// Module 10277 (ExpressionPickerActionSheet)
 import initialize from "initialize" /* 504 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
@@ -15,7 +15,7 @@ import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 5682 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
-import { STICKER_FORMATS } from "PADDING_HORIZONTAL" /* 10273 */;
+import { STICKER_FORMATS } from "PADDING_HORIZONTAL" /* 10278 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 require = arg1;
@@ -40,7 +40,7 @@ export default function ExpressionPickerActionSheet(arg0) {
     if (isIOSResult) {
       obj = { animatedSheetIndex: null, followSystemKeyboard: true };
       obj[0] = sharedValue;
-      isIOSResult = callback(tmp7(10275), obj);
+      isIOSResult = callback(tmp7(10280), obj);
     }
     obj = { children: null };
     const items1 = [isIOSResult, ];
@@ -77,7 +77,7 @@ export default function ExpressionPickerActionSheet(arg0) {
     obj2[9] = initialGifQuery;
     obj2[10] = STICKER_FORMATS;
     obj2[11] = diff;
-    obj1[5] = callback(tmp7(10276), obj2);
+    obj1[5] = callback(tmp7(10281), obj2);
     items1[1] = callback(tmp2(7150).BottomSheet, obj1);
     obj[0] = items1;
     tmp15Result = closure_9(closure_8, obj);

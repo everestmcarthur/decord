@@ -1,10 +1,10 @@
-// Module ID: 13391
-// Function ID: 13392
+// Module ID: 13395
+// Function ID: 13396
 // Name: presentBuyNitroPurchaseSuccess
 // Dependencies: [19, 7421, 1373, 21, 1114, 4906, 4910, 2]
 // Exports: presentBuyNitroPurchaseSuccess
 
-// Module 13391 (presentBuyNitroPurchaseSuccess)
+// Module 13395 (presentBuyNitroPurchaseSuccess)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useAlertStore from "useAlertStore" /* 4906 */;

@@ -1,10 +1,10 @@
-// Module ID: 13386
-// Function ID: 13387
+// Module ID: 13390
+// Function ID: 13391
 // Name: BuyNitroPlanPriceDetails
 // Dependencies: [19, 17, 7237, 1373, 1085, 21, 4560, 576, 504, 7234, 4556, 1114, 2]
 // Exports: default
 
-// Module 13386 (BuyNitroPlanPriceDetails)
+// Module 13390 (BuyNitroPlanPriceDetails)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

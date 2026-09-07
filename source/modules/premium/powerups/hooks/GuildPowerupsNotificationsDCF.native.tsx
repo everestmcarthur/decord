@@ -1,14 +1,14 @@
-// Module ID: 12501
-// Function ID: 12502
+// Module ID: 12505
+// Function ID: 12506
 // Name: usePerksCoachmarkDCF
-// Dependencies: [7388, 1943, 12495, 12502, 2]
+// Dependencies: [7388, 1943, 12499, 12506, 2]
 // Exports: useBoostToUnlockCoachmarkDCF, useExpiringPowerupCoachmarkDCF, useGameServerPricingCoachmarkDCF, useGuildPowerupNotificationDCF, useNewGamesCoachmarkDC, useNewPerkAvailableCoachmarkDCF, usePerksCoachmarkDCF
 
-// Module 12501 (usePerksCoachmarkDCF)
+// Module 12505 (usePerksCoachmarkDCF)
 import set from "set" /* 2 */;
 import DismissibleContent from "DismissibleContent" /* 1943 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7388 */;
-import getUnitIdDefault from "getUnitId" /* 12502 */;
+import getUnitIdDefault from "getUnitId" /* 12506 */;
 
 const result = set.fileFinishedImporting("modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx");
 
@@ -37,7 +37,7 @@ export const useGuildPowerupNotificationDCF = function useGuildPowerupNotificati
   if (arg0) {
     prop = tmp(1943).DismissibleContent.GUILD_POWERUP_NOTIFICATION;
   }
-  obj = { cooldownDurationMs: tmp(12495).GUILD_POWERUP_NOTIFICATION_COOLDOWN };
+  obj = { cooldownDurationMs: tmp(12499).GUILD_POWERUP_NOTIFICATION_COOLDOWN };
   return obj.useSelectedTimeRecurringDismissibleContent(prop, obj);
 };
 export function useNewGamesCoachmarkDC(arg0) {
@@ -67,7 +67,7 @@ export const useBoostToUnlockCoachmarkDCF = function useBoostToUnlockCoachmarkDC
       prop = tmp2(1943).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK;
     }
   }
-  obj = { cooldownDurationMs: tmp2(12495).BOOST_TO_UNLOCK_COACHMARK_COOLDOWN, numTimesToRecur: tmp2(12495).BOOST_TO_UNLOCK_COACHMARK_MAX_TIMES_TO_RECUR };
+  obj = { cooldownDurationMs: tmp2(12499).BOOST_TO_UNLOCK_COACHMARK_COOLDOWN, numTimesToRecur: tmp2(12499).BOOST_TO_UNLOCK_COACHMARK_MAX_TIMES_TO_RECUR };
   return useSelectedDismissibleContent.useSelectedTimeRecurringGuildDismissibleContent(prop, id, obj, GUILD_HEADER_TOOLTIPS);
 };
 export function useExpiringPowerupCoachmarkDCF(arg0, c0) {

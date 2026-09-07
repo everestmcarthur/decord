@@ -1,10 +1,10 @@
-// Module ID: 16368
-// Function ID: 16369
+// Module ID: 16371
+// Function ID: 16372
 // Name: apexExperiment
 // Dependencies: [1433, 2]
 // Exports: getIsYouBarGuildTagEnabled, useIsYouBarGuildTagEnabled
 
-// Module 16368 (apexExperiment)
+// Module 16371 (apexExperiment)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 

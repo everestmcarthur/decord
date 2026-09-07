@@ -1,16 +1,16 @@
-// Module ID: 9986
-// Function ID: 9987
+// Module ID: 9991
+// Function ID: 9992
 // Name: VolumeSlider
-// Dependencies: [19, 17, 4585, 21, 1115, 4560, 576, 4262, 9987, 8278, 5015, 1114, 5101, 2]
+// Dependencies: [19, 17, 4585, 21, 1115, 4560, 576, 4262, 9992, 8278, 5015, 1114, 5101, 2]
 // Exports: default
 
-// Module 9986 (VolumeSlider)
+// Module 9991 (VolumeSlider)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
 import _modDef8278 from "module_8278" /* 8278 */;
-import VoiceXIcon from "VoiceXIcon" /* 9987 */;
+import VoiceXIcon from "VoiceXIcon" /* 9992 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { MAX_EMBEDDED_VOLUME_PERCEPTUAL as closure_4 } from "DesktopSources" /* 4585 */;
 import jsxProd from "jsxProd" /* 21 */;

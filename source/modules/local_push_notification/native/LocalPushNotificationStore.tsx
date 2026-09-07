@@ -1,17 +1,17 @@
-// Module ID: 13715
-// Function ID: 13716
+// Module ID: 13719
+// Function ID: 13720
 // Name: set
-// Dependencies: [1979, 5413, 13716, 1074, 9687, 4153, 1114, 504, 573, 2]
+// Dependencies: [1979, 5413, 13720, 1074, 9692, 4153, 1114, 504, 573, 2]
 
-// Module 13715 (set)
+// Module 13719 (set)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import hooksDefault from "hooks" /* 4153 */;
-import NativeModulesDefault from "NativeModules" /* 9687 */;
+import NativeModulesDefault from "NativeModules" /* 9692 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;
 import closure_4 from "recomputeGuild" /* 5413 */;
-import LocalNotificationTypes from "LocalNotificationTypes" /* 13716 */;
+import LocalNotificationTypes from "LocalNotificationTypes" /* 13720 */;
 import { VerificationLevels } from "ME" /* 1074 */;
 import set from "set" /* 2 */;
 
@@ -47,9 +47,9 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
             set.add(userInfo);
           }
         }
-        const result = callback(9687).cancelLocalNotifications(userInfo);
-        const obj = callback(9687);
-        const result1 = callback(9687).cancelLocalNotifications(userInfo);
+        const result = callback(9692).cancelLocalNotifications(userInfo);
+        const obj = callback(9692);
+        const result1 = callback(9692).cancelLocalNotifications(userInfo);
         set.delete(userInfo);
       });
     });
@@ -81,8 +81,8 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
               obj[2] = guild.name;
               const intl = getSystemLocale.intl;
               obj[3] = intl.string(getSystemLocale.t["hrDBa+"]);
-              const result = tmp15(9687).scheduleLocalNotification(obj);
-              const tmp15Result = tmp15(9687);
+              const result = tmp15(9692).scheduleLocalNotification(obj);
+              const tmp15Result = tmp15(9692);
             }
             tmp15 = importDefault;
           }

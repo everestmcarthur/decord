@@ -1,22 +1,22 @@
-// Module ID: 17753
-// Function ID: 17754
+// Module ID: 17756
+// Function ID: 17757
 // Name: DeleteButton
-// Dependencies: [5, 32, 19, 17, 4209, 1371, 17752, 15205, 1074, 21, 4560, 576, 5524, 13898, 5123, 4518, 1178, 1114, 1611, 17754, 4713, 8593, 17756, 9816, 17757, 2]
+// Dependencies: [5, 32, 19, 17, 4209, 1371, 17755, 15208, 1074, 21, 4560, 576, 5524, 13901, 5123, 4518, 1178, 1114, 1611, 17757, 4713, 8598, 17759, 9821, 17760, 2]
 
-// Module 17753 (DeleteButton)
+// Module 17756 (DeleteButton)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import TrashIcon from "TrashIcon" /* 4518 */;
 import PressableBase from "PressableBase" /* 5123 */;
-import stylesDefault from "styles" /* 13898 */;
+import stylesDefault from "styles" /* 13901 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "markAllUserIdListsStale" /* 4209 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "resetImperatively" /* 17752 */;
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 15205 */;
+import closure_9 from "resetImperatively" /* 17755 */;
+import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 15208 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importAllResult from "noop" /* 19 */;
@@ -173,7 +173,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     return applyArgumentsResult;
   }
   let tmp = callback4();
-  const tmp4 = first(13898)();
+  const tmp4 = first(13901)();
   const tmp5 = callback(closure_9.useNameState(), 2);
   first = tmp5[0];
   dependencyMap = tmp6;
@@ -238,7 +238,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
         callback3(id.id);
         dependencyMap(benefitType(4713).computeChannelName(id, first4, first3));
       };
-      let tmp25 = callback2(tmp2(17754), obj);
+      let tmp25 = callback2(tmp2(17757), obj);
       let tmp26 = callback2;
     } else {
       obj = { style: null, showTopContainer: false, multiline: false, maxLength: null, value: null, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null };
@@ -249,7 +249,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
       obj[5] = intl9.string(tmp20(1114).t["kV54/Y"]);
       obj[6] = tmp6;
       obj[8] = tmp20(1178).ClearButtonVisibility.WITH_CONTENT;
-      tmp25 = callback2(tmp20(8593).FormInput, obj);
+      tmp25 = callback2(tmp20(8598).FormInput, obj);
       tmp26 = callback2;
     }
     obj = { style: null, children: null };
@@ -269,7 +269,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
       return applyArgumentsResult;
     };
     obj1[4] = benefitType.listingId;
-    const items = [tmp26(tmp2(17756), obj1), ];
+    const items = [tmp26(tmp2(17759), obj1), ];
     let obj2 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
     const items1 = [tmp.scrollContainer, ];
     const obj3 = { paddingBottom: null };
@@ -279,10 +279,10 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp4.header;
     obj4[1] = stringResult1;
-    const items2 = [tmp26(tmp2(9816), obj4), tmp25, , , , , ];
+    const items2 = [tmp26(tmp2(9821), obj4), tmp25, , , , , ];
     const obj5 = { style: null, children: null };
     obj5[0] = tmp4.header;
-    let tmp2Result = tmp2(9816);
+    let tmp2Result = tmp2(9821);
     const intl7 = tmp20(1114).intl;
     obj5[1] = intl7.string(tmp20(1114).t.sMOuuS);
     items2[2] = tmp26(tmp2Result, obj5);
@@ -296,10 +296,10 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
       callback(emojiId.emojiId);
       callback2(emojiId.emojiName);
     };
-    items2[3] = tmp26(tmp2(17757), obj6);
+    items2[3] = tmp26(tmp2(17760), obj6);
     const obj8 = { style: null, children: null };
     obj8[0] = tmp4.header;
-    tmp2Result = tmp2(9816);
+    tmp2Result = tmp2(9821);
     const intl8 = tmp20(1114).intl;
     obj8[1] = intl8.string(tmp20(1114).t["74JctW"]);
     items2[4] = tmp26(tmp2Result, obj8);
@@ -309,7 +309,7 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     obj9[5] = first3;
     obj9[6] = tmp9[1];
     obj9[7] = stringResult2;
-    items2[5] = tmp26(tmp20(8593).FormInput, obj9);
+    items2[5] = tmp26(tmp20(8598).FormInput, obj9);
     let tmp26Result = null;
     if (null != benefitType.onDelete) {
       const obj10 = { onDelete: null };

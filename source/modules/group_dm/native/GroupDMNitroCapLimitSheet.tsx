@@ -1,17 +1,17 @@
-// Module ID: 11596
-// Function ID: 11597
+// Module ID: 11601
+// Function ID: 11602
 // Name: GroupDMNitroCapLimitSheet
-// Dependencies: [19, 17, 4552, 11593, 1074, 21, 4560, 576, 504, 11591, 1242, 4527, 11597, 9967, 11598, 7150, 4556, 1114, 4975, 8662, 2]
+// Dependencies: [19, 17, 4552, 11598, 1074, 21, 4560, 576, 504, 11596, 1242, 4527, 11602, 9972, 11603, 7150, 4556, 1114, 4975, 8667, 2]
 // Exports: default
 
-// Module 11596 (GroupDMNitroCapLimitSheet)
+// Module 11601 (GroupDMNitroCapLimitSheet)
 import ThemesDefault from "Themes" /* 576 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9967 */;
-import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11598 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9972 */;
+import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11603 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { MAX_GROUP_DM_NITRO_PARTICIPANTS as closure_6 } from "MAX_GROUP_DM_NITRO_PARTICIPANTS" /* 11593 */;
+import { MAX_GROUP_DM_NITRO_PARTICIPANTS as closure_6 } from "MAX_GROUP_DM_NITRO_PARTICIPANTS" /* 11598 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -40,7 +40,7 @@ export default function GroupDMNitroCapLimitSheet(location) {
   let obj = _location(504);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  obj1 = _location(11591);
+  obj1 = _location(11596);
   const groupDMNitroAudience = obj1.useGroupDMNitroAudience();
   importDefault = tmp6;
   let obj2 = React;
@@ -51,14 +51,14 @@ export default function GroupDMNitroCapLimitSheet(location) {
     obj.track(closure_1_7.PREMIUM_PROMOTION_OPENED, obj);
     callback(4527).hideActionSheet();
     const obj3 = callback(4527);
-    const result = _location(11597).navigateToPremiumHomePage();
+    const result = _location(11602).navigateToPremiumHomePage();
   }, items1);
   const tmp9 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants.IN_APP);
   let loading = "acquire" === groupDMNitroAudience;
   if (loading) {
     loading = tmp9.loading;
   }
-  obj = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: _location(11591).GroupDMNitroAcquisitionStrategy.CHECKOUT, onCheckout: tmp9.onPress };
+  obj = { audience: groupDMNitroAudience, location: _location, acquisitionStrategy: _location(11596).GroupDMNitroAcquisitionStrategy.CHECKOUT, onCheckout: tmp9.onPress };
   const tmp8ResultResult = useGroupDMNitroUpsellActionDefault(obj);
   dependencyMap = tmp8ResultResult;
   const items2 = ["upgrade" === groupDMNitroAudience, tmp8ResultResult];
@@ -84,9 +84,9 @@ export default function GroupDMNitroCapLimitSheet(location) {
   const intl3 = tmp2(1114).intl;
   const obj4 = { number: closure_6 };
   const tmp8Result = useGroupDMNitroUpsellActionDefault;
-  obj6[0] = intl3.string(_location(11591).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
-  const tmp2Result = _location(11591);
-  obj6[3] = callback(_location(8662).NitroWheelIcon, { style: tmp.nitroWheelIcon, color: ThemesDefault.unsafe_rawColors.WHITE, size: "custom" });
+  obj6[0] = intl3.string(_location(11596).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
+  const tmp2Result = _location(11596);
+  obj6[3] = callback(_location(8667).NitroWheelIcon, { style: tmp.nitroWheelIcon, color: ThemesDefault.unsafe_rawColors.WHITE, size: "custom" });
   obj6[5] = !stateFromStores;
   obj6[6] = loading;
   let tmp16 = null;

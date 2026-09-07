@@ -1,9 +1,9 @@
-// Module ID: 11172
-// Function ID: 11173
+// Module ID: 11177
+// Function ID: 11178
 // Name: metadata
 // Dependencies: [2]
 
-// Module 11172 (metadata)
+// Module 11177 (metadata)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("../discord_assets/assets/premium/tiered_tenure_badging/mobile_diamond_badge_medium.png.js");

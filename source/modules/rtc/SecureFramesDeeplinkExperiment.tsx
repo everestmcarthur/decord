@@ -1,10 +1,10 @@
-// Module ID: 9160
-// Function ID: 9161
+// Module ID: 9165
+// Function ID: 9166
 // Name: useSecureFramesDeeplinkExperiment
 // Dependencies: [4475, 2]
 // Exports: getSecureFramesDeeplinkExperiment, useSecureFramesDeeplinkExperiment
 
-// Module 9160 (useSecureFramesDeeplinkExperiment)
+// Module 9165 (useSecureFramesDeeplinkExperiment)
 import createExperimentDefault from "createExperiment" /* 4475 */;
 
 const items = [{ id: 1, label: "Enabled.", config: { enabled: true } }];

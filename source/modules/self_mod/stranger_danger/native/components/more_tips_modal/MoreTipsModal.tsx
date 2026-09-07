@@ -1,19 +1,19 @@
-// Module ID: 11375
-// Function ID: 11376
+// Module ID: 11380
+// Function ID: 11381
 // Name: MoreTipsModalScreen
-// Dependencies: [19, 17, 10915, 1074, 21, 4560, 576, 11376, 4556, 1114, 11377, 7377, 4763, 6992, 1178, 1611, 563, 11370, 7602, 7607, 7000, 2]
+// Dependencies: [19, 17, 10920, 1074, 21, 4560, 576, 11381, 4556, 1114, 11382, 7377, 4763, 6992, 1178, 1611, 563, 11375, 7602, 7607, 7000, 2]
 // Exports: default
 
-// Module 11375 (MoreTipsModalScreen)
+// Module 11380 (MoreTipsModalScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import Text from "Text" /* 4556 */;
-import SafetyTipsContainerDefault from "SafetyTipsContainer" /* 11376 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11377 */;
+import SafetyTipsContainerDefault from "SafetyTipsContainer" /* 11381 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11382 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 10915 */;
+import closure_6 from "handleConnectionOpen" /* 10920 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

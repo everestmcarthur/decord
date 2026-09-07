@@ -1,10 +1,10 @@
-// Module ID: 14960
-// Function ID: 14961
+// Module ID: 14963
+// Function ID: 14964
 // Name: trackEmptyStateCardClicked
 // Dependencies: [1074, 1242, 2]
 // Exports: trackEmptyStateCardClicked
 
-// Module 14960 (trackEmptyStateCardClicked)
+// Module 14963 (trackEmptyStateCardClicked)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

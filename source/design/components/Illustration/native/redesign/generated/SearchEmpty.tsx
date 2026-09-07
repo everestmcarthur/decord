@@ -1,10 +1,10 @@
-// Module ID: 10317
-// Function ID: 10318
+// Module ID: 10322
+// Function ID: 10323
 // Name: getSearchEmptySource
-// Dependencies: [19, 17, 21, 8233, 10318, 10319, 10320, 4411, 2]
+// Dependencies: [19, 17, 21, 8233, 10323, 10324, 10325, 4411, 2]
 // Exports: SearchEmpty, getSearchEmptySource, useSearchEmptySource
 
-// Module 10317 (getSearchEmptySource)
+// Module 10322 (getSearchEmptySource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import getIllustrationSource from "getIllustrationSource" /* 8233 */;
@@ -19,13 +19,13 @@ export const getSearchEmptySource = function getSearchEmptySource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(10318);
+      return callback(10323);
     },
     darker() {
-      return callback(10319);
+      return callback(10324);
     },
     light() {
-      return callback(10320);
+      return callback(10325);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -34,13 +34,13 @@ export const useSearchEmptySource = function useSearchEmptySource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(10318);
+      return callback(10323);
     },
     darker() {
-      return callback(10319);
+      return callback(10324);
     },
     light() {
-      return callback(10320);
+      return callback(10325);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -49,13 +49,13 @@ export const SearchEmpty = function SearchEmpty(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(10318);
+      return callback(10323);
     },
     darker() {
-      return callback(10319);
+      return callback(10324);
     },
     light() {
-      return callback(10320);
+      return callback(10325);
     }
   };
   obj = {};

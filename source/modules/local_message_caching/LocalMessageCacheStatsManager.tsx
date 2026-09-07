@@ -1,9 +1,9 @@
-// Module ID: 17890
-// Function ID: 17891
+// Module ID: 17893
+// Function ID: 17894
 // Name: makeLogLine
 // Dependencies: [1074, 7488, 1242, 7118, 2]
 
-// Module 17890 (makeLogLine)
+// Module 17893 (makeLogLine)
 import set from "set" /* 2 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import initializeDefault from "initialize" /* 7118 */;

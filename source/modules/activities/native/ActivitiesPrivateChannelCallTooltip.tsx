@@ -1,10 +1,10 @@
-// Module ID: 12780
-// Function ID: 12781
+// Module ID: 12784
+// Function ID: 12785
 // Name: ActivitiesPrivateChannelCallTooltip
 // Dependencies: [19, 17, 4552, 1920, 21, 4560, 504, 4296, 4561, 1178, 1114, 4975, 2]
 // Exports: default
 
-// Module 12780 (ActivitiesPrivateChannelCallTooltip)
+// Module 12784 (ActivitiesPrivateChannelCallTooltip)
 import noopAll from "noop" /* 19 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import { View } from "get ActivityIndicator" /* 17 */;

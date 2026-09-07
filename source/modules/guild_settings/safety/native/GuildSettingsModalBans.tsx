@@ -1,17 +1,17 @@
-// Module ID: 17650
-// Function ID: 17651
+// Module ID: 17653
+// Function ID: 17654
 // Name: ConnectedGuildSettingsModalBans
-// Dependencies: [32, 19, 17, 1979, 1371, 9064, 21, 4560, 576, 504, 7049, 1935, 5517, 5520, 9063, 5605, 1178, 5612, 1114, 7190, 4258, 7195, 7039, 17651, 7050, 8232, 7055, 7040, 2]
+// Dependencies: [32, 19, 17, 1979, 1371, 9069, 21, 4560, 576, 504, 7049, 1935, 5517, 5520, 9068, 5605, 1178, 5612, 1114, 7190, 4258, 7195, 7039, 17654, 7050, 8232, 7055, 7040, 2]
 // Exports: default
 
-// Module 17650 (ConnectedGuildSettingsModalBans)
+// Module 17653 (ConnectedGuildSettingsModalBans)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "createGuildRecordFromRust" /* 1979 */;
 import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "handleFormInit" /* 9064 */;
+import closure_9 from "handleFormInit" /* 9069 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

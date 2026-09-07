@@ -1,9 +1,9 @@
-// Module ID: 13794
-// Function ID: 13795
+// Module ID: 13797
+// Function ID: 13798
 // Name: PrivateChannelSubtitle
-// Dependencies: [19, 17, 1956, 1979, 4199, 1074, 21, 4560, 576, 13795, 13796, 4556, 13797, 504, 9937, 4713, 9820, 1114, 11590, 1178, 5062, 13799, 10011, 10031, 5123, 2]
+// Dependencies: [19, 17, 1956, 1979, 4199, 1074, 21, 4560, 576, 13798, 13799, 4556, 13800, 504, 9942, 4713, 9825, 1114, 11595, 1178, 5062, 13802, 10016, 10036, 5123, 2]
 
-// Module 13794 (PrivateChannelSubtitle)
+// Module 13797 (PrivateChannelSubtitle)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -11,12 +11,12 @@ import Button from "Button" /* 1178 */;
 import computeChannelNameDefault from "computeChannelName" /* 4713 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
 import PressableBase from "PressableBase" /* 5123 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 9937 */;
-import registerAssetDefault from "registerAsset" /* 10031 */;
-import id from "id" /* 13795 */;
-import idDefault from "id" /* 13795 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13796 */;
-import OnGoingCallTimerDefault from "OnGoingCallTimer" /* 13797 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 9942 */;
+import registerAssetDefault from "registerAsset" /* 10036 */;
+import id from "id" /* 13798 */;
+import idDefault from "id" /* 13798 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13799 */;
+import OnGoingCallTimerDefault from "OnGoingCallTimer" /* 13800 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "participantFromServer" /* 1956 */;
 import closure_5 from "createGuildRecordFromRust" /* 1979 */;
@@ -40,7 +40,7 @@ function PrivateChannelSubtitle(channel) {
     tmp6Result = tmp6(tmp7(4556).Text, obj);
   }
   items[1] = tmp6Result;
-  tmp6Result = state === tmp7(13795).CallStates.CONNECTED;
+  tmp6Result = state === tmp7(13798).CallStates.CONNECTED;
   if (tmp6Result) {
     obj1 = { channelId: null, style: null };
     obj1[0] = channel.id;

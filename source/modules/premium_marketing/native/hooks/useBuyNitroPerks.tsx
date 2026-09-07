@@ -1,10 +1,10 @@
-// Module ID: 13360
-// Function ID: 13361
+// Module ID: 13364
+// Function ID: 13365
 // Name: useBuyNitroPerks
-// Dependencies: [19, 7432, 1373, 672, 7393, 1114, 8757, 13361, 9371, 13362, 13363, 5106, 9377, 13365, 9375, 13366, 9221, 13367, 9373, 13368, 8662, 10114, 13369, 12528, 13370, 13371, 10110, 13373, 5071, 13374, 13375, 13377, 13378, 13380, 13381, 8717, 13383, 8862, 2]
+// Dependencies: [19, 7432, 1373, 672, 7393, 1114, 8762, 13365, 9376, 13366, 13367, 5106, 9382, 13369, 9380, 13370, 9226, 13371, 9378, 13372, 8667, 10119, 13373, 12532, 13374, 13375, 10115, 13377, 5071, 13378, 13379, 13381, 13382, 13384, 13385, 8722, 13387, 8867, 2]
 // Exports: default
 
-// Module 13360 (useBuyNitroPerks)
+// Module 13364 (useBuyNitroPerks)
 import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 7393 */;
 import closure_3 from "noop" /* 19 */;
 import { Gradients } from "items" /* 7432 */;

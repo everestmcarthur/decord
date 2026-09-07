@@ -1,14 +1,14 @@
-// Module ID: 13279
-// Function ID: 13280
+// Module ID: 13283
+// Function ID: 13284
 // Name: VideoDenyIcon
-// Dependencies: [19, 21, 576, 4261, 13280, 2]
+// Dependencies: [19, 21, 576, 4261, 13284, 2]
 // Exports: VideoDenyIcon
 
-// Module 13279 (VideoDenyIcon)
+// Module 13283 (VideoDenyIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 13280 */;
+import registerAsset from "registerAsset" /* 13284 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

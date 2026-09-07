@@ -1,9 +1,9 @@
-// Module ID: 8906
-// Function ID: 8907
+// Module ID: 8911
+// Function ID: 8912
 // Name: InputButton
 // Dependencies: [109, 19, 17, 21, 4560, 576, 4980, 6621, 4976, 2]
 
-// Module 8906 (InputButton)
+// Module 8911 (InputButton)
 import ThemesDefault from "Themes" /* 576 */;
 import CollapsingText from "CollapsingText" /* 4976 */;
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4980 */;

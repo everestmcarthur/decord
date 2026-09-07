@@ -1,10 +1,10 @@
-// Module ID: 15981
-// Function ID: 15982
+// Module ID: 15984
+// Function ID: 15985
 // Name: ExternalLink
 // Dependencies: [19, 17, 21, 4560, 576, 6944, 1483, 6974, 1114, 4556, 5433, 4975, 2]
 // Exports: default
 
-// Module 15981 (ExternalLink)
+// Module 15984 (ExternalLink)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

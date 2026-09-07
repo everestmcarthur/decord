@@ -1,10 +1,10 @@
-// Module ID: 12403
-// Function ID: 12404
+// Module ID: 12407
+// Function ID: 12408
 // Name: ApplicationCommandOptionItem
-// Dependencies: [32, 19, 17, 2021, 21, 4560, 576, 5441, 5123, 1114, 1178, 504, 12231, 5587, 4556, 8593, 8272, 12404, 2]
+// Dependencies: [32, 19, 17, 2021, 21, 4560, 576, 5441, 5123, 1114, 1178, 504, 12235, 5587, 4556, 8598, 8272, 12408, 2]
 // Exports: default
 
-// Module 12403 (ApplicationCommandOptionItem)
+// Module 12407 (ApplicationCommandOptionItem)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
@@ -404,7 +404,7 @@ export default function _default(command) {
   }
   items5[3] = tmp19Result;
   obj[5] = items5;
-  const items8 = [c10(closure_6, obj), callback2(command(8593).FormDivider, { style: tmp.applicationDescriptionDivider }), callback2(stateFromStores, { command, option: currentOption, optionState: tmp17 }), callback2(command(8593).FormDivider, { style: tmp.applicationDescriptionDivider })];
+  const items8 = [c10(closure_6, obj), callback2(command(8598).FormDivider, { style: tmp.applicationDescriptionDivider }), callback2(stateFromStores, { command, option: currentOption, optionState: tmp17 }), callback2(command(8598).FormDivider, { style: tmp.applicationDescriptionDivider })];
   obj[1] = items8;
   return c10(onPressOption, obj);
 };

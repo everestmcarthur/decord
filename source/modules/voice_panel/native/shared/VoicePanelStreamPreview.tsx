@@ -1,10 +1,10 @@
-// Module ID: 13038
-// Function ID: 13039
+// Module ID: 13042
+// Function ID: 13043
 // Name: VoicePanelStreamPreview
-// Dependencies: [19, 17, 4582, 502, 21, 4296, 4975, 4560, 576, 10062, 504, 4612, 4561, 7073, 4556, 1114, 2]
+// Dependencies: [19, 17, 4582, 502, 21, 4296, 4975, 4560, 576, 10067, 504, 4612, 4561, 7073, 4556, 1114, 2]
 // Exports: VoicePanelStreamPreview
 
-// Module 13038 (VoicePanelStreamPreview)
+// Module 13042 (VoicePanelStreamPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -51,7 +51,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(10062)(guildId, channelId, ownerId).previewUrl;
+  const previewUrl = stream(10067)(guildId, channelId, ownerId).previewUrl;
   let obj = mode(504);
   const items = [closure_4, closure_5];
   const items1 = [stream];
@@ -113,7 +113,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   const obj3 = { style: animatedStyle, layout, children: null };
   const tmp11 = closure_7;
   const tmp12 = closure_8;
-  const tmp4 = stream(10062);
+  const tmp4 = stream(10067);
   if (stateFromStores) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.ownStreamTextContainer;

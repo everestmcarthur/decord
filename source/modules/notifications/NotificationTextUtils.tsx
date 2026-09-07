@@ -1,10 +1,10 @@
-// Module ID: 10085
-// Function ID: 10086
+// Module ID: 10090
+// Function ID: 10091
 // Name: shouldNotifyBase
-// Dependencies: [1956, 4200, 7219, 4201, 4768, 1961, 1957, 1979, 4583, 4209, 2011, 4381, 5279, 4741, 1951, 1371, 10086, 1074, 9505, 1113, 4771, 1935, 1384, 10087, 10088, 4798, 4418, 10089, 7685, 4713, 1114, 8264, 4712, 7270, 7986, 3, 7302, 4404, 1894, 7682, 10090, 504, 2]
+// Dependencies: [1956, 4200, 7219, 4201, 4768, 1961, 1957, 1979, 4583, 4209, 2011, 4381, 5279, 4741, 1951, 1371, 10091, 1074, 9510, 1113, 4771, 1935, 1384, 10092, 10093, 4798, 4418, 10094, 7685, 4713, 1114, 8264, 4712, 7270, 7986, 3, 7302, 4404, 1894, 7682, 10095, 504, 2]
 // Exports: allowInAppNotifications, makeTextChatNotification, shouldIncludeSelectedChannel, shouldNotify, shouldNotifyForForumThreadCreation, shouldNotifyForReaction, shouldNotifyForSelectedChannel, useAllowInAppNotifications
 
-// Module 10085 (shouldNotifyBase)
+// Module 10090 (shouldNotifyBase)
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import hasFlag from "hasFlag" /* 1384 */;
@@ -18,9 +18,9 @@ import isMentioned from "isMentioned" /* 4798 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
 import isForwardMessage from "isForwardMessage" /* 7302 */;
 import FSI from "FSI" /* 7685 */;
-import isChannelCurrentlyVisible from "isChannelCurrentlyVisible" /* 10087 */;
-import computeThreadNotificationSetting from "computeThreadNotificationSetting" /* 10088 */;
-import useFocusModeEnabled from "useFocusModeEnabled" /* 10090 */;
+import isChannelCurrentlyVisible from "isChannelCurrentlyVisible" /* 10092 */;
+import computeThreadNotificationSetting from "computeThreadNotificationSetting" /* 10093 */;
+import useFocusModeEnabled from "useFocusModeEnabled" /* 10095 */;
 import closure_3 from "participantFromServer" /* 1956 */;
 import closure_4 from "initialize" /* 4200 */;
 import closure_5 from "processChannel" /* 7219 */;
@@ -37,9 +37,9 @@ import closure_16 from "filterPlayingActivities" /* 5279 */;
 import closure_17 from "updateUserGuildSettingsInternal" /* 4741 */;
 import closure_18 from "handleRequiredAction" /* 1951 */;
 import closure_19 from "mergeGuildAvatar" /* 1371 */;
-import closure_20 from "initialize" /* 10086 */;
+import closure_20 from "initialize" /* 10091 */;
 import ME from "ME" /* 1074 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9505 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 9510 */;
 import { ThreadMemberFlags } from "AbortCodes" /* 1113 */;
 
 require = arg1;
@@ -431,8 +431,8 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
       const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
       let tmp5 = null == rootNavigationRef || !rootNavigationRef.isReady();
       if (!tmp5) {
-        tmp5 = !tmp3(10089).isChannelFocused();
-        const tmp3Result = tmp3(10089);
+        tmp5 = !tmp3(10094).isChannelFocused();
+        const tmp3Result = tmp3(10094);
       }
       flag = tmp5;
       const obj3 = getRootNavigationRef;

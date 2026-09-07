@@ -1,10 +1,10 @@
-// Module ID: 11819
-// Function ID: 11820
+// Module ID: 11824
+// Function ID: 11825
 // Name: PopoutCheck
-// Dependencies: [32, 19, 17, 1385, 502, 2021, 2015, 1979, 11820, 5408, 1074, 21, 4560, 576, 1114, 5407, 4511, 4556, 4495, 12, 4262, 5283, 11566, 9438, 1178, 1396, 4411, 38, 7162, 7182, 504, 1242, 4740, 5520, 7150, 7204, 4975, 4527, 11569, 8179, 2]
+// Dependencies: [32, 19, 17, 1385, 502, 2021, 2015, 1979, 11825, 5408, 1074, 21, 4560, 576, 1114, 5407, 4511, 4556, 4495, 12, 4262, 5283, 11571, 9443, 1178, 1396, 4411, 38, 7162, 7182, 504, 1242, 4740, 5520, 7150, 7204, 4975, 4527, 11574, 8179, 2]
 // Exports: default
 
-// Module 11819 (PopoutCheck)
+// Module 11824 (PopoutCheck)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -20,7 +20,7 @@ import closure_8 from "fetchFingerprint" /* 502 */;
 import closure_9 from "trackCommunicationDisabled" /* 2021 */;
 import closure_10 from "createGuildRoleRecordFromRust" /* 2015 */;
 import closure_11 from "createGuildRecordFromRust" /* 1979 */;
-import closure_12 from "map" /* 11820 */;
+import closure_12 from "map" /* 11825 */;
 import { OperatorTypes } from "OperatorTypes" /* 5408 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;

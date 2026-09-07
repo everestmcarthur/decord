@@ -1,9 +1,9 @@
-// Module ID: 17312
-// Function ID: 17313
+// Module ID: 17315
+// Function ID: 17316
 // Name: handleMessageCreate
-// Dependencies: [1957, 4781, 2011, 1371, 1074, 8399, 3, 1095, 7456, 7304, 7118, 1894, 5423, 5424, 11929, 5272, 2]
+// Dependencies: [1957, 4781, 2011, 1371, 1074, 8399, 3, 1095, 7456, 7304, 7118, 1894, 5423, 5424, 8592, 5272, 2]
 
-// Module 17312 (handleMessageCreate)
+// Module 17315 (handleMessageCreate)
 import timestampDefault from "timestamp" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1095 */;
 import initializeDefault from "initialize" /* 7118 */;

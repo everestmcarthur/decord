@@ -1,11 +1,11 @@
-// Module ID: 13909
-// Function ID: 13910
+// Module ID: 13912
+// Function ID: 13913
 // Name: MessageRequestRestrictedGuildPrivacyOption
-// Dependencies: [19, 21, 1935, 6995, 7200, 1114, 12445, 2]
+// Dependencies: [19, 21, 1935, 6995, 7200, 1114, 12449, 2]
 // Exports: useMessageRequestPrivacyOption
 
-// Module 13909 (MessageRequestRestrictedGuildPrivacyOption)
-import setDefault from "set" /* 12445 */;
+// Module 13912 (MessageRequestRestrictedGuildPrivacyOption)
+import setDefault from "set" /* 12449 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 

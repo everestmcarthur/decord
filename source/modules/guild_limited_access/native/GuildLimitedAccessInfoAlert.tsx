@@ -1,10 +1,10 @@
-// Module ID: 13831
-// Function ID: 13832
+// Module ID: 13834
+// Function ID: 13835
 // Name: GuildLimitedAccessInfoAlert
-// Dependencies: [19, 1979, 13832, 1074, 21, 4560, 5524, 576, 1114, 4994, 1178, 4556, 2]
+// Dependencies: [19, 1979, 13835, 1074, 21, 4560, 5524, 576, 1114, 4994, 1178, 4556, 2]
 // Exports: default
 
-// Module 13831 (GuildLimitedAccessInfoAlert)
+// Module 13834 (GuildLimitedAccessInfoAlert)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -12,7 +12,7 @@ import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
 import componentDidMountDefault from "componentDidMount" /* 4994 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import { GUILD_LIMITED_ACCESS_HC_LINK as closure_4 } from "GUILD_LIMITED_ACCESS_HC_LINK" /* 13832 */;
+import { GUILD_LIMITED_ACCESS_HC_LINK as closure_4 } from "GUILD_LIMITED_ACCESS_HC_LINK" /* 13835 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importDefaultResult from "createTextStyle" /* 5524 */;

@@ -1,10 +1,10 @@
-// Module ID: 8618
-// Function ID: 8619
+// Module ID: 8623
+// Function ID: 8624
 // Name: RestrictedUser
-// Dependencies: [32, 19, 17, 4209, 5421, 5414, 21, 4560, 576, 504, 1114, 1178, 8619, 4556, 4527, 8620, 7123, 4975, 7150, 7072, 2]
+// Dependencies: [32, 19, 17, 4209, 5421, 5414, 21, 4560, 576, 504, 1114, 1178, 8624, 4556, 4527, 8625, 7123, 4975, 7150, 7072, 2]
 // Exports: default
 
-// Module 8618 (RestrictedUser)
+// Module 8623 (RestrictedUser)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -54,7 +54,7 @@ function RestrictedUser(guildId) {
     obj2[0] = items3;
     const obj3 = { style: null, source: null, color: null };
     obj3[0] = tmp.icon;
-    obj3[1] = user(8619);
+    obj3[1] = user(8624);
     obj3[2] = user(576).unsafe_rawColors.WHITE;
     obj2[1] = tmp11(tmp2(1178).Icon, obj3);
     speaker = tmp11(tmp10, obj2);
@@ -185,9 +185,9 @@ export default function StageBlockedUsersActionSheet(channel) {
   const tmp = callback3();
   const tmp2 = items1(React.useState(0), 2);
   dependencyMap = tmp2[1];
-  let obj = channel(8620);
+  let obj = channel(8625);
   const stageBlockedUsers = obj.useStageBlockedUsers(channel.id);
-  obj1 = channel(8620);
+  obj1 = channel(8625);
   const stageIgnoredUsers = obj1.useStageIgnoredUsers(channel.id);
   const callback = React.useCallback((nativeEvent) => {
     dependencyMap(nativeEvent.nativeEvent.layout.height);

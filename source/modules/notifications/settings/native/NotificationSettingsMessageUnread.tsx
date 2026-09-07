@@ -1,13 +1,13 @@
-// Module ID: 10163
-// Function ID: 10164
+// Module ID: 10168
+// Function ID: 10169
 // Name: NotificationSettingsMessageUnread
-// Dependencies: [19, 17, 21, 4560, 576, 10157, 4556, 1114, 5123, 10164, 10155, 4527, 10166, 1896, 10149, 10168, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 10162, 4556, 1114, 5123, 10169, 10160, 4527, 10171, 1896, 10154, 10173, 2]
 // Exports: NotificationSettingsChannelMessageUnread, NotificationSettingsGuildMessageUnread
 
-// Module 10163 (NotificationSettingsMessageUnread)
+// Module 10168 (NotificationSettingsMessageUnread)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockChannels" /* 10164 */;
+import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockChannels" /* 10169 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -16,7 +16,7 @@ const require = arg1;
 function NotificationSettingsMessageUnread(onPress) {
   const _require = onPress;
   const tmp = callback3();
-  let obj = _require(10157);
+  let obj = _require(10162);
   const unreadSelectOptions = obj.getUnreadSelectOptions();
   const found = unreadSelectOptions.find((value) => value.value === onPress.setting);
   obj = { style: onPress.style, children: null };
@@ -73,7 +73,7 @@ export const NotificationSettingsGuildMessageUnread = function NotificationSetti
   const _require = style;
   let obj = {
     style: style.style,
-    setting: _require(10155).useGuildPresetSettings(style.guildId).unread,
+    setting: _require(10160).useGuildPresetSettings(style.guildId).unread,
     onCustomize() {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { guildId: style.guildId };
@@ -86,7 +86,7 @@ export const NotificationSettingsChannelMessageUnread = function NotificationSet
   const _require = style;
   let obj = {
     style: style.style,
-    setting: _require(10149).useChannelPresetSettings(style.channel).unread,
+    setting: _require(10154).useChannelPresetSettings(style.channel).unread,
     onCustomize() {
       let obj = closure_1_1(closure_1_2[11]);
       obj = { channel: style.channel };

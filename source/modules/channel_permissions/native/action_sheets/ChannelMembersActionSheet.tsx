@@ -1,16 +1,16 @@
-// Module ID: 11609
-// Function ID: 11610
+// Module ID: 11614
+// Function ID: 11615
 // Name: ChannelMembersActionSheet
-// Dependencies: [19, 17, 1957, 2021, 2015, 1979, 4199, 1074, 21, 4560, 576, 1611, 504, 1483, 4713, 11610, 9738, 1114, 7150, 7149, 5123, 4527, 8625, 11612, 7380, 8595, 11608, 10032, 1178, 6627, 9751, 4556, 2]
+// Dependencies: [19, 17, 1957, 2021, 2015, 1979, 4199, 1074, 21, 4560, 576, 1611, 504, 1483, 4713, 11615, 9743, 1114, 7150, 7149, 5123, 4527, 8630, 11617, 7380, 8600, 11613, 10037, 1178, 6627, 9756, 4556, 2]
 // Exports: default
 
-// Module 11609 (ChannelMembersActionSheet)
+// Module 11614 (ChannelMembersActionSheet)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import getAppChannelBotUserIdFromApplication from "getAppChannelBotUserIdFromApplication" /* 11610 */;
+import getAppChannelBotUserIdFromApplication from "getAppChannelBotUserIdFromApplication" /* 11615 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import closure_5 from "trackCommunicationDisabled" /* 2021 */;
@@ -82,9 +82,9 @@ export default function ChannelMembersActionSheet(arg0) {
       if (null != sortedGuildRoles) {
         const canResult = closure_8.can(constants.MANAGE_ROLES, stateFromStores);
         c5 = canResult;
-        let tmp5Result = tmp5(9738);
+        let tmp5Result = tmp5(9743);
         const existingRolesRows = tmp5Result.getExistingRolesRows(guild, sortedGuildRoles, stateFromStores, stateFromStores.accessPermissions);
-        tmp5Result = tmp5(9738);
+        tmp5Result = tmp5(9743);
         obj = { appChannelBotUserId: null };
         obj[0] = tmp11;
         const items5 = [];
@@ -131,8 +131,8 @@ export default function ChannelMembersActionSheet(arg0) {
           obj6[1] = function onPress() {
             return closure_1_0(sectionRowWrapper[26]).openAddMembersActionSheet(stateFromStores);
           };
-          obj6[2] = tmp32(tmp5(10032).GroupPlusIcon, {});
-          tmp32Result = tmp32(tmp5(8595).RowButton, obj6);
+          obj6[2] = tmp32(tmp5(10037).GroupPlusIcon, {});
+          tmp32Result = tmp32(tmp5(8600).RowButton, obj6);
         } else {
           const obj7 = { style: null, children: null };
           obj7[0] = tmp.warning;

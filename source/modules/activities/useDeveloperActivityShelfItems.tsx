@@ -1,12 +1,12 @@
-// Module ID: 12042
-// Function ID: 12043
+// Module ID: 12046
+// Function ID: 12047
 // Name: useDeveloperActivityShelfItems
-// Dependencies: [19, 8855, 1920, 504, 2]
+// Dependencies: [19, 8860, 1920, 504, 2]
 // Exports: useDeveloperActivityShelfItems
 
-// Module 12042 (useDeveloperActivityShelfItems)
+// Module 12046 (useDeveloperActivityShelfItems)
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "initialize" /* 8855 */;
+import closure_3 from "initialize" /* 8860 */;
 import { DEFAULT_EMBEDDED_ACTIVITY_CONFIG as closure_4 } from "items3" /* 1920 */;
 
 const require = arg1;

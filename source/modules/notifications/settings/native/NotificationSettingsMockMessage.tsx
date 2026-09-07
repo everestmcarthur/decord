@@ -1,10 +1,10 @@
-// Module ID: 10158
-// Function ID: 10159
+// Module ID: 10163
+// Function ID: 10164
 // Name: NotificationSettingsMockMessage
-// Dependencies: [19, 17, 1371, 1074, 21, 4560, 576, 504, 4404, 4296, 4561, 4564, 4556, 1114, 1178, 10159, 2]
+// Dependencies: [19, 17, 1371, 1074, 21, 4560, 576, 504, 4404, 4296, 4561, 4564, 4556, 1114, 1178, 10164, 2]
 // Exports: default
 
-// Module 10158 (NotificationSettingsMockMessage)
+// Module 10163 (NotificationSettingsMockMessage)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -85,7 +85,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   }, items3);
   const obj4 = { style: tmp.card, children: null };
   const obj5 = { style: tmp.cardContent, children: null };
-  const obj6 = { children: tmp12(_require(1178).Avatar, { source: sharedValue(10159), size: _require(1178).AvatarSizes.LARGE_48 }) };
+  const obj6 = { children: tmp12(_require(1178).Avatar, { source: sharedValue(10164), size: _require(1178).AvatarSizes.LARGE_48 }) };
   const items4 = [tmp12(View, obj6), ];
   const obj8 = { style: tmp.cardMessage, children: null };
   const obj9 = { variant: "text-sm/semibold", children: null };

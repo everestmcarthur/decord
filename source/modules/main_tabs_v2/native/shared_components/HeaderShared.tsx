@@ -1,7 +1,7 @@
 // Module ID: 7863
 // Function ID: 7864
 // Name: GenericHeaderTitle
-// Dependencies: [19, 17, 7864, 21, 4560, 576, 4556, 4262, 5625, 5631, 7865, 1115, 7870, 1611, 1484, 7872, 5581, 558, 7875, 13263, 5123, 1178, 2]
+// Dependencies: [19, 17, 7864, 21, 4560, 576, 4556, 4262, 5625, 5631, 7865, 1115, 7870, 1611, 1484, 7872, 5581, 558, 7875, 13267, 5123, 1178, 2]
 // Exports: HeaderIconButton, getDefaultChannelStackHeaderProps, getDefaultStackHeaderProps, getRenderBackImage, getRenderHeaderTextButton, getRenderModalBackImage, getRenderModalCloseImage, renderHeader
 
 // Module 7863 (GenericHeaderTitle)

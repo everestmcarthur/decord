@@ -1,16 +1,16 @@
-// Module ID: 17298
-// Function ID: 17299
+// Module ID: 17301
+// Function ID: 17302
 // Name: scheduleUpcomingWarning
-// Dependencies: [10081, 1371, 7537, 1114, 2396, 1394, 10083, 573, 7594, 17293, 7118, 2]
+// Dependencies: [10086, 1371, 7537, 1114, 2396, 1394, 10088, 573, 7594, 17296, 7118, 2]
 // Exports: getCurrentRestrictedHoursState
 
-// Module 17298 (scheduleUpcomingWarning)
+// Module 17301 (scheduleUpcomingWarning)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;
 import initializeDefault from "initialize" /* 7118 */;
 import apexExperiment from "apexExperiment" /* 7594 */;
-import closeRestrictedHoursModal from "closeRestrictedHoursModal" /* 17293 */;
-import closure_3 from "DesktopNotificationTypes" /* 10081 */;
+import closeRestrictedHoursModal from "closeRestrictedHoursModal" /* 17296 */;
+import closure_3 from "DesktopNotificationTypes" /* 10086 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import closure_5 from "freshTeenActivityWithMap" /* 7537 */;
 
@@ -59,10 +59,10 @@ function scheduleUpcomingWarning() {
         const intl = tmp5(1114).intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        let tmp5Result = tmp5(10083);
+        let tmp5Result = tmp5(10088);
         const items = [tmp5(1394).JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const stringResult = intl.string(messagesProxyDefault["0JlDg0"]);
-        tmp5Result = tmp5(10083);
+        tmp5Result = tmp5(10088);
         const _HermesInternal2 = HermesInternal;
         const formatDaysResult = tmp5Result.formatDays(items);
         const trimmed = "" + tmp5Result.formatDays(items) + " " + tmp5Result.getScheduleRuleDateRange(rule).trim();

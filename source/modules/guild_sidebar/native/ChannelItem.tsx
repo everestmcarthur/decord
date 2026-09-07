@@ -1,15 +1,15 @@
-// Module ID: 16116
-// Function ID: 16117
+// Module ID: 16119
+// Function ID: 16120
 // Name: getChannelMode
-// Dependencies: [109, 19, 17, 4600, 4209, 1371, 1074, 1964, 4742, 21, 4560, 576, 5441, 12379, 1396, 5587, 16117, 5075, 5028, 504, 1178, 5007, 16118, 4713, 1100, 2]
+// Dependencies: [109, 19, 17, 4600, 4209, 1371, 1074, 1964, 4742, 21, 4560, 576, 5441, 12383, 1396, 5587, 16120, 5075, 5028, 504, 1178, 5007, 16121, 4713, 1100, 2]
 
-// Module 16116 (getChannelMode)
+// Module 16119 (getChannelMode)
 import ThemesDefault from "Themes" /* 576 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 import getChannelIcon from "getChannelIcon" /* 5028 */;
 import BookCheckIcon2 from "BookCheckIcon" /* 5075 */;
-import BaseChannelSubtitle from "BaseChannelSubtitle" /* 12379 */;
-import registerAssetDefault from "registerAsset" /* 16117 */;
+import BaseChannelSubtitle from "BaseChannelSubtitle" /* 12383 */;
+import registerAssetDefault from "registerAsset" /* 16120 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "sortActivity" /* 4600 */;
@@ -108,7 +108,7 @@ function ChannelIcon(arg0) {
       obj6 = {};
     }
     const merged = Object.assign(obj6);
-    return callback2(tmp9(12379).BaseChannelIcon, obj4);
+    return callback2(tmp9(12383).BaseChannelIcon, obj4);
   }
 }
 function DMChannelIcon(userId) {

@@ -1,13 +1,13 @@
-// Module ID: 11240
-// Function ID: 11241
+// Module ID: 11245
+// Function ID: 11246
 // Name: AddDescription
-// Dependencies: [32, 19, 17, 4901, 4900, 21, 4560, 576, 504, 1477, 1483, 6981, 11146, 7863, 1114, 9307, 11239, 7085, 10924, 2]
+// Dependencies: [32, 19, 17, 4901, 4900, 21, 4560, 576, 504, 1477, 1483, 6981, 11151, 7863, 1114, 9312, 11244, 7085, 10929, 2]
 // Exports: default
 
-// Module 11240 (AddDescription)
+// Module 11245 (AddDescription)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import _modDef10924 from "module_10924" /* 10924 */;
+import _modDef10929 from "module_10929" /* 10929 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -127,5 +127,5 @@ export default function AddImageDescriptionModal(arg0) {
   obj[2] = function render() {
     return closure_1_10(closure_1_13, { source: closure_0, channelId: closure_1, id: closure_2 });
   };
-  return callback(_modDef10924, obj);
+  return callback(_modDef10929, obj);
 };

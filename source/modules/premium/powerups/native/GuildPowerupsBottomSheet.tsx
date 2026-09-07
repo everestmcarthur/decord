@@ -1,10 +1,10 @@
-// Module ID: 12518
-// Function ID: 12519
+// Module ID: 12522
+// Function ID: 12523
 // Name: GuildPowerupsBottomSheetHeader
-// Dependencies: [17, 4552, 4450, 4451, 21, 4560, 576, 12499, 12496, 12519, 12520, 504, 12521, 4271, 12523, 4556, 12524, 12526, 12527, 4515, 1114, 2428, 12513, 12533, 4453, 9067, 12534, 12535, 12539, 12544, 12545, 4975, 12543, 7150, 2]
+// Dependencies: [17, 4552, 4450, 4451, 21, 4560, 576, 12503, 12500, 12523, 12524, 504, 12525, 4271, 12527, 4556, 12528, 12530, 12531, 4515, 1114, 2428, 12517, 12537, 4453, 9072, 12538, 12539, 12543, 12548, 12549, 4975, 12547, 7150, 2]
 // Exports: default
 
-// Module 12518 (GuildPowerupsBottomSheetHeader)
+// Module 12522 (GuildPowerupsBottomSheetHeader)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import initialize from "initialize" /* 504 */;
@@ -13,17 +13,17 @@ import messagesProxyDefault from "messagesProxy" /* 2428 */;
 import str11 from "str11" /* 4451 */;
 import Text from "Text" /* 4556 */;
 import Background from "Background" /* 7150 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12496 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12499 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12513 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12519 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12520 */;
-import GuildPowerupCardFooterActive from "GuildPowerupCardFooterActive" /* 12524 */;
-import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 12526 */;
-import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 12533 */;
-import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 12534 */;
-import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 12535 */;
-import ModalType from "ModalType" /* 12543 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12500 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12503 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12517 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12523 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12524 */;
+import GuildPowerupCardFooterActive from "GuildPowerupCardFooterActive" /* 12528 */;
+import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 12530 */;
+import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 12537 */;
+import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 12538 */;
+import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 12539 */;
+import ModalType from "ModalType" /* 12547 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -49,7 +49,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
   if (powerup.type === constants.LEVEL) {
     obj = { style: null };
     obj[0] = tmp.gemContainer;
-    let tmp15 = callback(tmp2(12521), obj);
+    let tmp15 = callback(tmp2(12525), obj);
     let tmp14 = callback;
   } else if (tmp10 === closure_7) {
     obj = { style: null, children: null };
@@ -66,7 +66,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
     obj3[0] = str;
     obj3[1] = tmp.image;
     tmp14 = callback;
-    tmp15 = callback(tmp2(12523), obj3);
+    tmp15 = callback(tmp2(12527), obj3);
   }
   const obj4 = { children: null };
   const items1 = [tmp15, ];
@@ -144,8 +144,8 @@ function GuildPowerupsBottomSheetFooter(arg0) {
   if (showConfigureButton) {
     let result = powerup.skuId !== isPowerupActive(4453).GUILD_POWERUP_TAG_SKU_ID;
     if (!result) {
-      result = tmp6(9067).canUseMobileServerTagSettings(guildId);
-      const tmp6Result = tmp6(9067);
+      result = tmp6(9072).canUseMobileServerTagSettings(guildId);
+      const tmp6Result = tmp6(9072);
     }
     showConfigureButton = result;
     tmp6 = isPowerupActive;
@@ -154,7 +154,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
   ({ disabled, reason } = useCanGuildPowerupBeToggledDefault(guildId, powerup, isPowerupActive));
   const tmp8 = useCanGuildPowerupBeToggledDefault(guildId, powerup, isPowerupActive);
   ({ onActivate: c1, isLoading } = useGuildPowerupOnActivateDefault(guildId, powerup));
-  dependencyMap = tmp2(12539)(guildId, powerup);
+  dependencyMap = tmp2(12543)(guildId, powerup);
   if (tmp4) {
     let tmp14 = !showConfigureButton;
     const hasItem = set.has(powerup.skuId);
@@ -187,7 +187,7 @@ function GuildPowerupsBottomSheetFooter(arg0) {
     if (tmp21) {
       obj1 = { text: null };
       obj1[0] = reason;
-      tmp21 = callback(tmp2(12545), obj1);
+      tmp21 = callback(tmp2(12549), obj1);
     }
     items[1] = tmp21;
     if (showConfigureButton) {

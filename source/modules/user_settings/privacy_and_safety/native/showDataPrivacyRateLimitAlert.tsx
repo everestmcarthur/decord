@@ -1,10 +1,10 @@
-// Module ID: 14856
-// Function ID: 14857
+// Module ID: 14859
+// Function ID: 14860
 // Name: showDataPrivacyRateLimitAlert
 // Dependencies: [4904, 1114, 2]
 // Exports: showDataPrivacyRateLimitAlert
 
-// Module 14856 (showDataPrivacyRateLimitAlert)
+// Module 14859 (showDataPrivacyRateLimitAlert)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import setDefault from "set" /* 4904 */;

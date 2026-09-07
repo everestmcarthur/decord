@@ -1,10 +1,10 @@
-// Module ID: 12625
-// Function ID: 12626
+// Module ID: 12629
+// Function ID: 12630
 // Name: UserProfileAlertUserReported
 // Dependencies: [19, 21, 4910, 1114, 4910, 2]
 // Exports: default
 
-// Module 12625 (UserProfileAlertUserReported)
+// Module 12629 (UserProfileAlertUserReported)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;

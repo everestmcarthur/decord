@@ -1,10 +1,10 @@
-// Module ID: 9223
-// Function ID: 9224
+// Module ID: 9228
+// Function ID: 9229
 // Name: GameControllerIcon
 // Dependencies: [19, 21, 576, 4261, 8138, 2]
 // Exports: GameControllerIcon
 
-// Module 9223 (GameControllerIcon)
+// Module 9228 (GameControllerIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;

@@ -1,10 +1,10 @@
-// Module ID: 9034
-// Function ID: 9035
+// Module ID: 9039
+// Function ID: 9040
 // Name: useUserProfileWidgets
 // Dependencies: [502, 7621, 7625, 504, 2]
 // Exports: default
 
-// Module 9034 (useUserProfileWidgets)
+// Module 9039 (useUserProfileWidgets)
 import closure_2 from "fetchFingerprint" /* 502 */;
 import closure_3 from "createUserWidgetFromServer" /* 7621 */;
 import closure_4 from "initialize" /* 7625 */;

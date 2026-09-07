@@ -1,17 +1,17 @@
-// Module ID: 17214
-// Function ID: 17215
+// Module ID: 17217
+// Function ID: 17218
 // Name: voiceSettings
-// Dependencies: [19, 4599, 1074, 21, 1114, 17215, 7382, 4527, 4761, 4905, 17212, 1896, 17216, 4612, 17217, 9820, 11590, 10001, 8627, 7, 4259, 8361, 2]
+// Dependencies: [19, 4599, 1074, 21, 1114, 17218, 7382, 4527, 4761, 4905, 17215, 1896, 17219, 4612, 17220, 9825, 11595, 10006, 8632, 7, 4259, 8361, 2]
 // Exports: invite, openHideSelfStreamAndVideoConfirmDialog, reportStreamIssue, rtcDebugPanel, selfVideoHidden, shareActivityLogs, videoParticipantsHidden, voiceSettings
 
-// Module 17214 (voiceSettings)
+// Module 17217 (voiceSettings)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import _modDef4905 from "module_4905" /* 4905 */;
-import registerAssetDefault from "registerAsset" /* 8627 */;
-import registerAssetDefault2 from "registerAsset" /* 10001 */;
-import registerAssetDefault3 from "registerAsset" /* 17215 */;
-import registerAssetDefault4 from "registerAsset" /* 17216 */;
+import registerAssetDefault from "registerAsset" /* 8632 */;
+import registerAssetDefault2 from "registerAsset" /* 10006 */;
+import registerAssetDefault3 from "registerAsset" /* 17218 */;
+import registerAssetDefault4 from "registerAsset" /* 17219 */;
 import closure_3 from "initialize" /* 4599 */;
 import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -104,19 +104,19 @@ export const invite = function invite(isPrivate) {
   dependencyMap = arg2;
   if (null != arg1) {
     function onPress() {
-      let obj = isPrivate(9820);
+      let obj = isPrivate(9825);
       obj = { source: closure_1_6.STREAM, stream: closure_1 };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     }
   } else {
     onPress = function onPress() {
-      let obj = isPrivate(9820);
+      let obj = isPrivate(9825);
       obj = { source: closure_1_6.VOICE_CHANNEL };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     };
     if (null != arg2) {
       onPress = function onPress() {
-        let obj = isPrivate(9820);
+        let obj = isPrivate(9825);
         obj = { source: closure_1_6.ACTIVITY_INVITE, targetApplicationId: dependencyMap };
         return obj.showInstantInviteActionSheet(isPrivate, obj);
       };
@@ -124,7 +124,7 @@ export const invite = function invite(isPrivate) {
   }
   if (isPrivate.isPrivate()) {
     onPress = function onPress() {
-      return callback(11590)(isPrivate.id, closure_1_5.CHANNEL_CALL);
+      return callback(11595)(isPrivate.id, closure_1_5.CHANNEL_CALL);
     };
   }
   let obj = { label: null, icon: null, onPress: null };

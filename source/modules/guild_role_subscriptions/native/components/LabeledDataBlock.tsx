@@ -1,10 +1,10 @@
-// Module ID: 15220
-// Function ID: 15221
+// Module ID: 15223
+// Function ID: 15224
 // Name: LabeledDataBlock
 // Dependencies: [19, 17, 1074, 21, 4560, 576, 5524, 4556, 5123, 1178, 2]
 // Exports: default
 
-// Module 15220 (LabeledDataBlock)
+// Module 15223 (LabeledDataBlock)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;

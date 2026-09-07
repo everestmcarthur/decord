@@ -1,9 +1,9 @@
-// Module ID: 11675
-// Function ID: 11676
+// Module ID: 11680
+// Function ID: 11681
 // Name: handleChannelDelete
 // Dependencies: [2025, 1957, 2021, 1979, 4781, 4209, 1371, 4783, 12, 7600, 504, 573, 2]
 
-// Module 11675 (handleChannelDelete)
+// Module 11680 (handleChannelDelete)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

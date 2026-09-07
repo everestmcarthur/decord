@@ -1,14 +1,14 @@
-// Module ID: 8839
-// Function ID: 8840
+// Module ID: 8844
+// Function ID: 8845
 // Name: WishlistButtonBase
-// Dependencies: [5, 32, 19, 17, 502, 1371, 1076, 1085, 21, 4296, 4980, 4560, 576, 4271, 6620, 4411, 4279, 4259, 1114, 4561, 4974, 4978, 8840, 8774, 504, 8770, 8829, 8842, 8769, 2]
+// Dependencies: [5, 32, 19, 17, 502, 1371, 1076, 1085, 21, 4296, 4980, 4560, 576, 4271, 6620, 4411, 4279, 4259, 1114, 4561, 4974, 4978, 8845, 8779, 504, 8775, 8834, 8847, 8774, 2]
 // Exports: default
 
-// Module 8839 (WishlistButtonBase)
+// Module 8844 (WishlistButtonBase)
 import ThemesDefault from "Themes" /* 576 */;
 import ManaContext from "ManaContext" /* 4271 */;
-import getProductNameAndTypeFromSku from "getProductNameAndTypeFromSku" /* 8769 */;
-import getProductPurchaseState from "getProductPurchaseState" /* 8842 */;
+import getProductNameAndTypeFromSku from "getProductNameAndTypeFromSku" /* 8774 */;
+import getProductPurchaseState from "getProductPurchaseState" /* 8847 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;

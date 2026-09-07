@@ -1,10 +1,10 @@
-// Module ID: 12407
-// Function ID: 12408
+// Module ID: 12411
+// Function ID: 12412
 // Name: useKeyboardOpenPaddingStyle
 // Dependencies: [32, 19, 21, 4296, 4262, 576, 1625, 4427, 1609, 4561, 4564, 2]
 // Exports: default
 
-// Module 12407 (useKeyboardOpenPaddingStyle)
+// Module 12411 (useKeyboardOpenPaddingStyle)
 import ThemesDefault from "Themes" /* 576 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import closure_3 from "_slicedToArray" /* 32 */;

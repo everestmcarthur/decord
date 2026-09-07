@@ -1,20 +1,20 @@
-// Module ID: 17209
-// Function ID: 17210
+// Module ID: 17212
+// Function ID: 17213
 // Name: NOOP
-// Dependencies: [19, 17, 1957, 12271, 21, 4560, 576, 4296, 12272, 17037, 9582, 1935, 17101, 9982, 13793, 4973, 5687, 17210, 1114, 9992, 504, 12103, 4962, 6655, 1608, 5589, 7123, 12281, 2]
+// Dependencies: [19, 17, 1957, 12275, 21, 4560, 576, 4296, 12276, 17040, 9587, 1935, 17104, 9987, 13796, 4973, 5687, 17213, 1114, 9997, 504, 12107, 4962, 6655, 1608, 5589, 7123, 12285, 2]
 
-// Module 17209 (NOOP)
+// Module 17212 (NOOP)
 import ThemesDefault from "Themes" /* 576 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9582 */;
-import apexExperimentDefault from "apexExperiment" /* 9982 */;
-import dismissPanelDefault from "dismissPanel" /* 12272 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13793 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17037 */;
-import apexExperimentDefault2 from "apexExperiment" /* 17101 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9587 */;
+import apexExperimentDefault from "apexExperiment" /* 9987 */;
+import dismissPanelDefault from "dismissPanel" /* 12276 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13796 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17040 */;
+import apexExperimentDefault2 from "apexExperiment" /* 17104 */;
 import importAllResult from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import { CONTROLS_DRAWER_HEADER_EXPANDED_SIZE } from "VoicePanelControlsModes" /* 12271 */;
+import { CONTROLS_DRAWER_HEADER_EXPANDED_SIZE } from "VoicePanelControlsModes" /* 12275 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 import importDefaultResult from "module_4296" /* 4296 */;
@@ -51,42 +51,42 @@ let closure_10 = importAllResult.memo((arg0) => {
     obj = { channel: null, connected: null };
     obj[0] = channel;
     obj[1] = tmp2;
-    items[1] = callback(tmp3(17210).GameConsoles, obj);
+    items[1] = callback(tmp3(17213).GameConsoles, obj);
     if (nonContextualStreamOutputPresent) {
-      nonContextualStreamOutputPresent = tmp12(tmp3(17210).StreamVolumeItem, {});
+      nonContextualStreamOutputPresent = tmp12(tmp3(17213).StreamVolumeItem, {});
     }
     items[2] = nonContextualStreamOutputPresent;
     obj = { title: null, hasIcons: true, children: null };
     const intl = tmp3(1114).intl;
     obj[0] = intl.string(tmp3(1114).t.NiTd0e);
-    const items1 = [callback(tmp3(17210).DeafenSwitch, {}), , , , ];
+    const items1 = [callback(tmp3(17213).DeafenSwitch, {}), , , , ];
     obj1 = { channel: null, connected: null };
     obj1[0] = channel;
     obj1[1] = tmp2;
-    items1[1] = callback(tmp3(17210).AudioRouteButton, obj1);
+    items1[1] = callback(tmp3(17213).AudioRouteButton, obj1);
     obj2 = { channelId: null };
     obj2[0] = channelId;
-    items1[2] = callback(tmp3(17210).HideNonVideoParticipants, obj2);
-    items1[3] = callback(tmp3(17210).HideSelfVideo, {});
+    items1[2] = callback(tmp3(17213).HideNonVideoParticipants, obj2);
+    items1[3] = callback(tmp3(17213).HideSelfVideo, {});
     let tmp12Result = tmp2;
     if (tmp2) {
       const obj3 = { channel: null, connected: null };
       obj3[0] = channel;
       obj3[1] = tmp2;
-      tmp12Result = tmp12(tmp3(17210).InviteButton, obj3);
+      tmp12Result = tmp12(tmp3(17213).InviteButton, obj3);
     }
     items1[4] = tmp12Result;
     obj[2] = items1;
     items[3] = tmp7(tmp3(5687).TableRowGroup, obj);
-    items[4] = callback(tmp3(9992).VoiceProcessingOptions, {});
+    items[4] = callback(tmp3(9997).VoiceProcessingOptions, {});
     const obj4 = { guildId: null };
     obj4[0] = channel.guild_id;
-    const items2 = [callback(tmp3(17210).VoiceSettingsButton, obj4), ];
+    const items2 = [callback(tmp3(17213).VoiceSettingsButton, obj4), ];
     tmp12Result = null != tmp6;
     if (tmp12Result) {
       const obj5 = { stream: null };
       obj5[0] = tmp6;
-      tmp12Result = tmp12(tmp3(17210).ReportStreamIssueButton, obj5);
+      tmp12Result = tmp12(tmp3(17213).ReportStreamIssueButton, obj5);
     }
     const obj6 = { hasIcons: true, children: null };
     items2[1] = tmp12Result;
@@ -97,11 +97,11 @@ let closure_10 = importAllResult.memo((arg0) => {
       tmp7Result = null;
       if (setting) {
         tmp7Result = null;
-        if (embeddedActivityLaunchability === tmp3(9582).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+        if (embeddedActivityLaunchability === tmp3(9587).EmbeddedActivityLaunchability.CAN_LAUNCH) {
           const obj7 = { title: null, hasIcons: true, children: null };
           const intl2 = tmp3(1114).intl;
           obj7[0] = intl2.string(tmp3(1114).t.J6rqB7);
-          const items3 = [tmp12(tmp3(17210).LeaveActivitiesButton, {}), tmp12(tmp3(17210).ShareActivityLogsButton, {}), tmp12(tmp3(17210).ToggleShowActivitiesDebugOverlay, {})];
+          const items3 = [tmp12(tmp3(17213).LeaveActivitiesButton, {}), tmp12(tmp3(17213).ShareActivityLogsButton, {}), tmp12(tmp3(17213).ToggleShowActivitiesDebugOverlay, {})];
           obj7[2] = items3;
           tmp7Result = tmp7(tmp3(5687).TableRowGroup, obj7);
         }
@@ -114,23 +114,23 @@ let closure_10 = importAllResult.memo((arg0) => {
   } else {
     const obj9 = { openTab: null };
     obj9[0] = openTab;
-    const items4 = [callback(tmp3(17210).ActivitiesButton, obj9), ];
-    if (tmp3(17101).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
+    const items4 = [callback(tmp3(17213).ActivitiesButton, obj9), ];
+    if (tmp3(17104).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
       const obj10 = { openTab: null };
       obj10[0] = openTab;
-      let tmp9Result = tmp9(tmp3(17210).ChatButton, obj10);
+      let tmp9Result = tmp9(tmp3(17213).ChatButton, obj10);
       const obj11 = { hasIcons: true, children: null };
       items4[1] = tmp9Result;
       obj11[1] = items4;
       tmp7Result = tmp7(tmp3(5687).TableRowGroup, obj11);
-    } else if (tmp3(17101).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
+    } else if (tmp3(17104).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
       const obj12 = { channel: null };
       obj12[0] = channel;
-      tmp9Result = tmp9(tmp3(17210).ScreenshareButton, obj12);
+      tmp9Result = tmp9(tmp3(17213).ScreenshareButton, obj12);
     }
     const obj13 = { channel: null };
     obj13[0] = channel;
-    tmp9Result = tmp9(tmp3(17210).SoundboardButton, obj13);
+    tmp9Result = tmp9(tmp3(17213).SoundboardButton, obj13);
   }
 });
 let closure_12 = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };

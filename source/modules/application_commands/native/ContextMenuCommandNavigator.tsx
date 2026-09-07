@@ -1,10 +1,10 @@
-// Module ID: 16867
-// Function ID: 16868
+// Module ID: 16870
+// Function ID: 16871
 // Name: ContextMenuCommandNavigator
-// Dependencies: [19, 17, 21, 7913, 4560, 576, 7475, 7000, 1611, 7863, 1114, 16868, 16870, 2]
+// Dependencies: [19, 17, 21, 7913, 4560, 576, 7475, 7000, 1611, 7863, 1114, 16871, 16873, 2]
 // Exports: default
 
-// Module 16867 (ContextMenuCommandNavigator)
+// Module 16870 (ContextMenuCommandNavigator)
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import closure_3 from "noop" /* 19 */;
@@ -65,7 +65,7 @@ export default function ContextMenuCommandNavigator() {
   obj2[0] = intl.string(_require(1114).t.PHjkRE);
   obj1[1] = obj2;
   obj1[2] = function getComponent() {
-    return lib(16868).default;
+    return lib(16871).default;
   };
   const items1 = [
     callback(Screen, obj1),
@@ -80,7 +80,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return lib(16870).default;
+        return lib(16873).default;
       }
     })
   ];

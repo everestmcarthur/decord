@@ -1,17 +1,17 @@
-// Module ID: 15514
-// Function ID: 15515
+// Module ID: 15517
+// Function ID: 15518
 // Name: toggle
-// Dependencies: [10081, 7975, 7594, 14911, 8645, 11468, 1114, 504, 15515, 2]
+// Dependencies: [10086, 7975, 7594, 14914, 8650, 11473, 1114, 504, 15518, 2]
 
-// Module 15514 (toggle)
+// Module 15517 (toggle)
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import apexExperiment from "apexExperiment" /* 7594 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8645 */;
-import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14911 */;
-import _modDef15515 from "module_15515" /* 15515 */;
-import closure_3 from "DesktopNotificationTypes" /* 10081 */;
-import createToggle from "createToggle" /* 11468 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8650 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14914 */;
+import _modDef15518 from "module_15518" /* 15518 */;
+import closure_3 from "DesktopNotificationTypes" /* 10086 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 createToggle = {
@@ -29,7 +29,7 @@ createToggle = {
     return initialize.useStateFromStores(items, () => obj.screenDowntimeReminder);
   },
   onValueChange(screenDowntimeReminder) {
-    return _modDef15515.setScreenDowntimeReminder(screenDowntimeReminder);
+    return _modDef15518.setScreenDowntimeReminder(screenDowntimeReminder);
   },
   usePredicate() {
     let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });

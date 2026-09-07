@@ -1,11 +1,11 @@
-// Module ID: 12602
-// Function ID: 12603
+// Module ID: 12606
+// Function ID: 12607
 // Name: useUserProfileMutuals
-// Dependencies: [32, 19, 7659, 5438, 7621, 504, 12, 9798, 2]
+// Dependencies: [32, 19, 7659, 5438, 7621, 504, 12, 9803, 2]
 // Exports: default
 
-// Module 12602 (useUserProfileMutuals)
-import usePrevValueDefault from "usePrevValue" /* 9798 */;
+// Module 12606 (useUserProfileMutuals)
+import usePrevValueDefault from "usePrevValue" /* 9803 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
 import closure_5 from "recomputeAffinities" /* 7659 */;

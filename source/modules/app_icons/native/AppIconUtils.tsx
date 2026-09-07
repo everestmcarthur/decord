@@ -1,10 +1,10 @@
-// Module ID: 13363
-// Function ID: 13364
+// Module ID: 13367
+// Function ID: 13368
 // Name: fetchCurrentAppIcon
-// Dependencies: [32, 5, 19, 17, 9323, 1074, 1373, 3, 1115, 13364, 9324, 4992, 573, 1242, 4259, 1114, 7382, 1608, 2]
+// Dependencies: [32, 5, 19, 17, 9328, 1074, 1373, 3, 1115, 13368, 9329, 4992, 573, 1242, 4259, 1114, 7382, 1608, 2]
 // Exports: isAppIconsSupported, navigateToAppIconSettings, setAppIcon, useAppIcons, useCurrentAppIcon
 
-// Module 13363 (fetchCurrentAppIcon)
+// Module 13367 (fetchCurrentAppIcon)
 import timestampDefault from "timestamp" /* 3 */;
 import isMetaQuest from "isMetaQuest" /* 1608 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
@@ -12,7 +12,7 @@ import openUserSettings from "openUserSettings" /* 7382 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
-import items from "items" /* 9323 */;
+import items from "items" /* 9328 */;
 import ME from "ME" /* 1074 */;
 import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 import set from "set" /* 1115 */;
@@ -154,7 +154,7 @@ function _setAppIcon() {
         obj3[0] = callback;
         obj3[1] = callback2;
         let TIER_2 = null;
-        if (callback !== callback(9324).FreemiumAppIconIds.DEFAULT) {
+        if (callback !== callback(9329).FreemiumAppIconIds.DEFAULT) {
           TIER_2 = TIER_2.TIER_2;
         }
         obj3[2] = TIER_2;
@@ -184,7 +184,7 @@ if (set.isAndroid()) {
   DCDIconManager = require("get ActivityIndicator").NativeModules.DCDIconManager;
 }
 function useCurrentAppIcon() {
-  const tmp = callback(React.useState(_require(9324).FreemiumAppIconIds.DEFAULT), 2);
+  const tmp = callback(React.useState(_require(9329).FreemiumAppIconIds.DEFAULT), 2);
   _require = tmp[1];
   importDefault = React.useCallback(callback2(function*() {
     if (c3 === 2) {
@@ -266,7 +266,7 @@ export const setAppIcon = function setAppIcon(DEFAULT, premiumType) {
   return applyArgumentsResult;
 };
 export const useAppIcons = function useAppIcons() {
-  const currentAppIcon = callback(React.useState(_require(9324).FreemiumAppIconIds.DEFAULT), 2);
+  const currentAppIcon = callback(React.useState(_require(9329).FreemiumAppIconIds.DEFAULT), 2);
   _require = currentAppIcon[1];
   importDefault = React.useCallback(callback2(function*() {
     if (c3 === 2) {

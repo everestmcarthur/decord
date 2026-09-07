@@ -1,10 +1,10 @@
-// Module ID: 14609
-// Function ID: 14610
+// Module ID: 14612
+// Function ID: 14613
 // Name: useUploadAvatar
-// Dependencies: [5, 19, 1371, 1074, 1373, 563, 9313, 4527, 5138, 4218, 14593, 8169, 8167, 8164, 8166, 2]
+// Dependencies: [5, 19, 1371, 1074, 1373, 563, 9318, 4527, 5138, 4218, 14596, 8169, 8167, 8164, 8166, 2]
 // Exports: default
 
-// Module 14609 (useUploadAvatar)
+// Module 14612 (useUploadAvatar)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
@@ -109,7 +109,7 @@ export default function useUploadAvatar(guildId) {
               }
             }
           }
-          obj1 = closure_1_0(14593);
+          obj1 = closure_1_0(14596);
           const obj4 = { imageUri: null, description: null, originalMd5: null };
           obj4[0] = base64;
           obj3 = closure_1_0(8169);

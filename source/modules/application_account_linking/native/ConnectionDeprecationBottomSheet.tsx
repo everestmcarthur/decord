@@ -1,10 +1,10 @@
-// Module ID: 16940
-// Function ID: 16941
+// Module ID: 16943
+// Function ID: 16944
 // Name: ConnectionIcon
-// Dependencies: [19, 17, 4788, 5281, 1954, 21, 4560, 576, 4271, 1611, 504, 5283, 7165, 7162, 7182, 16941, 4527, 16943, 1896, 7149, 7150, 4973, 16929, 4556, 1114, 3010, 8837, 4975, 12956, 4269, 1396, 4977, 7172, 7168, 2]
+// Dependencies: [19, 17, 4788, 5281, 1954, 21, 4560, 576, 4271, 1611, 504, 5283, 7165, 7162, 7182, 16944, 4527, 16946, 1896, 7149, 7150, 4973, 16932, 4556, 1114, 3010, 8842, 4975, 12960, 4269, 1396, 4977, 7172, 7168, 2]
 // Exports: default, useShouldShowConnectionDeprecationBottomSheet
 
-// Module 16940 (ConnectionIcon)
+// Module 16943 (ConnectionIcon)
 import ThemesDefault from "Themes" /* 576 */;
 import getAvatarURL from "getAvatarURL" /* 1396 */;
 import isThemeLight from "isThemeLight" /* 4269 */;

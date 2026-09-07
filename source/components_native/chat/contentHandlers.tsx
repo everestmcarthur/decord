@@ -1,9 +1,9 @@
-// Module ID: 11586
-// Function ID: 11587
+// Module ID: 11591
+// Function ID: 11592
 // Name: onTapMention
-// Dependencies: [5, 11584, 9942, 8375, 4255, 11547, 8179, 7182, 4527, 11587, 1896, 11, 1935, 1114, 7190, 4258, 4904, 10329, 2]
+// Dependencies: [5, 11589, 9947, 8375, 4255, 11552, 8179, 7182, 4527, 11592, 1896, 11, 1935, 1114, 7190, 4258, 4904, 10334, 2]
 
-// Module 11586 (onTapMention)
+// Module 11591 (onTapMention)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import presentAddedFriendToast from "presentAddedFriendToast" /* 4258 */;
@@ -12,7 +12,7 @@ import setDefault from "set" /* 4904 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
 import _copy from "_copy" /* 7190 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11584 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11589 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
 require = arg1;
@@ -89,7 +89,7 @@ let closure_5 = importDefaultResult((arg0) => {
             } else {
               if (null != attachmentUrl) {
                 if ("" !== attachmentUrl) {
-                  let obj3 = callback2(9942);
+                  let obj3 = callback2(9947);
                   dependencyMap = 2;
                   c4 = 1;
                   const obj2 = { value: null, done: false };
@@ -186,7 +186,7 @@ let closure_4 = importDefaultResult((arg0) => {
             } else {
               if (null != attachmentUrl) {
                 if ("" !== attachmentUrl) {
-                  let obj2 = callback2(9942);
+                  let obj2 = callback2(9947);
                   dependencyMap = 2;
                   c4 = 1;
                   obj2 = { value: null, done: false };
@@ -203,7 +203,7 @@ let closure_4 = importDefaultResult((arg0) => {
             callback = arg1;
             obj = { urlString: null };
             obj[0] = callback;
-            callback(11584)(obj);
+            callback(11589)(obj);
           }
           c4 = 3;
           const obj3 = { value: null, done: true };
@@ -230,7 +230,7 @@ obj[2] = function() {
   return applyArgumentsResult;
 };
 obj[3] = function onTapMention(closure_0) {
-  let obj = parsedUserId(11547);
+  let obj = parsedUserId(11552);
   const nativeSyntheticEventData = obj.getNativeSyntheticEventData(closure_0);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
@@ -249,7 +249,7 @@ obj[3] = function onTapMention(closure_0) {
         obj[0] = guildId;
         obj[1] = roleId;
         obj[2] = channelId;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(1896)(11587, tmp2.paths), "RoleMembersActionSheet", obj);
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(1896)(11592, tmp2.paths), "RoleMembersActionSheet", obj);
         const obj9 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }
@@ -258,7 +258,7 @@ obj[3] = function onTapMention(closure_0) {
         obj1 = { guildId: null, roleId: null, channelId: null };
         obj1[0] = guildId;
         const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
-        const tmp10 = tmp(1896)(11587, tmp2.paths);
+        const tmp10 = tmp(1896)(11592, tmp2.paths);
         obj1[1] = DISCORD_EPOCHDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj1[2] = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);
@@ -307,7 +307,7 @@ obj[5] = function onTapInlineCode(nativeEvent) {
   }
 };
 obj[6] = function onTapEmoji(emojiNode) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10329, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10334, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
 };
 let result = require("set").fileFinishedImporting("components_native/chat/contentHandlers.tsx");
 

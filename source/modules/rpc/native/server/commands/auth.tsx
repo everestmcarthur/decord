@@ -1,9 +1,9 @@
-// Module ID: 14514
-// Function ID: 14515
-// Dependencies: [4788, 1074, 9554, 8856, 1109, 14515, 2]
+// Module ID: 14517
+// Function ID: 14518
+// Dependencies: [4788, 1074, 9559, 8861, 1109, 14518, 2]
 
-// Module 14514
-import authorizeWithPromptDefault from "authorizeWithPrompt" /* 14515 */;
+// Module 14517
+import authorizeWithPromptDefault from "authorizeWithPrompt" /* 14518 */;
 import closure_3 from "addApplication" /* 4788 */;
 import ME from "ME" /* 1074 */;
 

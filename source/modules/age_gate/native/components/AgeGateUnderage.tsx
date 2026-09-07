@@ -1,10 +1,10 @@
-// Module ID: 15986
-// Function ID: 15987
+// Module ID: 15989
+// Function ID: 15990
 // Name: AgeGateUnderage
 // Dependencies: [19, 17, 1074, 21, 4560, 576, 6944, 1483, 5624, 5630, 1114, 6975, 6978, 5692, 6974, 4556, 2024, 4975, 2]
 // Exports: default
 
-// Module 15986 (AgeGateUnderage)
+// Module 15989 (AgeGateUnderage)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

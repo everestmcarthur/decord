@@ -1,18 +1,18 @@
-// Module ID: 9313
-// Function ID: 9314
+// Module ID: 9318
+// Function ID: 9319
 // Name: usePremiumUpsellConfig
-// Dependencies: [19, 1371, 1074, 1373, 21, 9314, 1114, 9315, 9316, 9317, 4218, 9318, 9319, 9320, 4905, 9322, 1896, 7447, 9362, 4425, 1242, 4527, 9392, 2]
+// Dependencies: [19, 1371, 1074, 1373, 21, 9319, 1114, 9320, 9321, 9322, 4218, 9323, 9324, 9325, 4905, 9327, 1896, 7447, 9367, 4425, 1242, 4527, 9397, 2]
 // Exports: getUpsellItems, usePremiumUpsellConfig
 
-// Module 9313 (usePremiumUpsellConfig)
+// Module 9318 (usePremiumUpsellConfig)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
-import registerAssetDefault from "registerAsset" /* 9314 */;
-import registerAssetDefault2 from "registerAsset" /* 9315 */;
-import registerAssetDefault3 from "registerAsset" /* 9316 */;
-import registerAssetDefault4 from "registerAsset" /* 9317 */;
-import registerAssetDefault5 from "registerAsset" /* 9318 */;
-import registerAssetDefault6 from "registerAsset" /* 9319 */;
+import registerAssetDefault from "registerAsset" /* 9319 */;
+import registerAssetDefault2 from "registerAsset" /* 9320 */;
+import registerAssetDefault3 from "registerAsset" /* 9321 */;
+import registerAssetDefault4 from "registerAsset" /* 9322 */;
+import registerAssetDefault5 from "registerAsset" /* 9323 */;
+import registerAssetDefault6 from "registerAsset" /* 9324 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;

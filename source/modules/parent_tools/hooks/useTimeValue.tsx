@@ -1,10 +1,10 @@
-// Module ID: 14935
-// Function ID: 14936
+// Module ID: 14938
+// Function ID: 14939
 // Name: useTimeValue
-// Dependencies: [19, 2, 10083]
+// Dependencies: [19, 2, 10088]
 // Exports: default
 
-// Module 14935 (useTimeValue)
+// Module 14938 (useTimeValue)
 import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useTimeValue.tsx");

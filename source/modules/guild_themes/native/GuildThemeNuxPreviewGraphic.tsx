@@ -1,13 +1,13 @@
-// Module ID: 16163
-// Function ID: 16164
+// Module ID: 16166
+// Function ID: 16167
 // Name: GuildThemeNuxPreviewGraphic
-// Dependencies: [19, 17, 21, 4560, 576, 16164, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 16167, 2]
 // Exports: default
 
-// Module 16163 (GuildThemeNuxPreviewGraphic)
+// Module 16166 (GuildThemeNuxPreviewGraphic)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import PreviewOverlayDefault from "PreviewOverlay" /* 16164 */;
+import PreviewOverlayDefault from "PreviewOverlay" /* 16167 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

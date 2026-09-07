@@ -1,10 +1,10 @@
-// Module ID: 14761
-// Function ID: 14762
+// Module ID: 14764
+// Function ID: 14765
 // Name: SettingsAgeGroupResetAlert
-// Dependencies: [5, 21, 1483, 13764, 4906, 4258, 1114, 4910, 2946, 4910, 2]
+// Dependencies: [5, 21, 1483, 13767, 4906, 4258, 1114, 4910, 2946, 4910, 2]
 // Exports: default
 
-// Module 14761 (SettingsAgeGroupResetAlert)
+// Module 14764 (SettingsAgeGroupResetAlert)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import jsxProd from "jsxProd" /* 21 */;
 
@@ -48,7 +48,7 @@ export default function SettingsAgeGroupResetAlert() {
               c1 = 2;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(13764).resetAgeVerification();
+              obj1[0] = closure_1_0(13767).resetAgeVerification();
               return obj1;
             }
           } else if (1 === tmp7) {

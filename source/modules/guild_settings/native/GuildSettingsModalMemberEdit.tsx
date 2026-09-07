@@ -1,10 +1,10 @@
-// Module ID: 11836
-// Function ID: 11837
+// Module ID: 11841
+// Function ID: 11842
 // Name: GuildSettingsModalMemberEditScene
-// Dependencies: [19, 17, 4552, 1975, 2016, 2021, 2015, 1979, 4199, 1371, 11837, 1074, 21, 4560, 576, 4204, 12, 5604, 1178, 4556, 5605, 1114, 5687, 4271, 7377, 5624, 4404, 9438, 4188, 8593, 4973, 6606, 11838, 11839, 4258, 11844, 1483, 504, 38, 9403, 7311, 7040, 11849, 11851, 5598, 7000, 2]
+// Dependencies: [19, 17, 4552, 1975, 2016, 2021, 2015, 1979, 4199, 1371, 11842, 1074, 21, 4560, 576, 4204, 12, 5604, 1178, 4556, 5605, 1114, 5687, 4271, 7377, 5624, 4404, 9443, 4188, 8598, 4973, 6606, 11843, 11844, 4258, 11849, 1483, 504, 38, 9408, 7311, 7040, 11854, 11856, 5598, 7000, 2]
 // Exports: default
 
-// Module 11836 (GuildSettingsModalMemberEditScene)
+// Module 11841 (GuildSettingsModalMemberEditScene)
 import ThemesDefault from "Themes" /* 576 */;
 import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import Text from "Text" /* 4556 */;
@@ -18,7 +18,7 @@ import closure_11 from "createGuildRoleRecordFromRust" /* 2015 */;
 import closure_12 from "createGuildRecordFromRust" /* 1979 */;
 import closure_13 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_14 from "mergeGuildAvatar" /* 1371 */;
-import closure_15 from "handleStopEditingRoles" /* 11837 */;
+import closure_15 from "handleStopEditingRoles" /* 11842 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -368,7 +368,7 @@ class GuildSettingsModalMemberEdit extends PureComponent2 {
       closure_1_1(closure_1_3[32]).startEditingRoles(applyArgumentsResult.props.guild.id, applyArgumentsResult.props.user.id);
     };
     applyArgumentsResult.handleToggleRole = function handleToggleRole(roleId, state) {
-      callback(11838).toggleRole(roleId, state);
+      callback(11843).toggleRole(roleId, state);
     };
     applyArgumentsResult.handleSetCommunicationDisabled = function handleSetCommunicationDisabled() {
       ({ guild, user } = applyArgumentsResult.props);
@@ -412,7 +412,7 @@ class GuildSettingsModalMemberEdit extends PureComponent2 {
       }
     };
     applyArgumentsResult.handleCancelEditMemberRoles = function handleCancelEditMemberRoles() {
-      callback(11838).stopEditingRoles();
+      callback(11843).stopEditingRoles();
     };
     return applyArgumentsResult;
   }
@@ -482,7 +482,7 @@ prototype["render"] = function render() {
     let tmp18Result = null;
     if (user.bot) {
       obj = { verified: null };
-      let tmp21Result = tmp21(9438);
+      let tmp21Result = tmp21(9443);
       obj[0] = user.isVerifiedBot();
       tmp18Result = tmp18(tmp21Result, obj);
     }
@@ -593,7 +593,7 @@ prototype["render"] = function render() {
       items2[6] = tmp18Result;
       obj4[2] = items2;
       obj3[2] = tmp16(tmp19(4973).Stack, obj4);
-      return tmp18(tmp19(8593).Form, obj3);
+      return tmp18(tmp19(8598).Form, obj3);
     } else {
       const result = tmp19(4188).isMemberCommunicationDisabled(member);
       const TableRowGroup = tmp19(5687).TableRowGroup;

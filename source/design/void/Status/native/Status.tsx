@@ -1,19 +1,19 @@
-// Module ID: 14105
-// Function ID: 14106
+// Module ID: 14108
+// Function ID: 14109
 // Name: Status
-// Dependencies: [32, 19, 17, 1179, 1074, 13029, 21, 4560, 14103, 576, 14106, 14107, 14108, 14109, 14110, 14111, 14112, 14104, 14113, 4296, 4974, 14090, 2]
+// Dependencies: [32, 19, 17, 1179, 1074, 13033, 21, 4560, 14106, 576, 14109, 14110, 14111, 14112, 14113, 14114, 14115, 14107, 14116, 4296, 4974, 14093, 2]
 // Exports: StatusWithTyping, default
 
-// Module 14105 (Status)
+// Module 14108 (Status)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
-import getAnimatedTypingTranslateX from "getAnimatedTypingTranslateX" /* 14103 */;
-import STATUS_PADDINGDefault from "STATUS_PADDING" /* 14104 */;
+import getAnimatedTypingTranslateX from "getAnimatedTypingTranslateX" /* 14106 */;
+import STATUS_PADDINGDefault from "STATUS_PADDING" /* 14107 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { STATUS_PADDING } from "STATUS_PADDING" /* 1179 */;
 import { StatusTypes } from "ME" /* 1074 */;
-import n from "n" /* 13029 */;
+import n from "n" /* 13033 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -75,23 +75,23 @@ export default function Status(isMobileOnline) {
   obj[0] = items;
   obj = { style: callback2().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = tmp4(14106);
+    let tmp4Result = tmp4(14109);
   } else if (flag2) {
-    tmp4Result = tmp4(14107);
-  } else if (flag) {
-    tmp4Result = tmp4(14108);
-  } else if (StatusTypes.IDLE === status) {
-    tmp4Result = tmp4(14109);
-  } else if (tmp7.DND === status) {
     tmp4Result = tmp4(14110);
+  } else if (flag) {
+    tmp4Result = tmp4(14111);
+  } else if (StatusTypes.IDLE === status) {
+    tmp4Result = tmp4(14112);
+  } else if (tmp7.DND === status) {
+    tmp4Result = tmp4(14113);
   } else {
     if (tmp7.OFFLINE !== status) {
       if (tmp7.INVISIBLE !== status) {
         const ONLINE = tmp7.ONLINE;
-        tmp4Result = tmp4(14112);
+        tmp4Result = tmp4(14115);
       }
     }
-    tmp4Result = tmp4(14111);
+    tmp4Result = tmp4(14114);
   }
   obj[1] = tmp4Result;
   obj[1] = closure_11(closure_4, obj);

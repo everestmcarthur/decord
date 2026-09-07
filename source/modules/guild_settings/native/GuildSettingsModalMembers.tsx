@@ -1,9 +1,9 @@
-// Module ID: 16571
-// Function ID: 16572
+// Module ID: 16574
+// Function ID: 16575
 // Name: items
-// Dependencies: [32, 19, 17, 502, 4480, 2021, 2015, 1979, 4199, 1371, 9064, 1074, 21, 9835, 4560, 576, 1483, 10947, 4712, 4404, 1114, 10942, 1611, 504, 7265, 9738, 8666, 16572, 7377, 9800, 5520, 9063, 11, 4272, 7050, 8874, 1178, 8232, 7040, 2]
+// Dependencies: [32, 19, 17, 502, 4480, 2021, 2015, 1979, 4199, 1371, 9069, 1074, 21, 9840, 4560, 576, 1483, 10952, 4712, 4404, 1114, 10947, 1611, 504, 7265, 9743, 8671, 16575, 7377, 9805, 5520, 9068, 11, 4272, 7050, 8879, 1178, 8232, 7040, 2]
 
-// Module 16571 (items)
+// Module 16574 (items)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
@@ -15,7 +15,7 @@ import closure_9 from "createGuildRoleRecordFromRust" /* 2015 */;
 import closure_10 from "createGuildRecordFromRust" /* 1979 */;
 import closure_11 from "getUncachedChannelPermissions" /* 4199 */;
 import closure_12 from "mergeGuildAvatar" /* 1371 */;
-import closure_13 from "handleFormInit" /* 9064 */;
+import closure_13 from "handleFormInit" /* 9069 */;
 import { GuildSettingsSections } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -97,7 +97,7 @@ let closure_20 = importAllResult.memo((guild) => {
     };
     obj[7] = start;
     obj[8] = end;
-    return closure_15(guildMember(10942), obj);
+    return closure_15(guildMember(10947), obj);
   }
   tmp = callback();
 });
@@ -287,7 +287,7 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.create(null));
-            const obj = { source: callback2(9800), accessibilityLabel: null, ref: null };
+            const obj = { source: callback2(9805), accessibilityLabel: null, ref: null };
             const intl = callback(1114).intl;
             obj[1] = intl.string(callback(1114).t.ogxXGq);
             obj[2] = ref.ref;

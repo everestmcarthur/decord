@@ -1,10 +1,10 @@
-// Module ID: 16855
-// Function ID: 16856
+// Module ID: 16858
+// Function ID: 16859
 // Name: ChannelSettingsEditForumTag
-// Dependencies: [32, 19, 17, 5459, 1957, 1374, 21, 4560, 576, 1483, 504, 4556, 1114, 7898, 7377, 4973, 5687, 5605, 5123, 11121, 7130, 1396, 8757, 1178, 6616, 7201, 4905, 2]
+// Dependencies: [32, 19, 17, 5459, 1957, 1374, 21, 4560, 576, 1483, 504, 4556, 1114, 7898, 7377, 4973, 5687, 5605, 5123, 11126, 7130, 1396, 8762, 1178, 6616, 7201, 4905, 2]
 // Exports: default
 
-// Module 16855 (ChannelSettingsEditForumTag)
+// Module 16858 (ChannelSettingsEditForumTag)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -237,7 +237,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
     style: tmp.emojiIconWrapper,
     accessibilityRole: "button",
     onPress() {
-      let obj = channelId(11121);
+      let obj = channelId(11126);
       obj = { onPressEmoji: handlePressEmoji, pickerIntention: flag.COMMUNITY_CONTENT, channel: closure_11 };
       const result = obj.openEmojiPickerActionSheet(obj);
     },
@@ -361,5 +361,5 @@ export default function ChannelSettingsEditForumTag(channelId) {
     tmp31 = tag;
     const tmp32 = tag(7130);
   }
-  tmp27Result1 = tmp27(tmp3(8757).ReactionIcon, {});
+  tmp27Result1 = tmp27(tmp3(8762).ReactionIcon, {});
 };

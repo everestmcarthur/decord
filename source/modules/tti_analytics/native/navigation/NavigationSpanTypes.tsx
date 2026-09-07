@@ -1,9 +1,9 @@
-// Module ID: 17864
-// Function ID: 17865
+// Module ID: 17867
+// Function ID: 17868
 // Name: NavigationSpanStatus
 // Dependencies: [2]
 
-// Module 17864 (NavigationSpanStatus)
+// Module 17867 (NavigationSpanStatus)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationSpanTypes.tsx");

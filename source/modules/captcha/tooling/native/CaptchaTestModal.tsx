@@ -1,10 +1,10 @@
-// Module ID: 15683
-// Function ID: 15684
+// Module ID: 15686
+// Function ID: 15687
 // Name: CaptchaTestScreen
-// Dependencies: [5, 32, 19, 17, 21, 4560, 576, 15684, 15685, 4259, 4556, 1178, 7123, 4975, 4763, 5624, 7000, 1114, 2]
+// Dependencies: [5, 32, 19, 17, 21, 4560, 576, 15687, 15688, 4259, 4556, 1178, 7123, 4975, 4763, 5624, 7000, 1114, 2]
 // Exports: default
 
-// Module 15683 (CaptchaTestScreen)
+// Module 15686 (CaptchaTestScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -12,7 +12,7 @@ import closure_5 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
-import { HCAPTCHA_DIFFICULTY_OPTIONS as prop, CAPTCHA_DECIDER_TYPE_OPTIONS as prop1 } from "found" /* 15684 */;
+import { HCAPTCHA_DIFFICULTY_OPTIONS as prop, CAPTCHA_DECIDER_TYPE_OPTIONS as prop1 } from "found" /* 15687 */;
 import set from "set" /* 2 */;
 
 const require = arg1;

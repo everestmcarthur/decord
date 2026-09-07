@@ -1,9 +1,9 @@
-// Module ID: 13686
-// Function ID: 13687
+// Module ID: 13690
+// Function ID: 13691
 // Name: updateState
-// Dependencies: [7476, 502, 4781, 2011, 1895, 1074, 3, 13687, 504, 1461, 573, 2]
+// Dependencies: [7476, 502, 4781, 2011, 1895, 1074, 3, 13691, 504, 1461, 573, 2]
 
-// Module 13686 (updateState)
+// Module 13690 (updateState)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
@@ -42,7 +42,7 @@ function updateState() {
             obj1 = { state: null, delayMs: null };
             obj1[0] = tmp13.WAITING_FOR_NETWORK;
             if (closure_2.hasCache()) {
-              let obj15 = state(13687);
+              let obj15 = state(13691);
               let num2 = obj15.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num2 == null) {
                 num2 = 10000;
@@ -73,7 +73,7 @@ function updateState() {
             const obj5 = { state: null, delayMs: null };
             obj5[0] = tmp13.WAITING_FOR_NETWORK;
             if (closure_2.hasCache()) {
-              let obj10 = state(13687);
+              let obj10 = state(13691);
               let num = obj10.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num == null) {
                 num = 10000;

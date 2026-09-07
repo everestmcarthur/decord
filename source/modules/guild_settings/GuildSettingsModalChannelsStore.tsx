@@ -1,9 +1,9 @@
-// Module ID: 16143
-// Function ID: 16144
+// Module ID: 16146
+// Function ID: 16147
 // Name: sortCategoryList
 // Dependencies: [109, 1961, 2012, 4199, 1074, 7112, 1982, 12, 504, 573, 2]
 
-// Module 16143 (sortCategoryList)
+// Module 16146 (sortCategoryList)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 7112 */;

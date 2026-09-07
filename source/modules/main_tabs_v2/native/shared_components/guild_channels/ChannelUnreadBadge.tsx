@@ -1,13 +1,13 @@
-// Module ID: 16033
-// Function ID: 16034
-// Dependencies: [19, 17, 10118, 4742, 21, 4560, 10121, 4982, 7869, 2]
+// Module ID: 16036
+// Function ID: 16037
+// Dependencies: [19, 17, 10123, 4742, 21, 4560, 10126, 4982, 7869, 2]
 
-// Module 16033
+// Module 16036
 import getFontScale from "getFontScale" /* 4982 */;
 import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7869 */;
-import getLayoutStyles from "getLayoutStyles" /* 10121 */;
+import getLayoutStyles from "getLayoutStyles" /* 10126 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10118 */;
+import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10123 */;
 import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -36,11 +36,11 @@ const memoResult = importAllResult.memo(function ChannelUnreadBadge(panelVariant
     const unreadBadge = layoutStyles.unreadBadge;
     obj = { style: null, children: null };
     items[2] = isThread ? unreadBadge.positionThread : unreadBadge.position;
-    items[3] = tmp2(10121).makeSizeStyle(layoutStyles.unreadBadge.size);
+    items[3] = tmp2(10126).makeSizeStyle(layoutStyles.unreadBadge.size);
     obj[0] = items;
     obj = { classic: null, size: null, badgeStyle: null };
     obj[0] = flag;
-    const tmp2Result = tmp2(10121);
+    const tmp2Result = tmp2(10126);
     const tmp9 = View;
     const _Math = Math;
     obj[1] = tmp2(7869).CHANNEL_BADGE_SIZE * Math.max(tmp6, 1);

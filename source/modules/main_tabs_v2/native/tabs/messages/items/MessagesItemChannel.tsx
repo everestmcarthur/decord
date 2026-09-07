@@ -1,17 +1,17 @@
-// Module ID: 16030
-// Function ID: 16031
+// Module ID: 16033
+// Function ID: 16034
 // Name: getMessagesItemChannelSizes
-// Dependencies: [32, 19, 1957, 21, 10119, 576, 16031, 504, 16040, 8874, 16041, 2]
+// Dependencies: [32, 19, 1957, 21, 10124, 576, 16034, 504, 16043, 8879, 16044, 2]
 // Exports: getMessagesItemChannelSizes
 
-// Module 16030 (getMessagesItemChannelSizes)
+// Module 16033 (getMessagesItemChannelSizes)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 10119 */;
-import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 16031 */;
-import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 16031 */;
-import _modDef16040 from "module_16040" /* 16040 */;
-import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 16041 */;
+import map from "map" /* 10124 */;
+import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 16034 */;
+import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault from "MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING" /* 16034 */;
+import _modDef16043 from "module_16043" /* 16043 */;
+import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 16044 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;
@@ -40,7 +40,7 @@ let closure_7 = importAllResult.memo(function MessagesItemChannel(arg0) {
     obj = { height: null, row: null };
     obj[0] = placeholderHeight;
     obj[1] = row;
-    tmp5 = jsx(_modDef16040, { height: null, row: null });
+    tmp5 = jsx(_modDef16043, { height: null, row: null });
   }
   return tmp5;
 });
@@ -53,7 +53,7 @@ const memoResult = importAllResult.memo((arg0) => {
   return <closure_7 />;
 });
 const memoResult1 = importAllResult.memo((channelId) => {
-  let obj = _require(8874);
+  let obj = _require(8879);
   const items = [channelId.channelId];
   const tmp = callback(obj.useRecyclingState(false, items), 2);
   _require = tmp2;

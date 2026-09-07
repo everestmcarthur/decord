@@ -1,10 +1,10 @@
-// Module ID: 12776
-// Function ID: 12777
+// Module ID: 12780
+// Function ID: 12781
 // Name: useIsViewingPremiumMemberships
 // Dependencies: [1074, 1964, 4392, 4399, 2]
 // Exports: default
 
-// Module 12776 (useIsViewingPremiumMemberships)
+// Module 12780 (useIsViewingPremiumMemberships)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import set2 from "set" /* 1964 */;

@@ -1,18 +1,18 @@
-// Module ID: 15695
-// Function ID: 15696
+// Module ID: 15698
+// Function ID: 15699
 // Name: BalanceWidget
-// Dependencies: [19, 17, 1074, 1076, 1954, 5444, 21, 5123, 4556, 1114, 10625, 1943, 1242, 11767, 5447, 15696, 8850, 4527, 11101, 1896, 7182, 7541, 11100, 4380, 4991, 4560, 576, 2]
+// Dependencies: [19, 17, 1074, 1076, 1954, 5444, 21, 5123, 4556, 1114, 10630, 1943, 1242, 11772, 5447, 15699, 8855, 4527, 11106, 1896, 7182, 7541, 11105, 4380, 4991, 4560, 576, 2]
 // Exports: default
 
-// Module 15695 (BalanceWidget)
+// Module 15698 (BalanceWidget)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4380 */;
 import Text from "Text" /* 4556 */;
 import PressableBase from "PressableBase" /* 5123 */;
-import _mod8850 from "module_8850" /* 8850 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10625 */;
-import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11100 */;
+import _mod8855 from "module_8855" /* 8855 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10630 */;
+import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11105 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
@@ -74,7 +74,7 @@ class OrbsOnboardingMenuDismissibleContent {
 }
 function BalanceWidgetMenu(style) {
   let str;
-  let obj = str(8850);
+  let obj = str(8855);
   str = obj.useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = React.useCallback(() => {
@@ -142,7 +142,7 @@ let closure_15 = createCacheKey.createStyles(() => {
 let result = require("set").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
 
 export default function BalanceWidgetMenuWrapper(style) {
-  let obj = _mod8850;
+  let obj = _mod8855;
   const balance = obj.useFetchVirtualCurrencyBalance().balance;
   UNSAFE_isDismissibleContentDismissed;
   if (null == balance) {

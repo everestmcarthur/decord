@@ -1,10 +1,10 @@
-// Module ID: 8920
-// Function ID: 8921
+// Module ID: 8925
+// Function ID: 8926
 // Name: useGameNameAndCoverImage
 // Dependencies: [7309, 1114, 2]
 // Exports: default
 
-// Module 8920 (useGameNameAndCoverImage)
+// Module 8925 (useGameNameAndCoverImage)
 import set from "set" /* 2 */;
 import importDefaultResult1 from "importDefaultResult1" /* 7309 */;
 

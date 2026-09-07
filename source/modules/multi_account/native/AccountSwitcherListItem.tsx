@@ -1,10 +1,10 @@
-// Module ID: 15952
-// Function ID: 15953
+// Module ID: 15955
+// Function ID: 15956
 // Name: AccountStatusIcon
-// Dependencies: [19, 17, 1385, 4405, 1371, 12413, 21, 4560, 504, 4520, 576, 4515, 4556, 1114, 5123, 4277, 1178, 4404, 2]
+// Dependencies: [19, 17, 1385, 4405, 1371, 12417, 21, 4560, 504, 4520, 576, 4515, 4556, 1114, 5123, 4277, 1178, 4404, 2]
 // Exports: default
 
-// Module 15952 (AccountStatusIcon)
+// Module 15955 (AccountStatusIcon)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -13,7 +13,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "createdAt" /* 1385 */;
 import closure_6 from "initialize" /* 4405 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { MultiAccountTokenStatus } from "initialize" /* 12413 */;
+import { MultiAccountTokenStatus } from "initialize" /* 12417 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -106,7 +106,7 @@ export default function AccountSwitcherListItem(arg0) {
     const items2 = [leading, , ];
     obj2 = { style: null, children: null };
     obj2[0] = tmp.accountInfo;
-    const obj3 = { user: null, guildId: "a" };
+    const obj3 = { user: null, guildId: "Array" };
     obj3[0] = obj2;
     const items3 = [callback(tmp2(1178).Avatar, obj3), ];
     const obj4 = { style: null, children: null };

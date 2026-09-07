@@ -1,14 +1,14 @@
-// Module ID: 14909
-// Function ID: 14910
+// Module ID: 14912
+// Function ID: 14913
 // Name: getSpendingLimitDisplayState
-// Dependencies: [1221, 7537, 1373, 504, 14827, 7234, 7235, 1114, 2396, 2]
+// Dependencies: [1221, 7537, 1373, 504, 14830, 7234, 7235, 1114, 2396, 2]
 // Exports: useSpendingLimitDisplayState, useSpendingLimitFromUserSettings
 
-// Module 14909 (getSpendingLimitDisplayState)
+// Module 14912 (getSpendingLimitDisplayState)
 import initialize from "initialize" /* 504 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;
 import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 7234 */;
-import spendingLimitEqual from "spendingLimitEqual" /* 14827 */;
+import spendingLimitEqual from "spendingLimitEqual" /* 14830 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
 import closure_4 from "freshTeenActivityWithMap" /* 7537 */;
 import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1373 */;

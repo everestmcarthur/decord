@@ -1,9 +1,9 @@
-// Module ID: 12463
-// Function ID: 12464
+// Module ID: 12467
+// Function ID: 12468
 // Name: clearGuildMemberTimeout
 // Dependencies: [2021, 1371, 4188, 573, 7118, 2]
 
-// Module 12463 (clearGuildMemberTimeout)
+// Module 12467 (clearGuildMemberTimeout)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import isCommunicationDisabled from "isCommunicationDisabled" /* 4188 */;

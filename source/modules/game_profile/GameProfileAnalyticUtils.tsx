@@ -1,10 +1,10 @@
-// Module ID: 8686
-// Function ID: 8687
+// Module ID: 8691
+// Function ID: 8692
 // Name: GameProfileEmbedAction
 // Dependencies: [8336, 1074, 8358, 1256, 1242, 2]
 // Exports: generateViewId, getGuildIdAndVerifiedFromInvite, trackGameProfileAction, trackGameProfileClose, trackGameProfileEmbedAction, trackGameProfileFeedback, trackGameProfileOpen
 
-// Module 8686 (GameProfileEmbedAction)
+// Module 8691 (GameProfileEmbedAction)
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import v1 from "v1" /* 1256 */;
 import closure_3 from "map" /* 8336 */;

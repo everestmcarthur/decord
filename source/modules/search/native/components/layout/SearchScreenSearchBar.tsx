@@ -1,11 +1,11 @@
-// Module ID: 16627
-// Function ID: 16628
-// Dependencies: [19, 17, 21, 4560, 4267, 6625, 1874, 16628, 16630, 16635, 2]
+// Module ID: 16630
+// Function ID: 16631
+// Dependencies: [19, 17, 21, 4560, 4267, 6625, 1874, 16631, 16633, 16638, 2]
 
-// Module 16627
-import _modDef16628 from "module_16628" /* 16628 */;
-import SearchFilterPrefixRowDefault from "SearchFilterPrefixRow" /* 16630 */;
-import _modDef16635 from "module_16635" /* 16635 */;
+// Module 16630
+import _modDef16631 from "module_16631" /* 16631 */;
+import SearchFilterPrefixRowDefault from "SearchFilterPrefixRow" /* 16633 */;
+import _modDef16638 from "module_16638" /* 16638 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -55,7 +55,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, arg1) 
   items1[1] = headerWithBackButton;
   const items2 = [backButton, , ];
   obj = { style: tmp.headerSearch, children: null };
-  const items3 = [callback(_modDef16628, { ref: memo, searchContext, setSuggestionsDismissed }), ];
+  const items3 = [callback(_modDef16631, { ref: memo, searchContext, setSuggestionsDismissed }), ];
   obj = { style: tmp.suggestionsAnchor, children: null };
   obj1 = { searchContext, onLayoutMeasure: onSuggestionsLayoutMesure, dismissed: suggestionsDismissed, containerStyle: null };
   const items4 = [tmp.suggestions, ];
@@ -71,7 +71,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, arg1) 
   items2[1] = closure_6(View, obj);
   const tmp10 = SearchFilterPrefixRowDefault;
   const tmp8 = importDefault;
-  items2[2] = callback(View, { style: tmp.headerControlsRight, children: callback(_modDef16635, { searchContext, onOpen: callback, onClose: callback1 }) });
+  items2[2] = callback(View, { style: tmp.headerControlsRight, children: callback(_modDef16638, { searchContext, onOpen: callback, onClose: callback1 }) });
   obj[1] = items2;
   return closure_6(View, obj);
 }));

@@ -1,16 +1,16 @@
-// Module ID: 16769
-// Function ID: 16770
+// Module ID: 16772
+// Function ID: 16773
 // Name: IncomingRequestRow
-// Dependencies: [19, 4552, 4788, 10860, 1074, 21, 4296, 563, 1114, 4404, 16044, 12628, 10868, 16442, 16770, 2]
+// Dependencies: [19, 4552, 4788, 10865, 1074, 21, 4296, 563, 1114, 4404, 16047, 12632, 10873, 16445, 16773, 2]
 // Exports: ConnectedIncomingGameFriendRequestRow, IncomingFriendRequestRow
 
-// Module 16769 (IncomingRequestRow)
+// Module 16772 (IncomingRequestRow)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import closure_5 from "addApplication" /* 4788 */;
-import { UserRowModes } from "UserRowModes" /* 10860 */;
+import { UserRowModes } from "UserRowModes" /* 10865 */;
 import { RelationshipTypes } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 

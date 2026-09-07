@@ -1,9 +1,9 @@
-// Module ID: 16815
-// Function ID: 16816
+// Module ID: 16818
+// Function ID: 16819
 // Name: AutoArchiveDurationOptions
-// Dependencies: [19, 1964, 21, 9306, 5685, 1114, 5688, 2]
+// Dependencies: [19, 1964, 21, 9311, 5685, 1114, 5688, 2]
 
-// Module 16815 (AutoArchiveDurationOptions)
+// Module 16818 (AutoArchiveDurationOptions)
 import { ChannelFlags } from "set" /* 1964 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
@@ -13,7 +13,7 @@ const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   let _require;
   ({ title, description, selected, onSelectDuration } = channel);
-  let obj = _require(9306);
+  let obj = _require(9311);
   const autoArchiveOptions = obj.getAutoArchiveOptions();
   let hasFlagResult = null != channel && channel.isForumPost();
   if (hasFlagResult) {

@@ -1,10 +1,10 @@
-// Module ID: 14626
-// Function ID: 14627
+// Module ID: 14629
+// Function ID: 14630
 // Name: UserProfileEffectEditButton
-// Dependencies: [19, 17, 7208, 8798, 1085, 21, 4560, 576, 8166, 11042, 4527, 14627, 1896, 1114, 14618, 5577, 5587, 11011, 8801, 1178, 13172, 2]
+// Dependencies: [19, 17, 7208, 8803, 1085, 21, 4560, 576, 8166, 11047, 4527, 14630, 1896, 1114, 14621, 5577, 5587, 11016, 8806, 1178, 13176, 2]
 // Exports: default
 
-// Module 14626 (UserProfileEffectEditButton)
+// Module 14629 (UserProfileEffectEditButton)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

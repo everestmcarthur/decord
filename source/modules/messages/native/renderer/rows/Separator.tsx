@@ -1,10 +1,10 @@
-// Module ID: 13248
-// Function ID: 13249
+// Module ID: 13252
+// Function ID: 13253
 // Name: generateSeparatorRowData
 // Dependencies: [7933, 4560, 576, 1369, 2]
 // Exports: generateSeparatorRowData
 
-// Module 13248 (generateSeparatorRowData)
+// Module 13252 (generateSeparatorRowData)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;

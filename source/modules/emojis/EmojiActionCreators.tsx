@@ -1,10 +1,10 @@
-// Module ID: 10333
-// Function ID: 10334
+// Module ID: 10338
+// Function ID: 10339
 // Name: toggleGuildExpandedState
 // Dependencies: [573, 2]
 // Exports: initiateEmojiInteraction, toggleGuildExpandedState
 
-// Module 10333 (toggleGuildExpandedState)
+// Module 10338 (toggleGuildExpandedState)
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 

@@ -1,9 +1,9 @@
-// Module ID: 17430
-// Function ID: 17431
+// Module ID: 17433
+// Function ID: 17434
 // Name: prototype
-// Dependencies: [1908, 1895, 1074, 7118, 17431, 9089, 2]
+// Dependencies: [1908, 1895, 1074, 7118, 17434, 9094, 2]
 
-// Module 17430 (prototype)
+// Module 17433 (prototype)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_3 from "getState" /* 1895 */;

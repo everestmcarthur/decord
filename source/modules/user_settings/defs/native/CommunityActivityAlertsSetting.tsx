@@ -1,13 +1,13 @@
-// Module ID: 15517
-// Function ID: 15518
+// Module ID: 15520
+// Function ID: 15521
 // Name: route
-// Dependencies: [10080, 7975, 1074, 504, 1114, 11468, 15518, 2]
+// Dependencies: [10085, 7975, 1074, 504, 1114, 11473, 15521, 2]
 
-// Module 15517 (route)
+// Module 15520 (route)
 import initialize from "initialize" /* 504 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "computeAlertSettings" /* 10080 */;
-import createToggle from "createToggle" /* 11468 */;
+import closure_2 from "computeAlertSettings" /* 10085 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 createToggle = {
@@ -29,7 +29,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.COMMUNITY_ALERTS,
   getComponent() {
-    return require(15518) /* UserSettingsCommunityNotifications */.default;
+    return require(15521) /* UserSettingsCommunityNotifications */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

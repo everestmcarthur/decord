@@ -1,9 +1,9 @@
-// Module ID: 8446
-// Function ID: 8447
+// Module ID: 8453
+// Function ID: 8454
 // Name: initialize
 // Dependencies: [1371, 510, 504, 573, 2]
 
-// Module 8446 (initialize)
+// Module 8453 (initialize)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
@@ -32,7 +32,7 @@ Object.defineProperty(prototype, "loading", {
   set: undefined
 });
 Object.defineProperty(prototype, "methods", {
-  get: function methods(first, arg1) {
+  get: function methods(callback, arg1) {
     return c4;
   },
   set: undefined

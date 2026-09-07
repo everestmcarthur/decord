@@ -1,15 +1,15 @@
-// Module ID: 11012
-// Function ID: 11013
+// Module ID: 11017
+// Function ID: 11018
 // Name: OrbCheckoutAmountTag
-// Dependencies: [17, 21, 4560, 576, 8837, 4556, 1114, 2]
+// Dependencies: [17, 21, 4560, 576, 8842, 4556, 1114, 2]
 // Exports: default
 
-// Module 11012 (OrbCheckoutAmountTag)
+// Module 11017 (OrbCheckoutAmountTag)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
-import OrbsIcon from "OrbsIcon" /* 8837 */;
+import OrbsIcon from "OrbsIcon" /* 8842 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

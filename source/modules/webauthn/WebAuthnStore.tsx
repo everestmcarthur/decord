@@ -1,9 +1,9 @@
-// Module ID: 14656
-// Function ID: 14657
+// Module ID: 14659
+// Function ID: 14660
 // Name: hasFetchedCredentials
 // Dependencies: [1894, 504, 573, 2]
 
-// Module 14656 (hasFetchedCredentials)
+// Module 14659 (hasFetchedCredentials)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 

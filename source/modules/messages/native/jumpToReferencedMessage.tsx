@@ -1,10 +1,10 @@
-// Module ID: 11930
-// Function ID: 11931
+// Module ID: 11934
+// Function ID: 11935
 // Name: jumpToReferencedMessage
 // Dependencies: [7456, 2]
 // Exports: default
 
-// Module 11930 (jumpToReferencedMessage)
+// Module 11934 (jumpToReferencedMessage)
 import set from "set" /* 2 */;
 import trackInviteDefault from "trackInvite" /* 7456 */;
 

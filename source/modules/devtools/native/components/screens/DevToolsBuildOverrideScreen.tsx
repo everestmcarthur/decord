@@ -1,14 +1,14 @@
-// Module ID: 15580
-// Function ID: 15581
+// Module ID: 15583
+// Function ID: 15584
 // Name: jsx
-// Dependencies: [32, 19, 17, 11425, 21, 4560, 576, 8862, 15581, 6981, 504, 11789, 4973, 5687, 5605, 4507, 7190, 4258, 15158, 4518, 5685, 5688, 6606, 4975, 1369, 2]
+// Dependencies: [32, 19, 17, 11430, 21, 4560, 576, 8867, 15584, 6981, 504, 11794, 4973, 5687, 5605, 4507, 7190, 4258, 15161, 4518, 5685, 5688, 6606, 4975, 1369, 2]
 
-// Module 15580 (jsx)
+// Module 15583 (jsx)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getCurrentBuildOverride" /* 11425 */;
+import closure_6 from "getCurrentBuildOverride" /* 11430 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -34,7 +34,7 @@ const memoResult = importAllResult.memo(() => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let tmp;
     if (overrides != null) {
-      tmp = overrides[first(undefined, 11789).DEVICE_FIELD];
+      tmp = overrides[first(undefined, 11794).DEVICE_FIELD];
     }
     return tmp;
   });
@@ -67,12 +67,12 @@ const memoResult = importAllResult.memo(() => {
     };
     const items1 = [tmp7(tmp3(5605).TableRow, obj1), , ];
     let obj3 = { icon: null, label: "Refresh Override", onPress: null, arrow: true };
-    obj3[0] = tmp7(tmp3(15158).RefreshIcon, {});
-    obj3[2] = tmp3(11789).refreshBuildOverride;
+    obj3[0] = tmp7(tmp3(15161).RefreshIcon, {});
+    obj3[2] = tmp3(11794).refreshBuildOverride;
     items1[1] = tmp7(tmp3(5605).TableRow, obj3);
     const obj4 = { icon: null, label: "Clear Override", variant: "danger", onPress: null, arrow: true };
     obj4[0] = tmp7(tmp3(4518).TrashIcon, { color: "text-feedback-critical" });
-    obj4[3] = tmp3(11789).clearBuildOverride;
+    obj4[3] = tmp3(11794).clearBuildOverride;
     items1[2] = tmp7(tmp3(5605).TableRow, obj4);
     obj2[2] = items1;
     tmp10Result = tmp10(tmp3(5687).TableRowGroup, obj2);
@@ -149,11 +149,11 @@ const memoResult = importAllResult.memo(() => {
     onPress() {
       const type = first.type;
       if ("branch" === type) {
-        const result = first(11789).setBuildOverrideForBranch(tmp.id);
-        const obj3 = first(11789);
+        const result = first(11794).setBuildOverrideForBranch(tmp.id);
+        const obj3 = first(11794);
       } else if ("id" === type) {
-        const result1 = first(11789).setBuildOverrideForId(tmp.id);
-        const obj2 = first(11789);
+        const result1 = first(11794).setBuildOverrideForId(tmp.id);
+        const obj2 = first(11794);
       } else {
         first(1369).assertNever(tmp.type);
         const obj = first(1369);

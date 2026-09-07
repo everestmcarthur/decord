@@ -1,14 +1,14 @@
-// Module ID: 9686
-// Function ID: 9687
+// Module ID: 9691
+// Function ID: 9692
 // Name: StageChannelRaiseHandAck
-// Dependencies: [5, 32, 19, 17, 4251, 1962, 1074, 21, 1114, 4560, 576, 4713, 504, 4992, 9687, 8620, 9676, 5422, 8411, 8413, 8398, 8394, 1178, 4556, 4976, 4975, 9678, 9583, 4495, 4269, 9481, 5028, 2]
+// Dependencies: [5, 32, 19, 17, 4251, 1962, 1074, 21, 1114, 4560, 576, 4713, 504, 4992, 9692, 8625, 9681, 5422, 8411, 8413, 8398, 8394, 1178, 4556, 4976, 4975, 9683, 9588, 4495, 4269, 9486, 5028, 2]
 // Exports: default
 
-// Module 9686 (StageChannelRaiseHandAck)
+// Module 9691 (StageChannelRaiseHandAck)
 import ThemesDefault from "Themes" /* 576 */;
 import computeChannelNameDefault from "computeChannelName" /* 4713 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9678 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9683 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "_slicedToArray" /* 32 */;
 import closure_6 from "noop" /* 19 */;
@@ -302,7 +302,7 @@ export default function GlobalStageChannelStatus(arg0) {
     stringResult = intl.string(id(1114).t["/YzI63"]);
   }
   const tmp7 = useIsInvitedToSpeakDefault();
-  let invitedHeaderText = tmp3(9583)(id);
+  let invitedHeaderText = tmp3(9588)(id);
   let obj = id(504);
   const items = [closure_9];
   const items1 = [id];
@@ -338,7 +338,7 @@ export default function GlobalStageChannelStatus(arg0) {
           obj[0] = tmp.noticeContainer;
           obj1 = { animated: true, barStyle: null };
           obj1[1] = str;
-          const items2 = [callback2(tmp3(9481), obj1), , ];
+          const items2 = [callback2(tmp3(9486), obj1), , ];
           const obj2 = { style: null, size: null, source: null };
           obj2[0] = activeSpeakerIcon;
           obj2[1] = tmp8(1178).Icon.Sizes.REFRESH_SMALL_16;

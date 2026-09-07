@@ -1,9 +1,9 @@
-// Module ID: 17823
-// Function ID: 17824
+// Module ID: 17826
+// Function ID: 17827
 // Name: prototype
 // Dependencies: [17, 1221, 7118, 1115, 2]
 
-// Module 17823 (prototype)
+// Module 17826 (prototype)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import set2 from "set" /* 1115 */;

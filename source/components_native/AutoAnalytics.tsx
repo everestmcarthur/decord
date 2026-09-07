@@ -1,18 +1,18 @@
-// Module ID: 16736
-// Function ID: 16737
+// Module ID: 16739
+// Function ID: 16740
 // Name: componentDidMount
-// Dependencies: [19, 4576, 5277, 7526, 1962, 1957, 2021, 1979, 1908, 4609, 4583, 2011, 4381, 5279, 4741, 1371, 1074, 1964, 21, 4740, 7775, 16737, 16738, 1982, 16739, 1242, 1369, 16740, 504, 16741, 16742, 2]
+// Dependencies: [19, 4576, 5277, 7526, 1962, 1957, 2021, 1979, 1908, 4609, 4583, 2011, 4381, 5279, 4741, 1371, 1074, 1964, 21, 4740, 7775, 16740, 16741, 1982, 16742, 1242, 1369, 16743, 504, 16744, 16745, 2]
 // Exports: default
 
-// Module 16736 (componentDidMount)
+// Module 16739 (componentDidMount)
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
 import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7775 */;
-import collectGuildThemeAnalyticsMetadata from "collectGuildThemeAnalyticsMetadata" /* 16737 */;
-import trackGuildViewedClickstreamDefault from "trackGuildViewedClickstream" /* 16738 */;
-import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 16740 */;
+import collectGuildThemeAnalyticsMetadata from "collectGuildThemeAnalyticsMetadata" /* 16740 */;
+import trackGuildViewedClickstreamDefault from "trackGuildViewedClickstream" /* 16741 */;
+import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 16743 */;
 import closure_3 from "getParticipants" /* 4576 */;
 import closure_4 from "_handleConnectionOpen" /* 5277 */;
 import closure_5 from "scheduledEventSort" /* 7526 */;
@@ -82,7 +82,7 @@ prototype["componentDidMount"] = function componentDidMount() {
     obj5[0] = selectedGuildId;
     trackGuildViewedClickstreamDefault(obj5);
     if (obj8.isFavoritesGuildId(selectedGuildId)) {
-      tmp14(16739)();
+      tmp14(16742)();
     }
     obj8 = getFavoritesAwareGuildName;
     tmp14 = importDefault;
@@ -266,7 +266,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
       const obj19 = collectGuildThemeAnalyticsMetadata;
       const tmp68 = importDefault;
       if (obj21.isFavoritesGuildId(selectedGuildId)) {
-        tmp68(16739)();
+        tmp68(16742)();
       }
       obj21 = getFavoritesAwareGuildName;
     }

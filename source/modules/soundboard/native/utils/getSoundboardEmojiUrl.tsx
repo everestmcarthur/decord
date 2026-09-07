@@ -1,10 +1,10 @@
-// Module ID: 11935
-// Function ID: 11936
+// Module ID: 11939
+// Function ID: 11940
 // Name: getSoundboardEmojiUrl
 // Dependencies: [1396, 2]
 // Exports: default
 
-// Module 11935 (getSoundboardEmojiUrl)
+// Module 11939 (getSoundboardEmojiUrl)
 import set from "set" /* 2 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
 

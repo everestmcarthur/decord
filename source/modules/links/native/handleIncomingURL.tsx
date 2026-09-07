@@ -1,10 +1,10 @@
-// Module ID: 17896
-// Function ID: 17897
+// Module ID: 17899
+// Function ID: 17900
 // Name: _handleIncomingURL
-// Dependencies: [5, 1957, 4583, 1895, 1074, 3, 7475, 17895, 4767, 1242, 13850, 4540, 4545, 1255, 8378, 15944, 17897, 2]
+// Dependencies: [5, 1957, 4583, 1895, 1074, 3, 7475, 17898, 4767, 1242, 13853, 4540, 4545, 1255, 8378, 15947, 17900, 2]
 // Exports: default
 
-// Module 17896 (_handleIncomingURL)
+// Module 17899 (_handleIncomingURL)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;

@@ -1,10 +1,10 @@
-// Module ID: 13136
-// Function ID: 13137
+// Module ID: 13140
+// Function ID: 13141
 // Name: memo
-// Dependencies: [32, 19, 17, 1076, 21, 4560, 576, 13137, 6655, 1114, 7554, 13138, 4556, 2]
+// Dependencies: [32, 19, 17, 1076, 21, 4560, 576, 13141, 6655, 1114, 7554, 13142, 4556, 2]
 // Exports: default
 
-// Module 13136 (memo)
+// Module 13140 (memo)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
@@ -141,7 +141,7 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   const tmp12 = onActiveItemChange;
   tmp4 = callback(callback5(product.skuId), 2);
   const items2 = [
-    callback6(onActiveItemChange(13138).IndividualProductPreview, {
+    callback6(onActiveItemChange(13142).IndividualProductPreview, {
       product: callback4(() => {
         const items = [closure_1];
         return { skuId: closure_1.skuId, type: closure_1.type, items };

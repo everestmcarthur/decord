@@ -1,10 +1,10 @@
-// Module ID: 13469
-// Function ID: 13470
+// Module ID: 13473
+// Function ID: 13474
 // Name: apexExperiment
 // Dependencies: [1433, 2]
 // Exports: getBogoPromotionGateEnabled, useBogoPromotionGateEnabled
 
-// Module 13469 (apexExperiment)
+// Module 13473 (apexExperiment)
 import set from "set" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 

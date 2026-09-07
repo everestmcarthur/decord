@@ -1,13 +1,13 @@
-// Module ID: 15837
-// Function ID: 15838
+// Module ID: 15840
+// Function ID: 15841
 // Name: CollectiblesShopHeaderTitle
-// Dependencies: [19, 17, 1371, 1076, 1074, 5444, 8183, 21, 4560, 576, 12138, 4556, 1114, 504, 8851, 11484, 7541, 7182, 7133, 4527, 11101, 1896, 1242, 11767, 5447, 4763, 8179, 11090, 8097, 8774, 8666, 15838, 1483, 2]
+// Dependencies: [19, 17, 1371, 1076, 1074, 5444, 8183, 21, 4560, 576, 12142, 4556, 1114, 504, 8856, 11489, 7541, 7182, 7133, 4527, 11106, 1896, 1242, 11772, 5447, 4763, 8179, 11095, 8097, 8779, 8671, 15841, 1483, 2]
 // Exports: default
 
-// Module 15837 (CollectiblesShopHeaderTitle)
+// Module 15840 (CollectiblesShopHeaderTitle)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
-import ShopIcon from "ShopIcon" /* 12138 */;
+import ShopIcon from "ShopIcon" /* 12142 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;

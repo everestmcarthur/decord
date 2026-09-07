@@ -1,10 +1,10 @@
-// Module ID: 9818
-// Function ID: 9819
+// Module ID: 9823
+// Function ID: 9824
 // Name: DeleteEventAlert
-// Dependencies: [5, 19, 7526, 21, 4560, 504, 9703, 4527, 4910, 1114, 4556, 2]
+// Dependencies: [5, 19, 7526, 21, 4560, 504, 9708, 4527, 4910, 1114, 4556, 2]
 // Exports: default
 
-// Module 9818 (DeleteEventAlert)
+// Module 9823 (DeleteEventAlert)
 import noopAll from "noop" /* 19 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "scheduledEventSort" /* 7526 */;
@@ -50,7 +50,7 @@ export default function DeleteEventAlert(eventException) {
               return obj;
             } else {
               closure_0 = tmp4;
-              const obj8 = v0(9703);
+              const obj8 = v0(9708);
               if (closure_1_4) {
                 v0 = 2;
                 dependencyMap = 1;

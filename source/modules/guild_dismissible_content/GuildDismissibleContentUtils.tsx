@@ -1,10 +1,10 @@
-// Module ID: 12494
-// Function ID: 12495
+// Module ID: 12498
+// Function ID: 12499
 // Name: isContentDismissed
 // Dependencies: [1221, 1074, 1954, 1084, 1942, 504, 1940, 1242, 1943, 2]
 // Exports: isContentDismissed, markContentAsDismissed, unmarkContentAsDismissed, useIsContentDismissed
 
-// Module 12494 (isContentDismissed)
+// Module 12498 (isContentDismissed)
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import hasBit from "hasBit" /* 1942 */;
 import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;

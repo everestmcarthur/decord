@@ -1,10 +1,10 @@
-// Module ID: 12016
-// Function ID: 12017
+// Module ID: 12020
+// Function ID: 12021
 // Name: ForumPostTitle
 // Dependencies: [19, 21, 4560, 1116, 4556, 2]
 // Exports: default
 
-// Module 12016 (ForumPostTitle)
+// Module 12020 (ForumPostTitle)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4556 */;
 import { jsx } from "jsxProd" /* 21 */;

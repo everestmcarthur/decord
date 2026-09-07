@@ -1,10 +1,10 @@
-// Module ID: 13564
-// Function ID: 13565
+// Module ID: 13568
+// Function ID: 13569
 // Name: textLogoTier2
-// Dependencies: [19, 17, 7432, 1373, 21, 4560, 576, 4987, 1093, 4218, 13565, 13566, 8068, 9385, 10715, 10716, 5607, 2]
+// Dependencies: [19, 17, 7432, 1373, 21, 4560, 576, 4987, 1093, 4218, 13569, 13570, 8068, 9390, 10720, 10721, 5607, 2]
 // Exports: default
 
-// Module 13564 (textLogoTier2)
+// Module 13568 (textLogoTier2)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import keys from "keys" /* 1093 */;
@@ -44,9 +44,9 @@ export default function _default(premiumType) {
   }
   obj[3] = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = tmp5(13565);
+    let tmp5Result = tmp5(13569);
   } else if (tmp10.TIER_1 === premiumType) {
-    tmp5Result = tmp5(13566);
+    tmp5Result = tmp5(13570);
   } else if (tmp10.TIER_2 === premiumType) {
     tmp5Result = tmp5(8068);
   }
@@ -64,11 +64,11 @@ export default function _default(premiumType) {
   obj = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    tmp5Result = tmp5(9385);
+    tmp5Result = tmp5(9390);
   } else if (tmp10.TIER_1 === premiumType) {
-    tmp5Result = tmp5(10715);
+    tmp5Result = tmp5(10720);
   } else if (tmp10.TIER_2 === premiumType) {
-    tmp5Result = tmp5(10716);
+    tmp5Result = tmp5(10721);
   }
   obj1 = { children: null };
   obj[3] = tmp5Result;

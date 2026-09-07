@@ -1,10 +1,10 @@
-// Module ID: 16602
-// Function ID: 16603
+// Module ID: 16605
+// Function ID: 16606
 // Name: ProposalCard
-// Dependencies: [19, 17, 1895, 16586, 16589, 21, 4560, 576, 1114, 3547, 4973, 4556, 4550, 4975, 5607, 4255, 16603, 16604, 16606, 16608, 16610, 504, 8874, 16612, 2]
+// Dependencies: [19, 17, 1895, 16589, 16592, 21, 4560, 576, 1114, 3547, 4973, 4556, 4550, 4975, 5607, 4255, 16606, 16607, 16609, 16611, 16613, 504, 8879, 16615, 2]
 // Exports: default
 
-// Module 16602 (ProposalCard)
+// Module 16605 (ProposalCard)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 3547 */;
@@ -12,17 +12,17 @@ import get_defaultRulesDefault from "get defaultRules" /* 4550 */;
 import Text from "Text" /* 4556 */;
 import Stack from "Stack" /* 4973 */;
 import Button from "Button" /* 4975 */;
-import VibegrationsMessageAuthorDefault from "VibegrationsMessageAuthor" /* 16604 */;
-import VibegrationsClarificationCardDefault from "VibegrationsClarificationCard" /* 16606 */;
-import VibegrationsSecretRequestCardDefault from "VibegrationsSecretRequestCard" /* 16608 */;
-import VibegrationsSettingsRequestCardDefault from "VibegrationsSettingsRequestCard" /* 16610 */;
+import VibegrationsMessageAuthorDefault from "VibegrationsMessageAuthor" /* 16607 */;
+import VibegrationsClarificationCardDefault from "VibegrationsClarificationCard" /* 16609 */;
+import VibegrationsSecretRequestCardDefault from "VibegrationsSecretRequestCard" /* 16611 */;
+import VibegrationsSettingsRequestCardDefault from "VibegrationsSettingsRequestCard" /* 16613 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "getState" /* 1895 */;
-import closure_7 from "newMessage" /* 16586 */;
-import { turnSettled } from "newMessage" /* 16586 */;
-import rejectPendingPublish from "rejectPendingPublish" /* 16589 */;
-import closure_13 from "rejectPendingPublish" /* 16589 */;
+import closure_7 from "newMessage" /* 16589 */;
+import { turnSettled } from "newMessage" /* 16589 */;
+import rejectPendingPublish from "rejectPendingPublish" /* 16592 */;
+import closure_13 from "rejectPendingPublish" /* 16592 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -218,7 +218,7 @@ function ActivityBox(tree) {
     const steps = tree.steps;
     const items1 = [
       steps.map((id) => {
-          const obj = { variant: "text-sm/normal", color: "text-muted", children: callback(16603).describeNode(id) };
+          const obj = { variant: "text-sm/normal", color: "text-muted", children: callback(16606).describeNode(id) };
           return callback3(callback(4556).Text, obj, id.id);
         }),
 

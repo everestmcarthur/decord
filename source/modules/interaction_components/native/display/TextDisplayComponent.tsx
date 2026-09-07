@@ -1,10 +1,10 @@
-// Module ID: 15715
-// Function ID: 15716
+// Module ID: 15718
+// Function ID: 15719
 // Name: TextDisplayComponent
-// Dependencies: [32, 19, 4552, 2011, 8111, 21, 8112, 38, 4550, 7888, 504, 1935, 15716, 11616, 11586, 2]
+// Dependencies: [32, 19, 4552, 2011, 8111, 21, 8112, 38, 4550, 7888, 504, 1935, 15719, 11621, 11591, 2]
 // Exports: default
 
-// Module 15715 (TextDisplayComponent)
+// Module 15718 (TextDisplayComponent)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;

@@ -1,9 +1,9 @@
-// Module ID: 17838
-// Function ID: 17839
+// Module ID: 17841
+// Function ID: 17842
 // Name: AVErrorStreamViewHighPacketLossDefinition
-// Dependencies: [4582, 502, 4599, 17837, 4612, 9110, 17834, 2]
+// Dependencies: [4582, 502, 4599, 17840, 4612, 9115, 17837, 2]
 
-// Module 17838 (AVErrorStreamViewHighPacketLossDefinition)
+// Module 17841 (AVErrorStreamViewHighPacketLossDefinition)
 import closure_2 from "reset" /* 4582 */;
 import closure_3 from "fetchFingerprint" /* 502 */;
 import closure_4 from "initialize" /* 4599 */;

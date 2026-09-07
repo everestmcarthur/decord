@@ -1,10 +1,10 @@
-// Module ID: 14115
-// Function ID: 14116
+// Module ID: 14118
+// Function ID: 14119
 // Name: SpeakerPulse
 // Dependencies: [19, 17, 4552, 21, 4560, 576, 504, 4296, 4561, 2]
 // Exports: default
 
-// Module 14115 (SpeakerPulse)
+// Module 14118 (SpeakerPulse)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

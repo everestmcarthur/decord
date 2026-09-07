@@ -1,12 +1,12 @@
-// Module ID: 16173
-// Function ID: 16174
+// Module ID: 16176
+// Function ID: 16177
 // Name: useGuildPowerupsBoostAction
-// Dependencies: [5, 19, 4455, 4450, 1074, 12538, 7162, 7419, 4458, 4454, 5434, 7403, 2]
+// Dependencies: [5, 19, 4455, 4450, 1074, 12542, 7162, 7419, 4458, 4454, 5434, 7403, 2]
 // Exports: default
 
-// Module 16173 (useGuildPowerupsBoostAction)
+// Module 16176 (useGuildPowerupsBoostAction)
 import contextDefault from "context" /* 7162 */;
-import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 12538 */;
+import useGuildBoostPurchaseHandlerDefault from "useGuildBoostPurchaseHandler" /* 12542 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "handleGuildBoostsUpdate" /* 4455 */;

@@ -1,10 +1,10 @@
-// Module ID: 10903
-// Function ID: 10904
+// Module ID: 10908
+// Function ID: 10909
 // Name: useDisplayNameStylesEffectDefaultColors
 // Dependencies: [19, 1389, 1091, 4262, 576, 1390, 2]
 // Exports: default
 
-// Module 10903 (useDisplayNameStylesEffectDefaultColors)
+// Module 10908 (useDisplayNameStylesEffectDefaultColors)
 import ThemesDefault from "Themes" /* 576 */;
 import int2hslRaw from "int2hslRaw" /* 1091 */;
 import map from "map" /* 4262 */;

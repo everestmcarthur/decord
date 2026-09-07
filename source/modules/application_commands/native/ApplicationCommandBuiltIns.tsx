@@ -1,9 +1,9 @@
-// Module ID: 9302
-// Function ID: 9303
+// Module ID: 9307
+// Function ID: 9308
 // Name: get untranslatedDescription
 // Dependencies: [4209, 1371, 4999, 1894, 7523, 1114, 4713, 4904, 4573, 7456, 2]
 
-// Module 9302 (get untranslatedDescription)
+// Module 9307 (get untranslatedDescription)
 import setDefault from "set" /* 4904 */;
 import closure_3 from "markAllUserIdListsStale" /* 4209 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;

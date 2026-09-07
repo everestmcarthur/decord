@@ -1,22 +1,22 @@
-// Module ID: 17662
-// Function ID: 17663
+// Module ID: 17665
+// Function ID: 17666
 // Name: onModalClose
-// Dependencies: [19, 21, 17661, 5630, 5624, 1114, 7377, 6992, 17663, 17664, 17676, 17677, 7000, 2]
+// Dependencies: [19, 21, 17664, 5630, 5624, 1114, 7377, 6992, 17666, 17667, 17679, 17680, 7000, 2]
 // Exports: default
 
-// Module 17662 (onModalClose)
+// Module 17665 (onModalClose)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import HeaderBackImage from "HeaderBackImage" /* 5624 */;
 import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5630 */;
 import NavigationStack from "NavigationStack" /* 7000 */;
-import _modDef17661 from "module_17661" /* 17661 */;
-import EnableCommunityModalSteps from "EnableCommunityModalSteps" /* 17663 */;
+import _modDef17664 from "module_17664" /* 17664 */;
+import EnableCommunityModalSteps from "EnableCommunityModalSteps" /* 17666 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;
 function onModalClose() {
-  _modDef17661.close();
+  _modDef17664.close();
 }
 function HeaderBackButton(arg0) {
   useNavigatorBackPressHandler.useNavigatorBackPressHandler(() => {
@@ -44,7 +44,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return callback3(callback2(17664), {});
+        return callback3(callback2(17667), {});
       }
     };
     obj = {
@@ -53,7 +53,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return callback3(callback2(17676), {});
+        return callback3(callback2(17679), {});
       }
     };
     obj = {
@@ -62,7 +62,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return callback3(callback2(17677), {});
+        return callback3(callback2(17680), {});
       }
     };
     return { [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_1]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_2]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_3]: obj };

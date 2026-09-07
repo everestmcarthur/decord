@@ -1,14 +1,14 @@
-// Module ID: 17195
-// Function ID: 17196
+// Module ID: 17198
+// Function ID: 17199
 // Name: ScreenXIcon
-// Dependencies: [19, 21, 576, 4261, 9971, 2]
+// Dependencies: [19, 21, 576, 4261, 9976, 2]
 // Exports: ScreenXIcon
 
-// Module 17195 (ScreenXIcon)
+// Module 17198 (ScreenXIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 9971 */;
+import registerAsset from "registerAsset" /* 9976 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

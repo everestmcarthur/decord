@@ -1,13 +1,13 @@
-// Module ID: 16139
-// Function ID: 16140
+// Module ID: 16142
+// Function ID: 16143
 // Name: useFavoritesGuildResetAction
-// Dependencies: [19, 4381, 1074, 1935, 10224, 1982, 1100, 10223, 1114, 3225, 2]
+// Dependencies: [19, 4381, 1074, 1935, 10229, 1982, 1100, 10228, 1114, 3225, 2]
 // Exports: default
 
-// Module 16139 (useFavoritesGuildResetAction)
+// Module 16142 (useFavoritesGuildResetAction)
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import messagesProxyDefault from "messagesProxy" /* 3225 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10224 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 10229 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "handleConnectionOpen" /* 4381 */;
 import { Routes } from "ME" /* 1074 */;

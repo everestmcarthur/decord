@@ -1,10 +1,10 @@
-// Module ID: 14594
-// Function ID: 14595
+// Module ID: 14597
+// Function ID: 14598
 // Name: UserProfileUpsellButton
-// Dependencies: [19, 1074, 1373, 21, 4560, 7162, 7446, 1242, 4975, 9313, 1114, 8662, 2]
+// Dependencies: [19, 1074, 1373, 21, 4560, 7162, 7446, 1242, 4975, 9318, 1114, 8667, 2]
 // Exports: default
 
-// Module 14594 (UserProfileUpsellButton)
+// Module 14597 (UserProfileUpsellButton)
 import closure_3 from "noop" /* 19 */;
 import ME from "ME" /* 1074 */;
 import { PremiumUpsellTypes } from "GuildFeatures" /* 1373 */;
@@ -49,6 +49,6 @@ export default function UserProfileUpsellButton(analyticsObject) {
   }
   obj[2] = label;
   obj = { color: "white", size: "sm", style: callback().nitroWheel };
-  obj[3] = jsx(analyticsObject(8662).NitroWheelIcon, { color: "white", size: "sm", style: callback().nitroWheel });
+  obj[3] = jsx(analyticsObject(8667).NitroWheelIcon, { color: "white", size: "sm", style: callback().nitroWheel });
   return jsx(analyticsObject(4975).Button, { color: "white", size: "sm", style: callback().nitroWheel });
 };

@@ -1,10 +1,10 @@
-// Module ID: 10705
-// Function ID: 10706
+// Module ID: 10710
+// Function ID: 10711
 // Name: isSpendingLimitError
-// Dependencies: [4461, 4240, 8645, 4905, 1114, 7587, 4573, 2]
+// Dependencies: [4461, 4240, 8650, 4905, 1114, 7587, 4573, 2]
 // Exports: isSpendingLimitError, showSpendingLimitReachedAlert
 
-// Module 10705 (isSpendingLimitError)
+// Module 10710 (isSpendingLimitError)
 import set from "set" /* 2 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4461 */;
 import _modDef4905 from "module_4905" /* 4905 */;
@@ -23,7 +23,7 @@ export const isSpendingLimitError = function isSpendingLimitError(billingError) 
   return tmp3;
 };
 export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAlert() {
-  let obj = activeLinkUserIds(8645);
+  let obj = activeLinkUserIds(8650);
   activeLinkUserIds = obj.getActiveLinkUserIds();
   obj1 = _modDef4905;
   obj = { title: null, body: null, isDismissable: true };

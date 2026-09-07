@@ -1,17 +1,17 @@
-// Module ID: 13600
-// Function ID: 13601
+// Module ID: 13604
+// Function ID: 13605
 // Name: items
-// Dependencies: [19, 17, 4552, 21, 4560, 576, 1114, 13601, 5529, 13602, 13603, 4556, 12564, 2]
+// Dependencies: [19, 17, 4552, 21, 4560, 576, 1114, 13605, 5529, 13606, 13607, 4556, 12568, 2]
 // Exports: default
 
-// Module 13600 (items)
+// Module 13604 (items)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import playDefault from "play" /* 5529 */;
-import registerAssetDefault from "registerAsset" /* 13601 */;
-import _mod13602 from "module_13602" /* 13602 */;
-import registerAssetDefault2 from "registerAsset" /* 13603 */;
+import registerAssetDefault from "registerAsset" /* 13605 */;
+import _mod13606 from "module_13606" /* 13606 */;
+import registerAssetDefault2 from "registerAsset" /* 13607 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -53,7 +53,7 @@ let items = [
       return intl.string(getSystemLocale.t.wOYbTv);
     },
     getGraphic(arg0) {
-      const obj = { source: _mod13602, autoPlay: !useReducedMotion.useReducedMotion, style: arg0 };
+      const obj = { source: _mod13606, autoPlay: !useReducedMotion.useReducedMotion, style: arg0 };
       return callback(playDefault, obj);
     }
   },
@@ -117,7 +117,7 @@ export default function GuildBoostingMarketingTopPerksCards() {
       return closure_1_7(closure_1_4, obj, arg1);
     })
   };
-  items[1] = callback(_require(12564).MarketingCardsScroller, obj);
+  items[1] = callback(_require(12568).MarketingCardsScroller, obj);
   obj[1] = items;
   return callback2(closure_4, obj);
 };

@@ -1,13 +1,13 @@
-// Module ID: 9749
-// Function ID: 9750
+// Module ID: 9754
+// Function ID: 9755
 // Name: CreateChannelTypeDescription
-// Dependencies: [19, 17, 9065, 1074, 21, 9187, 5551, 4556, 1114, 2]
+// Dependencies: [19, 17, 9070, 1074, 21, 9192, 5551, 4556, 1114, 2]
 // Exports: default
 
-// Module 9749 (CreateChannelTypeDescription)
+// Module 9754 (CreateChannelTypeDescription)
 import closure_2 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { GuildProfileFetchStatus } from "handleUpdateStart" /* 9065 */;
+import { GuildProfileFetchStatus } from "handleUpdateStart" /* 9070 */;
 import { ChannelTypes } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 
@@ -17,7 +17,7 @@ const result = require("set").fileFinishedImporting("modules/channel/native/comp
 export default function CreateChannelTypeDescription(guildId) {
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
-  let obj = fetchGuildProfile(9187);
+  let obj = fetchGuildProfile(9192);
   guildProfile = obj.useGuildProfile(guildId);
   ({ guildProfile, fetchGuildProfile } = guildProfile);
   let hasItem = null != guildProfile;

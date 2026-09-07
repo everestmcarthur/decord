@@ -1,17 +1,17 @@
-// Module ID: 8760
-// Function ID: 8761
+// Module ID: 8765
+// Function ID: 8766
 // Name: _getShopCollection
-// Dependencies: [5, 2025, 8682, 1074, 8761, 573, 4802, 1272, 504, 559, 1090, 8752, 2]
+// Dependencies: [5, 2025, 8687, 1074, 8766, 573, 4802, 1272, 504, 559, 1090, 8757, 2]
 // Exports: getGameAnnouncements, getShopCollection
 
-// Module 8760 (_getShopCollection)
+// Module 8765 (_getShopCollection)
 import failsDefault from "fails" /* 559 */;
 import setDefault from "set" /* 1090 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_getSystemLocale" /* 2025 */;
-import importDefaultResult from "getSimilarGames" /* 8682 */;
+import importDefaultResult from "getSimilarGames" /* 8687 */;
 import { Endpoints } from "ME" /* 1074 */;
-import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_7 } from "set" /* 8761 */;
+import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_7 } from "set" /* 8766 */;
 import initialize from "initialize" /* 504 */;
 
 const require = arg1;
@@ -200,7 +200,7 @@ function _getGameAnnouncements() {
         const obj6 = { type: "GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS", gameId: null, messages: null, channelId: null, guildId: null };
         obj6[1] = callback;
         const obj9 = body(573);
-        obj6[2] = callback(8752).toAnnouncementMessages(body.messages);
+        obj6[2] = callback(8757).toAnnouncementMessages(body.messages);
         const channel_id = body.channel_id;
         dependencyMap = channel_id;
         if (channel_id == null) {
@@ -215,7 +215,7 @@ function _getGameAnnouncements() {
         obj6[4] = c3;
         obj9.dispatch(obj6);
         c7 = 0;
-        const obj11 = callback(8752);
+        const obj11 = callback(8757);
       }
       c7 = 0;
       return body;

@@ -1,14 +1,14 @@
-// Module ID: 17313
-// Function ID: 17314
+// Module ID: 17316
+// Function ID: 17317
 // Name: _initialize
-// Dependencies: [1915, 1908, 4583, 5279, 5419, 4584, 1074, 1090, 7118, 4447, 4740, 16742, 4690, 2]
+// Dependencies: [1915, 1908, 4583, 5279, 5419, 4584, 1074, 1090, 7118, 4447, 4740, 16745, 4690, 2]
 
-// Module 17313 (_initialize)
+// Module 17316 (_initialize)
 import setDefault from "set" /* 1090 */;
 import _openRobloxURLWithRootPlaceId from "_openRobloxURLWithRootPlaceId" /* 4690 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
 import initializeDefault from "initialize" /* 7118 */;
-import getGamePlatformDefault from "getGamePlatform" /* 16742 */;
+import getGamePlatformDefault from "getGamePlatform" /* 16745 */;
 import closure_3 from "initialize" /* 1915 */;
 import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
 import closure_5 from "createRTCConnection" /* 4583 */;

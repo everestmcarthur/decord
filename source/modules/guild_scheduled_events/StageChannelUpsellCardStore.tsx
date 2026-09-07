@@ -1,10 +1,10 @@
-// Module ID: 9730
-// Function ID: 9731
+// Module ID: 9735
+// Function ID: 9736
 // Name: useStageChannelUpsellCardStore
 // Dependencies: [1963, 1244, 510, 1249, 4184, 2]
 // Exports: useStageChannelUpsellCardStore
 
-// Module 9730 (useStageChannelUpsellCardStore)
+// Module 9735 (useStageChannelUpsellCardStore)
 import set from "set" /* 2 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
 import isIterable from "isIterable" /* 4184 */;

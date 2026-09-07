@@ -1,10 +1,10 @@
-// Module ID: 8864
-// Function ID: 8865
+// Module ID: 8869
+// Function ID: 8870
 // Name: getCardProductName
 // Dependencies: [1889, 1114, 7553, 2]
 // Exports: getCardProductName, getProductName, getProductNameAndTypeLabel, getPurchasedProductName
 
-// Module 8864 (getCardProductName)
+// Module 8869 (getCardProductName)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;

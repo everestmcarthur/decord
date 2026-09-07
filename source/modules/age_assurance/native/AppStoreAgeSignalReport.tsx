@@ -1,12 +1,12 @@
-// Module ID: 17460
-// Function ID: 17461
+// Module ID: 17463
+// Function ID: 17464
 // Name: collectAgeSignal
-// Dependencies: [32, 5, 1371, 1074, 8571, 8450, 1232, 1115, 8568, 8570, 1242, 5423, 4589, 2]
+// Dependencies: [32, 5, 1371, 1074, 8574, 8439, 1232, 1115, 8571, 8573, 1242, 5423, 4589, 2]
 // Exports: beginAppStoreAgeSignalReport, settleAppStoreAgeSignalReport
 
-// Module 17460 (collectAgeSignal)
+// Module 17463 (collectAgeSignal)
 import isFeatureAgeGated from "isFeatureAgeGated" /* 5423 */;
-import MIN_AGE_GATE from "MIN_AGE_GATE" /* 8450 */;
+import MIN_AGE_GATE from "MIN_AGE_GATE" /* 8439 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
@@ -156,7 +156,7 @@ function _performAgeCheck() {
           dependencyMap = callback3(callback2, 2);
           callback3 = 32;
           c4 = 5;
-          let obj7 = callback(8568);
+          let obj7 = callback(8571);
           c5 = 3;
           constants = 1;
           let obj4 = { value: null, done: false };
@@ -175,7 +175,7 @@ function _performAgeCheck() {
           return obj5;
         } else {
           c5 = arg1;
-          obj4 = callback(8570);
+          obj4 = callback(8573);
           c5 = 4;
           constants = 1;
           const obj6 = { value: null, done: false };

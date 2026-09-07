@@ -1,14 +1,14 @@
-// Module ID: 9864
-// Function ID: 9865
+// Module ID: 9869
+// Function ID: 9870
 // Name: frozen
-// Dependencies: [109, 19, 17, 21, 4560, 576, 4271, 9865, 4965, 9879, 8245, 2]
+// Dependencies: [109, 19, 17, 21, 4560, 576, 4271, 9870, 4965, 9884, 8245, 2]
 
-// Module 9864 (frozen)
+// Module 9869 (frozen)
 import ThemesDefault from "Themes" /* 576 */;
 import isBlurDisabledDefault from "isBlurDisabled" /* 4965 */;
 import _modDef8245 from "module_8245" /* 8245 */;
-import QRCodeDefault from "QRCode" /* 9865 */;
-import registerAsset from "registerAsset" /* 9879 */;
+import QRCodeDefault from "QRCode" /* 9870 */;
+import registerAsset from "registerAsset" /* 9884 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

@@ -1,10 +1,10 @@
-// Module ID: 8586
-// Function ID: 8587
+// Module ID: 8589
+// Function ID: 8590
 // Name: AgeVerificationMethodsContainer
 // Dependencies: [19, 8412, 8419, 21, 4560, 576, 8418, 7602, 7607, 4973, 1178, 1114, 5687, 4556, 2946, 5433, 4975, 8417, 5605, 8411, 2]
 // Exports: AgeVerificationMethodsContainer
 
-// Module 8586 (AgeVerificationMethodsContainer)
+// Module 8589 (AgeVerificationMethodsContainer)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { VerificationMethod } from "set" /* 8412 */;

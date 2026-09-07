@@ -1,10 +1,10 @@
-// Module ID: 15482
-// Function ID: 15483
+// Module ID: 15485
+// Function ID: 15486
 // Name: hasAndroidNotificationChannels
 // Dependencies: [1115, 4539, 2]
 // Exports: hasAndroidNotificationChannels
 
-// Module 15482 (hasAndroidNotificationChannels)
+// Module 15485 (hasAndroidNotificationChannels)
 import set from "set" /* 2 */;
 import set2 from "set" /* 1115 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;

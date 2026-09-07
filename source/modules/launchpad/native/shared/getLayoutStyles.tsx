@@ -1,10 +1,10 @@
-// Module ID: 16977
-// Function ID: 16978
+// Module ID: 16980
+// Function ID: 16981
 // Name: getLayoutStyle
 // Dependencies: [576, 1178, 5584, 7172, 2]
 // Exports: default
 
-// Module 16977 (getLayoutStyle)
+// Module 16980 (getLayoutStyle)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;

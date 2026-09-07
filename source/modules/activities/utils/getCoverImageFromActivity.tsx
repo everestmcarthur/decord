@@ -1,10 +1,10 @@
-// Module ID: 13234
-// Function ID: 13235
+// Module ID: 13238
+// Function ID: 13239
 // Name: getCoverImageFromActivity
 // Dependencies: [1920, 8139, 2]
 // Exports: default
 
-// Module 13234 (getCoverImageFromActivity)
+// Module 13238 (getCoverImageFromActivity)
 import set from "set" /* 2 */;
 import items3 from "items3" /* 1920 */;
 import updateAssets from "updateAssets" /* 8139 */;

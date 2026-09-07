@@ -1,9 +1,9 @@
-// Module ID: 17863
-// Function ID: 17864
+// Module ID: 17866
+// Function ID: 17867
 // Name: getLastBundle
-// Dependencies: [1256, 17864, 2]
+// Dependencies: [1256, 17867, 2]
 
-// Module 17863 (getLastBundle)
+// Module 17866 (getLastBundle)
 import set from "set" /* 2 */;
 
 class NavigationSpanTracker {
@@ -64,9 +64,9 @@ prototype["flush"] = function flush(arg0) {
     }
     self.active = null;
     if ("deadline_exceeded" === arg0) {
-      let INTERRUPTED = _require(17864).NavigationSpanStatus.DEADLINE_EXCEEDED;
+      let INTERRUPTED = _require(17867).NavigationSpanStatus.DEADLINE_EXCEEDED;
     } else {
-      INTERRUPTED = _require(17864).NavigationSpanStatus.INTERRUPTED;
+      INTERRUPTED = _require(17867).NavigationSpanStatus.INTERRUPTED;
     }
     const bundle = self.buildBundle(str, str.spanTtiName, true, INTERRUPTED);
     self.lastBundle = bundle;

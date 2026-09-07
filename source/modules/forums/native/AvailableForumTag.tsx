@@ -1,10 +1,10 @@
-// Module ID: 11249
-// Function ID: 11250
+// Module ID: 11254
+// Function ID: 11255
 // Name: AvailableForumTag
-// Dependencies: [19, 5459, 1374, 21, 4560, 576, 504, 10628, 8902, 7130, 1396, 4556, 2]
+// Dependencies: [19, 5459, 1374, 21, 4560, 576, 504, 10633, 8907, 7130, 1396, 4556, 2]
 // Exports: default
 
-// Module 11249 (AvailableForumTag)
+// Module 11254 (AvailableForumTag)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "getEmojiToGroupId" /* 5459 */;

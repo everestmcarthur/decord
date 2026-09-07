@@ -1,17 +1,17 @@
-// Module ID: 16804
-// Function ID: 16805
+// Module ID: 16807
+// Function ID: 16808
 // Name: YouExpiringTrialOfferCard
-// Dependencies: [19, 17, 13722, 1074, 7432, 1373, 21, 1090, 4560, 576, 16805, 1242, 1114, 4153, 563, 7447, 7439, 16803, 2024, 4556, 4218, 5123, 1178, 8662, 4987, 7207, 2]
+// Dependencies: [19, 17, 13726, 1074, 7432, 1373, 21, 1090, 4560, 576, 16808, 1242, 1114, 4153, 563, 7447, 7439, 16806, 2024, 4556, 4218, 5123, 1178, 8667, 4987, 7207, 2]
 // Exports: default
 
-// Module 16804 (YouExpiringTrialOfferCard)
+// Module 16807 (YouExpiringTrialOfferCard)
 import ThemesDefault from "Themes" /* 576 */;
 import setDefault from "set" /* 1090 */;
 import hooksDefault from "hooks" /* 4153 */;
 import useCountdownDefault from "useCountdown" /* 7439 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "clearDismissUntil" /* 13722 */;
+import closure_5 from "clearDismissUntil" /* 13726 */;
 import ME from "ME" /* 1074 */;
 import { Gradients } from "items" /* 7432 */;
 import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_11 } from "GuildFeatures" /* 1373 */;
@@ -56,7 +56,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     }
   }
   const tmp7Result = useCountdownDefault(num, closure_15);
-  let tmp4Result = tmp4(16803);
+  let tmp4Result = tmp4(16806);
   shouldShowExpiringTrialOfferCard = tmp4Result.useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {

@@ -1,25 +1,25 @@
-// Module ID: 17492
-// Function ID: 17493
+// Module ID: 17495
+// Function ID: 17496
 // Name: nativeEventEmitter
-// Dependencies: [5, 17, 9903, 4582, 502, 5278, 1957, 1908, 10081, 4583, 4209, 4405, 1371, 1074, 4585, 3, 9516, 7118, 17493, 5411, 9182, 4767, 9089, 9946, 9951, 1608, 4713, 9902, 2]
+// Dependencies: [5, 17, 9908, 4582, 502, 5278, 1957, 1908, 10086, 4583, 4209, 4405, 1371, 1074, 4585, 3, 9521, 7118, 17496, 5411, 9187, 4767, 9094, 9951, 9956, 1608, 4713, 9907, 2]
 
-// Module 17492 (nativeEventEmitter)
+// Module 17495 (nativeEventEmitter)
 import timestampDefault from "timestamp" /* 3 */;
 import isMetaQuest from "isMetaQuest" /* 1608 */;
 import initializeDefault from "initialize" /* 7118 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9089 */;
-import enforcingDefault from "enforcing" /* 9516 */;
-import createSoundForPack from "createSoundForPack" /* 9902 */;
-import enforcingDefault2 from "enforcing" /* 17493 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9094 */;
+import enforcingDefault from "enforcing" /* 9521 */;
+import createSoundForPack from "createSoundForPack" /* 9907 */;
+import enforcingDefault2 from "enforcing" /* 17496 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "Soundpacks" /* 9903 */;
+import closure_5 from "Soundpacks" /* 9908 */;
 import closure_6 from "reset" /* 4582 */;
 import closure_7 from "fetchFingerprint" /* 502 */;
 import closure_8 from "callConnect" /* 5278 */;
 import closure_9 from "ensureGuildLoaded" /* 1957 */;
 import closure_10 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_11 from "DesktopNotificationTypes" /* 10081 */;
+import closure_11 from "DesktopNotificationTypes" /* 10086 */;
 import closure_12 from "createRTCConnection" /* 4583 */;
 import closure_13 from "markAllUserIdListsStale" /* 4209 */;
 import closure_14 from "initialize" /* 4405 */;
@@ -377,9 +377,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       obj[0] = guildId;
       tmp19 = obj;
     }
-    const obj4 = self(17493);
-    const reportIncomingCallResult = self(17493).reportIncomingCall(channelId, channelName, tmp19);
-    self(17493).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const obj4 = self(17496);
+    const reportIncomingCallResult = self(17496).reportIncomingCall(channelId, channelName, tmp19);
+    self(17496).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         closure_1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -388,7 +388,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId, channel
       closure_1_25.warn("Failed to report incoming call:", arg0);
       self.clearCall(closure_0);
     });
-    const nextPromise = self(17493).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
+    const nextPromise = self(17496).reportIncomingCall(channelId, channelName, tmp19).then((arg0) => {
       if (!arg0) {
         closure_1_25.warn("Failed to report incoming call: resolved false");
         self.clearCall(closure_0);
@@ -402,7 +402,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(17493);
+  obj = self(17496);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj.cancelIncomingCall(channelId).then(() => {
     self.clearCall(closure_0);
@@ -890,7 +890,7 @@ prototype["endCall"] = function endCall(currentCall) {
   const self = this;
   closure_0 = currentCall;
   obj.info("Ending call:", currentCall.channelId);
-  obj = self(17493);
+  obj = self(17496);
   const endCallResult = obj.endCall(currentCall.channelId);
   return obj.endCall(currentCall.channelId).then((arg0) => {
     self.clearCall(currentCall.channelId);
@@ -1046,7 +1046,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(17493);
+            obj = self(17496);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

@@ -1,16 +1,16 @@
-// Module ID: 12155
-// Function ID: 12156
+// Module ID: 12159
+// Function ID: 12160
 // Name: validateOptionContent
-// Dependencies: [4999, 7523, 9412, 1114, 12156, 2]
+// Dependencies: [4999, 7523, 9417, 1114, 12160, 2]
 // Exports: getValidationResults
 
-// Module 12155 (validateOptionContent)
+// Module 12159 (validateOptionContent)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4999 */;
 import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7523 */;
-import getString from "getString" /* 9412 */;
-import validateNumericOptionRangeDefault from "validateNumericOptionRange" /* 12156 */;
+import getString from "getString" /* 9417 */;
+import validateNumericOptionRangeDefault from "validateNumericOptionRange" /* 12160 */;
 
 function validateOptionContent(allowEmptyValues) {
   ({ option, content, guildId, channelId, commandOrigin } = allowEmptyValues);

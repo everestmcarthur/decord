@@ -1,10 +1,10 @@
-// Module ID: 11342
-// Function ID: 11343
+// Module ID: 11347
+// Function ID: 11348
 // Name: useIsSelectedResourceChannel
-// Dependencies: [7280, 1957, 2011, 1074, 1964, 563, 1384, 11343, 7222, 2]
+// Dependencies: [7280, 1957, 2011, 1074, 1964, 563, 1384, 11348, 7222, 2]
 // Exports: default
 
-// Module 11342 (useIsSelectedResourceChannel)
+// Module 11347 (useIsSelectedResourceChannel)
 import closure_3 from "toggleSection" /* 7280 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import closure_5 from "handleConnectionOpen" /* 2011 */;

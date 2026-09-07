@@ -1,11 +1,11 @@
-// Module ID: 17199
-// Function ID: 17200
+// Module ID: 17202
+// Function ID: 17203
 // Name: useSoundboardConfig
-// Dependencies: [19, 1957, 1908, 17037, 504, 4380, 1943, 17059, 7375, 1114, 2]
+// Dependencies: [19, 1957, 1908, 17040, 504, 4380, 1943, 17062, 7375, 1114, 2]
 // Exports: default
 
-// Module 17199 (useSoundboardConfig)
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17037 */;
+// Module 17202 (useSoundboardConfig)
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17040 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import closure_5 from "_detectH265HardwareDecode" /* 1908 */;

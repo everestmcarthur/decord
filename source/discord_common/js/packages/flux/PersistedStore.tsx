@@ -13,7 +13,7 @@ import set from "set" /* 2 */;
 
 require = arg1;
 let closure_3 = ["_state", "_version"];
-let closure_6 = { _state: "hash", _version: "call" };
+let closure_6 = { _state: "push", _version: "channel" };
 let c7 = null;
 let PersistedStore;
 class PersistedStore extends r10016 {

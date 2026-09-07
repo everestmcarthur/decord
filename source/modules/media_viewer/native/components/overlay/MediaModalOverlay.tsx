@@ -1,22 +1,22 @@
-// Module ID: 12958
-// Function ID: 12959
+// Module ID: 12962
+// Function ID: 12963
 // Name: OverlayMuteButton
-// Dependencies: [32, 19, 17, 21, 4560, 576, 7123, 9050, 1114, 12959, 10011, 12960, 12961, 12962, 8271, 11509, 1115, 4965, 12963, 8293, 12965, 4296, 12969, 8270, 12970, 12971, 12964, 8262, 8263, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 576, 7123, 9055, 1114, 12963, 10016, 12964, 12965, 12966, 8271, 11514, 1115, 4965, 12967, 8293, 12969, 4296, 12973, 8270, 12974, 12975, 12968, 8262, 8263, 2]
 // Exports: default
 
-// Module 12958 (OverlayMuteButton)
+// Module 12962 (OverlayMuteButton)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import _modDef4296 from "module_4296" /* 4296 */;
 import isBlurDisabledDefault from "isBlurDisabled" /* 4965 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
 import nativeEventEmitter from "nativeEventEmitter" /* 8271 */;
-import renderDefault from "render" /* 9050 */;
-import useMediaModalFooterActionStore from "useMediaModalFooterActionStore" /* 11509 */;
-import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 12962 */;
-import ObscuredViewDefault from "ObscuredView" /* 12963 */;
-import MediaModalOverlayHeader from "MediaModalOverlayHeader" /* 12965 */;
-import _modDef12969 from "module_12969" /* 12969 */;
+import renderDefault from "render" /* 9055 */;
+import useMediaModalFooterActionStore from "useMediaModalFooterActionStore" /* 11514 */;
+import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 12966 */;
+import ObscuredViewDefault from "ObscuredView" /* 12967 */;
+import MediaModalOverlayHeader from "MediaModalOverlayHeader" /* 12969 */;
+import _modDef12973 from "module_12973" /* 12973 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -30,7 +30,7 @@ function OverlayMuteButton(arg0) {
   const tmp = callback3();
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.w4m945);
-  obj = { left: true, right: true, children: tmp4(isMuted ? 12959 : 10011) };
+  obj = { left: true, right: true, children: tmp4(isMuted ? 12963 : 10016) };
   obj[3] = ThemesDefault.unsafe_rawColors.WHITE;
   obj[4] = onToggleMute;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
@@ -43,7 +43,7 @@ function OverlayObscureToggleButton(arg0) {
   const tmp = callback3();
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.UIsxUw);
-  obj = { left: true, right: true, children: tmp4(spoilerActive ? 12960 : 12961) };
+  obj = { left: true, right: true, children: tmp4(spoilerActive ? 12964 : 12965) };
   obj[3] = ThemesDefault.unsafe_rawColors.WHITE;
   obj[4] = onToggleObscure;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
@@ -53,7 +53,7 @@ function OverlayObscureToggleButton(arg0) {
 function MediaModalOverlay(getVideoControls) {
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
-  let obj = index(12964);
+  let obj = index(12968);
   const items = [index];
   const items1 = [videoControls];
   const callback = importAllResult.useCallback(() => index(closure_1_2[27]).toggleSpoiler(index), items);
@@ -135,7 +135,7 @@ let closure_13 = importAllResult.memo((arg0) => {
   if (!tmp7) {
     const obj4 = { description: null };
     obj4[0] = source.description;
-    tmp22Result = tmp22(_modDef12969, obj4);
+    tmp22Result = tmp22(_modDef12973, obj4);
   }
   const items3 = [tmp22Result, , ];
   if (null != slider) {
@@ -169,7 +169,7 @@ let closure_13 = importAllResult.memo((arg0) => {
     obj8[0] = mediaModalFooterActionStore;
     obj8[1] = slider;
     obj8[2] = syncer;
-    tmp22Result2 = tmp22(tmp2(12970).MediaModalOverlayFooterAction, obj8);
+    tmp22Result2 = tmp22(tmp2(12974).MediaModalOverlayFooterAction, obj8);
   } else if (disableMediaOverlayFooter) {
     const obj9 = { bottom: true, style: null };
     obj9[1] = tmp.invisibleFooter;
@@ -182,7 +182,7 @@ let closure_13 = importAllResult.memo((arg0) => {
     obj10[5] = onClose;
     obj10[6] = tmp8;
     obj10[7] = overlayEnabled;
-    tmp22Result2 = tmp22(tmp2(12971).MediaModalOverlayFooter, obj10);
+    tmp22Result2 = tmp22(tmp2(12975).MediaModalOverlayFooter, obj10);
   }
   const obj11 = { children: null };
   items3[2] = tmp22Result2;

@@ -1,10 +1,10 @@
-// Module ID: 12105
-// Function ID: 12106
+// Module ID: 12109
+// Function ID: 12110
 // Name: CommandRowIcon
-// Dependencies: [5, 32, 19, 21, 12028, 9289, 11993, 7523, 5612, 4975, 1114, 4505, 2]
+// Dependencies: [5, 32, 19, 21, 12032, 9294, 11997, 7523, 5612, 4975, 1114, 4505, 2]
 // Exports: default, useCommandRowSend
 
-// Module 12105 (CommandRowIcon)
+// Module 12109 (CommandRowIcon)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -78,10 +78,10 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               dependencyMap();
             }
             c3 = 1;
-            obj1 = closure_1_0(9289);
+            obj1 = closure_1_0(9294);
             obj1 = { command: null, optionValues: null, context: null, sectionName: null, commandOrigin: null };
             obj1[0] = closure_1_0;
-            obj1[1] = closure_1_0(11993).parseOptionValuesForSend(closure_1_6.channel, closure_1_0, {});
+            obj1[1] = closure_1_0(11997).parseOptionValuesForSend(closure_1_6.channel, closure_1_0, {});
             obj1[2] = closure_1_6;
             obj1[3] = c4;
             obj1[4] = closure_1_0(7523).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;

@@ -1,10 +1,10 @@
-// Module ID: 11003
-// Function ID: 11004
+// Module ID: 11008
+// Function ID: 11009
 // Name: SocialLayerStorefrontGiftPurchaseSection
-// Dependencies: [32, 19, 17, 7424, 1371, 1074, 1373, 21, 4560, 576, 6981, 7168, 504, 1242, 11004, 10814, 1115, 573, 10797, 1114, 10820, 4556, 4975, 2]
+// Dependencies: [32, 19, 17, 7424, 1371, 1074, 1373, 21, 4560, 576, 6981, 7168, 504, 1242, 11009, 10819, 1115, 573, 10802, 1114, 10825, 4556, 4975, 2]
 // Exports: default
 
-// Module 11003 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 11008 (SocialLayerStorefrontGiftPurchaseSection)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

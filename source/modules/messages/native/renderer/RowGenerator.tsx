@@ -1,15 +1,15 @@
 // Module ID: 7932
 // Function ID: 7933
 // Name: setOptions
-// Dependencies: [1183, 7933, 7934, 12, 7935, 7937, 13248, 13249, 1369, 2]
+// Dependencies: [1183, 7933, 7934, 12, 7935, 7937, 13252, 13253, 1369, 2]
 
 // Module 7932 (setOptions)
 import applyDefault from "apply" /* 12 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
 import generateBlockedGroupRowData from "generateBlockedGroupRowData" /* 7935 */;
 import generateMessageRowData from "generateMessageRowData" /* 7937 */;
-import generateSeparatorRowData from "generateSeparatorRowData" /* 13248 */;
-import generateLoadingRowData from "generateLoadingRowData" /* 13249 */;
+import generateSeparatorRowData from "generateSeparatorRowData" /* 13252 */;
+import generateLoadingRowData from "generateLoadingRowData" /* 13253 */;
 import closure_3 from "handleThemeChange" /* 1183 */;
 import Changeset from "Changeset" /* 7933 */;
 

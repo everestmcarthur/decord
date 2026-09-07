@@ -1,10 +1,10 @@
-// Module ID: 11880
-// Function ID: 11881
+// Module ID: 11885
+// Function ID: 11886
 // Name: useSafetyHubClassifications
-// Dependencies: [19, 8430, 8419, 504, 11, 8418, 8420, 11881, 2]
+// Dependencies: [19, 8430, 8419, 504, 11, 8418, 8420, 11886, 2]
 // Exports: useActiveSafetyHubClassifications, useExpiredSafetyHubClassifications, useSafetyHubAppealSignal, useSafetyHubClassification, useSafetyHubClassifications
 
-// Module 11880 (useSafetyHubClassifications)
+// Module 11885 (useSafetyHubClassifications)
 import initialize from "initialize" /* 504 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;

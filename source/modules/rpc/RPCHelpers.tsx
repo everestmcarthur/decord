@@ -1,10 +1,10 @@
-// Module ID: 9559
-// Function ID: 9560
+// Module ID: 9564
+// Function ID: 9565
 // Name: recurseReplaceContentTree
-// Dependencies: [5, 4788, 1918, 1961, 1385, 1957, 1979, 1908, 4781, 4600, 1371, 4579, 4465, 1074, 1365, 4547, 1090, 12, 7456, 4550, 4793, 9560, 4712, 1367, 8339, 1272, 9554, 9512, 9561, 2]
+// Dependencies: [5, 4788, 1918, 1961, 1385, 1957, 1979, 1908, 4781, 4600, 1371, 4579, 4465, 1074, 1365, 4547, 1090, 12, 7456, 4550, 4793, 9565, 4712, 1367, 8339, 1272, 9559, 9517, 9566, 2]
 // Exports: containsSameValues, getDeprecatedVoiceSettingsWithShortcut, getRemoteIconURL, getVoiceConnectionState, getVoiceSettingsWithShortcut, hasMessageReadPermission, isMatchingOrigin, processSocketThrottlers, transformApplicationRelationship, transformBaseRelationship, transformChannel, transformVoiceState, validateActivityInvite, validateApplication, validateOriginAndUpdateSocket, validatePostMessageTransport, validateSocketApplication
 
-// Module 9559 (recurseReplaceContentTree)
+// Module 9564 (recurseReplaceContentTree)
 import applyDefault from "apply" /* 12 */;
 import setDefault from "set" /* 1090 */;
 import sendRequest from "sendRequest" /* 1272 */;
@@ -13,8 +13,8 @@ import get_defaultRulesDefault from "get defaultRules" /* 4550 */;
 import getNicknameDefault from "getNickname" /* 4712 */;
 import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4793 */;
 import set from "set" /* 8339 */;
-import prototypeDefault from "prototype" /* 9554 */;
-import transformUserDefault from "transformUser" /* 9560 */;
+import prototypeDefault from "prototype" /* 9559 */;
+import transformUserDefault from "transformUser" /* 9565 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "addApplication" /* 4788 */;
 import closure_5 from "createExecutable" /* 1918 */;
@@ -164,13 +164,13 @@ function _validateSocketApplication() {
               callback2 = closure_1_4.getApplication(callback);
               if (typeof dependencyMap === "string") {
                 if (tmp67.transport === closure_1_16.POST_MESSAGE) {
-                  const tmp21 = callback(9512)(tmp68);
+                  const tmp21 = callback(9517)(tmp68);
                   if (null != tmp21) {
                     const items = [tmp21];
                   }
                   obj1 = { closeCode: null };
                   obj1[0] = closure_1_21.INVALID_ORIGIN;
-                  const tmp52 = new callback(9554)(obj1, "Invalid Origin");
+                  const tmp52 = new callback(9559)(obj1, "Invalid Origin");
                   throw tmp52;
                 } else {
                   name = 1;
@@ -224,7 +224,7 @@ function _validateSocketApplication() {
               if (!callback3(dependencyMap, rpc_origins.rpc_origins)) {
                 const obj6 = { closeCode: null };
                 obj6[0] = constants.INVALID_ORIGIN;
-                const tmp16 = new callback(9554)(obj6, "Invalid Origin");
+                const tmp16 = new callback(9559)(obj6, "Invalid Origin");
                 throw tmp16;
               }
             }
@@ -297,7 +297,7 @@ function _processSocketThrottlers() {
                 if (tmp36) {
                   num5 = 2;
                 }
-                const tmp24 = new callback(9561)(num5, closure_1_25);
+                const tmp24 = new callback(9566)(num5, closure_1_25);
                 tmp38[tmp35] = tmp24;
                 obj2 = tmp24;
               }
@@ -312,7 +312,7 @@ function _processSocketThrottlers() {
             c6 = 0;
             obj2 = { closeCode: null };
             obj2[0] = constants.CLOSE_ABNORMAL;
-            const tmp16 = new callback(9554)(obj2, "Socket closed during throttle");
+            const tmp16 = new callback(9559)(obj2, "Socket closed during throttle");
             throw tmp16;
           } else if (arg0 === 1) {
             c7 = 3;

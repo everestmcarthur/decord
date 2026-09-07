@@ -1,10 +1,10 @@
-// Module ID: 16343
-// Function ID: 16344
+// Module ID: 16346
+// Function ID: 16347
 // Name: useChannelUnreadBadgeState
 // Dependencies: [7532, 4575, 4741, 504, 7535, 2]
 // Exports: useBaseChannelUnreadBadgeState, useChannelUnreadBadgeState
 
-// Module 16343 (useChannelUnreadBadgeState)
+// Module 16346 (useChannelUnreadBadgeState)
 import closure_2 from "guildHasCommunity" /* 7532 */;
 import closure_3 from "generateOldThreadCutoff" /* 4575 */;
 import closure_4 from "updateUserGuildSettingsInternal" /* 4741 */;

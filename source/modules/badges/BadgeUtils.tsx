@@ -1,10 +1,10 @@
-// Module ID: 11199
-// Function ID: 11200
+// Module ID: 11204
+// Function ID: 11205
 // Name: isPinnedBadge
 // Dependencies: [8183, 8184, 8193, 2]
 // Exports: getLegacyIconUrlByBadgeId, getUnhideableBadgeIds, groupCustomizableBadges
 
-// Module 11199 (isPinnedBadge)
+// Module 11204 (isPinnedBadge)
 import set from "set" /* 2 */;
 import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8183 */;
 import BadgeId from "BadgeId" /* 8184 */;

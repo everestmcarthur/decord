@@ -1,14 +1,14 @@
-// Module ID: 9983
-// Function ID: 9984
+// Module ID: 9988
+// Function ID: 9989
 // Name: handleInputModePress
-// Dependencies: [19, 17, 1908, 1074, 21, 4560, 7195, 1114, 9089, 504, 9979, 5605, 4556, 7201, 9984, 2]
+// Dependencies: [19, 17, 1908, 1074, 21, 4560, 7195, 1114, 9094, 504, 9984, 5605, 4556, 7201, 9989, 2]
 // Exports: default
 
-// Module 9983 (handleInputModePress)
+// Module 9988 (handleInputModePress)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import showSimpleActionSheet from "showSimpleActionSheet" /* 7195 */;
-import VoiceSensitivityDefault from "VoiceSensitivity" /* 9984 */;
+import VoiceSensitivityDefault from "VoiceSensitivity" /* 9989 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
 import { InputModes } from "ME" /* 1074 */;
@@ -27,14 +27,14 @@ function handleInputModePress() {
   const intl2 = getSystemLocale.intl;
   obj1[0] = intl2.string(getSystemLocale.t.Q8gkVL);
   obj1[1] = function onPress() {
-    callback(9089).setMode(constants.PUSH_TO_TALK);
+    callback(9094).setMode(constants.PUSH_TO_TALK);
   };
   const items = [obj1, ];
   const obj2 = { label: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj2[0] = intl3.string(getSystemLocale.t.cHCEOJ);
   obj2[1] = function onPress() {
-    callback(9089).setMode(constants.VOICE_ACTIVITY);
+    callback(9094).setMode(constants.VOICE_ACTIVITY);
   };
   items[1] = obj2;
   obj[2] = items;
@@ -104,6 +104,6 @@ export default function UserSettingsVoiceInputOptions() {
   }
   items1[1] = tmp4Result;
   obj[2] = items1;
-  return closure_8(inputMode(9979).UserSettingsTableRowGroup, obj);
+  return closure_8(inputMode(9984).UserSettingsTableRowGroup, obj);
 };
 export { handleInputModePress };

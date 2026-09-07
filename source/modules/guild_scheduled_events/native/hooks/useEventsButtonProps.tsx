@@ -1,11 +1,11 @@
-// Module ID: 12374
-// Function ID: 12375
+// Module ID: 12378
+// Function ID: 12379
 // Name: useEventsButtonProps
-// Dependencies: [19, 4575, 4741, 4742, 504, 9662, 5057, 5569, 9698, 4527, 12375, 1896, 1114, 12379, 2]
+// Dependencies: [19, 4575, 4741, 4742, 504, 9667, 5057, 5569, 9703, 4527, 12379, 1896, 1114, 12383, 2]
 // Exports: default
 
-// Module 12374 (useEventsButtonProps)
-import useGuildEventsDefault from "useGuildEvents" /* 9662 */;
+// Module 12378 (useEventsButtonProps)
+import useGuildEventsDefault from "useGuildEvents" /* 9667 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "generateOldThreadCutoff" /* 4575 */;
 import closure_5 from "updateUserGuildSettingsInternal" /* 4741 */;
@@ -50,13 +50,13 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1114).intl;
     name = intl.string(tmp(1114).t.tlopTM);
   }
-  let mode = tmp(12379).ChannelModes.DEFAULT;
+  let mode = tmp(12383).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(12379).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(12383).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 };

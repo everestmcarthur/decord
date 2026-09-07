@@ -1,10 +1,10 @@
-// Module ID: 11574
-// Function ID: 11575
+// Module ID: 11579
+// Function ID: 11580
 // Name: LegacyUserProfileConnections
-// Dependencies: [19, 17, 2025, 1385, 4405, 7621, 1074, 1182, 5408, 21, 4560, 576, 5407, 11575, 5283, 1396, 4411, 1178, 11578, 11579, 4262, 11580, 11581, 4528, 7190, 4258, 1114, 8370, 4740, 4255, 5123, 4556, 4271, 504, 7503, 11582, 2]
+// Dependencies: [19, 17, 2025, 1385, 4405, 7621, 1074, 1182, 5408, 21, 4560, 576, 5407, 11580, 5283, 1396, 4411, 1178, 11583, 11584, 4262, 11585, 11586, 4528, 7190, 4258, 1114, 8370, 4740, 4255, 5123, 4556, 4271, 504, 7503, 11587, 2]
 // Exports: default, useAppplicationRoleConnectionItems, useConnectedAccountItems
 
-// Module 11574 (LegacyUserProfileConnections)
+// Module 11579 (LegacyUserProfileConnections)
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

@@ -1,16 +1,16 @@
-// Module ID: 16790
-// Function ID: 16791
+// Module ID: 16793
+// Function ID: 16794
 // Name: useHasSettingsBadge
-// Dependencies: [19, 17, 1371, 1954, 1373, 21, 4560, 1116, 576, 13468, 7449, 4380, 1943, 504, 8186, 8227, 8238, 4411, 672, 4218, 16791, 11484, 16792, 16793, 11767, 5447, 16794, 14994, 1114, 16795, 16797, 8662, 7380, 4987, 2]
+// Dependencies: [19, 17, 1371, 1954, 1373, 21, 4560, 1116, 576, 13472, 7449, 4380, 1943, 504, 8186, 8227, 8238, 4411, 672, 4218, 16794, 11489, 16795, 16796, 11772, 5447, 16797, 14997, 1114, 16798, 16800, 8667, 7380, 4987, 2]
 // Exports: useHasSettingsBadge
 
-// Module 16790 (useHasSettingsBadge)
+// Module 16793 (useHasSettingsBadge)
 import ThemesDefault from "Themes" /* 576 */;
 import PlatformTypes from "PlatformTypes" /* 1116 */;
 import DismissibleContent from "DismissibleContent" /* 1943 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4380 */;
 import hasUserTrialOfferExpired from "hasUserTrialOfferExpired" /* 7449 */;
-import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 13468 */;
+import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 13472 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "mergeGuildAvatar" /* 1371 */;

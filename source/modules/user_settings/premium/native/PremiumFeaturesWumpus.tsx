@@ -1,10 +1,10 @@
-// Module ID: 9384
-// Function ID: 9385
+// Module ID: 9389
+// Function ID: 9390
 // Name: PremiumFeaturesWumpus
-// Dependencies: [19, 1373, 21, 4560, 6945, 9385, 9386, 9387, 9388, 9389, 9390, 5587, 2]
+// Dependencies: [19, 1373, 21, 4560, 6945, 9390, 9391, 9392, 9393, 9394, 9395, 5587, 2]
 // Exports: default
 
-// Module 9384 (PremiumFeaturesWumpus)
+// Module 9389 (PremiumFeaturesWumpus)
 import closure_2 from "noop" /* 19 */;
 import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 import jsxProd from "jsxProd" /* 21 */;

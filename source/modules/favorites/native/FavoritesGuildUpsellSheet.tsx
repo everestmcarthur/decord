@@ -1,12 +1,12 @@
-// Module ID: 10228
-// Function ID: 10229
+// Module ID: 10233
+// Function ID: 10234
 // Name: FavoritesGuildUpsellSheet
-// Dependencies: [19, 1970, 1074, 21, 10225, 10229, 4527, 10227, 10230, 1114, 3225, 5989, 5433, 4975, 9392, 9362, 10233, 1100, 2]
+// Dependencies: [19, 1970, 1074, 21, 10230, 10234, 4527, 10232, 10235, 1114, 3225, 5989, 5433, 4975, 9397, 9367, 10238, 1100, 2]
 // Exports: default
 
-// Module 10228 (FavoritesGuildUpsellSheet)
+// Module 10233 (FavoritesGuildUpsellSheet)
 import messagesProxyDefault from "messagesProxy" /* 3225 */;
-import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10229 */;
+import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10234 */;
 import closure_3 from "noop" /* 19 */;
 import { MAX_FAVORITE_CHANNELS } from "date" /* 1970 */;
 import { FAVORITES } from "ME" /* 1074 */;
@@ -19,7 +19,7 @@ let result = require("set").fileFinishedImporting("modules/favorites/native/Favo
 export default function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
   if (FREE_FAVORITE_LIMIT === undefined) {
-    FREE_FAVORITE_LIMIT = analyticsLocations(10225).FREE_FAVORITE_LIMIT;
+    FREE_FAVORITE_LIMIT = analyticsLocations(10230).FREE_FAVORITE_LIMIT;
   }
   let str = limit.source;
   if (str === undefined) {
@@ -33,7 +33,7 @@ export default function FavoritesGuildUpsellSheet(limit) {
   importDefault = undefined;
   analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault(str).analyticsLocations;
   importDefault = React.useCallback(() => {
-    callback(4527).hideActionSheet(analyticsLocations(10227).FAVORITES_UPSELL_SHEET_KEY);
+    callback(4527).hideActionSheet(analyticsLocations(10232).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   const intl = analyticsLocations(1114).intl;
   const tmp8 = messagesProxyDefault;
@@ -74,5 +74,5 @@ export default function FavoritesGuildUpsellSheet(limit) {
   });
   obj1[0] = items;
   obj[3] = closure_7(analyticsLocations(5433).ButtonGroup, obj1);
-  return closure_6(analyticsLocations(10230).PromoSheet, obj);
+  return closure_6(analyticsLocations(10235).PromoSheet, obj);
 };

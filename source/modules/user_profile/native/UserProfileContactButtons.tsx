@@ -1,10 +1,10 @@
-// Module ID: 13124
-// Function ID: 13125
+// Module ID: 13128
+// Function ID: 13129
 // Name: FlatFriendButton
-// Dependencies: [19, 17, 4209, 1074, 21, 4560, 576, 4975, 7162, 8190, 13063, 504, 4404, 13125, 4497, 1114, 12620, 9042, 11217, 4527, 4763, 4573, 13127, 8097, 5071, 7880, 13128, 2]
+// Dependencies: [19, 17, 4209, 1074, 21, 4560, 576, 4975, 7162, 8190, 13067, 504, 4404, 13129, 4497, 1114, 12624, 9047, 11222, 4527, 4763, 4573, 13131, 8097, 5071, 7880, 13132, 2]
 // Exports: default
 
-// Module 13124 (FlatFriendButton)
+// Module 13128 (FlatFriendButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 4975 */;
@@ -46,7 +46,7 @@ function FriendRequestButton(user) {
     newestAnalyticsLocation = trackUserProfileAction(7162)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(13063);
+  let tmp3Result = tmp3(13067);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(504);
   const items = [closure_4];
@@ -60,7 +60,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13125).UserClockIcon;
+          let UserPlusIcon = tmp3(13129).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(4497).UserPlusIcon;
         }
@@ -92,11 +92,11 @@ function FriendRequestButton(user) {
               callback({ action: "CANCEL_FRIEND_REQUEST" });
               closure_1_1(closure_1_2[17]).cancelFriendRequest(id.id, closure_2);
             };
-            const result = user(12620).confirmCancelFriendRequest(obj);
-            const obj3 = user(12620);
+            const result = user(12624).confirmCancelFriendRequest(obj);
+            const obj3 = user(12624);
           } else {
             trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
-            obj = trackUserProfileAction(9042);
+            obj = trackUserProfileAction(9047);
             obj = { userId: null, context: null };
             obj[0] = user.id;
             obj[1] = dependencyMap;

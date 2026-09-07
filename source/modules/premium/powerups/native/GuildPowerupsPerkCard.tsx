@@ -1,10 +1,10 @@
-// Module ID: 12571
-// Function ID: 12572
+// Module ID: 12575
+// Function ID: 12576
 // Name: GuildPowerupsPerkCard
-// Dependencies: [19, 17, 21, 4560, 576, 4495, 4411, 8095, 12568, 12523, 4987, 4556, 12524, 1178, 1114, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 4495, 4411, 8095, 12572, 12527, 4987, 4556, 12528, 1178, 1114, 2]
 // Exports: default
 
-// Module 12571 (GuildPowerupsPerkCard)
+// Module 12575 (GuildPowerupsPerkCard)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
@@ -12,7 +12,7 @@ import useThemeDefault from "useTheme" /* 4495 */;
 import Text from "Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import apexExperiment from "apexExperiment" /* 8095 */;
-import GuildPowerupCardFooterActive from "GuildPowerupCardFooterActive" /* 12524 */;
+import GuildPowerupCardFooterActive from "GuildPowerupCardFooterActive" /* 12528 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -53,9 +53,9 @@ export default function GuildPowerupsPerkCard(arg0) {
   obj = { containerStyle: items, style: tmp2.card, status, onPress, children: null };
   items = [tmp2.container, style];
   obj = { style: tmp2.imageContainer, children: null };
-  let tmp3Result = tmp3(12568);
+  let tmp3Result = tmp3(12572);
   if (riveComponent == null) {
-    tmp3Result = tmp3(12523);
+    tmp3Result = tmp3(12527);
     if (imageUrl == null) {
       imageUrl = "";
     }

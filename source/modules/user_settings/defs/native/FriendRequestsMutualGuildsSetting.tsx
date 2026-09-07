@@ -1,16 +1,16 @@
-// Module ID: 14978
-// Function ID: 14979
+// Module ID: 14981
+// Function ID: 14982
 // Name: toggle
-// Dependencies: [19, 7975, 1074, 14824, 1935, 6995, 1384, 11468, 1114, 2]
+// Dependencies: [19, 7975, 1074, 14827, 1935, 6995, 1384, 11473, 1114, 2]
 
-// Module 14978 (toggle)
+// Module 14981 (toggle)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import hasFlagAll from "hasFlag" /* 1384 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14824 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14827 */;
 import closure_3 from "noop" /* 19 */;
 import { FriendSourceFlags } from "ME" /* 1074 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 createToggle = {

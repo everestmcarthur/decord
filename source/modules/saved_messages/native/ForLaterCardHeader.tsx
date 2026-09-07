@@ -1,17 +1,17 @@
-// Module ID: 12215
-// Function ID: 12216
+// Module ID: 12219
+// Function ID: 12220
 // Name: HeaderIcon
-// Dependencies: [17, 1979, 21, 4560, 576, 7209, 504, 5584, 10910, 1178, 5071, 4713, 5028, 1114, 4556, 2]
+// Dependencies: [17, 1979, 21, 4560, 576, 7209, 504, 5584, 10915, 1178, 5071, 4713, 5028, 1114, 4556, 2]
 // Exports: ForLaterCardHeader
 
-// Module 12215 (HeaderIcon)
+// Module 12219 (HeaderIcon)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
 import computeChannelNameDefault from "computeChannelName" /* 4713 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7209 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10910 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10915 */;
 import closure_4 from "createGuildRecordFromRust" /* 1979 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

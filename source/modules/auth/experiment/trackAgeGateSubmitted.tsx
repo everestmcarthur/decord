@@ -1,10 +1,10 @@
-// Module ID: 15959
-// Function ID: 15960
+// Module ID: 15962
+// Function ID: 15963
 // Name: trackAgeGateSubmitted
 // Dependencies: [1074, 1242, 4153, 2]
 // Exports: default
 
-// Module 15959 (trackAgeGateSubmitted)
+// Module 15962 (trackAgeGateSubmitted)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

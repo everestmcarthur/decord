@@ -1,20 +1,20 @@
-// Module ID: 15557
-// Function ID: 15558
+// Module ID: 15560
+// Function ID: 15561
 // Name: getClientInfo
-// Dependencies: [11425, 21, 1364, 4527, 11789, 7190, 4258, 7198, 7149, 1114, 7200, 4507, 4539, 11468, 5538, 1935, 2]
+// Dependencies: [11430, 21, 1364, 4527, 11794, 7190, 4258, 7198, 7149, 1114, 7200, 4507, 4539, 11473, 5538, 1935, 2]
 // Exports: getClientInfoString
 
-// Module 15557 (getClientInfo)
+// Module 15560 (getClientInfo)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import CopyIcon from "CopyIcon" /* 4507 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
 import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7200 */;
-import setBuildOverrideForBranch from "setBuildOverrideForBranch" /* 11789 */;
-import closure_3 from "getCurrentBuildOverride" /* 11425 */;
+import setBuildOverrideForBranch from "setBuildOverrideForBranch" /* 11794 */;
+import closure_3 from "getCurrentBuildOverride" /* 11430 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 import importAllResult from "getConstants" /* 1364 */;
 
 require = arg1;

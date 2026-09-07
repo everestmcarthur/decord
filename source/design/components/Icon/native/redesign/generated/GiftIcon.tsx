@@ -1,10 +1,10 @@
-// Module ID: 11030
-// Function ID: 11031
+// Module ID: 11035
+// Function ID: 11036
 // Name: GiftIcon
 // Dependencies: [19, 21, 576, 4261, 8083, 2]
 // Exports: GiftIcon
 
-// Module 11030 (GiftIcon)
+// Module 11035 (GiftIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;

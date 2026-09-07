@@ -1,10 +1,10 @@
-// Module ID: 12244
-// Function ID: 12245
+// Module ID: 12248
+// Function ID: 12249
 // Name: AppLauncherButtonIcon
-// Dependencies: [19, 17, 21, 4427, 1609, 10951, 5106, 2]
+// Dependencies: [19, 17, 21, 4427, 1609, 10956, 5106, 2]
 // Exports: AppLauncherButtonIcon
 
-// Module 12244 (AppLauncherButtonIcon)
+// Module 12248 (AppLauncherButtonIcon)
 import noopAll from "noop" /* 19 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -27,7 +27,7 @@ export const AppLauncherButtonIcon = function AppLauncherButtonIcon(style) {
     obj[0] = items1;
     items[1] = obj;
     obj.style = items;
-    let tmp4Result = tmp4(tmp6(10951).PlusLargeIcon, obj);
+    let tmp4Result = tmp4(tmp6(10956).PlusLargeIcon, obj);
   } else {
     obj1 = { style: null };
     obj1[0] = style;

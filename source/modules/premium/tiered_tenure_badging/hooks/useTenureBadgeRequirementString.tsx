@@ -1,14 +1,14 @@
-// Module ID: 11183
-// Function ID: 11184
+// Module ID: 11188
+// Function ID: 11189
 // Name: useTenureBadgeRequirementString
-// Dependencies: [1373, 11184, 7634, 1114, 2]
+// Dependencies: [1373, 11189, 7634, 1114, 2]
 // Exports: getTenureBadgeRequirementString, useTenureBadgeRequirementString
 
-// Module 11183 (useTenureBadgeRequirementString)
+// Module 11188 (useTenureBadgeRequirementString)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import GuildFeatures from "GuildFeatures" /* 1373 */;
-import usePremiumSince from "usePremiumSince" /* 11184 */;
+import usePremiumSince from "usePremiumSince" /* 11189 */;
 
 const TieredTenureBadge = GuildFeatures.TieredTenureBadge;
 const result = set.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTenureBadgeRequirementString.tsx");

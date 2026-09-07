@@ -1,10 +1,10 @@
-// Module ID: 14642
-// Function ID: 14643
+// Module ID: 14645
+// Function ID: 14646
 // Name: UserPrimaryGuildListBottomSheet
-// Dependencies: [19, 17, 7944, 21, 4560, 1115, 576, 8165, 5605, 4527, 1114, 5584, 9184, 5689, 12, 7150, 4556, 8874, 8593, 2]
+// Dependencies: [19, 17, 7944, 21, 4560, 1115, 576, 8165, 5605, 4527, 1114, 5584, 9189, 5689, 12, 7150, 4556, 8879, 8598, 2]
 // Exports: default
 
-// Module 14642 (UserPrimaryGuildListBottomSheet)
+// Module 14645 (UserPrimaryGuildListBottomSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -124,7 +124,7 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   obj[3] = intl.string(availableGuilds(1114).t.Fo0g9x);
   obj[1] = callback(availableGuilds(4556).Text, obj);
   obj[2] = callback(memo, obj);
-  obj[3] = callback(availableGuilds(8874).BottomSheetFlashList, {
+  obj[3] = callback(availableGuilds(8879).BottomSheetFlashList, {
     ItemSeparatorComponent() {
       return closure_1_6(availableGuilds(closure_1_2[18]).FormDivider, { iconPush: true, style: divider.divider });
     },

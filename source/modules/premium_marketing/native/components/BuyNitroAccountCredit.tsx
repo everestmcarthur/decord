@@ -1,12 +1,12 @@
-// Module ID: 13407
-// Function ID: 13408
-// Dependencies: [19, 1371, 4224, 7394, 1373, 21, 4560, 576, 504, 1974, 13348, 2]
+// Module ID: 13411
+// Function ID: 13412
+// Dependencies: [19, 1371, 4224, 7394, 1373, 21, 4560, 576, 504, 1974, 13352, 2]
 
-// Module 13407
+// Module 13411
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import areSetsEqual from "areSetsEqual" /* 1974 */;
-import AccountCreditTierDefault from "AccountCreditTier" /* 13348 */;
+import AccountCreditTierDefault from "AccountCreditTier" /* 13352 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;
 import closure_4 from "reset" /* 4224 */;
 import closure_5 from "addEntitlement" /* 7394 */;

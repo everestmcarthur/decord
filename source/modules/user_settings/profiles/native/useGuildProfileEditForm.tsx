@@ -1,10 +1,10 @@
-// Module ID: 14646
-// Function ID: 14647
+// Module ID: 14649
+// Function ID: 14650
 // Name: useGuildProfileEditForm
-// Dependencies: [109, 5, 19, 8160, 7621, 1979, 5438, 1371, 1074, 504, 11871, 4447, 573, 9210, 14647, 11086, 6988, 14605, 8167, 4461, 1114, 2]
+// Dependencies: [109, 5, 19, 8160, 7621, 1979, 5438, 1371, 1074, 504, 11876, 4447, 573, 9215, 14650, 11091, 6988, 14608, 8167, 4461, 1114, 2]
 // Exports: default
 
-// Module 14646 (useGuildProfileEditForm)
+// Module 14649 (useGuildProfileEditForm)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "asyncGeneratorStep" /* 5 */;
 import closure_6 from "noop" /* 19 */;
@@ -68,7 +68,7 @@ export default function useGuildProfileEditForm() {
   const merged1 = Object.assign(stateFromStoresObject.errors);
   const memo = pendingThemeColors.useMemo(() => {
     const delayedCall = new stateFromStores(pendingNickname[11]).DelayedCall(200, () => {
-      callback2(573).wait(callback(9210).resetAllPending);
+      callback2(573).wait(callback(9215).resetAllPending);
     });
     return delayedCall;
   }, []);
@@ -127,11 +127,11 @@ export default function useGuildProfileEditForm() {
             obj1[3] = closure_1_11;
             guildMemberChangesForUpdateRequest = closure_1_12;
             obj1[4] = closure_1_12;
-            guildMemberChangesForUpdateRequest = closure_1_0(11086).getGuildMemberChangesForUpdateRequest(obj1);
+            guildMemberChangesForUpdateRequest = closure_1_0(11091).getGuildMemberChangesForUpdateRequest(obj1);
             let avatarId = guildMemberChangesForUpdateRequest;
             guildMemberChangesForUpdateRequest = closure_1_0;
             guildMemberChangesForUpdateRequest = dependencyMap;
-            const obj16 = closure_1_0(11086);
+            const obj16 = closure_1_0(11091);
             const obj2 = { pendingBanner: null, pendingBio: null, pendingPronouns: null, pendingThemeColors: null, pendingProfileEffect: null, pendingProfileFrame: null };
             guildMemberChangesForUpdateRequest = c3;
             obj2[0] = c3;
@@ -149,7 +149,7 @@ export default function useGuildProfileEditForm() {
             if (closure_1_7 != null) {
               id = closure_1_7.id;
             }
-            let bannerOriginalMd5 = closure_1_0(11086).getProfileChangesForUpdateRequest(obj2, id);
+            let bannerOriginalMd5 = closure_1_0(11091).getProfileChangesForUpdateRequest(obj2, id);
             dependencyMap = true;
             c3 = false;
             const _Object = Object;
@@ -161,10 +161,10 @@ export default function useGuildProfileEditForm() {
               v0 = 1;
               guildMemberChangesForUpdateRequest = 1;
               let obj3 = { value: null, done: false };
-              obj3[0] = closure_1_0(9210).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest);
+              obj3[0] = closure_1_0(9215).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest);
               return obj3;
             }
-            const obj18 = closure_1_0(11086);
+            const obj18 = closure_1_0(11091);
           }
         }
         yield "HermesInternal";
@@ -203,9 +203,9 @@ export default function useGuildProfileEditForm() {
               }
               if (null != avatar) {
                 guildMemberChangesForUpdateRequest = v0;
-                guildMemberChangesForUpdateRequest = closure_1_0(14605).showGenericGuildProfileUpdateFailureToast(v0.body.avatar);
+                guildMemberChangesForUpdateRequest = closure_1_0(14608).showGenericGuildProfileUpdateFailureToast(v0.body.avatar);
                 c3 = true;
-                const obj15 = closure_1_0(14605);
+                const obj15 = closure_1_0(14608);
               }
             }
             let tmp42 = dependencyMap;
@@ -240,7 +240,7 @@ export default function useGuildProfileEditForm() {
             const aPIError = new closure_1_0(4461).APIError(ok);
             const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
             if (null != firstFieldErrorMessage) {
-              obj1 = closure_1_0(14605);
+              obj1 = closure_1_0(14608);
               const result1 = obj1.showGenericGuildProfileUpdateFailureToast(closure_1_9);
               c3 = true;
             }
@@ -264,7 +264,7 @@ export default function useGuildProfileEditForm() {
           tmp54 = c3;
         }
         if (!tmp54) {
-          obj6 = closure_1_0(14605);
+          obj6 = closure_1_0(14608);
           const intl = closure_1_0(1114).intl;
           const result2 = obj6.showGenericGuildProfileUpdateFailureToast(intl.string(closure_1_0(1114).t.s35OuK));
         }

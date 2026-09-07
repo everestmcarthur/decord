@@ -1,10 +1,10 @@
-// Module ID: 15054
-// Function ID: 15055
+// Module ID: 15057
+// Function ID: 15058
 // Name: BountiesModalCloseButton
 // Dependencies: [19, 21, 4560, 576, 5123, 1114, 5680, 2]
 // Exports: default
 
-// Module 15054 (BountiesModalCloseButton)
+// Module 15057 (BountiesModalCloseButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

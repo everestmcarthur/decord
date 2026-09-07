@@ -1,10 +1,10 @@
-// Module ID: 13519
-// Function ID: 13520
+// Module ID: 13523
+// Function ID: 13524
 // Name: getTopPatternSource
-// Dependencies: [19, 17, 21, 8233, 13520, 13521, 13522, 4411, 2]
+// Dependencies: [19, 17, 21, 8233, 13524, 13525, 13526, 4411, 2]
 // Exports: TopPattern, getTopPatternSource, useTopPatternSource
 
-// Module 13519 (getTopPatternSource)
+// Module 13523 (getTopPatternSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import getIllustrationSource from "getIllustrationSource" /* 8233 */;
@@ -19,13 +19,13 @@ export const getTopPatternSource = function getTopPatternSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(13520);
+      return callback(13524);
     },
     darker() {
-      return callback(13521);
+      return callback(13525);
     },
     light() {
-      return callback(13522);
+      return callback(13526);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -34,13 +34,13 @@ export const useTopPatternSource = function useTopPatternSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(13520);
+      return callback(13524);
     },
     darker() {
-      return callback(13521);
+      return callback(13525);
     },
     light() {
-      return callback(13522);
+      return callback(13526);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -49,13 +49,13 @@ export const TopPattern = function TopPattern(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(13520);
+      return callback(13524);
     },
     darker() {
-      return callback(13521);
+      return callback(13525);
     },
     light() {
-      return callback(13522);
+      return callback(13526);
     }
   };
   obj = {};

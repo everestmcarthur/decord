@@ -1,9 +1,9 @@
-// Module ID: 17448
-// Function ID: 17449
+// Module ID: 17451
+// Function ID: 17452
 // Name: NEW_USER_MODAL_KEY
 // Dependencies: [2]
 
-// Module 17448 (NEW_USER_MODAL_KEY)
+// Module 17451 (NEW_USER_MODAL_KEY)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/nuf/native/components/NewUserModalTypes.tsx");

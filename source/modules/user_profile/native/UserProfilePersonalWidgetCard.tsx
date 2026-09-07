@@ -1,16 +1,16 @@
-// Module ID: 8658
-// Function ID: 8659
+// Module ID: 8663
+// Function ID: 8664
 // Name: PersonalWidgetText
-// Dependencies: [32, 19, 17, 502, 1074, 21, 4560, 576, 8659, 8660, 4556, 1114, 1935, 8661, 4271, 5587, 4987, 8255, 504, 7207, 8662, 8663, 2]
+// Dependencies: [32, 19, 17, 502, 1074, 21, 4560, 576, 8664, 8665, 4556, 1114, 1935, 8666, 4271, 5587, 4987, 8255, 504, 7207, 8667, 8668, 2]
 // Exports: default
 
-// Module 8658 (PersonalWidgetText)
+// Module 8663 (PersonalWidgetText)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import ManaContext from "ManaContext" /* 4271 */;
 import preloadDefault from "preload" /* 5587 */;
 import GifTagDefault from "GifTag" /* 8255 */;
-import PersonalWidgetExpandCollapseProvider from "PersonalWidgetExpandCollapseProvider" /* 8659 */;
+import PersonalWidgetExpandCollapseProvider from "PersonalWidgetExpandCollapseProvider" /* 8664 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -279,7 +279,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = callback3();
   const tmp5 = disableInteraction;
-  obj[1] = callback2(userId(8662).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj[1] = callback2(userId(8667).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj[2] = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -289,7 +289,7 @@ function UserProfilePersonalWidgetCardContent(style) {
     obj = { userId: null, widget: null };
     obj[0] = userId;
     obj[1] = widget;
-    tmp4Result = tmp4(tmp5(8663), obj);
+    tmp4Result = tmp4(tmp5(8668), obj);
   }
   obj[3] = tmp4Result;
   obj1 = { style: tmp.sectionsContainer, children: null };

@@ -1,10 +1,10 @@
-// Module ID: 13621
-// Function ID: 13622
+// Module ID: 13625
+// Function ID: 13626
 // Name: PremiumPaymentGuildAnimation
-// Dependencies: [32, 19, 17, 1979, 7432, 21, 4560, 576, 13622, 13623, 504, 4495, 4994, 1114, 4905, 5434, 4987, 1093, 4411, 13624, 13625, 4556, 2]
+// Dependencies: [32, 19, 17, 1979, 7432, 21, 4560, 576, 13626, 13627, 504, 4495, 4994, 1114, 4905, 5434, 4987, 1093, 4411, 13628, 13629, 4556, 2]
 // Exports: default
 
-// Module 13621 (PremiumPaymentGuildAnimation)
+// Module 13625 (PremiumPaymentGuildAnimation)
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import keys from "keys" /* 1093 */;
@@ -13,8 +13,8 @@ import useThemeDefault from "useTheme" /* 4495 */;
 import Text from "Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import componentDidMountDefault2 from "componentDidMount" /* 13622 */;
-import _mod13623 from "module_13623" /* 13623 */;
+import componentDidMountDefault2 from "componentDidMount" /* 13626 */;
+import _mod13627 from "module_13627" /* 13627 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -30,7 +30,7 @@ class PremiumPaymentGuildAnimation {
     tmp = closure_11();
     obj = { nextScene, onSceneComplete, loop, sceneSegments: closure_12, style: tmp.animation, source: null };
     tmp2 = require("componentDidMount");
-    obj[5] = require("module_13623");
+    obj[5] = require("module_13627");
     return jsx(tmp2, obj);
   }
 }
@@ -103,9 +103,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = closure_6;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(13624);
+    let tmp8Result = tmp8(13628);
   } else {
-    tmp8Result = tmp8(13625);
+    tmp8Result = tmp8(13629);
   }
   obj3[1] = tmp8Result;
   obj2[1] = callback2(tmp15, obj3);

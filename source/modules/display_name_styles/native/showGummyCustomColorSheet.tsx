@@ -1,10 +1,10 @@
-// Module ID: 15346
-// Function ID: 15347
+// Module ID: 15349
+// Function ID: 15350
 // Name: showGummyCustomColorSheet
-// Dependencies: [4527, 15347, 1896, 2]
+// Dependencies: [4527, 15350, 1896, 2]
 // Exports: default
 
-// Module 15346 (showGummyCustomColorSheet)
+// Module 15349 (showGummyCustomColorSheet)
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
@@ -13,6 +13,6 @@ const DisplayNameStylesGummyCustomColorSheet = "DisplayNameStylesGummyCustomColo
 const result = set.fileFinishedImporting("modules/display_name_styles/native/showGummyCustomColorSheet.tsx");
 
 export default function showGummyCustomColorSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(15347, dependencyMap.paths), DisplayNameStylesGummyCustomColorSheet, arg0, "stack");
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(15350, dependencyMap.paths), DisplayNameStylesGummyCustomColorSheet, arg0, "stack");
 };
 export const DISPLAY_NAME_STYLES_GUMMY_CUSTOM_COLOR_SHEET_KEY = "DisplayNameStylesGummyCustomColorSheet";

@@ -1,12 +1,12 @@
-// Module ID: 14873
-// Function ID: 14874
+// Module ID: 14876
+// Function ID: 14877
 // Name: FamilyCenterParentalConsentNotice
-// Dependencies: [19, 21, 4560, 576, 14865, 14866, 4255, 4556, 14874, 1114, 2396, 2]
+// Dependencies: [19, 21, 4560, 576, 14868, 14869, 4255, 4556, 14877, 1114, 2396, 2]
 // Exports: default
 
-// Module 14873 (FamilyCenterParentalConsentNotice)
+// Module 14876 (FamilyCenterParentalConsentNotice)
 import ThemesDefault from "Themes" /* 576 */;
-import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 14874 */;
+import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 14877 */;
 import closure_3 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -22,9 +22,9 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/native
 export default function FamilyCenterParentalConsentNotice() {
   const tmp = callback();
   const _require = tmp;
-  let obj = _require(14865);
+  let obj = _require(14868);
   const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-  obj1 = _require(14866);
+  obj1 = _require(14869);
   const parentalConsentWarning = obj1.useParentalConsentWarning();
   let daysRemaining;
   if (parentalConsentWarning != null) {

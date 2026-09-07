@@ -1,9 +1,9 @@
-// Module ID: 13758
-// Function ID: 13759
+// Module ID: 13762
+// Function ID: 13763
 // Name: checkGuildIsHub
 // Dependencies: [7214, 1979, 1074, 504, 573, 2]
 
-// Module 13758 (checkGuildIsHub)
+// Module 13762 (checkGuildIsHub)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_0 from "set" /* 7214 */;

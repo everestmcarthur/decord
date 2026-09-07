@@ -1,10 +1,10 @@
-// Module ID: 11314
-// Function ID: 11315
+// Module ID: 11319
+// Function ID: 11320
 // Name: useReactionPermissions
-// Dependencies: [32, 4200, 2021, 5413, 4199, 1074, 504, 4205, 7977, 7269, 11315, 2]
+// Dependencies: [32, 4200, 2021, 5413, 4199, 1074, 504, 4205, 7977, 7269, 11320, 2]
 // Exports: default
 
-// Module 11314 (useReactionPermissions)
+// Module 11319 (useReactionPermissions)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "initialize" /* 4200 */;
 import closure_5 from "trackCommunicationDisabled" /* 2021 */;

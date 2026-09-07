@@ -1,10 +1,10 @@
-// Module ID: 14959
-// Function ID: 14960
+// Module ID: 14962
+// Function ID: 14963
 // Name: EmptyStateCard
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 4495, 9252, 14960, 14961, 1396, 4411, 5607, 1178, 4527, 14957, 1896, 4556, 7503, 1611, 4973, 1114, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 4495, 9257, 14963, 14964, 1396, 4411, 5607, 1178, 4527, 14960, 1896, 4556, 7503, 1611, 4973, 1114, 2]
 // Exports: default
 
-// Module 14959 (EmptyStateCard)
+// Module 14962 (EmptyStateCard)
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import Text from "Text" /* 4556 */;

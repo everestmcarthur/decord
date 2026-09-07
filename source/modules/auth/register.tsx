@@ -1,15 +1,15 @@
-// Module ID: 15957
-// Function ID: 15958
+// Module ID: 15960
+// Function ID: 15961
 // Name: _scorePassword
-// Dependencies: [5, 15958, 502, 1074, 1098, 4153, 1242, 4753, 1250, 4462, 11277, 573, 15959, 15960, 2]
+// Dependencies: [5, 15961, 502, 1074, 1098, 4153, 1242, 4753, 1250, 4462, 11282, 573, 15962, 15963, 2]
 // Exports: default, registerPhone, scorePassword
 
-// Module 15957 (_scorePassword)
+// Module 15960 (_scorePassword)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import encodeProperties from "encodeProperties" /* 1250 */;
 import _modDef4753 from "module_4753" /* 4753 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import initialize from "initialize" /* 15958 */;
+import initialize from "initialize" /* 15961 */;
 import closure_5 from "fetchFingerprint" /* 502 */;
 import ME from "ME" /* 1074 */;
 import result from "result" /* 1098 */;
@@ -180,7 +180,7 @@ function _registerPhone() {
           } else if (2 === tmp8) {
             c4 = 0;
             callback = dependencyMap;
-            if (callback instanceof phone(11277).CaptchaCancelError) {
+            if (callback instanceof phone(11282).CaptchaCancelError) {
               throw callback;
             } else {
               const tmp23 = new callback(4462)(callback);
@@ -246,7 +246,7 @@ function registerFull(giftCodeSKUId) {
   let obj = dispatcherDefault;
   obj.dispatch({ type: "REGISTER" });
   if (null != birthday) {
-    tmp4(15959)(birthday, constants2.REGISTER);
+    tmp4(15962)(birthday, constants2.REGISTER);
     let tmp4Result = tmp4(1242);
     obj = { source: null, action: null };
     obj[0] = constants5.REGISTER;
@@ -313,13 +313,13 @@ function registerFull(giftCodeSKUId) {
     const obj3 = callback2(573);
     callback2(1242).track(constants.AGE_GATE_ACTION, { source: constants3.REGISTER, action: constants2.AGE_GATE_SUCCESS });
   }, (arg0) => {
-    if (arg0 instanceof callback(11277).CaptchaCancelError) {
+    if (arg0 instanceof callback(11282).CaptchaCancelError) {
       throw arg0;
     } else {
       let obj = new callback2(4462)(arg0);
       if (null != obj.getFieldErrors("date_of_birth")) {
-        const result = callback3(15960).preventUnderageRegistration(constants3.REGISTER);
-        const obj2 = callback3(15960);
+        const result = callback3(15963).preventUnderageRegistration(constants3.REGISTER);
+        const obj2 = callback3(15963);
       }
       obj = { is_unique_username_registration: true, email_error_reason: null, phone_error_reason: null, password_error_reason: null, username_error_reason: null, global_name_error_reason: null, date_of_birth_error_reason: null, promotional_email_opt_in_error_reason: null, fingerprint_error_reason: null, invite_error_reason: null, gift_code_sku_id_error_reason: null, guild_template_code_error_reason: null, consent_error_reason: null, generic_error_reason: null };
       obj[1] = obj.getFirstFieldErrorMessage("email");

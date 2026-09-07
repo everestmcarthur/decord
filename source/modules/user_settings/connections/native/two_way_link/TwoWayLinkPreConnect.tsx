@@ -1,10 +1,10 @@
-// Module ID: 9230
-// Function ID: 9231
+// Module ID: 9235
+// Function ID: 9236
 // Name: _authorizeLink
-// Dependencies: [32, 5, 19, 17, 1074, 21, 3, 4560, 5406, 9231, 4255, 1115, 9226, 5407, 38, 573, 4556, 1114, 7123, 4975, 2]
+// Dependencies: [32, 5, 19, 17, 1074, 21, 3, 4560, 5406, 9236, 4255, 1115, 9231, 5407, 38, 573, 4556, 1114, 7123, 4975, 2]
 // Exports: TwoWayLinkPreConnect
 
-// Module 9230 (_authorizeLink)
+// Module 9235 (_authorizeLink)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;

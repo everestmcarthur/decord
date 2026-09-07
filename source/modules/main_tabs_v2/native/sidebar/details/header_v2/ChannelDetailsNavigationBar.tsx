@@ -1,9 +1,9 @@
-// Module ID: 16728
-// Function ID: 16729
+// Module ID: 16731
+// Function ID: 16732
 // Name: MuteButton
-// Dependencies: [19, 17, 4200, 4201, 1957, 4741, 7876, 10916, 1074, 7877, 21, 4560, 12370, 576, 4262, 504, 1483, 8097, 1114, 9060, 7949, 12299, 12358, 4771, 7052, 10913, 8625, 7381, 16729, 4271, 4296, 4561, 16626, 4564, 11612, 5123, 5628, 2]
+// Dependencies: [19, 17, 4200, 4201, 1957, 4741, 7876, 10921, 1074, 7877, 21, 4560, 12374, 576, 4262, 504, 1483, 8097, 1114, 9065, 7949, 12303, 12362, 4771, 7052, 10918, 8630, 7381, 16732, 4271, 4296, 4561, 16629, 4564, 11617, 5123, 5628, 2]
 
-// Module 16728 (MuteButton)
+// Module 16731 (MuteButton)
 import ThemesDefault from "Themes" /* 576 */;
 import registerAssetDefault from "registerAsset" /* 7052 */;
 import importAllResult from "noop" /* 19 */;
@@ -13,7 +13,7 @@ import closure_6 from "storeThread" /* 4201 */;
 import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import closure_8 from "updateUserGuildSettingsInternal" /* 4741 */;
 import useChannelDetailsStore from "useChannelDetailsStore" /* 7876 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10916 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10921 */;
 import { ChannelSettingsSections } from "ME" /* 1074 */;
 import { SearchEntrypointAnalyticsLocations as closure_14 } from "SearchEntrypointAnalyticsLocations" /* 7877 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -52,7 +52,7 @@ function MuteButton(channelId) {
   obj[1] = callback;
   obj[2] = token1;
   obj[3] = token;
-  obj[4] = tmp5(stateFromStores ? 9060 : 7949);
+  obj[4] = tmp5(stateFromStores ? 9065 : 7949);
   return closure_15(channelId(8097).IconButton, obj, constants.MUTE);
 }
 function SearchButton(channelId) {
@@ -281,7 +281,7 @@ let closure_24 = importAllResult.forwardRef((cleanUp, ref) => {
   S.__workletHash = 1270940013897;
   S.__initData = closure_22;
   const animatedStyle = obj.useAnimatedStyle(S);
-  obj = { style: items, children: callback2(cleanUp(16626), obj1) };
+  obj = { style: items, children: callback2(cleanUp(16629), obj1) };
   items = [callback4().searchHeader, animatedStyle];
   return callback2(cleanUp(4296).View, obj);
 });

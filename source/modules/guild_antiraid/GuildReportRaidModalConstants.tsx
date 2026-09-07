@@ -1,10 +1,10 @@
-// Module ID: 13965
-// Function ID: 13966
+// Module ID: 13968
+// Function ID: 13969
 // Name: getReportRaidHelpArticleURL
 // Dependencies: [1074, 2024, 1114, 2]
 // Exports: getReportRaidHelpArticleURL, getReportRaidTypeLabel
 
-// Module 13965 (getReportRaidHelpArticleURL)
+// Module 13968 (getReportRaidHelpArticleURL)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

@@ -1,13 +1,13 @@
-// Module ID: 16791
-// Function ID: 16792
+// Module ID: 16794
+// Function ID: 16795
 // Name: useHasNewAdContent
-// Dependencies: [32, 15080, 7703, 5444, 1090, 11489, 504, 7699, 5451, 7388, 1943, 2]
+// Dependencies: [32, 15083, 7703, 5444, 1090, 11494, 504, 7699, 5451, 7388, 1943, 2]
 // Exports: default
 
-// Module 16791 (useHasNewAdContent)
+// Module 16794 (useHasNewAdContent)
 import setDefault from "set" /* 1090 */;
 import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getOrCreateSet" /* 15080 */;
+import closure_3 from "getOrCreateSet" /* 15083 */;
 import closure_4 from "initializeState" /* 7703 */;
 import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5444 */;
 

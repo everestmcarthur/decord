@@ -1,10 +1,10 @@
-// Module ID: 14878
-// Function ID: 14879
+// Module ID: 14881
+// Function ID: 14882
 // Name: shareGuardianConnectLink
 // Dependencies: [7538, 8361, 1114, 2396, 2]
 // Exports: shareGuardianConnectLink
 
-// Module 14878 (shareGuardianConnectLink)
+// Module 14881 (shareGuardianConnectLink)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;

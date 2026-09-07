@@ -1,20 +1,20 @@
-// Module ID: 16819
-// Function ID: 16820
+// Module ID: 16822
+// Function ID: 16823
 // Name: ConnectedChannelSettingsInstantInvites
-// Dependencies: [32, 19, 17, 8626, 1957, 1074, 21, 4560, 576, 1611, 504, 8625, 10932, 1178, 10949, 10950, 1114, 7039, 16820, 7055, 2]
+// Dependencies: [32, 19, 17, 8631, 1957, 1074, 21, 4560, 576, 1611, 504, 8630, 10937, 1178, 10954, 10955, 1114, 7039, 16823, 7055, 2]
 // Exports: default
 
-// Module 16819 (ConnectedChannelSettingsInstantInvites)
+// Module 16822 (ConnectedChannelSettingsInstantInvites)
 import ThemesDefault from "Themes" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import _modDef7055 from "module_7055" /* 7055 */;
-import registerAssetDefault from "registerAsset" /* 10949 */;
-import registerAssetDefault2 from "registerAsset" /* 10950 */;
-import _modDef16820 from "module_16820" /* 16820 */;
+import registerAssetDefault from "registerAsset" /* 10954 */;
+import registerAssetDefault2 from "registerAsset" /* 10955 */;
+import _modDef16823 from "module_16823" /* 16823 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "normalizeChannelPropertyForCompare" /* 8626 */;
+import closure_6 from "normalizeChannelPropertyForCompare" /* 8631 */;
 import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import { ChannelSettingsSections } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -91,18 +91,18 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items5);
   const items6 = [memo1.length];
   const effect = memo.useEffect(() => {
-    callback(8625).setSection(constants.INSTANT_INVITES);
+    callback(8630).setSection(constants.INSTANT_INVITES);
   }, []);
   const items7 = [memo1];
   const callback1 = memo.useCallback((arg0, arg1) => {
     if ("invite" === memo1[arg1].type) {
       let obj = { invite: null };
       obj[0] = tmp.data;
-      let tmp5 = closure_1_9(closure_1_1(10932), obj);
+      let tmp5 = closure_1_9(closure_1_1(10937), obj);
     } else {
       obj = { channel: null };
       obj[0] = tmp.data;
-      tmp5 = closure_1_9(lib(10932).LinkedChannelInvite, obj);
+      tmp5 = closure_1_9(lib(10937).LinkedChannelInvite, obj);
     }
     return tmp5;
   }, items7);
@@ -137,7 +137,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   const items8 = [callback(tmpResult(7039).SceneLoadingIndicator, {}), ];
   tmpResult = null;
   if (memo1.length > 0) {
-    tmp2 = _modDef16820;
+    tmp2 = _modDef16823;
     obj = { item: null, onMeasured: null };
     memo1 = memo1[0];
     obj[0] = memo1;

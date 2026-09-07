@@ -1,12 +1,12 @@
-// Module ID: 17589
-// Function ID: 17590
+// Module ID: 17592
+// Function ID: 17593
 // Name: GuildSettingsServerTagBadgeGrid
-// Dependencies: [19, 17, 7944, 21, 576, 4560, 17590, 12479, 4973, 4556, 1114, 17591, 17592, 13915, 7209, 2]
+// Dependencies: [19, 17, 7944, 21, 576, 4560, 17593, 12483, 4973, 4556, 1114, 17594, 17595, 13918, 7209, 2]
 // Exports: default
 
-// Module 17589 (GuildSettingsServerTagBadgeGrid)
+// Module 17592 (GuildSettingsServerTagBadgeGrid)
 import ThemesDefault from "Themes" /* 576 */;
-import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 17590 */;
+import useGuildTagBadgeCollectionDefault from "useGuildTagBadgeCollection" /* 17593 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { GuildTagBadgeSize } from "items" /* 7944 */;

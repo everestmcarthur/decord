@@ -1,10 +1,10 @@
-// Module ID: 11123
-// Function ID: 11124
+// Module ID: 11128
+// Function ID: 11129
 // Name: DoubleTapReminderContent
-// Dependencies: [19, 1954, 21, 4560, 576, 4556, 1114, 4380, 1943, 1935, 7968, 4259, 11124, 2]
+// Dependencies: [19, 1954, 21, 4560, 576, 4556, 1114, 4380, 1943, 1935, 7968, 4259, 11129, 2]
 // Exports: maybeShowDoubleTapReminderToast
 
-// Module 11123 (DoubleTapReminderContent)
+// Module 11128 (DoubleTapReminderContent)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

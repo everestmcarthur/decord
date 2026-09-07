@@ -1,23 +1,23 @@
-// Module ID: 17160
-// Function ID: 17161
+// Module ID: 17163
+// Function ID: 17164
 // Name: StreamPreview
-// Dependencies: [5, 32, 19, 17, 1956, 4577, 13732, 4582, 502, 1957, 1908, 4199, 4578, 1371, 4579, 4584, 12273, 12276, 1074, 13737, 4585, 21, 4560, 12277, 576, 12272, 5411, 4702, 4612, 504, 5589, 4556, 1114, 13038, 7168, 4189, 17149, 1477, 4296, 9531, 9530, 9652, 5123, 17147, 4975, 8768, 1250, 6610, 9118, 4712, 5605, 10993, 11422, 7162, 7182, 1242, 17115, 17161, 4974, 4271, 7073, 17037, 17163, 2]
+// Dependencies: [5, 32, 19, 17, 1956, 4577, 13736, 4582, 502, 1957, 1908, 4199, 4578, 1371, 4579, 4584, 12277, 12280, 1074, 13741, 4585, 21, 4560, 12281, 576, 12276, 5411, 4702, 4612, 504, 5589, 4556, 1114, 13042, 7168, 4189, 17152, 1477, 4296, 9536, 9535, 9657, 5123, 17150, 4975, 8773, 1250, 6610, 9123, 4712, 5605, 10998, 11427, 7162, 7182, 1242, 17118, 17164, 4974, 4271, 7073, 17040, 17166, 2]
 
-// Module 17160 (StreamPreview)
+// Module 17163 (StreamPreview)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import encodeProperties from "encodeProperties" /* 1250 */;
 import Text from "Text" /* 4556 */;
 import setDefault from "set" /* 5589 */;
-import trackImpressionDefault from "trackImpression" /* 8768 */;
-import VoiceBadges from "VoiceBadges" /* 9118 */;
+import trackImpressionDefault from "trackImpression" /* 8773 */;
+import VoiceBadges from "VoiceBadges" /* 9123 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "participantFromServer" /* 1956 */;
 import closure_7 from "set" /* 4577 */;
-import closure_8 from "init" /* 13732 */;
+import closure_8 from "init" /* 13736 */;
 import closure_9 from "reset" /* 4582 */;
 import closure_10 from "fetchFingerprint" /* 502 */;
 import closure_11 from "ensureGuildLoaded" /* 1957 */;
@@ -27,10 +27,10 @@ import closure_14 from "handleUpdate" /* 4578 */;
 import closure_15 from "mergeGuildAvatar" /* 1371 */;
 import closure_16 from "updateVoiceState" /* 4579 */;
 import closure_17 from "getVoiceStatesForGuild" /* 4584 */;
-import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 12273 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 12276 */;
+import { MODE_CHANGE_PHYSICS } from "VoicePanelModes" /* 12277 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 12280 */;
 import ME from "ME" /* 1074 */;
-import { VoiceChannelWarningSurfaces as closure_23 } from "GdmWarningMedium" /* 13737 */;
+import { VoiceChannelWarningSurfaces as closure_23 } from "GdmWarningMedium" /* 13741 */;
 import { Features } from "DesktopSources" /* 4585 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -701,10 +701,10 @@ let closure_39 = { code: "function VoicePanelPreJoinContentTsx3(){const{windowDi
 let closure_40 = { code: "function VoicePanelPreJoinContentTsx4(finished=false){const{transitionState,TransitionStates,runOnJS,transitionCleanUp}=this.__closure;finished&&transitionState===TransitionStates.YEETED&&runOnJS(transitionCleanUp)();}" };
 let obj4 = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING, marginHorizontal: ThemesDefault.space.PX_16 };
 const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
-  const context = importAllResult.useContext(guildId(12272));
+  const context = importAllResult.useContext(guildId(12276));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(17037)(channelId);
+  const tmp2 = guildId(17040)(channelId);
   dependencyMap = tmp2;
   let obj = channelId(504);
   let items = [closure_17, closure_8, closure_6, closure_12, closure_9];
@@ -749,7 +749,7 @@ const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
       obj[4] = ignoredUsersForVoiceChannel;
       return obj;
     }
-  }, items1, channelId(17163).areVoicePanelPreJoinContentPropsEqual);
+  }, items1, channelId(17166).areVoicePanelPreJoinContentPropsEqual);
   obj = { item: stateFromStores, renderItem };
   return callback(channelId(4271).TransitionItem, obj);
 });

@@ -1,17 +1,17 @@
-// Module ID: 15915
-// Function ID: 15916
+// Module ID: 15918
+// Function ID: 15919
 // Name: route
-// Dependencies: [11468, 1114, 9776, 14450, 15916, 15917, 2722, 15914, 15919, 15920, 15921, 15922, 2]
+// Dependencies: [11473, 1114, 9781, 14453, 15919, 15920, 2722, 15917, 15922, 15923, 15924, 15925, 2]
 
-// Module 15915 (route)
+// Module 15918 (route)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2722 */;
-import BellIcon from "BellIcon" /* 9776 */;
-import getNamedExperiment from "getNamedExperiment" /* 14450 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15914 */;
-import frozen from "frozen" /* 15916 */;
-import createToggle from "createToggle" /* 11468 */;
+import BellIcon from "BellIcon" /* 9781 */;
+import getNamedExperiment from "getNamedExperiment" /* 14453 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15917 */;
+import frozen from "frozen" /* 15919 */;
+import createToggle from "createToggle" /* 11473 */;
 
 let obj = {
   useTitle() {
@@ -28,7 +28,7 @@ let obj = {
 obj = {
   route: frozen.MobileNotifSettingsSections.NOTIFICATIONS_REDESIGN,
   getComponent() {
-    return require(15917).default;
+    return require(15920).default;
   }
 };
 obj[4] = obj;
@@ -45,7 +45,7 @@ const obj1 = {
   screen: {
     route: frozen.MobileNotifSettingsSections.NOTIF_REALTIME,
     getComponent() {
-      return require(15919).default;
+      return require(15922).default;
     }
   }
 };
@@ -64,13 +64,13 @@ const obj3 = {
 const obj2 = {
   route: frozen.MobileNotifSettingsSections.NOTIF_REALTIME,
   getComponent() {
-    return require(15919).default;
+    return require(15922).default;
   }
 };
 obj3[3] = {
   route: frozen.MobileNotifSettingsSections.NOTIF_CATEGORY_SOCIAL,
   getComponent() {
-    return require(15920).default;
+    return require(15923).default;
   }
 };
 const route2 = createToggle.createRoute(obj3);
@@ -88,13 +88,13 @@ const obj5 = {
 const obj4 = {
   route: frozen.MobileNotifSettingsSections.NOTIF_CATEGORY_SOCIAL,
   getComponent() {
-    return require(15920).default;
+    return require(15923).default;
   }
 };
 obj5[3] = {
   route: frozen.MobileNotifSettingsSections.NOTIF_CATEGORY_SERVER,
   getComponent() {
-    return require(15921).default;
+    return require(15924).default;
   }
 };
 const route3 = createToggle.createRoute(obj5);
@@ -112,20 +112,20 @@ const obj7 = {
 const obj6 = {
   route: frozen.MobileNotifSettingsSections.NOTIF_CATEGORY_SERVER,
   getComponent() {
-    return require(15921).default;
+    return require(15924).default;
   }
 };
 obj7[3] = {
   route: frozen.MobileNotifSettingsSections.NOTIF_CATEGORY_OTHER,
   getComponent() {
-    return require(15922).default;
+    return require(15925).default;
   }
 };
 const route4 = createToggle.createRoute(obj7);
 const obj8 = {
   route: frozen.MobileNotifSettingsSections.NOTIF_CATEGORY_OTHER,
   getComponent() {
-    return require(15922).default;
+    return require(15925).default;
   }
 };
 const result = set.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRoutes.tsx");

@@ -1,19 +1,19 @@
-// Module ID: 17623
-// Function ID: 17624
+// Module ID: 17626
+// Function ID: 17627
 // Name: componentDidMount
-// Dependencies: [109, 5, 19, 17, 2016, 502, 2021, 2015, 1979, 9064, 17610, 17605, 1074, 17612, 21, 4560, 576, 4271, 5624, 7377, 1114, 4740, 17614, 12, 1242, 9738, 17624, 4259, 9566, 5597, 5520, 11573, 4904, 1178, 5687, 5605, 17625, 17632, 17634, 17635, 4973, 8593, 1483, 504, 4204, 7040, 2]
+// Dependencies: [109, 5, 19, 17, 2016, 502, 2021, 2015, 1979, 9069, 17613, 17608, 1074, 17615, 21, 4560, 576, 4271, 5624, 7377, 1114, 4740, 17617, 12, 1242, 9743, 17627, 4259, 9571, 5597, 5520, 11578, 4904, 1178, 5687, 5605, 17628, 17635, 17637, 17638, 4973, 8598, 1483, 504, 4204, 7040, 2]
 // Exports: default
 
-// Module 17623 (componentDidMount)
+// Module 17626 (componentDidMount)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import TableRowInner from "TableRowInner" /* 5605 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import GuildSettingsRoleEditDisplayDefault from "GuildSettingsRoleEditDisplay" /* 17625 */;
-import GuildSettingsRoleEditPermissionDefault from "GuildSettingsRoleEditPermission" /* 17632 */;
-import onMembersLoadFailDefault from "onMembersLoadFail" /* 17634 */;
-import HeaderSectionDefault from "HeaderSection" /* 17635 */;
+import GuildSettingsRoleEditDisplayDefault from "GuildSettingsRoleEditDisplay" /* 17628 */;
+import GuildSettingsRoleEditPermissionDefault from "GuildSettingsRoleEditPermission" /* 17635 */;
+import onMembersLoadFailDefault from "onMembersLoadFail" /* 17637 */;
+import HeaderSectionDefault from "HeaderSection" /* 17638 */;
 import closure_5 from "_objectWithoutProperties" /* 109 */;
 import closure_6 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
@@ -23,12 +23,12 @@ import closure_10 from "fetchFingerprint" /* 502 */;
 import closure_11 from "trackCommunicationDisabled" /* 2021 */;
 import closure_12 from "createGuildRoleRecordFromRust" /* 2015 */;
 import closure_13 from "createGuildRecordFromRust" /* 1979 */;
-import closure_14 from "handleFormInit" /* 9064 */;
-import closure_15 from "handleSetSection" /* 17610 */;
-import { RoleColorsStyle } from "handleSetSection" /* 17610 */;
-import { GuildSettingsRoleEditSections as closure_17 } from "MAX_SUBCATEGORIES" /* 17605 */;
+import closure_14 from "handleFormInit" /* 9069 */;
+import closure_15 from "handleSetSection" /* 17613 */;
+import { RoleColorsStyle } from "handleSetSection" /* 17613 */;
+import { GuildSettingsRoleEditSections as closure_17 } from "MAX_SUBCATEGORIES" /* 17608 */;
 import ME from "ME" /* 1074 */;
-import { HOLOGRAPHIC_ROLE_COLORS } from "HOLOGRAPHIC_ROLE_COLORS" /* 17612 */;
+import { HOLOGRAPHIC_ROLE_COLORS } from "HOLOGRAPHIC_ROLE_COLORS" /* 17615 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -555,7 +555,7 @@ prototype["render"] = function render() {
     items[3] = renderDeleteButtonResult;
     obj6[1] = items;
     obj5[1] = closure_23(tmp24(4973).Stack, obj6);
-    tmp22Result = tmp22(tmp24(8593).Form, obj5);
+    tmp22Result = tmp22(tmp24(8598).Form, obj5);
     const tmp26 = closure_23;
   }
   obj2[1] = tmp22Result;

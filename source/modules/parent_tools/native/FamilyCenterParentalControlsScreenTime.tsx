@@ -1,10 +1,10 @@
-// Module ID: 14932
-// Function ID: 14933
+// Module ID: 14935
+// Function ID: 14936
 // Name: ScheduleRuleRow
-// Dependencies: [17, 1074, 21, 4560, 576, 10083, 5605, 4556, 1114, 2396, 14893, 1483, 5687, 2]
+// Dependencies: [17, 1074, 21, 4560, 576, 10088, 5605, 4556, 1114, 2396, 14896, 1483, 5687, 2]
 // Exports: default
 
-// Module 14932 (ScheduleRuleRow)
+// Module 14935 (ScheduleRuleRow)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -19,10 +19,10 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  let obj = rule(10083);
+  let obj = rule(10088);
   const scheduleRuleDateRange = obj.getScheduleRuleDateRange(rule);
-  const obj2 = rule(10083);
-  obj = { label: scheduleRuleDateRange, subLabel: rule(10083).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const obj2 = rule(10088);
+  obj = { label: scheduleRuleDateRange, subLabel: rule(10088).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1114).intl;
   const string = intl.string;
   const tmp4 = messagesProxyDefault;

@@ -1,12 +1,12 @@
-// Module ID: 9201
-// Function ID: 9202
+// Module ID: 9206
+// Function ID: 9207
 // Name: GuildProfileGameRow
-// Dependencies: [19, 17, 21, 8675, 8686, 5605, 9196, 4560, 9200, 8170, 1114, 4527, 9185, 1896, 7150, 6627, 5687, 2]
+// Dependencies: [19, 17, 21, 8680, 8691, 5605, 9201, 4560, 9205, 8170, 1114, 4527, 9190, 1896, 7150, 6627, 5687, 2]
 // Exports: default
 
-// Module 9201 (GuildProfileGameRow)
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8675 */;
-import stylesDefault from "styles" /* 9196 */;
+// Module 9206 (GuildProfileGameRow)
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8680 */;
+import stylesDefault from "styles" /* 9201 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -16,7 +16,7 @@ const require = arg1;
 function GuildProfileGameRow(activityLevel) {
   const game = activityLevel.game;
   let _require;
-  let obj = { gameId: game.id, source: _require(8686).GameProfileSources.GuildProfileGames, trackEntryPointImpression: true };
+  let obj = { gameId: game.id, source: _require(8691).GameProfileSources.GuildProfileGames, trackEntryPointImpression: true };
   const tmpResult = useOpenGameProfileModalDefault(obj);
   _require = tmpResult;
   obj = { icon: jsx(stylesDefault, { game, activityLevel: activityLevel.activityLevel }), label: game.name, arrow: tmp3, onPress: null };
@@ -36,7 +36,7 @@ export default function GuildProfileGamesActionSheet(profile) {
   let gameActivity;
   id = profile.id;
   gameActivity = profile.gameActivity;
-  let obj = id(9200);
+  let obj = id(9205);
   const allGuildProfileGames = obj.useAllGuildProfileGames(profile);
   obj1 = id(8170);
   const intl = id(1114).intl;

@@ -1,11 +1,11 @@
-// Module ID: 13857
-// Function ID: 13858
-// Dependencies: [19, 12679, 1074, 21, 4560, 576, 8593, 1242, 12676, 7195, 1114, 13858, 2]
+// Module ID: 13860
+// Function ID: 13861
+// Dependencies: [19, 12683, 1074, 21, 4560, 576, 8598, 1242, 12680, 7195, 1114, 13861, 2]
 
-// Module 13857
+// Module 13860
 import ThemesDefault from "Themes" /* 576 */;
-import registerAssetDefault from "registerAsset" /* 13858 */;
-import { dismissUpsellCTA } from "setStoredContacts" /* 12679 */;
+import registerAssetDefault from "registerAsset" /* 13861 */;
+import { dismissUpsellCTA } from "setStoredContacts" /* 12683 */;
 import ME from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -58,7 +58,7 @@ const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) 
   obj[4] = intl.string(location(1114).t.T6Rfd9);
   const intl2 = location(1114).intl;
   obj[5] = intl2.string(location(1114).t.c6KIpg);
-  return jsx(location(8593).FormCTA, {
+  return jsx(location(8598).FormCTA, {
     onPress() {
       let obj = closure_1_1(closure_1_2[7]);
       obj = { type: closure_1_5.CONTACT_SYNC_MODAL, location: null };

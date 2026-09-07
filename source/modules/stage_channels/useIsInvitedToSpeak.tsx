@@ -1,10 +1,10 @@
-// Module ID: 9678
-// Function ID: 9679
+// Module ID: 9683
+// Function ID: 9684
 // Name: useIsInvitedToSpeak
 // Dependencies: [502, 2011, 504, 4707, 2]
 // Exports: default
 
-// Module 9678 (useIsInvitedToSpeak)
+// Module 9683 (useIsInvitedToSpeak)
 import initialize from "initialize" /* 504 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4707 */;
 import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4707 */;

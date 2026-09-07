@@ -1,10 +1,10 @@
-// Module ID: 16308
-// Function ID: 16309
+// Module ID: 16311
+// Function ID: 16312
 // Name: transitionGuildsBarToGuildOrOpenSelectedChannel
 // Dependencies: [2011, 4381, 1074, 4418, 4417, 4571, 7342, 2]
 // Exports: default
 
-// Module 16308 (transitionGuildsBarToGuildOrOpenSelectedChannel)
+// Module 16311 (transitionGuildsBarToGuildOrOpenSelectedChannel)
 import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
 import closure_2 from "handleConnectionOpen" /* 2011 */;
 import closure_3 from "handleConnectionOpen" /* 4381 */;

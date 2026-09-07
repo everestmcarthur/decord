@@ -1,23 +1,23 @@
-// Module ID: 11285
-// Function ID: 11286
+// Module ID: 11290
+// Function ID: 11291
 // Name: resolveAsset
-// Dependencies: [5444, 1074, 11286, 11287, 11288, 11289, 11290, 7708, 11297, 11298, 5452, 1365, 1878, 2]
+// Dependencies: [5444, 1074, 11291, 11292, 11293, 11294, 11295, 7708, 11302, 11303, 5452, 1365, 1878, 2]
 // Exports: buildUrl, getDevicePixelScaledDimensions, getQuestAsset, getScaledFirstFrameImageUrl, getScaledImageUrl, resolveAdCreativeCdnUrl, resolveOptionalAdCreativeCdnUrl
 
-// Module 11285 (resolveAsset)
+// Module 11290 (resolveAsset)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1878 */;
 import set2 from "set" /* 5452 */;
 import QuestRewardTypes from "QuestRewardTypes" /* 7708 */;
-import metadataDefault from "metadata" /* 11286 */;
-import metadataDefault2 from "metadata" /* 11287 */;
-import metadataDefault3 from "metadata" /* 11288 */;
-import metadataDefault4 from "metadata" /* 11289 */;
-import _getDefaultRewardName from "_getDefaultRewardName" /* 11290 */;
-import metadataDefault5 from "metadata" /* 11297 */;
-import metadataDefault6 from "metadata" /* 11298 */;
+import metadataDefault from "metadata" /* 11291 */;
+import metadataDefault2 from "metadata" /* 11292 */;
+import metadataDefault3 from "metadata" /* 11293 */;
+import metadataDefault4 from "metadata" /* 11294 */;
+import _getDefaultRewardName from "_getDefaultRewardName" /* 11295 */;
+import metadataDefault5 from "metadata" /* 11302 */;
+import metadataDefault6 from "metadata" /* 11303 */;
 import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
 
 function resolveAsset(id, questBarHeroVideo) {
@@ -85,10 +85,315 @@ function getMimetype(questBarHeroVideo) {
           formatted1 = str3.toLowerCase();
         }
       }
+      formatted = formatted1;
     }
-    return "application/x-mpegURL";
+    switch (formatted) {
+      case "Date":
+      break;
+      case "TypeError":
+      break;
+      case "Error":
+      break;
+      case "HTTP":
+      break;
+      case "T":
+      break;
+      case "HermesInternal":
+      break;
+      case "Icon":
+      break;
+      case "IconComponent":
+      break;
+      case "c":
+      break;
+      case "p":
+      break;
+      case "LengthDelimited":
+      break;
+      case "limit":
+      break;
+      case "i":
+      break;
+      case "it":
+      break;
+      case "d":
+      break;
+      case "Map":
+      break;
+      case "Math":
+      break;
+      case "h":
+      break;
+      case "Number":
+      break;
+      case "Object":
+      break;
+      case "ct":
+      break;
+      case "PX_16":
+      break;
+      case "flex":
+      break;
+      case "flexDirection":
+      break;
+      case "PX_8":
+      break;
+      case "Path":
+      break;
+      case "Promise":
+      break;
+      case "s":
+      break;
+      case "Reflect":
+      break;
+      case "Set":
+      break;
+      case "format":
+      break;
+      case "formatToPlainString":
+      break;
+      case "String":
+      break;
+      case "Symbol":
+      break;
+      case "Text":
+        return "video/webm";
+      case "x":
+      break;
+      case "View":
+        return "video/mp4";
+      case "w":
+      break;
+      case "WireType":
+        return "image/webp";
+      case "__closure":
+      break;
+      case "__d":
+        return "image/jpeg";
+      case "__esModule":
+      break;
+      case "__initData":
+        return "image/jpeg";
+      case "filter":
+      break;
+      case "__packager_asset":
+        return "image/png";
+      case "k":
+      break;
+      case "set":
+        return "image/gif";
+      case "__workletHash":
+      break;
+      case "_desired":
+        return "image/svg+xml";
+      case "_distance":
+      break;
+      case "st":
+        return "text/plain";
+      case "accessibilityLabel":
+      break;
+      case "accessibilityRole":
+        return "text/vtt";
+      case "accessible":
+      break;
+      case "padding":
+        return "video/mp2t";
+      case "paddingHorizontal":
+      break;
+      case "add":
+        return "application/x-mpegURL";
+      case "alignItems":
+      break;
+      case "ao":
+      break;
+      case "applicationId":
+      break;
+      case "ti":
+      break;
+      case "apply":
+      break;
+      case "assign":
+      break;
+      case "backgroundColor":
+      break;
+      case "round":
+      break;
+      case "bm":
+      break;
+      case "body":
+      break;
+      case "borderRadius":
+      break;
+      case "bottom":
+      break;
+      case "call":
+      break;
+      case "channel":
+      break;
+      case "channelId":
+      break;
+      case "channel_id":
+      break;
+      case "id":
+      break;
+      case "children":
+      break;
+      case "cix":
+      break;
+      case "ix":
+      break;
+      case "unicodeVersion":
+      break;
+      case "code":
+      break;
+      case "color":
+      break;
+      case "colors":
+      break;
+      case "concat":
+      break;
+      case "construct":
+      break;
+      case "constructor":
+      break;
+      case "container":
+      break;
+      case "content":
+      break;
+      case "context":
+      break;
+      case "text":
+      break;
+      case "count":
+      break;
+      case "create":
+      break;
+      case "createStyles":
+      break;
+      case "ty":
+      break;
+      case "current":
+      break;
+      case "cursor":
+      break;
+      case "data":
+      break;
+      case "ddd":
+      break;
+      case "default":
+      break;
+      case "defineProperty":
+      break;
+      case "op":
+      break;
+      case "delete":
+      break;
+      case "description":
+      break;
+      case "ip":
+      break;
+      case "disabled":
+      break;
+      case "sa":
+      break;
+      case "dispatch":
+      break;
+      case "displayName":
+      break;
+      case "diversity":
+      break;
+      case "v":
+      break;
+      case "done":
+      break;
+      case "duration":
+      break;
+      case "enabled":
+      break;
+      case "end":
+      break;
+      case "enumerable":
+      break;
+      case "error":
+      break;
+      case "exports":
+      break;
+      case "fileFinishedImporting":
+      break;
+      case "fill":
+      break;
+      case "find":
+      break;
+      case "ind":
+      break;
+      case "flags":
+      break;
+      case "forEach":
+      break;
+      case "gap":
+      break;
+      case "get":
+      break;
+      case "getChannel":
+      break;
+      case "getCurrentUser":
+      break;
+      case "guild":
+      break;
+      case "guildId":
+      break;
+      case "guild_id":
+      break;
+      case "has":
+      break;
+      case "hasDiversityParent":
+      break;
+      case "hash":
+      break;
+      case "hd":
+      break;
+      case "header":
+      break;
+      case "height":
+      break;
+      case "httpServerLocation":
+      break;
+      case "icon":
+      break;
+      case "includes":
+      break;
+      case "index":
+      break;
+      case "indexOf":
+      break;
+      case "intl":
+      break;
+      case "items":
+      break;
+      case "join":
+      break;
+      case "jsx":
+      break;
+      case "jsxs":
+      break;
+      case "justifyContent":
+      break;
+      case "key":
+      break;
+      case "keys":
+      break;
+      case "kind":
+      break;
+      case "ks":
+      break;
+      case "space":
+      break;
+      case "label":
+      break;
+      default:
+        return null;
+    }
   }
-  obj = isDiscordProxiedAssetUrlDefault;
 }
 function getAssetUrlWithMediaProxyQueryParams(assetUrl, arg1) {
   let size = arg1;

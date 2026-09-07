@@ -1,10 +1,10 @@
-// Module ID: 15574
-// Function ID: 15575
+// Module ID: 15577
+// Function ID: 15578
 // Name: updateDevToolsSettings
 // Dependencies: [7719, 573, 2]
 // Exports: clearAnalyticsLog, openDevTools, toggleDisplayDevTools, updateDevToolsSettings
 
-// Module 15574 (updateDevToolsSettings)
+// Module 15577 (updateDevToolsSettings)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_2 from "initialize" /* 7719 */;
 

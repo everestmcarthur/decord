@@ -1,14 +1,14 @@
-// Module ID: 14467
-// Function ID: 14468
-// Dependencies: [4788, 4465, 1074, 9557, 9559, 14468, 8856, 9554, 9518, 1242, 1272, 8854, 2]
+// Module ID: 14470
+// Function ID: 14471
+// Dependencies: [4788, 4465, 1074, 9562, 9564, 14471, 8861, 9559, 9523, 1242, 1272, 8859, 2]
 
-// Module 14467
+// Module 14470
 import sendRequest from "sendRequest" /* 1272 */;
-import isTestModeForApplication from "isTestModeForApplication" /* 8854 */;
-import prototypeDefault from "prototype" /* 9554 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9559 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14468 */;
+import isTestModeForApplication from "isTestModeForApplication" /* 8859 */;
+import prototypeDefault from "prototype" /* 9559 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9562 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9564 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14471 */;
 import closure_3 from "addApplication" /* 4788 */;
 import ME from "ME" /* 1074 */;
 
@@ -37,9 +37,9 @@ let obj = {
       const guildId = obj3.getGuildId();
     }
     application = application.getApplication(id);
-    let tmpResult = tmp(8856);
+    let tmpResult = tmp(8861);
     if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
-      tmpResult = tmp(9518);
+      tmpResult = tmp(9523);
       const activeAnalyticsSessionIDs = tmpResult.getActiveAnalyticsSessionIDs(id);
       obj = { activity_application_id: null, activity_channel_type: null, activity_guild_id: null, activity_user_session_id: null };
       obj[0] = id;
@@ -61,7 +61,7 @@ let obj = {
     } else {
       obj1 = { errorCode: null };
       obj1[0] = constants2.INVALID_COMMAND;
-      const tmp12 = new tmp5(9554)(obj1, "This application cannot access this API");
+      const tmp12 = new tmp5(9559)(obj1, "This application cannot access this API");
       throw tmp12;
     }
   }

@@ -1,9 +1,9 @@
-// Module ID: 11017
-// Function ID: 11018
+// Module ID: 11022
+// Function ID: 11023
 // Name: GIFT_STYLE_DESCRIPTIONS
 // Dependencies: [1373, 2460, 2]
 
-// Module 11017 (GIFT_STYLE_DESCRIPTIONS)
+// Module 11022 (GIFT_STYLE_DESCRIPTIONS)
 import set from "set" /* 2 */;
 import GuildFeatures from "GuildFeatures" /* 1373 */;
 import messagesProxyDefault from "messagesProxy" /* 2460 */;

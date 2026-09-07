@@ -1,8 +1,8 @@
-// Module ID: 11885
-// Function ID: 11886
-// Dependencies: [573, 4763, 11886, 1896, 2]
+// Module ID: 11890
+// Function ID: 11891
+// Dependencies: [573, 4763, 11891, 1896, 2]
 
-// Module 11885
+// Module 11890
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -16,7 +16,7 @@ export default {
     let obj = dispatcherDefault;
     obj = { type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId };
     obj.dispatch(obj);
-    _modDef4763.pushLazy(asyncRequireImpl(11886, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
+    _modDef4763.pushLazy(asyncRequireImpl(11891, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
   },
   close() {
     _modDef4763.popWithKey(APPEAL_INGESTION_MODAL_KEY);

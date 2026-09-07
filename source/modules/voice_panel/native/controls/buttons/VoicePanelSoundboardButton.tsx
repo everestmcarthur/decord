@@ -1,15 +1,15 @@
-// Module ID: 17198
-// Function ID: 17199
+// Module ID: 17201
+// Function ID: 17202
 // Name: SoundboardButton
-// Dependencies: [19, 21, 4560, 576, 12272, 17184, 17199, 17185, 1114, 5589, 12528, 2]
+// Dependencies: [19, 21, 4560, 576, 12276, 17187, 17202, 17188, 1114, 5589, 12532, 2]
 // Exports: default
 
-// Module 17198 (SoundboardButton)
+// Module 17201 (SoundboardButton)
 import ThemesDefault from "Themes" /* 576 */;
-import dismissPanelDefault from "dismissPanel" /* 12272 */;
-import useVoicePanelButtonStyles from "useVoicePanelButtonStyles" /* 17184 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 17199 */;
-import useSoundboardConfigDefault from "useSoundboardConfig" /* 17199 */;
+import dismissPanelDefault from "dismissPanel" /* 12276 */;
+import useVoicePanelButtonStyles from "useVoicePanelButtonStyles" /* 17187 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 17202 */;
+import useSoundboardConfigDefault from "useSoundboardConfig" /* 17202 */;
 import closure_3 from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -41,7 +41,7 @@ export default function SoundboardButton(arg0) {
     obj[0] = handlePress;
     obj[1] = disabled;
     obj[2] = props;
-    let tmpResult = tmp(17185);
+    let tmpResult = tmp(17188);
     const intl = tmp4(1114).intl;
     obj[3] = intl.string(tmp4(1114).t["6EJvHt"]);
     obj[4] = disabledAccessibilityHint;
@@ -57,7 +57,7 @@ export default function SoundboardButton(arg0) {
     tmpResult = tmp(5589);
     const obj3 = { color: null };
     obj3[0] = color;
-    obj2[1] = callback(tmp4(12528).SoundboardIcon, obj3);
+    obj2[1] = callback(tmp4(12532).SoundboardIcon, obj3);
     items1[1] = callback(tmpResult, obj2);
     obj[5] = items1;
     tmp8 = callback2(tmpResult, obj);

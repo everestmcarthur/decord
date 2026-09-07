@@ -1,10 +1,10 @@
-// Module ID: 9294
-// Function ID: 9295
+// Module ID: 9299
+// Function ID: 9300
 // Name: _fetchApplicationCommandIndex
 // Dependencies: [5, 1074, 573, 1272, 1090, 1242, 1369, 2]
 // Exports: fetchApplicationCommandIndex, requestApplicationCommandIndex
 
-// Module 9294 (_fetchApplicationCommandIndex)
+// Module 9299 (_fetchApplicationCommandIndex)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 1074 */;
@@ -60,7 +60,7 @@ function _fetchApplicationCommandIndex() {
                   closure_0 = arg0;
                   c2 = 0;
                   c3 = 0;
-                  return (/* F125642 */ function*() { ... })();
+                  return (/* F125671 */ function*() { ... })();
                 });
                 closure_7 = tmp;
                 const apply = tmp.apply;

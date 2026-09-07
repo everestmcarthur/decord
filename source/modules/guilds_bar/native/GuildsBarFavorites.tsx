@@ -1,8 +1,8 @@
-// Module ID: 16310
-// Function ID: 16311
-// Dependencies: [19, 17, 1960, 1074, 1954, 21, 4560, 576, 16294, 10224, 504, 16311, 16296, 10238, 16308, 16136, 1114, 16312, 10235, 16313, 2]
+// Module ID: 16313
+// Function ID: 16314
+// Dependencies: [19, 17, 1960, 1074, 1954, 21, 4560, 576, 16297, 10229, 504, 16314, 16299, 10243, 16311, 16139, 1114, 16315, 10240, 16316, 2]
 
-// Module 16310
+// Module 16313
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -21,21 +21,21 @@ obj = { position: "absolute", top: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_M
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildsBarFavorites() {
-  let obj = shouldShowPopover(16294);
-  obj1 = shouldShowPopover(10224);
+  let obj = shouldShowPopover(16297);
+  obj1 = shouldShowPopover(10229);
   const isFavoritesGuildSelected = obj1.useIsFavoritesGuildSelected();
   let obj2 = shouldShowPopover(504);
   let items = [closure_5];
   const stateFromStores = obj2.useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const tmp5 = markPopoverAsDismissed;
-  ({ badge, unread } = markPopoverAsDismissed(16311)(stateFromStores));
-  const tmp6 = markPopoverAsDismissed(16311)(stateFromStores);
-  ({ badge: badge2, cutouts } = markPopoverAsDismissed(16296)({ mentionCount: badge }));
+  ({ badge, unread } = markPopoverAsDismissed(16314)(stateFromStores));
+  const tmp6 = markPopoverAsDismissed(16314)(stateFromStores);
+  ({ badge: badge2, cutouts } = markPopoverAsDismissed(16299)({ mentionCount: badge }));
   const ref = importAllResult.useRef(null);
-  const tmp7 = markPopoverAsDismissed(16296)({ mentionCount: badge });
+  const tmp7 = markPopoverAsDismissed(16299)({ mentionCount: badge });
   const tmp9 = callback2();
-  const favoritesIntroPopover = shouldShowPopover(10238).useFavoritesIntroPopover();
+  const favoritesIntroPopover = shouldShowPopover(10243).useFavoritesIntroPopover();
   shouldShowPopover = favoritesIntroPopover.shouldShowPopover;
   markPopoverAsDismissed = favoritesIntroPopover.markPopoverAsDismissed;
   const items1 = [shouldShowPopover, markPopoverAsDismissed];
@@ -69,23 +69,23 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
   obj[6] = memo;
   obj[7] = accessibilityActions;
   obj[8] = onAccessibilityAction;
-  const obj4 = shouldShowPopover(10238);
+  const obj4 = shouldShowPopover(10243);
   const tmp13 = closure_9;
   let intl = shouldShowPopover(1114).intl;
   obj[9] = intl.string(shouldShowPopover(1114).t.wMWyci);
   obj[10] = badge2;
-  obj[11] = callback(shouldShowPopover(16312).HomeDrawerFavoritesRowExpandedChildren, {});
+  obj[11] = callback(shouldShowPopover(16315).HomeDrawerFavoritesRowExpandedChildren, {});
   const colors = markPopoverAsDismissed(576).colors;
   obj = { color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj[12] = callback(shouldShowPopover(10235).StarIcon, obj);
-  const children = [callback(markPopoverAsDismissed(16294), obj), , ];
+  obj[12] = callback(shouldShowPopover(10240).StarIcon, obj);
+  const children = [callback(markPopoverAsDismissed(16297), obj), , ];
   obj1 = { ref, style: tmp9.anchor, pointerEvents: "none", collapsable: false };
   children[1] = callback(View, obj1);
   if (shouldShowPopover) {
     obj2 = { targetRef: null, markAsDismissed: null };
     obj2[0] = ref;
     obj2[1] = markPopoverAsDismissed;
-    shouldShowPopover = tmp15(tmp5(16313), obj2);
+    shouldShowPopover = tmp15(tmp5(16316), obj2);
   }
   children[2] = shouldShowPopover;
   return tmp13(View, { children });

@@ -1,19 +1,19 @@
-// Module ID: 16990
-// Function ID: 16991
+// Module ID: 16993
+// Function ID: 16994
 // Name: LaunchpadChannelIcon
-// Dependencies: [19, 17, 1979, 4209, 1371, 4742, 21, 9770, 4560, 576, 16977, 504, 5584, 12191, 7641, 16979, 10910, 16982, 4713, 2]
+// Dependencies: [19, 17, 1979, 4209, 1371, 4742, 21, 9775, 4560, 576, 16980, 504, 5584, 12195, 7641, 16982, 10915, 16985, 4713, 2]
 // Exports: default, getChannelAccessibilityProps
 
-// Module 16990 (LaunchpadChannelIcon)
+// Module 16993 (LaunchpadChannelIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import computeChannelName from "computeChannelName" /* 4713 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
 import getRelativeTimestamp from "getRelativeTimestamp" /* 7641 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9770 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16977 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 16979 */;
-import ChannelContentDefault from "ChannelContent" /* 16982 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9775 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16980 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16982 */;
+import ChannelContentDefault from "ChannelContent" /* 16985 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "createGuildRecordFromRust" /* 1979 */;
 import closure_5 from "markAllUserIdListsStale" /* 4209 */;
@@ -33,7 +33,7 @@ function LaunchpadChannelIcon(channel) {
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
   const tmp2 = getLayoutStyleDefault();
   obj[1] = callback(GuildIconSizesDefault, { guild: stateFromStores, size: getLayoutStyleDefault().icon.guildBadgeIconSize });
-  const items1 = [callback(View, obj), callback(channel(12191).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
+  const items1 = [callback(View, obj), callback(channel(12195).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
   obj[0] = items1;
   return callback2(closure_9, obj);
 }
@@ -95,7 +95,7 @@ export default function renderChannelItem(unread) {
     obj1 = { channel: null, size: null };
     obj1[0] = channel;
     obj1[1] = tmp7.icon.avatarSize;
-    let tmp11Result = tmp11(tmp5(10910), obj1);
+    let tmp11Result = tmp11(tmp5(10915), obj1);
   } else {
     const obj2 = { channel: null };
     obj2[0] = channel;

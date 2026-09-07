@@ -1,10 +1,10 @@
-// Module ID: 16813
-// Function ID: 16814
+// Module ID: 16816
+// Function ID: 16817
 // Name: getSecondsSliderLabel
 // Dependencies: [1114, 4153, 2]
 // Exports: getSecondsSliderLabel
 
-// Module 16813 (getSecondsSliderLabel)
+// Module 16816 (getSecondsSliderLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import hooksDefault from "hooks" /* 4153 */;

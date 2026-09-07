@@ -1,10 +1,10 @@
-// Module ID: 14640
-// Function ID: 14641
+// Module ID: 14643
+// Function ID: 14644
 // Name: UserProfilePrimaryGuildEditButton
-// Dependencies: [19, 1979, 7944, 21, 4560, 576, 504, 14641, 8165, 8164, 1114, 1115, 4556, 14618, 4527, 14642, 1896, 5584, 9184, 2]
+// Dependencies: [19, 1979, 7944, 21, 4560, 576, 504, 14644, 8165, 8164, 1114, 1115, 4556, 14621, 4527, 14645, 1896, 5584, 9189, 2]
 // Exports: default
 
-// Module 14640 (UserProfilePrimaryGuildEditButton)
+// Module 14643 (UserProfilePrimaryGuildEditButton)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;

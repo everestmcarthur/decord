@@ -1,12 +1,12 @@
-// Module ID: 12122
-// Function ID: 12123
+// Module ID: 12126
+// Function ID: 12127
 // Name: useAppsInThisServer
-// Dependencies: [19, 9290, 1371, 4999, 504, 9416, 1894, 9300, 12121, 12, 9406, 2]
+// Dependencies: [19, 9295, 1371, 4999, 504, 9421, 1894, 9305, 12125, 12, 9411, 2]
 // Exports: default
 
-// Module 12122 (useAppsInThisServer)
+// Module 12126 (useAppsInThisServer)
 import closure_4 from "noop" /* 19 */;
-import { useGuildIndexState } from "getIndexKey" /* 9290 */;
+import { useGuildIndexState } from "getIndexKey" /* 9295 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
 import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_7 } from "TRUE_OPTION_NAME" /* 4999 */;
 

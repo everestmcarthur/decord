@@ -1,14 +1,14 @@
-// Module ID: 17203
-// Function ID: 17204
+// Module ID: 17206
+// Function ID: 17207
 // Name: MobilePhoneDenyIcon
-// Dependencies: [19, 21, 576, 4261, 17204, 2]
+// Dependencies: [19, 21, 576, 4261, 17207, 2]
 // Exports: MobilePhoneDenyIcon
 
-// Module 17203 (MobilePhoneDenyIcon)
+// Module 17206 (MobilePhoneDenyIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 17204 */;
+import registerAsset from "registerAsset" /* 17207 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,14 +1,14 @@
-// Module ID: 15371
-// Function ID: 15372
+// Module ID: 15374
+// Function ID: 15375
 // Name: EmojiFaceVomitingIcon
-// Dependencies: [19, 21, 576, 4261, 15372, 2]
+// Dependencies: [19, 21, 576, 4261, 15375, 2]
 // Exports: EmojiFaceVomitingIcon
 
-// Module 15371 (EmojiFaceVomitingIcon)
+// Module 15374 (EmojiFaceVomitingIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 15372 */;
+import registerAsset from "registerAsset" /* 15375 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

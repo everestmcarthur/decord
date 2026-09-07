@@ -1,17 +1,17 @@
-// Module ID: 16545
-// Function ID: 16546
+// Module ID: 16548
+// Function ID: 16549
 // Name: ContentHeader
-// Dependencies: [32, 19, 17, 1957, 21, 4560, 576, 4556, 4527, 16546, 1896, 10346, 15240, 1178, 504, 4713, 1114, 5028, 15227, 16541, 5587, 16547, 2]
+// Dependencies: [32, 19, 17, 1957, 21, 4560, 576, 4556, 4527, 16549, 1896, 10351, 15243, 1178, 504, 4713, 1114, 5028, 15230, 16544, 5587, 16550, 2]
 // Exports: default
 
-// Module 16545 (ContentHeader)
+// Module 16548 (ContentHeader)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
 import Text from "Text" /* 4556 */;
-import GappedList from "GappedList" /* 10346 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 15227 */;
+import GappedList from "GappedList" /* 10351 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 15230 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "ensureGuildLoaded" /* 1957 */;
@@ -147,7 +147,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   const first1 = callback(obj3.useChannelBenefits(listingId), 1)[0];
   let obj4 = getRoleEmojisAll;
   const first2 = callback(obj4.useIntangibleBenefits(listingId), 1)[0];
-  let obj5 = listingId(16541);
+  let obj5 = listingId(16544);
   const first3 = first1[0];
   const first4 = first2[0];
   const size = first.size;
@@ -164,7 +164,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   obj2[0] = items1;
   items[2] = closure_9(closure_6, obj2);
   obj[1] = items;
-  const items2 = [closure_9(closure_6, obj), closure_8(listingId(1178).Spacer, { size: 16 }), closure_8(guildId(16547), { listingId }), ];
+  const items2 = [closure_9(closure_6, obj), closure_8(listingId(1178).Spacer, { size: 16 }), closure_8(guildId(16550), { listingId }), ];
   let tmp8Result2 = length > 0 || size > 0 || length2 > 0;
   if (tmp8Result2) {
     const items3 = [tmp10(tmp4(1178).Spacer, { size: 24 }), , ];
@@ -231,7 +231,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
     const obj16 = { children: null };
     items6[2] = tmp8Result1;
     obj4[1] = items6;
-    obj3[1] = tmp8(tmp4(10346).GappedList, obj4);
+    obj3[1] = tmp8(tmp4(10351).GappedList, obj4);
     items3[1] = tmp10(tmp9, obj3);
     const obj17 = { onPress: null };
     obj17[0] = function onPress() {

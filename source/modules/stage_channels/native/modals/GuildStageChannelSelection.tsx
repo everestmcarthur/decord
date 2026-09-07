@@ -1,10 +1,10 @@
-// Module ID: 9817
-// Function ID: 9818
+// Module ID: 9822
+// Function ID: 9823
 // Name: GuildStageChannelSelection
-// Dependencies: [19, 4209, 1371, 21, 4560, 9712, 4713, 1874, 4527, 9426, 1896, 1114, 4556, 2]
+// Dependencies: [19, 4209, 1371, 21, 4560, 9717, 4713, 1874, 4527, 9431, 1896, 1114, 4556, 2]
 // Exports: default
 
-// Module 9817 (GuildStageChannelSelection)
+// Module 9822 (GuildStageChannelSelection)
 import noopAll from "noop" /* 19 */;
 import closure_4 from "markAllUserIdListsStale" /* 4209 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;

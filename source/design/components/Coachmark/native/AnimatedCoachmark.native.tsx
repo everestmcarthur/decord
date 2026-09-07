@@ -1,13 +1,13 @@
-// Module ID: 11134
-// Function ID: 11135
+// Module ID: 11139
+// Function ID: 11140
 // Name: renderTooltipItem
-// Dependencies: [32, 19, 17, 21, 4296, 11135, 4279, 11132, 9969, 2]
+// Dependencies: [32, 19, 17, 21, 4296, 11140, 4279, 11137, 9974, 2]
 // Exports: AnimatedCoachmark
 
-// Module 11134 (renderTooltipItem)
+// Module 11139 (renderTooltipItem)
 import _modDef4296 from "module_4296" /* 4296 */;
-import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9969 */;
-import Coachmark from "Coachmark" /* 11135 */;
+import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9974 */;
+import Coachmark from "Coachmark" /* 11140 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
@@ -34,7 +34,7 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   const merged = Object.assign(visible, Object.create(null));
   importDefault = undefined;
   [tmp3, c1] = callback(React.useState(visible), 2);
-  let obj = visible(11132);
+  let obj = visible(11137);
   const result = obj.tooltipEnterExitAnimation(merged.position);
   const items = [visible];
   const effect = React.useEffect(() => {

@@ -1,10 +1,10 @@
-// Module ID: 15689
-// Function ID: 15690
+// Module ID: 15692
+// Function ID: 15693
 // Name: PremiumPerksList
 // Dependencies: [19, 17, 21, 4560, 576, 4556, 2]
 // Exports: default
 
-// Module 15689 (PremiumPerksList)
+// Module 15692 (PremiumPerksList)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

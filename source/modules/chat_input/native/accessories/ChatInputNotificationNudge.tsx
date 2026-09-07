@@ -1,22 +1,22 @@
-// Module ID: 12408
-// Function ID: 12409
+// Module ID: 12412
+// Function ID: 12413
 // Name: ChatInputNotificationNudgeImpl
-// Dependencies: [32, 19, 17, 4201, 4741, 12409, 1074, 1954, 12410, 21, 4560, 576, 1242, 9059, 4556, 5123, 12411, 1114, 12412, 5680, 504, 12145, 12420, 7388, 1943, 2]
+// Dependencies: [32, 19, 17, 4201, 4741, 12413, 1074, 1954, 12414, 21, 4560, 576, 1242, 9064, 4556, 5123, 12415, 1114, 12416, 5680, 504, 12149, 12424, 7388, 1943, 2]
 // Exports: default
 
-// Module 12408 (ChatInputNotificationNudgeImpl)
+// Module 12412 (ChatInputNotificationNudgeImpl)
 import ThemesDefault from "Themes" /* 576 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12145 */;
-import apexExperimentDefault from "apexExperiment" /* 12420 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12149 */;
+import apexExperimentDefault from "apexExperiment" /* 12424 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_7 from "storeThread" /* 4201 */;
 import closure_8 from "updateUserGuildSettingsInternal" /* 4741 */;
-import { PermissionPromptType } from "set" /* 12409 */;
+import { PermissionPromptType } from "set" /* 12413 */;
 import ME from "ME" /* 1074 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import EventActionType from "EventActionType" /* 12410 */;
+import EventActionType from "EventActionType" /* 12414 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -117,9 +117,9 @@ export default function ChatInputNotificationNudge(channel) {
   if (!stateFromStores) {
     tmp5 = !useIsAppDMDefault(channel);
   }
-  let tmpResult = tmp(12411);
+  let tmpResult = tmp(12415);
   const shouldShowPushNotificationNudgeByPromptType = tmpResult.useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
-  tmpResult = tmp(12411);
+  tmpResult = tmp(12415);
   const shouldShowPushNotificationNudgeByPromptType1 = tmpResult.useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.POST_REACTION_BANNER);
   const tmp4 = importDefault;
   const tmp4Result = apexExperimentDefault;

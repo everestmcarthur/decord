@@ -1,10 +1,10 @@
-// Module ID: 12503
-// Function ID: 12504
+// Module ID: 12507
+// Function ID: 12508
 // Name: useGuildPowerupNewPerkMarketingVersion
-// Dependencies: [19, 1979, 4199, 4450, 1074, 4473, 504, 4489, 4488, 4453, 9067, 2]
+// Dependencies: [19, 1979, 4199, 4450, 1074, 4473, 504, 4489, 4488, 4453, 9072, 2]
 // Exports: default
 
-// Module 12503 (useGuildPowerupNewPerkMarketingVersion)
+// Module 12507 (useGuildPowerupNewPerkMarketingVersion)
 import closure_2 from "noop" /* 19 */;
 import closure_3 from "createGuildRecordFromRust" /* 1979 */;
 import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
@@ -63,7 +63,7 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
           if (obj.canUseMobileServerTagSettings(guildId)) {
             return stateFromStores1.GUILD_TAG;
           }
-          obj = guildId(9067);
+          obj = guildId(9072);
         }
       }
     }

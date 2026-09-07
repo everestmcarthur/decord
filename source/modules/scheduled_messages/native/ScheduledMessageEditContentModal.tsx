@@ -1,10 +1,10 @@
-// Module ID: 12222
-// Function ID: 12223
+// Module ID: 12226
+// Function ID: 12227
 // Name: ScheduledMessageEditContentModal
-// Dependencies: [5, 32, 19, 17, 1957, 21, 4560, 576, 1611, 9304, 504, 7682, 7845, 12211, 4763, 1114, 5631, 7863, 1115, 5624, 5123, 4556, 7085, 2]
+// Dependencies: [5, 32, 19, 17, 1957, 21, 4560, 576, 1611, 9309, 504, 7682, 7845, 12215, 4763, 1114, 5631, 7863, 1115, 5624, 5123, 4556, 7085, 2]
 // Exports: default
 
-// Module 12222 (ScheduledMessageEditContentModal)
+// Module 12226 (ScheduledMessageEditContentModal)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -81,7 +81,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
             v0 = 1;
             dependencyMap = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = closure_1_0(12211).editScheduledMessage(closure_1_0.scheduledMessageId, obj1);
+            obj2[0] = closure_1_0(12215).editScheduledMessage(closure_1_0.scheduledMessageId, obj1);
             return obj2;
           }
         } else if (arg0 === 1) {

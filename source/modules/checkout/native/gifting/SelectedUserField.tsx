@@ -1,10 +1,10 @@
-// Module ID: 10857
-// Function ID: 10858
+// Module ID: 10862
+// Function ID: 10863
 // Name: SelectedUserField
 // Dependencies: [19, 17, 21, 4560, 576, 6621, 1114, 4404, 7051, 1178, 4556, 6616, 2]
 // Exports: default
 
-// Module 10857 (SelectedUserField)
+// Module 10862 (SelectedUserField)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import nameFromUserDefault from "nameFromUser" /* 4404 */;
@@ -65,7 +65,7 @@ export default function SelectedUserField(onPress) {
   if (null != selectedUser) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.userPill;
-    obj3 = { user: null, guildId: "Array", size: -1 };
+    obj3 = { user: null, guildId: "Array", size: "Array" };
     obj3[0] = selectedUser;
     obj3[2] = tmp4(1178).AvatarSizes.XSMALL_20;
     const items2 = [tmp2(tmp4(1178).Avatar, obj3), ];

@@ -1,10 +1,10 @@
-// Module ID: 12019
-// Function ID: 12020
+// Module ID: 12023
+// Function ID: 12024
 // Name: ForumPostTypingUsers
-// Dependencies: [19, 17, 21, 4560, 576, 7885, 11979, 12020, 4296, 1178, 4556, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 7885, 11983, 12024, 4296, 1178, 4556, 2]
 // Exports: default
 
-// Module 12019 (ForumPostTypingUsers)
+// Module 12023 (ForumPostTypingUsers)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;

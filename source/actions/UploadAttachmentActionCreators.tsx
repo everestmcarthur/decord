@@ -1,8 +1,8 @@
-// Module ID: 9307
-// Function ID: 9308
-// Dependencies: [573, 9308, 2]
+// Module ID: 9312
+// Function ID: 9313
+// Dependencies: [573, 9313, 2]
 
-// Module 9307
+// Module 9312
 import set from "set" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 
@@ -17,14 +17,14 @@ export default {
   addFiles(draftType) {
     ({ files, channelId } = draftType);
     draftType = draftType.draftType;
-    if (files.some(channelId(9308).itemNeedsHeicPreConversion)) {
+    if (files.some(channelId(9313).itemNeedsHeicPreConversion)) {
       function dispatch(files) {
         let obj = draftType(closure_1_2[0]);
         obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType };
         obj.dispatch(obj);
       }
-      Promise.all(files.map(channelId(9308).maybePreConvertHeicItem)).then(dispatch);
-      const allPromises = Promise.all(files.map(channelId(9308).maybePreConvertHeicItem));
+      Promise.all(files.map(channelId(9313).maybePreConvertHeicItem)).then(dispatch);
+      const allPromises = Promise.all(files.map(channelId(9313).maybePreConvertHeicItem));
     } else {
       let obj = draftType(573);
       obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId: null, files: null, draftType: null };

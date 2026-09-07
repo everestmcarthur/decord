@@ -1,9 +1,9 @@
-// Module ID: 10269
-// Function ID: 10270
+// Module ID: 10274
+// Function ID: 10275
 // Name: _initialize
 // Dependencies: [7118, 510, 2]
 
-// Module 10269 (_initialize)
+// Module 10274 (_initialize)
 import Storage2 from "Storage" /* 510 */;
 import initializeDefault from "initialize" /* 7118 */;
 

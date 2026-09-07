@@ -1,10 +1,10 @@
-// Module ID: 17578
-// Function ID: 17579
+// Module ID: 17581
+// Function ID: 17582
 // Name: GuildSettingsStickerCreateModal
-// Dependencies: [19, 21, 10921, 10924, 1114, 17579, 2]
+// Dependencies: [19, 21, 10926, 10929, 1114, 17582, 2]
 // Exports: default
 
-// Module 17578 (GuildSettingsStickerCreateModal)
+// Module 17581 (GuildSettingsStickerCreateModal)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -17,14 +17,14 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   ({ guildId: require, stickerId } = arg0);
   dependencyMap = undefined;
   c3 = undefined;
-  ({ onGoBack: c2, ref: c3 } = stickerId(10921)());
-  const tmp2 = stickerId(10921)();
+  ({ onGoBack: c2, ref: c3 } = stickerId(10926)());
+  const tmp2 = stickerId(10926)();
   const tmp3 = c3;
   const intl = getSystemLocale.intl;
   if (null != stickerId) {
   } else {
   }
-  const tmp4 = stickerId(10924);
+  const tmp4 = stickerId(10929);
   return tmp3(tmp4, {
     screenKey: "guild-settings-sticker-create",
     title: intl.string(_3DzNjU),

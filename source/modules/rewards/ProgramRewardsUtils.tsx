@@ -1,15 +1,15 @@
-// Module ID: 13726
-// Function ID: 13727
+// Module ID: 13730
+// Function ID: 13731
 // Name: canFetchNitroProgramReward
-// Dependencies: [1371, 1373, 3994, 13727, 13730, 7556, 13731, 4218, 2]
+// Dependencies: [1371, 1373, 3994, 13731, 13734, 7556, 13735, 4218, 2]
 // Exports: canFetchAnyProgramReward, canFetchNitroProgramReward, canFetchXboxProgramReward, hasNecessaryPremiumSubscriptionStatus, isEligibleForProgramReward, isProgramRewardStale, useIsEligibleForProgramReward
 
-// Module 13726 (canFetchNitroProgramReward)
+// Module 13730 (canFetchNitroProgramReward)
 import isPastDefault from "isPast" /* 3994 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
 import apexExperiment from "apexExperiment" /* 7556 */;
-import RewardProgram from "RewardProgram" /* 13727 */;
-import PremiumRewardsOrbsTreatment from "PremiumRewardsOrbsTreatment" /* 13730 */;
+import RewardProgram from "RewardProgram" /* 13731 */;
+import PremiumRewardsOrbsTreatment from "PremiumRewardsOrbsTreatment" /* 13734 */;
 import closure_3 from "mergeGuildAvatar" /* 1371 */;
 import { PremiumTypes } from "GuildFeatures" /* 1373 */;
 
@@ -24,11 +24,11 @@ function canFetchNitroProgramReward(canUseMonthlyOrbs) {
     str = "ProgramRewardsUtils";
   }
   if (RewardProgram.RewardProgram.NITRO === NITRO) {
-    let tmpResult = tmp(13730);
+    let tmpResult = tmp(13734);
     let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else {
     flag = false;
-    if (tmp(13727).RewardProgram.XBOX === NITRO) {
+    if (tmp(13731).RewardProgram.XBOX === NITRO) {
       tmpResult = tmp(7556);
       flag = tmpResult.getIsXboxGamePassPerksEnabled(str);
     }
@@ -50,22 +50,22 @@ function canFetchXboxProgramReward(canUseMonthlyOrbs) {
     str = "ProgramRewardsUtils";
   }
   if (RewardProgram.RewardProgram.NITRO === XBOX) {
-    let tmpResult = tmp(13730);
+    let tmpResult = tmp(13734);
     let flag = tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
   } else {
     flag = false;
-    if (tmp(13727).RewardProgram.XBOX === XBOX) {
+    if (tmp(13731).RewardProgram.XBOX === XBOX) {
       tmpResult = tmp(7556);
       flag = tmpResult.getIsXboxGamePassPerksEnabled(str);
     }
   }
   if (flag) {
-    flag = tmp(13731).hasCrepeMonthlyOrbsPerk(authStore.getCurrentUser());
-    const tmpResult1 = tmp(13731);
+    flag = tmp(13735).hasCrepeMonthlyOrbsPerk(authStore.getCurrentUser());
+    const tmpResult1 = tmp(13735);
   }
   return flag;
 }
-let closure_5 = { [arg1(13727).RewardProgram.NITRO]: canFetchNitroProgramReward, [arg1(13727).RewardProgram.XBOX]: canFetchXboxProgramReward };
+let closure_5 = { [arg1(13731).RewardProgram.NITRO]: canFetchNitroProgramReward, [arg1(13731).RewardProgram.XBOX]: canFetchXboxProgramReward };
 const result = require("set").fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
 
 export const isProgramRewardStale = function isProgramRewardStale(next_reward_date) {
@@ -92,9 +92,9 @@ export const isEligibleForProgramReward = function isEligibleForProgramReward(ar
     str = "ProgramRewardsUtils";
   }
   if (RewardProgram.RewardProgram.NITRO === arg0) {
-    let tmpResult = tmp(13730);
+    let tmpResult = tmp(13734);
     return tmpResult.getPremiumRewardsOrbsExperiment(str).isInTreatment;
-  } else if (tmp(13727).RewardProgram.XBOX === arg0) {
+  } else if (tmp(13731).RewardProgram.XBOX === arg0) {
     tmpResult = tmp(7556);
     return tmpResult.getIsXboxGamePassPerksEnabled(str);
   } else {

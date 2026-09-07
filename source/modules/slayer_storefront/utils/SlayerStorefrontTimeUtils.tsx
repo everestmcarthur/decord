@@ -1,10 +1,10 @@
-// Module ID: 16928
-// Function ID: 16929
+// Module ID: 16931
+// Function ID: 16932
 // Name: getLimitedOfferTimeLeft
 // Dependencies: [32, 19, 4153, 1090, 1114, 3417, 7445, 2]
 // Exports: useTickingFormattedLimitedOfferTimeLeft
 
-// Module 16928 (getLimitedOfferTimeLeft)
+// Module 16931 (getLimitedOfferTimeLeft)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 3417 */;
 import hooksDefault from "hooks" /* 4153 */;

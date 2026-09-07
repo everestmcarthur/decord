@@ -1,10 +1,10 @@
-// Module ID: 10923
-// Function ID: 10924
+// Module ID: 10928
+// Function ID: 10929
 // Name: maybeShowDiscardChangesAlert
 // Dependencies: [4905, 1114, 2]
 // Exports: default, showDiscardChangesAlert
 
-// Module 10923 (maybeShowDiscardChangesAlert)
+// Module 10928 (maybeShowDiscardChangesAlert)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import _modDef4905 from "module_4905" /* 4905 */;

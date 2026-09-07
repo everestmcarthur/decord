@@ -1,10 +1,10 @@
-// Module ID: 11910
-// Function ID: 11911
+// Module ID: 11915
+// Function ID: 11916
 // Name: useSafetyHubInitialized
 // Dependencies: [8430, 504, 2]
 // Exports: useSafetyHubInitialized
 
-// Module 11910 (useSafetyHubInitialized)
+// Module 11915 (useSafetyHubInitialized)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
 

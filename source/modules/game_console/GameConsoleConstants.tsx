@@ -1,10 +1,10 @@
-// Module ID: 9233
-// Function ID: 9234
+// Module ID: 9238
+// Function ID: 9239
 // Name: XBOX_URL_BASE
 // Dependencies: [1074, 8339, 2]
 // Exports: XBOX_HANDOFF_SEARCH_PARAMS
 
-// Module 9233 (XBOX_URL_BASE)
+// Module 9238 (XBOX_URL_BASE)
 import ME from "ME" /* 1074 */;
 import set2 from "set" /* 8339 */;
 import set from "set" /* 2 */;

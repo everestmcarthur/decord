@@ -1,15 +1,15 @@
-// Module ID: 13060
-// Function ID: 13061
+// Module ID: 13064
+// Function ID: 13065
 // Name: CustomStatusBubble
-// Dependencies: [32, 19, 17, 8777, 1979, 4209, 1371, 8160, 7621, 8183, 7208, 1074, 7151, 1954, 21, 8241, 504, 4527, 11149, 1896, 11116, 11112, 8190, 7162, 9042, 4404, 8097, 13061, 1114, 12620, 13062, 4499, 8242, 4712, 7190, 4258, 11152, 9207, 12996, 4975, 10250, 576, 9508, 13064, 8674, 8230, 8243, 1611, 13063, 13065, 13066, 7311, 11150, 8169, 13067, 8227, 8238, 8776, 13068, 9032, 13069, 13070, 13071, 13072, 12627, 13073, 12998, 13078, 11207, 7185, 13048, 13079, 13051, 13084, 13090, 9792, 8256, 8244, 13096, 4296, 13097, 13117, 13118, 13123, 13124, 7156, 12614, 12616, 13129, 2]
+// Dependencies: [32, 19, 17, 8782, 1979, 4209, 1371, 8160, 7621, 8183, 7208, 1074, 7151, 1954, 21, 8241, 504, 4527, 11154, 1896, 11121, 11117, 8190, 7162, 9047, 4404, 8097, 13065, 1114, 12624, 13066, 4499, 8242, 4712, 7190, 4258, 11157, 9212, 13000, 4975, 10255, 576, 9513, 13068, 8679, 8230, 8243, 1611, 13067, 13069, 13070, 7311, 11155, 8169, 13071, 8227, 8238, 8781, 13072, 9037, 13073, 13074, 13075, 13076, 12631, 13077, 13002, 13082, 11212, 7185, 13052, 13083, 13055, 13088, 13094, 9797, 8256, 8244, 13100, 4296, 13101, 13121, 13122, 13127, 13128, 7156, 12618, 12620, 13133, 2]
 
-// Module 13060 (CustomStatusBubble)
+// Module 13064 (CustomStatusBubble)
 import useSharedStylesDefault from "useSharedStyles" /* 8241 */;
-import WidgetRendererDefault from "WidgetRenderer" /* 8674 */;
+import WidgetRendererDefault from "WidgetRenderer" /* 8679 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "get" /* 8777 */;
+import closure_7 from "get" /* 8782 */;
 import closure_8 from "createGuildRecordFromRust" /* 1979 */;
 import closure_9 from "markAllUserIdListsStale" /* 4209 */;
 import closure_10 from "mergeGuildAvatar" /* 1371 */;
@@ -218,14 +218,14 @@ function EditSection(guildId) {
   obj1 = guildId(504);
   const items = [closure_8];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_1_8.getGuild(guildId));
-  dependencyMap = trackUserProfileAction(9207)();
-  closure_3 = trackUserProfileAction(9207)({ guild: stateFromStores });
+  dependencyMap = trackUserProfileAction(9212)();
+  closure_3 = trackUserProfileAction(9212)({ guild: stateFromStores });
   obj = { style: trackUserProfileAction(8241)().primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: null, secondaryButton: null };
   const tmp = trackUserProfileAction;
   const tmp3 = trackUserProfileAction(8241)();
   obj = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
   obj1 = { size: "sm", color: trackUserProfileAction(576).colors.WHITE };
-  obj[1] = callback(guildId(10250).PencilIcon, obj1);
+  obj[1] = callback(guildId(10255).PencilIcon, obj1);
   if (null != stateFromStores) {
     const intl2 = tmp4(1114).intl;
     let stringResult = intl2.string(tmp4(1114).t.HmFaFB);
@@ -237,7 +237,7 @@ function EditSection(guildId) {
   obj[3] = function onPress() {
     trackUserProfileAction({ action: "EDIT_PROFILE" });
     trackUserProfileAction(4527).hideAllActionSheets();
-    trackUserProfileAction(9508)();
+    trackUserProfileAction(9513)();
     dependencyMap();
   };
   obj[2] = callback(guildId(4975).Button, obj);
@@ -246,19 +246,19 @@ function EditSection(guildId) {
     const obj2 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj3 = { size: "sm", color: null };
     obj3[1] = tmp(576).colors.WHITE;
-    obj2[1] = tmp6(tmp4(10250).PencilIcon, obj3);
+    obj2[1] = tmp6(tmp4(10255).PencilIcon, obj3);
     const intl3 = tmp4(1114).intl;
     obj2[2] = intl3.string(tmp4(1114).t["PKQB/H"]);
     obj2[3] = function onPress() {
       trackUserProfileAction({ action: "EDIT_GUILD_PROFILE" });
       trackUserProfileAction(4527).hideAllActionSheets();
-      trackUserProfileAction(9508)();
+      trackUserProfileAction(9513)();
       callback();
     };
     tmp6Result = tmp6(tmp4(4975).Button, obj2);
   }
   obj[3] = tmp6Result;
-  return callback(trackUserProfileAction(12996), obj);
+  return callback(trackUserProfileAction(13000), obj);
 }
 function UserProfileWidgetsBoardContainer(isCurrentUser) {
   isCurrentUser = isCurrentUser.isCurrentUser;
@@ -267,7 +267,7 @@ function UserProfileWidgetsBoardContainer(isCurrentUser) {
   const items = [tmp3.card, { backgroundColor: containerBackground }];
   const obj = { style: tmp3.profileContent, children: null };
   if (isCurrentUser) {
-    isCurrentUser = callback(tmp(13064), {});
+    isCurrentUser = callback(tmp(13068), {});
   }
   const items1 = [isCurrentUser, callback(WidgetRendererDefault, { userId, isVisible, cardStyle: items })];
   obj[1] = items1;

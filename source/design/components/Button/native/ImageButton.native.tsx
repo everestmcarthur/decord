@@ -1,9 +1,9 @@
-// Module ID: 9890
-// Function ID: 9891
+// Module ID: 9895
+// Function ID: 9896
 // Name: ImageButton
 // Dependencies: [19, 17, 21, 4560, 4980, 576, 4981, 4296, 4974, 4978, 4983, 8098, 4556, 2]
 
-// Module 9890 (ImageButton)
+// Module 9895 (ImageButton)
 import ThemesDefault from "Themes" /* 576 */;
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4980 */;
 import importAllResult from "noop" /* 19 */;

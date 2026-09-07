@@ -1,13 +1,13 @@
-// Module ID: 17827
-// Function ID: 17828
+// Module ID: 17830
+// Function ID: 17831
 // Name: prototype
-// Dependencies: [5, 13704, 9066, 1074, 7118, 17828, 573, 1272, 1471, 17829, 7341, 2]
+// Dependencies: [5, 13708, 9071, 1074, 7118, 17831, 573, 1272, 1471, 17832, 7341, 2]
 
-// Module 17827 (prototype)
+// Module 17830 (prototype)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "map" /* 13704 */;
-import { DISCOVERY_ALL_CATEGORIES_ID as closure_6 } from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9066 */;
+import closure_5 from "map" /* 13708 */;
+import { DISCOVERY_ALL_CATEGORIES_ID as closure_6 } from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9071 */;
 import { Endpoints } from "ME" /* 1074 */;
 
 const require = arg1;
@@ -86,7 +86,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
                 obj1 = { categoryId: null };
                 obj1[0] = c6;
                 if (!total) {
-                  let obj6 = lib(17828);
+                  let obj6 = lib(17831);
                 }
                 let obj7 = closure_1_1(573);
                 const obj2 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_START", categoryId: null, reset: true };
@@ -97,7 +97,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
                 let obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
                 obj3[0] = constants.GUILD_DISCOVERY;
                 const obj4 = { offset: 0, limit: null };
-                obj4[1] = lib(17829).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT;
+                obj4[1] = lib(17832).GlobalDiscoveryServersLimits.FEATURED_DEFAULT_LIMIT;
                 obj3[1] = closure_1_1(1471).stringify(obj4);
                 const obj11 = closure_1_1(1471);
                 obj3[3] = lib(1272).rejectWithMigratedError();
@@ -131,7 +131,7 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
               lib = arg1;
               total = lib.body.total;
               const guilds = lib.body.guilds;
-              closure_2 = guilds.map(lib(17828).fromDiscoverableGuildServer);
+              closure_2 = guilds.map(lib(17831).fromDiscoverableGuildServer);
               const obj8 = { type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS", categoryId: null, guilds: null, total: null };
               obj8[1] = c6;
               obj8[2] = closure_2;

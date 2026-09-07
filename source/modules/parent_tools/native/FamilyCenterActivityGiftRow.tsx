@@ -1,15 +1,15 @@
-// Module ID: 14905
-// Function ID: 14906
+// Module ID: 14908
+// Function ID: 14909
 // Name: FamilyCenterActivityGiftRow
-// Dependencies: [19, 17, 21, 4560, 576, 8173, 14893, 14902, 14904, 4404, 14903, 4556, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 8173, 14896, 14905, 14907, 4404, 14906, 4556, 2]
 // Exports: default
 
-// Module 14905 (FamilyCenterActivityGiftRow)
+// Module 14908 (FamilyCenterActivityGiftRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8173 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 14893 */;
-import getCollectibleTypeName from "getCollectibleTypeName" /* 14902 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 14896 */;
+import getCollectibleTypeName from "getCollectibleTypeName" /* 14905 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -61,10 +61,10 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj[4] = claimedAt;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const giftSubtext = tmp5(14904).getGiftSubtext(obj);
+    const giftSubtext = tmp5(14907).getGiftSubtext(obj);
     obj1 = { displayName: null, product: null, isSubscription: null, subscriptionPlanId: null };
     obj1[0] = displayName;
-    tmp2Result = tmp2(14903);
+    tmp2Result = tmp2(14906);
     if (product == null) {
       product = null;
     }

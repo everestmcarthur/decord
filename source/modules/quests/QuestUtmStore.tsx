@@ -9,15 +9,9 @@ import keys from "keys" /* 560 */;
 
 let obj = keys.create((arg0) => {
   closure_0 = arg0;
-  obj = {
-    utmSourceCurrent: "r",
-    utmMediumCurrent: "o",
-    utmCampaignCurrent: "ip",
-    utmContentCurrent: "count",
-    setUtmCurrentContext(utmSourceCurrent) {
-      return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });
-    },
-    getUtmCurrentContext: "done"
+  obj = { utmSourceCurrent: "r", utmMediumCurrent: "w", utmCampaignCurrent: "isArray", utmContentCurrent: "isArray", setUtmCurrentContext: "accessibilityRole", getUtmCurrentContext: "a" };
+  obj[4] = function setUtmCurrentContext(utmSourceCurrent) {
+    return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });
   };
   obj[5] = function getUtmCurrentContext() {
     return state.getState();

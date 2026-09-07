@@ -1,10 +1,10 @@
-// Module ID: 9410
-// Function ID: 9411
+// Module ID: 9415
+// Function ID: 9416
 // Name: getPlatform
 // Dependencies: [1894, 2]
 // Exports: default
 
-// Module 9410 (getPlatform)
+// Module 9415 (getPlatform)
 import set from "set" /* 2 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
 

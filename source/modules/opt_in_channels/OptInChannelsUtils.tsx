@@ -1,17 +1,17 @@
-// Module ID: 11559
-// Function ID: 11560
+// Module ID: 11564
+// Function ID: 11565
 // Name: setIndex
-// Dependencies: [19, 1957, 7111, 4575, 4209, 1371, 1074, 1964, 7534, 4742, 7222, 5517, 4713, 7112, 7528, 11560, 7110, 1100, 4380, 1943, 504, 1114, 4153, 11, 2]
+// Dependencies: [19, 1957, 7111, 4575, 4209, 1371, 1074, 1964, 7534, 4742, 7222, 5517, 4713, 7112, 7528, 11565, 7110, 1100, 4380, 1943, 504, 1114, 4153, 11, 2]
 // Exports: clearRecentChannels, getActiveAgoTimestamp, getFirstRouteFor, useChannelBrowserChannelCount, useChannelBrowserSections, useFilterCategoriesByQuery
 
-// Module 11559 (setIndex)
+// Module 11564 (setIndex)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import transitionTo from "transitionTo" /* 1100 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import hooksDefault from "hooks" /* 4153 */;
 import ack from "ack" /* 7110 */;
 import computeSubtitle from "computeSubtitle" /* 7528 */;
-import _bulkClearRecents from "_bulkClearRecents" /* 11560 */;
+import _bulkClearRecents from "_bulkClearRecents" /* 11565 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "ensureGuildLoaded" /* 1957 */;
 import closure_5 from "setIndex" /* 7111 */;

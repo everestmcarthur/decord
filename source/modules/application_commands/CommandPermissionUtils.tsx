@@ -1,10 +1,10 @@
-// Module ID: 9405
-// Function ID: 9406
+// Module ID: 9410
+// Function ID: 9411
 // Name: computeAllowedForUser
-// Dependencies: [1961, 1979, 4999, 1074, 9406, 9295, 7523, 1894, 1086, 9245, 38, 7521, 7522, 2]
+// Dependencies: [1961, 1979, 4999, 1074, 9411, 9300, 7523, 1894, 1086, 9250, 38, 7521, 7522, 2]
 // Exports: computeAllowedForChannel, hasAccess
 
-// Module 9405 (computeAllowedForUser)
+// Module 9410 (computeAllowedForUser)
 import set from "set" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
 import ME from "ME" /* 1074 */;
@@ -14,8 +14,8 @@ import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 4999 */;
 import buildCommand from "buildCommand" /* 7521 */;
 import commandPermissions from "commandPermissions" /* 7522 */;
 import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7523 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9245 */;
-import computePermissions from "computePermissions" /* 9295 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9250 */;
+import computePermissions from "computePermissions" /* 9300 */;
 import closure_5 from "createGuildRecordFromRust" /* 1979 */;
 
 function computeAllowedForUser(permissions, guild_id, userId, roleIds, isImpersonating) {

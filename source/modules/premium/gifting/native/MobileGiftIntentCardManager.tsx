@@ -1,12 +1,12 @@
-// Module ID: 17467
-// Function ID: 17468
+// Module ID: 17470
+// Function ID: 17471
 // Name: isChannelEligible
-// Dependencies: [7659, 1957, 4781, 2011, 8078, 1373, 17468, 1094, 1935, 10744, 8768, 1250, 4447, 9848, 2]
+// Dependencies: [7659, 1957, 4781, 2011, 8078, 1373, 17471, 1094, 1935, 10749, 8773, 1250, 4447, 9853, 2]
 
-// Module 17467 (isChannelEligible)
+// Module 17470 (isChannelEligible)
 import set2 from "set" /* 1094 */;
-import fetchUserAffinitiesV2 from "fetchUserAffinitiesV2" /* 9848 */;
-import onPostConnectionOpenDefault from "onPostConnectionOpen" /* 17468 */;
+import fetchUserAffinitiesV2 from "fetchUserAffinitiesV2" /* 9853 */;
+import onPostConnectionOpenDefault from "onPostConnectionOpen" /* 17471 */;
 import closure_2 from "recomputeAffinities" /* 7659 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;
 import closure_4 from "reinjectEphemerals" /* 4781 */;
@@ -34,10 +34,10 @@ prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
       if (id === store.getChannelId()) {
         if (ready.isReady(id)) {
           if (self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, closure_0, constants.SEND_MESSAGE)) {
-            let tmpResult = tmp(10744);
+            let tmpResult = tmp(10749);
             const result = tmpResult.logMessageGiftIntentShown(closure_0);
             const userAffinity = self.getUserAffinity(closure_0);
-            tmpResult = tmp(8768);
+            tmpResult = tmp(8773);
             let obj = { name: null, type: null, properties: null };
             obj[0] = tmp(1250).ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION;
             obj[1] = tmp(1250).ImpressionTypes.VIEW;

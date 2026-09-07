@@ -1,13 +1,13 @@
-// Module ID: 11995
-// Function ID: 11996
+// Module ID: 11999
+// Function ID: 12000
 // Name: tryUpdateSubscriptionForHereMention
-// Dependencies: [32, 19, 7279, 7312, 7286, 9304, 12, 2]
+// Dependencies: [32, 19, 7279, 7312, 7286, 9309, 12, 2]
 // Exports: tryUpdateSubscriptionForHereMention, useHereMentionCallback
 
-// Module 11995 (tryUpdateSubscriptionForHereMention)
+// Module 11999 (tryUpdateSubscriptionForHereMention)
 import reset from "reset" /* 7286 */;
 import subscribeMembers from "subscribeMembers" /* 7312 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9304 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9309 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "getMemberListId" /* 7279 */;

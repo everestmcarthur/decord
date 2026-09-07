@@ -1,7 +1,7 @@
 // Module ID: 4551
 // Function ID: 4552
 // Name: MarkupText
-// Dependencies: [19, 17, 4552, 1957, 2015, 1979, 1074, 1964, 1085, 21, 4555, 4556, 4560, 576, 4571, 4714, 4418, 4763, 8179, 4904, 1114, 7190, 4258, 5584, 1178, 1365, 8370, 4255, 11614, 11584, 8096, 504, 4409, 7961, 4527, 11587, 1896, 11, 1935, 5587, 11565, 13840, 11212, 4996, 10127, 13841, 13843, 4503, 4998, 1115, 5028, 13845, 10129, 2]
+// Dependencies: [19, 17, 4552, 1957, 2015, 1979, 1074, 1964, 1085, 21, 4555, 4556, 4560, 576, 4571, 4714, 4418, 4763, 8179, 4904, 1114, 7190, 4258, 5584, 1178, 1365, 8370, 4255, 11619, 11589, 8096, 504, 4409, 7961, 4527, 11592, 1896, 11, 1935, 5587, 11570, 13843, 11217, 4996, 10132, 13844, 13846, 4503, 4998, 1115, 5028, 13848, 10134, 2]
 // Exports: default, plainMentionRenderer, plainSpoilerRenderer
 
 // Module 4551 (MarkupText)
@@ -11,7 +11,7 @@ import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
 import Text from "Text" /* 4556 */;
 import preloadDefault from "preload" /* 5587 */;
 import smartOutput from "smartOutput" /* 8096 */;
-import handleTapCommandMentionDefault from "handleTapCommandMention" /* 11212 */;
+import handleTapCommandMentionDefault from "handleTapCommandMention" /* 11217 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
@@ -494,7 +494,7 @@ function MarkupChannelMention(state) {
       obj3 = fontScale < 2 ? { width: 12, height: 12 } : { width: 16, height: 16 };
     }
     obj2[1] = obj3;
-    obj2[2] = node(11565);
+    obj2[2] = node(11570);
     obj2[3] = tmp3(1178).Icon.Sizes.CUSTOM;
     closure_15(tmp3(1178).ThemedIcon, obj2);
     const tmp6 = closure_15;
@@ -515,7 +515,7 @@ function MarkupAttachmentLink(state) {
     str2 = "text-xs/medium";
   }
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-  obj = { themedColor: node(576).colors.MENTION_FOREGROUND, source: node(13840), size: null };
+  obj = { themedColor: node(576).colors.MENTION_FOREGROUND, source: node(13843), size: null };
   const fontScale = store.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1178).Icon.Sizes.EXTRA_SMALL_10;
@@ -993,7 +993,7 @@ export default function createRules() {
     },
     [closure_0(closure_2[43]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, key) {
-        return callback(str(13845), { node, state: key }, key.key);
+        return callback(str(13848), { node, state: key }, key.key);
       }
     },
     [closure_0(closure_2[43]).AST_KEY.TIMESTAMP]: {

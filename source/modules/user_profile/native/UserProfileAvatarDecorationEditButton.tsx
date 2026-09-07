@@ -1,10 +1,10 @@
-// Module ID: 14625
-// Function ID: 14626
+// Module ID: 14628
+// Function ID: 14629
 // Name: COLLECTIBLES_PREVIEW_SIZE
-// Dependencies: [19, 17, 2021, 7208, 1085, 21, 4560, 576, 504, 8258, 8166, 11042, 8157, 1114, 14618, 8812, 1178, 13172, 2]
+// Dependencies: [19, 17, 2021, 7208, 1085, 21, 4560, 576, 504, 8258, 8166, 11047, 8157, 1114, 14621, 8817, 1178, 13176, 2]
 // Exports: default
 
-// Module 14625 (COLLECTIBLES_PREVIEW_SIZE)
+// Module 14628 (COLLECTIBLES_PREVIEW_SIZE)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;

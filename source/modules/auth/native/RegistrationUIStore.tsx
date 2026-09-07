@@ -1,10 +1,10 @@
-// Module ID: 15946
-// Function ID: 15947
+// Module ID: 15949
+// Function ID: 15950
 // Name: useRegistrationUIStore
 // Dependencies: [560, 1249, 2]
 // Exports: clearRegistrationErrorMessage, doesRegistrationHaveIdentityType, resetRegistration, setRegistrationErrors, setSubmitting, updateRegistrationOptions
 
-// Module 15946 (useRegistrationUIStore)
+// Module 15949 (useRegistrationUIStore)
 import set from "set" /* 2 */;
 import batchUpdates from "batchUpdates" /* 1249 */;
 import keys from "keys" /* 560 */;

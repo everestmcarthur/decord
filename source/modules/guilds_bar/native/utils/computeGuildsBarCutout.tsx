@@ -1,15 +1,15 @@
-// Module ID: 16297
-// Function ID: 16298
+// Module ID: 16300
+// Function ID: 16301
 // Name: computeGuildsBarCutout
-// Dependencies: [17, 16285, 1178, 8813, 2]
+// Dependencies: [17, 16288, 1178, 8818, 2]
 // Exports: default
 
-// Module 16297 (computeGuildsBarCutout)
+// Module 16300 (computeGuildsBarCutout)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import Button from "Button" /* 1178 */;
-import SolidCutout from "SolidCutout" /* 8813 */;
-import GUILD_ITEM_SIZE2 from "GUILD_ITEM_SIZE" /* 16285 */;
+import SolidCutout from "SolidCutout" /* 8818 */;
+import GUILD_ITEM_SIZE2 from "GUILD_ITEM_SIZE" /* 16288 */;
 
 const PixelRatio = get_ActivityIndicator.PixelRatio;
 const GUILD_ITEM_SIZE = GUILD_ITEM_SIZE2.GUILD_ITEM_SIZE;

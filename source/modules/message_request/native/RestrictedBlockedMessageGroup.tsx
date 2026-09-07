@@ -1,10 +1,10 @@
-// Module ID: 16901
-// Function ID: 16902
+// Module ID: 16904
+// Function ID: 16905
 // Name: RestrictedBlockedMessageGroup
-// Dependencies: [32, 19, 17, 21, 4560, 16899, 576, 5123, 4556, 1114, 2]
+// Dependencies: [32, 19, 17, 21, 4560, 16902, 576, 5123, 4556, 1114, 2]
 // Exports: default
 
-// Module 16901 (RestrictedBlockedMessageGroup)
+// Module 16904 (RestrictedBlockedMessageGroup)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;

@@ -1,14 +1,14 @@
-// Module ID: 16694
-// Function ID: 16695
+// Module ID: 16697
+// Function ID: 16698
 // Name: useSearchMessagesLoadingState
-// Dependencies: [7281, 12339, 7878, 16646, 504, 12340, 2]
+// Dependencies: [7281, 12343, 7878, 16649, 504, 12344, 2]
 // Exports: useSearchMessagesLoadingState
 
-// Module 16694 (useSearchMessagesLoadingState)
+// Module 16697 (useSearchMessagesLoadingState)
 import initialize from "initialize" /* 504 */;
-import useFullscreenPlaceholderCount from "useFullscreenPlaceholderCount" /* 16646 */;
+import useFullscreenPlaceholderCount from "useFullscreenPlaceholderCount" /* 16649 */;
 import closure_2 from "handleReaction" /* 7281 */;
-import closure_3 from "prototype" /* 12339 */;
+import closure_3 from "prototype" /* 12343 */;
 import { SEARCH_TABS_TO_SEARCH_QUERY_LIMITS as closure_4 } from "MessageEmbedTypes" /* 7878 */;
 
 require = arg1;

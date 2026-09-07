@@ -1,12 +1,12 @@
-// Module ID: 10972
-// Function ID: 10973
+// Module ID: 10977
+// Function ID: 10978
 // Name: useInappropriateConversationWarningsForChannel
-// Dependencies: [10915, 504, 2]
+// Dependencies: [10920, 504, 2]
 // Exports: useInappropriateConversationWarningsForChannel
 
-// Module 10972 (useInappropriateConversationWarningsForChannel)
-import closure_2 from "handleConnectionOpen" /* 10915 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 10915 */;
+// Module 10977 (useInappropriateConversationWarningsForChannel)
+import closure_2 from "handleConnectionOpen" /* 10920 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 10920 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx");

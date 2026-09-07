@@ -1,9 +1,9 @@
-// Module ID: 17370
-// Function ID: 17371
+// Module ID: 17373
+// Function ID: 17374
 // Name: prototype
-// Dependencies: [32, 5, 2014, 502, 1957, 2021, 1979, 4381, 4747, 4748, 4187, 7118, 1384, 4763, 17371, 1896, 12285, 1093, 12284, 7222, 7223, 2]
+// Dependencies: [32, 5, 2014, 502, 1957, 2021, 1979, 4381, 4747, 4748, 4187, 7118, 1384, 4763, 17374, 1896, 12289, 1093, 12288, 7222, 7223, 2]
 
-// Module 17370 (prototype)
+// Module 17373 (prototype)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;

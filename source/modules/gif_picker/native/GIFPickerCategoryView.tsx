@@ -1,10 +1,10 @@
-// Module ID: 10383
-// Function ID: 10384
+// Module ID: 10388
+// Function ID: 10389
 // Name: GIFPickerCategoryView
-// Dependencies: [19, 17, 1074, 21, 4560, 576, 1114, 9759, 5587, 10384, 10235, 4556, 2]
+// Dependencies: [19, 17, 1074, 21, 4560, 576, 1114, 9764, 5587, 10389, 10240, 4556, 2]
 // Exports: default
 
-// Module 10383 (GIFPickerCategoryView)
+// Module 10388 (GIFPickerCategoryView)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -50,7 +50,7 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   let obj = { categoryName: item.name };
   const formatToPlainStringResult = intl.formatToPlainString(onSelectCategory(1114).t["j+63pw"], obj);
   obj = { style: tmp.container, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult };
-  const merged = Object.assign(item(9759)(callback, formatToPlainStringResult));
+  const merged = Object.assign(item(9764)(callback, formatToPlainStringResult));
   obj = { style: tmp.gifImage, source: obj1 };
   const items1 = [callback(item(5587), obj), callback(closure_4, { style: tmp.gifOverlay }), ];
   const obj3 = { style: tmp.categoryName, accessible: false, children: null };
@@ -58,14 +58,14 @@ export default function GIFPickerCategoryView(onSelectCategory) {
     const obj4 = { size: "sm", style: null, color: null };
     obj4[1] = tmp.categoryNameIcon;
     obj4[2] = tmp6(576).colors.WHITE;
-    let tmp10Result = tmp10(tmp3(10384).AnalyticsIcon, obj4);
+    let tmp10Result = tmp10(tmp3(10389).AnalyticsIcon, obj4);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {
       const obj5 = { size: "sm", style: null, color: null };
       obj5[1] = tmp.categoryNameIcon;
       obj5[2] = tmp6(576).colors.WHITE;
-      tmp10Result = tmp10(tmp3(10235).StarIcon, obj5);
+      tmp10Result = tmp10(tmp3(10240).StarIcon, obj5);
     }
   }
   const items2 = [tmp10Result, callback(onSelectCategory(4556).Text, { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name })];

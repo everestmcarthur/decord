@@ -1,10 +1,10 @@
-// Module ID: 16902
-// Function ID: 16903
+// Module ID: 16905
+// Function ID: 16906
 // Name: Settings
-// Dependencies: [19, 17, 21, 4560, 576, 16784, 1611, 6945, 4539, 4296, 16903, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 16787, 1611, 6945, 4539, 4296, 16906, 2]
 // Exports: default
 
-// Module 16902 (Settings)
+// Module 16905 (Settings)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;

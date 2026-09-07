@@ -1,10 +1,10 @@
-// Module ID: 13539
-// Function ID: 13540
+// Module ID: 13543
+// Function ID: 13544
 // Name: PremiumSubscriptionUpsell
-// Dependencies: [19, 17, 2025, 1371, 1074, 7432, 1373, 21, 4560, 576, 4511, 1114, 1880, 504, 4218, 4987, 1093, 4556, 13540, 13541, 9391, 4975, 2]
+// Dependencies: [19, 17, 2025, 1371, 1074, 7432, 1373, 21, 4560, 576, 4511, 1114, 1880, 504, 4218, 4987, 1093, 4556, 13544, 13545, 9396, 4975, 2]
 // Exports: default
 
-// Module 13539 (PremiumSubscriptionUpsell)
+// Module 13543 (PremiumSubscriptionUpsell)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -89,11 +89,11 @@ export default function PremiumSubscriptionUpsell(arg0) {
     obj6[0] = tmp.upsellFeatures;
     const obj7 = { style: null, source: null };
     obj7[0] = tmp.upsellFeatureSubLogo;
-    obj7[1] = tmp5(13540);
+    obj7[1] = tmp5(13544);
     const items4 = [closure_10(closure_4, obj7), , ];
     const obj8 = { style: null, source: null };
     obj8[0] = tmp.upsellFeatureLogoTier2;
-    obj8[1] = tmp5(13541);
+    obj8[1] = tmp5(13545);
     items4[1] = closure_10(closure_4, obj8);
     const obj9 = { style: null, features: null, labelStyle: null, rowStyle: null };
     obj9[0] = tmp.upsellFeatureList;
@@ -101,7 +101,7 @@ export default function PremiumSubscriptionUpsell(arg0) {
     obj10[0] = tmp2(4511).CheckmarkLargeIcon;
     const intl4 = tmp2(1114).intl;
     const obj11 = { discountPercentage: null };
-    const tmp5Result1 = tmp5(9391);
+    const tmp5Result1 = tmp5(9396);
     obj11[0] = tmp2(1880).formatPercent(locale.locale, closure_9 / 100);
     obj10[1] = intl4.formatToPlainString(tmp2(1114).t.P3aEj6, obj11);
     obj10[2] = tmp5(576).unsafe_rawColors.WHITE;

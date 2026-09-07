@@ -1,10 +1,10 @@
-// Module ID: 13542
-// Function ID: 13543
+// Module ID: 13546
+// Function ID: 13547
 // Name: BoostPurchaseNitroBanner
-// Dependencies: [5, 32, 19, 17, 7424, 1979, 4223, 4224, 7237, 13543, 1373, 1074, 7432, 4542, 21, 4560, 5524, 5441, 576, 4973, 5692, 4556, 1114, 4218, 13544, 13545, 13546, 13547, 13548, 13549, 8662, 4262, 504, 13550, 13299, 4495, 1178, 1242, 13333, 13334, 5605, 13551, 5577, 6655, 4411, 1116, 7409, 10663, 4905, 13552, 1896, 5687, 4987, 7410, 7240, 4233, 4763, 7412, 10709, 7162, 7257, 5598, 4992, 10808, 10703, 1483, 7417, 13343, 7182, 10704, 4884, 11435, 13309, 7404, 9365, 4230, 10804, 2]
+// Dependencies: [5, 32, 19, 17, 7424, 1979, 4223, 4224, 7237, 13547, 1373, 1074, 7432, 4542, 21, 4560, 5524, 5441, 576, 4973, 5692, 4556, 1114, 4218, 13548, 13549, 13550, 13551, 13552, 13553, 8667, 4262, 504, 13554, 13303, 4495, 1178, 1242, 13337, 13338, 5605, 13555, 5577, 6655, 4411, 1116, 7409, 10668, 4905, 13556, 1896, 5687, 4987, 7410, 7240, 4233, 4763, 7412, 10714, 7162, 7257, 5598, 4992, 10813, 10708, 1483, 7417, 13347, 7182, 10709, 4884, 11440, 13313, 7404, 9370, 4230, 10809, 2]
 // Exports: default
 
-// Module 13542 (BoostPurchaseNitroBanner)
+// Module 13546 (BoostPurchaseNitroBanner)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Button from "Button" /* 1178 */;
@@ -15,13 +15,13 @@ import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import createTextStyleDefault from "createTextStyle" /* 5524 */;
 import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
 import getPremiumBundledItemsFromProductId from "getPremiumBundledItemsFromProductId" /* 7409 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
-import registerAssetDefault from "registerAsset" /* 13544 */;
-import registerAssetDefault2 from "registerAsset" /* 13545 */;
-import registerAssetDefault3 from "registerAsset" /* 13546 */;
-import registerAssetDefault4 from "registerAsset" /* 13547 */;
-import registerAssetDefault5 from "registerAsset" /* 13548 */;
-import registerAssetDefault6 from "registerAsset" /* 13549 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
+import registerAssetDefault from "registerAsset" /* 13548 */;
+import registerAssetDefault2 from "registerAsset" /* 13549 */;
+import registerAssetDefault3 from "registerAsset" /* 13550 */;
+import registerAssetDefault4 from "registerAsset" /* 13551 */;
+import registerAssetDefault5 from "registerAsset" /* 13552 */;
+import registerAssetDefault6 from "registerAsset" /* 13553 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
@@ -31,7 +31,7 @@ import closure_10 from "createGuildRecordFromRust" /* 1979 */;
 import closure_11 from "addSubscriptionPlan" /* 4223 */;
 import closure_12 from "reset" /* 4224 */;
 import closure_13 from "updateProduct" /* 7237 */;
-import usePremiumPlanSelectStore from "usePremiumPlanSelectStore" /* 13543 */;
+import usePremiumPlanSelectStore from "usePremiumPlanSelectStore" /* 13547 */;
 import GuildFeatures from "GuildFeatures" /* 1373 */;
 import ME from "ME" /* 1074 */;
 import items from "items" /* 7432 */;

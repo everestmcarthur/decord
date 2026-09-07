@@ -1,12 +1,12 @@
-// Module ID: 17837
-// Function ID: 17838
+// Module ID: 17840
+// Function ID: 17841
 // Name: getReportInboundErrors
-// Dependencies: [4598, 1090, 9609, 2]
+// Dependencies: [4598, 1090, 9614, 2]
 // Exports: getAccumulatedStatsWithMinDatapoints, getReportInboundErrors, getWarningFrameRate
 
-// Module 17837 (getReportInboundErrors)
+// Module 17840 (getReportInboundErrors)
 import setDefault from "set" /* 1090 */;
-import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 9609 */;
+import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 9614 */;
 import closure_2 from "updateAveragedStatsHelper" /* 4598 */;
 
 require = arg1;

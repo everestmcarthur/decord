@@ -1,10 +1,10 @@
-// Module ID: 13501
-// Function ID: 13502
+// Module ID: 13505
+// Function ID: 13506
 // Name: GuildBoostSlotCooldown
-// Dependencies: [19, 17, 1183, 1979, 4455, 4224, 1074, 21, 4560, 576, 5524, 7439, 4556, 1114, 11, 5123, 5434, 5584, 13502, 504, 1396, 13503, 13507, 4884, 4458, 12, 2]
+// Dependencies: [19, 17, 1183, 1979, 4455, 4224, 1074, 21, 4560, 576, 5524, 7439, 4556, 1114, 11, 5123, 5434, 5584, 13506, 504, 1396, 13507, 13511, 4884, 4458, 12, 2]
 // Exports: default
 
-// Module 13501 (GuildBoostSlotCooldown)
+// Module 13505 (GuildBoostSlotCooldown)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initialize from "initialize" /* 504 */;
@@ -14,8 +14,8 @@ import Text from "Text" /* 4556 */;
 import GuildIconSizes from "GuildIconSizes" /* 5584 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
 import useCountdownDefault from "useCountdown" /* 7439 */;
-import registerAssetDefault from "registerAsset" /* 13502 */;
-import getSubscriptionPlaceholderPatternSource from "getSubscriptionPlaceholderPatternSource" /* 13503 */;
+import registerAssetDefault from "registerAsset" /* 13506 */;
+import getSubscriptionPlaceholderPatternSource from "getSubscriptionPlaceholderPatternSource" /* 13507 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_7 from "handleThemeChange" /* 1183 */;
@@ -269,7 +269,7 @@ function BoostedGuild(arg0) {
     tmp11Result = tmp11(tmp10, obj3);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_11(guildBoostSlots(13507), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_11(guildBoostSlots(13511), { guild: stateFromStores, theme: stateFromStores1 });
   obj1[1] = items3;
   const items4 = [closure_12(closure_5, obj1), closure_11(BoostedGuildInfo, { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length })];
   obj[1] = items4;

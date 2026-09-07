@@ -1,9 +1,9 @@
-// Module ID: 9837
-// Function ID: 9838
+// Module ID: 9842
+// Function ID: 9843
 // Name: handleUserUpdate
 // Dependencies: [32, 1957, 2021, 7278, 4600, 5279, 1371, 1074, 12, 11, 4204, 4404, 1369, 504, 573, 2]
 
-// Module 9837 (handleUserUpdate)
+// Module 9842 (handleUserUpdate)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;

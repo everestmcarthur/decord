@@ -1,7 +1,7 @@
 // Module ID: 7431
 // Function ID: 7432
 // Name: PremiumPlanActionSheetHeader
-// Dependencies: [19, 17, 1373, 7432, 21, 4560, 7433, 7434, 4218, 4987, 1093, 5587, 7435, 7436, 7437, 7438, 9385, 10715, 9390, 2]
+// Dependencies: [19, 17, 1373, 7432, 21, 4560, 7433, 7434, 4218, 4987, 1093, 5587, 7435, 7436, 7437, 7438, 9390, 10720, 9395, 2]
 // Exports: default
 
 // Module 7431 (PremiumPlanActionSheetHeader)
@@ -97,11 +97,11 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     obj[1] = items1;
     items[1] = tmp12(View, obj);
     if (tmp15.TIER_0 === premiumType) {
-      let tmp13Result3 = tmp13(9385);
+      let tmp13Result3 = tmp13(9390);
     } else if (tmp15.TIER_1 === premiumType) {
-      tmp13Result3 = tmp13(10715);
+      tmp13Result3 = tmp13(10720);
     } else if (tmp15.TIER_2 === premiumType) {
-      tmp13Result3 = tmp13(9390);
+      tmp13Result3 = tmp13(9395);
     }
     const obj4 = { source: null, style: null, resizeMode: "contain" };
     obj4[0] = tmp13Result3;

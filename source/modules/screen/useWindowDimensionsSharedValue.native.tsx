@@ -1,13 +1,13 @@
-// Module ID: 12033
-// Function ID: 12034
+// Module ID: 12037
+// Function ID: 12038
 // Name: mutable
-// Dependencies: [4296, 1477, 12034, 11354, 2]
+// Dependencies: [4296, 1477, 12038, 11359, 2]
 // Exports: default, getWindowDimensionsWorklet
 
-// Module 12033 (mutable)
+// Module 12037 (mutable)
 import set from "set" /* 2 */;
-import uDefault from "u" /* 11354 */;
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12034 */;
+import uDefault from "u" /* 11359 */;
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12038 */;
 import module_4296 from "module_4296" /* 4296 */;
 import useWindowDimensions from "useWindowDimensions" /* 1477 */;
 

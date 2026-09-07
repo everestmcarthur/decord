@@ -1,14 +1,14 @@
-// Module ID: 15749
-// Function ID: 15750
+// Module ID: 15752
+// Function ID: 15753
 // Name: route
-// Dependencies: [1074, 11468, 13378, 15750, 15614, 2]
+// Dependencies: [1074, 11473, 13382, 15753, 15617, 2]
 
-// Module 15749 (route)
+// Module 15752 (route)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 13378 */;
-import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 15750 */;
-import createToggle from "createToggle" /* 11468 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 13382 */;
+import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 15753 */;
+import createToggle from "createToggle" /* 11473 */;
 
 obj = {
   useTitle() {
@@ -22,7 +22,7 @@ obj = {
 obj = {
   route: ME.UserSettingsSections.DESIGN_SYSTEM,
   getComponent() {
-    return require(15614) /* SettingsDesignSystemsScreen */.default;
+    return require(15617) /* SettingsDesignSystemsScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

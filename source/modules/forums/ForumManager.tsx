@@ -1,9 +1,9 @@
-// Module ID: 17366
-// Function ID: 17367
+// Module ID: 17369
+// Function ID: 17370
 // Name: handleChannelPreload
 // Dependencies: [1957, 1964, 7118, 7304, 2]
 
-// Module 17366 (handleChannelPreload)
+// Module 17369 (handleChannelPreload)
 import initializeDefault from "initialize" /* 7118 */;
 import loadForumPostData from "loadForumPostData" /* 7304 */;
 import closure_2 from "ensureGuildLoaded" /* 1957 */;

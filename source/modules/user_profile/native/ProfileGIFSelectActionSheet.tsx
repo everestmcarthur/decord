@@ -1,16 +1,16 @@
-// Module ID: 14611
-// Function ID: 14612
+// Module ID: 14614
+// Function ID: 14615
 // Name: ProfileGIFSelectActionSheet
-// Dependencies: [32, 5, 19, 17, 21, 4560, 576, 5157, 14593, 8169, 8167, 8164, 8166, 6989, 4527, 7150, 7149, 1114, 8662, 10364, 2]
+// Dependencies: [32, 5, 19, 17, 21, 4560, 576, 5157, 14596, 8169, 8167, 8164, 8166, 6989, 4527, 7150, 7149, 1114, 8667, 10369, 2]
 // Exports: default
 
-// Module 14611 (ProfileGIFSelectActionSheet)
+// Module 14614 (ProfileGIFSelectActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
 import Background from "Background" /* 7150 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
-import _modDef10364 from "module_10364" /* 10364 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
+import _modDef10369 from "module_10369" /* 10369 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import closure_5 from "noop" /* 19 */;
@@ -164,7 +164,7 @@ export default function ProfileGIFSelectActionSheet(arg0) {
                 }
               } else {
                 if (closure_1_10.BANNER === tmp65) {
-                  obj9 = { assetOrigin: null, imageUri: null, description: "", originalAsset: "Array", originalMd5: "text-sm/normal" };
+                  obj9 = { assetOrigin: null, imageUri: null, description: "", originalAsset: "Array", originalMd5: "text-xs/normal" };
                   obj9[0] = lib(closure_1_2[13]).AssetOriginTypes.NEW_ASSET;
                   obj9[1] = c5;
                   obj9[4] = closure_6;
@@ -210,7 +210,7 @@ export default function ProfileGIFSelectActionSheet(arg0) {
   obj[1] = callback(NitroWheelIcon.NitroWheelIcon, {});
   ({ titleWrapper: obj2[2], titleContainer: obj2[3] } = tmp);
   let items = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), ];
-  obj = { style: tmp.gifPicker, children: callback(_modDef10364, obj1) };
+  obj = { style: tmp.gifPicker, children: callback(_modDef10369, obj1) };
   items[1] = callback(View, obj);
   obj[3] = items;
   return callback2(Background.BottomSheet, obj);

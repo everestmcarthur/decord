@@ -1,10 +1,10 @@
-// Module ID: 14593
-// Function ID: 14594
+// Module ID: 14596
+// Function ID: 14597
 // Name: createPendingImage
 // Dependencies: [6989, 1369, 2]
 // Exports: createPendingImage
 
-// Module 14593 (createPendingImage)
+// Module 14596 (createPendingImage)
 import set from "set" /* 2 */;
 import AssetOriginTypes from "AssetOriginTypes" /* 6989 */;
 
@@ -17,7 +17,7 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
   }
   ({ imageUri, staticImageUri, description, originalAsset, originalMd5 } = assetOrigin);
   if (AssetOriginTypes.AssetOriginTypes.NEW_ASSET === NEW_ASSET) {
-    let obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: "Array", originalMd5: "citt\u00E0" };
+    let obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: "Array", originalMd5: 301990442 };
     obj[0] = NEW_ASSET;
     obj[1] = imageUri;
     obj[2] = staticImageUri;
@@ -34,7 +34,7 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     obj[5] = originalMd5;
     return obj;
   } else if (tmp3(6989).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
-    obj1 = { assetOrigin: null, imageUri: null, description: "Array", originalAsset: false };
+    obj1 = { assetOrigin: null, imageUri: null, description: "Array", originalAsset: true };
     obj1[0] = NEW_ASSET;
     obj1[1] = imageUri;
     obj1[3] = originalAsset;

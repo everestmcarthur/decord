@@ -1,10 +1,10 @@
-// Module ID: 10250
-// Function ID: 10251
+// Module ID: 10255
+// Function ID: 10256
 // Name: PencilIcon
 // Dependencies: [19, 21, 576, 4261, 7966, 2]
 // Exports: PencilIcon
 
-// Module 10250 (PencilIcon)
+// Module 10255 (PencilIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;

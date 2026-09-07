@@ -1,10 +1,10 @@
-// Module ID: 16424
-// Function ID: 16425
+// Module ID: 16427
+// Function ID: 16428
 // Name: getNotificationCenterItemBody
 // Dependencies: [7526, 1979, 4209, 1371, 1074, 1114, 4404, 7640, 1925, 38, 2]
 // Exports: default, getFriendRequestSentBody
 
-// Module 16424 (getNotificationCenterItemBody)
+// Module 16427 (getNotificationCenterItemBody)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import closure_3 from "scheduledEventSort" /* 7526 */;
 import { isGuildEventEnded } from "scheduledEventSort" /* 7526 */;

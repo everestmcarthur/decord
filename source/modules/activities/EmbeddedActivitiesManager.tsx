@@ -1,19 +1,19 @@
-// Module ID: 9518
-// Function ID: 9519
+// Module ID: 9523
+// Function ID: 9524
 // Name: getShelfItemTrackingProperties
-// Dependencies: [5, 4576, 1961, 502, 1957, 4583, 2011, 1371, 9519, 1956, 1074, 9410, 1115, 1272, 4189, 9520, 9521, 1242, 9507, 9523, 9524, 4761, 1256, 1925, 9295, 9525, 1898, 1109, 573, 9526, 9512, 9527, 7163, 9502, 1114, 9529, 9504, 9530, 9548, 1894, 7182, 2]
+// Dependencies: [5, 4576, 1961, 502, 1957, 4583, 2011, 1371, 9524, 1956, 1074, 9415, 1115, 1272, 4189, 9525, 9526, 1242, 9512, 9528, 9529, 4761, 1256, 1925, 9300, 9530, 1898, 1109, 573, 9531, 9517, 9532, 7163, 9507, 1114, 9534, 9509, 9535, 9553, 1894, 7182, 2]
 // Exports: getActiveAnalyticsSessionIDs, trackFrameSessionEnd, trackFrameSessionStart
 
-// Module 9518 (getShelfItemTrackingProperties)
+// Module 9523 (getShelfItemTrackingProperties)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
 import set2 from "set" /* 1115 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import initializeDefault from "initialize" /* 1898 */;
 import _modDef4761 from "module_4761" /* 4761 */;
-import getPlatformDefault from "getPlatform" /* 9410 */;
-import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 9507 */;
-import getShelfItemDataDefault from "getShelfItemData" /* 9520 */;
+import getPlatformDefault from "getPlatform" /* 9415 */;
+import _launchFrameOnNativeDefault from "_launchFrameOnNative" /* 9512 */;
+import getShelfItemDataDefault from "getShelfItemData" /* 9525 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "getParticipants" /* 4576 */;
 import { GUILD_VOCAL_CHANNEL_TYPES } from "createChannelRecord" /* 1961 */;
@@ -22,7 +22,7 @@ import closure_7 from "ensureGuildLoaded" /* 1957 */;
 import closure_8 from "createRTCConnection" /* 4583 */;
 import closure_9 from "handleConnectionOpen" /* 2011 */;
 import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import closure_11 from "initialize" /* 9519 */;
+import closure_11 from "initialize" /* 9524 */;
 import closure_12 from "participantFromServer" /* 1956 */;
 import ME from "ME" /* 1074 */;
 
@@ -177,10 +177,10 @@ function _handleActivityClose() {
                   const obj5 = { applicationId: null, activityConfigs: null };
                   obj5[0] = callback;
                   obj5[1] = currentUser;
-                  activity = lib(9520)(obj5);
+                  activity = lib(9525)(obj5);
                   releasePhase = callback2(activity).releasePhase;
-                  constants = lib(9521).getRawThermalState();
-                  const obj13 = lib(9521);
+                  constants = lib(9526).getRawThermalState();
+                  const obj13 = lib(9526);
                   const obj6 = { channel_id: null, guild_id: null, media_session_id: null, activity_session_id: null, application_id: null, duration_ms: null, user_premium_tier: null, raw_thermal_state: null, release_phase: null, shelf_rank: null, activity_user_session_id: null, channel_type: null, media_session_ids: null, embedded_activity_location_kind: null };
                   obj6[0] = sessionId;
                   obj6[1] = channel;
@@ -263,9 +263,9 @@ function handleOpenEmbeddedActivity(applicationId) {
     let obj = _launchFrameOnNativeDefault;
     obj.clearMainFrameSlot();
   }
-  obj1 = applicationId(9523);
+  obj1 = applicationId(9528);
   if (obj1.tryLaunchAsFrame({ applicationId })) {
-    let tmp4Result = tmp4(9524);
+    let tmp4Result = tmp4(9529);
     obj = { isStart: null, inviterUserId: null, channelId: null, guildId: null, locationKind: null, launchId: null, compositeInstanceId: null, activitiesInfraVersion: null };
     obj[0] = isStart;
     obj[1] = inviterUserId;
@@ -343,12 +343,12 @@ function handleOpenEmbeddedActivity(applicationId) {
             if (tmp55 != null) {
               const activity = tmp55.activity;
               if (activity != null) {
-                let tmp54Result = tmp54(9410);
+                let tmp54Result = tmp54(9415);
                 const tmp4Result5 = tmp4(1115);
                 release_phase = activity.client_platform_config[tmp54Result(undefined, tmp4Result5.getOS(tmp4Result5))].release_phase;
               }
             }
-            tmp54Result = tmp54(9521);
+            tmp54Result = tmp54(9526);
             const rawThermalState = tmp54Result.getRawThermalState();
             if (null != mediaSessionId) {
               const items = [mediaSessionId];
@@ -418,8 +418,8 @@ function handleOpenEmbeddedActivity(applicationId) {
             obj2[15] = source;
             let commandContextType = null;
             if (null != channel) {
-              commandContextType = tmp4(9295).computeCommandContextType(channel, applicationId);
-              const tmp4Result7 = tmp4(9295);
+              commandContextType = tmp4(9300).computeCommandContextType(channel, applicationId);
+              const tmp4Result7 = tmp4(9300);
             }
             obj2[16] = commandContextType;
             obj2[17] = inviterUserId;
@@ -1221,7 +1221,7 @@ export default EmbeddedActivitiesManager;
 export const trackFrameSessionStart = function trackFrameSessionStart(applicationId, analyticsContext) {
   const _require = applicationId;
   let result = analyticsContext;
-  let obj = _require(9524);
+  let obj = _require(9529);
   if (analyticsContext == null) {
     result = obj.consumePendingFrameLaunch(applicationId);
   }
@@ -1248,9 +1248,9 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       if (locationKind == null) {
         if (null != channel) {
           if (null != guildId) {
-            let PRIVATE_CHANNEL = tmp2(9525).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+            let PRIVATE_CHANNEL = tmp2(9530).EmbeddedActivityLocationKind.GUILD_CHANNEL;
           } else {
-            PRIVATE_CHANNEL = tmp2(9525).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+            PRIVATE_CHANNEL = tmp2(9530).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
           }
         }
       }
@@ -1286,12 +1286,12 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       if (tmp18 != null) {
         const activity = tmp18.activity;
         if (activity != null) {
-          let tmp17Result = tmp17(9410);
+          let tmp17Result = tmp17(9415);
           tmp2Result = tmp2(1115);
           release_phase = activity.client_platform_config[tmp17Result(undefined, tmp2Result.getOS(tmp2Result))].release_phase;
         }
       }
-      tmp17Result = tmp17(9521);
+      tmp17Result = tmp17(9526);
       const rawThermalState = tmp17Result.getRawThermalState();
       let analyticsLocations = result.analyticsLocations;
       if (analyticsLocations == null) {
@@ -1353,8 +1353,8 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       obj1[15] = source;
       let commandContextType = null;
       if (null != channel) {
-        commandContextType = tmp2(9295).computeCommandContextType(channel, applicationId);
-        const tmp2Result1 = tmp2(9295);
+        commandContextType = tmp2(9300).computeCommandContextType(channel, applicationId);
+        const tmp2Result1 = tmp2(9300);
       }
       obj1[16] = commandContextType;
       obj1[17] = result.inviterUserId;
@@ -1426,12 +1426,12 @@ export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId)
       if (tmp13 != null) {
         const activity = tmp13.activity;
         if (activity != null) {
-          let tmp11Result = tmp11(9410);
+          let tmp11Result = tmp11(9415);
           const obj2 = set2;
           release_phase = activity.client_platform_config[tmp11Result(undefined, obj2.getOS(obj2))].release_phase;
         }
       }
-      tmp11Result = tmp11(9521);
+      tmp11Result = tmp11(9526);
       const rawThermalState = tmp11Result.getRawThermalState();
       let diff = null;
       if (null != tmp3.connectedSince) {

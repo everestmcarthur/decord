@@ -1,20 +1,20 @@
-// Module ID: 9042
-// Function ID: 9043
+// Module ID: 9047
+// Function ID: 9048
 // Name: handleRelationshipAddError
-// Dependencies: [32, 1371, 1074, 9043, 5553, 4904, 5522, 1114, 9044, 9045, 9046, 1272, 4404, 4411, 573, 9047, 8404, 2]
+// Dependencies: [32, 1371, 1074, 9048, 5553, 4904, 5522, 1114, 9049, 9050, 9051, 1272, 4404, 4411, 573, 9052, 8404, 2]
 
-// Module 9042 (handleRelationshipAddError)
+// Module 9047 (handleRelationshipAddError)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import sendRequest from "sendRequest" /* 1272 */;
 import setDefault from "set" /* 4904 */;
 import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 5522 */;
 import openContextMenu from "openContextMenu" /* 5553 */;
-import isLimitedAccessErrorCode from "isLimitedAccessErrorCode" /* 9045 */;
-import openClearAllIncomingRequestsConfirmationModalDefault from "openClearAllIncomingRequestsConfirmationModal" /* 9047 */;
+import isLimitedAccessErrorCode from "isLimitedAccessErrorCode" /* 9050 */;
+import openClearAllIncomingRequestsConfirmationModalDefault from "openClearAllIncomingRequestsConfirmationModal" /* 9052 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
-import { ClearFriendRequestFilters } from "ClearFriendRequestFilters" /* 9043 */;
+import { ClearFriendRequestFilters } from "ClearFriendRequestFilters" /* 9048 */;
 
 require = arg1;
 function handleRelationshipAddError(arg0, arg1, substr) {
@@ -65,7 +65,7 @@ function handleRelationshipAddError(arg0, arg1, substr) {
         if (num !== tmp2.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
           if (arg1 === obj.SHOW_ALWAYS) {
             if (null != substr) {
-              let tmp18Result = tmp18(9046);
+              let tmp18Result = tmp18(9051);
               if (!num) {
                 num = 0;
               }

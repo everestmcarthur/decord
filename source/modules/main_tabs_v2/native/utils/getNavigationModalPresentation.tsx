@@ -1,10 +1,10 @@
-// Module ID: 10925
-// Function ID: 10926
+// Module ID: 10930
+// Function ID: 10931
 // Name: getNavigationModalPresentation
 // Dependencies: [1115, 6945, 4539, 8332, 2]
 // Exports: default
 
-// Module 10925 (getNavigationModalPresentation)
+// Module 10930 (getNavigationModalPresentation)
 import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
 import useIsWindowLarge from "useIsWindowLarge" /* 6945 */;
 import handleOrientationChange from "handleOrientationChange" /* 8332 */;

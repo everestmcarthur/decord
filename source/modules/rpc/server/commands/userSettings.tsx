@@ -1,8 +1,8 @@
-// Module ID: 14505
-// Function ID: 14506
+// Module ID: 14508
+// Function ID: 14509
 // Dependencies: [2025, 1074, 8339, 2]
 
-// Module 14505
+// Module 14508
 import closure_0 from "_getSystemLocale" /* 2025 */;
 
 let obj = {};

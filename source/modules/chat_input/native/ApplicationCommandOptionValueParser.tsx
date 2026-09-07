@@ -1,10 +1,10 @@
-// Module ID: 11993
-// Function ID: 11994
+// Module ID: 11997
+// Function ID: 11998
 // Name: getUsers
 // Dependencies: [32, 19, 5506, 1961, 2012, 2021, 2015, 4209, 1371, 5000, 12, 1369, 4713, 5442, 1894, 7682, 2]
 // Exports: getRoles, parseOptionValuesForSend, useApplicationCommandOptionValueParser
 
-// Module 11993 (getUsers)
+// Module 11997 (getUsers)
 import applyDefault from "apply" /* 12 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;

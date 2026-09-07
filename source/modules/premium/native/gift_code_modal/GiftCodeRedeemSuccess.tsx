@@ -1,10 +1,10 @@
-// Module ID: 11452
-// Function ID: 11453
+// Module ID: 11457
+// Function ID: 11458
 // Name: GiftCodeRedeemSuccess
-// Dependencies: [32, 19, 17, 5510, 21, 4560, 576, 504, 11441, 7168, 11042, 7554, 1889, 8171, 11083, 7123, 7226, 8825, 7172, 8797, 4745, 1178, 11108, 11219, 11220, 11448, 4556, 1114, 4799, 4975, 4763, 2]
+// Dependencies: [32, 19, 17, 5510, 21, 4560, 576, 504, 11446, 7168, 11047, 7554, 1889, 8171, 11088, 7123, 7226, 8830, 7172, 8802, 4745, 1178, 11113, 11224, 11225, 11453, 4556, 1114, 4799, 4975, 4763, 2]
 // Exports: default
 
-// Module 11452 (GiftCodeRedeemSuccess)
+// Module 11457 (GiftCodeRedeemSuccess)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
@@ -42,11 +42,11 @@ export default function GiftCodeRedeemSuccess(giftCode) {
   let obj = giftCode(504);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.get(giftCode.skuId));
-  obj1 = giftCode(11441);
+  obj1 = giftCode(11446);
   const getOrFetchSubscriptionPlan = obj1.useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
   let obj2 = giftCode(7168);
   const getOrFetchApplication = obj2.useGetOrFetchApplication(giftCode.applicationId);
-  let obj3 = giftCode(11042);
+  let obj3 = giftCode(11047);
   let obj4 = giftCode(7554);
   let skuId = null;
   if (obj4.isCollectiblesGiftCode(giftCode)) {
@@ -70,7 +70,7 @@ export default function GiftCodeRedeemSuccess(giftCode) {
   }
   const shopProductItems = tmp2Result.useShopProductItems(tmp10);
   ({ firstAvatarDecoration, firstProfileEffect, firstNameplate } = shopProductItems);
-  tmp2Result = tmp2(11083);
+  tmp2Result = tmp2(11088);
   let tmp12 = product;
   if (product == null) {
     obj = { skuId: "", type: null, items: null };
@@ -101,7 +101,7 @@ export default function GiftCodeRedeemSuccess(giftCode) {
         obj3[0] = tmp.gameItemCard;
         obj4 = { sku: null };
         obj4[0] = stateFromStores;
-        obj3[1] = tmp24(user(8825), obj4);
+        obj3[1] = tmp24(user(8830), obj4);
         let tmp24Result = tmp24(closure_5, obj3);
       } else {
         const obj5 = { game: null, size: null, skuId: null };
@@ -129,7 +129,7 @@ export default function GiftCodeRedeemSuccess(giftCode) {
         obj8[2] = firstNameplate;
         obj8[3] = product.previewAssets;
         obj8[6] = tmp15;
-        tmp20Result = tmp20(user(8797), obj8);
+        tmp20Result = tmp20(user(8802), obj8);
       }
       obj7[2] = tmp20Result;
       obj6[1] = callback2(closure_5, obj7);

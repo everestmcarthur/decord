@@ -1,10 +1,10 @@
-// Module ID: 11621
-// Function ID: 11622
+// Module ID: 11626
+// Function ID: 11627
 // Name: getCommandOptionComponents
-// Dependencies: [19, 17, 4552, 1957, 2015, 1979, 4781, 4209, 1371, 9290, 4999, 1074, 1482, 5000, 21, 4560, 576, 1894, 1178, 4527, 8179, 4404, 4556, 4713, 1114, 7162, 504, 4794, 9176, 7961, 5587, 1399, 5607, 1115, 11622, 4258, 5605, 1609, 7523, 4973, 5687, 7182, 8117, 7150, 2]
+// Dependencies: [19, 17, 4552, 1957, 2015, 1979, 4781, 4209, 1371, 9295, 4999, 1074, 1482, 5000, 21, 4560, 576, 1894, 1178, 4527, 8179, 4404, 4556, 4713, 1114, 7162, 504, 4794, 9181, 7961, 5587, 1399, 5607, 1115, 11627, 4258, 5605, 1609, 7523, 4973, 5687, 7182, 8117, 7150, 2]
 // Exports: default
 
-// Module 11621 (getCommandOptionComponents)
+// Module 11626 (getCommandOptionComponents)
 import ThemesDefault from "Themes" /* 576 */;
 import nameFromUserDefault from "nameFromUser" /* 4404 */;
 import closure_4 from "noop" /* 19 */;
@@ -16,7 +16,7 @@ import closure_11 from "createGuildRecordFromRust" /* 1979 */;
 import closure_12 from "reinjectEphemerals" /* 4781 */;
 import closure_13 from "markAllUserIdListsStale" /* 4209 */;
 import closure_14 from "mergeGuildAvatar" /* 1371 */;
-import closure_15 from "getIndexKey" /* 9290 */;
+import closure_15 from "getIndexKey" /* 9295 */;
 import { SUB_COMMAND_KEY_SEPARATOR } from "TRUE_OPTION_NAME" /* 4999 */;
 import ME from "ME" /* 1074 */;
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;

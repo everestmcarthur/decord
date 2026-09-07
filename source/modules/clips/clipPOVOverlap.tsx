@@ -1,15 +1,15 @@
-// Module ID: 13991
-// Function ID: 13992
+// Module ID: 13994
+// Function ID: 13995
 // Name: getClipPOVWindow
-// Dependencies: [5132, 1074, 1384, 13992, 2]
+// Dependencies: [5132, 1074, 1384, 13995, 2]
 // Exports: getClipAttachmentPOVWindow, getClipPOVOverlapMilliseconds, getClipPOVWindow
 
-// Module 13991 (getClipPOVWindow)
+// Module 13994 (getClipPOVWindow)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import hasFlag from "hasFlag" /* 1384 */;
 import result2 from "result" /* 5132 */;
-import getPOVExportTargetDefault from "getPOVExportTarget" /* 13992 */;
+import getPOVExportTargetDefault from "getPOVExportTarget" /* 13995 */;
 
 const ClipType = result2.ClipType;
 const MessageAttachmentFlags = ME.MessageAttachmentFlags;

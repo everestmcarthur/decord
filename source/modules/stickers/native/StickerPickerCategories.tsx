@@ -1,16 +1,16 @@
-// Module ID: 10419
-// Function ID: 10420
+// Module ID: 10424
+// Function ID: 10425
 // Name: CATEGORY_ICON_SIZE
-// Dependencies: [32, 19, 17, 1979, 10390, 1074, 1219, 21, 4560, 576, 1935, 4899, 5268, 1242, 5123, 1178, 1396, 5584, 10176, 4528, 4529, 10358, 10359, 7055, 1114, 10420, 2]
+// Dependencies: [32, 19, 17, 1979, 10395, 1074, 1219, 21, 4560, 576, 1935, 4899, 5268, 1242, 5123, 1178, 1396, 5584, 10181, 4528, 4529, 10363, 10364, 7055, 1114, 10425, 2]
 // Exports: default
 
-// Module 10419 (CATEGORY_ICON_SIZE)
+// Module 10424 (CATEGORY_ICON_SIZE)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import { useStickerPickerStore } from "useStickerPickerStore" /* 10390 */;
+import { useStickerPickerStore } from "useStickerPickerStore" /* 10395 */;
 import ME from "ME" /* 1074 */;
 import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1219 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -219,7 +219,7 @@ export default function _default(categories) {
   const callback5 = first.useCallback((arg0, index) => closure_1_14(closure_1_17, { category: categories[index], index, isActive: index === categoryIndex, onPressCategory: callback2 }), items8);
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(10358)();
+  const tmp19 = categoryIndex(10363)();
   const tmp20 = closure_15;
   obj = { estimatedListSize: "windowSize", horizontal: true, itemSize: EXPRESSION_FOOTER_HEIGHT, keyboardShouldPersistTaps: "always", listId: ExpressionPickerViewType.STICKER, onLayout: callback4, onScroll: callback1, placeholderConfig: tmp19, ref, scrollReporting: "callbacks", sections: memo, renderItem: callback5, showsHorizontalScrollIndicator: false, style: tmp.list };
   const items9 = [callback(categoryIndex(7055), obj), ];
@@ -235,12 +235,12 @@ export default function _default(categories) {
     obj1[0] = items10;
     const obj2 = { style: null, source: null };
     obj2[0] = tmp.guildIcon;
-    obj2[1] = tmp17(10420);
+    obj2[1] = tmp17(10425);
     obj1[1] = tmp22(categories(1178).Icon, obj2);
     obj[3] = tmp22(closure_5, obj1);
     tmp22Result = tmp22(categories(5123).PressableOpacity, obj);
   }
   items9[1] = tmp22Result;
   obj[2] = items9;
-  return tmp20(categoryIndex(10359), obj);
+  return tmp20(categoryIndex(10364), obj);
 };

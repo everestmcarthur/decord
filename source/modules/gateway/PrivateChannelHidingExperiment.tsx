@@ -1,12 +1,12 @@
-// Module ID: 13668
-// Function ID: 13669
+// Module ID: 13672
+// Function ID: 13673
 // Name: getCachedPrivateChannelObfuscation
-// Dependencies: [1433, 2, 13669]
+// Dependencies: [1433, 2, 13673]
 // Exports: isChannelMetadataIntegrityCheckEnabled, isChannelMetadataObfuscationEnabled, useIsChannelMetadataObfuscationEnabled
 
-// Module 13668 (getCachedPrivateChannelObfuscation)
+// Module 13672 (getCachedPrivateChannelObfuscation)
 import set from "set" /* 2 */;
-import PRIVATE_CHANNEL_OBFUSCATION_KEY from "PRIVATE_CHANNEL_OBFUSCATION_KEY" /* 13669 */;
+import PRIVATE_CHANNEL_OBFUSCATION_KEY from "PRIVATE_CHANNEL_OBFUSCATION_KEY" /* 13673 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 
 const obj = { 1: null, 2: { enableObfuscation: true, enableIntegrityCheck: false }, 3: { enableObfuscation: true, enableIntegrityCheck: true } };

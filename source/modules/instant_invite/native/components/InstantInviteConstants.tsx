@@ -1,9 +1,9 @@
-// Module ID: 9856
-// Function ID: 9857
+// Module ID: 9861
+// Function ID: 9862
 // Name: SHARE_APPS_KEY
-// Dependencies: [17, 9825, 1074, 9857, 9054, 576, 1114, 9820, 9860, 4504, 9861, 1608, 9862, 4527, 9863, 1896, 7759, 1115, 9880, 9881, 4693, 7456, 4905, 9882, 9883, 9884, 9885, 9886, 9887, 9888, 9889, 2]
+// Dependencies: [17, 9830, 1074, 9862, 9059, 576, 1114, 9825, 9865, 4504, 9866, 1608, 9867, 4527, 9868, 1896, 7759, 1115, 9885, 9886, 4693, 7456, 4905, 9887, 9888, 9889, 9890, 9891, 9892, 9893, 9894, 2]
 
-// Module 9856 (SHARE_APPS_KEY)
+// Module 9861 (SHARE_APPS_KEY)
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -11,27 +11,27 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import registerAssetDefault from "registerAsset" /* 4504 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 import getInviteURLDefault from "getInviteURL" /* 7759 */;
-import registerAssetDefault2 from "registerAsset" /* 9054 */;
-import _modDef9857 from "module_9857" /* 9857 */;
-import registerAssetDefault3 from "registerAsset" /* 9860 */;
-import registerAssetDefault4 from "registerAsset" /* 9861 */;
-import registerAssetDefault5 from "registerAsset" /* 9862 */;
-import registerAssetDefault6 from "registerAsset" /* 9880 */;
-import registerAssetDefault7 from "registerAsset" /* 9881 */;
-import registerAssetDefault8 from "registerAsset" /* 9882 */;
-import registerAssetDefault9 from "registerAsset" /* 9883 */;
-import registerAssetDefault10 from "registerAsset" /* 9884 */;
-import registerAssetDefault11 from "registerAsset" /* 9885 */;
-import registerAssetDefault12 from "registerAsset" /* 9886 */;
-import registerAssetDefault13 from "registerAsset" /* 9887 */;
-import registerAssetDefault14 from "registerAsset" /* 9888 */;
-import registerAssetDefault15 from "registerAsset" /* 9889 */;
-import SHARE_APPS_KEY from "SHARE_APPS_KEY" /* 9825 */;
+import registerAssetDefault2 from "registerAsset" /* 9059 */;
+import _modDef9862 from "module_9862" /* 9862 */;
+import registerAssetDefault3 from "registerAsset" /* 9865 */;
+import registerAssetDefault4 from "registerAsset" /* 9866 */;
+import registerAssetDefault5 from "registerAsset" /* 9867 */;
+import registerAssetDefault6 from "registerAsset" /* 9885 */;
+import registerAssetDefault7 from "registerAsset" /* 9886 */;
+import registerAssetDefault8 from "registerAsset" /* 9887 */;
+import registerAssetDefault9 from "registerAsset" /* 9888 */;
+import registerAssetDefault10 from "registerAsset" /* 9889 */;
+import registerAssetDefault11 from "registerAsset" /* 9890 */;
+import registerAssetDefault12 from "registerAsset" /* 9891 */;
+import registerAssetDefault13 from "registerAsset" /* 9892 */;
+import registerAssetDefault14 from "registerAsset" /* 9893 */;
+import registerAssetDefault15 from "registerAsset" /* 9894 */;
+import SHARE_APPS_KEY from "SHARE_APPS_KEY" /* 9830 */;
 import ME from "ME" /* 1074 */;
 import isMetaQuest from "isMetaQuest" /* 1608 */;
 import set from "set" /* 1115 */;
 import sendSMS from "sendSMS" /* 4693 */;
-import showInstantInviteActionSheet from "showInstantInviteActionSheet" /* 9820 */;
+import showInstantInviteActionSheet from "showInstantInviteActionSheet" /* 9825 */;
 
 const Linking = get_ActivityIndicator.Linking;
 SHARE_APPS_KEY = SHARE_APPS_KEY.SHARE_APPS_KEY;
@@ -40,7 +40,7 @@ const SHARE_URLS = SHARE_APPS_KEY.SHARE_URLS;
 let obj = { SHARE: 0, [0]: "SHARE", COPY: 1, [1]: "COPY", QR_CODE: 2, [2]: "QR_CODE", MESSAGES: 3, [3]: "MESSAGES", MAIL: 4, [4]: "MAIL", FB_MESSENGER: 5, [5]: "FB_MESSENGER", GMAIL: 6, [6]: "GMAIL", TELEGRAM: 7, [7]: "TELEGRAM", TWITTER: 8, [8]: "TWITTER", WHATSAPP: 9, [9]: "WHATSAPP", LINE: 10, [10]: "LINE" };
 obj = {
   type: obj.SHARE,
-  icon: _modDef9857,
+  icon: _modDef9862,
   isAvailable: Promise.resolve(true),
   IconComponent: registerAssetDefault2,
   backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_500,
@@ -85,7 +85,7 @@ obj1[5] = function onPress(code) {
   obj[0] = getInviteURLDefault(code);
   obj[1] = _location;
   obj[2] = channel;
-  obj.openLazy(asyncRequireImpl(9863, dependencyMap.paths), combined, obj, "stack");
+  obj.openLazy(asyncRequireImpl(9868, dependencyMap.paths), combined, obj, "stack");
 };
 items[2] = obj1;
 let obj2 = { type: obj.MESSAGES, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
@@ -108,8 +108,8 @@ obj2[5] = function onPress(channel) {
   channel = channel.channel;
   const code = channel.code;
   ({ message, location: _location } = channel);
-  channel(9820).trackOptionClicked(code, channel, constants.SMS, _location);
-  let obj = channel(9820);
+  channel(9825).trackOptionClicked(code, channel, constants.SMS, _location);
+  let obj = channel(9825);
   const tmp = channel;
   if (obj2.isIOS()) {
     code(4527).hideActionSheet();
@@ -164,8 +164,8 @@ obj3[5] = function onPress(channel) {
   channel = channel.channel;
   const code = channel.code;
   ({ message, location: _location } = channel);
-  channel(9820).trackOptionClicked(code, channel, constants.EMAIL, _location);
-  let obj = channel(9820);
+  channel(9825).trackOptionClicked(code, channel, constants.EMAIL, _location);
+  let obj = channel(9825);
   const tmp = channel;
   if (obj2.isIOS()) {
     code(4527).hideActionSheet();

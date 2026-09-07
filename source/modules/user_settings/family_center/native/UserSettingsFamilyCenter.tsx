@@ -1,10 +1,10 @@
-// Module ID: 14869
-// Function ID: 14870
+// Module ID: 14872
+// Function ID: 14873
 // Name: FamilyCenterLoading
-// Dependencies: [32, 19, 17, 7537, 1371, 1074, 1098, 1954, 7538, 21, 4973, 4560, 576, 7162, 7182, 8645, 14870, 14871, 8647, 563, 9792, 1114, 2396, 14872, 14912, 7539, 1242, 7602, 7607, 4992, 4380, 1943, 7211, 9793, 12616, 2]
+// Dependencies: [32, 19, 17, 7537, 1371, 1074, 1098, 1954, 7538, 21, 4973, 4560, 576, 7162, 7182, 8650, 14873, 14874, 8652, 563, 9797, 1114, 2396, 14875, 14915, 7539, 1242, 7602, 7607, 4992, 4380, 1943, 7211, 9798, 12620, 2]
 // Exports: default
 
-// Module 14869 (FamilyCenterLoading)
+// Module 14872 (FamilyCenterLoading)
 import ThemesDefault from "Themes" /* 576 */;
 import Stack from "Stack" /* 4973 */;
 import closure_3 from "_slicedToArray" /* 32 */;
@@ -26,11 +26,11 @@ function FamilyCenterLoading() {
 }
 function FamilyCenter() {
   const tmp = callback3();
-  let obj = familyCenterInitialized(8645);
+  let obj = familyCenterInitialized(8650);
   const acceptedRequestsCount = obj.useAcceptedRequestsCount();
-  const tmp6 = isLoading(14870)();
-  const selectedTab = isLoading(14871)().selectedTab;
-  obj1 = familyCenterInitialized(8647);
+  const tmp6 = isLoading(14873)();
+  const selectedTab = isLoading(14874)().selectedTab;
+  obj1 = familyCenterInitialized(8652);
   const selectedTeenId = obj1.useSelectedTeenId();
   let obj2 = familyCenterInitialized(563);
   items = [closure_7];
@@ -44,19 +44,19 @@ function FamilyCenter() {
   callback = obj2.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj3 = familyCenterInitialized(9792);
+  let obj3 = familyCenterInitialized(9797);
   obj = { items: null, onPageChange: null, pageWidth: null, defaultIndex: null };
   obj = { label: null, id: null, page: null };
   const intl = familyCenterInitialized(1114).intl;
   obj[0] = intl.string(isLoading(2396).bdBmqy);
   obj[1] = FamilyCenterSubPages.ACTIVITY;
-  obj[2] = callback2(isLoading(14872), {});
+  obj[2] = callback2(isLoading(14875), {});
   const items1 = [obj, ];
   obj1 = { label: null, id: null, page: null };
   const intl2 = familyCenterInitialized(1114).intl;
   obj1[0] = intl2.string(isLoading(2396)["gVWG+6"]);
   obj1[1] = FamilyCenterSubPages.REQUESTS;
-  obj1[2] = callback2(isLoading(14912), {});
+  obj1[2] = callback2(isLoading(14915), {});
   items1[1] = obj1;
   obj[0] = items1;
   obj[1] = function onPageChange(arg0) {
@@ -114,14 +114,14 @@ function FamilyCenter() {
   obj3 = { value: tmp3(isLoading(7182).FAMILY_CENTER).analyticsLocations, children: null };
   let obj4 = { style: tmp.container, onLayout: callback, children: null };
   const tmp11 = callback(obj2.useState(0), 2);
-  const items3 = [callback2(closure_5, { style: tmp.segmentedControlContainer, children: callback2(familyCenterInitialized(9793).SegmentedControl, { state: segmentedControlState }) }), ];
+  const items3 = [callback2(closure_5, { style: tmp.segmentedControlContainer, children: callback2(familyCenterInitialized(9798).SegmentedControl, { state: segmentedControlState }) }), ];
   let obj6 = { style: tmp.container, children: null };
   if (isLoading) {
     let tmp14Result = tmp14(FamilyCenterLoading, {});
   } else {
     const obj7 = { state: null };
     obj7[0] = segmentedControlState;
-    tmp14Result = tmp14(tmp4(12616).SegmentedControlPages, obj7);
+    tmp14Result = tmp14(tmp4(12620).SegmentedControlPages, obj7);
   }
   obj6[1] = tmp14Result;
   obj6 = tmp14(tmp23, obj6);

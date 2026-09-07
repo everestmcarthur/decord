@@ -1,18 +1,18 @@
-// Module ID: 15233
-// Function ID: 15234
+// Module ID: 15236
+// Function ID: 15237
 // Name: getUsedTemplateChannelsForGuild
-// Dependencies: [5, 19, 1957, 4193, 15228, 15234, 1074, 1964, 4803, 563, 1384, 573, 9736, 7260, 13893, 2]
+// Dependencies: [5, 19, 1957, 4193, 15231, 15237, 1074, 1964, 4803, 563, 1384, 573, 9741, 7260, 13896, 2]
 // Exports: announceCreateTemplateChannels, announceDeleteTemplateChannels, createChannelsFromTemplateTierBenefits, getTemplateTierCreationAnalyticsContext, isEligibleForNewBadge, useChannelWithTemplateFallback, useSuggestedUnusedPrices
 
-// Module 15233 (getUsedTemplateChannelsForGuild)
+// Module 15236 (getUsedTemplateChannelsForGuild)
 import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 7260 */;
-import GuildFeatures2 from "GuildFeatures" /* 13893 */;
+import GuildFeatures2 from "GuildFeatures" /* 13896 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import { useMemo } from "noop" /* 19 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
 import closure_7 from "makeGroupListingIndexSubscriptionListingTag" /* 4193 */;
-import { useEditStateStore } from "AllChannelAccessOptions" /* 15228 */;
-import closure_9 from "initialize" /* 15234 */;
+import { useEditStateStore } from "AllChannelAccessOptions" /* 15231 */;
+import closure_9 from "initialize" /* 15237 */;
 import { GuildFeatures } from "ME" /* 1074 */;
 import { ChannelFlags } from "set" /* 1964 */;
 import importDefaultResult from "allSettled" /* 4803 */;

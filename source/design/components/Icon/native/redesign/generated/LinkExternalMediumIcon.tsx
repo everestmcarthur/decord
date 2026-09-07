@@ -1,14 +1,14 @@
-// Module ID: 9078
-// Function ID: 9079
+// Module ID: 9083
+// Function ID: 9084
 // Name: LinkExternalMediumIcon
-// Dependencies: [19, 21, 576, 4261, 9079, 2]
+// Dependencies: [19, 21, 576, 4261, 9084, 2]
 // Exports: LinkExternalMediumIcon
 
-// Module 9078 (LinkExternalMediumIcon)
+// Module 9083 (LinkExternalMediumIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 9079 */;
+import registerAsset from "registerAsset" /* 9084 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

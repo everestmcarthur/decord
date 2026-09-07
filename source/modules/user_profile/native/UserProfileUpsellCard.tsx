@@ -1,10 +1,10 @@
-// Module ID: 14622
-// Function ID: 14623
+// Module ID: 14625
+// Function ID: 14626
 // Name: UserProfileUpsellCard
-// Dependencies: [19, 17, 7208, 7432, 21, 4560, 576, 1178, 8662, 4556, 4987, 1093, 2]
+// Dependencies: [19, 17, 7208, 7432, 21, 4560, 576, 1178, 8667, 4556, 4987, 1093, 2]
 // Exports: default
 
-// Module 14622 (UserProfileUpsellCard)
+// Module 14625 (UserProfileUpsellCard)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -46,7 +46,7 @@ export default function UserProfileUpsellCard(headerText) {
     obj[0] = tmp.titleContainer;
     obj1 = { color: null, size: "xs" };
     obj1[0] = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
-    const items3 = [tmp2(tmp3(8662).NitroWheelIcon, obj1), ];
+    const items3 = [tmp2(tmp3(8667).NitroWheelIcon, obj1), ];
     const obj2 = { variant: "heading-sm/bold", children: null };
     obj2[1] = headerText;
     items3[1] = tmp2(tmp3(4556).Text, obj2);

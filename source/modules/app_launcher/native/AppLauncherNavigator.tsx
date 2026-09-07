@@ -1,15 +1,15 @@
-// Module ID: 12082
-// Function ID: 12083
-// Dependencies: [109, 19, 1482, 1074, 21, 7913, 4560, 576, 7162, 7182, 4427, 1609, 7000, 4740, 1484, 12083, 12127, 12153, 12195, 11215, 2]
+// Module ID: 12086
+// Function ID: 12087
+// Dependencies: [109, 19, 1482, 1074, 21, 7913, 4560, 576, 7162, 7182, 4427, 1609, 7000, 4740, 1484, 12087, 12131, 12157, 12199, 11220, 2]
 
-// Module 12082
+// Module 12086
 import ThemesDefault from "Themes" /* 576 */;
 import contextDefault from "context" /* 7162 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import AppRowLabelDefault from "AppRowLabel" /* 12083 */;
-import AppLauncherApplicationViewScreenInnerDefault from "AppLauncherApplicationViewScreenInner" /* 12127 */;
-import AppLauncherCommandViewFooterDefault from "AppLauncherCommandViewFooter" /* 12153 */;
-import DEFAULT_CONTENT_PADDINGDefault from "DEFAULT_CONTENT_PADDING" /* 12195 */;
+import AppRowLabelDefault from "AppRowLabel" /* 12087 */;
+import AppLauncherApplicationViewScreenInnerDefault from "AppLauncherApplicationViewScreenInner" /* 12131 */;
+import AppLauncherCommandViewFooterDefault from "AppLauncherCommandViewFooter" /* 12157 */;
+import DEFAULT_CONTENT_PADDINGDefault from "DEFAULT_CONTENT_PADDING" /* 12199 */;
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
@@ -108,7 +108,7 @@ const memoResult = importAllResult.memo(function AppLauncherNavigator(arg0) {
     entrypointParams = { customId: null, referrerId: null };
     const obj15 = { customId: null, referrerId: null };
   }
-  return closure_8(entrypoint(11215).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams, keyboardCloseReasonRef, onActivityItemSelected, width }, children });
+  return closure_8(entrypoint(11220).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams, keyboardCloseReasonRef, onActivityItemSelected, width }, children });
 });
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherNavigator.tsx");
 

@@ -1,18 +1,18 @@
-// Module ID: 15160
-// Function ID: 15161
+// Module ID: 15163
+// Function ID: 15164
 // Name: StyleSheet
-// Dependencies: [19, 17, 1371, 21, 4560, 576, 11483, 11496, 504, 11290, 7722, 1114, 4556, 5452, 5607, 15131, 11285, 15123, 11767, 15118, 5123, 8307, 4987, 5587, 15161, 8274, 2]
+// Dependencies: [19, 17, 1371, 21, 4560, 576, 11488, 11501, 504, 11295, 7722, 1114, 4556, 5452, 5607, 15134, 11290, 15126, 11772, 15121, 5123, 8307, 4987, 5587, 15164, 8274, 2]
 // Exports: QuestBottomSheetProgressCardInGameTask, QuestBottomSheetProgressCardPlayStreamTask, QuestBottomSheetProgressCardWatchTask
 
-// Module 15160 (StyleSheet)
+// Module 15163 (StyleSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import preloadDefault from "preload" /* 5587 */;
 import PressableCard from "PressableCard" /* 5607 */;
-import useQuests from "useQuests" /* 11483 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15118 */;
-import COMPLETION_GLOW_SHADOW_RADIUSDefault from "COMPLETION_GLOW_SHADOW_RADIUS" /* 15131 */;
-import _modDef15161 from "module_15161" /* 15161 */;
+import useQuests from "useQuests" /* 11488 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15121 */;
+import COMPLETION_GLOW_SHADOW_RADIUSDefault from "COMPLETION_GLOW_SHADOW_RADIUS" /* 15134 */;
+import _modDef15164 from "module_15164" /* 15164 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_6 from "mergeGuildAvatar" /* 1371 */;
@@ -56,9 +56,9 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
   let defaultRewardName;
   c8 = undefined;
   const tmp = callback();
-  let obj = questTaskDetails(11483);
+  let obj = questTaskDetails(11488);
   questTaskDetails = obj.useQuestTaskDetails(quest);
-  obj1 = questTaskDetails(11483);
+  obj1 = questTaskDetails(11488);
   isQuestProgressing = obj1.useIsQuestProgressing(quest);
   const userStatus = quest.userStatus;
   let completedAt;
@@ -73,17 +73,17 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
     claimedAt = userStatus2.claimedAt;
   }
   React = tmp9;
-  let tmp2Result = tmp2(11496);
+  let tmp2Result = tmp2(11501);
   const result = tmp2Result.supportedTaskPlatforms(quest);
   c4 = result;
-  tmp2Result = tmp2(11483);
+  tmp2Result = tmp2(11488);
   questFormattedDate = tmp2Result.useQuestFormattedDate(quest.config.rewardsConfig.rewardsExpireAt);
   gameTitle = quest.config.messages.gameTitle;
   const items = [gameTitle];
   const stateFromStores = questTaskDetails(504).useStateFromStores(items, () => gameTitle.getCurrentUser());
   const tmp2Result1 = questTaskDetails(504);
-  defaultRewardName = questTaskDetails(11290).getDefaultRewardName(quest.config, stateFromStores);
-  const tmp2Result2 = questTaskDetails(11290);
+  defaultRewardName = questTaskDetails(11295).getDefaultRewardName(quest.config, stateFromStores);
+  const tmp2Result2 = questTaskDetails(11295);
   const isSponsoredPlayQuestResult = questTaskDetails(7722).isSponsoredPlayQuest(quest);
   c8 = isSponsoredPlayQuestResult;
   const items1 = [questTaskDetails, tmp7, null != claimedAt, gameTitle, defaultRewardName, isQuestProgressing, result, questFormattedDate, isSponsoredPlayQuestResult];
@@ -149,7 +149,7 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
     tmp7 = isQuestProgressing;
   }
   obj1[3] = !tmp7;
-  const items2 = [defaultRewardName(isQuestProgressing(15131), obj1), ];
+  const items2 = [defaultRewardName(isQuestProgressing(15134), obj1), ];
   let tmp18Result = null != memo;
   if (tmp18Result) {
     let obj2 = { style: null, variant: "text-sm/semibold", color: "text-subtle", children: null };
@@ -178,7 +178,7 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
 export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetProgressCardWatchTask(quest) {
   quest = quest.quest;
   const tmp = callback();
-  let obj = quest(11483);
+  let obj = quest(11488);
   const items = [quest];
   const questTaskDetails = obj.useQuestTaskDetails(quest);
   const memo = React.useMemo(() => quest(closure_1_2[16]).getQuestAsset(quest, quest(closure_1_2[16]).QuestAssetType.QUEST_BAR_HERO_VIDEO), items);
@@ -186,11 +186,11 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   const memo1 = React.useMemo(() => quest(closure_1_2[16]).getQuestAsset(quest, quest(closure_1_2[16]).QuestAssetType.VIDEO_PLAYER_THUMBNAIL, undefined, true), items1);
   const items2 = [quest];
   const memo2 = React.useMemo(() => quest(closure_1_2[16]).getQuestAsset(quest, quest(closure_1_2[16]).QuestAssetType.QUEST_BAR_HERO_IMAGE), items2);
-  obj1 = quest(15123);
+  obj1 = quest(15126);
   obj = { questId: quest.id, sourceQuestContent: quest.sourceQuestContent };
   let isHeroVideoSupportedResult = null != memo;
   if (isHeroVideoSupportedResult) {
-    let tmp2Result = tmp2(11767);
+    let tmp2Result = tmp2(11772);
     isHeroVideoSupportedResult = tmp2Result.isHeroVideoSupported(memo);
   }
   const userStatus = quest.userStatus;
@@ -201,7 +201,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   if (null != completedAt) {
   } else {
   }
-  tmp2Result = tmp2(11483);
+  tmp2Result = tmp2(11488);
   let tmp11 = obj1.useWatchTaskPressHandler(obj);
   if (tmp2Result.useIsQuestAccessSuspended()) {
     tmp11 = openQuestAccessSuspendedBottomSheetDefault;
@@ -262,7 +262,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   }
   items5[1] = tmp14Result;
   const obj10 = { style: tmp.playVideoIconWrapper, children: null };
-  const items7 = [closure_7(_modDef15161, { blurTheme: "light" }), ];
+  const items7 = [closure_7(_modDef15164, { blurTheme: "light" }), ];
   const watchTaskPressHandler = obj1.useWatchTaskPressHandler(obj);
   items7[1] = closure_7(quest(8274).PlayIcon, { color: ThemesDefault.colors.WHITE });
   obj10[1] = items7;

@@ -1,15 +1,15 @@
-// Module ID: 17516
-// Function ID: 17517
+// Module ID: 17519
+// Function ID: 17520
 // Name: handleTouch
-// Dependencies: [5, 32, 19, 17, 1951, 1074, 21, 4560, 576, 7195, 1114, 6593, 1611, 5630, 4972, 8181, 8768, 1250, 4556, 4975, 9050, 9800, 2]
+// Dependencies: [5, 32, 19, 17, 1951, 1074, 21, 4560, 576, 7195, 1114, 6593, 1611, 5630, 4972, 8181, 8773, 1250, 4556, 4975, 9055, 9805, 2]
 // Exports: default
 
-// Module 17516 (handleTouch)
+// Module 17519 (handleTouch)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import showSimpleActionSheet from "showSimpleActionSheet" /* 7195 */;
-import trackImpressionDefault from "trackImpression" /* 8768 */;
+import trackImpressionDefault from "trackImpression" /* 8773 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -200,15 +200,15 @@ export default function NewTermsModal() {
     obj18[0] = top;
     items4[1] = obj18;
     obj17[0] = items4;
-    obj17[1] = tmp2(9800);
+    obj17[1] = tmp2(9805);
     obj17[2] = tmp.navbarRight.tintColor;
     obj17[3] = handleMoreActions;
     const intl9 = tmp6(1114).intl;
     obj17[5] = intl9.string(tmp6(1114).t["UKOtz+"]);
-    items3[2] = callback3(tmp2(9050), obj17);
+    items3[2] = callback3(tmp2(9055), obj17);
     obj[1] = items3;
     tmp10 = callback4(closure_6, obj);
-    const tmp2Result = tmp2(9050);
+    const tmp2Result = tmp2(9055);
   }
   return tmp10;
 };

@@ -1,9 +1,9 @@
-// Module ID: 11791
-// Function ID: 11792
+// Module ID: 11796
+// Function ID: 11797
 // Name: BundleUpdaterManager
 // Dependencies: [5, 17, 1074, 3, 1115, 81, 1896, 4745, 1242, 7602, 2]
 
-// Module 11791 (BundleUpdaterManager)
+// Module 11796 (BundleUpdaterManager)
 import timestampDefault from "timestamp" /* 3 */;
 import t from "t" /* 4745 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;

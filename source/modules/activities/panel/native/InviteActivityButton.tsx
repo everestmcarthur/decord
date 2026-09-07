@@ -1,9 +1,9 @@
-// Module ID: 17026
-// Function ID: 17027
-// Dependencies: [19, 11457, 5279, 21, 4527, 17027, 1896, 504, 11761, 4975, 10031, 1114, 2]
+// Module ID: 17029
+// Function ID: 17030
+// Dependencies: [19, 11462, 5279, 21, 4527, 17030, 1896, 504, 11766, 4975, 10036, 1114, 2]
 
-// Module 17026
-import closure_3 from "updateActivities" /* 11457 */;
+// Module 17029
+import closure_3 from "updateActivities" /* 11462 */;
 import closure_4 from "filterPlayingActivities" /* 5279 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
@@ -24,7 +24,7 @@ const memoResult = importAllResult.memo(function InviteActivityButton(applicatio
       obj = { activity: stateFromStores };
       obj.openLazy(applicationId(closure_1_2[6])(closure_1_2[5], closure_1_2.paths), "ActivityInviteSheet-" + stateFromStores.session_id, obj);
     };
-    obj[1] = stateFromStores(10031);
+    obj[1] = stateFromStores(10036);
     const intl = tmp(1114).intl;
     obj[2] = intl.string(tmp(1114).t["OzOM/q"]);
     const intl2 = tmp(1114).intl;

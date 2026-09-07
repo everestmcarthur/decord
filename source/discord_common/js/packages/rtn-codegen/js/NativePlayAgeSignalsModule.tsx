@@ -1,9 +1,9 @@
-// Module ID: 8573
-// Function ID: 8574
+// Module ID: 8576
+// Function ID: 8577
 // Name: NativePlayAgeSignalsModule
 // Dependencies: [17, 2]
 
-// Module 8573 (NativePlayAgeSignalsModule)
+// Module 8576 (NativePlayAgeSignalsModule)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 

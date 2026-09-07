@@ -1,10 +1,10 @@
-// Module ID: 10165
-// Function ID: 10166
+// Module ID: 10170
+// Function ID: 10171
 // Name: ChannelIndicator
 // Dependencies: [17, 4742, 21, 4560, 576, 4262, 2]
 // Exports: default
 
-// Module 10165 (ChannelIndicator)
+// Module 10170 (ChannelIndicator)
 import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 576 */;

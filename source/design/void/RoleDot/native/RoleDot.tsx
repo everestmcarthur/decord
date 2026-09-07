@@ -1,10 +1,10 @@
-// Module ID: 14123
-// Function ID: 14124
+// Module ID: 14126
+// Function ID: 14127
 // Name: RoleDot
 // Dependencies: [19, 17, 21, 4560, 576, 1115, 4982, 5004, 4987, 1369, 2]
 // Exports: RoleDot
 
-// Module 14123 (RoleDot)
+// Module 14126 (RoleDot)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getFontScale from "getFontScale" /* 4982 */;

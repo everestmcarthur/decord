@@ -1,8 +1,8 @@
-// Module ID: 13259
-// Function ID: 13260
-// Dependencies: [19, 17, 4576, 1957, 1908, 4209, 1371, 4579, 7876, 1074, 4581, 2010, 7877, 4585, 21, 1178, 4560, 576, 504, 11395, 13260, 7981, 13261, 10869, 13128, 4906, 13262, 1114, 13263, 12299, 12358, 4740, 4527, 13277, 1896, 5123, 7051, 13278, 8374, 4255, 1242, 12956, 7380, 4767, 5101, 7882, 7880, 4556, 13279, 10110, 2]
+// Module ID: 13263
+// Function ID: 13264
+// Dependencies: [19, 17, 4576, 1957, 1908, 4209, 1371, 4579, 7876, 1074, 4581, 2010, 7877, 4585, 21, 1178, 4560, 576, 504, 11400, 13264, 7981, 13265, 10874, 13132, 4906, 13266, 1114, 13267, 12303, 12362, 4740, 4527, 13281, 1896, 5123, 7051, 13282, 8374, 4255, 1242, 12960, 7380, 4767, 5101, 7882, 7880, 4556, 13283, 10115, 2]
 
-// Module 13259
+// Module 13263
 import ThemesDefault from "Themes" /* 576 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -74,7 +74,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
     }
     return isInChannelResult;
   }, items2);
-  tmp2Result = tmp2(11395);
+  tmp2Result = tmp2(11400);
   inappropriateConversationSafetyToolsWarningForChannel = tmp2Result.useInappropriateConversationSafetyToolsWarningForChannel(channelId);
   closure_6 = tmp7;
   const items3 = [visibleParticipants, totalParticipantCount];
@@ -105,7 +105,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
   const tmp2Result1 = channelId(504);
   const items4 = [callParticipants];
   const stateFromStores3 = channelId(504).useStateFromStores(items4, () => callParticipants.supports(constants.VIDEO));
-  const VideoGuardExperiment = tmp2(13260).VideoGuardExperiment;
+  const VideoGuardExperiment = tmp2(13264).VideoGuardExperiment;
   const videoEnabled = VideoGuardExperiment.useConfig({ location: "PrivateChannelButtons" }).videoEnabled;
   closure_7 = tmp10;
   const tmp2Result2 = channelId(504);
@@ -156,7 +156,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
     tmp15 = callParticipants.length > 0;
   }
   closure_11 = tmp15;
-  const tmp17 = screenIndex(13261)({ context: { type: "channel", channel: stateFromStores } });
+  const tmp17 = screenIndex(13265)({ context: { type: "channel", channel: stateFromStores } });
   application = tmp17.application;
   const items7 = [stateFromStores];
   callback = obj8.useCallback(() => {
@@ -274,7 +274,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
     };
     const intl5 = tmp2(1114).intl;
     obj[2] = intl5.string(tmp2(1114).t["+KSnWX"]);
-    obj[3] = callback(tmp2(12956).WindowLaunchIcon, { size: "sm" });
+    obj[3] = callback(tmp2(12960).WindowLaunchIcon, { size: "sm" });
     let tmp25Result = callback(tmp2(5123).PressableOpacity, obj);
   } else if (tmp17.isAppDM) {
     let tmp43 = null;
@@ -421,9 +421,9 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
             const intl2 = tmp2(1114).intl;
             obj10[3] = intl2.string(tmp2(1114).t.oCqlGG);
             if (videoEnabled) {
-              let VideoDenyIcon = tmp2(10110).VideoIcon;
+              let VideoDenyIcon = tmp2(10115).VideoIcon;
             } else {
-              VideoDenyIcon = tmp2(13279).VideoDenyIcon;
+              VideoDenyIcon = tmp2(13283).VideoDenyIcon;
             }
             obj10[5] = tmp33(VideoDenyIcon, { size: "sm" });
             tmp33Result = tmp33(tmp2(5123).PressableOpacity, obj10);

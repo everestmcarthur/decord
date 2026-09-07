@@ -1,10 +1,10 @@
-// Module ID: 13906
-// Function ID: 13907
+// Module ID: 13909
+// Function ID: 13910
 // Name: _checkForNewerBuild
 // Dependencies: [5, 4541, 3, 1272, 4255, 1115, 1093, 2]
 // Exports: checkForNewerBuild, openBuildInstaller
 
-// Module 13906 (_checkForNewerBuild)
+// Module 13909 (_checkForNewerBuild)
 import timestampDefault from "timestamp" /* 3 */;
 import keys from "keys" /* 1093 */;
 import _mod4255 from "module_4255" /* 4255 */;

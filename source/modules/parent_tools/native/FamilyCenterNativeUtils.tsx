@@ -1,10 +1,10 @@
-// Module ID: 11913
-// Function ID: 11914
+// Module ID: 11918
+// Function ID: 11919
 // Name: FAMILY_CENTER_REQUEST_MODAL_KEY
-// Dependencies: [4774, 7538, 1074, 1242, 7539, 4763, 11914, 1896, 2]
+// Dependencies: [4774, 7538, 1074, 1242, 7539, 4763, 11919, 1896, 2]
 // Exports: handleFamilyCenterQRCodeScan, resumeFamilyCenterConnection
 
-// Module 11913 (FAMILY_CENTER_REQUEST_MODAL_KEY)
+// Module 11918 (FAMILY_CENTER_REQUEST_MODAL_KEY)
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4763 from "module_4763" /* 4763 */;
@@ -35,7 +35,7 @@ export const handleFamilyCenterQRCodeScan = function handleFamilyCenterQRCodeSca
     obj = { userId: null, linkCode: null };
     obj[0] = match[1];
     obj[1] = match[2];
-    _modDef4763.pushLazy(asyncRequireImpl(11914, dependencyMap.paths), obj, c7);
+    _modDef4763.pushLazy(asyncRequireImpl(11919, dependencyMap.paths), obj, c7);
   }
 };
 export const resumeFamilyCenterConnection = function resumeFamilyCenterConnection() {
@@ -46,7 +46,7 @@ export const resumeFamilyCenterConnection = function resumeFamilyCenterConnectio
     obj.popWithKey(c7);
     obj = { userId: null, linkCode: null };
     ({ teenId: obj3[0], linkCode: obj3[1] } = pendingConnection);
-    _modDef4763.pushLazy(asyncRequireImpl(11914, dependencyMap.paths), obj, c7);
+    _modDef4763.pushLazy(asyncRequireImpl(11919, dependencyMap.paths), obj, c7);
     flag = true;
     const obj2 = _modDef4763;
   }

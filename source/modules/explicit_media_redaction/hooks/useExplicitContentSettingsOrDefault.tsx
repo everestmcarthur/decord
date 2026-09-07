@@ -1,10 +1,10 @@
-// Module ID: 14820
-// Function ID: 14821
+// Module ID: 14823
+// Function ID: 14824
 // Name: useExplicitContentSettingOrDefault
 // Dependencies: [1221, 563, 7298, 7301, 2]
 // Exports: useExplicitContentSettingOrDefault, useGoreContentSettingOrDefault
 
-// Module 14820 (useExplicitContentSettingOrDefault)
+// Module 14823 (useExplicitContentSettingOrDefault)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
 import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 7298 */;
 import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 7301 */;

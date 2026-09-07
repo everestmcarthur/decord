@@ -1,17 +1,17 @@
-// Module ID: 17782
-// Function ID: 17783
+// Module ID: 17785
+// Function ID: 17786
 // Name: TierTemplatesRenderer
-// Dependencies: [32, 19, 17, 15234, 17729, 1074, 21, 4560, 576, 4556, 17783, 563, 15212, 15213, 12203, 17789, 1611, 1483, 1242, 4740, 17739, 10250, 1114, 5624, 8768, 1250, 17724, 1178, 2]
+// Dependencies: [32, 19, 17, 15237, 17732, 1074, 21, 4560, 576, 4556, 17786, 563, 15215, 15216, 12207, 17792, 1611, 1483, 1242, 4740, 17742, 10255, 1114, 5624, 8773, 1250, 17727, 1178, 2]
 // Exports: default
 
-// Module 17782 (TierTemplatesRenderer)
+// Module 17785 (TierTemplatesRenderer)
 import ThemesDefault from "Themes" /* 576 */;
-import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 15213 */;
+import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 15216 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_10 from "initialize" /* 15234 */;
-import { usePriceTiers } from "usePriceTiers" /* 17729 */;
+import closure_10 from "initialize" /* 15237 */;
+import { usePriceTiers } from "usePriceTiers" /* 17732 */;
 import ME from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -49,7 +49,7 @@ function TierTemplatesRenderer(groupListingId) {
           const style = { height: "100%", width: closure_16 };
           return callback(closure_8, { style });
         };
-        obj[6] = guildId(17783).CARD_WIDTH + c16;
+        obj[6] = guildId(17786).CARD_WIDTH + c16;
         obj[7] = function renderItem(item) {
           return closure_1_14(groupListingId(closure_1_3[10]), { template: item.item, priceTiers: tiers, guildId, groupListingId, editGroupId: guildId });
         };

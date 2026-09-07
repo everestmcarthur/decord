@@ -1,10 +1,10 @@
-// Module ID: 12059
-// Function ID: 12060
+// Module ID: 12063
+// Function ID: 12064
 // Name: useEmbeddedApps
 // Dependencies: [19, 4600, 1371, 1956, 504, 4189, 7168, 1369, 2]
 // Exports: default, useEmbeddedAppsByChannel, useEmbeddedAppsWithPresence
 
-// Module 12059 (useEmbeddedApps)
+// Module 12063 (useEmbeddedApps)
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7168 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "sortActivity" /* 4600 */;

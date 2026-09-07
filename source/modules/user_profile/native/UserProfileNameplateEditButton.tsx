@@ -1,10 +1,10 @@
-// Module ID: 14634
-// Function ID: 14635
+// Module ID: 14637
+// Function ID: 14638
 // Name: UserProfileNameplateEditButton
-// Dependencies: [19, 17, 2021, 7208, 1085, 21, 4560, 576, 504, 8166, 14635, 4527, 14636, 1896, 14618, 1114, 8818, 1178, 13172, 2]
+// Dependencies: [19, 17, 2021, 7208, 1085, 21, 4560, 576, 504, 8166, 14638, 4527, 14639, 1896, 14621, 1114, 8823, 1178, 13176, 2]
 // Exports: default
 
-// Module 14634 (UserProfileNameplateEditButton)
+// Module 14637 (UserProfileNameplateEditButton)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
@@ -62,7 +62,7 @@ export default function UserProfileNameplateEditButton(user) {
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const fetchNameplate = user(14635).useFetchNameplate(skuId);
+  const fetchNameplate = user(14638).useFetchNameplate(skuId);
   ({ nameplateProduct, nameplateData, nameplateRecord, isFetching } = fetchNameplate);
   if (null != guildId) {
     let nameplate2;
@@ -91,7 +91,7 @@ export default function UserProfileNameplateEditButton(user) {
     obj[1] = intl5.string(tmp3(1114).t.MKDeyL);
     obj[2] = NOOP;
     obj[3] = <closure_4 animating size="large" />;
-    return jsx(tmp3(14618).UserProfileEditFormButton, { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true });
+    return jsx(tmp3(14621).UserProfileEditFormButton, { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true });
   } else {
     let name;
     if (nameplateProduct != null) {
@@ -126,15 +126,15 @@ export default function UserProfileNameplateEditButton(user) {
           obj4[0] = tmp.previewContainer;
           const obj5 = { nameplate: null, fullOpacity: true, isSquarePreview: true };
           obj5[0] = nameplateData;
-          obj4[1] = tmp15(guildId(8818), obj5);
+          obj4[1] = tmp15(guildId(8823), obj5);
           let tmp15Result = tmp15(closure_5, obj4);
         }
         obj2[4] = tmp15Result;
-        return tmp15(tmp3(14618).UserProfileEditFormButton, obj2);
+        return tmp15(tmp3(14621).UserProfileEditFormButton, obj2);
       }
     }
     const obj6 = { source: null, style: null };
-    obj6[0] = guildId(13172);
+    obj6[0] = guildId(13176);
     obj6[1] = tmp.noneIcon;
     tmp15Result = tmp15(tmp3(1178).Icon, obj6);
   }

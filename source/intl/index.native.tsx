@@ -1,7 +1,7 @@
 // Module ID: 1114
 // Function ID: 1115
 // Name: getSystemLocale
-// Dependencies: [19, 1074, 21, 17, 1115, 1117, 1118, 1155, 1178, 14184, 2, 14185, 14188]
+// Dependencies: [19, 1074, 21, 17, 1115, 1117, 1118, 1155, 1178, 14187, 2, 14188, 14191]
 // Exports: getSystemLocale, useSyncMessages
 
 // Module 1114 (getSystemLocale)
@@ -10,8 +10,8 @@ import noopAll from "noop" /* 19 */;
 import enforcing from "enforcing" /* 1117 */;
 import getAvailableLocales2 from "getAvailableLocales" /* 1118 */;
 import Button from "Button" /* 1178 */;
-import IntlLink from "IntlLink" /* 14184 */;
-import messagesProxyDefault from "messagesProxy" /* 14188 */;
+import IntlLink from "IntlLink" /* 14187 */;
+import messagesProxyDefault from "messagesProxy" /* 14191 */;
 import { Fonts } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 import set from "set" /* 1115 */;

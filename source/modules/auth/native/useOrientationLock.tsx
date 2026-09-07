@@ -1,10 +1,10 @@
-// Module ID: 16001
-// Function ID: 16002
+// Module ID: 16004
+// Function ID: 16005
 // Name: usePortraitOrientationOnly
 // Dependencies: [19, 4539, 1608, 6944, 8332, 2]
 // Exports: default
 
-// Module 16001 (usePortraitOrientationOnly)
+// Module 16004 (usePortraitOrientationOnly)
 import useWideAuthViewDefault from "useWideAuthView" /* 6944 */;
 import closure_3 from "noop" /* 19 */;
 

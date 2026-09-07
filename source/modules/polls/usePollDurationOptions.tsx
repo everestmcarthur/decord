@@ -1,10 +1,10 @@
-// Module ID: 12200
-// Function ID: 12201
+// Module ID: 12204
+// Function ID: 12205
 // Name: usePollDurationOptions
 // Dependencies: [7829, 1114, 2]
 // Exports: default
 
-// Module 12200 (usePollDurationOptions)
+// Module 12204 (usePollDurationOptions)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7829 */;

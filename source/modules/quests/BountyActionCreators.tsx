@@ -1,10 +1,10 @@
-// Module ID: 11524
-// Function ID: 11525
+// Module ID: 11529
+// Function ID: 11530
 // Name: fetchBountiesAndDispatch
-// Dependencies: [5, 7700, 4609, 7702, 7703, 1074, 3, 573, 5451, 11284, 7701, 4462, 7461, 7721, 1272, 5447, 7699, 2]
+// Dependencies: [5, 7700, 4609, 7702, 7703, 1074, 3, 573, 5451, 11289, 7701, 4462, 7461, 7721, 1272, 5447, 7699, 2]
 // Exports: claimBountyReward, dismissAdContent, fetchBountyPreview, fetchDockCreativePreview, fetchQuestHomeBounties, setBountyVideoProgress
 
-// Module 11524 (fetchBountiesAndDispatch)
+// Module 11529 (fetchBountiesAndDispatch)
 import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import getOrRefreshAdSession from "getOrRefreshAdSession" /* 7721 */;
@@ -428,7 +428,7 @@ function _fetchDockCreativePreview() {
                     tmp = dependencyMap;
                     const obj17 = callback2(573);
                     tmp = c6;
-                    obj8[1] = callback(11284).bountyFromServer(c6.creative_content);
+                    obj8[1] = callback(11289).bountyFromServer(c6.creative_content);
                     obj7[1] = obj8;
                     let ad_id;
                     if (closure_5 != null) {
@@ -510,7 +510,7 @@ function _fetchDockCreativePreview() {
                     obj7[9] = dependencyMap;
                     obj17.dispatch(obj7);
                     c6 = 0;
-                    const obj20 = callback(11284);
+                    const obj20 = callback(11289);
                   }
                 }
               }

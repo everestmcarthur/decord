@@ -1,10 +1,10 @@
-// Module ID: 13043
-// Function ID: 13044
+// Module ID: 13047
+// Function ID: 13048
 // Name: UserVoiceSettings
-// Dependencies: [19, 17, 5012, 1908, 4199, 1074, 1085, 21, 4560, 8190, 504, 4707, 9170, 9986, 9089, 7207, 1114, 9127, 10005, 13044, 12528, 13046, 10110, 6610, 4556, 12620, 9212, 8593, 4527, 9154, 9150, 2]
+// Dependencies: [19, 17, 5012, 1908, 4199, 1074, 1085, 21, 4560, 8190, 504, 4707, 9175, 9991, 9094, 7207, 1114, 9132, 10010, 13048, 12532, 13050, 10115, 6610, 4556, 12624, 9217, 8598, 4527, 9159, 9155, 2]
 // Exports: default
 
-// Module 13043 (UserVoiceSettings)
+// Module 13047 (UserVoiceSettings)
 import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "handleSoundCreateOrUpdate" /* 5012 */;
@@ -221,9 +221,9 @@ function CurrentUserVoiceSettings(channel) {
     obj = { label: null, icon: null, onPress: null };
     obj[0] = stringResult;
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9127).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(9132).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(10005).MicrophoneIcon;
+      MicrophoneIcon = tmp2(10010).MicrophoneIcon;
     }
     obj1 = { children: null };
     obj[1] = MicrophoneIcon;

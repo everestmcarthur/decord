@@ -1,14 +1,14 @@
-// Module ID: 16896
-// Function ID: 16897
+// Module ID: 16899
+// Function ID: 16900
 // Name: RestrictedMessagePreviewHeader
-// Dependencies: [19, 17, 12443, 21, 4560, 576, 7162, 4404, 8179, 7190, 4258, 4527, 12601, 1896, 8191, 7342, 4763, 5123, 1114, 1178, 4556, 16879, 5584, 16897, 2]
+// Dependencies: [19, 17, 12447, 21, 4560, 576, 7162, 4404, 8179, 7190, 4258, 4527, 12605, 1896, 8191, 7342, 4763, 5123, 1114, 1178, 4556, 16882, 5584, 16900, 2]
 // Exports: default
 
-// Module 16896 (RestrictedMessagePreviewHeader)
+// Module 16899 (RestrictedMessagePreviewHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import { MOBILE_MESSAGE_REQUESTS_MODAL_KEY as closure_5 } from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL" /* 12443 */;
+import { MOBILE_MESSAGE_REQUESTS_MODAL_KEY as closure_5 } from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL" /* 12447 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

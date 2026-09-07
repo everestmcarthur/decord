@@ -1,16 +1,16 @@
-// Module ID: 15326
-// Function ID: 15327
+// Module ID: 15329
+// Function ID: 15330
 // Name: items
-// Dependencies: [32, 19, 1074, 1954, 21, 1943, 7388, 1178, 1114, 11468, 15327, 15329, 2]
+// Dependencies: [32, 19, 1074, 1954, 21, 1943, 7388, 1178, 1114, 11473, 15330, 15332, 2]
 
-// Module 15326 (items)
+// Module 15329 (items)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7388 */;
 import closure_2 from "_slicedToArray" /* 32 */;
 import closure_3 from "noop" /* 19 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11468 */;
+import createToggle from "createToggle" /* 11473 */;
 
 require = arg1;
 let items = [require("DismissibleContent").DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
@@ -66,7 +66,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCESSIBILITY,
   getComponent() {
-    return require(15329) /* SettingsAccessibilityScreen */.default;
+    return require(15332) /* SettingsAccessibilityScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

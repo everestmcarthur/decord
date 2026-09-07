@@ -1,10 +1,10 @@
-// Module ID: 14688
-// Function ID: 14689
+// Module ID: 14691
+// Function ID: 14692
 // Name: trackSafetySettingsNoticeAnalytics
 // Dependencies: [1074, 1242, 2]
 // Exports: trackSafetySettingsNoticeAnalytics
 
-// Module 14688 (trackSafetySettingsNoticeAnalytics)
+// Module 14691 (trackSafetySettingsNoticeAnalytics)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

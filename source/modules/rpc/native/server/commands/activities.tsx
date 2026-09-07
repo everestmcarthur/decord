@@ -1,12 +1,12 @@
-// Module ID: 14513
-// Function ID: 14514
+// Module ID: 14516
+// Function ID: 14517
 // Name: RPC_LOCAL_SCOPE
-// Dependencies: [5, 4465, 1074, 4770, 8339, 14480, 9554, 9820, 14468, 5139, 5150, 9504, 4462, 2]
+// Dependencies: [5, 4465, 1074, 4770, 8339, 14483, 9559, 9825, 14471, 5139, 5150, 9509, 4462, 2]
 
-// Module 14513 (RPC_LOCAL_SCOPE)
-import prototypeDefault from "prototype" /* 9554 */;
-import showInstantInviteActionSheet from "showInstantInviteActionSheet" /* 9820 */;
-import validateOpenInviteDialog from "validateOpenInviteDialog" /* 14480 */;
+// Module 14516 (RPC_LOCAL_SCOPE)
+import prototypeDefault from "prototype" /* 9559 */;
+import showInstantInviteActionSheet from "showInstantInviteActionSheet" /* 9825 */;
+import validateOpenInviteDialog from "validateOpenInviteDialog" /* 14483 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
 import ME from "ME" /* 1074 */;

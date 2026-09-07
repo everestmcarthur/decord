@@ -1,9 +1,9 @@
-// Module ID: 10706
-// Function ID: 10707
+// Module ID: 10711
+// Function ID: 10712
 // Name: set
 // Dependencies: [2, 8060]
 
-// Module 10706 (set)
+// Module 10711 (set)
 import set from "set" /* 2 */;
 
 const result = set.fileFinishedImporting("modules/premium/hooks/usePremiumDiscountOffer.native.tsx");

@@ -1,9 +1,9 @@
-// Module ID: 8874
-// Function ID: 8875
+// Module ID: 8879
+// Function ID: 8880
 // Name: noop
 // Dependencies: [19, 17, 21, 1115, 6852, 4296, 6851, 6627, 2]
 
-// Module 8874 (noop)
+// Module 8879 (noop)
 import _mod6852 from "module_6852" /* 6852 */;
 import importAllResult from "noop" /* 19 */;
 import { RefreshControl } from "get ActivityIndicator" /* 17 */;

@@ -1,10 +1,10 @@
-// Module ID: 13181
-// Function ID: 13182
+// Module ID: 13185
+// Function ID: 13186
 // Name: formatSharedClientThemeData
 // Dependencies: [17, 8051, 1114, 2626, 2]
 // Exports: formatSharedClientThemeData
 
-// Module 13181 (formatSharedClientThemeData)
+// Module 13185 (formatSharedClientThemeData)
 import set from "set" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;

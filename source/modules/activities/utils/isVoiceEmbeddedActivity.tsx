@@ -1,10 +1,10 @@
-// Module ID: 9526
-// Function ID: 9527
+// Module ID: 9531
+// Function ID: 9532
 // Name: isVoiceEmbeddedActivity
 // Dependencies: [502, 1957, 2011, 4579, 1094, 2]
 // Exports: default
 
-// Module 9526 (isVoiceEmbeddedActivity)
+// Module 9531 (isVoiceEmbeddedActivity)
 import set from "set" /* 1094 */;
 import closure_2 from "fetchFingerprint" /* 502 */;
 import closure_3 from "ensureGuildLoaded" /* 1957 */;

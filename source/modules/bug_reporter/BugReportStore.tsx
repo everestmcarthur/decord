@@ -1,9 +1,9 @@
-// Module ID: 10184
-// Function ID: 10185
+// Module ID: 10189
+// Function ID: 10190
 // Name: zustandStore
 // Dependencies: [4429, 2]
 
-// Module 10184 (zustandStore)
+// Module 10189 (zustandStore)
 import set from "set" /* 2 */;
 import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4429 */;
 

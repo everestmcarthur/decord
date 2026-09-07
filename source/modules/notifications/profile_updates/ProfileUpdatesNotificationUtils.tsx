@@ -1,10 +1,10 @@
-// Module ID: 15506
-// Function ID: 15507
+// Module ID: 15509
+// Function ID: 15510
 // Name: onProfileUpdatesNotificationSettingsChanged
 // Dependencies: [4212, 1074, 1935, 1242, 2]
 // Exports: onProfileUpdatesNotificationSettingsChanged
 
-// Module 15506 (onProfileUpdatesNotificationSettingsChanged)
+// Module 15509 (onProfileUpdatesNotificationSettingsChanged)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

@@ -1,16 +1,16 @@
-// Module ID: 17463
-// Function ID: 17464
+// Module ID: 17466
+// Function ID: 17467
 // Name: ConnectGuardianShareScreen
-// Dependencies: [19, 17, 7537, 21, 4560, 576, 1114, 2396, 4258, 4763, 11916, 563, 14880, 8421, 8422, 4973, 4556, 14881, 5577, 5624, 11928, 2]
+// Dependencies: [19, 17, 7537, 21, 4560, 576, 1114, 2396, 4258, 4763, 11921, 563, 14883, 8421, 8422, 4973, 4556, 14884, 5577, 5624, 11933, 2]
 // Exports: default
 
-// Module 17463 (ConnectGuardianShareScreen)
+// Module 17466 (ConnectGuardianShareScreen)
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import messagesProxyDefault from "messagesProxy" /* 2396 */;
 import _modDef4763 from "module_4763" /* 4763 */;
-import Modal from "Modal" /* 11928 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14880 */;
+import Modal from "Modal" /* 11933 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14883 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_5 from "freshTeenActivityWithMap" /* 7537 */;
@@ -28,7 +28,7 @@ function ConnectGuardianShareScreen() {
     let arr = callback(4763);
     arr = arr.pop();
   }, []);
-  obj1 = getLinkCode(11916);
+  obj1 = getLinkCode(11921);
   getLinkCode = obj1.useFamilyCenterActions({ onError: callback }).getLinkCode;
   let obj2 = getLinkCode(563);
   const items = [closure_5];
@@ -63,7 +63,7 @@ function ConnectGuardianShareScreen() {
       obj5[1] = stateFromStores;
       obj5[2] = stateFromStores1;
       obj5[3] = getLinkCode;
-      let tmp11Result = tmp11(tmp2(14881).ConnectGuardianCard, obj5);
+      let tmp11Result = tmp11(tmp2(14884).ConnectGuardianCard, obj5);
     }
     const obj6 = { children: null };
     const obj7 = { children: null };

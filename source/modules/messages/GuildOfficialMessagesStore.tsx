@@ -1,9 +1,9 @@
-// Module ID: 13720
-// Function ID: 13721
+// Module ID: 13724
+// Function ID: 13725
 // Name: updateGuildState
 // Dependencies: [1957, 2021, 1979, 4209, 1371, 1074, 4783, 1384, 504, 573, 2]
 
-// Module 13720 (updateGuildState)
+// Module 13724 (updateGuildState)
 import initializeDefault from "initialize" /* 504 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import hasFlag from "hasFlag" /* 1384 */;

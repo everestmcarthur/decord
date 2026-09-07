@@ -1,10 +1,10 @@
-// Module ID: 15811
-// Function ID: 15812
+// Module ID: 15814
+// Function ID: 15815
 // Name: useCollectiblesShopDeepLinkProps
 // Dependencies: [19, 7542, 7559, 504, 7553, 2]
 // Exports: useCollectiblesShopDeepLinkProps
 
-// Module 15811 (useCollectiblesShopDeepLinkProps)
+// Module 15814 (useCollectiblesShopDeepLinkProps)
 import set from "set" /* 2 */;
 import noop from "noop" /* 19 */;
 import closure_3 from "updateCategoriesAndProducts" /* 7542 */;

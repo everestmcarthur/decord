@@ -1,10 +1,10 @@
-// Module ID: 11220
-// Function ID: 11221
+// Module ID: 11225
+// Function ID: 11226
 // Name: NameplatePreview
-// Dependencies: [19, 17, 4552, 2021, 21, 4560, 576, 1886, 8217, 8159, 504, 4404, 4794, 1178, 8818, 10899, 10900, 4556, 2]
+// Dependencies: [19, 17, 4552, 2021, 21, 4560, 576, 1886, 8217, 8159, 504, 4404, 4794, 1178, 8823, 10904, 10905, 4556, 2]
 // Exports: NameplatePreview
 
-// Module 11220 (NameplatePreview)
+// Module 11225 (NameplatePreview)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
@@ -105,7 +105,7 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   obj = { style: tmp.container, "aria-hidden": aria_hidden["aria-hidden"], children: null };
   const memo = stateFromStores.useMemo(() => closure_1_7(user(user[13]).Avatar, { style: user.avatar, user, guildId, size: user(user[13]).AvatarSizes.NORMAL, avatarDecoration: pendingAvatarDecoration, animate: !stateFromStores, autoStatusCutout: true, "aria-hidden": true }), items2);
   obj1 = { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 };
-  const items3 = [callback(guildId(8818), obj1), , ];
+  const items3 = [callback(guildId(8823), obj1), , ];
   obj2 = { style: tmp.avatar, children: memo };
   items3[1] = callback(pendingAvatarDecoration, obj2);
   obj3 = { style: tmp.content, children: null };
@@ -115,10 +115,10 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     obj4[0] = user.id;
     obj4[1] = guildId;
     obj4[2] = pendingGlobalName;
-    obj4[4] = tmp4(10900).EffectDisplayType.STATIC;
+    obj4[4] = tmp4(10905).EffectDisplayType.STATIC;
     obj4[6] = pendingDisplayNameStyles;
-    tmp19Result = tmp19(tmp7(10899), obj4);
-    const tmp7Result = tmp7(10899);
+    tmp19Result = tmp19(tmp7(10904), obj4);
+    const tmp7Result = tmp7(10904);
   }
   const items4 = [tmp19Result, ];
   tmp19Result = null == tmp15;

@@ -1,9 +1,9 @@
-// Module ID: 15205
-// Function ID: 15206
+// Module ID: 15208
+// Function ID: 15209
 // Name: MAX_SUBSCRIPTION_TIERS
 // Dependencies: [1373, 1085, 2]
 
-// Module 15205 (MAX_SUBSCRIPTION_TIERS)
+// Module 15208 (MAX_SUBSCRIPTION_TIERS)
 import set from "set" /* 2 */;
 import sum from "sum" /* 1085 */;
 import GuildFeatures from "GuildFeatures" /* 1373 */;

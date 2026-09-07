@@ -1,10 +1,10 @@
-// Module ID: 16023
-// Function ID: 16024
+// Module ID: 16026
+// Function ID: 16027
 // Name: withEqualityFn
-// Dependencies: [1074, 1244, 4296, 4561, 16024, 4184, 2]
+// Dependencies: [1074, 1244, 4296, 4561, 16027, 4184, 2]
 // Exports: computeMaxX
 
-// Module 16023 (withEqualityFn)
+// Module 16026 (withEqualityFn)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import isIterable from "isIterable" /* 4184 */;
@@ -33,9 +33,9 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       if (tmp2) {
         num = tmp.maxX;
       }
-      const result1 = panelX.set(callback(4561).withTiming(num, tmp9(16024).HOME_DRAWER_SETTLE_TIMING));
+      const result1 = panelX.set(callback(4561).withTiming(num, tmp9(16027).HOME_DRAWER_SETTLE_TIMING));
       const obj3 = callback(4561);
-      const result2 = snapX.set(callback(4561).withTiming(0, tmp9(16024).HOME_DRAWER_SETTLE_TIMING));
+      const result2 = snapX.set(callback(4561).withTiming(0, tmp9(16027).HOME_DRAWER_SETTLE_TIMING));
       const obj = {};
       const merged = Object.assign(gestureState.get());
       obj.active = false;

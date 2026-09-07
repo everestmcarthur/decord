@@ -1,14 +1,14 @@
-// Module ID: 11243
-// Function ID: 11244
+// Module ID: 11248
+// Function ID: 11249
 // Name: PencilSparkleIcon
-// Dependencies: [19, 21, 576, 4261, 11244, 2]
+// Dependencies: [19, 21, 576, 4261, 11249, 2]
 // Exports: PencilSparkleIcon
 
-// Module 11243 (PencilSparkleIcon)
+// Module 11248 (PencilSparkleIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 11244 */;
+import registerAsset from "registerAsset" /* 11249 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

@@ -1,10 +1,10 @@
-// Module ID: 17073
-// Function ID: 17074
+// Module ID: 17076
+// Function ID: 17077
 // Name: useSoundboardSoundLock
-// Dependencies: [19, 1371, 5014, 504, 7344, 4218, 17074, 7850, 7853, 4259, 10070, 1114, 2]
+// Dependencies: [19, 1371, 5014, 504, 7344, 4218, 17077, 7850, 7853, 4259, 10075, 1114, 2]
 // Exports: useSoundboardSoundLock
 
-// Module 17073 (useSoundboardSoundLock)
+// Module 17076 (useSoundboardSoundLock)
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;

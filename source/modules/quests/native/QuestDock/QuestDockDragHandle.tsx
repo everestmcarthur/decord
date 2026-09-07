@@ -1,13 +1,13 @@
-// Module ID: 15188
-// Function ID: 15189
+// Module ID: 15191
+// Function ID: 15192
 // Name: QuestDockMode
-// Dependencies: [19, 17, 5444, 15095, 21, 4560, 15096, 15097, 4296, 4974, 7073, 15094, 7154, 1114, 2]
+// Dependencies: [19, 17, 5444, 15098, 21, 4560, 15099, 15100, 4296, 4974, 7073, 15097, 7154, 1114, 2]
 
-// Module 15188 (QuestDockMode)
+// Module 15191 (QuestDockMode)
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import { QuestDockMode } from "QuestsExperimentLocations" /* 5444 */;
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15095 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 15098 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 
@@ -44,11 +44,11 @@ let closure_14 = { code: "function QuestDockDragHandleTsx5(){const{withSpring,is
 const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   ({ isExpanded, variant } = arg0);
   const tmp = callback();
-  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(15096).QuestDockGestureContext);
+  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(15099).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const windowDimensions = context.windowDimensions;
   dependencyMap = tmp5;
-  let obj = activeQuestDockMode(15097);
+  let obj = activeQuestDockMode(15100);
   youBarHorizontalMargin = obj.useYouBarHorizontalMargin();
   obj1 = activeQuestDockMode(4296);
   const fn = function n() {
@@ -140,7 +140,7 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   const obj4 = { style: animatedStyle1, layout: null, children: null };
   const tmp13 = windowDimensions(7073);
   const tmp14 = closure_8;
-  obj4[1] = activeQuestDockMode(15094).dimensionsLayoutTransition;
+  obj4[1] = activeQuestDockMode(15097).dimensionsLayoutTransition;
   obj5 = { style: items1, children: null };
   items1 = [tmp.dragHandleOverlay, animatedStyle3];
   const tmp15 = windowDimensions(7073);

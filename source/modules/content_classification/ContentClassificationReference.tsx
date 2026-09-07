@@ -1,10 +1,10 @@
-// Module ID: 9480
-// Function ID: 9481
+// Module ID: 9485
+// Function ID: 9486
 // Name: isAgeRestrictedClassificationReference
 // Dependencies: [5112, 2]
 // Exports: isAgeRestrictedClassificationReference
 
-// Module 9480 (isAgeRestrictedClassificationReference)
+// Module 9485 (isAgeRestrictedClassificationReference)
 import set from "set" /* 2 */;
 import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5112 */;
 

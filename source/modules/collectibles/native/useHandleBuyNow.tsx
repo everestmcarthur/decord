@@ -1,10 +1,10 @@
-// Module ID: 13166
-// Function ID: 13167
+// Module ID: 13170
+// Function ID: 13171
 // Name: useHandleBuyNow
-// Dependencies: [5, 32, 19, 1074, 3, 11014, 7541, 4527, 11077, 1608, 7316, 4233, 4259, 1114, 2]
+// Dependencies: [5, 32, 19, 1074, 3, 11019, 7541, 4527, 11082, 1608, 7316, 4233, 4259, 1114, 2]
 // Exports: default, useHandleBuyNow
 
-// Module 13166 (useHandleBuyNow)
+// Module 13170 (useHandleBuyNow)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -69,7 +69,7 @@ function useHandleBuyNow(product) {
             callback(false);
             obj = v0(4527);
             obj.hideAllActionSheets();
-            obj1 = v0(11077);
+            obj1 = v0(11082);
             const obj3 = { product: null, useCategoryImage: true, stageCollectibleChangeForEditProfile: null };
             obj3[0] = closure_0;
             obj3[2] = closure_3;

@@ -1,10 +1,10 @@
-// Module ID: 16403
-// Function ID: 16404
+// Module ID: 16406
+// Function ID: 16407
 // Name: IconWithBadge
-// Dependencies: [19, 17, 7636, 21, 4560, 576, 504, 16394, 1178, 8813, 1116, 5628, 5680, 4513, 2]
+// Dependencies: [19, 17, 7636, 21, 4560, 576, 504, 16397, 1178, 8818, 1116, 5628, 5680, 4513, 2]
 // Exports: CloseIconWithBadgeOnSide, LeftBackIconWithBadge, SettingsLeftIconWithBadge
 
-// Module 16403 (IconWithBadge)
+// Module 16406 (IconWithBadge)
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
 import XLargeIcon from "XLargeIcon" /* 4513 */;
@@ -33,7 +33,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(16394)().value;
+    num2 = memo(16397)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -75,7 +75,7 @@ function IconWithBadge(includeNotificationsCount) {
   } else {
     items4 = [];
   }
-  const tmp5Result = memo(8813);
+  const tmp5Result = memo(8818);
   const items5 = [closure_6(tmp5Result, { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, obj3) }), ];
   let tmp9Result = null;
   if (sum > 0) {

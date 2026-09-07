@@ -1,10 +1,10 @@
-// Module ID: 13290
-// Function ID: 13291
+// Module ID: 13294
+// Function ID: 13295
 // Name: IntroDemo
-// Dependencies: [17, 7151, 21, 4560, 576, 7860, 13291, 13292, 4556, 1114, 13293, 11707, 4523, 7209, 2]
+// Dependencies: [17, 7151, 21, 4560, 576, 7860, 13295, 13296, 4556, 1114, 13297, 11712, 4523, 7209, 2]
 // Exports: default
 
-// Module 13290 (IntroDemo)
+// Module 13294 (IntroDemo)
 import set from "set" /* 2 */;
 import ThemesDefault from "Themes" /* 576 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
@@ -13,8 +13,8 @@ import Text from "Text" /* 4556 */;
 import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7209 */;
 import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7860 */;
-import BookmarkIcon from "BookmarkIcon" /* 11707 */;
-import setDefault from "set" /* 13293 */;
+import BookmarkIcon from "BookmarkIcon" /* 11712 */;
+import setDefault from "set" /* 13297 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -129,7 +129,7 @@ export default function ForLaterIntro(type) {
   const tmp4 = type.type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER;
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: importDefault(tmp4 ? 13291 : 13292), style: tmp.upsellImage };
+  obj = { source: importDefault(tmp4 ? 13295 : 13296), style: tmp.upsellImage };
   const items = [closure_6(closure_3, obj), , ];
   obj1 = { style: tmp.textContainer, children: null };
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };

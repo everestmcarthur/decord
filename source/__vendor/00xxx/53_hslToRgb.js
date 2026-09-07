@@ -814,7 +814,7 @@ export default function normalizeColor(num) {
           break;
           case "Setter":
           break;
-          case "useDeferredValue":
+          case "useDefaultThreadName":
           break;
           case "MarkupParserNodeTypeError":
           break;
@@ -842,14 +842,6 @@ export default function normalizeColor(num) {
           break;
           case "NSFW_SPACE_WARNING_MODAL_CLICKED":
           break;
-          case "AppDatabaseManager":
-          break;
-          case "Database":
-          break;
-          case "tab":
-          break;
-          case "base":
-          break;
           case "rm":
           break;
           case "m":
@@ -872,9 +864,9 @@ export default function normalizeColor(num) {
           break;
           case "perGuildMaxCount":
           break;
-          case "go_live_notifications":
+          case "PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL":
           break;
-          case "paymentGatewaySubscriptionId":
+          case "paymentGatewayPlanId":
           break;
           case "integrationOwner":
           break;
@@ -950,11 +942,7 @@ export default function normalizeColor(num) {
           break;
           case "ap":
           break;
-          case "remoteSessionId":
-          break;
-          case "GameLibrarySettings":
-          break;
-          case "rar":
+          case "unit_type":
           break;
           case "ToIntlMathematicalValue":
           break;
@@ -974,7 +962,13 @@ export default function normalizeColor(num) {
           break;
           case "be":
           break;
-          case "getStartedHeaderContainer":
+          case "canReportMessage":
+          break;
+          case "canReportMessageToMods":
+          break;
+          case "showReportModalForGuildScheduledEvent":
+          break;
+          case "GuildScheduledEventEntityTypes":
           break;
           case "$ZodObject":
           break;
@@ -990,6 +984,8 @@ export default function normalizeColor(num) {
           break;
           case "IT":
           break;
+          case "xdays":
+          break;
           case "MEDIA_PICKER_SEND_BUTTON_SPRING":
           break;
           case "marginHorizontal":
@@ -1002,17 +998,13 @@ export default function normalizeColor(num) {
           break;
           case "_":
           break;
-          case "_shouldShowModal":
+          case "getTrendingType":
           break;
-          case "shouldShow":
+          case "TrendingType":
           break;
-          case "ModalFadeTransition":
+          case "beforeItem":
           break;
-          case "emojiReactionFrecency":
-          break;
-          case "emojiReactionFrecencyWithoutFetchingLatest":
-          break;
-          case "testModeApplicationId":
+          case "tempBanned":
           break;
           case "AUTO_MODERATION_REMOVE_REGEX_PATTERNS":
           break;
@@ -1038,11 +1030,7 @@ export default function normalizeColor(num) {
           break;
           case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
           break;
-          case "handlePasskeyUpsellShow":
-          break;
-          case "ShowQRCodeModal":
-          break;
-          case "ModalAnimation":
+          case "inTestModeForApplication":
           break;
           case "invalidEmojis":
           break;
@@ -1068,9 +1056,9 @@ export default function normalizeColor(num) {
           break;
           case "BinaryReader":
           break;
-          case "Touchable":
+          case "file_cabinet":
           break;
-          case "TouchableHaptic":
+          case "cab":
           break;
           case "$ZodSet":
           break;
@@ -1124,9 +1112,17 @@ export default function normalizeColor(num) {
           break;
           case "INTERACTIVE_MUTED":
           break;
-          case "inner_width":
+          case "baseCost":
           break;
-          case "widthChars":
+          case "cachedPrimarySuffix":
+          break;
+          case "unlocked":
+          break;
+          case "unlockedEmojis":
+          break;
+          case "lockedEmojis":
+          break;
+          case "isActionPickSupported":
           break;
           case "buttonLabel":
           break;
@@ -1140,7 +1136,7 @@ export default function normalizeColor(num) {
           break;
           case "ext":
           break;
-          case "isReported":
+          case "isRenewableEndDateSortEnabled":
           break;
           case "AccessibilityFocusView":
           break;
@@ -1280,7 +1276,7 @@ export default function normalizeColor(num) {
           break;
           case "ss":
           break;
-          case "setForegroundProcess":
+          case "isDeaf":
           break;
           case "_w":
           break;
@@ -1298,7 +1294,7 @@ export default function normalizeColor(num) {
           break;
           case "sh":
           break;
-          case "growthbookTags":
+          case "guildDismissibleContentStates":
           break;
           case "initialScrollToTop":
           break;
@@ -1438,11 +1434,7 @@ export default function normalizeColor(num) {
           break;
           case "ms":
           break;
-          case "_attributes":
-          break;
-          case "attribute":
-          break;
-          case "attributes":
+          case "LaunchApplication14":
           break;
           case "insetBottom":
           break;
@@ -1456,11 +1448,11 @@ export default function normalizeColor(num) {
           break;
           case "Dao":
           break;
-          case "kiss_woman_woman_dark_skin_tone_medium_skin_tone":
+          case "hideShadow":
           break;
-          case "hasJoined":
+          case "withMutualFriends":
           break;
-          case "hasJoinedEmojiSourceGuild":
+          case "withMutualFriendsCount":
           break;
           case "app":
           break;
@@ -1478,7 +1470,9 @@ export default function normalizeColor(num) {
           break;
           case "io":
           break;
-          case "showGuildOfficialMessageGradient":
+          case "showGuildEventModeratorActionSheet":
+          break;
+          case "GuildEventModeratorAction":
           break;
           case "_applyCombination":
           break;
@@ -1556,9 +1550,15 @@ export default function normalizeColor(num) {
           break;
           case "excludedQuests":
           break;
-          case "makeReactFormatter":
+          case "navigateToProfileCustomization":
           break;
-          case "org_id":
+          case "ProfileCustomizationSubsection":
+          break;
+          case "sectionBody":
+          break;
+          case "sectionBodyIOSBorder":
+          break;
+          case "order_id":
           break;
           case "_bodyArrayBuffer":
           break;
@@ -1611,8 +1611,6 @@ export default function normalizeColor(num) {
           break;
           case "ll":
           break;
-          case "systemVersion":
-          break;
           case "_channelId":
           break;
           case "ch":
@@ -1624,6 +1622,26 @@ export default function normalizeColor(num) {
           case "ann":
           break;
           case "nn":
+          break;
+          case "isExtensionAnimated":
+          break;
+          case "addMembersContainer":
+          break;
+          case "r_mark_yUz$esjava$0":
+          break;
+          case "CROSSHAIRS":
+          break;
+          case "SHOW_TOOLTIP":
+          break;
+          case "PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_FRIENDS_DMS":
+          break;
+          case "GORE_MEDIA_FILTERS_FRIENDS_DMS":
+          break;
+          case "MOBILE_VOICE_MESSAGE_RECORDING_LOCK_ICON_DEFAULT":
+          break;
+          case "DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE":
+          break;
+          case "MAX_ATTACHMENT_SIZE":
           break;
           case "isSelf":
           break;
@@ -1657,11 +1675,7 @@ export default function normalizeColor(num) {
           break;
           case "ix8XIj":
           break;
-          case "getElementById":
-          break;
-          case "contentWindow":
-          break;
-          case "false":
+          case "handleEvent":
           break;
           case "uni":
           break;
@@ -1689,7 +1703,9 @@ export default function normalizeColor(num) {
           break;
           case "concatSettings":
           break;
-          case "subscriptionPlanPrice":
+          case "subscriptionPeriod":
+          break;
+          case "subscriptionPeriodEnd":
           break;
           case "$constructor":
           break;
@@ -1743,7 +1759,7 @@ export default function normalizeColor(num) {
           break;
           case "withActiveSpan":
           break;
-          case "pendingPrimaryGuildId":
+          case "pendingMaintainScrollAtEnd":
           break;
           case "enablePanDownToClose":
           break;
@@ -1777,11 +1793,15 @@ export default function normalizeColor(num) {
           break;
           case "exclusions":
           break;
-          case "initialUserProfileSection":
+          case "_getEmbeddedActivities":
           break;
-          case "UserProfileSections":
+          case "getEmbeddedActivitiesByChannel":
           break;
-          case "shouldObscureSpoiler":
+          case "_indicesToKeys":
+          break;
+          case "indices":
+          break;
+          case "shouldShowCountryCodeSelector":
           break;
           case "_$esjava$cursor":
           break;
@@ -1789,7 +1809,7 @@ export default function normalizeColor(num) {
           break;
           case "so":
           break;
-          case "NitroDiamondBadgeSmallBadge":
+          case "NitroGoldBadgeLargeBadge":
           break;
           case "_clientSdkMetadata":
           break;
@@ -1800,6 +1820,8 @@ export default function normalizeColor(num) {
           case "da":
           break;
           case "dddd":
+          break;
+          case "RELATIONSHIP_INVALUD_USER_BOT":
           break;
           case "__defaultLocale":
           break;
@@ -1817,11 +1839,11 @@ export default function normalizeColor(num) {
           break;
           case "localeIdentifier":
           break;
-          case "woman_farmer_tone2":
+          case "partySize":
           break;
-          case "man_farmer_tone2":
+          case "partySizeText":
           break;
-          case "farmer_tone2":
+          case "trialCreationResult":
           break;
           case "define":
           break;
@@ -1841,15 +1863,13 @@ export default function normalizeColor(num) {
           break;
           case "ele":
           break;
-          case "ptt_start":
+          case "pttReleaseDelay":
           break;
-          case "_startMs":
+          case "layout_mode":
           break;
-          case "startMs":
+          case "isDM":
           break;
-          case "shouldTrackExposure":
-          break;
-          case "ExposureTypes":
+          case "isDMChannel":
           break;
           case "avatar_description":
           break;
@@ -1897,19 +1917,15 @@ export default function normalizeColor(num) {
           break;
           case "contentStyles":
           break;
-          case "subtree":
+          case "subtotal":
           break;
-          case "subtreeFlags":
+          case "totalBitrate":
           break;
-          case "useGroupListingsFetchContext":
+          case "saveExplicitContentSettingsToDisk":
           break;
-          case "isHeaderBarButtonsAvailableForCurrentPlatform":
+          case "ExplicitContentSettings":
           break;
-          case "formCtaIcon":
-          break;
-          case "containerWrapper":
-          break;
-          case "persistentCodesEnabled":
+          case "persistedIsClassicChatFontScaleEnabled":
           break;
           case "_dispatch":
           break;
@@ -1953,7 +1969,7 @@ export default function normalizeColor(num) {
           break;
           case "renderConfirmButton":
           break;
-          case "targetSeatId":
+          case "targetMessageId":
           break;
           case "toExpPos":
           break;
@@ -1988,6 +2004,22 @@ export default function normalizeColor(num) {
           case "enable":
           break;
           case "shouldRestrictUpdatingCreatorMonetizationSettings":
+          break;
+          case "billed_cap":
+          break;
+          case "_capacity":
+          break;
+          case "capacity":
+          break;
+          case "city_sunset":
+          break;
+          case "sunset":
+          break;
+          case "unset":
+          break;
+          case "unsetWaitingForIdentifier":
+          break;
+          case "setWaitingForIdentifier":
           break;
           case "@braintree/extended-promise":
           break;
@@ -2117,17 +2149,21 @@ export default function normalizeColor(num) {
           break;
           case "oldestUnreadMessageIdStale":
           break;
-          case "addPendingAuthorizedState":
+          case "addPerformanceInstrumentationHandler":
           break;
-          case "AUTO_DISMISS":
+          case "SPACE_0":
           break;
-          case "DISMISS_BLOCK":
+          case "CHANNEL_TOPIC_RULES":
           break;
-          case "BLOCK_QUOTE":
+          case "TOPIC":
           break;
-          case "currentChannelId":
+          case "LESS_THAN_24H_BEFORE_REWARD":
           break;
-          case "displayMessagesWithCache":
+          case "REWARD_HERO":
+          break;
+          case "ROBLOX_DEFERRED_WEB_URL":
+          break;
+          case "WEB_URL":
           break;
           case "fo":
           break;
@@ -2145,7 +2181,16 @@ export default function normalizeColor(num) {
           break;
           case "phone":
           break;
-          case "registerFetchedSupplementals":
+          case "linkType":
+          break;
+          case "videoHook":
+          break;
+          case "videoHookAllowDx12":
+          break;
+          case "registered":
+            tmp21 = 4294638335;
+          break;
+          case "registeredIncomingCallIds":
           break;
           case "favoriteGuildVisibleSetting":
           break;
@@ -2155,9 +2200,9 @@ export default function normalizeColor(num) {
           break;
           case "interpretNumericEntities":
           break;
-          case "minimumRebufferDuration":
+          case "defaultColor":
           break;
-          case "onGestureCancel":
+          case "defaultColors":
           break;
           case "getCurrent":
           break;
@@ -2183,12 +2228,19 @@ export default function normalizeColor(num) {
           break;
           case "ContentClassificationVisibility":
           break;
+          case "CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL":
+          break;
+          case "ALREADY_STREAMING":
+          break;
+          case "STREAMING_UPDATE":
+          break;
+          case "selectProperties":
+          break;
           case "hasDiversity":
           break;
           case "Parent":
           break;
           case "ParentalControlledDefaultGuildsRestrictedV2":
-            tmp21 = 4294638335;
           break;
           case "ar":
           break;
@@ -2196,9 +2248,7 @@ export default function normalizeColor(num) {
           break;
           case "DefaultGuildsRestrictedV2":
           break;
-          case "unbanUser":
-          break;
-          case "banUser":
+          case "isStableParticipantWithUser":
           break;
           case "avatar_hash":
           break;
@@ -2212,15 +2262,7 @@ export default function normalizeColor(num) {
           break;
           case "instrumentGoogleGenAIClient":
           break;
-          case "transformDataType":
-          break;
-          case "nonGuildVersions":
-          break;
-          case "nonGuildVersionsTransaction":
-          break;
-          case "actionOnPress":
-          break;
-          case "refreshNewMembersAndSearchResults":
+          case "transformIntoHandlerTags":
           break;
           case "isPrivate":
           break;
@@ -2278,11 +2320,9 @@ export default function normalizeColor(num) {
           break;
           case "icons":
           break;
-          case "canUseCustomCallSounds":
+          case "boostSlots":
           break;
-          case "allSounds":
-          break;
-          case "showReportToModMessageModal":
+          case "showModal":
           break;
           case "_include":
           break;
@@ -2352,9 +2392,7 @@ export default function normalizeColor(num) {
           break;
           case "jo":
           break;
-          case "getExistingMembers":
-          break;
-          case "getExistingMembersRows":
+          case "dismissButton":
           break;
           case "js":
           break;
@@ -2384,6 +2422,8 @@ export default function normalizeColor(num) {
           break;
           case "ke":
           break;
+          case "parent_span_id":
+          break;
           case "useStorekitResubscribe":
           break;
           case "subscribeFromItem":
@@ -2402,13 +2442,7 @@ export default function normalizeColor(num) {
           break;
           case "spacerStyle":
           break;
-          case "welcomeModalChannelId":
-          break;
-          case "family_wwb":
-          break;
-          case "family_wwbb":
-          break;
-          case "bbHeight":
+          case "cardHeight":
           break;
           case "aria-label":
           break;
@@ -2466,16 +2500,6 @@ export default function normalizeColor(num) {
           break;
           case "disableImageViewPreallocationAndroid":
           break;
-          case "cheese":
-          break;
-          case "cheese_wedge":
-          break;
-          case "edgeMode":
-          break;
-          case "defaultNativePermissionsRequestOptions":
-          break;
-          case "NativePermissionsRequestOptions":
-          break;
           case "load":
           break;
           case "J":
@@ -2520,11 +2544,11 @@ export default function normalizeColor(num) {
           break;
           case "maxLengthIndicator":
           break;
-          case "ANIMATED_VIDEO_BG_CAPERNITE_NIGHT_NEW":
+          case "routeGetIdList":
           break;
-          case "NEW_EVENT":
+          case "strstart":
           break;
-          case "NEW_EVENT_WINDOW_MILLISECONDS":
+          case "startAndEndSpan":
           break;
           case "__memo":
           break;
@@ -2534,774 +2558,788 @@ export default function normalizeColor(num) {
           break;
           case "sag":
           break;
-          case "closeConversationsAndJumpToMessage":
+          case "importance":
           break;
           case "_$esjava$method":
+            tmp21 = 0;
           break;
           case "_$esjava$methodobject":
           break;
           case "ho":
+            tmp21 = 4042850303;
           break;
           case "hod":
           break;
           case "dob":
+            tmp21 = 4209760255;
           break;
           case "obj":
           break;
           case "object":
+            tmp21 = 16777215;
           break;
           case "objectAssign":
           break;
           case "ActionStatusSubLabel":
+            tmp21 = 16777215;
           break;
           case "onStatus":
           break;
           case "Status":
+            tmp21 = 2147472639;
           break;
           case "SubLabel":
           break;
           case "lineHeight":
-            tmp21 = 0;
+            tmp21 = 4043309055;
           break;
           case "getDeviceInfo":
           break;
           case "DeviceInfo":
-            tmp21 = 4042850303;
+            tmp21 = 4126530815;
           break;
           case "forNoAnimation":
           break;
           case "onStickyHeaderRender":
-            tmp21 = 4209760255;
+            tmp21 = 4293182719;
           break;
           case "onStickyHeaderRendered":
           break;
           case "few":
-            tmp21 = 16777215;
+            tmp21 = 255;
           break;
           case "Omnibutton":
           break;
           case "OmnibuttonCoachmarkRive":
-            tmp21 = 16777215;
+            tmp21 = 4293643775;
           break;
           case "mni":
           break;
           case "nib":
-            tmp21 = 2147472639;
+            tmp21 = 65535;
           break;
           case "button":
           break;
           case "footerPortrait":
-            tmp21 = 4043309055;
+            tmp21 = 2318131967;
           break;
           case "trait":
           break;
           case "voicePanelsFullscreen":
-            tmp21 = 4126530815;
+            tmp21 = 2771004159;
           break;
           case "screenIsLandscape":
           break;
           case "Ambient":
-            tmp21 = 4293182719;
+            tmp21 = 3736635391;
           break;
           case "Ambient_Lightmode":
           break;
           case "bie":
-            tmp21 = 255;
+            tmp21 = 3934150143;
           break;
           case "tm":
           break;
           case "mod":
-            tmp21 = 4293643775;
+            tmp21 = 1604231423;
           break;
           case "modeOptions":
           break;
           case "contact_names":
-            tmp21 = 65535;
+            tmp21 = 2147418367;
           break;
           case "nam":
           break;
           case "LegacyRawButton":
-            tmp21 = 2318131967;
+            tmp21 = 3530104575;
           break;
           case "RawButton":
           break;
-          case "hasMessageContent":
-            tmp21 = 2771004159;
+          case "guildTagTextVariant":
+            tmp21 = 4286533887;
           break;
           case "track_next":
           break;
           case "_nextChannelId":
-            tmp21 = 3736635391;
+            tmp21 = 1687547391;
           break;
           case "didRetrySilentInitialScroll":
           break;
           case "BounceOutLeft":
-            tmp21 = 3934150143;
+            tmp21 = 4294499583;
           break;
           case "snapToAlignment":
           break;
           case "Alignment":
-            tmp21 = 1604231423;
+            tmp21 = 3692313855;
           break;
           case "$ZodUnknown":
           break;
           case "ZodUnknown":
-            tmp21 = 2147418367;
+            tmp21 = 35839;
           break;
           case "Unknown":
           break;
           case "kn":
-            tmp21 = 3530104575;
+            tmp21 = 9145343;
           break;
           case "$input":
           break;
           case "inp":
-            tmp21 = 4286533887;
+            tmp21 = 3095792639;
           break;
           case "input":
           break;
           case "put":
-            tmp21 = 1687547391;
+            tmp21 = 2846468607;
           break;
           case "last4":
           break;
           case "cardholderName":
-            tmp21 = 4294499583;
+            tmp21 = 2846468607;
           break;
           case "expirationMonth":
           break;
           case "expirationYear":
-            tmp21 = 3692313855;
+            tmp21 = 6553855;
           break;
           case "binData":
           break;
           case "useLegacyChatInput":
-            tmp21 = 35839;
+            tmp21 = 3182914559;
           break;
           case "ChatInputExpressionPressed":
           break;
           case "res":
-            tmp21 = 9145343;
+            tmp21 = 2332068863;
           break;
           case "relationship_type":
           break;
           case "fearful":
-            tmp21 = 3095792639;
+            tmp21 = 1433087999;
           break;
           case "fearful_face":
           break;
           case "face_with_rolling_eyes":
-            tmp21 = 2846468607;
+            tmp21 = 4287365375;
           break;
           case "rolling_eyes":
           break;
           case "_opacityActive":
-            tmp21 = 2846468607;
+            tmp21 = 2570243327;
           break;
           case "opa":
           break;
           case "city":
-            tmp21 = 6553855;
+            tmp21 = 2332033279;
           break;
           case "emitTimeout":
           break;
           case "claimed_at":
-            tmp21 = 3182914559;
+            tmp21 = 3918953215;
           break;
           case "gift_info_options":
           break;
           case "_options":
-            tmp21 = 2332068863;
+            tmp21 = 2411499519;
           break;
           case "opt":
           break;
           case "option":
-            tmp21 = 1433087999;
+            tmp21 = 1211993087;
           break;
           case "_parent":
           break;
           case "_parentSpanId":
-            tmp21 = 4287365375;
+            tmp21 = 793726975;
           break;
           case "par":
           break;
           case "parentSpan":
-            tmp21 = 2570243327;
+            tmp21 = 793726975;
           break;
           case "parentSpanId":
           break;
           case "did_force_clear_guild_hashes":
-            tmp21 = 2332033279;
+            tmp21 = 13554175;
           break;
           case "hashes":
           break;
+          case "setFingerprint":
+            tmp21 = 2483082239;
+          break;
+          case "paymentsBlocked":
+          break;
           case "preview_asset_paths":
-            tmp21 = 3918953215;
+            tmp21 = 4279538687;
           break;
           case "path":
           break;
           case "heldGiftingPromptSystemMessage":
-            tmp21 = 2411499519;
+            tmp21 = 12582911;
           break;
           case "getAnimatableSourceWithFallback":
           break;
           case "backgroundTaskIdentifierInvalid":
-            tmp21 = 1211993087;
+            tmp21 = 1768516095;
           break;
           case "Invalid":
           break;
           case "InvalidKeywordError":
-            tmp21 = 793726975;
+            tmp21 = 1768516095;
           break;
           case "valid":
           break;
           case "cacheComposition":
-            tmp21 = 793726975;
+            tmp21 = 512819199;
           break;
           case "positionComponentInternal":
           break;
           case "_props":
-            tmp21 = 13554175;
+            tmp21 = 2988581631;
           break;
           case "_propsStack":
           break;
           case "pr":
-            tmp21 = 2483082239;
+            tmp21 = 4294635775;
           break;
           case "pro":
           break;
           case "prop":
-            tmp21 = 4279538687;
+            tmp21 = 579543807;
           break;
           case "propsStack":
           break;
           case "ops":
-            tmp21 = 12582911;
+            tmp21 = 4278255615;
           break;
           case "ps":
           break;
           case "StackRouter":
-            tmp21 = 1768516095;
+            tmp21 = 4278255615;
           break;
           case "outerRow":
           break;
           case "woman_and_man_holding_hands_medium_light_skin_tone_medium_skin_tone":
-            tmp21 = 1768516095;
+            tmp21 = 3705462015;
           break;
           case "FePointLight":
           break;
           case "LightSpeedIn":
-            tmp21 = 512819199;
+            tmp21 = 4177068031;
           break;
           case "LightSpeedInData":
           break;
           case "proto":
-            tmp21 = 2988581631;
+            tmp21 = 4292280575;
           break;
           case "prototypeInitialized":
           break;
           case "fetchIpCountryCode":
-            tmp21 = 4294635775;
+            tmp21 = 3668254975;
           break;
           case "openOAuth2Modal":
           break;
           case "_pushCells":
-            tmp21 = 579543807;
+            tmp21 = 2155905279;
           break;
           case "pus":
           break;
           case "rad":
-            tmp21 = 4278255615;
+            tmp21 = 2155905279;
           break;
           case "ii":
           break;
           case "DrawerActions":
-            tmp21 = 4278255615;
+            tmp21 = 8388863;
           break;
           case "aw":
           break;
           case "awe":
-            tmp21 = 3705462015;
+            tmp21 = 2919182335;
           break;
           case "verifiedBot":
           break;
           case "$ZodPrefault":
-            tmp21 = 4177068031;
+            tmp21 = 4043305215;
           break;
           case "ZodPrefault":
           break;
           case "reg":
-            tmp21 = 4292280575;
+            tmp21 = 4285117695;
           break;
           case "register":
           break;
           case "recipients":
-            tmp21 = 3668254975;
+            tmp21 = 3445382399;
           break;
           case "reject":
           break;
           case "eject":
-            tmp21 = 2155905279;
+            tmp21 = 1258324735;
           break;
           case "ErrorNumber":
           break;
-          case "TreehouseIcon":
-            tmp21 = 2155905279;
+          case "shouldIndicateNewChannel":
+            tmp21 = 4294963455;
           break;
-          case "house":
+          case "_positive":
+          break;
+          case "_cancelHoverOutDelayTimeout":
+            tmp21 = 4041641215;
+          break;
+          case "outageBannerMessage":
+          break;
+          case "getAudioPid":
+            tmp21 = 3873897215;
+          break;
+          case "TableRadioRow":
           break;
           case "__replaceAnimatedNodeWithValues":
-            tmp21 = 8388863;
+            tmp21 = 4293981695;
           break;
           case "place":
           break;
           case "lac":
-            tmp21 = 2919182335;
+            tmp21 = 2096890111;
           break;
           case "ace":
           break;
           case "isCamera":
-            tmp21 = 4043305215;
+            tmp21 = 4294626815;
           break;
           case "kiss_person_person_medium_dark_skin_tone_dark_skin_tone":
           break;
           case "_resolve":
-            tmp21 = 4285117695;
+            tmp21 = 2916673279;
           break;
           case "_resolveEmpty":
           break;
           case "sol":
-            tmp21 = 3445382399;
+            tmp21 = 4034953471;
           break;
           case "resultName":
           break;
-          case "wasDeepLink":
-            tmp21 = 1258324735;
-          break;
           case "_$esjava$result":
+            tmp21 = 3774873599;
           break;
           case "resultCount":
-            tmp21 = 4294963455;
           break;
           case "sul":
+            tmp21 = 4210742015;
           break;
-          case "setInert":
-            tmp21 = 4041641215;
+          case "GET_VOICE_CAPABILITIES":
+          break;
+          case "SUSPEND_CAMERA_VIEW":
+            tmp21 = 3553874943;
           break;
           case "forumTag":
           break;
           case "pollBadge":
-            tmp21 = 3873897215;
+            tmp21 = 3553874943;
           break;
           case "getAuthenticationErrorsFromV6OrEarlierAPIError":
           break;
           case "V6OrEarlierAPIError":
-            tmp21 = 4293981695;
+            tmp21 = 2431553791;
           break;
           case "getBrightness":
           break;
           case "BrightnessDown":
-            tmp21 = 2096890111;
+            tmp21 = 4290167295;
           break;
           case "ownerId":
           break;
-          case "iconFill":
-            tmp21 = 4294626815;
-          break;
-          case "iconFillMuted":
-          break;
-          case "removeFrame":
-            tmp21 = 2916673279;
-          break;
-          case "run":
-          break;
-          case "actionStatusAccessibilityLabel":
-            tmp21 = 4034953471;
-          break;
-          case "scale":
-          break;
-          case "ale":
-            tmp21 = 3774873599;
-          break;
-          case "shape":
-          break;
-          case "hap":
-            tmp21 = 4210742015;
-          break;
-          case "ape":
-          break;
-          case "pes":
-            tmp21 = 3553874943;
-          break;
-          case "ariaDescription":
-          break;
-          case "stringifyUrl":
-            tmp21 = 3553874943;
-          break;
-          case "minUserInstallCommandCount":
-          break;
-          case "sku":
-            tmp21 = 2431553791;
-          break;
-          case "skuIds":
-          break;
-          case "fromByteArray":
-            tmp21 = 4290167295;
-          break;
-          case "sl":
-          break;
-          case "sliceBody":
+          case "approvalUrl":
             tmp21 = 4288707327;
           break;
-          case "ice":
+          case "canSelectBeEmpty":
           break;
-          case "minPressDuration":
+          case "AppsFlyer":
             tmp21 = 548580095;
           break;
-          case "isPerformanceResourceTiming":
+          case "removeFrame":
           break;
-          case "PerformanceResourceTiming":
+          case "run":
             tmp21 = 2278488831;
           break;
-          case "PerformanceResourceTiming_public":
+          case "actionStatusAccessibilityLabel":
           break;
-          case "sou":
+          case "scale":
             tmp21 = 2005441023;
           break;
-          case "public_flags":
+          case "ale":
           break;
-          case "flags_":
+          case "shape":
             tmp21 = 2005441023;
           break;
-          case "flags_new":
+          case "hap":
           break;
-          case "_new_centroid":
+          case "ape":
             tmp21 = 2965692159;
           break;
-          case "new":
+          case "pes":
           break;
-          case "centroidDimension":
+          case "ariaDescription":
             tmp21 = 4294959359;
           break;
-          case "onInitiateThread":
+          case "stringifyUrl":
           break;
-          case "readFloatLE":
+          case "minUserInstallCommandCount":
             tmp21 = 16711935;
           break;
-          case "thread.name":
+          case "sku":
           break;
-          case "_splitColorsIntoChannels":
+          case "skuIds":
             tmp21 = 852308735;
           break;
-          case "purchase_token":
+          case "fromByteArray":
+          break;
+          case "sl":
+            tmp21 = 4210091775;
+          break;
+          case "sliceBody":
+          break;
+          case "ice":
+            tmp21 = 2147483903;
+          break;
+          case "minPressDuration":
+          break;
+          case "isPerformanceResourceTiming":
+            tmp21 = 1724754687;
+          break;
+          case "PerformanceResourceTiming":
+          break;
+          case "PerformanceResourceTiming_public":
+            tmp21 = 52735;
+          break;
+          case "sou":
+          break;
+          case "public_flags":
+            tmp21 = 3126187007;
+          break;
+          case "flags_":
+          break;
+          case "flags_new":
+            tmp21 = 2473647103;
+          break;
+          case "_new_centroid":
+          break;
+          case "new":
+            tmp21 = 1018393087;
+          break;
+          case "centroidDimension":
+          break;
+          case "onInitiateThread":
+            tmp21 = 2070474495;
+          break;
+          case "readFloatLE":
+          break;
+          case "thread.name":
+            tmp21 = 16423679;
+          break;
+          case "_splitColorsIntoChannels":
           break;
           case "MMlhsr":
-            tmp21 = 4210091775;
+            tmp21 = 1221709055;
           break;
           case "sr-Cyrl":
           break;
           case "sr-Cyrl-BA":
-            tmp21 = 2147483903;
+            tmp21 = 3340076543;
           break;
           case "BATTLENET_MIGRATION":
           break;
           case "MIGRATION_DESTINATION_ORIGIN":
-            tmp21 = 1724754687;
+            tmp21 = 421097727;
           break;
           case "INPUT_MONITORING":
           break;
           case "RING_TO_GUILD_VC_BANNER_SHOWN":
-            tmp21 = 52735;
+            tmp21 = 4127193855;
           break;
           case "tierCard":
           break;
           case "hasTakenDecoupledClip":
-            tmp21 = 3126187007;
+            tmp21 = 4293190143;
           break;
           case "ClipsRecordingRestartNeeded":
           break;
           case "star":
-            tmp21 = 2473647103;
+            tmp21 = 4293178879;
           break;
           case "art":
           break;
           case "client_app_state":
-            tmp21 = 1018393087;
+            tmp21 = 4292783615;
           break;
           case "app_state":
           break;
           case "_state":
-            tmp21 = 2070474495;
+            tmp21 = 33023;
           break;
           case "stat":
           break;
           case "stateActionComplete":
-            tmp21 = 16423679;
+            tmp21 = 4260751103;
           break;
           case "woman_climbing":
           break;
           case "woman_climbing_dark_skin_tone":
-            tmp21 = 1221709055;
+            tmp21 = 2155872511;
           break;
           case "man_climbing":
           break;
           case "man_climbing_dark_skin_tone":
-            tmp21 = 3340076543;
+            tmp21 = 1804477439;
           break;
           case "limb":
           break;
           case "appeal_status":
-            tmp21 = 421097727;
+            tmp21 = 4289003775;
           break;
           case "_status":
           break;
           case "statusAllowsPerks":
-            tmp21 = 4127193855;
+            tmp21 = 4282712319;
           break;
           case "_$esjava$s":
           break;
           case "_$esjava$substring_i":
-            tmp21 = 4293190143;
+            tmp21 = 3664828159;
           break;
           case "sub":
           break;
           case "substr":
-            tmp21 = 4293178879;
+            tmp21 = 4008225535;
           break;
           case "substring":
           break;
           case "bs":
-            tmp21 = 4292783615;
+            tmp21 = 2566625535;
           break;
           case "bst":
           break;
           case "string_id":
-            tmp21 = 33023;
-          break;
-          case "localVolumes":
+            tmp21 = 2951671551;
           break;
           case "DEPRECATED_style":
-            tmp21 = 4260751103;
           break;
           case "_style":
+            tmp21 = 3681588223;
           break;
           case "sty":
-            tmp21 = 2155872511;
           break;
           case "styleAttr":
+            tmp21 = 4293907967;
           break;
-          case "SHARE_INTERACTION":
-            tmp21 = 1804477439;
+          case "_buildKeyCodeMapFromKeyMap":
+          break;
+          case "build":
+            tmp21 = 4292524543;
           break;
           case "surrogate":
           break;
           case "rog":
-            tmp21 = 4289003775;
+            tmp21 = 3448061951;
           break;
           case "gat":
           break;
           case "gate":
-            tmp21 = 4282712319;
+            tmp21 = 4290825215;
           break;
           case "isStickerPackAnimated":
           break;
           case "AnimatedStartStagePrompt":
-            tmp21 = 3664828159;
+            tmp21 = 3718307327;
           break;
           case "StartStagePrompt":
           break;
           case "Prompt":
-            tmp21 = 4008225535;
+            tmp21 = 2967529215;
           break;
           case "_createExtraStyles":
           break;
           case "canSend":
-            tmp21 = 2566625535;
+            tmp21 = 2147516671;
           break;
           case "canSendGuildOfficialMessages":
           break;
           case "FastestListPropsPlaceholderType":
-            tmp21 = 2951671551;
+            tmp21 = 1714657791;
           break;
           case "est":
           break;
           case "person_walking_facing_right_tone1":
-            tmp21 = 3681588223;
+            tmp21 = 4278190335;
           break;
           case "epochAuthenticator":
           break;
           case "AuthenticatorType":
-            tmp21 = 4293907967;
+            tmp21 = 3163525119;
           break;
           case "the":
           break;
           case "people_holding_hands_medium_skin_tone_medium_dark_skin_tone":
-            tmp21 = 4292524543;
+            tmp21 = 1097458175;
           break;
           case "priceId":
           break;
           case "mintcream":
-            tmp21 = 3448061951;
+            tmp21 = 2336560127;
           break;
           case "UpdatePropsManager":
           break;
           case "EntitlementFeatureNames":
-            tmp21 = 4290825215;
+            tmp21 = 4202722047;
           break;
           case "__views__":
           break;
           case "__constants":
-            tmp21 = 3718307327;
+            tmp21 = 4104413439;
           break;
           case "shouldPreventRemove":
           break;
           case "moveInto":
-            tmp21 = 2967529215;
+            tmp21 = 780883967;
           break;
           case "ja":
           break;
           case "java":
-            tmp21 = 2147516671;
+            tmp21 = 4294307583;
           break;
           case "av":
           break;
           case "$":
-            tmp21 = 1714657791;
+            tmp21 = 2689740287;
           break;
           case "flag_to":
           break;
           case "_toLowerCase":
-            tmp21 = 4278190335;
+            tmp21 = 3233857791;
           break;
           case "ase":
           break;
           case "flying_saucer":
-            tmp21 = 3163525119;
+            tmp21 = 2278484991;
           break;
           case "sau":
           break;
           case "_uint64":
-            tmp21 = 1097458175;
+            tmp21 = 1784335871;
           break;
           case "uint64":
           break;
           case "int64toString":
-            tmp21 = 2336560127;
+            tmp21 = 1887473919;
           break;
           case "supportsInAppBrowser":
           break;
           case "BrowserStop":
-            tmp21 = 4202722047;
+            tmp21 = 1887473919;
           break;
           case "Stop":
           break;
           case "StopWatch":
-            tmp21 = 4104413439;
+            tmp21 = 4294638335;
           break;
           case "WatchdogTimeout":
           break;
           case "dog":
-            tmp21 = 780883967;
+            tmp21 = 16744447;
           break;
           case "couple_with_heart_woman_woman_medium_skin_tone_light_skin_tone":
           break;
           case "next_track":
-            tmp21 = 4294307583;
+            tmp21 = 1182971135;
           break;
           case "_trackIfSessionMetadataExists":
           break;
           case "tra":
-            tmp21 = 2689740287;
+            tmp21 = 3535047935;
           break;
           case "rac":
           break;
-          case "shouldTriggerOffer":
-            tmp21 = 3233857791;
+          case "shouldTrackVoiceInviteEmbedViews":
+            tmp21 = 8421631;
           break;
           case "_transformMetadataToCamelCase":
           break;
           case "sf":
-            tmp21 = 2278484991;
+            tmp21 = 3636451583;
           break;
           case "mel":
           break;
           case "searchTokenType":
-            tmp21 = 1784335871;
+            tmp21 = 4284696575;
+          break;
+          case "allowGameFriendDmsInDiscord":
+          break;
+          case "DiscordContentClassificationFlagMasks":
+            tmp21 = 1088475391;
           break;
           case "APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED":
           break;
           case "DCDSecurityKeyManager":
-            tmp21 = 1887473919;
+            tmp21 = 4001558271;
           break;
-          case "useParams":
+          case "useQuestCompletionDetails":
           break;
           case "forEachInCell":
-            tmp21 = 1887473919;
+            tmp21 = 4125012991;
           break;
           case "../lib/create-assets-url":
           break;
           case "hi-IN":
-            tmp21 = 4294638335;
+            tmp21 = 4294967295;
           break;
           case "IN_APP_GUILD_TEMPLATES_MODAL_KEY":
           break;
           case "GUILD_TEMPLATE":
-            tmp21 = 16744447;
+            tmp21 = 4126537215;
           break;
           case "GUILD_TEMPLATES":
           break;
           case "useFocus":
-            tmp21 = 1182971135;
+            tmp21 = 4294902015;
           break;
           case "useFocusEffect":
           break;
           case "use":
-            tmp21 = 3535047935;
           break;
           case "Call":
           break;
           case "effectClick":
-            tmp21 = 8421631;
           break;
           case "ClickImage":
           break;
           case "Image Height":
-            tmp21 = 3636451583;
           break;
           case "eight_pointed_black_star":
           break;
           case "star2":
-            tmp21 = 4284696575;
-          break;
-          case "GUILD_STOP_LURKING":
           break;
           case "useEffectEvent":
-            tmp21 = 1088475391;
           break;
           case "ff":
           break;
           case "fec":
-            tmp21 = 4001558271;
           break;
           case "ChestAndGemSpotIllustration":
           break;
           case "GemSpotIllustration":
-            tmp21 = 4125012991;
           break;
           case "useMemoArray":
           break;
           case "Memo":
-            tmp21 = 4294967295;
           break;
           case "useStateFromStoresArray":
           break;
           case "State":
-            tmp21 = 4126537215;
           break;
           case "Store":
           break;
           case "ore":
-            tmp21 = 4294902015;
           break;
           case "isAnyApplicationInTestMode":
           break;
@@ -3463,16 +3501,6 @@ export default function normalizeColor(num) {
           break;
           case "dress":
           break;
-          case "PRESS_VOICE_CHANNEL_AVATARS":
-          break;
-          case "Z_SYNC_FLUSH":
-          break;
-          case "SHARE_MESSAGE_SENT":
-          break;
-          case "toBigInt":
-          break;
-          case "supportedCardTypes":
-          break;
           case "#11806a":
           break;
           case "#1abc9c":
@@ -3483,17 +3511,11 @@ export default function normalizeColor(num) {
           break;
           case "f8":
           break;
-          case "mismatchesReported":
+          case "min_id":
           break;
           case "#206694":
           break;
           case "06":
-          break;
-          case "isReactionMilestoneNotification":
-          break;
-          case "getExampleHandle":
-          break;
-          case "_calculateNewPageFromPageSizeChange":
           break;
           case "#2ecc71":
           break;
@@ -3501,15 +3523,9 @@ export default function normalizeColor(num) {
           break;
           case "GUILD_TOGGLE_COLLAPSE_MUTED":
           break;
-          case "unsubscribeFromKeyboardEvents":
+          case "unsubscribeFromVoiceStateStoreUpdates":
           break;
           case "#3498db":
-          break;
-          case "darkblue":
-          break;
-          case "blue_square":
-          break;
-          case "areDOMRectsEqual":
           break;
           case "#546e7a":
           break;
@@ -3531,13 +3547,11 @@ export default function normalizeColor(num) {
           break;
           case "STREAM_BAD_NETWORK_QUALITY":
           break;
-          case "getRemoteVideoSinkPixelCount":
-          break;
-          case "trackSearchOpened":
+          case "IAPProductIds":
           break;
           case "#71368a":
           break;
-          case "useIsAppLauncherEnabled":
+          case "useIsGameInvitePostVoiceEnabled":
           break;
           case "#95a5a6":
           break;
@@ -3553,9 +3567,11 @@ export default function normalizeColor(num) {
           break;
           case "aa":
           break;
-          case "RobloxStoreLink":
+          case "_sendAnalyticsEvent":
           break;
-          case "GroupGamingSpotIllustration":
+          case "sendAnalytics":
+          break;
+          case "HdStreamAbstractUI":
           break;
           case "#9b59b6":
           break;
@@ -3579,7 +3595,7 @@ export default function normalizeColor(num) {
           break;
           case "#ad1457":
           break;
-          case "hideFooter":
+          case "highlightColor":
           break;
           case "blockEnd":
           break;
@@ -3607,8 +3623,6 @@ export default function normalizeColor(num) {
           break;
           case "CUSTOM_STATUS_BUBBLE_BG":
           break;
-          case "BUBBLE":
-          break;
           case "blockStart":
           break;
           case "#f1c40f":
@@ -3622,14 +3636,6 @@ export default function normalizeColor(num) {
           case "typeofJsonValue":
           break;
           case "onValueUpdated":
-          break;
-          case "customNotificationSoundConfig":
-          break;
-          case "ignoreScrollFromMVCP":
-          break;
-          case "ignoreScrollFromMVCPIgnored":
-          break;
-          case "draggable":
           break;
           case "$ZodAny":
           break;
@@ -3695,35 +3701,7 @@ export default function normalizeColor(num) {
           break;
           case "URL":
           break;
-          case "GOOGLE_PLAY":
-          break;
-          case "GOOGLE_PLAY_PRICE_CHANGE_ACTION_SHEET":
-          break;
-          case "ACTION_SHEET":
-          break;
-          case "ACTION_SHEET_BORDER_RADIUS":
-          break;
-          case "EE":
-          break;
-          case "BORDER":
-          break;
-          case "BORDER_RADIUS":
-          break;
-          case "LEGACY_BADGE_ID_MAP":
-          break;
-          case "APPLICATION_DIRECTORY":
-          break;
-          case "APPLICATION_DIRECTORY_APPLICATION":
-          break;
-          case "APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS":
-          break;
-          case "PERMISSIONS_DENIED":
-          break;
-          case "AGE_VERIFICATION_RETRY":
-          break;
-          case "RETRY":
-          break;
-          case "RETRY_MODAL":
+          case "handleRedeemVirtualCurrencyStart":
           break;
           case "handleStoreChange":
           break;
@@ -3807,6 +3785,10 @@ export default function normalizeColor(num) {
           break;
           case "SvgAst":
           break;
+          case "handleLongPressMessage":
+          break;
+          case "getAllUserExperimentDescriptors":
+          break;
           case "encrypted":
           break;
           case "sandbox":
@@ -3817,7 +3799,19 @@ export default function normalizeColor(num) {
           break;
           case "G":
           break;
-          case "keyboardItem":
+          case "isGuildVocal":
+          break;
+          case "isGuildVocalChannelOrVocalThreadType":
+          break;
+          case "canUpsell":
+          break;
+          case "canUpsellFavoriteLimit":
+          break;
+          case "commandTargetId":
+          break;
+          case "getId":
+          break;
+          case "getIdFromHistoryItem":
           break;
           case "$ZodCheckIncludes":
           break;
@@ -3853,15 +3847,13 @@ export default function normalizeColor(num) {
           break;
           case "$ZodCheckMaxSize":
           break;
-          case "useMountLayoutEffect":
+          case "useMessageCount":
           break;
           case "$ZodCheckMimeType":
           break;
           case "peekGradient":
           break;
-          case "argumentCallback":
-          break;
-          case "backgroundLayer":
+          case "go_live_notifications":
           break;
           case "$ZodCheckMinLength":
           break;
@@ -3913,6 +3905,8 @@ export default function normalizeColor(num) {
           break;
           case "eventDescriptionContainer":
           break;
+          case "executableFingerprint":
+          break;
           case "$ZodCheckRegex":
           break;
           case "SOCIAL_LAYER_CONNECTIONS":
@@ -3928,6 +3922,8 @@ export default function normalizeColor(num) {
           case "CHANNEL_DETAILS_HEADER":
           break;
           case "HEADERS_RECEIVED":
+          break;
+          case "Shadows":
           break;
           case "getSoundpack":
           break;
@@ -3968,21 +3964,23 @@ export default function normalizeColor(num) {
           case "skyblue":
           break;
           case "blueviolet":
-            tmp21 = 4294307583;
           break;
           case "violet":
           break;
-          case "_kick":
-          break;
           case "$ZodCheckUpperCase":
+            tmp21 = 4294307583;
           break;
           case "seis":
           break;
-          case "kiss_person_person_light_skin_tone_dark_skin_tone":
+          case "addQueryPrefix":
           break;
-          case "ChannelNotificationIcon":
+          case "fixYogaFlexBasisFitContentInMainAxis":
           break;
-          case "getMuteOptions":
+          case "FamilyCenterSubPages":
+          break;
+          case "gestureHandlerWillMount":
+          break;
+          case "getNameplateAssets":
           break;
           case "$ZodCodec":
           break;
@@ -3997,10 +3995,6 @@ export default function normalizeColor(num) {
           case "decayInterval":
           break;
           case "validateRecipient":
-          break;
-          case "lastIsPressed":
-          break;
-          case "rating_count":
           break;
           case "$ZodCustom":
           break;
@@ -4037,12 +4031,6 @@ export default function normalizeColor(num) {
           case "nat":
           break;
           case "nio":
-          break;
-          case "clearCookies":
-          break;
-          case "filterStaffContent":
-          break;
-          case "trackGuildDiscoveryGetFeaturedGuildsFailed":
           break;
           case "$ZodE164":
           break;
@@ -4106,15 +4094,7 @@ export default function normalizeColor(num) {
           break;
           case "act":
           break;
-          case "SCREEN_CAPTURE_KIT":
-          break;
-          case "MESSAGE_DELETE":
-          break;
-          case "MESSAGE_DELETE_BULK":
-          break;
-          case "BULK_GUILD_BAN":
-          break;
-          case "BULK_GUILD_BAN_V2":
+          case "GUILD_DISCOVERY_SLUG":
           break;
           case "$ZodFile":
           break;
@@ -4134,7 +4114,11 @@ export default function normalizeColor(num) {
           break;
           case "commandTypes":
           break;
-          case "spanToJSON":
+          case "spanTimeInputToSeconds":
+          break;
+          case "isComplete":
+          break;
+          case "isCompleted":
           break;
           case "leaveActivity":
           break;
@@ -4156,17 +4140,13 @@ export default function normalizeColor(num) {
           break;
           case "IGNORED_GROUP":
           break;
-          case "STREAM_NOTIFY":
+          case "STREAM_OUTPUT_VOLUME":
           break;
-          case "STREAM_NOTIFY_GUILD_MAX_SIZE":
+          case "MEMBER_USER":
           break;
-          case "pfxTop":
+          case "USER_ACCOUNT_EMAIL_RESEND_VERIFICATION_EMAIL":
           break;
-          case "opPreemptiveExpand":
-          break;
-          case "wrappedEmit":
-          break;
-          case "runner_tone2":
+          case "rowboat_tone2":
           break;
           case "$ZodIPv6":
           break;
@@ -4228,6 +4208,10 @@ export default function normalizeColor(num) {
           break;
           case "StreamingTier2LargeBadge":
           break;
+          case "networkRequestHeaders":
+          break;
+          case "isChromeDebugger":
+          break;
           case "a_7":
           break;
           case "{":
@@ -4250,13 +4234,11 @@ export default function normalizeColor(num) {
           break;
           case "getPendingFolderGuildIds":
           break;
-          case "raised_back_of_hand_tone2":
+          case "crossorigin":
           break;
-          case "back_of_hand_tone2":
+          case "originApplicationId":
           break;
-          case "guardsman":
-          break;
-          case "guardsman_tone1":
+          case "_removeModalBackdrop":
           break;
           case "$ZodLazy":
           break;
@@ -4288,8 +4270,6 @@ export default function normalizeColor(num) {
           break;
           case "anyChannelRecordsObfuscated":
           break;
-          case "LaunchApplication14":
-          break;
           case "successProcessor":
           break;
           case "$ZodMAC":
@@ -4310,10 +4290,6 @@ export default function normalizeColor(num) {
           break;
           case "maxBufferMs":
           break;
-          case "dodgerblue":
-          break;
-          case "jeans":
-          break;
           case "$ZodNanoID":
           break;
           case "ZodNanoID":
@@ -4328,10 +4304,6 @@ export default function normalizeColor(num) {
           break;
           case "ev":
           break;
-          case "flag_pe":
-          break;
-          case "_perfKey":
-          break;
           case "$ZodNonOptional":
           break;
           case "ZodNonOptional":
@@ -4344,21 +4316,7 @@ export default function normalizeColor(num) {
           break;
           case "ZodNullable":
           break;
-          case "trackColor":
-          break;
-          case "trackColorForFalse":
-          break;
-          case "setOutputDevice":
-          break;
-          case "setOutputDeviceById":
-          break;
-          case "discovery_splash":
-          break;
-          case "splash":
-          break;
-          case "hash_mask":
-          break;
-          case "maskContentUnits":
+          case "trackCommandSelected":
           break;
           case "$ZodNumber":
           break;
@@ -4378,7 +4336,33 @@ export default function normalizeColor(num) {
           break;
           case "allowedMentions":
           break;
-          case "showDot":
+          case "showDivider":
+          break;
+          case "presentAddedFriendToast":
+          break;
+          case "astToString":
+          break;
+          case "\\":
+          break;
+          case "due_at":
+          break;
+          case "atNextMillisecond":
+          break;
+          case "second_place":
+          break;
+          case "second_place_medal":
+          break;
+          case "paymentMethodId":
+          break;
+          case "userName":
+          break;
+          case "payerInfo":
+          break;
+          case "lastName":
+          break;
+          case "phoneNumber":
+          break;
+          case "postalCode":
           break;
           case "$ZodPipe":
           break;
@@ -4398,27 +4382,13 @@ export default function normalizeColor(num) {
           break;
           case "nl":
           break;
-          case "addedPhone":
-          break;
-          case "_secureFramesTransitionPrepareCount":
-          break;
-          case "trackE2EEUserVerificationShareClicked":
-          break;
-          case "setRobloxSubgameDetectionConfig":
-          break;
           case "$ZodRealError":
           break;
           case "ZodRealError":
           break;
           case "GiftingTier4LargeBadge":
           break;
-          case "woman_kneeling_light_skin_tone":
-          break;
-          case "man_kneeling_light_skin_tone":
-          break;
-          case "target_id":
-          break;
-          case "removeHLSJS":
+          case "hasDeferredInvite":
           break;
           case "benefitType":
           break;
@@ -4453,10 +4423,6 @@ export default function normalizeColor(num) {
           case "$ZodSuccess":
           break;
           case "ZodSuccess":
-          break;
-          case "premiumPlanIdFromItems":
-          break;
-          case "view_start":
           break;
           case "docx":
           break;
@@ -4494,6 +4460,12 @@ export default function normalizeColor(num) {
           break;
           case "wrapAllMCPHandlers":
           break;
+          case "PREMIUM_UPSELL_STICKERS_EVERYWHERE":
+          break;
+          case "STICKERS_EVERYWHERE":
+          break;
+          case "STICKERS_EVERYWHERE_UPSELL":
+          break;
           case "$ZodTuple":
           break;
           case "ZodTuple":
@@ -4520,8 +4492,6 @@ export default function normalizeColor(num) {
           break;
           case "ZodURL":
           break;
-          case "handleRedeemVirtualCurrencyStart":
-          break;
           case "$ZodUUID":
           break;
           case "ZodUUID":
@@ -4533,8 +4503,6 @@ export default function normalizeColor(num) {
           case "ned":
           break;
           case "maxCount":
-          break;
-          case "getEnumValues":
           break;
           case "$ZodUnion":
           break;
@@ -4556,13 +4524,15 @@ export default function normalizeColor(num) {
           break;
           case "totalParticipants":
           break;
+          case "index_pointing_at_the_viewer_tone2":
+          break;
           case "$ZodXor":
           break;
           case "ZodXor":
           break;
           case "safelyMakeUrlHumanReadable":
           break;
-          case "queryChannels":
+          case "queryDMChannels":
           break;
           case "_$esjava$b":
           break;
@@ -4582,9 +4552,9 @@ export default function normalizeColor(num) {
           break;
           case "and":
           break;
-          case "woman_in_motorized_wheelchair_tone4":
+          case "woman_in_motorized_wheelchair_tone5":
           break;
-          case "man_in_motorized_wheelchair_tone4":
+          case "man_in_motorized_wheelchair_tone5":
           break;
           case "jfif":
           break;
@@ -4644,21 +4614,7 @@ export default function normalizeColor(num) {
           break;
           case "outputDeviceId":
           break;
-          case "logsOrigin":
-          break;
-          case "incoming_envelope":
-          break;
-          case "envelope":
-          break;
-          case "envelopeContainsItemType":
-          break;
-          case "recycle":
-          break;
-          case "recycleItems":
-          break;
-          case "fromResource":
-          break;
-          case "sourceSessionId":
+          case "databases":
           break;
           case "rowWidth":
           break;
@@ -4695,10 +4651,6 @@ export default function normalizeColor(num) {
           case ";)":
           break;
           case "ApiIllocon":
-          break;
-          case "couple_with_heart":
-          break;
-          case "couple_with_heart_dark_skin_tone":
           break;
           case "&amp;":
           break;
@@ -4742,6 +4694,10 @@ export default function normalizeColor(num) {
           break;
           case "AvatarCamExample":
           break;
+          case "couple_with_heart":
+          break;
+          case "couple_with_heart_dark_skin_tone":
+          break;
           case "+1":
           break;
           case "+1/7Z9":
@@ -4782,15 +4738,21 @@ export default function normalizeColor(num) {
           break;
           case "audioOnly":
           break;
-          case "AudioBassUp":
-          break;
           case "numpad +":
           break;
           case "+1_tone3":
           break;
-          case "sizes":
+          case "_getParticipantsForEmbeddedActivities":
           break;
-          case "sizesKnown":
+          case "getParticipant":
+          break;
+          case "getParticipants":
+          break;
+          case "EmbeddedActivitiesStore":
+          break;
+          case "small_red_triangle":
+          break;
+          case "small_red_triangle_down":
           break;
           case "rS8FA+":
           break;
@@ -4813,6 +4775,12 @@ export default function normalizeColor(num) {
           case "fmt":
           break;
           case "TwinButtons":
+          break;
+          case "getEmojiEntranceKey":
+          break;
+          case "GUILD_RING_STOP":
+          break;
+          case "STOP_CAMERA_VIEW":
           break;
           case "+CbP2v":
           break;
@@ -4846,17 +4814,23 @@ export default function normalizeColor(num) {
           break;
           case "+Gyklt":
           break;
+          case "END_CALL":
+          break;
+          case "CALL_DISCONNECT_BOTTOM_SHEET":
+          break;
+          case "SHEET_HANDLE_MARGIN_BOTTOM":
+          break;
+          case "MASTERPASS_POPUP_CLOSED":
+          break;
+          case "reconcileBackoff":
+          break;
+          case "offscreenDisabledUsers":
+          break;
           case "+IrDzN":
           break;
           case "MANUAL_IFRAME_RESIZING":
           break;
           case "GUILD_CHANNEL_INTEGRITY_CHECK_FAILED":
-          break;
-          case "openStageSettingsSheet":
-          break;
-          case "TABLE_ROW_HEIGHT":
-          break;
-          case "toPower":
           break;
           case "+TSRGD":
           break;
@@ -4876,7 +4850,11 @@ export default function normalizeColor(num) {
           break;
           case "FRIENDS_LIST_CLICKED":
           break;
-          case "BLURPLE_45":
+          case "SECURE_FRAMES_VERIFIED_DEVICES":
+          break;
+          case "unblockUser":
+          break;
+          case "blockUser":
           break;
           case "isLZH":
           break;
@@ -4892,19 +4870,9 @@ export default function normalizeColor(num) {
           break;
           case "LIKELY_ATO":
           break;
-          case "embedMedia":
+          case "profileFrame":
           break;
-          case "embedMediaToMediaItem":
-          break;
-          case "rowHeight":
-          break;
-          case "getSingleWindowPreview":
-          break;
-          case "ColorSpace":
-          break;
-          case "Space":
-          break;
-          case "profileContainer":
+          case "profileFrameContainer":
           break;
           case "+cGVV6":
           break;
@@ -4950,19 +4918,15 @@ export default function normalizeColor(num) {
           break;
           case "+uI23H":
           break;
-          case "APPLICATION_PUBLIC":
+          case "reflectionEquals":
           break;
-          case "PUBLIC_GUILD_GUILDLINES":
+          case "instrumentAnthropicAiClient":
           break;
-          case "_triggerRemeasureForChildListsInCell":
+          case "transformInternalTextMessage":
           break;
-          case "trigger":
+          case "getBaseTheme":
           break;
-          case "CellRendererComponent":
-          break;
-          case "CellRendererComponentStyle":
-          break;
-          case "leftwards_hand_tone2":
+          case "left_fist_tone2":
           break;
           case "redesign":
           break;
@@ -5002,7 +4966,7 @@ export default function normalizeColor(num) {
           break;
           case "enter":
           break;
-          case "getSectionProps":
+          case "getSelectedChannelIds":
           break;
           case "../../lib/analytics":
           break;
@@ -5018,7 +4982,9 @@ export default function normalizeColor(num) {
           break;
           case "overviewContent":
           break;
-          case "getSortedActivityTypeConfigs":
+          case "left_fist_tone4":
+          break;
+          case "getSortedNamedCategories":
           break;
           case "../../lib/constants":
           break;
@@ -5038,17 +5004,11 @@ export default function normalizeColor(num) {
           break;
           case "errorCallbacks":
           break;
-          case "GUILD_RAID":
-          break;
-          case "GUILD_RAID_FEEDBACK":
-          break;
-          case "forOwn":
-          break;
-          case "getSortedCategories":
+          case "getSortedRoles":
           break;
           case "../../lib/convert-to-braintree-error":
           break;
-          case "guildDismissibleContentStates":
+          case "guildGameIds":
           break;
           case "../../lib/enumerate":
           break;
@@ -5056,11 +5016,13 @@ export default function normalizeColor(num) {
           break;
           case "rate":
           break;
-          case "useGoogleSkuIds":
+          case "image/avif":
           break;
-          case "getFullMatch":
+          case "AvatarMoatmonsturrExample":
           break;
-          case "AvatarLockeExample":
+          case "atm":
+          break;
+          case "mon":
           break;
           case "_forceFlush":
           break;
@@ -5108,9 +5070,9 @@ export default function normalizeColor(num) {
           break;
           case "stringMatchesSomePattern":
           break;
-          case "makeFifoCache":
+          case "retryBackoffCache":
           break;
-          case "checkOpts":
+          case "checkSoundboardSounds":
           break;
           case "showSuccessToast":
           break;
@@ -5120,23 +5082,7 @@ export default function normalizeColor(num) {
           break;
           case "minId":
           break;
-          case "_eventEmitter":
-          break;
-          case "_eventEmitterGuid":
-          break;
-          case "eventEmitter":
-          break;
-          case "GuideNextDay":
-          break;
-          case "DayPeriodParser":
-          break;
-          case "serializeHost":
-          break;
-          case "canTapAnswers":
-          break;
-          case "showReportModalForWidget":
-          break;
-          case "getQuestTaskTypes":
+          case "handleGuildMemberAdd":
           break;
           case "canTriggerUserOffer":
           break;
@@ -5158,7 +5104,7 @@ export default function normalizeColor(num) {
           break;
           case "errors":
           break;
-          case "getSelectableChannelIds":
+          case "getSelectedOptions":
           break;
           case "../lib/assets":
           break;
@@ -5183,6 +5129,12 @@ export default function normalizeColor(num) {
           case "verificationDetails":
           break;
           case "rif":
+          break;
+          case "handleAnnouncementMessageViewTracking":
+          break;
+          case "MessageViewTrackingType":
+          break;
+          case "person_with_ball_tone4":
           break;
           case "../lib/create-deferred-client":
           break;
@@ -5212,39 +5164,7 @@ export default function normalizeColor(num) {
           break;
           case "rows":
           break;
-          case "_applyModification":
-          break;
-          case "onBuy":
-          break;
-          case "onBuySettled":
-          break;
-          case "setShouldCollectHermesInstrumentedStats":
-          break;
-          case "call_me_hand_tone3":
-          break;
-          case "captcha_flow_key":
-          break;
-          case "_key":
-          break;
-          case "_keyChildMapping":
-          break;
-          case "pingedLanes":
-          break;
-          case "tracePropagationTargets":
-          break;
-          case "kiss_person_person_medium_skin_tone_medium_light_skin_tone":
-          break;
-          case "ackUserGuildJoinRequest":
-          break;
-          case "GuildJoinRequestApplicationStatuses":
-          break;
-          case "questApplication":
-          break;
-          case "uses":
-          break;
-          case "usesClientMods":
-          break;
-          case "ses":
+          case "validForUserIds":
           break;
           case "../shared/constants":
           break;
@@ -5260,7 +5180,7 @@ export default function normalizeColor(num) {
           break;
           case "packets":
           break;
-          case "getScreenshotButtonOptions":
+          case "getSelectableChannels":
           break;
           case "./braintree-error":
           break;
@@ -5312,7 +5232,9 @@ export default function normalizeColor(num) {
           break;
           case "GroupIcon":
           break;
-          case "initializeStreamParameters":
+          case "_getCellKey":
+          break;
+          case "inputDevices":
           break;
           case "./songbird":
           break;
@@ -5416,6 +5338,8 @@ export default function normalizeColor(num) {
           break;
           case "INVITE_OPTIONS_1_DAY":
           break;
+          case "boosterFallback":
+          break;
           case "/uzRss":
           break;
           case "CHANNEL_WEBHOOKS":
@@ -5446,9 +5370,7 @@ export default function normalizeColor(num) {
           break;
           case "PinPDown":
           break;
-          case "useGPlayAnalyticsStore":
-          break;
-          case "recordMessageRender":
+          case "useFullscreenPlaceholderCount":
           break;
           case "019":
           break;
@@ -5468,7 +5390,11 @@ export default function normalizeColor(num) {
           break;
           case "toCodePoint":
           break;
-          case "MULTIPLE_REPORTS":
+          case "LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS":
+          break;
+          case "MESSAGE_REQUESTS":
+          break;
+          case "MESSAGE_REQUESTS_SUPPLEMENTAL_DATA":
           break;
           case "PREFERS_COLOR_SCHEME_DARK":
           break;
@@ -5480,29 +5406,23 @@ export default function normalizeColor(num) {
           break;
           case "0B74eY":
           break;
-          case "setUpEventListeners":
+          case "AUTHENTICATION_REQUIRED":
           break;
-          case "getPins":
+          case "REQUIRED_OPTIONS_FOR_PAY_UPON_INVOICE_PAYMENT_TYPE":
           break;
-          case "insert$esjava$3":
+          case "UNKNOWN_MESSAGE":
           break;
-          case "HarVuP":
-          break;
-          case "PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS":
-          break;
-          case "EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS":
-          break;
-          case "DMS_MESSAGE_PREVIEWS":
-          break;
-          case "MESSAGE_PREVIEWS":
-          break;
-          case "MESSAGE_PREVIEWS_LOADED":
+          case "MESSAGE_LINK_COPIED":
           break;
           case "0JCuGm":
           break;
-          case "NetInfoStateType":
+          case "THREAD_STARTER_MESSAGE":
           break;
-          case "person_with_blond_hair_tone2":
+          case "MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT":
+          break;
+          case "DEFAULT_GUILD_OFFICIAL_COLOR":
+          break;
+          case "OFFICIAL":
           break;
           case "0dOFq+":
           break;
@@ -5608,7 +5528,9 @@ export default function normalizeColor(num) {
           break;
           case "ara":
           break;
-          case "setEchoCancellation":
+          case "handleLongPressLink":
+          break;
+          case "kiss_woman_woman_medium_light_skin_tone_medium_dark_skin_tone":
           break;
           case "1B1Cyn":
           break;
@@ -5617,6 +5539,8 @@ export default function normalizeColor(num) {
           case "1LyF1h":
           break;
           case "hour23h":
+          break;
+          case "nagbar":
           break;
           case "1Op+NP":
           break;
@@ -5650,7 +5574,9 @@ export default function normalizeColor(num) {
           break;
           case "URY":
           break;
-          case "dualReadValidationDisabled":
+          case "setDebugLogging":
+          break;
+          case "getLastFastConnectIdentifyUserId":
           break;
           case "1zioRF":
           break;
@@ -5670,22 +5596,6 @@ export default function normalizeColor(num) {
           break;
           case "R3BPH+":
           break;
-          case "stackElements":
-          break;
-          case "HOIST":
-          break;
-          case "PRESS_TIME_OUT_USER":
-          break;
-          case "USER_ACTIVITY_SUBSCRIBE":
-          break;
-          case "SUBSCRIBE_NOW":
-          break;
-          case "NOW_PLAYING":
-          break;
-          case "NOW_PLAYING_CARD_HOVERED":
-          break;
-          case "RED_NEW_24":
-          break;
           case "BLUE_NEW_21":
           break;
           case "21W3EN":
@@ -5698,19 +5608,7 @@ export default function normalizeColor(num) {
           break;
           case "vanityURLCode":
           break;
-          case "useIsVoicePanelFullscreen":
-          break;
-          case "screenIndex":
-          break;
-          case "moduleId":
-          break;
-          case "dumpling":
-          break;
-          case "getHighImportanceMentionCountForChannel":
-          break;
-          case "nullProcessor":
-          break;
-          case "sortedSkuIds":
+          case "getSubscriptionGroupForSubscriptionPlan":
           break;
           case "BLUE_NEW_26":
           break;
@@ -5742,6 +5640,14 @@ export default function normalizeColor(num) {
           break;
           case "2D":
           break;
+          case "aggregationDuration":
+          break;
+          case "aggregationDurationMs":
+          break;
+          case "showCharactersRemaining":
+          break;
+          case "getLastSelectedChannelId":
+          break;
           case "pS+K2L":
           break;
           case "2LsZdT":
@@ -5754,7 +5660,31 @@ export default function normalizeColor(num) {
           break;
           case "LIVE_ACTIVITY_SETTINGS_UPDATED":
           break;
-          case "kum":
+          case "OPUS":
+          break;
+          case "USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED":
+          break;
+          case "JOIN_LARGE_GUILD_UNDERAGE":
+          break;
+          case "DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY":
+          break;
+          case "CLOSE_ACTIVITY_JOIN_REQUEST":
+          break;
+          case "ACTIVITY_JOIN":
+          break;
+          case "ACTIVITY_JOIN_REQUEST":
+          break;
+          case "JO":
+          break;
+          case "JOIN":
+          break;
+          case "JOIN_REQUEST":
+          break;
+          case "RPC_COMMAND_SENT":
+          break;
+          case "TVTimer":
+          break;
+          case "mergeBinaryOptions":
           break;
           case "guide_dog":
           break;
@@ -5771,6 +5701,20 @@ export default function normalizeColor(num) {
           case "firefighter_medium_light_skin_tone":
           break;
           case "2jxGer":
+          break;
+          case "TRIVIA_BOARD_GAME":
+          break;
+          case "GAME_AUTOCOMPLETE_DEBOUNCE_MS":
+          break;
+          case "SUPERVISED_PENDING":
+          break;
+          case "PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER":
+          break;
+          case "RPC_SCOPE_CONFIG":
+          break;
+          case "GUILD_EVENT_INFO_ACTION_SHEET_KEY":
+          break;
+          case "EVENT_INFO":
           break;
           case "2mIlKQ":
           break;
@@ -5816,8 +5760,6 @@ export default function normalizeColor(num) {
           break;
           case "setNativePickerStyleUsed":
           break;
-          case "timestampStart":
-          break;
           case "3AS4UM":
           break;
           case "UM":
@@ -5841,6 +5783,10 @@ export default function normalizeColor(num) {
           case "3D5yo/":
           break;
           case "VIBING_WUMPUS_CLOSED":
+          break;
+          case "DNK":
+          break;
+          case "KrispInitErrorWeight8k":
           break;
           case "WMF_DIRECT_3D_INTEL":
           break;
@@ -5876,10 +5822,6 @@ export default function normalizeColor(num) {
           break;
           case "onLongPressCommandMention":
           break;
-          case "handleInteractionCreate":
-          break;
-          case "onCreateThreadPress":
-          break;
           case "CHANGE_RTC_REGION":
           break;
           case "RTC_REGION_OVERRIDE":
@@ -5902,9 +5844,21 @@ export default function normalizeColor(num) {
           break;
           case "ScrollableContainer":
           break;
-          case "useForumPostMessageAuthor":
+          case "useForumPostMediaThumbnail":
           break;
-          case "presentCommandCopied":
+          case "ForumPostMediaThumbnail":
+          break;
+          case "Thumbnail":
+          break;
+          case "hum":
+          break;
+          case "bn":
+          break;
+          case "BottomSheetMasonryFlashList":
+          break;
+          case "MasonryFlashList":
+          break;
+          case "referrer_id":
           break;
           case "3hF1W4":
           break;
@@ -5916,13 +5870,7 @@ export default function normalizeColor(num) {
           break;
           case "46Ra1b":
           break;
-          case "isEmail":
-          break;
-          case "isEmailRequired":
-          break;
-          case "initVideoStateStore":
-          break;
-          case "VideoState":
+          case "originalConsoleMethods":
           break;
           case "getSmallestScreenWidthDp":
           break;
@@ -5932,11 +5880,11 @@ export default function normalizeColor(num) {
           break;
           case "video_timestamp_seconds":
           break;
-          case "ClientOutdatedAcceptGiftError":
+          case "isNearToNow":
           break;
-          case "td":
+          case "withSetScope":
           break;
-          case "Accept":
+          case "openMemberVerificationCancelPendingAlert":
           break;
           case "addMountListener":
           break;
@@ -5964,10 +5912,6 @@ export default function normalizeColor(num) {
           break;
           case "GUILD_POWERUP_APPLICATION_ID":
           break;
-          case "woman_biking_tone4":
-          break;
-          case "man_biking_tone4":
-          break;
           case "hasNonZeroTargetOffset":
           break;
           case "getOffset":
@@ -5986,19 +5930,33 @@ export default function normalizeColor(num) {
           break;
           case "SUMMARIES_ENABLED_NOTICE":
           break;
-          case "registerIncodeInterview":
+          case "GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES":
           break;
-          case "couple_with_heart_man_man_light_skin_tone":
+          case "TEMPLATES":
           break;
-          case "couple_with_heart_man_man_light_skin_tone_dark_skin_tone":
+          case "LATEST_ACTIVITY":
           break;
-          case "indigo":
+          case "ACTIVITY_FEED_ENABLED_BY_USER":
+          break;
+          case "USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED":
+          break;
+          case "ACCOUNT_EMAIL":
+          break;
+          case "EMAIL":
+          break;
+          case "MAIL":
+          break;
+          case "IL":
+          break;
+          case "getViewabilityConfig":
           break;
           case "fTE74g":
           break;
           case "4g":
           break;
-          case "OPACITY_BLUE_52":
+          case "target_user":
+          break;
+          case "target_user_id":
           break;
           case "WMBV4i":
           break;
@@ -6090,22 +6048,19 @@ export default function normalizeColor(num) {
           break;
           case "E2EE_CALL_VERIFICATION_CODE_COPIED":
           break;
-          case "USER_BANNED":
-          break;
-          case "APP_PROFILE_OPEN_APP_BUTTON_CLICKED":
-          break;
-          case "DISCORD_GAME_INVITES":
-            tmp21 = 4001558271;
-          break;
-          case "GAME_INVITES":
+          case "getNitroFileUploadRolloutConfig":
           break;
           case "5Jvu1R":
+          break;
+          case "FILTER_FROM":
           break;
           case "STREAM_VIEW_LOW_FPS":
           break;
           case "FPS_5":
           break;
           case "5KxXrK":
+          break;
+          case "loadState":
           break;
           case "unknownProcessor":
           break;
@@ -6125,17 +6080,22 @@ export default function normalizeColor(num) {
           break;
           case "QUEST_HOME_SEARCH_QUERY_SUBMITTED":
           break;
+          case "CHANNEL_NOTIFICATION_SETTINGS":
+          break;
+          case "NOTIFICATION_SETTINGS_MODAL_CLOSE":
+          break;
+          case "SEARCH_TYPE_TO_SEARCH_RESULT_TABS":
+          break;
           case "5Q9+/L":
           break;
           case "enableContentProtection":
-            tmp21 = 4294902015;
           break;
           case "onRequireModeratorMFAClick":
           break;
           case "kiss_woman_woman_tone4_tone5":
-            tmp21 = 4294902015;
           break;
           case "5Wxrcd":
+            tmp21 = 4001558271;
           break;
           case "cd":
           break;
@@ -6157,11 +6117,7 @@ export default function normalizeColor(num) {
           break;
           case "headerMessages":
           break;
-          case "last_flush":
-          break;
-          case "_flushHandler":
-          break;
-          case "numSubscriptions":
+          case "getParticipantIds":
           break;
           case "5f3HIC":
           break;
@@ -6172,12 +6128,30 @@ export default function normalizeColor(num) {
           case "ACTIVITY_LEAVE":
           break;
           case "LEAVE":
+            tmp21 = 4294902015;
           break;
           case "LEAVE_PRESS_RECT":
           break;
-          case "addTimeRecurringDismissedContent":
+          case "addTimeToInitialDisplayFallback":
+            tmp21 = 4294902015;
           break;
-          case "createCompactNumberFormat":
+          case "TimeToInitialDisplay":
+          break;
+          case "FallbackCurrencyCountry":
+          break;
+          case "CountryListMode":
+          break;
+          case "deaf_man_medium_dark_skin_tone":
+          break;
+          case "basicOptionalSeconds":
+          break;
+          case "showManageSubscriptions":
+          break;
+          case "sampleRand":
+          break;
+          case "spanSizeInfo":
+          break;
+          case "forcedTheme":
           break;
           case "5g":
           break;
@@ -6187,7 +6161,7 @@ export default function normalizeColor(num) {
           break;
           case "INVALID_GIFT_REDEMPTION_OWNED":
           break;
-          case "GiftCardRight3dIllustration":
+          case "cacheReadInputTokens":
           break;
           case "5h0QOP":
           break;
@@ -6199,15 +6173,7 @@ export default function normalizeColor(num) {
           break;
           case "5h8p5P":
           break;
-          case "shouldFetchDefaultSounds":
-          break;
-          case "xCjYxK":
-          break;
-          case "SECURE_FRAMES_VERIFIED_KEY_CREATE":
-          break;
-          case "CREATE_STAGE_CHANNEL_PERMISSIONS":
-          break;
-          case "CHANNEL_PERMISSIONS_PAGE_VIEWED":
+          case "CHANNEL_LIST_UPDATED":
           break;
           case "woman_biking_tone1":
           break;
@@ -6215,11 +6181,11 @@ export default function normalizeColor(num) {
           break;
           case "5kicT2":
           break;
-          case "setServerDeaf":
+          case "PREMIUM_MARKETING_NAGBAR":
           break;
-          case "NATIVE_PING":
+          case "NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING":
           break;
-          case "GUILD_CHANNEL_RESYNC_FAILED":
+          case "GUILD_CHANNEL_RESYNC_EXECUTED":
           break;
           case "NRuk5m":
           break;
@@ -6249,6 +6215,16 @@ export default function normalizeColor(num) {
           break;
           case "6.0":
           break;
+          case "smiling_face_with_tear":
+          break;
+          case "_teardown":
+          break;
+          case "_teardownRegistry":
+          break;
+          case "teardown":
+          break;
+          case "tryItOutAvatarDecoration":
+          break;
           case "BRAND_560":
           break;
           case "60lJ0C":
@@ -6266,12 +6242,6 @@ export default function normalizeColor(num) {
           case "6E9a1J":
           break;
           case "JALI2K":
-          break;
-          case "getPatternPosition":
-          break;
-          case "onVideoExternalPlaybackChange":
-          break;
-          case "getAudioDevices":
           break;
           case "quietMode":
           break;
@@ -6341,9 +6311,11 @@ export default function normalizeColor(num) {
           break;
           case "6moJ8s":
           break;
-          case "useInitiateAgeVerification":
+          case "bullet_train":
           break;
-          case "useInitiateAgeVerificationV2":
+          case "train2":
+          break;
+          case "in2":
           break;
           case "6p0yBo":
           break;
@@ -6351,11 +6323,17 @@ export default function normalizeColor(num) {
           break;
           case "Bonsai Icon":
           break;
+          case "HUB_CREATE_GUILD_CUSTOMIZE":
+          break;
+          case "GUILD_AUTOMOD_RULE":
+          break;
+          case "GUILD_AUTOMOD_RULES":
+          break;
+          case "SWITCH_THUMB_ICON_ACTIVE":
+          break;
           case "6p7Mhh":
           break;
           case "hh":
-          break;
-          case "modalSessionId":
           break;
           case "OPEN_USER_SETTINGS":
           break;
@@ -6385,9 +6363,15 @@ export default function normalizeColor(num) {
           break;
           case "capChannelCount":
           break;
-          case "trackFeedFeedbackSubmitted":
+          case "trackFeedFirstScrollStarted":
           break;
-          case "dropUnreachableChannels":
+          case "targetBitrate":
+          break;
+          case "targetBitrateHistogram":
+          break;
+          case "markReferralProgramEntrypointBadgeAcknowledged":
+          break;
+          case "warningText":
           break;
           case "allowLinks":
           break;
@@ -6417,7 +6401,9 @@ export default function normalizeColor(num) {
           break;
           case "getStageIgnoredUsersCount":
           break;
-          case "trackSync":
+          case "trackThreadBrowserOpened":
+          break;
+          case "removeLinkedLobby":
           break;
           case "7Xq/nV":
           break;
@@ -6429,7 +6415,15 @@ export default function normalizeColor(num) {
           break;
           case "JEST_WORKER_ID":
           break;
-          case "MMR":
+          case "AIszv8":
+          break;
+          case "NitroLogoCardSpotIllustration":
+          break;
+          case "getGuildEmoji":
+          break;
+          case "getGuildEmojis":
+          break;
+          case "isAMR":
           break;
           case "UZ":
           break;
@@ -6495,9 +6489,9 @@ export default function normalizeColor(num) {
           break;
           case "oEAioF":
           break;
-          case "woman_in_tuxedo_medium_dark_skin_tone":
+          case "woman_in_tuxedo_medium_light_skin_tone":
           break;
-          case "man_in_tuxedo_medium_dark_skin_tone":
+          case "man_in_tuxedo_medium_light_skin_tone":
           break;
           case "8WfJZ8":
           break;
@@ -6543,6 +6537,14 @@ export default function normalizeColor(num) {
           break;
           case "presentVideoSaved":
           break;
+          case "UnitType":
+          break;
+          case "UnitTypeToKind":
+          break;
+          case "Kindle":
+          break;
+          case "Kindle Fire":
+          break;
           case "983601860436819969":
           break;
           case "969dEL":
@@ -6557,9 +6559,9 @@ export default function normalizeColor(num) {
           break;
           case "buttonsContainer":
           break;
-          case "xhrBytesReceived":
+          case "otherOptions":
           break;
-          case "descriptionMainContainer":
+          case "otherOptionsContainer":
           break;
           case "CLIENT_SESSION_STORAGE_VERSION":
           break;
@@ -6577,19 +6579,25 @@ export default function normalizeColor(num) {
           break;
           case "KEYBIND":
           break;
-          case "SYSTEM_TRAY_SET_ICON":
+          case "TEST_CLASSIFICATION":
           break;
-          case "OAUTH2_AUTHORIZE_SAMSUNG":
+          case "TEST_CLASSIFICATION_LOW":
           break;
-          case "OAUTH2_AUTHORIZE_SAMSUNG_CALLBACK":
+          case "storage":
           break;
-          case "SAMSUNG":
+          case "storageHasToken":
           break;
-          case "SUN":
+          case "enableInp":
           break;
-          case "SEAT_1":
+          case "multiline":
           break;
-          case "SEAT_10":
+          case "wc":
+          break;
+          case "PRESS_APPLICATION_WIDGET_PLACEHOLDER_CONNECT":
+          break;
+          case "CONNECTION_REFRESH":
+          break;
+          case "REFRESH_MEDIUM_10":
           break;
           case "983601860436819968":
           break;
@@ -6600,6 +6608,7 @@ export default function normalizeColor(num) {
           case "9EDo+/":
           break;
           case "9FaEzi":
+            tmp21 = 4001558271;
           break;
           case "ziB0HF":
           break;
@@ -6607,16 +6616,11 @@ export default function normalizeColor(num) {
           break;
           case "analyticsLocations":
           break;
-          case "showFeedback":
-            tmp21 = 4001558271;
+          case "showFailedToast":
           break;
-          case "showFeedbackButton":
+          case "attachment_id":
           break;
-          case "backButtonInCustomView":
-          break;
-          case "w_mask":
-          break;
-          case "maskInputOptions":
+          case "attachment_ids":
           break;
           case "9Oq93m":
           break;
@@ -6626,9 +6630,9 @@ export default function normalizeColor(num) {
           break;
           case "9ddYKt":
           break;
-          case "couple_with_heart_woman_woman_light_skin_tone_medium_skin_tone":
+          case "couple_with_heart_woman_woman_light_skin_tone_medium_dark_skin_tone":
           break;
-          case "nextSkuId":
+          case "nextSensorId":
           break;
           case "black_heart":
           break;
@@ -6637,6 +6641,7 @@ export default function normalizeColor(num) {
           case "decorationAsset":
           break;
           case "setAlwaysOnTop":
+            tmp21 = 4294902015;
           break;
           case "opVZ9q":
           break;
@@ -6646,7 +6651,6 @@ export default function normalizeColor(num) {
           case "9rfonh":
           break;
           case "fon":
-            tmp21 = 4294902015;
           break;
           case "9sZWVp":
           break;
@@ -6656,9 +6660,9 @@ export default function normalizeColor(num) {
           break;
           case "apiVersion":
           break;
-          case "kiss_man_man_medium_light_skin_tone_medium_dark_skin_tone":
+          case "responseStart":
           break;
-          case "submitAgeSignal":
+          case "startRegisterWebAuthnCredential":
           break;
           case "unlockThread":
           break;
@@ -6675,14 +6679,6 @@ export default function normalizeColor(num) {
           case "<3":
           break;
           case "safetyWarnings":
-          break;
-          case "isAutomatedPageLoadSpan":
-          break;
-          case "kiss_tone2":
-          break;
-          case "woman_in_lotus_position_tone3":
-          break;
-          case "man_in_lotus_position_tone3":
           break;
           case "callbackSetter":
           break;
@@ -6746,7 +6742,19 @@ export default function normalizeColor(num) {
           break;
           case "A/Ly/2":
           break;
-          case "isPremiumWithPremiumGroup":
+          case "PLAY_SOUNDBOARD_SOUND":
+          break;
+          case "SOUNDBOARD_SOUND_GUILD_DATA":
+          break;
+          case "binding":
+          break;
+          case "NitroRubyBadgeSmallBadge":
+          break;
+          case "shouldIndex":
+          break;
+          case "skipAttempt":
+          break;
+          case "shadowContainer":
           break;
           case "QUARANTINE_EVENT":
           break;
@@ -6866,13 +6874,15 @@ export default function normalizeColor(num) {
           break;
           case "VE":
           break;
-          case "assetFormat":
+          case "ACTIVITIES_NITRO_UPSELL":
           break;
-          case "app_context":
+          case "NITRO":
           break;
-          case "contextCommands":
+          case "NITRO_UPSELL":
           break;
-          case "suggestedGamesIds":
+          case "NITRO_UPSELL_ALERT_KEY":
+          break;
+          case "TR":
           break;
           case "pix":
           break;
@@ -6938,11 +6948,21 @@ export default function normalizeColor(num) {
           break;
           case "START_STAGE_CHANNEL_EVENT_SHEET_KEY":
           break;
-          case "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM":
+          case "isBackwards":
           break;
-          case "EMOJI_ROW_EMOJI_CONTAINER_SIZE":
+          case "FALSE_OPTION_NAME":
           break;
-          case "E2EE_USER_VERIFICATION_CODE_COPIED":
+          case "OPTION_NAME_CONTAINS":
+          break;
+          case "CONTAINS_SELF_HARM_CONTENT":
+          break;
+          case "SELF_HARM":
+          break;
+          case "SELF_HARM_CONTENT":
+          break;
+          case "CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE":
+          break;
+          case "E2EE_STREAM_VERIFICATION_SHARE_CLICKED":
           break;
           case "ACCELEROMETER":
           break;
@@ -6955,8 +6975,6 @@ export default function normalizeColor(num) {
           case "tax":
           break;
           case "Model":
-          break;
-          case "IFD_TYPE_MPF":
           break;
           case "OAUTH2_WHITELIST_ACCEPT":
           break;
@@ -7011,6 +7029,7 @@ export default function normalizeColor(num) {
           case "GUILD_EVENTS_FOR_GUILD":
           break;
           case "GUILD_ADD_ACCEPT_INVITE":
+            tmp21 = 8421631;
           break;
           case "ACCEPT_INVITE":
           break;
@@ -7029,7 +7048,6 @@ export default function normalizeColor(num) {
           case "KEYBOARD_ANIMATION_CONFIG":
           break;
           case "GUILD_BOOST_TIER_3":
-            tmp21 = 8421631;
           break;
           case "TIER_3":
           break;
@@ -7067,7 +7085,11 @@ export default function normalizeColor(num) {
           break;
           case "FAVORITED":
           break;
-          case "SCREEN_BACKGROUND_COLOR":
+          case "RESUME_APPLICATION_STREAMING_VIEW":
+          break;
+          case "VIEW_MOD_REPORT":
+          break;
+          case "REPORT_APPLICATION_CLICKED":
           break;
           case "purchaseResponse":
           break;
@@ -7109,6 +7131,8 @@ export default function normalizeColor(num) {
           break;
           case "WARNING":
           break;
+          case "brewer":
+          break;
           case "ACCEPT_SPAM_MESSAGE":
           break;
           case "SPAM":
@@ -7119,10 +7143,6 @@ export default function normalizeColor(num) {
           break;
           case "GE":
           break;
-          case "_createProxy":
-          break;
-          case "createProxyTicket":
-          break;
           case "activeOutputSinks":
           break;
           case "FeFuncA":
@@ -7131,7 +7151,7 @@ export default function normalizeColor(num) {
           break;
           case "SUGGESTION":
           break;
-          case "inclusions":
+          case "inputJsonParts":
           break;
           case "SETTINGS_ACCESSIBILITY":
           break;
@@ -7213,14 +7233,6 @@ export default function normalizeColor(num) {
           break;
           case "DE":
           break;
-          case "WARGAME":
-          break;
-          case "GAME_AUTOCOMPLETE_FETCH_FAILURE":
-          break;
-          case "REACT_RENDER_OP":
-          break;
-          case "OPACITY_BLACK_52":
-          break;
           case "PREMIUM_GIFT_YEAR_TIER_0":
           break;
           case "TIER_0_MARKETING_PAGE_BACK_BUTTON_BG":
@@ -7256,12 +7268,6 @@ export default function normalizeColor(num) {
           case "IGNORE_USER_CONFIRMATION":
           break;
           case "NO_APPLICATION_ID":
-          break;
-          case "YELLOW_460":
-          break;
-          case "LIGHT_YELLOW":
-          break;
-          case "YELLOW_200":
           break;
           case "AUTO_DISABLE":
           break;
@@ -7305,8 +7311,6 @@ export default function normalizeColor(num) {
           break;
           case "RATIONAL":
           break;
-          case "shouldIncludePreferredRegion":
-          break;
           case "MULTI_ACCOUNT_REMOVE_ACCOUNT":
           break;
           case "ACCOUNT_AGE_GROUP_ASSIGNED_ADULT":
@@ -7332,6 +7336,12 @@ export default function normalizeColor(num) {
           case "SELF":
           break;
           case "REDACTABLE_MESSAGE_LOADED":
+          break;
+          case "LOCAL_PAYMENT_START_PAYMENT_FAILED":
+          break;
+          case "woman_kneeling_tone4":
+          break;
+          case "man_kneeling_tone4":
           break;
           case "UNVERIFIED":
           break;
@@ -7449,23 +7459,17 @@ export default function normalizeColor(num) {
           break;
           case "SKU":
           break;
-          case "pins":
-          break;
           case "ACCOUNT_DELETE":
           break;
           case "DELETE":
           break;
           case "SETTING_UP_TWO_FACTOR":
           break;
-          case "buildOverride":
+          case "onClear":
           break;
-          case "buildOverrides":
+          case "onClearFilters":
           break;
-          case "packages":
-          break;
-          case "util":
-          break;
-          case "utils":
+          case "renderBody":
           break;
           case "ACCOUNT_DISABLE":
           break;
@@ -7487,27 +7491,17 @@ export default function normalizeColor(num) {
           break;
           case "mcp.client.name":
           break;
-          case "saved_at":
+          case "DESIGN_SYSTEMS_ROW_BUTTON":
           break;
-          case "CANNOT_USE_COMMAND":
+          case "BUTTON_SEND_VOICE_MESSAGE":
           break;
-          case "COMMAND_MENTION":
+          case "BUTTON_SEND_VOICE_MESSAGE_DISABLED":
           break;
-          case "MENTION_BACKGROUND":
+          case "SEND":
           break;
-          case "BACKGROUND_MOD_MUTED":
+          case "VOICE_MESSAGE":
           break;
-          case "MUTED":
-          break;
-          case "MUTED_LOCAL":
-          break;
-          case "LOCAL_COMMUNITY":
-          break;
-          case "COMMUNITY_CONTENT":
-          break;
-          case "CONTENT_AND_SOCIAL_DISCORD":
-          break;
-          case "DISCORD_APPLICATION_ID":
+          case "DISABLED_DEVICE_ID":
           break;
           case "GET_APPLICATION_TICKET":
           break;
@@ -7530,28 +7524,6 @@ export default function normalizeColor(num) {
           case "PL":
           break;
           case "PLAY":
-          break;
-          case "DOWNGRADE_SUBSCRIPTION":
-          break;
-          case "SUBSCRIPTION_PLAN_UNAVAILABLE":
-          break;
-          case "GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES":
-          break;
-          case "TEMPLATES":
-          break;
-          case "LATEST_ACTIVITY":
-          break;
-          case "ACTIVITY_FEED_ENABLED_BY_USER":
-          break;
-          case "USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED":
-          break;
-          case "ACCOUNT_EMAIL":
-          break;
-          case "EMAIL":
-          break;
-          case "MAIL":
-          break;
-          case "IL":
           break;
           case "ACCOUNT_ENABLE_2FA":
           break;
@@ -7619,17 +7591,19 @@ export default function normalizeColor(num) {
           break;
           case "INFO":
           break;
-          case "isRoleEqual":
+          case "full_moon":
           break;
-          case "atob":
+          case "full_moon_with_face":
           break;
-          case "poly":
+          case "facepalm":
           break;
-          case "polyfill":
+          case "facepalm_tone1":
           break;
-          case "polyfillGlobal":
+          case "alignCenter":
           break;
-          case "GlobalDiscoveryAppsSections":
+          case "CenterRight":
+          break;
+          case "ghtnss":
           break;
           case "ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION":
           break;
@@ -7669,8 +7643,6 @@ export default function normalizeColor(num) {
           break;
           case "PROMPT_SEEN":
           break;
-          case "resetAllPending":
-          break;
           case "JaIyFi":
           break;
           case "FiMFTZ":
@@ -7685,13 +7657,7 @@ export default function normalizeColor(num) {
           break;
           case "STEP_1_LOADED":
           break;
-          case "currentTimeStamp":
-          break;
-          case "regional_indicator_k":
-          break;
-          case "kiwifruit":
-          break;
-          case "keyboardContexts":
+          case "keyedListeners":
           break;
           case "flag_af":
           break;
@@ -7719,7 +7685,7 @@ export default function normalizeColor(num) {
           break;
           case "NE":
           break;
-          case "handshake_tone4_tone2":
+          case "handshake_tone3_tone2":
           break;
           case "nitroJoinCTA":
           break;
@@ -7740,8 +7706,6 @@ export default function normalizeColor(num) {
           case "TT":
           break;
           case "GS":
-          break;
-          case "PRIMARY_260":
           break;
           case "AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK":
           break;
@@ -7796,14 +7760,6 @@ export default function normalizeColor(num) {
           case "SOUL":
           break;
           case "ACCOUNT_REVERT":
-          break;
-          case "rowSelected":
-          break;
-          case "GiftIcon":
-          break;
-          case "GiftIconCoachmark":
-          break;
-          case "safety_vest":
           break;
           case "OPEN_SHARE_MOMENT_DIALOG":
           break;
@@ -7901,10 +7857,6 @@ export default function normalizeColor(num) {
           break;
           case "USERNAME_UPDATE":
           break;
-          case "_subscriptions":
-          break;
-          case "subscriptions":
-          break;
           case "BWP":
           break;
           case "setShowFloatingCTA":
@@ -7929,7 +7881,7 @@ export default function normalizeColor(num) {
           break;
           case "SWIPE_RIGHT_TO_LEFT_UNSET":
           break;
-          case "hash_bits":
+          case "headerBytes":
           break;
           case "loginWebAuthn":
           break;
@@ -7953,11 +7905,7 @@ export default function normalizeColor(num) {
           break;
           case "SPACE":
           break;
-          case "STORE_LISTINGS_FETCH_FAIL":
-          break;
-          case "ILLO_YELLOW_50":
-          break;
-          case "YELLOW":
+          case "STORE_LISTINGS_FETCH_SUCCESS":
           break;
           case "ACHIEVEMENT_IN_GAME":
           break;
@@ -8045,11 +7993,21 @@ export default function normalizeColor(num) {
           break;
           case "DSA_EXPERIMENT_UNAUTHENTICATED":
           break;
-          case "CHECKPOINT_PERSONA_SEVEN_GRADIENT_START":
+          case "USER_AFFINITIES_V2":
           break;
-          case "START_PURCHASE":
+          case "PRIVACY_LEVEL":
           break;
-          case "SEAT_19":
+          case "LEVEL_9":
+          break;
+          case "two_women_holding_hands":
+          break;
+          case "women_holding_hands_dark_skin_tone":
+          break;
+          case "women_holding_hands_dark_skin_tone_light_skin_tone":
+          break;
+          case "men_holding_hands_dark_skin_tone":
+          break;
+          case "men_holding_hands_dark_skin_tone_light_skin_tone":
           break;
           case "ACK_CHANNEL_RTC_UPDATE_CHAT_OPEN":
           break;
@@ -8111,7 +8069,9 @@ export default function normalizeColor(num) {
           break;
           case "CHANNEL_BROWSER_NUX":
           break;
-          case "getStableSafeAreaInsets":
+          case "progressUpdateGranularity":
+          break;
+          case "getStorefrontEntries":
           break;
           case "CONTROL_SECONDARY_BORDER_ACTIVE":
           break;
@@ -8130,34 +8090,6 @@ export default function normalizeColor(num) {
           case "SPEED_BUMP":
           break;
           case "MPEntry":
-          break;
-          case "acw":
-          break;
-          case "SAFARI":
-          break;
-          case "RIBES":
-          break;
-          case "BES":
-          break;
-          case "BEST":
-          break;
-          case "BEST_FOOD":
-          break;
-          case "FOOD":
-          break;
-          case "FOOD_CRAVING":
-          break;
-          case "GIFT_START":
-          break;
-          case "RTCSocketCloseCode":
-          break;
-          case "deaf_person_tone4":
-          break;
-          case "person_tone4_red_hair":
-          break;
-          case "prefersCrossFadeTransitions":
-          break;
-          case "ChatSmileIcon":
           break;
           case "suspendedUserToken":
           break;
@@ -8207,11 +8139,15 @@ export default function normalizeColor(num) {
           break;
           case "SIDEBAR":
           break;
-          case "nail_care":
+          case "innerContent":
           break;
-          case "nail_care_tone1":
+          case "transformComponents":
           break;
-          case "DiscordNative":
+          case "originalId":
+          break;
+          case "KzCF/6":
+          break;
+          case "requestSafeIdleCallback":
           break;
           case "APP_LAUNCHER_CLOSED":
           break;
@@ -8265,17 +8201,7 @@ export default function normalizeColor(num) {
           break;
           case "ADS":
           break;
-          case "GUILD_SETTINGS_ROLE_SELECT":
-          break;
-          case "ROLE_SELECT":
-          break;
-          case "SELECT_CONSOLE_PLATFORM":
-          break;
-          case "PLATFORM_CRUNCHYROLL":
-          break;
-          case "CRUNCHYROLL":
-          break;
-          case "CRUNCHYROLL_CLIENT_ID":
+          case "CREATOR_MONETIZATION_TERMS_ACCEPTED":
           break;
           case "CHECKPOINT_PERSONA_ONE_SECONDARY":
           break;
@@ -8329,11 +8255,9 @@ export default function normalizeColor(num) {
           break;
           case "THREEDS_CARDINAL_SDK_SETUP_FAILED":
           break;
-          case "accountWarning":
+          case "appliedAdjust":
           break;
-          case "accountWarningButton":
-          break;
-          case "onCurrentSecond":
+          case "justifySelf":
           break;
           case "NOTIF_CENTER_ITEMS":
           break;
@@ -8349,9 +8273,11 @@ export default function normalizeColor(num) {
           break;
           case "USER_DENIED":
           break;
-          case "initialProgress":
+          case "ICC_NON_SRGB_PROFILE":
           break;
-          case "initialProgressSec":
+          case "RGB":
+          break;
+          case "PROFILE_BIO_RULES":
           break;
           case "NOTIF_CENTER_ITEMS_BULK_ACK":
           break;
@@ -8370,8 +8296,6 @@ export default function normalizeColor(num) {
           case "VIEWED":
           break;
           case "WEDNESDAY":
-          break;
-          case "YOU_ACCOUNT_ACTION_SHEET":
           break;
           case "MESSAGE_PIN":
           break;
@@ -8396,6 +8320,10 @@ export default function normalizeColor(num) {
           case "MIN":
           break;
           case "MESSAGE_ACTIONS_MENU":
+          break;
+          case "maximum":
+          break;
+          case "maximumDate":
           break;
           case "MESSAGE_TOO_LONG":
           break;
@@ -8440,7 +8368,6 @@ export default function normalizeColor(num) {
           case "EDIT_LAST_MESSAGE":
           break;
           case "MESSAGE_BULK_DELETE":
-            tmp21 = 4294902015;
           break;
           case "isResponseUrlStale":
           break;
@@ -8458,6 +8385,8 @@ export default function normalizeColor(num) {
           break;
           case "EDIT_LINKED_LOBBY":
           break;
+          case "r4Zjzv":
+          break;
           case "ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED":
           break;
           case "NEW":
@@ -8467,8 +8396,6 @@ export default function normalizeColor(num) {
           case "NAMEPLATE":
           break;
           case "SHEET_HEADER_PADDING_HORIZONTAL":
-          break;
-          case "crossOriginIframeStyleMirror":
           break;
           case "WEB_OPEN":
           break;
@@ -8513,6 +8440,7 @@ export default function normalizeColor(num) {
           case "VOICE":
           break;
           case "VOICE_CHANNEL":
+            tmp21 = 4294902015;
           break;
           case "VOICE_CHANNEL_SELECT":
           break;
@@ -8546,6 +8474,8 @@ export default function normalizeColor(num) {
           break;
           case "MEMBER_VERIFICATION_APPLICATION_VIEWED":
           break;
+          case "BananaSpotIllustration":
+          break;
           case "ACRequestOperations":
           break;
           case "Request":
@@ -8553,8 +8483,6 @@ export default function normalizeColor(num) {
           case "eq":
           break;
           case "quest":
-          break;
-          case "heroIllustrationContainer":
           break;
           case "MAX_BULK_ROLE_MEMBERS_ADD":
           break;
@@ -8584,9 +8512,15 @@ export default function normalizeColor(num) {
           break;
           case "RESPONSIVE_DENSITY_MEDIA_QUERY":
           break;
-          case "ytVideoReady":
+          case "upsellItem":
           break;
-          case "FORUM_UPSELL_MODAL_CLICKED":
+          case "emitPlayerReady":
+          break;
+          case "FORUM_THREAD_CREATED":
+          break;
+          case "THREAD_CREATE":
+          break;
+          case "THREAD_CREATED":
           break;
           case "GET_CAMERA_VIEW_CAPABILITIES":
           break;
@@ -8616,8 +8550,6 @@ export default function normalizeColor(num) {
           break;
           case "ACTIVITY_LAUNCH_INVALID_CONFIGURATION_PLATFORM_NOT_SUPPORTED":
           break;
-          case "PORTRAIT_9_16":
-          break;
           case "else":
           break;
           case "heartbeats":
@@ -8638,7 +8570,11 @@ export default function normalizeColor(num) {
           break;
           case "EnableScreenDowntimeScheduleNotifications":
           break;
-          case "touchableHandleLongPress":
+          case "_longestInteractionMap":
+          break;
+          case "applicationStatus":
+          break;
+          case "useAppliedTags":
           break;
           case "CHAT_INPUT_OMNI_BUTTON_ACTION":
           break;
@@ -8667,8 +8603,6 @@ export default function normalizeColor(num) {
           case "WEBAUTHN_PASSWORDLESS_CHALLENGE":
           break;
           case "GEN_AI_REQUEST_STREAM_ATTRIBUTE":
-          break;
-          case "controlsProps":
           break;
           case "ADD_UPDATE_PORTAL":
           break;
@@ -8710,15 +8644,43 @@ export default function normalizeColor(num) {
           break;
           case "GK18KJ":
           break;
-          case "changeToListingId":
+          case "GOOGLE_PLAY":
           break;
-          case "disableUI":
+          case "GOOGLE_PLAY_PRICE_CHANGE_ACTION_SHEET":
           break;
-          case "UI_ACTION":
+          case "ACTION_SHEET":
           break;
-          case "UI_ACTION_TOUCH":
+          case "ACTION_SHEET_BORDER_RADIUS":
           break;
-          case "TOUCHABLE_STATE":
+          case "EE":
+          break;
+          case "BORDER":
+          break;
+          case "BORDER_RADIUS":
+          break;
+          case "LEGACY_BADGE_ID_MAP":
+          break;
+          case "APPLICATION_DIRECTORY":
+          break;
+          case "APPLICATION_DIRECTORY_APPLICATION":
+          break;
+          case "APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS":
+          break;
+          case "PERMISSIONS_DENIED":
+          break;
+          case "SWITCH_BORDER_SELECTED_DEFAULT":
+          break;
+          case "DEFAULT_ROLE_COLOR":
+          break;
+          case "DEFAULT_ROLE_COLOR_HEX":
+          break;
+          case "EXACT_SEARCH_RESULT_COUNTS":
+          break;
+          case "SPAN_STATUS_UNSET":
+          break;
+          case "PRESET_DOCUMENTS":
+          break;
+          case "TRUNCATED_MESSAGE_VIEW_SIZE":
           break;
           case "ACTIVITY_UPSELL_ACTION_SHEET":
           break;
@@ -8749,11 +8711,49 @@ export default function normalizeColor(num) {
           case "THB":
           break;
           case "saturation":
-            tmp21 = 4278190335;
           break;
           case "saturationFactor":
           break;
           case "PREMIUM_PAYMENT_ACTION_SHEET":
+          break;
+          case "ACTION_SHEET_HANDLE_SPACING":
+          break;
+          case "REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT":
+          break;
+          case "REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2":
+          break;
+          case "voiceAndVideo":
+          break;
+          case "roleJustCreated":
+          break;
+          case "BillingSettingsBanner":
+          break;
+          case "QZRcfO":
+          break;
+          case "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD":
+          break;
+          case "SOUNDBOARD_ACTION_SHEET":
+          break;
+          case "ACTION_SHEET_INNER_BORDER_RADIUS":
+          break;
+          case "LEGACY_BLUR_FALLBACK_DEFAULT":
+          break;
+          case "DEFAULT_GOOGLE_GRACE_PERIOD_DAYS":
+          break;
+          case "GOOGLE":
+          break;
+          case "searchFetchers":
+          break;
+          case "APP_CHANNEL":
+          break;
+          case "APP_CHANNEL_APP":
+          break;
+          case "APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY":
+            tmp21 = 4278190335;
+          break;
+          case "ACTION_SHEET_KEY":
+          break;
+          case "KEYBOARD_SHORTCUT_USED":
           break;
           default:
             tmp21 = null;

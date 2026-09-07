@@ -1,14 +1,14 @@
-// Module ID: 9371
-// Function ID: 9372
+// Module ID: 9376
+// Function ID: 9377
 // Name: UploadIcon
-// Dependencies: [19, 21, 576, 4261, 9372, 2]
+// Dependencies: [19, 21, 576, 4261, 9377, 2]
 // Exports: UploadIcon
 
-// Module 9371 (UploadIcon)
+// Module 9376 (UploadIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 9372 */;
+import registerAsset from "registerAsset" /* 9377 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

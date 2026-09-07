@@ -1,9 +1,9 @@
-// Module ID: 10930
-// Function ID: 10931
+// Module ID: 10935
+// Function ID: 10936
 // Name: componentDidMount
 // Dependencies: [19, 21, 1114, 1090, 4556, 2]
 
-// Module 10930 (componentDidMount)
+// Module 10935 (componentDidMount)
 import setDefault from "set" /* 1090 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;

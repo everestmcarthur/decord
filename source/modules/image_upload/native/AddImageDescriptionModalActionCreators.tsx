@@ -1,8 +1,8 @@
-// Module ID: 11239
-// Function ID: 11240
-// Dependencies: [4527, 4763, 11240, 1896, 2]
+// Module ID: 11244
+// Function ID: 11245
+// Dependencies: [4527, 4763, 11245, 1896, 2]
 
-// Module 11239
+// Module 11244
 import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
@@ -15,7 +15,7 @@ export default {
   open(closure_0) {
     ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
     const obj = ACTION_SHEET_HEIGHT_HALFDefault;
-    _modDef4763.pushLazy(asyncRequireImpl(11240, dependencyMap.paths), closure_0, ADD_IMAGE_DESCRIPTION_MODAL_KEY);
+    _modDef4763.pushLazy(asyncRequireImpl(11245, dependencyMap.paths), closure_0, ADD_IMAGE_DESCRIPTION_MODAL_KEY);
   },
   close() {
     _modDef4763.popWithKey(ADD_IMAGE_DESCRIPTION_MODAL_KEY);

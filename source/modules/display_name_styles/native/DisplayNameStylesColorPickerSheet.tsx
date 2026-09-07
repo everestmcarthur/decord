@@ -1,10 +1,10 @@
-// Module ID: 15352
-// Function ID: 15353
+// Module ID: 15355
+// Function ID: 15356
 // Name: DisplayNameStylesColorPickerSheet
-// Dependencies: [32, 19, 17, 1389, 1074, 21, 4560, 576, 8170, 10903, 4528, 4527, 14595, 1242, 7150, 7149, 1114, 2786, 4975, 12, 1091, 1390, 15350, 2]
+// Dependencies: [32, 19, 17, 1389, 1074, 21, 4560, 576, 8170, 10908, 4528, 4527, 14598, 1242, 7150, 7149, 1114, 2786, 4975, 12, 1091, 1390, 15353, 2]
 // Exports: default
 
-// Module 15352 (DisplayNameStylesColorPickerSheet)
+// Module 15355 (DisplayNameStylesColorPickerSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

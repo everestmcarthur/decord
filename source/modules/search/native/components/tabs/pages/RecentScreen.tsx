@@ -1,9 +1,9 @@
-// Module ID: 16640
-// Function ID: 16641
+// Module ID: 16643
+// Function ID: 16644
 // Name: ClearAllHistory
-// Dependencies: [32, 5, 19, 7281, 12363, 16641, 12339, 7878, 12353, 1074, 21, 5123, 12361, 1114, 4556, 10862, 16642, 4573, 12358, 12340, 504, 1484, 16645, 12338, 14821, 8411, 8413, 16646, 16647, 16650, 2]
+// Dependencies: [32, 5, 19, 7281, 12367, 16644, 12343, 7878, 12357, 1074, 21, 5123, 12365, 1114, 4556, 10867, 16645, 4573, 12362, 12344, 504, 1484, 16648, 12342, 14824, 8411, 8413, 16649, 16650, 16653, 2]
 
-// Module 16640 (ClearAllHistory)
+// Module 16643 (ClearAllHistory)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
 import PressableBase from "PressableBase" /* 5123 */;
@@ -11,11 +11,11 @@ import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import closure_6 from "handleReaction" /* 7281 */;
-import closure_7 from "search" /* 12363 */;
-import closure_8 from "deserialize" /* 16641 */;
-import closure_9 from "prototype" /* 12339 */;
+import closure_7 from "search" /* 12367 */;
+import closure_8 from "deserialize" /* 16644 */;
+import closure_9 from "prototype" /* 12343 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
-import { EMPTY_MEDIA_RESULTS } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 12353 */;
+import { EMPTY_MEDIA_RESULTS } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 12357 */;
 import { SearchTypes } from "ME" /* 1074 */;
 import { jsx } from "jsxProd" /* 21 */;
 

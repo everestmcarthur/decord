@@ -1,13 +1,13 @@
-// Module ID: 8790
-// Function ID: 8791
+// Module ID: 8795
+// Function ID: 8796
 // Name: useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds
-// Dependencies: [19, 8791, 1915, 7621, 1979, 4600, 7228, 504, 8341, 8792, 2]
+// Dependencies: [19, 8796, 1915, 7621, 1979, 4600, 7228, 504, 8341, 8797, 2]
 // Exports: useAreUsersInSocialLayerStorefrontMutualGuildsApplicationIds, useAreUsersPlayingStorefrontEnabledGames, useCurrentUserPlayedSocialLayerStorefrontGamesApplicationIds, useCurrentUserPlayingSocialLayerStorefrontGamesApplicationIds, useIsCurrentUserInSocialLayerStorefrontGuildsApplicationIds, useIsCurrentUserPlayingSocialLayerStorefrontGames, useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds, useUsersPlayingStorefrontEnabledGamesApplicationIds
 
-// Module 8790 (useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds)
+// Module 8795 (useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds)
 import initialize from "initialize" /* 504 */;
 import closure_2 from "noop" /* 19 */;
-import closure_3 from "map" /* 8791 */;
+import closure_3 from "map" /* 8796 */;
 import closure_4 from "initialize" /* 1915 */;
 import closure_5 from "createUserWidgetFromServer" /* 7621 */;
 import closure_6 from "createGuildRecordFromRust" /* 1979 */;

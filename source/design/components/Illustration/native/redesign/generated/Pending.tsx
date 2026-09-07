@@ -1,10 +1,10 @@
-// Module ID: 16887
-// Function ID: 16888
+// Module ID: 16890
+// Function ID: 16891
 // Name: getPendingSource
-// Dependencies: [19, 17, 21, 8233, 16888, 16889, 16890, 4411, 2]
+// Dependencies: [19, 17, 21, 8233, 16891, 16892, 16893, 4411, 2]
 // Exports: Pending, getPendingSource, usePendingSource
 
-// Module 16887 (getPendingSource)
+// Module 16890 (getPendingSource)
 import noopAll from "noop" /* 19 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
 import getIllustrationSource from "getIllustrationSource" /* 8233 */;
@@ -19,13 +19,13 @@ export const getPendingSource = function getPendingSource(theme) {
   let obj = getIllustrationSource;
   obj = {
     dark() {
-      return callback(16888);
+      return callback(16891);
     },
     darker() {
-      return callback(16889);
+      return callback(16892);
     },
     light() {
-      return callback(16890);
+      return callback(16893);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -34,13 +34,13 @@ export const usePendingSource = function usePendingSource() {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16888);
+      return callback(16891);
     },
     darker() {
-      return callback(16889);
+      return callback(16892);
     },
     light() {
-      return callback(16890);
+      return callback(16893);
     }
   };
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -49,13 +49,13 @@ export const Pending = function Pending(arg0) {
   let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
-      return callback(16888);
+      return callback(16891);
     },
     darker() {
-      return callback(16889);
+      return callback(16892);
     },
     light() {
-      return callback(16890);
+      return callback(16893);
     }
   };
   obj = {};

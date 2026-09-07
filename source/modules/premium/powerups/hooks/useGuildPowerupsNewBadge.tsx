@@ -1,11 +1,11 @@
-// Module ID: 12510
-// Function ID: 12511
+// Module ID: 12514
+// Function ID: 12515
 // Name: useGuildPowerupsNewBadge
-// Dependencies: [32, 19, 4449, 4450, 1954, 1943, 504, 12503, 7388, 1945, 2]
+// Dependencies: [32, 19, 4449, 4450, 1954, 1943, 504, 12507, 7388, 1945, 2]
 // Exports: default, useAutoDismissGuildPowerupsNewBadge
 
-// Module 12510 (useGuildPowerupsNewBadge)
-import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 12503 */;
+// Module 12514 (useGuildPowerupsNewBadge)
+import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 12507 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import closure_5 from "calculateAppliedBoosts" /* 4449 */;
@@ -64,7 +64,7 @@ export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildP
   const items = [closure_5];
   const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_5.getStateForGuild(closure_0));
   let obj = _require(504);
-  const tmp2Result = num(12503)(guildId, stateFromStores);
+  const tmp2Result = num(12507)(guildId, stateFromStores);
   num = 0;
   if (tmp2Result >= constants.GUILD_THEME) {
     num = tmp2Result;

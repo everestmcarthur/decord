@@ -1,10 +1,10 @@
-// Module ID: 8448
-// Function ID: 8449
+// Module ID: 8440
+// Function ID: 8441
 // Name: _requestGoogleWalletVerification
-// Dependencies: [5, 502, 1074, 8418, 1272, 8449, 2]
+// Dependencies: [5, 502, 1074, 8418, 1272, 8441, 2]
 // Exports: checkGoogleWalletAvailable, getGoogleWalletCredential, requestGoogleWalletVerification, verifyGoogleWalletCredential
 
-// Module 8448 (_requestGoogleWalletVerification)
+// Module 8440 (_requestGoogleWalletVerification)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "fetchFingerprint" /* 502 */;
 import { Endpoints } from "ME" /* 1074 */;

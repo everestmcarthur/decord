@@ -1,14 +1,14 @@
-// Module ID: 16312
-// Function ID: 16313
+// Module ID: 16315
+// Function ID: 16316
 // Name: HomeDrawerFavoritesRowExpandedChildren
-// Dependencies: [19, 21, 16305, 4556, 1114, 2]
+// Dependencies: [19, 21, 16308, 4556, 1114, 2]
 // Exports: HomeDrawerFavoritesRowExpandedChildren
 
-// Module 16312 (HomeDrawerFavoritesRowExpandedChildren)
+// Module 16315 (HomeDrawerFavoritesRowExpandedChildren)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import Text from "Text" /* 4556 */;
-import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 16305 */;
+import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 16308 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

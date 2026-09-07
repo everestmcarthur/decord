@@ -1,10 +1,10 @@
-// Module ID: 16252
-// Function ID: 16253
+// Module ID: 16255
+// Function ID: 16256
 // Name: useIsGuildEligibleForRoleSubscriptionsUpsell
 // Dependencies: [1975, 1979, 1371, 1074, 504, 7261, 2]
 // Exports: default
 
-// Module 16252 (useIsGuildEligibleForRoleSubscriptionsUpsell)
+// Module 16255 (useIsGuildEligibleForRoleSubscriptionsUpsell)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;

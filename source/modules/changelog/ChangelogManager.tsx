@@ -1,9 +1,9 @@
-// Module ID: 17325
-// Function ID: 17326
+// Module ID: 17328
+// Function ID: 17329
 // Name: prototype
-// Dependencies: [5, 32, 2025, 4574, 7118, 8092, 17326, 573, 11, 17328, 2]
+// Dependencies: [5, 32, 2025, 4574, 7118, 8092, 17329, 573, 11, 17331, 2]
 
-// Module 17325 (prototype)
+// Module 17328 (prototype)
 import initializeDefault from "initialize" /* 7118 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
@@ -108,10 +108,10 @@ let prototype = function ChangelogManager() {
                 continue;
               }
               return first;
-            })(body, lib(17326).getClientVersionForChangelog());
+            })(body, lib(17329).getClientVersionForChangelog());
             dispatchResult2 = body;
             dispatchResult2 = dependencyMap;
-            const obj23 = lib(17326);
+            const obj23 = lib(17329);
             let obj3 = { type: "CHANGE_LOG_SET_CONFIG", config: null, latestChangelogId: null };
             dispatchResult2 = lib;
             obj3[1] = lib.body;
@@ -196,7 +196,7 @@ let prototype = function ChangelogManager() {
                   const _Date2 = Date;
                   const date1 = new Date(dispatchResult2);
                   if (date > date1) {
-                    obj = lib(17328);
+                    obj = lib(17331);
                     obj.openChangelog();
                   }
                   c3 = 0;

@@ -1,14 +1,14 @@
-// Module ID: 13157
-// Function ID: 13158
+// Module ID: 13161
+// Function ID: 13162
 // Name: NitroAcquiredHeader
-// Dependencies: [19, 17, 1074, 1373, 21, 4560, 576, 8846, 5587, 13158, 4495, 7588, 4411, 10724, 10725, 4556, 1114, 2024, 4255, 7150, 7431, 5123, 11105, 4975, 4527, 7154, 2]
+// Dependencies: [19, 17, 1074, 1373, 21, 4560, 576, 8851, 5587, 13162, 4495, 7588, 4411, 10729, 10730, 4556, 1114, 2024, 4255, 7150, 7431, 5123, 11110, 4975, 4527, 7154, 2]
 // Exports: default
 
-// Module 13157 (NitroAcquiredHeader)
+// Module 13161 (NitroAcquiredHeader)
 import ThemesDefault from "Themes" /* 576 */;
 import preloadDefault from "preload" /* 5587 */;
-import FRACTIONAL_NITRO_COIN_SIZE from "FRACTIONAL_NITRO_COIN_SIZE" /* 8846 */;
-import registerAssetDefault from "registerAsset" /* 13158 */;
+import FRACTIONAL_NITRO_COIN_SIZE from "FRACTIONAL_NITRO_COIN_SIZE" /* 8851 */;
+import registerAssetDefault from "registerAsset" /* 13162 */;
 import closure_3 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;
@@ -142,7 +142,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   }
   obj1 = { children: null };
   const items2 = [tmp12Result, ];
-  let obj2 = { style: tmp.questionIconContainer, onPress: callback, children: tmp15(skuId(11105).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(576).colors.WHITE }) };
+  let obj2 = { style: tmp.questionIconContainer, onPress: callback, children: tmp15(skuId(11110).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(576).colors.WHITE }) };
   items2[1] = tmp15(skuId(5123).PressableOpacity, obj2);
   obj1[0] = items2;
   const items3 = [closure_10(closure_11, obj1), , ];

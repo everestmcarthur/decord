@@ -1,9 +1,9 @@
-// Module ID: 10095
-// Function ID: 10096
+// Module ID: 10100
+// Function ID: 10101
 // Name: set
 // Dependencies: [576, 4296, 2]
 
-// Module 10095 (set)
+// Module 10100 (set)
 import ThemesDefault from "Themes" /* 576 */;
 import _mod4296 from "module_4296" /* 4296 */;
 import set from "set" /* 2 */;

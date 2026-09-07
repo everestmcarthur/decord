@@ -1,10 +1,10 @@
-// Module ID: 17010
-// Function ID: 17011
+// Module ID: 17013
+// Function ID: 17014
 // Name: usePIPAvoidanceSpecs
-// Dependencies: [4296, 16689, 17011, 9495, 16910, 17012, 11354, 2]
+// Dependencies: [4296, 16692, 17014, 9500, 16913, 17015, 11359, 2]
 // Exports: default
 
-// Module 17010 (usePIPAvoidanceSpecs)
+// Module 17013 (usePIPAvoidanceSpecs)
 import set from "set" /* 2 */;
 
 let closure_3 = { code: "function usePIPAvoidanceSpecsTsx1(){const{keyboardHeight,safeArea,screenName}=this.__closure;return{keyboardHeight:keyboardHeight.get(),safeAreaBottom:safeArea.bottom,screenName:screenName.get()};}" };
@@ -15,9 +15,9 @@ export default function usePIPAvoidanceSpecs(safeArea) {
   const _require = safeArea;
   let obj = _require(4296);
   const sharedValue = obj.useSharedValue({ top: 0, bottom: 0 });
-  const tmp2 = sharedValue(16689)();
+  const tmp2 = sharedValue(16692)();
   dependencyMap = tmp2;
-  const tmp3 = sharedValue(17011)();
+  const tmp3 = sharedValue(17014)();
   closure_3 = tmp3;
   const fn = function n() {
     return { keyboardHeight: closure_2.get(), safeAreaBottom: safeArea.bottom, screenName: closure_3.get() };
@@ -39,7 +39,7 @@ export default function usePIPAvoidanceSpecs(safeArea) {
       const tmp4 = sharedValue(tmp2[4])(screenName);
     }
   };
-  obj = { cheapWorkletShallowEqual: _require(9495).cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(16910), getAdjustedBottomOffsets: sharedValue(17012), updateSharedValueIfChanged: sharedValue(11354), pipAvoidanceSpecs: sharedValue };
+  obj = { cheapWorkletShallowEqual: _require(9500).cheapWorkletShallowEqual, getPIPBottomOffsetForPIPMode: sharedValue(16913), getAdjustedBottomOffsets: sharedValue(17015), updateSharedValueIfChanged: sharedValue(11359), pipAvoidanceSpecs: sharedValue };
   fn2.__closure = obj;
   fn2.__workletHash = 643938425459;
   fn2.__initData = closure_4;

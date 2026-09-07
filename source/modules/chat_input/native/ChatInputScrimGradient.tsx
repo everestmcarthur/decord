@@ -1,10 +1,10 @@
-// Module ID: 12261
-// Function ID: 12262
+// Module ID: 12265
+// Function ID: 12266
 // Name: ChatInputScrimGradient
 // Dependencies: [19, 17, 21, 4378, 4262, 576, 1091, 4987, 2]
 // Exports: ChatInputScrimGradient, useChatInputFloatingOverlayStyle
 
-// Module 12261 (ChatInputScrimGradient)
+// Module 12265 (ChatInputScrimGradient)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import map from "map" /* 4262 */;

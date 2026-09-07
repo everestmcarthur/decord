@@ -1,10 +1,10 @@
-// Module ID: 10186
-// Function ID: 10187
+// Module ID: 10191
+// Function ID: 10192
 // Name: uriScheme
 // Dependencies: [5, 3, 1256, 5138, 1232, 2]
 // Exports: getAttachments
 
-// Module 10186 (uriScheme)
+// Module 10191 (uriScheme)
 import timestampDefault from "timestamp" /* 3 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 

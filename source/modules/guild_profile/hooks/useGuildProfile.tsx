@@ -1,13 +1,13 @@
-// Module ID: 9187
-// Function ID: 9188
+// Module ID: 9192
+// Function ID: 9193
 // Name: useGuildProfile
-// Dependencies: [5, 19, 9065, 504, 9188, 2]
+// Dependencies: [5, 19, 9070, 504, 9193, 2]
 // Exports: useGuildProfile
 
-// Module 9187 (useGuildProfile)
+// Module 9192 (useGuildProfile)
 import closure_2 from "asyncGeneratorStep" /* 5 */;
 import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUpdateStart" /* 9065 */;
+import closure_4 from "handleUpdateStart" /* 9070 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfile.tsx");

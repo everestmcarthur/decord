@@ -1,13 +1,13 @@
-// Module ID: 10914
-// Function ID: 10915
+// Module ID: 10919
+// Function ID: 10920
 // Name: handleVoiceOrStageChannelConnectPress
-// Dependencies: [5, 19, 10915, 7330, 1962, 5507, 1961, 7117, 1957, 7527, 1979, 4199, 4575, 4209, 2011, 4741, 1371, 1074, 10916, 21, 8393, 1896, 4767, 1114, 10917, 8179, 4501, 4573, 4713, 4904, 10250, 10919, 4503, 4763, 10931, 3225, 9286, 1100, 10951, 10222, 10032, 9820, 10953, 7113, 4418, 5680, 10955, 8588, 10956, 10957, 10959, 10243, 10244, 10246, 6970, 7110, 9059, 9776, 7119, 7114, 10961, 8625, 5073, 10963, 10964, 5097, 5071, 4527, 10965, 10966, 4761, 8394, 8664, 8629, 6968, 5520, 7380, 4507, 9737, 10629, 7190, 4258, 7162, 7182, 10224, 504, 1965, 7535, 7884, 1935, 5584, 1178, 10967, 10974, 10975, 7198, 1608, 10998, 7200, 2]
+// Dependencies: [5, 19, 10920, 7330, 1962, 5507, 1961, 7117, 1957, 7527, 1979, 4199, 4575, 4209, 2011, 4741, 1371, 1074, 10921, 21, 8393, 1896, 4767, 1114, 10922, 8179, 4501, 4573, 4713, 4904, 10255, 10924, 4503, 4763, 10936, 3225, 9291, 1100, 10956, 10227, 10037, 9825, 10958, 7113, 4418, 5680, 10960, 8593, 10961, 10962, 10964, 10248, 10249, 10251, 6970, 7110, 9064, 9781, 7119, 7114, 10966, 8630, 5073, 10968, 10969, 5097, 5071, 4527, 10970, 10971, 4761, 8394, 8669, 8634, 6968, 5520, 7380, 4507, 9742, 10634, 7190, 4258, 7162, 7182, 10229, 504, 1965, 7535, 7884, 1935, 5584, 1178, 10972, 10979, 10980, 7198, 1608, 11003, 7200, 2]
 // Exports: default
 
-// Module 10914 (handleVoiceOrStageChannelConnectPress)
+// Module 10919 (handleVoiceOrStageChannelConnectPress)
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "noop" /* 19 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 10915 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 10920 */;
 import closure_6 from "initialize" /* 7330 */;
 import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
 import closure_8 from "handleThreadCreateOrUpdate" /* 5507 */;
@@ -23,7 +23,7 @@ import closure_20 from "handleConnectionOpen" /* 2011 */;
 import closure_21 from "updateUserGuildSettingsInternal" /* 4741 */;
 import closure_22 from "mergeGuildAvatar" /* 1371 */;
 import ME from "ME" /* 1074 */;
-import { ChannelDetailsNavigatorScreens as closure_32 } from "ChannelDetailsNavigatorScreens" /* 10916 */;
+import { ChannelDetailsNavigatorScreens as closure_32 } from "ChannelDetailsNavigatorScreens" /* 10921 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;

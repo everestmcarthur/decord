@@ -1,9 +1,9 @@
-// Module ID: 13622
-// Function ID: 13623
+// Module ID: 13626
+// Function ID: 13627
 // Name: componentDidMount
 // Dependencies: [109, 19, 17, 21, 5530, 2]
 
-// Module 13622 (componentDidMount)
+// Module 13626 (componentDidMount)
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 5530 */;
 import closure_3 from "_objectWithoutProperties" /* 109 */;
 import { View } from "get ActivityIndicator" /* 17 */;

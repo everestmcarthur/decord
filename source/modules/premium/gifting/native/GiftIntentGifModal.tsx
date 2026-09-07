@@ -1,10 +1,10 @@
-// Module ID: 11816
-// Function ID: 11817
+// Module ID: 11821
+// Function ID: 11822
 // Name: _sendGiftIntentGif
-// Dependencies: [32, 5, 19, 17, 1957, 1074, 4553, 21, 4560, 576, 7456, 7682, 1242, 7182, 6981, 504, 7085, 1114, 11817, 10364, 4975, 4763, 5598, 5624, 7000, 2]
+// Dependencies: [32, 5, 19, 17, 1957, 1074, 4553, 21, 4560, 576, 7456, 7682, 1242, 7182, 6981, 504, 7085, 1114, 11822, 10369, 4975, 4763, 5598, 5624, 7000, 2]
 // Exports: default
 
-// Module 11816 (_sendGiftIntentGif)
+// Module 11821 (_sendGiftIntentGif)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "asyncGeneratorStep" /* 5 */;

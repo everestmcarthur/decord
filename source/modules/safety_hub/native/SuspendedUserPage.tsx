@@ -1,16 +1,16 @@
-// Module ID: 16907
-// Function ID: 16908
+// Module ID: 16910
+// Function ID: 16911
 // Name: SuspendedUserSafetyHubPage
-// Dependencies: [19, 17, 8430, 8419, 21, 4560, 576, 504, 7123, 8097, 1114, 6593, 6992, 4556, 4255, 14768, 2]
+// Dependencies: [19, 17, 8430, 8419, 21, 4560, 576, 504, 7123, 8097, 1114, 6593, 6992, 4556, 4255, 14771, 2]
 // Exports: default
 
-// Module 16907 (SuspendedUserSafetyHubPage)
+// Module 16910 (SuspendedUserSafetyHubPage)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
 import registerAssetDefault from "registerAsset" /* 6992 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import handleLogInClickDefault from "handleLogInClick" /* 14768 */;
+import handleLogInClickDefault from "handleLogInClick" /* 14771 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
 import SafetyHubView from "SafetyHubView" /* 8419 */;

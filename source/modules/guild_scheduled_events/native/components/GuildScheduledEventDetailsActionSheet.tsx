@@ -1,10 +1,10 @@
-// Module ID: 9790
-// Function ID: 9791
+// Module ID: 9795
+// Function ID: 9796
 // Name: GuildScheduledEventDetailsActionSheet
-// Dependencies: [32, 19, 17, 1979, 7526, 1963, 21, 4560, 576, 1114, 7162, 7182, 504, 9780, 9791, 9701, 9781, 1611, 9792, 9772, 9793, 7150, 6627, 9795, 9801, 2]
+// Dependencies: [32, 19, 17, 1979, 7526, 1963, 21, 4560, 576, 1114, 7162, 7182, 504, 9785, 9796, 9706, 9786, 1611, 9797, 9777, 9798, 7150, 6627, 9800, 9806, 2]
 // Exports: default
 
-// Module 9790 (GuildScheduledEventDetailsActionSheet)
+// Module 9795 (GuildScheduledEventDetailsActionSheet)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;

@@ -1,9 +1,9 @@
-// Module ID: 14554
-// Function ID: 14555
+// Module ID: 14557
+// Function ID: 14558
 // Name: GestureWrapper
-// Dependencies: [32, 19, 17, 7328, 1957, 2011, 1074, 1964, 21, 4560, 576, 4296, 5126, 14555, 4766, 1109, 1233, 4418, 4912, 7036, 14557, 14558, 4417, 1100, 4495, 1242, 4419, 14559, 7041, 1484, 1369, 14560, 1115, 11533, 14561, 14569, 4341, 14571, 1480, 9643, 12783, 12789, 14572, 4432, 14573, 14575, 14577, 14578, 14579, 15931, 15939, 1232, 2]
+// Dependencies: [32, 19, 17, 7328, 1957, 2011, 1074, 1964, 21, 4560, 576, 4296, 5126, 14558, 4766, 1109, 1233, 4418, 4912, 7036, 14560, 14561, 4417, 1100, 4495, 1242, 4419, 14562, 7041, 1484, 1369, 14563, 1115, 11538, 14564, 14572, 4341, 14574, 1480, 9648, 12787, 12793, 14575, 4432, 14576, 14578, 14580, 14581, 14582, 15934, 15942, 1232, 2]
 
-// Module 14554 (GestureWrapper)
+// Module 14557 (GestureWrapper)
 import ThemesDefault from "Themes" /* 576 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
 import _modDef1232 from "module_1232" /* 1232 */;
@@ -14,7 +14,7 @@ import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import enqueueDefault from "enqueue" /* 4766 */;
 import useNavigationTheme from "useNavigationTheme" /* 7041 */;
-import DiscordGestureHandlerRootViewDefault from "DiscordGestureHandlerRootView" /* 14555 */;
+import DiscordGestureHandlerRootViewDefault from "DiscordGestureHandlerRootView" /* 14558 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
@@ -102,7 +102,7 @@ function AppNavigationContainer(children) {
         name = first.name;
       }
     }
-    callback(14559).log("Initial Screen: " + name);
+    callback(14562).log("Initial Screen: " + name);
     return tmp;
   }, []);
   _require = React.useRef(true);
@@ -179,7 +179,7 @@ try {
     const appEntryKey = children.appEntryKey;
     let memo = appEntryKey;
     let memo1;
-    const requestGatewaySocket = memo(14560).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = memo(14563).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = React.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -208,8 +208,8 @@ try {
     }, []);
     riveAppStatePlaybackExperiment = undefined;
     memo = undefined;
-    let obj = memo(14560);
-    riveAppStatePlaybackExperiment = memo(15939).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = memo(14563);
+    riveAppStatePlaybackExperiment = memo(15942).useRiveAppStatePlaybackExperiment("AppContainer");
     let items = [riveAppStatePlaybackExperiment];
     memo = React.useMemo(() => {
       const items = [];

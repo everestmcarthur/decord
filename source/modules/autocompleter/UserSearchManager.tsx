@@ -1,9 +1,9 @@
-// Module ID: 9839
-// Function ID: 9840
+// Module ID: 9844
+// Function ID: 9845
 // Name: getTransformedUser
-// Dependencies: [1961, 1385, 1957, 2021, 4209, 1371, 1074, 4404, 1384, 1256, 7118, 9840, 1369, 1232, 12, 11, 2]
+// Dependencies: [1961, 1385, 1957, 2021, 4209, 1371, 1074, 4404, 1384, 1256, 7118, 9845, 1369, 1232, 12, 11, 2]
 
-// Module 9839 (getTransformedUser)
+// Module 9844 (getTransformedUser)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import _modDef1232 from "module_1232" /* 1232 */;
@@ -11,7 +11,7 @@ import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 
 import hasFlagAll from "hasFlag" /* 1384 */;
 import createChannelRecord from "createChannelRecord" /* 1961 */;
 import initializeDefault from "initialize" /* 7118 */;
-import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9840 */;
+import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9845 */;
 import closure_5 from "createdAt" /* 1385 */;
 import closure_6 from "ensureGuildLoaded" /* 1957 */;
 import closure_7 from "trackCommunicationDisabled" /* 2021 */;

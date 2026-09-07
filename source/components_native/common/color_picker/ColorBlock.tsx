@@ -1,9 +1,9 @@
-// Module ID: 14597
-// Function ID: 14598
+// Module ID: 14600
+// Function ID: 14601
 // Name: styles
-// Dependencies: [19, 17, 21, 4560, 576, 1091, 5123, 4409, 1178, 11564, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 1091, 5123, 4409, 1178, 11569, 2]
 
-// Module 14597 (styles)
+// Module 14600 (styles)
 import ThemesDefault from "Themes" /* 576 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -47,7 +47,7 @@ const memoResult = importAllResult.memo((color) => {
       let tmp10Result = tmp6(tmp2(5123).PressableOpacity, obj);
     } else {
       const obj2 = { source: null, color: null };
-      obj2[0] = onSelect(11564);
+      obj2[0] = onSelect(11569);
       if (v < 0.5) {
         unsafe_rawColors = tmp8(576).unsafe_rawColors;
         let BLACK2 = unsafe_rawColors.WHITE;
@@ -70,7 +70,7 @@ const memoResult = importAllResult.memo((color) => {
       tmp10Result = tmp10(tmp11, obj3);
     } else {
       const obj5 = { source: null, color: null };
-      obj5[0] = onSelect(11564);
+      obj5[0] = onSelect(11569);
       if (v < 0.5) {
         let BLACK = tmp3(576).unsafe_rawColors.WHITE;
       } else {

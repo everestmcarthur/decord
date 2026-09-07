@@ -1,14 +1,14 @@
-// Module ID: 10254
-// Function ID: 10255
+// Module ID: 10259
+// Function ID: 10260
 // Name: Tags
-// Dependencies: [5, 32, 19, 17, 4552, 1183, 4901, 2021, 4199, 2011, 7687, 4900, 1371, 1074, 1964, 1954, 1219, 1113, 1085, 21, 4560, 576, 7162, 504, 4411, 4427, 9304, 4713, 7885, 7682, 7275, 4404, 6981, 4296, 7777, 4571, 7456, 12, 7898, 8625, 10255, 10256, 4905, 1114, 10257, 10259, 1115, 10260, 10261, 10264, 1943, 10265, 1896, 10266, 10267, 8593, 1178, 7274, 1609, 1481, 6941, 8179, 10270, 4556, 10271, 10421, 10625, 10626, 8862, 10627, 10631, 7377, 11246, 5087, 10635, 7767, 4527, 11248, 8757, 4975, 5071, 2]
+// Dependencies: [5, 32, 19, 17, 4552, 1183, 4901, 2021, 4199, 2011, 7687, 4900, 1371, 1074, 1964, 1954, 1219, 1113, 1085, 21, 4560, 576, 7162, 504, 4411, 4427, 9309, 4713, 7885, 7682, 7275, 4404, 6981, 4296, 7777, 4571, 7456, 12, 7898, 8630, 10260, 10261, 4905, 1114, 10262, 10264, 1115, 10265, 10266, 10269, 1943, 10270, 1896, 10271, 10272, 8598, 1178, 7274, 1609, 1481, 6941, 8179, 10275, 4556, 10276, 10426, 10630, 10631, 8867, 10632, 10636, 7377, 11251, 5087, 10640, 7767, 4527, 11253, 8762, 4975, 5071, 2]
 // Exports: default
 
-// Module 10254 (Tags)
+// Module 10259 (Tags)
 import ThemesDefault from "Themes" /* 576 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 4427 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
-import TagIcon from "TagIcon" /* 8862 */;
+import TagIcon from "TagIcon" /* 8867 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
@@ -112,7 +112,7 @@ function ActionBar(channel) {
     obj = { attachments: null, channelId: null, highlightThumbnails: true };
     obj[0] = stateFromStores;
     obj[1] = channel.id;
-    isMediaChannelResult = callback(tmp5(10631), obj);
+    isMediaChannelResult = callback(tmp5(10636), obj);
   }
   const items3 = [isMediaChannelResult, ];
   obj1 = { style: tmp.actions, children: null };
@@ -125,7 +125,7 @@ function ActionBar(channel) {
       const items5 = [, ];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj2[1] = items5;
-      obj2[2] = tmp2(8862).TagIcon;
+      obj2[2] = tmp2(8867).TagIcon;
       obj2[3] = function onPress() {
         isEdit.dismiss();
         let obj = closure_1_1(closure_1_2[76]);
@@ -154,13 +154,13 @@ function ActionBar(channel) {
       tmp10 = callback(tmp2(7377).HeaderActionButton, obj2);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(10259).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10264).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj3 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
       const intl3 = tmp2(1114).intl;
       obj3[0] = intl3.string(tmp2(1114).t.iZ7Mz9);
       obj3[1] = tmp.actionButton;
-      obj3[2] = tmp2(8757).ReactionIcon;
+      obj3[2] = tmp2(8762).ReactionIcon;
       obj3[3] = onShowExpressionPicker;
       tmp18 = callback(tmp2(7377).HeaderActionButton, obj3);
     }
@@ -204,7 +204,7 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj7[1] = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(11246).KeyboardIcon;
+      let ImageIcon = tmp2(11251).KeyboardIcon;
     } else {
       ImageIcon = tmp2(5087).ImageIcon;
     }

@@ -1,10 +1,10 @@
-// Module ID: 16550
-// Function ID: 16551
+// Module ID: 16553
+// Function ID: 16554
 // Name: GuildOnboardingHomePage
-// Dependencies: [19, 4476, 4747, 4748, 1074, 21, 4296, 504, 7223, 12284, 1242, 4740, 5520, 16551, 16552, 16557, 16561, 16562, 16565, 7222, 2]
+// Dependencies: [19, 4476, 4747, 4748, 1074, 21, 4296, 504, 7223, 12288, 1242, 4740, 5520, 16554, 16555, 16560, 16564, 16565, 16568, 7222, 2]
 // Exports: default
 
-// Module 16550 (GuildOnboardingHomePage)
+// Module 16553 (GuildOnboardingHomePage)
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "getHash" /* 4476 */;
 import closure_5 from "handleSettingsLoadSuccess" /* 4747 */;
@@ -44,8 +44,8 @@ function GuildOnboardingHomePage(guildId) {
   const items1 = [guildId, stateFromStores, tmp6];
   const effect = React.useEffect(() => {
     if (stateFromStores === closure_1_6) {
-      const guildHomeSettings = guildId(12284).fetchGuildHomeSettings(guildId);
-      const obj2 = guildId(12284);
+      const guildHomeSettings = guildId(12288).fetchGuildHomeSettings(guildId);
+      const obj2 = guildId(12288);
     } else if (null != tmp) {
       const obj = {};
       const obj3 = stateFromStores(1242);
@@ -98,16 +98,16 @@ function GuildOnboardingHomePage(guildId) {
     obj = { guildId: null, hideDescription: null };
     obj[0] = guildId;
     obj[1] = tmp5;
-    const items3 = [callback(tmp4(16552), obj), ];
+    const items3 = [callback(tmp4(16555), obj), ];
     if (tmp5) {
       obj1 = { children: null };
       let obj2 = { guildId: null };
       obj2[0] = guildId;
-      const items4 = [tmp12(tmp4(16557), obj2), , ];
+      const items4 = [tmp12(tmp4(16560), obj2), , ];
       let obj3 = { guildId: null };
       obj3[0] = guildId;
-      items4[1] = tmp12(tmp4(16561), obj3);
-      tmp4 = tmp4(16562);
+      items4[1] = tmp12(tmp4(16564), obj3);
+      tmp4 = tmp4(16565);
       const obj4 = { guildId: null };
       obj4[0] = guildId;
       tmp = tmp12(tmp4, obj4);
@@ -117,12 +117,12 @@ function GuildOnboardingHomePage(guildId) {
     } else {
       let obj5 = { guildId: null };
       obj5[0] = guildId;
-      tmp12Result = tmp12(tmp4(16565), obj5);
+      tmp12Result = tmp12(tmp4(16568), obj5);
     }
     items3[1] = tmp12Result;
     obj[2] = items3;
-    closure_11(tmp4(16551), obj);
-    const tmp4Result = tmp4(16551);
+    closure_11(tmp4(16554), obj);
+    const tmp4Result = tmp4(16554);
   }
 }
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);

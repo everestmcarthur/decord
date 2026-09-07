@@ -1,12 +1,12 @@
-// Module ID: 15860
-// Function ID: 15861
+// Module ID: 15863
+// Function ID: 15864
 // Name: SponsoredContentPreferencesScreen
-// Dependencies: [19, 7975, 1074, 21, 1114, 2024, 11468, 14689, 2]
+// Dependencies: [19, 7975, 1074, 21, 1114, 2024, 11473, 14692, 2]
 // Exports: default
 
-// Module 15860 (SponsoredContentPreferencesScreen)
+// Module 15863 (SponsoredContentPreferencesScreen)
 import combinedDefault from "combined" /* 2024 */;
-import _modDef14689 from "module_14689" /* 14689 */;
+import _modDef14692 from "module_14692" /* 14692 */;
 import closure_3 from "noop" /* 19 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;
@@ -38,5 +38,5 @@ export default function SponsoredContentPreferencesScreen() {
     obj = { sections: items1 };
     return obj.createList(obj);
   }, items4);
-  return jsx(_modDef14689, { node });
+  return jsx(_modDef14692, { node });
 };

@@ -1,12 +1,12 @@
-// Module ID: 9418
-// Function ID: 9419
+// Module ID: 9423
+// Function ID: 9424
 // Name: canInstallApplication
-// Dependencies: [9290, 4999, 9245, 2]
+// Dependencies: [9295, 4999, 9250, 2]
 // Exports: canInstallApplication, isAppUserInstallable, shouldInstallApplicationOnDemand
 
-// Module 9418 (canInstallApplication)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9245 */;
-import closure_2 from "getIndexKey" /* 9290 */;
+// Module 9423 (canInstallApplication)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9250 */;
+import closure_2 from "getIndexKey" /* 9295 */;
 import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4999 */;
 
 require = arg1;

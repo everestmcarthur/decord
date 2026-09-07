@@ -1,10 +1,10 @@
-// Module ID: 15801
-// Function ID: 15802
+// Module ID: 15804
+// Function ID: 15805
 // Name: HapticButton
 // Dependencies: [19, 17, 21, 4560, 4975, 4528, 4529, 4973, 5607, 4556, 4530, 2]
 // Exports: default
 
-// Module 15801 (HapticButton)
+// Module 15804 (HapticButton)
 import noopAll from "noop" /* 19 */;
 import IMPACT_LIGHTDefault from "IMPACT_LIGHT" /* 4529 */;
 import Text from "Text" /* 4556 */;

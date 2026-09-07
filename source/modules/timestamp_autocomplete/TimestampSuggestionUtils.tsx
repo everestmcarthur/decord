@@ -1,13 +1,13 @@
-// Module ID: 10425
-// Function ID: 10426
+// Module ID: 10430
+// Function ID: 10431
 // Name: items
-// Dependencies: [32, 2025, 4153, 10426, 1114, 2]
+// Dependencies: [32, 2025, 4153, 10431, 1114, 2]
 // Exports: preloadTimestampParser, queryTimestampSuggestions
 
-// Module 10425 (items)
+// Module 10430 (items)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import hooksDefault from "hooks" /* 4153 */;
-import _mod10426 from "module_10426" /* 10426 */;
+import _mod10431 from "module_10431" /* 10431 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "_getSystemLocale" /* 2025 */;
 import set from "set" /* 2 */;
@@ -21,7 +21,7 @@ HermesBuiltin.arraySpread(set, 1);
 let result = set.fileFinishedImporting("modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx");
 
 export const preloadTimestampParser = function preloadTimestampParser() {
-  _mod10426;
+  _mod10431;
 };
 export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0, cloneResult1) {
   let obj = cloneResult1;
@@ -245,7 +245,7 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
     }
     return items1;
   } else {
-    const tmp6 = _mod10426;
+    const tmp6 = _mod10431;
     locale = locale.locale;
     str = "en-US";
     if ("en-US" === locale) {

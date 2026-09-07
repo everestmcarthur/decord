@@ -1,10 +1,10 @@
-// Module ID: 9210
-// Function ID: 9211
+// Module ID: 9215
+// Function ID: 9216
 // Name: _saveGuildIdentityChanges
 // Dependencies: [5, 1074, 573, 1272, 5169, 6985, 2]
 // Exports: clearErrors, initGuildIdentitySettings, resetAllPending, resetPendingMemberChanges, resetPendingProfileChanges, saveGuildIdentityChanges, setCurrentGuild
 
-// Module 9210 (_saveGuildIdentityChanges)
+// Module 9215 (_saveGuildIdentityChanges)
 import dispatcherDefault from "dispatcher" /* 573 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 1074 */;

@@ -1,12 +1,12 @@
-// Module ID: 12181
-// Function ID: 12182
+// Module ID: 12185
+// Function ID: 12186
 // Name: RoleIcon
-// Dependencies: [32, 19, 7128, 2016, 2015, 1074, 21, 12179, 9752, 504, 7129, 5605, 4556, 5089, 5517, 4527, 12166, 12167, 2]
+// Dependencies: [32, 19, 7128, 2016, 2015, 1074, 21, 12183, 9757, 504, 7129, 5605, 4556, 5089, 5517, 4527, 12170, 12171, 2]
 // Exports: default
 
-// Module 12181 (RoleIcon)
-import ShieldUserIcon from "ShieldUserIcon" /* 9752 */;
-import stylesDefault from "styles" /* 12179 */;
+// Module 12185 (RoleIcon)
+import ShieldUserIcon from "ShieldUserIcon" /* 9757 */;
+import stylesDefault from "styles" /* 12183 */;
 import closure_4 from "_slicedToArray" /* 32 */;
 import closure_5 from "noop" /* 19 */;
 import closure_6 from "getRoleMemberCount" /* 7128 */;

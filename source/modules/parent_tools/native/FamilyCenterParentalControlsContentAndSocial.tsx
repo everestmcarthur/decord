@@ -1,15 +1,15 @@
-// Module ID: 14930
-// Function ID: 14931
+// Module ID: 14933
+// Function ID: 14934
 // Name: FamilyCenterParentalControlsContentAndSocial
-// Dependencies: [19, 17, 1074, 7975, 21, 11468, 1114, 2024, 14689, 2]
+// Dependencies: [19, 17, 1074, 7975, 21, 11473, 1114, 2024, 14692, 2]
 // Exports: default
 
-// Module 14930 (FamilyCenterParentalControlsContentAndSocial)
+// Module 14933 (FamilyCenterParentalControlsContentAndSocial)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import combinedDefault from "combined" /* 2024 */;
-import createToggle from "createToggle" /* 11468 */;
-import _modDef14689 from "module_14689" /* 14689 */;
+import createToggle from "createToggle" /* 11473 */;
+import _modDef14692 from "module_14692" /* 14692 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
@@ -47,6 +47,6 @@ export default function FamilyCenterParentalControlsContentAndSocial() {
   obj[0] = items1;
   obj4 = { children: null };
   const list = obj.createList(obj);
-  obj4[0] = jsx(_modDef14689, { node: list });
+  obj4[0] = jsx(_modDef14692, { node: list });
   return <View>{null}</View>;
 };

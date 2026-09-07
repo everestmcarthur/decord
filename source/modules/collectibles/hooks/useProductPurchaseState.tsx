@@ -1,11 +1,11 @@
-// Module ID: 8842
-// Function ID: 8843
+// Module ID: 8847
+// Function ID: 8848
 // Name: getProductPurchaseState
-// Dependencies: [7558, 8843, 1889, 504, 2]
+// Dependencies: [7558, 8848, 1889, 504, 2]
 // Exports: useProductPurchaseState
 
-// Module 8842 (getProductPurchaseState)
-import compactDefault from "compact" /* 8843 */;
+// Module 8847 (getProductPurchaseState)
+import compactDefault from "compact" /* 8848 */;
 import closure_3 from "map" /* 7558 */;
 
 const require = arg1;

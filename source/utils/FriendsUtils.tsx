@@ -1,10 +1,10 @@
-// Module ID: 9046
-// Function ID: 9047
+// Module ID: 9051
+// Function ID: 9052
 // Name: validateDiscordTag
 // Dependencies: [32, 1074, 1114, 38, 1242, 8376, 2]
 // Exports: humanizeAbortCodeForA11y, isValidDiscordTag
 
-// Module 9046 (validateDiscordTag)
+// Module 9051 (validateDiscordTag)
 import _modDef38 from "module_38" /* 38 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;

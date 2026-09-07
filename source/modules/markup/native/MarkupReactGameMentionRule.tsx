@@ -1,10 +1,10 @@
-// Module ID: 13845
-// Function ID: 13846
+// Module ID: 13848
+// Function ID: 13849
 // Name: MarkupGameMention
-// Dependencies: [19, 21, 4560, 576, 5107, 1114, 1924, 4551, 8565, 5587, 8680, 8686, 4556, 7309, 2]
+// Dependencies: [19, 21, 4560, 576, 5107, 1114, 1924, 4551, 8568, 5587, 8685, 8691, 4556, 7309, 2]
 // Exports: createFetchingGameMentionRule
 
-// Module 13845 (MarkupGameMention)
+// Module 13848 (MarkupGameMention)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import importDefaultResult1 from "importDefaultResult1" /* 7309 */;

@@ -1,10 +1,10 @@
-// Module ID: 13162
-// Function ID: 13163
+// Module ID: 13166
+// Function ID: 13167
 // Name: useCanGiftProduct
 // Dependencies: [8178, 7554, 7553, 4218, 1889, 4231, 2]
 // Exports: useCanGiftProduct
 
-// Module 13162 (useCanGiftProduct)
+// Module 13166 (useCanGiftProduct)
 import set from "set" /* 2 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
 import getProductOrbPrice from "getProductOrbPrice" /* 7553 */;

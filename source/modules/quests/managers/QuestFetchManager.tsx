@@ -1,13 +1,13 @@
-// Module ID: 17813
-// Function ID: 17814
+// Module ID: 17816
+// Function ID: 17817
 // Name: _fetch
-// Dependencies: [7703, 1090, 7118, 11484, 1232, 11276, 1115, 11300, 17814, 2]
+// Dependencies: [7703, 1090, 7118, 11489, 1232, 11281, 1115, 11305, 17817, 2]
 
-// Module 17813 (_fetch)
+// Module 17816 (_fetch)
 import setDefault from "set" /* 1090 */;
 import _modDef1232 from "module_1232" /* 1232 */;
 import initializeDefault from "initialize" /* 7118 */;
-import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11484 */;
+import getIsEligibleForQuests from "getIsEligibleForQuests" /* 11489 */;
 import closure_3 from "initializeState" /* 7703 */;
 
 require = arg1;
@@ -124,12 +124,12 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
     obj[4] = closure_3.isFetchingCurrentQuests;
     obj[2] = obj;
     _modDef1232.addBreadcrumb(obj);
-    let tmpResult = tmp(11276);
+    let tmpResult = tmp(11281);
     const currentQuests = tmpResult.fetchCurrentQuests();
     tmpResult = tmp(1115);
     if (tmpResult.isMac()) {
-      const state = tmp6(11300).getState();
-      const tmp6Result = tmp6(11300);
+      const state = tmp6(11305).getState();
+      const tmp6Result = tmp6(11305);
     }
     const obj2 = _modDef1232;
     tmp6 = importDefault;

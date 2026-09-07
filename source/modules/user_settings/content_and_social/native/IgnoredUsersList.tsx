@@ -1,10 +1,10 @@
-// Module ID: 14808
-// Function ID: 14809
+// Module ID: 14811
+// Function ID: 14812
 // Name: IgnoredUsersList
-// Dependencies: [19, 17, 4209, 21, 4560, 576, 7162, 7182, 1178, 14802, 1114, 7123, 4556, 5687, 14809, 504, 2]
+// Dependencies: [19, 17, 4209, 21, 4560, 576, 7162, 7182, 1178, 14805, 1114, 7123, 4556, 5687, 14812, 504, 2]
 // Exports: default
 
-// Module 14808 (IgnoredUsersList)
+// Module 14811 (IgnoredUsersList)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import ThemesDefault from "Themes" /* 576 */;
@@ -15,7 +15,7 @@ import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
 import context from "context" /* 7162 */;
 import contextDefault from "context" /* 7162 */;
-import getBlockedSource from "getBlockedSource" /* 14802 */;
+import getBlockedSource from "getBlockedSource" /* 14805 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import closure_4 from "markAllUserIdListsStale" /* 4209 */;
 import jsxProd from "jsxProd" /* 21 */;

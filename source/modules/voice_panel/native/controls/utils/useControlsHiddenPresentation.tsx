@@ -1,12 +1,12 @@
-// Module ID: 17178
-// Function ID: 17179
+// Module ID: 17181
+// Function ID: 17182
 // Name: useControlsHiddenPresentation
-// Dependencies: [12273, 4271, 4296, 4974, 2]
+// Dependencies: [12277, 4271, 4296, 4974, 2]
 // Exports: default
 
-// Module 17178 (useControlsHiddenPresentation)
+// Module 17181 (useControlsHiddenPresentation)
 import set from "set" /* 2 */;
-import VoicePanelModes from "VoicePanelModes" /* 12273 */;
+import VoicePanelModes from "VoicePanelModes" /* 12277 */;
 
 VoicePanelModes = VoicePanelModes.VoicePanelModes;
 let obj = {};

@@ -1,14 +1,14 @@
-// Module ID: 8638
-// Function ID: 8639
+// Module ID: 8643
+// Function ID: 8644
 // Name: Arrow
-// Dependencies: [19, 21, 4560, 576, 1178, 8639, 2]
+// Dependencies: [19, 21, 4560, 576, 1178, 8644, 2]
 // Exports: default
 
-// Module 8638 (Arrow)
+// Module 8643 (Arrow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import Button from "Button" /* 1178 */;
-import registerAssetDefault from "registerAsset" /* 8639 */;
+import registerAssetDefault from "registerAsset" /* 8644 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
 

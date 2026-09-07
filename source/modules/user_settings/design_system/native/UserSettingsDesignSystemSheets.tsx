@@ -1,10 +1,10 @@
-// Module ID: 15797
-// Function ID: 15798
+// Module ID: 15800
+// Function ID: 15801
 // Name: DemoActionSheet
-// Dependencies: [32, 19, 17, 1074, 21, 4560, 7198, 7149, 9718, 7199, 4973, 6606, 7200, 4527, 4975, 1114, 10230, 5814, 5607, 4556, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4560, 7198, 7149, 9723, 7199, 4973, 6606, 7200, 4527, 4975, 1114, 10235, 5814, 5607, 4556, 2]
 // Exports: default
 
-// Module 15797 (DemoActionSheet)
+// Module 15800 (DemoActionSheet)
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
 import Text from "Text" /* 4556 */;
@@ -16,7 +16,7 @@ import TextInput from "TextInput" /* 6606 */;
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
 import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7200 */;
-import PromoSheet from "PromoSheet" /* 10230 */;
+import PromoSheet from "PromoSheet" /* 10235 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
@@ -48,7 +48,7 @@ function DemoActionSheet() {
     obj = { onPress: null, label: null };
     obj[0] = NOOP;
     obj[1] = tmp12;
-    tmp14Result = tmp14(tmp15(9718).ActionSheetHeaderPressableText, obj);
+    tmp14Result = tmp14(tmp15(9723).ActionSheetHeaderPressableText, obj);
   }
   obj[2] = tmp14Result;
   tmp14Result = tmp2;

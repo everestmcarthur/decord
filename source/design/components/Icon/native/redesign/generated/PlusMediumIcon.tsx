@@ -1,14 +1,14 @@
-// Module ID: 12753
-// Function ID: 12754
+// Module ID: 12757
+// Function ID: 12758
 // Name: PlusMediumIcon
-// Dependencies: [19, 21, 576, 4261, 12199, 2]
+// Dependencies: [19, 21, 576, 4261, 12203, 2]
 // Exports: PlusMediumIcon
 
-// Module 12753 (PlusMediumIcon)
+// Module 12757 (PlusMediumIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 12199 */;
+import registerAsset from "registerAsset" /* 12203 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

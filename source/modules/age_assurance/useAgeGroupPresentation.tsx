@@ -1,10 +1,10 @@
-// Module ID: 14716
-// Function ID: 14717
+// Module ID: 14719
+// Function ID: 14720
 // Name: AgeGroupState
 // Dependencies: [1074, 4773, 8411, 2024, 8413, 1114, 2]
 // Exports: handleOpenAgeGatedContentArticle, handleShowAgeVerification, useAgeGroupState, useAgeGroupValueLabel
 
-// Module 14716 (AgeGroupState)
+// Module 14719 (AgeGroupState)
 import set from "set" /* 2 */;
 import ME from "ME" /* 1074 */;
 import combinedDefault from "combined" /* 2024 */;

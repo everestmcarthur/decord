@@ -1,10 +1,10 @@
-// Module ID: 12627
-// Function ID: 12628
+// Module ID: 12631
+// Function ID: 12632
 // Name: ChatProvisionalAccountExplainerCard
-// Dependencies: [19, 17, 21, 4560, 576, 12628, 12629, 5607, 4556, 1114, 6610, 7207, 2]
+// Dependencies: [19, 17, 21, 4560, 576, 12632, 12633, 5607, 4556, 1114, 6610, 7207, 2]
 // Exports: ChatProvisionalAccountExplainerCard, UserProfileProvisionalAccountExplainerCard
 
-// Module 12627 (ChatProvisionalAccountExplainerCard)
+// Module 12631 (ChatProvisionalAccountExplainerCard)
 import ThemesDefault from "Themes" /* 576 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7207 */;
 import closure_3 from "noop" /* 19 */;
@@ -31,7 +31,7 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
   c1 = "text-sm/semibold";
   const items = [iconSize, "text-sm/semibold"];
   const callback = React.useCallback((application) => closure_1_5(textmdsemibold(closure_1_2[5]), { application, textVariant: textmdsemibold, iconSize }, application.id), items);
-  let obj = iconSize(12629);
+  let obj = iconSize(12633);
   const provisionalAccountExplanationText = obj.useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
   obj = { style: items1, children: null };
   items1 = [tmp.chatContainer, style];
@@ -51,7 +51,7 @@ export const UserProfileProvisionalAccountExplainerCard = function UserProfilePr
   const items = [iconSize, "text-md/semibold"];
   ({ style, userId } = iconSize);
   const callback = React.useCallback((application) => closure_1_5(textmdsemibold(closure_1_2[5]), { application, textVariant: textmdsemibold, iconSize }, application.id), items);
-  let obj = iconSize(12629);
+  let obj = iconSize(12633);
   const provisionalAccountExplanationText = obj.useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
   obj = { style, title: null, titleIcon: null, children: null };
   const intl = iconSize(1114).intl;

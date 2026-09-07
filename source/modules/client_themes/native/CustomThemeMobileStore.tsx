@@ -104,7 +104,7 @@ prototype["getState"] = function getState() {
     obj[0] = closure_3;
     obj[1] = closure_4;
   } else {
-    obj = { theme: "hash", customTheme: "call" };
+    obj = { theme: "push", customTheme: "channel" };
   }
   return obj;
 };

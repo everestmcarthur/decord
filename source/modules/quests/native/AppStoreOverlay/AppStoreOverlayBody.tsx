@@ -1,16 +1,16 @@
-// Module ID: 11502
-// Function ID: 11503
+// Module ID: 11507
+// Function ID: 11508
 // Name: APP_STORE_OVERLAY_HEIGHT_RATIO
-// Dependencies: [19, 17, 1074, 7151, 21, 4560, 576, 5587, 4556, 11503, 1114, 11506, 11511, 1611, 4262, 672, 4987, 4975, 2]
+// Dependencies: [19, 17, 1074, 7151, 21, 4560, 576, 5587, 4556, 11508, 1114, 11511, 11516, 1611, 4262, 672, 4987, 4975, 2]
 // Exports: AppStoreOverlayBody, AppStoreOverlayFooter
 
-// Module 11502 (APP_STORE_OVERLAY_HEIGHT_RATIO)
+// Module 11507 (APP_STORE_OVERLAY_HEIGHT_RATIO)
 import ThemesDefault from "Themes" /* 576 */;
 import Text from "Text" /* 4556 */;
 import preloadDefault from "preload" /* 5587 */;
-import AppStoreOverlayStatCardItemDefault from "AppStoreOverlayStatCardItem" /* 11503 */;
-import getMeasurableUrlDefault from "getMeasurableUrl" /* 11506 */;
-import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 11511 */;
+import AppStoreOverlayStatCardItemDefault from "AppStoreOverlayStatCardItem" /* 11508 */;
+import getMeasurableUrlDefault from "getMeasurableUrl" /* 11511 */;
+import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 11516 */;
 import closure_3 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { VerticalGradient } from "ME" /* 1074 */;

@@ -1,11 +1,11 @@
-// Module ID: 14931
-// Function ID: 14932
+// Module ID: 14934
+// Function ID: 14935
 // Name: FamilyCenterParentalControlsDataAndPrivacy
-// Dependencies: [19, 1074, 7975, 21, 1114, 2396, 2024, 11468, 14689, 2]
+// Dependencies: [19, 1074, 7975, 21, 1114, 2396, 2024, 11473, 14692, 2]
 // Exports: default
 
-// Module 14931 (FamilyCenterParentalControlsDataAndPrivacy)
-import _modDef14689 from "module_14689" /* 14689 */;
+// Module 14934 (FamilyCenterParentalControlsDataAndPrivacy)
+import _modDef14692 from "module_14692" /* 14692 */;
 import closure_3 from "noop" /* 19 */;
 import { HelpdeskArticles } from "ME" /* 1074 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
@@ -54,5 +54,5 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     obj = { sections: memo };
     return obj.createList(obj);
   }, items);
-  return jsx(_modDef14689, { node });
+  return jsx(_modDef14692, { node });
 };

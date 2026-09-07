@@ -1,12 +1,12 @@
-// Module ID: 14587
-// Function ID: 14588
+// Module ID: 14590
+// Function ID: 14591
 // Name: UserSettingsEditUserProfile
-// Dependencies: [19, 1371, 21, 7162, 7182, 504, 8187, 14588, 2]
+// Dependencies: [19, 1371, 21, 7162, 7182, 504, 8187, 14591, 2]
 // Exports: default
 
-// Module 14587 (UserSettingsEditUserProfile)
+// Module 14590 (UserSettingsEditUserProfile)
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import EditUserProfileBannerDefault from "EditUserProfileBanner" /* 14588 */;
+import EditUserProfileBannerDefault from "EditUserProfileBanner" /* 14591 */;
 import closure_3 from "noop" /* 19 */;
 import closure_4 from "mergeGuildAvatar" /* 1371 */;
 import { jsx } from "jsxProd" /* 21 */;

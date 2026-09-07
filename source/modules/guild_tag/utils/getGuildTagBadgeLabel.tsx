@@ -1,10 +1,10 @@
-// Module ID: 17592
-// Function ID: 17593
+// Module ID: 17595
+// Function ID: 17596
 // Name: getGuildTagBadgeLabel
 // Dependencies: [7944, 1114, 1369, 2]
 // Exports: default
 
-// Module 17592 (getGuildTagBadgeLabel)
+// Module 17595 (getGuildTagBadgeLabel)
 import set from "set" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1114 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;

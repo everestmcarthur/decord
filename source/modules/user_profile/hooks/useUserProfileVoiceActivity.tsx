@@ -1,10 +1,10 @@
-// Module ID: 13042
-// Function ID: 13043
+// Module ID: 13046
+// Function ID: 13047
 // Name: useUserProfileVoiceActivity
-// Dependencies: [4600, 4579, 7739, 10879, 504, 2]
+// Dependencies: [4600, 4579, 7739, 10884, 504, 2]
 // Exports: default, isUserProfileVoiceActivityForChannel
 
-// Module 13042 (useUserProfileVoiceActivity)
+// Module 13046 (useUserProfileVoiceActivity)
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7739 */;
 import closure_3 from "sortActivity" /* 4600 */;
 import closure_4 from "updateVoiceState" /* 4579 */;
@@ -15,7 +15,7 @@ const result = require("set").fileFinishedImporting("modules/user_profile/hooks/
 export default function useUserProfileVoiceActivity(guildId) {
   const userId = guildId.userId;
   let id;
-  const tmp2 = id(10879)({ userId, guildId: guildId.guildId });
+  const tmp2 = id(10884)({ userId, guildId: guildId.guildId });
   const voiceChannel = tmp2.voiceChannel;
   id = undefined;
   if (voiceChannel != null) {

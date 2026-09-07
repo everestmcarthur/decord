@@ -1,15 +1,15 @@
-// Module ID: 17468
-// Function ID: 17469
+// Module ID: 17471
+// Function ID: 17472
 // Name: onPostConnectionOpen
-// Dependencies: [4782, 1221, 1957, 8078, 1074, 1090, 7118, 559, 10744, 573, 7456, 2]
+// Dependencies: [4782, 1221, 1957, 8078, 1074, 1090, 7118, 559, 10749, 573, 7456, 2]
 
-// Module 17468 (onPostConnectionOpen)
+// Module 17471 (onPostConnectionOpen)
 import failsDefault from "fails" /* 559 */;
 import dispatcherDefault from "dispatcher" /* 573 */;
 import setDefault from "set" /* 1090 */;
 import initializeDefault from "initialize" /* 7118 */;
 import trackInviteDefault from "trackInvite" /* 7456 */;
-import fetchAndReconcileGiftIntentDismissals from "fetchAndReconcileGiftIntentDismissals" /* 10744 */;
+import fetchAndReconcileGiftIntentDismissals from "fetchAndReconcileGiftIntentDismissals" /* 10749 */;
 import closure_3 from "dropChannelIfEmpty" /* 4782 */;
 import closure_4 from "handleConnectionClosedOrResumed" /* 1221 */;
 import closure_5 from "ensureGuildLoaded" /* 1957 */;

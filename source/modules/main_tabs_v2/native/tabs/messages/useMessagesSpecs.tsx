@@ -1,10 +1,10 @@
-// Module ID: 16020
-// Function ID: 16021
+// Module ID: 16023
+// Function ID: 16024
 // Name: useMessagesSpecs
-// Dependencies: [109, 19, 1074, 4982, 1611, 16021, 16030, 16042, 576, 2]
+// Dependencies: [109, 19, 1074, 4982, 1611, 16024, 16033, 16045, 576, 2]
 // Exports: default
 
-// Module 16020 (useMessagesSpecs)
+// Module 16023 (useMessagesSpecs)
 import closure_4 from "_objectWithoutProperties" /* 109 */;
 import closure_5 from "noop" /* 19 */;
 import { DM_WIDTH } from "ME" /* 1074 */;

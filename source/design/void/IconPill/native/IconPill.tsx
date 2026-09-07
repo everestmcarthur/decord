@@ -1,14 +1,14 @@
-// Module ID: 14093
-// Function ID: 14094
+// Module ID: 14096
+// Function ID: 14097
 // Name: IconPill
-// Dependencies: [19, 17, 1085, 21, 4560, 576, 4977, 8612, 2]
+// Dependencies: [19, 17, 1085, 21, 4560, 576, 4977, 8617, 2]
 // Exports: default
 
-// Module 14093 (IconPill)
+// Module 14096 (IconPill)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import IconSizesDefault from "IconSizes" /* 4977 */;
-import _modDef8612 from "module_8612" /* 8612 */;
+import _modDef8617 from "module_8617" /* 8617 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;
@@ -47,7 +47,7 @@ export default function IconPill(IconComponent) {
   }
   const items1 = [tmp9, ];
   const items2 = [tmp.pillText, textStyle];
-  items1[1] = tmp8(_modDef8612, { style: items2, numberOfLines: 1, accessibilityLabel, children: text });
+  items1[1] = tmp8(_modDef8617, { style: items2, numberOfLines: 1, accessibilityLabel, children: text });
   obj[1] = items1;
   return closure_4(View, obj);
 };

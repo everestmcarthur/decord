@@ -1,18 +1,18 @@
-// Module ID: 17927
-// Function ID: 17928
+// Module ID: 17930
+// Function ID: 17931
 // Name: AppShare
-// Dependencies: [32, 19, 17, 7460, 14395, 502, 1074, 12414, 21, 504, 6593, 1115, 14434, 12417, 7475, 1242, 4992, 14554, 13900, 1608, 8362, 7039, 16908, 16954, 4910, 2]
+// Dependencies: [32, 19, 17, 7460, 14398, 502, 1074, 12418, 21, 504, 6593, 1115, 14437, 12421, 7475, 1242, 4992, 14557, 13903, 1608, 8362, 7039, 16911, 16957, 4910, 2]
 // Exports: default
 
-// Module 17927 (AppShare)
+// Module 17930 (AppShare)
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import result from "result" /* 7460 */;
-import handleTokenUpdated from "handleTokenUpdated" /* 14395 */;
+import handleTokenUpdated from "handleTokenUpdated" /* 14398 */;
 import closure_7 from "fetchFingerprint" /* 502 */;
 import { AnalyticEvents } from "ME" /* 1074 */;
-import { MultiAccountSwitchLocation as closure_9 } from "MAX_ACCOUNTS" /* 12414 */;
+import { MultiAccountSwitchLocation as closure_9 } from "MAX_ACCOUNTS" /* 12418 */;
 import jsxProd from "jsxProd" /* 21 */;
 
 const require = arg1;
@@ -41,9 +41,9 @@ export default function AppShare(targetUserId) {
   const items = [first];
   const effect = obj.useEffect(() => {
     if (!first) {
-      first(14434).init();
+      first(14437).init();
       dependencyMap(true);
-      const obj = first(14434);
+      const obj = first(14437);
     }
   }, items);
   const items1 = [targetUserId];
@@ -106,7 +106,7 @@ export default function AppShare(targetUserId) {
     obj = { appEntryKey: null, sharedContent: null, onClose: null };
     obj[0] = tmp18;
     obj[1] = targetUserId;
-    const tmp14Result = tmp14(13900);
+    const tmp14Result = tmp14(13903);
     if (tmp9Result.isMetaQuest()) {
       let exitApp = tmp14(8362).close;
     } else {
@@ -119,8 +119,8 @@ export default function AppShare(targetUserId) {
     const items5 = [tmp19(tmp9(7039).SceneLoadingIndicator, {}), , , ];
     obj1 = { appEntryKey: null };
     obj1[0] = tmp18;
-    items5[1] = tmp19(tmp9(16908).ActionSheetContainer, obj1);
-    items5[2] = tmp19(tmp14(16954), {});
+    items5[1] = tmp19(tmp9(16911).ActionSheetContainer, obj1);
+    items5[2] = tmp19(tmp14(16957), {});
     items5[3] = tmp19(tmp9(4910).AlertModalContainer, {});
     obj[1] = items5;
     return closure_11(tmp17, obj);

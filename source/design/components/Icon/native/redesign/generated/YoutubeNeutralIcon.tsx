@@ -1,14 +1,14 @@
-// Module ID: 8888
-// Function ID: 8889
+// Module ID: 8893
+// Function ID: 8894
 // Name: YoutubeNeutralIcon
-// Dependencies: [19, 21, 576, 4261, 8889, 2]
+// Dependencies: [19, 21, 576, 4261, 8894, 2]
 // Exports: YoutubeNeutralIcon
 
-// Module 8888 (YoutubeNeutralIcon)
+// Module 8893 (YoutubeNeutralIcon)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 8889 */;
+import registerAsset from "registerAsset" /* 8894 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 require = arg1;

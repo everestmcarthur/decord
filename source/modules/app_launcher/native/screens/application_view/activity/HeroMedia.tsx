@@ -1,14 +1,14 @@
-// Module ID: 12084
-// Function ID: 12085
+// Module ID: 12088
+// Function ID: 12089
 // Name: HeroMedia
-// Dependencies: [19, 4552, 1482, 21, 4560, 11216, 9652, 504, 7168, 12058, 8307, 1114, 2]
+// Dependencies: [19, 4552, 1482, 21, 4560, 11221, 9657, 504, 7168, 12062, 8307, 1114, 2]
 // Exports: default, useHeroMediaDimensions
 
-// Module 12084 (HeroMedia)
+// Module 12088 (HeroMedia)
 import noopAll from "noop" /* 19 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9652 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11216 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12058 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9657 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11221 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12062 */;
 import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
 import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
 import { jsx } from "jsxProd" /* 21 */;

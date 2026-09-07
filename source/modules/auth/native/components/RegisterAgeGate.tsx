@@ -1,17 +1,17 @@
-// Module ID: 15982
-// Function ID: 15983
+// Module ID: 15985
+// Function ID: 15986
 // Name: RegisterAgeGate
-// Dependencies: [32, 19, 17, 6595, 15946, 15947, 1074, 21, 4560, 576, 4153, 15983, 4271, 1483, 15943, 504, 6957, 15962, 15945, 38, 6972, 1114, 6607, 8902, 15984, 4975, 6941, 9719, 4411, 2]
+// Dependencies: [32, 19, 17, 6595, 15949, 15950, 1074, 21, 4560, 576, 4153, 15986, 4271, 1483, 15946, 504, 6957, 15965, 15948, 38, 6972, 1114, 6607, 8907, 15987, 4975, 6941, 9724, 4411, 2]
 // Exports: default
 
-// Module 15982 (RegisterAgeGate)
+// Module 15985 (RegisterAgeGate)
 import ThemesDefault from "Themes" /* 576 */;
 import closure_3 from "_slicedToArray" /* 32 */;
 import closure_4 from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import closure_6 from "hasConsented" /* 6595 */;
-import useRegistrationUIStore from "useRegistrationUIStore" /* 15946 */;
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15947 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15949 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15950 */;
 import { AuthStates } from "ME" /* 1074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4560 */;

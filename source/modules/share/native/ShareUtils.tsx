@@ -1,12 +1,12 @@
-// Module ID: 13902
-// Function ID: 13903
+// Module ID: 13905
+// Function ID: 13906
 // Name: _sendShareMessage
-// Dependencies: [5, 4901, 4553, 4259, 11253, 9307, 7777, 5128, 5127, 7682, 9293, 7456, 2]
+// Dependencies: [5, 4901, 4553, 4259, 11258, 9312, 7777, 5128, 5127, 7682, 9298, 7456, 2]
 // Exports: sendShareMessage, showInformationToast
 
-// Module 13902 (_sendShareMessage)
+// Module 13905 (_sendShareMessage)
 import dispatcherDefault from "dispatcher" /* 4259 */;
-import registerAssetDefault from "registerAsset" /* 11253 */;
+import registerAssetDefault from "registerAsset" /* 11258 */;
 import closure_3 from "asyncGeneratorStep" /* 5 */;
 import { DraftType } from "handleChanged" /* 4901 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
@@ -80,10 +80,10 @@ function _sendShareMessage() {
               }
               constants = lib2(7682).parse(lib2, lib2);
               if (c4.length > 0) {
-                let obj2 = lib2(9307);
+                let obj2 = lib2(9312);
                 obj2.clearAll(id, c4.ChannelMessage);
               }
-              future = new lib(9293).Future();
+              future = new lib(9298).Future();
               let obj3 = lib2(7456);
               obj2 = { location: null, doNotNotifyOnError: true, attachmentsToUpload: null, onAttachmentUploadError: null };
               obj2[0] = constants.SHARE_MODAL;
