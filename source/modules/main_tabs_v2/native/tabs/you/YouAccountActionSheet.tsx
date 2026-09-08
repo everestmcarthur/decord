@@ -168,7 +168,7 @@ function YouAccountRadioGroup() {
       str2 = "never";
     }
     obj = { label: closure_1_1(closure_1_3[34]).getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: null };
-    obj = { user: obj, guildId: "Array", size: "Array" };
+    obj = { user: obj, guildId: "Array", size: -1 };
     obj[2] = closure_1_0(closure_1_3[35]).AvatarSizes.REFRESH_MEDIUM_32;
     obj[3] = closure_1_19(closure_1_0(closure_1_3[35]).Avatar, obj);
     return obj;

@@ -160,7 +160,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   }
   let headerLeftResult;
   if (headerLeft != null) {
-    obj = { tintColor: null, canGoBack: null, label: null, href: "Array" };
+    obj = { tintColor: null, canGoBack: null, label: null, href: "a" };
     obj[0] = text;
     obj[1] = tmp18;
     let tmp20 = headerBackTitle;
@@ -313,7 +313,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     tmp45 = callback3(tmp(4912).ScreenStackHeaderSearchBarView, obj14);
   }
   items7[3] = tmp45;
-  const obj16 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "fill", backTitleFontFamily: true, backTitleFontSize: true, blurEffect: true, color: true, direction: true, disableBackButtonMenu: true, hidden: true, hideBackButton: true, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: 0.32, title: 10, titleColor: 300, titleFontFamily: 0.001, titleFontSize: 0.001, titleFontWeight: true, topInsetEnabled: "/assets/.cache/intl/ZGVzaWdu", disableTopInsetApplication: null, disableLeftInsetApplication: "ecc045078c789c6ed4f029d53d356e3f", disableRightInsetApplication: "da.messages.ecc045078c789c6ed4f029d53d356e3f.compiled.messages", disableBottomInsetApplication: "jsona", translucent: "abajo", children: "flecha", headerLeftBarButtonItems: "flecha esquina izquierda", headerRightBarButtonItems: "flecha hacia esquina izquierda abajo", experimental_userInterfaceStyle: "izquierda" };
+  const obj16 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "fill", backTitleFontFamily: true, backTitleFontSize: true, blurEffect: true, color: true, direction: true, disableBackButtonMenu: true, hidden: true, hideBackButton: true, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "man_gesturing_no", title: 17088321, titleColor: 16732416, titleFontFamily: 17088322, titleFontSize: 17088256, titleFontWeight: 16732416, topInsetEnabled: 28962, disableTopInsetApplication: 18939904, disableLeftInsetApplication: 113, disableRightInsetApplication: -1086258944, disableBottomInsetApplication: 50331908, translucent: 113, children: 7406080, headerLeftBarButtonItems: 50331648, headerRightBarButtonItems: 3211793, experimental_userInterfaceStyle: 0 };
   obj16[5] = tmp10;
   obj16[6] = fontSize;
   obj16[7] = headerBlurEffect;

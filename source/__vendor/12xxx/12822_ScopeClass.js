@@ -132,7 +132,7 @@ let items = [
     value: function setUser(arg0) {
       let obj = arg0;
       if (!arg0) {
-        obj = { email: "T", id: "call", ip_address: "sk", username: "rejectWithError" };
+        obj = { email: "has", id: "add", ip_address: "current", username: "Math" };
       }
       const self = this;
       this._user = obj;

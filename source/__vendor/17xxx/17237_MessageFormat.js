@@ -215,6 +215,6 @@ obj = {
 };
 extend.defineProperty(MessageFormat, "__addLocaleData", obj);
 extend.defineProperty(MessageFormat, "__parse", { value: SyntaxError.default.parse });
-extend.defineProperty(MessageFormat, "defaultLocale", { enumerable: true, writable: true, value: "HermesInternal" });
+extend.defineProperty(MessageFormat, "defaultLocale", { enumerable: true, writable: true, value: "ti" });
 
 export default MessageFormat;

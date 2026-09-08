@@ -66,7 +66,7 @@ export default function getTagProperties(arg0) {
         const intl6 = tmp2(1114).intl;
         stringResult2 = intl6.string(tmp2(1114).t.fyE8sH);
       }
-      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "alignItems", tagType: null, tagIconUrl: null, opTagText: null, opTagTextColor: null, opTagBackgroundColor: null };
+      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "padding", tagType: "Array", tagIconUrl: "GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE", opTagText: "r", opTagTextColor: "_abortController", opTagBackgroundColor: "INTERACTION_MODAL_SUBMIT" };
       obj[0] = stringResult;
       obj[1] = null;
       obj[2] = flag;

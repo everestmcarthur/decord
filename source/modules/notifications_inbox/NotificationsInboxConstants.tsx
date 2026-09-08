@@ -41,7 +41,7 @@ export const getNotificationsInboxGuild = function getNotificationsInboxGuild(ar
     const intl = getSystemLocale.intl;
     stringResult = intl.string(getSystemLocale.t.HcoRu0);
   }
-  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "text-xs/normal" };
+  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "row" };
   obj[4] = [];
   return tmp2(1971).fromGuildBasic(obj);
 };

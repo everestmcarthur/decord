@@ -11,7 +11,7 @@ import closure_4 from "hasConsented" /* 6595 */;
 import { Consents } from "ME" /* 1074 */;
 
 let object = arg1;
-let closure_6 = { detected: false, lastScannedAt: "Array" };
+let closure_6 = { detected: false, lastScannedAt: "PX_16" };
 let closure_7 = { apps: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class LocalAppDetectionStore extends DeviceSettingsStore {

@@ -404,7 +404,7 @@ export const HideSelfVideo = function HideSelfVideo() {
       if (!table) {
         if (!VIDEO) {
           VIDEO = closure_1_15.VIDEO;
-          const f119247 = (arg0) => f119247(!VIDEO);
+          const f119255 = (arg0) => f119255(!VIDEO);
           let obj = callback(table[14]);
           obj = { importer: null };
           obj[0] = function importer() {
@@ -422,7 +422,7 @@ export const HideSelfVideo = function HideSelfVideo() {
           obj.openLazy(obj);
         }
       }
-      return f119247(!VIDEO);
+      return f119255(!VIDEO);
     };
     const intl = tmp5(1114).intl;
     obj[3] = intl.string(tmp5(1114).t.MH8ESU);

@@ -14,7 +14,7 @@ import closure_6 from "comparator" /* 2012 */;
 import closure_7 from "createGuildRecordFromRust" /* 1979 */;
 
 require = arg1;
-let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "Array" };
+let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "PX_16" };
 const result = require("set").fileFinishedImporting("utils/native/WelcomeScreenUtils.tsx");
 
 export const useShowWelcomeModal = function useShowWelcomeModal(guildId, channelId) {

@@ -797,13 +797,13 @@ if (self2) {
             break;
             case "be":
             break;
-            case "canReportMessage":
+            case "activeTabId":
             break;
-            case "canReportMessageToMods":
+            case "disableEarlyViewCommandExecution":
             break;
-            case "showReportModalForGuildScheduledEvent":
+            case "threshold_met":
             break;
-            case "GuildScheduledEventEntityTypes":
+            case "meetsServerAgeRequirement":
             break;
             case "$ZodObject":
             break;
@@ -865,7 +865,7 @@ if (self2) {
             break;
             case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
             break;
-            case "inTestModeForApplication":
+            case "useGameInvitesChannelOfficialApplication":
             break;
             case "invalidEmojis":
             break;
@@ -1129,9 +1129,19 @@ if (self2) {
             break;
             case "sh":
             break;
-            case "guildDismissibleContentStates":
+            case "isIosWKWebview":
             break;
-            case "initialScrollToTop":
+            case "viewHierarchyIntegration":
+            break;
+            case "allowWithinModal":
+            break;
+            case "ModalFloatingAction":
+            break;
+            case "ModalFloatingActionSpacer":
+            break;
+            case "Spacer":
+            break;
+            case "SpacerView":
             break;
             case "flag_de":
             break;
@@ -1330,6 +1340,7 @@ if (self2) {
             case "lib":
             break;
             case "assignSimilarDate":
+              const combined1 = code.concat(tmp3);
             break;
             case "sign":
             break;
@@ -1340,7 +1351,6 @@ if (self2) {
             case "ios_backgroundColor":
             break;
             case "ba":
-              const combined1 = code.concat(tmp3);
             break;
             case "back":
             break;
@@ -1688,6 +1698,8 @@ if (self2) {
             break;
             case "fin":
             break;
+            case "useRequiredAppLauncherContext":
+            break;
             case "flag_km":
             break;
             case "undelete":
@@ -1851,7 +1863,9 @@ if (self2) {
             case "sunset":
             break;
             case "unset":
-            break;
+              let _HermesInternal = HermesInternal;
+              let combined2 = "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u1793\u17C5\u1780\u17D2\u1793\u17BB\u1784 " + code.origin;
+              return combined2;
             case "unsetWaitingForIdentifier":
             break;
             case "setWaitingForIdentifier":
@@ -1863,9 +1877,7 @@ if (self2) {
             case "extended":
             break;
             case "ended":
-              let _HermesInternal = HermesInternal;
-              let combined2 = "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u1793\u17C5\u1780\u17D2\u1793\u17BB\u1784 " + code.origin;
-              return combined2;
+            break;
             case "nd":
             break;
             case "promise":
@@ -1986,21 +1998,23 @@ if (self2) {
             break;
             case "oldestUnreadMessageIdStale":
             break;
-            case "addPerformanceInstrumentationHandler":
+            case "addPendingAuthorizedState":
             break;
-            case "SPACE_0":
+            case "AUTO_DISMISS":
             break;
-            case "CHANNEL_TOPIC_RULES":
+            case "DISMISS_BLOCK":
             break;
-            case "TOPIC":
+            case "BLOCK_QUOTE":
             break;
-            case "LESS_THAN_24H_BEFORE_REWARD":
+            case "MAX_GUILD_FILE_SIZE_250_MB":
             break;
-            case "REWARD_HERO":
+            case "BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE":
             break;
-            case "ROBLOX_DEFERRED_WEB_URL":
+            case "NATURE":
             break;
-            case "WEB_URL":
+            case "REACTION_RIGHT_CLICK_MENU_UPSELL":
+            break;
+            case "ReanimatedNativeDetector":
             break;
             case "fo":
             break;
@@ -2040,6 +2054,8 @@ if (self2) {
             break;
             case "defaultColors":
             break;
+            case "OPEN_POPOUT":
+            break;
             case "getCurrent":
             break;
             case "getCurrentUserActiveStream":
@@ -2064,18 +2080,12 @@ if (self2) {
             break;
             case "ContentClassificationVisibility":
             break;
-            case "CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL":
-            break;
-            case "ALREADY_STREAMING":
-            break;
-            case "STREAMING_UPDATE":
-            break;
-            case "selectProperties":
-            break;
             case "hasDiversity":
             break;
             case "Parent":
-            break;
+              _HermesInternal = HermesInternal;
+              combined2 = "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u1793\u17C5\u1780\u17D2\u1793\u17BB\u1784 " + code.origin;
+              return combined2;
             case "ParentalControlledDefaultGuildsRestrictedV2":
             break;
             case "ar":
@@ -2083,9 +2093,7 @@ if (self2) {
             case "DefaultGuildsRestricted":
             break;
             case "DefaultGuildsRestrictedV2":
-              _HermesInternal = HermesInternal;
-              combined2 = "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C\u1793\u17C5\u1780\u17D2\u1793\u17BB\u1784 " + code.origin;
-              return combined2;
+            break;
             case "isStableParticipantWithUser":
             break;
             case "avatar_hash":
@@ -2200,6 +2208,12 @@ if (self2) {
             break;
             case "deleteKeyFromRecyclePool":
             break;
+            case "getGuildIconURL":
+            break;
+            case "STREAM_SEND_LOW_FPS":
+            break;
+            case "FPS_30":
+            break;
             case "pronouns":
             break;
             case "pronounsAccessibilityHint":
@@ -2260,8 +2274,6 @@ if (self2) {
             break;
             case "ke":
             break;
-            case "parent_span_id":
-            break;
             case "useStorekitResubscribe":
             break;
             case "subscribeFromItem":
@@ -2291,18 +2303,6 @@ if (self2) {
             case "byAppEntry":
             break;
             case "tryItOutBanner":
-            break;
-            case "Buf8":
-            break;
-            case "f8wNDl":
-            break;
-            case "DlcqlU":
-            break;
-            case "lcq":
-            break;
-            case "HYPESQUAD":
-            break;
-            case "HYPESQUAD_HOUSE_1":
             break;
             default:
               return "\u1791\u17B7\u1793\u17D2\u1793\u1793\u17D0\u1799\u1798\u17B7\u1793\u178F\u17D2\u179A\u17B9\u1798\u178F\u17D2\u179A\u17BC\u179C";

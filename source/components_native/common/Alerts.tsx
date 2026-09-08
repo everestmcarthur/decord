@@ -145,7 +145,7 @@ AlertWrapper.prototype["render"] = function render() {
   return callback(Dialog.Dialog, obj);
 };
 AlertWrapper.contextType = require("ManaContext").ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "padding", props: "_desired" });
+let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "padding", props: "now" });
 let obj1 = {
   stores: items3,
   center: true,
@@ -191,7 +191,7 @@ const memoResult = importAllResult.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "Array", renderKey: "padding", props: "_desired" };
+        return { renderAlert: "Array", renderKey: "padding", props: "now" };
       }
     }
   });

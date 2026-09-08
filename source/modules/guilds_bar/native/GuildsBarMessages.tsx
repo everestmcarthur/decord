@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo(function GuildsBarMessages() {
   const obj2 = initialize;
   ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 }));
   const colors = ThemesDefault.colors;
-  obj = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config: closure_6, overState: "y", label: "eyebrow", externalChildren: "interactive-text-default", expandedChildren: null, children: false };
+  obj = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config: closure_6, overState: "y", label: "heading-lg/semibold", externalChildren: "text-default", expandedChildren: null, children: 1 };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
   const intl = tmp(1114).intl;
@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo(function GuildsBarMessages() {
   obj[8] = badge;
   obj[9] = jsx(HomeDrawerDMsRowDefault, {});
   obj[10] = jsx(ChatIcon.ChatIcon, { color: tmp7 });
-  return jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config: closure_6, overState: "y", label: "eyebrow", externalChildren: "interactive-text-default", expandedChildren: null, children: false });
+  return jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config: closure_6, overState: "y", label: "heading-lg/semibold", externalChildren: "text-default", expandedChildren: null, children: 1 });
 });
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarMessages.tsx");
 

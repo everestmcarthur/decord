@@ -18,7 +18,7 @@ import importDefaultResult1 from "dispatcher" /* 573 */;
 let obj = arg1;
 function updateUserGuildSettings(closure_0, arg1, INFREQUENT_USER_ACTION) {
   closure_1 = arg1;
-  return obj.updateAsync("guilds", (guilds) => callback(closure_1_2[10]).mutateUserGuildSettingsInternal(guilds, callback, f74620), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (guilds) => callback(closure_1_2[10]).mutateUserGuildSettingsInternal(guilds, callback, f74624), INFREQUENT_USER_ACTION);
 }
 function updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, arg1) {
   const self = this;
@@ -627,15 +627,15 @@ prototype["scheduleSaveFromOfflineEdit"] = function scheduleSaveFromOfflineEdit(
 };
 function updateUserAllGuildSettings(arg0, INFREQUENT_USER_ACTION) {
   closure_0 = arg0;
-  return obj.updateAsync("guilds", (arg0) => f74623(arg0), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (arg0) => f74627(arg0), INFREQUENT_USER_ACTION);
 }
 function setGuildThemeSourcePreferenceOverride(id, arg1) {
   closure_0 = arg1;
   closure_0 = id;
-  const f74613 = (arg0) => {
+  const f74617 = (arg0) => {
     arg0.guildThemeSourcePreference = closure_0;
   };
-  return obj.updateAsync("guilds", (guilds) => callback(closure_1_2[10]).mutateUserGuildSettingsInternal(guilds, callback, f74620), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (guilds) => callback(closure_1_2[10]).mutateUserGuildSettingsInternal(guilds, callback, f74624), UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 obj = Object.create(UserSettingsProtoActionCreators.prototype);
 obj.beforeSendCallbacks = [];
@@ -1004,17 +1004,17 @@ export { setGuildThemeSourcePreferenceOverride };
 export const clearGuildThemeSourcePreferenceOverride = function clearGuildThemeSourcePreferenceOverride(closure_0) {
   obj = obj(1187).GuildThemeSourcePreference.UNSPECIFIED;
   obj = closure_0;
-  const f74613 = (arg0) => {
+  const f74617 = (arg0) => {
     arg0.guildThemeSourcePreference = closure_0;
   };
-  return obj.updateAsync("guilds", (guilds) => callback(closure_1_2[10]).mutateUserGuildSettingsInternal(guilds, callback, f74620), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (guilds) => callback(closure_1_2[10]).mutateUserGuildSettingsInternal(guilds, callback, f74624), UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const updateUserChannelSettings = function updateUserChannelSettings(arg0, arg1, arg2, INFREQUENT_USER_ACTION) {
   closure_0 = arg1;
-  let f74620 = arg2;
+  let f74624 = arg2;
   closure_0 = arg0;
-  f74620 = (channels) => callback(closure_1_2[10]).mutateUserChannelSettingsInternal(channels, callback, f74620);
-  return obj.updateAsync("guilds", (guilds) => callback(closure_1_2[10]).mutateUserGuildSettingsInternal(guilds, callback, f74620), INFREQUENT_USER_ACTION);
+  f74624 = (channels) => callback(closure_1_2[10]).mutateUserChannelSettingsInternal(channels, callback, f74624);
+  return obj.updateAsync("guilds", (guilds) => callback(closure_1_2[10]).mutateUserGuildSettingsInternal(guilds, callback, f74624), INFREQUENT_USER_ACTION);
 };
 export const addDismissedContent = function addDismissedContent(closure_0) {
   obj = closure_0;
@@ -1077,7 +1077,7 @@ export const removeDismissedRecurringContent = function removeDismissedRecurring
   return updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
 };
 export const clearGuildDismissedContents = function clearGuildDismissedContents() {
-  const f74623 = (guilds) => {
+  const f74627 = (guilds) => {
     if (null != guilds.guilds) {
       const _Object = Object;
       const values = Object.values(guilds.guilds);
@@ -1097,7 +1097,7 @@ export const clearGuildDismissedContents = function clearGuildDismissedContents(
       }
     }
   };
-  return obj.updateAsync("guilds", (arg0) => f74623(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", (arg0) => f74627(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const clearDismissedContents = function clearDismissedContents() {
   return obj.updateAsync("userContent", (arg0) => {

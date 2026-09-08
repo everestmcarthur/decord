@@ -85,7 +85,7 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "w", purchaseType: "fetchDeveloperApplications", storeHasPrice: "textAlign" };
+    obj = { userPrice: "r", pricesForPurchaseType: "w", purchaseType: -1533303325, storeHasPrice: 822296673 };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;
@@ -381,7 +381,7 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "w", purchaseType: "fetchDeveloperApplications", storeHasPrice: "textAlign" };
+    obj = { userPrice: "r", pricesForPurchaseType: "w", purchaseType: -1533303325, storeHasPrice: 822296673 };
     obj[2] = SELF_PURCHASE;
     obj[3] = null != stateFromStores1;
     return obj;

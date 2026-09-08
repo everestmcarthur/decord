@@ -609,7 +609,7 @@ function StreamActivityCard(user) {
   obj1[2] = tmp.cardTitle;
   obj1[3] = closure_21(user(activity[43]).LiveTag, {});
   obj3 = { style: tmp.streamPreview, children: tmp19(tmp2(tmp3[57]).VoicePanelStreamPreview, obj4) };
-  obj4 = { mode: "a", stream: false, disabled: false, onPress: "a" };
+  obj4 = { mode: "a", stream: "<string:264830979>", disabled: "<string:264962051>", onPress: "<string:4179492867>" };
   obj4[1] = stream;
   obj4[2] = !stateFromStores(tmp2Result.useCanWatchStream(stateFromStores), 1)[0];
   obj4[3] = function onPress() {

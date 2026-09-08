@@ -57,7 +57,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   const rounded = Math.floor(random * ensureAvatarSourceDefault.DEFAULT_AVATARS.length);
   obj = { style: tmp.avatarContainer, children: null };
   if (null != otherUser) {
-    obj = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Heartbeat" };
+    obj = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Warning" };
     obj[0] = tmp.avatar;
     obj[1] = otherUser;
     let avatarDecoration;

@@ -792,7 +792,7 @@ if (self2) {
               return combined1;
             case "be":
             break;
-            case "canReportMessage":
+            case "activeTabId":
               let str26 = "<";
               if (code.inclusive) {
                 str26 = "<=";
@@ -839,9 +839,9 @@ if (self2) {
                 return "\u0417\u0430\u043D\u0430\u0434\u0442\u0430 \u0432\u044F\u043B\u0456\u043A\u0456: \u0447\u0430\u043A\u0430\u043B\u0430\u0441\u044F, \u0448\u0442\u043E " + str27 + " \u043F\u0430\u0432\u0456\u043D\u043D\u0430 \u0431\u044B\u0446\u044C " + str26 + code.maximum.toString();
               }
             break;
-            case "canReportMessageToMods":
+            case "disableEarlyViewCommandExecution":
             break;
-            case "showReportModalForGuildScheduledEvent":
+            case "threshold_met":
               let str18 = ">";
               if (code.inclusive) {
                 str18 = ">=";
@@ -882,7 +882,7 @@ if (self2) {
                 return "\u0417\u0430\u043D\u0430\u0434\u0442\u0430 \u043C\u0430\u043B\u044B: \u0447\u0430\u043A\u0430\u043B\u0430\u0441\u044F, \u0448\u0442\u043E " + origin + " \u043F\u0430\u0432\u0456\u043D\u043D\u0430 \u0431\u044B\u0446\u044C " + str18 + minimum.toString();
               }
             break;
-            case "GuildScheduledEventEntityTypes":
+            case "meetsServerAgeRequirement":
             break;
             case "$ZodObject":
               if ("starts_with" === code.format) {
@@ -984,7 +984,7 @@ if (self2) {
             break;
             case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
             break;
-            case "inTestModeForApplication":
+            case "useGameInvitesChannelOfficialApplication":
             break;
             case "invalidEmojis":
             break;
@@ -1248,9 +1248,19 @@ if (self2) {
             break;
             case "sh":
             break;
-            case "guildDismissibleContentStates":
+            case "isIosWKWebview":
             break;
-            case "initialScrollToTop":
+            case "viewHierarchyIntegration":
+            break;
+            case "allowWithinModal":
+            break;
+            case "ModalFloatingAction":
+            break;
+            case "ModalFloatingActionSpacer":
+            break;
+            case "Spacer":
+            break;
+            case "SpacerView":
             break;
             case "flag_de":
             break;
@@ -1603,16 +1613,6 @@ if (self2) {
             case "afk_channel_id":
             break;
             case "_id":
-            break;
-            case "family_adult_adult_child":
-            break;
-            case "family_adult_adult_child_child":
-            break;
-            case "_children":
-            break;
-            case "_childrenToCellKey":
-            break;
-            case "child":
               tmp5 = code.keys.length > 1;
               str4 = "\u043A\u043B\u044E\u0447";
               if (tmp5) {
@@ -1623,12 +1623,24 @@ if (self2) {
               _HermesInternal3 = HermesInternal;
               combined3 = "\u041D\u0435\u0440\u0430\u0441\u043F\u0430\u0437\u043D\u0430\u043D\u044B " + str4 + ": " + joinValuesResult;
               return combined3;
-            case "hi":
+            case "family_adult_adult_child":
             break;
-            case "dr":
+            case "family_adult_adult_child_child":
               _HermesInternal2 = HermesInternal;
               combined4 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u043A\u043B\u044E\u0447 \u0443 " + code.origin;
               return combined4;
+            case "_children":
+            break;
+            case "_childrenToCellKey":
+            break;
+            case "child":
+            break;
+            case "hi":
+              _HermesInternal = HermesInternal;
+              combined5 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u0430\u0435 \u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435 \u045E " + code.origin;
+              return combined5;
+            case "dr":
+            break;
             case "ren":
             break;
             case "authorRow":
@@ -1636,9 +1648,7 @@ if (self2) {
             case "wMWyci":
             break;
             case "ci":
-              _HermesInternal = HermesInternal;
-              combined5 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u0430\u0435 \u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435 \u045E " + code.origin;
-              return combined5;
+            break;
             case "ix8XIj":
             break;
             case "handleEvent":
@@ -1818,6 +1828,8 @@ if (self2) {
             case "fi":
             break;
             case "fin":
+            break;
+            case "useRequiredAppLauncherContext":
             break;
             case "flag_km":
             break;
@@ -2115,21 +2127,23 @@ if (self2) {
             break;
             case "oldestUnreadMessageIdStale":
             break;
-            case "addPerformanceInstrumentationHandler":
+            case "addPendingAuthorizedState":
             break;
-            case "SPACE_0":
+            case "AUTO_DISMISS":
             break;
-            case "CHANNEL_TOPIC_RULES":
+            case "DISMISS_BLOCK":
             break;
-            case "TOPIC":
+            case "BLOCK_QUOTE":
             break;
-            case "LESS_THAN_24H_BEFORE_REWARD":
+            case "MAX_GUILD_FILE_SIZE_250_MB":
             break;
-            case "REWARD_HERO":
+            case "BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE":
             break;
-            case "ROBLOX_DEFERRED_WEB_URL":
+            case "NATURE":
             break;
-            case "WEB_URL":
+            case "REACTION_RIGHT_CLICK_MENU_UPSELL":
+            break;
+            case "ReanimatedNativeDetector":
             break;
             case "fo":
             break;
@@ -2169,6 +2183,8 @@ if (self2) {
             break;
             case "defaultColors":
             break;
+            case "OPEN_POPOUT":
+            break;
             case "getCurrent":
             break;
             case "getCurrentUserActiveStream":
@@ -2192,14 +2208,6 @@ if (self2) {
             case "getContentClassificationVisibility":
             break;
             case "ContentClassificationVisibility":
-            break;
-            case "CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL":
-            break;
-            case "ALREADY_STREAMING":
-            break;
-            case "STREAMING_UPDATE":
-            break;
-            case "selectProperties":
             break;
             case "hasDiversity":
             break;
@@ -2254,14 +2262,6 @@ if (self2) {
             case "hei":
             break;
             case "heightAverageWindow":
-            break;
-            case "eight":
-            break;
-            case "ht":
-            break;
-            case "withMonitor":
-            break;
-            case "activityPanelMode":
               tmp5 = code.keys.length > 1;
               str4 = "\u043A\u043B\u044E\u0447";
               if (tmp5) {
@@ -2272,12 +2272,22 @@ if (self2) {
               _HermesInternal3 = HermesInternal;
               combined3 = "\u041D\u0435\u0440\u0430\u0441\u043F\u0430\u0437\u043D\u0430\u043D\u044B " + str4 + ": " + joinValuesResult;
               return combined3;
-            case "debugLogCs2GsiPayload":
+            case "eight":
             break;
-            case "loadAllGuildAndPrivateChannelsFromDisk":
+            case "ht":
               _HermesInternal2 = HermesInternal;
               combined4 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u043A\u043B\u044E\u0447 \u0443 " + code.origin;
               return combined4;
+            case "withMonitor":
+            break;
+            case "activityPanelMode":
+            break;
+            case "debugLogCs2GsiPayload":
+            break;
+            case "loadAllGuildAndPrivateChannelsFromDisk":
+              _HermesInternal = HermesInternal;
+              combined5 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u0430\u0435 \u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435 \u045E " + code.origin;
+              return combined5;
             case "FadeOutRight":
             break;
             case "http":
@@ -2285,9 +2295,7 @@ if (self2) {
             case "oc":
             break;
             case "oca":
-              _HermesInternal = HermesInternal;
-              combined5 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u0430\u0435 \u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435 \u045E " + code.origin;
-              return combined5;
+            break;
             case "NonConvert":
             break;
             case "Convert":
@@ -2339,6 +2347,12 @@ if (self2) {
             case "TouchPad":
             break;
             case "deleteKeyFromRecyclePool":
+            break;
+            case "getGuildIconURL":
+            break;
+            case "STREAM_SEND_LOW_FPS":
+            break;
+            case "FPS_30":
             break;
             case "pronouns":
             break;
@@ -2399,8 +2413,6 @@ if (self2) {
             case "PasskeysSpotIllustration":
             break;
             case "ke":
-            break;
-            case "parent_span_id":
             break;
             case "useStorekitResubscribe":
             break;
@@ -2702,7 +2714,7 @@ if (self2) {
             break;
             case "hashes":
             break;
-            case "setFingerprint":
+            case "libvpx":
             break;
             case "paymentsBlocked":
             break;
@@ -2793,18 +2805,6 @@ if (self2) {
             case "eject":
             break;
             case "ErrorNumber":
-            break;
-            case "shouldIndicateNewChannel":
-            break;
-            case "_positive":
-            break;
-            case "_cancelHoverOutDelayTimeout":
-            break;
-            case "outageBannerMessage":
-            break;
-            case "getAudioPid":
-            break;
-            case "TableRadioRow":
             break;
             case "__replaceAnimatedNodeWithValues":
             break;
@@ -3009,9 +3009,7 @@ if (self2) {
             break;
             case "styleAttr":
             break;
-            case "_buildKeyCodeMapFromKeyMap":
-            break;
-            case "build":
+            case "createArgs":
             break;
             case "surrogate":
             break;
@@ -3021,13 +3019,7 @@ if (self2) {
             break;
             case "gate":
             break;
-            case "isStickerPackAnimated":
-            break;
-            case "AnimatedStartStagePrompt":
-            break;
-            case "StartStagePrompt":
-            break;
-            case "Prompt":
+            case "BountiesStage1Experiment":
             break;
             case "_createExtraStyles":
             break;
@@ -3084,6 +3076,14 @@ if (self2) {
             case "sau":
             break;
             case "_uint64":
+            break;
+            case "uint64":
+            break;
+            case "int64toString":
+            break;
+            case "supportsInAppBrowser":
+            break;
+            case "BrowserStop":
             break;
             default:
               return "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u045E\u0432\u043E\u0434";

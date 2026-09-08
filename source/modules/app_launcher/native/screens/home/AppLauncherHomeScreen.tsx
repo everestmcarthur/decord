@@ -188,7 +188,7 @@ function ActivityItemTuple(arg0) {
   const items = [containerWidth];
   const size = React.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "push", height: "channel" };
+      return { width: "jsxs", height: "channel" };
     } else {
       const tmp5 = closure_1_1(closure_1_3[25])(tmp / 2 - closure_1_14 - 6);
       const obj = { width: null, height: null };
@@ -339,7 +339,7 @@ function RecommendationItemTuple(isLastTuple) {
   items = [containerWidth, num];
   closure_7 = React.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "push", height: "channel" };
+      return { width: "jsxs", height: "channel" };
     } else {
       const tmp6 = closure_1_1(closure_1_3[25])((tmp - 2 * closure_1_14 - 12 * (2 - 1)) / 2);
       const obj = { width: null, height: null };

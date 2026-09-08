@@ -153,7 +153,7 @@ function _initializeAndroidNotificationSettingsStore() {
   }
   return applyArgumentsResult;
 }
-let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "T", isVibrationsEnabled: "call", isSoundsEnabled: "sk", isNotifyEveryTime: "rejectWithError" }));
+let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "has", isVibrationsEnabled: "add", isSoundsEnabled: "current", isNotifyEveryTime: "Math" }));
 let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
 
 export const initializeAndroidNotificationSettingsStore = function initializeAndroidNotificationSettingsStore() {

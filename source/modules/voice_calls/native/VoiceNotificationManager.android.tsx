@@ -27,7 +27,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "braintreeunionpayhostedfields", embeddedActivity: "tanabata_tree", isStreaming: "leaves" };
+    obj.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: "four_leaf_clover", isPushToTalk: "animal", embeddedActivity: "bamboo", isStreaming: "face" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = closure_1_9.getChannelId();
       const state = closure_1_9.getState();
@@ -222,7 +222,7 @@ prototype["terminate"] = function terminate() {
 };
 set = Object.create(VoiceNotificationManager.prototype);
 set.voiceServiceHandlerId = 9000;
-set.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "braintreeunionpayhostedfields", embeddedActivity: "tanabata_tree", isStreaming: "leaves" };
+set.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: "four_leaf_clover", isPushToTalk: "animal", embeddedActivity: "bamboo", isStreaming: "face" };
 set.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = closure_1_9.getChannelId();
   const state = closure_1_9.getState();

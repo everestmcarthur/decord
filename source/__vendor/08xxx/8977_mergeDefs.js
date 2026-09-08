@@ -807,13 +807,13 @@ if (self2) {
             break;
             case "be":
             break;
-            case "canReportMessage":
+            case "activeTabId":
             break;
-            case "canReportMessageToMods":
+            case "disableEarlyViewCommandExecution":
             break;
-            case "showReportModalForGuildScheduledEvent":
+            case "threshold_met":
             break;
-            case "GuildScheduledEventEntityTypes":
+            case "meetsServerAgeRequirement":
             break;
             case "$ZodObject":
             break;
@@ -875,7 +875,7 @@ if (self2) {
             break;
             case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
             break;
-            case "inTestModeForApplication":
+            case "useGameInvitesChannelOfficialApplication":
             break;
             case "invalidEmojis":
             break;
@@ -1159,9 +1159,19 @@ if (self2) {
             break;
             case "sh":
             break;
-            case "guildDismissibleContentStates":
+            case "isIosWKWebview":
             break;
-            case "initialScrollToTop":
+            case "viewHierarchyIntegration":
+            break;
+            case "allowWithinModal":
+            break;
+            case "ModalFloatingAction":
+            break;
+            case "ModalFloatingActionSpacer":
+            break;
+            case "Spacer":
+            break;
+            case "SpacerView":
             break;
             case "flag_de":
             break;
@@ -1717,6 +1727,8 @@ if (self2) {
             break;
             case "fin":
             break;
+            case "useRequiredAppLauncherContext":
+            break;
             case "flag_km":
             break;
             case "undelete":
@@ -2013,21 +2025,23 @@ if (self2) {
             break;
             case "oldestUnreadMessageIdStale":
             break;
-            case "addPerformanceInstrumentationHandler":
+            case "addPendingAuthorizedState":
             break;
-            case "SPACE_0":
+            case "AUTO_DISMISS":
             break;
-            case "CHANNEL_TOPIC_RULES":
+            case "DISMISS_BLOCK":
             break;
-            case "TOPIC":
+            case "BLOCK_QUOTE":
             break;
-            case "LESS_THAN_24H_BEFORE_REWARD":
+            case "MAX_GUILD_FILE_SIZE_250_MB":
             break;
-            case "REWARD_HERO":
+            case "BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE":
             break;
-            case "ROBLOX_DEFERRED_WEB_URL":
+            case "NATURE":
             break;
-            case "WEB_URL":
+            case "REACTION_RIGHT_CLICK_MENU_UPSELL":
+            break;
+            case "ReanimatedNativeDetector":
             break;
             case "fo":
             break;
@@ -2067,6 +2081,8 @@ if (self2) {
             break;
             case "defaultColors":
             break;
+            case "OPEN_POPOUT":
+            break;
             case "getCurrent":
             break;
             case "getCurrentUserActiveStream":
@@ -2090,14 +2106,6 @@ if (self2) {
             case "getContentClassificationVisibility":
             break;
             case "ContentClassificationVisibility":
-            break;
-            case "CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL":
-            break;
-            case "ALREADY_STREAMING":
-            break;
-            case "STREAMING_UPDATE":
-            break;
-            case "selectProperties":
             break;
             case "hasDiversity":
             break;
@@ -2225,6 +2233,12 @@ if (self2) {
             break;
             case "deleteKeyFromRecyclePool":
             break;
+            case "getGuildIconURL":
+            break;
+            case "STREAM_SEND_LOW_FPS":
+            break;
+            case "FPS_30":
+            break;
             case "pronouns":
             break;
             case "pronounsAccessibilityHint":
@@ -2284,8 +2298,6 @@ if (self2) {
             case "PasskeysSpotIllustration":
             break;
             case "ke":
-            break;
-            case "parent_span_id":
             break;
             case "useStorekitResubscribe":
             break;
@@ -2587,7 +2599,7 @@ if (self2) {
             break;
             case "hashes":
             break;
-            case "setFingerprint":
+            case "libvpx":
             break;
             case "paymentsBlocked":
             break;
@@ -2678,18 +2690,6 @@ if (self2) {
             case "eject":
             break;
             case "ErrorNumber":
-            break;
-            case "shouldIndicateNewChannel":
-            break;
-            case "_positive":
-            break;
-            case "_cancelHoverOutDelayTimeout":
-            break;
-            case "outageBannerMessage":
-            break;
-            case "getAudioPid":
-            break;
-            case "TableRadioRow":
             break;
             case "__replaceAnimatedNodeWithValues":
             break;
@@ -2881,9 +2881,7 @@ if (self2) {
             break;
             case "styleAttr":
             break;
-            case "_buildKeyCodeMapFromKeyMap":
-            break;
-            case "build":
+            case "createArgs":
             break;
             case "surrogate":
             break;
@@ -2893,13 +2891,7 @@ if (self2) {
             break;
             case "gate":
             break;
-            case "isStickerPackAnimated":
-            break;
-            case "AnimatedStartStagePrompt":
-            break;
-            case "StartStagePrompt":
-            break;
-            case "Prompt":
+            case "BountiesStage1Experiment":
             break;
             case "_createExtraStyles":
             break;
@@ -3685,9 +3677,11 @@ if (self2) {
             break;
             case "seis":
             break;
-            case "addQueryPrefix":
+            case "addProfilesToEnvelope":
             break;
-            case "fixYogaFlexBasisFitContentInMainAxis":
+            case "Profiles":
+            break;
+            case "files":
             break;
             case "FamilyCenterSubPages":
             break;
@@ -3859,6 +3853,8 @@ if (self2) {
             break;
             case "USER_ACCOUNT_EMAIL_RESEND_VERIFICATION_EMAIL":
             break;
+            case "maybeFetchOnboardingPrompts":
+            break;
             case "rowboat_tone2":
             break;
             case "$ZodIPv6":
@@ -3921,10 +3917,6 @@ if (self2) {
             break;
             case "StreamingTier2LargeBadge":
             break;
-            case "networkRequestHeaders":
-            break;
-            case "isChromeDebugger":
-            break;
             case "a_7":
             break;
             case "{":
@@ -3945,13 +3937,11 @@ if (self2) {
             break;
             case "UNREAD_LESS_IMPORTANT":
             break;
-            case "getPendingFolderGuildIds":
+            case "fonts":
             break;
-            case "crossorigin":
+            case "openChannel":
             break;
-            case "originApplicationId":
-            break;
-            case "_removeModalBackdrop":
+            case "openChannelCallModal":
             break;
             case "$ZodLazy":
             break;
@@ -4167,17 +4157,11 @@ if (self2) {
             break;
             case "deflate":
             break;
-            case "fastImageStyle":
+            case "fastList":
             break;
-            case "awrap":
+            case "fastListComputer":
             break;
-            case "wrapAllMCPHandlers":
-            break;
-            case "PREMIUM_UPSELL_STICKERS_EVERYWHERE":
-            break;
-            case "STICKERS_EVERYWHERE":
-            break;
-            case "STICKERS_EVERYWHERE_UPSELL":
+            case "mau":
             break;
             case "$ZodTuple":
             break;
@@ -4318,6 +4302,22 @@ if (self2) {
             case "modal":
             break;
             case "dal":
+            break;
+            case "$output":
+            break;
+            case "out":
+            break;
+            case "output":
+            break;
+            case "outputDeviceId":
+            break;
+            case "databases":
+            break;
+            case "rowWidth":
+            break;
+            case "$p":
+            break;
+            case "$ref":
             break;
             default:
               return "Klaidinga \u012Fvestis";

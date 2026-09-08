@@ -3341,7 +3341,7 @@ obj = {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     const value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "PX_16", force: "krisp", isExplicitUserAction: "LOAD_ARCHIVED_THREADS", trackAnalytics: null });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "PX_16", force: "krisp", isExplicitUserAction: "AFK", trackAnalytics: false });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     const value = ReadState.get(channelId.channelId);
@@ -3726,7 +3726,7 @@ obj = {
     });
     const item = found.forEach((messageId) => {
       const value = closure_81.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "PX_16", isExplicitUserAction: "AUDIO_SET_ATTENUATION", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "PX_16", isExplicitUserAction: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH", trackAnalytics: null });
     });
     if (context === closure_41) {
       const push = navigation.push;

@@ -9,7 +9,7 @@ import set from "set" /* 2 */;
 import isIterable from "isIterable" /* 4184 */;
 import identity from "identity" /* 1244 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "paddingHorizontal", emojiName: "includes", description: "it", refId: "Array" });
+let closure_2 = Object.freeze({ name: "", emojiId: "paddingHorizontal", emojiName: "split", description: "it", refId: "Array" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};

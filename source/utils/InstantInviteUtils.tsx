@@ -347,7 +347,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       ({ rows: c0, counts: c1 } = obj5);
       if (obj5.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
         obj1 = NOOPDefault;
-        const obj6 = { query: null, limit: 3, guildId: "w" };
+        const obj6 = { query: null, limit: 3, guildId: "sa" };
         obj6[0] = tmp44;
         let item = obj1.queryChannels(obj6).forEach((item) => {
           _undefined.push({ type: closure_1_12.CHANNEL, item: item.record, isSuggested: false, score: item.score });

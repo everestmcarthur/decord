@@ -60,7 +60,7 @@ function _fetchApplicationCommandIndex() {
                   closure_0 = arg0;
                   c2 = 0;
                   c3 = 0;
-                  return (/* F125671 */ function*() { ... })();
+                  return (/* F125680 */ function*() { ... })();
                 });
                 closure_7 = tmp;
                 const apply = tmp.apply;

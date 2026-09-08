@@ -174,29 +174,29 @@ function commaSeparatedCall() {
 
 export default function normalizeColor(num) {
   if (typeof num === "number") {
-    let tmp82 = null;
+    let tmp84 = null;
     if (num >>> 0 === num) {
-      tmp82 = null;
+      tmp84 = null;
       if (num >= 0) {
-        tmp82 = null;
+        tmp84 = null;
         if (num <= 4294967295) {
-          tmp82 = num;
+          tmp84 = num;
         }
       }
     }
-    return tmp82;
+    return tmp84;
   } else if (typeof num !== "string") {
     return null;
   } else {
-    let tmp20 = match;
+    let tmp25 = match;
     if (undefined !== match) {
-      num = tmp20.hex6;
-      match = num.exec(num);
+      let num2 = tmp25.hex6;
+      match = num2.exec(num);
       if (match) {
         const _parseInt12 = parseInt;
         return parseInt(match[1] + "ff", 16) >>> 0;
       } else {
-        let tmp21 = 2597139199;
+        let tmp26 = 2597139199;
         switch (num) {
           case "indexOf":
           break;
@@ -321,39 +321,39 @@ export default function normalizeColor(num) {
           case "result":
           break;
           case "right":
-            if (null != tmp21) {
-              return tmp21;
+            if (null != tmp26) {
+              return tmp26;
             } else {
-              const rgba = tmp20.rgba;
-              num = rgba.exec(num);
-              if (!num) {
-                const rgb = tmp20.rgb;
-                num = rgb.exec(num);
+              const rgba = tmp25.rgba;
+              num2 = rgba.exec(num);
+              if (!num2) {
+                const rgb = tmp25.rgb;
+                num2 = rgb.exec(num);
               }
-              if (!num) {
-                const hex3 = tmp20.hex3;
+              if (!num2) {
+                const hex3 = tmp25.hex3;
                 const match1 = hex3.exec(num);
                 if (match1) {
                   const _parseInt3 = parseInt;
-                  let tmp27 = parseInt(match1[1] + match1[1] + match1[2] + match1[2] + match1[3] + match1[3] + "ff", 16) >>> 0;
+                  let tmp32 = parseInt(match1[1] + match1[1] + match1[2] + match1[2] + match1[3] + match1[3] + "ff", 16) >>> 0;
                 } else {
-                  const hex8 = tmp20.hex8;
+                  const hex8 = tmp25.hex8;
                   const match2 = hex8.exec(num);
                   if (match2) {
                     const _parseInt2 = parseInt;
-                    tmp27 = parseInt(match2[1], 16) >>> 0;
+                    tmp32 = parseInt(match2[1], 16) >>> 0;
                   } else {
-                    const hex4 = tmp20.hex4;
+                    const hex4 = tmp25.hex4;
                     const match3 = hex4.exec(num);
                     if (match3) {
                       const _parseInt = parseInt;
-                      tmp27 = parseInt(match3[1] + match3[1] + match3[2] + match3[2] + match3[3] + match3[3] + match3[4] + match3[4], 16) >>> 0;
+                      tmp32 = parseInt(match3[1] + match3[1] + match3[2] + match3[2] + match3[3] + match3[3] + match3[4] + match3[4], 16) >>> 0;
                     } else {
-                      const hsl = tmp20.hsl;
+                      const hsl = tmp25.hsl;
                       const match4 = hsl.exec(num);
                       if (match4) {
+                        const _parseFloat11 = parseFloat;
                         const _parseFloat12 = parseFloat;
-                        const _parseFloat13 = parseFloat;
                         const result = parseFloat(match4[1]) % 360;
                         const parsed = parseFloat(match4[2]);
                         let num45 = 0;
@@ -364,7 +364,7 @@ export default function normalizeColor(num) {
                           }
                           num45 = num47;
                         }
-                        const _parseFloat14 = parseFloat;
+                        const _parseFloat13 = parseFloat;
                         const parsed1 = parseFloat(match4[3]);
                         let num48 = 0;
                         if (parsed1 >= 0) {
@@ -374,17 +374,19 @@ export default function normalizeColor(num) {
                           }
                           num48 = num50;
                         }
-                        tmp27 = (255 | hslToRgb((result + 360) % 360 / 360, num45, num48)) >>> 0;
-                        const tmp50 = hslToRgb;
+                        tmp32 = (255 | hslToRgb((result + 360) % 360 / 360, num45, num48)) >>> 0;
+                        const tmp52 = hslToRgb;
                       } else {
-                        const hsla = tmp20.hsla;
-                        let num2 = hsla.exec(num);
-                        if (num2) {
-                          if (undefined !== num2[6]) {
+                        const hsla = tmp25.hsla;
+                        num = hsla.exec(num);
+                        if (num) {
+                          if (undefined !== num[6]) {
+                            tmp25 = hslToRgb;
+                            let str6 = globalThis;
                             const _parseFloat8 = parseFloat;
                             const _parseFloat9 = parseFloat;
-                            const result1 = parseFloat(num2[6]) % 360;
-                            const parsed2 = parseFloat(num2[7]);
+                            const result1 = parseFloat(num[6]) % 360;
+                            const parsed2 = parseFloat(num[7]);
                             let num34 = 0;
                             if (parsed2 >= 0) {
                               let num36 = 1;
@@ -394,37 +396,35 @@ export default function normalizeColor(num) {
                               num34 = num36;
                             }
                             const _parseFloat10 = parseFloat;
-                            const parsed3 = parseFloat(num2[8]);
+                            let str7 = parseFloat(num[8]);
                             let num37 = 0;
-                            if (parsed3 >= 0) {
+                            if (str7 >= 0) {
                               let num39 = 1;
-                              if (parsed3 <= 100) {
-                                num39 = parsed3 / 100;
+                              if (str7 <= 100) {
+                                num39 = str7 / 100;
                               }
                               num37 = num39;
                             }
-                            const _parseFloat11 = parseFloat;
-                            const parsed4 = parseFloat(num2[9]);
-                            num2 = 0;
-                            if (parsed4 >= 0) {
+                            const parsed3 = str6.parseFloat(num[9]);
+                            num = 0;
+                            if (parsed3 >= 0) {
                               let num42 = 255;
-                              if (parsed4 <= 1) {
-                                const _Math3 = Math;
-                                num42 = Math.round(255 * parsed4);
+                              if (parsed3 <= 1) {
+                                const _Math3 = str6.Math;
+                                num42 = _Math3.round(255 * parsed3);
                               }
-                              num2 = num42;
+                              num = num42;
                             }
-                            let tmp41 = (hslToRgb((result1 + 360) % 360 / 360, num34, num37) | num2) >>> 0;
-                            const tmp42 = hslToRgb;
-                            const tmp42Result = hslToRgb((result1 + 360) % 360 / 360, num34, num37);
+                            let tmp46 = (tmp25((result1 + 360) % 360 / 360, num34, num37) | num) >>> 0;
+                            const tmp25Result = tmp25((result1 + 360) % 360 / 360, num34, num37);
                           } else {
                             let result2 = globalThis;
-                            const _parseFloat18 = parseFloat;
+                            const _parseFloat17 = parseFloat;
                             result2 = hslToRgb;
                             num = 360;
-                            const _parseFloat19 = parseFloat;
-                            result2 = parseFloat(num2[2]) % 360;
-                            result2 = parseFloat(num2[3]);
+                            const _parseFloat18 = parseFloat;
+                            result2 = parseFloat(num[2]) % 360;
+                            result2 = parseFloat(num[3]);
                             num = 0;
                             let num24 = 0;
                             if (result2 >= 0) {
@@ -435,77 +435,77 @@ export default function normalizeColor(num) {
                               num24 = num23;
                             }
                             const _parseFloat6 = parseFloat;
-                            const parsed5 = parseFloat(num2[4]);
+                            const parsed4 = parseFloat(num[4]);
                             let num25 = 0;
-                            if (parsed5 >= 0) {
+                            if (parsed4 >= 0) {
                               let num27 = 1;
-                              if (parsed5 <= 100) {
-                                num27 = parsed5 / 100;
+                              if (parsed4 <= 100) {
+                                num27 = parsed4 / 100;
                               }
                               num25 = num27;
                             }
                             const _parseFloat7 = parseFloat;
-                            const parsed6 = parseFloat(num2[5]);
+                            const parsed5 = parseFloat(num[5]);
                             let num28 = 0;
-                            if (parsed6 >= 0) {
+                            if (parsed5 >= 0) {
                               let num31 = 255;
-                              if (parsed6 <= 1) {
+                              if (parsed5 <= 1) {
                                 const _Math2 = Math;
-                                num31 = Math.round(255 * parsed6);
+                                num31 = Math.round(255 * parsed5);
                               }
                               num28 = num31;
                             }
-                            tmp41 = (result2((result2 + 360) % 360 / 360, num24, num25) | num28) >>> 0;
+                            tmp46 = (result2((result2 + 360) % 360 / 360, num24, num25) | num28) >>> 0;
                             const result2Result = result2((result2 + 360) % 360 / 360, num24, num25);
                           }
                         } else {
-                          const hwb = tmp20.hwb;
+                          const hwb = tmp25.hwb;
                           let num3 = hwb.exec(num);
-                          tmp27 = null;
+                          tmp32 = null;
                           if (num3) {
                             if (undefined !== num3[5]) {
                               const _parseFloat2 = parseFloat;
                               const _parseFloat3 = parseFloat;
                               const result3 = parseFloat(num3[5]) % 360;
-                              const parsed7 = parseFloat(num3[6]);
+                              const parsed6 = parseFloat(num3[6]);
                               let num13 = 0;
-                              if (parsed7 >= 0) {
+                              if (parsed6 >= 0) {
                                 let num15 = 1;
-                                if (parsed7 <= 100) {
-                                  num15 = parsed7 / 100;
+                                if (parsed6 <= 100) {
+                                  num15 = parsed6 / 100;
                                 }
                                 num13 = num15;
                               }
                               const _parseFloat4 = parseFloat;
-                              const parsed8 = parseFloat(num3[7]);
+                              const parsed7 = parseFloat(num3[7]);
                               let num16 = 0;
-                              if (parsed8 >= 0) {
+                              if (parsed7 >= 0) {
                                 let num18 = 1;
-                                if (parsed8 <= 100) {
-                                  num18 = parsed8 / 100;
+                                if (parsed7 <= 100) {
+                                  num18 = parsed7 / 100;
                                 }
                                 num16 = num18;
                               }
                               const _parseFloat5 = parseFloat;
-                              const parsed9 = parseFloat(num3[8]);
+                              const parsed8 = parseFloat(num3[8]);
                               num3 = 0;
-                              if (parsed9 >= 0) {
+                              if (parsed8 >= 0) {
                                 let num21 = 255;
-                                if (parsed9 <= 1) {
+                                if (parsed8 <= 1) {
                                   const _Math = Math;
-                                  num21 = Math.round(255 * parsed9);
+                                  num21 = Math.round(255 * parsed8);
                                 }
                                 num3 = num21;
                               }
-                              let tmp29 = (hwbToRgb((result3 + 360) % 360 / 360, num13, num16) | num3) >>> 0;
-                              const tmp30 = hwbToRgb;
-                              const tmp30Result = hwbToRgb((result3 + 360) % 360 / 360, num13, num16);
+                              let tmp34 = (hwbToRgb((result3 + 360) % 360 / 360, num13, num16) | num3) >>> 0;
+                              const tmp35 = hwbToRgb;
+                              const tmp35Result = hwbToRgb((result3 + 360) % 360 / 360, num13, num16);
                             } else {
                               result2 = globalThis;
-                              const _parseFloat16 = parseFloat;
+                              const _parseFloat15 = parseFloat;
                               result2 = hwbToRgb;
                               num = 360;
-                              const _parseFloat17 = parseFloat;
+                              const _parseFloat16 = parseFloat;
                               result2 = parseFloat(num3[2]) % 360;
                               result2 = parseFloat(num3[3]);
                               num = 0;
@@ -518,16 +518,16 @@ export default function normalizeColor(num) {
                                 num6 = num5;
                               }
                               const _parseFloat = parseFloat;
-                              const parsed10 = parseFloat(num3[4]);
+                              const parsed9 = parseFloat(num3[4]);
                               let num7 = 0;
-                              if (parsed10 >= 0) {
+                              if (parsed9 >= 0) {
                                 let num9 = 1;
-                                if (parsed10 <= 100) {
-                                  num9 = parsed10 / 100;
+                                if (parsed9 <= 100) {
+                                  num9 = parsed9 / 100;
                                 }
                                 num7 = num9;
                               }
-                              tmp29 = (255 | result2((result2 + 360) % 360 / 360, num6, num7)) >>> 0;
+                              tmp34 = (255 | result2((result2 + 360) % 360 / 360, num6, num7)) >>> 0;
                             }
                           }
                         }
@@ -536,103 +536,103 @@ export default function normalizeColor(num) {
                   }
                 }
               }
-              if (undefined !== num[9]) {
+              if (undefined !== num2[9]) {
                 let _RegExp = globalThis;
                 const _parseInt9 = parseInt;
-                const parsed11 = parseInt(num[9], 10);
+                const parsed10 = parseInt(num2[9], 10);
                 let num85 = 0;
-                if (parsed11 >= 0) {
+                if (parsed10 >= 0) {
                   let num86 = 255;
-                  if (parsed11 <= 255) {
-                    num86 = parsed11;
+                  if (parsed10 <= 255) {
+                    num86 = parsed10;
                   }
                   num85 = num86;
                 }
                 const _parseInt10 = parseInt;
-                const parsed12 = parseInt(num[10], 10);
+                const parsed11 = parseInt(num2[10], 10);
                 let num88 = 0;
-                if (parsed12 >= 0) {
+                if (parsed11 >= 0) {
                   let num89 = 255;
-                  if (parsed12 <= 255) {
-                    num89 = parsed12;
+                  if (parsed11 <= 255) {
+                    num89 = parsed11;
                   }
                   num88 = num89;
                 }
                 const _parseInt11 = parseInt;
-                const parsed13 = parseInt(num[11], 10);
-                let str11 = 0;
-                if (parsed13 >= 0) {
+                const parsed12 = parseInt(num2[11], 10);
+                let str5 = 0;
+                if (parsed12 >= 0) {
                   let num91 = 255;
-                  if (parsed13 <= 255) {
-                    num91 = parsed13;
+                  if (parsed12 <= 255) {
+                    num91 = parsed12;
                   }
-                  str11 = num91;
+                  str5 = num91;
                 }
-                const parsed14 = _RegExp.parseFloat(num[12]);
-                num = 0;
-                if (parsed14 >= 0) {
+                const parsed13 = _RegExp.parseFloat(num2[12]);
+                num2 = 0;
+                if (parsed13 >= 0) {
                   let num95 = 255;
-                  if (parsed14 <= 1) {
+                  if (parsed13 <= 1) {
                     const _Math5 = _RegExp.Math;
-                    num95 = _Math5.round(255 * parsed14);
+                    num95 = _Math5.round(255 * parsed13);
                   }
-                  num = num95;
+                  num2 = num95;
                 }
-                let tmp62 = (num85 << 24 | num88 << 16 | str11 << 8 | num) >>> 0;
-                const tmp72 = num85 << 24;
-                const tmp74 = num88 << 16;
-                const tmp76 = str11 << 8;
-              } else if (undefined !== num[5]) {
+                let tmp64 = (num85 << 24 | num88 << 16 | str5 << 8 | num2) >>> 0;
+                const tmp74 = num85 << 24;
+                const tmp76 = num88 << 16;
+                const tmp78 = str5 << 8;
+              } else if (undefined !== num2[5]) {
                 const _parseInt6 = parseInt;
-                const parsed15 = parseInt(num[5], 10);
+                const parsed14 = parseInt(num2[5], 10);
                 let num70 = 0;
-                if (parsed15 >= 0) {
+                if (parsed14 >= 0) {
                   let num71 = 255;
-                  if (parsed15 <= 255) {
-                    num71 = parsed15;
+                  if (parsed14 <= 255) {
+                    num71 = parsed14;
                   }
                   num70 = num71;
                 }
                 const _parseInt7 = parseInt;
-                const parsed16 = parseInt(num[6], 10);
+                const parsed15 = parseInt(num2[6], 10);
                 let num73 = 0;
-                if (parsed16 >= 0) {
+                if (parsed15 >= 0) {
                   let num74 = 255;
-                  if (parsed16 <= 255) {
-                    num74 = parsed16;
+                  if (parsed15 <= 255) {
+                    num74 = parsed15;
                   }
                   num73 = num74;
                 }
                 const _parseInt8 = parseInt;
-                const parsed17 = parseInt(num[7], 10);
+                const parsed16 = parseInt(num2[7], 10);
                 let num76 = 0;
-                if (parsed17 >= 0) {
+                if (parsed16 >= 0) {
                   let num77 = 255;
-                  if (parsed17 <= 255) {
-                    num77 = parsed17;
+                  if (parsed16 <= 255) {
+                    num77 = parsed16;
                   }
                   num76 = num77;
                 }
-                const _parseFloat15 = parseFloat;
-                const parsed18 = parseFloat(num[8]);
+                const _parseFloat14 = parseFloat;
+                const parsed17 = parseFloat(num2[8]);
                 let num79 = 0;
-                if (parsed18 >= 0) {
+                if (parsed17 >= 0) {
                   let num82 = 255;
-                  if (parsed18 <= 1) {
+                  if (parsed17 <= 1) {
                     const _Math4 = Math;
-                    num82 = Math.round(255 * parsed18);
+                    num82 = Math.round(255 * parsed17);
                   }
                   num79 = num82;
                 }
-                tmp62 = (num70 << 24 | num73 << 16 | num76 << 8 | num79) >>> 0;
-                const tmp65 = num70 << 24;
-                const tmp67 = num73 << 16;
-                const tmp69 = num76 << 8;
+                tmp64 = (num70 << 24 | num73 << 16 | num76 << 8 | num79) >>> 0;
+                const tmp67 = num70 << 24;
+                const tmp69 = num73 << 16;
+                const tmp71 = num76 << 8;
               } else {
                 result2 = globalThis;
                 const _parseInt13 = parseInt;
                 num = 10;
-                result2 = parseInt(num[2], 10);
+                result2 = parseInt(num2[2], 10);
                 num = 0;
                 let num59 = 0;
                 if (result2 >= 0) {
@@ -643,28 +643,28 @@ export default function normalizeColor(num) {
                   num59 = num58;
                 }
                 const _parseInt4 = parseInt;
-                const parsed19 = parseInt(num[3], 10);
+                const parsed18 = parseInt(num2[3], 10);
                 let num61 = 0;
-                if (parsed19 >= 0) {
+                if (parsed18 >= 0) {
                   let num62 = 255;
-                  if (parsed19 <= 255) {
-                    num62 = parsed19;
+                  if (parsed18 <= 255) {
+                    num62 = parsed18;
                   }
                   num61 = num62;
                 }
                 const _parseInt5 = parseInt;
-                const parsed20 = parseInt(num[4], 10);
+                const parsed19 = parseInt(num2[4], 10);
                 let num64 = 0;
-                if (parsed20 >= 0) {
+                if (parsed19 >= 0) {
                   let num65 = 255;
-                  if (parsed20 <= 255) {
-                    num65 = parsed20;
+                  if (parsed19 <= 255) {
+                    num65 = parsed19;
                   }
                   num64 = num65;
                 }
-                tmp62 = (num59 << 24 | num61 << 16 | num64 << 8 | 255) >>> 0;
-                const tmp58 = num59 << 24;
-                const tmp60 = num61 << 16;
+                tmp64 = (num59 << 24 | num61 << 16 | num64 << 8 | 255) >>> 0;
+                const tmp60 = num59 << 24;
+                const tmp62 = num61 << 16;
               }
             }
           break;
@@ -962,13 +962,13 @@ export default function normalizeColor(num) {
           break;
           case "be":
           break;
-          case "canReportMessage":
+          case "activeTabId":
           break;
-          case "canReportMessageToMods":
+          case "disableEarlyViewCommandExecution":
           break;
-          case "showReportModalForGuildScheduledEvent":
+          case "threshold_met":
           break;
-          case "GuildScheduledEventEntityTypes":
+          case "meetsServerAgeRequirement":
           break;
           case "$ZodObject":
           break;
@@ -1030,7 +1030,7 @@ export default function normalizeColor(num) {
           break;
           case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
           break;
-          case "inTestModeForApplication":
+          case "useGameInvitesChannelOfficialApplication":
           break;
           case "invalidEmojis":
           break;
@@ -1294,9 +1294,19 @@ export default function normalizeColor(num) {
           break;
           case "sh":
           break;
-          case "guildDismissibleContentStates":
+          case "isIosWKWebview":
           break;
-          case "initialScrollToTop":
+          case "viewHierarchyIntegration":
+          break;
+          case "allowWithinModal":
+          break;
+          case "ModalFloatingAction":
+          break;
+          case "ModalFloatingActionSpacer":
+          break;
+          case "Spacer":
+          break;
+          case "SpacerView":
           break;
           case "flag_de":
           break;
@@ -1577,6 +1587,7 @@ export default function normalizeColor(num) {
           case "Radius":
           break;
           case "iu":
+            tmp26 = 2147516671;
           break;
           case "maxE":
           break;
@@ -1587,7 +1598,6 @@ export default function normalizeColor(num) {
           case "overflow_bottom":
           break;
           case "_bottom":
-            tmp21 = 2147516671;
           break;
           case "bot":
           break;
@@ -1852,6 +1862,8 @@ export default function normalizeColor(num) {
           case "fi":
           break;
           case "fin":
+          break;
+          case "useRequiredAppLauncherContext":
           break;
           case "flag_km":
           break;
@@ -2149,21 +2161,23 @@ export default function normalizeColor(num) {
           break;
           case "oldestUnreadMessageIdStale":
           break;
-          case "addPerformanceInstrumentationHandler":
+          case "addPendingAuthorizedState":
           break;
-          case "SPACE_0":
+          case "AUTO_DISMISS":
           break;
-          case "CHANNEL_TOPIC_RULES":
+          case "DISMISS_BLOCK":
           break;
-          case "TOPIC":
+          case "BLOCK_QUOTE":
           break;
-          case "LESS_THAN_24H_BEFORE_REWARD":
+          case "MAX_GUILD_FILE_SIZE_250_MB":
           break;
-          case "REWARD_HERO":
+          case "BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE":
           break;
-          case "ROBLOX_DEFERRED_WEB_URL":
+          case "NATURE":
           break;
-          case "WEB_URL":
+          case "REACTION_RIGHT_CLICK_MENU_UPSELL":
+          break;
+          case "ReanimatedNativeDetector":
           break;
           case "fo":
           break;
@@ -2174,6 +2188,7 @@ export default function normalizeColor(num) {
           case "DiscountsMegaphoneSpotIllustration":
           break;
           case "counts":
+            tmp26 = 4294638335;
           break;
           case "ga":
           break;
@@ -2188,7 +2203,6 @@ export default function normalizeColor(num) {
           case "videoHookAllowDx12":
           break;
           case "registered":
-            tmp21 = 4294638335;
           break;
           case "registeredIncomingCallIds":
           break;
@@ -2203,6 +2217,8 @@ export default function normalizeColor(num) {
           case "defaultColor":
           break;
           case "defaultColors":
+          break;
+          case "OPEN_POPOUT":
           break;
           case "getCurrent":
           break;
@@ -2227,14 +2243,6 @@ export default function normalizeColor(num) {
           case "getContentClassificationVisibility":
           break;
           case "ContentClassificationVisibility":
-          break;
-          case "CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL":
-          break;
-          case "ALREADY_STREAMING":
-          break;
-          case "STREAMING_UPDATE":
-          break;
-          case "selectProperties":
           break;
           case "hasDiversity":
           break;
@@ -2362,6 +2370,12 @@ export default function normalizeColor(num) {
           break;
           case "deleteKeyFromRecyclePool":
           break;
+          case "getGuildIconURL":
+          break;
+          case "STREAM_SEND_LOW_FPS":
+          break;
+          case "FPS_30":
+          break;
           case "pronouns":
           break;
           case "pronounsAccessibilityHint":
@@ -2421,8 +2435,6 @@ export default function normalizeColor(num) {
           case "PasskeysSpotIllustration":
           break;
           case "ke":
-          break;
-          case "parent_span_id":
           break;
           case "useStorekitResubscribe":
           break;
@@ -2549,767 +2561,748 @@ export default function normalizeColor(num) {
           case "strstart":
           break;
           case "startAndEndSpan":
+            tmp26 = 0;
           break;
           case "__memo":
           break;
           case "mo":
+            tmp26 = 4042850303;
           break;
           case "messageIds":
           break;
           case "sag":
+            tmp26 = 4209760255;
           break;
           case "importance":
           break;
           case "_$esjava$method":
-            tmp21 = 0;
+            tmp26 = 16777215;
           break;
           case "_$esjava$methodobject":
           break;
           case "ho":
-            tmp21 = 4042850303;
+            tmp26 = 16777215;
           break;
           case "hod":
           break;
           case "dob":
-            tmp21 = 4209760255;
+            tmp26 = 2147472639;
           break;
           case "obj":
           break;
           case "object":
-            tmp21 = 16777215;
+            tmp26 = 4043309055;
           break;
           case "objectAssign":
           break;
           case "ActionStatusSubLabel":
-            tmp21 = 16777215;
+            tmp26 = 4126530815;
           break;
           case "onStatus":
           break;
           case "Status":
-            tmp21 = 2147472639;
+            tmp26 = 4293182719;
           break;
           case "SubLabel":
           break;
           case "lineHeight":
-            tmp21 = 4043309055;
+            tmp26 = 255;
           break;
           case "getDeviceInfo":
           break;
           case "DeviceInfo":
-            tmp21 = 4126530815;
+            tmp26 = 4293643775;
           break;
           case "forNoAnimation":
           break;
           case "onStickyHeaderRender":
-            tmp21 = 4293182719;
+            tmp26 = 65535;
           break;
           case "onStickyHeaderRendered":
           break;
           case "few":
-            tmp21 = 255;
+            tmp26 = 2318131967;
           break;
           case "Omnibutton":
           break;
           case "OmnibuttonCoachmarkRive":
-            tmp21 = 4293643775;
+            tmp26 = 2771004159;
           break;
           case "mni":
           break;
           case "nib":
-            tmp21 = 65535;
+            tmp26 = 3736635391;
           break;
           case "button":
           break;
           case "footerPortrait":
-            tmp21 = 2318131967;
+            tmp26 = 3934150143;
           break;
           case "trait":
           break;
           case "voicePanelsFullscreen":
-            tmp21 = 2771004159;
+            tmp26 = 1604231423;
           break;
           case "screenIsLandscape":
           break;
           case "Ambient":
-            tmp21 = 3736635391;
+            tmp26 = 2147418367;
           break;
           case "Ambient_Lightmode":
           break;
           case "bie":
-            tmp21 = 3934150143;
+            tmp26 = 3530104575;
           break;
           case "tm":
           break;
           case "mod":
-            tmp21 = 1604231423;
+            tmp26 = 4286533887;
           break;
           case "modeOptions":
           break;
           case "contact_names":
-            tmp21 = 2147418367;
+            tmp26 = 1687547391;
           break;
           case "nam":
           break;
           case "LegacyRawButton":
-            tmp21 = 3530104575;
+            tmp26 = 4294499583;
           break;
           case "RawButton":
           break;
           case "guildTagTextVariant":
-            tmp21 = 4286533887;
+            tmp26 = 3692313855;
           break;
           case "track_next":
           break;
           case "_nextChannelId":
-            tmp21 = 1687547391;
+            tmp26 = 35839;
           break;
           case "didRetrySilentInitialScroll":
           break;
           case "BounceOutLeft":
-            tmp21 = 4294499583;
+            tmp26 = 9145343;
           break;
           case "snapToAlignment":
           break;
           case "Alignment":
-            tmp21 = 3692313855;
+            tmp26 = 3095792639;
           break;
           case "$ZodUnknown":
           break;
           case "ZodUnknown":
-            tmp21 = 35839;
+            tmp26 = 2846468607;
           break;
           case "Unknown":
           break;
           case "kn":
-            tmp21 = 9145343;
+            tmp26 = 2846468607;
           break;
           case "$input":
           break;
           case "inp":
-            tmp21 = 3095792639;
+            tmp26 = 6553855;
           break;
           case "input":
           break;
           case "put":
-            tmp21 = 2846468607;
+            tmp26 = 3182914559;
           break;
           case "last4":
           break;
           case "cardholderName":
-            tmp21 = 2846468607;
+            tmp26 = 2332068863;
           break;
           case "expirationMonth":
           break;
           case "expirationYear":
-            tmp21 = 6553855;
+            tmp26 = 1433087999;
           break;
           case "binData":
           break;
           case "useLegacyChatInput":
-            tmp21 = 3182914559;
+            tmp26 = 4287365375;
           break;
           case "ChatInputExpressionPressed":
           break;
           case "res":
-            tmp21 = 2332068863;
+            tmp26 = 2570243327;
           break;
           case "relationship_type":
           break;
           case "fearful":
-            tmp21 = 1433087999;
+            tmp26 = 2332033279;
           break;
           case "fearful_face":
           break;
           case "face_with_rolling_eyes":
-            tmp21 = 4287365375;
+            tmp26 = 3918953215;
           break;
           case "rolling_eyes":
           break;
           case "_opacityActive":
-            tmp21 = 2570243327;
+            tmp26 = 2411499519;
           break;
           case "opa":
           break;
           case "city":
-            tmp21 = 2332033279;
+            tmp26 = 1211993087;
           break;
           case "emitTimeout":
           break;
           case "claimed_at":
-            tmp21 = 3918953215;
+            tmp26 = 793726975;
           break;
           case "gift_info_options":
           break;
           case "_options":
-            tmp21 = 2411499519;
+            tmp26 = 793726975;
           break;
           case "opt":
           break;
           case "option":
-            tmp21 = 1211993087;
+            tmp26 = 13554175;
           break;
           case "_parent":
           break;
           case "_parentSpanId":
-            tmp21 = 793726975;
+            tmp26 = 2483082239;
           break;
           case "par":
           break;
           case "parentSpan":
-            tmp21 = 793726975;
+            tmp26 = 4279538687;
           break;
           case "parentSpanId":
           break;
           case "did_force_clear_guild_hashes":
-            tmp21 = 13554175;
+            tmp26 = 12582911;
           break;
           case "hashes":
           break;
-          case "setFingerprint":
-            tmp21 = 2483082239;
+          case "libvpx":
+            tmp26 = 1768516095;
           break;
           case "paymentsBlocked":
           break;
           case "preview_asset_paths":
-            tmp21 = 4279538687;
+            tmp26 = 1768516095;
           break;
           case "path":
           break;
           case "heldGiftingPromptSystemMessage":
-            tmp21 = 12582911;
+            tmp26 = 512819199;
           break;
           case "getAnimatableSourceWithFallback":
           break;
           case "backgroundTaskIdentifierInvalid":
-            tmp21 = 1768516095;
+            tmp26 = 2988581631;
           break;
           case "Invalid":
           break;
           case "InvalidKeywordError":
-            tmp21 = 1768516095;
+            tmp26 = 4294635775;
           break;
           case "valid":
           break;
           case "cacheComposition":
-            tmp21 = 512819199;
+            tmp26 = 579543807;
           break;
           case "positionComponentInternal":
           break;
           case "_props":
-            tmp21 = 2988581631;
+            tmp26 = 4278255615;
           break;
           case "_propsStack":
           break;
           case "pr":
-            tmp21 = 4294635775;
+            tmp26 = 4278255615;
           break;
           case "pro":
           break;
           case "prop":
-            tmp21 = 579543807;
+            tmp26 = 3705462015;
           break;
           case "propsStack":
           break;
           case "ops":
-            tmp21 = 4278255615;
+            tmp26 = 4177068031;
           break;
           case "ps":
           break;
           case "StackRouter":
-            tmp21 = 4278255615;
+            tmp26 = 4292280575;
           break;
           case "outerRow":
           break;
           case "woman_and_man_holding_hands_medium_light_skin_tone_medium_skin_tone":
-            tmp21 = 3705462015;
+            tmp26 = 3668254975;
           break;
           case "FePointLight":
           break;
           case "LightSpeedIn":
-            tmp21 = 4177068031;
+            tmp26 = 2155905279;
           break;
           case "LightSpeedInData":
           break;
           case "proto":
-            tmp21 = 4292280575;
+            tmp26 = 2155905279;
           break;
           case "prototypeInitialized":
           break;
           case "fetchIpCountryCode":
-            tmp21 = 3668254975;
+            tmp26 = 8388863;
           break;
           case "openOAuth2Modal":
           break;
           case "_pushCells":
-            tmp21 = 2155905279;
+            tmp26 = 2919182335;
           break;
           case "pus":
           break;
           case "rad":
-            tmp21 = 2155905279;
+            tmp26 = 4043305215;
           break;
           case "ii":
           break;
           case "DrawerActions":
-            tmp21 = 8388863;
+            tmp26 = 4285117695;
           break;
           case "aw":
           break;
           case "awe":
-            tmp21 = 2919182335;
+            tmp26 = 3445382399;
           break;
           case "verifiedBot":
           break;
           case "$ZodPrefault":
-            tmp21 = 4043305215;
+            tmp26 = 1258324735;
           break;
           case "ZodPrefault":
           break;
           case "reg":
-            tmp21 = 4285117695;
+            tmp26 = 4294963455;
           break;
           case "register":
           break;
           case "recipients":
-            tmp21 = 3445382399;
+            tmp26 = 4041641215;
           break;
           case "reject":
           break;
           case "eject":
-            tmp21 = 1258324735;
+            tmp26 = 3873897215;
           break;
           case "ErrorNumber":
           break;
-          case "shouldIndicateNewChannel":
-            tmp21 = 4294963455;
-          break;
-          case "_positive":
-          break;
-          case "_cancelHoverOutDelayTimeout":
-            tmp21 = 4041641215;
-          break;
-          case "outageBannerMessage":
-          break;
-          case "getAudioPid":
-            tmp21 = 3873897215;
-          break;
-          case "TableRadioRow":
-          break;
           case "__replaceAnimatedNodeWithValues":
-            tmp21 = 4293981695;
+            tmp26 = 4293981695;
           break;
           case "place":
           break;
           case "lac":
-            tmp21 = 2096890111;
+            tmp26 = 2096890111;
           break;
           case "ace":
           break;
           case "isCamera":
-            tmp21 = 4294626815;
+            tmp26 = 4294626815;
           break;
           case "kiss_person_person_medium_dark_skin_tone_dark_skin_tone":
           break;
           case "_resolve":
-            tmp21 = 2916673279;
+            tmp26 = 2916673279;
           break;
           case "_resolveEmpty":
           break;
           case "sol":
-            tmp21 = 4034953471;
+            tmp26 = 4034953471;
           break;
           case "resultName":
           break;
           case "_$esjava$result":
-            tmp21 = 3774873599;
+            tmp26 = 3774873599;
           break;
           case "resultCount":
           break;
           case "sul":
-            tmp21 = 4210742015;
+            tmp26 = 4210742015;
           break;
           case "GET_VOICE_CAPABILITIES":
           break;
           case "SUSPEND_CAMERA_VIEW":
-            tmp21 = 3553874943;
+            tmp26 = 3553874943;
           break;
           case "forumTag":
           break;
           case "pollBadge":
-            tmp21 = 3553874943;
+            tmp26 = 3553874943;
           break;
           case "getAuthenticationErrorsFromV6OrEarlierAPIError":
           break;
           case "V6OrEarlierAPIError":
-            tmp21 = 2431553791;
+            tmp26 = 2431553791;
           break;
           case "getBrightness":
           break;
           case "BrightnessDown":
-            tmp21 = 4290167295;
+            tmp26 = 4290167295;
           break;
           case "ownerId":
           break;
           case "approvalUrl":
-            tmp21 = 4288707327;
+            tmp26 = 4288707327;
           break;
           case "canSelectBeEmpty":
           break;
           case "AppsFlyer":
-            tmp21 = 548580095;
+            tmp26 = 548580095;
           break;
           case "removeFrame":
           break;
           case "run":
-            tmp21 = 2278488831;
+            tmp26 = 2278488831;
           break;
           case "actionStatusAccessibilityLabel":
           break;
           case "scale":
-            tmp21 = 2005441023;
+            tmp26 = 2005441023;
           break;
           case "ale":
           break;
           case "shape":
-            tmp21 = 2005441023;
+            tmp26 = 2005441023;
           break;
           case "hap":
           break;
           case "ape":
-            tmp21 = 2965692159;
+            tmp26 = 2965692159;
           break;
           case "pes":
           break;
           case "ariaDescription":
-            tmp21 = 4294959359;
+            tmp26 = 4294959359;
           break;
           case "stringifyUrl":
           break;
           case "minUserInstallCommandCount":
-            tmp21 = 16711935;
+            tmp26 = 16711935;
           break;
           case "sku":
           break;
           case "skuIds":
-            tmp21 = 852308735;
+            tmp26 = 852308735;
           break;
           case "fromByteArray":
           break;
           case "sl":
-            tmp21 = 4210091775;
+            tmp26 = 4210091775;
           break;
           case "sliceBody":
           break;
           case "ice":
-            tmp21 = 2147483903;
+            tmp26 = 2147483903;
           break;
           case "minPressDuration":
           break;
           case "isPerformanceResourceTiming":
-            tmp21 = 1724754687;
+            tmp26 = 1724754687;
           break;
           case "PerformanceResourceTiming":
           break;
           case "PerformanceResourceTiming_public":
-            tmp21 = 52735;
+            tmp26 = 52735;
           break;
           case "sou":
           break;
           case "public_flags":
-            tmp21 = 3126187007;
+            tmp26 = 3126187007;
           break;
           case "flags_":
           break;
           case "flags_new":
-            tmp21 = 2473647103;
+            tmp26 = 2473647103;
           break;
           case "_new_centroid":
           break;
           case "new":
-            tmp21 = 1018393087;
+            tmp26 = 1018393087;
           break;
           case "centroidDimension":
           break;
           case "onInitiateThread":
-            tmp21 = 2070474495;
+            tmp26 = 2070474495;
           break;
           case "readFloatLE":
           break;
           case "thread.name":
-            tmp21 = 16423679;
+            tmp26 = 16423679;
           break;
           case "_splitColorsIntoChannels":
           break;
           case "MMlhsr":
-            tmp21 = 1221709055;
+            tmp26 = 1221709055;
           break;
           case "sr-Cyrl":
           break;
           case "sr-Cyrl-BA":
-            tmp21 = 3340076543;
+            tmp26 = 3340076543;
           break;
           case "BATTLENET_MIGRATION":
           break;
           case "MIGRATION_DESTINATION_ORIGIN":
-            tmp21 = 421097727;
+            tmp26 = 421097727;
           break;
           case "INPUT_MONITORING":
           break;
           case "RING_TO_GUILD_VC_BANNER_SHOWN":
-            tmp21 = 4127193855;
+            tmp26 = 4127193855;
           break;
           case "tierCard":
           break;
           case "hasTakenDecoupledClip":
-            tmp21 = 4293190143;
+            tmp26 = 4293190143;
           break;
           case "ClipsRecordingRestartNeeded":
           break;
           case "star":
-            tmp21 = 4293178879;
+            tmp26 = 4293178879;
           break;
           case "art":
           break;
           case "client_app_state":
-            tmp21 = 4292783615;
+            tmp26 = 4292783615;
           break;
           case "app_state":
           break;
           case "_state":
-            tmp21 = 33023;
+            tmp26 = 33023;
           break;
           case "stat":
           break;
           case "stateActionComplete":
-            tmp21 = 4260751103;
+            tmp26 = 4260751103;
           break;
           case "woman_climbing":
           break;
           case "woman_climbing_dark_skin_tone":
-            tmp21 = 2155872511;
+            tmp26 = 2155872511;
           break;
           case "man_climbing":
           break;
           case "man_climbing_dark_skin_tone":
-            tmp21 = 1804477439;
+            tmp26 = 1804477439;
           break;
           case "limb":
           break;
           case "appeal_status":
-            tmp21 = 4289003775;
+            tmp26 = 4289003775;
           break;
           case "_status":
           break;
           case "statusAllowsPerks":
-            tmp21 = 4282712319;
+            tmp26 = 4282712319;
           break;
           case "_$esjava$s":
           break;
           case "_$esjava$substring_i":
-            tmp21 = 3664828159;
+            tmp26 = 3664828159;
           break;
           case "sub":
           break;
           case "substr":
-            tmp21 = 4008225535;
+            tmp26 = 4008225535;
           break;
           case "substring":
           break;
           case "bs":
-            tmp21 = 2566625535;
+            tmp26 = 2566625535;
           break;
           case "bst":
           break;
           case "string_id":
-            tmp21 = 2951671551;
+            tmp26 = 2951671551;
           break;
           case "DEPRECATED_style":
           break;
           case "_style":
-            tmp21 = 3681588223;
+            tmp26 = 3681588223;
           break;
           case "sty":
           break;
           case "styleAttr":
-            tmp21 = 4293907967;
+            tmp26 = 4293907967;
           break;
-          case "_buildKeyCodeMapFromKeyMap":
-          break;
-          case "build":
-            tmp21 = 4292524543;
+          case "createArgs":
           break;
           case "surrogate":
+            tmp26 = 4292524543;
           break;
           case "rog":
-            tmp21 = 3448061951;
           break;
           case "gat":
+            tmp26 = 3448061951;
           break;
           case "gate":
-            tmp21 = 4290825215;
           break;
-          case "isStickerPackAnimated":
-          break;
-          case "AnimatedStartStagePrompt":
-            tmp21 = 3718307327;
-          break;
-          case "StartStagePrompt":
-          break;
-          case "Prompt":
-            tmp21 = 2967529215;
+          case "BountiesStage1Experiment":
+            tmp26 = 4290825215;
           break;
           case "_createExtraStyles":
           break;
           case "canSend":
-            tmp21 = 2147516671;
+            tmp26 = 3718307327;
           break;
           case "canSendGuildOfficialMessages":
           break;
           case "FastestListPropsPlaceholderType":
-            tmp21 = 1714657791;
+            tmp26 = 2967529215;
           break;
           case "est":
           break;
           case "person_walking_facing_right_tone1":
-            tmp21 = 4278190335;
+            tmp26 = 2147516671;
           break;
           case "epochAuthenticator":
           break;
           case "AuthenticatorType":
-            tmp21 = 3163525119;
+            tmp26 = 1714657791;
           break;
           case "the":
           break;
           case "people_holding_hands_medium_skin_tone_medium_dark_skin_tone":
-            tmp21 = 1097458175;
+            tmp26 = 4278190335;
           break;
           case "priceId":
           break;
           case "mintcream":
-            tmp21 = 2336560127;
+            tmp26 = 3163525119;
           break;
           case "UpdatePropsManager":
           break;
           case "EntitlementFeatureNames":
-            tmp21 = 4202722047;
+            tmp26 = 1097458175;
           break;
           case "__views__":
           break;
           case "__constants":
-            tmp21 = 4104413439;
+            tmp26 = 2336560127;
           break;
           case "shouldPreventRemove":
           break;
           case "moveInto":
-            tmp21 = 780883967;
+            tmp26 = 4202722047;
           break;
           case "ja":
           break;
           case "java":
-            tmp21 = 4294307583;
+            tmp26 = 4104413439;
           break;
           case "av":
           break;
           case "$":
-            tmp21 = 2689740287;
+            tmp26 = 780883967;
           break;
           case "flag_to":
           break;
           case "_toLowerCase":
-            tmp21 = 3233857791;
+            tmp26 = 4294307583;
           break;
           case "ase":
           break;
           case "flying_saucer":
-            tmp21 = 2278484991;
+            tmp26 = 2689740287;
           break;
           case "sau":
           break;
           case "_uint64":
-            tmp21 = 1784335871;
+            tmp26 = 3233857791;
           break;
           case "uint64":
+            tmp26 = 2318131967;
           break;
           case "int64toString":
-            tmp21 = 1887473919;
+            tmp26 = 2278484991;
           break;
           case "supportsInAppBrowser":
           break;
           case "BrowserStop":
-            tmp21 = 1887473919;
+            tmp26 = 1784335871;
           break;
           case "Stop":
           break;
           case "StopWatch":
-            tmp21 = 4294638335;
+            tmp26 = 1887473919;
           break;
           case "WatchdogTimeout":
           break;
           case "dog":
-            tmp21 = 16744447;
+            tmp26 = 1887473919;
           break;
           case "couple_with_heart_woman_woman_medium_skin_tone_light_skin_tone":
           break;
           case "next_track":
-            tmp21 = 1182971135;
+            tmp26 = 4294638335;
           break;
           case "_trackIfSessionMetadataExists":
           break;
           case "tra":
-            tmp21 = 3535047935;
+            tmp26 = 16744447;
           break;
           case "rac":
           break;
           case "shouldTrackVoiceInviteEmbedViews":
-            tmp21 = 8421631;
+            tmp26 = 1182971135;
           break;
           case "_transformMetadataToCamelCase":
           break;
           case "sf":
-            tmp21 = 3636451583;
+            tmp26 = 3535047935;
           break;
           case "mel":
           break;
           case "searchTokenType":
-            tmp21 = 4284696575;
+            tmp26 = 8421631;
           break;
           case "allowGameFriendDmsInDiscord":
           break;
           case "DiscordContentClassificationFlagMasks":
-            tmp21 = 1088475391;
+            tmp26 = 3636451583;
           break;
           case "APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED":
           break;
           case "DCDSecurityKeyManager":
-            tmp21 = 4001558271;
+            tmp26 = 4284696575;
           break;
           case "useQuestCompletionDetails":
           break;
           case "forEachInCell":
-            tmp21 = 4125012991;
+            tmp26 = 1088475391;
           break;
           case "../lib/create-assets-url":
           break;
           case "hi-IN":
-            tmp21 = 4294967295;
+            tmp26 = 4001558271;
           break;
           case "IN_APP_GUILD_TEMPLATES_MODAL_KEY":
           break;
           case "GUILD_TEMPLATE":
-            tmp21 = 4126537215;
+            tmp26 = 4125012991;
           break;
           case "GUILD_TEMPLATES":
           break;
           case "useFocus":
-            tmp21 = 4294902015;
+            tmp26 = 4294967295;
           break;
           case "useFocusEffect":
           break;
           case "use":
+            tmp26 = 4126537215;
           break;
           case "Call":
           break;
           case "effectClick":
+            tmp26 = 4294902015;
           break;
           case "ClickImage":
           break;
@@ -3968,13 +3961,15 @@ export default function normalizeColor(num) {
           case "violet":
           break;
           case "$ZodCheckUpperCase":
-            tmp21 = 4294307583;
           break;
           case "seis":
           break;
-          case "addQueryPrefix":
+          case "addProfilesToEnvelope":
           break;
-          case "fixYogaFlexBasisFitContentInMainAxis":
+          case "Profiles":
+          break;
+          case "files":
+            tmp26 = 4294307583;
           break;
           case "FamilyCenterSubPages":
           break;
@@ -4146,6 +4141,8 @@ export default function normalizeColor(num) {
           break;
           case "USER_ACCOUNT_EMAIL_RESEND_VERIFICATION_EMAIL":
           break;
+          case "maybeFetchOnboardingPrompts":
+          break;
           case "rowboat_tone2":
           break;
           case "$ZodIPv6":
@@ -4208,10 +4205,6 @@ export default function normalizeColor(num) {
           break;
           case "StreamingTier2LargeBadge":
           break;
-          case "networkRequestHeaders":
-          break;
-          case "isChromeDebugger":
-          break;
           case "a_7":
           break;
           case "{":
@@ -4232,13 +4225,11 @@ export default function normalizeColor(num) {
           break;
           case "UNREAD_LESS_IMPORTANT":
           break;
-          case "getPendingFolderGuildIds":
+          case "fonts":
           break;
-          case "crossorigin":
+          case "openChannel":
           break;
-          case "originApplicationId":
-          break;
-          case "_removeModalBackdrop":
+          case "openChannelCallModal":
           break;
           case "$ZodLazy":
           break;
@@ -4454,17 +4445,11 @@ export default function normalizeColor(num) {
           break;
           case "deflate":
           break;
-          case "fastImageStyle":
+          case "fastList":
           break;
-          case "awrap":
+          case "fastListComputer":
           break;
-          case "wrapAllMCPHandlers":
-          break;
-          case "PREMIUM_UPSELL_STICKERS_EVERYWHERE":
-          break;
-          case "STICKERS_EVERYWHERE":
-          break;
-          case "STICKERS_EVERYWHERE_UPSELL":
+          case "mau":
           break;
           case "$ZodTuple":
           break;
@@ -4776,12 +4761,6 @@ export default function normalizeColor(num) {
           break;
           case "TwinButtons":
           break;
-          case "getEmojiEntranceKey":
-          break;
-          case "GUILD_RING_STOP":
-          break;
-          case "STOP_CAMERA_VIEW":
-          break;
           case "+CbP2v":
           break;
           case "2v7kfl":
@@ -5016,6 +4995,10 @@ export default function normalizeColor(num) {
           break;
           case "rate":
           break;
+          case "nine_thirty":
+          break;
+          case "premiumImageSource":
+          break;
           case "image/avif":
           break;
           case "AvatarMoatmonsturrExample":
@@ -5041,6 +5024,8 @@ export default function normalizeColor(num) {
           case "vi":
           break;
           case "external":
+          break;
+          case "refTypeCheck":
           break;
           case "buttonSecondaryLoading":
           break;
@@ -5230,8 +5215,6 @@ export default function normalizeColor(num) {
           break;
           case "ung":
           break;
-          case "GroupIcon":
-          break;
           case "_getCellKey":
           break;
           case "inputDevices":
@@ -5306,7 +5289,9 @@ export default function normalizeColor(num) {
           break;
           case "label_type":
           break;
-          case "flag_wf":
+          case "flag_vu":
+          break;
+          case "vulcan_tone3":
           break;
           case "ACTION_SHEET_DRAG_HANDLE_HEIGHT":
           break;
@@ -5497,6 +5482,18 @@ export default function normalizeColor(num) {
           case "LaunchApplication13":
           break;
           case "13/7kX":
+          break;
+          case "getPrivateChannelMentionCount":
+          break;
+          case "trackSearchFilterAdd":
+          break;
+          case "SearchFilter":
+          break;
+          case "SearchFilterAddLocations":
+          break;
+          case "scrollToItem":
+          break;
+          case "embeddedCheckout":
           break;
           case "PLUM_13":
           break;
@@ -5702,19 +5699,7 @@ export default function normalizeColor(num) {
           break;
           case "2jxGer":
           break;
-          case "TRIVIA_BOARD_GAME":
-          break;
-          case "GAME_AUTOCOMPLETE_DEBOUNCE_MS":
-          break;
-          case "SUPERVISED_PENDING":
-          break;
-          case "PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER":
-          break;
-          case "RPC_SCOPE_CONFIG":
-          break;
-          case "GUILD_EVENT_INFO_ACTION_SHEET_KEY":
-          break;
-          case "EVENT_INFO":
+          case "GUILD_ONBOARDING_MODAL_KEY":
           break;
           case "2mIlKQ":
           break;
@@ -5783,10 +5768,6 @@ export default function normalizeColor(num) {
           case "3D5yo/":
           break;
           case "VIBING_WUMPUS_CLOSED":
-          break;
-          case "DNK":
-          break;
-          case "KrispInitErrorWeight8k":
           break;
           case "WMF_DIRECT_3D_INTEL":
           break;
@@ -5954,9 +5935,7 @@ export default function normalizeColor(num) {
           break;
           case "4g":
           break;
-          case "target_user":
-          break;
-          case "target_user_id":
+          case "OPACITY_BLUE_52":
           break;
           case "WMBV4i":
           break;
@@ -6010,9 +5989,7 @@ export default function normalizeColor(num) {
           break;
           case "mx_claus_medium_dark_skin_tone":
           break;
-          case "getFetchState":
-          break;
-          case "getFetchStateForApplication":
+          case "getFetchStateForSku":
           break;
           case "setQualityOverwrite":
           break;
@@ -6095,7 +6072,6 @@ export default function normalizeColor(num) {
           case "kiss_woman_woman_tone4_tone5":
           break;
           case "5Wxrcd":
-            tmp21 = 4001558271;
           break;
           case "cd":
           break;
@@ -6120,6 +6096,7 @@ export default function normalizeColor(num) {
           case "getParticipantIds":
           break;
           case "5f3HIC":
+            tmp26 = 4001558271;
           break;
           case "IC":
           break;
@@ -6128,12 +6105,10 @@ export default function normalizeColor(num) {
           case "ACTIVITY_LEAVE":
           break;
           case "LEAVE":
-            tmp21 = 4294902015;
           break;
           case "LEAVE_PRESS_RECT":
           break;
           case "addTimeToInitialDisplayFallback":
-            tmp21 = 4294902015;
           break;
           case "TimeToInitialDisplay":
           break;
@@ -6149,19 +6124,17 @@ export default function normalizeColor(num) {
           break;
           case "sampleRand":
           break;
-          case "spanSizeInfo":
-          break;
-          case "forcedTheme":
-          break;
           case "5g":
           break;
           case "5glWta":
           break;
           case "ta-IN":
+            tmp26 = 4294902015;
           break;
           case "INVALID_GIFT_REDEMPTION_OWNED":
           break;
           case "cacheReadInputTokens":
+            tmp26 = 4294902015;
           break;
           case "5h0QOP":
           break;
@@ -6191,11 +6164,15 @@ export default function normalizeColor(num) {
           break;
           case "5mnTa7":
           break;
-          case "flag_bv":
+          case "flag_bt":
           break;
-          case "bval":
+          case "bt75uw":
           break;
-          case "validateOriginAndUpdateSocket":
+          case "YtjJPQ":
+          break;
+          case "PUBLIC_UPDATES_CHANNEL_ID":
+          break;
+          case "PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY":
           break;
           case "lG6a5x":
           break;
@@ -6303,7 +6280,7 @@ export default function normalizeColor(num) {
           break;
           case "y1":
           break;
-          case "flattenColorOverOpaqueBackground":
+          case "flattenChunks":
           break;
           case "6lU9xM":
           break;
@@ -6417,7 +6394,9 @@ export default function normalizeColor(num) {
           break;
           case "AIszv8":
           break;
-          case "NitroLogoCardSpotIllustration":
+          case "childList":
+          break;
+          case "NitroOpalBadgeLargeBadge":
           break;
           case "getGuildEmoji":
           break;
@@ -6557,12 +6536,6 @@ export default function normalizeColor(num) {
           break;
           case "PURPLE":
           break;
-          case "buttonsContainer":
-          break;
-          case "otherOptions":
-          break;
-          case "otherOptionsContainer":
-          break;
           case "CLIENT_SESSION_STORAGE_VERSION":
           break;
           case "NEUTRAL_96":
@@ -6593,11 +6566,17 @@ export default function normalizeColor(num) {
           break;
           case "wc":
           break;
-          case "PRESS_APPLICATION_WIDGET_PLACEHOLDER_CONNECT":
+          case "OAUTH2_AUTHORIZE_SAMSUNG":
           break;
-          case "CONNECTION_REFRESH":
+          case "OAUTH2_AUTHORIZE_SAMSUNG_CALLBACK":
           break;
-          case "REFRESH_MEDIUM_10":
+          case "SAMSUNG":
+          break;
+          case "SUN":
+          break;
+          case "SEAT_1":
+          break;
+          case "SEAT_10":
           break;
           case "983601860436819968":
           break;
@@ -6608,7 +6587,6 @@ export default function normalizeColor(num) {
           case "9EDo+/":
           break;
           case "9FaEzi":
-            tmp21 = 4001558271;
           break;
           case "ziB0HF":
           break;
@@ -6631,6 +6609,7 @@ export default function normalizeColor(num) {
           case "9ddYKt":
           break;
           case "couple_with_heart_woman_woman_light_skin_tone_medium_dark_skin_tone":
+            tmp26 = 4001558271;
           break;
           case "nextSensorId":
           break;
@@ -6641,16 +6620,20 @@ export default function normalizeColor(num) {
           case "decorationAsset":
           break;
           case "setAlwaysOnTop":
-            tmp21 = 4294902015;
           break;
           case "opVZ9q":
           break;
           case "9qLtWs":
-            tmp21 = 4294902015;
           break;
           case "9rfonh":
           break;
           case "fon":
+          break;
+          case "isCustomEmoji":
+          break;
+          case "getCachedCommand":
+          break;
+          case "badgeSize":
           break;
           case "9sZWVp":
           break;
@@ -6659,10 +6642,12 @@ export default function normalizeColor(num) {
           case ":":
           break;
           case "apiVersion":
+            tmp26 = 4294902015;
           break;
           case "responseStart":
           break;
           case "startRegisterWebAuthnCredential":
+            tmp26 = 4294902015;
           break;
           case "unlockThread":
           break;
@@ -6741,18 +6726,6 @@ export default function normalizeColor(num) {
           case "checkoutContextRecord":
           break;
           case "A/Ly/2":
-          break;
-          case "PLAY_SOUNDBOARD_SOUND":
-          break;
-          case "SOUNDBOARD_SOUND_GUILD_DATA":
-          break;
-          case "binding":
-          break;
-          case "NitroRubyBadgeSmallBadge":
-          break;
-          case "shouldIndex":
-          break;
-          case "skipAttempt":
           break;
           case "shadowContainer":
           break;
@@ -6874,15 +6847,7 @@ export default function normalizeColor(num) {
           break;
           case "VE":
           break;
-          case "ACTIVITIES_NITRO_UPSELL":
-          break;
-          case "NITRO":
-          break;
-          case "NITRO_UPSELL":
-          break;
-          case "NITRO_UPSELL_ALERT_KEY":
-          break;
-          case "TR":
+          case "addFavoriteGIF":
           break;
           case "pix":
           break;
@@ -7029,7 +6994,6 @@ export default function normalizeColor(num) {
           case "GUILD_EVENTS_FOR_GUILD":
           break;
           case "GUILD_ADD_ACCEPT_INVITE":
-            tmp21 = 8421631;
           break;
           case "ACCEPT_INVITE":
           break;
@@ -7066,6 +7030,7 @@ export default function normalizeColor(num) {
           case "ACCEPT_QUEST":
           break;
           case "QUESTS_CURRENT_QUESTS":
+            tmp26 = 8421631;
           break;
           case "QUESTS_CARD":
           break;
@@ -7311,6 +7276,10 @@ export default function normalizeColor(num) {
           break;
           case "RATIONAL":
           break;
+          case "flag_gq":
+          break;
+          case "SplitTextInput":
+          break;
           case "MULTI_ACCOUNT_REMOVE_ACCOUNT":
           break;
           case "ACCOUNT_AGE_GROUP_ASSIGNED_ADULT":
@@ -7338,10 +7307,6 @@ export default function normalizeColor(num) {
           case "REDACTABLE_MESSAGE_LOADED":
           break;
           case "LOCAL_PAYMENT_START_PAYMENT_FAILED":
-          break;
-          case "woman_kneeling_tone4":
-          break;
-          case "man_kneeling_tone4":
           break;
           case "UNVERIFIED":
           break;
@@ -7487,9 +7452,19 @@ export default function normalizeColor(num) {
           break;
           case "TIME_UNITS_PATTERN":
           break;
-          case "flag_mc":
+          case "flag_ma":
           break;
-          case "mcp.client.name":
+          case "_maybeCallOnEdgeReached":
+          break;
+          case "may":
+          break;
+          case "hedgehog":
+          break;
+          case "by_weekday":
+          break;
+          case "_weekdaysMinStrictRegex":
+          break;
+          case "executeError":
           break;
           case "DESIGN_SYSTEMS_ROW_BUTTON":
           break;
@@ -7621,7 +7596,15 @@ export default function normalizeColor(num) {
           break;
           case "Nfvo72":
           break;
-          case "flag_fm":
+          case "flag_fk":
+          break;
+          case "moai":
+          break;
+          case "isAdvancedMode":
+          break;
+          case "default_tag_setting":
+          break;
+          case "settingName":
           break;
           case "KuYcnU":
           break;
@@ -7783,17 +7766,7 @@ export default function normalizeColor(num) {
           break;
           case "INTEGER_WORD_DICTIONARY":
           break;
-          case "flag_sy":
-          break;
-          case "_systemResources":
-          break;
-          case "systemResources":
-          break;
-          case "sources":
-          break;
-          case "regional_indicator_f":
-          break;
-          case "r_fix_ending$esjava$0":
+          case "flag_sx":
           break;
           case "flag_lb":
           break;
@@ -8255,9 +8228,7 @@ export default function normalizeColor(num) {
           break;
           case "THREEDS_CARDINAL_SDK_SETUP_FAILED":
           break;
-          case "appliedAdjust":
-          break;
-          case "justifySelf":
+          case "PRESS_OPTIONS":
           break;
           case "NOTIF_CENTER_ITEMS":
           break;
@@ -8273,11 +8244,15 @@ export default function normalizeColor(num) {
           break;
           case "USER_DENIED":
           break;
-          case "ICC_NON_SRGB_PROFILE":
+          case "ForceTouchGesture":
           break;
-          case "RGB":
+          case "ForceTouchGestureHandler":
           break;
-          case "PROFILE_BIO_RULES":
+          case "Touch":
+          break;
+          case "forceTouch":
+          break;
+          case "forceTouchAvailable":
           break;
           case "NOTIF_CENTER_ITEMS_BULK_ACK":
           break;
@@ -8321,9 +8296,7 @@ export default function normalizeColor(num) {
           break;
           case "MESSAGE_ACTIONS_MENU":
           break;
-          case "maximum":
-          break;
-          case "maximumDate":
+          case "TextControllerIcon":
           break;
           case "MESSAGE_TOO_LONG":
           break;
@@ -8397,6 +8370,10 @@ export default function normalizeColor(num) {
           break;
           case "SHEET_HEADER_PADDING_HORIZONTAL":
           break;
+          case "PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID":
+          break;
+          case "PLAINTEXT":
+          break;
           case "WEB_OPEN":
           break;
           case "OPEN_CHANNEL_TAB":
@@ -8440,7 +8417,6 @@ export default function normalizeColor(num) {
           case "VOICE":
           break;
           case "VOICE_CHANNEL":
-            tmp21 = 4294902015;
           break;
           case "VOICE_CHANNEL_SELECT":
           break;
@@ -8465,6 +8441,7 @@ export default function normalizeColor(num) {
           case "viewMore":
           break;
           case "viewMoreCTA":
+            tmp26 = 4294902015;
           break;
           case "ACRONYM":
           break;
@@ -8749,23 +8726,49 @@ export default function normalizeColor(num) {
           case "APP_CHANNEL_APP":
           break;
           case "APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY":
-            tmp21 = 4278190335;
           break;
           case "ACTION_SHEET_KEY":
           break;
           case "KEYBOARD_SHORTCUT_USED":
           break;
+          case "couple_with_heart_person_person_medium_dark_skin_tone_medium_light_skin_tone":
+          break;
+          case "newSnowflakeId":
+          break;
+          case "AUTO_MODERATION_FLAG_TO_CHANNEL":
+          break;
+          case "FLAG_TO_CHANNEL":
+          break;
+          case "LAG":
+          break;
+          case "CHANNEL_ACTION_SHEET":
+          break;
+          case "ACTION_SHEET_MAX_WIDTH":
+          break;
+          case "MAX":
+          break;
+          case "THEATRE":
+          break;
+          case "TREATMENT_C":
+            tmp26 = 4278190335;
+          break;
+          case "CHECKPOINT_PERSONA_NINE_SECONDARY":
+          break;
+          case "YOU_BAR_NAMEPLATE_ACCESSIBILITY":
+          break;
           default:
-            tmp21 = null;
+            tmp26 = null;
         }
       }
     } else {
-      const tmp84 = call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
+      str7 = "[-+]?\\d*\\.?\\d+";
+      const tmp86 = call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
       _RegExp = commaSeparatedCall;
-      const tmp85 = commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
-      num = globalThis;
+      const tmp87 = commaSeparatedCall("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
+      num2 = globalThis;
       const _HermesInternal = HermesInternal;
-      const combined = tmp84 + "|" + tmp85 + "|" + callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
+      str6 = "|";
+      const combined = tmp86 + "|" + tmp87 + "|" + callWithSlashSeparator("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+");
       match = { rgb: null, rgba: null, hsl: null, hsla: null, hwb: null, hex3: null, hex4: null, hex6: null, hex8: null };
       const _RegExp2 = RegExp;
       const _HermesInternal2 = HermesInternal;
@@ -8775,25 +8778,27 @@ export default function normalizeColor(num) {
       const _HermesInternal3 = HermesInternal;
       const regExp1 = new RegExp("rgba(" + combined + ")");
       match[1] = regExp1;
-      str11 = "[-+]?\\d*\\.?\\d+%";
+      str5 = "[-+]?\\d*\\.?\\d+%";
       const _RegExp4 = RegExp;
+      result2 = new.target;
       let text = `hsl${call("[-+]?\\d*\\.?\\d+", "[-+]?\\d*\\.?\\d+%", "[-+]?\\d*\\.?\\d+%")}`;
+      result2 = new.target;
     }
     result2 = new _RegExp4(text);
     match[2] = result2;
-    const _RegExpResult = _RegExp("[-+]?\\d*\\.?\\d+", str11, str11, "[-+]?\\d*\\.?\\d+");
-    const regExp2 = new num.RegExp("hsla(" + _RegExpResult + "|" + tmp86("[-+]?\\d*\\.?\\d+", str11, str11, "[-+]?\\d*\\.?\\d+") + ")");
+    const _RegExpResult = _RegExp(str7, str5, str5, str7);
+    const regExp2 = new num2.RegExp("hsla(" + _RegExpResult + str6 + tmp88(str7, str5, str5, str7) + ")");
     match[3] = regExp2;
-    _RegExp = num.RegExp;
-    const tmp12 = callModern("[-+]?\\d*\\.?\\d+", str11, str11);
-    text = "hwb(" + tmp12 + "|" + tmp86("[-+]?\\d*\\.?\\d+", str11, str11, "[-+]?\\d*\\.?\\d+") + ")";
-    str11 = new.target;
+    _RegExp = num2.RegExp;
+    num = callModern(str7, str5, str5);
+    text = "hwb(" + num + str6 + tmp88(str7, str5, str5, str7) + ")";
+    str5 = new.target;
     _RegExp = new _RegExp(text);
     match[4] = _RegExp;
     match[5] = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
     match[6] = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
     match[7] = /^#([0-9a-fA-F]{6})$/;
     match[8] = /^#([0-9a-fA-F]{8})$/;
-    tmp20 = match;
+    tmp25 = match;
   }
 };

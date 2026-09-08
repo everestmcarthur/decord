@@ -1450,7 +1450,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp25 = callback;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "accessible", layout: "enabled", layoutPhysics: "Array" };
+  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: 1, layoutPhysics: 1 };
   obj8[3] = layoutTransition;
   obj8[4] = physics;
   tmp26Result = callback(closure_37, obj8);

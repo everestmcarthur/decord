@@ -47,7 +47,7 @@ const memoResult = importAllResult.memo((action) => {
     obj[0] = tmp.container;
     obj = { style: null, children: null };
     obj[0] = tmp.avatarContainer;
-    obj1 = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Heartbeat" };
+    obj1 = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Warning" };
     obj1[0] = tmp.avatar;
     obj1[1] = stateFromStores;
     obj1[4] = stateFromStores.avatarDecoration;

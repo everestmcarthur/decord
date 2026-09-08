@@ -866,13 +866,13 @@ if (self2) {
             break;
             case "be":
             break;
-            case "canReportMessage":
+            case "activeTabId":
             break;
-            case "canReportMessageToMods":
+            case "disableEarlyViewCommandExecution":
             break;
-            case "showReportModalForGuildScheduledEvent":
+            case "threshold_met":
             break;
-            case "GuildScheduledEventEntityTypes":
+            case "meetsServerAgeRequirement":
             break;
             case "$ZodObject":
             break;
@@ -934,7 +934,7 @@ if (self2) {
             break;
             case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
             break;
-            case "inTestModeForApplication":
+            case "useGameInvitesChannelOfficialApplication":
             break;
             case "invalidEmojis":
             break;
@@ -1198,9 +1198,19 @@ if (self2) {
             break;
             case "sh":
             break;
-            case "guildDismissibleContentStates":
+            case "isIosWKWebview":
             break;
-            case "initialScrollToTop":
+            case "viewHierarchyIntegration":
+            break;
+            case "allowWithinModal":
+            break;
+            case "ModalFloatingAction":
+            break;
+            case "ModalFloatingActionSpacer":
+            break;
+            case "Spacer":
+            break;
+            case "SpacerView":
             break;
             case "flag_de":
             break;
@@ -1343,7 +1353,10 @@ if (self2) {
             case "insetBottom":
             break;
             case "BottomSheetSlideOutSpec":
-            break;
+              _HermesInternal = HermesInternal;
+              str = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 ";
+              combined5 = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 " + code.origin;
+              return combined5;
             case "SlideOut":
             break;
             case "GuildEntityDao":
@@ -1353,10 +1366,7 @@ if (self2) {
             case "Dao":
             break;
             case "hideShadow":
-              _HermesInternal = HermesInternal;
-              str = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 ";
-              combined5 = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 " + code.origin;
-              return combined5;
+            break;
             case "withMutualFriends":
             break;
             case "withMutualFriendsCount":
@@ -1759,6 +1769,8 @@ if (self2) {
             break;
             case "fin":
             break;
+            case "useRequiredAppLauncherContext":
+            break;
             case "flag_km":
             break;
             case "undelete":
@@ -1946,18 +1958,6 @@ if (self2) {
             case "enum":
             break;
             case "nu":
-            break;
-            case "num":
-            break;
-            case "mer":
-            break;
-            case "era":
-            break;
-            case "referrerPolicy":
-            break;
-            case "../../../lib/braintree-error":
-            break;
-            case "../../lib/braintree-error":
               if ("ends_with" === format2) {
                 _HermesInternal7 = HermesInternal;
                 combined = "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E25\u0E07\u0E17\u0E49\u0E32\u0E22\u0E14\u0E49\u0E27\u0E22 \"" + code.suffix + "\"";
@@ -1976,6 +1976,18 @@ if (self2) {
                 combined = "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: " + format;
               }
               return combined;
+            case "num":
+            break;
+            case "mer":
+            break;
+            case "era":
+            break;
+            case "referrerPolicy":
+            break;
+            case "../../../lib/braintree-error":
+            break;
+            case "../../lib/braintree-error":
+              return "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E44\u0E21\u0E48\u0E15\u0E23\u0E07\u0E01\u0E31\u0E1A\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E22\u0E39\u0E40\u0E19\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48\u0E01\u0E33\u0E2B\u0E19\u0E14\u0E44\u0E27\u0E49";
             case "../lib/braintree-error":
             break;
             case "brain":
@@ -1983,11 +1995,14 @@ if (self2) {
             case "braintree":
             break;
             case "tre":
-            break;
+              _HermesInternal = HermesInternal;
+              str = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 ";
+              combined5 = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 " + code.origin;
+              return combined5;
             case "tree":
             break;
             case "ee":
-              return "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E44\u0E21\u0E48\u0E15\u0E23\u0E07\u0E01\u0E31\u0E1A\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E22\u0E39\u0E40\u0E19\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48\u0E01\u0E33\u0E2B\u0E19\u0E14\u0E44\u0E27\u0E49";
+            break;
             case "err":
             break;
             case "errorApplyingMediaFilterSettings":
@@ -1995,10 +2010,7 @@ if (self2) {
             case "FilterSettingsGraph":
             break;
             case "phoenix":
-              _HermesInternal = HermesInternal;
-              str = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 ";
-              combined5 = "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 " + code.origin;
-              return combined5;
+            break;
             case "googleAuthorizationFingerprint":
             break;
             case "printer":
@@ -2075,21 +2087,23 @@ if (self2) {
             break;
             case "oldestUnreadMessageIdStale":
             break;
-            case "addPerformanceInstrumentationHandler":
+            case "addPendingAuthorizedState":
             break;
-            case "SPACE_0":
+            case "AUTO_DISMISS":
             break;
-            case "CHANNEL_TOPIC_RULES":
+            case "DISMISS_BLOCK":
             break;
-            case "TOPIC":
+            case "BLOCK_QUOTE":
             break;
-            case "LESS_THAN_24H_BEFORE_REWARD":
+            case "MAX_GUILD_FILE_SIZE_250_MB":
             break;
-            case "REWARD_HERO":
+            case "BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE":
             break;
-            case "ROBLOX_DEFERRED_WEB_URL":
+            case "NATURE":
             break;
-            case "WEB_URL":
+            case "REACTION_RIGHT_CLICK_MENU_UPSELL":
+            break;
+            case "ReanimatedNativeDetector":
             break;
             case "fo":
             break;
@@ -2129,6 +2143,8 @@ if (self2) {
             break;
             case "defaultColors":
             break;
+            case "OPEN_POPOUT":
+            break;
             case "getCurrent":
             break;
             case "getCurrentUserActiveStream":
@@ -2152,14 +2168,6 @@ if (self2) {
             case "getContentClassificationVisibility":
             break;
             case "ContentClassificationVisibility":
-            break;
-            case "CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL":
-            break;
-            case "ALREADY_STREAMING":
-            break;
-            case "STREAMING_UPDATE":
-            break;
-            case "selectProperties":
             break;
             case "hasDiversity":
             break;
@@ -2287,6 +2295,12 @@ if (self2) {
             break;
             case "deleteKeyFromRecyclePool":
             break;
+            case "getGuildIconURL":
+            break;
+            case "STREAM_SEND_LOW_FPS":
+            break;
+            case "FPS_30":
+            break;
             case "pronouns":
             break;
             case "pronounsAccessibilityHint":
@@ -2346,8 +2360,6 @@ if (self2) {
             case "PasskeysSpotIllustration":
             break;
             case "ke":
-            break;
-            case "parent_span_id":
             break;
             case "useStorekitResubscribe":
             break;
@@ -2432,18 +2444,6 @@ if (self2) {
             case "setDesignConfig":
             break;
             case "filterFn":
-            break;
-            case "action_location":
-            break;
-            case "loc":
-            break;
-            case "locationAnalyticsObject":
-            break;
-            case "AnalyticsObjects":
-            break;
-            case "__mapperRegistry":
-            break;
-            case "_map":
             break;
             default:
               return "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07";

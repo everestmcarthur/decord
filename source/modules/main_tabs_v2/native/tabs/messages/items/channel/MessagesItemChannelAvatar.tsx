@@ -112,7 +112,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "imagebutton", size: null, animate: "Double tap to focus", typing: null, autoStatusCutout: null };
+      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "no-hide-descendants", size: "redux.action", animate: null, typing: "info", autoStatusCutout: null };
       obj[0] = stateFromStores2;
       obj[1] = stateFromStores2.avatarDecoration;
       obj[3] = stateFromStores3;
@@ -127,7 +127,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
       obj[8] = REFRESH_MEDIUM_32;
       obj[9] = stateFromStores1;
       obj[10] = stateFromStores;
-      tmp11Result = jsx(tmp3(1178).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "imagebutton", size: null, animate: "Double tap to focus", typing: null, autoStatusCutout: null });
+      tmp11Result = jsx(tmp3(1178).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "no-hide-descendants", size: "redux.action", animate: null, typing: "info", autoStatusCutout: null });
       const tmp11 = jsx;
     }
   }

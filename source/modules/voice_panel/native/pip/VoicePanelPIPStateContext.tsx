@@ -8,7 +8,7 @@
 import importAllResult from "noop" /* 19 */;
 
 let c0 = importAllResult;
-const context = importAllResult.createContext({ id: "sa", mode: "isArray", width: false, height: "first_quarter_moon", containerHeight: "waxing_gibbous_moon", showSecondaryPIP: "earth_africa" });
+const context = importAllResult.createContext({ id: "sa", mode: "isArray", width: false, height: "first_quarter_moon", containerHeight: "waxing_gibbous_moon", showSecondaryPIP: "crescent_moon" });
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPStateContext.tsx");
 
 export const VoicePanelPIPStateContext = context;

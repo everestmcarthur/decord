@@ -50,7 +50,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (hasItem) {
           let INACTIVE = closure_1_5.POWERUP_ACTIVATED;
         }
-        let obj = { type: null, powerup: null, sourceEntitlement: "r", sourcePowerup: "isArray" };
+        let obj = { type: null, powerup: null, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
         obj[0] = INACTIVE;
         obj[1] = skuId;
       }
@@ -102,7 +102,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           if (tmp10 == null) {
             tmp10 = null;
           }
-          obj = { type: null, powerup: null, sourceEntitlement: "r", sourcePowerup: "isArray" };
+          obj = { type: null, powerup: null, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
           obj[0] = closure_1_5.INACTIVE;
           obj[1] = skuId;
           if (isActiveFromLevel) {
@@ -174,7 +174,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
         if (hasItem) {
           let INACTIVE = closure_1_5.POWERUP_ACTIVATED;
         }
-        let obj = { type: null, powerup: null, sourceEntitlement: "r", sourcePowerup: "isArray" };
+        let obj = { type: null, powerup: null, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
         obj[0] = INACTIVE;
         obj[1] = skuId;
       }
@@ -226,7 +226,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
           if (tmp10 == null) {
             tmp10 = null;
           }
-          obj = { type: null, powerup: null, sourceEntitlement: "r", sourcePowerup: "isArray" };
+          obj = { type: null, powerup: null, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
           obj[0] = closure_1_5.INACTIVE;
           obj[1] = skuId;
           if (isActiveFromLevel) {

@@ -222,12 +222,12 @@ let fn = () => {
           obj.assert(flattenResult.length > 0, "You need to provide at least one extension");
           this.assert(flattenResult, type.extensionsSchema);
           obj = Object.create(this);
-          let f112538 = obj;
+          let f112544 = obj;
           let num = 0;
           if (0 < flattenResult.length) {
             while (true) {
               let tmp6 = flattenResult[num];
-              f112538 = tmp6;
+              f112544 = tmp6;
               let base = tmp6.base;
               let tmp7 = num;
               if (!base) {
@@ -236,7 +236,7 @@ let fn = () => {
               cloneResult = base.clone();
               type = cloneResult;
               let constructor = cloneResult.constructor;
-              f112538 = constructor;
+              f112544 = constructor;
               class type {
                 constructor() {
                   self = this;
@@ -255,9 +255,9 @@ let fn = () => {
                       }
                       tmp14 = closure_0;
                       if (closure_0.base) {
-                        tmp15 = f112538;
+                        tmp15 = f112544;
                         tmp16 = closure_1;
-                        tmp17 = f112538(tmp13, closure_1);
+                        tmp17 = f112544(tmp13, closure_1);
                       }
                       tmp13._type = tmp14.name;
                       if (!tmp14.language) {
@@ -373,9 +373,9 @@ let fn = () => {
                         }
                         tmp14 = closure_0;
                         if (closure_0.base) {
-                          tmp15 = f112538;
+                          tmp15 = f112544;
                           tmp16 = closure_1;
-                          tmp17 = f112538(tmp13, closure_1);
+                          tmp17 = f112544(tmp13, closure_1);
                         }
                         tmp13._type = tmp14.name;
                         if (!tmp14.language) {
@@ -490,9 +490,9 @@ let fn = () => {
                         }
                         tmp14 = closure_0;
                         if (closure_0.base) {
-                          tmp15 = f112538;
+                          tmp15 = f112544;
                           tmp16 = closure_1;
-                          tmp17 = f112538(tmp13, closure_1);
+                          tmp17 = f112544(tmp13, closure_1);
                         }
                         tmp13._type = tmp14.name;
                         if (!tmp14.language) {
@@ -651,9 +651,9 @@ let fn = () => {
                         }
                         tmp14 = closure_0;
                         if (closure_0.base) {
-                          tmp15 = f112538;
+                          tmp15 = f112544;
                           tmp16 = closure_1;
-                          tmp17 = f112538(tmp13, closure_1);
+                          tmp17 = f112544(tmp13, closure_1);
                         }
                         tmp13._type = tmp14.name;
                         if (!tmp14.language) {
@@ -811,9 +811,9 @@ let fn = () => {
                           }
                           tmp14 = closure_0;
                           if (closure_0.base) {
-                            tmp15 = f112538;
+                            tmp15 = f112544;
                             tmp16 = closure_1;
-                            tmp17 = f112538(tmp13, closure_1);
+                            tmp17 = f112544(tmp13, closure_1);
                           }
                           tmp13._type = tmp14.name;
                           if (!tmp14.language) {
@@ -952,7 +952,7 @@ let fn = () => {
                       return obj;
                     }
                   }
-                  f112538 = tmp15;
+                  f112544 = tmp15;
                   let tmp16 = sum;
                   while (!tmp15.params) {
                     class type {
@@ -973,9 +973,9 @@ let fn = () => {
                             }
                             tmp14 = closure_0;
                             if (closure_0.base) {
-                              tmp15 = f112538;
+                              tmp15 = f112544;
                               tmp16 = closure_1;
-                              tmp17 = f112538(tmp13, closure_1);
+                              tmp17 = f112544(tmp13, closure_1);
                             }
                             tmp13._type = tmp14.name;
                             if (!tmp14.language) {
@@ -1134,9 +1134,9 @@ let fn = () => {
                               }
                               tmp14 = closure_0;
                               if (closure_0.base) {
-                                tmp15 = f112538;
+                                tmp15 = f112544;
                                 tmp16 = closure_1;
-                                tmp17 = f112538(tmp13, closure_1);
+                                tmp17 = f112544(tmp13, closure_1);
                               }
                               tmp13._type = tmp14.name;
                               if (!tmp14.language) {
@@ -1316,7 +1316,7 @@ let fn = () => {
                           } while (num < arr2.length);
                         }
                         if (constructor) {
-                          f112538.assert(obj, tmp6);
+                          f112544.assert(obj, tmp6);
                         }
                         let self = this;
                         if (obj.validate) {
@@ -1359,9 +1359,9 @@ let fn = () => {
                               }
                               tmp14 = closure_0;
                               if (closure_0.base) {
-                                tmp15 = f112538;
+                                tmp15 = f112544;
                                 tmp16 = closure_1;
-                                tmp17 = f112538(tmp13, closure_1);
+                                tmp17 = f112544(tmp13, closure_1);
                               }
                               tmp13._type = tmp14.name;
                               if (!tmp14.language) {
@@ -1523,9 +1523,9 @@ let fn = () => {
                             }
                             tmp14 = closure_0;
                             if (closure_0.base) {
-                              tmp15 = f112538;
+                              tmp15 = f112544;
                               tmp16 = closure_1;
-                              tmp17 = f112538(tmp13, closure_1);
+                              tmp17 = f112544(tmp13, closure_1);
                             }
                             tmp13._type = tmp14.name;
                             if (!tmp14.language) {
@@ -1684,9 +1684,9 @@ let fn = () => {
                             }
                             tmp14 = closure_0;
                             if (closure_0.base) {
-                              tmp15 = f112538;
+                              tmp15 = f112544;
                               tmp16 = closure_1;
-                              tmp17 = f112538(tmp13, closure_1);
+                              tmp17 = f112544(tmp13, closure_1);
                             }
                             tmp13._type = tmp14.name;
                             if (!tmp14.language) {
@@ -1849,9 +1849,9 @@ let fn = () => {
                         }
                         tmp14 = closure_0;
                         if (closure_0.base) {
-                          tmp15 = f112538;
+                          tmp15 = f112544;
                           tmp16 = closure_1;
-                          tmp17 = f112538(tmp13, closure_1);
+                          tmp17 = f112544(tmp13, closure_1);
                         }
                         tmp13._type = tmp14.name;
                         if (!tmp14.language) {
@@ -2024,9 +2024,9 @@ let fn = () => {
                         }
                         tmp14 = closure_0;
                         if (closure_0.base) {
-                          tmp15 = f112538;
+                          tmp15 = f112544;
                           tmp16 = closure_1;
-                          tmp17 = f112538(tmp13, closure_1);
+                          tmp17 = f112544(tmp13, closure_1);
                         }
                         tmp13._type = tmp14.name;
                         if (!tmp14.language) {
@@ -15545,8 +15545,8 @@ let fn = () => {
             if (exports) {
               str = "undefined";
               if (undefined !== exports) {
-                tmp2 = f112569;
-                str = f112569(exports);
+                tmp2 = f112575;
+                str = f112575(exports);
               }
               str2 = "object";
               tmp = "object" === str;
@@ -16733,7 +16733,7 @@ let fn = () => {
     (arg0, arg1, arg2) => {
       let Set = module;
       Set = arg2;
-      let f122252 = arg2;
+      let f122260 = arg2;
       let fn = (arg0) => {
         Set = arg0;
         if (typeof Symbol === "function") {
@@ -16836,13 +16836,13 @@ let fn = () => {
                       tmp8 = num2;
                       str2 = "undefined";
                       if (undefined !== arg0) {
-                        tmp9 = f122251;
-                        str2 = f122251(arg0);
+                        tmp9 = f122259;
+                        str2 = f122259(arg0);
                       }
                       str3 = "undefined";
                       if (undefined !== str) {
-                        tmp10 = f122251;
-                        str3 = f122251(str);
+                        tmp10 = f122259;
+                        str3 = f122259(str);
                       }
                       if (str2 === str3) {
                         if (arg0 === str) {
@@ -16978,7 +16978,7 @@ let fn = () => {
         Set = _Buffer;
         let _Symbol = Symbol;
         if (typeof Symbol !== "function") {
-          f122252 = (arg0) => {
+          f122260 = (arg0) => {
             if (arg0) {
               const _Symbol = Symbol;
               if (typeof Symbol === "function") {
@@ -17087,13 +17087,13 @@ let fn = () => {
                       tmp8 = num2;
                       str2 = "undefined";
                       if (undefined !== module) {
-                        tmp9 = f122251;
-                        str2 = f122251(module);
+                        tmp9 = f122259;
+                        str2 = f122259(module);
                       }
                       str3 = "undefined";
                       if (undefined !== str) {
-                        tmp10 = f122251;
-                        str3 = f122251(str);
+                        tmp10 = f122259;
+                        str3 = f122259(str);
                       }
                       if (str2 === str3) {
                         if (module === str) {

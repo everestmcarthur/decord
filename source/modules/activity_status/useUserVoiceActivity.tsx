@@ -69,7 +69,7 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
   }
 }
 let closure_6 = { ChannelStore: importDefaultResult, PermissionStore: importDefaultResult1, VoiceStateStore: importDefaultResult2 };
-let closure_7 = Object.freeze({ voiceState: "push", voiceChannel: "channel" });
+let closure_7 = Object.freeze({ voiceState: "jsxs", voiceChannel: "channel" });
 const result = require("set").fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
 
 export default function useUserVoiceActivity(userId) {

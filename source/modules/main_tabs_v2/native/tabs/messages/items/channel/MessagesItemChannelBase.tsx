@@ -78,7 +78,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
       obj[0] = store.getStatus(obj.getRecipientId());
       obj[1] = activities;
     } else {
-      obj = { status: "push", activities: "channel" };
+      obj = { status: "jsxs", activities: "channel" };
     }
     return obj;
   });

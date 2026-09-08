@@ -32,7 +32,7 @@ const Permissions = sum.Permissions;
 let closure_16 = new timestampDefault("MediaPlayerManager");
 let obj = keys.create((arg0) => {
   closure_0 = arg0;
-  obj = { activeMediaPlayerSource: "HermesInternal", mediaSourceMessage: "flex", canAccessMedia: "ip", isPlaying: false, wasPipClosedByUser: null, progress: null, rate: "PX_16", showPip: "mp3", closePip: "audio/mpeg", displayedMediaItemIdsPerChannel: "A digital audio file format that uses compression to reduce file size while maintaining high quality sound", currentlyDisplayedChannelId: null };
+  obj = { activeMediaPlayerSource: "HermesInternal", mediaSourceMessage: "flex", canAccessMedia: "ip", isPlaying: false, wasPipClosedByUser: null, progress: null, rate: "PX_16", showPip: "bpg", closePip: "image/bpg", displayedMediaItemIdsPerChannel: "Better Portable Graphics image format", currentlyDisplayedChannelId: null };
   obj[8] = function closePip() {
     callback(closure_1_2[13]).batchUpdates(() => callback({ showPip: false }));
   };

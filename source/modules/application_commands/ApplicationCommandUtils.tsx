@@ -497,7 +497,7 @@ export const buildApplicationCommands = function buildApplicationCommands(applic
   closure_0 = arg1;
   return applyDefault.flatMap(application_commands, (id) => {
     closure_1_1(closure_1_3[10])(null != id.id, "Missing command id");
-    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: false };
+    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: "argent" };
     obj[4] = closure_0;
     return closure_1_12(obj);
   });

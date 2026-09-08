@@ -704,13 +704,13 @@ const fn = function t(moment) {
       break;
       case "be":
       break;
-      case "canReportMessage":
+      case "activeTabId":
       break;
-      case "canReportMessageToMods":
+      case "disableEarlyViewCommandExecution":
       break;
-      case "showReportModalForGuildScheduledEvent":
+      case "threshold_met":
       break;
-      case "GuildScheduledEventEntityTypes":
+      case "meetsServerAgeRequirement":
       break;
       case "$ZodObject":
       break;
@@ -790,7 +790,7 @@ const fn = function t(moment) {
       break;
       case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
       break;
-      case "inTestModeForApplication":
+      case "useGameInvitesChannelOfficialApplication":
       break;
       case "invalidEmojis":
       break;
@@ -1054,9 +1054,19 @@ const fn = function t(moment) {
       break;
       case "sh":
       break;
-      case "guildDismissibleContentStates":
+      case "isIosWKWebview":
       break;
-      case "initialScrollToTop":
+      case "viewHierarchyIntegration":
+      break;
+      case "allowWithinModal":
+      break;
+      case "ModalFloatingAction":
+      break;
+      case "ModalFloatingActionSpacer":
+      break;
+      case "Spacer":
+      break;
+      case "SpacerView":
       break;
       case "flag_de":
       break;
@@ -1241,16 +1251,6 @@ const fn = function t(moment) {
       case "backoffTimeSec":
       break;
       case "../../../../lib/assign":
-      break;
-      case "../../../lib/assign":
-      break;
-      case "../../lib/assign":
-      break;
-      case "../lib/assign":
-      break;
-      case ".":
-      break;
-      case "./":
       break;
       default:
     }

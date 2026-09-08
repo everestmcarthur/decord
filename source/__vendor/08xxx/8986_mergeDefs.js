@@ -894,14 +894,14 @@ if (self2) {
                 combined2 = "\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 " + format;
               }
               return combined2;
-            case "canReportMessage":
+            case "activeTabId":
             break;
-            case "canReportMessageToMods":
+            case "disableEarlyViewCommandExecution":
               const _HermesInternal4 = HermesInternal;
               return "\u041D\u0435\u0432\u0435\u0440\u043D\u043E\u0435 \u0447\u0438\u0441\u043B\u043E: \u0434\u043E\u043B\u0436\u043D\u043E \u0431\u044B\u0442\u044C \u043A\u0440\u0430\u0442\u043D\u044B\u043C " + code.divisor;
-            case "showReportModalForGuildScheduledEvent":
+            case "threshold_met":
             break;
-            case "GuildScheduledEventEntityTypes":
+            case "meetsServerAgeRequirement":
               let tmp5 = code.keys.length > 1;
               let str3 = "\u044B\u0439";
               if (tmp5) {
@@ -980,7 +980,7 @@ if (self2) {
             break;
             case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
             break;
-            case "inTestModeForApplication":
+            case "useGameInvitesChannelOfficialApplication":
             break;
             case "invalidEmojis":
             break;
@@ -1244,9 +1244,19 @@ if (self2) {
             break;
             case "sh":
             break;
-            case "guildDismissibleContentStates":
+            case "isIosWKWebview":
             break;
-            case "initialScrollToTop":
+            case "viewHierarchyIntegration":
+            break;
+            case "allowWithinModal":
+            break;
+            case "ModalFloatingAction":
+            break;
+            case "ModalFloatingActionSpacer":
+            break;
+            case "Spacer":
+            break;
+            case "SpacerView":
             break;
             case "flag_de":
             break;
@@ -1517,16 +1527,6 @@ if (self2) {
             case "safeAreaRight":
             break;
             case "bor":
-            break;
-            case "border":
-            break;
-            case "order":
-            break;
-            case "der":
-            break;
-            case "Radius":
-            break;
-            case "iu":
               tmp5 = code.keys.length > 1;
               str3 = "\u044B\u0439";
               if (tmp5) {
@@ -1541,12 +1541,24 @@ if (self2) {
               _HermesInternal3 = HermesInternal;
               combined3 = "\u041D\u0435\u0440\u0430\u0441\u043F\u043E\u0437\u043D\u0430\u043D\u043D" + str3 + " \u043A\u043B\u044E\u0447" + str4 + ": " + joinValuesResult;
               return combined3;
-            case "maxE":
+            case "border":
             break;
-            case "isCurrentUserTeen":
+            case "order":
               _HermesInternal2 = HermesInternal;
               combined4 = "\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u043A\u043B\u044E\u0447 \u0432 " + code.origin;
               return combined4;
+            case "der":
+            break;
+            case "Radius":
+            break;
+            case "iu":
+            break;
+            case "maxE":
+              _HermesInternal = HermesInternal;
+              combined5 = "\u041D\u0435\u0432\u0435\u0440\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0432 " + code.origin;
+              return combined5;
+            case "isCurrentUserTeen":
+            break;
             case "Teen Screen Time Illo":
             break;
             case "overflow_bottom":
@@ -1554,9 +1566,7 @@ if (self2) {
             case "_bottom":
             break;
             case "bot":
-              _HermesInternal = HermesInternal;
-              combined5 = "\u041D\u0435\u0432\u0435\u0440\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0432 " + code.origin;
-              return combined5;
+            break;
             case "bottom-right":
             break;
             case "ott":
@@ -1818,6 +1828,8 @@ if (self2) {
             case "fi":
             break;
             case "fin":
+            break;
+            case "useRequiredAppLauncherContext":
             break;
             case "flag_km":
             break;
@@ -2115,21 +2127,23 @@ if (self2) {
             break;
             case "oldestUnreadMessageIdStale":
             break;
-            case "addPerformanceInstrumentationHandler":
+            case "addPendingAuthorizedState":
             break;
-            case "SPACE_0":
+            case "AUTO_DISMISS":
             break;
-            case "CHANNEL_TOPIC_RULES":
+            case "DISMISS_BLOCK":
             break;
-            case "TOPIC":
+            case "BLOCK_QUOTE":
             break;
-            case "LESS_THAN_24H_BEFORE_REWARD":
+            case "MAX_GUILD_FILE_SIZE_250_MB":
             break;
-            case "REWARD_HERO":
+            case "BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE":
             break;
-            case "ROBLOX_DEFERRED_WEB_URL":
+            case "NATURE":
             break;
-            case "WEB_URL":
+            case "REACTION_RIGHT_CLICK_MENU_UPSELL":
+            break;
+            case "ReanimatedNativeDetector":
             break;
             case "fo":
             break;
@@ -2169,6 +2183,8 @@ if (self2) {
             break;
             case "defaultColors":
             break;
+            case "OPEN_POPOUT":
+            break;
             case "getCurrent":
             break;
             case "getCurrentUserActiveStream":
@@ -2176,7 +2192,9 @@ if (self2) {
             case "U":
             break;
             case "Use":
-            break;
+              _HermesInternal = HermesInternal;
+              combined5 = "\u041D\u0435\u0432\u0435\u0440\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0432 " + code.origin;
+              return combined5;
             case "User":
             break;
             case "ser":
@@ -2192,16 +2210,6 @@ if (self2) {
             case "getContentClassificationVisibility":
             break;
             case "ContentClassificationVisibility":
-              _HermesInternal = HermesInternal;
-              combined5 = "\u041D\u0435\u0432\u0435\u0440\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0432 " + code.origin;
-              return combined5;
-            case "CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL":
-            break;
-            case "ALREADY_STREAMING":
-            break;
-            case "STREAMING_UPDATE":
-            break;
-            case "selectProperties":
             break;
             case "hasDiversity":
             break;
@@ -2329,6 +2337,12 @@ if (self2) {
             break;
             case "deleteKeyFromRecyclePool":
             break;
+            case "getGuildIconURL":
+            break;
+            case "STREAM_SEND_LOW_FPS":
+            break;
+            case "FPS_30":
+            break;
             case "pronouns":
             break;
             case "pronounsAccessibilityHint":
@@ -2388,8 +2402,6 @@ if (self2) {
             case "PasskeysSpotIllustration":
             break;
             case "ke":
-            break;
-            case "parent_span_id":
             break;
             case "useStorekitResubscribe":
             break;
@@ -2691,7 +2703,7 @@ if (self2) {
             break;
             case "hashes":
             break;
-            case "setFingerprint":
+            case "libvpx":
             break;
             case "paymentsBlocked":
             break;
@@ -2782,18 +2794,6 @@ if (self2) {
             case "eject":
             break;
             case "ErrorNumber":
-            break;
-            case "shouldIndicateNewChannel":
-            break;
-            case "_positive":
-            break;
-            case "_cancelHoverOutDelayTimeout":
-            break;
-            case "outageBannerMessage":
-            break;
-            case "getAudioPid":
-            break;
-            case "TableRadioRow":
             break;
             case "__replaceAnimatedNodeWithValues":
             break;
@@ -2987,9 +2987,7 @@ if (self2) {
             break;
             case "styleAttr":
             break;
-            case "_buildKeyCodeMapFromKeyMap":
-            break;
-            case "build":
+            case "createArgs":
             break;
             case "surrogate":
             break;
@@ -2999,13 +2997,7 @@ if (self2) {
             break;
             case "gate":
             break;
-            case "isStickerPackAnimated":
-            break;
-            case "AnimatedStartStagePrompt":
-            break;
-            case "StartStagePrompt":
-            break;
-            case "Prompt":
+            case "BountiesStage1Experiment":
             break;
             case "_createExtraStyles":
             break;
@@ -3086,6 +3078,14 @@ if (self2) {
             case "_trackIfSessionMetadataExists":
             break;
             case "tra":
+            break;
+            case "rac":
+            break;
+            case "shouldTrackVoiceInviteEmbedViews":
+            break;
+            case "_transformMetadataToCamelCase":
+            break;
+            case "sf":
             break;
             default:
               return "\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0435 \u0432\u0445\u043E\u0434\u043D\u044B\u0435 \u0434\u0430\u043D\u043D\u044B\u0435";

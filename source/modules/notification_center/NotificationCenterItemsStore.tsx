@@ -197,7 +197,7 @@ function handleRelationshipAddOrUpdate(relationship) {
     });
   }
 }
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "balra", notifCenterTabFocused: "balra tol\u00F3 k\u00E9z" };
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "onTapSummaryJump", notifCenterTabFocused: 0.00000000000000000000000000000000000000000000000000000012273576812576707 };
 let set = new Set();
 obj[6] = set;
 obj[7] = [];
@@ -374,7 +374,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "balra", notifCenterTabFocused: "balra tol\u00F3 k\u00E9z" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "onTapSummaryJump", notifCenterTabFocused: 0.00000000000000000000000000000000000000000000000000000012273576812576707 };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -502,7 +502,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "balra", notifCenterTabFocused: "balra tol\u00F3 k\u00E9z" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "onTapSummaryJump", notifCenterTabFocused: 0.00000000000000000000000000000000000000000000000000000012273576812576707 };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -653,7 +653,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "balra", notifCenterTabFocused: "balra tol\u00F3 k\u00E9z" };
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "flex", notifCenterActive: "onTapSummaryJump", notifCenterTabFocused: 0.00000000000000000000000000000000000000000000000000000012273576812576707 };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {

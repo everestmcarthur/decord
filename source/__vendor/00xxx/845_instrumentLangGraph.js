@@ -70,7 +70,7 @@ export const instrumentLangGraph = function instrumentLangGraph(compile) {
                   obj[applyResult(823).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
                   obj[2] = obj;
                   applyResult = undefined;
-                  applyResult = callback(/* F125882 */ function() { ... });
+                  applyResult = callback(/* F125891 */ function() { ... });
                   return obj.startSpan(obj, () => { ... });
                 }
               });
@@ -151,7 +151,7 @@ export const instrumentStateGraphCompile = function instrumentStateGraphCompile(
                   obj[applyResult(823).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
                   obj[2] = obj;
                   applyResult = undefined;
-                  applyResult = callback(/* F125882 */ function() { ... });
+                  applyResult = callback(/* F125891 */ function() { ... });
                   return obj.startSpan(obj, () => { ... });
                 }
               });

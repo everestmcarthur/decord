@@ -212,7 +212,7 @@ export const handleClick = function handleClick(href, preventDefault) {
       }
       tmp3(8375).trackLinkClicked(tmp8);
       if (null == onClick) {
-        const obj3 = { skipExtensionCheck: "a", analyticsLocations: false, messageId: false, channelId: "a" };
+        const obj3 = { skipExtensionCheck: "a", analyticsLocations: "<string:264830979>", messageId: "<string:264962051>", channelId: "<string:4179492867>" };
         obj3[1] = items;
         obj3[2] = messageId;
         obj3[3] = channelId;

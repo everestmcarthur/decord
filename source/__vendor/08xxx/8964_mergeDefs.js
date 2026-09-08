@@ -767,13 +767,13 @@ if (self2) {
             break;
             case "be":
             break;
-            case "canReportMessage":
+            case "activeTabId":
             break;
-            case "canReportMessageToMods":
+            case "disableEarlyViewCommandExecution":
             break;
-            case "showReportModalForGuildScheduledEvent":
+            case "threshold_met":
             break;
-            case "GuildScheduledEventEntityTypes":
+            case "meetsServerAgeRequirement":
             break;
             case "$ZodObject":
             break;
@@ -835,7 +835,7 @@ if (self2) {
             break;
             case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
             break;
-            case "inTestModeForApplication":
+            case "useGameInvitesChannelOfficialApplication":
             break;
             case "invalidEmojis":
             break;
@@ -1099,9 +1099,19 @@ if (self2) {
             break;
             case "sh":
             break;
-            case "guildDismissibleContentStates":
+            case "isIosWKWebview":
             break;
-            case "initialScrollToTop":
+            case "viewHierarchyIntegration":
+            break;
+            case "allowWithinModal":
+            break;
+            case "ModalFloatingAction":
+            break;
+            case "ModalFloatingActionSpacer":
+            break;
+            case "Spacer":
+            break;
+            case "SpacerView":
             break;
             case "flag_de":
             break;
@@ -1657,6 +1667,8 @@ if (self2) {
             break;
             case "fin":
             break;
+            case "useRequiredAppLauncherContext":
+            break;
             case "flag_km":
             break;
             case "undelete":
@@ -1808,7 +1820,9 @@ if (self2) {
             case "enable":
             break;
             case "shouldRestrictUpdatingCreatorMonetizationSettings":
-            break;
+              let _HermesInternal = HermesInternal;
+              let combined = "Valeur invalide dans " + code.origin;
+              return combined;
             case "billed_cap":
             break;
             case "_capacity":
@@ -1820,9 +1834,7 @@ if (self2) {
             case "sunset":
             break;
             case "unset":
-              let _HermesInternal = HermesInternal;
-              let combined = "Valeur invalide dans " + code.origin;
-              return combined;
+            break;
             case "unsetWaitingForIdentifier":
             break;
             case "setWaitingForIdentifier":
@@ -1955,21 +1967,23 @@ if (self2) {
             break;
             case "oldestUnreadMessageIdStale":
             break;
-            case "addPerformanceInstrumentationHandler":
+            case "addPendingAuthorizedState":
             break;
-            case "SPACE_0":
+            case "AUTO_DISMISS":
             break;
-            case "CHANNEL_TOPIC_RULES":
+            case "DISMISS_BLOCK":
             break;
-            case "TOPIC":
+            case "BLOCK_QUOTE":
             break;
-            case "LESS_THAN_24H_BEFORE_REWARD":
+            case "MAX_GUILD_FILE_SIZE_250_MB":
             break;
-            case "REWARD_HERO":
+            case "BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE":
             break;
-            case "ROBLOX_DEFERRED_WEB_URL":
+            case "NATURE":
             break;
-            case "WEB_URL":
+            case "REACTION_RIGHT_CLICK_MENU_UPSELL":
+            break;
+            case "ReanimatedNativeDetector":
             break;
             case "fo":
             break;
@@ -2009,6 +2023,8 @@ if (self2) {
             break;
             case "defaultColors":
             break;
+            case "OPEN_POPOUT":
+            break;
             case "getCurrent":
             break;
             case "getCurrentUserActiveStream":
@@ -2032,14 +2048,6 @@ if (self2) {
             case "getContentClassificationVisibility":
             break;
             case "ContentClassificationVisibility":
-            break;
-            case "CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL":
-            break;
-            case "ALREADY_STREAMING":
-            break;
-            case "STREAMING_UPDATE":
-            break;
-            case "selectProperties":
             break;
             case "hasDiversity":
             break;
@@ -2167,6 +2175,12 @@ if (self2) {
             break;
             case "deleteKeyFromRecyclePool":
             break;
+            case "getGuildIconURL":
+            break;
+            case "STREAM_SEND_LOW_FPS":
+            break;
+            case "FPS_30":
+            break;
             case "pronouns":
             break;
             case "pronounsAccessibilityHint":
@@ -2226,8 +2240,6 @@ if (self2) {
             case "PasskeysSpotIllustration":
             break;
             case "ke":
-            break;
-            case "parent_span_id":
             break;
             case "useStorekitResubscribe":
             break;
@@ -2352,7 +2364,9 @@ if (self2) {
             case "routeGetIdList":
             break;
             case "strstart":
-            break;
+              _HermesInternal = HermesInternal;
+              combined = "Valeur invalide dans " + code.origin;
+              return combined;
             case "startAndEndSpan":
             break;
             case "__memo":
@@ -2364,9 +2378,7 @@ if (self2) {
             case "sag":
             break;
             case "importance":
-              _HermesInternal = HermesInternal;
-              combined = "Valeur invalide dans " + code.origin;
-              return combined;
+            break;
             case "_$esjava$method":
             break;
             case "_$esjava$methodobject":
@@ -2506,18 +2518,6 @@ if (self2) {
             case "city":
             break;
             case "emitTimeout":
-            break;
-            case "claimed_at":
-            break;
-            case "gift_info_options":
-            break;
-            case "_options":
-            break;
-            case "opt":
-            break;
-            case "option":
-            break;
-            case "_parent":
             break;
             default:
               return "Entr\u00E9e invalide";

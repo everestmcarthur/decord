@@ -17,7 +17,7 @@ const f18355 = () => {
 ({ RN$LegacyInterop_UIManager_getConstantsForViewManager: error, RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8 } = global);
 c0 = false;
 c1 = null;
-const f69053 = () => {
+const f69057 = () => {
 
 };
 let obj = {};
@@ -53,7 +53,7 @@ obj = {
   },
   getDefaultEventTypes() {
     if (closure_8) {
-      if (typeof f69053 !== "function") {
+      if (typeof f69057 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (!c0) {

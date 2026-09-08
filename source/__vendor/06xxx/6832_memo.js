@@ -13,7 +13,7 @@ import { jsx } from "jsxProd" /* 21 */;
 const require = arg1;
 let closure_3 = ["name", "stackBehavior", "enableDismissOnClose", "onDismiss", "onAnimate", "index", "snapPoints", "enablePanDownToClose", "animateOnMount", "containerComponent", "onChange", "children"];
 ({ useCallback: closure_6, useImperativeHandle: error, useMemo: closure_8, useRef: c9, useState: c10, createElement: unpackModuleId, forwardRef, memo } = noop);
-let closure_14 = { mount: false, data: "Array" };
+let closure_14 = { mount: false, data: "PX_16" };
 const memoResult = memo(forwardRef(function BottomSheetModalComponent(name) {
   const _require = arg1;
   name = name.name;

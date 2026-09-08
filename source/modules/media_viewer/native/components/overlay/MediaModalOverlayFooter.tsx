@@ -14,7 +14,7 @@ import createCacheKey from "createCacheKey" /* 4560 */;
 
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { drawerContainer: { overflow: "hidden", backgroundColor: "call" }, drawerHeaderTab: null, drawerHeader: null, messagePreviewContainer: null, thumbnailsContainer: null };
+createCacheKey = { drawerContainer: { overflow: "hidden", backgroundColor: "WireType" }, drawerHeaderTab: null, drawerHeader: null, messagePreviewContainer: null, thumbnailsContainer: null };
 createCacheKey = { width: 40, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: "Array" };

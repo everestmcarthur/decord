@@ -193,7 +193,7 @@ prototype["_connect"] = function _connect() {
   const self = this;
   let identify = this;
   if (this.willReconnect()) {
-    let obj = f96110(13670);
+    let obj = f96114(13670);
     if (obj.getIsPaused()) {
       closure_9.info("Skipping _connect because socket is paused");
     } else {
@@ -240,7 +240,7 @@ prototype["_connect"] = function _connect() {
       ({ compressionHandler: compressionHandler2, _handleClose } = self);
       onOpen = compressionHandler2;
       identify = _handleClose.bind(self);
-      f96110 = (str) => {
+      f96114 = (str) => {
         const timestamp = Date.now();
         let obj = closure_1_10;
         ({ op, s, t, d } = closure_1_10.unpack(str));
@@ -311,7 +311,7 @@ prototype["_connect"] = function _connect() {
       dependencyMap = 0;
       compressionHandler2.dataReady((arg0) => {
         try {
-          f96110(arg0, c3);
+          f96114(arg0, c3);
           c3 = 0;
         } catch (tmp5) {
           c3 = 0;

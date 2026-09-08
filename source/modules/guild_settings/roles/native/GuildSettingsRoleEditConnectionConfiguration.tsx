@@ -599,7 +599,7 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
     }
     if (configurationItems[0].configuration.connectionType === closure_11) {
       let obj = { hasIcons: true, children: null };
-      obj = { platform: null, integration: "a", applicationId: "c\u1EB7p \u0111\u00F4i", onRemove: "h\u1EB9n h\u00F2", locked: "n\u1EE5 h\u00F4n" };
+      obj = { platform: null, integration: "a", applicationId: 12800, onRemove: 12801, locked: 12804 };
       obj[2] = applicationId;
       obj[3] = function onRemove() {
         return onConfigurationChange(null, configurationItems[0].index);

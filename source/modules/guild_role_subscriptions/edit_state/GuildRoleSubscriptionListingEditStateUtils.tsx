@@ -745,7 +745,7 @@ export const useImage = function useImage(editStateId, arg1) {
 };
 export const useApplicationId = function useApplicationId(listingId) {
   const _require = listingId;
-  const f99317 = (application_id) => {
+  const f99321 = (application_id) => {
     application_id = undefined;
     if (application_id != null) {
       application_id = application_id.application_id;
@@ -754,7 +754,7 @@ export const useApplicationId = function useApplicationId(listingId) {
   };
   const items = [closure_8];
   const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_8.getSubscriptionListing(closure_0));
-  const tmp2 = f99317(5598)(() => first);
+  const tmp2 = f99321(5598)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   return React.useMemo(() => callback(c2), items1);

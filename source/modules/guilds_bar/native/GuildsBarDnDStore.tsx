@@ -15,7 +15,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   const _require = arg0;
   closure_1 = arg1;
-  obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: _require(4296).makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: true, scrollPosition: "none", windowSize: null, setStateShallow: null, dropStart: null, dropComplete: "bindJoinStream" };
+  obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: _require(4296).makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "Success", scrollPosition: "oO.O", windowSize: "success", setStateShallow: null, dropStart: 0, dropComplete: "No Video Devices" };
   const obj2 = _require(4296);
   obj[4] = _require(4296).makeMutable(obj);
   const obj3 = _require(4296);

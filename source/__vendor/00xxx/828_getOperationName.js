@@ -237,13 +237,13 @@ arg5.getOperationName = getOperationName;
 arg5.getSpanOperation = function getSpanOperation(closure_1_1) {
   return "gen_ai." + getOperationName(closure_1_1);
 };
-arg5.isChatCompletionChunk = function isChatCompletionChunk(closure_8) {
-  let tmp = null !== closure_8 && typeof closure_8 === "object";
+arg5.isChatCompletionChunk = function isChatCompletionChunk(obj) {
+  let tmp = null !== obj && typeof obj === "object";
   if (tmp) {
-    tmp = "object" in closure_8;
+    tmp = "object" in obj;
   }
   if (tmp) {
-    tmp = "chat.completion.chunk" === closure_8.object;
+    tmp = "chat.completion.chunk" === obj.object;
   }
   return tmp;
 };
@@ -293,16 +293,16 @@ arg5.isResponsesApiResponse = function isResponsesApiResponse(closure_1) {
   }
   return tmp;
 };
-arg5.isResponsesApiStreamEvent = function isResponsesApiStreamEvent(closure_8) {
-  let startsWithResult = null !== closure_8 && typeof closure_8 === "object";
+arg5.isResponsesApiStreamEvent = function isResponsesApiStreamEvent(obj) {
+  let startsWithResult = null !== obj && typeof obj === "object";
   if (startsWithResult) {
-    startsWithResult = "type" in closure_8;
+    startsWithResult = "type" in obj;
   }
   if (startsWithResult) {
-    startsWithResult = typeof closure_8.type === "string";
+    startsWithResult = typeof obj.type === "string";
   }
   if (startsWithResult) {
-    const type = closure_8.type;
+    const type = obj.type;
     startsWithResult = type.startsWith("response.");
   }
   return startsWithResult;

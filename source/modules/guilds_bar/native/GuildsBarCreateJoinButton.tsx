@@ -152,7 +152,7 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
       })();
     }
   }), items1);
-  obj = { selected: stateFromStores, circle: false, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: "eyebrow", label: "header", expandedChildren: null, children: "guilds-bar-drag-preview" };
+  obj = { selected: stateFromStores, circle: false, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: "eyebrow", label: "interactive-text-default", expandedChildren: null, children: "Array" };
   obj[5] = memo;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const tmp8 = View;
@@ -162,8 +162,8 @@ const memoResult = importAllResult.memo(function GuildsBarCreateJoinButton() {
   const colors = ThemesDefault.colors;
   obj1 = { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
   obj[8] = jsx(enabled(11209).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  obj[1] = jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: false, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: "eyebrow", label: "header", expandedChildren: null, children: "guilds-bar-drag-preview" });
-  return <tmp8 selected={stateFromStores} circle={false} unread={false} styles={obj.useGuildsBarAnimatedWrapperStyles()} overState="y" config="eyebrow" label="header" expandedChildren={null}>{"guilds-bar-drag-preview"}</tmp8>;
+  obj[1] = jsx(UnreadIndicatorDefault, { selected: stateFromStores, circle: false, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: "eyebrow", label: "interactive-text-default", expandedChildren: null, children: "Array" });
+  return <tmp8 selected={stateFromStores} circle={false} unread={false} styles={obj.useGuildsBarAnimatedWrapperStyles()} overState="y" config="eyebrow" label="interactive-text-default" expandedChildren={null}>{"Array"}</tmp8>;
 });
 let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
 

@@ -1495,13 +1495,13 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "be":
     break;
-    case "canReportMessage":
+    case "activeTabId":
     break;
-    case "canReportMessageToMods":
+    case "disableEarlyViewCommandExecution":
     break;
-    case "showReportModalForGuildScheduledEvent":
+    case "threshold_met":
     break;
-    case "GuildScheduledEventEntityTypes":
+    case "meetsServerAgeRequirement":
     break;
     case "$ZodObject":
     break;
@@ -1563,7 +1563,7 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
     break;
-    case "inTestModeForApplication":
+    case "useGameInvitesChannelOfficialApplication":
     break;
     case "invalidEmojis":
     break;
@@ -1828,13 +1828,13 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "sh":
     break;
-    case "guildDismissibleContentStates":
+    case "isIosWKWebview":
     break;
-    case "initialScrollToTop":
+    case "viewHierarchyIntegration":
     break;
-    case "flag_de":
+    case "allowWithinModal":
     break;
-    case "de":
+    case "ModalFloatingAction":
     break;
     default:
       return null;

@@ -15,7 +15,7 @@ import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: error, RTCConnectionStates: closure_8 } = ME);
 let obj = {};
-const merged = Object.assign({ initialized: false, callId: "Array" });
+const merged = Object.assign({ initialized: false, callId: "PX_16" });
 obj = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
 const result = require("set").fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
 

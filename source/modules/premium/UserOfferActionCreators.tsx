@@ -83,7 +83,7 @@ function _fetchUserOffer() {
                   flag = true;
                 }
                 if (obj1 === undefined) {
-                  obj1 = { offerId: "push", paymentGatewayOverride: "channel" };
+                  obj1 = { offerId: "jsxs", paymentGatewayOverride: "channel" };
                 }
                 throwTypeErrorResult = retries;
                 throwTypeErrorResult = closure_4;

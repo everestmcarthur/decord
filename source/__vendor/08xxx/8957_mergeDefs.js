@@ -876,13 +876,13 @@ if (self2) {
             break;
             case "be":
             break;
-            case "canReportMessage":
+            case "activeTabId":
             break;
-            case "canReportMessageToMods":
+            case "disableEarlyViewCommandExecution":
             break;
-            case "showReportModalForGuildScheduledEvent":
+            case "threshold_met":
             break;
-            case "GuildScheduledEventEntityTypes":
+            case "meetsServerAgeRequirement":
             break;
             case "$ZodObject":
             break;
@@ -944,7 +944,7 @@ if (self2) {
             break;
             case "woman_and_man_holding_hands_medium_skin_tone_medium_dark_skin_tone":
             break;
-            case "inTestModeForApplication":
+            case "useGameInvitesChannelOfficialApplication":
             break;
             case "invalidEmojis":
             break;
@@ -1208,9 +1208,19 @@ if (self2) {
             break;
             case "sh":
             break;
-            case "guildDismissibleContentStates":
+            case "isIosWKWebview":
             break;
-            case "initialScrollToTop":
+            case "viewHierarchyIntegration":
+            break;
+            case "allowWithinModal":
+            break;
+            case "ModalFloatingAction":
+            break;
+            case "ModalFloatingActionSpacer":
+            break;
+            case "Spacer":
+            break;
+            case "SpacerView":
             break;
             case "flag_de":
             break;
@@ -1411,7 +1421,7 @@ if (self2) {
             case "assignSimilarDate":
             break;
             case "sign":
-            break;
+              return "Ugyldigt input: matcher ingen af de tilladte typer";
             case "gn":
             break;
             case "foi":
@@ -1419,9 +1429,12 @@ if (self2) {
             case "ios_backgroundColor":
             break;
             case "ba":
-            break;
+              _HermesInternal = HermesInternal;
+              str = "Ugyldig v\u00E6rdi i ";
+              combined5 = "Ugyldig v\u00E6rdi i " + code.origin;
+              return combined5;
             case "back":
-              return "Ugyldigt input: matcher ingen af de tilladte typer";
+            break;
             case "background":
             break;
             case "backgroundColorGradient":
@@ -1429,10 +1442,7 @@ if (self2) {
             case "kg":
             break;
             case "gr":
-              _HermesInternal = HermesInternal;
-              str = "Ugyldig v\u00E6rdi i ";
-              combined5 = "Ugyldig v\u00E6rdi i " + code.origin;
-              return combined5;
+            break;
             case "un":
             break;
             case "und":
@@ -1769,6 +1779,8 @@ if (self2) {
             break;
             case "fin":
             break;
+            case "useRequiredAppLauncherContext":
+            break;
             case "flag_km":
             break;
             case "undelete":
@@ -1978,7 +1990,7 @@ if (self2) {
             case "tre":
             break;
             case "tree":
-            break;
+              return "Ugyldigt input: matcher ingen af de tilladte typer";
             case "ee":
             break;
             case "err":
@@ -1986,11 +1998,14 @@ if (self2) {
             case "errorApplyingMediaFilterSettings":
             break;
             case "FilterSettingsGraph":
-            break;
+              _HermesInternal = HermesInternal;
+              str = "Ugyldig v\u00E6rdi i ";
+              combined5 = "Ugyldig v\u00E6rdi i " + code.origin;
+              return combined5;
             case "phoenix":
             break;
             case "googleAuthorizationFingerprint":
-              return "Ugyldigt input: matcher ingen af de tilladte typer";
+            break;
             case "printer":
             break;
             case "exp":
@@ -1998,10 +2013,7 @@ if (self2) {
             case "expo":
             break;
             case "port":
-              _HermesInternal = HermesInternal;
-              str = "Ugyldig v\u00E6rdi i ";
-              combined5 = "Ugyldig v\u00E6rdi i " + code.origin;
-              return combined5;
+            break;
             case "rtsState":
             break;
             case "ts":
@@ -2068,21 +2080,23 @@ if (self2) {
             break;
             case "oldestUnreadMessageIdStale":
             break;
-            case "addPerformanceInstrumentationHandler":
+            case "addPendingAuthorizedState":
             break;
-            case "SPACE_0":
+            case "AUTO_DISMISS":
             break;
-            case "CHANNEL_TOPIC_RULES":
+            case "DISMISS_BLOCK":
             break;
-            case "TOPIC":
+            case "BLOCK_QUOTE":
             break;
-            case "LESS_THAN_24H_BEFORE_REWARD":
+            case "MAX_GUILD_FILE_SIZE_250_MB":
             break;
-            case "REWARD_HERO":
+            case "BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE":
             break;
-            case "ROBLOX_DEFERRED_WEB_URL":
+            case "NATURE":
             break;
-            case "WEB_URL":
+            case "REACTION_RIGHT_CLICK_MENU_UPSELL":
+            break;
+            case "ReanimatedNativeDetector":
             break;
             case "fo":
             break;
@@ -2122,6 +2136,8 @@ if (self2) {
             break;
             case "defaultColors":
             break;
+            case "OPEN_POPOUT":
+            break;
             case "getCurrent":
             break;
             case "getCurrentUserActiveStream":
@@ -2145,14 +2161,6 @@ if (self2) {
             case "getContentClassificationVisibility":
             break;
             case "ContentClassificationVisibility":
-            break;
-            case "CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL":
-            break;
-            case "ALREADY_STREAMING":
-            break;
-            case "STREAMING_UPDATE":
-            break;
-            case "selectProperties":
             break;
             case "hasDiversity":
             break;
@@ -2280,6 +2288,12 @@ if (self2) {
             break;
             case "deleteKeyFromRecyclePool":
             break;
+            case "getGuildIconURL":
+            break;
+            case "STREAM_SEND_LOW_FPS":
+            break;
+            case "FPS_30":
+            break;
             case "pronouns":
             break;
             case "pronounsAccessibilityHint":
@@ -2339,8 +2353,6 @@ if (self2) {
             case "PasskeysSpotIllustration":
             break;
             case "ke":
-            break;
-            case "parent_span_id":
             break;
             case "useStorekitResubscribe":
             break;
@@ -2591,18 +2603,6 @@ if (self2) {
             case "expirationMonth":
             break;
             case "expirationYear":
-            break;
-            case "binData":
-            break;
-            case "useLegacyChatInput":
-            break;
-            case "ChatInputExpressionPressed":
-            break;
-            case "res":
-            break;
-            case "relationship_type":
-            break;
-            case "fearful":
             break;
             default:
               return "Ugyldigt input";
