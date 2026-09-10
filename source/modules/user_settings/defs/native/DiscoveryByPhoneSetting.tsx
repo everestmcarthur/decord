@@ -1,16 +1,16 @@
-// Module ID: 14876
-// Function ID: 14877
+// Module ID: 14925
+// Function ID: 14926
 // Name: DiscoveryByPhoneSetting
-// Dependencies: [7989, 1074, 1114, 1935, 1384, 12714, 11500, 2]
+// Dependencies: [8027, 1074, 1114, 1935, 1384, 12754, 11540, 2]
 
-// Module 14876 (DiscoveryByPhoneSetting)
+// Module 14925 (DiscoveryByPhoneSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SettingsConstants from "SettingsConstants" /* 7989 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12714 */;
-import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingsConstants from "SettingsConstants" /* 8027 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12754 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 const FriendDiscoveryFlags = Constants.FriendDiscoveryFlags;

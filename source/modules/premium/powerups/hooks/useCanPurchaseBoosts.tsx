@@ -1,12 +1,12 @@
-// Module ID: 12535
-// Function ID: 12536
+// Module ID: 12575
+// Function ID: 12576
 // Name: useCanPurchaseBoosts
-// Dependencies: [1371, 1373, 7407, 504, 2]
+// Dependencies: [1371, 1373, 7445, 504, 2]
 // Exports: default
 
-// Module 12535 (useCanPurchaseBoosts)
+// Module 12575 (useCanPurchaseBoosts)
 import initialize from "initialize" /* 504 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7407 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7445 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

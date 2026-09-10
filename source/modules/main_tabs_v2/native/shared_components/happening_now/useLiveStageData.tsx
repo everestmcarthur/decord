@@ -1,14 +1,14 @@
-// Module ID: 16104
-// Function ID: 16105
+// Module ID: 16153
+// Function ID: 16154
 // Name: useLiveStageData
-// Dependencies: [19, 5432, 1957, 563, 5439, 12, 2]
+// Dependencies: [19, 5468, 1957, 563, 5475, 12, 2]
 // Exports: useLiveStageData
 
-// Module 16104 (useLiveStageData)
+// Module 16153 (useLiveStageData)
 import _modDef12 from "module_12" /* 12 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5439 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5475 */;
 import noop from "module_19" /* 19 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5432 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5468 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = globalThis.__r;

@@ -1,17 +1,17 @@
-// Module ID: 15553
-// Function ID: 15554
+// Module ID: 15602
+// Function ID: 15603
 // Name: UserSettingsHighlightNotifications
-// Dependencies: [19, 1979, 5452, 4755, 1074, 21, 7133, 7128, 504, 5598, 7214, 8626, 2]
+// Dependencies: [19, 1979, 5488, 4786, 1074, 21, 7171, 7166, 504, 5634, 7252, 8663, 2]
 // Exports: default
 
-// Module 15553 (UserSettingsHighlightNotifications)
-import GuildIconDefault from "GuildIcon" /* 5598 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7128 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7133 */;
+// Module 15602 (UserSettingsHighlightNotifications)
+import GuildIconDefault from "GuildIcon" /* 5634 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7166 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7171 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import SortedGuildStore from "SortedGuildStore" /* 5452 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
+import SortedGuildStore from "SortedGuildStore" /* 5488 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
 
 require = fn;
 function Row(guildId) {
@@ -38,7 +38,7 @@ function Row(guildId) {
     }
     const obj2 = { guild };
     const obj3 = { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd };
-    return jsx(tmp2(7214).TableSwitchRow, { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd });
+    return jsx(tmp2(7252).TableSwitchRow, { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd });
   }
   const obj = guildId(504);
   tmp2 = guildId;
@@ -55,7 +55,7 @@ export default function UserSettingsHighlightNotifications() {
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
     const obj2 = { children: tmp3 };
-    tmp4 = jsx(stateFromStoresArray(8626).Form, { children: tmp3 });
+    tmp4 = jsx(stateFromStoresArray(8663).Form, { children: tmp3 });
   }
   return tmp4;
 };

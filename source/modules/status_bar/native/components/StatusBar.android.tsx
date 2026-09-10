@@ -1,11 +1,11 @@
-// Module ID: 9513
-// Function ID: 9514
+// Module ID: 9551
+// Function ID: 9552
 // Name: StatusBar
-// Dependencies: [17, 9514, 2]
+// Dependencies: [17, 9552, 2]
 
-// Module 9513 (StatusBar)
+// Module 9551 (StatusBar)
 import _mod17 from "module_17" /* 17 */;
-import StatusBarManagerDefault from "StatusBarManager" /* 9514 */;
+import StatusBarManagerDefault from "StatusBarManager" /* 9552 */;
 import size from "module_2" /* 2 */;
 
 const StatusBar = _mod17.StatusBar;

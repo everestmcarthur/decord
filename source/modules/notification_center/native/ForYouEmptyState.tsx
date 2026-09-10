@@ -1,20 +1,20 @@
-// Module ID: 16482
-// Function ID: 16483
+// Module ID: 16531
+// Function ID: 16532
 // Name: ForYouEmptyState
-// Dependencies: [19, 17, 21, 4574, 5706, 4570, 1114, 2]
+// Dependencies: [19, 17, 21, 4605, 5742, 4601, 1114, 2]
 // Exports: ForYouEmptyState
 
-// Module 16482 (ForYouEmptyState)
+// Module 16531 (ForYouEmptyState)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import native from "native" /* 5706 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import native from "native" /* 5742 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_5 = createStyles.createStyles({ image: { marginBottom: 16 }, container: { paddingHorizontal: 48, alignItems: "center", justifyContent: "center" }, headerText: { fontSize: 18, marginTop: 16, marginBottom: 8 }, text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouEmptyState.tsx");

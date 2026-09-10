@@ -1,13 +1,13 @@
-// Module ID: 10327
-// Function ID: 10328
+// Module ID: 10365
+// Function ID: 10366
 // Name: NsfwGateGuild
-// Dependencies: [19, 17, 2021, 1371, 10328, 1074, 21, 4574, 576, 1114, 2024, 1242, 9328, 6989, 10329, 4570, 4989, 2]
+// Dependencies: [19, 17, 2021, 1371, 10366, 1074, 21, 4605, 576, 1114, 2024, 1242, 9365, 7025, 10367, 4601, 5025, 2]
 // Exports: default
 
-// Module 10327 (NsfwGateGuild)
+// Module 10365 (NsfwGateGuild)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9328 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9365 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -15,12 +15,12 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const NsfwGateSource = fn(10328).NsfwGateSource;
+const NsfwGateSource = fn(10366).NsfwGateSource;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, header: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 16 }, image: { marginBottom: 16 } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -64,16 +64,16 @@ export default function NsfwGateGuild(guildId) {
     AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
   }, items);
   let obj3 = { style: tmp.container, children: null };
-  const items1 = [closure_11(currentUser(6989), {}), , , , , ];
+  const items1 = [closure_11(currentUser(7025), {}), , , , , ];
   const formatResult = intl3.format(guildId(1114).t.Z12LNW, obj);
-  items1[1] = closure_11(closure_5, { source: currentUser(10329), style: tmp.image });
-  items1[2] = closure_11(guildId(4570).Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult });
-  items1[3] = closure_11(guildId(4570).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 });
-  items1[4] = closure_11(guildId(4570).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: formatResult });
+  items1[1] = closure_11(closure_5, { source: currentUser(10367), style: tmp.image });
+  items1[2] = closure_11(guildId(4601).Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult });
+  items1[3] = closure_11(guildId(4601).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: stringResult1 });
+  items1[4] = closure_11(guildId(4601).Text, { style: tmp.description, variant: "text-md/normal", color: "text-default", children: formatResult });
   const obj8 = { onPress: guildId.onClose, size: "md", text: null };
   const intl4 = guildId(1114).intl;
   obj8.text = intl4.string(guildId(1114).t.gRqiWV);
-  items1[5] = closure_11(guildId(4989).Button, obj8);
+  items1[5] = closure_11(guildId(5025).Button, obj8);
   obj3.children = items1;
   return closure_12(closure_4, obj3);
 };

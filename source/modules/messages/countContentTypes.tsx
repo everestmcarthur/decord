@@ -1,10 +1,10 @@
-// Module ID: 11696
-// Function ID: 11697
+// Module ID: 11736
+// Function ID: 11737
 // Name: countContentTypes
 // Dependencies: [2]
 // Exports: default
 
-// Module 11696 (countContentTypes)
+// Module 11736 (countContentTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/countContentTypes.tsx");

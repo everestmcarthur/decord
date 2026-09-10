@@ -1,17 +1,17 @@
-// Module ID: 15525
-// Function ID: 15526
+// Module ID: 15574
+// Function ID: 15575
 // Name: AndroidNotificationLightsSetting
-// Dependencies: [15513, 7989, 1115, 15515, 11500, 1114, 2]
+// Dependencies: [15562, 8027, 1115, 15564, 11540, 1114, 2]
 
-// Module 15525 (AndroidNotificationLightsSetting)
+// Module 15574 (AndroidNotificationLightsSetting)
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import SettingsConstants from "SettingsConstants" /* 7989 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15513 */;
-import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingsConstants from "SettingsConstants" /* 8027 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15562 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
-const SettingsNotificationUtils = tmp2(15515);
+const SettingsNotificationUtils = tmp2(15564);
 ({ useAndroidNotificationLightsEnabled: c2, setAndroidNotificationLightsEnabled } = AndroidNotificationSettingsStore);
 const toggle = SettingBuilders.createToggle({
   useTitle() {

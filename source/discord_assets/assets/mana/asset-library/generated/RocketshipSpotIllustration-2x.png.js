@@ -1,8 +1,8 @@
-// Module ID: 6402
-// Function ID: 6403
+// Module ID: 6438
+// Function ID: 6439
 // Dependencies: [2]
 
-// Module 6402
+// Module 6438
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/RocketshipSpotIllustration-2x.png.js");

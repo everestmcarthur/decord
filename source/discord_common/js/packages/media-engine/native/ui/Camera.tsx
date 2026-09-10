@@ -1,10 +1,10 @@
-// Module ID: 4637
-// Function ID: 4638
+// Module ID: 4668
+// Function ID: 4669
 // Name: Camera
-// Dependencies: [19, 21, 4633, 2]
+// Dependencies: [19, 21, 4664, 2]
 
-// Module 4637 (Camera)
-import VideoDefault from "Video" /* 4633 */;
+// Module 4668 (Camera)
+import VideoDefault from "Video" /* 4664 */;
 import noop from "module_19" /* 19 */;
 
 class Camera {

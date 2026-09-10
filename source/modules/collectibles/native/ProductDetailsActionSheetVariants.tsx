@@ -1,15 +1,15 @@
-// Module ID: 13179
-// Function ID: 13180
+// Module ID: 13226
+// Function ID: 13227
 // Name: ProductDetailsActionSheetVariants
-// Dependencies: [19, 17, 21, 4574, 576, 8874, 5137, 1114, 8898, 7147, 7567, 4570, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 8911, 5173, 1114, 8935, 7185, 7605, 4601, 2]
 // Exports: default
 
-// Module 13179 (ProductDetailsActionSheetVariants)
+// Module 13226 (ProductDetailsActionSheetVariants)
 import nativeDefault from "native" /* 576 */;
-import Pressables from "Pressables" /* 5137 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7147 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 8874 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 8898 */;
+import Pressables from "Pressables" /* 5173 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7185 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 8911 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 8935 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,7 +45,7 @@ function VariantCheckmark(variant) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 let obj2 = { container: { flex: 1, display: "flex", flexDirection: "column", marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 }, headerRow: null, variantsContainer: null, text: null };
 let obj3 = { flex: 1, display: "flex", flexDirection: "column", marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.headerRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -53,7 +53,7 @@ let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 obj2.variantsContainer = { display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj2.text = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
 let closure_6 = createStyles.createStyles(obj2);
-createStyles = fn(4574);
+createStyles = fn(4605);
 let closure_7 = createStyles.createStyles((arg0) => {
   const size = { width: 28, height: 28, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: null };
   const colors = nativeDefault.colors;

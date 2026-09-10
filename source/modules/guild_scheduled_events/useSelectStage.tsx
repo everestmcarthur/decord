@@ -1,10 +1,10 @@
-// Module ID: 9810
-// Function ID: 9811
+// Module ID: 9848
+// Function ID: 9849
 // Name: useSelectStage
-// Dependencies: [5, 32, 19, 1957, 2011, 504, 8421, 2]
+// Dependencies: [5, 32, 19, 1957, 2011, 504, 8458, 2]
 // Exports: default
 
-// Module 9810 (useSelectStage)
+// Module 9848 (useSelectStage)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

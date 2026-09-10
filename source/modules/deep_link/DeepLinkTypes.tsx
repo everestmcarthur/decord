@@ -1,9 +1,9 @@
-// Module ID: 17931
-// Function ID: 17932
+// Module ID: 17986
+// Function ID: 17987
 // Name: DeepLinkTypes
 // Dependencies: [2]
 
-// Module 17931 (DeepLinkTypes)
+// Module 17986 (DeepLinkTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/deep_link/DeepLinkTypes.tsx");

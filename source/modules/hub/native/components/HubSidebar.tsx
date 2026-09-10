@@ -1,15 +1,15 @@
-// Module ID: 16244
-// Function ID: 16245
+// Module ID: 16293
+// Function ID: 16294
 // Name: HubSidebar
-// Dependencies: [19, 17, 2012, 2011, 1074, 10150, 21, 4574, 576, 12409, 1178, 504, 16245, 16246, 15626, 1114, 4585, 12783, 12338, 4511, 9852, 2]
+// Dependencies: [19, 17, 2012, 2011, 1074, 10188, 21, 4605, 576, 12449, 1178, 504, 16294, 16295, 15675, 1114, 4616, 12823, 12378, 4542, 9890, 2]
 // Exports: default
 
-// Module 16244 (HubSidebar)
+// Module 16293 (HubSidebar)
 import nativeDefault from "native" /* 576 */;
-import transitionToChannel from "transitionToChannel" /* 4585 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9852 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12338 */;
-import BaseChannelItem from "BaseChannelItem" /* 12409 */;
+import transitionToChannel from "transitionToChannel" /* 4616 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9890 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12378 */;
+import BaseChannelItem from "BaseChannelItem" /* 12449 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
@@ -30,8 +30,8 @@ function HubItem(arg0) {
   }
   const obj = { style: closure_9().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
   const tmp = closure_9();
-  obj.name = React5(tmp5(12409).BaseChannelName, { name: label, mode: DEFAULT });
-  obj.icon = React5(tmp5(12409).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj.name = React5(tmp5(12449).BaseChannelName, { name: label, mode: DEFAULT });
+  obj.icon = React5(tmp5(12449).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     const obj2 = { value: unreadCount };
@@ -44,8 +44,8 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1074).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4574);
-let obj2 = { container: { marginVertical: fn(10150).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md }, row: { flex: 1 } };
+const createStyles = fn(4605);
+let obj2 = { container: { marginVertical: fn(10188).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md }, row: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/native/components/HubSidebar.tsx");
@@ -68,7 +68,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(16245);
+  guild(16294);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -77,8 +77,8 @@ export default function HubSidebar(guild) {
     }
     const obj4 = { style: row, children: null };
     const obj5 = { guild };
-    const items4 = [closure_7(stateFromStores(16246), obj5), , , ];
-    const obj6 = { active: stateFromStores1, IconComponent: tmp(15626).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
+    const items4 = [closure_7(stateFromStores(16295), obj5), , , ];
+    const obj6 = { active: stateFromStores1, IconComponent: tmp(15675).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
     const intl = tmp(1114).intl;
     obj6.label = intl.string(tmp(1114).t.K50GHd);
     obj6.handleItemClick = function handleItemClick() {
@@ -86,14 +86,14 @@ export default function HubSidebar(guild) {
     };
     obj6.unreadCount = tmp7;
     items4[1] = closure_7(HubItem, obj6);
-    const obj7 = { IconComponent: tmp(12783).PlusMediumIcon, label: null, handleItemClick: null };
+    const obj7 = { IconComponent: tmp(12823).PlusMediumIcon, label: null, handleItemClick: null };
     const intl2 = tmp(1114).intl;
     obj7.label = intl2.string(tmp(1114).t.emRpdS);
     obj7.handleItemClick = function handleItemClick() {
       return GuildDirectoryAddModalActionCreatorsDefault.open({ directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: stateFromStores.id });
     };
     items4[2] = closure_7(HubItem, obj7);
-    const obj8 = { IconComponent: tmp(4511).UserPlusIcon, label: null, handleItemClick: null };
+    const obj8 = { IconComponent: tmp(4542).UserPlusIcon, label: null, handleItemClick: null };
     const intl3 = tmp(1114).intl;
     obj8.label = intl3.string(tmp(1114).t.MJQOuJ);
     obj8.handleItemClick = function handleItemClick() {

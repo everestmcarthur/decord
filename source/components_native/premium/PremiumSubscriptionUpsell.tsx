@@ -1,10 +1,10 @@
-// Module ID: 13566
-// Function ID: 13567
+// Module ID: 13615
+// Function ID: 13616
 // Name: PremiumSubscriptionUpsell
-// Dependencies: [19, 17, 2025, 1371, 1074, 7446, 1373, 21, 4574, 576, 4525, 1114, 1880, 504, 4231, 5001, 1093, 4570, 13567, 13568, 9423, 4989, 2]
+// Dependencies: [19, 17, 2025, 1371, 1074, 7484, 1373, 21, 4605, 576, 4556, 1114, 1880, 504, 4262, 5037, 1093, 4601, 13616, 13617, 9461, 5025, 2]
 // Exports: default
 
-// Module 13566 (PremiumSubscriptionUpsell)
+// Module 13615 (PremiumSubscriptionUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
@@ -14,12 +14,12 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(7446).Gradients;
+const Gradients = fn(7484).Gradients;
 const PremiumConstants = fn(1373);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_9 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 const obj2 = { title: { textAlign: "center" }, subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" }, upsell: { paddingTop: 32, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, upsellCard: null, upsellFeatures: null, upsellFeatureSubLogo: null, upsellFeatureList: null, upsellButton: null, upsellFeatureLogoTier2: null, upsellLabel: null, upsellRow: null };
 let obj3 = { paddingTop: 32, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.upsellCard = { borderRadius: nativeDefault.radii.xs, padding: 16, alignItems: "center" };
@@ -50,44 +50,44 @@ export default function PremiumSubscriptionUpsell(arg0) {
     const items1 = [tmp.upsell, style];
     obj3.style = items1;
     let obj4 = { style: tmp.upsellCard, start: tmp2(1093).HorizontalGradient.START, end: tmp2(1093).HorizontalGradient.END, colors: Gradients.PREMIUM_GUILD, children: null };
-    const tmp5Result = tmp5(5001);
+    const tmp5Result = tmp5(5037);
     if (tmp5Result3.isPremium(stateFromStores)) {
       const obj5 = { children: null };
       const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "text-overlay-light", children: null };
       const intl2 = tmp2(1114).intl;
       obj6.children = intl2.string(tmp2(1114).t.YYfHlx);
-      const items2 = [tmp6(tmp2(4570).Text, obj6), ];
+      const items2 = [tmp6(tmp2(4601).Text, obj6), ];
       const obj7 = { style: tmp.subtitle, variant: "text-md/semibold", color: "text-overlay-light", children: null };
       const intl3 = tmp2(1114).intl;
       const obj8 = { numFreeGuildSubscriptions };
       obj7.children = intl3.format(tmp2(1114).t.Af0zEZ, obj8);
-      items2[1] = tmp6(tmp2(4570).Text, obj7);
+      items2[1] = tmp6(tmp2(4601).Text, obj7);
       obj5.children = items2;
       let tmp6Result1 = tmp8(closure_1_11, obj5);
     } else {
       const obj9 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "text-overlay-light", children: null };
       const intl = tmp2(1114).intl;
       obj9.children = intl.string(tmp2(1114).t["qUl+K4"]);
-      tmp6Result1 = tmp6(tmp2(4570).Text, obj9);
+      tmp6Result1 = tmp6(tmp2(4601).Text, obj9);
     }
     const items3 = [tmp6Result1, , ];
     const obj10 = { style: tmp.upsellFeatures, children: null };
-    const obj11 = { style: tmp.upsellFeatureSubLogo, source: tmp5(13567) };
+    const obj11 = { style: tmp.upsellFeatureSubLogo, source: tmp5(13616) };
     const items4 = [closure_1_10(React4, obj11), , ];
-    const obj12 = { style: tmp.upsellFeatureLogoTier2, source: tmp5(13568) };
+    const obj12 = { style: tmp.upsellFeatureLogoTier2, source: tmp5(13617) };
     items4[1] = closure_1_10(React4, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };
-    tmp5Result3 = tmp5(4231);
-    obj15.IconComponent = tmp2(4525).CheckmarkLargeIcon;
+    tmp5Result3 = tmp5(4262);
+    obj15.IconComponent = tmp2(4556).CheckmarkLargeIcon;
     const intl4 = tmp2(1114).intl;
     const obj16 = { discountPercentage: null };
-    const tmp5Result4 = tmp5(9423);
+    const tmp5Result4 = tmp5(9461);
     obj16.discountPercentage = tmp2(1880).formatPercent(LocaleStore.locale, React7 / 100);
     obj15.label = intl4.formatToPlainString(tmp2(1114).t.P3aEj6, obj16);
     obj15.color = tmp5(576).unsafe_rawColors.WHITE;
     const items5 = [obj15, ];
-    const obj17 = { IconComponent: tmp2(4525).CheckmarkLargeIcon, label: null, color: null };
+    const obj17 = { IconComponent: tmp2(4556).CheckmarkLargeIcon, label: null, color: null };
     const intl5 = tmp2(1114).intl;
     const obj18 = { numFreeGuildSubscriptions };
     obj17.label = intl5.formatToPlainString(tmp2(1114).t.Ntlzbd, obj18);
@@ -104,7 +104,7 @@ export default function PremiumSubscriptionUpsell(arg0) {
     stringResult = intl6.string(tmp2(1114).t.fJOECn);
     obj20.text = stringResult;
     obj20.onPress = onLearnMorePremium;
-    tmp = tmp6(tmp2(4989).Button, obj20);
+    tmp = tmp6(tmp2(5025).Button, obj20);
     obj19.children = tmp;
     items3[2] = closure_1_10(React3, obj19);
     obj4.children = items3;

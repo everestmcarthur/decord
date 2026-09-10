@@ -1,8 +1,8 @@
-// Module ID: 6480
-// Function ID: 6481
+// Module ID: 6516
+// Function ID: 6517
 // Dependencies: [2]
 
-// Module 6480
+// Module 6516
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SmokeIllocon-2x.png.js");

@@ -1,10 +1,10 @@
-// Module ID: 10134
-// Function ID: 10135
+// Module ID: 10172
+// Function ID: 10173
 // Name: getGuildSafetyAlertsChannelId
 // Dependencies: [2]
 // Exports: default
 
-// Module 10134 (getGuildSafetyAlertsChannelId)
+// Module 10172 (getGuildSafetyAlertsChannelId)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_antiraid/getGuildSafetyAlertsChannelId.tsx");

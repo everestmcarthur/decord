@@ -1,10 +1,10 @@
-// Module ID: 13384
-// Function ID: 13385
+// Module ID: 13433
+// Function ID: 13434
 // Name: useBuyNitroTrialAndPriceOverrides
 // Dependencies: [560, 2]
 // Exports: applyBuyNitroOrderPriceOverride, markBuyNitroTrialUnavailable, resetBuyNitroTrialAndPriceOverrides, useBuyNitroOrderPriceOverrides, useBuyNitroTrialUnavailableTiers
 
-// Module 13384 (useBuyNitroTrialAndPriceOverrides)
+// Module 13433 (useBuyNitroTrialAndPriceOverrides)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

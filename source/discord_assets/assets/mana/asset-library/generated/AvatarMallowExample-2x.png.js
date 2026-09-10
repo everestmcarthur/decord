@@ -1,8 +1,8 @@
-// Module ID: 5784
-// Function ID: 5785
+// Module ID: 5820
+// Function ID: 5821
 // Dependencies: [2]
 
-// Module 5784
+// Module 5820
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarMallowExample-2x.png.js");

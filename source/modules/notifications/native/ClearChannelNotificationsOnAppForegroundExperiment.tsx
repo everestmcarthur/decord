@@ -1,10 +1,10 @@
-// Module ID: 17842
-// Function ID: 17843
+// Module ID: 17901
+// Function ID: 17902
 // Name: ClearChannelNotificationsOnAppForegroundExperiment
 // Dependencies: [1433, 2]
 // Exports: shouldClearChannelNotificationsOnAppForeground
 
-// Module 17842 (ClearChannelNotificationsOnAppForegroundExperiment)
+// Module 17901 (ClearChannelNotificationsOnAppForegroundExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

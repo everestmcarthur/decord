@@ -1,0 +1,18 @@
+// Module ID: 4124
+// Function ID: 4125
+// Name: startOfYesterday
+// Dependencies: []
+// Exports: default
+
+// Module 4124 (startOfYesterday)
+
+export default function startOfYesterday() {
+  const date = new Date();
+  const fullYear = date.getFullYear();
+  const month = date.getMonth();
+  const date2 = new Date(0);
+  date2.setFullYear(fullYear, month, date.getDate() - 1);
+  date2.setHours(0, 0, 0, 0);
+  return date2;
+};
+export default exports.default;

@@ -1,12 +1,12 @@
-// Module ID: 15513
-// Function ID: 15514
+// Module ID: 15562
+// Function ID: 15563
 // Name: AndroidNotificationSettingsStore
-// Dependencies: [5, 1244, 1115, 9719, 1249, 4197, 2]
+// Dependencies: [5, 1244, 1115, 9757, 1249, 4227, 2]
 // Exports: initializeAndroidNotificationSettingsStore, setAndroidMessageNotificationsEnabled, setAndroidNotificationLightsEnabled, setAndroidNotificationSoundsEnabled, setAndroidNotificationVibrationsEnabled, useAndroidMessageNotificationsEnabled, useAndroidNotificationLightsEnabled, useAndroidNotificationSoundsEnabled, useAndroidNotificationVibrationsEnabled
 
-// Module 15513 (AndroidNotificationSettingsStore)
-import _mod4197 from "module_4197" /* 4197 */;
-import PushNotificationDefault from "PushNotification" /* 9719 */;
+// Module 15562 (AndroidNotificationSettingsStore)
+import _mod4227 from "module_4227" /* 4227 */;
+import PushNotificationDefault from "PushNotification" /* 9757 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -131,7 +131,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore(arg0,
   }
 };
 const identity = fn(1244);
-let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "flexDirection", isSoundsEnabled: "y", isNotifyEveryTime: "HermesInternal" }));
+let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "call", isVibrationsEnabled: "header", isSoundsEnabled: "rejectWithError", isNotifyEveryTime: "Array" }));
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
 
@@ -146,7 +146,7 @@ export const initializeAndroidNotificationSettingsStore = function initializeAnd
   return applyArgumentsResult;
 };
 export const useAndroidNotificationLightsEnabled = function useAndroidNotificationLightsEnabled() {
-  return closure_4((isLightsEnabled) => isLightsEnabled.isLightsEnabled, _mod4197.shallow);
+  return closure_4((isLightsEnabled) => isLightsEnabled.isLightsEnabled, _mod4227.shallow);
 };
 export const setAndroidNotificationLightsEnabled = function setAndroidNotificationLightsEnabled(isLightsEnabled) {
   _require = isLightsEnabled;
@@ -155,7 +155,7 @@ export const setAndroidNotificationLightsEnabled = function setAndroidNotificati
   PushNotificationDefault.setLightsEnabled(isLightsEnabled);
 };
 export const useAndroidNotificationVibrationsEnabled = function useAndroidNotificationVibrationsEnabled() {
-  return closure_4((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, _mod4197.shallow);
+  return closure_4((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, _mod4227.shallow);
 };
 export const setAndroidNotificationVibrationsEnabled = function setAndroidNotificationVibrationsEnabled(isVibrationsEnabled) {
   _require = isVibrationsEnabled;
@@ -164,7 +164,7 @@ export const setAndroidNotificationVibrationsEnabled = function setAndroidNotifi
   PushNotificationDefault.setVibrationsEnabled(isVibrationsEnabled);
 };
 export const useAndroidNotificationSoundsEnabled = function useAndroidNotificationSoundsEnabled() {
-  return closure_4((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, _mod4197.shallow);
+  return closure_4((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, _mod4227.shallow);
 };
 export const setAndroidNotificationSoundsEnabled = function setAndroidNotificationSoundsEnabled(isSoundsEnabled) {
   _require = isSoundsEnabled;
@@ -173,7 +173,7 @@ export const setAndroidNotificationSoundsEnabled = function setAndroidNotificati
   PushNotificationDefault.setSoundsEnabled(isSoundsEnabled);
 };
 export const useAndroidMessageNotificationsEnabled = function useAndroidMessageNotificationsEnabled() {
-  return closure_4((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, _mod4197.shallow);
+  return closure_4((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, _mod4227.shallow);
 };
 export const setAndroidMessageNotificationsEnabled = function setAndroidMessageNotificationsEnabled(isNotifyEveryTime) {
   _require = isNotifyEveryTime;

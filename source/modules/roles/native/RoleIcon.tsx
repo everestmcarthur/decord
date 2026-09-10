@@ -1,11 +1,11 @@
-// Module ID: 7219
-// Function ID: 7220
+// Module ID: 7257
+// Function ID: 7258
 // Name: RoleIcon
-// Dependencies: [19, 17, 21, 1115, 4570, 2]
+// Dependencies: [19, 17, 21, 1115, 4601, 2]
 // Exports: default
 
-// Module 7219 (RoleIcon)
-import Text_Text from "Text/Text" /* 4570 */;
+// Module 7257 (RoleIcon)
+import Text_Text from "Text/Text" /* 4601 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export default function RoleIcon(arg0) {
     size = 20;
   }
   const size1 = { height: size, width: size };
-  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "call", textAlign: "<string:4294865153>", width: size, marginBottom: "<string:1358954889>" };
+  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "call", textAlign: "mp", width: size, marginBottom: "age_gate_modal" };
   if (null != src) {
     const obj2 = { resizeMode: "contain", source: null, style: null };
     const obj3 = { uri: src };

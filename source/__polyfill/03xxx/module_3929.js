@@ -1,12 +1,13 @@
 // Module ID: 3929
 // Function ID: 3930
-// Dependencies: [3663, 3930, 3664]
+// Dependencies: [3693, 3930, 3931, 3694]
 // Exports: default
 
 // Module 3929
-import _typeof_mod from "module_3663" /* 3663 */;
-import module_3930_mod from "module_3930" /* 3930 */;
-import requiredArgs_mod from "requiredArgs" /* 3664 */;
+import _typeof_mod from "module_3693" /* 3693 */;
+import startOfUTCISOWeek_mod from "startOfUTCISOWeek" /* 3930 */;
+import startOfUTCISOWeekYear_mod from "startOfUTCISOWeekYear" /* 3931 */;
+import requiredArgs_mod from "requiredArgs" /* 3694 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -16,35 +17,37 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let module_3930 = module_3930_mod;
-if (!module_3930) {
-  const obj2 = { default: module_3930 };
+let startOfUTCISOWeek = startOfUTCISOWeek_mod;
+if (!startOfUTCISOWeek) {
+  const obj2 = { default: startOfUTCISOWeek };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_3930;
+  tmp5 = startOfUTCISOWeek;
 }
-module_3930 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+startOfUTCISOWeek = tmp5;
+let startOfUTCISOWeekYear = startOfUTCISOWeekYear_mod;
+if (!startOfUTCISOWeekYear) {
+  const obj3 = { default: startOfUTCISOWeekYear };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = startOfUTCISOWeekYear;
 }
-requiredArgs = tmp7;
+startOfUTCISOWeekYear = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function getDaysInYear(arg0) {
+export default function getUTCISOWeek(arg0) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  if ("Invalid Date" === String(date)) {
-    return NaN;
-  } else {
-    let num = 365;
-    if (module_3930.default(defaultResult1)) {
-      num = 366;
-    }
-    return num;
-  }
-  date = new Date(defaultResult1);
+  const time = startOfUTCISOWeek.default(defaultResult1).getTime();
+  const defaultResult2 = startOfUTCISOWeek.default(defaultResult1);
+  return Math.round((time - startOfUTCISOWeekYear.default(defaultResult1).getTime()) / c4) + 1;
 };
 export default exports.default;

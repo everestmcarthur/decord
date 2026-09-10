@@ -1,12 +1,12 @@
-// Module ID: 11913
-// Function ID: 11914
+// Module ID: 11953
+// Function ID: 11954
 // Name: useSafetyHubAccountStanding
-// Dependencies: [8458, 504, 2]
+// Dependencies: [8495, 504, 2]
 // Exports: useSafetyHubAccountStanding
 
-// Module 11913 (useSafetyHubAccountStanding)
+// Module 11953 (useSafetyHubAccountStanding)
 import initialize from "initialize" /* 504 */;
-import SafetyHubStore from "SafetyHubStore" /* 8458 */;
+import SafetyHubStore from "SafetyHubStore" /* 8495 */;
 
 require = fn;
 const size = fn(2);

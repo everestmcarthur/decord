@@ -1,10 +1,10 @@
-// Module ID: 7414
-// Function ID: 7415
+// Module ID: 7452
+// Function ID: 7453
 // Name: EntitlementActionCreators
-// Dependencies: [5, 1074, 573, 1272, 4816, 2]
+// Dependencies: [5, 1074, 573, 1272, 4847, 2]
 // Exports: fetchGiftableEntitlements, fetchUserEntitlements, fetchUserEntitlementsForApplication
 
-// Module 7414 (EntitlementActionCreators)
+// Module 7452 (EntitlementActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

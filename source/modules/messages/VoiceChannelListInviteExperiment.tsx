@@ -1,11 +1,11 @@
-// Module ID: 11338
-// Function ID: 11339
+// Module ID: 11378
+// Function ID: 11379
 // Name: VoiceChannelListInviteExperiment
-// Dependencies: [4488, 2]
+// Dependencies: [4519, 2]
 // Exports: getVoiceChannelListInviteExperiment, useVoiceChannelListInviteExperiment
 
-// Module 11338 (VoiceChannelListInviteExperiment)
-import createExperiment from "module_4488" /* 4488 */;
+// Module 11378 (VoiceChannelListInviteExperiment)
+import createExperiment from "module_4519" /* 4519 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-05_voice_channel_list_invite_embed", label: "Voice Channel List Invite Embed", defaultConfig: { enabled: false }, treatments: null };

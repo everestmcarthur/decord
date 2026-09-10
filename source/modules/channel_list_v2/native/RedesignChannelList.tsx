@@ -1,27 +1,28 @@
-// Module ID: 16136
-// Function ID: 16137
+// Module ID: 16185
+// Function ID: 16186
 // Name: RedesignChannelList
-// Dependencies: [32, 19, 17, 4566, 7539, 16056, 1979, 2011, 4598, 1074, 21, 1486, 4431, 11250, 16137, 16138, 16165, 16213, 15129, 16055, 16214, 16166, 16216, 7550, 504, 7549, 16217, 16221, 7542, 16222, 11025, 16041, 15130, 11564, 7170, 16084, 16274, 16287, 7086, 16290, 16292, 16296, 16297, 16302, 1982, 16304, 10326, 16312, 11927, 2]
+// Dependencies: [32, 19, 17, 4597, 7577, 16103, 1979, 2011, 4629, 1074, 21, 1486, 4462, 11290, 16186, 16187, 16214, 16262, 15178, 16102, 16263, 16215, 16265, 7588, 504, 7587, 16266, 16270, 7580, 16271, 11065, 16090, 15179, 11604, 7208, 16133, 16323, 16336, 7124, 16339, 16341, 16345, 16346, 16351, 1982, 16353, 10364, 16361, 11967, 2]
 
-// Module 16136 (RedesignChannelList)
-import ChannelListState from "ChannelListState" /* 7542 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11025 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11927 */;
-import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 16166 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16213 */;
-import ChannelsUnreadBarsDefault from "ChannelsUnreadBars" /* 16214 */;
-import renderRedesignChannelListItem from "renderRedesignChannelListItem" /* 16222 */;
-import GuildUpsellChannelListDefault from "GuildUpsellChannelList" /* 16297 */;
-import GuildsEmptyDefault from "GuildsEmpty" /* 16302 */;
-import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 16312 */;
+// Module 16185 (RedesignChannelList)
+import ChannelListState from "ChannelListState" /* 7580 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11065 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11967 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16102 */;
+import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 16215 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16262 */;
+import ChannelsUnreadBarsDefault from "ChannelsUnreadBars" /* 16263 */;
+import renderRedesignChannelListItem from "renderRedesignChannelListItem" /* 16271 */;
+import GuildUpsellChannelListDefault from "GuildUpsellChannelList" /* 16346 */;
+import GuildsEmptyDefault from "GuildsEmpty" /* 16351 */;
+import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 16361 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
-import ChannelListStore from "ChannelListStore" /* 7539 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16056 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import ChannelListStore from "ChannelListStore" /* 7577 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16103 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4598 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4629 */;
 
 require = fn;
 function GuildChannels(guild) {
@@ -69,7 +70,7 @@ function ChannelsWrapper(selectedGuildId) {
           obj4.guild = stateFromStores;
           obj4.selectedChannelId = selectedChannelId;
           obj4.selectedVoiceChannelId = stateFromStores1;
-          return closure_14(tmp2(16304).default, obj4);
+          return closure_14(tmp2(16353).default, obj4);
         } else {
           if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
             const obj5 = { style: merged.style, guildId: selectedGuildId };
@@ -340,10 +341,14 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/RedesignChannelList.tsx");
 
 export default noop.memo((arg0) => {
-  const obj = { children: null };
+  const doesLandOnHomeDrawer = useHomeDrawerGesture.useDoesLandOnHomeDrawer();
   const merged = Object.assign(arg0);
-  const items = [closure_1_14(ChannelsWrapper, {}), closure_1_14(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "channel-list", checkFocusedScreen: "guilds" })];
-  obj.children = items;
-  return __initData(value2, obj);
+  const children = [closure_1_14(ChannelsWrapper, {}), ];
+  let tmp6Result = null;
+  if (!doesLandOnHomeDrawer) {
+    tmp6Result = closure_1_14(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "channel-list", checkFocusedScreen: "guilds" });
+  }
+  children[1] = tmp6Result;
+  return __initData(value2, { children });
 });
 export const ChannelList = memoResult;

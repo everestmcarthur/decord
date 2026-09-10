@@ -1,10 +1,10 @@
-// Module ID: 9643
-// Function ID: 9644
+// Module ID: 9681
+// Function ID: 9682
 // Name: WindowVisibilityUtils
-// Dependencies: [1895, 1074, 9642, 2]
+// Dependencies: [1895, 1074, 9680, 2]
 // Exports: default
 
-// Module 9643 (WindowVisibilityUtils)
+// Module 9681 (WindowVisibilityUtils)
 import AppStateStore from "AppStateStore" /* 1895 */;
 
 const AppStates = fn(1074).AppStates;

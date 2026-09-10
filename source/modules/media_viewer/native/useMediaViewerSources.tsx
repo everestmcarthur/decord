@@ -1,11 +1,11 @@
-// Module ID: 8288
-// Function ID: 8289
+// Module ID: 8325
+// Function ID: 8326
 // Name: useMediaViewerSources
-// Dependencies: [4443, 2]
+// Dependencies: [4474, 2]
 // Exports: removeSpoiler, setMediaViewerSources, toggleSpoiler, updateMediaViewerSources
 
-// Module 8288 (useMediaViewerSources)
-import ZustandStore from "ZustandStore" /* 4443 */;
+// Module 8325 (useMediaViewerSources)
+import ZustandStore from "ZustandStore" /* 4474 */;
 import size from "module_2" /* 2 */;
 
 const zustandStore = ZustandStore.createZustandStore(() => {

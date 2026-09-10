@@ -1,11 +1,11 @@
-// Module ID: 17404
-// Function ID: 17405
+// Module ID: 17463
+// Function ID: 17464
 // Name: GuildOnboardingHomeManager
-// Dependencies: [32, 5, 2014, 502, 1957, 2021, 1979, 4395, 4761, 4762, 4200, 7132, 1384, 4777, 17405, 1896, 12315, 1093, 12314, 7236, 7237, 2]
+// Dependencies: [32, 5, 2014, 502, 1957, 2021, 1979, 4426, 4792, 4793, 4230, 7170, 1384, 4808, 17464, 1896, 12355, 1093, 12354, 7274, 7275, 2]
 
-// Module 17404 (GuildOnboardingHomeManager)
+// Module 17463 (GuildOnboardingHomeManager)
 import FlagUtils from "FlagUtils" /* 1384 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
@@ -13,13 +13,13 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4761 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4762 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4792 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4793 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 require = fn;
-const GuildMemberFlags = fn(4200).GuildMemberFlags;
+const GuildMemberFlags = fn(4230).GuildMemberFlags;
 const prototype = function GuildOnboardingHomeManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -91,10 +91,10 @@ const prototype = function GuildOnboardingHomeManager() {
           }
           if (0 !== num) {
             const obj2 = ModalActionCreatorsDefault;
-            const tmp9 = tmp(1896)(17405, tmp2.paths);
+            const tmp9 = tmp(1896)(17464, tmp2.paths);
             const obj3 = { initialPercent: (num - 1) / num, numActions: num };
             const obj4 = { animation: tmp(1093).ModalAnimation.FADE };
-            obj2.pushLazy(tmp9, obj3, tmp(12315).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);
+            obj2.pushLazy(tmp9, obj3, tmp(12355).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);
           }
         }
         obj = FlagUtils;
@@ -187,11 +187,11 @@ const prototype = function GuildOnboardingHomeManager() {
               tmp13 = null != closure_129_5;
             }
             if (tmp13) {
-              tmp13 = closure_129_5.actionType === applyArgumentsResult(12315).NewMemberActionTypes.VIEW;
+              tmp13 = closure_129_5.actionType === applyArgumentsResult(12355).NewMemberActionTypes.VIEW;
             }
             if (tmp13) {
-              const result = applyArgumentsResult(12314).completeNewMemberAction(closure_129_0, closure_129_1);
-              const obj = applyArgumentsResult(12314);
+              const result = applyArgumentsResult(12354).completeNewMemberAction(closure_129_0, closure_129_1);
+              const obj = applyArgumentsResult(12354);
             }
             arr = memberActions;
           }

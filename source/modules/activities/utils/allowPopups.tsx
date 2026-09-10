@@ -1,10 +1,10 @@
-// Module ID: 9682
-// Function ID: 9683
+// Module ID: 9720
+// Function ID: 9721
 // Name: allowPopups
 // Dependencies: [1920, 2]
 // Exports: allowPopups
 
-// Module 9682 (allowPopups)
+// Module 9720 (allowPopups)
 import Constants from "Constants" /* 1920 */;
 import size from "module_2" /* 2 */;
 

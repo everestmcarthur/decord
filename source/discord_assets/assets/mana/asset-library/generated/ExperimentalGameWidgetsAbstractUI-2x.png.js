@@ -1,8 +1,8 @@
-// Module ID: 5992
-// Function ID: 5993
+// Module ID: 6028
+// Function ID: 6029
 // Dependencies: [2]
 
-// Module 5992
+// Module 6028
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ExperimentalGameWidgetsAbstractUI-2x.png.js");

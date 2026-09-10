@@ -1,13 +1,13 @@
-// Module ID: 6403
-// Function ID: 6404
+// Module ID: 6439
+// Function ID: 6440
 // Name: RubberDuckSpotIllustration
-// Dependencies: [21, 5601, 6404, 2]
+// Dependencies: [21, 5637, 6440, 2]
 // Exports: RubberDuckSpotIllustration
 
-// Module 6403 (RubberDuckSpotIllustration)
+// Module 6439 (RubberDuckSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6404 from "module_6404" /* 6404 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6440 from "module_6440" /* 6440 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const RubberDuckSpotIllustration = function RubberDuckSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6404 };
+  const obj2 = { uri: _modDef6440 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

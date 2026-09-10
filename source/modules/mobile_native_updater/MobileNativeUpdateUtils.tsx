@@ -1,14 +1,14 @@
-// Module ID: 13932
-// Function ID: 13933
+// Module ID: 13981
+// Function ID: 13982
 // Name: MobileNativeUpdateUtils
-// Dependencies: [5, 4555, 3, 1272, 4268, 1115, 1093, 2]
+// Dependencies: [5, 4586, 3, 1272, 4299, 1115, 1093, 2]
 // Exports: checkForNewerBuild, openBuildInstaller
 
-// Module 13932 (MobileNativeUpdateUtils)
+// Module 13981 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import Linking from "Linking" /* 4268 */;
+import Linking from "Linking" /* 4299 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -106,7 +106,7 @@ function openBuildInstallerUrl(install) {
   } catch (err) {
   }
 }
-const UPDATE_CONFIG = fn(4555).UPDATE_CONFIG;
+const UPDATE_CONFIG = fn(4586).UPDATE_CONFIG;
 const logger = new LoggerDefault("MobileNativeUpdateUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");

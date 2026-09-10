@@ -1,11 +1,11 @@
-// Module ID: 9531
-// Function ID: 9532
+// Module ID: 9569
+// Function ID: 9570
 // Name: CircleWithCutoutUtils
-// Dependencies: [19, 21, 8484, 2]
+// Dependencies: [19, 21, 8521, 2]
 // Exports: default, getBadgeLeft, getBadgeTop, getCutoutCenterX, getCutoutCenterY
 
-// Module 9531 (CircleWithCutoutUtils)
-import inlineStyles from "inlineStyles" /* 8484 */;
+// Module 9569 (CircleWithCutoutUtils)
+import inlineStyles from "inlineStyles" /* 8521 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

@@ -1,14 +1,14 @@
-// Module ID: 17927
-// Function ID: 17928
+// Module ID: 17982
+// Function ID: 17983
 // Name: SentryExperimentFeatureFlagManager
-// Dependencies: [4490, 1236, 4395, 1232, 7132, 2]
+// Dependencies: [4521, 1236, 4426, 1232, 7170, 2]
 
-// Module 17927 (SentryExperimentFeatureFlagManager)
+// Module 17982 (SentryExperimentFeatureFlagManager)
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import ExperimentStore from "ExperimentStore" /* 4490 */;
+import ExperimentStore from "ExperimentStore" /* 4521 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 function isLikelyControl(registeredExperiments, variantId2) {
   if (null == registeredExperiments) {

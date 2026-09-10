@@ -1,14 +1,28 @@
-// Module ID: 13671
-// Function ID: 13672
+// Module ID: 13720
+// Function ID: 13721
 // Name: VoiceServerUpdateImmediateExperiment
-// Dependencies: [2]
+// Dependencies: [1433, 2]
 // Exports: isVoiceServerUpdateImmediateEnabled
 
-// Module 13671 (VoiceServerUpdateImmediateExperiment)
+// Module 13720 (VoiceServerUpdateImmediateExperiment)
+import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
+const obj = { name: "2026-09-voice-server-update-immediate-mobile", kind: "user", defaultConfig: { enabled: false }, variations: null };
+let obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+const config = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/gateway/VoiceServerUpdateImmediateExperiment.tsx");
 
-export function isVoiceServerUpdateImmediateEnabled(GatewaySocketDispatcher) {
-  return false;
-}
+export const isVoiceServerUpdateImmediateEnabled = function isVoiceServerUpdateImmediateEnabled(GatewaySocketDispatcher) {
+  let flag;
+  if (config != null) {
+    const obj2 = { location: GatewaySocketDispatcher };
+    flag = config.getConfig(obj2).enabled;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};

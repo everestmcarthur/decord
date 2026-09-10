@@ -1,19 +1,19 @@
-// Module ID: 7982
-// Function ID: 7983
+// Module ID: 8020
+// Function ID: 8021
 // Name: DoubleTapToReactUtils
-// Dependencies: [19, 1949, 5473, 7983, 1954, 1374, 21, 4226, 1935, 7984, 4224, 4542, 7778, 7986, 4230, 7988, 1896, 4920, 4394, 1943, 2]
+// Dependencies: [19, 1949, 5509, 8021, 1954, 1374, 21, 4257, 1935, 8022, 4255, 4573, 7815, 8024, 4261, 8026, 1896, 4951, 4425, 1943, 2]
 // Exports: areEmojisEqual, disambiguatedEmojiFromSettingsValue, getFallbackDoubleTapDisambiguatedEmoji, handleAddDefaultDoubleTapReaction, reactionEmojiFromSettingsValue
 
-// Module 7982 (DoubleTapToReactUtils)
-import ReactionUtils from "ReactionUtils" /* 4224 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4226 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4230 */;
+// Module 8020 (DoubleTapToReactUtils)
+import ReactionUtils from "ReactionUtils" /* 4255 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4257 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4261 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5473 */;
+import EmojiStore from "EmojiStore" /* 5509 */;
 
 require = fn;
 const isContentShown = fn(1949).isContentShown;
-const NITRO_UPSELL_ALERT_KEY = fn(7983).NITRO_UPSELL_ALERT_KEY;
+const NITRO_UPSELL_ALERT_KEY = fn(8021).NITRO_UPSELL_ALERT_KEY;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const EmojiConstants = fn(1374);
 ({ EmojiDisabledReasons: closure_8, EmojiIntention: closure_9 } = EmojiConstants);
@@ -120,7 +120,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
         const result1 = UnicodeEmojisDefault.convertNameToSurrogate("heart");
         let tmp11 = null;
         if ("" !== result1) {
-          obj5 = { name: result1, id: "PX_16", animated: 79.757 };
+          obj5 = { name: result1, id: "PX_16", animated: "failOffsetY" };
           tmp11 = obj5;
         }
         if (null != tmp11) {
@@ -138,10 +138,10 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
       }
       const reactions = message.reactions;
       if (reactions.some((emoji) => ReactionUtils.emojiEquals(emoji.emoji, obj5) && emoji.me)) {
-        const result2 = tmp(4542).triggerHapticFeedback(tmp(4542).HapticFeedbackTypes.IMPACT_LIGHT);
-        const tmpResult10 = tmp(4542);
-        const obj6 = { channelId: channel.id, messageId: message.id, emoji: tmp8, location: tmp(7778).ReactionLocations.DOUBLE_TAP };
-        tmp(7778).removeReaction(obj6);
+        const result2 = tmp(4573).triggerHapticFeedback(tmp(4573).HapticFeedbackTypes.IMPACT_LIGHT);
+        const tmpResult10 = tmp(4573);
+        const obj6 = { channelId: channel.id, messageId: message.id, emoji: tmp8, location: tmp(7815).ReactionLocations.DOUBLE_TAP };
+        tmp(7815).removeReaction(obj6);
       } else {
         if (flag) {
           let byName = UnicodeEmojisDefault.getByName("heart");
@@ -180,38 +180,38 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
             if (emojiUnavailableReason === constants.PREMIUM_LOCKED) {
               const lazyResult = noop.lazy(() => obj5(paths[16])(paths[15], paths.paths));
               const obj11 = { emojiName: customEmojiById.name };
-              tmp(4920).openAlert(NITRO_UPSELL_ALERT_KEY, <lazyResult emojiName={customEmojiById.name} />);
+              tmp(4951).openAlert(NITRO_UPSELL_ALERT_KEY, <lazyResult emojiName={customEmojiById.name} />);
             } else if (null != emojiUnavailableReason) {
               const obj13 = { emojiName: customEmojiById.name, reason: emojiUnavailableReason };
-              const result3 = tmp(7986).showDoubleTapErrorToast(obj13);
+              const result3 = tmp(8024).showDoubleTapErrorToast(obj13);
             }
           }
-          const result4 = tmp(4542).triggerHapticFeedback(tmp(4542).HapticFeedbackTypes.IMPACT_LIGHT);
-          const tmpResult15 = tmp(7778);
+          const result4 = tmp(4573).triggerHapticFeedback(tmp(4573).HapticFeedbackTypes.IMPACT_LIGHT);
+          const tmpResult15 = tmp(7815);
           const id = channel.id;
-          tmpResult15.addReaction(id, message.id, tmp8, tmp(7778).ReactionLocations.DOUBLE_TAP);
-          const tmpResult14 = tmp(4542);
+          tmpResult15.addReaction(id, message.id, tmp8, tmp(7815).ReactionLocations.DOUBLE_TAP);
+          const tmpResult14 = tmp(4573);
           const obj14 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-          const result5 = tmp(4394).UNSAFE_markDismissibleContentAsDismissed(tmp(1943).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj14);
+          const result5 = tmp(4425).UNSAFE_markDismissibleContentAsDismissed(tmp(1943).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj14);
           if (isContentShown(tmp(1943).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL)) {
             const obj15 = { dismissAction: tmp31.INDIRECT_ACTION, forceTrack: true };
-            const result6 = tmp(4394).UNSAFE_markDismissibleContentAsDismissed(tmp(1943).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL, obj15);
-            const tmpResult17 = tmp(4394);
+            const result6 = tmp(4425).UNSAFE_markDismissibleContentAsDismissed(tmp(1943).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL, obj15);
+            const tmpResult17 = tmp(4425);
           }
           tmp31 = ContentDismissActionType;
-          const tmpResult16 = tmp(4394);
+          const tmpResult16 = tmp(4425);
         } else if (!flag) {
           let emojiName1;
           if (setting != null) {
             emojiName1 = setting.emojiName;
           }
           const obj16 = { emojiName: emojiName1 };
-          const result7 = tmp(7986).showDoubleTapErrorToast(obj16);
-          const tmpResult18 = tmp(7986);
+          const result7 = tmp(8024).showDoubleTapErrorToast(obj16);
+          const tmpResult18 = tmp(8024);
         }
       }
     }
-    tmpResult = tmp(7984);
+    tmpResult = tmp(8022);
   }
 };
 export const areEmojisEqual = function areEmojisEqual(customEmojiById, emoji) {

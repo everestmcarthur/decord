@@ -1,8 +1,8 @@
-// Module ID: 9167
-// Function ID: 9168
-// Dependencies: [2, 9168]
+// Module ID: 9204
+// Function ID: 9205
+// Dependencies: [2, 9205]
 
-// Module 9167
+// Module 9204
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

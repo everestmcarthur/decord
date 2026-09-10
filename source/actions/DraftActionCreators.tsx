@@ -1,9 +1,9 @@
-// Module ID: 7791
-// Function ID: 7792
+// Module ID: 7828
+// Function ID: 7829
 // Name: DraftActionCreators
 // Dependencies: [573, 2]
 
-// Module 7791 (DraftActionCreators)
+// Module 7828 (DraftActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

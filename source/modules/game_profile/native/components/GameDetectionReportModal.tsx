@@ -1,15 +1,15 @@
-// Module ID: 8930
-// Function ID: 8931
+// Module ID: 8967
+// Function ID: 8968
 // Name: GameDetectionReportModal
-// Dependencies: [32, 19, 17, 21, 4574, 576, 1483, 8719, 8931, 4777, 1114, 7391, 5694, 5638, 4570, 5699, 5702, 6620, 4989, 7099, 7014, 2]
+// Dependencies: [32, 19, 17, 21, 4605, 576, 1483, 8756, 8968, 4808, 1114, 7429, 5730, 5674, 4601, 5735, 5738, 6656, 5025, 7137, 7052, 2]
 // Exports: default
 
-// Module 8930 (GameDetectionReportModal)
+// Module 8967 (GameDetectionReportModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import NavigatorHeader from "NavigatorHeader" /* 5638 */;
-import Navigator from "Navigator" /* 7014 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
+import NavigatorHeader from "NavigatorHeader" /* 5674 */;
+import Navigator from "Navigator" /* 7052 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8756 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -228,7 +228,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "game-detection-report";
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null, submitContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };

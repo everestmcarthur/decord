@@ -1,17 +1,17 @@
-// Module ID: 17204
-// Function ID: 17205
+// Module ID: 17263
+// Function ID: 17264
 // Name: useDrawerToggle
-// Dependencies: [19, 12301, 12302, 4310, 8295, 17205, 1114, 2]
+// Dependencies: [19, 12341, 12342, 4341, 8332, 17264, 1114, 2]
 // Exports: default
 
-// Module 17204 (useDrawerToggle)
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17205 */;
+// Module 17263 (useDrawerToggle)
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17264 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsModes = fn(12301).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(12341).VoicePanelControlsModes;
 const __initData = { code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useDrawerToggle.tsx");

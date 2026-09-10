@@ -1,9 +1,9 @@
-// Module ID: 14032
-// Function ID: 14033
+// Module ID: 14081
+// Function ID: 14082
 // Name: DisableHookFramePacerExperiment
 // Dependencies: [1433, 2]
 
-// Module 14032 (DisableHookFramePacerExperiment)
+// Module 14081 (DisableHookFramePacerExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

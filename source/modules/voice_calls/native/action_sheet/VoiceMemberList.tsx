@@ -1,28 +1,28 @@
-// Module ID: 13810
-// Function ID: 13811
+// Module ID: 13859
+// Function ID: 13860
 // Name: VoiceMemberList
-// Dependencies: [32, 5, 19, 17, 1956, 1385, 4596, 4212, 1371, 4598, 1074, 1182, 7165, 1085, 21, 4574, 13806, 9969, 504, 8626, 13493, 1114, 10063, 11621, 9852, 4570, 9651, 7176, 1874, 5425, 9565, 4781, 13811, 13812, 1477, 13819, 4431, 12, 4541, 8205, 4284, 13820, 7086, 2]
+// Dependencies: [32, 5, 19, 17, 1956, 1385, 4627, 4243, 1371, 4629, 1074, 1182, 7203, 1085, 21, 4605, 13855, 10007, 504, 8663, 13542, 1114, 10101, 11661, 9890, 4601, 9689, 7214, 1874, 5461, 9603, 4812, 13860, 13861, 1477, 13868, 4462, 12, 4572, 8242, 4315, 13869, 7124, 2]
 
-// Module 13810 (VoiceMemberList)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7176 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
-import Form from "Form" /* 8626 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9852 */;
-import _modDef10063 from "module_10063" /* 10063 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11621 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13806 */;
-import VoiceMemberUser from "VoiceMemberUser" /* 13812 */;
+// Module 13859 (VoiceMemberList)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7214 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8242 */;
+import Form from "Form" /* 8663 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9890 */;
+import _modDef10101 from "module_10101" /* 10101 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11661 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13855 */;
+import VoiceMemberUser from "VoiceMemberUser" /* 13861 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import UserRecord from "UserRecord" /* 1385 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4627 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import UserStore from "UserStore" /* 1371 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4598 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4629 */;
 
 const VoiceMemberUserDefault = VoiceMemberUser;
 
@@ -61,7 +61,7 @@ function extractKey(id) {
 function VoiceSectionRow(arg0) {
   ({ item, isActionSheet } = arg0);
   ({ channelId, onPressUser } = arg0);
-  importDefault = isActionSheet(9651).useAnalyticsContext();
+  importDefault = isActionSheet(9689).useAnalyticsContext();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   if (tmp3) {
     dependencyMap = async function _onItemPress(arg0, value) {
@@ -144,15 +144,15 @@ function VoiceSectionRow(arg0) {
         },
       isActionSheet
     };
-    return closure_21(tmp2(13811), obj2);
+    return closure_21(tmp2(13860), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_21(tmp2(13812), obj3);
+    return closure_21(tmp2(13861), obj3);
   }
-  let obj = isActionSheet(9651);
+  let obj = isActionSheet(9689);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
 }
 get_ActivityIndicator = fn(17);
@@ -160,11 +160,11 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1074);
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = Constants);
 const FORM_ROW_VERTICAL_PADDING = fn(1182).FORM_ROW_VERTICAL_PADDING;
-const ACTION_SHEET_MAX_WIDTH = fn(7165).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7203).ACTION_SHEET_MAX_WIDTH;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_24 = createStyles.createStyles({ container: { flex: 1, flexShrink: 1 }, sectionContainer: { paddingTop: 16, paddingHorizontal: 16 }, sectionTitle: { lineHeight: 16 }, voiceChannelContainer: { overflow: "hidden", flexGrow: 1, flexShrink: 1, minHeight: 1 }, headerFormDivider: { marginLeft: 0 }, rowFormDivider: { marginHorizontal: 16 } });
 let closure_25 = noop.memo((channel) => __initData(GuildEventVoiceBannerDefault, { channel: channel.channel }));
 let closure_26 = noop.memo((channel) => {
@@ -181,9 +181,9 @@ let closure_26 = noop.memo((channel) => {
       const obj3 = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1114).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1114).t["6Qgrev"]);
-      obj3.source = _modDef10063;
-      obj3.size = tmp4(13493).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_21(tmp4(13493).CircularIconButton, obj3);
+      obj3.source = _modDef10101;
+      obj3.size = tmp4(13542).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_21(tmp4(13542).CircularIconButton, obj3);
       const intl2 = tmp4(1114).intl;
       obj2.label = intl2.string(tmp4(1114).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -194,7 +194,7 @@ let closure_26 = noop.memo((channel) => {
           const result = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(tmp, obj2);
         }
       };
-      items[1] = closure_21(tmp4(8626).FormRow, obj2);
+      items[1] = closure_21(tmp4(8663).FormRow, obj2);
       obj.children = items;
       tmp7 = closure_22(noop.Fragment, obj);
     }
@@ -365,7 +365,7 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(13811);
+                tmp4 = tmp4(13860);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(tmp9);
               } else {

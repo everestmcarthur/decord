@@ -1,12 +1,12 @@
-// Module ID: 11935
-// Function ID: 11936
+// Module ID: 11975
+// Function ID: 11976
 // Name: AppealIngestionBreadcrumbs
-// Dependencies: [19, 17, 21, 4574, 576, 4570, 1114, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 4601, 1114, 2]
 // Exports: default
 
-// Module 11935 (AppealIngestionBreadcrumbs)
+// Module 11975 (AppealIngestionBreadcrumbs)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flex: 0, alignSelf: "stretch", marginBottom: 8 }, title: { lineHeight: 16, marginBottom: 8 }, breadCrumbItemContainer: { flexDirection: "row", justifyContent: "flex-start", marginBottom: 8, marginEnd: 32, overflow: "visible" }, breadCrumbDot: null, breadCrumbBar: null, breadCrumbText: null };
 let size = { marginStart: 2, marginTop: 8, width: 4, height: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.breadCrumbDot = size;

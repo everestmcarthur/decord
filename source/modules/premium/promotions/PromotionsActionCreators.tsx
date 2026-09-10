@@ -1,19 +1,19 @@
-// Module ID: 13380
-// Function ID: 13381
+// Module ID: 13429
+// Function ID: 13430
 // Name: PromotionsActionCreators
-// Dependencies: [5, 2025, 10698, 1371, 10697, 1373, 1074, 573, 13381, 1272, 7414, 1940, 1218, 13382, 2]
+// Dependencies: [5, 2025, 10736, 1371, 10735, 1373, 1074, 573, 13430, 1272, 7452, 1940, 1218, 13431, 2]
 // Exports: addClaimedOutboundPromotionCode, clearActivePromotions, dismissOutboundPromotionNotice, fetchActiveBogoPromotion, fetchClaimedOutboundPromotionCodes, maybeFetchActivePromotions
 
-// Module 13380 (PromotionsActionCreators)
+// Module 13429 (PromotionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import wrappers from "wrappers" /* 1218 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import MarketingComponentPlatform from "MarketingComponentPlatform" /* 13381 */;
+import MarketingComponentPlatform from "MarketingComponentPlatform" /* 13430 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import PromotionRecord from "PromotionRecord" /* 10698 */;
+import PromotionRecord from "PromotionRecord" /* 10736 */;
 import UserStore from "UserStore" /* 1371 */;
-import PromotionsStore from "PromotionsStore" /* 10697 */;
+import PromotionsStore from "PromotionsStore" /* 10735 */;
 
 require = fn;
 function fetchActivePromotions() {

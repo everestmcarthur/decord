@@ -1,33 +1,52 @@
 // Module ID: 4013
 // Function ID: 4014
-// Dependencies: [3872, 3664]
+// Dependencies: [3697, 3693, 3929, 3694]
 // Exports: default
 
 // Module 4013
-import startOfMinute_mod from "startOfMinute" /* 3872 */;
-import requiredArgs_mod from "requiredArgs" /* 3664 */;
+import module_3697_mod from "module_3697" /* 3697 */;
+import _typeof_mod from "module_3693" /* 3693 */;
+import module_3929_mod from "module_3929" /* 3929 */;
+import requiredArgs_mod from "requiredArgs" /* 3694 */;
 
-let startOfMinute = startOfMinute_mod;
-if (!startOfMinute) {
-  const obj = { default: startOfMinute };
+let module_3697 = module_3697_mod;
+if (!module_3697) {
+  const obj = { default: module_3697 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfMinute;
+  tmp3 = module_3697;
 }
-startOfMinute = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_3697 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = _typeof;
 }
-requiredArgs = tmp5;
+_typeof = tmp5;
+let module_3929 = module_3929_mod;
+if (!module_3929) {
+  const obj3 = { default: module_3929 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_3929;
+}
+module_3929 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function isSameMinute(arg0, arg1) {
+export default function setUTCISOWeek(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfMinute.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfMinute.default(arg1).getTime();
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_3929.default(defaultResult1) - module_3697.default(arg1);
+  defaultResult1.setUTCDate(defaultResult1.getUTCDate() - 7 * diff);
+  return defaultResult1;
 };
 export default exports.default;

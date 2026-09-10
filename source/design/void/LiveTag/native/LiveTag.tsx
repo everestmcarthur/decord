@@ -1,19 +1,19 @@
-// Module ID: 14148
-// Function ID: 14149
+// Module ID: 14197
+// Function ID: 14198
 // Name: LiveTag
-// Dependencies: [19, 17, 21, 4574, 576, 1115, 4570, 1114, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 1115, 4601, 1114, 2]
 // Exports: default
 
-// Module 14148 (LiveTag)
+// Module 14197 (LiveTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { tag: { paddingHorizontal: 6, paddingVertical: 2, borderRadius: nativeDefault.radii.round, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.RED_400 }, tagText: null };
 const obj4 = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, marginTop: null };
 const PlatformUtils = fn(1115);

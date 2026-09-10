@@ -1,8 +1,8 @@
-// Module ID: 5776
-// Function ID: 5777
+// Module ID: 5812
+// Function ID: 5813
 // Dependencies: [2]
 
-// Module 5776
+// Module 5812
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarDefaultExample-2x.png.js");

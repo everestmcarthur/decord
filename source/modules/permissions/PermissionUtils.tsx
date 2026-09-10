@@ -1,10 +1,10 @@
-// Module ID: 16874
-// Function ID: 16875
+// Module ID: 16931
+// Function ID: 16932
 // Name: permissions/PermissionUtils
 // Dependencies: [1085, 1114, 1369, 2]
 // Exports: generateChannelAppsSection, generateChannelEventsSection, generateChannelGeneralSection, generateChannelMembershipSection, generateChannelStageSection, generateChannelStageVoiceSection, generateChannelTextSection, generateChannelVoiceChatSection, generateChannelVoiceSection, generateGuildPermissionSpec, renderDescription
 
-// Module 16874 (permissions/PermissionUtils)
+// Module 16931 (permissions/PermissionUtils)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;

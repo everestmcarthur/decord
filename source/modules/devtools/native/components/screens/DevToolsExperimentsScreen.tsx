@@ -1,24 +1,24 @@
-// Module ID: 11843
-// Function ID: 11844
+// Module ID: 11883
+// Function ID: 11884
 // Name: DevToolsExperimentsScreen
-// Dependencies: [32, 19, 17, 4490, 502, 1979, 4491, 21, 4574, 576, 11512, 11513, 6995, 7063, 11844, 12, 1178, 8258, 7064, 7069, 7906, 4495, 4541, 5619, 4570, 1255, 11841, 5701, 7904, 7203, 4272, 4534, 7164, 7163, 2]
+// Dependencies: [32, 19, 17, 4521, 502, 1979, 4522, 21, 4605, 576, 11552, 11553, 7033, 7101, 11884, 12, 1178, 8295, 7102, 7107, 7944, 4526, 4572, 5655, 4601, 1255, 11881, 5737, 7942, 7241, 4303, 4565, 7202, 7201, 2]
 
-// Module 11843 (DevToolsExperimentsScreen)
+// Module 11883 (DevToolsExperimentsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import FingerprintUtils from "FingerprintUtils" /* 1255 */;
-import ExperimentManager from "ExperimentManager" /* 4495 */;
-import TableRow from "TableRow" /* 5619 */;
-import TableRowGroup from "TableRowGroup" /* 5701 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
-import ClipboardUtils from "ClipboardUtils" /* 7203 */;
-import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 7906 */;
-import useExperimentAssignments from "useExperimentAssignments" /* 11841 */;
+import ExperimentManager from "ExperimentManager" /* 4526 */;
+import TableRow from "TableRow" /* 5655 */;
+import TableRowGroup from "TableRowGroup" /* 5737 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7201 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7202 */;
+import ClipboardUtils from "ClipboardUtils" /* 7241 */;
+import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 7944 */;
+import useExperimentAssignments from "useExperimentAssignments" /* 11881 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ExperimentStore from "ExperimentStore" /* 4490 */;
+import ExperimentStore from "ExperimentStore" /* 4521 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -155,11 +155,11 @@ function GuildExperimentDebugView(arg0) {
   const tmp17 = closure_12;
   const tmp18 = View;
   obj6.subLabel = str;
-  const items1 = [closure_11(obj3(5701).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj3(5619).TableRow, obj6) }), closure_11(obj3(1178).Spacer, { size: 16 }), , , , , , , ];
+  const items1 = [closure_11(obj3(5737).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj3(5655).TableRow, obj6) }), closure_11(obj3(1178).Spacer, { size: 16 }), , , , , , , ];
   const obj8 = { title: "Guild Assignments", hasIcons: false, children: null };
-  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(5619).TableRow, obj6) };
-  obj8.children = closure_11(obj3(5619).TableRow, { label: items.join("\n") });
-  items1[2] = closure_11(obj3(5701).TableRowGroup, obj8);
+  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(5655).TableRow, obj6) };
+  obj8.children = closure_11(obj3(5655).TableRow, { label: items.join("\n") });
+  items1[2] = closure_11(obj3(5737).TableRowGroup, obj8);
   items1[3] = closure_11(obj3(1178).Spacer, { size: 16 });
   let str2 = "None";
   let str3 = "None";
@@ -168,21 +168,21 @@ function GuildExperimentDebugView(arg0) {
     str3 = JSON.stringify(loadedGuildExperiment, undefined, 2);
   }
   const obj9 = { label: items.join("\n") };
-  items1[4] = closure_11(obj3(5701).TableRowGroup, { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(5619).TableRow, { label: str3 }) });
+  items1[4] = closure_11(obj3(5737).TableRowGroup, { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(5655).TableRow, { label: str3 }) });
   items1[5] = closure_11(obj3(1178).Spacer, { size: 16 });
   if (null != override) {
     const _JSON2 = JSON;
     str2 = JSON.stringify(override, undefined, 2);
   }
-  const obj10 = { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(5619).TableRow, { label: str3 }) };
-  items1[6] = closure_11(obj3(5701).TableRowGroup, { title: "Override Descriptor", hasIcons: false, children: closure_11(obj3(5619).TableRow, { label: str2 }) });
+  const obj10 = { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(5655).TableRow, { label: str3 }) };
+  items1[6] = closure_11(obj3(5737).TableRowGroup, { title: "Override Descriptor", hasIcons: false, children: closure_11(obj3(5655).TableRow, { label: str2 }) });
   items1[7] = closure_11(obj3(1178).Spacer, { size: 16 });
   if (0 === mapped.length) {
-    let mapped3 = tmp19(tmp20(5619).TableRow, { label: "none" });
+    let mapped3 = tmp19(tmp20(5655).TableRow, { label: "none" });
   } else {
     mapped3 = mapped.map((label) => closure_1_11(obj3(dependencyMap[23]).TableRow, { label, labelLineClamp: 1 }, label));
   }
-  items1[8] = closure_11(obj3(5701).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
+  items1[8] = closure_11(obj3(5737).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
   obj5.children = items1;
   return tmp17(tmp18, obj5);
 }
@@ -201,8 +201,8 @@ class ExperimentDetails {
     obj9 = { paddingHorizontal: null };
     callback = closure_4.useCallback(() => {
       ClipboardUtils.copy(uRLForExperiment, () => {
-        const obj = uRLForExperiment(4272);
-        obj.open({ key: "experiment-link-copied", content: "Copied experiment link", IconComponent: onCopyLink(4534).CircleCheckIcon, iconColor: "status-positive" });
+        const obj = uRLForExperiment(4303);
+        obj.open({ key: "experiment-link-copied", content: "Copied experiment link", IconComponent: onCopyLink(4565).CircleCheckIcon, iconColor: "status-positive" });
         if (closure_1_0 != null) {
           closure_1_0();
         }
@@ -222,7 +222,7 @@ class ExperimentDetails {
             if (isDestructive) {
               variant = "danger";
             }
-            return closure_1_11(onCopyLink(5619).TableRow, { variant, label, onPress }, index);
+            return closure_1_11(onCopyLink(5655).TableRow, { variant, label, onPress }, index);
           })
     };
     items1 = [, , ];
@@ -257,11 +257,11 @@ function ExperimentActionSheet(arg0) {
   return closure_1_11(Sheet_BottomSheet.BottomSheet, obj);
 }
 const View = fn(17).View;
-const ExperimentConstants = fn(4491);
+const ExperimentConstants = fn(4522);
 ({ ExperimentBuckets: closure_9, ExperimentTypes: c10 } = ExperimentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, listContainer: null, searchBar: null, debugContainer: null, copyExperimentLink: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj.listContainer = { paddingHorizontal: nativeDefault.space.PX_12 };

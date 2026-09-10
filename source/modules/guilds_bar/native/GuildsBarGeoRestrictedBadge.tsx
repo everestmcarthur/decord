@@ -1,21 +1,21 @@
-// Module ID: 16381
-// Function ID: 16382
+// Module ID: 16430
+// Function ID: 16431
 // Name: GuildsBarGeoRestrictedBadge
-// Dependencies: [19, 17, 21, 4574, 576, 5455, 5601, 12294, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 5491, 5637, 12334, 2]
 
-// Module 16381 (GuildsBarGeoRestrictedBadge)
+// Module 16430 (GuildsBarGeoRestrictedBadge)
 import nativeDefault from "native" /* 576 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef12294 from "module_12294" /* 12294 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef12334 from "module_12334" /* 12334 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { badgeImageContainer: null, badgeImage: null };
 let size = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(5455).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
+const size1 = { height: 16, width: 16, opacity: fn(5491).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
 obj.badgeImage = size1;
 let closure_4 = createStyles.createStyles(obj);
 size = fn(2);
@@ -26,7 +26,7 @@ export default noop.memo(function GuildsBarGeoRestrictedBadge(style) {
   const obj = { style: null, pointerEvents: "none", children: null };
   const items = [tmp.badgeImageContainer, style.style];
   obj.style = items;
-  const obj2 = { source: _modDef12294, style: tmp.badgeImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef12294, style: tmp.badgeImage });
+  const obj2 = { source: _modDef12334, style: tmp.badgeImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef12334, style: tmp.badgeImage });
   return <View style={null} pointerEvents="none">{null}</View>;
 });

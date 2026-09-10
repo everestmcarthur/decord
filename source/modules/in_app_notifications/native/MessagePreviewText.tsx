@@ -1,21 +1,21 @@
-// Module ID: 10139
-// Function ID: 10140
+// Module ID: 10177
+// Function ID: 10178
 // Name: MessagePreviewText
-// Dependencies: [19, 17, 1957, 10127, 1085, 21, 4574, 1116, 576, 10140, 10141, 10126, 4570, 5601, 10163, 4807, 10171, 10172, 1095, 7316, 1114, 7893, 2]
+// Dependencies: [19, 17, 1957, 10165, 1085, 21, 4605, 1116, 576, 10178, 10179, 10164, 4601, 5637, 10201, 4838, 10209, 10210, 1095, 7354, 1114, 7931, 2]
 // Exports: default
 
-// Module 10139 (MessagePreviewText)
+// Module 10177 (MessagePreviewText)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useMessageAuthor from "useMessageAuthor" /* 4807 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7316 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10126 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10140 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 10141 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 10163 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 10171 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 10172 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useMessageAuthor from "useMessageAuthor" /* 4838 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7354 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10164 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10178 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 10179 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 10201 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 10209 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 10210 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -134,16 +134,16 @@ function EmbedCard(embed) {
   return React7(View, obj);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10127);
+const InAppNotificationConstants = fn(10165);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 const PlatformUtils = fn(1116);
 let obj3 = { italic: { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC } };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(4574);
+createStyles = fn(4605);
 let obj6 = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 let obj4 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 obj6.embedContainer = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
@@ -151,7 +151,7 @@ let obj7 = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.spa
 obj6.embedAccentBar = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 let obj8 = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 obj6.embedTextContainer = { flex: 1, gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "channel" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "WireType" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);
@@ -198,7 +198,7 @@ export default function MessagePreviewText(message) {
   } else if (isForwardMessageDefault(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
-      tmp29 = previewableMedia[0].type === tmp(10163).PreviewableMediaTypes.GIF;
+      tmp29 = previewableMedia[0].type === tmp(10201).PreviewableMediaTypes.GIF;
     }
     if (previewableMedia.length > 0) {
       if (null != nullableMessageAuthor) {
@@ -217,10 +217,10 @@ export default function MessagePreviewText(message) {
   } else if (message.content.length > 0) {
     if (null != nullableMessageAuthor) {
       const channel = ChannelStore.getChannel(message.channel_id);
-      tmp(10126);
+      tmp(10164);
       if (null != channel) {
-        const obj10 = { channel, message, color: "text-default", layout: tmp(7893).ChannelListLayoutTypes.COZY, variant: tmp24, muted: false, lineClamp };
-        return React6(tmp(10141).ChannelRowPreview, obj10);
+        const obj10 = { channel, message, color: "text-default", layout: tmp(7931).ChannelListLayoutTypes.COZY, variant: tmp24, muted: false, lineClamp };
+        return React6(tmp(10179).ChannelRowPreview, obj10);
       }
     }
     const obj11 = { message: getInitialMessagePreview, lineClamp, maxHeight };
@@ -233,7 +233,7 @@ export default function MessagePreviewText(message) {
         let tmp17Result = null !== secondaryText;
         if (tmp17Result) {
           const obj13 = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp, children: secondaryText };
-          tmp17Result = React6(tmp(4570).Text, obj13);
+          tmp17Result = React6(tmp(4601).Text, obj13);
         }
         const obj14 = { children: null };
         items2[1] = tmp17Result;
@@ -254,7 +254,7 @@ export default function MessagePreviewText(message) {
       const obj17 = { text: formatResult1 };
       const items3 = [React6(SystemMessageText, obj17), ];
       const obj18 = { variant: "redesign/message-preview/medium", color: "text-default", lineClamp, children: message.poll.question.text };
-      items3[1] = React6(tmp(4570).Text, obj18);
+      items3[1] = React6(tmp(4601).Text, obj18);
       obj16.children = items3;
       return React7(View, obj16);
     } else {

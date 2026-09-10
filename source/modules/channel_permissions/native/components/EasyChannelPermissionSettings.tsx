@@ -1,27 +1,27 @@
-// Module ID: 16861
-// Function ID: 16862
+// Module ID: 16918
+// Function ID: 16919
 // Name: EasyChannelPermissionSettings
-// Dependencies: [32, 5, 19, 17, 16862, 1957, 2021, 2015, 1979, 4212, 4222, 1371, 8429, 1074, 21, 4574, 576, 1483, 11641, 504, 9770, 9771, 9772, 1114, 4727, 4918, 9783, 4217, 4987, 5701, 7214, 1178, 5619, 11236, 11639, 5644, 4754, 9824, 9825, 16863, 16865, 2]
+// Dependencies: [32, 5, 19, 17, 16919, 1957, 2021, 2015, 1979, 4243, 4253, 1371, 8466, 1074, 21, 4605, 576, 1483, 11681, 504, 9808, 9809, 9810, 1114, 4758, 4949, 9821, 4248, 5023, 5737, 7252, 1178, 5655, 11276, 11679, 5680, 4785, 9862, 9863, 16920, 16922, 2]
 // Exports: default
 
-// Module 16861 (EasyChannelPermissionSettings)
+// Module 16918 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 576 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4754 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9770 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9771 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9783 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11639 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4785 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9808 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9809 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9821 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11679 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 16862 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 16919 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;
@@ -71,13 +71,13 @@ function ChannelPermissionSettingsBasicView(channel) {
             closure_1 = tmp5;
             closure_128_0 = undefined;
             accessPermissions = accessPermissions.accessPermissions;
-            const result = v2(9770).isPrivateGuildChannel(accessPermissions);
-            const obj9 = v2(9770);
+            const result = v2(9808).isPrivateGuildChannel(accessPermissions);
+            const obj9 = v2(9808);
             const tmp21 = v2;
-            closure_128_0 = v2(9770).flipEveryonePermission(accessPermissions, accessPermissions, result);
+            closure_128_0 = v2(9808).flipEveryonePermission(accessPermissions, accessPermissions, result);
             currentUser = currentUser.getCurrentUser();
             let tmp7 = ChannelSettingsPermissionsStore;
-            const obj10 = v2(9770);
+            const obj10 = v2(9808);
             if (!ChannelSettingsPermissionsStore) {
               tmp7 = null == currentUser;
             }
@@ -87,7 +87,7 @@ function ChannelPermissionSettingsBasicView(channel) {
             if (!tmp7) {
               v2 = 1;
               dependencyMap = 1;
-              const obj4 = { value: tmp21(9770).grantUserChannelAccess(accessPermissions, accessPermissions), done: false };
+              const obj4 = { value: tmp21(9808).grantUserChannelAccess(accessPermissions, accessPermissions), done: false };
               return obj4;
             }
             canResult = PermissionStore.can(constants.ADMINISTRATOR, guild);
@@ -115,7 +115,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         const items = [closure_128_0];
         v2 = 2;
         dependencyMap = 1;
-        const obj7 = { value: tmp2(9771).savePermissionUpdates(closure_129_0.id, items), done: false };
+        const obj7 = { value: tmp2(9809).savePermissionUpdates(closure_129_0.id, items), done: false };
         return obj7;
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -155,7 +155,7 @@ function ChannelPermissionSettingsBasicView(channel) {
               if (!privateToggleState) {
                 c2 = 1;
                 dependencyMap = 1;
-                const obj6 = { value: tmp5(9772).checkChattableChannelThresholdMetAfterChannelPermissionDeny(guild_id, constants.VIEW_CHANNEL), done: false };
+                const obj6 = { value: tmp5(9810).checkChattableChannelThresholdMetAfterChannelPermissionDeny(guild_id, constants.VIEW_CHANNEL), done: false };
                 return obj6;
               }
             }
@@ -180,7 +180,7 @@ function ChannelPermissionSettingsBasicView(channel) {
           stringResult = string(t["47gQYL"]);
         }
         closure_128_0 = stringResult;
-        closure_128_1 = tmp5(4727).computeChannelName(closure_129_0, UserStore, RelationshipStore);
+        closure_128_1 = tmp5(4758).computeChannelName(closure_129_0, UserStore, RelationshipStore);
         let intl2 = tmp5(1114).intl;
         let onCancel = intl2.format;
         let show = tmp5(1114).t;
@@ -193,8 +193,8 @@ function ChannelPermissionSettingsBasicView(channel) {
         }
         closure_128_2 = onCancelResult;
         closure_129_2(!closure_129_1);
-        const obj4 = tmp5(4727);
-        show = tmp2(4918).show;
+        const obj4 = tmp5(4758);
+        show = tmp2(4949).show;
         const obj9 = { title: closure_128_0, body: closure_128_2, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, onCancel: null };
         const intl3 = tmp5(1114).intl;
         obj9.cancelText = intl3.string(tmp5(1114).t["ETE/oC"]);
@@ -208,7 +208,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         obj9.onCancel = onCancel;
         show(obj9);
         dependencyMap = 3;
-        const tmp42 = tmp2(4918);
+        const tmp42 = tmp2(4949);
       } catch (tmp54) {
         dependencyMap = tmp;
         throw tmp54;
@@ -235,7 +235,7 @@ function ChannelPermissionSettingsBasicView(channel) {
   const sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
   const items1 = [navigation];
   const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-    navigation.setOptions({ headerRight: "disabled" });
+    navigation.setOptions({ headerRight: "Array" });
   }, items1);
   const items2 = [guild, sortedGuildRoles, channel];
   const memo = togglePrivateChannel.useMemo(() => {
@@ -361,13 +361,13 @@ function onBack() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const SettingMode = fn(8429).SettingMode;
+const SettingMode = fn(8466).SettingMode;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_18, Permissions: closure_19, AnalyticEvents: closure_20, ChannelSettingsSections: closure_21, SettingsPaneTypes: closure_22 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 let closure_25 = { BASIC: 0, [0]: "BASIC", ADVANCED: 1, [1]: "ADVANCED", MODERATORS: 2, [2]: "MODERATORS" };
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: { marginTop: 16, flex: 1 }, adminWarning: null };
 let obj3 = { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.adminWarning = { marginTop: nativeDefault.space.PX_12 };

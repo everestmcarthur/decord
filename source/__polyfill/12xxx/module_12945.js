@@ -1,70 +1,36 @@
 // Module ID: 12945
 // Function ID: 12946
-// Dependencies: [12833, 12830, 12943]
-// Exports: callFrameToStackFrame, watchdogTimer
+// Dependencies: [12923, 12911, 12946]
 
 // Module 12945
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12830 */;
-import _mod12833 from "module_12833" /* 12833 */;
+import _mod12946 from "module_12946" /* 12946 */;
+import setupIntegration from "module_12923" /* 12923 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
-  let replaced;
-  if (str) {
-    replaced = str.replace(/^file:\/\//, "");
-  }
-  let sum;
-  if (location.location.columnNumber) {
-    sum = location.location.columnNumber + 1;
-  }
-  let sum1;
-  if (location.location.lineNumber) {
-    sum1 = location.location.lineNumber + 1;
-  }
-  const obj2 = { filename: replaced, module: fn(replaced), function: null, colno: null, lineno: null, in_app: null };
-  const obj = _mod12833;
-  obj2.function = location.functionName || stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-  obj2.colno = sum;
-  obj2.lineno = sum1;
-  let filenameIsInAppResult;
-  if (replaced) {
-    filenameIsInAppResult = tmp4(12943).filenameIsInApp(replaced);
-    const tmp4Result = tmp4(12943);
-  }
-  obj2.in_app = filenameIsInAppResult;
-  return obj.dropUndefinedKeys(obj2);
-};
-export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
-  closure_0 = arg1;
-  closure_1 = arg2;
-  closure_2 = arg3;
-  const navigation = fn();
-  c4 = false;
-  closure_5 = true;
-  const timerId = setInterval(() => {
-    const timeMs = navigation.getTimeMs();
-    let tmp2 = false === c4;
-    if (tmp2) {
-      tmp2 = timeMs > closure_0 + closure_1;
-    }
-    if (tmp2) {
-      c4 = true;
-      if (closure_5) {
-        closure_2();
+export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
+  name: "ModuleMetadata",
+  setup(on) {
+    const options = on;
+    on.on("beforeEnvelope", (arg0) => {
+      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        if ("event" === arg1) {
+          const _Array = Array;
+          let tmp3;
+          if (Array.isArray(arg0)) {
+            tmp3 = arg0[1];
+          }
+          if (tmp3) {
+            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+            arg0[1] = tmp3;
+            const obj = options(dependencyMap[2]);
+          }
+        }
+      });
+    });
+    on.on("applyFrameMetadata", (type) => {
+      if (!type.type) {
+        const result = _mod12946.addMetadataToStackFrames(options.getOptions().stackParser, type);
       }
-    }
-    if (timeMs < closure_0 + closure_1) {
-      c4 = false;
-    }
-  }, 20);
-  return {
-    poll() {
-      navigation.reset();
-    },
-    enabled(arg0) {
-      closure_5 = arg0;
-    }
-  };
-};
+    });
+  }
+}));

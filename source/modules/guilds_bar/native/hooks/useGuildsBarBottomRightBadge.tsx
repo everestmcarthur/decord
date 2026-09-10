@@ -1,20 +1,20 @@
-// Module ID: 16330
-// Function ID: 16331
+// Module ID: 16379
+// Function ID: 16380
 // Name: useGuildsBarBottomRightBadge
-// Dependencies: [32, 19, 21, 4574, 1178, 4275, 576, 16331, 16332, 16336, 2]
+// Dependencies: [32, 19, 21, 4605, 1178, 4306, 576, 16380, 16381, 16385, 2]
 // Exports: default
 
-// Module 16330 (useGuildsBarBottomRightBadge)
+// Module 16379 (useGuildsBarBottomRightBadge)
 import native from "native" /* 1178 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16331 */;
-import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 16332 */;
-import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 16336 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16380 */;
+import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 16381 */;
+import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 16385 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles({ bottomRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBottomRightBadge.tsx");
@@ -105,7 +105,7 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
       obj8.cutouts = items2;
       return obj8;
     } else {
-      return { badge: null, cutout: "r", cutouts: "isArray" };
+      return { badge: null, cutout: "Array", cutouts: "toLowerCase" };
     }
   }, items1);
 };

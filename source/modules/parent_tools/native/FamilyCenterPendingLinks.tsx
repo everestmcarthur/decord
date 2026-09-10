@@ -1,26 +1,26 @@
-// Module ID: 14953
-// Function ID: 14954
+// Module ID: 15002
+// Function ID: 15003
 // Name: FamilyCenterPendingLinks
-// Dependencies: [19, 17, 7552, 21, 4574, 576, 8678, 11950, 1114, 2396, 4570, 8679, 5137, 4777, 14954, 1896, 1178, 9598, 14955, 14952, 14956, 14947, 2]
+// Dependencies: [19, 17, 7590, 21, 4605, 576, 8715, 11990, 1114, 2396, 4601, 8716, 5173, 4808, 15003, 1896, 1178, 9636, 15004, 15001, 15005, 14996, 2]
 // Exports: default
 
-// Module 14953 (FamilyCenterPendingLinks)
+// Module 15002 (FamilyCenterPendingLinks)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import useUserLinks from "useUserLinks" /* 8678 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8679 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11950 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import useUserLinks from "useUserLinks" /* 8715 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8716 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11990 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function FamilyCenterPendingLinkRow(otherUser) {
   const str = otherUser.otherUser;
   const tmp = closure_9();
-  str(8678);
+  str(8715);
   if (undefined === str) {
     return null;
   } else {
@@ -34,12 +34,12 @@ function FamilyCenterPendingLinkRow(otherUser) {
       const obj3 = { name: str1 };
       obj2.accessibilityLabel = intl3.formatToPlainString(tmp2(2396).oUpA6X, obj3);
       obj2.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14956, dependencyMap.paths), { otherUser: str });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15005, dependencyMap.paths), { otherUser: str });
       };
       obj2.style = tmp.actionButton;
-      const obj4 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(14952) };
+      const obj4 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(15001) };
       obj2.children = closure_5(tmp5(1178).Icon, obj4);
-      let tmp8Result = tmp17(tmp5(5137).PressableOpacity, obj2);
+      let tmp8Result = tmp17(tmp5(5173).PressableOpacity, obj2);
       let tmp14 = tmp17;
     } else {
       let tmp12Result = null;
@@ -53,14 +53,14 @@ function FamilyCenterPendingLinkRow(otherUser) {
         const obj5 = { name: str2 };
         obj.accessibilityLabel = intl.formatToPlainString(tmp2(2396).jc1Ip7, obj5);
         obj.onPress = function onPress() {
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14954, dependencyMap.paths), { otherUser: str });
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15003, dependencyMap.paths), { otherUser: str });
         };
         const items = [, ];
         ({ actionButton: arr[0], actionButtonFirst: arr[1] } = tmp);
         obj.style = items;
-        const obj6 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(9598) };
+        const obj6 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(9636) };
         obj.children = closure_5(tmp5(1178).Icon, obj6);
-        tmp12Result = tmp12(tmp5(5137).PressableOpacity, obj);
+        tmp12Result = tmp12(tmp5(5173).PressableOpacity, obj);
       }
       const items1 = [tmp12Result, ];
       tmp14 = closure_5;
@@ -74,28 +74,28 @@ function FamilyCenterPendingLinkRow(otherUser) {
       const obj9 = { name: str3 };
       obj8.accessibilityLabel = intl2.formatToPlainString(tmp2(2396)["4GtllP"], obj9);
       obj8.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14955, dependencyMap.paths), { otherUser: str });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15004, dependencyMap.paths), { otherUser: str });
       };
       obj8.style = tmp.actionButton;
-      const obj10 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(14952) };
+      const obj10 = { size: tmp5(1178).Icon.Sizes.SMALL, disableColor: true, source: tmp2(15001) };
       obj8.children = tmp14(tmp5(1178).Icon, obj10);
-      items1[1] = tmp14(tmp5(5137).PressableOpacity, obj8);
+      items1[1] = tmp14(tmp5(5173).PressableOpacity, obj8);
       obj7.children = items1;
       tmp8Result = closure_6(closure_7, obj7);
     }
     const obj11 = { otherUser: str, actions: tmp8Result };
-    return tmp14(tmp2(14947), obj11);
+    return tmp14(tmp2(14996), obj11);
   }
   tmp4 = useIsInAdultAgeGroupDefault();
 }
 const View = fn(17).View;
-const UserLinkStatus = fn(7552).UserLinkStatus;
+const UserLinkStatus = fn(7590).UserLinkStatus;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 let obj2 = { container: { marginTop: 24 }, content: { display: "flex", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md }, header: { marginBottom: 10 } };
 let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(4574);
+createStyles = fn(4605);
 let obj5 = { actionButton: null, actionButtonFirst: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 obj5.actionButton = size;

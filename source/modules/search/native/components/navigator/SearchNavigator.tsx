@@ -1,26 +1,26 @@
-// Module ID: 16904
-// Function ID: 16905
+// Module ID: 16961
+// Function ID: 16962
 // Name: SearchNavigator
-// Dependencies: [19, 17, 7891, 16678, 1074, 21, 4574, 576, 7927, 7014, 12388, 1611, 16905, 7877, 16900, 16901, 2]
+// Dependencies: [19, 17, 7929, 16735, 1074, 21, 4605, 576, 7965, 7052, 12428, 1611, 16962, 7914, 16957, 16958, 2]
 
-// Module 16904 (SearchNavigator)
+// Module 16961 (SearchNavigator)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12388 */;
-import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 16900 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12428 */;
+import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 16957 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-let closure_5 = fn(7891).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(16678).SearchNavigatorScreens;
+let closure_5 = fn(7929).SearchEntrypointAnalyticsLocations;
+const SearchNavigatorScreens = fn(16735).SearchNavigatorScreens;
 const SearchTypes = fn(1074).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_10 = createStyles.createStyles(obj);
-const NativeStackNavigator = fn(7927);
+const NativeStackNavigator = fn(7965);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 const size = fn(2);
@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/navi
 
 export default noop.memo((route) => {
   const searchContext = route.route.params.searchContext;
-  const accessibilityNativeStackOptions = searchContext(7014).useAccessibilityNativeStackOptions();
+  const accessibilityNativeStackOptions = searchContext(7052).useAccessibilityNativeStackOptions();
   const items = [searchContext];
   const effect = noop.useEffect(() => {
     if (searchContext.type === SearchTypes.GUILD) {
@@ -41,7 +41,7 @@ export default noop.memo((route) => {
       search_tracking_TrackingDefault.trackSearchClosed({ searchContext });
     };
   }, items);
-  let obj = searchContext(7014);
+  let obj = searchContext(7052);
   const rect = useSafeAreaInsetsDefault();
   const obj2 = { style: null, children: null };
   const items1 = [closure_10().container, { paddingLeft: rect.left, paddingRight: rect.right }];
@@ -55,7 +55,7 @@ export default noop.memo((route) => {
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(16905).default;
+        return searchContext(16962).default;
       }
     }),
     closure_8(closure_11.Screen, {
@@ -64,8 +64,8 @@ export default noop.memo((route) => {
         route = route.route;
         const obj = {
           headerShown: true,
-          header: route(7877).renderHeader,
-          headerLeft: route(7877).getRenderBackImage(route.navigation),
+          header: route(7914).renderHeader,
+          headerLeft: route(7914).getRenderBackImage(route.navigation),
           headerTitle() {
             return closure_2_8(SearchNavigatorPreviewHeaderDefault, { channelId: route.params.channelId });
           },
@@ -74,7 +74,7 @@ export default noop.memo((route) => {
         return obj;
       },
       getComponent() {
-        return searchContext(16901).default;
+        return searchContext(16958).default;
       }
     })
   ];

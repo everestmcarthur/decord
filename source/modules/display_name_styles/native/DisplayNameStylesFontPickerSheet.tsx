@@ -1,14 +1,14 @@
-// Module ID: 15374
-// Function ID: 15375
+// Module ID: 15423
+// Function ID: 15424
 // Name: DisplayNameStylesFontPickerSheet
-// Dependencies: [32, 19, 17, 1085, 21, 4574, 576, 8196, 15369, 15371, 1391, 1388, 4542, 4541, 7164, 7163, 1114, 2786, 4989, 4987, 14643, 9208, 4570, 4529, 2]
+// Dependencies: [32, 19, 17, 1085, 21, 4605, 576, 8233, 15418, 15420, 1391, 1388, 4573, 4572, 7202, 7201, 1114, 2786, 5025, 5023, 14692, 9245, 4601, 4560, 2]
 // Exports: default
 
-// Module 15374 (DisplayNameStylesFontPickerSheet)
+// Module 15423 (DisplayNameStylesFontPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef2786 from "module_2786" /* 2786 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import HapticUtils from "HapticUtils" /* 4542 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import HapticUtils from "HapticUtils" /* 4573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { header: { paddingTop: 4 }, headerTrailing: { justifyContent: "center", alignItems: "center" }, container: { flex: 1 }, contentContainer: { padding: nativeDefault.space.PX_8, alignItems: "center" }, gridContainer: { flexWrap: "wrap", maxWidth: 350 }, fontCard: null, fontCardSelected: null, fontText: null, tileNewDot: null, nonLatinDisclaimer: null, disclaimerText: null };
 let size = { width: 79, height: 79, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
 obj2.fontCard = size;
@@ -42,14 +42,14 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   closure_5 = undefined;
   const tmp = closure_10();
   importDefault = tmp;
-  let obj = onSelectFont(8196);
-  const visibleFontOrder = onSelectFont(15369).useVisibleFontOrder();
-  let obj2 = onSelectFont(15369);
-  const displayNameStylesNewFonts = onSelectFont(15371).useDisplayNameStylesNewFonts(visibleFontOrder);
+  let obj = onSelectFont(8233);
+  const visibleFontOrder = onSelectFont(15418).useVisibleFontOrder();
+  let obj2 = onSelectFont(15418);
+  const displayNameStylesNewFonts = onSelectFont(15420).useDisplayNameStylesNewFonts(visibleFontOrder);
   ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
   [first, closure_5] = first.useState(selectedFontId);
   let tmp14Result = first !== onSelectFont(1391).DisplayNameFont.DEFAULT;
-  let obj3 = onSelectFont(15371);
+  let obj3 = onSelectFont(15420);
   closure_6 = tmp9;
   let obj4 = onSelectFont(1388);
   constants = first.useCallback((arg0) => {
@@ -73,15 +73,15 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   const intl2 = onSelectFont(1114).intl;
   obj9.text = intl2.string(onSelectFont(1114).t.XqMe3N);
   obj9.onPress = callback;
-  obj8.children = closure_8(onSelectFont(4989).Button, obj9);
+  obj8.children = closure_8(onSelectFont(5025).Button, obj9);
   obj7.trailing = closure_8(closure_5, obj8);
-  obj6.children = closure_8(onSelectFont(7163).BottomSheetTitleHeader, obj7);
+  obj6.children = closure_8(onSelectFont(7201).BottomSheetTitleHeader, obj7);
   obj5.header = closure_8(closure_5, obj6);
   const obj10 = { style: tmp.container, children: null };
   const obj11 = { style: tmp.contentContainer, children: null };
   const hasNonLatinLettersResult = onSelectFont(1388).hasNonLatinLetters(displayName.displayName);
   let items1 = [
-    closure_8(onSelectFont(4987).Stack, {
+    closure_8(onSelectFont(5023).Stack, {
       direction: "horizontal",
       align: "center",
       justify: "center",
@@ -139,11 +139,11 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   }
   if (tmp14Result) {
     const obj13 = { style: tmp.nonLatinDisclaimer, children: null };
-    let items2 = [tmp11(tmp2(4529).CircleInformationIcon, { size: "sm" }), ];
+    let items2 = [tmp11(tmp2(4560).CircleInformationIcon, { size: "sm" }), ];
     const obj14 = { variant: "text-xs/normal", color: "text-subtle", style: tmp.disclaimerText, children: null };
     const intl3 = tmp2(1114).intl;
     obj14.children = intl3.string(_modDef2786["+O1xL2"]);
-    items2[1] = tmp11(tmp2(4570).Text, obj14);
+    items2[1] = tmp11(tmp2(4601).Text, obj14);
     obj13.children = items2;
     tmp14Result = tmp14(tmp12, obj13);
   }
@@ -151,5 +151,5 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   obj11.children = items1;
   obj10.children = closure_9(closure_5, obj11);
   obj5.children = closure_8(closure_5, obj10);
-  return closure_8(onSelectFont(7164).BottomSheet, obj5);
+  return closure_8(onSelectFont(7202).BottomSheet, obj5);
 };

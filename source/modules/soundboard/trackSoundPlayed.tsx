@@ -1,17 +1,17 @@
-// Module ID: 7386
-// Function ID: 7387
+// Module ID: 7424
+// Function ID: 7425
 // Name: trackSoundPlayed
-// Dependencies: [1915, 1957, 4597, 2011, 5028, 1074, 1373, 1242, 2]
+// Dependencies: [1915, 1957, 4628, 2011, 5064, 1074, 1373, 1242, 2]
 // Exports: default
 
-// Module 7386 (trackSoundPlayed)
+// Module 7424 (trackSoundPlayed)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-const DEFAULT_SOUND_GUILD_ID = fn(5028).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5064).DEFAULT_SOUND_GUILD_ID;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const PremiumConstants = fn(1373);
 ({ AnalyticsPremiumFeatureNames: closure_8, AnalyticsPremiumFeatureTiers: closure_9 } = PremiumConstants);

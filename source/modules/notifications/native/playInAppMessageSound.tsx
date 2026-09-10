@@ -1,15 +1,15 @@
-// Module ID: 10135
-// Function ID: 10136
+// Module ID: 10173
+// Function ID: 10174
 // Name: playInAppMessageSound
-// Dependencies: [10113, 10136, 1074, 1608, 9934, 2]
+// Dependencies: [10151, 10174, 1074, 1608, 9972, 2]
 // Exports: playInAppMessageSound
 
-// Module 10135 (playInAppMessageSound)
+// Module 10173 (playInAppMessageSound)
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10113 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10151 */;
 
 require = fn;
-let closure_3 = fn(10136).isInAppMessageSoundsEnabled;
+let closure_3 = fn(10174).isInAppMessageSoundsEnabled;
 const InAppNotificationTypes = fn(1074).InAppNotificationTypes;
 const message1 = "message1";
 let timestamp = 0;
@@ -24,8 +24,8 @@ export const playInAppMessageSound = function playInAppMessageSound(notification
           const _Date = Date;
           timestamp = Date.now();
           if (timestamp - timestamp >= 1000) {
-            tmp8(9934).playSound(tmp3, 0.4);
-            const tmp8Result = tmp8(9934);
+            tmp8(9972).playSound(tmp3, 0.4);
+            const tmp8Result = tmp8(9972);
           }
         }
         tmp3 = message1;

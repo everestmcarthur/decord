@@ -1,10 +1,10 @@
-// Module ID: 9103
-// Function ID: 9104
+// Module ID: 9140
+// Function ID: 9141
 // Name: GuildSettingsFetchActionCreators
 // Dependencies: [5, 1918, 1385, 1074, 1272, 573, 2]
 // Exports: fetchGuildEmbed, fetchGuildIntegrationsApplications
 
-// Module 9103 (GuildSettingsFetchActionCreators)
+// Module 9140 (GuildSettingsFetchActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

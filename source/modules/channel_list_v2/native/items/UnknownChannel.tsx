@@ -1,16 +1,16 @@
-// Module ID: 16257
-// Function ID: 16258
+// Module ID: 16306
+// Function ID: 16307
 // Name: UnknownChannel
-// Dependencies: [19, 10150, 4756, 21, 4574, 576, 4272, 1114, 4529, 4727, 10945, 16149, 2]
+// Dependencies: [19, 10188, 4787, 21, 4605, 576, 4303, 1114, 4560, 4758, 10985, 16198, 2]
 
-// Module 16257 (UnknownChannel)
+// Module 16306 (UnknownChannel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4529 */;
-import useChannelNameDefault from "useChannelName" /* 4727 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10945 */;
-import ChannelItemDefault from "ChannelItem" /* 16149 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4560 */;
+import useChannelNameDefault from "useChannelName" /* 4758 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10985 */;
+import ChannelItemDefault from "ChannelItem" /* 16198 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,12 +21,12 @@ function handlePress() {
   obj2.IconComponent = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open(obj2);
 }
-const UnreadSetting = fn(4756).UnreadSetting;
+const UnreadSetting = fn(4787).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
-let obj = { container: { marginVertical: fn(10150).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(4605);
+let obj = { container: { marginVertical: fn(10188).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_6 = createStyles.createStyles(obj);
-const obj3 = { marginVertical: fn(10150).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+const obj3 = { marginVertical: fn(10188).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
 

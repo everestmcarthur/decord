@@ -1,20 +1,20 @@
-// Module ID: 14702
-// Function ID: 14703
+// Module ID: 14751
+// Function ID: 14752
 // Name: WebAuthnEditStep
-// Dependencies: [32, 19, 21, 4574, 576, 1483, 5638, 8626, 1114, 1178, 4989, 6611, 4272, 10684, 4534, 2]
+// Dependencies: [32, 19, 21, 4605, 576, 1483, 5674, 8663, 1114, 1178, 5025, 6647, 4303, 10722, 4565, 2]
 // Exports: default
 
-// Module 14702 (WebAuthnEditStep)
+// Module 14751 (WebAuthnEditStep)
 import nativeDefault from "native" /* 576 */;
-import NavigatorHeader from "NavigatorHeader" /* 5638 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6611 */;
+import NavigatorHeader from "NavigatorHeader" /* 5674 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6647 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { inputField: { marginBottom: nativeDefault.space.PX_16 }, form: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.form = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -51,7 +51,7 @@ export default function EditCredentialModal(credential) {
   obj3.placeholder = credential.name;
   obj3.disabled = tmp6;
   obj3.clearButtonVisibility = credential(1178).ClearButtonVisibility.WITH_CONTENT;
-  const items1 = [closure_5(credential(8626).FormInput, obj3), closure_5(credential(8626).FormDivider, {}), ];
+  const items1 = [closure_5(credential(8663).FormInput, obj3), closure_5(credential(8663).FormDivider, {}), ];
   const obj4 = {
     onPress() {
       _undefined(true);
@@ -61,18 +61,18 @@ export default function EditCredentialModal(credential) {
         const obj2 = { key: "WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
         const intl = credential(1114).intl;
         obj2.content = intl.string(credential(1114).t.IV13mH);
-        obj2.icon = navigation(10684);
-        obj2.IconComponent = credential(4534).CircleCheckIcon;
-        navigation(4272).open(obj2);
+        obj2.icon = navigation(10722);
+        obj2.IconComponent = credential(4565).CircleCheckIcon;
+        navigation(4303).open(obj2);
         closure_1_1.popToTop();
       });
       result.then(() => {
         const obj2 = { key: "WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
         const intl = credential(1114).intl;
         obj2.content = intl.string(credential(1114).t.IV13mH);
-        obj2.icon = navigation(10684);
-        obj2.IconComponent = credential(4534).CircleCheckIcon;
-        navigation(4272).open(obj2);
+        obj2.icon = navigation(10722);
+        obj2.IconComponent = credential(4565).CircleCheckIcon;
+        navigation(4303).open(obj2);
         closure_1_1.popToTop();
       }).catch((error) => {
         closure_1_4(error.body.message);
@@ -94,7 +94,7 @@ export default function EditCredentialModal(credential) {
   obj4.loading = tmp6;
   const intl2 = tmp2(1114).intl;
   obj4.text = intl2.string(credential(1114).t["7asiR3"]);
-  items1[2] = closure_5(credential(4989).Button, obj4);
+  items1[2] = closure_5(credential(5025).Button, obj4);
   obj2.children = items1;
-  return closure_6(credential(8626).Form, obj2);
+  return closure_6(credential(8663).Form, obj2);
 };

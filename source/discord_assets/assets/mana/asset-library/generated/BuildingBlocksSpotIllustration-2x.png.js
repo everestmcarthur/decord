@@ -1,8 +1,8 @@
-// Module ID: 5830
-// Function ID: 5831
+// Module ID: 5866
+// Function ID: 5867
 // Dependencies: [2]
 
-// Module 5830
+// Module 5866
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BuildingBlocksSpotIllustration-2x.png.js");

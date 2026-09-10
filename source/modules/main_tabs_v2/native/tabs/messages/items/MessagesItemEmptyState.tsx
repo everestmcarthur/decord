@@ -1,15 +1,15 @@
-// Module ID: 16128
-// Function ID: 16129
+// Module ID: 16177
+// Function ID: 16178
 // Name: MessagesItemEmptyState
-// Dependencies: [19, 17, 21, 4574, 576, 4432, 16087, 4570, 1114, 4989, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 4463, 16136, 4601, 1114, 5025, 2]
 
-// Module 16128 (MessagesItemEmptyState)
+// Module 16177 (MessagesItemEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import RootNavigationRef from "RootNavigationRef" /* 4432 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import components_Button_Button from "components/Button/Button" /* 4989 */;
-import _modDef16087 from "module_16087" /* 16087 */;
+import RootNavigationRef from "RootNavigationRef" /* 4463 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import components_Button_Button from "components/Button/Button" /* 5025 */;
+import _modDef16136 from "module_16136" /* 16136 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: { padding: nativeDefault.space.PX_16, flex: 1, height: 325 }, containerImage: null, image: null, body: null, title: null };
 let obj3 = { padding: nativeDefault.space.PX_16, flex: 1, height: 325 };
 obj.containerImage = { marginBottom: nativeDefault.space.PX_16, flexShrink: 1, flexGrow: 1 };
@@ -45,7 +45,7 @@ export default noop.memo(function MessagesItemEmptyState() {
       }
     }
   }, []);
-  obj3.source = _modDef16087;
+  obj3.source = _modDef16136;
   obj3.style = tmp.image;
   obj2.children = timestampProducer(React4, obj3);
   const items = [timestampProducer(hasOwnProperty, obj2), , , ];

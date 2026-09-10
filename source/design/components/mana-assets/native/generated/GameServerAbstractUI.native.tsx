@@ -1,13 +1,13 @@
-// Module ID: 6105
-// Function ID: 6106
+// Module ID: 6141
+// Function ID: 6142
 // Name: GameServerAbstractUI
-// Dependencies: [21, 5601, 6106, 2]
+// Dependencies: [21, 5637, 6142, 2]
 // Exports: GameServerAbstractUI
 
-// Module 6105 (GameServerAbstractUI)
+// Module 6141 (GameServerAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6106 from "module_6106" /* 6106 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6142 from "module_6142" /* 6142 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GameServerAbstractUI = function GameServerAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6106 };
+  const obj2 = { uri: _modDef6142 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

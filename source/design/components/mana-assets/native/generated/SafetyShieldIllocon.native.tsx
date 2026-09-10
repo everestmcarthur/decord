@@ -1,13 +1,13 @@
-// Module ID: 6415
-// Function ID: 6416
+// Module ID: 6451
+// Function ID: 6452
 // Name: SafetyShieldIllocon
-// Dependencies: [21, 5601, 6416, 2]
+// Dependencies: [21, 5637, 6452, 2]
 // Exports: SafetyShieldIllocon
 
-// Module 6415 (SafetyShieldIllocon)
+// Module 6451 (SafetyShieldIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6416 from "module_6416" /* 6416 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6452 from "module_6452" /* 6452 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const SafetyShieldIllocon = function SafetyShieldIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6416 };
+  const obj2 = { uri: _modDef6452 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

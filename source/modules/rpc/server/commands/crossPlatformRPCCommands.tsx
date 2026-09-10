@@ -1,33 +1,33 @@
-// Module ID: 14494
-// Function ID: 14495
+// Module ID: 14543
+// Function ID: 14544
 // Name: crossPlatformRPCCommands
-// Dependencies: [14495, 14497, 14499, 14500, 14501, 14502, 14503, 14509, 14516, 14517, 14518, 14519, 14520, 14521, 14522, 14529, 14532, 14533, 14534, 14535, 14536, 14537, 14538, 14539, 2]
+// Dependencies: [14544, 14546, 14548, 14549, 14550, 14551, 14552, 14558, 14565, 14566, 14567, 14568, 14569, 14570, 14571, 14578, 14581, 14582, 14583, 14584, 14585, 14586, 14587, 14588, 2]
 
-// Module 14494 (crossPlatformRPCCommands)
-import applicationDefault from "application" /* 14495 */;
-import certifiedDevicesDefault from "certifiedDevices" /* 14497 */;
-import channelsDefault from "channels" /* 14499 */;
-import commands_configDefault from "commands/config" /* 14500 */;
-import guildsDefault from "guilds" /* 14501 */;
-import imagesDefault from "images" /* 14502 */;
-import invitesDefault from "invites" /* 14503 */;
-import linksDefault from "links" /* 14509 */;
-import logsDefault from "logs" /* 14516 */;
-import networkingDefault from "networking" /* 14517 */;
-import providersDefault from "providers" /* 14518 */;
-import relationshipsDefault from "relationships" /* 14519 */;
-import setActivityDefault from "setActivity" /* 14520 */;
-import setOrientationLockStateDefault from "setOrientationLockState" /* 14521 */;
-import merged14Default from "merged14" /* 14522 */;
-import subscriptionsDefault from "subscriptions" /* 14529 */;
-import usersDefault from "users" /* 14532 */;
-import userSettingsDefault from "userSettings" /* 14533 */;
-import platformBehaviorsDefault from "platformBehaviors" /* 14534 */;
-import soundboardDefault from "soundboard" /* 14535 */;
-import vibegrationsVoiceDefault from "vibegrationsVoice" /* 14536 */;
-import activitiesDefault from "activities" /* 14537 */;
-import questsDefault from "quests" /* 14538 */;
-import voiceChannelChatDefault from "voiceChannelChat" /* 14539 */;
+// Module 14543 (crossPlatformRPCCommands)
+import applicationDefault from "application" /* 14544 */;
+import certifiedDevicesDefault from "certifiedDevices" /* 14546 */;
+import channelsDefault from "channels" /* 14548 */;
+import commands_configDefault from "commands/config" /* 14549 */;
+import guildsDefault from "guilds" /* 14550 */;
+import imagesDefault from "images" /* 14551 */;
+import invitesDefault from "invites" /* 14552 */;
+import linksDefault from "links" /* 14558 */;
+import logsDefault from "logs" /* 14565 */;
+import networkingDefault from "networking" /* 14566 */;
+import providersDefault from "providers" /* 14567 */;
+import relationshipsDefault from "relationships" /* 14568 */;
+import setActivityDefault from "setActivity" /* 14569 */;
+import setOrientationLockStateDefault from "setOrientationLockState" /* 14570 */;
+import merged14Default from "merged14" /* 14571 */;
+import subscriptionsDefault from "subscriptions" /* 14578 */;
+import usersDefault from "users" /* 14581 */;
+import userSettingsDefault from "userSettings" /* 14582 */;
+import platformBehaviorsDefault from "platformBehaviors" /* 14583 */;
+import soundboardDefault from "soundboard" /* 14584 */;
+import vibegrationsVoiceDefault from "vibegrationsVoice" /* 14585 */;
+import activitiesDefault from "activities" /* 14586 */;
+import questsDefault from "quests" /* 14587 */;
+import voiceChannelChatDefault from "voiceChannelChat" /* 14588 */;
 
 const application = Object.assign(applicationDefault);
 const certifiedDevices = Object.assign(certifiedDevicesDefault);

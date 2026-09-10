@@ -1,10 +1,10 @@
-// Module ID: 6618
-// Function ID: 6619
+// Module ID: 6654
+// Function ID: 6655
 // Name: ConfirmEmailCode
-// Dependencies: [5, 32, 19, 17, 1371, 5637, 21, 4574, 576, 504, 4476, 4570, 1114, 6619, 6956, 4272, 4989, 2]
+// Dependencies: [5, 32, 19, 17, 1371, 5673, 21, 4605, 576, 504, 4507, 4601, 1114, 6655, 6992, 4303, 5025, 2]
 // Exports: default
 
-// Module 6618 (ConfirmEmailCode)
+// Module 6654 (ConfirmEmailCode)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -14,11 +14,11 @@ import UserStore from "UserStore" /* 1371 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(5637);
+const ChangeEmailStore = fn(5673);
 ({ useChangeEmailError: closure_9, ChangeEmailFields: c10 } = ChangeEmailStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: null, contentContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.input = { marginTop: nativeDefault.space.PX_24 };

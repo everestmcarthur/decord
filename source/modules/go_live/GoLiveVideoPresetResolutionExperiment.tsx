@@ -1,10 +1,10 @@
-// Module ID: 9986
-// Function ID: 9987
+// Module ID: 10024
+// Function ID: 10025
 // Name: GoLiveVideoPresetResolutionExperiment
-// Dependencies: [4621, 1434, 2]
+// Dependencies: [4652, 1434, 2]
 
-// Module 9986 (GoLiveVideoPresetResolutionExperiment)
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4621 */;
+// Module 10024 (GoLiveVideoPresetResolutionExperiment)
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4652 */;
 import ApexExperiment from "apex/ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

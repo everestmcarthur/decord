@@ -1,14 +1,14 @@
-// Module ID: 15136
-// Function ID: 15137
+// Module ID: 15185
+// Function ID: 15186
 // Name: QuestDockDismissalToast
-// Dependencies: [19, 17, 21, 4574, 576, 4570, 1114, 12316, 4272, 12799, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 4601, 1114, 12356, 4303, 12839, 2]
 // Exports: displayQuestDismissalToast
 
-// Module 15136 (QuestDockDismissalToast)
+// Module 15185 (QuestDockDismissalToast)
 import nativeDefault from "native" /* 576 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
-import _modDef12316 from "module_12316" /* 12316 */;
-import _modDef12799 from "module_12799" /* 12799 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
+import _modDef12356 from "module_12356" /* 12356 */;
+import _modDef12839 from "module_12839" /* 12839 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -18,8 +18,8 @@ function QuestDockDismissalNotification() {
   const intl = require("util").intl;
   obj.children = intl.format(require("util").t.dYE1px, {
     arrowHook() {
-      const obj = { style: closure_0.toastArrowForwardIconContainer, children: <React3 resizeMode="contain" source={_modDef12316} style={closure_0.toastArrowForwardIcon} /> };
-      return <React4 style={closure_0.toastArrowForwardIconContainer}><React3 resizeMode="contain" source={_modDef12316} style={closure_0.toastArrowForwardIcon} /></React4>;
+      const obj = { style: closure_0.toastArrowForwardIconContainer, children: <React3 resizeMode="contain" source={_modDef12356} style={closure_0.toastArrowForwardIcon} /> };
+      return <React4 style={closure_0.toastArrowForwardIconContainer}><React3 resizeMode="contain" source={_modDef12356} style={closure_0.toastArrowForwardIcon} /></React4>;
     }
   });
   return jsx(require("Text/Text").Text, { color: "mobile-text-heading-primary", variant: "text-sm/semibold", children: null });
@@ -27,7 +27,7 @@ function QuestDockDismissalNotification() {
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles(() => {
   const obj = { toastArrowForwardIconContainer: { height: 6, width: 16 }, toastArrowForwardIcon: null };
   const size = { opacity: 0.35, position: "absolute", top: "50%", left: 0, height: 16, width: 16, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, transform: null };
@@ -41,5 +41,5 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDockDismis
 
 export const displayQuestDismissalToast = function displayQuestDismissalToast() {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "QUEST_BAR_DISMISS_TOAST", content: QuestDockDismissalNotification, icon: _modDef12799, position: "bottom" });
+  obj.open({ key: "QUEST_BAR_DISMISS_TOAST", content: QuestDockDismissalNotification, icon: _modDef12839, position: "bottom" });
 };

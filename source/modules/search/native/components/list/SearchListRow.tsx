@@ -1,20 +1,20 @@
-// Module ID: 16687
-// Function ID: 16688
+// Module ID: 16744
+// Function ID: 16745
 // Name: SearchListRow
-// Dependencies: [19, 17, 7892, 21, 4574, 576, 5137, 4570, 2]
+// Dependencies: [19, 17, 7930, 21, 4605, 576, 5173, 4601, 2]
 
-// Module 16687 (SearchListRow)
+// Module 16744 (SearchListRow)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Pressables from "Pressables" /* 5137 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Pressables from "Pressables" /* 5173 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const paddingVertical = fn(7892).SEARCH_ROW_TAP_STATE_PADDING;
+const paddingVertical = fn(7930).SEARCH_ROW_TAP_STATE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles((marginLeft) => {
   const obj = { pressable: { paddingHorizontal: 16, paddingVertical }, body: { flexDirection: "row", alignItems: "center" }, labels: { justifyContent: "center", flex: 1 }, underlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE }, text: { flexShrink: 1 }, iconContainer: { marginRight: 12 }, extrasContainer: { marginLeft } };
   return obj;

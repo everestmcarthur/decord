@@ -1,12 +1,12 @@
-// Module ID: 7466
-// Function ID: 7467
+// Module ID: 7504
+// Function ID: 7505
 // Name: ReferralTrialStore
-// Dependencies: [1371, 1074, 7467, 573, 1089, 504, 2]
+// Dependencies: [1371, 1074, 7505, 573, 1089, 504, 2]
 
-// Module 7466 (ReferralTrialStore)
+// Module 7504 (ReferralTrialStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7467 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7505 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -144,8 +144,8 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
-      const referralsRemaining = userTrialOfferId(7467).fetchReferralsRemaining();
-      const obj = userTrialOfferId(7467);
+      const referralsRemaining = userTrialOfferId(7505).fetchReferralsRemaining();
+      const obj = userTrialOfferId(7505);
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);

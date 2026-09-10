@@ -1,13 +1,13 @@
-// Module ID: 5907
-// Function ID: 5908
+// Module ID: 5943
+// Function ID: 5944
 // Name: DevIdentityWideAbstractUI
-// Dependencies: [21, 5601, 5908, 2]
+// Dependencies: [21, 5637, 5944, 2]
 // Exports: DevIdentityWideAbstractUI
 
-// Module 5907 (DevIdentityWideAbstractUI)
+// Module 5943 (DevIdentityWideAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5908 from "module_5908" /* 5908 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5944 from "module_5944" /* 5944 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const DevIdentityWideAbstractUI = function DevIdentityWideAbstractUI(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5908 };
+  const obj2 = { uri: _modDef5944 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

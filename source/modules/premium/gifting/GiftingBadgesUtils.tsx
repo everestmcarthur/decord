@@ -1,15 +1,15 @@
-// Module ID: 13598
-// Function ID: 13599
+// Module ID: 13647
+// Function ID: 13648
 // Name: GiftingBadgesUtils
-// Dependencies: [8218, 1371, 10775, 13599, 504, 4394, 1943, 2]
+// Dependencies: [8255, 1371, 10813, 13648, 504, 4425, 1943, 2]
 // Exports: getGiftingBadgeProgressPercent, getIsGiftingBadgesDesktopEnabled, useIsEligibleToShowGiftingBadgeCoachmark, useIsGiftingBadgesDesktopEnabled
 
-// Module 13598 (GiftingBadgesUtils)
+// Module 13647 (GiftingBadgesUtils)
 import initialize from "initialize" /* 504 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4394 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8218 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10775 */;
-import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 13599 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4425 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8255 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10813 */;
+import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 13648 */;
 import UserStore from "UserStore" /* 1371 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// Module ID: 17582
-// Function ID: 17583
+// Module ID: 17641
+// Function ID: 17642
 // Name: ListBulletsIcon
-// Dependencies: [19, 21, 576, 4274, 17583, 2]
+// Dependencies: [19, 21, 576, 4305, 17642, 2]
 // Exports: ListBulletsIcon
 
-// Module 17582 (ListBulletsIcon)
+// Module 17641 (ListBulletsIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod17583 from "module_17583" /* 17583 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod17642 from "module_17642" /* 17642 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ListBulletsIcon = function ListBulletsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17583, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17642, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

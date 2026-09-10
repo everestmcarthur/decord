@@ -1,17 +1,17 @@
-// Module ID: 10390
-// Function ID: 10391
+// Module ID: 10428
+// Function ID: 10429
 // Name: useExpressionPickerCategoriesPlaceholderConfig
-// Dependencies: [19, 1074, 4574, 576, 7076, 2]
+// Dependencies: [19, 1074, 4605, 576, 7114, 2]
 // Exports: default
 
-// Module 10390 (useExpressionPickerCategoriesPlaceholderConfig)
+// Module 10428 (useExpressionPickerCategoriesPlaceholderConfig)
 import nativeDefault from "native" /* 576 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7076 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7114 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const CATEGORY_ICON_SIZE = fn(1074).CATEGORY_ICON_SIZE;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 const obj2 = { placeholder: { color: nativeDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.5 } };
 let closure_4 = createStyles.createStyles(obj2);
 let size = fn(2);

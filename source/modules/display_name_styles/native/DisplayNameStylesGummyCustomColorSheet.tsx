@@ -1,14 +1,14 @@
-// Module ID: 15379
-// Function ID: 15380
+// Module ID: 15428
+// Function ID: 15429
 // Name: DisplayNameStylesGummyCustomColorSheet
-// Dependencies: [19, 17, 1389, 21, 4574, 576, 4310, 1388, 1091, 4542, 4541, 7164, 7163, 1114, 4989, 15380, 14629, 2]
+// Dependencies: [19, 17, 1389, 21, 4605, 576, 4341, 1388, 1091, 4573, 4572, 7202, 7201, 1114, 5025, 15429, 14678, 2]
 // Exports: default
 
-// Module 15379 (DisplayNameStylesGummyCustomColorSheet)
+// Module 15428 (DisplayNameStylesGummyCustomColorSheet)
 import nativeDefault from "native" /* 576 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1388 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import HapticUtils from "HapticUtils" /* 4542 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import HapticUtils from "HapticUtils" /* 4573 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const DisplayNameStylesConstants = fn(1389);
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: hasOwnProperty, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: metroRequire } = DisplayNameStylesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { body: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, alignItems: "center" }, huePickerInset: null, previewWrapper: null, preview: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, alignItems: "center" };
 obj2.huePickerInset = { paddingHorizontal: nativeDefault.space.PX_4 + 2, alignSelf: "stretch" };
@@ -31,12 +31,12 @@ let result = size.fileFinishedImporting("modules/display_name_styles/native/Disp
 export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   onSelect = onSelect.onSelect;
   const tmp = closure_9();
-  let obj = onSelect(4310);
+  let obj = onSelect(4341);
   let obj2 = onSelect(1388);
   const sharedValue = obj.useSharedValue(obj2.wrapHue(onSelect(1091).int2hslRaw(onSelect.initialColor).h));
   const items = [sharedValue, onSelect];
   const callback = noop.useCallback(() => {
-    const result = onSelect(4542).triggerHapticFeedback(onSelect(4542).HapticFeedbackTypes.IMPACT_LIGHT);
+    const result = onSelect(4573).triggerHapticFeedback(onSelect(4573).HapticFeedbackTypes.IMPACT_LIGHT);
   }, []);
   const callback1 = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -51,16 +51,16 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   const intl2 = onSelect(1114).intl;
   obj6.text = intl2.string(onSelect(1114).t.XqMe3N);
   obj6.onPress = callback1;
-  obj5.trailing = closure_7(onSelect(4989).Button, obj6);
-  obj4.header = closure_7(onSelect(7163).BottomSheetTitleHeader, obj5);
+  obj5.trailing = closure_7(onSelect(5025).Button, obj6);
+  obj4.header = closure_7(onSelect(7201).BottomSheetTitleHeader, obj5);
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.previewWrapper, children: null };
   const obj3 = onSelect(1091);
-  obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(15380), { hue: sharedValue }) });
+  obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(15429), { hue: sharedValue }) });
   const items1 = [closure_7(View, obj8), ];
-  const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(14629), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
+  const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(14678), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
   items1[1] = closure_7(View, obj10);
   obj7.children = items1;
   obj4.children = closure_8(View, obj7);
-  return closure_7(onSelect(7164).BottomSheet, obj4);
+  return closure_7(onSelect(7202).BottomSheet, obj4);
 };

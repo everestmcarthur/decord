@@ -1,11 +1,11 @@
-// Module ID: 14464
-// Function ID: 14465
+// Module ID: 14513
+// Function ID: 14514
 // Name: AccessibilityPreferencesSharedValue
-// Dependencies: [1349, 2, 14154]
+// Dependencies: [1349, 2, 14203]
 
-// Module 14464 (AccessibilityPreferencesSharedValue)
+// Module 14513 (AccessibilityPreferencesSharedValue)
 import AccessibilityConstants from "AccessibilityConstants" /* 1349 */;
-import native from "native" /* 14154 */;
+import native from "native" /* 14203 */;
 import size from "module_2" /* 2 */;
 
 const AccessibilityFeatureFlags = AccessibilityConstants.AccessibilityFeatureFlags;

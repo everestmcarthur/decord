@@ -1,16 +1,16 @@
-// Module ID: 9310
-// Function ID: 9311
+// Module ID: 9347
+// Function ID: 9348
 // Name: CrunchyrollLinkSuccess
-// Dependencies: [19, 17, 21, 4574, 9258, 9311, 4570, 1114, 7137, 4989, 2]
+// Dependencies: [19, 17, 21, 4605, 9295, 9348, 4601, 1114, 7175, 5025, 2]
 // Exports: default
 
-// Module 9310 (CrunchyrollLinkSuccess)
+// Module 9347 (CrunchyrollLinkSuccess)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import components_Button_Button from "components/Button/Button" /* 4989 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9258 */;
-import _modDef9311 from "module_9311" /* 9311 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import components_Button_Button from "components/Button/Button" /* 5025 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7175 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9295 */;
+import _modDef9348 from "module_9348" /* 9348 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
@@ -28,7 +28,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const items = [hasOwnProperty(React3, { source: _modDef9311, style: tmp.image }), , ];
+  const items = [hasOwnProperty(React3, { source: _modDef9348, style: tmp.image }), , ];
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.Fnvxvk);

@@ -1,11 +1,11 @@
-// Module ID: 4974
-// Function ID: 4975
+// Module ID: 5010
+// Function ID: 5011
 // Name: useAccessibilityViewIsModalToggle
-// Dependencies: [19, 4975, 2]
+// Dependencies: [19, 5011, 2]
 // Exports: default
 
-// Module 4974 (useAccessibilityViewIsModalToggle)
-import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 4975 */;
+// Module 5010 (useAccessibilityViewIsModalToggle)
+import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 5011 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

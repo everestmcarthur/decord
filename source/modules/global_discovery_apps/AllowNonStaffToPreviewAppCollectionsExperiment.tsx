@@ -1,9 +1,9 @@
-// Module ID: 12147
-// Function ID: 12148
+// Module ID: 12187
+// Function ID: 12188
 // Name: AllowNonStaffToPreviewAppCollectionsExperiment
 // Dependencies: [1433, 2]
 
-// Module 12147 (AllowNonStaffToPreviewAppCollectionsExperiment)
+// Module 12187 (AllowNonStaffToPreviewAppCollectionsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

@@ -1,29 +1,29 @@
-// Module ID: 14690
-// Function ID: 14691
+// Module ID: 14739
+// Function ID: 14740
 // Name: PasskeyUpsellView
-// Dependencies: [32, 19, 17, 14686, 1074, 1954, 21, 4574, 576, 1483, 1114, 14691, 14692, 5638, 2024, 7137, 14695, 4570, 1115, 4989, 6963, 2]
+// Dependencies: [32, 19, 17, 14735, 1074, 1954, 21, 4605, 576, 1483, 1114, 14740, 14741, 5674, 2024, 7175, 14744, 4601, 1115, 5025, 6999, 2]
 // Exports: default
 
-// Module 14690 (PasskeyUpsellView)
+// Module 14739 (PasskeyUpsellView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import NavigatorHeader from "NavigatorHeader" /* 5638 */;
-import NativeCeremoniesDefault from "NativeCeremonies" /* 6963 */;
-import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 14691 */;
-import _modDef14695 from "module_14695" /* 14695 */;
+import NavigatorHeader from "NavigatorHeader" /* 5674 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 6999 */;
+import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 14740 */;
+import _modDef14744 from "module_14744" /* 14744 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const WebAuthnScreens = fn(14686).WebAuthnScreens;
+const WebAuthnScreens = fn(14735).WebAuthnScreens;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flex: 1, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollViewContainer: null, headerContainer: null, headerImage: null, headerText: null, circleIcon: null, listContainer: null, row: null, text: null, buttonContainer: null };
 let obj3 = { flex: 1, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollViewContainer = { flexGrow: 1, justifyContent: "space-between", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -73,13 +73,13 @@ export default function PasskeyUpsellView() {
   const obj3 = { bottom: true, style: tmp4.container, children: null };
   const obj4 = { contentContainerStyle: tmp4.scrollViewContainer, children: null };
   const obj5 = { style: tmp4.headerContainer, children: null };
-  const items1 = [closure_11(closure_6, { source: _modDef14695, style: tmp4.headerImage }), , ];
+  const items1 = [closure_11(closure_6, { source: _modDef14744, style: tmp4.headerImage }), , ];
   const obj7 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp4.headerText, children: null };
   let intl = navigation(1114).intl;
   obj7.children = intl.string(navigation(1114).t.CjleBl);
-  items1[1] = closure_11(navigation(4570).Text, obj7);
+  items1[1] = closure_11(navigation(4601).Text, obj7);
   const obj8 = { variant: "heading-md/normal", color: "text-default", style: tmp4.headerText, children: null };
-  const obj6 = { source: _modDef14695, style: tmp4.headerImage };
+  const obj6 = { source: _modDef14744, style: tmp4.headerImage };
   const tmp12 = closure_7;
   const obj9 = navigation(1115);
   const intl2 = navigation(1114).intl;
@@ -91,7 +91,7 @@ export default function PasskeyUpsellView() {
     stringResult = string(t.d6uxJy);
   }
   obj8.children = stringResult;
-  items1[2] = closure_11(navigation(4570).Text, obj8);
+  items1[2] = closure_11(navigation(4601).Text, obj8);
   obj5.children = items1;
   const items2 = [closure_12(closure_5, obj5), , ];
   const obj10 = { style: tmp4.listContainer, children: null };
@@ -100,7 +100,7 @@ export default function PasskeyUpsellView() {
   const obj13 = { variant: "heading-md/normal", color: "text-default", style: tmp4.text, children: null };
   const intl3 = tmp(1114).intl;
   obj13.children = intl3.string(navigation(1114).t.HtqVkj);
-  items3[1] = closure_11(navigation(4570).Text, obj13);
+  items3[1] = closure_11(navigation(4601).Text, obj13);
   obj11.children = items3;
   const items4 = [closure_12(closure_5, obj11), ];
   const obj14 = { style: tmp4.row, children: null };
@@ -119,7 +119,7 @@ export default function PasskeyUpsellView() {
     string2Result = string2(t2.uYfqlo);
   }
   obj16.children = string2Result;
-  items5[1] = closure_11(navigation(4570).Text, obj16);
+  items5[1] = closure_11(navigation(4601).Text, obj16);
   obj14.children = items5;
   items4[1] = closure_12(closure_5, obj14);
   obj10.children = items4;
@@ -128,7 +128,7 @@ export default function PasskeyUpsellView() {
   const obj18 = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl5 = tmp(1114).intl;
   obj18.children = intl5.format(navigation(1114).t.OeGXVv, { learnMoreLink: articleURL });
-  const items6 = [closure_11(navigation(4570).Text, obj18), , ];
+  const items6 = [closure_11(navigation(4601).Text, obj18), , ];
   const intl6 = tmp(1114).intl;
   const string3 = intl6.string;
   const t3 = tmp(1114).t;
@@ -137,7 +137,7 @@ export default function PasskeyUpsellView() {
   } else {
     string3Result = string3(t3.NIFmCJ);
   }
-  items6[1] = closure_11(navigation(4989).Button, {
+  items6[1] = closure_11(navigation(5025).Button, {
     text: string3Result,
     onPress() {
       PasskeyUpsellManagerDefault.markDismissed(ContentDismissActionType.TAKE_ACTION);
@@ -156,10 +156,10 @@ export default function PasskeyUpsellView() {
   } else {
     string4Result = string4(t4["7J6/nG"]);
   }
-  items6[2] = closure_11(navigation(4989).Button, { text: string4Result, onPress: onCancel, size: "lg", variant: "secondary", grow: true });
+  items6[2] = closure_11(navigation(5025).Button, { text: string4Result, onPress: onCancel, size: "lg", variant: "secondary", grow: true });
   obj17.children = items6;
   items2[2] = closure_12(closure_5, obj17);
   obj4.children = items2;
   obj3.children = closure_12(tmp12, obj4);
-  return closure_11(navigation(7137).SafeAreaPaddingView, obj3);
+  return closure_11(navigation(7175).SafeAreaPaddingView, obj3);
 };

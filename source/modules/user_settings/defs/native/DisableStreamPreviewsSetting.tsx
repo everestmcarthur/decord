@@ -1,13 +1,13 @@
-// Module ID: 15896
-// Function ID: 15897
+// Module ID: 15945
+// Function ID: 15946
 // Name: DisableStreamPreviewsSetting
-// Dependencies: [7989, 1935, 11500, 1114, 2]
+// Dependencies: [8027, 1935, 11540, 1114, 2]
 
-// Module 15896 (DisableStreamPreviewsSetting)
+// Module 15945 (DisableStreamPreviewsSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SettingsConstants from "SettingsConstants" /* 7989 */;
-import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingsConstants from "SettingsConstants" /* 8027 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

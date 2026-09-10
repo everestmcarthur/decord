@@ -1,16 +1,16 @@
-// Module ID: 14483
-// Function ID: 14484
+// Module ID: 14532
+// Function ID: 14533
 // Name: PreloadedUserSettingsMigrations
-// Dependencies: [1957, 1074, 12444, 1187, 1942, 7227, 510, 1223, 504, 1218, 1943, 7535, 2]
+// Dependencies: [1957, 1074, 12484, 1187, 1942, 7265, 510, 1223, 504, 1218, 1943, 7573, 2]
 
-// Module 14483 (PreloadedUserSettingsMigrations)
+// Module 14532 (PreloadedUserSettingsMigrations)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import wrappers from "wrappers" /* 1218 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1223 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import HotspotStore2 from "HotspotStore" /* 7227 */;
+import HotspotStore2 from "HotspotStore" /* 7265 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
@@ -39,7 +39,7 @@ function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULT
   return hasHiddenHotspotResult;
 }
 const ChannelNoticeTypes = fn(1074).ChannelNoticeTypes;
-let closure_5 = fn(12444).MULTIACCOUNT_TOOLTIP_SEEN_KEY;
+let closure_5 = fn(12484).MULTIACCOUNT_TOOLTIP_SEEN_KEY;
 let items = [
   {
     version: 2,
@@ -159,8 +159,8 @@ let items = [
       const Storage = Storage4.Storage;
       let hasHiddenHotspotResult = true === Storage.get("HAS_SEEN_HUB_UPSELL");
       if (!hasHiddenHotspotResult) {
-        const HotspotStore = tmp(7227).HotspotStore;
-        hasHiddenHotspotResult = HotspotStore.hasHiddenHotspot(tmp(7227).HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL);
+        const HotspotStore = tmp(7265).HotspotStore;
+        hasHiddenHotspotResult = HotspotStore.hasHiddenHotspot(tmp(7265).HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL);
       }
       let flag = false;
       if (hasHiddenHotspotResult) {
@@ -802,7 +802,7 @@ let items = [
           Storage2.remove("lastChangeLogId");
           return false;
         }
-        tmpResult = tmp(7535);
+        tmpResult = tmp(7573);
       }
     },
     cleanup() {

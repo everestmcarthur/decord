@@ -1,13 +1,13 @@
-// Module ID: 15301
-// Function ID: 15302
+// Module ID: 15350
+// Function ID: 15351
 // Name: ThemeMidnightIcon
-// Dependencies: [19, 21, 576, 4274, 15302, 2]
+// Dependencies: [19, 21, 576, 4305, 15351, 2]
 // Exports: ThemeMidnightIcon
 
-// Module 15301 (ThemeMidnightIcon)
+// Module 15350 (ThemeMidnightIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod15302 from "module_15302" /* 15302 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod15351 from "module_15351" /* 15351 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ThemeMidnightIcon = function ThemeMidnightIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15302, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15351, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

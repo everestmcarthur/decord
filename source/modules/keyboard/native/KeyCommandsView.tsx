@@ -1,16 +1,16 @@
-// Module ID: 14603
-// Function ID: 14604
+// Module ID: 14652
+// Function ID: 14653
 // Name: KeyCommandsView
-// Dependencies: [32, 19, 21, 4574, 14604, 2]
+// Dependencies: [32, 19, 21, 4605, 14653, 2]
 // Exports: default, useKeyCommands
 
-// Module 14603 (KeyCommandsView)
-import KeyCommandsNativeComponentDefault from "KeyCommandsNativeComponent" /* 14604 */;
+// Module 14652 (KeyCommandsView)
+import KeyCommandsNativeComponentDefault from "KeyCommandsNativeComponent" /* 14653 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_5 = createStyles.createStyles({ viewDefaults: { flex: 1 } });
 const redux = noop.createContext({
   keyCommands: [],

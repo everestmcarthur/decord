@@ -1,10 +1,10 @@
-// Module ID: 11551
-// Function ID: 11552
+// Module ID: 11591
+// Function ID: 11592
 // Name: AppLauncherPlayUtils
-// Dependencies: [5, 9555, 4587, 9580, 2]
+// Dependencies: [5, 9593, 4618, 9618, 2]
 // Exports: launchActivityInBotDM
 
-// Module 11551 (AppLauncherPlayUtils)
+// Module 11591 (AppLauncherPlayUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

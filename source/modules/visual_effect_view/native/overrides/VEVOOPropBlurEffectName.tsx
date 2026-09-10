@@ -1,20 +1,20 @@
-// Module ID: 15963
-// Function ID: 15964
+// Module ID: 16012
+// Function ID: 16013
 // Name: VEVOOPropBlurEffectName
-// Dependencies: [32, 19, 4980, 21, 4574, 15959, 8626, 7215, 4981, 2]
+// Dependencies: [32, 19, 5016, 21, 4605, 16008, 8663, 7253, 5017, 2]
 
-// Module 15963 (VEVOOPropBlurEffectName)
+// Module 16012 (VEVOOPropBlurEffectName)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const VEVOOStore = fn(4980);
+const VEVOOStore = fn(5016);
 ({ getVisualEffectViewOverrides: closure_4, setVisualEffectViewOverides: hasOwnProperty } = VEVOOStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_9 = createStyles.createStyles({ radio: { fontSize: 14 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurEffectName.tsx");

@@ -1,12 +1,12 @@
-// Module ID: 17875
-// Function ID: 17876
+// Module ID: 17933
+// Function ID: 17934
 // Name: AVErrorStreamSendHighPacketLoss
-// Dependencies: [4596, 4613, 4626, 17873, 9142, 17870, 2]
+// Dependencies: [4627, 4644, 4657, 17931, 9179, 17928, 2]
 
-// Module 17875 (AVErrorStreamSendHighPacketLoss)
-import StreamKeyUtils from "StreamKeyUtils" /* 4626 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4613 */;
+// Module 17933 (AVErrorStreamSendHighPacketLoss)
+import StreamKeyUtils from "StreamKeyUtils" /* 4657 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4627 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4644 */;
 
 require = fn;
 const size = fn(2);
@@ -28,16 +28,16 @@ export const AVErrorStreamSendHighPacketLossDefinition = {
       if (null == mediaEngineConnectionId) {
         return null;
       } else {
-        const accumulatedStatsWithMinDatapoints = tmp8(17873).getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, currentUserActiveStream.ownerId);
+        const accumulatedStatsWithMinDatapoints = tmp8(17931).getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, currentUserActiveStream.ownerId);
         let tmp6 = null;
         if (null != accumulatedStatsWithMinDatapoints) {
           if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
-            const obj2 = { type: tmp8(9142).AVError.STREAM_SEND_HIGH_PACKET_LOSS };
-            const tmp8Result3 = tmp8(17870);
-            const merged = Object.assign(tmp8Result3.getStreamErrorContext(tmp8(4626).encodeStreamKey(currentUserActiveStream)));
+            const obj2 = { type: tmp8(9179).AVError.STREAM_SEND_HIGH_PACKET_LOSS };
+            const tmp8Result3 = tmp8(17928);
+            const merged = Object.assign(tmp8Result3.getStreamErrorContext(tmp8(4657).encodeStreamKey(currentUserActiveStream)));
             const items = [obj2];
             const tmp3 = items;
-            const tmp8Result4 = tmp8(4626);
+            const tmp8Result4 = tmp8(4657);
           }
           tmp6 = tmp3;
         }

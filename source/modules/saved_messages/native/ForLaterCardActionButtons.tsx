@@ -1,19 +1,19 @@
-// Module ID: 13313
-// Function ID: 13314
+// Module ID: 13362
+// Function ID: 13363
 // Name: ForLaterCardActionButtons
-// Dependencies: [19, 17, 21, 4574, 4541, 11741, 1896, 11735, 11740, 1114, 11767, 5694, 13314, 10282, 8699, 8113, 8706, 2]
+// Dependencies: [19, 17, 21, 4605, 4572, 11781, 1896, 11775, 11780, 1114, 11807, 5730, 13363, 10320, 8736, 8150, 8743, 2]
 // Exports: default
 
-// Module 13313 (ForLaterCardActionButtons)
+// Module 13362 (ForLaterCardActionButtons)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import SavedMessageHelpers from "SavedMessageHelpers" /* 11735 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import SavedMessageHelpers from "SavedMessageHelpers" /* 11775 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles({ actionGroup: { flexDirection: "row", gap: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterCardActionButtons.tsx");
@@ -23,23 +23,23 @@ export default function ForLaterCardActionButtons(savedMessage) {
   const jumpToMessage = savedMessage.jumpToMessage;
   const items = [savedMessage];
   let obj = { label: null, IconComponent: null, action: null };
-  const callback = noop.useCallback(() => ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11741, dependencyMap.paths), "MessageReminderDurationActionSheet", {
+  const callback = noop.useCallback(() => ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11781, dependencyMap.paths), "MessageReminderDurationActionSheet", {
     createReminder(dueAt) {
       const obj2 = {};
       const merged = Object.assign(closure_1_0.saveData);
       obj2.dueAt = dueAt;
-      obj2.source = savedMessage(11740).SavedMessageSources.FOR_LATER_LIST;
-      return savedMessage(11735).addOrUpdateSavedMessage(obj2);
+      obj2.source = savedMessage(11780).SavedMessageSources.FOR_LATER_LIST;
+      return savedMessage(11775).addOrUpdateSavedMessage(obj2);
     },
     removeReminder() {
-      return savedMessage(11735).removeSavedMessage({ channelId: closure_1_0.saveData.channelId, messageId: closure_1_0.saveData.messageId, displayToast: true, isReminder: true });
+      return savedMessage(11775).removeSavedMessage({ channelId: closure_1_0.saveData.channelId, messageId: closure_1_0.saveData.messageId, displayToast: true, isReminder: true });
     },
     channelId: savedMessage.saveData.channelId,
     messageId: savedMessage.saveData.messageId
   }), items);
   let intl = savedMessage(1114).intl;
   obj.label = intl.string(savedMessage(1114).t["+TSRGD"]);
-  obj.IconComponent = savedMessage(11767).ChatArrowRightIcon;
+  obj.IconComponent = savedMessage(11807).ChatArrowRightIcon;
   obj.action = function action() {
     return jumpToMessage();
   };
@@ -53,7 +53,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   const tmp = closure_6();
   items1[1] = {
     label: intl2.string(SvXS1Z),
-    IconComponent: savedMessage(5694).XSmallIcon,
+    IconComponent: savedMessage(5730).XSmallIcon,
     action() {
       return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
     },
@@ -73,11 +73,11 @@ export default function ForLaterCardActionButtons(savedMessage) {
           const intl = savedMessage(1114).intl;
           obj.accessibilityLabel = intl.string(savedMessage(1114).t.e1heBD);
           obj.size = "sm";
-          obj.icon = jumpToMessage(8706);
-          return jsx(savedMessage(8113).IconButton, { ref: ref.ref });
+          obj.icon = jumpToMessage(8743);
+          return jsx(savedMessage(8150).IconButton, { ref: ref.ref });
         }
     };
-    obj3.children = jsx(tmp3(8699).ContextMenu, {
+    obj3.children = jsx(tmp3(8736).ContextMenu, {
       items: items1,
       keyboardShouldPersistTaps: "handled",
       triggerOnTap: true,
@@ -89,8 +89,8 @@ export default function ForLaterCardActionButtons(savedMessage) {
           const intl = savedMessage(1114).intl;
           obj.accessibilityLabel = intl.string(savedMessage(1114).t.e1heBD);
           obj.size = "sm";
-          obj.icon = jumpToMessage(8706);
-          return jsx(savedMessage(8113).IconButton, { ref: ref.ref });
+          obj.icon = jumpToMessage(8743);
+          return jsx(savedMessage(8150).IconButton, { ref: ref.ref });
         }
     });
     return <View style={tmp.actionGroup}>{null}</View>;
@@ -99,9 +99,9 @@ export default function ForLaterCardActionButtons(savedMessage) {
     const t = tmp3(1114).t;
     let obj5 = { label: intl3.string(savedMessage.throttledNow > savedMessage.saveData.dueAt ? t.GtBCnz : t.vrbqs1), IconComponent: null, action: null };
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      let PencilIcon = tmp3(13314).BellZIcon;
+      let PencilIcon = tmp3(13363).BellZIcon;
     } else {
-      PencilIcon = tmp3(10282).PencilIcon;
+      PencilIcon = tmp3(10320).PencilIcon;
     }
     obj5.IconComponent = PencilIcon;
     obj5.action = callback;

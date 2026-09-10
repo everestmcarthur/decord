@@ -1,35 +1,35 @@
-// Module ID: 16619
-// Function ID: 16620
+// Module ID: 16674
+// Function ID: 16675
 // Name: VibegrationsStandaloneScreen
-// Dependencies: [5, 32, 19, 17, 2021, 1979, 4212, 16620, 16623, 16621, 1074, 9543, 21, 4574, 576, 1611, 1483, 504, 7258, 16628, 1114, 3560, 4570, 7099, 4989, 5701, 5619, 7655, 6995, 9539, 13281, 4919, 4272, 4541, 16632, 16633, 16636, 9403, 7394, 15028, 10212, 7259, 5638, 7391, 8302, 8699, 8705, 16637, 7260, 7014, 2]
+// Dependencies: [5, 32, 19, 17, 2021, 1979, 4243, 16675, 16678, 16676, 1074, 9581, 21, 4605, 576, 1611, 1483, 504, 7296, 16683, 1114, 3590, 4601, 7137, 5025, 5737, 5655, 7692, 7033, 9577, 13328, 4950, 4303, 4572, 16687, 16688, 16691, 9441, 7432, 15077, 10250, 7297, 5674, 7429, 8339, 8736, 8742, 16692, 7298, 7052, 2]
 // Exports: default
 
-// Module 16619 (VibegrationsStandaloneScreen)
+// Module 16674 (VibegrationsStandaloneScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import _modDef3560 from "module_3560" /* 3560 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
-import NavigatorHeader from "NavigatorHeader" /* 5638 */;
-import SettingsIcon from "SettingsIcon" /* 7394 */;
-import UploadIcon from "UploadIcon" /* 9403 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9539 */;
-import RetryIcon from "RetryIcon" /* 10212 */;
-import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13281 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15028 */;
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16628 */;
-import VibegrationsPublishNotesSheetDefault from "VibegrationsPublishNotesSheet" /* 16632 */;
-import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet" /* 16633 */;
-import VibegrationsProjectSettingsSheet from "VibegrationsProjectSettingsSheet" /* 16636 */;
+import _modDef3590 from "module_3590" /* 3590 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4572 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
+import NavigatorHeader from "NavigatorHeader" /* 5674 */;
+import SettingsIcon from "SettingsIcon" /* 7432 */;
+import UploadIcon from "UploadIcon" /* 9441 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9577 */;
+import RetryIcon from "RetryIcon" /* 10250 */;
+import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13328 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15077 */;
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16683 */;
+import VibegrationsPublishNotesSheetDefault from "VibegrationsPublishNotesSheet" /* 16687 */;
+import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet" /* 16688 */;
+import VibegrationsProjectSettingsSheet from "VibegrationsProjectSettingsSheet" /* 16691 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 16620 */;
-import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 16623 */;
-import VibegrationsProjectStore_mod from "VibegrationsProjectStore" /* 16621 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16675 */;
+import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 16678 */;
+import VibegrationsProjectStore_mod from "VibegrationsProjectStore" /* 16676 */;
 
 const VibegrationsModelSettingsSheetDefault = VibegrationsModelSettingsSheet;
 const VibegrationsProjectSettingsSheetDefault = VibegrationsProjectSettingsSheet;
@@ -464,7 +464,7 @@ function ChatScene(guildId) {
                 obj6.publish = nextPromise;
                 obj6.initialDraft = promise5;
                 obj3.content = tmp16(VibegrationsPublishNotesSheetDefault, obj6);
-                obj3.key = tmp14(16632).VIBEGRATIONS_PUBLISH_NOTES_SHEET_KEY;
+                obj3.key = tmp14(16687).VIBEGRATIONS_PUBLISH_NOTES_SHEET_KEY;
                 obj2.showActionSheet(obj3);
               } else {
                 const nextPromise1 = __initData(tmp).then((ok) => {
@@ -490,38 +490,38 @@ function ChatScene(guildId) {
                 nextPromise1.then(() => {
                   const obj2 = { key: "VIBEGRATIONS_PUBLISH_SUCCESS", content: null };
                   const intl = guildId(1114).intl;
-                  obj2.content = intl.string(projectId(3560).wA0o0L);
-                  projectId(4272).open(obj2);
+                  obj2.content = intl.string(projectId(3590).wA0o0L);
+                  projectId(4303).open(obj2);
                 }).catch((error) => {
                   if (error instanceof Error) {
                     let message = error.message;
                   } else {
                     const intl = guildId(1114).intl;
-                    message = intl.string(projectId(3560).fNP6Cd);
+                    message = intl.string(projectId(3590).fNP6Cd);
                   }
-                  projectId(4272).open({ key: "VIBEGRATIONS_PUBLISH_FAILED", content: message });
+                  projectId(4303).open({ key: "VIBEGRATIONS_PUBLISH_FAILED", content: message });
                 });
                 const nextPromise2 = nextPromise1.then(() => {
                   const obj2 = { key: "VIBEGRATIONS_PUBLISH_SUCCESS", content: null };
                   const intl = guildId(1114).intl;
-                  obj2.content = intl.string(projectId(3560).wA0o0L);
-                  projectId(4272).open(obj2);
+                  obj2.content = intl.string(projectId(3590).wA0o0L);
+                  projectId(4303).open(obj2);
                 });
               }
             }
           }
           const obj8 = { title: null, body: null };
           let intl = util.intl;
-          obj8.title = intl.string(_modDef3560.DYwf2n);
+          obj8.title = intl.string(_modDef3590.DYwf2n);
           const intl2 = util.intl;
-          obj8.body = intl2.string(_modDef3560["nDQB/b"]);
+          obj8.body = intl2.string(_modDef3590["nDQB/b"]);
           actions_AlertActionCreatorsDefault.show(obj8);
         } else {
           const obj12 = { title: null, body: null };
           const intl3 = util.intl;
-          obj12.title = intl3.string(_modDef3560["+UouPe"]);
+          obj12.title = intl3.string(_modDef3590["+UouPe"]);
           const intl4 = util.intl;
-          obj12.body = intl4.string(_modDef3560["E0QD++"]);
+          obj12.body = intl4.string(_modDef3590["E0QD++"]);
           actions_AlertActionCreatorsDefault.show(obj12);
         }
       }
@@ -547,7 +547,7 @@ function ChatScene(guildId) {
     if (canPublish) {
       const obj = { label: null, IconComponent: null, action: null };
       const intl = util.intl;
-      obj.label = intl.string(_modDef3560["5gU57O"]);
+      obj.label = intl.string(_modDef3590["5gU57O"]);
       obj.IconComponent = UploadIcon.UploadIcon;
       obj.action = callback2;
       items.push(obj);
@@ -555,7 +555,7 @@ function ChatScene(guildId) {
     if (isOwner) {
       const obj2 = { label: null, IconComponent: null, action: null };
       const intl2 = util.intl;
-      obj2.label = intl2.string(_modDef3560["xhcY+n"]);
+      obj2.label = intl2.string(_modDef3590["xhcY+n"]);
       obj2.IconComponent = SettingsIcon.SettingsIcon;
       obj2.action = callback4;
       items.push(obj2);
@@ -563,14 +563,14 @@ function ChatScene(guildId) {
     if (stateFromStores2) {
       const obj3 = { label: null, IconComponent: null, action: null };
       const intl3 = util.intl;
-      obj3.label = intl3.string(_modDef3560["2NWMqY"]);
+      obj3.label = intl3.string(_modDef3590["2NWMqY"]);
       obj3.IconComponent = FiltersHorizontalIcon.FiltersHorizontalIcon;
       obj3.action = callback3;
       items.push(obj3);
     }
     const obj4 = { label: null, IconComponent: null, action: null };
     const intl4 = util.intl;
-    obj4.label = intl4.string(_modDef3560.xKexN1);
+    obj4.label = intl4.string(_modDef3590.xKexN1);
     obj4.IconComponent = RetryIcon.RetryIcon;
     obj4.action = callback1;
     items.push(obj4);
@@ -613,12 +613,12 @@ function ChatScene(guildId) {
           align: "below",
           children(arg0) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-            const obj = { ref, IconComponent: closure_1_0(8705).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
+            const obj = { ref, IconComponent: closure_1_0(8742).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
             const intl = closure_1_0(1114).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1114).t["UKOtz+"]);
             obj.accessibilityActions = accessibilityActions;
             obj.onAccessibilityAction = onAccessibilityAction;
-            return closure_1_23(closure_1_0(7391).HeaderActionButton, obj);
+            return closure_1_23(closure_1_0(7429).HeaderActionButton, obj);
           }
         });
         obj.children = items;
@@ -636,17 +636,17 @@ function ChatScene(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-let VibegrationsConnectionStore = fn(16623);
+let VibegrationsConnectionStore = fn(16678);
 ({ draftPatchNotes: map1, ensureConnection: closure_14, publishProject: closure_15, sendUserMessage: closure_16 } = VibegrationsConnectionStore);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
-let VibegrationsProjectStore = fn(16621);
+let VibegrationsProjectStore = fn(16676);
 ({ canPublishProject: closure_18, isProjectOwner: closure_19 } = VibegrationsProjectStore);
 let VibegrationsProjectStore = VibegrationsProjectStore_mod;
 const Permissions = fn(1074).Permissions;
-const MAIN_SURFACE = fn(9543).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9581).MAIN_SURFACE;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_25 = createStyles.createStyles((paddingBottom) => {
   const obj = { content: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom }, centered: null, listContent: null, createSection: null, sharedSection: null, sharedHeading: null, headerActions: null };
   const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom };

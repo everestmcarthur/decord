@@ -1,15 +1,15 @@
-// Module ID: 4726
-// Function ID: 4727
+// Module ID: 4757
+// Function ID: 4758
 // Name: NicknameUtils
-// Dependencies: [1957, 2021, 4222, 1114, 4418, 504, 2]
+// Dependencies: [1957, 2021, 4253, 1114, 4449, 504, 2]
 // Exports: getNickname, useName
 
-// Module 4726 (NicknameUtils)
+// Module 4757 (NicknameUtils)
 import util from "util" /* 1114 */;
-import UserUtilsDefault from "UserUtils" /* 4418 */;
+import UserUtilsDefault from "UserUtils" /* 4449 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 
 require = fn;
 function getNickname(id, arg1, id) {

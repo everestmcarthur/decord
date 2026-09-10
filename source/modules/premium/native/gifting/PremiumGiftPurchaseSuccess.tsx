@@ -1,18 +1,18 @@
-// Module ID: 11105
-// Function ID: 11106
+// Module ID: 11145
+// Function ID: 11146
 // Name: PremiumGiftPurchaseSuccess
-// Dependencies: [19, 17, 5524, 1373, 1074, 21, 4574, 576, 10731, 1483, 10775, 4813, 10694, 8389, 4989, 1114, 4231, 7203, 4271, 10862, 4570, 8934, 4522, 2]
+// Dependencies: [19, 17, 5560, 1373, 1074, 21, 4605, 576, 10769, 1483, 10813, 4844, 10732, 8426, 5025, 1114, 4262, 7241, 4302, 10900, 4601, 8971, 4553, 2]
 // Exports: PremiumGiftSuccessActions, default
 
-// Module 11105 (PremiumGiftPurchaseSuccess)
+// Module 11145 (PremiumGiftPurchaseSuccess)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4271 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 4813 */;
-import ClipboardUtils from "ClipboardUtils" /* 7203 */;
-import showShareActionSheet from "showShareActionSheet" /* 8389 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10694 */;
+import ToastUtils from "ToastUtils" /* 4302 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4844 */;
+import ClipboardUtils from "ClipboardUtils" /* 7241 */;
+import showShareActionSheet from "showShareActionSheet" /* 8426 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10732 */;
 import noop from "module_19" /* 19 */;
-import SKUStore from "SKUStore" /* 5524 */;
+import SKUStore from "SKUStore" /* 5560 */;
 
 require = fn;
 const View = fn(17).View;
@@ -20,7 +20,7 @@ const SubscriptionIntervalTypes = fn(1373).SubscriptionIntervalTypes;
 const AnalyticsSections = fn(1074).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { disclaimer: { marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 }, title: null, description: null, input: null, inputLabel: null };
 let obj3 = { marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 };
 obj2.title = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
@@ -37,23 +37,23 @@ let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumG
 export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   let tmp = closure_11();
-  const nativeGiftContext = giftCodeRecord(10731).useNativeGiftContext();
+  const nativeGiftContext = giftCodeRecord(10769).useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj = giftCodeRecord(10731);
-  const giftCodeURL = giftCodeRecord(4813).getGiftCodeURL(giftCodeRecord.code);
+  let obj = giftCodeRecord(10769);
+  const giftCodeURL = giftCodeRecord(4844).getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
   }
   if (null != giftCodeRecord.subscriptionPlanId) {
     let subscriptionPlanId = giftCodeRecord.subscriptionPlanId;
   } else {
-    subscriptionPlanId = tmp2(4231).getPlanIdForPremiumType(premiumType, planInterval);
-    const tmp2Result = tmp2(4231);
+    subscriptionPlanId = tmp2(4262).getPlanIdForPremiumType(premiumType, planInterval);
+    const tmp2Result = tmp2(4262);
   }
-  let obj2 = giftCodeRecord(4813);
+  let obj2 = giftCodeRecord(4844);
   const tmp6 = giftCodeURL;
-  const tierDisplayNameByPlanId = giftCodeURL(4231).getTierDisplayNameByPlanId(subscriptionPlanId);
-  const obj4 = giftCodeURL(4231);
+  const tierDisplayNameByPlanId = giftCodeURL(4262).getTierDisplayNameByPlanId(subscriptionPlanId);
+  const obj4 = giftCodeURL(4262);
   const items = [giftCodeRecord, giftCodeURL];
   const obj3 = { children: null };
   const callback = noop.useCallback(() => {
@@ -65,12 +65,12 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     tmp = giftCodeRecord;
     const result = ToastUtils.presentCopiedToClipboard();
   }, items);
-  obj3.children = closure_8(giftCodeURL(10862), { giftStyle });
+  obj3.children = closure_8(giftCodeURL(10900), { giftStyle });
   const items1 = [closure_8(View, obj3), , , , ];
   const obj6 = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = tmp2(1114).intl;
   obj6.children = intl.string(giftCodeRecord(1114).t["/s1xR7"]);
-  items1[1] = closure_8(giftCodeRecord(4570).Text, obj6);
+  items1[1] = closure_8(giftCodeRecord(4601).Text, obj6);
   const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };
   const intl2 = tmp2(1114).intl;
   if (obj5.getInterval(subscriptionPlanId).intervalType === SubscriptionIntervalTypes.YEAR) {
@@ -80,22 +80,22 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   }
   const obj8 = { children: null };
   obj7.children = intl2.format(bUdTqI, { intervalCount: 1, name: tierDisplayNameByPlanId });
-  items1[2] = closure_8(giftCodeRecord(4570).Text, obj7);
+  items1[2] = closure_8(giftCodeRecord(4601).Text, obj7);
   const obj9 = { style: tmp.input, children: null };
   const obj10 = { style: tmp.inputLabel, variant: "heading-md/bold", children: null };
   const intl3 = tmp2(1114).intl;
   obj10.children = intl3.string(giftCodeRecord(1114).t["qS+yMo"]);
-  const items2 = [closure_8(giftCodeRecord(4570).Text, obj10), ];
-  obj5 = giftCodeURL(4231);
+  const items2 = [closure_8(giftCodeRecord(4601).Text, obj10), ];
+  obj5 = giftCodeURL(4262);
   const tmp10 = closure_9;
   const tmp12 = View;
-  items2[1] = closure_8(giftCodeRecord(8934).InputButton, { text: giftCodeURL, icon: tmp6(4522), iconPosition: "end", onPress: callback });
+  items2[1] = closure_8(giftCodeRecord(8971).InputButton, { text: giftCodeURL, icon: tmp6(4553), iconPosition: "end", onPress: callback });
   obj9.children = items2;
   items1[3] = closure_10(tmp12, obj9);
   const obj12 = { style: tmp.disclaimer, variant: "text-xs/normal", children: null };
   const intl4 = tmp2(1114).intl;
   obj12.children = intl4.string(giftCodeRecord(1114).t.As9eLl);
-  items1[4] = closure_8(giftCodeRecord(4570).Text, obj12);
+  items1[4] = closure_8(giftCodeRecord(4601).Text, obj12);
   obj8.children = items1;
   return closure_10(tmp10, obj8);
 };

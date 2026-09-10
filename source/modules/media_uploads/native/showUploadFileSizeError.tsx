@@ -1,26 +1,26 @@
-// Module ID: 9342
-// Function ID: 9343
+// Module ID: 9380
+// Function ID: 9381
 // Name: showUploadFileSizeError
-// Dependencies: [1185, 1371, 1074, 4567, 1373, 1885, 7857, 5193, 4754, 9343, 9344, 5144, 5152, 9345, 1093, 7196, 1114, 4471, 5143, 4918, 2]
+// Dependencies: [1185, 1371, 1074, 4598, 1373, 1885, 7894, 5229, 4785, 9381, 9382, 5180, 5188, 9383, 1093, 7234, 1114, 4502, 5179, 4949, 2]
 // Exports: default
 
-// Module 9342 (showUploadFileSizeError)
+// Module 9380 (showUploadFileSizeError)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5152 */;
-import KestrelExperiment from "KestrelExperiment" /* 5193 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
-import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 9343 */;
-import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 9344 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9345 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4785 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5188 */;
+import KestrelExperiment from "KestrelExperiment" /* 5229 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
+import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 9381 */;
+import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 9382 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9383 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const FileUploadErrorTypes = fn(4567).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4598).FileUploadErrorTypes;
 const PremiumConstants = fn(1373);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };
@@ -35,8 +35,8 @@ export default function showUploadFileSizeError(arg0) {
   const currentUser = UserStore.getCurrentUser();
   const isPremiumExactlyResult = PremiumTypeUtils.isPremiumExactly(currentUser, TIER_2.TIER_2);
   if (null != file.items) {
-    let attachmentMimeTypes = tmp2(7857).getAttachmentMimeTypes(file.items);
-    const tmp2Result = tmp2(7857);
+    let attachmentMimeTypes = tmp2(7894).getAttachmentMimeTypes(file.items);
+    const tmp2Result = tmp2(7894);
   } else {
     attachmentMimeTypes = [];
   }
@@ -94,8 +94,8 @@ export default function showUploadFileSizeError(arg0) {
   }
   let tmp21 = isPremiumExactlyResult;
   if (!isPremiumExactlyResult) {
-    tmp21 = num > tmp2(5144).getNitroFileUploadLimitBytes({ location: "native.showUploadFileSizeError" });
-    const tmp2Result16 = tmp2(5144);
+    tmp21 = num > tmp2(5180).getNitroFileUploadLimitBytes({ location: "native.showUploadFileSizeError" });
+    const tmp2Result16 = tmp2(5180);
   }
   if (!tmp21) {
     tmp21 = tmp20;
@@ -125,13 +125,13 @@ export default function showUploadFileSizeError(arg0) {
         const formatToPlainString = intl3.formatToPlainString;
         const t = tmp2(1114).t;
         if (tmp20) {
-          const obj4 = { maxSize: tmp2(4471).formatSize(tmp2(5143).MAX_TOTAL_ATTACHMENT_SIZE / tmp2(4471).BYTE_IN_KB, { useKibibytes: true }) };
+          const obj4 = { maxSize: tmp2(4502).formatSize(tmp2(5179).MAX_TOTAL_ATTACHMENT_SIZE / tmp2(4502).BYTE_IN_KB, { useKibibytes: true }) };
           stringResult1 = formatToPlainString(t.tUOJdH, obj4);
-          const tmp2Result19 = tmp2(4471);
+          const tmp2Result19 = tmp2(4502);
         } else {
-          const obj5 = { maxSize: tmp2(4471).formatSize(maxSize / tmp2(4471).BYTE_IN_KB, { useKibibytes: true }) };
+          const obj5 = { maxSize: tmp2(4502).formatSize(maxSize / tmp2(4502).BYTE_IN_KB, { useKibibytes: true }) };
           stringResult1 = formatToPlainString(t.fxEKdS, obj5);
-          const tmp2Result20 = tmp2(4471);
+          const tmp2Result20 = tmp2(4502);
         }
       }
       const intl2 = tmp2(1114).intl;

@@ -1,12 +1,12 @@
-// Module ID: 9200
-// Function ID: 9201
+// Module ID: 9237
+// Function ID: 9238
 // Name: SecureFramesCopyIcon
-// Dependencies: [19, 21, 4271, 7203, 8113, 4521, 1114, 2]
+// Dependencies: [19, 21, 4302, 7241, 8150, 4552, 1114, 2]
 // Exports: default
 
-// Module 9200 (SecureFramesCopyIcon)
-import ToastUtils from "ToastUtils" /* 4271 */;
-import ClipboardUtils from "ClipboardUtils" /* 7203 */;
+// Module 9237 (SecureFramesCopyIcon)
+import ToastUtils from "ToastUtils" /* 4302 */;
+import ClipboardUtils from "ClipboardUtils" /* 7241 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

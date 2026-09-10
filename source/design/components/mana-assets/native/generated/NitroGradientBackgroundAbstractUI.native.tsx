@@ -1,13 +1,13 @@
-// Module ID: 6287
-// Function ID: 6288
+// Module ID: 6323
+// Function ID: 6324
 // Name: NitroGradientBackgroundAbstractUI
-// Dependencies: [21, 5601, 6288, 2]
+// Dependencies: [21, 5637, 6324, 2]
 // Exports: NitroGradientBackgroundAbstractUI
 
-// Module 6287 (NitroGradientBackgroundAbstractUI)
+// Module 6323 (NitroGradientBackgroundAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6288 from "module_6288" /* 6288 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6324 from "module_6324" /* 6324 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const NitroGradientBackgroundAbstractUI = function NitroGradientBackgroun
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6288 };
+  const obj2 = { uri: _modDef6324 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

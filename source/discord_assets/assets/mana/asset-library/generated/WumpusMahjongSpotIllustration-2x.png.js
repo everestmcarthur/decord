@@ -1,8 +1,8 @@
-// Module ID: 6602
-// Function ID: 6603
+// Module ID: 6638
+// Function ID: 6639
 // Dependencies: [2]
 
-// Module 6602
+// Module 6638
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WumpusMahjongSpotIllustration-2x.png.js");

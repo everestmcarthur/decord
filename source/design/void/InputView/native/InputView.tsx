@@ -1,17 +1,17 @@
-// Module ID: 14209
-// Function ID: 14210
+// Module ID: 14258
+// Function ID: 14259
 // Name: InputView
-// Dependencies: [109, 19, 17, 1074, 21, 4574, 576, 5455, 4284, 1178, 4570, 1114, 6630, 4425, 12203, 1115, 2]
+// Dependencies: [109, 19, 17, 1074, 21, 4605, 576, 5491, 4315, 1178, 4601, 1114, 6666, 4456, 12243, 1115, 2]
 
-// Module 14209 (InputView)
+// Module 14258 (InputView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import native from "native" /* 1178 */;
-import shared from "shared" /* 4425 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import CircleXIcon from "CircleXIcon" /* 6630 */;
-import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 12203 */;
+import shared from "shared" /* 4456 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import CircleXIcon from "CircleXIcon" /* 6666 */;
+import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 12243 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,20 +22,20 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { disabled: { opacity: 0.5 }, topContainer: { minHeight: 16, alignItems: "center", flexDirection: "row", marginBottom: 5, flexWrap: "wrap" }, inputViewTitle: { marginRight: 5 }, inputViewError: { fontSize: 10, color: nativeDefault.unsafe_rawColors.RED_400 }, inputBorder: null, inputView: null, inputViewBorder: null, inputViewBorderActive: null, inputContainer: null, bottomContainer: null, charactersLength: null, closeIcon: null, clearButton: null, required: null };
 let obj3 = { fontSize: 10, color: nativeDefault.unsafe_rawColors.RED_400 };
 obj2.inputBorder = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
 let obj4 = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
-obj2.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5455).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5491).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.inputViewBorder = { marginTop: 8, height: 2 };
-let obj5 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5455).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+let obj5 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5491).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.inputViewBorderActive = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.inputContainer = { flexDirection: "row", alignItems: "center", position: "relative" };
 obj2.bottomContainer = { marginTop: 5 };
 let obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
-obj2.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5455).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
-let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5455).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+obj2.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5491).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5491).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 obj2.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.clearButton = { position: "absolute", right: 6 };
 let obj8 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -389,7 +389,7 @@ prototype["render"] = function render() {
   obj.children = closure_1_10(hasOwnProperty, obj2);
   return tmp2(tmp3, obj);
 };
-InputView.contextType = fn(4284).ThemeContext;
+InputView.contextType = fn(4315).ThemeContext;
 InputView.defaultProps = { showBorder: true, value: "", returnKeyType: "next", disabled: false, autoFocus: false, multiline: false, numberOfLines: 1, showTopContainer: true, showCharactersRemaining: false, clearButtonVisibility: "never", inActionSheet: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/InputView/native/InputView.tsx");

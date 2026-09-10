@@ -1,13 +1,13 @@
-// Module ID: 5843
-// Function ID: 5844
+// Module ID: 5879
+// Function ID: 5880
 // Name: CatIllocon
-// Dependencies: [21, 5601, 5844, 2]
+// Dependencies: [21, 5637, 5880, 2]
 // Exports: CatIllocon
 
-// Module 5843 (CatIllocon)
+// Module 5879 (CatIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5844 from "module_5844" /* 5844 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5880 from "module_5880" /* 5880 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const CatIllocon = function CatIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5844 };
+  const obj2 = { uri: _modDef5880 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

@@ -1,15 +1,15 @@
-// Module ID: 5925
-// Function ID: 5926
+// Module ID: 5961
+// Function ID: 5962
 // Name: DiscordShopLockupLogo
-// Dependencies: [17, 21, 576, 4275, 5926, 2]
+// Dependencies: [17, 21, 576, 4306, 5962, 2]
 // Exports: DiscordShopLockupLogo
 
-// Module 5925 (DiscordShopLockupLogo)
+// Module 5961 (DiscordShopLockupLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4275 */;
-import _modDef5926 from "module_5926" /* 5926 */;
+import useToken from "useToken" /* 4306 */;
+import _modDef5962 from "module_5962" /* 5962 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -46,7 +46,7 @@ export const DiscordShopLockupLogo = function DiscordShopLockupLogo(color) {
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj4 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj4.source = { uri: _modDef5926 };
+  obj4.source = { uri: _modDef5962 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj4.style = items;

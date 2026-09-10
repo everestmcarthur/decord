@@ -1,19 +1,19 @@
-// Module ID: 9562
-// Function ID: 9563
+// Module ID: 9600
+// Function ID: 9601
 // Name: handlePressJoinActivity
-// Dependencies: [5, 1918, 1957, 1979, 4212, 1371, 4593, 1956, 9563, 9564, 4918, 1114, 7177, 9534, 9565, 2]
+// Dependencies: [5, 1918, 1957, 1979, 4243, 1371, 4624, 1956, 9601, 9602, 4949, 1114, 7215, 9572, 9603, 2]
 // Exports: maybeJoinEmbeddedActivity
 
-// Module 9562 (handlePressJoinActivity)
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9563 */;
+// Module 9600 (handlePressJoinActivity)
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9601 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import UserStore from "UserStore" /* 1371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import VoiceStateStore from "VoiceStateStore" /* 4624 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
 require = fn;
@@ -23,24 +23,24 @@ function handlePressJoinActivity(arg0) {
     if (handleCanJoin != null) {
       handleCanJoin();
     }
-  } else if (tmp(9563).EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === embeddedActivityJoinability) {
-    const result = tmp(9564).showActivitiesInvalidPermissionsAlert();
-    const tmpResult = tmp(9564);
-  } else if (tmp(9563).EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS === embeddedActivityJoinability) {
+  } else if (tmp(9601).EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === embeddedActivityJoinability) {
+    const result = tmp(9602).showActivitiesInvalidPermissionsAlert();
+    const tmpResult = tmp(9602);
+  } else if (tmp(9601).EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS === embeddedActivityJoinability) {
     const obj2 = { title: null, body: null, hideActionSheet: false };
     const intl7 = tmp(1114).intl;
     obj2.title = intl7.string(tmp(1114).t.PtobXW);
     const intl8 = tmp(1114).intl;
     obj2.body = intl8.string(tmp(1114).t.UXoQTp);
     AlertActionCreatorsDefault.show(obj2);
-  } else if (tmp(9563).EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS === embeddedActivityJoinability) {
+  } else if (tmp(9601).EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS === embeddedActivityJoinability) {
     const obj4 = { title: null, body: null, hideActionSheet: false };
     const intl5 = tmp(1114).intl;
     obj4.title = intl5.string(tmp(1114).t.PtobXW);
     const intl6 = tmp(1114).intl;
     obj4.body = intl6.string(tmp(1114).t.uGDCcw);
     AlertActionCreatorsDefault.show(obj4);
-  } else if (tmp(9563).EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability) {
+  } else if (tmp(9601).EmbeddedActivityJoinability.ACTIVITY_AGE_GATED === embeddedActivityJoinability) {
     const obj6 = { title: null, body: null, hideActionSheet: false };
     const intl3 = tmp(1114).intl;
     obj6.title = intl3.string(tmp(1114).t.PtobXW);

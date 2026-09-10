@@ -1,10 +1,10 @@
-// Module ID: 7308
-// Function ID: 7309
+// Module ID: 7346
+// Function ID: 7347
 // Name: SensitiveContentSelfHarmExperiment
 // Dependencies: [1433, 2]
 // Exports: isSensitiveContentSelfHarmEnabled, useIsSensitiveContentSelfHarmEnabled
 
-// Module 7308 (SensitiveContentSelfHarmExperiment)
+// Module 7346 (SensitiveContentSelfHarmExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

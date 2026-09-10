@@ -1,12 +1,12 @@
-// Module ID: 8653
-// Function ID: 8654
+// Module ID: 8690
+// Function ID: 8691
 // Name: useStageBlockedUsersCount
-// Dependencies: [5432, 504, 5439, 2]
+// Dependencies: [5468, 504, 5475, 2]
 // Exports: getStageBlockedUsersCount, getStageIgnoredUsersCount, useStageBlockedUsers, useStageBlockedUsersCount, useStageIgnoredUsers, useStageIgnoredUsersCount
 
-// Module 8653 (useStageBlockedUsersCount)
-import StageChannelParticipants from "StageChannelParticipants" /* 5439 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5432 */;
+// Module 8690 (useStageBlockedUsersCount)
+import StageChannelParticipants from "StageChannelParticipants" /* 5475 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5468 */;
 
 const require = globalThis.__r;
 

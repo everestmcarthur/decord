@@ -1,13 +1,13 @@
-// Module ID: 14849
-// Function ID: 14850
+// Module ID: 14898
+// Function ID: 14899
 // Name: useExplicitContentSettingsOrDefault
-// Dependencies: [1221, 563, 7312, 7315, 2]
+// Dependencies: [1221, 563, 7350, 7353, 2]
 // Exports: useExplicitContentSettingOrDefault, useGoreContentSettingOrDefault
 
-// Module 14849 (useExplicitContentSettingsOrDefault)
+// Module 14898 (useExplicitContentSettingsOrDefault)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7312 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7315 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7350 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7353 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
 require = fn;

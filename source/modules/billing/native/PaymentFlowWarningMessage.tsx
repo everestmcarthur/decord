@@ -1,21 +1,21 @@
-// Module ID: 13327
-// Function ID: 13328
+// Module ID: 13376
+// Function ID: 13377
 // Name: PaymentFlowWarningMessage
-// Dependencies: [19, 17, 21, 4574, 576, 5455, 1178, 4570, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 5491, 1178, 4601, 2]
 // Exports: default
 
-// Module 13327 (PaymentFlowWarningMessage)
+// Module 13376 (PaymentFlowWarningMessage)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
-const obj2 = { container: { padding: 10, marginVertical: 5, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: fn(5455).DARK_PRIMARY_630_LIGHT_PRIMARY_230 }, icon: { marginRight: 10 }, text: { flexShrink: 1 } };
+const createStyles = fn(4605);
+const obj2 = { container: { padding: 10, marginVertical: 5, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: fn(5491).DARK_PRIMARY_630_LIGHT_PRIMARY_230 }, icon: { marginRight: 10 }, text: { flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/PaymentFlowWarningMessage.tsx");

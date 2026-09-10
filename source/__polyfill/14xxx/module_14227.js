@@ -1,25 +1,9 @@
 // Module ID: 14227
 // Function ID: 14228
-// Dependencies: []
-// Exports: default
+// Dependencies: [1122]
 
 // Module 14227
-const weakMap = new WeakMap();
+import registerAsset from "module_1122" /* 1122 */;
 
-export default function getInternalSlots(arg0, arg1) {
-  let items = arg1;
-  if (undefined === arg1) {
-    items = [];
-  }
-  value = weakMap.get(arg0);
-  if (!value) {
-    const _Object = Object;
-    const obj2 = Object.create(null, items.reduce((acc, item) => {
-      acc[item] = { enumerable: false, writable: true, configurable: true };
-      return acc;
-    }, {}));
-    const result = weakMap.set(arg0, obj2);
-    value = obj2;
-  }
-  return value;
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "42a20b8c34f5da51714fe4afb6b4ab7f", name: "NitroGem6", type: "lottie" });

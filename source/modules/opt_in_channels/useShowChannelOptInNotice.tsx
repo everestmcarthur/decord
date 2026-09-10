@@ -1,11 +1,11 @@
-// Module ID: 11454
-// Function ID: 11455
+// Module ID: 11494
+// Function ID: 11495
 // Name: useShowChannelOptInNotice
-// Dependencies: [4755, 1074, 1964, 7549, 504, 7236, 2]
+// Dependencies: [4786, 1074, 1964, 7587, 504, 7274, 2]
 // Exports: default
 
-// Module 11454 (useShowChannelOptInNotice)
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
+// Module 11494 (useShowChannelOptInNotice)
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
 
 const require = globalThis.__r;
 

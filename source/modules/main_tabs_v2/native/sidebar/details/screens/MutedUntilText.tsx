@@ -1,18 +1,18 @@
-// Module ID: 10178
-// Function ID: 10179
+// Module ID: 10216
+// Function ID: 10217
 // Name: MutedUntilText
-// Dependencies: [19, 21, 4574, 1114, 4570, 2]
+// Dependencies: [19, 21, 4605, 1114, 4601, 2]
 // Exports: default
 
-// Module 10178 (MutedUntilText)
+// Module 10216 (MutedUntilText)
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const MuteSettingType = { SERVER: 0, [0]: "SERVER", CHANNEL: 1, [1]: "CHANNEL", DM: 2, [2]: "DM", CATEGORY: 3, [3]: "CATEGORY" };
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_4 = createStyles.createStyles({ formHintText: { lineHeight: 18, marginBottom: 8, marginTop: 8, paddingHorizontal: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx");
@@ -47,7 +47,7 @@ export default function MutedUntilText(arg0) {
         return jsx(Text_Text.Text, { variant: "text-sm/medium", color: "control-brand-foreground", children }, "muted");
       };
       obj2.children = intl5.format(N2NXMd, obj3);
-      return jsx(tmp15(4570).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: null });
+      return jsx(tmp15(4601).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: null });
     }
   }
   if (obj.SERVER === type) {
@@ -70,6 +70,6 @@ export default function MutedUntilText(arg0) {
     return null;
   }
   obj = { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult };
-  return jsx(tmp3(4570).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult });
+  return jsx(tmp3(4601).Text, { style: tmp.formHintText, variant: "text-sm/medium", color: "text-muted", children: stringResult });
 };
 export { MuteSettingType };

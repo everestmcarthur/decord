@@ -1,10 +1,10 @@
-// Module ID: 4996
-// Function ID: 4997
+// Module ID: 5032
+// Function ID: 5033
 // Name: useFontScale
 // Dependencies: [19, 1478, 1480, 2]
 // Exports: getFontScale, useFontScale
 
-// Module 4996 (useFontScale)
+// Module 5032 (useFontScale)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
 import noop from "module_19" /* 19 */;
 import DimensionsStore from "DimensionsStore" /* 1478 */;

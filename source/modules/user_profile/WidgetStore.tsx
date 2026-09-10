@@ -1,16 +1,16 @@
-// Module ID: 7639
-// Function ID: 7640
+// Module ID: 7676
+// Function ID: 7677
 // Name: WidgetStore
-// Dependencies: [32, 1371, 7635, 504, 1369, 12, 573, 2]
+// Dependencies: [32, 1371, 7672, 504, 1369, 12, 573, 2]
 
-// Module 7639 (WidgetStore)
+// Module 7676 (WidgetStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1371 */;
-import UserProfileStore from "UserProfileStore" /* 7635 */;
+import UserProfileStore from "UserProfileStore" /* 7672 */;
 
 require = fn;
 let c6 = null;

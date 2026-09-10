@@ -1,10 +1,10 @@
-// Module ID: 13386
-// Function ID: 13387
+// Module ID: 13435
+// Function ID: 13436
 // Name: useBuyNitroListData
-// Dependencies: [19, 1074, 7176, 1242, 13387, 2]
+// Dependencies: [19, 1074, 7214, 1242, 13436, 2]
 // Exports: default
 
-// Module 13386 (useBuyNitroListData)
+// Module 13435 (useBuyNitroListData)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import noop from "module_19" /* 19 */;
 

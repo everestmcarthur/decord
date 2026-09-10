@@ -1,23 +1,23 @@
-// Module ID: 13302
-// Function ID: 13303
+// Module ID: 13351
+// Function ID: 13352
 // Name: GuildChannelHeader
-// Dependencies: [32, 19, 17, 13303, 5291, 1961, 7293, 1957, 4494, 1979, 4222, 1371, 1074, 1954, 21, 4275, 576, 504, 13296, 6634, 10326, 1114, 4727, 13294, 7402, 1943, 2024, 5042, 11159, 10285, 13290, 2]
+// Dependencies: [32, 19, 17, 13352, 5327, 1961, 7331, 1957, 4525, 1979, 4253, 1371, 1074, 1954, 21, 4306, 576, 504, 13345, 6670, 10364, 1114, 4758, 13343, 7440, 1943, 2024, 5078, 11199, 10323, 13338, 2]
 
-// Module 13302 (GuildChannelHeader)
+// Module 13351 (GuildChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5042 */;
-import ChannelHeader from "ChannelHeader" /* 13290 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5078 */;
+import ChannelHeader from "ChannelHeader" /* 13338 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 13303 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5291 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7293 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 13352 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7331 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4494 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4525 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -27,8 +27,8 @@ function GuildChannelMemberCount(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  const token = channel(4275).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
-  let obj = channel(4275);
+  const token = channel(4306).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  let obj = channel(4306);
   const items = [ChannelMemberStore, ChannelMemberCountStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     let flag = false;
@@ -71,8 +71,8 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(13296);
-    return tmpResult.renderMemberCountText(online, total, flag, tmp(6634).ICON_SIZE[token]);
+    const tmpResult = tmp(13345);
+    return tmpResult.renderMemberCountText(online, total, flag, tmp(6670).ICON_SIZE[token]);
   }
 }
 function computeVisibleChannelName(channel) {
@@ -95,8 +95,8 @@ function computeVisibleChannelName(channel) {
       stringResult1 = string(ai6Lbr.ZTNur7);
     }
   } else {
-    stringResult = tmp(4727).computeChannelName(channel, UserStore, RelationshipStore);
-    const tmpResult = tmp(4727);
+    stringResult = tmp(4758).computeChannelName(channel, UserStore, RelationshipStore);
+    const tmpResult = tmp(4758);
   }
   return stringResult;
 }
@@ -105,7 +105,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
   const channel = guild.channel;
   _slicedToArray = undefined;
   const items = [guild(1943).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = _slicedToArray(guild(7402).useSelectedDismissibleContent(items, undefined, true), 2);
+  const tmp = _slicedToArray(guild(7440).useSelectedDismissibleContent(items, undefined, true), 2);
   dependencyMap = tmp2;
   const tmp3 = tmp[0] === guild(1943).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   _slicedToArray = tmp3;
@@ -133,8 +133,8 @@ function ChannelLinkedLobbyCoachmark(guild) {
     obj.imgSource = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(7402);
-  const coachmark = guild(11159).useCoachmark(guild.iconRef, memo);
+  let obj = guild(7440);
+  const coachmark = guild(11199).useCoachmark(guild.iconRef, memo);
   return null;
 }
 const View = fn(17).View;

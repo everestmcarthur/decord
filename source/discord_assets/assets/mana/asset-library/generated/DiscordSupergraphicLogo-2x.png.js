@@ -1,8 +1,8 @@
-// Module ID: 5928
-// Function ID: 5929
+// Module ID: 5964
+// Function ID: 5965
 // Dependencies: [2]
 
-// Module 5928
+// Module 5964
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordSupergraphicLogo-2x.png.js");

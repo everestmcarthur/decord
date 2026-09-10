@@ -1,25 +1,25 @@
-// Module ID: 7848
-// Function ID: 7849
+// Module ID: 7885
+// Function ID: 7886
 // Name: MessageQueue
-// Dependencies: [109, 4573, 502, 4623, 1074, 4567, 1090, 7849, 3, 4754, 7850, 7473, 1272, 1894, 38, 5141, 5143, 5148, 2]
+// Dependencies: [109, 4604, 502, 4654, 1074, 4598, 1090, 7886, 3, 4785, 7887, 7511, 1272, 1894, 38, 5177, 5179, 5184, 2]
 // Exports: getFailedMessageId, isMessageDataCommand, isMessageDataEdit, isMessageDataSend
 
-// Module 7848 (MessageQueue)
+// Module 7885 (MessageQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import getOverlayMessageAnaylticsLocationDefault from "getOverlayMessageAnaylticsLocation" /* 7850 */;
+import getOverlayMessageAnaylticsLocationDefault from "getOverlayMessageAnaylticsLocation" /* 7887 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import DevSettingsStore from "DevSettingsStore" /* 4573 */;
+import DevSettingsStore from "DevSettingsStore" /* 4604 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NetworkStore from "NetworkStore" /* 4623 */;
-import Queue from "Queue" /* 7849 */;
+import NetworkStore from "NetworkStore" /* 4654 */;
+import Queue from "Queue" /* 7886 */;
 
 let handleCommand1 = fn;
 let closure_3 = ["channelId", "analyticsLocation"];
 let closure_4 = ["channelId", "analyticsLocation"];
 const Constants = fn(1074);
 ({ AbortCodes: closure_9, Endpoints: c10, AnalyticEvents: closure_11 } = Constants);
-let closure_12 = fn(4567).MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS;
+let closure_12 = fn(4598).MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS;
 const MessageDataType = { SEND: 0, [0]: "SEND", EDIT: 1, [1]: "EDIT", COMMAND: 2, [2]: "COMMAND", SEND_ANNOUNCEMENT: 3, [3]: "SEND_ANNOUNCEMENT" };
 let items = [DurationsDefault.Millis.MINUTE, 5 * DurationsDefault.Millis.MINUTE];
 class MessageQueue extends tmp5 {
@@ -202,8 +202,8 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
   }
   const tmp = _objectWithoutProperties(nonce, closure_3);
   const tmp5 = handleCommand1;
-  const signalStrength = handleCommand1(7473).getSignalStrength();
-  const obj2 = handleCommand1(7473);
+  const signalStrength = handleCommand1(7511).getSignalStrength();
+  const obj2 = handleCommand1(7511);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {
@@ -246,8 +246,8 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
   }
   const tmp = _objectWithoutProperties(message, closure_4);
   const tmp5 = handleCommand1;
-  const signalStrength = handleCommand1(7473).getSignalStrength();
-  const obj2 = handleCommand1(7473);
+  const signalStrength = handleCommand1(7511).getSignalStrength();
+  const obj2 = handleCommand1(7511);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {

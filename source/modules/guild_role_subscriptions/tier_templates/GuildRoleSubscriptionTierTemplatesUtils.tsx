@@ -1,19 +1,19 @@
-// Module ID: 15265
-// Function ID: 15266
+// Module ID: 15314
+// Function ID: 15315
 // Name: GuildRoleSubscriptionTierTemplatesUtils
-// Dependencies: [5, 19, 1957, 4206, 15260, 15266, 1074, 1964, 4817, 563, 1384, 573, 9768, 7274, 13919, 2]
+// Dependencies: [5, 19, 1957, 4237, 15309, 15315, 1074, 1964, 4848, 563, 1384, 573, 9806, 7312, 13968, 2]
 // Exports: announceCreateTemplateChannels, announceDeleteTemplateChannels, createChannelsFromTemplateTierBenefits, getTemplateTierCreationAnalyticsContext, isEligibleForNewBadge, useChannelWithTemplateFallback, useSuggestedUnusedPrices
 
-// Module 15265 (GuildRoleSubscriptionTierTemplatesUtils)
+// Module 15314 (GuildRoleSubscriptionTierTemplatesUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
-import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7274 */;
-import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 13919 */;
+import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7312 */;
+import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 13968 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4206 */;
-import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 15266 */;
-import allSettled_mod from "allSettled" /* 4817 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4237 */;
+import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 15315 */;
+import allSettled_mod from "allSettled" /* 4848 */;
 
 const require = globalThis.__r;
 
@@ -141,7 +141,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0, va
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(15260).useEditStateStore;
+const useEditStateStore = fn(15309).useEditStateStore;
 const GuildFeatures = fn(1074).GuildFeatures;
 const ChannelFlags = fn(1964).ChannelFlags;
 let allSettled = allSettled_mod;

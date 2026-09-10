@@ -1,15 +1,15 @@
-// Module ID: 10415
-// Function ID: 10416
+// Module ID: 10453
+// Function ID: 10454
 // Name: GIFPickerCategoryView
-// Dependencies: [19, 17, 1074, 21, 4574, 576, 1114, 9791, 5601, 10416, 10267, 4570, 2]
+// Dependencies: [19, 17, 1074, 21, 4605, 576, 1114, 9829, 5637, 10454, 10305, 4601, 2]
 // Exports: default
 
-// Module 10415 (GIFPickerCategoryView)
+// Module 10453 (GIFPickerCategoryView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import useAccessibilityPressDefault from "useAccessibilityPress" /* 9791 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import useAccessibilityPressDefault from "useAccessibilityPress" /* 9829 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 fn(1074).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 }, gifImage: null, gifOverlay: null, categoryName: null, categoryNameIcon: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
 obj2.gifImage = { borderRadius: nativeDefault.radii.xs, flex: 1 };
@@ -57,12 +57,12 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   const obj5 = { style: tmp.categoryName, accessible: false, children: null };
   if (item.type === GIFPickerResultTypes.TRENDING_GIFS) {
     const obj6 = { size: "sm", style: tmp.categoryNameIcon, color: tmp6(576).colors.WHITE };
-    let tmp10Result = tmp10(tmp3(10416).AnalyticsIcon, obj6);
+    let tmp10Result = tmp10(tmp3(10454).AnalyticsIcon, obj6);
   } else {
     tmp10Result = null;
     if (item.type === tmp12.FAVORITES) {
       const obj7 = { size: "sm", style: tmp.categoryNameIcon, color: tmp6(576).colors.WHITE };
-      tmp10Result = tmp10(tmp3(10267).StarIcon, obj7);
+      tmp10Result = tmp10(tmp3(10305).StarIcon, obj7);
     }
   }
   const items2 = [tmp10Result, React5(Text_Text.Text, { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name })];

@@ -1,11 +1,11 @@
-// Module ID: 15031
-// Function ID: 15032
+// Module ID: 15080
+// Function ID: 15081
 // Name: BountiesModalActionCreators
-// Dependencies: [4777, 15032, 1896, 2]
+// Dependencies: [4808, 15081, 1896, 2]
 
-// Module 15031 (BountiesModalActionCreators)
+// Module 15080 (BountiesModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
 import size from "module_2" /* 2 */;
 
 const BOUNTIES_MODAL = "BOUNTIES_MODAL";
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/B
 export default {
   showModal(arg0) {
     ({ bountyId, sourceQuestContent, variant } = arg0);
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15032, dependencyMap.paths), { bountyId, sourceQuestContent, variant }, BOUNTIES_MODAL);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15081, dependencyMap.paths), { bountyId, sourceQuestContent, variant }, BOUNTIES_MODAL);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(BOUNTIES_MODAL);

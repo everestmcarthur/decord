@@ -1,29 +1,29 @@
-// Module ID: 5585
-// Function ID: 5586
+// Module ID: 5621
+// Function ID: 5622
 // Name: MemberVerificationModal
-// Dependencies: [19, 17, 2021, 5586, 5587, 21, 4310, 1178, 4574, 576, 1611, 4509, 5588, 5590, 504, 4398, 573, 5541, 5591, 5592, 5596, 5609, 5610, 5137, 1114, 7103, 2]
+// Dependencies: [19, 17, 2021, 5622, 5623, 21, 4341, 1178, 4605, 576, 1611, 4540, 5624, 5626, 504, 4429, 573, 5577, 5627, 5628, 5632, 5645, 5646, 5173, 1114, 7141, 2]
 // Exports: default
 
-// Module 5585 (MemberVerificationModal)
+// Module 5621 (MemberVerificationModal)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4310 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4341 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4429 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5586 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5622 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
-const MemberVerificationAlertActionCreators = tmp3(5541);
+const MemberVerificationAlertActionCreators = tmp3(5577);
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(5587);
+const MemberVerificationFormConstants = fn(5623);
 ({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollContainer: null, closeButtonContainer: null, closeIconContainer: null, closeIconOverBanner: null, closeIconAfterBanner: null, headerSeparator: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

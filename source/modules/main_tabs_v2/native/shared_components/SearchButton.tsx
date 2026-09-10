@@ -1,21 +1,21 @@
-// Module ID: 12400
-// Function ID: 12401
+// Module ID: 12440
+// Function ID: 12441
 // Name: SearchButton
-// Dependencies: [19, 17, 21, 4574, 576, 7065, 4570, 1114, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 7103, 4601, 1114, 2]
 // Exports: SearchButtonContent
 
-// Module 12400 (SearchButton)
+// Module 12440 (SearchButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7065 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7103 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { searchButton: { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 }, roundedCorners: { borderRadius: 20 }, roundedCornersAlt: null, text: null };
 const obj3 = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 };
 obj2.roundedCornersAlt = { borderRadius: nativeDefault.radii.round };

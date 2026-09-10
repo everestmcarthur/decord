@@ -1,22 +1,22 @@
-// Module ID: 14671
-// Function ID: 14672
+// Module ID: 14720
+// Function ID: 14721
 // Name: UserPrimaryGuildListBottomSheet
-// Dependencies: [19, 17, 7958, 21, 4574, 1115, 576, 8191, 5619, 4541, 1114, 5598, 9216, 5703, 12, 7164, 4570, 8906, 8626, 2]
+// Dependencies: [19, 17, 7996, 21, 4605, 1115, 576, 8228, 5655, 4572, 1114, 5634, 9253, 5739, 12, 7202, 4601, 8943, 8663, 2]
 // Exports: default
 
-// Module 14671 (UserPrimaryGuildListBottomSheet)
+// Module 14720 (UserPrimaryGuildListBottomSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import Form from "Form" /* 8626 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import Form from "Form" /* 8663 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(7958).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7996).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" }, guildIcon: { marginLeft: 4 }, tag: { padding: 2 }, tagStyles: null, divider: null, itemTrailingStyle: null };
 const PlatformUtils = fn(1115);
 let num = 18;
@@ -119,9 +119,9 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   const obj3 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   const intl = availableGuilds(1114).intl;
   obj3.children = intl.string(availableGuilds(1114).t.Fo0g9x);
-  obj2.children = closure_6(availableGuilds(4570).Text, obj3);
+  obj2.children = closure_6(availableGuilds(4601).Text, obj3);
   obj.header = closure_6(memo, obj2);
-  obj.children = closure_6(availableGuilds(8906).BottomSheetFlashList, {
+  obj.children = closure_6(availableGuilds(8943).BottomSheetFlashList, {
     ItemSeparatorComponent() {
       return timestampProducer(Form.FormDivider, { iconPush: true, style: divider.divider });
     },
@@ -153,5 +153,5 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
       return timestampProducer(closure_9, obj);
     }
   });
-  return closure_6(availableGuilds(7164).BottomSheet, obj);
+  return closure_6(availableGuilds(7202).BottomSheet, obj);
 };

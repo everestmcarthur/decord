@@ -1,26 +1,26 @@
-// Module ID: 14893
-// Function ID: 14894
+// Module ID: 14942
+// Function ID: 14943
 // Name: FamilyCenterSetting
-// Dependencies: [19, 1074, 21, 14894, 14895, 8621, 576, 1114, 2396, 11500, 5103, 14898, 2]
+// Dependencies: [19, 1074, 21, 14943, 14944, 8658, 576, 1114, 2396, 11540, 5139, 14947, 2]
 
-// Module 14893 (FamilyCenterSetting)
+// Module 14942 (FamilyCenterSetting)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14894 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 14895 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14943 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 14944 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11500);
+const SettingBuilders = fn(11540);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(_modDef2396.RZqaJn);
   },
   parent: null,
-  IconComponent: fn(5103).GroupIcon,
+  IconComponent: fn(5139).GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
     const isParentalConsentBannerActive = useIsParentalConsentBannerActive.useIsParentalConsentBannerActive();
     const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
@@ -40,7 +40,7 @@ const route = SettingBuilders.createRoute({
           const obj3 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null };
           const intl = tmp(1114).intl;
           obj3.accessibilityLabel = intl.string(_modDef2396.wucWfE);
-          tmp6 = jsx(tmp(8621).WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
+          tmp6 = jsx(tmp(8658).WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
         }
       }
     }

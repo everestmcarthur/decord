@@ -1,11 +1,11 @@
-// Module ID: 9504
-// Function ID: 9505
+// Module ID: 9542
+// Function ID: 9543
 // Name: isOrientationLockSupported
-// Dependencies: [4553, 1608, 2]
+// Dependencies: [4584, 1608, 2]
 // Exports: default
 
-// Module 9504 (isOrientationLockSupported)
-import DeviceUtils from "DeviceUtils" /* 4553 */;
+// Module 9542 (isOrientationLockSupported)
+import DeviceUtils from "DeviceUtils" /* 4584 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/device/native/isOrientationLockSupported.tsx");
@@ -18,8 +18,8 @@ export default function isOrientationLockSupported() {
     const tmpResult = tmp(1608);
   }
   if (result) {
-    result = tmp(4553).isOrientationLockSupported();
-    const tmpResult2 = tmp(4553);
+    result = tmp(4584).isOrientationLockSupported();
+    const tmpResult2 = tmp(4584);
   }
   return result;
 };

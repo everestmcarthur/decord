@@ -1,13 +1,13 @@
-// Module ID: 8618
-// Function ID: 8619
+// Module ID: 8655
+// Function ID: 8656
 // Name: ManualReviewDecidedTeenAlertModal
-// Dependencies: [19, 21, 4924, 1114, 2978, 4924, 2]
+// Dependencies: [19, 21, 4955, 1114, 2978, 4955, 2]
 // Exports: default
 
-// Module 8618 (ManualReviewDecidedTeenAlertModal)
+// Module 8655 (ManualReviewDecidedTeenAlertModal)
 import util from "util" /* 1114 */;
 import _modDef2978 from "module_2978" /* 2978 */;
-import AlertModal from "AlertModal" /* 4924 */;
+import AlertModal from "AlertModal" /* 4955 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

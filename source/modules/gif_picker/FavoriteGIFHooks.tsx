@@ -1,12 +1,12 @@
-// Module ID: 10402
-// Function ID: 10403
+// Module ID: 10440
+// Function ID: 10441
 // Name: FavoriteGIFHooks
-// Dependencies: [19, 10403, 12, 2]
+// Dependencies: [19, 10441, 12, 2]
 // Exports: useFavoriteGIFs, useIsFavoriteGIF, useShouldShowTooltipOnFavorite, useSortedFavoriteGIFs
 
-// Module 10402 (FavoriteGIFHooks)
+// Module 10440 (FavoriteGIFHooks)
 import _modDef12 from "module_12" /* 12 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10403 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10441 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

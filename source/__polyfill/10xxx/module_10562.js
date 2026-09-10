@@ -1,9 +1,9 @@
 // Module ID: 10562
 // Function ID: 10563
-// Dependencies: [41, 42, 93, 95, 98, 10471]
+// Dependencies: [41, 42, 93, 95, 98, 10520]
 
 // Module 10562
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10471 */;
+import _mod10520 from "module_10520" /* 10520 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
@@ -30,13 +30,27 @@ function _isNativeReflectConstruct() {
   }
 }
 let _classCallCheck = _classCallCheck_mod;
-const regExp = new RegExp("([0-9]|0[1-9]|1[012])/([0-9]{4})", "i");
-class NLSlashMonthFormatParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class FRMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, NLSlashMonthFormatParser);
+    tmp = closure_0(this, FRMergeDateRangeRefiner);
     tmp2 = c2;
-    obj = c2(NLSlashMonthFormatParser);
+    obj = c2(FRMergeDateRangeRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -51,26 +65,14 @@ class NLSlashMonthFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = NLSlashMonthFormatParser;
-_inherits(NLSlashMonthFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = FRMergeDateRangeRefiner;
+_inherits(FRMergeDateRangeRefiner, fn(_mod10520).default);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(à|a|au|-)\s*$/i;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const parsed = parseInt(arg1[2]);
-      const parsed1 = parseInt(arg1[1]);
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const implyResult = parsingComponents.imply("day", 1);
-      return parsingComponents.imply("day", 1).assign("month", parsed1).assign("year", parsed);
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(NLSlashMonthFormatParser, items);
+export default _createClass(FRMergeDateRangeRefiner, items);

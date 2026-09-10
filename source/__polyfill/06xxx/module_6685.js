@@ -1,14 +1,20 @@
 // Module ID: 6685
 // Function ID: 6686
-// Dependencies: [106, 65]
+// Dependencies: [19, 6686]
+// Exports: useBottomSheetInternal
 
 // Module 6685
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod6686 from "module_6686" /* 6686 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerDetector", directEventTypes: { topGestureHandlerEvent: { registrationName: "onGestureHandlerEvent" }, topGestureHandlerStateChange: { registrationName: "onGestureHandlerStateChange" }, topGestureHandlerTouchEvent: { registrationName: "onGestureHandlerTouchEvent" }, topGestureHandlerReanimatedEvent: { registrationName: "onGestureHandlerReanimatedEvent" }, topGestureHandlerReanimatedStateChange: { registrationName: "onGestureHandlerReanimatedStateChange" }, topGestureHandlerReanimatedTouchEvent: { registrationName: "onGestureHandlerReanimatedTouchEvent" }, topGestureHandlerAnimatedEvent: { registrationName: "onGestureHandlerAnimatedEvent" } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onGestureHandlerEvent: true, onGestureHandlerStateChange: true, onGestureHandlerTouchEvent: true, onGestureHandlerReanimatedEvent: true, onGestureHandlerReanimatedStateChange: true, onGestureHandlerReanimatedTouchEvent: true, onGestureHandlerAnimatedEvent: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { handlerTags: true, moduleId: true, virtualChildren: true, pointerEvents: true };
+const useContext = _mod19.useContext;
 
-export default module_65.get("RNGestureHandlerDetector", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const useBottomSheetInternal = function useBottomSheetInternal(arg0) {
+  const tmp = useContext(_mod6686.BottomSheetInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'useBottomSheetInternal' cannot be used out of the BottomSheet!";
+    }
+  }
+  return tmp;
+};

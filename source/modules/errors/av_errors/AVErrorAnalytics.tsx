@@ -1,24 +1,24 @@
-// Module ID: 17888
-// Function ID: 17889
+// Module ID: 17946
+// Function ID: 17947
 // Name: AVErrorAnalytics
-// Dependencies: [32, 4612, 4619, 4620, 1957, 1908, 4597, 4624, 2011, 4613, 1074, 4599, 9142, 4626, 4703, 12, 7755, 9641, 1359, 4568, 1242, 2]
+// Dependencies: [32, 4643, 4650, 4651, 1957, 1908, 4628, 4655, 2011, 4644, 1074, 4630, 9179, 4657, 4734, 12, 7792, 9679, 1359, 4599, 1242, 2]
 // Exports: sendAVErrorAnalyticsEvent
 
-// Module 17888 (AVErrorAnalytics)
+// Module 17946 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1359 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4568 */;
-import VideoQualityStats from "VideoQualityStats" /* 7755 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9641 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4599 */;
+import VideoQualityStats from "VideoQualityStats" /* 7792 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9679 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4612 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4620 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4643 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4651 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
-import RTCRegionStore from "RTCRegionStore" /* 4624 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
+import RTCRegionStore from "RTCRegionStore" /* 4655 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4613 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4644 */;
 
 const require = globalThis.__r;
 
@@ -76,9 +76,9 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(4619).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(4650).getSystemAnalyticsInfo;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(4599);
+const Constants = fn(4630);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");

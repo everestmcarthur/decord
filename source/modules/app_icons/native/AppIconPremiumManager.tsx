@@ -1,20 +1,20 @@
-// Module ID: 17348
-// Function ID: 17349
+// Module ID: 17407
+// Function ID: 17408
 // Name: AppIconPremiumManager
-// Dependencies: [5, 1371, 9355, 1074, 3, 9356, 7132, 1115, 13390, 4231, 1242, 2]
+// Dependencies: [5, 1371, 9393, 1074, 3, 9394, 7170, 1115, 13439, 4262, 1242, 2]
 
-// Module 17348 (AppIconPremiumManager)
+// Module 17407 (AppIconPremiumManager)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 let require = fn;
-const getIconById = fn(9355).getIconById;
+const getIconById = fn(9393).getIconById;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_7 = new LoggerDefault("AppIconPremiumManager");
-const DEFAULT = fn(9356).FreemiumAppIconIds.DEFAULT;
+const DEFAULT = fn(9394).FreemiumAppIconIds.DEFAULT;
 let closure_9 = { ORPHANED: "orphaned", PREMIUM_LOST: "premium_lost" };
 class AppIconPremiumManager extends tmp3 {
   constructor() {

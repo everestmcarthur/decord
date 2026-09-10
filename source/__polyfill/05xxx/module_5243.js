@@ -1,93 +1,72 @@
 // Module ID: 5243
 // Function ID: 5244
-// Dependencies: [5244]
+// Dependencies: [5235, 5236]
+// Exports: isAVI, isFLV, isM4V, isMKV, isMOV, isMP4, isOGG, isSWF, isWEBM
 
 // Module 5243
-import _modDef5244 from "module_5244" /* 5244 */;
+import _mod5235 from "module_5235" /* 5235 */;
+import _mod5236 from "module_5236" /* 5236 */;
 
-importDefault = arg2;
+require = arg1;
 const dependencyMap = arg6;
 
-export default {
-  read(dataView, sum) {
-    const shortAt = _modDef5244.getShortAt(dataView, sum);
-    let tmp4;
-    if (8 <= shortAt) {
-      const byteAt = tmp(5244).getByteAt(dataView, sum + 7);
-      const obj2 = { value: byteAt, description: "" + byteAt };
-      tmp4 = obj2;
-      const tmpResult = tmp(5244);
+export const isAVI = function isAVI(fileChunk) {
+  fileChunk = _mod5235.getFileChunk(fileChunk);
+  const FileTypes = _mod5236.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "avi");
+};
+export const isFLV = function isFLV(fileChunk) {
+  fileChunk = _mod5235.getFileChunk(fileChunk);
+  const FileTypes = _mod5236.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flv") && _mod5235.isFlvStringIncluded(fileChunk);
+};
+export const isM4V = function isM4V(fileChunk) {
+  fileChunk = _mod5235.getFileChunk(fileChunk);
+  const FileTypes = _mod5236.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4v") && _mod5235.isftypStringIncluded(fileChunk);
+};
+export const isMKV = function isMKV(fileChunk) {
+  fileChunk = _mod5235.getFileChunk(fileChunk, 64);
+  const FileTypes = _mod5236.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === _mod5235.findMatroskaDocTypeElements(fileChunk);
+};
+export const isMOV = function isMOV(fileChunk) {
+  fileChunk = _mod5235.getFileChunk(fileChunk);
+  const FileTypes = _mod5236.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mov");
+};
+export const isMP4 = function isMP4(fileChunk, excludeSimilarTypes) {
+  fileChunk = _mod5235.getFileChunk(fileChunk);
+  const FileTypes = _mod5236.FileTypes;
+  let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "mp4");
+  if (!checkByFileTypeResult) {
+    excludeSimilarTypes = undefined;
+    if (null != excludeSimilarTypes) {
+      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
     }
-    let tmp6;
-    if (3 <= shortAt) {
-      const byteAt1 = tmp(5244).getByteAt(dataView, sum + 2);
-      const obj3 = { value: byteAt1, description: "" + byteAt1 };
-      tmp6 = obj3;
-      const tmpResult4 = tmp(5244);
+    let tmp8 = !excludeSimilarTypes;
+    if (!excludeSimilarTypes) {
+      const fileChunk1 = tmp(5235).getFileChunk(fileChunk);
+      const FileTypes2 = tmp(5236).FileTypes;
+      tmp8 = FileTypes2.checkByFileType(fileChunk1, "m4v") && tmp(5235).isftypStringIncluded(fileChunk1);
+      const tmp10 = FileTypes2.checkByFileType(fileChunk1, "m4v") && tmp(5235).isftypStringIncluded(fileChunk1);
     }
-    const obj4 = { "Bits Per Sample": tmp6, "Image Height": null, "Image Width": null, "Color Components": null, Subsampling: null };
-    let tmp8;
-    if (5 <= shortAt) {
-      const shortAt1 = tmp(5244).getShortAt(dataView, sum + 3);
-      const obj5 = { value: shortAt1, description: null };
-      const _HermesInternal = HermesInternal;
-      obj5.description = "" + shortAt1 + "px";
-      tmp8 = obj5;
-      const tmpResult5 = tmp(5244);
-    }
-    obj4["Image Height"] = tmp8;
-    let tmp11;
-    if (7 <= shortAt) {
-      const shortAt2 = tmp(5244).getShortAt(dataView, sum + 5);
-      const obj6 = { value: shortAt2, description: null };
-      const _HermesInternal2 = HermesInternal;
-      obj6.description = "" + shortAt2 + "px";
-      tmp11 = obj6;
-      const tmpResult6 = tmp(5244);
-    }
-    obj4["Image Width"] = tmp11;
-    obj4["Color Components"] = tmp4;
-    let tmp14 = tmp4;
-    if (tmp4) {
-      value = tmp4.value;
-      let tmp15;
-      if (8 + 3 * value <= shortAt) {
-        const items = [];
-        for (let num6 = 0; num6 < value; num6 = num6 + 1) {
-          sum = sum + 8 + 3 * num6;
-          let obj11 = _modDef5244;
-          let items1 = [obj11.getByteAt(dataView, sum), , ];
-          let obj12 = _modDef5244;
-          items1[1] = obj12.getByteAt(dataView, sum + 1);
-          let obj13 = _modDef5244;
-          items1[2] = obj13.getByteAt(dataView, sum + 2);
-          let arr = items.push(items1);
-        }
-        const obj7 = { value: items, description: null };
-        let str6 = "";
-        if (items.length > 1) {
-          closure_0 = { 1: "Y", 2: "Cb", 3: "Cr", 4: "I", 5: "Q" };
-          const mapped = items.map((item) => closure_0[item[0]]);
-          let str7 = "";
-          const joined = mapped.join("");
-          if (0 !== items.length) {
-            str7 = "";
-            if (undefined !== items[0][1]) {
-              const obj8 = { 17: "4:4:4 (1 1)", 18: "4:4:0 (1 2)", 20: "4:4:1 (1 4)", 33: "4:2:2 (2 1)", 34: "4:2:0 (2 2)", 36: "4:2:1 (2 4)", 65: "4:1:1 (4 1)", 66: "4:1:0 (4 2)" };
-              str7 = "";
-              if (undefined !== obj8[items[0][1]]) {
-                str7 = obj8[items[0][1]];
-              }
-            }
-          }
-          str6 = joined + str7;
-        }
-        obj7.description = str6;
-        tmp15 = obj7;
-      }
-      tmp14 = tmp15;
-    }
-    obj4.Subsampling = tmp14;
-    return obj4;
+    checkByFileTypeResult = tmp8;
   }
+  return checkByFileTypeResult;
+};
+export const isOGG = function isOGG(fileChunk) {
+  fileChunk = _mod5235.getFileChunk(fileChunk);
+  const FileTypes = _mod5236.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ogg");
+};
+export const isSWF = function isSWF(fileChunk) {
+  fileChunk = _mod5235.getFileChunk(fileChunk);
+  const FileTypes = _mod5236.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "swf");
+};
+export const isWEBM = function isWEBM(fileChunk) {
+  fileChunk = _mod5235.getFileChunk(fileChunk, 64);
+  const FileTypes = _mod5236.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === _mod5235.findMatroskaDocTypeElements(fileChunk);
 };

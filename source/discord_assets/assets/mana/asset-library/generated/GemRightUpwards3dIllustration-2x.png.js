@@ -1,8 +1,8 @@
-// Module ID: 6136
-// Function ID: 6137
+// Module ID: 6172
+// Function ID: 6173
 // Dependencies: [2]
 
-// Module 6136
+// Module 6172
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemRightUpwards3dIllustration-2x.png.js");

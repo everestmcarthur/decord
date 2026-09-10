@@ -1,8 +1,8 @@
-// Module ID: 6388
-// Function ID: 6389
+// Module ID: 6424
+// Function ID: 6425
 // Dependencies: [2]
 
-// Module 6388
+// Module 6424
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PuzzleCubeSpotIllustration-2x.png.js");

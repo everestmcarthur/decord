@@ -1,8 +1,8 @@
-// Module ID: 5926
-// Function ID: 5927
+// Module ID: 5962
+// Function ID: 5963
 // Dependencies: [2]
 
-// Module 5926
+// Module 5962
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordShopLockupLogo-2x.png.js");

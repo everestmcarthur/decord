@@ -1,11 +1,11 @@
-// Module ID: 7742
-// Function ID: 7743
+// Module ID: 7779
+// Function ID: 7780
 // Name: AnalyticsTypes
-// Dependencies: [5461, 2]
+// Dependencies: [5497, 2]
 // Exports: getContentProperties, getQuestContentName, getQuestStatus
 
-// Module 7742 (AnalyticsTypes)
-import QuestTypes from "QuestTypes" /* 5461 */;
+// Module 7779 (AnalyticsTypes)
+import QuestTypes from "QuestTypes" /* 5497 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = Object.keys(QuestTypes.QuestContent);

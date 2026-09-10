@@ -1,20 +1,20 @@
-// Module ID: 4999
-// Function ID: 5000
+// Module ID: 5035
+// Function ID: 5036
 // Name: ButtonPill
-// Dependencies: [32, 19, 17, 21, 4994, 4574, 576, 4995, 4284, 4275, 5000, 5001, 4310, 4425, 5005, 4294, 4988, 4992, 2]
+// Dependencies: [32, 19, 17, 21, 5030, 4605, 576, 5031, 4315, 4306, 5036, 5037, 4341, 4456, 5041, 4325, 5024, 5028, 2]
 // Exports: ButtonPill
 
-// Module 4999 (ButtonPill)
+// Module 5035 (ButtonPill)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4275 */;
-import native from "native" /* 4284 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
-import spring from "spring" /* 4988 */;
-import springPresets from "springPresets" /* 4992 */;
-import ButtonConstants2 from "ButtonConstants" /* 4994 */;
-import ButtonHooks from "ButtonHooks" /* 4995 */;
-import LinearGradientDefault from "LinearGradient" /* 5001 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5005 */;
+import useToken from "useToken" /* 4306 */;
+import native from "native" /* 4315 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4341 */;
+import spring from "spring" /* 5024 */;
+import springPresets from "springPresets" /* 5028 */;
+import ButtonConstants2 from "ButtonConstants" /* 5030 */;
+import ButtonHooks from "ButtonHooks" /* 5031 */;
+import LinearGradientDefault from "LinearGradient" /* 5037 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5041 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -37,7 +37,7 @@ function PillWrapper(expressivePressState) {
   let tmp7 = null;
   if (shiny) {
     const obj7 = { variant };
-    tmp7 = React5(tmp(5000).ButtonShine, obj7);
+    tmp7 = React5(tmp(5036).ButtonShine, obj7);
   }
   if ("experimental_premium-primary" !== variant) {
     if ("experimental_premium-basic" !== variant) {
@@ -55,9 +55,9 @@ function PillWrapper(expressivePressState) {
         const obj10 = { buttonColor: tmp5.expressiveRiveFill.color, cornerRadius: tmp5.expressivePill.borderRadius };
         const merged = Object.assign(expressivePressState);
         obj9.dataBinding = obj10;
-        obj8.children = React5(tmp(4284).ExpressiveButtonRive, obj9);
+        obj8.children = React5(tmp(4315).ExpressiveButtonRive, obj9);
         tmp11Result = tmp11(hasOwnProperty, obj8);
-        tmpResult = tmp(4425);
+        tmpResult = tmp(4456);
       }
       let obj11 = { children: null };
       const items3 = [tmp11Result, ];
@@ -66,7 +66,7 @@ function PillWrapper(expressivePressState) {
       obj12.style = items4;
       const items5 = [children, tmp7];
       obj12.children = items5;
-      items3[1] = tmp9(tmp6(4310).View, obj12);
+      items3[1] = tmp9(tmp6(4341).View, obj12);
       obj11.children = items3;
     }
     return tmp9(tmp10, obj11);
@@ -217,8 +217,8 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
     if (enabled) {
       let withDelayResult = withSpringResult;
       if (!tmp3) {
-        withDelayResult = tmp(4310).withDelay(c10, withSpringResult);
-        const tmpResult = tmp(4310);
+        withDelayResult = tmp(4341).withDelay(c10, withSpringResult);
+        const tmpResult = tmp(4341);
       }
       obj2.opacity = withDelayResult;
       const items = [{ translateY: 0 }];
@@ -230,11 +230,11 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
       if (tmp3) {
         num2 = -1 * num;
       }
-      const obj3 = { translateY: tmp(4988).withSpring(num2, tmp(4992).SUBTLE_SPRING) };
+      const obj3 = { translateY: tmp(5024).withSpring(num2, tmp(5028).SUBTLE_SPRING) };
       const items1 = [obj3];
       obj2.transform = items1;
       tmp6 = obj2;
-      const tmpResult2 = tmp(4988);
+      const tmpResult2 = tmp(5024);
     }
     return tmp6;
   };
@@ -254,8 +254,8 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
     if (enabled) {
       let withDelayResult = withSpringResult;
       if (tmp3) {
-        withDelayResult = tmp(4310).withDelay(c10, withSpringResult);
-        const tmpResult = tmp(4310);
+        withDelayResult = tmp(4341).withDelay(c10, withSpringResult);
+        const tmpResult = tmp(4341);
       }
       obj2.opacity = withDelayResult;
       const items = [{ translateY: 0 }];
@@ -267,11 +267,11 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
       if (!tmp3) {
         num2 = num;
       }
-      const obj3 = { translateY: tmp(4988).withSpring(num2, tmp(4992).SUBTLE_SPRING) };
+      const obj3 = { translateY: tmp(5024).withSpring(num2, tmp(5028).SUBTLE_SPRING) };
       const items1 = [obj3];
       obj2.transform = items1;
       tmp5 = obj2;
-      const tmpResult2 = tmp(4988);
+      const tmpResult2 = tmp(5024);
     }
     return tmp5;
   };
@@ -287,13 +287,13 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 300;
-let ButtonConstants = fn(4994);
-const paddingVertical = ButtonConstants.getButtonPadding(fn(4994).SMALL_BUTTON_HEIGHT, fn(4994).SMALL_BUTTON_ICON_SIZE);
-ButtonConstants = fn(4994);
-const paddingVertical2 = ButtonConstants.getButtonPadding(fn(4994).MEDIUM_BUTTON_HEIGHT, fn(4994).MEDIUM_BUTTON_ICON_SIZE);
-ButtonConstants = fn(4994);
-const paddingVertical3 = ButtonConstants.getButtonPadding(fn(4994).LARGE_BUTTON_HEIGHT, fn(4994).LARGE_BUTTON_ICON_SIZE);
-const createStyles = fn(4574);
+let ButtonConstants = fn(5030);
+const paddingVertical = ButtonConstants.getButtonPadding(fn(5030).SMALL_BUTTON_HEIGHT, fn(5030).SMALL_BUTTON_ICON_SIZE);
+ButtonConstants = fn(5030);
+const paddingVertical2 = ButtonConstants.getButtonPadding(fn(5030).MEDIUM_BUTTON_HEIGHT, fn(5030).MEDIUM_BUTTON_ICON_SIZE);
+ButtonConstants = fn(5030);
+const paddingVertical3 = ButtonConstants.getButtonPadding(fn(5030).LARGE_BUTTON_HEIGHT, fn(5030).LARGE_BUTTON_ICON_SIZE);
+const createStyles = fn(4605);
 const value = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     const obj2 = { minHeight: ButtonConstants2.SMALL_BUTTON_HEIGHT, minWidth: ButtonConstants2.SMALL_BUTTON_HEIGHT, paddingHorizontal: ButtonConstants2.SMALL_BUTTON_HORIZONTAL_PADDING, paddingVertical };

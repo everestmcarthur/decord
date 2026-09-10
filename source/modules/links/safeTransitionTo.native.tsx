@@ -1,14 +1,14 @@
-// Module ID: 7261
-// Function ID: 7262
+// Module ID: 7299
+// Function ID: 7300
 // Name: safeTransitionTo
-// Dependencies: [5, 1979, 1074, 4728, 7262, 1100, 7263, 4919, 1114, 7290, 2528, 7329, 2]
+// Dependencies: [5, 1979, 1074, 4759, 7300, 1100, 7301, 4950, 1114, 7328, 2528, 7367, 2]
 // Exports: default
 
-// Module 7261 (safeTransitionTo)
+// Module 7299 (safeTransitionTo)
 import router_utils from "router_utils" /* 1100 */;
-import LinkUtils from "LinkUtils" /* 4728 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 7262 */;
-import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7263 */;
+import LinkUtils from "LinkUtils" /* 4759 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 7300 */;
+import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7301 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -125,7 +125,7 @@ let closure_6 = async function _safeTransitionTo(arg0, value) {
       }
       closure_2 = closure_131_2;
       if (closure_131_2 == null) {
-        closure_2 = { guildId: "disabled" };
+        closure_2 = { guildId: "Array" };
       }
       c5 = 2;
       c6 = 1;

@@ -1,13 +1,13 @@
-// Module ID: 6253
-// Function ID: 6254
+// Module ID: 6289
+// Function ID: 6290
 // Name: MicrophoneSpotIllustration
-// Dependencies: [21, 5601, 6254, 2]
+// Dependencies: [21, 5637, 6290, 2]
 // Exports: MicrophoneSpotIllustration
 
-// Module 6253 (MicrophoneSpotIllustration)
+// Module 6289 (MicrophoneSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6254 from "module_6254" /* 6254 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6290 from "module_6290" /* 6290 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const MicrophoneSpotIllustration = function MicrophoneSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6254 };
+  const obj2 = { uri: _modDef6290 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

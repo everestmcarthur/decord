@@ -1,16 +1,16 @@
-// Module ID: 10345
-// Function ID: 10346
+// Module ID: 10383
+// Function ID: 10384
 // Name: EmojiPickerPremiumSearchUpsell
-// Dependencies: [19, 17, 1371, 1074, 1373, 21, 4574, 576, 1242, 9998, 9345, 9997, 7867, 9999, 4231, 4541, 9424, 9394, 8695, 1178, 10346, 4570, 1114, 5137, 2]
+// Dependencies: [19, 17, 1371, 1074, 1373, 21, 4605, 576, 1242, 10036, 9383, 10035, 7904, 10037, 4262, 4572, 9462, 9432, 8732, 1178, 10384, 4601, 1114, 5173, 2]
 // Exports: useEmojiPickerPremiumSearchUpsellClick, useEmojiPickerPremiumSearchUpsellViewed
 
-// Module 10345 (EmojiPickerPremiumSearchUpsell)
+// Module 10383 (EmojiPickerPremiumSearchUpsell)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9394 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9424 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9432 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9462 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -22,7 +22,7 @@ const PremiumConstants = fn(1373);
 ({ PremiumSubscriptionSKUs: closure_9, PremiumUpsellTypes: c10, SubscriptionPlans: closure_11 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: { paddingTop: nativeDefault.space.PX_8 }, premiumSearchUpsell: null, premiumSearchUpsellContent: null, nitroIcon: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj.premiumSearchUpsell = { height: 56, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", alignItems: "center", alignContent: "center" };

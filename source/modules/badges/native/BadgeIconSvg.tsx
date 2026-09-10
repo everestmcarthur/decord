@@ -1,10 +1,10 @@
-// Module ID: 11223
-// Function ID: 11224
+// Module ID: 11263
+// Function ID: 11264
 // Name: BadgeIconSvg
 // Dependencies: [559, 1090, 2]
 // Exports: getCachedSvgXml, loadSvgXml
 
-// Module 11223 (BadgeIconSvg)
+// Module 11263 (BadgeIconSvg)
 import BackoffDefault from "Backoff" /* 559 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import size from "module_2" /* 2 */;

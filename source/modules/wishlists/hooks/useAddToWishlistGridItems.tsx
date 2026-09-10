@@ -1,11 +1,11 @@
-// Module ID: 13122
-// Function ID: 13123
+// Module ID: 13169
+// Function ID: 13170
 // Name: useAddToWishlistGridItems
-// Dependencies: [19, 1373, 10824, 13098, 2]
+// Dependencies: [19, 1373, 10862, 13144, 2]
 // Exports: useAddToWishlistGridItems
 
-// Module 13122 (useAddToWishlistGridItems)
-import WishlistUtils from "WishlistUtils" /* 13098 */;
+// Module 13169 (useAddToWishlistGridItems)
+import WishlistUtils from "WishlistUtils" /* 13144 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

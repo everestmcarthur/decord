@@ -1,23 +1,23 @@
-// Module ID: 17466
-// Function ID: 17467
+// Module ID: 17525
+// Function ID: 17526
 // Name: NewUserManager
-// Dependencies: [5, 6957, 5295, 1371, 5573, 12735, 1074, 12749, 17467, 12706, 12734, 1093, 9852, 573, 7132, 12713, 12776, 2]
+// Dependencies: [5, 6993, 5331, 1371, 5609, 12775, 1074, 12789, 17526, 12746, 12774, 1093, 9890, 573, 7170, 12753, 12816, 2]
 
-// Module 17466 (NewUserManager)
+// Module 17525 (NewUserManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import NUFActionCreators from "NUFActionCreators" /* 12734 */;
+import NUFActionCreators from "NUFActionCreators" /* 12774 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PhoneStore from "PhoneStore" /* 6957 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5295 */;
+import PhoneStore from "PhoneStore" /* 6993 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5331 */;
 import UserStore from "UserStore" /* 1371 */;
-import NewUserStore from "NewUserStore" /* 5573 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import NewUserStore from "NewUserStore" /* 5609 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 require = fn;
-const NewUserTypes = fn(12735).NewUserTypes;
+const NewUserTypes = fn(12775).NewUserTypes;
 const PlatformTypes = fn(1074).PlatformTypes;
-let closure_10 = fn(12749).HUBS_IN_ONBOARDING_COUNTRIES;
+let closure_10 = fn(12789).HUBS_IN_ONBOARDING_COUNTRIES;
 let obj = { REGISTRATION: "Registration", ADD_AVATAR: "Add Avatar", CONTACT_SYNC: "Contact Sync", GUILD_TEMPLATE: "Guild Template", STUDENT_HUB: "Student Hub", NEW_USER_INTENT: "New User Intent", ACCEPT_INVITE: "Accept Invite", DISCOVERABILITY: "Discoverability" };
 let obj2 = {
   key: obj.ADD_AVATAR,
@@ -29,7 +29,7 @@ let obj2 = {
     }
     return null == avatar;
   },
-  transitionToStep: fn(17467).openAddAvatarModal
+  transitionToStep: fn(17526).openAddAvatarModal
 };
 const items = [obj2, , , , , ];
 let obj3 = {
@@ -51,14 +51,14 @@ let obj3 = {
     }
     return tmp3;
   },
-  transitionToStep: fn(12706).openContactSyncModalOnboarding
+  transitionToStep: fn(12746).openContactSyncModalOnboarding
 };
 items[1] = {
   key: obj.DISCOVERABILITY,
   shouldShowStep() {
     return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: fn(12734).openDiscoverabilityModal
+  transitionToStep: fn(12774).openDiscoverabilityModal
 };
 items[2] = obj3;
 items[3] = {
@@ -93,11 +93,11 @@ let obj4 = {
   shouldShowStep() {
     return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: fn(12734).openDiscoverabilityModal
+  transitionToStep: fn(12774).openDiscoverabilityModal
 };
 items[5] = {
   key: obj.ACCEPT_INVITE,
-  shouldShowStep: fn(9852).hasDeferredInvite,
+  shouldShowStep: fn(9890).hasDeferredInvite,
   transitionToStep() {
     DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }

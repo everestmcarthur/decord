@@ -1,9 +1,70 @@
 // Module ID: 6954
 // Function ID: 6955
-// Dependencies: [1122]
+// Dependencies: [6907, 19, 6952]
+// Exports: useOnListLoad
 
 // Module 6954
-import registerAsset from "module_1122" /* 1122 */;
+import _mod6952 from "module_6952" /* 6952 */;
+import _slicedToArray from "module_6907" /* 6907 */;
 
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
+function useOnLoad(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = hasOwnProperty(false);
+  React3(() => {
+    let isFirstLayoutComplete = getDataLength.getIsFirstLayoutComplete();
+    if (isFirstLayoutComplete) {
+      isFirstLayoutComplete = !ref.current;
+    }
+    if (isFirstLayoutComplete) {
+      ref.current = true;
+      f81150();
+    }
+  });
+}
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "2f67acde4c60441cfd2d6684d11b6d76", name: "ic_close_circle_24px", type: "png" });
+export const useOnListLoad = (getDataLength, arg1) => {
+  let f81150 = arg1;
+  hasOwnProperty(Date.now());
+  [tmp3, closure_3] = timestampProducer(false);
+  const dataLength = getDataLength.getDataLength();
+  const tmp = hasOwnProperty;
+  const tmp2 = _slicedToArray(timestampProducer(false), 2);
+  const requestAnimationFrame = _mod6952.useUnmountAwareAnimationFrame().requestAnimationFrame;
+  const items = [dataLength];
+  React4(() => {
+    closure_2.current = Date.now();
+  }, items);
+  if (typeof useOnLoad === "function") {
+    f81150 = () => {
+      const elapsedTimeInMs = Date.now() - ref.current;
+      requestAnimationFrame(() => {
+        elapsedTimeInMs.isFirstPaintOnUiComplete = true;
+        if (f81150 != null) {
+          const obj = { elapsedTimeInMs };
+          tmp(obj);
+        }
+        closure_2_3(true);
+      });
+    };
+    tmp(false);
+    React3(() => {
+      let isFirstLayoutComplete = getDataLength.getIsFirstLayoutComplete();
+      if (isFirstLayoutComplete) {
+        isFirstLayoutComplete = !ref.current;
+      }
+      if (isFirstLayoutComplete) {
+        ref.current = true;
+        f81150();
+      }
+    });
+    const obj2 = { isLoaded: tmp3 };
+    return obj2;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+export { useOnLoad };

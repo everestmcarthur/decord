@@ -1,10 +1,10 @@
-// Module ID: 13032
-// Function ID: 13033
+// Module ID: 13072
+// Function ID: 13073
 // Name: isOnXbox
 // Dependencies: [1920, 1074, 2]
 // Exports: default
 
-// Module 13032 (isOnXbox)
+// Module 13072 (isOnXbox)
 import Constants from "Constants" /* 1074 */;
 import Constants2 from "Constants" /* 1920 */;
 import size from "module_2" /* 2 */;

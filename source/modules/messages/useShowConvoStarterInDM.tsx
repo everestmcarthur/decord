@@ -1,15 +1,15 @@
-// Module ID: 12296
-// Function ID: 12297
+// Module ID: 12336
+// Function ID: 12337
 // Name: useShowConvoStarterInDM
-// Dependencies: [19, 7233, 4795, 4222, 1371, 1074, 1964, 11396, 504, 2]
+// Dependencies: [19, 7271, 4826, 4253, 1371, 1074, 1964, 11436, 504, 2]
 // Exports: useShowConvoStarterInDM
 
-// Module 12296 (useShowConvoStarterInDM)
+// Module 12336 (useShowConvoStarterInDM)
 import _mod19 from "module_19" /* 19 */;
 import ChannelConstants from "ChannelConstants" /* 1964 */;
-import MessageRequestStore from "MessageRequestStore" /* 7233 */;
-import MessageStore from "MessageStore" /* 4795 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import MessageRequestStore from "MessageRequestStore" /* 7271 */;
+import MessageStore from "MessageStore" /* 4826 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

@@ -1,9 +1,9 @@
-// Module ID: 17468
-// Function ID: 17469
+// Module ID: 17527
+// Function ID: 17528
 // Name: AddAvatarModalConstants
 // Dependencies: [2]
 
-// Module 17468 (AddAvatarModalConstants)
+// Module 17527 (AddAvatarModalConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/avatar/native/components/AddAvatarModalConstants.tsx");

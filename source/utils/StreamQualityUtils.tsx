@@ -1,28 +1,28 @@
-// Module ID: 9141
-// Function ID: 9142
+// Module ID: 9178
+// Function ID: 9179
 // Name: StreamQualityUtils
-// Dependencies: [19, 4620, 502, 1979, 4597, 1371, 1074, 4621, 1373, 4599, 1114, 504, 4710, 1242, 2]
+// Dependencies: [19, 4651, 502, 1979, 4628, 1371, 1074, 4652, 1373, 4630, 1114, 504, 4741, 1242, 2]
 // Exports: getFPSText, getMaxQuality, getPremiumRequirement, getResolutionText, isPremiumFPS, isPremiumRequirement, isPremiumResolution, trackStreamSettingsUpdate, useMaxQuality
 
-// Module 9141 (StreamQualityUtils)
+// Module 9178 (StreamQualityUtils)
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 4710 */;
+import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 4741 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4620 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4651 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const StreamSettingsConstants = fn(4621);
+const StreamSettingsConstants = fn(4652);
 ({ ApplicationStreamFPS: c10, ApplicationStreamResolutions: closure_11, ApplicationStreamSettingRequirements: closure_12, getApplicationFramerate: map1, getApplicationResolution: closure_14 } = StreamSettingsConstants);
 let closure_15 = fn(1373).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(4599).ResolutionTypes;
+const ResolutionTypes = fn(4630).ResolutionTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("utils/StreamQualityUtils.tsx");
 

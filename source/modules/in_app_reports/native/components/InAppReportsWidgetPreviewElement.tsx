@@ -1,21 +1,21 @@
-// Module ID: 8690
-// Function ID: 8691
+// Module ID: 8727
+// Function ID: 8728
 // Name: InAppReportsWidgetPreviewElement
-// Dependencies: [19, 17, 21, 4574, 576, 8267, 7644, 8691, 7637, 8707, 4570, 1114, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 8304, 7681, 8728, 7674, 8744, 4601, 1114, 2]
 // Exports: default
 
-// Module 8690 (InAppReportsWidgetPreviewElement)
+// Module 8727 (InAppReportsWidgetPreviewElement)
 import nativeDefault from "native" /* 576 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7644 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8267 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8691 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7681 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8304 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8728 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, title: { lineHeight: 16, marginBottom: 8 }, card: { backgroundColor: nativeDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -38,10 +38,10 @@ export default function WidgetPreview(arg0) {
         const obj2 = { userId, widget, disableInteraction: true, cardStyle: null };
         const items1 = [tmp4.card, tmp.card];
         obj2.cardStyle = items1;
-        tmp6 = React4(tmp5(8707).WidgetSection, obj2);
+        tmp6 = React4(tmp5(8744).WidgetSection, obj2);
       }
     }
-    tmp5Result = tmp5(7637);
+    tmp5Result = tmp5(7674);
   }
   let tmp9 = null;
   if (null !== tmp6) {
@@ -49,7 +49,7 @@ export default function WidgetPreview(arg0) {
     const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     const intl = tmp5(1114).intl;
     obj4.children = intl.string(tmp5(1114).t.SpsnDY).toUpperCase();
-    const items2 = [React4(tmp5(4570).Text, obj4), tmp6];
+    const items2 = [React4(tmp5(4601).Text, obj4), tmp6];
     obj3.children = items2;
     tmp9 = hasOwnProperty(View, obj3);
     const str = intl.string(tmp5(1114).t.SpsnDY);

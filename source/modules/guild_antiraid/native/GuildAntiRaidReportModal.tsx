@@ -1,17 +1,17 @@
-// Module ID: 13990
-// Function ID: 13991
+// Module ID: 14039
+// Function ID: 14040
 // Name: GuildAntiRaidReportModal
-// Dependencies: [32, 19, 17, 13991, 21, 4574, 576, 1611, 4570, 4268, 1114, 5701, 5618, 4989, 5638, 11862, 7014, 2]
+// Dependencies: [32, 19, 17, 14040, 21, 4605, 576, 1611, 4601, 4299, 1114, 5737, 5654, 5025, 5674, 11902, 7052, 2]
 // Exports: default
 
-// Module 13990 (GuildAntiRaidReportModal)
+// Module 14039 (GuildAntiRaidReportModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import components_Button_Button from "components/Button/Button" /* 4989 */;
-import NavigatorHeader from "NavigatorHeader" /* 5638 */;
-import TableRowGroup from "TableRowGroup" /* 5701 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import components_Button_Button from "components/Button/Button" /* 5025 */;
+import NavigatorHeader from "NavigatorHeader" /* 5674 */;
+import TableRowGroup from "TableRowGroup" /* 5737 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -78,12 +78,12 @@ function ReportModal(onSubmit) {
   return closure_10(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(13991);
+const GuildReportRaidModalConstants = fn(14040);
 ({ getReportRaidHelpArticleURL: metroRequire, getReportRaidTypeLabel: closure_7, REPORT_RAID_OPTIONS: closure_8 } = GuildReportRaidModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flex: 1, paddingHorizontal: 16, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 }, headerSubtitle: { textAlign: "center", marginTop: 8 }, formBody: { marginTop: 24 }, formRow: { paddingVertical: 2 }, submitButtonContainer: null };
 const rect = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.submitButtonContainer = rect;

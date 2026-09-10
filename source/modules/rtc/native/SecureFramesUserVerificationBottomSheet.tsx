@@ -1,34 +1,34 @@
-// Module ID: 9201
-// Function ID: 9202
+// Module ID: 9238
+// Function ID: 9239
 // Name: SecureFramesUserVerificationBottomSheet
-// Dependencies: [32, 19, 17, 4597, 1371, 9184, 1074, 21, 4574, 576, 9188, 9202, 9163, 9191, 504, 9194, 8207, 4726, 9182, 9193, 8829, 9203, 4541, 4272, 4534, 1114, 7164, 7163, 7212, 4570, 9195, 4987, 4989, 2]
+// Dependencies: [32, 19, 17, 4628, 1371, 9221, 1074, 21, 4605, 576, 9225, 9239, 9200, 9228, 504, 9231, 8244, 4757, 9219, 9230, 8866, 9240, 4572, 4303, 4565, 1114, 7202, 7201, 7250, 4601, 9232, 5023, 5025, 2]
 // Exports: default
 
-// Module 9201 (SecureFramesUserVerificationBottomSheet)
+// Module 9238 (SecureFramesUserVerificationBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4534 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import UserActionCreators from "UserActionCreators" /* 8207 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8829 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9182 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9193 */;
-import XLargeBoldIcon from "XLargeBoldIcon" /* 9203 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4565 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import UserActionCreators from "UserActionCreators" /* 8244 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8866 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9219 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9230 */;
+import XLargeBoldIcon from "XLargeBoldIcon" /* 9240 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9184);
+const SecureFramesConstants = fn(9221);
 ({ AnalyticsSecureFramesUserVerification: closure_9, SECURE_FRAMES_PUBLIC_KEY_VERSION: c10, USER_VERIFIED_TOAST_KEY: closure_11 } = SecureFramesConstants);
 const AnalyticsLocations = fn(1074).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { iconContainer: null, icon: null, content: null, subtitle: null, buttons: null, helpMessage: null };
 let size = { height: 80, width: 80, borderRadius: 40, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, marginBottom: 16 };
 obj2.iconContainer = size;

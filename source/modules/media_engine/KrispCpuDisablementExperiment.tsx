@@ -1,10 +1,10 @@
-// Module ID: 14038
-// Function ID: 14039
+// Module ID: 14087
+// Function ID: 14088
 // Name: KrispCpuDisablementExperiment
 // Dependencies: [1433, 2]
 // Exports: getKrispCpuDisablementConfig
 
-// Module 14038 (KrispCpuDisablementExperiment)
+// Module 14087 (KrispCpuDisablementExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

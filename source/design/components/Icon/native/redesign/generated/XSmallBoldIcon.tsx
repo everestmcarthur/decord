@@ -1,13 +1,13 @@
-// Module ID: 7987
-// Function ID: 7988
+// Module ID: 8025
+// Function ID: 8026
 // Name: XSmallBoldIcon
-// Dependencies: [19, 21, 576, 4274, 7216, 2]
+// Dependencies: [19, 21, 576, 4305, 7254, 2]
 // Exports: XSmallBoldIcon
 
-// Module 7987 (XSmallBoldIcon)
+// Module 8025 (XSmallBoldIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod7216 from "module_7216" /* 7216 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod7254 from "module_7254" /* 7254 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const XSmallBoldIcon = function XSmallBoldIcon(WHITE) {
   }
   const merged = Object.assign(WHITE, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7216, color: INTERACTIVE_ICON_DEFAULT, style: WHITE.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7254, color: INTERACTIVE_ICON_DEFAULT, style: WHITE.style });
 };

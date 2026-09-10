@@ -1,12 +1,12 @@
-// Module ID: 14551
-// Function ID: 14552
+// Module ID: 14600
+// Function ID: 14601
 // Name: voiceSettingsEventHandlers
-// Dependencies: [14552, 9590, 2]
+// Dependencies: [14601, 9628, 2]
 
-// Module 14551 (voiceSettingsEventHandlers)
-import VoiceSettingsEventsFactory from "VoiceSettingsEventsFactory" /* 14552 */;
+// Module 14600 (voiceSettingsEventHandlers)
+import VoiceSettingsEventsFactory from "VoiceSettingsEventsFactory" /* 14601 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/native/events/voiceSettingsEventHandlers.tsx");
 
-export const voiceSettingsEventHandlers = VoiceSettingsEventsFactory(fn(9590).getDeprecatedVoiceSettings, fn(9590).getVoiceSettings);
+export const voiceSettingsEventHandlers = VoiceSettingsEventsFactory(fn(9628).getDeprecatedVoiceSettings, fn(9628).getVoiceSettings);

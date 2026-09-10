@@ -1,9 +1,9 @@
-// Module ID: 8843
-// Function ID: 8844
+// Module ID: 8880
+// Function ID: 8881
 // Name: APNGDecorationNativeComponent
 // Dependencies: [106, 65, 114, 2]
 
-// Module 8843 (APNGDecorationNativeComponent)
+// Module 8880 (APNGDecorationNativeComponent)
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;

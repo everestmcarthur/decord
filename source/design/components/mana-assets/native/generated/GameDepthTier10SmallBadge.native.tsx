@@ -1,13 +1,13 @@
-// Module ID: 6025
-// Function ID: 6026
+// Module ID: 6061
+// Function ID: 6062
 // Name: GameDepthTier10SmallBadge
-// Dependencies: [21, 5601, 6026, 2]
+// Dependencies: [21, 5637, 6062, 2]
 // Exports: GameDepthTier10SmallBadge
 
-// Module 6025 (GameDepthTier10SmallBadge)
+// Module 6061 (GameDepthTier10SmallBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6026 from "module_6026" /* 6026 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6062 from "module_6062" /* 6062 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GameDepthTier10SmallBadge = function GameDepthTier10SmallBadge(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6026 };
+  const obj2 = { uri: _modDef6062 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

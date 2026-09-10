@@ -1,17 +1,17 @@
-// Module ID: 12077
-// Function ID: 12078
+// Module ID: 12117
+// Function ID: 12118
 // Name: AppLauncherOnboardingLayer
-// Dependencies: [19, 17, 9517, 21, 4574, 576, 12078, 2]
+// Dependencies: [19, 17, 9555, 21, 4605, 576, 12118, 2]
 
-// Module 12077 (AppLauncherOnboardingLayer)
+// Module 12117 (AppLauncherOnboardingLayer)
 import nativeDefault from "native" /* 576 */;
-import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 12078 */;
+import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 12118 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
-let closure_3 = fn(9517).useBestActiveChatInputContainerHeight;
+let closure_3 = fn(9555).useBestActiveChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: null };
 const rect = { opacity: 1, width: "100%", position: "absolute", left: 0, top: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj.container = rect;

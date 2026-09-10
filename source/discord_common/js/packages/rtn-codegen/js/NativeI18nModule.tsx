@@ -1,9 +1,9 @@
-// Module ID: 17940
-// Function ID: 17941
+// Module ID: 17995
+// Function ID: 17996
 // Name: NativeI18nModule
 // Dependencies: [17, 2]
 
-// Module 17940 (NativeI18nModule)
+// Module 17995 (NativeI18nModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

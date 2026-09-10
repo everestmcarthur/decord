@@ -1,17 +1,17 @@
-// Module ID: 14920
-// Function ID: 14921
+// Module ID: 14969
+// Function ID: 14970
 // Name: FamilyCenterModalDataTooltip
-// Dependencies: [19, 17, 7552, 21, 5085, 11951, 4273, 13402, 5087, 11953, 4537, 11062, 4574, 576, 4570, 11950, 1114, 2396, 8679, 7607, 8449, 8450, 11957, 4989, 4777, 5638, 11959, 2]
+// Dependencies: [19, 17, 7590, 21, 5121, 11991, 4304, 13451, 5123, 11993, 4568, 11102, 4605, 576, 4601, 11990, 1114, 2396, 8716, 7644, 8486, 8487, 11997, 5025, 4808, 5674, 11999, 2]
 // Exports: default
 
-// Module 14920 (FamilyCenterModalDataTooltip)
+// Module 14969 (FamilyCenterModalDataTooltip)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8679 */;
-import Modal from "Modal" /* 11959 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8716 */;
+import Modal from "Modal" /* 11999 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -66,9 +66,9 @@ function FamilyCenterModalDataTooltipScreen() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(5085).ChatIcon, [USER_CALLED]: fn(11951).PhoneIcon, [USER_ADD]: fn(4273).FriendsIcon, [GUILD_ADD]: fn(13402).ServerGridIcon, [GUILD_INTERACTION]: fn(5087).ThreadIcon, [PURCHASES]: fn(11953).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(4537).ClockIcon, [GIFTS]: fn(11062).GiftIcon };
-({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7552).TeenActionDisplayType);
-let createStyles = fn(4574);
+let obj = { [USER_INTERACTION]: fn(5121).ChatIcon, [USER_CALLED]: fn(11991).PhoneIcon, [USER_ADD]: fn(4304).FriendsIcon, [GUILD_ADD]: fn(13451).ServerGridIcon, [GUILD_INTERACTION]: fn(5123).ThreadIcon, [PURCHASES]: fn(11993).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(4568).ClockIcon, [GIFTS]: fn(11102).GiftIcon };
+({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7590).TeenActionDisplayType);
+let createStyles = fn(4605);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };
 let size = { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round, flexShrink: 0, marginRight: nativeDefault.space.PX_12 };
 obj3.iconContainer = size;
@@ -77,7 +77,7 @@ obj3.header = { marginBottom: nativeDefault.space.PX_4 };
 let obj5 = { marginBottom: nativeDefault.space.PX_4 };
 obj3.icon = { tintColor: nativeDefault.colors.TEXT_BRAND };
 let closure_8 = createStyles.createStyles(obj3);
-createStyles = fn(4574);
+createStyles = fn(4605);
 let obj7 = { container: null, groupHeader: null };
 const obj6 = { tintColor: nativeDefault.colors.TEXT_BRAND };
 obj7.container = { display: "flex", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };

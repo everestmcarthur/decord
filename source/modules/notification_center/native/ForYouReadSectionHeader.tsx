@@ -1,20 +1,20 @@
-// Module ID: 16469
-// Function ID: 16470
+// Module ID: 16518
+// Function ID: 16519
 // Name: ForYouReadSectionHeader
-// Dependencies: [19, 17, 21, 4574, 576, 4570, 1114, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 4601, 1114, 2]
 // Exports: ForYouReadSectionHeader
 
-// Module 16469 (ForYouReadSectionHeader)
+// Module 16518 (ForYouReadSectionHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 8, paddingHorizontal: 24 }, textHeader: null };
 const obj3 = { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 8, paddingHorizontal: 24 };
 obj2.textHeader = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: 20 };

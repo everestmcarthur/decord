@@ -1,28 +1,28 @@
-// Module ID: 11922
-// Function ID: 11923
+// Module ID: 11962
+// Function ID: 11963
 // Name: ClassificationMessageEvidence
-// Dependencies: [32, 19, 17, 1183, 1371, 8458, 8447, 1074, 21, 7946, 4574, 504, 4425, 11923, 11924, 8446, 4724, 8287, 8336, 11925, 8685, 4797, 11, 2]
+// Dependencies: [32, 19, 17, 1183, 1371, 8495, 8484, 1074, 21, 7984, 4605, 504, 4456, 11963, 11964, 8483, 4755, 8324, 8373, 11965, 8722, 4828, 11, 2]
 // Exports: default
 
-// Module 11922 (ClassificationMessageEvidence)
-import RowGeneratorDefault from "RowGenerator" /* 7946 */;
-import openMediaModal from "openMediaModal" /* 8287 */;
+// Module 11962 (ClassificationMessageEvidence)
+import RowGeneratorDefault from "RowGenerator" /* 7984 */;
+import openMediaModal from "openMediaModal" /* 8324 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import UserStore from "UserStore" /* 1371 */;
-import SafetyHubStore from "SafetyHubStore" /* 8458 */;
+import SafetyHubStore from "SafetyHubStore" /* 8495 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, findNodeHandle: metroRequire, Image: closure_7, ActivityIndicator: closure_8 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8447);
+const SafetyHubConstants = fn(8484);
 ({ DEFAULT_MEDIA_MAX_WIDTH: closure_12, DEFAULT_MEDIA_MAX_HEIGHT: map1, VIDEO_PLACEHOLDER_WIDTH: closure_14, VIDEO_PLACEHOLDER_HEIGHT: closure_15, VIDEO_PLACEHOLDER_FILENAME: closure_16 } = SafetyHubConstants);
 const MessageTypes = fn(1074).MessageTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_21 = createStyles.createStyles({ dummyVideoAttachments: { width: 0, height: 0 } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationMessageEvidence.tsx");
@@ -42,11 +42,11 @@ export default function ClassificationEvidence(arg0) {
   let tmp5 = first1;
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
-  if (obj3.useStateFromStores(items1, () => ref(4425).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(11923));
+  if (obj3.useStateFromStores(items1, () => ref(4456).isThemeLight(id.theme))) {
+    let assetSource = resolveAssetSource(tmp11(11963));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(11924));
+    assetSource = resolveAssetSource(tmp11(11964));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
@@ -68,10 +68,10 @@ export default function ClassificationEvidence(arg0) {
         str = "";
       }
       obj.filename = str;
-      obj.flags = ref(8446).getSpoilerFlagsForAttachment(filename);
+      obj.flags = ref(8483).getSpoilerFlagsForAttachment(filename);
       obj.size = 0;
       obj.proxy_url = filename.url;
-      const obj2 = ref(8446);
+      const obj2 = ref(8483);
       const tmp2 = ref;
       if (obj3.isImageFile(filename.filename)) {
         const obj4 = {};
@@ -104,7 +104,7 @@ export default function ClassificationEvidence(arg0) {
           obj5.filename = filename;
           tmp4 = obj5;
         }
-        tmp2Result = tmp2(4724);
+        tmp2Result = tmp2(4755);
       }
       return tmp4;
     });
@@ -199,10 +199,10 @@ export default function ClassificationEvidence(arg0) {
     const items8 = [closure_18(closure_8, {}), ];
     let obj5 = { style: attachments.dummyVideoAttachments, children: null };
     attachments = first2.attachments;
-    first2 = attachments.filter((filename) => ref(4724).isVideoFile(filename.filename));
+    first2 = attachments.filter((filename) => ref(4755).isVideoFile(filename.filename));
     obj5.children = first2.map((uri, index) => {
       closure_0 = uri;
-      return closure_1_18(first(8336), {
+      return closure_1_18(first(8373), {
         source: { uri: uri.url },
         onLoad(arg0) {
           closure_0 = arg0;
@@ -225,13 +225,13 @@ export default function ClassificationEvidence(arg0) {
     let obj10 = obj4;
   } else {
     const obj6 = { ref, onTapImage: callback, inverted: false };
-    const items9 = [closure_18(tmp13(11925), obj6), ];
+    const items9 = [closure_18(tmp13(11965), obj6), ];
     const obj7 = { rowGenerator, message: null, modifyRow: null, pointerEvents: "none" };
-    const tmp13Result = tmp13(8685);
+    const tmp13Result = tmp13(8722);
     const tmp29 = closure_18;
     const obj8 = { id: first2.id, timestamp: null, channel_id: "1", type: null, author: null, content: null, attachments: null };
     const _Date = Date;
-    const tmpResult2 = tmp(4797);
+    const tmpResult2 = tmp(4828);
     const date = new Date(tmp13(11).extractTimestamp(first2.id));
     obj8.timestamp = date.toUTCString();
     obj8.type = MessageTypes.DEFAULT;

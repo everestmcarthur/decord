@@ -1,9 +1,9 @@
-// Module ID: 8028
-// Function ID: 8029
+// Module ID: 8066
+// Function ID: 8067
 // Name: AutomodRaidAlertTypes
 // Dependencies: [2]
 
-// Module 8028 (AutomodRaidAlertTypes)
+// Module 8066 (AutomodRaidAlertTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodRaidAlertTypes.tsx");

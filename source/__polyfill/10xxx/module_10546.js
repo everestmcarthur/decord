@@ -1,13 +1,14 @@
 // Module ID: 10546
 // Function ID: 10547
-// Dependencies: [41, 42, 93, 95, 98, 10478]
+// Dependencies: [41, 42, 93, 95, 96, 98, 10516]
 
 // Module 10546
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10478 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10516 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -30,14 +31,14 @@ function _isNativeReflectConstruct() {
   }
 }
 let _classCallCheck = _classCallCheck_mod;
-class PTTimeExpressionParser {
+class DETimeExpressionParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, PTTimeExpressionParser);
+    tmp = closure_0(this, DETimeExpressionParser);
     tmp2 = c2;
-    obj = c2(PTTimeExpressionParser);
+    obj = c2(DETimeExpressionParser);
     tmp3 = closure_1;
-    if (closure_3()) {
+    if (closure_4()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,22 +51,38 @@ class PTTimeExpressionParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = PTTimeExpressionParser;
-_inherits(PTTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_classCallCheck = DETimeExpressionParser;
+_inherits(DETimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
   key: "primaryPrefix",
   value: function primaryPrefix() {
-    return "(?:(?:ao?|\u00E0s?|das|da|de|do)\\s*)?";
+    return "(?:(?:um|von)\\s*)?";
   }
 };
-const items = [
+let items = [
   entry,
   {
     key: "followingPhase",
     value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:o)?|\\?)\\s*";
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|bis)\\s*";
+    }
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      let fnResult = null;
+      if (!str.match(/^\s*\d{4}\s*$/)) {
+        const self = this;
+        let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "extractPrimaryTimeComponents", this);
+        if (typeof fn === "function") {
+          fn = (items) => fn.apply(self, items);
+        }
+        const items = [arg0, arg1];
+        fnResult = fn(items);
+      }
+      return fnResult;
     }
   }
 ];
 
-export default _createClass(PTTimeExpressionParser, items);
+export default _createClass(DETimeExpressionParser, items);

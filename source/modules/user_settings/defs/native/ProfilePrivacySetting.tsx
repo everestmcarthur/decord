@@ -1,16 +1,16 @@
-// Module ID: 14879
-// Function ID: 14880
+// Module ID: 14928
+// Function ID: 14929
 // Name: ProfilePrivacySetting
-// Dependencies: [7989, 1935, 13105, 14880, 4541, 14881, 1896, 1114, 1187, 11500, 2]
+// Dependencies: [8027, 1935, 13152, 14929, 4572, 14930, 1896, 1114, 1187, 11540, 2]
 
-// Module 14879 (ProfilePrivacySetting)
+// Module 14928 (ProfilePrivacySetting)
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import SettingsConstants from "SettingsConstants" /* 7989 */;
-import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13105 */;
-import SettingBuilders from "SettingBuilders" /* 11500 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import SettingsConstants from "SettingsConstants" /* 8027 */;
+import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13152 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 const radio = SettingBuilders.createRadio({
@@ -30,13 +30,13 @@ const radio = SettingBuilders.createRadio({
     const ProfileVisibility2 = UserSettings.ProfileVisibility;
     ProfileVisibility2.updateSetting(NumberResult);
     if (obj.getIsInPrivateProfilesExperiment("ProfilePrivacySetting")) {
-      const profileToActivityUpsell = tmp2(14880).computeProfileToActivityUpsell(setting, NumberResult);
+      const profileToActivityUpsell = tmp2(14929).computeProfileToActivityUpsell(setting, NumberResult);
       if (null != profileToActivityUpsell) {
         ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds, settingName: obj4.settingName, mappedActivityValue: obj4.mappedActivityValue } = profileToActivityUpsell);
-        ActionSheetActionCreatorsDefault.openLazy(tmp2(1896)(14881, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null });
+        ActionSheetActionCreatorsDefault.openLazy(tmp2(1896)(14930, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null });
         const obj2 = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
       }
-      const tmp2Result = tmp2(14880);
+      const tmp2Result = tmp2(14929);
     }
   },
   useOptions() {

@@ -1,9 +1,9 @@
-// Module ID: 4540
-// Function ID: 4541
+// Module ID: 4571
+// Function ID: 4572
 // Name: NativeBrowserManagerModule
 // Dependencies: [17, 2]
 
-// Module 4540 (NativeBrowserManagerModule)
+// Module 4571 (NativeBrowserManagerModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

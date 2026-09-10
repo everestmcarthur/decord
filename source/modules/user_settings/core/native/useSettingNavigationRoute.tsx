@@ -1,10 +1,10 @@
-// Module ID: 7008
-// Function ID: 7009
+// Module ID: 7046
+// Function ID: 7047
 // Name: useSettingNavigationRoute
 // Dependencies: [1484, 2]
 // Exports: useSettingNavigationRoute
 
-// Module 7008 (useSettingNavigationRoute)
+// Module 7046 (useSettingNavigationRoute)
 import Link from "Link" /* 1484 */;
 import size from "module_2" /* 2 */;
 

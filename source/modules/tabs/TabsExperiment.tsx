@@ -1,9 +1,9 @@
-// Module ID: 11023
-// Function ID: 11024
+// Module ID: 11063
+// Function ID: 11064
 // Name: TabsExperiment
 // Dependencies: [1433, 2]
 
-// Module 11023 (TabsExperiment)
+// Module 11063 (TabsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

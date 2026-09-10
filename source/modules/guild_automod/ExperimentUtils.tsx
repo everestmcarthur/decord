@@ -1,11 +1,11 @@
-// Module ID: 10132
-// Function ID: 10133
+// Module ID: 10170
+// Function ID: 10171
 // Name: guild_automod/ExperimentUtils
-// Dependencies: [10133, 2]
+// Dependencies: [10171, 2]
 // Exports: isInMentionRaidExperiment, useIsMentionRaidExperimentEnabled
 
-// Module 10132 (guild_automod/ExperimentUtils)
-import AutomodExperiment from "AutomodExperiment" /* 10133 */;
+// Module 10170 (guild_automod/ExperimentUtils)
+import AutomodExperiment from "AutomodExperiment" /* 10171 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");

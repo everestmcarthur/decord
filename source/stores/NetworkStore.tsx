@@ -1,9 +1,9 @@
-// Module ID: 4623
-// Function ID: 4624
+// Module ID: 4654
+// Function ID: 4655
 // Name: NetworkStore
 // Dependencies: [1074, 504, 1461, 573, 2]
 
-// Module 4623 (NetworkStore)
+// Module 4654 (NetworkStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import NetworkUtilsDefault from "NetworkUtils" /* 1461 */;

@@ -1,22 +1,22 @@
-// Module ID: 13434
-// Function ID: 13435
+// Module ID: 13483
+// Function ID: 13484
 // Name: BuyNitroAccountCredit
-// Dependencies: [19, 1371, 4237, 7408, 1373, 21, 4574, 576, 504, 1974, 13375, 2]
+// Dependencies: [19, 1371, 4268, 7446, 1373, 21, 4605, 576, 504, 1974, 13424, 2]
 
-// Module 13434 (BuyNitroAccountCredit)
+// Module 13483 (BuyNitroAccountCredit)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import SetUtils from "SetUtils" /* 1974 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13375 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13424 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4237 */;
-import EntitlementStore from "EntitlementStore" /* 7408 */;
+import SubscriptionStore from "SubscriptionStore" /* 4268 */;
+import EntitlementStore from "EntitlementStore" /* 7446 */;
 
 require = fn;
 let closure_6 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { creditList: { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS } };
 let closure_8 = createStyles.createStyles(obj);
 const obj3 = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };

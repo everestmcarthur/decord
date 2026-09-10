@@ -1,11 +1,11 @@
-// Module ID: 14219
-// Function ID: 14220
+// Module ID: 14268
+// Function ID: 14269
 // Name: awaitExperiments
-// Dependencies: [9325, 2]
+// Dependencies: [9362, 2]
 // Exports: beginLoadedExperimentsTimeout, getPromise, onExperimentsLoaded
 
-// Module 14219 (awaitExperiments)
-import Future from "Future" /* 9325 */;
+// Module 14268 (awaitExperiments)
+import Future from "Future" /* 9362 */;
 import size from "module_2" /* 2 */;
 
 const future = new Future.Future();

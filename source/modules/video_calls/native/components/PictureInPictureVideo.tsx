@@ -1,26 +1,26 @@
-// Module ID: 9620
-// Function ID: 9621
+// Module ID: 9658
+// Function ID: 9659
 // Name: PictureInPictureVideo
-// Dependencies: [32, 19, 17, 1956, 4590, 502, 1908, 2011, 5433, 9518, 9499, 4595, 21, 4574, 1178, 576, 9621, 12, 9507, 9622, 504, 4775, 9623, 9626, 9636, 9654, 9655, 9663, 9567, 9685, 4275, 8158, 9657, 9525, 9521, 9524, 1477, 1115, 8360, 2]
+// Dependencies: [32, 19, 17, 1956, 4621, 502, 1908, 2011, 5469, 9556, 9537, 4626, 21, 4605, 1178, 576, 9659, 12, 9545, 9660, 504, 4806, 9661, 9664, 9674, 9692, 9693, 9701, 9605, 9723, 4306, 8195, 9695, 9563, 9559, 9562, 1477, 1115, 8397, 2]
 
-// Module 9620 (PictureInPictureVideo)
+// Module 9658 (PictureInPictureVideo)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4775 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9521 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 9524 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 9525 */;
-import transitionToActivityDefault from "transitionToActivity" /* 9567 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4806 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9559 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 9562 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 9563 */;
+import transitionToActivityDefault from "transitionToActivity" /* 9605 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SpeakingStore from "SpeakingStore" /* 5433 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9518 */;
+import SpeakingStore from "SpeakingStore" /* 5469 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9556 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -30,12 +30,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(9499);
+const ChannelCallStore = fn(9537);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(4595).ParticipantTypes;
+const ParticipantTypes = fn(4626).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { elevationShadow: null, background: null, backgroundPipFab: null, pip: null, pipFab: null, avatarContainer: null, activityPipContainer: null, thermalAlertIconContainer: null, thermalAlertIcon: null };
 const native = fn(1178);
 obj.elevationShadow = native.generateBoxShadowStyle(fn(1178).EIGHT_DP_ELEVATION_SHADOW_PARAMS);

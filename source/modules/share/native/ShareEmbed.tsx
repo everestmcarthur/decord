@@ -1,13 +1,13 @@
-// Module ID: 13930
-// Function ID: 13931
+// Module ID: 13979
+// Function ID: 13980
 // Name: ShareEmbed
-// Dependencies: [19, 17, 21, 4574, 576, 5591, 4570, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 5627, 4601, 2]
 // Exports: default
 
-// Module 13930 (ShareEmbed)
+// Module 13979 (ShareEmbed)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5591 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5627 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flexDirection: "row", height: 80, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, containerRevamp: { borderWidth: 0 }, thumbnail: { width: 80 }, contentContainer: { flex: 1, flexDirection: "column", justifyContent: "center", paddingLeft: 12, paddingRight: 24 }, authorView: { flexDirection: "row", alignItems: "center", marginBottom: 3 }, authorThumbnail: null, loadingSpinner: null };
 let size = { height: 16, width: 16, borderRadius: nativeDefault.radii.sm, marginRight: 4 };
 obj2.authorThumbnail = size;

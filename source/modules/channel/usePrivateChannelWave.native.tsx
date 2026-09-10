@@ -1,10 +1,10 @@
-// Module ID: 16070
-// Function ID: 16071
+// Module ID: 16119
+// Function ID: 16120
 // Name: usePrivateChannelWave
-// Dependencies: [5, 32, 19, 1074, 4567, 12295, 1100, 7470, 4272, 1114, 12294, 16071, 2]
+// Dependencies: [5, 32, 19, 1074, 4598, 12335, 1100, 7508, 4303, 1114, 12334, 16120, 2]
 // Exports: default
 
-// Module 16070 (usePrivateChannelWave)
+// Module 16119 (usePrivateChannelWave)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1074);
 ({ ME: metroRequire, Routes: closure_7 } = Constants);
-const MessageSendLocation = fn(4567).MessageSendLocation;
+const MessageSendLocation = fn(4598).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWave.native.tsx");
 

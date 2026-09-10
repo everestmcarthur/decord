@@ -1,8 +1,8 @@
-// Module ID: 5766
-// Function ID: 5767
+// Module ID: 5802
+// Function ID: 5803
 // Dependencies: [2]
 
-// Module 5766
+// Module 5802
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarCamExample-2x.png.js");

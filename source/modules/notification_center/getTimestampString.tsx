@@ -1,12 +1,12 @@
-// Module ID: 7656
-// Function ID: 7657
+// Module ID: 7693
+// Function ID: 7694
 // Name: notification_center/getTimestampString
-// Dependencies: [1114, 4166, 2]
+// Dependencies: [1114, 4196, 2]
 // Exports: default, getAbbreviatedFormatter, getFullFormatter
 
-// Module 7656 (notification_center/getTimestampString)
+// Module 7693 (notification_center/getTimestampString)
 import util from "util" /* 1114 */;
-import _modDef4166 from "module_4166" /* 4166 */;
+import _modDef4196 from "module_4196" /* 4196 */;
 import size from "module_2" /* 2 */;
 
 function getDurationString(seconds) {
@@ -53,7 +53,7 @@ let c4 = 31104000;
 const result = size.fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
 
 export default function getTimestampString(arg0) {
-  const obj = { seconds: _modDef4166().diff(_modDef4166(since), "s"), getFormatter };
+  const obj = { seconds: _modDef4196().diff(_modDef4196(since), "s"), getFormatter };
   ({ since, getFormatter } = arg0);
   return getDurationString(obj);
 };

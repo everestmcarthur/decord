@@ -1,17 +1,17 @@
-// Module ID: 17936
-// Function ID: 17937
+// Module ID: 17991
+// Function ID: 17992
 // Name: handleAppStateChanged
-// Dependencies: [502, 1895, 1074, 3, 10, 573, 4597, 17935, 7489, 4422, 9, 1242, 2]
+// Dependencies: [502, 1895, 1074, 3, 10, 573, 4628, 17990, 7527, 4453, 9, 1242, 2]
 // Exports: default
 
-// Module 17936 (handleAppStateChanged)
+// Module 17991 (handleAppStateChanged)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4422 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7489 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4453 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7527 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
 
@@ -35,8 +35,8 @@ export default function handleAppStateChanged(state) {
     const _default = RTCConnectionStore.default;
   }
   if (isAuthenticatedResult) {
-    tmp2(17935).deferUpdate();
-    const tmp2Result = tmp2(17935);
+    tmp2(17990).deferUpdate();
+    const tmp2Result = tmp2(17990);
   }
   if (state === constants2.ACTIVE) {
     TTIAnalyticsUtils.trackAppOpened("launcher");

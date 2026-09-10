@@ -1,8 +1,8 @@
-// Module ID: 5882
-// Function ID: 5883
+// Module ID: 5918
+// Function ID: 5919
 // Dependencies: [2]
 
-// Module 5882
+// Module 5918
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CompassIllocon-2x.png.js");

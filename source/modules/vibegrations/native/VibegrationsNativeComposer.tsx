@@ -1,14 +1,14 @@
-// Module ID: 16647
-// Function ID: 16648
+// Module ID: 16702
+// Function ID: 16703
 // Name: VibegrationsNativeComposer
-// Dependencies: [5, 32, 19, 17, 16623, 1074, 21, 4574, 576, 1114, 3560, 7259, 5164, 11255, 4570, 5137, 6630, 8699, 12269, 10983, 8634, 15970, 4519, 2]
+// Dependencies: [5, 32, 19, 17, 16678, 1074, 21, 4605, 576, 1114, 3590, 7297, 5200, 11295, 4601, 5173, 6666, 8736, 12309, 11023, 8671, 16019, 4550, 2]
 // Exports: default
 
-// Module 16647 (VibegrationsNativeComposer)
+// Module 16702 (VibegrationsNativeComposer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import _modDef3560 from "module_3560" /* 3560 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7259 */;
+import _modDef3590 from "module_3590" /* 3590 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7297 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,15 +21,15 @@ function tooLargeText(contentType) {
   const obj = { size: null };
   const obj2 = VibegrationsTypes;
   obj.size = obj2.formatVibegrationsAttachmentLimit(VibegrationsTypes.vibegrationsAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef3560.cI7t94, obj);
+  return intl.formatToPlainString(_modDef3590.cI7t94, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(16623);
+const VibegrationsConnectionStore = fn(16678);
 ({ deleteStagedAttachment: closure_8, uploadAttachmentBytes: closure_9 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, box: null, boxFocused: null, boxContents: null, input: null, inputText: null, inputPlaceholder: null, draftRow: null, draftPill: null, draftName: null, trailingButton: null, sendButtonActive: null, sendIconActive: null };
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.box = { backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, overflow: "hidden" };
@@ -244,9 +244,9 @@ export default function VibegrationsNativeComposer(projectId) {
       if (map.length > diff) {
         let intl = tmp16(1114).intl;
         let obj = { count: null };
-        VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = tmp16(7259).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
+        VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE = tmp16(7297).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
         obj.count = VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE;
-        _undefined3(intl.formatToPlainString(_modDef3560.DlX57a, obj));
+        _undefined3(intl.formatToPlainString(_modDef3590.DlX57a, obj));
         const _Math = Math;
         const substr = map.slice(0, Math.max(0, diff));
         let arr2 = substr;
@@ -334,10 +334,10 @@ export default function VibegrationsNativeComposer(projectId) {
             return obj4;
           } else {
             closure_128_0 = undefined;
-            const obj5 = { mediaType: "any", selectionLimit: tmp2(7259).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
+            const obj5 = { mediaType: "any", selectionLimit: tmp2(7297).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp5(5164).launchImageLibraryAsync(obj5), done: false };
+            const obj6 = { value: tmp5(5200).launchImageLibraryAsync(obj5), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -471,12 +471,12 @@ export default function VibegrationsNativeComposer(projectId) {
   const memo = obj.useMemo(() => {
     const obj = { label: null, action: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef3560.xE6M2k);
+    obj.label = intl.string(_modDef3590.xE6M2k);
     obj.action = callback5;
     const items = [obj, ];
     const obj2 = { label: null, action: null };
     const intl2 = util.intl;
-    obj2.label = intl2.string(_modDef3560.DN7KeU);
+    obj2.label = intl2.string(_modDef3590.DN7KeU);
     obj2.action = callback6;
     items[1] = obj2;
     return items;

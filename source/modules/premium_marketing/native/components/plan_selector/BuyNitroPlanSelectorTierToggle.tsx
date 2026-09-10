@@ -1,18 +1,18 @@
-// Module ID: 13433
-// Function ID: 13434
+// Module ID: 13482
+// Function ID: 13483
 // Name: BuyNitroPlanSelectorTierToggle
-// Dependencies: [32, 19, 17, 7446, 1373, 21, 4574, 576, 4310, 4575, 4578, 4577, 5001, 1093, 13385, 4542, 4543, 4570, 1114, 2]
+// Dependencies: [32, 19, 17, 7484, 1373, 21, 4605, 576, 4341, 4606, 4609, 4608, 5037, 1093, 13434, 4573, 4574, 4601, 1114, 2]
 // Exports: default
 
-// Module 13433 (BuyNitroPlanSelectorTierToggle)
+// Module 13482 (BuyNitroPlanSelectorTierToggle)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
-import HapticUtils from "HapticUtils" /* 4542 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
-import timing from "timing" /* 4575 */;
-import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4577 */;
-import timingPresets from "timingPresets" /* 4578 */;
-import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4341 */;
+import HapticUtils from "HapticUtils" /* 4573 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4574 */;
+import timing from "timing" /* 4606 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4608 */;
+import timingPresets from "timingPresets" /* 4609 */;
+import LinearGradientDefault from "LinearGradient" /* 5037 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,12 +23,12 @@ const PremiumConstants = fn(1373);
 ({ PREMIUM_TYPE_DISPLAY_NAME: closure_7, PremiumTypes: closure_8 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-[tmp7, tmp8] = fn(7446).Gradients.PREMIUM_TIER_2;
+[tmp7, tmp8] = fn(7484).Gradients.PREMIUM_TIER_2;
 let items = [tmp7, tmp8, tmp7, tmp8, tmp7];
 const locations = [0, 0.25, 0.5, 0.75, 1];
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { pill: null, tab: null, indicator: null, gradientLayer: null, gradientTrack: null, gradientFill: null };
-const importDefaultResultResult = _slicedToArray(fn(7446).Gradients.PREMIUM_TIER_2, 2);
+const importDefaultResultResult = _slicedToArray(fn(7484).Gradients.PREMIUM_TIER_2, 2);
 obj2.pill = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, padding: nativeDefault.space.PX_4 };
 let obj3 = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, padding: nativeDefault.space.PX_4 };
 obj2.tab = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4 };
@@ -67,7 +67,7 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   if (selectedTier !== sharedValue2.TIER_0) {
     num = 1;
   }
-  const sharedValue = selectedTier(4310).useSharedValue(num);
+  const sharedValue = selectedTier(4341).useSharedValue(num);
   closure_129_1 = sharedValue;
   items = [selectedTier !== sharedValue2.TIER_0, sharedValue];
   const effect = noop.useEffect(() => {
@@ -77,28 +77,28 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
     }
     const result = importDefault.set(timing.withTiming(num, timingPresets.timingStandard));
   }, items);
-  let obj = selectedTier(4310);
-  const sharedValue1 = selectedTier(4310).useSharedValue(0);
+  let obj = selectedTier(4341);
+  const sharedValue1 = selectedTier(4341).useSharedValue(0);
   closure_129_2 = sharedValue1;
   const items1 = [sharedValue1];
   const effect1 = noop.useEffect(() => {
     const accessibilityPreferencesSharedValue = reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue;
     if (!accessibilityPreferencesSharedValue.get().reduceMotion) {
-      const tmpResult = tmp(4310);
-      const obj = { duration: 5000, easing: tmp(4310).Easing.linear };
-      const result = disabled.set(tmpResult.withRepeat(tmp(4575).withTiming(-120, obj), -1, false));
+      const tmpResult = tmp(4341);
+      const obj = { duration: 5000, easing: tmp(4341).Easing.linear };
+      const result = disabled.set(tmpResult.withRepeat(tmp(4606).withTiming(-120, obj), -1, false));
       return () => selectedTier(disabled[8]).cancelAnimation(closure_1_2);
     }
   }, items1);
-  const tmp3Result = selectedTier(4310);
+  const tmp3Result = selectedTier(4341);
   const fn = function s() {
     return { opacity: importDefault.get() };
   };
   fn.__closure = { nitroProgress: sharedValue };
   fn.__workletHash = 7392050192451;
   fn.__initData = __initData;
-  const animatedStyle = selectedTier(4310).useAnimatedStyle(fn);
-  const tmp3Result6 = selectedTier(4310);
+  const animatedStyle = selectedTier(4341).useAnimatedStyle(fn);
+  const tmp3Result6 = selectedTier(4341);
   const fn2 = function c() {
     const obj = { transform: null };
     items = [{ translateX: disabled.get() }];
@@ -108,17 +108,17 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   fn2.__closure = { gradientFlowX: sharedValue1 };
   fn2.__workletHash = 14545174926033;
   fn2.__initData = __initData2;
-  const animatedStyle1 = selectedTier(4310).useAnimatedStyle(fn2);
+  const animatedStyle1 = selectedTier(4341).useAnimatedStyle(fn2);
   const tmp11 = _slicedToArray(noop.useState({}), 2);
   noop = tmp11[1];
   closure_5 = tmp12;
   noop.useRef(null);
-  const tmp3Result7 = selectedTier(4310);
+  const tmp3Result7 = selectedTier(4341);
   ref = noop.useRef(new Map());
   const map = new Map();
-  sharedValue2 = selectedTier(4310).useSharedValue(0);
-  const tmp3Result8 = selectedTier(4310);
-  sharedValue3 = selectedTier(4310).useSharedValue(0);
+  sharedValue2 = selectedTier(4341).useSharedValue(0);
+  const tmp3Result8 = selectedTier(4341);
+  sharedValue3 = selectedTier(4341).useSharedValue(0);
   ref2 = noop.useRef(false);
   const layoutEffect = noop.useLayoutEffect(() => {
     const current = ref.current;
@@ -151,7 +151,7 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
       }
     }
   }, items2);
-  selectedTier(4310);
+  selectedTier(4341);
   const fn3 = function k() {
     const obj = { transform: null, width: null };
     items = [{ translateX: sharedValue2.get() }];
@@ -185,7 +185,7 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
     const obj4 = { top: null, height: null };
   }
   const items6 = [tmp23, ];
-  const NITRO_PLAN_TIERS = tmp3(13385).NITRO_PLAN_TIERS;
+  const NITRO_PLAN_TIERS = tmp3(13434).NITRO_PLAN_TIERS;
   items6[1] = NITRO_PLAN_TIERS.map((item) => {
     closure_0 = item;
     let str = "text-muted";

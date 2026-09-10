@@ -1,9 +1,9 @@
-// Module ID: 6963
-// Function ID: 6964
+// Module ID: 6999
+// Function ID: 7000
 // Name: NativeCeremonies
-// Dependencies: [5, 17, 3, 6611, 1114, 1115, 6964, 6965, 1608, 2]
+// Dependencies: [5, 17, 3, 6647, 1114, 1115, 7000, 7001, 1608, 2]
 
-// Module 6963 (NativeCeremonies)
+// Module 6999 (NativeCeremonies)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

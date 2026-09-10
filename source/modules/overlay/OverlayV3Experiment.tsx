@@ -1,15 +1,15 @@
-// Module ID: 4420
-// Function ID: 4421
+// Module ID: 4451
+// Function ID: 4452
 // Name: OverlayV3Experiment
 // Dependencies: [1433, 2]
 // Exports: getOverlayChatConfig, getOverlayDefaultKeybind, getOverlayStreamerModeConfig, trackOverlayInitializedExperiments, useOverlayChat, useOverlayStreamerMode
 
-// Module 4420 (OverlayV3Experiment)
+// Module 4451 (OverlayV3Experiment)
 import ApexExperiment_mod from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
 let ApexExperiment = ApexExperiment_mod;
-const obj = { name: "2026-03-overlay-default-keybind", kind: "user", defaultConfig: { keybindOverride: "disabled" }, variations: null };
+const obj = { name: "2026-03-overlay-default-keybind", kind: "user", defaultConfig: { keybindOverride: "Array" }, variations: null };
 const obj2 = { 1: null, 2: { keybindOverride: "ctrl+tab" }, 3: { keybindOverride: "alt+x" } };
 obj2[3] = { keybindOverride: "ctrl+l" };
 obj.variations = obj2;

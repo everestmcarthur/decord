@@ -1,9 +1,9 @@
-// Module ID: 7554
-// Function ID: 7555
+// Module ID: 7592
+// Function ID: 7593
 // Name: FamilyCenterControlledSettingsStore
 // Dependencies: [1223, 1187, 504, 573, 2]
 
-// Module 7554 (FamilyCenterControlledSettingsStore)
+// Module 7592 (FamilyCenterControlledSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;

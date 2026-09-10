@@ -1,18 +1,18 @@
-// Module ID: 13168
-// Function ID: 13169
+// Module ID: 13215
+// Function ID: 13216
 // Name: AvatarDecorationProductPreview
-// Dependencies: [19, 17, 21, 4574, 8204, 8197, 1114, 1178, 2]
+// Dependencies: [19, 17, 21, 4605, 8241, 8234, 1114, 1178, 2]
 // Exports: default
 
-// Module 13168 (AvatarDecorationProductPreview)
-import useShopProductItems from "useShopProductItems" /* 8197 */;
-import useCurrentUser from "useCurrentUser" /* 8204 */;
+// Module 13215 (AvatarDecorationProductPreview)
+import useShopProductItems from "useShopProductItems" /* 8234 */;
+import useCurrentUser from "useCurrentUser" /* 8241 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_4 = createStyles.createStyles({ fullSizePreview: { flex: 1, alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/AvatarDecorationProductPreview.tsx");

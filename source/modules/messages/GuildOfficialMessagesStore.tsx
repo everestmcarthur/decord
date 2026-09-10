@@ -1,17 +1,17 @@
-// Module ID: 13747
-// Function ID: 13748
+// Module ID: 13796
+// Function ID: 13797
 // Name: GuildOfficialMessagesStore
-// Dependencies: [1957, 2021, 1979, 4222, 1371, 1074, 4797, 1384, 504, 573, 2]
+// Dependencies: [1957, 2021, 1979, 4253, 1371, 1074, 4828, 1384, 504, 573, 2]
 
-// Module 13747 (GuildOfficialMessagesStore)
+// Module 13796 (GuildOfficialMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4797 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4828 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -280,7 +280,7 @@ obj = {
             let tmp5 = null != tmp4;
             if (tmp5) {
               if (null == tmp4.messages[message.id]) {
-                const messageRecord = tmp23(4797).createMessageRecord(message);
+                const messageRecord = tmp23(4828).createMessageRecord(message);
                 if (null != obj[guildId]) {
                   obj = {};
                   const merged = Object.assign(obj);
@@ -297,7 +297,7 @@ obj = {
                   const merged3 = Object.assign(obj3);
                   obj[guildId] = obj2;
                 }
-                const tmp23Result = tmp23(4797);
+                const tmp23Result = tmp23(4828);
               }
               tmp5 = tmp6;
             }
@@ -352,7 +352,7 @@ obj = {
         const hasFlagResult = FlagUtils.hasFlag(num, MessageFlags.IS_GUILD_OFFICIAL);
         if (hasFlagResult) {
           if (null == tmp45) {
-            const messageRecord = tmp46(4797).createMessageRecord(message);
+            const messageRecord = tmp46(4828).createMessageRecord(message);
             if (null != obj[guildId]) {
               const obj5 = {};
               const merged4 = Object.assign(obj);
@@ -370,7 +370,7 @@ obj = {
               obj5[guildId] = obj6;
               obj = obj5;
             }
-            const tmp46Result = tmp46(4797);
+            const tmp46Result = tmp46(4828);
           }
         }
         if (!hasFlagResult) {
@@ -396,7 +396,7 @@ obj = {
         }
         if (hasFlagResult) {
           if (null != tmp45) {
-            const updateMessageRecordResult1 = tmp46(4797).updateMessageRecord(tmp45, message);
+            const updateMessageRecordResult1 = tmp46(4828).updateMessageRecord(tmp45, message);
             if (null != obj[guildId]) {
               const obj15 = {};
               const merged12 = Object.assign(obj);
@@ -411,7 +411,7 @@ obj = {
               obj15[guildId] = obj16;
               obj = obj15;
             }
-            const tmp46Result2 = tmp46(4797);
+            const tmp46Result2 = tmp46(4828);
           }
         }
         return false;

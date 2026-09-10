@@ -1,15 +1,15 @@
-// Module ID: 13421
-// Function ID: 13422
+// Module ID: 13470
+// Function ID: 13471
 // Name: BuyNitroGradient
-// Dependencies: [19, 1373, 21, 4310, 5001, 4575, 4578, 2]
+// Dependencies: [19, 1373, 21, 4341, 5037, 4606, 4609, 2]
 // Exports: default
 
-// Module 13421 (BuyNitroGradient)
-import timing from "timing" /* 4575 */;
-import timingPresets from "timingPresets" /* 4578 */;
-import LinearGradientDefault from "LinearGradient" /* 5001 */;
+// Module 13470 (BuyNitroGradient)
+import timing from "timing" /* 4606 */;
+import timingPresets from "timingPresets" /* 4609 */;
+import LinearGradientDefault from "LinearGradient" /* 5037 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
 
 require = fn;
 const PremiumTypes = fn(1373).PremiumTypes;
@@ -31,8 +31,8 @@ export default function BuyNitroGradient(selectedTier) {
     }
     return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
   };
-  let obj = selectedTier(4310);
-  fn.__closure = { withTiming: selectedTier(4575).withTiming, selectedTier, PremiumTypes, timingStandard: selectedTier(4578).timingStandard };
+  let obj = selectedTier(4341);
+  fn.__closure = { withTiming: selectedTier(4606).withTiming, selectedTier, PremiumTypes, timingStandard: selectedTier(4609).timingStandard };
   fn.__workletHash = 14014615431537;
   fn.__initData = __initData;
   const obj3 = { children: null };

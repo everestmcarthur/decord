@@ -1,13 +1,13 @@
-// Module ID: 16140
-// Function ID: 16141
+// Module ID: 16189
+// Function ID: 16190
 // Name: useFavoritesGuildCategoryFullNotice
-// Dependencies: [1960, 1970, 1074, 504, 10256, 1982, 1114, 3236, 2]
+// Dependencies: [1960, 1970, 1074, 504, 10294, 1982, 1114, 3236, 2]
 // Exports: default
 
-// Module 16140 (useFavoritesGuildCategoryFullNotice)
+// Module 16189 (useFavoritesGuildCategoryFullNotice)
 import initialize from "initialize" /* 504 */;
 import _modDef3236 from "module_3236" /* 3236 */;
-import FavoritesHooks from "FavoritesHooks" /* 10256 */;
+import FavoritesHooks from "FavoritesHooks" /* 10294 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 
 require = fn;

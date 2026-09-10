@@ -1,20 +1,20 @@
-// Module ID: 13054
-// Function ID: 13055
+// Module ID: 13094
+// Function ID: 13095
 // Name: UserProfileActivityVoiceChannel
-// Dependencies: [17, 4212, 1085, 21, 4574, 1115, 7176, 8216, 4976, 13055, 4727, 504, 5111, 5115, 1114, 5598, 5137, 4272, 7223, 4570, 9802, 4781, 4541, 13056, 1896, 8205, 13057, 1178, 2]
+// Dependencies: [17, 4243, 1085, 21, 4605, 1115, 7214, 8253, 5012, 13095, 4758, 504, 5147, 5151, 1114, 5634, 5173, 4303, 7261, 4601, 9840, 4812, 4572, 13096, 1896, 8242, 13097, 1178, 2]
 // Exports: default
 
-// Module 13054 (UserProfileActivityVoiceChannel)
+// Module 13094 (UserProfileActivityVoiceChannel)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1178 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4781 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4812 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4574 */;
+import createStyles from "createStyles" /* 4605 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import size from "module_2" /* 2 */;
 
@@ -122,7 +122,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.accessibilityLabel = intl3.formatToPlainString(guild(onAction[14]).t.e95u3C, { count: users.length });
   obj15.onPress = function onPress() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13056, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13096, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", {
       users,
       channel,
       onPressUser(userId) {

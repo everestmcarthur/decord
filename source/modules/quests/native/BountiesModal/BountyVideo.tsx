@@ -1,29 +1,29 @@
-// Module ID: 15054
-// Function ID: 15055
+// Module ID: 15103
+// Function ID: 15104
 // Name: BountyVideo
-// Dependencies: [32, 19, 17, 5458, 21, 1116, 11317, 576, 4574, 15055, 11552, 11553, 4310, 4275, 4575, 4578, 15042, 15047, 15056, 15066, 5601, 1114, 15067, 15069, 15071, 11123, 2]
+// Dependencies: [32, 19, 17, 5494, 21, 1116, 11357, 576, 4605, 15104, 11592, 11593, 4341, 4306, 4606, 4609, 15091, 15096, 15105, 15115, 5637, 1114, 15116, 15118, 15120, 11163, 2]
 // Exports: BountyVideo
 
-// Module 15054 (BountyVideo)
+// Module 15103 (BountyVideo)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4575 */;
-import timingPresets from "timingPresets" /* 4578 */;
-import AssetUtils from "AssetUtils" /* 11317 */;
-import useBountiesAutoScroll from "useBountiesAutoScroll" /* 15042 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 15055 */;
+import timing from "timing" /* 4606 */;
+import timingPresets from "timingPresets" /* 4609 */;
+import AssetUtils from "AssetUtils" /* 11357 */;
+import useBountiesAutoScroll from "useBountiesAutoScroll" /* 15091 */;
+import BountiesModalProgress from "BountiesModalProgress" /* 15104 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5458).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5494).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PlatformUtils = fn(1116);
 let closure_14 = { top: 48, bottom: 16, left: 16, right: 16 };
 const lg = nativeDefault.radii.lg;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_16 = createStyles.createStyles(() => {
   const obj = { videoContainer: null, leftRow: null, progress: null, poster: null };
   const obj2 = {};

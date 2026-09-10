@@ -1,16 +1,16 @@
-// Module ID: 12549
-// Function ID: 12550
+// Module ID: 12589
+// Function ID: 12590
 // Name: useCalculatePowerupCardStatus
-// Dependencies: [19, 4464, 1114, 2428, 2]
+// Dependencies: [19, 4495, 1114, 2428, 2]
 // Exports: useCalculatePowerupCardStatus
 
-// Module 12549 (useCalculatePowerupCardStatus)
+// Module 12589 (useCalculatePowerupCardStatus)
 import util from "util" /* 1114 */;
 import _modDef2428 from "module_2428" /* 2428 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PowerupActiveStatusType = fn(4464).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(4495).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
 

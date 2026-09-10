@@ -1,20 +1,20 @@
-// Module ID: 14801
-// Function ID: 14802
+// Module ID: 14850
+// Function ID: 14851
 // Name: SafetyHubAccountStandingSubwayMarker
-// Dependencies: [19, 17, 21, 4574, 576, 1114, 4570, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 1114, 4601, 2]
 // Exports: default
 
-// Module 14801 (SafetyHubAccountStandingSubwayMarker)
+// Module 14850 (SafetyHubAccountStandingSubwayMarker)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { width: 56, display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", rowGap: 8, flex: 1 }, marker: { display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1, padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, empty: null, label: null, firstOption: null, lastOption: null };
 let size = { display: "flex", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, width: "100%", height: "100%" };
 obj2.empty = size;

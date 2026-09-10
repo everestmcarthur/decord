@@ -1,10 +1,10 @@
-// Module ID: 13832
-// Function ID: 13833
+// Module ID: 13881
+// Function ID: 13882
 // Name: BrowserInvertedWantsExperiment
 // Dependencies: [1433, 1116, 2]
 // Exports: getBrowserInvertedWantsConfig
 
-// Module 13832 (BrowserInvertedWantsExperiment)
+// Module 13881 (BrowserInvertedWantsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

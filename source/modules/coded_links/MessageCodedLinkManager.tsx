@@ -1,16 +1,16 @@
-// Module ID: 17449
-// Function ID: 17450
+// Module ID: 17508
+// Function ID: 17509
 // Name: MessageCodedLinkManager
-// Dependencies: [5, 7471, 1957, 4558, 4557, 4562, 17450, 8406, 7338, 12101, 7132, 17457, 2]
+// Dependencies: [5, 7509, 1957, 4589, 4588, 4593, 17509, 8443, 7376, 12141, 7170, 17516, 2]
 
-// Module 17449 (MessageCodedLinkManager)
-import findCodedLinksDefault from "findCodedLinks" /* 4557 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17457 */;
+// Module 17508 (MessageCodedLinkManager)
+import findCodedLinksDefault from "findCodedLinks" /* 4588 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17516 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7471 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7509 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import InviteStore from "InviteStore" /* 4558 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import InviteStore from "InviteStore" /* 4589 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 const require = fn;
 function resolveMessageCodedLinks(content) {

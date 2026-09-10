@@ -1,21 +1,21 @@
-// Module ID: 13191
-// Function ID: 13192
+// Module ID: 13238
+// Function ID: 13239
 // Name: HeadlessCollectiblesPurchaseFlow
-// Dependencies: [19, 1074, 1085, 21, 9397, 8874, 11041, 1115, 4244, 10854, 10836, 4541, 8202, 13192, 2]
+// Dependencies: [19, 1074, 1085, 21, 9435, 8911, 11081, 1115, 4275, 10892, 10874, 4572, 8239, 13239, 2]
 // Exports: default
 
-// Module 13191 (HeadlessCollectiblesPurchaseFlow)
+// Module 13238 (HeadlessCollectiblesPurchaseFlow)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8202 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 8874 */;
-import ACOMExperiments from "ACOMExperiments" /* 9397 */;
-import NativePaymentContext from "NativePaymentContext" /* 10854 */;
-import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 11041 */;
-import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 13192 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8239 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 8911 */;
+import ACOMExperiments from "ACOMExperiments" /* 9435 */;
+import NativePaymentContext from "NativePaymentContext" /* 10892 */;
+import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 11081 */;
+import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 13239 */;
 import noop from "module_19" /* 19 */;
 
-const NativeCheckoutStoreProviderDefault = tmp3(10836);
+const NativeCheckoutStoreProviderDefault = tmp3(10874);
 require = fn;
 const application_id = fn(1074).COLLECTIBLES_APPLICATION_ID;
 const PaymentGateways = fn(1085).PaymentGateways;
@@ -42,8 +42,8 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     if (!tmp8) {
       let result = GOOGLE === tmp6.GOOGLE;
       if (result) {
-        result = tmp(4244).isGooglePlayBillingSupported();
-        const tmpResult = tmp(4244);
+        result = tmp(4275).isGooglePlayBillingSupported();
+        const tmpResult = tmp(4275);
       }
       tmp8 = result;
     }

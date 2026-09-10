@@ -1,17 +1,17 @@
-// Module ID: 15241
-// Function ID: 15242
+// Module ID: 15290
+// Function ID: 15291
 // Name: UserSettingsGuildRoleSubscriptions
-// Dependencies: [19, 17, 21, 4574, 4570, 1114, 1178, 15242, 15243, 15244, 15247, 15248, 2]
+// Dependencies: [19, 17, 21, 4605, 4601, 1114, 1178, 15291, 15292, 15293, 15296, 15297, 2]
 // Exports: default
 
-// Module 15241 (UserSettingsGuildRoleSubscriptions)
+// Module 15290 (UserSettingsGuildRoleSubscriptions)
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useRestorePurchasesDefault from "useRestorePurchases" /* 15242 */;
-import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15243 */;
-import LoadingIndicatorDefault from "LoadingIndicator" /* 15247 */;
-import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 15248 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useRestorePurchasesDefault from "useRestorePurchases" /* 15291 */;
+import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15292 */;
+import LoadingIndicatorDefault from "LoadingIndicator" /* 15296 */;
+import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 15297 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "role-subscriptions";
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_8 = createStyles.createStyles({ container: { flex: 1 }, list: { flex: 1 }, listContentContainer: { paddingHorizontal: 16 }, sectionHeader: { paddingVertical: 24 }, sectionSubtitle: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx");

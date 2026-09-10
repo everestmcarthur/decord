@@ -1,26 +1,26 @@
-// Module ID: 14905
-// Function ID: 14906
+// Module ID: 14954
+// Function ID: 14955
 // Name: FamilyCenterBannerButton
-// Dependencies: [19, 17, 1371, 7551, 7552, 1074, 4784, 21, 4574, 576, 8678, 4271, 1114, 11947, 563, 14906, 1242, 14907, 4541, 14908, 1896, 4987, 4989, 9085, 2396, 14911, 4777, 1365, 11944, 1608, 5153, 13894, 2]
+// Dependencies: [19, 17, 1371, 7589, 7590, 1074, 4815, 21, 4605, 576, 8715, 4302, 1114, 11987, 563, 14955, 1242, 14956, 4572, 14957, 1896, 5023, 5025, 9122, 2396, 14960, 4808, 1365, 11984, 1608, 5189, 13943, 2]
 // Exports: FamilyCenterParentQRCodeButton, FamilyCenterTeenQRCodeButton
 
-// Module 14905 (FamilyCenterBannerButton)
+// Module 14954 (FamilyCenterBannerButton)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import components_Button_Button from "components/Button/Button" /* 4989 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14907 */;
-import QrCodeIcon from "QrCodeIcon" /* 14911 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import components_Button_Button from "components/Button/Button" /* 5025 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14956 */;
+import QrCodeIcon from "QrCodeIcon" /* 14960 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7589 */;
 
 const require = globalThis.__r;
 
-const NativePermissionUtilsDefault = tmp(5153);
+const NativePermissionUtilsDefault = tmp(5189);
 require = fn;
 function FamilyCenterTeenQRCodeButtonInner() {
   const callback = stateFromStores1.useCallback(() => {
@@ -68,7 +68,7 @@ function FamilyCenterTeenQRCodeButtonInner() {
       const obj2 = { action: React7.ShowQRCodeModal };
       AnalyticsUtilsDefault.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj2);
       const obj4 = { linkCode: stateFromStores1, expiresAt: stateFromStores2, onRefresh: getLinkCode2 };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14908, dependencyMap.paths), React5, obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14957, dependencyMap.paths), React5, obj4);
     }
   }, items4);
   const obj8 = { direction: "horizontal", spacing: getLinkCode2(stateFromStores[9]).space.PX_8, style: tmp.container, children: null };
@@ -102,16 +102,16 @@ class FamilyCenterBannerButton {
   }
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7552);
+const FamilyCenterConstants = fn(7590);
 ({ CONNECT_GUARDIAN_BOTTOM_SHEET_KEY: closure_7, FAMILY_CENTER_LINK_REQUEST_REGEX: closure_8, FamilyCenterAction: closure_9 } = FamilyCenterConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const NativePermissionTypes = fn(4784).NativePermissionTypes;
+const NativePermissionTypes = fn(4815).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_16 } };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(4574);
+createStyles = fn(4605);
 const value = createStyles.createStyles({ button: { height: 50, width: "100%", marginTop: 16 }, art: { width: 18, height: 18, marginRight: 6 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterBannerButton.tsx");
@@ -172,6 +172,6 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
     };
     return closure_12(FamilyCenterBannerButton, obj2);
   }
-  obj = handleQrCodeScanSucess(8678);
+  obj = handleQrCodeScanSucess(8715);
   tmp = handleQrCodeScanSucess;
 };

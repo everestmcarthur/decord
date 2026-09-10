@@ -1,15 +1,15 @@
-// Module ID: 7883
-// Function ID: 7884
+// Module ID: 7920
+// Function ID: 7921
 // Name: Badge
-// Dependencies: [19, 17, 21, 4574, 576, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 2]
 
-// Module 7883 (Badge)
+// Module 7920 (Badge)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, badgeClassic: null, mask: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.badgeClassic = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };

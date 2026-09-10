@@ -1,22 +1,22 @@
-// Module ID: 10411
-// Function ID: 10412
+// Module ID: 10449
+// Function ID: 10450
 // Name: GIFPickerItemView
-// Dependencies: [19, 17, 21, 4574, 10401, 576, 1874, 4541, 10412, 1896, 1114, 5137, 5601, 2]
+// Dependencies: [19, 17, 21, 4605, 10439, 576, 1874, 4572, 10450, 1896, 1114, 5173, 5637, 2]
 // Exports: default
 
-// Module 10411 (GIFPickerItemView)
+// Module 10449 (GIFPickerItemView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10401 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10439 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = { container: null, gifImage: null, gifImageSelected: null };
   const size = { paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: nativeDefault.radii.xs, width: "100%", height, flex: 1 };
@@ -43,7 +43,7 @@ export default function GIFPickerItemView(onPressGIF) {
   }, items);
   const items2 = [index, item.src];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10412, dependencyMap.paths), "GIFPickerItemActionSheet", { item }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10450, dependencyMap.paths), "GIFPickerItemActionSheet", { item }, "stack");
     const obj2 = { item };
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, items1);

@@ -1,14 +1,14 @@
-// Module ID: 13595
-// Function ID: 13596
+// Module ID: 13644
+// Function ID: 13645
 // Name: renderPremiumButtonText
-// Dependencies: [19, 17, 1373, 21, 4574, 4423, 576, 4231, 1114, 1178, 2]
+// Dependencies: [19, 17, 1373, 21, 4605, 4454, 576, 4262, 1114, 1178, 2]
 // Exports: default
 
-// Module 13595 (renderPremiumButtonText)
+// Module 13644 (renderPremiumButtonText)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4262 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -83,10 +83,10 @@ const PremiumConstants = fn(1373);
 ({ PREMIUM_YEARLY_DISCOUNT_PERCENT: closure_4, PRICE_PLACEHOLDER: hasOwnProperty, SubscriptionIntervalTypes: metroRequire } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { discount: null, premiumText: null };
 let obj3 = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
-const ColorUtils = fn(4423);
+const ColorUtils = fn(4454);
 obj3.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.3);
 obj2.discount = obj3;
 obj2.premiumText = { flexDirection: "row" };

@@ -1,13 +1,13 @@
-// Module ID: 10850
-// Function ID: 10851
+// Module ID: 10888
+// Function ID: 10889
 // Name: ClydeIcon
-// Dependencies: [19, 21, 576, 4274, 10851, 2]
+// Dependencies: [19, 21, 576, 4305, 10889, 2]
 // Exports: ClydeIcon
 
-// Module 10850 (ClydeIcon)
+// Module 10888 (ClydeIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod10851 from "module_10851" /* 10851 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod10889 from "module_10889" /* 10889 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ClydeIcon = function ClydeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10851, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10889, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

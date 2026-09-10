@@ -1,10 +1,10 @@
-// Module ID: 12690
-// Function ID: 12691
+// Module ID: 12730
+// Function ID: 12731
 // Name: StylesheetUtils
 // Dependencies: [1925, 2]
 // Exports: getClass
 
-// Module 12690 (StylesheetUtils)
+// Module 12730 (StylesheetUtils)
 import StringUtils from "StringUtils" /* 1925 */;
 import size from "module_2" /* 2 */;
 

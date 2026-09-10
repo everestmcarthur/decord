@@ -1,13 +1,13 @@
-// Module ID: 6009
-// Function ID: 6010
+// Module ID: 6045
+// Function ID: 6046
 // Name: FindFriendsSpotIllustration
-// Dependencies: [21, 5601, 6010, 2]
+// Dependencies: [21, 5637, 6046, 2]
 // Exports: FindFriendsSpotIllustration
 
-// Module 6009 (FindFriendsSpotIllustration)
+// Module 6045 (FindFriendsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6010 from "module_6010" /* 6010 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6046 from "module_6046" /* 6046 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const FindFriendsSpotIllustration = function FindFriendsSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6010 };
+  const obj2 = { uri: _modDef6046 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

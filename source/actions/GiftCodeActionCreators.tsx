@@ -1,16 +1,16 @@
-// Module ID: 11462
-// Function ID: 11463
+// Module ID: 11502
+// Function ID: 11503
 // Name: GiftCodeActionCreators
-// Dependencies: [5, 4802, 7556, 7564, 1074, 1373, 573, 4813, 7177, 7555, 4475, 4254, 1232, 1272, 11463, 11464, 2]
+// Dependencies: [5, 4833, 7594, 7602, 1074, 1373, 573, 4844, 7215, 7593, 4506, 4285, 1232, 1272, 11503, 11504, 2]
 // Exports: deliverGiftCodes, reportUnexpectedGiftCodeError, resolveGiftCode
 
-// Module 11462 (GiftCodeActionCreators)
+// Module 11502 (GiftCodeActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4254 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11463 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4285 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11503 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 4802 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
+import ApplicationStore from "ApplicationStore" /* 4833 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7594 */;
 
 require = fn;
 function resolveGiftCode() {
@@ -212,11 +212,11 @@ let closure_12 = async function _deliverGiftCodes(recipient_ids, checkout_sessio
     return value.body;
   })();
 };
-let closure_6 = fn(7564).isUnknownCollectiblesItemRecord;
+let closure_6 = fn(7602).isUnknownCollectiblesItemRecord;
 const Constants = fn(1074);
 ({ COLLECTIBLES_APPLICATION_ID: closure_7, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
 let closure_10 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11464).default);
+const merged = Object.assign(fn(11504).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 

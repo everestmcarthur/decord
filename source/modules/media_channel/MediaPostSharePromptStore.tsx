@@ -1,13 +1,13 @@
-// Module ID: 7956
-// Function ID: 7957
+// Module ID: 7994
+// Function ID: 7995
 // Name: MediaPostSharePromptStore
-// Dependencies: [2013, 502, 1957, 7957, 11, 504, 573, 2]
+// Dependencies: [2013, 502, 1957, 7995, 11, 504, 573, 2]
 
-// Module 7956 (MediaPostSharePromptStore)
+// Module 7994 (MediaPostSharePromptStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 7957 */;
+import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 7995 */;
 import GatedChannelStore from "GatedChannelStore" /* 2013 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

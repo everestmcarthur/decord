@@ -1,13 +1,13 @@
-// Module ID: 5087
-// Function ID: 5088
+// Module ID: 5123
+// Function ID: 5124
 // Name: ThreadIcon
-// Dependencies: [19, 21, 576, 4274, 5044, 2]
+// Dependencies: [19, 21, 576, 4305, 5080, 2]
 // Exports: ThreadIcon
 
-// Module 5087 (ThreadIcon)
+// Module 5123 (ThreadIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod5044 from "module_5044" /* 5044 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod5080 from "module_5080" /* 5080 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ThreadIcon = function ThreadIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5044, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5080, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

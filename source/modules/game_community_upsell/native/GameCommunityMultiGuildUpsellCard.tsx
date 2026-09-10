@@ -1,20 +1,20 @@
-// Module ID: 16301
-// Function ID: 16302
+// Module ID: 16350
+// Function ID: 16351
 // Name: GameCommunityMultiGuildUpsellCard
-// Dependencies: [5, 32, 19, 17, 4566, 4213, 1979, 1074, 21, 4574, 576, 504, 1396, 1430, 1477, 1242, 5534, 7356, 7355, 1114, 8847, 8773, 1178, 4570, 4989, 8699, 8113, 8705, 2]
+// Dependencies: [5, 32, 19, 17, 4597, 4244, 1979, 1074, 21, 4605, 576, 504, 1396, 1430, 1477, 1242, 5570, 7394, 7393, 1114, 8884, 8810, 1178, 4601, 5025, 8736, 8150, 8742, 2]
 // Exports: default
 
-// Module 16301 (GameCommunityMultiGuildUpsellCard)
+// Module 16350 (GameCommunityMultiGuildUpsellCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
-import transitionToGuild from "transitionToGuild" /* 7356 */;
+import transitionToGuild from "transitionToGuild" /* 7394 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
-import LurkingStore from "LurkingStore" /* 4213 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
+import LurkingStore from "LurkingStore" /* 4244 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
@@ -24,7 +24,7 @@ const Constants = fn(1074);
 ({ GuildFeatures: closure_11, JoinGuildSources: closure_12, AnalyticEvents: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED, borderColor: nativeDefault.colors.BORDER_MUTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg, overflow: "hidden", flex: 1, marginBottom: nativeDefault.space.PX_16 }, bannerContainer: null, banner: null, content: null, guildIconContainer: null, guildIcon: null, guildNameRow: null, guildBadge: null, guildName: null, description: null, memberCounts: null, memberCount: null, dot: null, dotOnline: null, dismissButton: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED, borderColor: nativeDefault.colors.BORDER_MUTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg, overflow: "hidden", flex: 1, marginBottom: nativeDefault.space.PX_16 };
 obj2.bannerContainer = { height: 88, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };

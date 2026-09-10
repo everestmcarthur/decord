@@ -1,15 +1,15 @@
-// Module ID: 16391
-// Function ID: 16392
+// Module ID: 16440
+// Function ID: 16441
 // Name: useGuildsBarCreatePendingFolderNode
-// Dependencies: [19, 4396, 5453, 504, 9238, 16392, 5555, 5454, 1114, 2]
+// Dependencies: [19, 4427, 5489, 504, 9275, 16441, 5591, 5490, 1114, 2]
 // Exports: default
 
-// Module 16391 (useGuildsBarCreatePendingFolderNode)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5555 */;
-import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9238 */;
+// Module 16440 (useGuildsBarCreatePendingFolderNode)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5591 */;
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9275 */;
 import noop from "module_19" /* 19 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4396 */;
-import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5453 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4427 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5489 */;
 
 const require = fn;
 const size = fn(2);
@@ -29,15 +29,15 @@ export default function useGuildsBarCreatePendingFolderNode() {
     }
   }, items2);
   if (arr2.length > 0) {
-    const obj3 = { folderId: tmp2(16392).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER, folderName: null, expanded: null, guildIds: null };
+    const obj3 = { folderId: tmp2(16441).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER, folderName: null, expanded: null, guildIds: null };
     const intl = tmp2(1114).intl;
     obj3.folderName = intl.string(tmp2(1114).t["scsU+l"]);
     obj3.expanded = stateFromStores1;
     obj3.guildIds = arr2;
-    const folderNode = tmp2(5454).createFolderNode(obj3);
+    const folderNode = tmp2(5490).createFolderNode(obj3);
     for (const item10054 of arr2) {
       let children = folderNode.children;
-      let obj5 = stateFromStores(5454);
+      let obj5 = stateFromStores(5490);
       let arr = children.push(obj5.createGuildNode(item10054, folderNode.id));
       continue;
     }

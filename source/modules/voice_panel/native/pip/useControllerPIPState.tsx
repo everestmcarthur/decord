@@ -1,24 +1,24 @@
-// Module ID: 17118
-// Function ID: 17119
+// Module ID: 17177
+// Function ID: 17178
 // Name: useControllerPIPState
-// Dependencies: [32, 19, 1956, 4590, 9542, 1957, 5433, 12303, 9537, 9543, 17071, 504, 4202, 9578, 9527, 17119, 550, 17120, 17121, 17123, 2]
+// Dependencies: [32, 19, 1956, 4621, 9580, 1957, 5469, 12343, 9575, 9581, 17130, 504, 4233, 9616, 9565, 17178, 550, 17179, 17180, 17182, 2]
 // Exports: useControllerPIPState
 
-// Module 17118 (useControllerPIPState)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4202 */;
-import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 9578 */;
+// Module 17177 (useControllerPIPState)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4233 */;
+import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 9616 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
-import FramesStore from "FramesStore" /* 9542 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4621 */;
+import FramesStore from "FramesStore" /* 9580 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SpeakingStore from "SpeakingStore" /* 5433 */;
+import SpeakingStore from "SpeakingStore" /* 5469 */;
 
 require = fn;
-const VoicePanelModes = fn(12303).VoicePanelModes;
-const ActivityPanelModes = fn(9537).ActivityPanelModes;
-const asLaunched = fn(9543).asLaunched;
+const VoicePanelModes = fn(12343).VoicePanelModes;
+const ActivityPanelModes = fn(9575).ActivityPanelModes;
+const asLaunched = fn(9581).asLaunched;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
 
@@ -32,7 +32,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   let current;
   noop = undefined;
   c7 = undefined;
-  const ref = noop.useRef({ id: "sa", mode: "isArray", width: false, height: "level_slider", containerHeight: "control_knobs", showSecondaryPIP: "compass" });
+  const ref = noop.useRef({ id: "sa", mode: "isArray", width: false, height: 21, containerHeight: null, showSecondaryPIP: null });
   const tmp2 = current(noop.useState(undefined), 2);
   current = tmp2[0];
   noop = tmp2[1];
@@ -42,7 +42,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   });
   closure_129_0 = channelId;
   closure_129_1 = mode;
-  const tmp7 = ref(17071)(channelId);
+  const tmp7 = ref(17130)(channelId);
   closure_129_2 = tmp7;
   let items = [closure_5, c7, ChannelStore];
   const items1 = [channelId, tmp7, mode];
@@ -91,7 +91,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     obj = ChannelStore;
     obj3 = EmbeddedActivitiesStore;
   }, items1);
-  let tmp10 = ref(17119)(channelId);
+  let tmp10 = ref(17178)(channelId);
   const first1 = current(noop.useState(() => ref(closure_2[16])((fn) => fn(), 1000, { leading: true })), 1)[0];
   const items2 = [first1];
   const layoutEffect = noop.useLayoutEffect(() => () => first1.cancel(), items2);
@@ -100,7 +100,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   [tmp14, c7] = current(noop.useState(() => closure_2.getTargetDimensions(ref)), 2);
   let obj3 = { connected, mode, focusedId, participantTargetDimensions: tmp14, selfHasVideo: tmp10, showSecondaryPIP: stateFromStores };
   let tmp13 = current(noop.useState(() => closure_2.getTargetDimensions(ref)), 2);
-  ({ participant, dimensions } = ref(17120)(channelId, layoutManager, focusedId, current, { connected, mode, focusedId, participantTargetDimensions: tmp14, selfHasVideo: tmp10, showSecondaryPIP: stateFromStores }));
+  ({ participant, dimensions } = ref(17179)(channelId, layoutManager, focusedId, current, { connected, mode, focusedId, participantTargetDimensions: tmp14, selfHasVideo: tmp10, showSecondaryPIP: stateFromStores }));
   obj4 = {};
   const merged = Object.assign(ref.current);
   const merged1 = Object.assign(dimensions);
@@ -110,10 +110,10 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   }
   obj4.id = id;
   obj4.showSecondaryPIP = stateFromStores;
-  const tmp15 = ref(17120)(channelId, layoutManager, focusedId, current, { connected, mode, focusedId, participantTargetDimensions: tmp14, selfHasVideo: tmp10, showSecondaryPIP: stateFromStores });
-  obj4.mode = obj4(17121).getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp10 });
-  const tmp8Result = obj4(17121);
-  let result = obj4(9527).cheapWorkletShallowEqual(obj4, ref.current);
+  const tmp15 = ref(17179)(channelId, layoutManager, focusedId, current, { connected, mode, focusedId, participantTargetDimensions: tmp14, selfHasVideo: tmp10, showSecondaryPIP: stateFromStores });
+  obj4.mode = obj4(17180).getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp10 });
+  const tmp8Result = obj4(17180);
+  let result = obj4(9565).cheapWorkletShallowEqual(obj4, ref.current);
   dependencyMap = !result;
   const effect = obj.useEffect(() => {
     if (closure_2) {
@@ -173,6 +173,6 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       });
     });
   }, items4);
-  tmp5(17123)(channelId, layoutManager, focusedId);
+  tmp5(17182)(channelId, layoutManager, focusedId);
   return obj4;
 };

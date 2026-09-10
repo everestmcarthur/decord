@@ -1,10 +1,10 @@
-// Module ID: 8636
-// Function ID: 8637
+// Module ID: 8673
+// Function ID: 8674
 // Name: FormTitle
-// Dependencies: [19, 17, 1074, 21, 1115, 4574, 576, 1178, 2]
+// Dependencies: [19, 17, 1074, 21, 1115, 4605, 576, 1178, 2]
 // Exports: default
 
-// Module 8636 (FormTitle)
+// Module 8673 (FormTitle)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ let num2 = 48;
 if (PlatformUtils.isAndroid()) {
   num2 = 56;
 }
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 const obj4 = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE }, error: null };
 const obj5 = { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
 obj4.error = { color: nativeDefault.unsafe_rawColors.RED_400 };

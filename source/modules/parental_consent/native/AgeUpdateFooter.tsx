@@ -1,20 +1,20 @@
-// Module ID: 17920
-// Function ID: 17921
+// Module ID: 17975
+// Function ID: 17976
 // Name: AgeUpdateFooter
-// Dependencies: [19, 21, 4574, 4570, 1114, 2690, 8439, 8441, 2]
+// Dependencies: [19, 21, 4605, 4601, 1114, 2690, 8476, 8478, 2]
 // Exports: default
 
-// Module 17920 (AgeUpdateFooter)
+// Module 17975 (AgeUpdateFooter)
 import util from "util" /* 1114 */;
 import _modDef2690 from "module_2690" /* 2690 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8441 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8476 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8478 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_4 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");

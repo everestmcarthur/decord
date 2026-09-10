@@ -1,11 +1,11 @@
-// Module ID: 4978
-// Function ID: 4979
+// Module ID: 5014
+// Function ID: 5015
 // Name: VisualEffectViewAnimated
-// Dependencies: [4310, 4979, 2]
+// Dependencies: [4341, 5015, 2]
 
-// Module 4978 (VisualEffectViewAnimated)
-import VisualEffectViewDefault from "VisualEffectView" /* 4979 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+// Module 5014 (VisualEffectViewAnimated)
+import VisualEffectViewDefault from "VisualEffectView" /* 5015 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
 
 const VisualEffectView = ReanimatedRexport.createAnimatedComponent(VisualEffectViewDefault);
 const size = fn(2);

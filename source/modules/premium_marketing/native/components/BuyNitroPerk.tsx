@@ -1,13 +1,13 @@
-// Module ID: 13420
-// Function ID: 13421
+// Module ID: 13469
+// Function ID: 13470
 // Name: BuyNitroPerk
-// Dependencies: [19, 17, 21, 4574, 576, 5619, 13421, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 5655, 13470, 2]
 // Exports: default
 
-// Module 13420 (BuyNitroPerk)
+// Module 13469 (BuyNitroPerk)
 import nativeDefault from "native" /* 576 */;
-import TableRow from "TableRow" /* 5619 */;
-import BuyNitroGradientDefault from "BuyNitroGradient" /* 13421 */;
+import TableRow from "TableRow" /* 5655 */;
+import BuyNitroGradientDefault from "BuyNitroGradient" /* 13470 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const start = { x: 0, y: 0 };
 const end = { x: 1, y: 1 };
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { iconTile: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", overflow: "hidden" };
 obj2.iconTile = size;

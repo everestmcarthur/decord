@@ -1,13 +1,13 @@
-// Module ID: 6563
-// Function ID: 6564
+// Module ID: 6599
+// Function ID: 6600
 // Name: TreasureChestSpotIllustration
-// Dependencies: [21, 5601, 6564, 2]
+// Dependencies: [21, 5637, 6600, 2]
 // Exports: TreasureChestSpotIllustration
 
-// Module 6563 (TreasureChestSpotIllustration)
+// Module 6599 (TreasureChestSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6564 from "module_6564" /* 6564 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6600 from "module_6600" /* 6600 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const TreasureChestSpotIllustration = function TreasureChestSpotIllustrat
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6564 };
+  const obj2 = { uri: _modDef6600 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

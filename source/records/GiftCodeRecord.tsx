@@ -1,14 +1,14 @@
-// Module ID: 10732
-// Function ID: 10733
+// Module ID: 10770
+// Function ID: 10771
 // Name: GiftCodeRecord
-// Dependencies: [1386, 7469, 10698, 4232, 1373, 4166, 1384, 2]
+// Dependencies: [1386, 7507, 10736, 4263, 1373, 4196, 1384, 2]
 
-// Module 10732 (GiftCodeRecord)
-import _modDef4166 from "module_4166" /* 4166 */;
+// Module 10770 (GiftCodeRecord)
+import _modDef4196 from "module_4196" /* 4196 */;
 import Record from "Record" /* 1386 */;
-import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7469 */;
-import PromotionRecord from "PromotionRecord" /* 10698 */;
-import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4232 */;
+import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7507 */;
+import PromotionRecord from "PromotionRecord" /* 10736 */;
+import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4263 */;
 
 const require = fn;
 let closure_6 = fn(1373).PremiumSubscriptionSKUToPremiumType;
@@ -34,7 +34,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let tmp5 = null;
   if (null != user.expires_at) {
-    tmp5 = _modDef4166(user.expires_at);
+    tmp5 = _modDef4196(user.expires_at);
   }
   const redeemed = user.redeemed;
   if (null != user.subscription_plan) {
@@ -93,8 +93,8 @@ prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;
   let isAfterResult = null != expiresAt;
   if (isAfterResult) {
-    isAfterResult = _modDef4166().isAfter(expiresAt);
-    const obj = _modDef4166();
+    isAfterResult = _modDef4196().isAfter(expiresAt);
+    const obj = _modDef4196();
   }
   return isAfterResult;
 };

@@ -1,13 +1,13 @@
-// Module ID: 6557
-// Function ID: 6558
+// Module ID: 6593
+// Function ID: 6594
 // Name: Tome3dIllustration
-// Dependencies: [21, 5601, 6558, 2]
+// Dependencies: [21, 5637, 6594, 2]
 // Exports: Tome3dIllustration
 
-// Module 6557 (Tome3dIllustration)
+// Module 6593 (Tome3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6558 from "module_6558" /* 6558 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6594 from "module_6594" /* 6594 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const Tome3dIllustration = function Tome3dIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6558 };
+  const obj2 = { uri: _modDef6594 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

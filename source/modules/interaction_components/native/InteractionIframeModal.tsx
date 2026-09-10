@@ -1,14 +1,14 @@
-// Module ID: 17436
-// Function ID: 17437
+// Module ID: 17495
+// Function ID: 17496
 // Name: InteractionIframeModal
-// Dependencies: [32, 19, 17, 1350, 21, 4574, 576, 17424, 6995, 8360, 17437, 4986, 4272, 1114, 9674, 9682, 5137, 4527, 4570, 9470, 2]
+// Dependencies: [32, 19, 17, 1350, 21, 4605, 576, 17483, 7033, 8397, 17496, 5022, 4303, 1114, 9712, 9720, 5173, 4558, 4601, 9508, 2]
 // Exports: default
 
-// Module 17436 (InteractionIframeModal)
+// Module 17495 (InteractionIframeModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 17437 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 17496 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1350).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" }, headerCenterContainer: { flexDirection: "column", alignItems: "center" }, headerTitleContainer: { flexDirection: "row", marginBottom: 2 }, closeButton: { marginEnd: 8 }, spacerView: { marginStart: 8, width: 32 }, botTag: { marginStart: 4 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -68,7 +68,7 @@ export default function InteractionIframeModal(children) {
       referrerPolicy: "origin",
       isPipOrGridMode: false,
       webViewKey: "PX_16",
-      ignoreSilentHardwareSwitch: "dyrke"
+      ignoreSilentHardwareSwitch: "gutt"
     };
     ({ channel_id: obj2.channelId, guild_id: obj2.guildId } = queryParams);
     obj3.activityUrl = iframeModalState.iframeUrl;

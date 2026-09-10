@@ -1,11 +1,11 @@
-// Module ID: 4368
-// Function ID: 4369
+// Module ID: 4399
+// Function ID: 4400
 // Name: CheckpointCardRive
-// Dependencies: [109, 19, 21, 4304, 4369, 4359, 2]
+// Dependencies: [109, 19, 21, 4335, 4400, 4390, 2]
 
-// Module 4368 (CheckpointCardRive)
-import BaseRive from "BaseRive" /* 4304 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4359 */;
+// Module 4399 (CheckpointCardRive)
+import BaseRive from "BaseRive" /* 4335 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4390 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,17 +1,17 @@
-// Module ID: 7556
-// Function ID: 7557
+// Module ID: 7594
+// Function ID: 7595
 // Name: CollectiblesCategoryStore
-// Dependencies: [2025, 7557, 1090, 559, 573, 12, 7568, 504, 2]
+// Dependencies: [2025, 7595, 1090, 559, 573, 12, 7606, 504, 2]
 
-// Module 7556 (CollectiblesCategoryStore)
+// Module 7594 (CollectiblesCategoryStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7568 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7606 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7557 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7595 */;
 
 require = fn;
 function updateCategoriesAndProducts(map) {

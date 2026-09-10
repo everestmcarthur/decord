@@ -1,22 +1,22 @@
-// Module ID: 14508
-// Function ID: 14509
+// Module ID: 14557
+// Function ID: 14558
 // Name: validateOpenInviteDialog
-// Dependencies: [9542, 1957, 1979, 4212, 4479, 1074, 9543, 9586, 14496, 9806, 2]
+// Dependencies: [9580, 1957, 1979, 4243, 4510, 1074, 9581, 9624, 14545, 9844, 2]
 // Exports: validateOpenInviteDialog
 
-// Module 14508 (validateOpenInviteDialog)
-import RPCErrorDefault from "RPCError" /* 9586 */;
-import canViewInviteModal from "canViewInviteModal" /* 9806 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14496 */;
-import FramesStore from "FramesStore" /* 9542 */;
+// Module 14557 (validateOpenInviteDialog)
+import RPCErrorDefault from "RPCError" /* 9624 */;
+import canViewInviteModal from "canViewInviteModal" /* 9844 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14545 */;
+import FramesStore from "FramesStore" /* 9580 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 require = fn;
-const TransportTypes = fn(4479).TransportTypes;
+const TransportTypes = fn(4510).TransportTypes;
 const RPCErrors = fn(1074).RPCErrors;
-const FramesConstants = fn(9543);
+const FramesConstants = fn(9581);
 ({ asLaunched: closure_9, EmbeddedSurfaceType: c10 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
@@ -33,7 +33,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const surface = tmp46.surface;
       const type = surface.type;
       if (constants.MAIN === type) {
-        const obj3 = { frame: tmp46, channel: "r", guild: "isArray" };
+        const obj3 = { frame: tmp46, channel: "Array", guild: "toLowerCase" };
         return obj3;
       } else if (tmp23.APP_CHANNEL === type) {
         const obj4 = { frame: tmp46, channel: ChannelStore.getChannel(surface.channelId), guild: GuildStore.getGuild(surface.guildId) };
@@ -47,14 +47,14 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const obj9 = getCurrentEmbeddedActivityChannelDefault();
       if (null == obj9) {
         const obj6 = { errorCode: RPCErrors.INVALID_CHANNEL };
-        const tmp21 = new tmp48(9586)(obj6, "Invalid channel");
+        const tmp21 = new tmp48(9624)(obj6, "Invalid channel");
         throw tmp21;
       } else {
         const guild = GuildStore.getGuild(obj9.getGuildId());
         if (null == guild) {
           const obj7 = { errorCode: RPCErrors.INVALID_CHANNEL };
           const _HermesInternal2 = HermesInternal;
-          const tmp48Result1 = new tmp48(9586)(obj7, "Invalid guild " + obj9.getGuildId());
+          const tmp48Result1 = new tmp48(9624)(obj7, "Invalid guild " + obj9.getGuildId());
           throw tmp48Result1;
         } else {
           if (obj10.canViewInviteModal(PermissionStore, guild, obj9)) {
@@ -63,7 +63,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
           } else {
             const obj = { errorCode: RPCErrors.INVALID_PERMISSIONS };
             const _HermesInternal = HermesInternal;
-            const tmp7 = new tmp48(9586)(obj, "No invite permissions for " + obj9.id);
+            const tmp7 = new tmp48(9624)(obj, "No invite permissions for " + obj9.id);
             throw tmp7;
           }
           obj10 = canViewInviteModal;

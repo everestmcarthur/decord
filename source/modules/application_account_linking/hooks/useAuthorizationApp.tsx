@@ -1,12 +1,12 @@
-// Module ID: 7181
-// Function ID: 7182
+// Module ID: 7219
+// Function ID: 7220
 // Name: useAuthorizationApp
-// Dependencies: [19, 4802, 1918, 1350, 1894, 7182, 2]
+// Dependencies: [19, 4833, 1918, 1350, 1894, 7220, 2]
 // Exports: getAuthorizationApp, useAuthorizationApp
 
-// Module 7181 (useAuthorizationApp)
+// Module 7219 (useAuthorizationApp)
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4802 */;
+import ApplicationStore from "ApplicationStore" /* 4833 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 
 const require = globalThis.__r;

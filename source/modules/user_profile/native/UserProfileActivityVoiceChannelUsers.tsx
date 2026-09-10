@@ -1,15 +1,15 @@
-// Module ID: 13056
-// Function ID: 13057
+// Module ID: 13096
+// Function ID: 13097
 // Name: UserProfileActivityVoiceChannelUsers
-// Dependencies: [19, 4614, 21, 8243, 504, 5619, 4726, 1178, 11183, 1114, 2]
+// Dependencies: [19, 4645, 21, 8280, 504, 5655, 4757, 1178, 11223, 1114, 2]
 // Exports: default
 
-// Module 13056 (UserProfileActivityVoiceChannelUsers)
+// Module 13096 (UserProfileActivityVoiceChannelUsers)
 import util from "util" /* 1114 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4726 */;
-import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11183 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4757 */;
+import UserProfileStackedActionSheet from "UserProfileStackedActionSheet" /* 11223 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4614 */;
+import PresenceStore from "PresenceStore" /* 4645 */;
 
 const UserProfileStackedActionSheetDefault = UserProfileStackedActionSheet;
 
@@ -18,8 +18,8 @@ function UserRow(user) {
   user = user.user;
   const channel = user.channel;
   ({ onPress, start, end } = user);
-  const avatarDecoration = user(8243).useAvatarDecoration(user, channel.guild_id);
-  const obj = user(8243);
+  const avatarDecoration = user(8280).useAvatarDecoration(user, channel.guild_id);
+  const obj = user(8280);
   const items = [PresenceStore];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({ status: PresenceStore.getStatus(user.id), isMobileOnline: PresenceStore.isMobileOnline(user.id), isVROnline: PresenceStore.isVROnline(user.id) }));
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
@@ -29,7 +29,7 @@ function UserRow(user) {
   obj3.icon = jsx(user(1178).Avatar, { user, avatarDecoration, size: user(1178).AvatarSizes.REFRESH_MEDIUM_32, guildId: channel.guild_id, status, isMobileOnline, isVROnline, autoStatusCutout: true });
   obj3.start = start;
   obj3.end = end;
-  return jsx(user(5619).TableRow, { onPress, label: null, icon: null, start: null, end: null });
+  return jsx(user(5655).TableRow, { onPress, label: null, icon: null, start: null, end: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

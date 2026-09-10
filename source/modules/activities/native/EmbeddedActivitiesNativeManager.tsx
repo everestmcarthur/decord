@@ -1,28 +1,28 @@
-// Module ID: 9547
-// Function ID: 9548
+// Module ID: 9585
+// Function ID: 9586
 // Name: EmbeddedActivitiesNativeManager
-// Dependencies: [5, 17, 1957, 4597, 1956, 1920, 1074, 4479, 8326, 1115, 9548, 9549, 1232, 9550, 9582, 4919, 1114, 9553, 4202, 1242, 573, 9597, 9536, 4272, 9598, 1109, 1369, 1256, 2]
+// Dependencies: [5, 17, 1957, 4628, 1956, 1920, 1074, 4510, 8363, 1115, 9586, 9587, 1232, 9588, 9620, 4950, 1114, 9591, 4233, 1242, 573, 9635, 9574, 4303, 9636, 1109, 1369, 1256, 2]
 
-// Module 9547 (EmbeddedActivitiesNativeManager)
+// Module 9585 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import v1 from "v1" /* 1256 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9536 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 9548 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9549 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 9553 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9582 */;
-import _modDef9598 from "module_9598" /* 9598 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9574 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 9586 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9587 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 9591 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9620 */;
+import _modDef9636 from "module_9636" /* 9636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 9550 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 9588 */;
 
 require = fn;
 function postMessageToWebView() {
@@ -55,8 +55,8 @@ let closure_14 = async function _postMessageToWebView(arg0, arg1) {
 let closure_7 = fn(1920).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, ComponentActions: closure_9 } = Constants);
-const TransportTypes = fn(4479).TransportTypes;
-const WebView = fn(8326);
+const TransportTypes = fn(4510).TransportTypes;
+const WebView = fn(8363);
 const webViewProxy = WebView.getWebViewProxy("EMBEDDED_ACTIVITY_WEB_VIEW_KEY");
 const PlatformUtils = fn(1115);
 let nativeEventEmitter = null;
@@ -250,7 +250,7 @@ prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled(
   const obj2 = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
   const intl = util.intl;
   obj2.content = intl.string(util.t.JfA7IK);
-  obj2.icon = _modDef9598;
+  obj2.icon = _modDef9636;
   ToastActionCreatorsDefault.open(obj2);
 };
 prototype["releaseWebView"] = function releaseWebView() {

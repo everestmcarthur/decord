@@ -1,12 +1,12 @@
-// Module ID: 8814
-// Function ID: 8815
+// Module ID: 8851
+// Function ID: 8852
 // Name: PremiumWishlistItemRecord
-// Dependencies: [5525, 8812, 1074, 2]
+// Dependencies: [5561, 8849, 1074, 2]
 // Exports: isPremiumWishlistItemRecord
 
-// Module 8814 (PremiumWishlistItemRecord)
-import SKURecord from "SKURecord" /* 5525 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8812 */;
+// Module 8851 (PremiumWishlistItemRecord)
+import SKURecord from "SKURecord" /* 5561 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8849 */;
 
 const SKUProductLines = fn(1074).SKUProductLines;
 const prototype = function PremiumWishlistItemRecord(sku) {

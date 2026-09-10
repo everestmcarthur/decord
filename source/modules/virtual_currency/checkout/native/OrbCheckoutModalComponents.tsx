@@ -1,24 +1,24 @@
-// Module ID: 13183
-// Function ID: 13184
+// Module ID: 13230
+// Function ID: 13231
 // Name: OrbCheckoutModalComponents
-// Dependencies: [19, 17, 21, 4574, 576, 4987, 6624, 4570, 11042, 1114, 11044, 13182, 7255, 4509, 13184, 4989, 4425, 8869, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 5023, 6660, 4601, 11082, 1114, 11084, 13229, 7293, 4540, 13231, 5025, 4456, 8906, 2]
 // Exports: OrbCheckoutErrorCard, OrbCheckoutLegalFinePrint, OrbCheckoutOrderSummary, OrbCheckoutPaymentSourceDetails, OrbCheckoutPurchaseButton
 
-// Module 13183 (OrbCheckoutModalComponents)
+// Module 13230 (OrbCheckoutModalComponents)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import shared from "shared" /* 4425 */;
-import useThemeDefault from "useTheme" /* 4509 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Stack_Stack from "Stack/Stack" /* 4987 */;
-import components_Button_Button from "components/Button/Button" /* 4989 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6624 */;
-import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7255 */;
-import OrbsIcon from "OrbsIcon" /* 8869 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11042 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 11044 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13182 */;
-import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 13184 */;
+import shared from "shared" /* 4456 */;
+import useThemeDefault from "useTheme" /* 4540 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Stack_Stack from "Stack/Stack" /* 5023 */;
+import components_Button_Button from "components/Button/Button" /* 5025 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6660 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7293 */;
+import OrbsIcon from "OrbsIcon" /* 8906 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11082 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 11084 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13229 */;
+import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 13231 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { topRowWrapper: { width: "100%", marginBottom: 10 }, rowWrapper: { width: "100%", marginVertical: 10 }, rowDetailsContainer: { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: nativeDefault.space.PX_16 }, orbPaymentSourceDetails: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, sectionTitle: null, spinner: null, disclaimer: null, errorCard: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: nativeDefault.space.PX_16 };
 obj2.sectionTitle = { marginBottom: nativeDefault.space.PX_8 };
@@ -93,10 +93,10 @@ export const OrbCheckoutPaymentSourceDetails = function OrbCheckoutPaymentSource
 };
 export const OrbCheckoutLegalFinePrint = function OrbCheckoutLegalFinePrint() {
   const tmp = closure_8();
-  skuId = skuId(13182).useOrbCheckoutModalContext().skuId;
+  skuId = skuId(13229).useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
-  return closure_6(skuId(4570).Text, { style: tmp.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo });
+  return closure_6(skuId(4601).Text, { style: tmp.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo });
 };
 export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPress) {
   const tmp2 = useThemeDefault();

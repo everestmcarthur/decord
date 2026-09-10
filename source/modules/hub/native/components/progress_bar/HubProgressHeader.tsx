@@ -1,23 +1,23 @@
-// Module ID: 12702
-// Function ID: 12703
+// Module ID: 12742
+// Function ID: 12743
 // Name: HubProgressHeader
-// Dependencies: [19, 17, 9863, 12340, 21, 4574, 576, 12699, 1187, 1114, 8626, 4541, 12703, 1896, 12782, 2]
+// Dependencies: [19, 17, 9901, 12380, 21, 4605, 576, 12739, 1187, 1114, 8663, 4572, 12743, 1896, 12822, 2]
 // Exports: default
 
-// Module 12702 (HubProgressHeader)
+// Module 12742 (HubProgressHeader)
 import nativeDefault from "native" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HubProgressBarConstants = fn(9863);
+const HubProgressBarConstants = fn(9901);
 ({ HUB_PROGRESS_ACTION_SHEET_ID: closure_4, HUB_PROGRESS_NUM_TOTAL_STEPS: hasOwnProperty } = HubProgressBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
-let obj2 = { container: { overflow: "hidden", height: fn(12340).GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT, padding: 16 }, icon: { width: 48, height: 48 }, innerContainer: { paddingVertical: 8, paddingLeft: 8, paddingRight: 12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
+const createStyles = fn(4605);
+let obj2 = { container: { overflow: "hidden", height: fn(12380).GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT, padding: 16 }, icon: { width: 48, height: 48 }, innerContainer: { paddingVertical: 8, paddingLeft: 8, paddingRight: 12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_7 = createStyles.createStyles(obj2);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/progress_bar/HubProgressHeader.tsx");
@@ -62,7 +62,7 @@ export default function HubProgressHeader(guild) {
       }
       if (!tmp) {
         const obj2 = { guild, analyticsSource: "Directory Channel Header" };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12703, dependencyMap.paths), React4, obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12743, dependencyMap.paths), React4, obj2);
       }
     };
     obj5.iconSource = flag(tmp3[14]);

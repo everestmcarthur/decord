@@ -1,14 +1,14 @@
-// Module ID: 15966
-// Function ID: 15967
+// Module ID: 16015
+// Function ID: 16016
 // Name: ScreenRecordingUtils
-// Dependencies: [5, 17, 15965, 4918, 15967, 15968, 4541, 15969, 1896, 10219, 5142, 8231, 10218, 1477, 2]
+// Dependencies: [5, 17, 16014, 4949, 16016, 16017, 4572, 16018, 1896, 10257, 5178, 8268, 10256, 1477, 2]
 // Exports: handleRecordingPhase, handleStopAndSend
 
-// Module 15966 (ScreenRecordingUtils)
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
-import bug_reporter_BugReportUtils from "bug_reporter/BugReportUtils" /* 10219 */;
-import ScreenRecordingManagerDefault from "ScreenRecordingManager" /* 15967 */;
-import StudyConfig from "StudyConfig" /* 15968 */;
+// Module 16015 (ScreenRecordingUtils)
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
+import bug_reporter_BugReportUtils from "bug_reporter/BugReportUtils" /* 10257 */;
+import ScreenRecordingManagerDefault from "ScreenRecordingManager" /* 16016 */;
+import StudyConfig from "StudyConfig" /* 16017 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -831,7 +831,7 @@ let closure_13 = async function _handleRecordingPhase(arg0, value) {
 };
 get_ActivityIndicator = fn(17);
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-const useScreenRecordingStore = fn(15965).useScreenRecordingStore;
+const useScreenRecordingStore = fn(16014).useScreenRecordingStore;
 const DCDPhotos = NativeModules.DCDPhotos;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.DCDScreenRecordingManager);
 let size = fn(2);

@@ -1,9 +1,9 @@
-// Module ID: 5453
-// Function ID: 5454
+// Module ID: 5489
+// Function ID: 5490
 // Name: ExpandedGuildFolderStore
 // Dependencies: [1221, 504, 573, 2]
 
-// Module 5453 (ExpandedGuildFolderStore)
+// Module 5489 (ExpandedGuildFolderStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;

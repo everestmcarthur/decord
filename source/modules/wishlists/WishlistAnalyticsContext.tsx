@@ -1,10 +1,10 @@
-// Module ID: 13123
-// Function ID: 13124
+// Module ID: 13170
+// Function ID: 13171
 // Name: WishlistAnalyticsContext
 // Dependencies: [19, 21, 2]
 // Exports: WishlistAnalyticsProvider, useWishlistAnalyticsContext
 
-// Module 13123 (WishlistAnalyticsContext)
+// Module 13170 (WishlistAnalyticsContext)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

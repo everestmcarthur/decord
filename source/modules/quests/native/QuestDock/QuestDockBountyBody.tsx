@@ -1,20 +1,20 @@
-// Module ID: 15234
-// Function ID: 15235
+// Module ID: 15283
+// Function ID: 15284
 // Name: QuestDockBountyBody
-// Dependencies: [19, 5458, 21, 15212, 15132, 15122, 15129, 11518, 11225, 11229, 5465, 7742, 5461, 15031, 15033, 15230, 11329, 1114, 2]
+// Dependencies: [19, 5494, 21, 15261, 15181, 15171, 15178, 11558, 11265, 11269, 5501, 7779, 5497, 15080, 15082, 15279, 11369, 1114, 2]
 
-// Module 15234 (QuestDockBountyBody)
-import QuestTypes from "QuestTypes" /* 5461 */;
-import AdCreativeType from "AdCreativeType" /* 5465 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7742 */;
-import captureAdUserAction from "captureAdUserAction" /* 11225 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11229 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15031 */;
-import BountiesModalTypes from "BountiesModalTypes" /* 15033 */;
+// Module 15283 (QuestDockBountyBody)
+import QuestTypes from "QuestTypes" /* 5497 */;
+import AdCreativeType from "AdCreativeType" /* 5501 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7779 */;
+import captureAdUserAction from "captureAdUserAction" /* 11265 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11269 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15080 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 15082 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(5458).QuestDockMode;
+const QuestDockMode = fn(5494).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");

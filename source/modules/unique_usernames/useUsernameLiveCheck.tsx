@@ -1,14 +1,14 @@
-// Module ID: 14737
-// Function ID: 14738
+// Module ID: 14786
+// Function ID: 14787
 // Name: useUsernameLiveCheck
-// Dependencies: [19, 14738, 563, 12, 14739, 14740, 2]
+// Dependencies: [19, 14787, 563, 12, 14788, 14789, 2]
 // Exports: useUsernameLiveCheck
 
-// Module 14737 (useUsernameLiveCheck)
+// Module 14786 (useUsernameLiveCheck)
 import _mod12 from "module_12" /* 12 */;
-import UniqueUsernamesUtils from "UniqueUsernamesUtils" /* 14740 */;
+import UniqueUsernamesUtils from "UniqueUsernamesUtils" /* 14789 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14738 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14787 */;
 
 const require = globalThis.__r;
 

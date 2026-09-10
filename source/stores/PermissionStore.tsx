@@ -1,21 +1,21 @@
-// Module ID: 4212
-// Function ID: 4213
+// Module ID: 4243
+// Function ID: 4244
 // Name: PermissionStore
-// Dependencies: [2014, 4213, 1962, 4214, 1961, 1975, 1385, 1957, 2021, 1979, 1371, 1074, 4216, 4217, 12, 4220, 1971, 504, 1086, 4221, 573, 2]
+// Dependencies: [2014, 4244, 1962, 4245, 1961, 1975, 1385, 1957, 2021, 1979, 1371, 1074, 4247, 4248, 12, 4251, 1971, 504, 1086, 4252, 573, 2]
 
-// Module 4212 (PermissionStore)
+// Module 4243 (PermissionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4217 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4220 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4221 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4248 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 4251 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4252 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
-import LurkingStore from "LurkingStore" /* 4213 */;
+import LurkingStore from "LurkingStore" /* 4244 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4214 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4245 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -195,9 +195,9 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
     if (set.has(context.type)) {
       const channel = ChannelStore.getChannel(context.parent_id);
       if (null == channel) {
-        let NONE4 = tmp(4217).NONE;
+        let NONE4 = tmp(4248).NONE;
       } else {
-        const tmpResult = tmp(4217);
+        const tmpResult = tmp(4248);
         const tmp24 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
         NONE4 = tmpResult.applyThreadPermissions(context, tmp24, JoinedThreadsStore.hasJoined(context.id), GuildMemberStore.isCurrentUserGuest(context.guild_id));
         const hasJoinedResult = JoinedThreadsStore.hasJoined(context.id);
@@ -220,16 +220,16 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       if (null == NONE2) {
         const currentUser = UserStore.getCurrentUser();
         if (null == currentUser) {
-          NONE2 = tmp(4217).NONE;
+          NONE2 = tmp(4248).NONE;
         } else {
           const guild = GuildStore.getGuild(id);
           if (null == guild) {
-            let NONE3 = tmp(4217).NONE;
+            let NONE3 = tmp(4248).NONE;
           } else {
             const obj2 = { user: currentUser, context: guild, checkElevated: true };
-            NONE3 = tmp(4217).computePermissions(obj2);
+            NONE3 = tmp(4248).computePermissions(obj2);
             dependencyMap[id] = NONE3;
-            const tmpResult3 = tmp(4217);
+            const tmpResult3 = tmp(4248);
           }
           NONE2 = NONE3;
         }
@@ -249,7 +249,7 @@ const ChannelRecord = fn(1961);
 const GuildRecord = fn(1975);
 ({ isGuildOwner: c10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
 const Permissions = fn(1074).Permissions;
-let closure_18 = fn(4216).MemberSafetyPagePermissions;
+let closure_18 = fn(4247).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -319,16 +319,16 @@ prototype["canAccessMemberSafetyPage"] = function canAccessMemberSafetyPage(id) 
   if (null == NONE) {
     const currentUser = UserStore.getCurrentUser();
     if (null == currentUser) {
-      NONE = tmp(4217).NONE;
+      NONE = tmp(4248).NONE;
     } else {
       const guild = GuildStore.getGuild(id);
       if (null == guild) {
-        let NONE2 = tmp(4217).NONE;
+        let NONE2 = tmp(4248).NONE;
       } else {
         const obj2 = { user: currentUser, context: guild, checkElevated: true };
-        NONE2 = tmp(4217).computePermissions(obj2);
+        NONE2 = tmp(4248).computePermissions(obj2);
         dependencyMap[id] = NONE2;
-        const tmpResult = tmp(4217);
+        const tmpResult = tmp(4248);
       }
       NONE = NONE2;
     }
@@ -341,16 +341,16 @@ prototype["canAccessGuildSettings"] = function canAccessGuildSettings(guild) {
   if (null == NONE) {
     const currentUser = UserStore.getCurrentUser();
     if (null == currentUser) {
-      NONE = tmp(4217).NONE;
+      NONE = tmp(4248).NONE;
     } else {
       guild = GuildStore.getGuild(id);
       if (null == guild) {
-        let NONE2 = tmp(4217).NONE;
+        let NONE2 = tmp(4248).NONE;
       } else {
         const obj2 = { user: currentUser, context: guild, checkElevated: true };
-        NONE2 = tmp(4217).computePermissions(obj2);
+        NONE2 = tmp(4248).computePermissions(obj2);
         dependencyMap[id] = NONE2;
-        const tmpResult = tmp(4217);
+        const tmpResult = tmp(4248);
       }
       NONE = NONE2;
     }

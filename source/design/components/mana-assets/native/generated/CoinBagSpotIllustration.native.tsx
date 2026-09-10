@@ -1,13 +1,13 @@
-// Module ID: 5877
-// Function ID: 5878
+// Module ID: 5913
+// Function ID: 5914
 // Name: CoinBagSpotIllustration
-// Dependencies: [21, 5601, 5878, 2]
+// Dependencies: [21, 5637, 5914, 2]
 // Exports: CoinBagSpotIllustration
 
-// Module 5877 (CoinBagSpotIllustration)
+// Module 5913 (CoinBagSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5878 from "module_5878" /* 5878 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5914 from "module_5914" /* 5914 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const CoinBagSpotIllustration = function CoinBagSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5878 };
+  const obj2 = { uri: _modDef5914 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

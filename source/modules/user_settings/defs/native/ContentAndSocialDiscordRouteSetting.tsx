@@ -1,15 +1,15 @@
-// Module ID: 15916
-// Function ID: 15917
+// Module ID: 15965
+// Function ID: 15966
 // Name: ContentAndSocialDiscordRouteSetting
-// Dependencies: [7989, 1074, 11500, 1114, 4273, 15900, 2]
+// Dependencies: [8027, 1074, 11540, 1114, 4304, 15949, 2]
 
-// Module 15916 (ContentAndSocialDiscordRouteSetting)
+// Module 15965 (ContentAndSocialDiscordRouteSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import FriendsIcon from "FriendsIcon" /* 4273 */;
-import SettingsConstants from "SettingsConstants" /* 7989 */;
-import ContentAndSocialScreen from "ContentAndSocialScreen" /* 15900 */;
-import SettingBuilders from "SettingBuilders" /* 11500 */;
+import FriendsIcon from "FriendsIcon" /* 4304 */;
+import SettingsConstants from "SettingsConstants" /* 8027 */;
+import ContentAndSocialScreen from "ContentAndSocialScreen" /* 15949 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

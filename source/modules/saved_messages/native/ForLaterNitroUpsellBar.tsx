@@ -1,16 +1,16 @@
-// Module ID: 13321
-// Function ID: 13322
+// Module ID: 13370
+// Function ID: 13371
 // Name: ForLaterNitroUpsellBar
-// Dependencies: [19, 1373, 7866, 21, 7176, 11737, 12251, 4231, 1114, 2]
+// Dependencies: [19, 1373, 7903, 21, 7214, 11777, 12291, 4262, 1114, 2]
 // Exports: default
 
-// Module 13321 (ForLaterNitroUpsellBar)
-import openForLaterLimitUpsellDefault from "openForLaterLimitUpsell" /* 11737 */;
+// Module 13370 (ForLaterNitroUpsellBar)
+import openForLaterLimitUpsellDefault from "openForLaterLimitUpsell" /* 11777 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const PremiumTypes = fn(1373).PremiumTypes;
-const SavedMessagesConstants = fn(7866);
+const SavedMessagesConstants = fn(7903);
 ({ SAVED_BOOKMARKS_MAX: hasOwnProperty, SAVED_REMINDERS_MAX: metroRequire } = SavedMessagesConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -20,12 +20,12 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   isReminder = isReminder.isReminder;
   const isAtLimit = isReminder.isAtLimit;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7176)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7214)().analyticsLocations;
   const items = [isReminder, analyticsLocations];
   const callback = noop.useCallback(() => openForLaterLimitUpsellDefault(isReminder, analyticsLocations), items);
   const tmp2 = jsx;
-  const tmp3 = analyticsLocations(12251);
-  const premiumTypeDisplayName = isReminder(4231).getPremiumTypeDisplayName(PremiumTypes.TIER_2);
+  const tmp3 = analyticsLocations(12291);
+  const premiumTypeDisplayName = isReminder(4262).getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const intl = isReminder(1114).intl;
   const formatToPlainString = intl.formatToPlainString;
   const t = isReminder(1114).t;

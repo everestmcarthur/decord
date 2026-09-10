@@ -1,13 +1,13 @@
-// Module ID: 8938
-// Function ID: 8939
+// Module ID: 8975
+// Function ID: 8976
 // Name: InputButton
-// Dependencies: [109, 19, 17, 21, 4574, 576, 4994, 6635, 4990, 2]
+// Dependencies: [109, 19, 17, 21, 4605, 576, 5030, 6671, 5026, 2]
 
-// Module 8938 (InputButton)
+// Module 8975 (InputButton)
 import nativeDefault from "native" /* 576 */;
-import BaseTextButton from "BaseTextButton" /* 4990 */;
-import ButtonConstants from "ButtonConstants" /* 4994 */;
-import InputFieldContainer from "InputFieldContainer" /* 6635 */;
+import BaseTextButton from "BaseTextButton" /* 5026 */;
+import ButtonConstants from "ButtonConstants" /* 5030 */;
+import InputFieldContainer from "InputFieldContainer" /* 6671 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 let closure_2 = ["size", "isRound", "text", "value", "icon", "iconPosition", "accessibilityLabel", "accessibilityValue", "maxFontSizeMultiplier"];
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 const obj = { buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" }, buttonTextPlaceholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT }, buttonTextValue: null };
 let obj3 = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 obj.buttonTextValue = { color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };

@@ -1,10 +1,10 @@
-// Module ID: 16604
-// Function ID: 16605
+// Module ID: 16659
+// Function ID: 16660
 // Name: MemberSafetyPageTypes
-// Dependencies: [4398, 2]
+// Dependencies: [4429, 2]
 
-// Module 16604 (MemberSafetyPageTypes)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
+// Module 16659 (MemberSafetyPageTypes)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4429 */;
 import size from "module_2" /* 2 */;
 
 const obj = { ALL_MEMBERS: "ALL_MEMBERS" };

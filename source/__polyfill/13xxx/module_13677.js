@@ -1,14 +1,9 @@
 // Module ID: 13677
 // Function ID: 13678
-// Dependencies: [13678, 13679, 13687, 13691]
+// Dependencies: [1122]
 
 // Module 13677
-import _mod13691 from "module_13691" /* 13691 */;
-import assign from "module_13678" /* 13678 */;
-import Deflate from "Deflate" /* 13679 */;
-import Inflate from "Inflate" /* 13687 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod13691);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_boosting/native/images", width: 424, height: 254, scales: [1], hash: "616e0e1297b795db059112c52470eab4", name: "top_perk_streaming_quality", type: "png" });

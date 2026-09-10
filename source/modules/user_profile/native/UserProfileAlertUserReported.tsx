@@ -1,12 +1,12 @@
-// Module ID: 12655
-// Function ID: 12656
+// Module ID: 12695
+// Function ID: 12696
 // Name: UserProfileAlertUserReported
-// Dependencies: [19, 21, 4924, 1114, 4924, 2]
+// Dependencies: [19, 21, 4955, 1114, 4955, 2]
 // Exports: default
 
-// Module 12655 (UserProfileAlertUserReported)
+// Module 12695 (UserProfileAlertUserReported)
 import util from "util" /* 1114 */;
-import AlertModal from "AlertModal" /* 4924 */;
+import AlertModal from "AlertModal" /* 4955 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

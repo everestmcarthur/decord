@@ -1,14 +1,14 @@
-// Module ID: 17833
-// Function ID: 17834
+// Module ID: 17892
+// Function ID: 17893
 // Name: useInviteAssignableRoles
-// Dependencies: [19, 2016, 2015, 4212, 1371, 1074, 504, 4217, 2]
+// Dependencies: [19, 2016, 2015, 4243, 1371, 1074, 504, 4248, 2]
 // Exports: default
 
-// Module 17833 (useInviteAssignableRoles)
-import PermissionUtilsAll from "PermissionUtils" /* 4217 */;
+// Module 17892 (useInviteAssignableRoles)
+import PermissionUtilsAll from "PermissionUtils" /* 4248 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;

@@ -1,9 +1,9 @@
-// Module ID: 5450
-// Function ID: 5451
+// Module ID: 5486
+// Function ID: 5487
 // Name: PremiumGuildSubscribeConstants
 // Dependencies: [2]
 
-// Module 5450 (PremiumGuildSubscribeConstants)
+// Module 5486 (PremiumGuildSubscribeConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeConstants.tsx");

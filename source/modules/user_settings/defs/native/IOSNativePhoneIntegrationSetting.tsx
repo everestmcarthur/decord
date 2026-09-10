@@ -1,15 +1,15 @@
-// Module ID: 15522
-// Function ID: 15523
+// Module ID: 15571
+// Function ID: 15572
 // Name: IOSNativePhoneIntegrationSetting
-// Dependencies: [7989, 11500, 1114, 1935, 15523, 1115, 2]
+// Dependencies: [8027, 11540, 1114, 1935, 15572, 1115, 2]
 
-// Module 15522 (IOSNativePhoneIntegrationSetting)
+// Module 15571 (IOSNativePhoneIntegrationSetting)
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SettingsConstants from "SettingsConstants" /* 7989 */;
-import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 15523 */;
-import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingsConstants from "SettingsConstants" /* 8027 */;
+import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 15572 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

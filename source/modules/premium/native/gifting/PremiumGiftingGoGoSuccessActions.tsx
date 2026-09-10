@@ -1,24 +1,24 @@
-// Module ID: 11107
-// Function ID: 11108
+// Module ID: 11147
+// Function ID: 11148
 // Name: PremiumGiftingGoGoSuccessActions
-// Dependencies: [19, 10697, 1074, 1076, 21, 4574, 576, 10731, 504, 10774, 10785, 1483, 10775, 4813, 10694, 8389, 7555, 7196, 10786, 1114, 2460, 4989, 2]
+// Dependencies: [19, 10735, 1074, 1076, 21, 4605, 576, 10769, 504, 10812, 10823, 1483, 10813, 4844, 10732, 8426, 7593, 7234, 10824, 1114, 2460, 5025, 2]
 // Exports: default
 
-// Module 11107 (PremiumGiftingGoGoSuccessActions)
+// Module 11147 (PremiumGiftingGoGoSuccessActions)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
-import showShareActionSheet from "showShareActionSheet" /* 8389 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10694 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7593 */;
+import showShareActionSheet from "showShareActionSheet" /* 8426 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10732 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10697 */;
+import PromotionsStore from "PromotionsStore" /* 10735 */;
 
 require = fn;
 const AnalyticsSections = fn(1074).AnalyticsSections;
 let closure_6 = fn(1076).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { promoDetails: { marginBottom: nativeDefault.space.PX_6, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
   return obj;

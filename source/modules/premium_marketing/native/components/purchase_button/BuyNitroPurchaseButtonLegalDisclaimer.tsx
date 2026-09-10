@@ -1,15 +1,15 @@
-// Module ID: 13416
-// Function ID: 13417
+// Module ID: 13465
+// Function ID: 13466
 // Name: BuyNitroPurchaseButtonLegalDisclaimer
-// Dependencies: [19, 1074, 21, 4574, 576, 1114, 1115, 4231, 2024, 4570, 2]
+// Dependencies: [19, 1074, 21, 4605, 576, 1114, 1115, 4262, 2024, 4601, 2]
 // Exports: default
 
-// Module 13416 (BuyNitroPurchaseButtonLegalDisclaimer)
+// Module 13465 (BuyNitroPurchaseButtonLegalDisclaimer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import PremiumUtils from "PremiumUtils" /* 4231 */;
+import PremiumUtils from "PremiumUtils" /* 4262 */;
 import noop from "module_19" /* 19 */;
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -18,7 +18,7 @@ require = fn;
 const Constants = fn(1074);
 ({ HelpdeskArticles: c3, MarketingURLs: closure_4 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { disclaimer: { marginTop: nativeDefault.space.PX_12, textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -49,14 +49,14 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
         const obj2 = { paidURL: constants2.PAID_TERMS, interval: null, ctaText: null };
         const isAndroidResult = tmp3(1115).isAndroid();
         const tmp6 = tmp3(1115).isAndroid() ? t.COObWR : t["7wpqfj"];
-        obj2.interval = tmp3(4231).getIntervalStringAsNoun(item.interval);
+        obj2.interval = tmp3(4262).getIntervalStringAsNoun(item.interval);
         obj2.ctaText = ctaText;
         formatResult = format(tmp6, obj2);
         tmp10 = tmp3;
-        const tmp3Result4 = tmp3(4231);
+        const tmp3Result4 = tmp3(4262);
       }
       const obj3 = { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult };
-      jsx(tmp10(4570).Text, { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult });
+      jsx(tmp10(4601).Text, { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult });
     }
     const tmp3Result5 = PlatformUtils;
     tmp3(1114).t;

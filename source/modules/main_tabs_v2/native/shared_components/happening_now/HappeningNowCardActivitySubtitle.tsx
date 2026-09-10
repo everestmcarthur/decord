@@ -1,23 +1,23 @@
-// Module ID: 16112
-// Function ID: 16113
+// Module ID: 16161
+// Function ID: 16162
 // Name: HappeningNowCardActivitySubtitle
-// Dependencies: [19, 17, 1957, 1074, 21, 4574, 504, 4727, 15327, 9802, 1114, 8285, 10923, 2]
+// Dependencies: [19, 17, 1957, 1074, 21, 4605, 504, 4758, 15376, 9840, 1114, 8322, 10961, 2]
 // Exports: HappeningNowActivityCardSubtitle, HappeningNowVoiceCardSubtitle
 
-// Module 16112 (HappeningNowCardActivitySubtitle)
+// Module 16161 (HappeningNowCardActivitySubtitle)
 import util from "util" /* 1114 */;
-import useChannelNameDefault from "useChannelName" /* 4727 */;
-import isStreamingDefault from "isStreaming" /* 8285 */;
-import HappeningNowCard from "HappeningNowCard" /* 15327 */;
+import useChannelNameDefault from "useChannelName" /* 4758 */;
+import isStreamingDefault from "isStreaming" /* 8322 */;
+import HappeningNowCard from "HappeningNowCard" /* 15376 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
-const getChannelA11yLabelDefault = tmp4(9802);
+const getChannelA11yLabelDefault = tmp4(9840);
 require = fn;
 const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx");
@@ -34,7 +34,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     const obj3 = { channel: stateFromStores };
     tmp8 = getChannelA11yLabelDefault(obj3);
   }
-  obj2.children = jsx(voiceState(15327).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: useChannelNameDefault(stateFromStores) });
+  obj2.children = jsx(voiceState(15376).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: useChannelNameDefault(stateFromStores) });
   return <View style={tmp.cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
@@ -66,7 +66,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     tmp3 = null;
     if (null != name1) {
       if (!isStreamingDefault(activity)) {
-        if (tmp4(10923)(activity)) {
+        if (tmp4(10961)(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {
               const _HermesInternal = HermesInternal;

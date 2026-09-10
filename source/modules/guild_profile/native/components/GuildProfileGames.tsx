@@ -1,17 +1,17 @@
-// Module ID: 9227
-// Function ID: 9228
+// Module ID: 9264
+// Function ID: 9265
 // Name: GuildProfileGames
-// Dependencies: [19, 17, 21, 4574, 576, 8708, 8719, 9228, 4570, 9232, 4272, 4541, 9233, 1896, 5137, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 8745, 8756, 9265, 4601, 9269, 4303, 4572, 9270, 1896, 5173, 2]
 // Exports: default
 
-// Module 9227 (GuildProfileGames)
+// Module 9264 (GuildProfileGames)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8708 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
-import components_GameIconDefault from "components/GameIcon" /* 9228 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8745 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8756 */;
+import components_GameIconDefault from "components/GameIcon" /* 9265 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,7 +45,7 @@ function FavoriteGame(activityLevel) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { display: "flex", flexDirection: "row", gap: 8 }, favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, lastItem: { position: "relative", width: 32, height: 32 }, lastItemOverlay: null, lastItemImage: null, lastItemText: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.xs };
 obj2.lastItemOverlay = rect;

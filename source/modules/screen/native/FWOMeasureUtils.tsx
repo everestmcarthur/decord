@@ -1,11 +1,11 @@
-// Module ID: 8703
-// Function ID: 8704
+// Module ID: 8740
+// Function ID: 8741
 // Name: FWOMeasureUtils
-// Dependencies: [8704, 2]
+// Dependencies: [8741, 2]
 // Exports: measureInWindowForFWO
 
-// Module 8703 (FWOMeasureUtils)
-import NativeFWOMeasureModule from "NativeFWOMeasureModule" /* 8704 */;
+// Module 8740 (FWOMeasureUtils)
+import NativeFWOMeasureModule from "NativeFWOMeasureModule" /* 8741 */;
 import size from "module_2" /* 2 */;
 
 const __measureInWindowForFWO = global.__measureInWindowForFWO;

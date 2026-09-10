@@ -1,11 +1,11 @@
-// Module ID: 4388
-// Function ID: 4389
+// Module ID: 4419
+// Function ID: 4420
 // Name: ThemeAwareNitroWishlistingWumpusRive
-// Dependencies: [109, 19, 21, 4304, 4389, 4359, 2]
+// Dependencies: [109, 19, 21, 4335, 4420, 4390, 2]
 
-// Module 4388 (ThemeAwareNitroWishlistingWumpusRive)
-import BaseRive from "BaseRive" /* 4304 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4359 */;
+// Module 4419 (ThemeAwareNitroWishlistingWumpusRive)
+import BaseRive from "BaseRive" /* 4335 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4390 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

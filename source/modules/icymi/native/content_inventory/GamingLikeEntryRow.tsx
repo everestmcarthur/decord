@@ -1,17 +1,17 @@
-// Module ID: 16535
-// Function ID: 16536
+// Module ID: 16584
+// Function ID: 16585
 // Name: GamingLikeEntryRow
-// Dependencies: [19, 17, 1371, 21, 13038, 8161, 13043, 16486, 576, 504, 4808, 9208, 7182, 8159, 8708, 8719, 8156, 16536, 1896, 8379, 4777, 16540, 1114, 16542, 4570, 4418, 7655, 11, 672, 5137, 5601, 16543, 2]
+// Dependencies: [19, 17, 1371, 21, 13078, 8198, 13083, 16535, 576, 504, 4839, 9245, 7220, 8196, 8745, 8756, 8193, 16585, 1896, 8416, 4808, 16589, 1114, 16591, 4601, 4449, 7692, 11, 672, 5173, 5637, 16592, 2]
 // Exports: default
 
-// Module 16535 (GamingLikeEntryRow)
+// Module 16584 (GamingLikeEntryRow)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8156 */;
-import utils from "utils" /* 8161 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8379 */;
-import BadgesAll from "Badges" /* 13038 */;
-import TrendingType from "TrendingType" /* 13043 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8193 */;
+import utils from "utils" /* 8198 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8416 */;
+import BadgesAll from "Badges" /* 13078 */;
+import TrendingType from "TrendingType" /* 13083 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -19,8 +19,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8161).isEntryNew }, , , , ];
-let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8161).isEntryNew };
+let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8198).isEntryNew }, , , , ];
+let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8198).isEntryNew };
 items[1] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -73,7 +73,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   }
 };
-const createICYMIStyles = fn(16486);
+const createICYMIStyles = fn(16535);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   const obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -148,7 +148,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(16536, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(16585, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         author_id(openReplyActionSheet[19]).itemInteracted(content.id, "hotwheels_gaming_activity", "press_forward");

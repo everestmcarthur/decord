@@ -1,12 +1,12 @@
-// Module ID: 5161
-// Function ID: 5162
+// Module ID: 5197
+// Function ID: 5198
 // Name: openPrivacySettings
-// Dependencies: [17, 1115, 5162, 2]
+// Dependencies: [17, 1115, 5198, 2]
 // Exports: default
 
-// Module 5161 (openPrivacySettings)
+// Module 5197 (openPrivacySettings)
 import _mod17 from "module_17" /* 17 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5162 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5198 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

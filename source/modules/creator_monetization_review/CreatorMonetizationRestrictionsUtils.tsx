@@ -1,15 +1,15 @@
-// Module ID: 4205
-// Function ID: 4206
+// Module ID: 4236
+// Function ID: 4237
 // Name: CreatorMonetizationRestrictionsUtils
-// Dependencies: [4206, 1979, 4207, 1074, 2]
+// Dependencies: [4237, 1979, 4238, 1074, 2]
 // Exports: isRestrictedFromMonetizationReapplication, isRestrictedFromShowingGuildPurchaseEntryPoints, isRestrictedFromUpdatingCreatorMonetizationSettings, shouldHideGuildPurchaseEntryPoints, shouldRestrictUpdatingCreatorMonetizationSettings
 
-// Module 4205 (CreatorMonetizationRestrictionsUtils)
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4206 */;
+// Module 4236 (CreatorMonetizationRestrictionsUtils)
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4237 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
-const FetchState = fn(4206).FetchState;
-const constants = fn(4207).CreatorMonetizationRestrictions;
+const FetchState = fn(4237).FetchState;
+const constants = fn(4238).CreatorMonetizationRestrictions;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx");

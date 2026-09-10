@@ -1,20 +1,20 @@
-// Module ID: 17055
-// Function ID: 17056
+// Module ID: 17114
+// Function ID: 17115
 // Name: useMorphablePanelGesture
-// Dependencies: [19, 12304, 1477, 1611, 4310, 6669, 11386, 17053, 17056, 4542, 2]
+// Dependencies: [19, 12344, 1477, 1611, 4341, 6705, 11426, 17112, 17115, 4573, 2]
 // Exports: default
 
-// Module 17055 (useMorphablePanelGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import HapticUtils from "HapticUtils" /* 4542 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11386 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 17053 */;
-import triggerIOSHapticDefault from "triggerIOSHaptic" /* 17056 */;
+// Module 17114 (useMorphablePanelGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import HapticUtils from "HapticUtils" /* 4573 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11426 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 17112 */;
+import triggerIOSHapticDefault from "triggerIOSHaptic" /* 17115 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MorphablePanelConstants = fn(12304);
+const MorphablePanelConstants = fn(12344);
 ({ IS_IOS: closure_4, MIN_PAN_GESTURE_MOVE: hasOwnProperty, MorphablePanelModes } = MorphablePanelConstants);
 ({ PANEL_TAP_GESTURE_MAX_DISTANCE: closure_7, PIP_POP_HEIGHT: closure_8, POP_RESISTANCE: closure_9 } = MorphablePanelConstants);
 let closure_10 = { code: "function useMorphablePanelGestureTsx1(){const{onTapGestureStart}=this.__closure;var _onTapGestureStart;(_onTapGestureStart=onTapGestureStart)===null||_onTapGestureStart===void 0||_onTapGestureStart();}" };

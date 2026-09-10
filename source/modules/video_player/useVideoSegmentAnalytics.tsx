@@ -1,11 +1,11 @@
-// Module ID: 15165
-// Function ID: 15166
+// Module ID: 15214
+// Function ID: 15215
 // Name: useVideoSegmentAnalytics
-// Dependencies: [32, 19, 7720, 2]
+// Dependencies: [32, 19, 7757, 2]
 // Exports: default
 
-// Module 15165 (useVideoSegmentAnalytics)
-import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7720 */;
+// Module 15214 (useVideoSegmentAnalytics)
+import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7757 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
 
@@ -167,7 +167,7 @@ export default function useVideoSegmentAnalytics(getCurrentVideoTime) {
     handlePlayerStateChange: closure_5((arg0) => {
       if (DiscordVideoPlayerTypes.VideoPlayerState.PLAYING === arg0) {
         closure_7(true);
-      } else if (tmp(7720).VideoPlayerState.PAUSED === arg0) {
+      } else if (tmp(7757).VideoPlayerState.PAUSED === arg0) {
         ref4.current();
         closure_7(false);
       }

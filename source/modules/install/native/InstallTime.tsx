@@ -1,13 +1,13 @@
-// Module ID: 13726
-// Function ID: 13727
+// Module ID: 13775
+// Function ID: 13776
 // Name: InstallTime
-// Dependencies: [502, 510, 13727, 4603, 2]
+// Dependencies: [502, 510, 13776, 4634, 2]
 // Exports: getFirstInstallTimeElapsed
 
-// Module 13726 (InstallTime)
+// Module 13775 (InstallTime)
 import Storage4 from "Storage" /* 510 */;
-import TimeUtils from "TimeUtils" /* 4603 */;
-import NativeInstallTimeModuleDefault from "NativeInstallTimeModule" /* 13727 */;
+import TimeUtils from "TimeUtils" /* 4634 */;
+import NativeInstallTimeModuleDefault from "NativeInstallTimeModule" /* 13776 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

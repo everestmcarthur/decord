@@ -1,19 +1,19 @@
-// Module ID: 17579
-// Function ID: 17580
+// Module ID: 17638
+// Function ID: 17639
 // Name: GuildSettingsModalAuditLogFilter
-// Dependencies: [32, 19, 17, 1371, 17570, 1074, 21, 4574, 576, 1114, 4418, 17572, 1611, 1483, 5531, 17580, 10974, 5703, 5619, 1178, 10061, 17581, 7064, 8258, 8906, 7054, 2]
+// Dependencies: [32, 19, 17, 1371, 17629, 1074, 21, 4605, 576, 1114, 4449, 17631, 1611, 1483, 5567, 17639, 11014, 5739, 5655, 1178, 10099, 17640, 7102, 8295, 8943, 7092, 2]
 // Exports: createAuditLogFilterActionData, createAuditLogFilterUserData, default
 
-// Module 17579 (GuildSettingsModalAuditLogFilter)
+// Module 17638 (GuildSettingsModalAuditLogFilter)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import UserUtilsDefault from "UserUtils" /* 4418 */;
-import AuditLogUtils from "AuditLogUtils" /* 17572 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 17580 */;
+import UserUtilsDefault from "UserUtils" /* 4449 */;
+import AuditLogUtils from "AuditLogUtils" /* 17631 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 17639 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17570 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17629 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ const View = fn(17).View;
 const AuditLogFilterTypes = fn(1074).AuditLogFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 }, allUsersIconContainer: { height: 30, width: 30, alignItems: "center" } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);

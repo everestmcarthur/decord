@@ -1,20 +1,20 @@
-// Module ID: 16153
-// Function ID: 16154
+// Module ID: 16202
+// Function ID: 16203
 // Name: VoiceChannelUserLimit
-// Dependencies: [19, 17, 21, 4574, 576, 1178, 13817, 4570, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 1178, 13866, 4601, 2]
 
-// Module 16153 (VoiceChannelUserLimit)
+// Module 16202 (VoiceChannelUserLimit)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import _modDef13817 from "module_13817" /* 13817 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import _modDef13866 from "module_13866" /* 13866 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let rect = { videoIcon: null, wrapper: null, left: null, mid: null, right: null };
 let size = { height: 16, width: 16, marginRight: 4, tintColor: nativeDefault.colors.VOICE_CHANNEL_USER_LIMIT_ICON };
 rect.videoIcon = size;
@@ -37,7 +37,7 @@ export default noop.memo(function VoiceChannelUserLimit(videoLimit) {
   const obj2 = { style: rect.left, children: null };
   let tmp3 = null;
   if (videoLimit.videoLimit) {
-    const obj3 = { source: _modDef13817, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
+    const obj3 = { source: _modDef13866, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
     tmp3 = React4(native.Icon, obj3);
   }
   const items = [tmp3, ];

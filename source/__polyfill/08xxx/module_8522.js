@@ -1,158 +1,69 @@
 // Module ID: 8522
 // Function ID: 8523
-// Dependencies: [19, 17, 8502, 8490]
-// Exports: default, extractFeBlend, extractFeColorMatrix, extractFeComposite, extractFeGaussianBlur, extractFeMerge, extractFilter, extractIn
+// Dependencies: [8523, 8524, 8627, 8628, 8630, 8631, 8545]
 
 // Module 8522
-import extractOpacityDefault from "extractOpacity" /* 8490 */;
-import extractBrushDefault from "extractBrush" /* 8502 */;
-import noop from "module_19" /* 19 */;
+import CircleDefault from "Circle" /* 8524 */;
+import _modDef8545 from "module_8545" /* 8545 */;
+import showErrorCSS from "showErrorCSS" /* 8627 */;
+import _mod8628 from "module_8628" /* 8628 */;
+import _fetchText from "_fetchText" /* 8630 */;
+import RNSVGCircle from "RNSVGCircle" /* 8631 */;
 
-const re3 = /\s+/;
-const action = { type: 0, payload: fn(17).processColor("black") };
+const require = globalThis.__r;
 
-export default function extractFeFlood(arg0) {
-  ({ floodColor, floodOpacity } = arg0);
-  if (null == floodColor) {
-    let tmp = action;
-  } else {
-    tmp = extractBrushDefault(floodColor);
-  }
-  const obj = { floodColor: tmp };
-  if (null != floodOpacity) {
-    obj.floodOpacity = extractOpacityDefault(floodOpacity);
-  }
-  return obj;
-};
-export const extractFilter = (arg0) => {
-  const size = { x: arg0.x, y: arg0.y, width: arg0.width, height: arg0.height, result: arg0.result };
-  return size;
-};
-export const extractIn = (arg0) => {
-  if (arg0.in) {
-    const obj2 = { in1: arg0.in };
-    let obj = obj2;
-  } else {
-    obj = {};
-  }
-  return obj;
-};
-export const extractFeBlend = (in2) => {
-  const obj = {};
-  if (in2.in2) {
-    obj.in2 = in2.in2;
-  }
-  if (in2.mode) {
-    obj.mode = in2.mode;
-  }
-  return obj;
-};
-export const extractFeColorMatrix = (type) => {
-  const obj = {};
-  if (undefined !== type.values) {
-    const _Array = Array;
-    const values = type.values;
-    if (Array.isArray(type.values)) {
-      obj.values = values.map((item) => {
-        let parsed = item;
-        if (typeof item !== "number") {
-          const _parseFloat = parseFloat;
-          parsed = parseFloat(item);
-        }
-        return parsed;
-      });
-    } else if (typeof values === "number") {
-      const items = [type.values];
-      obj.values = items;
-    } else if (typeof type.values === "string") {
-      const parts = type.values.split(re3);
-      let _parseFloat = parseFloat;
-      const mapped = parts.map(parseFloat);
-      obj.values = mapped.filter((item) => !isNaN(item));
-    } else {
-      const _console = console;
-      console.warn("Invalid value for FeColorMatrix `values` prop");
-    }
-  }
-  if (type.type) {
-    obj.type = type.type;
-  }
-  return obj;
-};
-export const extractFeComposite = (arg0) => {
-  closure_0 = arg0;
-  const obj = { in1: arg0.in || "", in2: arg0.in2 || "", operator1: arg0.operator || "over" };
-  const items = ["k1", "k2", "k3", "k4"];
-  const item = items.forEach((item) => {
-    if (undefined !== closure_0[item]) {
-      const _Number = Number;
-      obj[item] = Number(tmp[item]) || 0;
-      const tmp4 = Number(tmp[item]) || 0;
-    }
-  });
-  return obj;
-};
-export const extractFeGaussianBlur = (stdDeviation) => {
-  const obj = {};
-  if (Array.isArray(stdDeviation.stdDeviation)) {
-    const _Number5 = Number;
-    obj.stdDeviationX = Number(stdDeviation.stdDeviation[0]) || 0;
-    const _Number6 = Number;
-    const tmp7 = Number(stdDeviation.stdDeviation[0]) || 0;
-    obj.stdDeviationY = Number(stdDeviation.stdDeviation[1]) || 0;
-    const tmp8 = Number(stdDeviation.stdDeviation[1]) || 0;
-  } else {
-    if (typeof stdDeviation.stdDeviation === "string") {
-      if (str2.match(re3)) {
-        const parts = stdDeviation.stdDeviation.split(tmp9);
-        const _Number3 = Number;
-        obj.stdDeviationX = Number(parts[0]) || 0;
-        const _Number4 = Number;
-        const tmp5 = Number(parts[0]) || 0;
-        obj.stdDeviationY = Number(parts[1]) || 0;
-        const tmp6 = Number(parts[1]) || 0;
-      }
-      str2 = stdDeviation.stdDeviation;
-      tmp9 = re3;
-    }
-    stdDeviation = stdDeviation.stdDeviation;
-    let tmp = typeof stdDeviation === "number";
-    if (typeof stdDeviation !== "number") {
-      const stdDeviation2 = stdDeviation.stdDeviation;
-      let tmp10 = typeof stdDeviation2 === "string";
-      if (typeof stdDeviation2 === "string") {
-        tmp10 = !stdDeviation.stdDeviation.match(re3);
-      }
-      tmp = tmp10;
-    }
-    if (tmp) {
-      const _Number = Number;
-      obj.stdDeviationX = Number(stdDeviation.stdDeviation) || 0;
-      const _Number2 = Number;
-      const tmp2 = Number(stdDeviation.stdDeviation) || 0;
-      obj.stdDeviationY = Number(stdDeviation.stdDeviation) || 0;
-      const tmp3 = Number(stdDeviation.stdDeviation) || 0;
-    }
-  }
-  if (stdDeviation.edgeMode) {
-    obj.edgeMode = stdDeviation.edgeMode;
-  }
-  return obj;
-};
-export const extractFeMerge = (children, parent) => {
-  if (children.children) {
-    const Children = noop.Children;
-    let mapped = Children.map(children.children, (arg0) => noop.cloneElement(arg0, { parent }));
-  } else {
-    mapped = [];
-  }
-  const nodes = [];
-  for (let num = 0; num < length; num = num + 1) {
-    let str = mapped[num].props.in;
-    if (!str) {
-      str = "";
-    }
-    let arr = nodes.push(str);
-  }
-  return { nodes };
-};
+for (const key10013 in require("module_8523")) {
+  arg5[key10013] = require("module_8523")[key10013];
+  continue;
+}
+for (const key10017 in require("Circle")) {
+  arg5[key10017] = require("Circle")[key10017];
+  continue;
+}
+
+export const inlineStyles = showErrorCSS.inlineStyles;
+export const loadLocalRawResource = showErrorCSS.loadLocalRawResource;
+export const LocalSvg = showErrorCSS.LocalSvg;
+export const SvgCss = showErrorCSS.SvgCss;
+export const SvgCssUri = showErrorCSS.SvgCssUri;
+export const SvgWithCss = showErrorCSS.SvgWithCss;
+export const SvgWithCssUri = showErrorCSS.SvgWithCssUri;
+export const WithLocalSvg = showErrorCSS.WithLocalSvg;
+export const camelCase = _mod8628.camelCase;
+export const fetchText = _fetchText.fetchText;
+export const parse = _mod8628.parse;
+export const RNSVGCircle = RNSVGCircle.RNSVGCircle;
+export const RNSVGClipPath = RNSVGCircle.RNSVGClipPath;
+export const RNSVGDefs = RNSVGCircle.RNSVGDefs;
+export const RNSVGEllipse = RNSVGCircle.RNSVGEllipse;
+export const RNSVGFeColorMatrix = RNSVGCircle.RNSVGFeColorMatrix;
+export const RNSVGFeComposite = RNSVGCircle.RNSVGFeComposite;
+export const RNSVGFeGaussianBlur = RNSVGCircle.RNSVGFeGaussianBlur;
+export const RNSVGFeMerge = RNSVGCircle.RNSVGFeMerge;
+export const RNSVGFeOffset = RNSVGCircle.RNSVGFeOffset;
+export const RNSVGFilter = RNSVGCircle.RNSVGFilter;
+export const RNSVGForeignObject = RNSVGCircle.RNSVGForeignObject;
+export const RNSVGGroup = RNSVGCircle.RNSVGGroup;
+export const RNSVGImage = RNSVGCircle.RNSVGImage;
+export const RNSVGLine = RNSVGCircle.RNSVGLine;
+export const RNSVGLinearGradient = RNSVGCircle.RNSVGLinearGradient;
+export const RNSVGMarker = RNSVGCircle.RNSVGMarker;
+export const RNSVGMask = RNSVGCircle.RNSVGMask;
+export const RNSVGPath = RNSVGCircle.RNSVGPath;
+export const RNSVGPattern = RNSVGCircle.RNSVGPattern;
+export const RNSVGRadialGradient = RNSVGCircle.RNSVGRadialGradient;
+export const RNSVGRect = RNSVGCircle.RNSVGRect;
+export const RNSVGSvgAndroid = RNSVGCircle.RNSVGSvgAndroid;
+export const RNSVGSvgIOS = RNSVGCircle.RNSVGSvgIOS;
+export const RNSVGSymbol = RNSVGCircle.RNSVGSymbol;
+export const RNSVGText = RNSVGCircle.RNSVGText;
+export const RNSVGTextPath = RNSVGCircle.RNSVGTextPath;
+export const RNSVGTSpan = RNSVGCircle.RNSVGTSpan;
+export const RNSVGUse = RNSVGCircle.RNSVGUse;
+export const Shape = _modDef8545;
+export const SvgAst = _mod8628.SvgAst;
+export const SvgFromUri = _mod8628.SvgFromUri;
+export const SvgFromXml = _mod8628.SvgFromXml;
+export const SvgUri = _mod8628.SvgUri;
+export const SvgXml = _mod8628.SvgXml;
+export default CircleDefault;

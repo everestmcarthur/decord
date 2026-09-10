@@ -1,10 +1,10 @@
-// Module ID: 15246
-// Function ID: 15247
+// Module ID: 15295
+// Function ID: 15296
 // Name: subscriptionUtils
 // Dependencies: [38, 2]
 // Exports: getRoleSubscriptionMutationPlanId, getRoleSubscriptionPlanId
 
-// Module 15246 (subscriptionUtils)
+// Module 15295 (subscriptionUtils)
 import _modDef38 from "module_38" /* 38 */;
 import size from "module_2" /* 2 */;
 

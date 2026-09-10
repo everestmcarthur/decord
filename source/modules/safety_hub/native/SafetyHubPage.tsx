@@ -1,29 +1,29 @@
-// Module ID: 14797
-// Function ID: 14798
+// Module ID: 14846
+// Function ID: 14847
 // Name: SafetyHubPage
-// Dependencies: [19, 17, 8458, 8447, 1074, 21, 6607, 11914, 504, 1178, 1114, 4570, 4989, 4574, 576, 14798, 11941, 11913, 14794, 5006, 11912, 1242, 7616, 7621, 4541, 14799, 1896, 14800, 14802, 2]
+// Dependencies: [19, 17, 8495, 8484, 1074, 21, 6643, 11954, 504, 1178, 1114, 4601, 5025, 4605, 576, 14847, 11981, 11953, 14843, 5042, 11952, 1242, 7653, 7658, 4572, 14848, 1896, 14849, 14851, 2]
 // Exports: default
 
-// Module 14797 (SafetyHubPage)
+// Module 14846 (SafetyHubPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6607 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7616 */;
-import MetricEvents from "MetricEvents" /* 7621 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11912 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11914 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6643 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7653 */;
+import MetricEvents from "MetricEvents" /* 7658 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11952 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11954 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8458 */;
+import SafetyHubStore from "SafetyHubStore" /* 8495 */;
 
 const require = globalThis.__r;
 
 const util = hyh4ls(1114);
 const native = hyh4ls(1178);
-const components_Button_Button = hyh4ls(4989);
+const components_Button_Button = hyh4ls(5025);
 require = fn;
 function handleLogInClick() {
   AuthenticationActionCreatorsDefault.closeSuspendedUser();
@@ -114,12 +114,12 @@ function AutomatedUnderageAppealStatus() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(8447).AgeCheckStatus;
+const AgeCheckStatus = fn(8484).AgeCheckStatus;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 }, loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" }, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 };
 obj2.body = { gap: nativeDefault.space.PX_8 };
@@ -153,7 +153,7 @@ export default function SafetyHubPage(visible) {
   const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14799, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14848, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SafetyHubErrorActionSheet");

@@ -1,15 +1,18 @@
 // Module ID: 10513
 // Function ID: 10514
-// Dependencies: [41, 42, 93, 95, 98, 10485]
+// Dependencies: [41, 42, 93, 95, 98, 10502, 10501, 10509]
 
 // Module 10513
-import _mod10485 from "module_10485" /* 10485 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _mod10501 from "module_10501" /* 10501 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10502 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10509 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const ENYearMonthDayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,51 +32,77 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class DEMergeDateTimeRefiner {
-  constructor() {
+const regExp = new RegExp("([0-9]{4})[-\\.\\/\\s](?:(" + repeatedTimeunitPattern.matchAnyPattern(_mod10501.MONTH_DICTIONARY) + ")|([0-9]{1,2}))[-\\.\\/\\s]([0-9]{1,2})(?=\\W|$)", "i");
+class ENYearMonthDayParser {
+  constructor(arg0) {
     self = this;
-    tmp = closure_0(this, DEMergeDateTimeRefiner);
-    tmp2 = c2;
-    obj = c2(DEMergeDateTimeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
+    tmp = c2(this, ENYearMonthDayParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENYearMonthDayParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMonthDateOrder = global;
+    return tmp3Result;
   }
 }
-_classCallCheck = DEMergeDateTimeRefiner;
-_inherits(DEMergeDateTimeRefiner, fn(_mod10485).default);
+_inherits(ENYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|um|am|,|-)?\\s*$");
+  key: "innerPattern",
+  value: function innerPattern() {
     return regExp;
   }
 };
-const items = [entry];
+let items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(arg0, arg1) {
+      const parsed = parseInt(arg1[1]);
+      const parsed1 = parseInt(arg1[4]);
+      if (arg1[3]) {
+        const _parseInt = parseInt;
+        let parsed2 = parseInt(arg1[3]);
+      } else {
+        parsed2 = ENYearMonthDayParser(10501).MONTH_DICTIONARY[str.toLowerCase(str)];
+      }
+      if (parsed2 < 1) {
+        const self = this;
+        if (this.strictMonthDateOrder) {
+          return null;
+        } else {
+          tmp6 = parsed2;
+          tmp7 = parsed1;
+          if (parsed1 >= 1) {
+            tmp6 = parsed2;
+            tmp7 = parsed1;
+            if (parsed1 <= 12) {
+              const items = [parsed1, parsed2];
+              [tmp6, tmp7] = items;
+            }
+          }
+        }
+      } else {
+        tmp6 = parsed2;
+        tmp7 = parsed1;
+      }
+      let tmp8 = null;
+      if (tmp7 >= 1) {
+        tmp8 = null;
+        if (tmp7 <= 31) {
+          const date = { day: tmp7, month: tmp6, year: parsed };
+          tmp8 = date;
+        }
+      }
+      return tmp8;
+    }
+  }
+];
 
-export default _createClass(DEMergeDateTimeRefiner, items);
+export default _createClass(ENYearMonthDayParser, items);

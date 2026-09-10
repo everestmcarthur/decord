@@ -1,26 +1,26 @@
-// Module ID: 5697
-// Function ID: 5698
+// Module ID: 5733
+// Function ID: 5734
 // Name: ChangeEmailCollectReasons
-// Dependencies: [19, 17, 1371, 5698, 1074, 21, 4574, 576, 504, 1483, 1242, 1093, 5699, 5702, 5704, 4570, 1114, 4989, 2]
+// Dependencies: [19, 17, 1371, 5734, 1074, 21, 4605, 576, 504, 1483, 1242, 1093, 5735, 5738, 5740, 4601, 1114, 5025, 2]
 // Exports: default
 
-// Module 5697 (ChangeEmailCollectReasons)
+// Module 5733 (ChangeEmailCollectReasons)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import TableRadioGroup from "TableRadioGroup" /* 5699 */;
+import TableRadioGroup from "TableRadioGroup" /* 5735 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const VerificationConstants = fn(5698);
+const VerificationConstants = fn(5734);
 ({ CHANGE_EMAIL_REASONS_ORDER: closure_7, SUSPICIOUS_CHANGE_EMAIL_REASONS: closure_8 } = VerificationConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 const obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, radioGroup: null, title: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.container = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };

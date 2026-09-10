@@ -1,19 +1,19 @@
-// Module ID: 9288
-// Function ID: 9289
+// Module ID: 9325
+// Function ID: 9326
 // Name: PlayStationLinkLanding
-// Dependencies: [19, 9287, 1074, 21, 4574, 1114, 5115, 9255, 1483, 2024, 9289, 9257, 2]
+// Dependencies: [19, 9324, 1074, 21, 4605, 1114, 5151, 9292, 1483, 2024, 9326, 9294, 2]
 // Exports: PlayStationLinkLanding
 
-// Module 9288 (PlayStationLinkLanding)
+// Module 9325 (PlayStationLinkLanding)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import _modDef9289 from "module_9289" /* 9289 */;
+import _modDef9326 from "module_9326" /* 9326 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(9287).PlayStationLinkModalScenes;
+let closure_4 = fn(9324).PlayStationLinkModalScenes;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ image: { width: 230, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx");
@@ -32,19 +32,19 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
     obj.label = intl.string(navigation(1114).t["+eJP7o"]);
     const intl2 = navigation(1114).intl;
     obj.subLabel = intl2.string(navigation(1114).t["+0VIUh"]);
-    obj.icon = navigation(5115).VoiceNormalIcon;
+    obj.icon = navigation(5151).VoiceNormalIcon;
     const items = [obj, ];
     const obj2 = { label: null, icon: null };
     const intl3 = navigation(1114).intl;
     obj2.label = intl3.string(navigation(1114).t.ZH4QFa);
-    obj2.icon = navigation(9255).GameControllerIcon;
+    obj2.icon = navigation(9292).GameControllerIcon;
     items[1] = obj2;
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef9289 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef9326 }), []);
   const obj3 = { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null };
   let intl2 = navigation(1114).intl;
   obj3.headerConnect = intl2.string(navigation(1114).t.xAWHOy);
@@ -53,5 +53,5 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
   obj3.body = intl.format(navigation(1114).t.kqZQNe, { helpdeskArticleUrl: articleURL });
   obj3.onNext = callback;
   obj3.valueProps = memo;
-  return jsx(navigation(9257).TwoWayLinkLanding, { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
+  return jsx(navigation(9294).TwoWayLinkLanding, { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
 };

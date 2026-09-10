@@ -1,13 +1,13 @@
-// Module ID: 15592
-// Function ID: 15593
+// Module ID: 15641
+// Function ID: 15642
 // Name: MobilePhoneSettingsIcon
-// Dependencies: [19, 21, 576, 4274, 15593, 2]
+// Dependencies: [19, 21, 576, 4305, 15642, 2]
 // Exports: MobilePhoneSettingsIcon
 
-// Module 15592 (MobilePhoneSettingsIcon)
+// Module 15641 (MobilePhoneSettingsIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod15593 from "module_15593" /* 15593 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod15642 from "module_15642" /* 15642 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const MobilePhoneSettingsIcon = function MobilePhoneSettingsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15593, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15642, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

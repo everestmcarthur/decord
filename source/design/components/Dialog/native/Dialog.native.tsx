@@ -1,11 +1,11 @@
-// Module ID: 4972
-// Function ID: 4973
+// Module ID: 5008
+// Function ID: 5009
 // Name: Dialog
-// Dependencies: [19, 17, 21, 4973, 2]
+// Dependencies: [19, 17, 21, 5009, 2]
 // Exports: Dialog
 
-// Module 4972 (Dialog)
-import AccessibilityView from "AccessibilityView" /* 4973 */;
+// Module 5008 (Dialog)
+import AccessibilityView from "AccessibilityView" /* 5009 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

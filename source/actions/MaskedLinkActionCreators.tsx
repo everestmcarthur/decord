@@ -1,10 +1,10 @@
-// Module ID: 12985
-// Function ID: 12986
+// Module ID: 13025
+// Function ID: 13026
 // Name: MaskedLinkActionCreators
 // Dependencies: [573, 2]
 // Exports: trustDomain, trustProtocol
 
-// Module 12985 (MaskedLinkActionCreators)
+// Module 13025 (MaskedLinkActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

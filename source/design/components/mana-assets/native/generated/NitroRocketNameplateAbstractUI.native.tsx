@@ -1,13 +1,13 @@
-// Module ID: 6299
-// Function ID: 6300
+// Module ID: 6335
+// Function ID: 6336
 // Name: NitroRocketNameplateAbstractUI
-// Dependencies: [21, 5601, 6300, 2]
+// Dependencies: [21, 5637, 6336, 2]
 // Exports: NitroRocketNameplateAbstractUI
 
-// Module 6299 (NitroRocketNameplateAbstractUI)
+// Module 6335 (NitroRocketNameplateAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6300 from "module_6300" /* 6300 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6336 from "module_6336" /* 6336 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const NitroRocketNameplateAbstractUI = function NitroRocketNameplateAbstr
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6300 };
+  const obj2 = { uri: _modDef6336 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

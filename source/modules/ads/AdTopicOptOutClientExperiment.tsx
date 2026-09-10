@@ -1,10 +1,10 @@
-// Module ID: 15890
-// Function ID: 15891
+// Module ID: 15939
+// Function ID: 15940
 // Name: AdTopicOptOutClientExperiment
 // Dependencies: [1433, 2]
 // Exports: isAdTopicOptOutClientEnabled, useIsAdTopicOptOutClientEnabled
 
-// Module 15890 (AdTopicOptOutClientExperiment)
+// Module 15939 (AdTopicOptOutClientExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

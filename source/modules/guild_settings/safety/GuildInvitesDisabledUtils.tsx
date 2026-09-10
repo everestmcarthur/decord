@@ -1,12 +1,12 @@
-// Module ID: 12401
-// Function ID: 12402
+// Module ID: 12441
+// Function ID: 12442
 // Name: GuildInvitesDisabledUtils
-// Dependencies: [10112, 4212, 1074, 504, 2]
+// Dependencies: [10150, 4243, 1074, 504, 2]
 // Exports: useInvitesDisabled, useInvitesDisabledPermission, useShouldShowInvitesDisabledNotif
 
-// Module 12401 (GuildInvitesDisabledUtils)
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10112 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+// Module 12441 (GuildInvitesDisabledUtils)
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10150 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = globalThis.__r;
 

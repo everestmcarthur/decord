@@ -1,9 +1,9 @@
-// Module ID: 5285
-// Function ID: 5286
+// Module ID: 5321
+// Function ID: 5322
 // Name: DimensionStore
 // Dependencies: [558, 504, 573, 2]
 
-// Module 5285 (DimensionStore)
+// Module 5321 (DimensionStore)
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

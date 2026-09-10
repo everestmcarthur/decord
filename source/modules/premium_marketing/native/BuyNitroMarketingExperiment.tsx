@@ -1,10 +1,10 @@
-// Module ID: 13335
-// Function ID: 13336
+// Module ID: 13384
+// Function ID: 13385
 // Name: BuyNitroMarketingExperiment
 // Dependencies: [1433, 2]
 // Exports: getMobileNitroMarketingRedesignExperiment
 
-// Module 13335 (BuyNitroMarketingExperiment)
+// Module 13384 (BuyNitroMarketingExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

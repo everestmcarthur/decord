@@ -1,13 +1,13 @@
-// Module ID: 16444
-// Function ID: 16445
+// Module ID: 16493
+// Function ID: 16494
 // Name: NotificationCenterPermissionNudge
-// Dependencies: [32, 19, 17, 1074, 1954, 12440, 21, 4574, 576, 1242, 9091, 4570, 1114, 4989, 12441, 5137, 5694, 15514, 7402, 1943, 2]
+// Dependencies: [32, 19, 17, 1074, 1954, 12480, 21, 4605, 576, 1242, 9128, 4601, 1114, 5025, 12481, 5173, 5730, 15563, 7440, 1943, 2]
 // Exports: default
 
-// Module 16444 (NotificationCenterPermissionNudge)
+// Module 16493 (NotificationCenterPermissionNudge)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15514 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15563 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -20,29 +20,29 @@ function NotificationCenterBannerImpl(onDismiss) {
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.IMPRESSION, prompt_type: constants5.NOTIFICATION_CENTER_BANNER });
   }, []);
   let obj = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.iconContainer, children: closure_14(onDismiss(9091).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }) };
+  const obj2 = { style: tmp.iconContainer, children: closure_14(onDismiss(9128).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }) };
   const items = [closure_14(View, obj2), , ];
   const obj4 = { style: tmp.contentContainer, children: null };
   const obj5 = { variant: "text-md/semibold", color: "text-default", children: null };
   const intl = onDismiss(1114).intl;
   obj5.children = intl.string(onDismiss(1114).t.G6YBna);
-  const items1 = [closure_14(onDismiss(4570).Text, obj5), , ];
+  const items1 = [closure_14(onDismiss(4601).Text, obj5), , ];
   const obj6 = { variant: "text-md/medium", color: "text-muted", style: null, children: null };
   const obj3 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
   obj6.style = { marginTop: nativeDefault.space.PX_4 };
   const intl2 = onDismiss(1114).intl;
   obj6.children = intl2.string(onDismiss(1114).t["9CoPDE"]);
-  items1[1] = closure_14(onDismiss(4570).Text, obj6);
+  items1[1] = closure_14(onDismiss(4601).Text, obj6);
   const obj8 = { style: tmp.ctaButton, children: null };
   const obj9 = { variant: "primary", size: "md", text: null, onPress: null };
   const intl3 = onDismiss(1114).intl;
   obj9.text = intl3.string(onDismiss(1114).t.a4bgO0);
   obj9.onPress = function onPress() {
-    const pushNotificationPermission = onDismiss(12441).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
-    const obj = onDismiss(12441);
+    const pushNotificationPermission = onDismiss(12481).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
+    const obj = onDismiss(12481);
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER });
   };
-  obj8.children = closure_14(onDismiss(4989).Button, obj9);
+  obj8.children = closure_14(onDismiss(5025).Button, obj9);
   items1[2] = closure_14(View, obj8);
   obj4.children = items1;
   items[1] = closure_15(View, obj4);
@@ -58,8 +58,8 @@ function NotificationCenterBannerImpl(onDismiss) {
   };
   const intl4 = onDismiss(1114).intl;
   obj10.accessibilityLabel = intl4.string(onDismiss(1114).t.WAI6xu);
-  obj10.children = closure_14(onDismiss(5694).XSmallIcon, { size: "sm", color: "icon-strong" });
-  items[2] = closure_14(onDismiss(5137).PressableHighlight, obj10);
+  obj10.children = closure_14(onDismiss(5730).XSmallIcon, { size: "sm", color: "icon-strong" });
+  items[2] = closure_14(onDismiss(5173).PressableHighlight, obj10);
   obj.children = items;
   return closure_15(View, obj);
 }
@@ -69,11 +69,11 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, NOOP: closure_8 } = Constants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12440);
+const NotificationPermissionConstants = fn(12480);
 ({ EventActionType: c10, EventActionLocation: closure_11, NotificationNudgeAnalyticsAction: closure_12, NotificationNudgeSurface: map1 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flexDirection: "row", paddingLeft: 24, paddingRight: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", borderBottomWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, gap: 16 }, contentContainer: { flex: 1 }, iconContainer: null, ctaButton: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, alignItems: "center", justifyContent: "center" };
 obj2.iconContainer = size;

@@ -1,10 +1,10 @@
-// Module ID: 8125
-// Function ID: 8126
+// Module ID: 8162
+// Function ID: 8163
 // Name: transformNativeMarkupNode
-// Dependencies: [32, 5010, 4569, 5136, 8126, 8127, 8128, 8129, 8130, 2]
+// Dependencies: [32, 5046, 4600, 5172, 8163, 8164, 8165, 8166, 8167, 2]
 
-// Module 8125 (transformNativeMarkupNode)
-import MarkupTypes from "MarkupTypes" /* 5010 */;
+// Module 8162 (transformNativeMarkupNode)
+import MarkupTypes from "MarkupTypes" /* 5046 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -76,7 +76,7 @@ function transformNode(type, channelId) {
         obj19.inQuote = true;
         let arr2 = transformNativeBlocks(type.value, obj19, "quote");
         if (arr2.length <= 0) {
-          const obj20 = { type: tmp55(5010).AST_KEY.TEXT, content: " " };
+          const obj20 = { type: tmp55(5046).AST_KEY.TEXT, content: " " };
           const items1 = [obj20];
           arr2 = items1;
         }
@@ -104,7 +104,7 @@ function transformNode(type, channelId) {
       } else {
         result1 = require("transformNativeMarkupLink").transformNativeLink(type.value, channelId, transformNativeInline);
         if (result1 == null) {
-          const obj24 = { type: tmp(5010).AST_KEY.TEXT, content: "" };
+          const obj24 = { type: tmp(5046).AST_KEY.TEXT, content: "" };
           result1 = obj24;
         }
         const obj = require("transformNativeMarkupLink");
@@ -201,7 +201,7 @@ function transformNativeBlocks(value, channelId, quote) {
   return items;
 }
 const set = new Set(["paragraph", "quote"]);
-const regExp = new RegExp(fn(4569).ANSI_CONTROL_SEQUENCE_RE, "g");
+const regExp = new RegExp(fn(4600).ANSI_CONTROL_SEQUENCE_RE, "g");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupNode.tsx");
 

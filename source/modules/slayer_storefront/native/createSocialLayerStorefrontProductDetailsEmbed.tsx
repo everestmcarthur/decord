@@ -1,27 +1,27 @@
-// Module ID: 11562
-// Function ID: 11563
+// Module ID: 11602
+// Function ID: 11603
 // Name: createSocialLayerStorefrontProductDetailsEmbed
-// Dependencies: [32, 19, 4802, 5524, 1074, 7750, 7959, 1114, 11563, 7245, 7240, 3430, 9398, 4562, 10830, 1116, 504, 1369, 7182, 2]
+// Dependencies: [32, 19, 4833, 5560, 1074, 7787, 7997, 1114, 11603, 7283, 7278, 3460, 9436, 4593, 10868, 1116, 504, 1369, 7220, 2]
 // Exports: createSocialLayerStorefrontProductDetailsEmbed, useFetchSocialLayerStorefrontProductDetailsEmbedData
 
-// Module 11562 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11602 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1114 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7240 */;
-import StorefrontUtils from "StorefrontUtils" /* 7245 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7959 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10830 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7278 */;
+import StorefrontUtils from "StorefrontUtils" /* 7283 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7997 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10868 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4802 */;
-import SKUStore from "SKUStore" /* 5524 */;
+import ApplicationStore from "ApplicationStore" /* 4833 */;
+import SKUStore from "SKUStore" /* 5560 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const PaymentGateways = fn(1074).PaymentGateways;
-const InviteTypes = fn(7750).InviteTypes;
+const InviteTypes = fn(7787).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
 
@@ -55,7 +55,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
       return null;
     } else {
       if (null != application) {
-        if (tmp(11563)(application)) {
+        if (tmp(11603)(application)) {
           if ("guild" !== guildOrApplication.type) {
             const result1 = StorefrontUtils.isSlayerSkuAvailableOnThisPlatform(value);
             const str4 = SlayerStorefrontUtils.getCardImageURL(value);
@@ -82,7 +82,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(tmp12(1114).t.boqtTA);
             } else {
-              stringResult = string(tmp(3430).BKf0MM);
+              stringResult = string(tmp(3460).BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;

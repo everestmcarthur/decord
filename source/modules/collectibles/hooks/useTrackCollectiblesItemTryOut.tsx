@@ -1,16 +1,16 @@
-// Module ID: 8189
-// Function ID: 8190
+// Module ID: 8226
+// Function ID: 8227
 // Name: useTrackCollectiblesItemTryOut
-// Dependencies: [19, 7556, 1074, 1373, 1889, 563, 1242, 7568, 2]
+// Dependencies: [19, 7594, 1074, 1373, 1889, 563, 1242, 7606, 2]
 // Exports: default
 
-// Module 8189 (useTrackCollectiblesItemTryOut)
+// Module 8226 (useTrackCollectiblesItemTryOut)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7568 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7606 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7594 */;
 import PremiumConstants from "PremiumConstants" /* 1373 */;
 import size from "module_2" /* 2 */;
 

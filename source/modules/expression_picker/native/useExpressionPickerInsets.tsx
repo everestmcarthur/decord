@@ -1,13 +1,13 @@
-// Module ID: 10315
-// Function ID: 10316
+// Module ID: 10353
+// Function ID: 10354
 // Name: useExpressionPickerInsets
-// Dependencies: [19, 1074, 1611, 6995, 576, 2]
+// Dependencies: [19, 1074, 1611, 7033, 576, 2]
 // Exports: default
 
-// Module 10315 (useExpressionPickerInsets)
+// Module 10353 (useExpressionPickerInsets)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6995 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7033 */;
 import noop from "module_19" /* 19 */;
 
 const EXPRESSION_FOOTER_HEIGHT = fn(1074).EXPRESSION_FOOTER_HEIGHT;

@@ -1,16 +1,16 @@
-// Module ID: 15647
-// Function ID: 15648
+// Module ID: 15696
+// Function ID: 15697
 // Name: UserSettingsDesignSystemsScreen
-// Dependencies: [19, 7989, 21, 11500, 14718, 2]
+// Dependencies: [19, 8027, 21, 11540, 14767, 2]
 // Exports: default
 
-// Module 15647 (UserSettingsDesignSystemsScreen)
-import SettingBuilders from "SettingBuilders" /* 11500 */;
-import SettingLayoutDefault from "SettingLayout" /* 14718 */;
+// Module 15696 (UserSettingsDesignSystemsScreen)
+import SettingBuilders from "SettingBuilders" /* 11540 */;
+import SettingLayoutDefault from "SettingLayout" /* 14767 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(7989).MobileUserSettings;
+const MobileUserSettings = fn(8027).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx");

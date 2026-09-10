@@ -1,15 +1,15 @@
-// Module ID: 12648
-// Function ID: 12649
+// Module ID: 12688
+// Function ID: 12689
 // Name: GuildIconPile
-// Dependencies: [19, 21, 5598, 11032, 12649, 8847, 11033, 2]
+// Dependencies: [19, 21, 5634, 11072, 12689, 8884, 11073, 2]
 // Exports: GuildIconPile
 
-// Module 12648 (GuildIconPile)
-import GuildIcon from "GuildIcon" /* 5598 */;
-import ClipView from "ClipView" /* 8847 */;
-import Pile from "Pile" /* 11032 */;
-import PileOverflow from "PileOverflow" /* 11033 */;
-import ListUtils from "ListUtils" /* 12649 */;
+// Module 12688 (GuildIconPile)
+import GuildIcon from "GuildIcon" /* 5634 */;
+import ClipView from "ClipView" /* 8884 */;
+import Pile from "Pile" /* 11072 */;
+import PileOverflow from "PileOverflow" /* 11073 */;
+import ListUtils from "ListUtils" /* 12689 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

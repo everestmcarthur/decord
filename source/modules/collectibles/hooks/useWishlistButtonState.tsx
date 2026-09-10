@@ -1,14 +1,14 @@
-// Module ID: 8863
-// Function ID: 8864
+// Module ID: 8900
+// Function ID: 8901
 // Name: useWishlistButtonState
-// Dependencies: [5, 32, 19, 7635, 7176, 1925, 504, 8809, 8816, 4425, 1114, 2]
+// Dependencies: [5, 32, 19, 7672, 7214, 1925, 504, 8846, 8853, 4456, 1114, 2]
 // Exports: useWishlistButtonState
 
-// Module 8863 (useWishlistButtonState)
+// Module 8900 (useWishlistButtonState)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7635 */;
+import UserProfileStore from "UserProfileStore" /* 7672 */;
 
 const require = globalThis.__r;
 

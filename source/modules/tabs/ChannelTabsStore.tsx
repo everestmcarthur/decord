@@ -1,16 +1,16 @@
-// Module ID: 11022
-// Function ID: 11023
+// Module ID: 11062
+// Function ID: 11063
 // Name: ChannelTabsStore
-// Dependencies: [32, 2011, 4395, 1964, 11023, 1116, 504, 573, 2]
+// Dependencies: [32, 2011, 4426, 1964, 11063, 1116, 504, 573, 2]
 
-// Module 11022 (ChannelTabsStore)
+// Module 11062 (ChannelTabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
-import TabsExperimentDefault from "TabsExperiment" /* 11023 */;
+import TabsExperimentDefault from "TabsExperiment" /* 11063 */;
 import _slicedToArray from "module_32" /* 32 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
 
 require = fn;
 function handleChannelDelete(channel) {

@@ -1,13 +1,13 @@
-// Module ID: 8792
-// Function ID: 8793
+// Module ID: 8829
+// Function ID: 8830
 // Name: useGameAnnouncements
-// Dependencies: [19, 8715, 504, 8793, 2]
+// Dependencies: [19, 8752, 504, 8830, 2]
 // Exports: default
 
-// Module 8792 (useGameAnnouncements)
+// Module 8829 (useGameAnnouncements)
 import _mod19 from "module_19" /* 19 */;
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8793 */;
-import GameProfileStore from "GameProfileStore" /* 8715 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8830 */;
+import GameProfileStore from "GameProfileStore" /* 8752 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -56,7 +56,7 @@ export default function useGameAnnouncements(arg0, limit) {
   if (messages == null) {
     messages = [];
   }
-  let obj2 = { messages, channelId: null, guildId: null, loading: null };
+  let obj2 = { messages, channelId: null, guildId: null, loading: null, hasFetched: null };
   let channelId;
   if (data != null) {
     channelId = data.channelId;
@@ -68,5 +68,6 @@ export default function useGameAnnouncements(arg0, limit) {
   }
   obj2.guildId = guildId;
   obj2.loading = stateFromStoresObject.isFetching;
+  obj2.hasFetched = hasFetched;
   return obj2;
 };

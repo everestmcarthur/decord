@@ -1,9 +1,29 @@
 // Module ID: 12987
 // Function ID: 12988
-// Dependencies: [1122]
+// Dependencies: [12868]
+// Exports: vercelWaitUntil
 
 // Module 12987
-import registerAsset from "module_1122" /* 1122 */;
+import _mod12868 from "module_12868" /* 12868 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "6fc18e0c40f0ce37259a8a45cc634c66", name: "WindowLaunchIcon", type: "png" });
+export const vercelWaitUntil = function vercelWaitUntil(arg0) {
+  const obj = _mod12868.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
+  if (obj) {
+    if (obj.get) {
+      if (obj.get()) {
+        let obj1 = obj.get();
+      }
+      let waitUntil = obj1;
+      if (obj1) {
+        waitUntil = obj1.waitUntil;
+      }
+      if (waitUntil) {
+        obj1.waitUntil(arg0);
+      }
+    }
+  }
+  obj1 = {};
+};

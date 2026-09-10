@@ -1,13 +1,13 @@
-// Module ID: 17699
-// Function ID: 17700
+// Module ID: 17758
+// Function ID: 17759
 // Name: EnableCommunitySharedNavigation
-// Dependencies: [19, 17, 9096, 1074, 21, 4574, 504, 1483, 4976, 4985, 573, 17697, 7053, 7137, 4989, 1114, 2]
+// Dependencies: [19, 17, 9133, 1074, 21, 4605, 504, 1483, 5012, 5021, 573, 17756, 7091, 7175, 5025, 1114, 2]
 // Exports: EnableCommunityModalScreen
 
-// Module 17699 (EnableCommunitySharedNavigation)
+// Module 17758 (EnableCommunitySharedNavigation)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9096 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9133 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 let GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, height: "100%" }, modal: { height: "100%", flex: 1, justifyContent: "space-between" }, button: { flexGrow: 0, paddingLeft: 16, paddingTop: 16, paddingRight: 16 } });
 let obj2 = { STEP_1: "STEP_1", STEP_2: "STEP_2", STEP_3: "STEP_3" };
 const size = fn(2);

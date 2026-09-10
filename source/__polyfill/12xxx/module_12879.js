@@ -1,77 +1,83 @@
 // Module ID: 12879
 // Function ID: 12880
-// Dependencies: [12828]
-// Exports: getDebugImagesForResources
+// Dependencies: [12880, 12877]
+// Exports: extractTraceparentData, generateSentryTraceHeader, propagationContextFromHeaders
 
 // Module 12879
-const require = arg1;
+import generatePropagationContext from "generatePropagationContext" /* 12877 */;
+import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12880 */;
+
+require = arg1;
 const dependencyMap = arg6;
-function getFilenameToDebugIdMap(arg0) {
-  _require = arg0;
-  _sentryDebugIds = require("module_12828").GLOBAL_OBJ._sentryDebugIds;
-  if (_sentryDebugIds) {
-    const _Object = Object;
-    const keys = Object.keys(_sentryDebugIds);
-    if (reduced) {
-      return reduced;
-    }
-    reduced = keys.reduce((acc, item) => {
-      let filename;
-      let tmp = obj;
-      if (!obj) {
-        obj = {};
-        tmp = obj;
-      }
-      if (tmp[item]) {
-        acc[tmp2[0]] = tmp2[1];
-      } else {
-        const arr = closure_0(item);
-        let diff = arr.length - 1;
-        if (0 <= diff) {
-          while (true) {
-            let tmp5 = arr[diff];
-            filename = tmp5;
-            if (tmp5) {
-              filename = tmp5.filename;
-            }
-            if (filename) {
-              if (_sentryDebugIds[item]) {
-                break;
-              }
-            }
-            diff = diff - 1;
-          }
-          acc[filename] = tmp8;
-          const items = [filename, tmp8];
-          obj[item] = items;
+const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
+
+export const TRACEPARENT_REGEXP = regExp;
+export const extractTraceparentData = function extractTraceparentData(str) {
+  if (str) {
+    const match = str.match(regExp);
+    if (match) {
+      let flag = true;
+      if ("1" !== match[3]) {
+        if ("0" === match[3]) {
+          flag = false;
         }
       }
-      return acc;
-    }, {});
-  } else {
-    return {};
-  }
-}
-
-export const getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1) {
-  const tmp = getFilenameToDebugIdMap(arg0);
-  const items = [];
-  if (tmp) {
-    const iter = arg1[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp7 = nextResult;
-      if (nextResult) {
-        obj = { type: "sourcemap", code_file: null, debug_id: null };
-        obj.code_file = tmp7;
-        obj.debug_id = tmp[tmp7];
-        let arr = items.push(obj);
-      }
-      continue;
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      return obj;
     }
-    return items;
-  } else {
-    return items;
   }
 };
-export { getFilenameToDebugIdMap };
+export const generateSentryTraceHeader = function generateSentryTraceHeader() {
+  let traceId = arg0;
+  if (arg0 === undefined) {
+    traceId = generatePropagationContext.generateTraceId();
+  }
+  let spanId = arg1;
+  if (arg1 === undefined) {
+    spanId = generatePropagationContext.generateSpanId();
+  }
+  let str = "";
+  if (undefined !== arg2) {
+    let str2 = "-0";
+    if (arg2) {
+      str2 = "-1";
+    }
+    str = str2;
+  }
+  return "" + traceId + "-" + spanId + str;
+};
+export const propagationContextFromHeaders = function propagationContextFromHeaders(str, arg1) {
+  let tmp;
+  if (str) {
+    const match = str.match(regExp);
+    if (match) {
+      let flag = true;
+      if ("1" !== match[3]) {
+        if ("0" === match[3]) {
+          flag = false;
+        }
+      }
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      tmp = obj;
+    }
+  }
+  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(arg1);
+  if (tmp) {
+    if (tmp.traceId) {
+      const obj3 = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
+      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
+      obj3.spanId = tmp4(12877).generateSpanId();
+      obj3.sampled = parentSampled;
+      if (!result) {
+        result = {};
+      }
+      obj3.dsc = result;
+      return obj3;
+    }
+  }
+  const obj4 = { traceId: null, spanId: null };
+  obj4.traceId = generatePropagationContext.generateTraceId();
+  const tmp4Result3 = generatePropagationContext;
+  obj4.spanId = generatePropagationContext.generateSpanId();
+  return obj4;
+};

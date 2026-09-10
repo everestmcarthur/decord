@@ -1,13 +1,13 @@
-// Module ID: 6449
-// Function ID: 6450
+// Module ID: 6485
+// Function ID: 6486
 // Name: ServerIconSproutletSyndicateExample
-// Dependencies: [21, 5601, 6450, 2]
+// Dependencies: [21, 5637, 6486, 2]
 // Exports: ServerIconSproutletSyndicateExample
 
-// Module 6449 (ServerIconSproutletSyndicateExample)
+// Module 6485 (ServerIconSproutletSyndicateExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6450 from "module_6450" /* 6450 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6486 from "module_6486" /* 6486 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ServerIconSproutletSyndicateExample = function ServerIconSproutletS
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6450 };
+  const obj2 = { uri: _modDef6486 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

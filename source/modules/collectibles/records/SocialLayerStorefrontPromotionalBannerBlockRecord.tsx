@@ -1,10 +1,10 @@
-// Module ID: 7597
-// Function ID: 7598
+// Module ID: 7634
+// Function ID: 7635
 // Name: SocialLayerStorefrontPromotionalBannerBlockRecord
-// Dependencies: [7587, 2]
+// Dependencies: [7624, 2]
 
-// Module 7597 (SocialLayerStorefrontPromotionalBannerBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 7587 */;
+// Module 7634 (SocialLayerStorefrontPromotionalBannerBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 7624 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function SocialLayerStorefrontPromotionalBannerBlockRecord(arg0) {

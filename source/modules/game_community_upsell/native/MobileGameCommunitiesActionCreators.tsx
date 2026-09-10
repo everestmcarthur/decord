@@ -1,13 +1,13 @@
-// Module ID: 16299
-// Function ID: 16300
+// Module ID: 16348
+// Function ID: 16349
 // Name: MobileGameCommunitiesActionCreators
-// Dependencies: [15653, 1074, 559, 1090, 573, 1272, 1471, 2]
+// Dependencies: [15702, 1074, 559, 1090, 573, 1272, 1471, 2]
 // Exports: dismissGuild, fetchMobileGameCommunities, fetchMobileGameCommunitiesIfStale
 
-// Module 16299 (MobileGameCommunitiesActionCreators)
+// Module 16348 (MobileGameCommunitiesActionCreators)
 import DurationsDefault from "Durations" /* 1090 */;
 import _modDef1471 from "module_1471" /* 1471 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15653 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15702 */;
 import Backoff from "Backoff" /* 559 */;
 import Dispatcher from "Dispatcher" /* 573 */;
 
@@ -65,7 +65,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
               let request = { url: constants.MOBILE_GAME_COMMUNITIES, query: closure_1(dependencyMap[6]).stringify({ game_ids, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
               let value = HTTP.get(request);
               let obj2 = closure_1(dependencyMap[6]);
-              value.then(() => { ... }, () => { ... }).catch(/* F123903 */ function() { ... });
+              value.then(() => { ... }, () => { ... }).catch(/* F124171 */ function() { ... });
             });
           }
         }).catch(() => {
@@ -124,7 +124,7 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
                   let request = { url: constants.MOBILE_GAME_COMMUNITIES, query: closure_1(dependencyMap[6]).stringify({ game_ids, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
                   let value = HTTP.get(request);
                   let obj2 = closure_1(dependencyMap[6]);
-                  value.then(() => { ... }, () => { ... }).catch(/* F123903 */ function() { ... });
+                  value.then(() => { ... }, () => { ... }).catch(/* F124171 */ function() { ... });
                 });
               }
             }).catch(() => {

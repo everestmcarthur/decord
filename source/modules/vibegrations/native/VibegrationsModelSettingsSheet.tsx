@@ -1,20 +1,20 @@
-// Module ID: 16633
-// Function ID: 16634
+// Module ID: 16688
+// Function ID: 16689
 // Name: VibegrationsModelSettingsSheet
-// Dependencies: [109, 19, 16623, 21, 504, 16634, 1114, 3560, 7211, 7163, 6641, 4987, 576, 5699, 5702, 16635, 5701, 7214, 4570, 2]
+// Dependencies: [109, 19, 16678, 21, 504, 16689, 1114, 3590, 7249, 7201, 6677, 5023, 576, 5735, 5738, 16690, 5737, 7252, 4601, 2]
 // Exports: default
 
-// Module 16633 (VibegrationsModelSettingsSheet)
-import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16634 */;
+// Module 16688 (VibegrationsModelSettingsSheet)
+import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16689 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16623 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16678 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["fast"];
-const sendModelSettings = fn(16623).sendModelSettings;
+const sendModelSettings = fn(16678).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
@@ -60,13 +60,13 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     settings = stateFromStores.settings;
     const choices = stateFromStores.choices;
     const intl2 = tmp(tmp2[6]).intl;
-    const stringResult = intl2.string(require("module_3560")["9FRudW"]);
+    const stringResult = intl2.string(require("module_3590")["9FRudW"]);
     const intl3 = tmp(tmp2[6]).intl;
-    const stringResult1 = intl3.string(require("module_3560")["4AsQHS"]);
+    const stringResult1 = intl3.string(require("module_3590")["4AsQHS"]);
     let obj2 = { scrollable: true, header: null, children: null };
     const obj3 = { title: null };
     const intl4 = tmp(tmp2[6]).intl;
-    obj3.title = intl4.string(require("module_3560")["2NWMqY"]);
+    obj3.title = intl4.string(require("module_3590")["2NWMqY"]);
     obj2.header = closure_8(tmp(tmp2[9]).BottomSheetTitleHeader, obj3);
     const obj4 = { direction: "vertical", spacing: require("native").space.PX_16, children: null };
     const obj5 = {
@@ -141,7 +141,7 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     items3[2] = tmp9Result;
     const obj10 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl = tmp(tmp2[6]).intl;
-    obj10.children = intl.string(require("module_3560").ICU5aW);
+    obj10.children = intl.string(require("module_3590").ICU5aW);
     items3[3] = closure_8(tmp(tmp2[18]).Text, obj10);
     obj4.children = items3;
     obj9.children = closure_9(tmp(tmp2[11]).Stack, obj4);

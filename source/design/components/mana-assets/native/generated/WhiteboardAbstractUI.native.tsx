@@ -1,13 +1,13 @@
-// Module ID: 6585
-// Function ID: 6586
+// Module ID: 6621
+// Function ID: 6622
 // Name: WhiteboardAbstractUI
-// Dependencies: [21, 5601, 6586, 2]
+// Dependencies: [21, 5637, 6622, 2]
 // Exports: WhiteboardAbstractUI
 
-// Module 6585 (WhiteboardAbstractUI)
+// Module 6621 (WhiteboardAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6586 from "module_6586" /* 6586 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6622 from "module_6622" /* 6622 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const WhiteboardAbstractUI = function WhiteboardAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6586 };
+  const obj2 = { uri: _modDef6622 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

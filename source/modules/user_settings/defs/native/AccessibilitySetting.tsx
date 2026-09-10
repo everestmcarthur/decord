@@ -1,11 +1,11 @@
-// Module ID: 15358
-// Function ID: 15359
+// Module ID: 15407
+// Function ID: 15408
 // Name: AccessibilitySetting
-// Dependencies: [32, 19, 1074, 1954, 21, 1943, 7402, 1178, 1114, 11500, 15359, 15361, 2]
+// Dependencies: [32, 19, 1074, 1954, 21, 1943, 7440, 1178, 1114, 11540, 15408, 15410, 2]
 
-// Module 15358 (AccessibilitySetting)
+// Module 15407 (AccessibilitySetting)
 import util from "util" /* 1114 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7402 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7440 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,14 +13,14 @@ require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let items = [fn(1943).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
-const SettingBuilders = fn(11500);
+const SettingBuilders = fn(11540);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(15359).AccessibilityIcon,
+  IconComponent: fn(15408).AccessibilityIcon,
   useTrailing() {
     [tmp4, r10012] = useSelectedDismissibleContent.useSelectedDismissibleContent(items);
     let tmp5 = null;
@@ -40,7 +40,7 @@ const route = SettingBuilders.createRoute({
     return tmp5;
   },
   usePreNavigationAction() {
-    const tmp = _slicedToArray(first(7402).useSelectedDismissibleContent(items), 2);
+    const tmp = _slicedToArray(first(7440).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];

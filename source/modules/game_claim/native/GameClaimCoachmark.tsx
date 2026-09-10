@@ -1,23 +1,23 @@
-// Module ID: 16223
-// Function ID: 16224
+// Module ID: 16272
+// Function ID: 16273
 // Name: GameClaimCoachmark
-// Dependencies: [5, 19, 17, 1074, 1954, 21, 576, 16224, 10151, 4994, 4574, 16225, 8952, 1114, 5621, 5137, 5694, 4570, 4989, 8611, 7330, 2]
+// Dependencies: [5, 19, 17, 1074, 1954, 21, 576, 16273, 10189, 5030, 4605, 16274, 8989, 1114, 5657, 5173, 5730, 4601, 5025, 8648, 7368, 2]
 // Exports: getScaledGameClaimNoticeHeight
 
-// Module 16223 (GameClaimCoachmark)
+// Module 16272 (GameClaimCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ButtonConstants from "ButtonConstants" /* 4994 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8952 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10151 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 16224 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16225 */;
+import ButtonConstants from "ButtonConstants" /* 5030 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8989 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10189 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 16273 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16274 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const GameClaimCardStackDefault = tmp5(16224);
+const GameClaimCardStackDefault = tmp5(16273);
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
@@ -28,7 +28,7 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { card: { padding: nativeDefault.space.PX_12 }, closeButton: null, centeredText: null, body: null, cta: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj.closeButton = size;
@@ -71,27 +71,27 @@ export default noop.memo((arg0) => {
           return require(ContentDismissActionType.USER_DISMISS);
         },
       style: tmp.closeButton,
-      children: closure_8(tmp2(5694).XSmallIcon, { size: "sm", color: "text-default" })
+      children: closure_8(tmp2(5730).XSmallIcon, { size: "sm", color: "text-default" })
     };
-    const items = [closure_8(tmp2(5137).PressableOpacity, obj3), , , , ];
+    const items = [closure_8(tmp2(5173).PressableOpacity, obj3), , , , ];
     let obj4 = { imageSrc: coverImageUrl };
     items[1] = closure_8(GameClaimCardStackDefault, obj4);
     let obj5 = { variant: "text-md/medium", color: "text-overlay-light", style: tmp.centeredText, children: null };
     const intl2 = tmp2(1114).intl;
     const obj6 = { gameName: tmp8 };
     obj5.children = intl2.format(tmp2(1114).t.Q11WTQ, obj6);
-    items[2] = closure_8(tmp2(4570).Text, obj5);
+    items[2] = closure_8(tmp2(4601).Text, obj5);
     const obj7 = { variant: "text-sm/normal", color: "text-overlay-light", style: null, children: null };
     const items1 = [, ];
     ({ body: arr2[0], centeredText: arr2[1] } = tmp);
     obj7.style = items1;
     obj7.children = stringResult;
-    items[3] = closure_8(tmp2(4570).Text, obj7);
+    items[3] = closure_8(tmp2(4601).Text, obj7);
     const obj8 = { style: tmp.cta, children: null };
     const obj9 = { variant: "primary", size: "sm", text: null, icon: null, iconPosition: "end", onPress: null };
     const intl3 = tmp2(1114).intl;
     obj9.text = intl3.string(tmp2(1114).t["2u6ZlY"]);
-    obj9.icon = closure_8(tmp2(8611).LinkExternalSmallIcon, { size: "xs", color: "white" });
+    obj9.icon = closure_8(tmp2(8648).LinkExternalSmallIcon, { size: "xs", color: "white" });
     obj9.onPress = asyncGeneratorStep(async (arg0, value) => {
       if (c0 === 2) {
         c0 = 3;
@@ -140,10 +140,10 @@ export default noop.memo((arg0) => {
         }
       }
     });
-    obj8.children = closure_8(tmp2(4989).Button, obj9);
+    obj8.children = closure_8(tmp2(5025).Button, obj9);
     items[4] = closure_8(View, obj8);
     obj2.children = items;
-    return closure_9(tmp2(5621).Card, obj2);
+    return closure_9(tmp2(5657).Card, obj2);
   }
   const tmp6Result = useGameNameAndCoverImageDefault(first, intl.string(util.t.VQq92a));
 });

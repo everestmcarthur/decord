@@ -1,10 +1,10 @@
-// Module ID: 10904
-// Function ID: 10905
+// Module ID: 10942
+// Function ID: 10943
 // Name: FriendRequestAlertsV2
 // Dependencies: [1433, 2]
 // Exports: isFriendRequestAlertsV2Enabled, useIsFriendRequestAlertsV2Enabled
 
-// Module 10904 (FriendRequestAlertsV2)
+// Module 10942 (FriendRequestAlertsV2)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

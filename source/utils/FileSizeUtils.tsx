@@ -1,10 +1,10 @@
-// Module ID: 4471
-// Function ID: 4472
+// Module ID: 4502
+// Function ID: 4503
 // Name: FileSizeUtils
 // Dependencies: [1114, 2]
 // Exports: formatKbSize
 
-// Module 4471 (FileSizeUtils)
+// Module 4502 (FileSizeUtils)
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 

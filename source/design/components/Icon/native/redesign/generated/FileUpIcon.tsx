@@ -1,13 +1,13 @@
-// Module ID: 15571
-// Function ID: 15572
+// Module ID: 15620
+// Function ID: 15621
 // Name: FileUpIcon
-// Dependencies: [19, 21, 576, 4274, 15572, 2]
+// Dependencies: [19, 21, 576, 4305, 15621, 2]
 // Exports: FileUpIcon
 
-// Module 15571 (FileUpIcon)
+// Module 15620 (FileUpIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod15572 from "module_15572" /* 15572 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod15621 from "module_15621" /* 15621 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const FileUpIcon = function FileUpIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15572, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15621, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

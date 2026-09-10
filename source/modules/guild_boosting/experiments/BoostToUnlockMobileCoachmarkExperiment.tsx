@@ -1,9 +1,9 @@
-// Module ID: 12532
-// Function ID: 12533
+// Module ID: 12572
+// Function ID: 12573
 // Name: BoostToUnlockMobileCoachmarkExperiment
 // Dependencies: [1434, 2]
 
-// Module 12532 (BoostToUnlockMobileCoachmarkExperiment)
+// Module 12572 (BoostToUnlockMobileCoachmarkExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
 const size = fn(2);

@@ -1,12 +1,12 @@
-// Module ID: 9539
-// Function ID: 9540
+// Module ID: 9577
+// Function ID: 9578
 // Name: FramesActionCreators
-// Dependencies: [5, 4593, 9540, 9541, 2]
+// Dependencies: [5, 4624, 9578, 9579, 2]
 
-// Module 9539 (FramesActionCreators)
-import _launchFrameAll from "_launchFrame" /* 9541 */;
+// Module 9577 (FramesActionCreators)
+import _launchFrameAll from "_launchFrame" /* 9579 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import VoiceStateStore from "VoiceStateStore" /* 4624 */;
 
 let closure_5 = async function _launchFrameOnNative() {
   closure_129_0 = await _launchFrameAll.launchFrame(closure_0);

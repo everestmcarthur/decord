@@ -1,15 +1,15 @@
-// Module ID: 5164
-// Function ID: 5165
+// Module ID: 5200
+// Function ID: 5201
 // Name: ImagePicker
-// Dependencies: [1183, 1085, 1115, 5165, 5166, 576, 5168, 1114, 2]
+// Dependencies: [1183, 1085, 1115, 5201, 5202, 576, 5204, 1114, 2]
 
-// Module 5164 (ImagePicker)
+// Module 5200 (ImagePicker)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import ImagePickerUtils from "ImagePickerUtils" /* 5165 */;
-import launchCamera from "launchCamera" /* 5166 */;
-import openPickerDefault from "openPicker" /* 5168 */;
+import ImagePickerUtils from "ImagePickerUtils" /* 5201 */;
+import launchCamera from "launchCamera" /* 5202 */;
+import openPickerDefault from "openPicker" /* 5204 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
 require = fn;

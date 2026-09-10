@@ -1,10 +1,10 @@
-// Module ID: 8795
-// Function ID: 8796
+// Module ID: 8832
+// Function ID: 8833
 // Name: navigateToGameAnnouncement
-// Dependencies: [5, 1979, 1074, 38, 7355, 8406, 1100, 2]
+// Dependencies: [5, 1979, 1074, 38, 7393, 8443, 1100, 2]
 // Exports: default
 
-// Module 8795 (navigateToGameAnnouncement)
+// Module 8832 (navigateToGameAnnouncement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 

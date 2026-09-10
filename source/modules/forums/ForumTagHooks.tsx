@@ -1,15 +1,15 @@
-// Module ID: 7289
-// Function ID: 7290
+// Module ID: 7327
+// Function ID: 7328
 // Name: ForumTagHooks
-// Dependencies: [19, 1957, 4212, 1085, 504, 1369, 7290, 2]
+// Dependencies: [19, 1957, 4243, 1085, 504, 1369, 7328, 2]
 // Exports: useAppliedTags, useAvailableTags, useSomeAppliedTags, useVisibleAppliedForumTags, useVisibleForumTags
 
-// Module 7289 (ForumTagHooks)
+// Module 7327 (ForumTagHooks)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import ReportToModUtils from "ReportToModUtils" /* 7290 */;
+import ReportToModUtils from "ReportToModUtils" /* 7328 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = globalThis.__r;
 

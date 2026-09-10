@@ -1,10 +1,10 @@
-// Module ID: 12421
-// Function ID: 12422
+// Module ID: 12461
+// Function ID: 12462
 // Name: useDebouncedSetChatInputState
 // Dependencies: [19, 2]
 // Exports: default
 
-// Module 12421 (useDebouncedSetChatInputState)
+// Module 12461 (useDebouncedSetChatInputState)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

@@ -1,16 +1,16 @@
-// Module ID: 17698
-// Function ID: 17699
+// Module ID: 17757
+// Function ID: 17758
 // Name: EnableCommunityModal
-// Dependencies: [19, 21, 17697, 5644, 5638, 1114, 7391, 7006, 17699, 17700, 17712, 17713, 7014, 2]
+// Dependencies: [19, 21, 17756, 5680, 5674, 1114, 7429, 7044, 17758, 17759, 17771, 17772, 7052, 2]
 // Exports: default
 
-// Module 17698 (EnableCommunityModal)
+// Module 17757 (EnableCommunityModal)
 import util from "util" /* 1114 */;
-import NavigatorHeader from "NavigatorHeader" /* 5638 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5644 */;
-import Navigator from "Navigator" /* 7014 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17697 */;
-import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 17699 */;
+import NavigatorHeader from "NavigatorHeader" /* 5674 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5680 */;
+import Navigator from "Navigator" /* 7052 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17756 */;
+import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 17758 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,10 +32,10 @@ const result = size.fileFinishedImporting("modules/public_guilds/native/componen
 export default function EnableCommunityModal() {
   const memo = noop.useMemo(() => {
     function headerRight() {
-      const obj = { source: closure_1_1(7006), onPress, accessibilityLabel: null };
+      const obj = { source: closure_1_1(7044), onPress, accessibilityLabel: null };
       const intl = closure_1_0(1114).intl;
       obj.accessibilityLabel = intl.string(closure_1_0(1114).t.cpT0Cq);
-      return closure_1_4(closure_1_0(7391).HeaderActionButton, obj);
+      return closure_1_4(closure_1_0(7429).HeaderActionButton, obj);
     }
     return {
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_1]: {
@@ -45,7 +45,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(17700), {});
+          return closure_1_4(closure_1_1(17759), {});
         }
       },
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_2]: {
@@ -54,7 +54,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(17712), {});
+          return closure_1_4(closure_1_1(17771), {});
         }
       },
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_3]: {
@@ -63,7 +63,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(17713), {});
+          return closure_1_4(closure_1_1(17772), {});
         }
       }
     };

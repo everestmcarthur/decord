@@ -1,12 +1,12 @@
-// Module ID: 16220
-// Function ID: 16221
+// Module ID: 16269
+// Function ID: 16270
 // Name: useActiveEventOrStageInstanceChannel
-// Dependencies: [1957, 9694, 16219, 2]
+// Dependencies: [1957, 9732, 16268, 2]
 // Exports: useActiveEventOrStageInstanceChannel
 
-// Module 16220 (useActiveEventOrStageInstanceChannel)
-import useGuildScheduledEvents from "useGuildScheduledEvents" /* 9694 */;
-import useLiveStageChannelsDefault from "useLiveStageChannels" /* 16219 */;
+// Module 16269 (useActiveEventOrStageInstanceChannel)
+import useGuildScheduledEvents from "useGuildScheduledEvents" /* 9732 */;
+import useLiveStageChannelsDefault from "useLiveStageChannels" /* 16268 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// Module ID: 11505
-// Function ID: 11506
+// Module ID: 11545
+// Function ID: 11546
 // Name: getActivitySessionKey
 // Dependencies: [2]
 // Exports: getActivitySessionKey
 
-// Module 11505 (getActivitySessionKey)
+// Module 11545 (getActivitySessionKey)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/getActivitySessionKey.tsx");

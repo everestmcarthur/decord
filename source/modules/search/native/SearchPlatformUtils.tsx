@@ -1,20 +1,20 @@
-// Module ID: 12368
-// Function ID: 12369
+// Module ID: 12408
+// Function ID: 12409
 // Name: SearchPlatformUtils
-// Dependencies: [7295, 12369, 7892, 12383, 1074, 12370, 8293, 1384, 6639, 1115, 1874, 4517, 1365, 10850, 576, 1935, 12388, 12391, 12377, 12, 558, 2]
+// Dependencies: [7333, 12409, 7930, 12423, 1074, 12410, 8330, 1384, 6675, 1115, 1874, 4548, 1365, 10888, 576, 1935, 12428, 12431, 12417, 12, 558, 2]
 // Exports: delayUntilNavigationComplete, getFiles, getGridItemSpacingStyles, getLinks, getMedia, getMediaGridItemStyles, getUrlIcon, performKeyboardAwareNavigation, toSearchBarTag
 
-// Module 12368 (SearchPlatformUtils)
+// Module 12408 (SearchPlatformUtils)
 import nativeDefault from "native" /* 576 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
-import LinkIcon from "LinkIcon" /* 4517 */;
-import ClydeIcon from "ClydeIcon" /* 10850 */;
-import SearchUtils from "SearchUtils" /* 12370 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12377 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12388 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12391 */;
-import SearchMessageStore from "SearchMessageStore" /* 7295 */;
-import SearchQueryStore from "SearchQueryStore" /* 12369 */;
+import LinkIcon from "LinkIcon" /* 4548 */;
+import ClydeIcon from "ClydeIcon" /* 10888 */;
+import SearchUtils from "SearchUtils" /* 12410 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12417 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12428 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12431 */;
+import SearchMessageStore from "SearchMessageStore" /* 7333 */;
+import SearchQueryStore from "SearchQueryStore" /* 12409 */;
 import apply_mod from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -154,11 +154,11 @@ function fetchInitialMessages(searchContext) {
   } else {
     const searchTabFetchId = require("SearchUtils").getSearchTabFetchId(searchContext, tmp3[0], queryString);
     if (!SearchMessageStore.getIsFetching(searchTabFetchId)) {
-      const result = queryString(12377).clearAllSearchMesssages();
-      const obj3 = queryString(12377);
+      const result = queryString(12417).clearAllSearchMesssages();
+      const obj3 = queryString(12417);
       const obj5 = { searchContext };
-      queryString(12388).trackSearchStarted(obj5);
-      const obj4 = queryString(12388);
+      queryString(12428).trackSearchStarted(obj5);
+      const obj4 = queryString(12428);
       const obj7 = {
         searchContext,
         searchTabs: tmp3,
@@ -179,7 +179,7 @@ function fetchInitialMessages(searchContext) {
       }
       const obj8 = { cursor };
       obj7.pagination = obj8;
-      const obj6 = queryString(12377);
+      const obj6 = queryString(12417);
       obj7.trackExactTotalHits = require("UserSettings").SearchResultExactCountEnabled.getSetting();
       obj7.searchMode = constants5.NEWEST;
       const tabMessages = obj6.fetchTabMessages(obj7);
@@ -193,9 +193,9 @@ function syncAutocomplete(searchContext) {
   const selectionScope = SearchUtils.getSelectionScope(tokenizeQueryResult, queryString.length - 1, queryString.length - 1);
   const result = SearchActionCreatorsDefault.updateAutocompleteQuery({ searchContext, tokens: tokenizeQueryResult, cursorScope: selectionScope, queryString });
 }
-const SearchConstants = fn(7892);
+const SearchConstants = fn(7930);
 ({ CHANNEL_SEARCH_INITIAL_MESSAGE_TABS: hasOwnProperty, MAX_SEARCH_RESULTS_LIMIT: metroRequire, MESSAGE_SEARCH_RESULT_TABS: closure_7, SEARCH_INITIAL_MESSAGE_TABS: closure_8, SEARCH_TABS_TO_SEARCH_QUERY_LIMITS: closure_9, SearchFileTypes: c10, SearchLinkTypes: closure_11, SearchMediaTypes: closure_12 } = SearchConstants);
-const SearchPlatformConstants = fn(12383);
+const SearchPlatformConstants = fn(12423);
 ({ PLATFORM_REGEX_ICON_PAIRS: map1, SEARCH_TEXT_INPUT_DEBOUNCE_TIME } = SearchPlatformConstants);
 const Constants = fn(1074);
 ({ MessageFlags: closure_14, SearchModes: closure_15, SearchTypes: closure_16 } = Constants);
@@ -233,7 +233,7 @@ obj.fetchNextMessages = function fetchNextMessages(searchContext, tab, onFetchSu
       }
       const obj6 = { cursor };
       obj5.pagination = obj6;
-      const obj4 = queryString(12377);
+      const obj4 = queryString(12417);
       obj5.trackExactTotalHits = tmp2(1935).SearchResultExactCountEnabled.getSetting();
       obj5.searchMode = constants5.NEWEST;
       tabMessages = obj4.fetchTabMessages(obj5);
@@ -271,10 +271,10 @@ obj.subscribeSearchQueryState = function subscribeSearchQueryState(searchContext
   closure_2 = fn2;
   let tmp = arg3;
   function callback() {
-    const tmp = f93348(SearchQueryStore.getManager(closure_0));
+    const tmp = f93557(SearchQueryStore.getManager(closure_0));
     if (null == closure_3) {
       closure_3 = tmp;
-      f93349(tmp, closure_3);
+      f93558(tmp, closure_3);
     }
   }
   const tmp2 = fn(callback.getManager(searchContext));
@@ -291,8 +291,8 @@ obj.subscribeSearchQueryState = function subscribeSearchQueryState(searchContext
 obj.subscribeTextInputValue = function subscribeTextInputValue(searchContext, debounceResult, arg2) {
   searchContext = debounceResult;
   let flag = arg2;
-  const f93348 = (getTextInputValue) => ({ textInputValue: getTextInputValue.getTextInputValue(), textInputChangedFromInput: getTextInputValue.getTextValueChangedFromInput() });
-  const f93349 = (textInputValue, textInputValue2) => {
+  const f93557 = (getTextInputValue) => ({ textInputValue: getTextInputValue.getTextInputValue(), textInputChangedFromInput: getTextInputValue.getTextValueChangedFromInput() });
+  const f93558 = (textInputValue, textInputValue2) => {
     textInputValue = undefined;
     if (textInputValue2 != null) {
       textInputValue = textInputValue2.textInputValue;
@@ -300,10 +300,10 @@ obj.subscribeTextInputValue = function subscribeTextInputValue(searchContext, de
     searchContext(textInputValue.textInputValue, textInputValue, textInputValue.textInputChangedFromInput);
   };
   function callback() {
-    const tmp = f93348(SearchQueryStore.getManager(closure_0));
+    const tmp = f93557(SearchQueryStore.getManager(closure_0));
     if (null == closure_3) {
       closure_3 = tmp;
-      f93349(tmp, closure_3);
+      f93558(tmp, closure_3);
     }
   }
   const manager = callback.getManager(searchContext);
@@ -323,7 +323,7 @@ let result = size.fileFinishedImporting("modules/search/native/SearchPlatformUti
 
 export default obj;
 export const getMedia = function getMedia(searchContext, items1) {
-  guildIdFromSearchContext = guildIdFromSearchContext(12370).getGuildIdFromSearchContext(searchContext);
+  guildIdFromSearchContext = guildIdFromSearchContext(12410).getGuildIdFromSearchContext(searchContext);
   const items = [];
   let item = items1.forEach((getContentMessage) => {
     closure_0 = getContentMessage;
@@ -334,7 +334,7 @@ export const getMedia = function getMedia(searchContext, items1) {
       const item = attachments.forEach((attachment, index) => {
         if (!obj.isThumbnailAttachment(attachment)) {
           if (tmpResult.isValidImageAttachment(attachment)) {
-            const tmpResult3 = tmp(8293);
+            const tmpResult3 = tmp(8330);
             const result = tmpResult3.extractMediaFromAttachment(attachment, closure_0, index, guildIdFromSearchContext);
             if (null != result) {
               const obj2 = { type: constants3.ATTACHMENT, attachment, messageId: null, channelId: null, author: null, mediaIndex: null, sources: null };
@@ -346,9 +346,9 @@ export const getMedia = function getMedia(searchContext, items1) {
             }
             tmp4 = closure_0;
           } else {
-            const tmpResult4 = tmp(8293);
+            const tmpResult4 = tmp(8330);
           }
-          tmpResult = tmp(8293);
+          tmpResult = tmp(8330);
         }
       });
     }
@@ -356,7 +356,7 @@ export const getMedia = function getMedia(searchContext, items1) {
     if (embeds != null) {
       const item1 = embeds.forEach((embed, index) => {
         if (obj.isValidImageEmbed(embed)) {
-          const tmpResult = tmp(8293);
+          const tmpResult = tmp(8330);
           const result = tmpResult.extractMediaFromEmbed(embed, closure_0, contentMessage, index, guildIdFromSearchContext);
           if (null != result) {
             const obj2 = { type: constants3.EMBED, embed, messageId: null, channelId: null, author: null, mediaIndex: null, sources: null };
@@ -368,13 +368,13 @@ export const getMedia = function getMedia(searchContext, items1) {
           }
           tmp4 = closure_0;
         } else {
-          const tmpResult2 = tmp(8293);
+          const tmpResult2 = tmp(8330);
         }
       });
     }
-    let result = guildIdFromSearchContext(8293).extractMediaFromMessageComponents(getContentMessage, contentMessage, closure_0);
+    let result = guildIdFromSearchContext(8330).extractMediaFromMessageComponents(getContentMessage, contentMessage, closure_0);
     const iter = result[Symbol.iterator]();
-    const obj = guildIdFromSearchContext(8293);
+    const obj = guildIdFromSearchContext(8330);
     while (iter !== undefined) {
       let obj6 = { type: null, messageId: null, channelId: null, author: null, mediaIndex: null, sources: null, unfurledMediaItem: null };
       obj6.type = constants.COMPONENT;
@@ -437,7 +437,7 @@ export const getLinks = function getLinks(searchContext, getContentMessage) {
   if (embeds != null) {
     const item = embeds.forEach((embed, index) => {
       if (obj.isValidImageEmbed(embed)) {
-        const tmpResult = tmp(8293);
+        const tmpResult = tmp(8330);
         const result = tmpResult.extractMediaFromEmbed(embed, closure_0, contentMessage, index, guildIdFromSearchContext);
         if (null != result) {
           const obj2 = { type: constants2.EMBED, messageId: null, channelId: null, author: null, linkIndex: null, sources: null, embed: null };
@@ -450,7 +450,7 @@ export const getLinks = function getLinks(searchContext, getContentMessage) {
         }
         tmp4 = closure_0;
       } else {
-        const tmpResult2 = tmp(8293);
+        const tmpResult2 = tmp(8330);
       }
     });
   }

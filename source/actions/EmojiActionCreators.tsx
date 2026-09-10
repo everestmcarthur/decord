@@ -1,23 +1,23 @@
-// Module ID: 10368
-// Function ID: 10369
+// Module ID: 10406
+// Function ID: 10407
 // Name: EmojiActionCreators
-// Dependencies: [5, 5473, 5291, 4916, 1074, 1084, 1940, 1218, 573, 1272, 5183, 4425, 1114, 4476, 4226, 1369, 5480, 12, 4918, 2]
+// Dependencies: [5, 5509, 5327, 4947, 1074, 1084, 1940, 1218, 573, 1272, 5219, 4456, 1114, 4507, 4257, 1369, 5516, 12, 4949, 2]
 // Exports: deleteEmoji, favoriteEmoji, fetchEmoji, setDiversityColor, unfavoriteEmoji, updateEmoji, uploadEmoji
 
-// Module 10368 (EmojiActionCreators)
+// Module 10406 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import wrappers from "wrappers" /* 1218 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4226 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
-import InlineUploaderDefault from "InlineUploader" /* 5183 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5480 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4257 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
+import InlineUploaderDefault from "InlineUploader" /* 5219 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5516 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 5473 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5291 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4916 */;
+import EmojiStore from "EmojiStore" /* 5509 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4947 */;
 
 const require = globalThis.__r;
 

@@ -1,11 +1,11 @@
 // Module ID: 3958
 // Function ID: 3959
-// Dependencies: [3663, 3664]
+// Dependencies: [3693, 3694]
 // Exports: default
 
 // Module 3958
-import _typeof_mod from "module_3663" /* 3663 */;
-import requiredArgs_mod from "requiredArgs" /* 3664 */;
+import _typeof_mod from "module_3693" /* 3693 */;
+import requiredArgs_mod from "requiredArgs" /* 3694 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -24,10 +24,14 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isBefore(arg0, arg1) {
-  requiredArgs.default(2, arguments);
+export default function getDaysInMonth(arg0) {
+  requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time < _typeof.default(arg1).getTime();
+  const fullYear = defaultResult1.getFullYear();
+  const month = defaultResult1.getMonth();
+  const date = new Date(0);
+  date.setFullYear(fullYear, month + 1, 0);
+  date.setHours(0, 0, 0, 0);
+  return date.getDate();
 };
 export default exports.default;

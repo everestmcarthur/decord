@@ -1,0 +1,9 @@
+// Module ID: 13660
+// Function ID: 13661
+// Dependencies: [1122]
+
+// Module 13660
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/simple", width: 32, height: 32, scales: [2, 3], hash: "b352e1ffa0afe53b75c17fb675b513d6", name: "tier_1_32px", type: "png" });

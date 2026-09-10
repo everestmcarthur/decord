@@ -1,16 +1,16 @@
-// Module ID: 5019
-// Function ID: 5020
+// Module ID: 5055
+// Function ID: 5056
 // Name: MarkupTextRule
-// Dependencies: [4270, 2]
+// Dependencies: [4301, 2]
 // Exports: textMarkupPatternWithExclusions
 
-// Module 5019 (MarkupTextRule)
-import _modDef4270 from "module_4270" /* 4270 */;
+// Module 5055 (MarkupTextRule)
+import _modDef4301 from "module_4301" /* 4301 */;
 
 const tmp2 = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/;
 const obj = {};
-const merged = Object.assign(_modDef4270.defaultRules.text);
-const t = fn(4270);
+const merged = Object.assign(_modDef4301.defaultRules.text);
+const t = fn(4301);
 obj.match = t.anyScopeRegex(tmp2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/MarkupTextRule.tsx");

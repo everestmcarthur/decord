@@ -1,10 +1,10 @@
-// Module ID: 10086
-// Function ID: 10087
+// Module ID: 10124
+// Function ID: 10125
 // Name: UserSummaryItem
-// Dependencies: [19, 17, 2021, 21, 4574, 576, 1178, 504, 1396, 4726, 1114, 4570, 2]
+// Dependencies: [19, 17, 2021, 21, 4605, 576, 1178, 504, 1396, 4757, 1114, 4601, 2]
 // Exports: default
 
-// Module 10086 (UserSummaryItem)
+// Module 10124 (UserSummaryItem)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flexDirection: "row" }, names: { marginStart: 4, paddingRight: 1 }, namesLegacy: { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_SUBTLE }, plusCountContainer: null, cutout: null };
 let obj3 = { marginStart: 4, paddingRight: 1, color: nativeDefault.colors.TEXT_SUBTLE };
 obj2.plusCountContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginStart: 2, alignItems: "center" };

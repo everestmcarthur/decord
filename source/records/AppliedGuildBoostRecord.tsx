@@ -1,9 +1,9 @@
-// Module ID: 4473
-// Function ID: 4474
+// Module ID: 4504
+// Function ID: 4505
 // Name: AppliedGuildBoostRecord
 // Dependencies: [1386, 2]
 
-// Module 4473 (AppliedGuildBoostRecord)
+// Module 4504 (AppliedGuildBoostRecord)
 import Record from "Record" /* 1386 */;
 
 const prototype = function AppliedGuildBoostRecord(endsAt) {

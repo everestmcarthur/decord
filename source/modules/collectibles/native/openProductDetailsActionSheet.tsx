@@ -1,14 +1,14 @@
-// Module ID: 8202
-// Function ID: 8203
+// Module ID: 8239
+// Function ID: 8240
 // Name: openProductDetailsActionSheet
-// Dependencies: [7567, 7555, 4541, 8203, 1896, 2]
+// Dependencies: [7605, 7593, 4572, 8240, 1896, 2]
 // Exports: openProductDetailsActionSheet, openProductDetailsActionSheetForSku
 
-// Module 8202 (openProductDetailsActionSheet)
+// Module 8239 (openProductDetailsActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7567 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7593 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7605 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "Shop Product Preview";
@@ -37,11 +37,11 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   const tmp2 = dependencyMap;
   CollectiblesActionCreators.productDetailsOpened(skuId);
   const tmpResult = CollectiblesActionCreators;
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8203, tmp2.paths), c3, { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext }, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8240, tmp2.paths), c3, { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext }, stack);
 };
 export const openProductDetailsActionSheetForSku = function openProductDetailsActionSheetForSku(skuId, stack) {
   skuId = skuId.skuId;
   ({ initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile } = skuId);
   CollectiblesActionCreators.productDetailsOpened(skuId);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8203, dependencyMap.paths), c3, { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile }, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8240, dependencyMap.paths), c3, { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile }, stack);
 };

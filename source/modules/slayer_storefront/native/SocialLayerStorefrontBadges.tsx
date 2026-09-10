@@ -1,21 +1,21 @@
-// Module ID: 10849
-// Function ID: 10850
+// Module ID: 10887
+// Function ID: 10888
 // Name: SocialLayerStorefrontBadges
-// Dependencies: [19, 17, 21, 4574, 576, 1115, 10850, 4570, 1114, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 1115, 10888, 4601, 1114, 2]
 // Exports: ExclusiveBadge
 
-// Module 10849 (SocialLayerStorefrontBadges)
+// Module 10887 (SocialLayerStorefrontBadges)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import ClydeIcon from "ClydeIcon" /* 10850 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import ClydeIcon from "ClydeIcon" /* 10888 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 const obj2 = { exclusiveBadge: { flexDirection: "row", alignItems: "center", textAlignVertical: "center", alignSelf: "flex-start", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, exclusiveBadgeText: null };
 const obj4 = { textTransform: "uppercase", fontSize: nativeDefault.space.PX_12, lineHeight: null };
 let PlatformUtils = fn(1115);

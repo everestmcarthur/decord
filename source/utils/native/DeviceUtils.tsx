@@ -1,10 +1,10 @@
-// Module ID: 4553
-// Function ID: 4554
+// Module ID: 4584
+// Function ID: 4585
 // Name: DeviceUtils
 // Dependencies: [17, 1115, 1343, 510, 2]
 // Exports: getDevice, getDeviceBrand, getDeviceInfo, getDeviceManufacturer, getDeviceMediaPerformanceClass, getDeviceModel, getDeviceProduct, getIsRunningOnSimulator, getMaxCpuFreq, getRamSize, getSmallestScreenWidthDp, getSocName, getSystemVersion, getSystemVersionMajor, getSystemVersionMinor, getTimeZone, isGestureNavigationEnabled, isIpadOS, isOrientationLockSupported
 
-// Module 4553 (DeviceUtils)
+// Module 4584 (DeviceUtils)
 import _mod17 from "module_17" /* 17 */;
 import NativeDeviceModuleDefault from "NativeDeviceModule" /* 1343 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;

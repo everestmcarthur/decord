@@ -1,34 +1,34 @@
-// Module ID: 11565
-// Function ID: 11566
+// Module ID: 11605
+// Function ID: 11606
 // Name: MessagesRenderer
-// Dependencies: [5, 32, 19, 9517, 2021, 4212, 4589, 5524, 7947, 1074, 21, 9, 11566, 11284, 11019, 11569, 7946, 11303, 11508, 12, 11, 11571, 11308, 11336, 11302, 11573, 7470, 11574, 11980, 4505, 1232, 11305, 11557, 558, 4562, 7749, 11986, 11925, 11578, 1115, 1609, 5461, 11987, 2]
+// Dependencies: [5, 32, 19, 9555, 2021, 4243, 4620, 5560, 7985, 1074, 21, 9, 11606, 11324, 11059, 11609, 7984, 11343, 11548, 12, 11, 11611, 11348, 11376, 11342, 11613, 7508, 11614, 12020, 4536, 1232, 11345, 11597, 558, 4593, 7786, 12026, 11965, 11618, 1115, 1609, 5497, 12027, 2]
 
-// Module 11565 (MessagesRenderer)
+// Module 11605 (MessagesRenderer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
-import Client from "Client" /* 4505 */;
-import CodedLink from "CodedLink" /* 4562 */;
-import QuestTypes from "QuestTypes" /* 5461 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7749 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11284 */;
-import computeScrollData from "computeScrollData" /* 11302 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11303 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11305 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11566 */;
-import MessagesHandlers from "MessagesHandlers" /* 11574 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11578 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 11986 */;
+import Client from "Client" /* 4536 */;
+import CodedLink from "CodedLink" /* 4593 */;
+import QuestTypes from "QuestTypes" /* 5497 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7508 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7786 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11324 */;
+import computeScrollData from "computeScrollData" /* 11342 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11343 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11345 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11606 */;
+import MessagesHandlers from "MessagesHandlers" /* 11614 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11618 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 12026 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import ReadStateStore from "ReadStateStore" /* 4589 */;
-import SKUStore from "SKUStore" /* 5524 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import ReadStateStore from "ReadStateStore" /* 4620 */;
+import SKUStore from "SKUStore" /* 5560 */;
 
 require = fn;
 function handleTapShowAltText(description) {
@@ -53,9 +53,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9517).updateShouldShowJumpToPresentButton;
+let closure_6 = fn(9555).updateShouldShowJumpToPresentButton;
 let closure_7 = fn(2021).getUserCommunicationDisabledVersion;
-const Changeset = fn(7947).Changeset;
+const Changeset = fn(7985).Changeset;
 const Constants = fn(1074);
 ({ ActivityActionTypes: closure_12, MAX_MESSAGES_PER_CHANNEL: map1, MessageFlags: closure_14, MessageTypes: closure_15, Permissions: closure_16 } = Constants);
 const jsxProd = fn(21);
@@ -67,16 +67,16 @@ const forwardRefResult = noop.forwardRef((messages, ref) => {
     const visibleMessages = messages_MessagesUtils.getVisibleMessages({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, chatManager: first, channelId: messages.channelId });
     if (visibleMessages.length > 0) {
       const obj3 = { visibleMessages, source };
-      const result = tmp(11308).questsVisibleMobileMessagesChanged(obj3);
-      const tmpResult5 = tmp(11336);
+      const result = tmp(11348).questsVisibleMobileMessagesChanged(obj3);
+      const tmpResult5 = tmp(11376);
       const result1 = tmpResult5.handleAnnouncementMessageViewTracking(visibleMessages, tmp3.shouldTrackAnnouncementMessageViews, tmp3.guildId, tmp3.channel);
-      const tmpResult6 = tmp(11336);
+      const tmpResult6 = tmp(11376);
       const result2 = tmpResult6.handleOfficialMessageViewTracking(visibleMessages, tmp3.shouldTrackOfficialMessageViews, tmp3.guildId, tmp3.channel);
-      const tmpResult7 = tmp(11336);
+      const tmpResult7 = tmp(11376);
       const result3 = tmpResult7.handleRichPresenceInviteEmbedViewTracking(visibleMessages, tmp3.shouldTrackRichPresenceInviteEmbedViews, tmp3.guildId, tmp3.channel);
-      const tmpResult8 = tmp(11336);
+      const tmpResult8 = tmp(11376);
       const result4 = tmpResult8.handleVoiceInviteEmbedViewTracking(visibleMessages, tmp3.shouldTrackVoiceInviteEmbedViews, tmp3.guildId, tmp3.channel);
-      const tmpResult = tmp(11308);
+      const tmpResult = tmp(11348);
     }
   }
   function findMessageIndex(ChatTTITracker) {
@@ -288,7 +288,7 @@ const forwardRefResult = noop.forwardRef((messages, ref) => {
   }, items2);
   let obj = require("MessagesHooks");
   let obj2 = { channelId: messages.channelId, jumpTargetId: messages.messages.jumpTargetId, oldestUnreadMessageId: messages.oldestUnreadMessageId, shouldJumpToOriginalPost: callback3 };
-  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11571)({ channelId: messages.channelId, jumpTargetId: messages.messages.jumpTargetId, oldestUnreadMessageId: messages.oldestUnreadMessageId, shouldJumpToOriginalPost: callback3 }));
+  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11611)({ channelId: messages.channelId, jumpTargetId: messages.messages.jumpTargetId, oldestUnreadMessageId: messages.oldestUnreadMessageId, shouldJumpToOriginalPost: callback3 }));
   let obj3 = {
     chatRef: ref5,
     chatManager: first,
@@ -342,8 +342,8 @@ const forwardRefResult = noop.forwardRef((messages, ref) => {
     isStaff: messages.isStaff,
     visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler
   };
-  let tmp16 = first(11571)({ channelId: messages.channelId, jumpTargetId: messages.messages.jumpTargetId, oldestUnreadMessageId: messages.oldestUnreadMessageId, shouldJumpToOriginalPost: callback3 });
-  ({ hasHandledScrollRef: closure_18, isAtBottomRef: closure_19, isNearBottomRef: handleTapShowAltText, isNearTopRef: handleMediaPlayFinishedAnalytics, deceleratingRef: isLoadingAtTop, draggingRef: closure_23, firstIgnoredScrollEventTimestampRef: closure_24, scrollToTop: closure_25, handleScrollCallbacks: closure_26, loadMoreBefore, loadMoreAfter, scrollToTopMessage, updateNativeRows, handleScrollPosition } = first(11573)({
+  let tmp16 = first(11611)({ channelId: messages.channelId, jumpTargetId: messages.messages.jumpTargetId, oldestUnreadMessageId: messages.oldestUnreadMessageId, shouldJumpToOriginalPost: callback3 });
+  ({ hasHandledScrollRef: closure_18, isAtBottomRef: closure_19, isNearBottomRef: handleTapShowAltText, isNearTopRef: handleMediaPlayFinishedAnalytics, deceleratingRef: isLoadingAtTop, draggingRef: closure_23, firstIgnoredScrollEventTimestampRef: closure_24, scrollToTop: closure_25, handleScrollCallbacks: closure_26, loadMoreBefore, loadMoreAfter, scrollToTopMessage, updateNativeRows, handleScrollPosition } = first(11613)({
     chatRef: ref5,
     chatManager: first,
     chatUpdatesQueue,
@@ -400,7 +400,7 @@ const forwardRefResult = noop.forwardRef((messages, ref) => {
   ref6.current = { getMessage: callback2, chatInputRef: messages.chatInputRef, selectedChannelId: messages.channelId, revealedMessageId: messages.messages.revealedMessageId, uploads: messages.uploads, paymentsBlocked: messages.paymentsBlocked, loadMoreBefore, loadMoreAfter };
   const first2 = first1(noop.useState(() => new MessagesHandlers.MessagesHandlers(() => ref.current)), 1)[0];
   const imperativeHandle = noop.useImperativeHandle(ref, () => ({ scrollToBottom, jumpToPresent, scrollToNewMessages, getChatRef }));
-  let tmp17 = first(11573)({
+  let tmp17 = first(11613)({
     chatRef: ref5,
     chatManager: first,
     chatUpdatesQueue,
@@ -454,7 +454,7 @@ const forwardRefResult = noop.forwardRef((messages, ref) => {
     visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler
   });
   let obj4 = { chatManager: first, rowGenerator: first1(noop.useState(() => new first(hasJumpedToOriginalPost[16])()), 1)[0], animatingStickerMessageIdRef: ref3, canAddNewReactions: callback1, channel: messages.channel, messages: messages.messages, isMessagesReady: messages.isMessagesReady, uploads: messages.uploads, roleStyle: messages.roleStyle, oldestUnreadMessageId: messages.oldestUnreadMessageId, replyingMessageId: messages.replyingMessageId, inlineAttachmentMedia: messages.inlineAttachmentMedia, inlineEmbedMedia: messages.inlineEmbedMedia, renderEmbeds: messages.renderEmbeds, renderReactions: messages.renderReactions, animateEmoji: messages.animateEmoji, gifAutoPlay: messages.gifAutoPlay, timestampHourCycle: messages.timestampHourCycle, currentUserId: messages.currentUserId, renderCommunicationDisabled: messages.renderCommunicationDisabled, selectedSummary: messages.selectedSummary, enableSwipeActions: messages.enableSwipeActions, isResourceChannel: messages.isResourceChannel, shouldObscureSpoiler: messages.shouldObscureSpoiler, shouldDisableInteractiveComponents: messages.shouldDisableInteractiveComponents, unloadableContentEntryMessageIds: messages.unloadableContentEntryMessageIds, containerWidth: messages.containerWidth, chatRef: ref5, loadedRef: ref4, animatedRef: ref, hasMoreMessagesAfterForLastUpdateRef: ref1, updateNativeRows, isLoadingAtTop, channelLatestMessageLoadingStatsManager, channelId: messages.channelId, isMessagesCached: messages.isMessagesCached, chatUpdatesQueue, shouldJumpToOriginalPost: callback3, findMessageIndex, scrollToTopMessage, useReducedMotion: messages.useReducedMotion };
-  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11980)({ chatManager: first, rowGenerator: first1(noop.useState(() => new first(hasJumpedToOriginalPost[16])()), 1)[0], animatingStickerMessageIdRef: ref3, canAddNewReactions: callback1, channel: messages.channel, messages: messages.messages, isMessagesReady: messages.isMessagesReady, uploads: messages.uploads, roleStyle: messages.roleStyle, oldestUnreadMessageId: messages.oldestUnreadMessageId, replyingMessageId: messages.replyingMessageId, inlineAttachmentMedia: messages.inlineAttachmentMedia, inlineEmbedMedia: messages.inlineEmbedMedia, renderEmbeds: messages.renderEmbeds, renderReactions: messages.renderReactions, animateEmoji: messages.animateEmoji, gifAutoPlay: messages.gifAutoPlay, timestampHourCycle: messages.timestampHourCycle, currentUserId: messages.currentUserId, renderCommunicationDisabled: messages.renderCommunicationDisabled, selectedSummary: messages.selectedSummary, enableSwipeActions: messages.enableSwipeActions, isResourceChannel: messages.isResourceChannel, shouldObscureSpoiler: messages.shouldObscureSpoiler, shouldDisableInteractiveComponents: messages.shouldDisableInteractiveComponents, unloadableContentEntryMessageIds: messages.unloadableContentEntryMessageIds, containerWidth: messages.containerWidth, chatRef: ref5, loadedRef: ref4, animatedRef: ref, hasMoreMessagesAfterForLastUpdateRef: ref1, updateNativeRows, isLoadingAtTop, channelLatestMessageLoadingStatsManager, channelId: messages.channelId, isMessagesCached: messages.isMessagesCached, chatUpdatesQueue, shouldJumpToOriginalPost: callback3, findMessageIndex, scrollToTopMessage, useReducedMotion: messages.useReducedMotion }));
+  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(12020)({ chatManager: first, rowGenerator: first1(noop.useState(() => new first(hasJumpedToOriginalPost[16])()), 1)[0], animatingStickerMessageIdRef: ref3, canAddNewReactions: callback1, channel: messages.channel, messages: messages.messages, isMessagesReady: messages.isMessagesReady, uploads: messages.uploads, roleStyle: messages.roleStyle, oldestUnreadMessageId: messages.oldestUnreadMessageId, replyingMessageId: messages.replyingMessageId, inlineAttachmentMedia: messages.inlineAttachmentMedia, inlineEmbedMedia: messages.inlineEmbedMedia, renderEmbeds: messages.renderEmbeds, renderReactions: messages.renderReactions, animateEmoji: messages.animateEmoji, gifAutoPlay: messages.gifAutoPlay, timestampHourCycle: messages.timestampHourCycle, currentUserId: messages.currentUserId, renderCommunicationDisabled: messages.renderCommunicationDisabled, selectedSummary: messages.selectedSummary, enableSwipeActions: messages.enableSwipeActions, isResourceChannel: messages.isResourceChannel, shouldObscureSpoiler: messages.shouldObscureSpoiler, shouldDisableInteractiveComponents: messages.shouldDisableInteractiveComponents, unloadableContentEntryMessageIds: messages.unloadableContentEntryMessageIds, containerWidth: messages.containerWidth, chatRef: ref5, loadedRef: ref4, animatedRef: ref, hasMoreMessagesAfterForLastUpdateRef: ref1, updateNativeRows, isLoadingAtTop, channelLatestMessageLoadingStatsManager, channelId: messages.channelId, isMessagesCached: messages.isMessagesCached, chatUpdatesQueue, shouldJumpToOriginalPost: callback3, findMessageIndex, scrollToTopMessage, useReducedMotion: messages.useReducedMotion }));
   const effect = noop.useEffect(() => {
     messages = messages.messages;
     const oldestUnreadMessageId = messages.oldestUnreadMessageId;
@@ -1121,7 +1121,7 @@ const forwardRefResult = noop.forwardRef((messages, ref) => {
   });
   let obj6 = { children: null };
   const items4 = [
-    findMessageIndex(first(11925), {
+    findMessageIndex(first(11965), {
       ref: ref5,
       style: messages.style,
       inverted: true,

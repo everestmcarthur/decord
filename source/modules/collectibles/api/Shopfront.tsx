@@ -1,10 +1,10 @@
-// Module ID: 15100
-// Function ID: 15101
+// Module ID: 15149
+// Function ID: 15150
 // Name: Shopfront
-// Dependencies: [5, 1074, 1272, 1326, 7353, 2]
+// Dependencies: [5, 1074, 1272, 1326, 7391, 2]
 // Exports: search
 
-// Module 15100 (Shopfront)
+// Module 15149 (Shopfront)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

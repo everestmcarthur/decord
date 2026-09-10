@@ -1,11 +1,11 @@
 // Module ID: 3961
 // Function ID: 3962
-// Dependencies: [3663, 3664]
+// Dependencies: [3693, 3694]
 // Exports: default
 
 // Module 3961
-import _typeof_mod from "module_3663" /* 3663 */;
-import requiredArgs_mod from "requiredArgs" /* 3664 */;
+import _typeof_mod from "module_3693" /* 3693 */;
+import requiredArgs_mod from "requiredArgs" /* 3694 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -24,8 +24,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFirstDayOfMonth(arg0) {
+export default function getDecade(arg0) {
   requiredArgs.default(1, arguments);
-  return 1 === _typeof.default(arg0).getDate();
+  return 10 * Math.floor(_typeof.default(arg0).getFullYear() / 10);
 };
 export default exports.default;

@@ -1,11 +1,11 @@
-// Module ID: 11548
-// Function ID: 11549
+// Module ID: 11588
+// Function ID: 11589
 // Name: getApplicationIdsForGame
-// Dependencies: [4802, 1916, 2]
+// Dependencies: [4833, 1916, 2]
 // Exports: default
 
-// Module 11548 (getApplicationIdsForGame)
-import ApplicationStore from "ApplicationStore" /* 4802 */;
+// Module 11588 (getApplicationIdsForGame)
+import ApplicationStore from "ApplicationStore" /* 4833 */;
 import GameStore from "GameStore" /* 1916 */;
 
 const size = fn(2);

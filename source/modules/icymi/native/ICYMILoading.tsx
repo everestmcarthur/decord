@@ -1,14 +1,14 @@
-// Module ID: 16547
-// Function ID: 16548
+// Module ID: 16596
+// Function ID: 16597
 // Name: ICYMILoading
-// Dependencies: [19, 17, 21, 16486, 576, 12669, 4310, 16525, 2]
+// Dependencies: [19, 17, 21, 16535, 576, 12709, 4341, 16574, 2]
 // Exports: ICYMILoading
 
-// Module 16547 (ICYMILoading)
+// Module 16596 (ICYMILoading)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12669 */;
-import ICYMIShared from "ICYMIShared" /* 16525 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4341 */;
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12709 */;
+import ICYMIShared from "ICYMIShared" /* 16574 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -72,7 +72,7 @@ function ICYMILoadingItem() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createICYMIStyles = fn(16486);
+const createICYMIStyles = fn(16535);
 let closure_8 = createICYMIStyles.createICYMIStyles((marginBottom) => {
   const obj = { backgroundColor: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, container: { padding: marginBottom.margin }, avatarRow: { flexDirection: "row", alignItems: "center", marginBottom: marginBottom.margin }, avatar: null, avatarTitle: null, title: null, subtitle: null, image: null, separator: null };
   const size = { width: 40, height: 40, borderRadius: nativeDefault.radii.md, marginRight: nativeDefault.space.PX_12 };

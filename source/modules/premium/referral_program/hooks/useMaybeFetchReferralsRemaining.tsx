@@ -1,13 +1,13 @@
-// Module ID: 8072
-// Function ID: 8073
+// Module ID: 8110
+// Function ID: 8111
 // Name: useMaybeFetchReferralsRemaining
-// Dependencies: [19, 1371, 7466, 1373, 504, 8073, 8074, 7407, 1885, 2]
+// Dependencies: [19, 1371, 7504, 1373, 504, 8111, 8112, 7445, 1885, 2]
 // Exports: useMaybeFetchReferralsRemaining
 
-// Module 8072 (useMaybeFetchReferralsRemaining)
+// Module 8110 (useMaybeFetchReferralsRemaining)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7466 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7504 */;
 
 const require = fn;
 const PremiumConstants = fn(1373);
@@ -24,10 +24,10 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
   const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(504);
   let tmp = flag;
-  const hasDiscountApplied = flag(8073).useHasDiscountApplied();
-  const obj2 = flag(8073);
-  const hasActiveTrial = flag(8074).useHasActiveTrial();
-  const tmp6 = fetched(7407)();
+  const hasDiscountApplied = flag(8111).useHasDiscountApplied();
+  const obj2 = flag(8111);
+  const hasActiveTrial = flag(8112).useHasActiveTrial();
+  const tmp6 = fetched(7445)();
   let verified;
   if (stateFromStores != null) {
     verified = stateFromStores.verified;

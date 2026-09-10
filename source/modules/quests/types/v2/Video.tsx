@@ -1,10 +1,10 @@
-// Module ID: 7728
-// Function ID: 7729
+// Module ID: 7765
+// Function ID: 7766
 // Name: v2/Video
 // Dependencies: [2]
 // Exports: desktopVideoAssetsFromServer, desktopVideoMessagesFromServer, mobileVideoAssetsFromServer, mobileVideoMessagesFromServer, videoAssetFromServer
 
-// Module 7728 (v2/Video)
+// Module 7765 (v2/Video)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/types/v2/Video.tsx");

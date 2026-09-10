@@ -1,18 +1,18 @@
-// Module ID: 8633
-// Function ID: 8634
+// Module ID: 8670
+// Function ID: 8671
 // Name: FormHint
-// Dependencies: [19, 17, 21, 4574, 576, 5700, 4570, 1178, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 5736, 4601, 1178, 2]
 // Exports: default
 
-// Module 8633 (FormHint)
+// Module 8670 (FormHint)
 import nativeDefault from "native" /* 576 */;
-import RedesignCompat from "RedesignCompat" /* 5700 */;
+import RedesignCompat from "RedesignCompat" /* 5736 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Platform = fn(17).Platform;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { formHintText: { fontSize: 14, marginBottom: 0, color: nativeDefault.colors.TEXT_MUTED }, redesignHorizontalPadding: { paddingHorizontal: 12 }, horizonatalPadding: { paddingHorizontal: 16 } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -34,7 +34,7 @@ export default function FormHint(inset) {
     const items = [redesignHorizontalPadding, style];
     obj2.style = items;
     obj2.children = children;
-    let tmp4Result = tmp4(tmp2(4570).Text, obj2);
+    let tmp4Result = tmp4(tmp2(4601).Text, obj2);
   } else {
     const items1 = [tmp.formHintText, , ];
     let horizonatalPadding = !flag;

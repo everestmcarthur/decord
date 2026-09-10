@@ -1,15 +1,15 @@
-// Module ID: 10997
-// Function ID: 10998
+// Module ID: 11037
+// Function ID: 11038
 // Name: ChannelVoiceChatModal
-// Dependencies: [19, 21, 4727, 4775, 10956, 5111, 4457, 10108, 2]
+// Dependencies: [19, 21, 4758, 4806, 10996, 5147, 4488, 10146, 2]
 // Exports: default
 
-// Module 10997 (ChannelVoiceChatModal)
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4457 */;
-import useChannelNameDefault from "useChannelName" /* 4727 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4775 */;
-import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10108 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10956 */;
+// Module 11037 (ChannelVoiceChatModal)
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4488 */;
+import useChannelNameDefault from "useChannelName" /* 4758 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4806 */;
+import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10146 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10996 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -31,7 +31,7 @@ export default function ChannelVoiceChatModal(channel) {
   if (tmp2 == null) {
     str = "";
   }
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5111).StageIcon, { size: "sm" })} render={function render() {
+  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5147).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     if (guild_id == null) {
       guild_id = null;

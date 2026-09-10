@@ -1,9 +1,9 @@
-// Module ID: 8390
-// Function ID: 8391
+// Module ID: 8427
+// Function ID: 8428
 // Name: NativeShareManagerModule
 // Dependencies: [17, 2]
 
-// Module 8390 (NativeShareManagerModule)
+// Module 8427 (NativeShareManagerModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

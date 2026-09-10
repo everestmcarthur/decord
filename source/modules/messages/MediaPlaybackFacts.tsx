@@ -1,10 +1,10 @@
-// Module ID: 11307
-// Function ID: 11308
+// Module ID: 11347
+// Function ID: 11348
 // Name: MediaPlaybackFacts
 // Dependencies: [2]
 // Exports: clearMediaPlaybackFactsForTest, getMediaPlaybackFacts, mediaItemIdFromSource, rememberMediaPlaybackFacts, resolveReportedMediaFacts
 
-// Module 11307 (MediaPlaybackFacts)
+// Module 11347 (MediaPlaybackFacts)
 import size from "module_2" /* 2 */;
 
 const map = new Map();

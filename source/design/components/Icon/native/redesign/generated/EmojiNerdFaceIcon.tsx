@@ -1,13 +1,13 @@
-// Module ID: 15413
-// Function ID: 15414
+// Module ID: 15462
+// Function ID: 15463
 // Name: EmojiNerdFaceIcon
-// Dependencies: [19, 21, 576, 4274, 15414, 2]
+// Dependencies: [19, 21, 576, 4305, 15463, 2]
 // Exports: EmojiNerdFaceIcon
 
-// Module 15413 (EmojiNerdFaceIcon)
+// Module 15462 (EmojiNerdFaceIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod15414 from "module_15414" /* 15414 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod15463 from "module_15463" /* 15463 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const EmojiNerdFaceIcon = function EmojiNerdFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15414, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15463, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

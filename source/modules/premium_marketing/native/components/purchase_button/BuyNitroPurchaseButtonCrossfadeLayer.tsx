@@ -1,13 +1,13 @@
-// Module ID: 13415
-// Function ID: 13416
+// Module ID: 13464
+// Function ID: 13465
 // Name: BuyNitroPurchaseButtonCrossfadeLayer
-// Dependencies: [32, 19, 17, 21, 4310, 4575, 4578, 4989, 2]
+// Dependencies: [32, 19, 17, 21, 4341, 4606, 4609, 5025, 2]
 // Exports: default, useBuyNitroButtonCrossfade
 
-// Module 13415 (BuyNitroPurchaseButtonCrossfadeLayer)
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
-import timingPresets from "timingPresets" /* 4578 */;
+// Module 13464 (BuyNitroPurchaseButtonCrossfadeLayer)
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
+import timingPresets from "timingPresets" /* 4609 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,8 +21,8 @@ let result = size.fileFinishedImporting("modules/premium_marketing/native/compon
 
 export default function BuyNitroPurchaseButtonCrossfadeLayer(arg0) {
   ({ snapshot, onDone } = arg0);
-  const sharedValue = onDone(4310).useSharedValue(1);
-  let obj = onDone(4310);
+  const sharedValue = onDone(4341).useSharedValue(1);
+  let obj = onDone(4341);
   let fn = function _() {
     return { opacity: sharedValue.get() };
   };
@@ -30,7 +30,7 @@ export default function BuyNitroPurchaseButtonCrossfadeLayer(arg0) {
   fn.__workletHash = 10244393639035;
   fn.__initData = __initData;
   const items = [sharedValue, onDone];
-  const animatedStyle = onDone(4310).useAnimatedStyle(fn);
+  const animatedStyle = onDone(4341).useAnimatedStyle(fn);
   const effect = noop.useEffect(() => {
     const fn = function t(arg0) {
       if (true === arg0) {
@@ -44,10 +44,10 @@ export default function BuyNitroPurchaseButtonCrossfadeLayer(arg0) {
     fn.__initData = __initData;
     const result = sharedValue.set(obj.withTiming(0, timingPresets.timingStandard, "respect-motion-settings", fn));
   }, items);
-  const obj3 = { style: null, pointerEvents: "none", children: jsx(onDone(4989).Button, { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "Boolean" }) };
+  const obj3 = { style: null, pointerEvents: "none", children: jsx(onDone(5025).Button, { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "Boolean" }) };
   const items1 = [StyleSheet.absoluteFill, animatedStyle];
   obj3.style = items1;
-  return jsx(sharedValue(4310).View, { style: null, pointerEvents: "none", children: jsx(onDone(4989).Button, { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "Boolean" }) });
+  return jsx(sharedValue(4341).View, { style: null, pointerEvents: "none", children: jsx(onDone(5025).Button, { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "Boolean" }) });
 };
 export const useBuyNitroButtonCrossfade = function useBuyNitroButtonCrossfade(variant, stringResult) {
   const tmp = _slicedToArray(noop.useState({ variant, ctaText: stringResult }), 2);

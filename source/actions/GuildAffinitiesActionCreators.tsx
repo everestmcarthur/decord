@@ -1,10 +1,10 @@
-// Module ID: 8374
-// Function ID: 8375
+// Module ID: 8411
+// Function ID: 8412
 // Name: GuildAffinitiesActionCreators
 // Dependencies: [1074, 1272, 573, 2]
 // Exports: fetchGuildAffinities
 
-// Module 8374 (GuildAffinitiesActionCreators)
+// Module 8411 (GuildAffinitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;

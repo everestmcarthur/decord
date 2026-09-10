@@ -1,8 +1,8 @@
-// Module ID: 6488
-// Function ID: 6489
+// Module ID: 6524
+// Function ID: 6525
 // Dependencies: [2]
 
-// Module 6488
+// Module 6524
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SocialSdkIllocon-2x.png.js");

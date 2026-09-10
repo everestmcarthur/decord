@@ -1,29 +1,29 @@
-// Module ID: 17152
-// Function ID: 17153
+// Module ID: 17211
+// Function ID: 17212
 // Name: VoicePanelHeaderSpeaker
-// Dependencies: [109, 19, 17, 17153, 4591, 17154, 9115, 1957, 4592, 1074, 21, 17156, 17129, 9114, 9497, 9247, 563, 9495, 9246, 17160, 1115, 9146, 9116, 1114, 9143, 9145, 17161, 9248, 4394, 1943, 5603, 17069, 14159, 2]
+// Dependencies: [109, 19, 17, 17212, 4622, 17213, 9152, 1957, 4623, 1074, 21, 17215, 17188, 9151, 9535, 9284, 563, 9533, 9283, 17219, 1115, 9183, 9153, 1114, 9180, 9182, 17220, 9285, 4425, 1943, 5639, 17128, 14208, 2]
 
-// Module 17152 (VoicePanelHeaderSpeaker)
+// Module 17211 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4394 */;
-import NativeViewDefault from "NativeView" /* 5603 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 9146 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 9495 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17069 */;
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 17156 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4425 */;
+import NativeViewDefault from "NativeView" /* 5639 */;
+import showAudioOutputSelector from "showAudioOutputSelector" /* 9183 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 9533 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17128 */;
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 17215 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 4591 */;
-import StageChannelAudioStore from "StageChannelAudioStore" /* 17154 */;
-import AudioRouteStore from "AudioRouteStore" /* 9115 */;
+import GameConsoleStore from "GameConsoleStore" /* 4622 */;
+import StageChannelAudioStore from "StageChannelAudioStore" /* 17213 */;
+import AudioRouteStore from "AudioRouteStore" /* 9152 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import SessionsStore from "SessionsStore" /* 4592 */;
+import SessionsStore from "SessionsStore" /* 4623 */;
 
 require = fn;
 let closure_3 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(17153).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(17212).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -219,7 +219,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        const obj = { onPress, ref: "a" };
+        const obj = { onPress, ref: "Array" };
         tmp = obj;
       }
       const obj2 = { targetRef: ref, canShowTooltip: null };

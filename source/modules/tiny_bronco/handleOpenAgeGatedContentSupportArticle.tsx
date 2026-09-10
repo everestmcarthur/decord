@@ -1,13 +1,13 @@
-// Module ID: 14783
-// Function ID: 14784
+// Module ID: 14832
+// Function ID: 14833
 // Name: handleOpenAgeGatedContentSupportArticle
-// Dependencies: [14712, 8439, 2024, 2]
+// Dependencies: [14761, 8476, 2024, 2]
 // Exports: handleOpenAgeGatedContentSupportArticle
 
-// Module 14783 (handleOpenAgeGatedContentSupportArticle)
+// Module 14832 (handleOpenAgeGatedContentSupportArticle)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
-import TinyBroncoConstants from "TinyBroncoConstants" /* 14712 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8476 */;
+import TinyBroncoConstants from "TinyBroncoConstants" /* 14761 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = TinyBroncoConstants.TINY_BRONCO_SUPPORT_ARTICLE_ID;

@@ -1,45 +1,107 @@
 // Module ID: 12900
 // Function ID: 12901
-// Dependencies: [12854, 12841, 12827]
-// Exports: addBreadcrumb
+// Dependencies: [41, 42, 12877, 12872]
 
 // Module 12900
-import _mod12854 from "module_12854" /* 12854 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
-  closure_0 = arg1;
-  const client = _mod12854.getClient();
-  const isolationScope = _mod12854.getIsolationScope();
-  if (client) {
-    const options = client.getOptions();
-    let beforeBreadcrumb = options.beforeBreadcrumb;
-    let tmp5 = null;
-    if (undefined !== beforeBreadcrumb) {
-      tmp5 = beforeBreadcrumb;
+const SentryNonRecordingSpan = require;
+class SentryNonRecordingSpan {
+  constructor() {
+    obj = global;
+    if (global === undefined) {
+      obj = {};
     }
-    beforeBreadcrumb = tmp5;
-    const maxBreadcrumbs = options.maxBreadcrumbs;
-    let num = 100;
-    if (undefined !== maxBreadcrumbs) {
-      num = maxBreadcrumbs;
+    self = this;
+    tmp = c2(this, SentryNonRecordingSpan);
+    traceId = obj.traceId;
+    if (!traceId) {
+      tmp2 = closure_0;
+      tmp3 = closure_1;
+      obj2 = closure_0(closure_1[2]);
+      traceId = obj2.generateTraceId();
     }
-    if (num > 0) {
-      let obj2 = { timestamp: tmp(12841).dateTimestampInSeconds() };
-      const merged = Object.assign(arg0);
-      if (tmp5) {
-        obj2 = tmp(12827).consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
-        const tmpResult2 = tmp(12827);
-      }
-      if (null !== obj2) {
-        if (client.emit) {
-          client.emit("beforeAddBreadcrumb", obj2, arg1);
-        }
-        isolationScope.addBreadcrumb(obj2, num);
-      }
-      const tmpResult = tmp(12841);
+    self._traceId = traceId;
+    spanId = obj.spanId;
+    if (!spanId) {
+      tmp4 = closure_0;
+      tmp5 = closure_1;
+      obj3 = closure_0(closure_1[2]);
+      spanId = obj3.generateSpanId();
     }
+    self._spanId = spanId;
+    return;
+  }
+}
+const entry = {
+  key: "spanContext",
+  value: function spanContext() {
+    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(12872).TRACE_FLAG_NONE };
   }
 };
+const items = [
+  entry,
+  {
+    key: "end",
+    value: function end(arg0) {
+
+    }
+  },
+  {
+    key: "setAttribute",
+    value: function setAttribute(arg0, arg1) {
+      return this;
+    }
+  },
+  {
+    key: "setAttributes",
+    value: function setAttributes(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "setStatus",
+    value: function setStatus(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "updateName",
+    value: function updateName(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "isRecording",
+    value: function isRecording() {
+      return false;
+    }
+  },
+  {
+    key: "addEvent",
+    value: function addEvent(arg0, arg1, arg2) {
+      return this;
+    }
+  },
+  {
+    key: "addLink",
+    value: function addLink(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "addLinks",
+    value: function addLinks(arg0) {
+      return this;
+    }
+  },
+  {
+    key: "recordException",
+    value: function recordException(arg0, arg1) {
+
+    }
+  }
+];
+
+export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);

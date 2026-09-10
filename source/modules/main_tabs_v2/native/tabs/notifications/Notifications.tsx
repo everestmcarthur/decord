@@ -1,26 +1,26 @@
-// Module ID: 16435
-// Function ID: 16436
+// Module ID: 16484
+// Function ID: 16485
 // Name: notifications/Notifications
-// Dependencies: [19, 17, 11116, 1954, 21, 4574, 576, 4432, 6959, 7869, 16436, 7137, 5137, 1114, 16437, 4570, 16438, 7874, 16440, 7176, 7196, 7489, 5644, 7170, 16444, 16445, 11927, 4427, 1611, 16047, 5139, 4284, 2]
+// Dependencies: [19, 17, 11156, 1954, 21, 4605, 576, 4463, 6995, 7906, 16485, 7175, 5173, 1114, 16486, 4601, 16487, 7911, 16489, 7214, 7234, 7527, 5680, 7208, 16493, 16494, 11967, 4458, 1611, 16096, 5175, 4315, 2]
 // Exports: ThemedNotificationsModal
 
-// Module 16435 (notifications/Notifications)
+// Module 16484 (notifications/Notifications)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import native from "native" /* 4284 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4427 */;
-import RootNavigationRef from "RootNavigationRef" /* 4432 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5139 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5644 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6959 */;
-import LayerScope from "LayerScope" /* 7170 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7176 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11927 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16047 */;
-import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 16436 */;
-import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 16444 */;
-import NotificationCenterForYou from "NotificationCenterForYou" /* 16445 */;
+import native from "native" /* 4315 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4458 */;
+import RootNavigationRef from "RootNavigationRef" /* 4463 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5175 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 5680 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6995 */;
+import LayerScope from "LayerScope" /* 7208 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7214 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11967 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16096 */;
+import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 16485 */;
+import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 16493 */;
+import NotificationCenterForYou from "NotificationCenterForYou" /* 16494 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -129,11 +129,11 @@ class ThemedNotifications {
   }
 }
 const View = fn(17).View;
-const YouBarNavigatorScreens = fn(11116).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11156).YouBarNavigatorScreens;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { containerOuter: { flex: 1 }, containerOuterTablet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, flex: 1 }, container: null, headerTitle: null, actionButtons: null, headerClose: null, headerText: null, headerBorder: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
 obj.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm, flexGrow: 1 };
@@ -168,28 +168,28 @@ let closure_12 = noop.memo(function HeaderInner(nestedInLaunchPad) {
     const intl = tmp5(1114).intl;
     obj4.accessibilityLabel = intl.string(tmp5(1114).t["13/7kX"]);
     obj4.onPress = goBack;
-    obj4.children = tmp12(tmp5(16437).LeftBackIconWithBadge, {});
-    const items1 = [tmp12(tmp5(5137).PressableOpacity, obj4), , ];
+    obj4.children = tmp12(tmp5(16486).LeftBackIconWithBadge, {});
+    const items1 = [tmp12(tmp5(5173).PressableOpacity, obj4), , ];
     const obj5 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp5(1114).intl;
     obj5.children = intl2.string(tmp5(1114).t.HcoRu0);
-    items1[1] = tmp12(tmp5(4570).Text, obj5);
+    items1[1] = tmp12(tmp5(4601).Text, obj5);
     const obj6 = { style: tmp.actionButtons, children: null };
     let tmp10Result = null;
     if (isForLaterExperimentOn) {
       const obj7 = { children: null };
-      const obj8 = { ref, type: tmp5(7874).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
-      const items2 = [tmp12(tmp2(16438), obj8), ];
+      const obj8 = { ref, type: tmp5(7911).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
+      const items2 = [tmp12(tmp2(16487), obj8), ];
       const obj9 = { type: null, onOpen: null };
-      const tmp2Result = tmp2(16438);
-      obj9.type = tmp5(7874).SavedMessageSortTypes.REMINDER;
+      const tmp2Result = tmp2(16487);
+      obj9.type = tmp5(7911).SavedMessageSortTypes.REMINDER;
       obj9.onOpen = callback;
-      items2[1] = tmp12(tmp2(16438), obj9);
+      items2[1] = tmp12(tmp2(16487), obj9);
       obj7.children = items2;
       tmp10Result = tmp10(closure_8, obj7);
-      const tmp2Result2 = tmp2(16438);
+      const tmp2Result2 = tmp2(16487);
     }
-    const items3 = [tmp10Result, tmp12(tmp2(16440), {})];
+    const items3 = [tmp10Result, tmp12(tmp2(16489), {})];
     obj6.children = items3;
     items1[2] = tmp10(tmp11, obj6);
     obj3.children = items1;

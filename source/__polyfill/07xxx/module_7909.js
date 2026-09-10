@@ -1,0 +1,9 @@
+// Module ID: 7909
+// Function ID: 7910
+// Dependencies: [1122]
+
+// Module 7909
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/roadblocks/images", width: 488, height: 240, scales: [1], hash: "1653812d24f945a581bfdacd052d1cd9", name: "app_icons_upsell", type: "png" });

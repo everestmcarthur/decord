@@ -1,13 +1,13 @@
-// Module ID: 5122
-// Function ID: 5123
+// Module ID: 5158
+// Function ID: 5159
 // Name: GameAutocompleteStore
-// Dependencies: [1437, 504, 5123, 573, 2]
+// Dependencies: [1437, 504, 5159, 573, 2]
 
-// Module 5122 (GameAutocompleteStore)
+// Module 5158 (GameAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1437 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 5123 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 5159 */;
 
 require = fn;
 const navigation = new privDefault({ max: 100 });

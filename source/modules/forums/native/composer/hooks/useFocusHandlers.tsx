@@ -1,10 +1,10 @@
-// Module ID: 10291
-// Function ID: 10292
+// Module ID: 10329
+// Function ID: 10330
 // Name: useFocusHandlers
 // Dependencies: [32, 19, 2]
 // Exports: useFocusHandlers
 
-// Module 10291 (useFocusHandlers)
+// Module 10329 (useFocusHandlers)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

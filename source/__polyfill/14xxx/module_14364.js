@@ -1,46 +1,28 @@
 // Module ID: 14364
 // Function ID: 14365
-// Dependencies: [14351, 14329]
+// Dependencies: [14277, 14365]
+// Exports: getSupportedTimeZones
 
 // Module 14364
-import _mod14351 from "module_14351" /* 14351 */;
+const require = globalThis.__r;
 
-const re2 = /#|\.prototype\./;
-function isForced(arg0, arg1) {
-  if (typeof fn === "function") {
-    const _String = String;
-    const str3 = String(arg0).replace(re2, ".");
-    const tmp5 = tmp[str3.toLowerCase(str3)];
-    let tmp7 = tmp5 === P;
-    if (!tmp7) {
-      if (tmp5 === N) {
-        tmp7 = tmp9;
-      } else {
-        let tmp11Result = dependencyMap;
-        if (_mod14351(arg1)) {
-          tmp11Result = tmp11(14329);
-          let tmp11ResultResult = tmp11Result(arg1);
-        } else {
-          tmp11ResultResult = arg1;
-        }
-        tmp11 = require;
-      }
+const require = arg1;
+const dependencyMap = arg6;
+
+export const getSupportedTimeZones = function getSupportedTimeZones(locale) {
+  _require = locale;
+  const timezones = require("module_14365").timezones;
+  return timezones.filter((item) => (function isSupported(timeZone, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
     }
-    return tmp7;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-const normalize = (arg0) => {
-  const str = String(arg0);
-  return String(arg0).replace(re2, ".").toLowerCase();
+    try {
+      const obj = { timeZone };
+      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
+      return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
+    } catch (err) {
+      return false;
+    }
+  })(item, closure_0));
 };
-isForced.normalize = normalize;
-const data = {};
-isForced.data = data;
-isForced.NATIVE = "N";
-const N = "N";
-isForced.POLYFILL = "P";
-const P = "P";
-
-export default isForced;

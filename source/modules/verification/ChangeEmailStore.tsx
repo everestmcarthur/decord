@@ -1,10 +1,10 @@
-// Module ID: 5637
-// Function ID: 5638
+// Module ID: 5673
+// Function ID: 5674
 // Name: ChangeEmailStore
 // Dependencies: [560, 1249, 2]
 // Exports: resetChangeEmailStore, setChangeEmailError, setEmailToken, useChangeEmailError
 
-// Module 5637 (ChangeEmailStore)
+// Module 5673 (ChangeEmailStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;

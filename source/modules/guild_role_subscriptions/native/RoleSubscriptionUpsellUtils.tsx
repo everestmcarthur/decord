@@ -1,11 +1,11 @@
-// Module ID: 10330
-// Function ID: 10331
+// Module ID: 10368
+// Function ID: 10369
 // Name: RoleSubscriptionUpsellUtils
-// Dependencies: [19, 21, 4919, 10331, 1896, 2]
+// Dependencies: [19, 21, 4950, 10369, 1896, 2]
 
-// Module 10330 (RoleSubscriptionUpsellUtils)
+// Module 10368 (RoleSubscriptionUpsellUtils)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ export default {
     guildId = guildId.guildId;
     actions_AlertActionCreatorsDefault.openLazy({
       importer() {
-        return asyncRequireImpl(10331, dependencyMap.paths).then((result) => {
+        return asyncRequireImpl(10369, dependencyMap.paths).then((result) => {
           closure_0 = result.default;
           return (arg0) => {
             const obj = {};

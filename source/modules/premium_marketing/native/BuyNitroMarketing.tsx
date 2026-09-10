@@ -1,14 +1,14 @@
-// Module ID: 13376
-// Function ID: 13377
+// Module ID: 13425
+// Function ID: 13426
 // Name: BuyNitroMarketing
-// Dependencies: [19, 17, 1373, 21, 4574, 576, 13377, 1483, 13378, 13385, 13383, 13386, 7176, 13379, 10774, 13412, 13419, 13420, 8906, 13422, 13425, 13430, 13434, 13435, 13436, 2]
+// Dependencies: [19, 17, 1373, 21, 4605, 576, 13426, 1483, 13427, 13434, 13432, 13435, 7214, 13428, 10812, 13461, 13468, 13469, 8943, 13471, 13474, 13479, 13483, 13484, 13485, 2]
 // Exports: default
 
-// Module 13376 (BuyNitroMarketing)
+// Module 13425 (BuyNitroMarketing)
 import nativeDefault from "native" /* 576 */;
-import BuyNitroPerkDetails from "BuyNitroPerkDetails" /* 13412 */;
-import BuyNitroSectionHeaderDefault from "BuyNitroSectionHeader" /* 13419 */;
-import BuyNitroPerkDefault from "BuyNitroPerk" /* 13420 */;
+import BuyNitroPerkDetails from "BuyNitroPerkDetails" /* 13461 */;
+import BuyNitroSectionHeaderDefault from "BuyNitroSectionHeader" /* 13468 */;
+import BuyNitroPerkDefault from "BuyNitroPerk" /* 13469 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, list: { flex: 1 }, listContent: null, listHeader: null, sectionHeader: null, disabled: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.listContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
@@ -48,7 +48,7 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
   const obj3 = applicationId(onPaymentDismiss[8]);
   let tmp7;
   if (null != initialTier) {
-    const obj5 = { tier: initialTier, productId: "a" };
+    const obj5 = { tier: initialTier, productId: "Array" };
     tmp7 = obj5;
   }
   buyNitroPlanSelection = applicationId(onPaymentDismiss[9]).useBuyNitroPlanSelection(tmp7);

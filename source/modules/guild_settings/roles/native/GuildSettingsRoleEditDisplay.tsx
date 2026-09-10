@@ -1,27 +1,27 @@
-// Module ID: 17659
-// Function ID: 17660
+// Module ID: 17718
+// Function ID: 17719
 // Name: GuildSettingsRoleEditDisplay
-// Dependencies: [19, 17, 2016, 17644, 17643, 1074, 17646, 21, 4574, 576, 5018, 504, 7201, 7200, 7219, 1178, 17660, 4541, 17661, 1896, 16324, 17658, 17663, 17664, 6620, 1114, 17666, 5701, 5619, 5001, 1369, 1091, 14625, 4529, 4570, 2428, 7214, 2]
+// Dependencies: [19, 17, 2016, 17703, 17702, 1074, 17705, 21, 4605, 576, 5054, 504, 7239, 7238, 7257, 1178, 17719, 4572, 17720, 1896, 16373, 17717, 17722, 17723, 6656, 1114, 17725, 5737, 5655, 5037, 1369, 1091, 14674, 4560, 4601, 2428, 7252, 2]
 // Exports: default
 
-// Module 17659 (GuildSettingsRoleEditDisplay)
+// Module 17718 (GuildSettingsRoleEditDisplay)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17644 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17703 */;
 
 require = fn;
 const View = fn(17).View;
 const isEveryoneRole = fn(2016).isEveryoneRole;
-const RoleColorsStyle = fn(17644).RoleColorsStyle;
-const STYLE_CONFIGS = fn(17643).STYLE_CONFIGS;
+const RoleColorsStyle = fn(17703).RoleColorsStyle;
+const STYLE_CONFIGS = fn(17702).STYLE_CONFIGS;
 const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR: closure_9, MAX_ROLE_LENGTH: c10 } = Constants);
-let closure_11 = fn(17646).DEFAULT_GRADIENT_ROLE_COLORS;
+let closure_11 = fn(17705).DEFAULT_GRADIENT_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { roleIcon: { paddingTop: 2 }, roleIconPlaceholder: { opacity: 0.5 }, trailingColorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, colorBlock: { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 }, holographicInfo: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, padding: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_12, marginTop: -1 * nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_12, display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO } };
 let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -93,7 +93,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
     const items1 = [guild.id, id];
     const items2 = [role, id, concat, primary_color, SOLID];
     const callback = SOLID.useCallback(() => {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17661, dependencyMap.paths), "RoleIcon", { guildId: guild.id, roleId: id });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17720, dependencyMap.paths), "RoleIcon", { guildId: guild.id, roleId: id });
     }, items1);
     const items3 = [guild.id, role, id, SOLID];
     const callback1 = SOLID.useCallback(() => {
@@ -104,7 +104,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
               guild(id[21]).updateRoleColor(role, arg0);
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16324, dependencyMap.paths), "RoleColorPicker", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16373, dependencyMap.paths), "RoleColorPicker", obj2);
       } else if (tmp === tmp2.GRADIENT) {
         const obj4 = {
           colors: concat,
@@ -112,11 +112,11 @@ export default function GuildSettingsRoleEditDisplay(guild) {
               guild(id[21]).updateRoleColors(closure_1_2, colors, constants.GRADIENT);
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17663, dependencyMap.paths), "RoleColorPicker", obj4);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17722, dependencyMap.paths), "RoleColorPicker", obj4);
       }
     }, items2);
     const callback2 = SOLID.useCallback(() => {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17664, dependencyMap.paths), "EnhancedRoleColorsSelectStyleModal", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17723, dependencyMap.paths), "EnhancedRoleColorsSelectStyleModal", {
         guildId: guild.id,
         role,
         roleStyle: SOLID,
@@ -178,7 +178,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
       items4[3] = tmp30Result;
       let tmp19Result = null;
       if (canGuildUseRoleIconsResult) {
-        const obj13 = { disabled: tmp3, label: null, onPress: null, arrow: true, trailing: null, subLabel: null, subLabelLineClamp: 3 };
+        const obj13 = { disabled: tmp3, label: null, onPress: null, arrow: true, trailing: null };
         const intl6 = tmp4(tmp5[25]).intl;
         obj13.label = intl6.string(tmp4(tmp5[25]).t.B9grJw);
         obj13.onPress = callback;
@@ -193,8 +193,6 @@ export default function GuildSettingsRoleEditDisplay(guild) {
         obj15.style = items7;
         obj15.children = tmp17;
         obj13.trailing = tmp19(primary_color, obj15);
-        const intl7 = tmp4(tmp5[25]).intl;
-        obj13.subLabel = intl7.string(tmp4(tmp5[25]).t.I3YQeV);
         obj14.children = tmp19(tmp4(tmp5[28]).TableRow, obj13);
         tmp19Result = tmp19(tmp4(tmp5[27]).TableRowGroup, obj14);
       }
@@ -204,12 +202,12 @@ export default function GuildSettingsRoleEditDisplay(guild) {
         tmp52 = tmp2;
       }
       const obj16 = { disabled: tmp52, label: null, value: null, onValueChange: null, subLabel: null };
-      const intl8 = tmp4(tmp5[25]).intl;
-      obj16.label = intl8.string(tmp4(tmp5[25]).t.iVW5w4);
+      const intl7 = tmp4(tmp5[25]).intl;
+      obj16.label = intl7.string(tmp4(tmp5[25]).t.iVW5w4);
       obj16.value = hoist;
       obj16.onValueChange = onHoistChanged;
-      const intl9 = tmp4(tmp5[25]).intl;
-      obj16.subLabel = intl9.string(tmp4(tmp5[25]).t.vceJPk);
+      const intl8 = tmp4(tmp5[25]).intl;
+      obj16.subLabel = intl8.string(tmp4(tmp5[25]).t.vceJPk);
       const items8 = [tmp19(tmp4(tmp5[36]).TableSwitchRow, obj16), ];
       if (!tmp3) {
         tmp3 = tmp2;
@@ -217,8 +215,8 @@ export default function GuildSettingsRoleEditDisplay(guild) {
       const obj17 = { children: null };
       const obj18 = { hasIcons: false, children: null };
       const obj19 = { disabled: tmp3, label: null, value: null, onValueChange: null };
-      const intl10 = tmp4(tmp5[25]).intl;
-      obj19.label = intl10.format(tmp4(tmp5[25]).t.DTXoJQ, {});
+      const intl9 = tmp4(tmp5[25]).intl;
+      obj19.label = intl9.format(tmp4(tmp5[25]).t.DTXoJQ, {});
       obj19.value = mentionable;
       obj19.onValueChange = onMentionableChanged;
       items8[1] = tmp19(tmp4(tmp5[36]).TableSwitchRow, obj19);

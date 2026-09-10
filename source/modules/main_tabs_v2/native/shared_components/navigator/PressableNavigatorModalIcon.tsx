@@ -1,13 +1,13 @@
-// Module ID: 7884
-// Function ID: 7885
+// Module ID: 7921
+// Function ID: 7922
 // Name: PressableNavigatorModalIcon
-// Dependencies: [21, 7880, 7877, 7881, 7885, 1114, 2]
+// Dependencies: [21, 7917, 7914, 7918, 7922, 1114, 2]
 // Exports: default
 
-// Module 7884 (PressableNavigatorModalIcon)
+// Module 7921 (PressableNavigatorModalIcon)
 import jsxProd from "jsxProd" /* 21 */;
-import HeaderShared from "HeaderShared" /* 7877 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7880 */;
+import HeaderShared from "HeaderShared" /* 7914 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7917 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -22,7 +22,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   if (str === undefined) {
     str = "back";
   }
-  const obj = { source: importDefault("back" === str ? 7881 : 7885), onPress: goBack, accessibilityLabel: null };
+  const obj = { source: importDefault("back" === str ? 7918 : 7922), onPress: goBack, accessibilityLabel: null };
   const intl = tmp5(1114).intl;
   const string = intl.string;
   const t = tmp5(1114).t;
@@ -32,5 +32,5 @@ export default function PressableNavigatorModalIcon(onPress) {
     stringResult = string(t.cpT0Cq);
   }
   obj.accessibilityLabel = stringResult;
-  return <tmp4 isModal>{jsx(HeaderShared.HeaderIconButton, { source: importDefault("back" === str ? 7881 : 7885), onPress: goBack, accessibilityLabel: null })}</tmp4>;
+  return <tmp4 isModal>{jsx(HeaderShared.HeaderIconButton, { source: importDefault("back" === str ? 7918 : 7922), onPress: goBack, accessibilityLabel: null })}</tmp4>;
 };

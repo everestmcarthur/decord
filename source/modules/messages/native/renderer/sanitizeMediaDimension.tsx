@@ -1,10 +1,10 @@
-// Module ID: 8133
-// Function ID: 8134
+// Module ID: 8170
+// Function ID: 8171
 // Name: sanitizeMediaDimension
 // Dependencies: [2]
 // Exports: sanitizeMediaDimension
 
-// Module 8133 (sanitizeMediaDimension)
+// Module 8170 (sanitizeMediaDimension)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/sanitizeMediaDimension.tsx");

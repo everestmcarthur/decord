@@ -1,13 +1,13 @@
-// Module ID: 11784
-// Function ID: 11785
+// Module ID: 11824
+// Function ID: 11825
 // Name: getCanJoin
-// Dependencies: [1074, 11785, 11786, 11787, 11788, 11789, 11790, 11791, 7327, 1115, 2]
+// Dependencies: [1074, 11825, 11826, 11827, 11828, 11829, 11830, 11831, 7365, 1115, 2]
 // Exports: getCanJoin, getCanSync
 
-// Module 11784 (getCanJoin)
+// Module 11824 (getCanJoin)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import isInviteActiveDefault from "isInviteActive" /* 11785 */;
-import getPartySize from "getPartySize" /* 11786 */;
+import isInviteActiveDefault from "isInviteActive" /* 11825 */;
+import getPartySize from "getPartySize" /* 11826 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -41,14 +41,14 @@ export const getCanJoin = function getCanJoin(currentUserId) {
               }
               if (type === constants.JOIN) {
                 if (null != presenceActivity) {
-                  const remoteJoinableActivityPlatform = tmp6(11791).getRemoteJoinableActivityPlatform(presenceActivity);
+                  const remoteJoinableActivityPlatform = tmp6(11831).getRemoteJoinableActivityPlatform(presenceActivity);
                   if (null != remoteJoinableActivityPlatform) {
                     const obj3 = { canJoin: true, remoteJoinPlatform: remoteJoinableActivityPlatform };
                     return obj3;
-                  } else if (tmp13(7327)(presenceActivity, constants2.SUPPORTS_JOIN_URL)) {
+                  } else if (tmp13(7365)(presenceActivity, constants2.SUPPORTS_JOIN_URL)) {
                     return { canJoin: true, remoteJoinPlatform: null };
                   }
-                  const tmp6Result7 = tmp6(11791);
+                  const tmp6Result7 = tmp6(11831);
                 }
               }
               if (tmp6Result8.platformSupportsActivityJoin()) {
@@ -60,11 +60,11 @@ export const getCanJoin = function getCanJoin(currentUserId) {
               obj4 = { canJoin: false, remoteJoinPlatform: null };
               tmp6Result8 = tmp6(1115);
             }
-            tmp6Result6 = tmp6(11790);
+            tmp6Result6 = tmp6(11830);
           }
-          tmp6Result5 = tmp6(11789);
+          tmp6Result5 = tmp6(11829);
         }
-        tmp6Result = tmp6(11788);
+        tmp6Result = tmp6(11828);
       }
       return { canJoin: false, remoteJoinPlatform: null };
     } else {
@@ -78,12 +78,12 @@ export const getCanSync = function getCanSync(activity, tmp8Result, arg2, id) {
   if (tmp) {
     let tmp6 = isInviteActiveDefault(activity, arg2, id.id);
     if (tmp6) {
-      let tmp8 = tmp4(7327)(activity, constants2.SYNC);
+      let tmp8 = tmp4(7365)(activity, constants2.SYNC);
       if (tmp8) {
         let isPlatformEmbedded = PlatformUtils.isPlatformEmbedded;
         if (isPlatformEmbedded) {
-          isPlatformEmbedded = !tmp9(11789).getIsInParty(tmp8Result, activity);
-          const tmp9Result = tmp9(11789);
+          isPlatformEmbedded = !tmp9(11829).getIsInParty(tmp8Result, activity);
+          const tmp9Result = tmp9(11829);
         }
         tmp8 = isPlatformEmbedded;
         tmp9 = require;

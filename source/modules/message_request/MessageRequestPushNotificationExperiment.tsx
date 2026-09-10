@@ -1,9 +1,9 @@
-// Module ID: 10129
-// Function ID: 10130
+// Module ID: 10167
+// Function ID: 10168
 // Name: MessageRequestPushNotificationExperiment
 // Dependencies: [1433, 2]
 
-// Module 10129 (MessageRequestPushNotificationExperiment)
+// Module 10167 (MessageRequestPushNotificationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

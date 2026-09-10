@@ -1,18 +1,18 @@
-// Module ID: 17852
-// Function ID: 17853
+// Module ID: 17910
+// Function ID: 17911
 // Name: MessageSendFailureNotificationManager
-// Dependencies: [2011, 4395, 1371, 1895, 1074, 13743, 10126, 10128, 9719, 1114, 7132, 2]
+// Dependencies: [2011, 4426, 1371, 1895, 1074, 13792, 10164, 10166, 9757, 1114, 7170, 2]
 
-// Module 17852 (MessageSendFailureNotificationManager)
+// Module 17910 (MessageSendFailureNotificationManager)
 import util from "util" /* 1114 */;
-import PushNotificationDefault from "PushNotification" /* 9719 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10126 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10128 */;
+import PushNotificationDefault from "PushNotification" /* 9757 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10164 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10166 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
 import UserStore from "UserStore" /* 1371 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 require = fn;
 function handleMessageSendFailure(shouldNotify) {
@@ -79,7 +79,7 @@ function handleMessageCreate(message) {
 }
 const Constants = fn(1074);
 ({ InAppNotificationTypes: closure_7, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(13743).LocalNotificationTypes;
+const LocalNotificationTypes = fn(13792).LocalNotificationTypes;
 const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };

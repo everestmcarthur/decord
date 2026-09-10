@@ -1,15 +1,15 @@
-// Module ID: 16145
-// Function ID: 16146
+// Module ID: 16194
+// Function ID: 16195
 // Name: FavoritesGuildCategorySettingsModal
-// Dependencies: [32, 19, 17, 1960, 1970, 21, 4574, 576, 1483, 504, 1982, 10255, 7877, 1114, 4918, 1178, 4987, 6620, 5701, 5619, 4532, 10954, 10956, 2]
+// Dependencies: [32, 19, 17, 1960, 1970, 21, 4605, 576, 1483, 504, 1982, 10293, 7914, 1114, 4949, 1178, 5023, 6656, 5737, 5655, 4563, 10994, 10996, 2]
 // Exports: default
 
-// Module 16145 (FavoritesGuildCategorySettingsModal)
+// Module 16194 (FavoritesGuildCategorySettingsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10255 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4949 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10293 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
@@ -125,7 +125,7 @@ const ScrollView = fn(17).ScrollView;
 let maxLength = fn(1970).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -136,12 +136,12 @@ let result = size.fileFinishedImporting("modules/favorites/native/modal/Favorite
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(10954)().onGoBack;
+  onGoBack = onGoBack(10994)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
   const intl = categoryId(1114).intl;
   obj.title = intl.string(categoryId(1114).t["/uELTj"]);
   obj.render = function render() {
     return React6(FavoritesGuildCategorySettings, { categoryId, onGoBack });
   };
-  return closure_8(onGoBack(10956), obj);
+  return closure_8(onGoBack(10996), obj);
 };

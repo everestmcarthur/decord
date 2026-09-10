@@ -1,13 +1,13 @@
-// Module ID: 17860
-// Function ID: 17861
+// Module ID: 17918
+// Function ID: 17919
 // Name: ForwardGuildBreadcrumbManager
-// Dependencies: [1074, 17861, 7132, 17457, 2]
+// Dependencies: [1074, 17919, 7170, 17516, 2]
 
-// Module 17860 (ForwardGuildBreadcrumbManager)
+// Module 17918 (ForwardGuildBreadcrumbManager)
 import Constants from "Constants" /* 1074 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17457 */;
-import BasicGuildActionCreators from "BasicGuildActionCreators" /* 17861 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17516 */;
+import BasicGuildActionCreators from "BasicGuildActionCreators" /* 17919 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 import size from "module_2" /* 2 */;
 
 function fetchForwardReferencedGuilds(message_reference) {

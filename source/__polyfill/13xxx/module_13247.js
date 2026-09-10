@@ -1,0 +1,9 @@
+// Module ID: 13247
+// Function ID: 13248
+// Dependencies: [1122]
+
+// Module 13247
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/collectibles/native/images", width: 20.5, height: 20, scales: [2, 3], hash: "1852cc5a5de0318feebc04948ebfbffa", name: "img_collectibles_shop", type: "png" });

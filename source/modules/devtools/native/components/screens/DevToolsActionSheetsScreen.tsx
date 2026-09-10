@@ -1,22 +1,22 @@
-// Module ID: 15754
-// Function ID: 15755
+// Module ID: 15803
+// Function ID: 15804
 // Name: DevToolsActionSheetsScreen
-// Dependencies: [32, 19, 17, 21, 4574, 576, 12978, 12976, 4777, 15755, 1896, 4541, 7164, 7163, 5701, 5619, 8621, 4525, 4987, 5621, 4570, 2]
+// Dependencies: [32, 19, 17, 21, 4605, 576, 13018, 13016, 4808, 15804, 1896, 4572, 7202, 7201, 5737, 5655, 8658, 4556, 5023, 5657, 4601, 2]
 // Exports: default
 
-// Module 15754 (DevToolsActionSheetsScreen)
+// Module 15803 (DevToolsActionSheetsScreen)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4525 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import TableRow from "TableRow" /* 5619 */;
-import TableRowGroup from "TableRowGroup" /* 5701 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
-import WarningIcon from "WarningIcon" /* 8621 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 12976 */;
-import BlockedDomainModalActionCreatorsDefault from "BlockedDomainModalActionCreators" /* 12978 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4556 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import TableRow from "TableRow" /* 5655 */;
+import TableRowGroup from "TableRowGroup" /* 5737 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7201 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7202 */;
+import WarningIcon from "WarningIcon" /* 8658 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 13016 */;
+import BlockedDomainModalActionCreatorsDefault from "BlockedDomainModalActionCreators" /* 13018 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -67,7 +67,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingHorizontal: nativeDefault.space.PX_12 }, contentContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.contentContainer = { paddingVertical: nativeDefault.space.PX_16 };
@@ -94,7 +94,7 @@ let items = [
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      return ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15755, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
+      return ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15804, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
     }
   }
 ];
@@ -112,11 +112,11 @@ export default function DevToolsActionSheetsScreen() {
   }, items);
   const obj2 = { spacing: 16, children: null };
   const obj3 = { children: null };
-  const items1 = [closure_7(selectedType(4570).Text, { variant: "heading-lg/medium", children: "Action Sheets" }), ];
-  const obj4 = { description: "Tap an option to launch the action sheet immediately", hasIcons: false, children: closure_7(selectedType(5619).TableRow, { label: found.label, subLabel: found.description, arrow: true, onPress: callback }) };
-  items1[1] = closure_7(selectedType(5701).TableRowGroup, obj4);
+  const items1 = [closure_7(selectedType(4601).Text, { variant: "heading-lg/medium", children: "Action Sheets" }), ];
+  const obj4 = { description: "Tap an option to launch the action sheet immediately", hasIcons: false, children: closure_7(selectedType(5655).TableRow, { label: found.label, subLabel: found.description, arrow: true, onPress: callback }) };
+  items1[1] = closure_7(selectedType(5737).TableRowGroup, obj4);
   obj3.children = items1;
-  obj2.children = closure_8(selectedType(5621).Card, obj3);
-  obj.children = closure_7(selectedType(4987).Stack, obj2);
+  obj2.children = closure_8(selectedType(5657).Card, obj3);
+  obj.children = closure_7(selectedType(5023).Stack, obj2);
   return closure_7(closure_6, obj);
 };

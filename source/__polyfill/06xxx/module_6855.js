@@ -1,24 +1,49 @@
 // Module ID: 6855
 // Function ID: 6856
-// Dependencies: [19, 6646]
-// Exports: useBottomSheetContentSizeSetter
+// Dependencies: [19, 1636]
+// Exports: useReactiveSharedValue
 
 // Module 6855
-import _mod19 from "module_19" /* 19 */;
-import _mod6646 from "module_6646" /* 6646 */;
+import noop from "module_19" /* 19 */;
 
-_mod19.useCallback;
+const require = globalThis.__r;
 
-export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
-  const bottomSheetInternal = _mod6646.useBottomSheetInternal();
-  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
-  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  const obj2 = { setContentSize: null };
-  const items = [enableDynamicSizing, animatedContentHeight];
-  obj2.setContentSize = useCallback((arg0) => {
-    if (enableDynamicSizing) {
-      const result = animatedContentHeight.set(arg0);
+({ useEffect: c2, useRef: c3 } = noop);
+
+export const useReactiveSharedValue = (current) => {
+  const tmp = closure_3(null);
+  const tmp2 = closure_3(null);
+  _require = tmp2;
+  let tmp3 = current;
+  if (current) {
+    tmp3 = typeof current === "object";
+  }
+  if (tmp3) {
+    tmp3 = "value" in current;
+  }
+  if (!tmp3) {
+    if (null === tmp2.current) {
+      tmp.current = current;
+      if (typeof current === "object") {
+        const obj2 = {};
+        const merged = Object.assign(current);
+        let mutable = require("cancelAnimation").makeMutable(obj2);
+        let obj = require("cancelAnimation");
+      } else {
+        mutable = require("cancelAnimation").makeMutable(current);
+        const obj3 = require("cancelAnimation");
+      }
+      tmp2.current = mutable;
+    } else if (tmp.current !== current) {
+      tmp2.current.value = current;
     }
-  }, items);
-  return obj2;
+  }
+  closure_2(() => () => {
+    if (ref.current) {
+      ref(dependencyMap[1]).cancelAnimation(tmp.current);
+      const obj = ref(dependencyMap[1]);
+    }
+  }, []);
+  current = tmp2.current;
+  return current;
 };

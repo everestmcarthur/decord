@@ -1,18 +1,18 @@
-// Module ID: 12734
-// Function ID: 12735
+// Module ID: 12774
+// Function ID: 12775
 // Name: NUFActionCreators
-// Dependencies: [5, 12707, 5295, 1371, 12735, 1074, 6994, 573, 4777, 12736, 1896, 12773, 12776, 12777, 1093, 12710, 12714, 2]
+// Dependencies: [5, 12747, 5331, 1371, 12775, 1074, 7030, 573, 4808, 12776, 1896, 12813, 12816, 12817, 1093, 12750, 12754, 2]
 // Exports: closeDiscoverabilityModal, nextOnboardingStep, openDiscoverabilityModal, previousOnboardingStep, startContactSyncForDiscoverability, startOnboarding, toggleDiscoverabilityForUser, transitionToHubEmailConnectionModal, transitionToNUFGuildTemplatesModal
 
-// Module 12734 (NUFActionCreators)
+// Module 12774 (NUFActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12710 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12714 */;
-import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 12773 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12776 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12750 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12754 */;
+import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 12813 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12816 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5295 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5331 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = globalThis.__r;
@@ -95,11 +95,11 @@ let closure_13 = async function _startContactSyncForDiscoverability(arg0, value)
     }
   }
 };
-const ContactSyncModalStore = fn(12707);
+const ContactSyncModalStore = fn(12747);
 ({ setAllowEmail: closure_4, setAllowSync: hasOwnProperty, setName: metroRequire, useContactSyncModalStore: closure_7 } = ContactSyncModalStore);
-let closure_10 = fn(12735).NUF_DISCOVERABILITY_MODAL_KEY;
+let closure_10 = fn(12775).NUF_DISCOVERABILITY_MODAL_KEY;
 const PlatformTypes = fn(1074).PlatformTypes;
-let closure_12 = fn(6994).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
+let closure_12 = fn(7030).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
 

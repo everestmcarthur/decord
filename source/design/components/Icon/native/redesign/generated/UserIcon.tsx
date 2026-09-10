@@ -1,13 +1,13 @@
-// Module ID: 11856
-// Function ID: 11857
+// Module ID: 11896
+// Function ID: 11897
 // Name: UserIcon
-// Dependencies: [19, 21, 576, 4274, 11857, 2]
+// Dependencies: [19, 21, 576, 4305, 11897, 2]
 // Exports: UserIcon
 
-// Module 11856 (UserIcon)
+// Module 11896 (UserIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod11857 from "module_11857" /* 11857 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod11897 from "module_11897" /* 11897 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const UserIcon = function UserIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11857, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11897, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

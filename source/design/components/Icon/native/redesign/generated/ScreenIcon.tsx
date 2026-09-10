@@ -1,13 +1,13 @@
-// Module ID: 8911
-// Function ID: 8912
+// Module ID: 8948
+// Function ID: 8949
 // Name: ScreenIcon
-// Dependencies: [19, 21, 576, 4274, 8912, 2]
+// Dependencies: [19, 21, 576, 4305, 8949, 2]
 // Exports: ScreenIcon
 
-// Module 8911 (ScreenIcon)
+// Module 8948 (ScreenIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod8912 from "module_8912" /* 8912 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod8949 from "module_8949" /* 8949 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const ScreenIcon = function ScreenIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8912, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8949, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,13 +1,13 @@
-// Module ID: 8769
-// Function ID: 8770
+// Module ID: 8806
+// Function ID: 8807
 // Name: GameProfileCommunity
-// Dependencies: [5, 32, 19, 17, 1959, 21, 4574, 576, 8722, 4557, 4562, 8770, 504, 8719, 7356, 8771, 1971, 4570, 1114, 5598, 8773, 1178, 4989, 2]
+// Dependencies: [5, 32, 19, 17, 1959, 21, 4605, 576, 8759, 4588, 4593, 8807, 504, 8756, 7394, 8808, 1971, 4601, 1114, 5634, 8810, 1178, 5025, 2]
 // Exports: default
 
-// Module 8769 (GameProfileCommunity)
+// Module 8806 (GameProfileCommunity)
 import nativeDefault from "native" /* 576 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
-import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 8771 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8756 */;
+import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 8808 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, card: null, guildContent: null, guildHeaderRow: null, guildIcon: null, guildIconImage: null, guildInfo: null, guildNameDescriptionContainer: null, guildNameRow: null, memberCountsContainer: null, memberCountContainer: null, onlineEllipse: null, membersEllipse: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };

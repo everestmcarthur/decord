@@ -1,10 +1,10 @@
-// Module ID: 12130
-// Function ID: 12131
+// Module ID: 12170
+// Function ID: 12171
 // Name: useTrackAppLauncherHomeItemImpression
-// Dependencies: [19, 12131, 12118, 8888, 1086, 2]
+// Dependencies: [19, 12171, 12158, 8925, 1086, 2]
 // Exports: useTrackAppLauncherHomeItemImpression
 
-// Module 12130 (useTrackAppLauncherHomeItemImpression)
+// Module 12170 (useTrackAppLauncherHomeItemImpression)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx");
 
 export const useTrackAppLauncherHomeItemImpression = function useTrackAppLauncherHomeItemImpression() {
-  trackAppLauncherItemImpressionOnFirstView = trackAppLauncherItemImpressionOnFirstView(12131).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
+  trackAppLauncherItemImpressionOnFirstView = trackAppLauncherItemImpressionOnFirstView(12171).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
   let obj2 = { trackAppLauncherHomeItemImpression: null };
   const items = [trackAppLauncherItemImpressionOnFirstView];
   obj2.trackAppLauncherHomeItemImpression = noop.useCallback((viewableItems) => {

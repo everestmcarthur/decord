@@ -1,9 +1,9 @@
-// Module ID: 10772
-// Function ID: 10773
+// Module ID: 10810
+// Function ID: 10811
 // Name: PremiumGiftingGogoPromotionExperiment
 // Dependencies: [1433, 2]
 
-// Module 10772 (PremiumGiftingGogoPromotionExperiment)
+// Module 10810 (PremiumGiftingGogoPromotionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

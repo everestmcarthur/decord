@@ -1,18 +1,18 @@
-// Module ID: 12619
-// Function ID: 12620
+// Module ID: 12659
+// Function ID: 12660
 // Name: GuildProgressItem
-// Dependencies: [19, 21, 4574, 12504, 12508, 12507, 6358, 1114, 12620, 2]
+// Dependencies: [19, 21, 4605, 12544, 12548, 12547, 6394, 1114, 12660, 2]
 // Exports: default
 
-// Module 12619 (GuildProgressItem)
-import GuildProgressUtils from "GuildProgressUtils" /* 12504 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12507 */;
-import GuildProgressCircleDefault from "GuildProgressCircle" /* 12620 */;
+// Module 12659 (GuildProgressItem)
+import GuildProgressUtils from "GuildProgressUtils" /* 12544 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12547 */;
+import GuildProgressCircleDefault from "GuildProgressCircle" /* 12660 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_4 = createStyles.createStyles({ icon: { width: 32, height: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressItem.tsx");

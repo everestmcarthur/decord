@@ -1,16 +1,16 @@
-// Module ID: 15321
-// Function ID: 15322
+// Module ID: 15370
+// Function ID: 15371
 // Name: SettingsAppearanceChannelList
-// Dependencies: [19, 17, 21, 4574, 576, 15322, 15323, 15324, 4310, 1114, 15330, 8906, 15333, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 15371, 15372, 15373, 4341, 1114, 15379, 8943, 15382, 2]
 // Exports: default
 
-// Module 15321 (SettingsAppearanceChannelList)
+// Module 15370 (SettingsAppearanceChannelList)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
-import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 15322 */;
-import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 15323 */;
-import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 15324 */;
-import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 15333 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4341 */;
+import SettingsAppearanceChannelRowItemDefault from "SettingsAppearanceChannelRowItem" /* 15371 */;
+import SettingsAppearanceMessagesHeaderItemDefault from "SettingsAppearanceMessagesHeaderItem" /* 15372 */;
+import SettingsAppearanceActivityCardsItemDefault from "SettingsAppearanceActivityCardsItem" /* 15373 */;
+import SettingsAppearanceChannelListPreviewNitroUpsellDefault from "SettingsAppearanceChannelListPreviewNitroUpsell" /* 15382 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { channelPreviewGradient: null, channelPreviewCardContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -74,9 +74,9 @@ export default function ChannelListPreview(useGradientBackground) {
   if (useGradientBackground) {
     let obj2 = { style: tmp.channelPreviewGradient, children: null };
     let obj3 = { themes, themeIndex, isDimmed: false, backgroundToken: tmp4(576).colors.BACKGROUND_BASE_LOW };
-    obj2.children = closure_5(tmp4(15330), obj3);
+    obj2.children = closure_5(tmp4(15379), obj3);
     tmp7 = closure_5(closure_4, obj2);
-    const tmp4Result = tmp4(15330);
+    const tmp4Result = tmp4(15379);
   }
   const items2 = [tmp7, , ];
   const obj4 = {
@@ -89,7 +89,7 @@ export default function ChannelListPreview(useGradientBackground) {
     showsVerticalScrollIndicator: false,
     importantForAccessibility: "no-hide-descendants"
   };
-  items2[1] = closure_5(animatedStyles(8906).FlashList, obj4);
+  items2[1] = closure_5(animatedStyles(8943).FlashList, obj4);
   items2[2] = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, { visible: isNitroLocked, theme: themes[themeIndex] });
   obj.children = items2;
   return closure_6(ReanimatedRexportDefault.View, obj);

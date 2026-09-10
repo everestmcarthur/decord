@@ -1,11 +1,11 @@
-// Module ID: 6952
-// Function ID: 6953
+// Module ID: 6988
+// Function ID: 6989
 // Name: FreeFormLabel
-// Dependencies: [19, 21, 4570, 2]
+// Dependencies: [19, 21, 4601, 2]
 // Exports: default
 
-// Module 6952 (FreeFormLabel)
-import Text_Text from "Text/Text" /* 4570 */;
+// Module 6988 (FreeFormLabel)
+import Text_Text from "Text/Text" /* 4601 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

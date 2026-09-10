@@ -1,10 +1,10 @@
-// Module ID: 12111
-// Function ID: 12112
+// Module ID: 12151
+// Function ID: 12152
 // Name: useAndroidOrientationSheetResync
 // Dependencies: [19, 1115, 2]
 // Exports: default
 
-// Module 12111 (useAndroidOrientationSheetResync)
+// Module 12151 (useAndroidOrientationSheetResync)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

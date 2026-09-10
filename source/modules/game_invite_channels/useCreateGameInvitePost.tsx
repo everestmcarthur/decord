@@ -1,17 +1,17 @@
-// Module ID: 12802
-// Function ID: 12803
+// Module ID: 12842
+// Function ID: 12843
 // Name: useCreateGameInvitePost
-// Dependencies: [5, 32, 19, 11489, 5293, 1074, 7286, 504, 11792, 9337, 2]
+// Dependencies: [5, 32, 19, 11529, 5329, 1074, 7324, 504, 11832, 9374, 2]
 // Exports: useCreateGameInvitePost
 
-// Module 12802 (useCreateGameInvitePost)
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7286 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11792 */;
+// Module 12842 (useCreateGameInvitePost)
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7324 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11832 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 11489 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5293 */;
+import LocalActivityStore from "LocalActivityStore" /* 11529 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5329 */;
 
 require = fn;
 const ActivityActionTypes = fn(1074).ActivityActionTypes;

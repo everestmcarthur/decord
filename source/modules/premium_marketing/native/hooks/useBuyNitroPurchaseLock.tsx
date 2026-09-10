@@ -1,11 +1,11 @@
-// Module ID: 13383
-// Function ID: 13384
+// Module ID: 13432
+// Function ID: 13433
 // Name: useBuyNitroPurchaseLock
-// Dependencies: [7251, 560, 504, 2]
+// Dependencies: [7289, 560, 504, 2]
 // Exports: useIsBuyNitroPurchaseBlocked
 
-// Module 13383 (useBuyNitroPurchaseLock)
-import IAPStore from "IAPStore" /* 7251 */;
+// Module 13432 (useBuyNitroPurchaseLock)
+import IAPStore from "IAPStore" /* 7289 */;
 
 const require = fn;
 const module_560 = fn(560);

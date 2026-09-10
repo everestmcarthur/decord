@@ -1,19 +1,19 @@
-// Module ID: 12043
-// Function ID: 12044
+// Module ID: 12083
+// Function ID: 12084
 // Name: ForumPostAppliedTags
-// Dependencies: [19, 17, 21, 4574, 576, 10659, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 10697, 2]
 // Exports: ForumPostAppliedTagPills, ForumPostAppliedTags
 
-// Module 12043 (ForumPostAppliedTags)
+// Module 12083 (ForumPostAppliedTags)
 import nativeDefault from "native" /* 576 */;
-import AppliedForumTag from "AppliedForumTag" /* 10659 */;
+import AppliedForumTag from "AppliedForumTag" /* 10697 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { pillTagsContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, tag: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, tagsContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, dot: null };
 let size = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 4, width: 4, borderRadius: 10, marginHorizontal: 8 };
 obj2.dot = size;
@@ -42,7 +42,7 @@ export const ForumPostAppliedTagPills = function ForumPostAppliedTagPills(additi
     obj2.tag = obj3;
     obj2.containerStyle = tmp.tag;
     obj2.hasUnreads = hasUnreads;
-    tmp4 = closure_3(hasUnreads(10659).AppliedForumTagPill, obj2);
+    tmp4 = closure_3(hasUnreads(10697).AppliedForumTagPill, obj2);
   }
   items1[1] = tmp4;
   obj.children = items1;

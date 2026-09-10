@@ -1,9 +1,0 @@
-// Module ID: 17601
-// Function ID: 17602
-// Dependencies: [1122]
-
-// Module 17601
-import registerAsset from "module_1122" /* 1122 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "e34464fbaad016de0cccce358d754f22", name: "ic_overflow_android", type: "png" });

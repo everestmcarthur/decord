@@ -1,21 +1,21 @@
-// Module ID: 11849
-// Function ID: 11850
+// Module ID: 11889
+// Function ID: 11890
 // Name: MessageGameIconActionSheet
-// Dependencies: [19, 17, 4802, 1074, 21, 4574, 1115, 576, 504, 7164, 1178, 4570, 1114, 2024, 2]
+// Dependencies: [19, 17, 4833, 1074, 21, 4605, 1115, 576, 504, 7202, 1178, 4601, 1114, 2024, 2]
 // Exports: default
 
-// Module 11849 (MessageGameIconActionSheet)
+// Module 11889 (MessageGameIconActionSheet)
 import nativeDefault from "native" /* 576 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4802 */;
+import ApplicationStore from "ApplicationStore" /* 4833 */;
 
 const require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 const PlatformUtils = fn(1115);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
@@ -53,7 +53,7 @@ export default function MessageGameIconActionSheet(applicationId) {
     const items1 = [closure_6(tmp2(1178).Icon, obj4), ];
     const obj7 = { style: tmp.gameDescriptionWrapper, children: null };
     const obj8 = { style: tmp.timestamp, variant: "text-xs/medium", color: "text-muted", children: applicationId.messageTimestamp };
-    const items2 = [closure_6(tmp2(4570).Text, obj8), ];
+    const items2 = [closure_6(tmp2(4601).Text, obj8), ];
     const obj9 = { variant: "text-sm/medium", children: null };
     const intl = tmp2(1114).intl;
     const obj10 = { applicationName: stateFromStores.name };
@@ -62,13 +62,13 @@ export default function MessageGameIconActionSheet(applicationId) {
     const obj11 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
     items3[2] = intl2.format(tmp2(1114).t.BPDKoA, obj11);
     obj9.children = items3;
-    items2[1] = closure_7(tmp2(4570).Text, obj9);
+    items2[1] = closure_7(tmp2(4601).Text, obj9);
     obj7.children = items2;
     items1[1] = closure_7(View, obj7);
     obj3.children = items1;
     obj2.children = closure_7(View, obj3);
     obj5.children = closure_6(View, obj2);
-    tmp5Result = tmp5(tmp2(7164).BottomSheet, obj5);
+    tmp5Result = tmp5(tmp2(7202).BottomSheet, obj5);
   }
   return tmp5Result;
 };

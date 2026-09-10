@@ -1,34 +1,34 @@
-// Module ID: 8362
-// Function ID: 8363
+// Module ID: 8399
+// Function ID: 8400
 // Name: MediaShareActions
-// Dependencies: [19, 8363, 1957, 4795, 8388, 1074, 7615, 21, 563, 7614, 8151, 4541, 8293, 4724, 8389, 8289, 8398, 4268, 11711, 4585, 4434, 11708, 1896, 11692, 4523, 1114, 11719, 9085, 12986, 11767, 5095, 7211, 7213, 2]
+// Dependencies: [19, 8400, 1957, 4826, 8425, 1074, 7652, 21, 563, 7651, 8188, 4572, 8330, 4755, 8426, 8326, 8435, 4299, 11751, 4616, 4465, 11748, 1896, 11732, 4554, 1114, 11759, 9122, 13026, 11807, 5131, 7249, 7251, 2]
 // Exports: default
 
-// Module 8362 (MediaShareActions)
+// Module 8399 (MediaShareActions)
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import useChatLayout from "useChatLayout" /* 4434 */;
-import DownloadIcon from "DownloadIcon" /* 4523 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import transitionToChannel from "transitionToChannel" /* 4585 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4724 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5095 */;
-import ActionSheet from "ActionSheet" /* 7211 */;
-import ActionSheetRow from "ActionSheetRow" /* 7213 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8289 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8293 */;
-import showShareActionSheet from "showShareActionSheet" /* 8389 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8398 */;
-import ShareIcon from "ShareIcon" /* 9085 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 11711 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11719 */;
-import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11767 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 12986 */;
+import useChatLayout from "useChatLayout" /* 4465 */;
+import DownloadIcon from "DownloadIcon" /* 4554 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import transitionToChannel from "transitionToChannel" /* 4616 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4755 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5131 */;
+import ActionSheet from "ActionSheet" /* 7249 */;
+import ActionSheetRow from "ActionSheetRow" /* 7251 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8326 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8330 */;
+import showShareActionSheet from "showShareActionSheet" /* 8426 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8435 */;
+import ShareIcon from "ShareIcon" /* 9122 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11751 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11759 */;
+import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11807 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 13026 */;
 import noop from "module_19" /* 19 */;
-import ICYMIStore from "ICYMIStore" /* 8363 */;
+import ICYMIStore from "ICYMIStore" /* 8400 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4795 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8388 */;
+import MessageStore from "MessageStore" /* 4826 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8425 */;
 
 require = fn;
 function useMediaShareActions(source) {
@@ -102,7 +102,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = tmp8.attachmentId;
         if (null != attachmentId) {
-          const obj3 = { message: tmp3, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "USER_CONNECTIONS_LINK_CALLBACK" };
+          const obj3 = { message: tmp3, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "USER_DISCORD_ACHIEVEMENT_STATE_UPDATE" };
           const obj4 = { onlyAttachmentIds: null };
           const items = [attachmentId];
           obj4.onlyAttachmentIds = items;
@@ -110,7 +110,7 @@ function useMediaShareActions(source) {
           ForwardModalUtils.openForwardModal(obj3);
         }
       } else {
-        const obj6 = { message: tmp3, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "USER_CONNECTIONS_LINK_CALLBACK" };
+        const obj6 = { message: tmp3, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "USER_DISCORD_ACHIEVEMENT_STATE_UPDATE" };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [tmp8.mediaIndex];
         obj7.onlyEmbedIndices = items1;
@@ -139,7 +139,7 @@ function useMediaShareActions(source) {
       const obj2 = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = tmp4);
       obj2.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11708, dependencyMap.paths), closure_11, obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11748, dependencyMap.paths), closure_11, obj2);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
   }, items7);
@@ -211,7 +211,7 @@ function useMediaShareActions(source) {
 }
 const Constants = fn(1074);
 ({ AnalyticsSections: closure_8, GIF_RE_IOS: closure_9, MediaType: c10 } = Constants);
-let closure_11 = fn(7615).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_11 = fn(7652).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaShareActions.tsx");

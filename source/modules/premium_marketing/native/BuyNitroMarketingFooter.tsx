@@ -1,17 +1,17 @@
-// Module ID: 13435
-// Function ID: 13436
+// Module ID: 13484
+// Function ID: 13485
 // Name: BuyNitroMarketingFooter
-// Dependencies: [17, 21, 4574, 576, 6669, 13414, 7196, 2]
+// Dependencies: [17, 21, 4605, 576, 6705, 13463, 7234, 2]
 // Exports: default
 
-// Module 13435 (BuyNitroMarketingFooter)
+// Module 13484 (BuyNitroMarketingFooter)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
-import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13414 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
+import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13463 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 4574 */;
+import createStyles from "createStyles" /* 4605 */;
 import size from "module_2" /* 2 */;
 
 ({ Platform, View: c3 } = get_ActivityIndicator);

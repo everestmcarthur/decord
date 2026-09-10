@@ -1,21 +1,21 @@
-// Module ID: 14924
-// Function ID: 14925
+// Module ID: 14973
+// Function ID: 14974
 // Name: FamilyCenterActivityTotal
-// Dependencies: [19, 17, 21, 4574, 576, 14923, 7607, 4570, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 14972, 7644, 4601, 2]
 // Exports: default
 
-// Module 14924 (FamilyCenterActivityTotal)
+// Module 14973 (FamilyCenterActivityTotal)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7607 */;
-import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14923 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7644 */;
+import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14972 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LEDGE);
 obj2.container = { display: "flex", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, padding: 12, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.md };

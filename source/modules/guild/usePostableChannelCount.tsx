@@ -1,13 +1,13 @@
-// Module ID: 16781
-// Function ID: 16782
+// Module ID: 16838
+// Function ID: 16839
 // Name: usePostableChannelCount
-// Dependencies: [2012, 4212, 1074, 504, 1086, 2]
+// Dependencies: [2012, 4243, 1074, 504, 1086, 2]
 // Exports: default
 
-// Module 16781 (usePostableChannelCount)
+// Module 16838 (usePostableChannelCount)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = globalThis.__r;
 

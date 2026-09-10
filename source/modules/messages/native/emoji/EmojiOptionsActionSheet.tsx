@@ -1,13 +1,13 @@
-// Module ID: 10372
-// Function ID: 10373
+// Module ID: 10410
+// Function ID: 10411
 // Name: EmojiOptionsActionSheet
-// Dependencies: [19, 21, 7203, 4271, 4541, 7211, 5701, 5619, 4517, 1114, 2]
+// Dependencies: [19, 21, 7241, 4302, 4572, 7249, 5737, 5655, 4548, 1114, 2]
 // Exports: default
 
-// Module 10372 (EmojiOptionsActionSheet)
-import ToastUtils from "ToastUtils" /* 4271 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import ClipboardUtils from "ClipboardUtils" /* 7203 */;
+// Module 10410 (EmojiOptionsActionSheet)
+import ToastUtils from "ToastUtils" /* 4302 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import ClipboardUtils from "ClipboardUtils" /* 7241 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,11 +25,11 @@ export default function EmojiOptionsActionSheet(emojiSrc) {
   }, items);
   let obj = { children: null };
   let obj2 = { hasIcons: true, children: null };
-  const obj3 = { icon: jsx(emojiSrc(4517).LinkIcon, {}), label: null, onPress: null };
+  const obj3 = { icon: jsx(emojiSrc(4548).LinkIcon, {}), label: null, onPress: null };
   const intl = emojiSrc(1114).intl;
   obj3.label = intl.string(emojiSrc(1114).t.cIoudn);
   obj3.onPress = callback;
-  obj2.children = jsx(emojiSrc(5619).TableRow, { icon: jsx(emojiSrc(4517).LinkIcon, {}), label: null, onPress: null });
-  obj.children = jsx(emojiSrc(5701).TableRowGroup, { hasIcons: true, children: null });
-  return jsx(emojiSrc(7211).ActionSheet, { children: null });
+  obj2.children = jsx(emojiSrc(5655).TableRow, { icon: jsx(emojiSrc(4548).LinkIcon, {}), label: null, onPress: null });
+  obj.children = jsx(emojiSrc(5737).TableRowGroup, { hasIcons: true, children: null });
+  return jsx(emojiSrc(7249).ActionSheet, { children: null });
 };

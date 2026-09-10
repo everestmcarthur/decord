@@ -1,10 +1,10 @@
-// Module ID: 16049
-// Function ID: 16050
+// Module ID: 16098
+// Function ID: 16099
 // Name: useGuildsRouteGuildId
 // Dependencies: [1484, 2]
 // Exports: default, useGuildsRouteGuildAndChannelId
 
-// Module 16049 (useGuildsRouteGuildId)
+// Module 16098 (useGuildsRouteGuildId)
 import Link from "Link" /* 1484 */;
 import size from "module_2" /* 2 */;
 

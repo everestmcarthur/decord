@@ -1,13 +1,13 @@
-// Module ID: 5789
-// Function ID: 5790
+// Module ID: 5825
+// Function ID: 5826
 // Name: AvatarRoseExample
-// Dependencies: [21, 5601, 5790, 2]
+// Dependencies: [21, 5637, 5826, 2]
 // Exports: AvatarRoseExample
 
-// Module 5789 (AvatarRoseExample)
+// Module 5825 (AvatarRoseExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5790 from "module_5790" /* 5790 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5826 from "module_5826" /* 5826 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const AvatarRoseExample = function AvatarRoseExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5790 };
+  const obj2 = { uri: _modDef5826 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,15 +1,15 @@
-// Module ID: 16386
-// Function ID: 16387
+// Module ID: 16435
+// Function ID: 16436
 // Name: GuildsBarCreateJoinButton
-// Dependencies: [5, 19, 17, 4395, 1074, 1373, 21, 4574, 9726, 1896, 12738, 7226, 9345, 7196, 16327, 13741, 504, 16342, 1114, 16387, 11236, 576, 2]
+// Dependencies: [5, 19, 17, 4426, 1074, 1373, 21, 4605, 9764, 1896, 12778, 7264, 9383, 7234, 16376, 13790, 504, 16391, 1114, 16436, 11276, 576, 2]
 
-// Module 16386 (GuildsBarCreateJoinButton)
+// Module 16435 (GuildsBarCreateJoinButton)
 import nativeDefault from "native" /* 576 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16327 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16342 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16376 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16391 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
 
 const require = fn;
 let closure_14 = async function _handleCreateJoinGuildPress(arg0, value) {
@@ -98,17 +98,17 @@ const Constants = fn(1074);
 ({ AnalyticsPages: closure_7, MOBILE_GUILD_UPSELL_LIST: closure_8, TooltipNames: closure_9, UpsellTypes: c10 } = Constants);
 const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
 
 export default noop.memo(function GuildsBarCreateJoinButton() {
   const tmp = closure_13();
-  const obj = enabled(16327);
-  const GameCommunityAddServerEntryExperiment = enabled(13741).GameCommunityAddServerEntryExperiment;
+  const obj = enabled(16376);
+  const GameCommunityAddServerEntryExperiment = enabled(13790).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
-  const guildsBarAnimatedWrapperStyles = enabled(16327).useGuildsBarAnimatedWrapperStyles();
+  const guildsBarAnimatedWrapperStyles = enabled(16376).useGuildsBarAnimatedWrapperStyles();
   const items = [SelectedGuildStore];
   let stateFromStores = enabled;
   if (enabled) {
@@ -135,13 +135,13 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
       })();
     }
   }), items1);
-  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: 0, expandedChildren: -15.5, children: 0 };
+  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "m180.747 219.024 29.309.136s-13.284-17.969-30.586-3.674a2.005 2.005 0 0 0-.598 2.215 2.006 2.006 0 0 0 1.875 1.323ZM279.165 161.961l20.489 16.006a2.122 2.122 0 0 1-.058 3.413 2.13 2.13 0 0 1-1.238.397c-6.35-.045-16.711-1.75-23.911-11.113l4.718-8.703Z", expandedChildren: "#242145", children: "m190.667 112.195-2.682 37.96a138.277 138.277 0 0 0 .097 20.736s.279 37.15 3.564 39.126c6.765.959 13.802 9.143 13.802 9.143h9.895a2.08 2.08 0 0 0 1.509-.643 2.073 2.073 0 0 0 .578-1.534l-.246-5.333-2.806-60.621 23.892 34.072a8.718 8.718 0 0 0 9.02 3.467l30.054-6.648a2.896 2.896 0 0 0 2.236-2.495l2.086-18.792a1.985 1.985 0 0 0-1.475-2.138 1.984 1.984 0 0 0-.935-.014l-27.988 6.293-20.865-27.398a7.256 7.256 0 0 1-1.257-6.26c.991-3.654 1.723-9.895-2.294-15.467l-36.185-3.454Z" };
   obj2 = enabled(504);
   const intl = tmp2(1114).intl;
   obj4.label = intl.string(enabled(1114).t.l5WIbf);
-  obj4.expandedChildren = jsx(enabled(16387).HomeDrawerAddServerRowExpandedChildren, {});
+  obj4.expandedChildren = jsx(enabled(16436).HomeDrawerAddServerRowExpandedChildren, {});
   const colors = nativeDefault.colors;
-  obj4.children = jsx(enabled(11236).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: 0, expandedChildren: -15.5, children: 0 });
+  obj4.children = jsx(enabled(11276).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
+  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "m180.747 219.024 29.309.136s-13.284-17.969-30.586-3.674a2.005 2.005 0 0 0-.598 2.215 2.006 2.006 0 0 0 1.875 1.323ZM279.165 161.961l20.489 16.006a2.122 2.122 0 0 1-.058 3.413 2.13 2.13 0 0 1-1.238.397c-6.35-.045-16.711-1.75-23.911-11.113l4.718-8.703Z", expandedChildren: "#242145", children: "m190.667 112.195-2.682 37.96a138.277 138.277 0 0 0 .097 20.736s.279 37.15 3.564 39.126c6.765.959 13.802 9.143 13.802 9.143h9.895a2.08 2.08 0 0 0 1.509-.643 2.073 2.073 0 0 0 .578-1.534l-.246-5.333-2.806-60.621 23.892 34.072a8.718 8.718 0 0 0 9.02 3.467l30.054-6.648a2.896 2.896 0 0 0 2.236-2.495l2.086-18.792a1.985 1.985 0 0 0-1.475-2.138 1.984 1.984 0 0 0-.935-.014l-27.988 6.293-20.865-27.398a7.256 7.256 0 0 1-1.257-6.26c.991-3.654 1.723-9.895-2.294-15.467l-36.185-3.454Z" });
   return <tmp8 style={tmp.stretch}>{null}</tmp8>;
 });

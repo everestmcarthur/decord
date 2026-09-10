@@ -1,16 +1,16 @@
-// Module ID: 12431
-// Function ID: 12432
+// Module ID: 12471
+// Function ID: 12472
 // Name: ApplicationCommandList
-// Dependencies: [19, 17, 10295, 21, 9448, 1894, 9330, 7537, 12429, 12430, 2]
+// Dependencies: [19, 17, 10333, 21, 9486, 1894, 9367, 7575, 12469, 12470, 2]
 // Exports: default
 
-// Module 12431 (ApplicationCommandList)
+// Module 12471 (ApplicationCommandList)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const FlatList = fn(17).FlatList;
 const jsx = fn(21).jsx;
-let closure_7 = 3 * fn(10295).AUTOCOMPLETE_ROW_HEIGHT;
+let closure_7 = 3 * fn(10333).AUTOCOMPLETE_ROW_HEIGHT;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandList.tsx");
 

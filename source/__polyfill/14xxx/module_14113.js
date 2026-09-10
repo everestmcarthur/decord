@@ -1,9 +1,9 @@
 // Module ID: 14113
 // Function ID: 14114
-// Dependencies: [1122]
+// Dependencies: [14105]
 
 // Module 14113
-import registerAsset from "module_1122" /* 1122 */;
+import _mod14105 from "module_14105" /* 14105 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "4d498b99244dd74c9e2dd5b1de10ead7", name: "ic_radio_square_checked_24px", type: "png" });
+export default (arg0, arg1, arg2) => 0 === _mod14105(arg0, arg1, arg2);

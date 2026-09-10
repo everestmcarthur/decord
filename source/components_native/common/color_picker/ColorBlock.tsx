@@ -1,18 +1,18 @@
-// Module ID: 14625
-// Function ID: 14626
+// Module ID: 14674
+// Function ID: 14675
 // Name: ColorBlock
-// Dependencies: [19, 17, 21, 4574, 576, 1091, 5137, 4423, 1178, 11595, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 1091, 5173, 4454, 1178, 11635, 2]
 
-// Module 14625 (ColorBlock)
+// Module 14674 (ColorBlock)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import _modDef11595 from "module_11595" /* 11595 */;
+import _modDef11635 from "module_11635" /* 11635 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 const obj = { colorBlock: { minWidth: 44, height: 44, borderRadius: nativeDefault.radii.xl, marginHorizontal: 12, marginVertical: 8, justifyContent: "center", alignItems: "center" } };
 const styles = createStyles.createStyles(obj);
 let obj3 = { minWidth: 44, height: 44, borderRadius: nativeDefault.radii.xl, marginHorizontal: 12, marginVertical: 8, justifyContent: "center", alignItems: "center" };
@@ -31,7 +31,7 @@ export default noop.memo((color) => {
   const v = utils_ColorUtils.int2hsv(color).v;
   if (null != onSelect) {
     const obj2 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, style: null, children: null };
-    const tmp2Result = tmp2(4423);
+    const tmp2Result = tmp2(4454);
     obj2.accessibilityLabel = tmp2Result.hexToColorName(tmp2(1091).int2hex(color), true);
     const obj3 = { selected };
     obj2.accessibilityState = obj3;
@@ -46,9 +46,9 @@ export default noop.memo((color) => {
     obj2.style = items;
     if (!selected) {
       obj2.children = null;
-      let tmp10Result1 = tmp6(tmp2(5137).PressableOpacity, obj2);
+      let tmp10Result1 = tmp6(tmp2(5173).PressableOpacity, obj2);
     } else {
-      const obj5 = { source: _modDef11595, color: null };
+      const obj5 = { source: _modDef11635, color: null };
       if (v < 0.5) {
         unsafe_rawColors = tmp8(576).unsafe_rawColors;
         let BLACK2 = unsafe_rawColors.WHITE;
@@ -69,7 +69,7 @@ export default noop.memo((color) => {
       obj6.children = null;
       tmp10Result1 = tmp10(tmp11, obj6);
     } else {
-      const obj8 = { source: _modDef11595, color: null };
+      const obj8 = { source: _modDef11635, color: null };
       if (v < 0.5) {
         let BLACK = tmp3(576).unsafe_rawColors.WHITE;
       } else {

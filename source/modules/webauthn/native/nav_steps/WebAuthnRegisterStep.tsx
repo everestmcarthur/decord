@@ -1,14 +1,14 @@
-// Module ID: 14703
-// Function ID: 14704
+// Module ID: 14752
+// Function ID: 14753
 // Name: WebAuthnRegisterStep
-// Dependencies: [32, 19, 17, 14686, 21, 4574, 576, 6963, 1114, 1178, 1483, 1115, 14704, 7137, 14705, 4570, 5447, 4989, 2]
+// Dependencies: [32, 19, 17, 14735, 21, 4605, 576, 6999, 1114, 1178, 1483, 1115, 14753, 7175, 14754, 4601, 5483, 5025, 2]
 // Exports: default
 
-// Module 14703 (WebAuthnRegisterStep)
+// Module 14752 (WebAuthnRegisterStep)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import NativeCeremoniesDefault from "NativeCeremonies" /* 6963 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 6999 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -42,10 +42,10 @@ function AndroidPasskeyRadioGroup(onChange) {
   return React5(native.RadioGroup, obj4);
 }
 const View = fn(17).View;
-const WebAuthnScreens = fn(14686).WebAuthnScreens;
+const WebAuthnScreens = fn(14735).WebAuthnScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { flexContainer: { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: 16, marginRight: 16, marginTop: 16 }, centerFlex: { display: "flex", alignItems: "center" }, margin: { marginTop: 16, textAlign: "center" }, radioItem: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md } };
 let closure_9 = createStyles.createStyles(obj2);
 let obj4 = { PASSKEY_CREDENTIAL_MANAGER: 0, [0]: "PASSKEY_CREDENTIAL_MANAGER", PASSKEY_DEVICE: 1, [1]: "PASSKEY_DEVICE", OTHER_AND_ANDROID_NONDISCOVERABLE: 2, [2]: "OTHER_AND_ANDROID_NONDISCOVERABLE" };
@@ -76,10 +76,10 @@ export default function WebAuthnRegisterStep() {
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
   const obj3 = navigation(1115);
-  const announceError = navigation(14704).useAnnounceError(tmp10);
+  const announceError = navigation(14753).useAnnounceError(tmp10);
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj4 = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_7(navigation(14705).KeyImage, {}), , ];
+  const items3 = [closure_7(navigation(14754).KeyImage, {}), , ];
   obj5 = { style: tmp4.margin, variant: "text-md/normal", children: null };
   const intl = tmp(1114).intl;
   const string = intl.string;
@@ -90,11 +90,11 @@ export default function WebAuthnRegisterStep() {
     stringResult = string(t.Lh5vTW);
   }
   obj5.children = stringResult;
-  items3[1] = closure_7(navigation(4570).Text, obj5);
+  items3[1] = closure_7(navigation(4601).Text, obj5);
   let tmp19Result = "" !== tmp10;
   if (tmp19Result) {
     const obj6 = { variant: "text-md/normal", color: "text-feedback-critical", children: tmp10 };
-    tmp19Result = tmp19(tmp(4570).Text, obj6);
+    tmp19Result = tmp19(tmp(4601).Text, obj6);
   }
   items3[2] = tmp19Result;
   obj4.children = items3;
@@ -114,7 +114,7 @@ export default function WebAuthnRegisterStep() {
     string2Result = string2(t2.oibaQa);
   }
   const obj8 = {
-    children: closure_7(navigation(4989).Button, {
+    children: closure_7(navigation(5025).Button, {
       text: string2Result,
       disabled: tmp7,
       loading: tmp7,
@@ -124,7 +124,7 @@ export default function WebAuthnRegisterStep() {
       size: "lg"
     })
   };
-  items4[2] = closure_7(navigation(5447).ButtonGroup, obj8);
+  items4[2] = closure_7(navigation(5483).ButtonGroup, obj8);
   rect.children = items4;
-  return closure_8(navigation(7137).SafeAreaPaddingView, rect);
+  return closure_8(navigation(7175).SafeAreaPaddingView, rect);
 };

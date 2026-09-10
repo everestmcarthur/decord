@@ -1,25 +1,25 @@
-// Module ID: 8746
-// Function ID: 8747
+// Module ID: 8783
+// Function ID: 8784
 // Name: GameProfileView
-// Dependencies: [19, 17, 21, 4574, 576, 7176, 7196, 8747, 8751, 8754, 8755, 8765, 8766, 8769, 8783, 8796, 8907, 8909, 8928, 8929, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 7214, 7234, 8784, 8788, 8791, 8792, 8802, 8803, 8806, 8820, 8833, 8944, 8946, 8965, 8966, 2]
 // Exports: default
 
-// Module 8746 (GameProfileView)
+// Module 8783 (GameProfileView)
 import nativeDefault from "native" /* 576 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7176 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
-import GameProfileHeaderDefault from "GameProfileHeader" /* 8747 */;
-import GameProfileMediaDefault from "GameProfileMedia" /* 8751 */;
-import GameProfileReviewsDefault from "GameProfileReviews" /* 8755 */;
-import GameProfileSummaryDefault from "GameProfileSummary" /* 8765 */;
-import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 8766 */;
-import GameProfileCommunityDefault from "GameProfileCommunity" /* 8769 */;
-import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 8783 */;
-import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 8796 */;
-import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 8907 */;
-import GameProfileDetailsDefault from "GameProfileDetails" /* 8909 */;
-import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 8928 */;
-import GameProfileReportButtonDefault from "GameProfileReportButton" /* 8929 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7214 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
+import GameProfileHeaderDefault from "GameProfileHeader" /* 8784 */;
+import GameProfileMediaDefault from "GameProfileMedia" /* 8788 */;
+import GameProfileReviewsDefault from "GameProfileReviews" /* 8792 */;
+import GameProfileSummaryDefault from "GameProfileSummary" /* 8802 */;
+import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 8803 */;
+import GameProfileCommunityDefault from "GameProfileCommunity" /* 8806 */;
+import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 8820 */;
+import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 8833 */;
+import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 8944 */;
+import GameProfileDetailsDefault from "GameProfileDetails" /* 8946 */;
+import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 8965 */;
+import GameProfileReportButtonDefault from "GameProfileReportButton" /* 8966 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -28,7 +28,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 }, body: null, buttonsContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 };
 obj2.body = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: 520, alignSelf: "center", width: "100%" };
@@ -78,7 +78,7 @@ export default function GameProfileView(arg0) {
       children: null
     };
     const obj5 = { game, websiteButtons, trackAction };
-    obj4.children = tmp5(tmp2(8754), obj5);
+    obj4.children = tmp5(tmp2(8791), obj5);
     tmp5Result = tmp5(tmp7, obj4);
   }
   items2[1] = tmp5Result;

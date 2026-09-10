@@ -1,13 +1,13 @@
 // Module ID: 500
 // Function ID: 501
 // Name: QosToken
-// Dependencies: [501, 3, 14223, 1224, 2]
+// Dependencies: [501, 3, 14272, 1224, 2]
 // Exports: buildQosToken
 
 // Module 500 (QosToken)
 import LoggerDefault from "Logger" /* 3 */;
 import ProtoUtils from "ProtoUtils" /* 1224 */;
-import qos_token from "qos_token" /* 14223 */;
+import qos_token from "qos_token" /* 14272 */;
 import DerivedQosDataStore from "DerivedQosDataStore" /* 501 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function buildQosTokenFromDerivedData(derivedQosData, isActive) {
   const ClientProvidedQosData = qos_token.ClientProvidedQosData;
   if (null != derivedQosData) {
     try {
-      derived = tmp2(1224).b64ToProto(tmp2(14223).DerivedQosData, derivedQosData);
+      derived = tmp2(1224).b64ToProto(tmp2(14272).DerivedQosData, derivedQosData);
       const tmp2Result = tmp2(1224);
     } catch (tmp5) {
       const _HermesInternal = HermesInternal;
@@ -25,7 +25,7 @@ function buildQosTokenFromDerivedData(derivedQosData, isActive) {
   }
   const obj = { isActive };
   const obj2 = ClientProvidedQosData.create({ isActive });
-  const QosToken = tmp2(14223).QosToken;
+  const QosToken = tmp2(14272).QosToken;
   return ProtoUtils.protoToB64(qos_token.QosToken, QosToken.create({ clientProvided: obj2, derived }));
 }
 const logger = new LoggerDefault("QOS");

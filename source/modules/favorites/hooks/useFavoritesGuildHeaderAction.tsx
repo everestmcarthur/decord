@@ -1,14 +1,14 @@
-// Module ID: 16184
-// Function ID: 16185
+// Module ID: 16233
+// Function ID: 16234
 // Name: useFavoritesGuildHeaderAction
-// Dependencies: [19, 1074, 10256, 1100, 1114, 3236, 2]
+// Dependencies: [19, 1074, 10294, 1100, 1114, 3236, 2]
 // Exports: default
 
-// Module 16184 (useFavoritesGuildHeaderAction)
+// Module 16233 (useFavoritesGuildHeaderAction)
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
-import FavoritesHooks from "FavoritesHooks" /* 10256 */;
+import FavoritesHooks from "FavoritesHooks" /* 10294 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

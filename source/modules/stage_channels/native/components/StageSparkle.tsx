@@ -1,21 +1,21 @@
-// Module ID: 8435
-// Function ID: 8436
+// Module ID: 8472
+// Function ID: 8473
 // Name: StageSparkle
-// Dependencies: [19, 17, 21, 4574, 576, 8436, 5601, 8437, 4284, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 8473, 5637, 8474, 4315, 2]
 // Exports: default
 
-// Module 8435 (StageSparkle)
+// Module 8472 (StageSparkle)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4284 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef8436 from "module_8436" /* 8436 */;
+import native from "native" /* 4315 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef8473 from "module_8473" /* 8473 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function StageSparkleInner(style) {
   ({ IconComponent, icon } = style);
   if (icon === undefined) {
-    icon = _modDef8436;
+    icon = _modDef8473;
   }
   const tmp3 = closure_6();
   const obj = { style: null, children: null };
@@ -33,15 +33,15 @@ function StageSparkleInner(style) {
   }
   obj2.children = tmp6Result;
   const items1 = [React4(View, obj2), ];
-  const obj5 = { style: tmp3.sparkles, source: tmp10(8437) };
-  items1[1] = React4(tmp10(5601), obj5);
+  const obj5 = { style: tmp3.sparkles, source: tmp10(8474) };
+  items1[1] = React4(tmp10(5637), obj5);
   obj.children = items1;
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { width: 88, height: 88, alignItems: "center", justifyContent: "center" }, iconContainer: null, iconStyle: null, sparkles: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 28, height: 56, width: 56, alignItems: "center", justifyContent: "center" };
 obj2.iconContainer = size;

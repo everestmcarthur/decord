@@ -1,20 +1,20 @@
-// Module ID: 16870
-// Function ID: 16871
+// Module ID: 16927
+// Function ID: 16928
 // Name: PermissionSpecUtils
-// Dependencies: [1961, 1979, 1074, 8429, 16871, 7265, 5031, 16872, 1114, 2024, 7283, 5431, 16873, 7282, 16874, 9095, 7781, 2]
+// Dependencies: [1961, 1979, 1074, 8466, 16928, 7303, 5067, 16929, 1114, 2024, 7321, 5467, 16930, 7320, 16931, 9132, 7818, 2]
 
-// Module 16870 (PermissionSpecUtils)
+// Module 16927 (PermissionSpecUtils)
 import util from "util" /* 1114 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5031 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7282 */;
-import tracking_Tracking from "tracking/Tracking" /* 7781 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8429 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9095 */;
-import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 16871 */;
-import HangoutWindowExperiment from "HangoutWindowExperiment" /* 16872 */;
-import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 16874 */;
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5067 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7320 */;
+import tracking_Tracking from "tracking/Tracking" /* 7818 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8466 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9132 */;
+import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 16928 */;
+import HangoutWindowExperiment from "HangoutWindowExperiment" /* 16929 */;
+import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 16931 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
@@ -24,8 +24,8 @@ function getPermissionOptions(id) {
   const guild = GuildStore.getGuild(id);
   let result1 = null != guild;
   if (result1) {
-    result1 = tmp(7265).isCreatorMonetizationEnabledGuild(guild);
-    const tmpResult = tmp(7265);
+    result1 = tmp(7303).isCreatorMonetizationEnabledGuild(guild);
+    const tmpResult = tmp(7303);
   }
   const soundmojiRenderingExperiment = SoundmojiRenderingExperiment.getSoundmojiRenderingExperiment({ location: "getPermissionOptions" });
   const tmpResult3 = SoundmojiRenderingExperiment;
@@ -62,15 +62,15 @@ export default {
     const tmp3 = closure_11(stateFromStores, arg2, obj);
     const tmp4 = set;
     let channelEventsSection = dependencyMap;
-    const VoiceInThreadsExperiment = set(7283).VoiceInThreadsExperiment;
+    const VoiceInThreadsExperiment = set(7321).VoiceInThreadsExperiment;
     let enabled = VoiceInThreadsExperiment.getCurrentConfig({ guildId: guild_id, location: "3ad37d_1" }).enabled;
     if (enabled) {
       enabled = set.has(stateFromStores.type);
     }
     const obj2 = { guildId: guild_id, location: "3ad37d_1" };
-    const tmp4Result = tmp4(5431);
-    const isStageVideoEnabledResult = tmp4(5431).isStageVideoEnabled(guild_id);
-    let result = tmp4(16873).canCurrentUserManageMessageFilters(guild_id);
+    const tmp4Result = tmp4(5467);
+    const isStageVideoEnabledResult = tmp4(5467).isStageVideoEnabled(guild_id);
+    let result = tmp4(16930).canCurrentUserManageMessageFilters(guild_id);
     const isMediaChannelResult = stateFromStores.isMediaChannel();
     importDefault = isMediaChannelResult;
     set = new Set();
@@ -104,13 +104,13 @@ export default {
       items[4] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl27.string(tmp4(1114).t["rrh/W6"]));
       if (tmp.showStageChannelPermissions) {
         const intl28 = tmp4(1114).intl;
-        const items1 = [obj33(16874).generateChannelStageSection(tmp3, intl28.string(tmp4(1114).t.yniauk))];
+        const items1 = [obj33(16931).generateChannelStageSection(tmp3, intl28.string(tmp4(1114).t.yniauk))];
         let items2 = items1;
-        const obj33Result = obj33(16874);
+        const obj33Result = obj33(16931);
       } else {
         items2 = [];
       }
-      obj33 = obj33(16874);
+      obj33 = obj33(16931);
       const intl29 = tmp4(1114).intl;
       channelEventsSection = obj33.generateChannelEventsSection(tmp3, intl29.string(tmp4(1114).t.b8lplT));
       items[HermesBuiltin.arraySpread(items2, 5)] = channelEventsSection;
@@ -173,9 +173,9 @@ export default {
         items4[5] = obj21.generateChannelVoiceChatSection(tmp3, intl13.string(tmp4(1114).t.iqlsnD), obj12);
         const stringResult1 = intl13.string(tmp4(1114).t.iqlsnD);
         const intl15 = tmp4(1114).intl;
-        items4[6] = tmp27(16874).generateChannelAppsSection(tmp3, intl15.string(tmp4(1114).t["rrh/W6"]), { showActivities: false });
+        items4[6] = tmp27(16931).generateChannelAppsSection(tmp3, intl15.string(tmp4(1114).t["rrh/W6"]), { showActivities: false });
         items5 = items4;
-        const tmp27Result = tmp27(16874);
+        const tmp27Result = tmp27(16931);
       } else {
         if (tmp16.GUILD_FORUM !== type) {
           if (tmp16.GUILD_MEDIA !== type) {
@@ -191,9 +191,9 @@ export default {
             items5[3] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl33.string(tmp4(1114).t["rrh/W6"]));
             if (enabled) {
               const intl = tmp4(1114).intl;
-              const items6 = [tmp38(16874).generateChannelVoiceSection(tmp3, intl.string(tmp4(1114).t["46Ra1b"]))];
+              const items6 = [tmp38(16931).generateChannelVoiceSection(tmp3, intl.string(tmp4(1114).t["46Ra1b"]))];
               let items7 = items6;
-              const tmp38Result = tmp38(16874);
+              const tmp38Result = tmp38(16931);
             } else {
               items7 = [];
             }
@@ -233,9 +233,9 @@ export default {
         items8[3] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl6.string(tmp4(1114).t["rrh/W6"]));
         if (enabled) {
           const intl7 = tmp4(1114).intl;
-          const items9 = [tmp22(16874).generateChannelVoiceSection(tmp3, intl7.string(tmp4(1114).t["46Ra1b"]))];
+          const items9 = [tmp22(16931).generateChannelVoiceSection(tmp3, intl7.string(tmp4(1114).t["46Ra1b"]))];
           let items10 = items9;
-          const tmp22Result2 = tmp22(16874);
+          const tmp22Result2 = tmp22(16931);
         } else {
           items10 = [];
         }

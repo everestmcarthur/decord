@@ -1,13 +1,13 @@
-// Module ID: 9774
-// Function ID: 9775
+// Module ID: 9812
+// Function ID: 9813
 // Name: AppChannelApplicationSelector
-// Dependencies: [19, 21, 9775, 1114, 5701, 5619, 9777, 4541, 9778, 1896, 9778, 2]
+// Dependencies: [19, 21, 9813, 1114, 5737, 5655, 9815, 4572, 9816, 1896, 9816, 2]
 // Exports: default
 
-// Module 9774 (AppChannelApplicationSelector)
+// Module 9812 (AppChannelApplicationSelector)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet" /* 9778 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet" /* 9816 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,7 +51,7 @@ export default function AppChannelApplicationSelector(guildId) {
   if (true !== disabled && !hasNoApplications) {
     fn = () => {
       const obj = ActionSheetActionCreatorsDefault;
-      obj.openLazy(asyncRequireImpl(9778, dependencyMap.paths), AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY, { guildId, channelId, selectedApplicationId, onChange });
+      obj.openLazy(asyncRequireImpl(9816, dependencyMap.paths), AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY, { guildId, channelId, selectedApplicationId, onChange });
     };
   }
   obj3.onPress = fn;

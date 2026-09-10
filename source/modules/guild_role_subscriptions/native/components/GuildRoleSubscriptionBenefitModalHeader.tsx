@@ -1,27 +1,27 @@
-// Module ID: 17792
-// Function ID: 17793
+// Module ID: 17851
+// Function ID: 17852
 // Name: GuildRoleSubscriptionBenefitModalHeader
-// Dependencies: [32, 19, 17, 1074, 21, 4574, 576, 5538, 15259, 7137, 9082, 4570, 1114, 1178, 2]
+// Dependencies: [32, 19, 17, 1074, 21, 4605, 576, 5574, 15308, 7175, 9119, 4601, 1114, 1178, 2]
 // Exports: default
 
-// Module 17792 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 17851 (GuildRoleSubscriptionBenefitModalHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9082 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15259 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7175 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9119 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15308 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5538 */;
+import TextStyles_mod from "TextStyles" /* 5574 */;
 
 require = fn;
 const View = fn(17).View;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { headerContainer: { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", paddingBottom: 8, paddingHorizontal: 16 }, headerButtonContainer: { flexDirection: "row", alignSelf: "center", minWidth: 60 }, headerButtonStart: { alignItems: "flex-start" }, headerButtonEnd: { alignItems: "flex-end" }, headerButton: null, disabledButton: null, titleContainer: null, title: null, subtitle: null };
 let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));

@@ -1,19 +1,19 @@
-// Module ID: 4433
-// Function ID: 4434
+// Module ID: 4464
+// Function ID: 4465
 // Name: getInitialNavigationState
-// Dependencies: [32, 502, 4399, 2011, 1074, 3, 4434, 1100, 4400, 4413, 4437, 2]
+// Dependencies: [32, 502, 4430, 2011, 1074, 3, 4465, 1100, 4431, 4444, 4468, 2]
 // Exports: computeInitialNavigationState, default, getInitialAuthState, wrapRouteForRootNavigator
 
-// Module 4433 (getInitialNavigationState)
+// Module 4464 (getInitialNavigationState)
 import LoggerDefault from "Logger" /* 3 */;
 import router_utils from "router_utils" /* 1100 */;
-import matchPathCompat from "matchPathCompat" /* 4400 */;
-import RouteUtils from "RouteUtils" /* 4413 */;
-import useChatLayout from "useChatLayout" /* 4434 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4437 */;
+import matchPathCompat from "matchPathCompat" /* 4431 */;
+import RouteUtils from "RouteUtils" /* 4444 */;
+import useChatLayout from "useChatLayout" /* 4465 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4468 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4399 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4430 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 require = fn;
@@ -84,9 +84,9 @@ function computeInitialNavigationStateWithoutLogging() {
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
     if (null == matchPathResult) {
       const obj6 = { path: null };
-      const RouteParam3 = tmp(4413).RouteParam;
-      const tmpResult = tmp(4400);
-      const RouteParam4 = tmp(4413).RouteParam;
+      const RouteParam3 = tmp(4444).RouteParam;
+      const tmpResult = tmp(4431);
+      const RouteParam4 = tmp(4444).RouteParam;
       obj6.path = obj5.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
       let matchPathResult1 = tmpResult.matchPath(DefaultRouteStore.lastNonVoiceRoute, obj6);
       let flag = false;

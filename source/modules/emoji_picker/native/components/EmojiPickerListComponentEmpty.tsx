@@ -1,20 +1,20 @@
-// Module ID: 10348
-// Function ID: 10349
+// Module ID: 10386
+// Function ID: 10387
 // Name: EmojiPickerListComponentEmpty
-// Dependencies: [19, 17, 21, 4574, 576, 10349, 10353, 6641, 1178, 1114, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 10387, 10391, 6677, 1178, 1114, 2]
 
-// Module 10348 (EmojiPickerListComponentEmpty)
+// Module 10386 (EmojiPickerListComponentEmpty)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import SearchEmpty from "SearchEmpty" /* 10349 */;
-import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 10353 */;
+import SearchEmpty from "SearchEmpty" /* 10387 */;
+import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 10391 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE }, emptyStateImage: null };
 let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.emptyStateImage = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };
@@ -32,7 +32,7 @@ export default noop.memo(function EmojiPickerListComponentEmpty(insetBottom) {
   const searchEmptySource = SearchEmpty.useSearchEmptySource();
   const modalDismissGuardRefreshControl = useModalDismissGuardRefreshControl.useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp3(6641).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp3(6677).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }

@@ -1,13 +1,13 @@
-// Module ID: 6233
-// Function ID: 6234
+// Module ID: 6269
+// Function ID: 6270
 // Name: LavaIllocon
-// Dependencies: [21, 5601, 6234, 2]
+// Dependencies: [21, 5637, 6270, 2]
 // Exports: LavaIllocon
 
-// Module 6233 (LavaIllocon)
+// Module 6269 (LavaIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6234 from "module_6234" /* 6234 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6270 from "module_6270" /* 6270 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const LavaIllocon = function LavaIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6234 };
+  const obj2 = { uri: _modDef6270 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

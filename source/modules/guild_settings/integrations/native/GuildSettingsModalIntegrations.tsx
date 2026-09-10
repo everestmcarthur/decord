@@ -1,14 +1,14 @@
-// Module ID: 17594
-// Function ID: 17595
+// Module ID: 17653
+// Function ID: 17654
 // Name: GuildSettingsModalIntegrations
-// Dependencies: [19, 17, 4212, 9096, 1074, 21, 4574, 576, 4275, 1483, 504, 4509, 17558, 8626, 4987, 5701, 5619, 1114, 16766, 16879, 15188, 5297, 1396, 4425, 7054, 2]
+// Dependencies: [19, 17, 4243, 9133, 1074, 21, 4605, 576, 4306, 1483, 504, 4540, 17617, 8663, 5023, 5737, 5655, 1114, 16823, 16936, 15237, 5333, 1396, 4456, 7092, 2]
 // Exports: default
 
-// Module 17594 (GuildSettingsModalIntegrations)
+// Module 17653 (GuildSettingsModalIntegrations)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9096 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9133 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let items = [, ];
 ({ TWITCH: arr[0], YOUTUBE: arr[1] } = PlatformTypes);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, screenContent: null, platformIcon: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.screenContent = { paddingTop: nativeDefault.space.PX_16 };

@@ -1,12 +1,12 @@
-// Module ID: 11648
-// Function ID: 11649
+// Module ID: 11688
+// Function ID: 11689
 // Name: openPinnedMessages
-// Dependencies: [10948, 4432, 2]
+// Dependencies: [10988, 4463, 2]
 // Exports: default
 
-// Module 11648 (openPinnedMessages)
-import RootNavigationRef from "RootNavigationRef" /* 4432 */;
-import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10948 */;
+// Module 11688 (openPinnedMessages)
+import RootNavigationRef from "RootNavigationRef" /* 4463 */;
+import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10988 */;
 import size from "module_2" /* 2 */;
 
 const constants = ChannelDetailsConstants.ChannelDetailsNavigatorScreens;

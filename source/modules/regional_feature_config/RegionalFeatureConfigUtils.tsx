@@ -1,12 +1,12 @@
-// Module ID: 5437
-// Function ID: 5438
+// Module ID: 5473
+// Function ID: 5474
 // Name: RegionalFeatureConfigUtils
-// Dependencies: [4789, 504, 2]
+// Dependencies: [4820, 504, 2]
 // Exports: hasAgeGatedFeatures, hasTeenDefaults, isFeatureAgeGated, isSettingTeenByDefault, shouldCollectAppStoreSignal, useHasAgeGatedFeatures, useHasTeenDefaults, useIsFeatureAgeGated, useIsSettingTeenByDefault
 
-// Module 5437 (RegionalFeatureConfigUtils)
+// Module 5473 (RegionalFeatureConfigUtils)
 import initialize from "initialize" /* 504 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4789 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4820 */;
 
 const require = globalThis.__r;
 

@@ -1,9 +1,9 @@
-// Module ID: 16226
-// Function ID: 16227
+// Module ID: 16275
+// Function ID: 16276
 // Name: UnclaimedGamesStore
 // Dependencies: [504, 573, 2]
 
-// Module 16226 (UnclaimedGamesStore)
+// Module 16275 (UnclaimedGamesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

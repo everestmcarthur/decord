@@ -1,17 +1,17 @@
-// Module ID: 13375
-// Function ID: 13376
+// Module ID: 13424
+// Function ID: 13425
 // Name: PremiumAccountCredit
-// Dependencies: [19, 17, 7408, 1074, 21, 4574, 576, 4231, 1114, 3074, 7186, 4570, 504, 12, 2]
+// Dependencies: [19, 17, 7446, 1074, 21, 4605, 576, 4262, 1114, 3074, 7224, 4601, 504, 12, 2]
 // Exports: default
 
-// Module 13375 (PremiumAccountCredit)
+// Module 13424 (PremiumAccountCredit)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PremiumUtils from "PremiumUtils" /* 4231 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import GameIcon from "GameIcon" /* 7186 */;
+import PremiumUtils from "PremiumUtils" /* 4262 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import GameIcon from "GameIcon" /* 7224 */;
 import noop from "module_19" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 7408 */;
+import EntitlementStore from "EntitlementStore" /* 7446 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 const GameIconDefault = GameIcon;
@@ -35,14 +35,14 @@ function AccountCreditTier(arg0) {
             const _Date2 = Date;
             let date = new Date(currentSubscription.pauseEndsAt);
           }
-          let num = tmp2(4231).extendDateWithUnconsumedFractionalPremium(date, unconsumedFractionalPremiumUnits);
+          let num = tmp2(4262).extendDateWithUnconsumedFractionalPremium(date, unconsumedFractionalPremiumUnits);
           const intl2 = tmp2(1114).intl;
           if (num == null) {
             num = 0;
           }
           const obj4 = { date: num };
           stringResult = intl2.formatToPlainString(tmp2(1114).t["5CNRRA"], obj4);
-          const tmp2Result = tmp2(4231);
+          const tmp2Result = tmp2(4262);
         }
         const _Date = Date;
         date = new Date(currentSubscription.currentPeriodEnd);
@@ -71,7 +71,7 @@ function AccountCreditTier(arg0) {
   let tmp21Result = !tmp17;
   if (!(null != currentSubscription && currentSubscription.isPurchasedExternally)) {
     const obj10 = { style: tmp.subText, variant: "text-xs/medium", color: "text-default", children: stringResult };
-    tmp21Result = tmp21(tmp2(4570).Text, obj10);
+    tmp21Result = tmp21(tmp2(4601).Text, obj10);
   }
   items2[1] = tmp21Result;
   obj8.children = items2;
@@ -87,7 +87,7 @@ const View = fn(17).View;
 const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { title: { marginBottom: 12 }, creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, creditItem: { flexDirection: "row", alignItems: "center", padding: 16 }, textContainer: { marginLeft: 16, marginRight: 16, flexDirection: "column", flex: 1 }, headerText: { lineHeight: 20 }, subText: { lineHeight: 16 }, timeText: { lineHeight: 20, alignSelf: "flex-start" }, divider: null, creditDescription: null };
 let obj3 = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.divider = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -125,7 +125,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
       const intl = tmp2(1114).intl;
       obj3.children = intl.string(tmp2(1114).t.YugZY0);
-      const items1 = [closure_6(tmp2(4570).Text, obj3), , , ];
+      const items1 = [closure_6(tmp2(4601).Text, obj3), , , ];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
       obj4.style = items2;
@@ -139,7 +139,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj5 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
       const intl2 = tmp2(1114).intl;
       obj5.children = intl2.string(tmp2(1114).t.kNEjGm);
-      items1[2] = closure_6(tmp2(4570).Text, obj5);
+      items1[2] = closure_6(tmp2(4601).Text, obj5);
       let tmp9Result = null;
       if (null != currentSubscription) {
         tmp9Result = null;
@@ -147,7 +147,7 @@ export default function PremiumAccountCredit(currentSubscription) {
           const obj6 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
           const intl3 = tmp2(1114).intl;
           obj6.children = intl3.string(tmp2(1114).t.azRP0E);
-          tmp9Result = closure_6(tmp2(4570).Text, obj6);
+          tmp9Result = closure_6(tmp2(4601).Text, obj6);
         }
       }
       items1[3] = tmp9Result;

@@ -1,14 +1,14 @@
-// Module ID: 10243
-// Function ID: 10244
+// Module ID: 10281
+// Function ID: 10282
 // Name: BugReporterFeatureActionSheet
-// Dependencies: [32, 19, 17, 21, 4574, 576, 4570, 10219, 5619, 4541, 5703, 6995, 12, 5531, 7063, 10244, 7164, 7163, 1114, 7064, 7069, 2]
+// Dependencies: [32, 19, 17, 21, 4605, 576, 4601, 10257, 5655, 4572, 5739, 7033, 12, 5567, 7101, 10282, 7202, 7201, 1114, 7102, 7107, 2]
 // Exports: default
 
-// Module 10243 (BugReporterFeatureActionSheet)
+// Module 10281 (BugReporterFeatureActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { list: { paddingHorizontal: nativeDefault.space.PX_12 }, searchBar: null, sectionHeader: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.searchBar = { paddingHorizontal: nativeDefault.space.PX_12 };
@@ -35,9 +35,9 @@ let closure_10 = noop.memo((item) => {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  const featureId = item(10219).getFeatureId(item);
-  const obj = item(10219);
-  const featureId1 = item(10219).getFeatureId(feature);
+  const featureId = item(10257).getFeatureId(item);
+  const obj = item(10257);
+  const featureId1 = item(10257).getFeatureId(feature);
   const obj3 = {
     start,
     end,
@@ -46,9 +46,9 @@ let closure_10 = noop.memo((item) => {
       setFeature(item);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     },
-    trailing: closure_6(item(5703).FormRadio, { selected: featureId === featureId1 })
+    trailing: closure_6(item(5739).FormRadio, { selected: featureId === featureId1 })
   };
-  return closure_6(item(5619).TableRow, obj3);
+  return closure_6(item(5655).TableRow, obj3);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");

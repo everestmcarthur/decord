@@ -1,24 +1,24 @@
-// Module ID: 13378
-// Function ID: 13379
+// Module ID: 13427
+// Function ID: 13428
 // Name: useBuyNitroMarketingLifecycleHooks
-// Dependencies: [19, 7435, 1954, 4574, 576, 13379, 10774, 4394, 1943, 1945, 13383, 13384, 2]
+// Dependencies: [19, 7473, 1954, 4605, 576, 13428, 10812, 4425, 1943, 1945, 13432, 13433, 2]
 // Exports: useBuyNitroMarketingLifecycleHooks
 
-// Module 13378 (useBuyNitroMarketingLifecycleHooks)
+// Module 13427 (useBuyNitroMarketingLifecycleHooks)
 import nativeDefault from "native" /* 576 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUtilsAll from "DismissibleContentUtils" /* 1945 */;
-import DismissibleContentUnsafeUtilsAll from "DismissibleContentUnsafeUtils" /* 4394 */;
-import useBuyNitroPurchaseLock from "useBuyNitroPurchaseLock" /* 13383 */;
+import DismissibleContentUnsafeUtilsAll from "DismissibleContentUnsafeUtils" /* 4425 */;
+import useBuyNitroPurchaseLock from "useBuyNitroPurchaseLock" /* 13432 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PremiumPlanPurchasedStore = fn(7435);
+const PremiumPlanPurchasedStore = fn(7473);
 ({ reset: closure_4, usePremiumPlanPurchasedStore: hasOwnProperty } = PremiumPlanPurchasedStore);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { navigator: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopWidth: 0 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -53,11 +53,11 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
     BuyNitroPurchaseLock.end();
     let result = nativeStackNavigation(_navigator[11]).resetBuyNitroTrialAndPriceOverrides();
     return () => {
-      const BuyNitroPurchaseLock = nativeStackNavigation(13383).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock = nativeStackNavigation(13432).BuyNitroPurchaseLock;
       BuyNitroPurchaseLock.end();
-      const BuyNitroPurchaseLock2 = nativeStackNavigation(13383).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock2 = nativeStackNavigation(13432).BuyNitroPurchaseLock;
       const result = BuyNitroPurchaseLock2.setInitialLoadComplete(false);
-      const result1 = nativeStackNavigation(13384).resetBuyNitroTrialAndPriceOverrides();
+      const result1 = nativeStackNavigation(13433).resetBuyNitroTrialAndPriceOverrides();
     };
   }, []);
   const items1 = [initialLoadCompleted];

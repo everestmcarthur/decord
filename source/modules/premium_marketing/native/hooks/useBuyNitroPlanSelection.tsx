@@ -1,11 +1,11 @@
-// Module ID: 13385
-// Function ID: 13386
+// Module ID: 13434
+// Function ID: 13435
 // Name: useBuyNitroPlanSelection
-// Dependencies: [32, 19, 1373, 7423, 7461, 7460, 13384, 8075, 10739, 9411, 9396, 2]
+// Dependencies: [32, 19, 1373, 7461, 7499, 7498, 13433, 8113, 10777, 9449, 9434, 2]
 // Exports: useBuyNitroPlanSelection
 
-// Module 13385 (useBuyNitroPlanSelection)
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7423 */;
+// Module 13434 (useBuyNitroPlanSelection)
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7461 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

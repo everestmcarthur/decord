@@ -1,13 +1,13 @@
-// Module ID: 10975
-// Function ID: 10976
+// Module ID: 11015
+// Function ID: 11016
 // Name: guild_instant_invites/InstantInviteUtils
-// Dependencies: [5, 1957, 1371, 1074, 1114, 10969, 10976, 8389, 7773, 7203, 4271, 9852, 8406, 4272, 2]
+// Dependencies: [5, 1957, 1371, 1074, 1114, 11009, 11016, 8426, 7810, 7241, 4302, 9890, 8443, 4303, 2]
 // Exports: useInviteActions
 
-// Module 10975 (guild_instant_invites/InstantInviteUtils)
-import ToastUtils from "ToastUtils" /* 4271 */;
-import getInviteURLDefault from "getInviteURL" /* 7773 */;
-import _modDef10976 from "module_10976" /* 10976 */;
+// Module 11015 (guild_instant_invites/InstantInviteUtils)
+import ToastUtils from "ToastUtils" /* 4302 */;
+import getInviteURLDefault from "getInviteURL" /* 7810 */;
+import _modDef11016 from "module_11016" /* 11016 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -31,9 +31,9 @@ export const useInviteActions = function useInviteActions(invite) {
   const obj = { label: null, iconSource: null, action: null };
   let intl = invite(1114).intl;
   obj.label = intl.string(invite(1114).t.RDE0Sc);
-  obj.iconSource = onInviteRevoked(10969).share;
+  obj.iconSource = onInviteRevoked(11009).share;
   obj.action = function action() {
-    _modDef10976(() => {
+    _modDef11016(() => {
       let tmp4;
       if (!closure_1_3) {
         tmp4 = onInviteRevoked(tmp2[8])(closure_1_0.code);
@@ -65,14 +65,14 @@ export const useInviteActions = function useInviteActions(invite) {
   let obj2 = { label: null, iconSource: null, action: null };
   const intl2 = invite(1114).intl;
   obj2.label = intl2.string(invite(1114).t.OpuAlK);
-  obj2.iconSource = onInviteRevoked(10969).copy;
+  obj2.iconSource = onInviteRevoked(11009).copy;
   obj2.action = function action() {
     if (c3) {
-      const tmpResult = tmp(9852);
+      const tmpResult = tmp(9890);
       tmpResult.handleCopy(invite.code, invite.channel, InstantInviteSources.GROUP_DM, false);
     } else {
-      tmp(7203).copy(getInviteURLDefault(invite.code));
-      const tmpResult2 = tmp(7203);
+      tmp(7241).copy(getInviteURLDefault(invite.code));
+      const tmpResult2 = tmp(7241);
       const result = ToastUtils.presentCopiedToClipboard();
     }
   };
@@ -80,7 +80,7 @@ export const useInviteActions = function useInviteActions(invite) {
   let obj3 = { label: null, iconSource: null, variant: "destructive", action: null };
   const intl3 = invite(1114).intl;
   obj3.label = intl3.string(invite(1114).t.v6Yazx);
-  obj3.iconSource = onInviteRevoked(10969).revoke;
+  obj3.iconSource = onInviteRevoked(11009).revoke;
   dependencyMap = asyncGeneratorStep(async () => {
     await v2(tmp24[12]).revokeInvite(invite);
     if (1 === tmp7) {

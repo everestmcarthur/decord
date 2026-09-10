@@ -1,10 +1,10 @@
-// Module ID: 11224
-// Function ID: 11225
+// Module ID: 11264
+// Function ID: 11265
 // Name: AdAnalyticsInterfaceExperiment
 // Dependencies: [1433, 2]
 // Exports: shouldMigrateToAdAnalyticsInterface
 
-// Module 11224 (AdAnalyticsInterfaceExperiment)
+// Module 11264 (AdAnalyticsInterfaceExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

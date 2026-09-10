@@ -1,10 +1,10 @@
-// Module ID: 10115
-// Function ID: 10116
+// Module ID: 10153
+// Function ID: 10154
 // Name: FamilyCenterRestrictedHoursUtils
 // Dependencies: [1379, 1114, 2396, 2]
 // Exports: computeOverlappingInfo, formatDuration, formatRestrictedScheduleInAppSubtitle, formatTime, getShortDayLabels, sortRulesByStartTime, timeToMinutes, toTimeProto
 
-// Module 10115 (FamilyCenterRestrictedHoursUtils)
+// Module 10153 (FamilyCenterRestrictedHoursUtils)
 import util from "util" /* 1114 */;
 import user from "user" /* 1379 */;
 import _modDef2396 from "module_2396" /* 2396 */;

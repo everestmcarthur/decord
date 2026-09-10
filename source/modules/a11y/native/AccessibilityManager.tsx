@@ -1,18 +1,18 @@
-// Module ID: 14462
-// Function ID: 14463
+// Module ID: 14511
+// Function ID: 14512
 // Name: AccessibilityManager
-// Dependencies: [5, 17, 4566, 1074, 1186, 14463, 573, 1242, 14466, 11386, 14464, 4422, 4425, 2]
+// Dependencies: [5, 17, 4597, 1074, 1186, 14512, 573, 1242, 14515, 11426, 14513, 4453, 4456, 2]
 
-// Module 14462 (AccessibilityManager)
+// Module 14511 (AccessibilityManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4422 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11386 */;
-import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 14463 */;
-import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14464 */;
-import updateSaturation from "updateSaturation" /* 14466 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4453 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11426 */;
+import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 14512 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14513 */;
+import updateSaturation from "updateSaturation" /* 14515 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

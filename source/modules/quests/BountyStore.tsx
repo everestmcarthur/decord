@@ -1,9 +1,9 @@
-// Module ID: 7716
-// Function ID: 7717
+// Module ID: 7753
+// Function ID: 7754
 // Name: BountyStore
 // Dependencies: [504, 573, 2]
 
-// Module 7716 (BountyStore)
+// Module 7753 (BountyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

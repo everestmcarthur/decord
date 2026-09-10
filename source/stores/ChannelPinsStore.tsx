@@ -1,20 +1,20 @@
-// Module ID: 11706
-// Function ID: 11707
+// Module ID: 11746
+// Function ID: 11747
 // Name: ChannelPinsStore
-// Dependencies: [2025, 1957, 2021, 1979, 4795, 4222, 1371, 4797, 12, 7614, 504, 573, 2]
+// Dependencies: [2025, 1957, 2021, 1979, 4826, 4253, 1371, 4828, 12, 7651, 504, 573, 2]
 
-// Module 11706 (ChannelPinsStore)
+// Module 11746 (ChannelPinsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4797 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7614 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4828 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7651 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import MessageStore from "MessageStore" /* 4795 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import MessageStore from "MessageStore" /* 4826 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

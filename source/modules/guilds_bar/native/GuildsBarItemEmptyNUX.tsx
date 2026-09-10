@@ -1,14 +1,14 @@
-// Module ID: 16384
-// Function ID: 16385
+// Module ID: 16433
+// Function ID: 16434
 // Name: GuildsBarItemEmptyNUX
-// Dependencies: [19, 17, 4395, 16318, 1074, 11116, 21, 4574, 576, 7356, 4275, 504, 4310, 4988, 16055, 16328, 1114, 16385, 16327, 5603, 16339, 4570, 2]
+// Dependencies: [19, 17, 4426, 16364, 1074, 11156, 21, 4605, 576, 7394, 4306, 504, 4341, 5024, 16102, 16377, 1114, 16434, 16376, 5639, 16388, 4601, 2]
 
-// Module 16384 (GuildsBarItemEmptyNUX)
+// Module 16433 (GuildsBarItemEmptyNUX)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 4988 */;
-import transitionToGuild from "transitionToGuild" /* 7356 */;
+import spring from "spring" /* 5024 */;
+import transitionToGuild from "transitionToGuild" /* 7394 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
 
 require = fn;
 function handlePress() {
@@ -16,13 +16,13 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const GuildsBarConstants = fn(16318);
+const GuildsBarConstants = fn(16364);
 ({ GUILD_ITEM_HIT_SLOP: closure_8, useGuildWrapperSize: closure_9 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1074).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(11116).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11156).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_14 = createStyles.createStyles((width, arg1) => {
   const diff = width - 10;
   const obj = { root: { alignSelf: "stretch", paddingLeft: hitSlop.left, marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING }, container: { position: "relative", flexDirection: "row", alignItems: "center", height: 55, width }, guildIndicator: null, icon: null, backdrop: null, expandedChildren: null };

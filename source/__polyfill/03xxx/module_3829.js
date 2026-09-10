@@ -1,40 +1,46 @@
 // Module ID: 3829
 // Function ID: 3830
-// Dependencies: [3667, 3812, 3664]
-// Exports: default
+// Dependencies: [3830, 3831, 3832, 3833, 3834]
 
 // Module 3829
-import module_3667_mod from "module_3667" /* 3667 */;
-import module_3812_mod from "module_3812" /* 3812 */;
-import requiredArgs_mod from "requiredArgs" /* 3664 */;
+import module_3830 from "module_3830" /* 3830 */;
+import module_3831 from "module_3831" /* 3831 */;
+import module_3832 from "module_3832" /* 3832 */;
+import date_mod from "module_3833" /* 3833 */;
+import date_mod from "module_3834" /* 3834 */;
 
-let module_3667 = module_3667_mod;
-if (!module_3667) {
-  const obj = { default: module_3667 };
+if (!module_3830) {
+  const obj = { default: module_3830 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3667;
+  tmp3 = module_3830;
 }
-module_3667 = tmp3;
-let module_3812 = module_3812_mod;
-if (!module_3812) {
-  const obj2 = { default: module_3812 };
+if (!module_3831) {
+  const obj2 = { default: module_3831 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_3812;
+  tmp5 = module_3831;
 }
-module_3812 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+if (!module_3832) {
+  const obj3 = { default: module_3832 };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_3832;
 }
-requiredArgs = tmp7;
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default function addQuarters(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_3812.default(arg0, 3 * module_3667.default(arg1));
-};
+export default { code: "tr", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

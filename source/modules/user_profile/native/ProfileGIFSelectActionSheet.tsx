@@ -1,16 +1,16 @@
-// Module ID: 14639
-// Function ID: 14640
+// Module ID: 14688
+// Function ID: 14689
 // Name: ProfileGIFSelectActionSheet
-// Dependencies: [32, 5, 19, 17, 21, 4574, 576, 5171, 14621, 8195, 8193, 8190, 8192, 7003, 4541, 7164, 7163, 1114, 8695, 10396, 2]
+// Dependencies: [32, 5, 19, 17, 21, 4605, 576, 5207, 14670, 8232, 8230, 8227, 8229, 7041, 4572, 7202, 7201, 1114, 8732, 10434, 2]
 // Exports: default
 
-// Module 14639 (ProfileGIFSelectActionSheet)
+// Module 14688 (ProfileGIFSelectActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8695 */;
-import GIFPickerDefault from "GIFPicker" /* 10396 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7201 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7202 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8732 */;
+import GIFPickerDefault from "GIFPicker" /* 10434 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { titleWrapper: { flex: 0 }, titleContainer: { justifyContent: "flex-start" }, gifPicker: { flex: 1, marginTop: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 } };
 let closure_9 = createStyles.createStyles(obj2);
 let obj4 = { AVATAR: 0, [0]: "AVATAR", BANNER: 1, [1]: "BANNER" };

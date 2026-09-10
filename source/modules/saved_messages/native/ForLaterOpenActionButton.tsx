@@ -1,22 +1,22 @@
-// Module ID: 16438
-// Function ID: 16439
+// Module ID: 16487
+// Function ID: 16488
 // Name: ForLaterOpenActionButton
-// Dependencies: [19, 17, 11691, 21, 8847, 16439, 4574, 576, 4509, 4275, 4995, 7874, 4537, 11738, 504, 7869, 7864, 7867, 7196, 7873, 8113, 1114, 2]
+// Dependencies: [19, 17, 11731, 21, 8884, 16488, 4605, 576, 4540, 4306, 5031, 7911, 4568, 11778, 504, 7906, 7901, 7904, 7234, 7910, 8150, 1114, 2]
 
-// Module 16438 (ForLaterOpenActionButton)
+// Module 16487 (ForLaterOpenActionButton)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4275 */;
-import useThemeDefault from "useTheme" /* 4509 */;
-import ButtonHooks from "ButtonHooks" /* 4995 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7864 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7867 */;
-import showForLaterModal from "showForLaterModal" /* 7873 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7874 */;
+import useToken from "useToken" /* 4306 */;
+import useThemeDefault from "useTheme" /* 4540 */;
+import ButtonHooks from "ButtonHooks" /* 5031 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7901 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7904 */;
+import showForLaterModal from "showForLaterModal" /* 7910 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7911 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11691 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11731 */;
 
-const ClipViewDefault = tmp(8847);
+const ClipViewDefault = tmp(8884);
 require = fn;
 function BadgedIcon(arg0) {
   ({ type, showRedDot } = arg0);
@@ -25,9 +25,9 @@ function BadgedIcon(arg0) {
   const tmp6 = closure_9();
   const iconSizeStyles = ButtonHooks.useIconSizeStyles("sm", true, 2);
   if (type === SavedMessagesTypes.SavedMessageSortTypes.REMINDER) {
-    let BookmarkIcon = tmp4(4537).ClockIcon;
+    let BookmarkIcon = tmp4(4568).ClockIcon;
   } else {
-    BookmarkIcon = tmp4(11738).BookmarkIcon;
+    BookmarkIcon = tmp4(11778).BookmarkIcon;
   }
   const obj3 = { style: null, children: null };
   const items = [tmp6.container, iconSizeStyles];
@@ -55,10 +55,10 @@ function BadgedIcon(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const point = { shape: fn(8847).CutoutShape.Circle, x: fn(16439).ICON_SIZE.sm - 7, y: fn(16439).ICON_SIZE.sm - 8, size: 10 };
-const createStyles = fn(4574);
+const point = { shape: fn(8884).CutoutShape.Circle, x: fn(16488).ICON_SIZE.sm - 7, y: fn(16488).ICON_SIZE.sm - 8, size: 10 };
+const createStyles = fn(4605);
 let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
-let size = { width: fn(16439).ICON_SIZE.sm, height: fn(16439).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(16488).ICON_SIZE.sm, height: fn(16488).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.lg, right: -2, bottom: -0.5 };
 obj.dot = size1;

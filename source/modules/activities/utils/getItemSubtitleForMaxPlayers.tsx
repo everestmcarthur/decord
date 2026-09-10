@@ -1,10 +1,10 @@
-// Module ID: 12176
-// Function ID: 12177
+// Module ID: 12216
+// Function ID: 12217
 // Name: getItemSubtitleForMaxPlayers
 // Dependencies: [1114, 2]
 // Exports: default, getItemSubtitleForMaxPlayersShort, getItemSubtitleForMaxPlayersShorter
 
-// Module 12176 (getItemSubtitleForMaxPlayers)
+// Module 12216 (getItemSubtitleForMaxPlayers)
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 

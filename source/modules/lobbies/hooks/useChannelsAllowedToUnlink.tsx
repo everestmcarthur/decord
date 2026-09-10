@@ -1,12 +1,12 @@
-// Module ID: 17558
-// Function ID: 17559
+// Module ID: 17617
+// Function ID: 17618
 // Name: useChannelsAllowedToUnlink
-// Dependencies: [2012, 4212, 10965, 504, 2]
+// Dependencies: [2012, 4243, 11005, 504, 2]
 // Exports: getChannelsAllowedToUnlink, useChannelsAllowedToUnlink
 
-// Module 17558 (useChannelsAllowedToUnlink)
+// Module 17617 (useChannelsAllowedToUnlink)
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = globalThis.__r;
 

@@ -1,15 +1,15 @@
-// Module ID: 9776
-// Function ID: 9777
+// Module ID: 9814
+// Function ID: 9815
 // Name: useGuildEmbeddedApplications
-// Dependencies: [5, 19, 4802, 1074, 504, 1090, 1369, 7177, 2]
+// Dependencies: [5, 19, 4833, 1074, 504, 1090, 1369, 7215, 2]
 // Exports: useGuildEmbeddedApplications
 
-// Module 9776 (useGuildEmbeddedApplications)
+// Module 9814 (useGuildEmbeddedApplications)
 import DurationsDefault from "Durations" /* 1090 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7177 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7215 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4802 */;
+import ApplicationStore from "ApplicationStore" /* 4833 */;
 
 const require = fn;
 const initialize = fn(504);

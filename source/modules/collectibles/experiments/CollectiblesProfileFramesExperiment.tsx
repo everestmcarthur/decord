@@ -1,10 +1,10 @@
-// Module ID: 8238
-// Function ID: 8239
+// Module ID: 8275
+// Function ID: 8276
 // Name: CollectiblesProfileFramesExperiment
 // Dependencies: [1433, 2]
 // Exports: useIsProfileFramesEnabled
 
-// Module 8238 (CollectiblesProfileFramesExperiment)
+// Module 8275 (CollectiblesProfileFramesExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

@@ -1,15 +1,15 @@
-// Module ID: 17975
-// Function ID: 17976
+// Module ID: 18030
+// Function ID: 18031
 // Name: SelectVoiceChannel
-// Dependencies: [1957, 4597, 17968, 5425, 4781, 4585, 2]
+// Dependencies: [1957, 4628, 18023, 5461, 4812, 4616, 2]
 
-// Module 17975 (SelectVoiceChannel)
-import transitionToChannel from "transitionToChannel" /* 4585 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4781 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5425 */;
-import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 17968 */;
+// Module 18030 (SelectVoiceChannel)
+import transitionToChannel from "transitionToChannel" /* 4616 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4812 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5461 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 18023 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
 
 require = fn;
 const size = fn(2);

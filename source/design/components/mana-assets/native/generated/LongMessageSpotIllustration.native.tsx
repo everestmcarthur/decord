@@ -1,13 +1,13 @@
-// Module ID: 6241
-// Function ID: 6242
+// Module ID: 6277
+// Function ID: 6278
 // Name: LongMessageSpotIllustration
-// Dependencies: [21, 5601, 6242, 2]
+// Dependencies: [21, 5637, 6278, 2]
 // Exports: LongMessageSpotIllustration
 
-// Module 6241 (LongMessageSpotIllustration)
+// Module 6277 (LongMessageSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6242 from "module_6242" /* 6242 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6278 from "module_6278" /* 6278 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const LongMessageSpotIllustration = function LongMessageSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6242 };
+  const obj2 = { uri: _modDef6278 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

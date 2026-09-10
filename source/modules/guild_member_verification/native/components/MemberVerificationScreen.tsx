@@ -1,21 +1,21 @@
-// Module ID: 16783
-// Function ID: 16784
+// Module ID: 16840
+// Function ID: 16841
 // Name: MemberVerificationScreen
-// Dependencies: [19, 17, 2012, 1979, 4396, 1074, 21, 4574, 576, 5591, 5585, 504, 5612, 4398, 5541, 1100, 4431, 1611, 5592, 16784, 2]
+// Dependencies: [19, 17, 2012, 1979, 4427, 1074, 21, 4605, 576, 5627, 5621, 504, 5648, 4429, 5577, 1100, 4462, 1611, 5628, 16841, 2]
 
-// Module 16783 (MemberVerificationScreen)
+// Module 16840 (MemberVerificationScreen)
 import nativeDefault from "native" /* 576 */;
 import router_utilsAll from "router_utils" /* 1100 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
-import MemberVerificationModalDefault from "MemberVerificationModal" /* 5585 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5591 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5592 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4429 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4462 */;
+import MemberVerificationModalDefault from "MemberVerificationModal" /* 5621 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5627 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5628 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4396 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4427 */;
 
 require = fn;
 function Loading() {
@@ -59,13 +59,13 @@ function ExistingJoinRequestHandler(guildId) {
     }
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
       onClose();
-      const result = tmp2(5541).openMemberVerificationPendingAlert(guildId);
-      const tmp2Result = tmp2(5541);
-    } else if (tmp2(4398).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+      const result = tmp2(5577).openMemberVerificationPendingAlert(guildId);
+      const tmp2Result = tmp2(5577);
+    } else if (tmp2(4429).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
       onClose();
       const obj = { guildId, canWithdraw: true };
-      const result1 = tmp2(5541).openMemberVerificationRejectedAlert(obj);
-      const tmp2Result2 = tmp2(5541);
+      const result1 = tmp2(5577).openMemberVerificationRejectedAlert(obj);
+      const tmp2Result2 = tmp2(5577);
     }
   }, items4);
   const items5 = [stateFromStores, guildId, onClose, stateFromStores1];
@@ -98,10 +98,10 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ ME: closure_9, Routes: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
-const makeAuthenticated = fn(16784);
+const makeAuthenticated = fn(16841);
 const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerificationRouteContainer(navigation) {
   navigation = navigation.navigation;
   guildId = navigation.route.params.guildId;

@@ -1,13 +1,13 @@
-// Module ID: 11927
-// Function ID: 11928
+// Module ID: 11967
+// Function ID: 11968
 // Name: TTIFirstContentfulPaint
-// Dependencies: [19, 21, 4432, 9, 7681, 11928, 2]
+// Dependencies: [19, 21, 4463, 9, 7718, 11968, 2]
 // Exports: TTIFirstContentfulPaint
 
-// Module 11927 (TTIFirstContentfulPaint)
+// Module 11967 (TTIFirstContentfulPaint)
 import TTITrackerDefault from "TTITracker" /* 9 */;
-import RootNavigationRef from "RootNavigationRef" /* 4432 */;
-import PostTTIScheduler from "PostTTIScheduler" /* 7681 */;
+import RootNavigationRef from "RootNavigationRef" /* 4463 */;
+import PostTTIScheduler from "PostTTIScheduler" /* 7718 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,5 +30,5 @@ export const TTIFirstContentfulPaint = function TTIFirstContentfulPaint(checkFoc
     firstContentfulPaint.record(nativeEvent.nativeEvent.timestamp);
     PostTTIScheduler.notifyAboutTTI();
   }, items);
-  return jsx(checkFocusedScreen(11928).TTIMeasurementView, { onMeasurement });
+  return jsx(checkFocusedScreen(11968).TTIMeasurementView, { onMeasurement });
 };

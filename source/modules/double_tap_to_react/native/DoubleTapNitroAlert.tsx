@@ -1,24 +1,24 @@
-// Module ID: 7988
-// Function ID: 7989
+// Module ID: 8026
+// Function ID: 8027
 // Name: DoubleTapNitroAlert
-// Dependencies: [19, 17, 7983, 1074, 7989, 21, 4574, 7396, 4920, 4924, 6624, 1114, 2]
+// Dependencies: [19, 17, 8021, 1074, 8027, 21, 4605, 7434, 4951, 4955, 6660, 1114, 2]
 // Exports: default
 
-// Module 7988 (DoubleTapNitroAlert)
+// Module 8026 (DoubleTapNitroAlert)
 import util from "util" /* 1114 */;
-import AlertModal from "AlertModal" /* 4924 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6624 */;
-import openUserSettings from "openUserSettings" /* 7396 */;
+import AlertModal from "AlertModal" /* 4955 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6660 */;
+import openUserSettings from "openUserSettings" /* 7434 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const NITRO_UPSELL_ALERT_KEY = fn(7983).NITRO_UPSELL_ALERT_KEY;
+const NITRO_UPSELL_ALERT_KEY = fn(8021).NITRO_UPSELL_ALERT_KEY;
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const MobileUserSettings = fn(7989).MobileUserSettings;
+const MobileUserSettings = fn(8027).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_10 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx");

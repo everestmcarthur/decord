@@ -1,13 +1,13 @@
-// Module ID: 15488
-// Function ID: 15489
+// Module ID: 15537
+// Function ID: 15538
 // Name: ChatSetting
-// Dependencies: [1074, 11500, 1114, 15489, 15491, 2]
+// Dependencies: [1074, 11540, 1114, 15538, 15540, 2]
 
-// Module 15488 (ChatSetting)
+// Module 15537 (ChatSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import ImageTextIcon from "ImageTextIcon" /* 15489 */;
-import SettingBuilders from "SettingBuilders" /* 11500 */;
+import ImageTextIcon from "ImageTextIcon" /* 15538 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

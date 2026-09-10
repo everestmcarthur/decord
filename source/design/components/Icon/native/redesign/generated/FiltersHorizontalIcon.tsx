@@ -1,13 +1,13 @@
-// Module ID: 15028
-// Function ID: 15029
+// Module ID: 15077
+// Function ID: 15078
 // Name: FiltersHorizontalIcon
-// Dependencies: [19, 21, 576, 4274, 15029, 2]
+// Dependencies: [19, 21, 576, 4305, 15078, 2]
 // Exports: FiltersHorizontalIcon
 
-// Module 15028 (FiltersHorizontalIcon)
+// Module 15077 (FiltersHorizontalIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod15029 from "module_15029" /* 15029 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod15078 from "module_15078" /* 15078 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const FiltersHorizontalIcon = function FiltersHorizontalIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15029, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15078, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

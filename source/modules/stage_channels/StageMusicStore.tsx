@@ -1,9 +1,9 @@
-// Module ID: 9931
-// Function ID: 9932
+// Module ID: 9969
+// Function ID: 9970
 // Name: StageMusicStore
 // Dependencies: [504, 573, 2]
 
-// Module 9931 (StageMusicStore)
+// Module 9969 (StageMusicStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

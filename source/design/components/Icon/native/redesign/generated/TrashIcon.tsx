@@ -1,13 +1,13 @@
-// Module ID: 4532
-// Function ID: 4533
+// Module ID: 4563
+// Function ID: 4564
 // Name: TrashIcon
-// Dependencies: [19, 21, 576, 4274, 4533, 2]
+// Dependencies: [19, 21, 576, 4305, 4564, 2]
 // Exports: TrashIcon
 
-// Module 4532 (TrashIcon)
+// Module 4563 (TrashIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod4533 from "module_4533" /* 4533 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod4564 from "module_4564" /* 4564 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const TrashIcon = function TrashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod4533, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod4564, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

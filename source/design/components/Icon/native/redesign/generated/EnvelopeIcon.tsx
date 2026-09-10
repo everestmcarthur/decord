@@ -1,13 +1,13 @@
-// Module ID: 7095
-// Function ID: 7096
+// Module ID: 7133
+// Function ID: 7134
 // Name: EnvelopeIcon
-// Dependencies: [19, 21, 576, 4274, 7096, 2]
+// Dependencies: [19, 21, 576, 4305, 7134, 2]
 // Exports: EnvelopeIcon
 
-// Module 7095 (EnvelopeIcon)
+// Module 7133 (EnvelopeIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod7096 from "module_7096" /* 7096 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod7134 from "module_7134" /* 7134 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const EnvelopeIcon = function EnvelopeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7096, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7134, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

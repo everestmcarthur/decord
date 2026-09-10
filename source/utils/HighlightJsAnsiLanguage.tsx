@@ -1,10 +1,10 @@
-// Module ID: 4569
-// Function ID: 4570
+// Module ID: 4600
+// Function ID: 4601
 // Name: HighlightJsAnsiLanguage
 // Dependencies: [2]
 // Exports: default
 
-// Module 4569 (HighlightJsAnsiLanguage)
+// Module 4600 (HighlightJsAnsiLanguage)
 import size from "module_2" /* 2 */;
 
 let closure_0 = { 1: "bold", 4: "underline" };

@@ -1,20 +1,20 @@
-// Module ID: 12609
-// Function ID: 12610
+// Module ID: 12649
+// Function ID: 12650
 // Name: GuildPowerupsRecentActivitySection
-// Dependencies: [17, 4566, 21, 4574, 576, 8111, 12610, 4255, 504, 7975, 9407, 12612, 12614, 1178, 4570, 12616, 1114, 2]
+// Dependencies: [17, 4597, 21, 4605, 576, 7032, 12650, 4286, 504, 8013, 9445, 12652, 12654, 1178, 4601, 12656, 1114, 2]
 // Exports: default
 
-// Module 12609 (GuildPowerupsRecentActivitySection)
+// Module 12649 (GuildPowerupsRecentActivitySection)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import DateUtils from "DateUtils" /* 4255 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8111 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12610 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12616 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import DateUtils from "DateUtils" /* 4286 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7032 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12650 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12656 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4574 */;
+import createStyles from "createStyles" /* 4605 */;
 import size from "module_2" /* 2 */;
 
 const useMaybeGetSortedBoostsDefault = useMaybeGetSortedBoosts;
@@ -35,15 +35,15 @@ function GuildPowerupsRecentActivityRow(row) {
     if (null != roleColor) {
       const obj5 = { color: roleColor };
     }
-    const processColorStringsArray = tmp(7975).useProcessColorStringsArray(roleColorStrings);
-    const tmpResult2 = tmp(7975);
+    const processColorStringsArray = tmp(8013).useProcessColorStringsArray(roleColorStrings);
+    const tmpResult2 = tmp(8013);
     const isRoleStyleAndRoleColorsEligibleForERC = tmpResult2.useIsRoleStyleAndRoleColorsEligibleForERC(boost.guildId, boost.userId, stateFromStores, processColorStringsArray);
     if ("gave" === phase) {
-      let BoostGemSlashIcon = tmp(9407).BoostGemIcon;
+      let BoostGemSlashIcon = tmp(9445).BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = tmp(12612).BoostTier1Icon;
+      BoostGemSlashIcon = tmp(12652).BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = tmp(12614).BoostGemSlashIcon;
+      BoostGemSlashIcon = tmp(12654).BoostGemSlashIcon;
     }
     const obj6 = { style: tmp4.boostRowContainer, children: null };
     if ("gave" === phase) {
@@ -72,10 +72,10 @@ function GuildPowerupsRecentActivityRow(row) {
     }
     obj11.gradientColors = tmp23;
     obj11.children = username;
-    items2[1] = hasOwnProperty(tmp(4570).Text, obj11);
-    items2[2] = hasOwnProperty(tmp(4570).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
+    items2[1] = hasOwnProperty(tmp(4601).Text, obj11);
+    items2[2] = hasOwnProperty(tmp(4601).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
     const obj12 = { variant: "text-md/medium", lineClamp: 1, style: tmp4.messageText, children: getBoostRowMessageTextDefault(row) };
-    items2[3] = hasOwnProperty(tmp(4570).Text, obj12);
+    items2[3] = hasOwnProperty(tmp(4601).Text, obj12);
     obj9.children = items2;
     items1[1] = timestampProducer(View, obj9);
     let str4 = "text-xs/semibold";
@@ -90,7 +90,7 @@ function GuildPowerupsRecentActivityRow(row) {
     obj13.color = str5;
     obj13.style = tmp4.timestamp;
     obj13.children = calendarFormatResult;
-    items1[2] = hasOwnProperty(tmp(4570).Text, obj13);
+    items1[2] = hasOwnProperty(tmp(4601).Text, obj13);
     obj6.children = items1;
     return timestampProducer(View, obj6);
   }
@@ -122,7 +122,7 @@ export default function GuildPowerupsRecentActivitySection(guildId) {
     const obj3 = { variant: "heading-lg/semibold", color: str, children: null };
     const intl = tmp(1114).intl;
     obj3.children = intl.string(tmp(1114).t.yM9Krm);
-    const items = [hasOwnProperty(tmp(4570).Text, obj3), ];
+    const items = [hasOwnProperty(tmp(4601).Text, obj3), ];
     const obj4 = { style: tmp4.boostContainer, children: arr.map((row) => closure_1_5(GuildPowerupsRecentActivityRow, { row }, "boost-" + row.boost.id)) };
     items[1] = hasOwnProperty(View, obj4);
     obj2.children = items;

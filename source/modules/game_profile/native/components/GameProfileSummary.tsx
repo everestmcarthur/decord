@@ -1,11 +1,11 @@
-// Module ID: 8765
-// Function ID: 8766
+// Module ID: 8802
+// Function ID: 8803
 // Name: GameProfileSummary
-// Dependencies: [32, 19, 17, 21, 4574, 8719, 1114, 4570, 2]
+// Dependencies: [32, 19, 17, 21, 4605, 8756, 1114, 4601, 2]
 // Exports: default
 
-// Module 8765 (GameProfileSummary)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
+// Module 8802 (GameProfileSummary)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8756 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_8 = createStyles.createStyles({ container: { flexDirection: "column" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");

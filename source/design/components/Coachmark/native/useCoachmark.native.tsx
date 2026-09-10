@@ -1,11 +1,11 @@
-// Module ID: 11159
-// Function ID: 11160
+// Module ID: 11199
+// Function ID: 11200
 // Name: useCoachmark
-// Dependencies: [19, 21, 1256, 11160, 7171, 11166, 2]
+// Dependencies: [19, 21, 1256, 11200, 7209, 11206, 2]
 // Exports: useCoachmark
 
-// Module 11159 (useCoachmark)
-import AnimatedCoachmark from "AnimatedCoachmark" /* 11166 */;
+// Module 11199 (useCoachmark)
+import AnimatedCoachmark from "AnimatedCoachmark" /* 11206 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,21 +1,21 @@
-// Module ID: 10192
-// Function ID: 10193
+// Module ID: 10230
+// Function ID: 10231
 // Name: NotificationSettingsMessageNotificationGuildActionSheet
-// Dependencies: [19, 4755, 1074, 4756, 1084, 21, 10187, 10193, 1114, 10182, 7133, 7128, 2]
+// Dependencies: [19, 4786, 1074, 4787, 1084, 21, 10225, 10231, 1114, 10220, 7171, 7166, 2]
 // Exports: default
 
-// Module 10192 (NotificationSettingsMessageNotificationGuildActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7128 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7133 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10182 */;
+// Module 10230 (NotificationSettingsMessageNotificationGuildActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7166 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7171 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10220 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(4756).UnreadSetting;
+const UnreadSetting = fn(4787).UnreadSetting;
 let closure_6 = fn(1084).GuildNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -49,5 +49,5 @@ export default function NotificationSettingsMessageNotificationGuildActionSheet(
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(guildId.guildId, obj, NotificationLabel.notifications(message_notifications));
   };
-  return tmp4(unread(10193), obj2);
+  return tmp4(unread(10231), obj2);
 };

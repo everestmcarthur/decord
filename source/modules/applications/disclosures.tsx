@@ -1,12 +1,12 @@
-// Module ID: 9272
-// Function ID: 9273
+// Module ID: 9309
+// Function ID: 9310
 // Name: disclosures
-// Dependencies: [5, 1074, 1272, 9273, 1114, 2]
+// Dependencies: [5, 1074, 1272, 9310, 1114, 2]
 // Exports: ackDisclosures, getDisclosures, getTextForDisclosure
 
-// Module 9272 (disclosures)
+// Module 9309 (disclosures)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import applications from "applications" /* 9273 */;
+import applications from "applications" /* 9310 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -79,7 +79,7 @@ const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/disclosures.tsx");
 
-export const ApplicationDisclosure = fn(9273).ApplicationDisclosureType;
+export const ApplicationDisclosure = fn(9310).ApplicationDisclosureType;
 export const getDisclosures = function getDisclosures() {
   const self = this;
   const apply = closure_4.apply;
@@ -104,7 +104,7 @@ export const getTextForDisclosure = function getTextForDisclosure(disclosure) {
   if (applications.ApplicationDisclosureType.IP_LOCATION === disclosure) {
     const intl2 = tmp(1114).intl;
     return intl2.string(tmp(1114).t["6wPmjo"]);
-  } else if (tmp(9273).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
+  } else if (tmp(9310).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
     const intl = tmp(1114).intl;
     return intl.string(tmp(1114).t["/uOMKZ"]);
   } else {

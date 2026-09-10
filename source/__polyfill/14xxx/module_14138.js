@@ -1,9 +1,0 @@
-// Module ID: 14138
-// Function ID: 14139
-// Dependencies: [1122]
-
-// Module 14138
-import registerAsset from "module_1122" /* 1122 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "82f333ceda03bd515ab62e8f0d1ea043", name: "StatusOnline", type: "png" });

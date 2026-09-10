@@ -1,10 +1,10 @@
-// Module ID: 16797
-// Function ID: 16798
+// Module ID: 16854
+// Function ID: 16855
 // Name: PortalKeyboardRendererComponent
-// Dependencies: [19, 1957, 21, 7235, 1609, 12065, 9441, 16798, 16804, 2]
+// Dependencies: [19, 1957, 21, 7273, 1609, 12105, 9479, 16855, 16861, 2]
 
-// Module 16797 (PortalKeyboardRendererComponent)
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7235 */;
+// Module 16854 (PortalKeyboardRendererComponent)
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7273 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 

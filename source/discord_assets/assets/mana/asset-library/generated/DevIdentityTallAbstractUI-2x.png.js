@@ -1,8 +1,8 @@
-// Module ID: 5906
-// Function ID: 5907
+// Module ID: 5942
+// Function ID: 5943
 // Dependencies: [2]
 
-// Module 5906
+// Module 5942
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DevIdentityTallAbstractUI-2x.png.js");

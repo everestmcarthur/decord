@@ -1,12 +1,12 @@
-// Module ID: 15975
-// Function ID: 15976
+// Module ID: 16024
+// Function ID: 16025
 // Name: createChatPanelNativeStackNavigator
-// Dependencies: [19, 21, 1484, 4431, 14201, 7927, 2]
+// Dependencies: [19, 21, 1484, 4462, 14250, 7965, 2]
 // Exports: default
 
-// Module 15975 (createChatPanelNativeStackNavigator)
+// Module 16024 (createChatPanelNativeStackNavigator)
 import Link from "Link" /* 1484 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4462 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,11 +1,11 @@
-// Module ID: 8276
-// Function ID: 8277
+// Module ID: 8313
+// Function ID: 8314
 // Name: VideoBackgroundManager
-// Dependencies: [2011, 7132, 2]
+// Dependencies: [2011, 7170, 2]
 
-// Module 8276 (VideoBackgroundManager)
+// Module 8313 (VideoBackgroundManager)
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 const prototype = function VideoBackgroundManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

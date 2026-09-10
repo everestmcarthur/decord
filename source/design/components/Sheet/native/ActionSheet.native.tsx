@@ -1,16 +1,16 @@
-// Module ID: 7211
-// Function ID: 7212
+// Module ID: 7249
+// Function ID: 7250
 // Name: ActionSheet
-// Dependencies: [19, 21, 4574, 576, 7164, 2]
+// Dependencies: [19, 21, 4605, 576, 7202, 2]
 
-// Module 7211 (ActionSheet)
+// Module 7249 (ActionSheet)
 import nativeDefault from "native" /* 576 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7202 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, body: { gap: 24 } };
 let closure_3 = createStyles.createStyles(obj);
 const obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };

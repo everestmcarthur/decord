@@ -1,13 +1,13 @@
-// Module ID: 6603
-// Function ID: 6604
+// Module ID: 6639
+// Function ID: 6640
 // Name: WumpusWishlistingSpotIllustration
-// Dependencies: [21, 5601, 6604, 2]
+// Dependencies: [21, 5637, 6640, 2]
 // Exports: WumpusWishlistingSpotIllustration
 
-// Module 6603 (WumpusWishlistingSpotIllustration)
+// Module 6639 (WumpusWishlistingSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6604 from "module_6604" /* 6604 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6640 from "module_6640" /* 6640 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const WumpusWishlistingSpotIllustration = function WumpusWishlistingSpotI
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6604 };
+  const obj2 = { uri: _modDef6640 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

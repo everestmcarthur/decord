@@ -1,12 +1,12 @@
-// Module ID: 13758
-// Function ID: 13759
+// Module ID: 13807
+// Function ID: 13808
 // Name: useHasXboxMonthlyOrbsPerk
-// Dependencies: [1371, 1373, 4231, 1377, 1379, 504, 2]
+// Dependencies: [1371, 1373, 4262, 1377, 1379, 504, 2]
 // Exports: hasCrepeMonthlyOrbsPerk, useHasXboxMonthlyOrbsPerk
 
-// Module 13758 (useHasXboxMonthlyOrbsPerk)
+// Module 13807 (useHasXboxMonthlyOrbsPerk)
 import initialize from "initialize" /* 504 */;
-import PremiumUtils from "PremiumUtils" /* 4231 */;
+import PremiumUtils from "PremiumUtils" /* 4262 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -51,7 +51,7 @@ export const useHasXboxMonthlyOrbsPerk = function useHasXboxMonthlyOrbsPerk() {
       flag = hasItem;
       const tmpResult2 = tmp(1377);
     }
-    tmpResult = tmp(4231);
+    tmpResult = tmp(4262);
   }
   return flag;
 };

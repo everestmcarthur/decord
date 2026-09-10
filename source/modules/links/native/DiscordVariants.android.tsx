@@ -1,12 +1,12 @@
-// Module ID: 16415
-// Function ID: 16416
+// Module ID: 16464
+// Function ID: 16465
 // Name: DiscordVariants
-// Dependencies: [4708, 16416, 2]
+// Dependencies: [4739, 16465, 2]
 // Exports: getCurrentVariant, isVariantInstalled, launchVariant
 
-// Module 16415 (DiscordVariants)
-import NativeIntentsModuleDefault from "NativeIntentsModule" /* 4708 */;
-import DiscordVariantTypes from "DiscordVariantTypes" /* 16416 */;
+// Module 16464 (DiscordVariants)
+import NativeIntentsModuleDefault from "NativeIntentsModule" /* 4739 */;
+import DiscordVariantTypes from "DiscordVariantTypes" /* 16465 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/links/native/DiscordVariants.android.tsx");

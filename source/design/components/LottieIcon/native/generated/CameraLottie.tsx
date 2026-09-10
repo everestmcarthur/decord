@@ -1,11 +1,11 @@
-// Module ID: 9979
-// Function ID: 9980
+// Module ID: 10017
+// Function ID: 10018
 // Name: CameraLottie
-// Dependencies: [19, 21, 9980, 9981, 2]
+// Dependencies: [19, 21, 10018, 10019, 2]
 
-// Module 9979 (CameraLottie)
-import LottieIcon from "LottieIcon" /* 9980 */;
-import _mod9981 from "module_9981" /* 9981 */;
+// Module 10017 (CameraLottie)
+import LottieIcon from "LottieIcon" /* 10018 */;
+import _mod10019 from "module_10019" /* 10019 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,5 +17,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 
 export const CameraLottie = noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod9981, ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod10019, ref, layers, markers: items });
 });

@@ -1,14 +1,9 @@
 // Module ID: 3668
 // Function ID: 3669
-// Dependencies: []
-// Exports: getDefaultOptions, setDefaultOptions
+// Dependencies: [1122]
 
 // Module 3668
-let global = {};
+import registerAsset from "module_1122" /* 1122 */;
 
-export function getDefaultOptions() {
-  return global;
-}
-export function setDefaultOptions(arg0) {
-  global = arg0;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "64cbf7daecea776b08d52353d4081cba", name: "hr.messages.64cbf7daecea776b08d52353d4081cba.compiled.messages", type: "jsona" });

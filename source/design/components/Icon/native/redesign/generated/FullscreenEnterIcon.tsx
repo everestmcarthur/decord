@@ -1,13 +1,13 @@
-// Module ID: 15064
-// Function ID: 15065
+// Module ID: 15113
+// Function ID: 15114
 // Name: FullscreenEnterIcon
-// Dependencies: [19, 21, 576, 4274, 15065, 2]
+// Dependencies: [19, 21, 576, 4305, 15114, 2]
 // Exports: FullscreenEnterIcon
 
-// Module 15064 (FullscreenEnterIcon)
+// Module 15113 (FullscreenEnterIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod15065 from "module_15065" /* 15065 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod15114 from "module_15114" /* 15114 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const FullscreenEnterIcon = function FullscreenEnterIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15065, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15114, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,18 +1,18 @@
-// Module ID: 12564
-// Function ID: 12565
+// Module ID: 12604
+// Function ID: 12605
 // Name: useCanGuildPowerupBeToggled
-// Dependencies: [19, 4463, 4464, 504, 12529, 1114, 2428, 2]
+// Dependencies: [19, 4494, 4495, 504, 12569, 1114, 2428, 2]
 // Exports: default
 
-// Module 12564 (useCanGuildPowerupBeToggled)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12529 */;
+// Module 12604 (useCanGuildPowerupBeToggled)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12569 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4463 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4494 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(4464).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(4495).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
 

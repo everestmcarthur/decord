@@ -1,14 +1,14 @@
-// Module ID: 7907
-// Function ID: 7908
+// Module ID: 7945
+// Function ID: 7946
 // Name: experiment
-// Dependencies: [32, 1188, 1217, 1218, 7908, 7909, 2]
+// Dependencies: [32, 1188, 1217, 1218, 7946, 7947, 2]
 
-// Module 7907 (experiment)
+// Module 7945 (experiment)
 import _mod1188 from "module_1188" /* 1188 */;
 import timestamp from "timestamp" /* 1217 */;
 import wrappers from "wrappers" /* 1218 */;
-import rules from "rules" /* 7908 */;
-import lifecycle_plan from "lifecycle_plan" /* 7909 */;
+import rules from "rules" /* 7946 */;
+import lifecycle_plan from "lifecycle_plan" /* 7947 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

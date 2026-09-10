@@ -1,27 +1,27 @@
-// Module ID: 11902
-// Function ID: 11903
+// Module ID: 11942
+// Function ID: 11943
 // Name: AutomodQuarantineUtils
-// Dependencies: [19, 9240, 502, 2021, 1979, 4212, 4395, 1074, 4200, 1084, 563, 4218, 1114, 9241, 9242, 7396, 2]
+// Dependencies: [19, 9277, 502, 2021, 1979, 4243, 4426, 1074, 4230, 1084, 563, 4249, 1114, 9278, 9279, 7434, 2]
 // Exports: useCurrentUserHasAutomodQuarantinedProfile, useGuildAutomodProfileQuarantineErrors, useOpenFixQuarantinedProfileModal
 
-// Module 11902 (AutomodQuarantineUtils)
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4218 */;
-import openUserSettings2 from "openUserSettings" /* 7396 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9242 */;
+// Module 11942 (AutomodQuarantineUtils)
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4249 */;
+import openUserSettings2 from "openUserSettings" /* 7434 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9279 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9240 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9277 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4426 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1074);
 ({ Permissions: closure_9, UserSettingsSections: c10 } = Constants);
-const GuildMemberFlags = fn(4200).GuildMemberFlags;
+const GuildMemberFlags = fn(4230).GuildMemberFlags;
 let closure_12 = fn(1084).ProfileCustomizationSubsection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodQuarantineUtils.tsx");
@@ -48,7 +48,7 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "Array", bio: "PX_16" };
+    const obj = { nick: "call", bio: "accessibilityLabel" };
     let guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

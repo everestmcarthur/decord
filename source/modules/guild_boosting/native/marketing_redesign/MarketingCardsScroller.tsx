@@ -1,14 +1,14 @@
-// Module ID: 12594
-// Function ID: 12595
+// Module ID: 12634
+// Function ID: 12635
 // Name: MarketingCardsScroller
-// Dependencies: [32, 19, 17, 4566, 21, 4574, 4423, 576, 504, 4976, 1114, 1116, 5137, 10407, 12398, 2]
+// Dependencies: [32, 19, 17, 4597, 21, 4605, 4454, 576, 504, 5012, 1114, 1116, 5173, 10445, 12438, 2]
 
-// Module 12594 (MarketingCardsScroller)
+// Module 12634 (MarketingCardsScroller)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -17,10 +17,10 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const previous = "previous";
 const next = "next";
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { wrapper: { position: "relative" }, navigationButton: null, navigationButtonPrevious: null, navigationButtonNext: null };
 let size = { alignItems: "center", backgroundColor: null, borderRadius: null, height: 44, justifyContent: "center", position: "absolute", top: "50%", transform: null, width: 44, zIndex: 1 };
-const ColorUtils = fn(4423);
+const ColorUtils = fn(4454);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.56);
 size.borderRadius = nativeDefault.radii.round;
 let items = [{ translateY: -22 }];

@@ -1,19 +1,19 @@
-// Module ID: 16322
-// Function ID: 16323
+// Module ID: 16371
+// Function ID: 16372
 // Name: GuildsBarFolderSettingsModal
-// Dependencies: [32, 19, 17, 5452, 16323, 21, 4574, 9390, 6995, 4541, 16324, 1896, 576, 4987, 6620, 1114, 5701, 5619, 1091, 14625, 5638, 504, 16321, 7014, 2]
+// Dependencies: [32, 19, 17, 5488, 16372, 21, 4605, 9428, 7033, 4572, 16373, 1896, 576, 5023, 6656, 1114, 5737, 5655, 1091, 14674, 5674, 504, 16370, 7052, 2]
 // Exports: default
 
-// Module 16322 (GuildsBarFolderSettingsModal)
+// Module 16371 (GuildsBarFolderSettingsModal)
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import NavigatorHeader from "NavigatorHeader" /* 5638 */;
-import UserSettingsActionCreators from "UserSettingsActionCreators" /* 9390 */;
-import GuildsBarFolderSettingsModalActionCreators from "GuildsBarFolderSettingsModalActionCreators" /* 16321 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import NavigatorHeader from "NavigatorHeader" /* 5674 */;
+import UserSettingsActionCreators from "UserSettingsActionCreators" /* 9428 */;
+import GuildsBarFolderSettingsModalActionCreators from "GuildsBarFolderSettingsModalActionCreators" /* 16370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SortedGuildStore from "SortedGuildStore" /* 5452 */;
+import SortedGuildStore from "SortedGuildStore" /* 5488 */;
 
 require = fn;
 function GuildFolderSettingsScene(color) {
@@ -31,10 +31,10 @@ function GuildFolderSettingsScene(color) {
     if (color == null) {
       tmp3 = defaultColor;
     }
-    obj.openLazy(asyncRequireImpl(16324, dependencyMap.paths), "RoleColorPicker", { color: tmp3, defaultColor, onSelect: onColorChange });
+    obj.openLazy(asyncRequireImpl(16373, dependencyMap.paths), "RoleColorPicker", { color: tmp3, defaultColor, onSelect: onColorChange });
   }, items);
   obj2.padding = onColorChange(576).space.PX_16;
-  obj2.paddingBottom = 38 + onColorChange(6995)().insets.bottom;
+  obj2.paddingBottom = 38 + onColorChange(7033)().insets.bottom;
   obj.contentContainerStyle = obj2;
   const obj3 = { spacing: onColorChange(576).space.PX_16, children: null };
   const obj4 = { label: null, placeholder: null, value: null, onChange: null, maxLength: 32, autoFocus: true, isClearable: true };
@@ -44,7 +44,7 @@ function GuildFolderSettingsScene(color) {
   obj4.placeholder = intl2.string(color(1114).t.xV9hVh);
   obj4.value = name;
   obj4.onChange = onNameChange;
-  const items1 = [closure_10(color(6620).TextInput, obj4), ];
+  const items1 = [closure_10(color(6656).TextInput, obj4), ];
   const obj5 = { label: null, subLabel: null, onPress: null, arrow: true, trailing: null };
   const intl3 = color(1114).intl;
   obj5.label = intl3.string(color(1114).t.xpurRF);
@@ -62,20 +62,20 @@ function GuildFolderSettingsScene(color) {
     tmp11 = closure_8;
   }
   const obj6 = { hasIcons: false, children: null };
-  obj5.trailing = closure_10(onColorChange(14625), { color: tmp11, style: tmp.colorBlock });
-  obj6.children = closure_10(color(5619).TableRow, obj5);
-  items1[1] = closure_10(color(5701).TableRowGroup, obj6);
+  obj5.trailing = closure_10(onColorChange(14674), { color: tmp11, style: tmp.colorBlock });
+  obj6.children = closure_10(color(5655).TableRow, obj5);
+  items1[1] = closure_10(color(5737).TableRowGroup, obj6);
   obj3.children = items1;
-  obj.children = closure_11(color(4987).Stack, obj3);
+  obj.children = closure_11(color(5023).Stack, obj3);
   return closure_10(closure_6, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildsBarConstants = fn(16323);
+const GuildsBarConstants = fn(16372);
 ({ DEFAULT_FOLDER_COLOR: closure_8, normalizeFolderColor: closure_9 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_12 = createStyles.createStyles({ scrollView: { flex: 1 }, colorBlock: { marginHorizontal: 0, marginVertical: 0, minWidth: 24, height: 24, borderRadius: 3 } });
 let c14 = "Folder Settings";
 const size = fn(2);
@@ -163,13 +163,13 @@ export default function GuildFolderSettingsModal(folderId) {
     obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(callback1);
     if (closure_5) {
       const intl2 = tmp3(1114).intl;
-      let fn = tmp3(5638).getHeaderTextButton(intl2.string(tmp3(1114).t["R3BPH+"]), callback);
-      const tmp3Result = tmp3(5638);
+      let fn = tmp3(5674).getHeaderTextButton(intl2.string(tmp3(1114).t["R3BPH+"]), callback);
+      const tmp3Result = tmp3(5674);
     } else {
       fn = () => null;
     }
     obj2.headerRight = fn;
     return { [c14]: obj2 };
   }, items3);
-  return closure_10(folderId(7014).Navigator, { screens: memo, initialRouteName });
+  return closure_10(folderId(7052).Navigator, { screens: memo, initialRouteName });
 };

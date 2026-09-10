@@ -1,16 +1,16 @@
-// Module ID: 12148
-// Function ID: 12149
+// Module ID: 12188
+// Function ID: 12189
 // Name: useFetchDeveloperActivityShelfItems
-// Dependencies: [19, 8887, 9534, 1935, 504, 9536, 2]
+// Dependencies: [19, 8924, 9572, 1935, 504, 9574, 2]
 // Exports: useFetchDeveloperActivityShelfItems
 
-// Module 12148 (useFetchDeveloperActivityShelfItems)
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9536 */;
+// Module 12188 (useFetchDeveloperActivityShelfItems)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9574 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8887 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8924 */;
 
 require = fn;
-const DevShelfFetchState = fn(8887).DevShelfFetchState;
+const DevShelfFetchState = fn(8924).DevShelfFetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
 

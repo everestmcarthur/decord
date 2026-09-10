@@ -1,10 +1,10 @@
-// Module ID: 11382
-// Function ID: 11383
+// Module ID: 11422
+// Function ID: 11423
 // Name: AnimatedKeyboardExperiment
 // Dependencies: [1433, 1115, 2]
 // Exports: isAnimatedAndroidKeyboard
 
-// Module 11382 (AnimatedKeyboardExperiment)
+// Module 11422 (AnimatedKeyboardExperiment)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;

@@ -1,9 +1,9 @@
-// Module ID: 11703
-// Function ID: 11704
+// Module ID: 11743
+// Function ID: 11744
 // Name: ChannelFollowerStatsStore
 // Dependencies: [504, 573, 2]
 
-// Module 11703 (ChannelFollowerStatsStore)
+// Module 11743 (ChannelFollowerStatsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

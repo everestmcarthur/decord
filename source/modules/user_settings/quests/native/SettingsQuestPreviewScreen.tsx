@@ -1,19 +1,19 @@
-// Module ID: 15201
-// Function ID: 15202
+// Module ID: 15250
+// Function ID: 15251
 // Name: SettingsQuestPreviewScreen
-// Dependencies: [32, 19, 17, 7717, 1183, 21, 576, 4574, 1484, 504, 15202, 15204, 1114, 9824, 11308, 573, 15205, 9825, 12646, 15211, 2]
+// Dependencies: [32, 19, 17, 7754, 1183, 21, 576, 4605, 1484, 504, 15251, 15253, 1114, 9862, 11348, 573, 15254, 9863, 12686, 15260, 2]
 // Exports: default
 
-// Module 15201 (SettingsQuestPreviewScreen)
+// Module 15250 (SettingsQuestPreviewScreen)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import QuestActionCreators from "QuestActionCreators" /* 11308 */;
-import QuestCardPreview from "QuestCardPreview" /* 15202 */;
-import QuestEmbedPreview from "QuestEmbedPreview" /* 15204 */;
+import QuestActionCreators from "QuestActionCreators" /* 11348 */;
+import QuestCardPreview from "QuestCardPreview" /* 15251 */;
+import QuestEmbedPreview from "QuestEmbedPreview" /* 15253 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7717 */;
+import QuestStore from "QuestStore" /* 7754 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
 require = fn;
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, controlBarContainer: { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 }, segmentedControlContainer: { paddingHorizontal: PX_16 }, pagesContainer: { flex: 1, width: "100%" }, activityIndicator: null, allSectionsContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let obj4 = { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 };

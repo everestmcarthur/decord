@@ -1,26 +1,26 @@
-// Module ID: 13296
-// Function ID: 13297
+// Module ID: 13345
+// Function ID: 13346
 // Name: ChannelHeaderShared
-// Dependencies: [32, 19, 17, 4222, 1371, 21, 4574, 576, 5137, 1115, 10931, 4570, 1178, 13297, 10942, 4275, 5042, 13298, 1114, 4727, 2]
+// Dependencies: [32, 19, 17, 4253, 1371, 21, 4605, 576, 5173, 1115, 10969, 4601, 1178, 13346, 10982, 4306, 5078, 13347, 1114, 4758, 2]
 // Exports: renderChannelIcon, renderChannelIconRaw, renderChannelTitle, renderEmptyIcon, renderGroupDMIcon, renderMemberCountText, renderParentChannelSubTitle, renderTitleWrapper, renderUserAvatar
 
-// Module 13296 (ChannelHeaderShared)
+// Module 13345 (ChannelHeaderShared)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import native from "native" /* 1178 */;
-import useToken from "useToken" /* 4275 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import useChannelName from "useChannelName" /* 4727 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5042 */;
-import Pressables from "Pressables" /* 5137 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10931 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10942 */;
-import _modDef13297 from "module_13297" /* 13297 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13298 */;
+import useToken from "useToken" /* 4306 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useChannelName from "useChannelName" /* 4758 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5078 */;
+import Pressables from "Pressables" /* 5173 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10969 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10982 */;
+import _modDef13346 from "module_13346" /* 13346 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13347 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -75,7 +75,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef13297, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef13346, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -97,7 +97,7 @@ function GroupDMIcon(channel) {
 function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: false, isMobileOnline: null, isVROnline: true, style: null, autoStatusCutout: false };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: false, isMobileOnline: "done", isVROnline: "flowing", style: "hourglass", autoStatusCutout: "hours" };
   let tmp3 = null;
   if (!user.isSystemUser()) {
     tmp3 = status;
@@ -162,7 +162,7 @@ function EmptyIcon() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 }, channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 }, nameWithArrow: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, channelNameContainer: { flexShrink: 1 }, channelName: { flexShrink: 1 }, arrowIcon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 }, channelIcon: { marginRight: 12, flexShrink: 0 }, channelIconWrapper: { width: 32, height: 32, justifyContent: "center", alignItems: "center" }, guildChannelIcon: null, subTitleContainer: null, parentChannelName: null };
   const obj2 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 };
@@ -174,8 +174,8 @@ let closure_11 = createStyles.createStyles(() => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx");
 
-export const renderTitleWrapper = function renderTitleWrapper(tmp28Result, callback, combined, titleContentHeight) {
-  return React6(TitleWrapper, { onPress: callback, headerAccessibilityLabel: combined, titleContentHeight, children: tmp28Result });
+export const renderTitleWrapper = function renderTitleWrapper(tmp33Result, callback, combined, titleContentHeight) {
+  return React6(TitleWrapper, { onPress: callback, headerAccessibilityLabel: combined, titleContentHeight, children: tmp33Result });
 };
 export const renderChannelTitle = function renderChannelTitle(channelName, arg1) {
   let obj = arg1;
@@ -208,12 +208,12 @@ export const renderChannelIcon = function renderChannelIcon(stateFromStores, sta
   const obj3 = { isRulesChannel: rulesChannelId === stateFromStores.id };
   return React6(ChannelIconRaw, { icon: channelIconWithGuild, IconComponent: utils_ChannelUtils.getChannelIconComponent(stateFromStores, { isRulesChannel: rulesChannelId === stateFromStores.id }) });
 };
-export const renderMemberCountText = function renderMemberCountText(online, length, flag, leadingAccessoryWidth) {
+export const renderMemberCountText = function renderMemberCountText(online, memberCount, flag, leadingAccessoryWidth) {
   if (flag === undefined) {
     flag = false;
   }
   if (null != online) {
-    const obj = { presenceCount: online, memberCount: length, withSeparator: flag, leadingAccessoryWidth };
+    const obj = { presenceCount: online, memberCount, withSeparator: flag, leadingAccessoryWidth };
     let tmp = React6(MemberCountText, obj);
   } else {
     tmp = null;

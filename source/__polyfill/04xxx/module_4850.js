@@ -1,34 +1,17 @@
 // Module ID: 4850
 // Function ID: 4851
-// Dependencies: []
+// Dependencies: [4849, 4851]
 
 // Module 4850
+import requirePromise from "requirePromise" /* 4849 */;
+import _mod4851 from "module_4851" /* 4851 */;
 
-export default function isArguments(callee) {
-  const call = toString.call;
-  const tmp2 = typeof call === "unknown" ? toString() : call(callee);
-  let tmp3 = "[object Arguments]" === tmp2;
-  if (!tmp3) {
-    let tmp4 = "[object Array]" !== tmp2;
-    if (tmp4) {
-      tmp4 = null !== callee;
-    }
-    if (tmp4) {
-      tmp4 = typeof callee === "object";
-    }
-    if (tmp4) {
-      tmp4 = typeof callee.length === "number";
-    }
-    if (tmp4) {
-      tmp4 = callee.length >= 0;
-    }
-    if (!tmp4) {
-      tmp3 = tmp4;
-    } else {
-      const call2 = tmp.call;
-      const str2 = "[object Function]";
-      const tmp6 = typeof call2 === "unknown" ? tmp() : call2(str2);
-    }
+
+export default function getPolyfill() {
+  requirePromise();
+  if (typeof Promise.allSettled === "function") {
+  } else {
+    allSettled = _mod4851;
   }
-  return tmp3;
+  return allSettled;
 };

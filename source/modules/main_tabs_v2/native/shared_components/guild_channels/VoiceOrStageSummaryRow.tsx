@@ -1,12 +1,12 @@
-// Module ID: 16692
-// Function ID: 16693
+// Module ID: 16749
+// Function ID: 16750
 // Name: guild_channels/VoiceOrStageSummaryRow
-// Dependencies: [19, 17, 21, 4574, 576, 10153, 4570, 1178, 16693, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 10191, 4601, 1178, 16750, 2]
 
-// Module 16692 (guild_channels/VoiceOrStageSummaryRow)
+// Module 16749 (guild_channels/VoiceOrStageSummaryRow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = { container: { flexDirection: "row", alignItems: "center", marginLeft: -2 }, overflowCircle: null, wrapper: null, badge: null, audienceBadge: null };
   const size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, width: height };
@@ -93,7 +93,7 @@ export default noop.memo(function VoiceOrStageSummaryRow(layout) {
     const items3 = [, ];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj5.style = items3;
-    let obj6 = { size: tmp(tmp2[7]).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: require("module_16693") };
+    let obj6 = { size: tmp(tmp2[7]).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: require("module_16750") };
     const items4 = [closure_4(tmp(tmp2[7]).Icon, obj6), ];
     let obj7 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
     items4[1] = closure_4(tmp(tmp2[6]).Text, obj7);

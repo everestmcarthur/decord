@@ -1,13 +1,13 @@
-// Module ID: 11247
-// Function ID: 11248
+// Module ID: 11287
+// Function ID: 11288
 // Name: AppLauncherContext
-// Dependencies: [19, 4310, 9441, 11248, 2]
+// Dependencies: [19, 4341, 9479, 11288, 2]
 // Exports: useAppLauncherChatInputRefDummy, useAppLauncherContext, useRequiredAppLauncherContext
 
-// Module 11247 (AppLauncherContext)
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9441 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11248 */;
+// Module 11287 (AppLauncherContext)
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9479 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11288 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

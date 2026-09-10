@@ -1,13 +1,13 @@
-// Module ID: 5951
-// Function ID: 5952
+// Module ID: 5987
+// Function ID: 5988
 // Name: DownloadBarIllocon
-// Dependencies: [21, 5601, 5952, 2]
+// Dependencies: [21, 5637, 5988, 2]
 // Exports: DownloadBarIllocon
 
-// Module 5951 (DownloadBarIllocon)
+// Module 5987 (DownloadBarIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5952 from "module_5952" /* 5952 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5988 from "module_5988" /* 5988 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const DownloadBarIllocon = function DownloadBarIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5952 };
+  const obj2 = { uri: _modDef5988 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

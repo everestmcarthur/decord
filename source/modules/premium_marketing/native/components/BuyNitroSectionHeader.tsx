@@ -1,11 +1,11 @@
-// Module ID: 13419
-// Function ID: 13420
+// Module ID: 13468
+// Function ID: 13469
 // Name: BuyNitroSectionHeader
-// Dependencies: [21, 4570, 2]
+// Dependencies: [21, 4601, 2]
 // Exports: default
 
-// Module 13419 (BuyNitroSectionHeader)
-import Text_Text from "Text/Text" /* 4570 */;
+// Module 13468 (BuyNitroSectionHeader)
+import Text_Text from "Text/Text" /* 4601 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// Module ID: 9514
-// Function ID: 9515
+// Module ID: 9552
+// Function ID: 9553
 // Name: StatusBarManager
 // Dependencies: [17, 12, 1623, 2]
 
-// Module 9514 (StatusBarManager)
+// Module 9552 (StatusBarManager)
 import _modDef12 from "module_12" /* 12 */;
 import _mod17 from "module_17" /* 17 */;
 import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1623 */;

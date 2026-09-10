@@ -1,19 +1,19 @@
-// Module ID: 17372
-// Function ID: 17373
+// Module ID: 17431
+// Function ID: 17432
 // Name: CustomStatusManager
-// Dependencies: [5293, 1074, 4461, 7132, 1935, 10123, 1940, 1218, 10122, 2]
+// Dependencies: [5329, 1074, 4492, 7170, 1935, 10161, 1940, 1218, 10160, 2]
 
-// Module 17372 (CustomStatusManager)
-import setUserStatusDefault from "setUserStatus" /* 10123 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5293 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+// Module 17431 (CustomStatusManager)
+import setUserStatusDefault from "setUserStatus" /* 10161 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5329 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 let require = fn;
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_4, StatusTypes: hasOwnProperty } = Constants);
-const timeout = new fn(4461).Timeout();
-const timeout1 = new fn(4461).Timeout();
-const timeout2 = new fn(4461).Timeout();
+const timeout = new fn(4492).Timeout();
+const timeout1 = new fn(4492).Timeout();
+const timeout2 = new fn(4492).Timeout();
 const prototype = function CustomStatusManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -137,9 +137,9 @@ const prototype = function CustomStatusManager() {
             closure_1_0(dependencyMap[8]).setFocusMode(false);
           }, true);
         } else {
-          applyArgumentsResult(10122).setFocusMode(false);
+          applyArgumentsResult(10160).setFocusMode(false);
           timeout1.stop();
-          const tmpResult = applyArgumentsResult(10122);
+          const tmpResult = applyArgumentsResult(10160);
         }
       }
     }

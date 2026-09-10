@@ -1,18 +1,18 @@
-// Module ID: 14719
-// Function ID: 14720
+// Module ID: 14768
+// Function ID: 14769
 // Name: SettingListRenderer
-// Dependencies: [19, 17, 14720, 14611, 11501, 21, 4574, 576, 5701, 4570, 14721, 1611, 14722, 14726, 8906, 14727, 14730, 14731, 1874, 2]
+// Dependencies: [19, 17, 14769, 14660, 11541, 21, 4605, 576, 5737, 4601, 14770, 1611, 14771, 14775, 8943, 14776, 14779, 14780, 1874, 2]
 
-// Module 14719 (SettingListRenderer)
+// Module 14768 (SettingListRenderer)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import TableRowGroup from "TableRowGroup" /* 5701 */;
-import SettingRenderer from "SettingRenderer" /* 14721 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14722 */;
-import SettingsSearchEmptyStateDefault from "SettingsSearchEmptyState" /* 14730 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import TableRowGroup from "TableRowGroup" /* 5737 */;
+import SettingRenderer from "SettingRenderer" /* 14770 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14771 */;
+import SettingsSearchEmptyStateDefault from "SettingsSearchEmptyState" /* 14779 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14720 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 14611 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14769 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 14660 */;
 
 const require = globalThis.__r;
 
@@ -96,9 +96,9 @@ function keyExtractor(type, arg1) {
   return "" + type.type + "-" + label;
 }
 const View = fn(17).View;
-const ListItemType = fn(11501).ListItemType;
+const ListItemType = fn(11541).ListItemType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 }, contentContainer: { paddingHorizontal: 16 }, searchResultsHeader: { paddingBottom: 24 }, spacer: { paddingTop: 24 }, subLabel: { marginTop: 8 } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 };
@@ -109,7 +109,7 @@ const memoResult = noop.memo((node) => {
   const items = [field, node];
   const memo = noop.useMemo(() => SettingRendererUtils.toSettingListItems(node, field), items);
   const ref = noop.useRef(null);
-  node(14726).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
+  node(14775).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };
   const obj4 = {};
@@ -121,7 +121,7 @@ const memoResult = noop.memo((node) => {
   obj3.renderItem = renderItem;
   obj3.data = memo;
   obj3.getItemType = getItemType;
-  obj2.children = jsx(node(8906).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
+  obj2.children = jsx(node(8943).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
   return <View style={tmp.container}>{null}</View>;
 });
 const size = fn(2);

@@ -1,11 +1,11 @@
-// Module ID: 6955
-// Function ID: 6956
+// Module ID: 6991
+// Function ID: 6992
 // Name: FreeFormErrorLabel
-// Dependencies: [19, 21, 4277, 4425, 4570, 2]
+// Dependencies: [19, 21, 4308, 4456, 4601, 2]
 // Exports: default
 
-// Module 6955 (FreeFormErrorLabel)
-import shared from "shared" /* 4425 */;
+// Module 6991 (FreeFormErrorLabel)
+import shared from "shared" /* 4456 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("design/void/Form/native/FreeFormError
 export default function Label(style) {
   const children = style.children;
   let nodeText;
-  nodeText = nodeText(4277).getNodeText(children);
+  nodeText = nodeText(4308).getNodeText(children);
   const items = [nodeText];
   const effect = noop.useEffect(() => {
     let tmp2 = null != nodeText;
@@ -28,5 +28,5 @@ export default function Label(style) {
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);
-  return jsx(nodeText(4570).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
+  return jsx(nodeText(4601).Text, { style: style.style, variant: "text-xs/medium", color: "text-feedback-critical", children });
 };

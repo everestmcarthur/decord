@@ -1,12 +1,12 @@
-// Module ID: 9427
-// Function ID: 9428
+// Module ID: 9465
+// Function ID: 9466
 // Name: ForumExplicitMediaAlert
-// Dependencies: [19, 17, 21, 4574, 576, 5008, 4570, 1114, 4989, 9428, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 5044, 4601, 1114, 5025, 9466, 2]
 // Exports: default
 
-// Module 9427 (ForumExplicitMediaAlert)
+// Module 9465 (ForumExplicitMediaAlert)
 import nativeDefault from "native" /* 576 */;
-import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 9428 */;
+import ExplicitMediaActionCreators from "ExplicitMediaActionCreators" /* 9466 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { padding: nativeDefault.space.PX_16, alignItems: "stretch" }, title: null, body: null, buttonContainer: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_16, alignItems: "stretch" };
 obj2.title = { marginBottom: nativeDefault.space.PX_16 };

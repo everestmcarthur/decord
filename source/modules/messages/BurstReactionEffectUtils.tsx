@@ -1,11 +1,11 @@
-// Module ID: 7836
-// Function ID: 7837
+// Module ID: 7873
+// Function ID: 7874
 // Name: BurstReactionEffectUtils
-// Dependencies: [4423, 12, 2]
+// Dependencies: [4454, 12, 2]
 // Exports: replaceAnimationColors
 
-// Module 7836 (BurstReactionEffectUtils)
-import ColorUtils from "ColorUtils" /* 4423 */;
+// Module 7873 (BurstReactionEffectUtils)
+import ColorUtils from "ColorUtils" /* 4454 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

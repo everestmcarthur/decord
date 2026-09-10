@@ -1,14 +1,14 @@
-// Module ID: 13590
-// Function ID: 13591
+// Module ID: 13639
+// Function ID: 13640
 // Name: GiftCodeRow
-// Dependencies: [19, 17, 1074, 21, 4574, 576, 4284, 11462, 4813, 8389, 6635, 4570, 4989, 1114, 4166, 1178, 2]
+// Dependencies: [19, 17, 1074, 21, 4605, 576, 4315, 11502, 4844, 8426, 6671, 4601, 5025, 1114, 4196, 1178, 2]
 
-// Module 13590 (GiftCodeRow)
+// Module 13639 (GiftCodeRow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 4813 */;
-import showShareActionSheet from "showShareActionSheet" /* 8389 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11462 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4844 */;
+import showShareActionSheet from "showShareActionSheet" /* 8426 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11502 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticsSections = fn(1074).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { giftCodeRow: { paddingHorizontal: 16 }, giftCodeRowLegacy: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, giftCodeShare: null, giftCodeInput: null, giftCodeInputContent: null, giftCodeShareButton: null, codeText: null, subTextRow: null, expiryText: null, revokeHint: null, firstRow: null, buttonContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.giftCodeShare = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: nativeDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
@@ -95,7 +95,7 @@ prototype["render"] = function render() {
     const intl2 = tmp6(tmp7[13]).intl;
     const obj11 = { hours: null, revokeHook: null };
     const expiresAt = giftCode.expiresAt;
-    obj11.hours = expiresAt.diff(require("module_4166")(), "h");
+    obj11.hours = expiresAt.diff(require("module_4196")(), "h");
     obj11.revokeHook = function revokeHook(children, arg1) {
       const obj = {
         accessibilityRole: "button",
@@ -119,7 +119,7 @@ prototype["render"] = function render() {
   obj.children = items3;
   return closure_7(closure_3, obj);
 };
-GiftCodeRow.contextType = fn(4284).ThemeContext;
+GiftCodeRow.contextType = fn(4315).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/GiftCodeRow.tsx");
 

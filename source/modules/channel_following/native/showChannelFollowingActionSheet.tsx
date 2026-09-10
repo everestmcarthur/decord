@@ -1,11 +1,11 @@
-// Module ID: 11357
-// Function ID: 11358
+// Module ID: 11397
+// Function ID: 11398
 // Name: showChannelFollowingActionSheet
-// Dependencies: [19, 21, 4541, 11358, 1896, 4919, 11365, 2]
+// Dependencies: [19, 21, 4572, 11398, 1896, 4950, 11405, 2]
 // Exports: showChannelFollowingActionSheet
 
-// Module 11357 (showChannelFollowingActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+// Module 11397 (showChannelFollowingActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
   _require = id;
   importDefault = guildId;
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(require("asyncRequireImpl")(11358, dependencyMap.paths), "NewChannelFollower." + id, {
+  obj.openLazy(require("asyncRequireImpl")(11398, dependencyMap.paths), "NewChannelFollower." + id, {
     sourceChannelId: id,
     sourceGuildId: guildId,
     targetChannelId,

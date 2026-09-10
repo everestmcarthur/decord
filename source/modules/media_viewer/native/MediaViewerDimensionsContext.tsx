@@ -1,10 +1,10 @@
-// Module ID: 8321
-// Function ID: 8322
+// Module ID: 8358
+// Function ID: 8359
 // Name: MediaViewerDimensionsContext
 // Dependencies: [19, 21, 1477, 38, 2]
 // Exports: MediaViewerDimensionsProvider, useMediaViewerDimensions
 
-// Module 8321 (MediaViewerDimensionsContext)
+// Module 8358 (MediaViewerDimensionsContext)
 import _modDef38 from "module_38" /* 38 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import noop from "module_19" /* 19 */;

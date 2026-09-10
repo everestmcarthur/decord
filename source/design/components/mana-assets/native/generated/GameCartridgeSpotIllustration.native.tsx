@@ -1,13 +1,13 @@
-// Module ID: 6021
-// Function ID: 6022
+// Module ID: 6057
+// Function ID: 6058
 // Name: GameCartridgeSpotIllustration
-// Dependencies: [21, 5601, 6022, 2]
+// Dependencies: [21, 5637, 6058, 2]
 // Exports: GameCartridgeSpotIllustration
 
-// Module 6021 (GameCartridgeSpotIllustration)
+// Module 6057 (GameCartridgeSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6022 from "module_6022" /* 6022 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6058 from "module_6058" /* 6058 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const GameCartridgeSpotIllustration = function GameCartridgeSpotIllustrat
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6022 };
+  const obj2 = { uri: _modDef6058 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

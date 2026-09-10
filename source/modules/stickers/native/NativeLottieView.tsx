@@ -1,14 +1,14 @@
-// Module ID: 8013
-// Function ID: 8014
+// Module ID: 8051
+// Function ID: 8052
 // Name: NativeLottieView
-// Dependencies: [19, 17, 21, 1115, 8014, 113, 2]
+// Dependencies: [19, 17, 21, 1115, 8052, 113, 2]
 // Exports: default
 
-// Module 8013 (NativeLottieView)
+// Module 8051 (NativeLottieView)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
-import LottieNodeNativeComponentDefault from "LottieNodeNativeComponent" /* 8014 */;
+import LottieNodeNativeComponentDefault from "LottieNodeNativeComponent" /* 8052 */;
 import noop_mod from "module_19" /* 19 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import size from "module_2" /* 2 */;

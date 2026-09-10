@@ -1,13 +1,13 @@
-// Module ID: 7752
-// Function ID: 7753
+// Module ID: 7789
+// Function ID: 7790
 // Name: StreamerApplicationSelectors
-// Dependencies: [4614, 1074, 7753, 558, 504, 2]
+// Dependencies: [4645, 1074, 7790, 558, 504, 2]
 // Exports: getStreamerActivity, getStreamerActivityByUserId, getStreamerApplication, useGetStreamApplication
 
-// Module 7752 (StreamerApplicationSelectors)
+// Module 7789 (StreamerApplicationSelectors)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7753 */;
-import PresenceStore from "PresenceStore" /* 4614 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7790 */;
+import PresenceStore from "PresenceStore" /* 4645 */;
 
 const require = globalThis.__r;
 

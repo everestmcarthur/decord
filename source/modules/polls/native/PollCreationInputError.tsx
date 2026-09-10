@@ -1,19 +1,19 @@
-// Module ID: 12260
-// Function ID: 12261
+// Module ID: 12300
+// Function ID: 12301
 // Name: PollCreationInputError
-// Dependencies: [19, 17, 21, 4574, 576, 4285, 1178, 4570, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 4316, 1178, 4601, 2]
 // Exports: default
 
-// Module 12260 (PollCreationInputError)
+// Module 12300 (PollCreationInputError)
 import nativeDefault from "native" /* 576 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4285 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4316 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 const obj2 = { container: { flexDirection: "row", alignItems: "center", marginTop: -10 }, icon: { alignSelf: "center", marginRight: 5, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL } };
 let closure_6 = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -35,7 +35,7 @@ export default function PollCreationInputError(message) {
   }, items);
   const obj = { style: tmp.container, children: null };
   const size = { width: 16, height: 16, style: tmp.icon };
-  const items1 = [closure_4(message(1178).WarningCircle, size), closure_4(message(4570).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message })];
+  const items1 = [closure_4(message(1178).WarningCircle, size), closure_4(message(4601).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message })];
   obj.children = items1;
   return closure_5(View, obj);
 };

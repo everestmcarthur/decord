@@ -1,17 +1,17 @@
-// Module ID: 16563
-// Function ID: 16564
+// Module ID: 16612
+// Function ID: 16613
 // Name: MainTabsChannelScreenStack
-// Dependencies: [32, 19, 17, 9542, 7878, 1074, 9543, 1085, 21, 4574, 16564, 4310, 5006, 4509, 4434, 16565, 4284, 4311, 4937, 16566, 1484, 16039, 4439, 16043, 6669, 4427, 16038, 9600, 573, 4440, 2]
+// Dependencies: [32, 19, 17, 9580, 7915, 1074, 9581, 1085, 21, 4605, 16613, 4341, 5042, 4540, 4465, 16614, 4315, 4342, 4980, 16615, 1484, 16088, 4470, 16092, 6705, 4458, 16087, 9638, 573, 4471, 2]
 
-// Module 16563 (MainTabsChannelScreenStack)
+// Module 16612 (MainTabsChannelScreenStack)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import native from "native" /* 4284 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9600 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16038 */;
+import native from "native" /* 4315 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9638 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16087 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9542 */;
+import FramesStore from "FramesStore" /* 9580 */;
 
 require = fn;
 function getKey(index) {
@@ -19,15 +19,15 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const MIDNIGHT_BORDER_WIDTH = fn(7878).MIDNIGHT_BORDER_WIDTH;
+const MIDNIGHT_BORDER_WIDTH = fn(7915).MIDNIGHT_BORDER_WIDTH;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: c10, AnalyticsSections: closure_11 } = Constants);
-const FramesConstants = fn(9543);
+const FramesConstants = fn(9581);
 ({ FrameIntent: closure_12, getChannelIdForSurface: map1 } = FramesConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_17 = createStyles.createStyles({ midnightContainerStyles: { marginTop: -MIDNIGHT_BORDER_WIDTH, marginLeft: -MIDNIGHT_BORDER_WIDTH } });
 const __initData = { code: "function MainTabsChannelScreenStackTsx1(){const{translateX}=this.__closure;return translateX.get()>0;}" };
 const __initData2 = { code: "function MainTabsChannelScreenStackTsx2(isVisibleBeneath,wasVisibleBeneath){const{highestFullyRenderedScreenIndex,index}=this.__closure;if(isVisibleBeneath===wasVisibleBeneath)return;if(isVisibleBeneath){if(highestFullyRenderedScreenIndex.get()>=index){highestFullyRenderedScreenIndex.set(index-1);}return;}if(highestFullyRenderedScreenIndex.get()<index){highestFullyRenderedScreenIndex.set(index);}}" };
@@ -462,8 +462,8 @@ export default noop.memo(function MainTabsChannelScreenStack(screens) {
       if (tmp.channelId === ref.current) {
         let isChatLockedOpen = tmp.type !== useChannelScreensFromNavigation.ChannelScreenType.DEFAULT;
         if (!isChatLockedOpen) {
-          isChatLockedOpen = tmp7(4434).getChatLayout().isChatLockedOpen;
-          const tmp7Result = tmp7(4434);
+          isChatLockedOpen = tmp7(4465).getChatLayout().isChatLockedOpen;
+          const tmp7Result = tmp7(4465);
         }
         if (!isChatLockedOpen) {
           const obj = { type: "TRY_ACK", location: null, channelId: null };

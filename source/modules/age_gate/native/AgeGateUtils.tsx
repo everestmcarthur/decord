@@ -1,18 +1,18 @@
-// Module ID: 10326
-// Function ID: 10327
+// Module ID: 10364
+// Function ID: 10365
 // Name: age_gate/AgeGateUtils
-// Dependencies: [1979, 4212, 1371, 1074, 1115, 4777, 10327, 1896, 9328, 2]
+// Dependencies: [1979, 4243, 1371, 1074, 1115, 4808, 10365, 1896, 9365, 2]
 // Exports: handleNSFWGuildInvite, isNSFWInvite, shouldNSFWGateGuild
 
-// Module 10326 (age_gate/AgeGateUtils)
+// Module 10364 (age_gate/AgeGateUtils)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const asyncRequireImpl = tmp(1896);
-const AgeRestrictedContentSettingsUtils = tmp(9328);
+const AgeRestrictedContentSettingsUtils = tmp(9365);
 require = fn;
 const Constants = fn(1074);
 const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
@@ -70,9 +70,9 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
         }
       }
       const obj3 = { guildId: id1 };
-      obj2.pushLazy(asyncRequireImpl(10327, tmp2.paths), obj3);
+      obj2.pushLazy(asyncRequireImpl(10365, tmp2.paths), obj3);
       flag2 = true;
-      const tmp12 = asyncRequireImpl(10327, tmp2.paths);
+      const tmp12 = asyncRequireImpl(10365, tmp2.paths);
     }
     return flag2;
   } else {

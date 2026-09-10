@@ -1,14 +1,14 @@
-// Module ID: 5427
-// Function ID: 5428
+// Module ID: 5463
+// Function ID: 5464
 // Name: GuildVerificationStore
-// Dependencies: [1975, 2021, 2015, 1979, 1371, 1074, 4200, 1384, 573, 11, 504, 2]
+// Dependencies: [1975, 2021, 2015, 1979, 1371, 1074, 4230, 1384, 573, 11, 504, 2]
 
-// Module 5427 (GuildVerificationStore)
+// Module 5463 (GuildVerificationStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildRecord from "GuildRecord" /* 1975 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4200 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4230 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;

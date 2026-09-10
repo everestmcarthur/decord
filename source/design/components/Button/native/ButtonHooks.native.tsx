@@ -1,18 +1,18 @@
-// Module ID: 4995
-// Function ID: 4996
+// Module ID: 5031
+// Function ID: 5032
 // Name: ButtonHooks
-// Dependencies: [19, 4574, 4284, 576, 4425, 4275, 4310, 4988, 4992, 4994, 4996, 4991, 4570, 1115, 2]
+// Dependencies: [19, 4605, 4315, 576, 4456, 4306, 4341, 5024, 5028, 5030, 5032, 5027, 4601, 1115, 2]
 // Exports: useButtonPillStyles, useButtonPressAnimationProps, useButtonScaleStyles, useButtonTextColorStyles, useForegroundColor, useGradientPillStyles, useIconSizeStyles, useIconTintStyles, useProfileThemedButtonStyles
 
-// Module 4995 (ButtonHooks)
+// Module 5031 (ButtonHooks)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4275 */;
-import native from "native" /* 4284 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import shared from "shared" /* 4425 */;
-import spring from "spring" /* 4988 */;
-import Icon from "Icon" /* 4991 */;
-import springPresets from "springPresets" /* 4992 */;
+import useToken from "useToken" /* 4306 */;
+import native from "native" /* 4315 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import shared from "shared" /* 4456 */;
+import spring from "spring" /* 5024 */;
+import Icon from "Icon" /* 5027 */;
+import springPresets from "springPresets" /* 5028 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -135,11 +135,11 @@ function getButtonColorTokens(variant) {
   }
 }
 let c4 = "rgba(0,0,0,0.001)";
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 const backgroundInactive = createStyles.experimental_createToken(() => "#161CBB");
-createStyles = fn(4574);
+createStyles = fn(4605);
 const backgroundPressed = createStyles.experimental_createToken(() => "#1318A0");
-createStyles = fn(4574);
+createStyles = fn(4605);
 const styleProperties = createStyles.createStyleProperties(getButtonColorTokens);
 const __initData = { code: "function ButtonHooksNativeTsx1(){const{interpolateColor,pressed,inactiveColor,pressedColor}=this.__closure;return{tintColor:interpolateColor(pressed.get(),[0,1],[inactiveColor,pressedColor])};}" };
 const __initData2 = { code: "function ButtonHooksNativeTsx2(){const{themedStyles,colors,interpolateColor,pressed}=this.__closure;var _themedStyles$backgro,_themedStyles,_themedStyles$borderC,_themedStyles2;const backgroundColor=(_themedStyles$backgro=(_themedStyles=themedStyles)===null||_themedStyles===void 0?void 0:_themedStyles.backgroundColor)!==null&&_themedStyles$backgro!==void 0?_themedStyles$backgro:[colors.backgroundInactive,colors.backgroundPressed];const borderColor=(_themedStyles$borderC=(_themedStyles2=themedStyles)===null||_themedStyles2===void 0?void 0:_themedStyles2.borderColor)!==null&&_themedStyles$borderC!==void 0?_themedStyles$borderC:[colors.borderInactive,colors.borderPressed];return{backgroundColor:interpolateColor(pressed.get(),[0,1],backgroundColor),borderColor:interpolateColor(pressed.get(),[0,1],borderColor)};}" };
@@ -601,21 +601,21 @@ export const useIconSizeStyles = (arg0) => {
   return fontScale.useMemo(() => {
     Icon;
     if ("sm" === closure_0) {
-      let iconSize = tmp(4991).getIconSize(tmp(4994).SMALL_BUTTON_ICON_SIZE);
-      const tmpResult = tmp(4991);
+      let iconSize = tmp(5027).getIconSize(tmp(5030).SMALL_BUTTON_ICON_SIZE);
+      const tmpResult = tmp(5027);
     } else {
       iconSize = tmp4;
       if ("lg" === tmp5) {
-        iconSize = tmp(4991).getIconSize(tmp(4994).LARGE_BUTTON_ICON_SIZE);
-        const tmpResult4 = tmp(4991);
+        iconSize = tmp(5027).getIconSize(tmp(5030).LARGE_BUTTON_ICON_SIZE);
+        const tmpResult4 = tmp(5027);
       }
     }
     let width = iconSize;
     if (flag) {
       width = iconSize;
       if (fontScale > 1) {
-        const tmpResult5 = tmp(4994);
-        const tmp13 = tmp(4570).TextStyleSheet[tmpResult5.getButtonDefaultTextVariant(tmpResult5, tmp5)];
+        const tmpResult5 = tmp(5030);
+        const tmp13 = tmp(4601).TextStyleSheet[tmpResult5.getButtonDefaultTextVariant(tmpResult5, tmp5)];
         const tmp9 = tmp(1115).isAndroid() ? tmp13.fontSize : tmp13.lineHeight;
         width = iconSize;
         if (null != iconSize) {

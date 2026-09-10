@@ -1,31 +1,31 @@
-// Module ID: 12017
-// Function ID: 12018
+// Module ID: 12057
+// Function ID: 12058
 // Name: useChatInputRefs
-// Dependencies: [19, 7794, 5516, 4915, 7695, 7701, 1371, 9517, 1074, 5014, 4567, 5612, 4439, 12, 12018, 12020, 12021, 12024, 12025, 9336, 7791, 4441, 1609, 1481, 1115, 4442, 1874, 1242, 11698, 7470, 11700, 12026, 7696, 12027, 4913, 12059, 6639, 2]
+// Dependencies: [19, 7831, 5552, 4946, 7732, 7738, 1371, 9555, 1074, 5050, 4598, 5648, 4470, 12, 12058, 12060, 12061, 12064, 12065, 9373, 7828, 4472, 1609, 1481, 1115, 4473, 1874, 1242, 11738, 7508, 11740, 12066, 7733, 12067, 4944, 12099, 6675, 2]
 // Exports: default
 
-// Module 12017 (useChatInputRefs)
+// Module 12057 (useChatInputRefs)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ChatInputUtils from "ChatInputUtils" /* 4439 */;
-import StickersUtils from "StickersUtils" /* 4913 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11698 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12018 */;
-import ChatInputSendUtils from "ChatInputSendUtils" /* 12027 */;
+import ChatInputUtils from "ChatInputUtils" /* 4470 */;
+import StickersUtils from "StickersUtils" /* 4944 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7508 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11738 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12058 */;
+import ChatInputSendUtils from "ChatInputSendUtils" /* 12067 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7794 */;
-import StickersStore from "StickersStore" /* 5516 */;
-import DraftStore from "DraftStore" /* 4915 */;
-import EditMessageStore from "EditMessageStore" /* 7695 */;
-import SlowmodeStore from "SlowmodeStore" /* 7701 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7831 */;
+import StickersStore from "StickersStore" /* 5552 */;
+import DraftStore from "DraftStore" /* 4946 */;
+import EditMessageStore from "EditMessageStore" /* 7732 */;
+import SlowmodeStore from "SlowmodeStore" /* 7738 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-const DraftType = fn(4915).DraftType;
-let closure_11 = fn(9517).updateChatInputContainerHeight;
+const DraftType = fn(4946).DraftType;
+let closure_11 = fn(9555).updateChatInputContainerHeight;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const COMMAND_SENTINEL = fn(5014).COMMAND_SENTINEL;
-const MessageSendLocation = fn(4567).MessageSendLocation;
+const COMMAND_SENTINEL = fn(5050).COMMAND_SENTINEL;
+const MessageSendLocation = fn(4598).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/useChatInputRefs.tsx");
 
@@ -43,7 +43,7 @@ export default function useChatInputRefs(chatInputProps) {
   const chatInputNative = noop.useRef(null);
   const chatInputSendButton = noop.useRef(null);
   const chatInputTextFlushedResponses = noop.useRef(new Map());
-  const tmp2 = chatInputTextFieldHeight(5612)(() => ChatInputUtils.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
+  const tmp2 = chatInputTextFieldHeight(5648)(() => ChatInputUtils.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
   closure_12 = tmp2;
   const propsPrev = noop.useRef(chatInputProps);
   const props = noop.useRef(chatInputProps);
@@ -69,7 +69,7 @@ export default function useChatInputRefs(chatInputProps) {
       closure_1_12.handleRef(null, channel.channel.id);
     };
   }, items2);
-  const state = noop.useRef(chatInputTextFieldHeight(5612)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
+  const state = noop.useRef(chatInputTextFieldHeight(5648)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
   noop.useRef({ handledHereMention: false, sending: false });
   const items3 = [tmp2];
   const memo = noop.useMemo(() => {
@@ -219,8 +219,8 @@ export default function useChatInputRefs(chatInputProps) {
           }
           obj.is_own_message = id === editingMessage.author.id;
           obj2.track(AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
-          tmp6(7470).endEditMessage(channel.id);
-          const tmp6Result = tmp6(7470);
+          tmp6(7508).endEditMessage(channel.id);
+          const tmp6Result = tmp6(7508);
         }
       },
       handlePressKey(arg0) {
@@ -364,7 +364,7 @@ export default function useChatInputRefs(chatInputProps) {
                 const merged = Object.assign(ref.current);
                 obj4.chatInputRef = chatInputRef;
                 obj2.params = obj4;
-                const result = threadCreationCallback(12027).chatInputSendApplicationCommand(obj2);
+                const result = threadCreationCallback(12067).chatInputSendApplicationCommand(obj2);
               });
             }
             if (!sendCommandResult) {
@@ -385,10 +385,10 @@ export default function useChatInputRefs(chatInputProps) {
                   tmp8 = chatInputRef;
                   obj3.chatInputRef = chatInputRef;
                   obj2.params = obj3;
-                  const result = chatInputProps(12027).chatInputHandleSendText(obj2);
-                  const obj = chatInputProps(12027);
+                  const result = chatInputProps(12067).chatInputHandleSendText(obj2);
+                  const obj = chatInputProps(12067);
                 }
-                const keyboardType = chatInputProps(4441).getKeyboardType();
+                const keyboardType = chatInputProps(4472).getKeyboardType();
                 if (keyboardType === chatInputProps(1609).KeyboardTypes.SYSTEM) {
                   const current2 = tmp8.current;
                   current2.focus();
@@ -453,7 +453,7 @@ export default function useChatInputRefs(chatInputProps) {
               let dismissKeyboardResult = chatInputRef;
               obj2.chatInputRef = chatInputRef;
               obj.params = obj2;
-              const result = tmp27(12027).chatInputValidateContentLength(obj);
+              const result = tmp27(12067).chatInputValidateContentLength(obj);
               if (null != result) {
                 closure_1.cancel();
                 if (null != threadCreationCallback) {
@@ -481,9 +481,9 @@ export default function useChatInputRefs(chatInputProps) {
                     }
                   }
                   const tmp31 = importDefault;
-                  tmp27(11700).deletePendingReply(channel.id);
-                  const tmp27Result2 = tmp27(11700);
-                  tmp31(7791).saveDraft(channel.id, "", DraftType.ChannelMessage);
+                  tmp27(11740).deletePendingReply(channel.id);
+                  const tmp27Result2 = tmp27(11740);
+                  tmp31(7828).saveDraft(channel.id, "", DraftType.ChannelMessage);
                   const current4 = dismissKeyboardResult.current;
                   if (current4 != null) {
                     current4.clearText();
@@ -492,12 +492,12 @@ export default function useChatInputRefs(chatInputProps) {
                   if (current5 != null) {
                     current5.showSideActions();
                   }
-                  const tmp31Result = tmp31(7791);
+                  const tmp31Result = tmp31(7828);
                 }
                 current2 = dismissKeyboardResult.current;
                 dismissKeyboardResult = current2.dismissKeyboard();
               }
-              const tmp27Result = tmp27(12027);
+              const tmp27Result = tmp27(12067);
             }
             obj7 = StickersUtils;
           }

@@ -1,8 +1,8 @@
-// Module ID: 6324
-// Function ID: 6325
+// Module ID: 6360
+// Function ID: 6361
 // Dependencies: [2]
 
-// Module 6324
+// Module 6360
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWumpusExcitement3dIllustration-2x.png.js");

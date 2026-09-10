@@ -1,13 +1,13 @@
-// Module ID: 9687
-// Function ID: 9688
+// Module ID: 9725
+// Function ID: 9726
 // Name: useTrackActivityVideoPip
-// Dependencies: [19, 9518, 1074, 563, 8300, 9665, 1242, 2]
+// Dependencies: [19, 9556, 1074, 563, 8337, 9703, 1242, 2]
 // Exports: default
 
-// Module 9687 (useTrackActivityVideoPip)
+// Module 9725 (useTrackActivityVideoPip)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9518 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9556 */;
 
 const require = globalThis.__r;
 
@@ -20,9 +20,9 @@ export default function useTrackActivityPip(arg0) {
   _require = arg0;
   const items = [ChannelCallLifecycleStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream());
-  let tmp2 = stateFromStores(8300)(stateFromStores);
+  let tmp2 = stateFromStores(8337)(stateFromStores);
   dependencyMap = tmp2;
-  const tmp3 = stateFromStores(9665)();
+  const tmp3 = stateFromStores(9703)();
   noop = tmp3;
   const items1 = [stateFromStores, tmp2, arg0, tmp3];
   const effect = noop.useEffect(() => {

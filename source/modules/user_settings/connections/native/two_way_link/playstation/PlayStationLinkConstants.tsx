@@ -1,9 +1,9 @@
-// Module ID: 9287
-// Function ID: 9288
+// Module ID: 9324
+// Function ID: 9325
 // Name: PlayStationLinkConstants
 // Dependencies: [2]
 
-// Module 9287 (PlayStationLinkConstants)
+// Module 9324 (PlayStationLinkConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkConstants.tsx");

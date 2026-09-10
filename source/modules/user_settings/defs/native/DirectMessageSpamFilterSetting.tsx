@@ -1,29 +1,29 @@
-// Module ID: 14865
-// Function ID: 14866
+// Module ID: 14914
+// Function ID: 14915
 // Name: DirectMessageSpamFilterSetting
-// Dependencies: [19, 7989, 14866, 1935, 11500, 1114, 14868, 2]
+// Dependencies: [19, 8027, 14915, 1935, 11540, 1114, 14917, 2]
 
-// Module 14865 (DirectMessageSpamFilterSetting)
+// Module 14914 (DirectMessageSpamFilterSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ModerationUtils from "ModerationUtils" /* 14866 */;
+import ModerationUtils from "ModerationUtils" /* 14915 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11500);
+const SettingBuilders = fn(11540);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.tiCXaH);
   },
-  parent: fn(7989).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8027).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions: function useDmSpamFilterSettingOptions() {
     return noop.useMemo(() => {
       const dmSpamOptions = ModerationUtils.generateDmSpamOptions();
       return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
     }, []);
   },
-  useValue: fn(14868).useDerivedDmSpamFilterSettingValue,
+  useValue: fn(14917).useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
     const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));

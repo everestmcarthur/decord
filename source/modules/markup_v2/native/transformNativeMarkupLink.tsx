@@ -1,12 +1,12 @@
-// Module ID: 8130
-// Function ID: 8131
+// Module ID: 8167
+// Function ID: 8168
 // Name: transformNativeMarkupLink
-// Dependencies: [5010, 5016, 2]
+// Dependencies: [5046, 5052, 2]
 // Exports: transformNativeLink
 
-// Module 8130 (transformNativeMarkupLink)
-import MarkupTypes from "MarkupTypes" /* 5010 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5016 */;
+// Module 8167 (transformNativeMarkupLink)
+import MarkupTypes from "MarkupTypes" /* 5046 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5052 */;
 import size from "module_2" /* 2 */;
 
 function stripCredentialsForDisplay(url) {

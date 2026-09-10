@@ -1,13 +1,13 @@
-// Module ID: 6587
-// Function ID: 6588
+// Module ID: 6623
+// Function ID: 6624
 // Name: WiltedFlowerIllocon
-// Dependencies: [21, 5601, 6588, 2]
+// Dependencies: [21, 5637, 6624, 2]
 // Exports: WiltedFlowerIllocon
 
-// Module 6587 (WiltedFlowerIllocon)
+// Module 6623 (WiltedFlowerIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6588 from "module_6588" /* 6588 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6624 from "module_6624" /* 6624 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const WiltedFlowerIllocon = function WiltedFlowerIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6588 };
+  const obj2 = { uri: _modDef6624 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

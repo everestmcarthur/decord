@@ -1,22 +1,22 @@
-// Module ID: 5141
-// Function ID: 5142
+// Module ID: 5177
+// Function ID: 5178
 // Name: CloudUpload
-// Dependencies: [109, 5, 32, 4573, 1185, 4623, 1074, 3, 1272, 5142, 5150, 1090, 559, 5183, 12, 1461, 5152, 5185, 5186, 5171, 5187, 5188, 5192, 5193, 1232, 5151, 5143, 5194, 5195, 1896, 5280, 1242, 2]
+// Dependencies: [109, 5, 32, 4604, 1185, 4654, 1074, 3, 1272, 5178, 5186, 1090, 559, 5219, 12, 1461, 5188, 5221, 5222, 5207, 5223, 5224, 5228, 5229, 1232, 5187, 5179, 5230, 5231, 1896, 5316, 1242, 2]
 
-// Module 5141 (CloudUpload)
+// Module 5177 (CloudUpload)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import Upload2 from "Upload" /* 5142 */;
-import InlineUploaderDefault from "InlineUploader" /* 5183 */;
+import Upload2 from "Upload" /* 5178 */;
+import InlineUploaderDefault from "InlineUploader" /* 5219 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DevSettingsStore from "DevSettingsStore" /* 4573 */;
+import DevSettingsStore from "DevSettingsStore" /* 4604 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
-import NetworkStore from "NetworkStore" /* 4623 */;
+import NetworkStore from "NetworkStore" /* 4654 */;
 
 const Upload = Upload2;
 
@@ -232,8 +232,8 @@ class CloudUpload extends tmp5 {
         tmp5._originalMd5 = global.originalMd5;
       }
       if (global.platform === tmp12(tmp13[9]).UploadPlatform.WEB) {
-        if (null != global.heicConversionAnalytics) {
-          ({ convertedMimeType, conversionFailureReason, compressTimeMs } = global.heicConversionAnalytics);
+        if (null != global.imageConversionAnalytics) {
+          ({ convertedMimeType, conversionFailureReason, compressTimeMs } = global.imageConversionAnalytics);
           if (null != convertedMimeType) {
             tmp5.uploadAnalytics.convertedMimeType = convertedMimeType;
           }
@@ -1022,10 +1022,10 @@ prototype["upload"] = function upload() {
                     }
                     if (tmp130) {
                       closure_3 = closure_133_0;
-                      const obj14 = status(5171);
+                      const obj14 = status(5207);
                       c8 = 3;
                       c9 = 1;
-                      const obj10 = { value: status(5171).fromBlob(file).catch(() => null), done: false };
+                      const obj10 = { value: status(5207).fromBlob(file).catch(() => null), done: false };
                       return obj10;
                     }
                   }
@@ -1072,10 +1072,10 @@ prototype["upload"] = function upload() {
                     }
                     closure_133_0.uploadAnalytics.timing.compressTimeMs = closure_132_4.compressTimeMs;
                   }
-                  const uploadPayload = v0(5187).default.getUploadPayload(closure_133_0);
+                  const uploadPayload = v0(5223).default.getUploadPayload(closure_133_0);
                   c8 = 5;
                   c9 = 1;
-                  const _default = v0(5187).default;
+                  const _default = v0(5223).default;
                 }
               } else if (5 === tmp9) {
                 if (arg0 === 1) {
@@ -1087,14 +1087,14 @@ prototype["upload"] = function upload() {
                   return obj12;
                 } else {
                   closure_132_5 = value;
-                  uploadTarget = v0(5188).getUploadTarget(closure_133_0.item.target);
+                  uploadTarget = v0(5224).getUploadTarget(closure_133_0.item.target);
                   if (null != closure_132_5.filename) {
                     if ("" !== closure_132_5.filename) {
                       const currentSize2 = closure_133_0.currentSize;
                       if (0 !== closure_133_0.currentSize) {
-                        kestrelConfig = v0(5193).getKestrelConfig({ location: "CloudUpload.upload.postCompressionCheck" });
-                        const obj6 = v0(5193);
-                        effectiveKestrelLimit = v0(5193).getEffectiveKestrelLimit(kestrelConfig, uploadTarget.getMaxFileSize(closure_133_0.channelId));
+                        kestrelConfig = v0(5229).getKestrelConfig({ location: "CloudUpload.upload.postCompressionCheck" });
+                        const obj6 = v0(5229);
+                        effectiveKestrelLimit = v0(5229).getEffectiveKestrelLimit(kestrelConfig, uploadTarget.getMaxFileSize(closure_133_0.channelId));
                         const currentSize = closure_133_0.currentSize;
                         v0 = currentSize;
                         if (currentSize == null) {
@@ -1135,7 +1135,7 @@ prototype["upload"] = function upload() {
                           };
                           return obj15;
                         }
-                        const obj7 = v0(5193);
+                        const obj7 = v0(5229);
                       } else {
                         closure_133_0.handleError(constants.ENTITY_EMPTY);
                       }
@@ -1237,16 +1237,16 @@ prototype["upload"] = function upload() {
               tmp141 = tmp144;
             }
             if (!tmp141) {
-              closure_133_0.mimeType = v0(5185).heicMimeType(file);
-              const obj13 = v0(5185);
+              closure_133_0.mimeType = v0(5221).heicMimeType(file);
+              const obj13 = v0(5221);
             }
           }
           if (closure_133_0.isCancelled()) {
             obj18.handleComplete(closure_133_0.id);
           } else if (obj18.allowOptimization) {
-            if (closure_133_0.item.platform === v0(5142).UploadPlatform.WEB) {
+            if (closure_133_0.item.platform === v0(5178).UploadPlatform.WEB) {
               if (!closure_132_0) {
-                if (true !== closure_133_0.item.heicConversionEvaluated) {
+                if (true !== closure_133_0.item.imageConversionEvaluated) {
                   c8 = 4;
                   c9 = 1;
                   const obj22 = { value: CloudUpload.tryConvertToWebP(closure_133_0.item.file, () => v0._aborted, closure_133_0.id), done: false };
@@ -1261,11 +1261,11 @@ prototype["upload"] = function upload() {
         } else {
           closure_132_0 = false;
           if (closure_133_0.allowOptimization) {
-            if (closure_133_0.item.platform === v0(5142).UploadPlatform.WEB) {
-              if (true !== closure_133_0.item.heicConversionEvaluated) {
+            if (closure_133_0.item.platform === v0(5178).UploadPlatform.WEB) {
+              if (true !== closure_133_0.item.imageConversionEvaluated) {
                 if (null != closure_133_0.item.file) {
                   if (obj25.isHeicFile(closure_133_0.item.file)) {
-                    const HeicUploadConversionExperiment = v0(5186).HeicUploadConversionExperiment;
+                    const HeicUploadConversionExperiment = v0(5222).HeicUploadConversionExperiment;
                     config = HeicUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertHeicToJpeg" });
                     if (config.enabled) {
                       file = closure_133_0.item.file;
@@ -1275,7 +1275,7 @@ prototype["upload"] = function upload() {
                       return obj23;
                     }
                   }
-                  obj25 = v0(5185);
+                  obj25 = v0(5221);
                 }
               }
             }
@@ -1363,7 +1363,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               const obj7 = { value: self, done: true };
               return obj7;
             }
-            obj17 = size(5188);
+            obj17 = size(5224);
           }
         } else {
           if (1 === tmp5) {
@@ -1440,7 +1440,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                         if (fileSize == null) {
                           c3 = 2;
                           c4 = 1;
-                          const obj9 = { value: size(5143).getFileData(uri), done: false };
+                          const obj9 = { value: size(5179).getFileData(uri), done: false };
                           return obj9;
                         }
                       }
@@ -1753,7 +1753,7 @@ CloudUpload["tryConvertHeicToJpeg"] = function tryConvertHeicToJpeg(file, arg1, 
           } else {
             closure_129_0 = value;
             closure_129_1 = closure_129_0.maybeConvertHeicToJpeg;
-            closure_129_2 = closure_129_0.HeicConversionFailureReason;
+            closure_129_2 = closure_129_0.ImageConversionFailureReason;
             c5 = 3;
             c6 = 1;
             const obj8 = { value: closure_129_1(closure_130_0, closure_130_3, closure_130_4), done: false };
@@ -1879,7 +1879,7 @@ prototype["delete"] = function delete() {
             const obj4 = { value, done: true };
             return obj4;
           } else if (null != self.uploadedFilename) {
-            const uploadTarget = v3(5188).getUploadTarget(tmp17.item.target);
+            const uploadTarget = v3(5224).getUploadTarget(tmp17.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(tmp17.uploadedFilename);
             const HTTP = v3(1272).HTTP;

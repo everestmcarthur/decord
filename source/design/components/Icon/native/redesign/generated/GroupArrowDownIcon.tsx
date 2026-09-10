@@ -1,13 +1,13 @@
-// Module ID: 9949
-// Function ID: 9950
+// Module ID: 9987
+// Function ID: 9988
 // Name: GroupArrowDownIcon
-// Dependencies: [19, 21, 576, 4274, 9950, 2]
+// Dependencies: [19, 21, 576, 4305, 9988, 2]
 // Exports: GroupArrowDownIcon
 
-// Module 9949 (GroupArrowDownIcon)
+// Module 9987 (GroupArrowDownIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod9950 from "module_9950" /* 9950 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod9988 from "module_9988" /* 9988 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const GroupArrowDownIcon = function GroupArrowDownIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9950, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9988, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

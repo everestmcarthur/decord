@@ -1,22 +1,22 @@
-// Module ID: 8667
-// Function ID: 8668
+// Module ID: 8704
+// Function ID: 8705
 // Name: InAppReportModal
-// Dependencies: [5, 32, 19, 8668, 21, 7391, 7006, 1114, 8669, 5006, 7607, 8666, 8664, 7014, 2]
+// Dependencies: [5, 32, 19, 8705, 21, 7429, 7044, 1114, 8706, 5042, 7644, 8703, 8701, 7052, 2]
 // Exports: default
 
-// Module 8667 (InAppReportModal)
+// Module 8704 (InAppReportModal)
 import util from "util" /* 1114 */;
-import Navigator from "Navigator" /* 7014 */;
-import HeaderActionButton from "HeaderActionButton" /* 7391 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7607 */;
-import showReportModal from "showReportModal" /* 8664 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8666 */;
+import Navigator from "Navigator" /* 7052 */;
+import HeaderActionButton from "HeaderActionButton" /* 7429 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7644 */;
+import showReportModal from "showReportModal" /* 8701 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8703 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const IN_APP_REPORTS_NODE = fn(8668).IN_APP_REPORTS_NODE;
+const IN_APP_REPORTS_NODE = fn(8705).IN_APP_REPORTS_NODE;
 let jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");
@@ -62,7 +62,7 @@ export default function InAppReportModal(arg0) {
   [c12, c13] = noop.useState([]);
   let tmp4 = _slicedToArray(noop.useState([]), 2);
   [c14, c15] = noop.useState([]);
-  menu(5006)(() => {
+  menu(5042)(() => {
     const orFetchLinkedUsers = FamilyCenterUtils.getOrFetchLinkedUsers();
   });
   let items = [closeModal, first];
@@ -144,8 +144,8 @@ export default function InAppReportModal(arg0) {
       showReportModal.hideReportModal();
       const item = _undefined2.forEach((fn) => fn());
       if (successNodeId) {
-        const result1 = tmp3(8666).showInAppReportsFeedbackModal(tmp5, tmp7);
-        const tmp3Result = tmp3(8666);
+        const result1 = tmp3(8703).showInAppReportsFeedbackModal(tmp5, tmp7);
+        const tmp3Result = tmp3(8703);
       }
       return {};
     } else {
@@ -183,7 +183,7 @@ export default function InAppReportModal(arg0) {
       const obj6 = {};
       const obj7 = {
         headerRight() {
-            const obj = { source: menu(7006), onPress, accessibilityLabel: null };
+            const obj = { source: menu(7044), onPress, accessibilityLabel: null };
             const intl = util.intl;
             obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
             return addOnCloseCallback(HeaderActionButton.HeaderActionButton, obj);

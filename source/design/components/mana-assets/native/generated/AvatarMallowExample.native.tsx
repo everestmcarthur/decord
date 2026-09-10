@@ -1,13 +1,13 @@
-// Module ID: 5783
-// Function ID: 5784
+// Module ID: 5819
+// Function ID: 5820
 // Name: AvatarMallowExample
-// Dependencies: [21, 5601, 5784, 2]
+// Dependencies: [21, 5637, 5820, 2]
 // Exports: AvatarMallowExample
 
-// Module 5783 (AvatarMallowExample)
+// Module 5819 (AvatarMallowExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5784 from "module_5784" /* 5784 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5820 from "module_5820" /* 5820 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const AvatarMallowExample = function AvatarMallowExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5784 };
+  const obj2 = { uri: _modDef5820 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

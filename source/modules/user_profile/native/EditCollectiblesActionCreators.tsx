@@ -1,12 +1,12 @@
-// Module ID: 8201
-// Function ID: 8202
+// Module ID: 8238
+// Function ID: 8239
 // Name: EditCollectiblesActionCreators
-// Dependencies: [1074, 7396, 2]
+// Dependencies: [1074, 7434, 2]
 // Exports: navigateToNitroManagement
 
-// Module 8201 (EditCollectiblesActionCreators)
+// Module 8238 (EditCollectiblesActionCreators)
 import Constants from "Constants" /* 1074 */;
-import openUserSettings from "openUserSettings" /* 7396 */;
+import openUserSettings from "openUserSettings" /* 7434 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsSections = Constants.UserSettingsSections;

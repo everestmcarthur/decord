@@ -1,20 +1,20 @@
-// Module ID: 9448
-// Function ID: 9449
+// Module ID: 9486
+// Function ID: 9487
 // Name: ApplicationCommandQueryApi
-// Dependencies: [32, 19, 1979, 9322, 5013, 1074, 7535, 9330, 504, 9332, 1369, 1894, 9327, 9437, 7537, 2]
+// Dependencies: [32, 19, 1979, 9359, 5049, 1074, 7573, 9367, 504, 9369, 1369, 1894, 9364, 9475, 7575, 2]
 // Exports: executeQuery, getCachedApplicationSection, getCachedCommand, getCachedResults, getChangeKeys, useAccessibleCommandsForApplication, useCachedResults, useCommand, useCommandsForApplication, useDiscovery, useQuery
 
-// Module 9448 (ApplicationCommandQueryApi)
+// Module 9486 (ApplicationCommandQueryApi)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7535 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7537 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9330 */;
-import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9332 */;
-import CommandPermissionUtils from "CommandPermissionUtils" /* 9437 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7573 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7575 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9367 */;
+import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9369 */;
+import CommandPermissionUtils from "CommandPermissionUtils" /* 9475 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9322 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9359 */;
 
 const require = globalThis.__r;
 const CommandPermissionUtilsAll = CommandPermissionUtils;
@@ -58,20 +58,20 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(9322);
+let ApplicationCommandIndexStore = fn(9359);
 ({ useContextIndexState: metroRequire, useDiscoveryState: closure_7, useQueryState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(5013).BuiltInSectionId;
+const BuiltInSectionId = fn(5049).BuiltInSectionId;
 const NOOP = fn(1074).NOOP;
 let items = [fn(1894).ApplicationCommandType.CHAT];
-let section = { id: "placeholder-section", type: fn(7537).ApplicationCommandSectionType.APPLICATION, name: "" };
+let section = { id: "placeholder-section", type: fn(7575).ApplicationCommandSectionType.APPLICATION, name: "" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "Array", command: "call", section: "default" };
+    return { application: "Array", command: "call", section: "ix" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -118,7 +118,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "Array", command: "call", section: "default" };
+    return { application: "Array", command: "call", section: "ix" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -426,7 +426,7 @@ export const useCommand = function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "PX_16" };
+    return { command: "call", application: "accessibilityLabel" };
   }, items);
 };
 export const useCommandsForApplication = function useCommandsForApplication(arg0, arg1, arg2) {

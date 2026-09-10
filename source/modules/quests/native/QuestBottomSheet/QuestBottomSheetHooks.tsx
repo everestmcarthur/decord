@@ -1,18 +1,18 @@
-// Module ID: 15153
-// Function ID: 15154
+// Module ID: 15202
+// Function ID: 15203
 // Name: QuestBottomSheetHooks
-// Dependencies: [5, 19, 5458, 15129, 15150, 4541, 11518, 15154, 11224, 11225, 11229, 5465, 7742, 5461, 7732, 2]
+// Dependencies: [5, 19, 5494, 15178, 15199, 4572, 11558, 15203, 11264, 11265, 11269, 5501, 7779, 5497, 7769, 2]
 // Exports: useMobileActivityPressHandler, useWatchTaskPressHandler
 
-// Module 15153 (QuestBottomSheetHooks)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11224 */;
-import openVideoQuestModalDefault from "openVideoQuestModal" /* 15154 */;
+// Module 15202 (QuestBottomSheetHooks)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11264 */;
+import openVideoQuestModalDefault from "openVideoQuestModal" /* 15203 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(5458).QuestDockMode;
+const QuestDockMode = fn(5494).QuestDockMode;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetHooks.tsx");
 
@@ -44,7 +44,7 @@ export const useWatchTaskPressHandler = function useWatchTaskPressHandler(questI
     obj.sourceQuestContent = sourceQuestContent;
     openVideoQuestModalDefault(obj);
     if (obj3.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_watch_task")) {
-      const obj4 = { type: tmp8(11229).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp8(5465).AdCreativeType.QUEST, adCreativeId: tmp4, questContentCTA: tmp8(7742).QuestContentCTA.WATCH_VIDEO, surfaceId: tmp8(5461).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent: tmp6, impressionId: null, questContentPosition: null };
+      const obj4 = { type: tmp8(11269).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp8(5501).AdCreativeType.QUEST, adCreativeId: tmp4, questContentCTA: tmp8(7779).QuestContentCTA.WATCH_VIDEO, surfaceId: tmp8(5497).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent: tmp6, impressionId: null, questContentPosition: null };
       let id;
       if (obj2 != null) {
         id = obj2.getId();
@@ -55,10 +55,10 @@ export const useWatchTaskPressHandler = function useWatchTaskPressHandler(questI
         questContentPosition1 = obj2.getQuestContentPosition();
       }
       obj4.questContentPosition = questContentPosition1;
-      tmp8(11225).captureAdUserAction(obj4);
-      const tmp8Result = tmp8(11225);
+      tmp8(11265).captureAdUserAction(obj4);
+      const tmp8Result = tmp8(11265);
     } else {
-      const obj5 = { questId: tmp4, questContent: tmp8(5461).QuestContent.QUEST_BOTTOM_SHEET, questContentCTA: tmp8(7742).QuestContentCTA.WATCH_VIDEO, questContentPosition: null, impressionId: null, sourceQuestContent: null };
+      const obj5 = { questId: tmp4, questContent: tmp8(5497).QuestContent.QUEST_BOTTOM_SHEET, questContentCTA: tmp8(7779).QuestContentCTA.WATCH_VIDEO, questContentPosition: null, impressionId: null, sourceQuestContent: null };
       let questContentPosition2;
       if (obj2 != null) {
         questContentPosition2 = obj2.getQuestContentPosition();
@@ -70,8 +70,8 @@ export const useWatchTaskPressHandler = function useWatchTaskPressHandler(questI
       }
       obj5.impressionId = id1;
       obj5.sourceQuestContent = tmp6;
-      const result = tmp8(7732).trackQuestContentClicked(obj5);
-      const tmp8Result2 = tmp8(7732);
+      const result = tmp8(7769).trackQuestContentClicked(obj5);
+      const tmp8Result2 = tmp8(7769);
     }
   }, items1);
 };
@@ -133,9 +133,9 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
           return obj8;
         } else {
           let captureAdUserAction = tmp4;
-          if (obj12.shouldMigrateToAdAnalyticsInterface(tmp4(11224).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_mobile_activity")) {
-            captureAdUserAction = captureAdUserAction(11225).captureAdUserAction;
-            const obj9 = { type: tmp4(11229).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp4(5465).AdCreativeType.QUEST, adCreativeId: closure_128_0, questContentCTA: tmp4(7742).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, surfaceId: tmp4(5461).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent: closure_128_1, impressionId: null, questContentPosition: null };
+          if (obj12.shouldMigrateToAdAnalyticsInterface(tmp4(11264).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_mobile_activity")) {
+            captureAdUserAction = captureAdUserAction(11265).captureAdUserAction;
+            const obj9 = { type: tmp4(11269).AdUserActionType.CLICK_INTERNAL, adCreativeType: tmp4(5501).AdCreativeType.QUEST, adCreativeId: closure_128_0, questContentCTA: tmp4(7779).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, surfaceId: tmp4(5497).QuestContent.QUEST_BOTTOM_SHEET, sourceQuestContent: closure_128_1, impressionId: null, questContentPosition: null };
             let id;
             if (closure_128_4 != null) {
               id = obj6.getId();
@@ -147,11 +147,11 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
             }
             obj9.questContentPosition = questContentPosition;
             captureAdUserAction(obj9);
-            const captureAdUserActionResult = captureAdUserAction(11225);
+            const captureAdUserActionResult = captureAdUserAction(11265);
             obj6 = closure_128_4;
             obj7 = closure_128_4;
           } else {
-            const obj10 = { questId: closure_128_0, questContent: tmp4(5461).QuestContent.QUEST_BOTTOM_SHEET, questContentCTA: tmp4(7742).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, questContentPosition: null, impressionId: null, sourceQuestContent: null };
+            const obj10 = { questId: closure_128_0, questContent: tmp4(5497).QuestContent.QUEST_BOTTOM_SHEET, questContentCTA: tmp4(7779).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY, questContentPosition: null, impressionId: null, sourceQuestContent: null };
             let questContentPosition1;
             if (closure_128_4 != null) {
               questContentPosition1 = obj3.getQuestContentPosition();
@@ -163,13 +163,13 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
             }
             obj10.impressionId = id1;
             obj10.sourceQuestContent = closure_128_1;
-            const result = captureAdUserAction(7732).trackQuestContentClicked(obj10);
-            const captureAdUserActionResult2 = captureAdUserAction(7732);
+            const result = captureAdUserAction(7769).trackQuestContentClicked(obj10);
+            const captureAdUserActionResult2 = captureAdUserAction(7769);
             obj3 = closure_128_4;
             obj4 = closure_128_4;
           }
           dependencyMap = 3;
-          obj12 = tmp4(11224);
+          obj12 = tmp4(11264);
         }
       } catch (tmp36) {
         dependencyMap = tmp;

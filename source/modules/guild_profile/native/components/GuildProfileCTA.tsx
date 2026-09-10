@@ -1,17 +1,17 @@
-// Module ID: 9236
-// Function ID: 9237
+// Module ID: 9273
+// Function ID: 9274
 // Name: GuildProfileCTA
-// Dependencies: [19, 1074, 1084, 21, 9237, 9239, 4541, 7356, 8406, 9243, 4398, 5541, 5564, 5583, 7355, 4989, 1114, 2]
+// Dependencies: [19, 1074, 1084, 21, 9274, 9276, 4572, 7394, 8443, 9280, 4429, 5577, 5600, 5619, 7393, 5025, 1114, 2]
 // Exports: default
 
-// Module 9236 (GuildProfileCTA)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import GuildProfileTypes from "GuildProfileTypes" /* 5564 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5583 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7355 */;
-import transitionToGuild from "transitionToGuild" /* 7356 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8406 */;
+// Module 9273 (GuildProfileCTA)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4429 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import GuildProfileTypes from "GuildProfileTypes" /* 5600 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5619 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7393 */;
+import transitionToGuild from "transitionToGuild" /* 7394 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8443 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,15 +61,15 @@ export default function GuildProfileCTA(profile) {
       applicationStatus = applicationStatus.applicationStatus;
     }
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-      const result = tmp2(5541).openMemberVerificationPendingAlert(guildId);
-      const tmp2Result = tmp2(5541);
-    } else if (tmp2(4398).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+      const result = tmp2(5577).openMemberVerificationPendingAlert(guildId);
+      const tmp2Result = tmp2(5577);
+    } else if (tmp2(4429).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
       const obj = { guildId, canWithdraw: true };
-      const result1 = tmp2(5541).openMemberVerificationRejectedAlert(obj);
-      const tmp2Result3 = tmp2(5541);
-    } else if (tmp2(4398).GuildJoinRequestApplicationStatuses.STARTED === applicationStatus) {
-      const result2 = tmp2(5541).openMemberVerificationIncompleteAlert(guildId);
-      const tmp2Result4 = tmp2(5541);
+      const result1 = tmp2(5577).openMemberVerificationRejectedAlert(obj);
+      const tmp2Result3 = tmp2(5577);
+    } else if (tmp2(4429).GuildJoinRequestApplicationStatuses.STARTED === applicationStatus) {
+      const result2 = tmp2(5577).openMemberVerificationIncompleteAlert(guildId);
+      const tmp2Result4 = tmp2(5577);
     }
   }, items2);
   const items4 = [guildId];

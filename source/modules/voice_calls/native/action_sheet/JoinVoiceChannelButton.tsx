@@ -1,21 +1,21 @@
-// Module ID: 13809
-// Function ID: 13810
+// Module ID: 13858
+// Function ID: 13859
 // Name: JoinVoiceChannelButton
-// Dependencies: [19, 17, 4212, 1074, 21, 4574, 9969, 504, 1114, 1874, 5425, 4989, 2]
+// Dependencies: [19, 17, 4243, 1074, 21, 4605, 10007, 504, 1114, 1874, 5461, 5025, 2]
 // Exports: default
 
-// Module 13809 (JoinVoiceChannelButton)
+// Module 13858 (JoinVoiceChannelButton)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5425 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 9969 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5461 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10007 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = fn;
 const View = fn(17).View;
 const Permissions = fn(1074).Permissions;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_9 = createStyles.createStyles({ container: { flexDirection: "row" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/JoinVoiceChannelButton.tsx");
@@ -48,6 +48,6 @@ export default function JoinVoiceChannelButton(channel) {
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
   }, items1);
-  obj2.children = jsx(channel(4989).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj2.children = jsx(channel(5025).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={null}>{null}</View>;
 };

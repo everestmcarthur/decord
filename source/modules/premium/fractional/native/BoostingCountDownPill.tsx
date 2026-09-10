@@ -1,18 +1,18 @@
-// Module ID: 13544
-// Function ID: 13545
+// Module ID: 13593
+// Function ID: 13594
 // Name: BoostingCountDownPill
-// Dependencies: [17, 21, 4574, 576, 4541, 13545, 1896, 1114, 4570, 2]
+// Dependencies: [17, 21, 4605, 576, 4572, 13594, 1896, 1114, 4601, 2]
 // Exports: default
 
-// Module 13544 (BoostingCountDownPill)
+// Module 13593 (BoostingCountDownPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4574 */;
+import createStyles from "createStyles" /* 4605 */;
 import size from "module_2" /* 2 */;
 
 function handlePress() {
@@ -20,7 +20,7 @@ function handlePress() {
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
   obj2.aboutText = intl.string(util.t["07lzz7"]);
-  obj.openLazy(asyncRequireImpl(13545, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
+  obj.openLazy(asyncRequireImpl(13594, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);

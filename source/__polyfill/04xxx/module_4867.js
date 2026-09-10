@@ -1,9 +1,17 @@
 // Module ID: 4867
 // Function ID: 4868
-// Dependencies: [1291]
+// Dependencies: []
 
 // Module 4867
-import _mod1291 from "module_1291" /* 1291 */;
 
-
-export default _mod1291.setPrototypeOf || null;
+export default function isPrimitive(fn) {
+  let tmp = null === fn;
+  if (!tmp) {
+    let tmp2 = typeof fn !== "function";
+    if (typeof fn !== "function") {
+      tmp2 = typeof fn !== "object";
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+};

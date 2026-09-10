@@ -1,9 +1,9 @@
-// Module ID: 14007
-// Function ID: 14008
+// Module ID: 14056
+// Function ID: 14057
 // Name: PremiumSKUFeature
 // Dependencies: [2]
 
-// Module 14007 (PremiumSKUFeature)
+// Module 14056 (PremiumSKUFeature)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");

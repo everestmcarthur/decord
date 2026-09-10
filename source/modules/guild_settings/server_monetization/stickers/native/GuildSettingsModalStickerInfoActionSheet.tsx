@@ -1,14 +1,14 @@
-// Module ID: 17618
-// Function ID: 17619
+// Module ID: 17677
+// Function ID: 17678
 // Name: GuildSettingsModalStickerInfoActionSheet
-// Dependencies: [5, 32, 19, 17, 5516, 21, 504, 10420, 4272, 6624, 1114, 7164, 7163, 576, 5701, 5619, 10282, 17611, 4532, 2]
+// Dependencies: [5, 32, 19, 17, 5552, 21, 504, 10458, 4303, 6660, 1114, 7202, 7201, 576, 5737, 5655, 10320, 17670, 4563, 2]
 
-// Module 17618 (GuildSettingsModalStickerInfoActionSheet)
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17611 */;
+// Module 17677 (GuildSettingsModalStickerInfoActionSheet)
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17670 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5516 */;
+import StickersStore from "StickersStore" /* 5552 */;
 
 const require = globalThis.__r;
 

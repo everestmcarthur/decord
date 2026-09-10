@@ -1,10 +1,10 @@
-// Module ID: 5423
-// Function ID: 5424
+// Module ID: 5459
+// Function ID: 5460
 // Name: getConnectionsRoles
 // Dependencies: [2015, 1979, 1074, 1086, 2]
 // Exports: default
 
-// Module 5423 (getConnectionsRoles)
+// Module 5459 (getConnectionsRoles)
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import BigFlagUtils from "BigFlagUtils" /* 1086 */;

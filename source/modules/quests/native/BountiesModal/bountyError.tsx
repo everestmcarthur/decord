@@ -1,13 +1,13 @@
-// Module ID: 15049
-// Function ID: 15050
+// Module ID: 15098
+// Function ID: 15099
 // Name: bountyError
-// Dependencies: [15035, 1114, 4272, 5611, 2]
+// Dependencies: [15084, 1114, 4303, 5647, 2]
 // Exports: openBountyRewardClaimErrorToast
 
-// Module 15049 (bountyError)
+// Module 15098 (bountyError)
 import util from "util" /* 1114 */;
-import _modDef5611 from "module_5611" /* 5611 */;
-import BountiesModalConstants from "BountiesModalConstants" /* 15035 */;
+import _modDef5647 from "module_5647" /* 5647 */;
+import BountiesModalConstants from "BountiesModalConstants" /* 15084 */;
 import size from "module_2" /* 2 */;
 
 const toastDurationMs = BountiesModalConstants.BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS;
@@ -28,7 +28,7 @@ export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErr
       if (null != message1) {
         let message = code.message;
       }
-      const obj2 = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: message, icon: _modDef5611, toastDurationMs };
+      const obj2 = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: message, icon: _modDef5647, toastDurationMs };
       obj.open(obj2);
     }
   }

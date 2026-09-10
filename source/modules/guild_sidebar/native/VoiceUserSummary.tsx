@@ -1,11 +1,11 @@
-// Module ID: 16163
-// Function ID: 16164
+// Module ID: 16212
+// Function ID: 16213
 // Name: VoiceUserSummary
-// Dependencies: [19, 17, 21, 1178, 4574, 7887, 7886, 5111, 5115, 2]
+// Dependencies: [19, 17, 21, 1178, 4605, 7924, 7923, 5147, 5151, 2]
 
-// Module 16163 (VoiceUserSummary)
+// Module 16212 (VoiceUserSummary)
 import native from "native" /* 1178 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7887 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7924 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = Object.freeze({ direction: fn(1178).CutoutDirection.RIGHT, inset: -2 });
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40 }, containerNoPadding: { flexDirection: "row", alignItems: "center", height: 40 }, iconContainer: { height: 40 }, redesignChannelIcon: { marginRight: 4 }, overflow: { height: 20, paddingHorizontal: 4, paddingVertical: 0, display: "flex", flexDirection: "row", alignItems: "center" }, transparentBorder: { borderColor: "transparent" } });
 let obj = { direction: fn(1178).CutoutDirection.RIGHT, inset: -2 };
 const size = fn(2);
@@ -28,11 +28,11 @@ export default noop.memo((guildId) => {
     transparentBorder = tmp.transparentBorder;
   }
   const obj2 = { style: null, children: null };
-  const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(7886).useClientThemesOverride()];
+  const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(7923).useClientThemesOverride()];
   obj2.style = items;
   if (renderIcon) {
     if (stageIcon) {
-      let VoiceNormalIcon = tmp4(5111).StageIcon;
+      let VoiceNormalIcon = tmp4(5147).StageIcon;
     }
     const obj3 = { size: "sm", color: "channel-icon", style: tmp.redesignChannelIcon };
     const items1 = [tmp7(VoiceNormalIcon, obj3), ];
@@ -55,6 +55,6 @@ export default noop.memo((guildId) => {
     obj2.children = items1;
     return tmp5(tmp6, obj2);
   }
-  VoiceNormalIcon = tmp4(5115).VoiceNormalIcon;
+  VoiceNormalIcon = tmp4(5151).VoiceNormalIcon;
 });
 export const VOICE_USER_SUMMARY_HEIGHT = 40;

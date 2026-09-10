@@ -1,14 +1,14 @@
-// Module ID: 10935
-// Function ID: 10936
+// Module ID: 10973
+// Function ID: 10974
 // Name: useDisplayNameStylesEffectDefaultColors
-// Dependencies: [19, 1389, 1091, 4275, 576, 1390, 2]
+// Dependencies: [19, 1389, 1091, 4306, 576, 1390, 2]
 // Exports: default
 
-// Module 10935 (useDisplayNameStylesEffectDefaultColors)
+// Module 10973 (useDisplayNameStylesEffectDefaultColors)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
-import useToken from "useToken" /* 4275 */;
+import useToken from "useToken" /* 4306 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

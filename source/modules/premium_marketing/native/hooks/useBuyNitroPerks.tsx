@@ -1,50 +1,50 @@
-// Module ID: 13387
-// Function ID: 13388
+// Module ID: 13436
+// Function ID: 13437
 // Name: useBuyNitroPerks
-// Dependencies: [19, 7446, 1373, 672, 7407, 4231, 1114, 8790, 13388, 5144, 9403, 13389, 13390, 5120, 9409, 13392, 9407, 13393, 9253, 13394, 9405, 13395, 8695, 10146, 13396, 12558, 13397, 13398, 10142, 13400, 5085, 13401, 13402, 13404, 13405, 13407, 13408, 8750, 13410, 8894, 2]
+// Dependencies: [19, 7484, 1373, 672, 7445, 4262, 1114, 8827, 13437, 5180, 9441, 13438, 13439, 5156, 9447, 13441, 9445, 13442, 9290, 13443, 9443, 13444, 8732, 10184, 13445, 12598, 13446, 13447, 10180, 13449, 5121, 13450, 13451, 13453, 13454, 13456, 13457, 8787, 13459, 8931, 2]
 // Exports: default
 
-// Module 13387 (useBuyNitroPerks)
+// Module 13436 (useBuyNitroPerks)
 import util from "util" /* 1114 */;
-import PremiumUtils from "PremiumUtils" /* 4231 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5144 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7407 */;
-import ReactionIcon from "ReactionIcon" /* 8790 */;
-import UploadIcon from "UploadIcon" /* 9403 */;
-import _modDef13388 from "module_13388" /* 13388 */;
-import _modDef13389 from "module_13389" /* 13389 */;
-import AppIconUtils from "AppIconUtils" /* 13390 */;
-import _modDef13392 from "module_13392" /* 13392 */;
-import _modDef13394 from "module_13394" /* 13394 */;
-import _modDef13395 from "module_13395" /* 13395 */;
-import _modDef13396 from "module_13396" /* 13396 */;
-import _modDef13397 from "module_13397" /* 13397 */;
-import _modDef13400 from "module_13400" /* 13400 */;
-import _modDef13401 from "module_13401" /* 13401 */;
-import _modDef13404 from "module_13404" /* 13404 */;
-import _modDef13407 from "module_13407" /* 13407 */;
+import PremiumUtils from "PremiumUtils" /* 4262 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5180 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7445 */;
+import ReactionIcon from "ReactionIcon" /* 8827 */;
+import UploadIcon from "UploadIcon" /* 9441 */;
+import _modDef13437 from "module_13437" /* 13437 */;
+import _modDef13438 from "module_13438" /* 13438 */;
+import AppIconUtils from "AppIconUtils" /* 13439 */;
+import _modDef13441 from "module_13441" /* 13441 */;
+import _modDef13443 from "module_13443" /* 13443 */;
+import _modDef13444 from "module_13444" /* 13444 */;
+import _modDef13445 from "module_13445" /* 13445 */;
+import _modDef13446 from "module_13446" /* 13446 */;
+import _modDef13449 from "module_13449" /* 13449 */;
+import _modDef13450 from "module_13450" /* 13450 */;
+import _modDef13453 from "module_13453" /* 13453 */;
+import _modDef13456 from "module_13456" /* 13456 */;
 import noop from "module_19" /* 19 */;
 import n_mod from "module_672" /* 672 */;
 
-const ChatIcon = tmp(5085);
-const AppsIcon = tmp(5120);
-const NitroWheelIcon = tmp(8695);
-const TrophyIcon = tmp(8750);
-const TagIcon = tmp(8894);
-const ScreenStreamIcon = tmp(9253);
-const SuperReactionIcon = tmp(9405);
-const BoostGemIcon = tmp(9407);
-const UserSquareIcon = tmp(9409);
-const VideoIcon = tmp(10142);
-const StickerIcon = tmp(10146);
-const SoundboardIcon = tmp(12558);
-const DoorEnterIcon = tmp(13398);
-const ServerGridIcon = tmp(13402);
-const PaintPaletteIcon = tmp(13405);
-const LettersIcon = tmp(13408);
-const SparklesIcon = tmp(13410);
+const ChatIcon = tmp(5121);
+const AppsIcon = tmp(5156);
+const NitroWheelIcon = tmp(8732);
+const TrophyIcon = tmp(8787);
+const TagIcon = tmp(8931);
+const ScreenStreamIcon = tmp(9290);
+const SuperReactionIcon = tmp(9443);
+const BoostGemIcon = tmp(9445);
+const UserSquareIcon = tmp(9447);
+const VideoIcon = tmp(10180);
+const StickerIcon = tmp(10184);
+const SoundboardIcon = tmp(12598);
+const DoorEnterIcon = tmp(13447);
+const ServerGridIcon = tmp(13451);
+const PaintPaletteIcon = tmp(13454);
+const LettersIcon = tmp(13457);
+const SparklesIcon = tmp(13459);
 require = fn;
-const Gradients = fn(7446).Gradients;
+const Gradients = fn(7484).Gradients;
 const PremiumConstants = fn(1373);
 ({ FractionalPremiumStates: closure_4, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: hasOwnProperty, PremiumTypes: metroRequire } = PremiumConstants);
 let n = n_mod;
@@ -71,10 +71,10 @@ export default function useBuyNitroPerks(arg0) {
     obj2.subLabel = intl2.string(util.t["3cyhe3"]);
     obj2.IconComponent = ReactionIcon.ReactionIcon;
     const tmp3 = TIER_2;
-    obj2.detail = { image: _modDef13388, description: util.t["3SUJLd"] };
+    obj2.detail = { image: _modDef13437, description: util.t["3SUJLd"] };
     let items = [obj2, , , , , , , , , , , , , , , ];
     const obj4 = { id: "uploads", label: null, labelBasic: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
-    let obj3 = { image: _modDef13388, description: util.t["3SUJLd"] };
+    let obj3 = { image: _modDef13437, description: util.t["3SUJLd"] };
     const obj6 = { legacyCopy: null, rolloutCopy: null };
     const intl3 = util.intl;
     obj6.legacyCopy = intl3.string(util.t["3BtVbk"]);
@@ -86,7 +86,7 @@ export default function useBuyNitroPerks(arg0) {
     const intl6 = util.intl;
     obj4.subLabel = intl6.string(util.t["8AhJqy"]);
     obj4.IconComponent = UploadIcon.UploadIcon;
-    const obj7 = { image: _modDef13389, description: null };
+    const obj7 = { image: _modDef13438, description: null };
     const obj9 = { legacyCopy: null, rolloutCopy: null };
     const intl7 = util.intl;
     obj9.legacyCopy = intl7.string(util.t.i1UuMk);
@@ -115,7 +115,7 @@ export default function useBuyNitroPerks(arg0) {
     obj12.subLabel = intl12.string(util.t["t/Mvdj"]);
     obj12.IconComponent = UserSquareIcon.UserSquareIcon;
     obj10 = AppIconUtils;
-    obj12.detail = { image: _modDef13392, description: util.t.kWcDK8 };
+    obj12.detail = { image: _modDef13441, description: util.t.kWcDK8 };
     items[arraySpreadResult] = obj12;
     if (closure_1) {
       let items3 = [];
@@ -127,7 +127,7 @@ export default function useBuyNitroPerks(arg0) {
       const intl14 = util.intl;
       obj14.subLabel = intl14.string(util.t["n+DGY/"]);
       obj14.IconComponent = BoostGemIcon.BoostGemIcon;
-      const obj16 = { image: tmp5(13393), description: util.t.jsyNHm };
+      const obj16 = { image: tmp5(13442), description: util.t.jsyNHm };
       obj14.detail = obj16;
       items3 = [obj14];
     }
@@ -138,9 +138,9 @@ export default function useBuyNitroPerks(arg0) {
     const intl16 = util.intl;
     obj17.subLabel = intl16.string(util.t.ymCPxp);
     obj17.IconComponent = ScreenStreamIcon.ScreenStreamIcon;
-    const obj13 = { image: _modDef13392, description: util.t.kWcDK8 };
+    const obj13 = { image: _modDef13441, description: util.t.kWcDK8 };
     const tmp7 = closure_1;
-    obj17.detail = { image: _modDef13394, description: util.t.ymCPxp };
+    obj17.detail = { image: _modDef13443, description: util.t.ymCPxp };
     items[arraySpreadResult7] = obj17;
     const sum = arraySpreadResult7 + 1;
     const obj19 = { id: "super-reactions", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
@@ -149,8 +149,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl18 = util.intl;
     obj19.subLabel = intl18.string(util.t.ZK3ZoX);
     obj19.IconComponent = SuperReactionIcon.SuperReactionIcon;
-    const obj18 = { image: _modDef13394, description: util.t.ymCPxp };
-    obj19.detail = { image: _modDef13395, description: util.t.A0U9fk };
+    const obj18 = { image: _modDef13443, description: util.t.ymCPxp };
+    obj19.detail = { image: _modDef13444, description: util.t.A0U9fk };
     items[sum] = obj19;
     if (tmp7) {
       let items4 = [];
@@ -170,8 +170,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl22 = util.intl;
     obj22.subLabel = intl22.string(util.t.hJG8ZN);
     obj22.IconComponent = StickerIcon.StickerIcon;
-    const obj20 = { image: _modDef13395, description: util.t.A0U9fk };
-    obj22.detail = { image: _modDef13396, description: util.t.FXlU24 };
+    const obj20 = { image: _modDef13444, description: util.t.A0U9fk };
+    obj22.detail = { image: _modDef13445, description: util.t.FXlU24 };
     items[arraySpreadResult8] = obj22;
     const sum1 = arraySpreadResult8 + 1;
     const obj24 = { id: "custom-sounds", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -180,8 +180,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl24 = util.intl;
     obj24.subLabel = intl24.string(util.t["4lSyCY"]);
     obj24.IconComponent = SoundboardIcon.SoundboardIcon;
-    const obj23 = { image: _modDef13396, description: util.t.FXlU24 };
-    obj24.detail = { image: _modDef13397, description: util.t["4lSyCY"] };
+    const obj23 = { image: _modDef13445, description: util.t.FXlU24 };
+    obj24.detail = { image: _modDef13446, description: util.t["4lSyCY"] };
     items[sum1] = obj24;
     const sum2 = sum1 + 1;
     const obj26 = { id: "entrance-sounds", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -198,8 +198,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl28 = util.intl;
     obj27.subLabel = intl28.string(util.t["A8O/Qw"]);
     obj27.IconComponent = VideoIcon.VideoIcon;
-    const obj25 = { image: _modDef13397, description: util.t["4lSyCY"] };
-    obj27.detail = { image: _modDef13400, description: util.t["A8O/Qw"] };
+    const obj25 = { image: _modDef13446, description: util.t["4lSyCY"] };
+    obj27.detail = { image: _modDef13449, description: util.t["A8O/Qw"] };
     items[sum3] = obj27;
     const sum4 = sum3 + 1;
     const obj29 = { id: "longer-messages", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -208,8 +208,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl30 = util.intl;
     obj29.subLabel = intl30.string(util.t.vN6XpQ);
     obj29.IconComponent = ChatIcon.ChatIcon;
-    const obj28 = { image: _modDef13400, description: util.t["A8O/Qw"] };
-    obj29.detail = { image: _modDef13401, description: util.t.vN6XpQ };
+    const obj28 = { image: _modDef13449, description: util.t["A8O/Qw"] };
+    obj29.detail = { image: _modDef13450, description: util.t.vN6XpQ };
     items[sum4] = obj29;
     const sum5 = sum4 + 1;
     const obj31 = { id: "more-servers", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -218,8 +218,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl32 = util.intl;
     obj31.subLabel = intl32.string(util.t.JMfaTU);
     obj31.IconComponent = ServerGridIcon.ServerGridIcon;
-    const obj30 = { image: _modDef13401, description: util.t.vN6XpQ };
-    obj31.detail = { image: _modDef13404, description: util.t.JMfaTU };
+    const obj30 = { image: _modDef13450, description: util.t.vN6XpQ };
+    obj31.detail = { image: _modDef13453, description: util.t.JMfaTU };
     items[sum5] = obj31;
     const sum6 = sum5 + 1;
     const obj33 = { id: "client-themes", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -228,8 +228,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl34 = util.intl;
     obj33.subLabel = intl34.string(util.t.CjRASJ);
     obj33.IconComponent = PaintPaletteIcon.PaintPaletteIcon;
-    const obj32 = { image: _modDef13404, description: util.t.JMfaTU };
-    obj33.detail = { image: _modDef13407, description: util.t.jBTTws };
+    const obj32 = { image: _modDef13453, description: util.t.JMfaTU };
+    obj33.detail = { image: _modDef13456, description: util.t.jBTTws };
     items[sum6] = obj33;
     const sum7 = sum6 + 1;
     const obj35 = { id: "display-name-styles", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -318,6 +318,6 @@ export default function useBuyNitroPerks(arg0) {
       HermesBuiltin.arraySpread(mapped.map((perk, index) => ({ kind: "perk", perk, start: 0 === index, end: index === mapped.length - 1 })), 1);
       return items7;
     }
-    const obj34 = { image: _modDef13407, description: util.t.jBTTws };
+    const obj34 = { image: _modDef13456, description: util.t.jBTTws };
   }, items);
 };

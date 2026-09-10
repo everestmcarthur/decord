@@ -1,12 +1,12 @@
-// Module ID: 7052
-// Function ID: 7053
+// Module ID: 7090
+// Function ID: 7091
 // Name: RunAfterInteractionsUtils
-// Dependencies: [17, 4461, 2]
+// Dependencies: [17, 4492, 2]
 // Exports: runAfterInteractions
 
-// Module 7052 (RunAfterInteractionsUtils)
+// Module 7090 (RunAfterInteractionsUtils)
 import _mod17 from "module_17" /* 17 */;
-import Timers from "Timers" /* 4461 */;
+import Timers from "Timers" /* 4492 */;
 import size from "module_2" /* 2 */;
 
 function runAfterInteractions(arg0, MINUTE) {

@@ -1,15 +1,15 @@
-// Module ID: 17024
-// Function ID: 17025
+// Module ID: 17083
+// Function ID: 17084
 // Name: useTextChannelPressEvents
-// Dependencies: [19, 1957, 4587, 4585, 10252, 16147, 10945, 2]
+// Dependencies: [19, 1957, 4618, 4616, 10290, 16196, 10985, 2]
 // Exports: useTextChannelPressEvents
 
-// Module 17024 (useTextChannelPressEvents)
-import transitionToChannel from "transitionToChannel" /* 4585 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10252 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10945 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16147 */;
+// Module 17083 (useTextChannelPressEvents)
+import transitionToChannel from "transitionToChannel" /* 4616 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4618 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10290 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10985 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16196 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 

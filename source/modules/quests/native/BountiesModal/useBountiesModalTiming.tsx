@@ -1,15 +1,15 @@
-// Module ID: 15046
-// Function ID: 15047
+// Module ID: 15095
+// Function ID: 15096
 // Name: useBountiesModalTiming
-// Dependencies: [32, 19, 5458, 11552, 2]
+// Dependencies: [32, 19, 5494, 11592, 2]
 // Exports: useBountiesModalTiming
 
-// Module 15046 (useBountiesModalTiming)
+// Module 15095 (useBountiesModalTiming)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const QuestsExperimentLocations = fn(5458).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5494).QuestsExperimentLocations;
 const BountyVideoEndMode = { END_CARD: "END_CARD", END_CARD_WITH_CTA: "END_CARD_WITH_CTA", LOOP: "LOOP", APP_STORE_LOOP: "APP_STORE_LOOP" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalTiming.tsx");

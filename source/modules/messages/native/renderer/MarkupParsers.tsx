@@ -1,21 +1,21 @@
-// Module ID: 8104
-// Function ID: 8105
+// Module ID: 8142
+// Function ID: 8143
 // Name: MarkupParsers
-// Dependencies: [1074, 1090, 1437, 4564, 8105, 8106, 7902, 8121, 1232, 2]
+// Dependencies: [1074, 1090, 1437, 4595, 8143, 8144, 7940, 8158, 1232, 2]
 // Exports: parseEmbedDescriptionMarkup, parseEmbedTitleMarkup, parseEmbedTitleMarkupWithoutLinks, parseMessageMarkup
 
-// Module 8104 (MarkupParsers)
+// Module 8142 (MarkupParsers)
 import Constants from "Constants" /* 1074 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4564 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 7902 */;
-import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 8105 */;
-import parseNativeMarkupDefault from "parseNativeMarkup" /* 8121 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4595 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 7940 */;
+import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 8143 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 8158 */;
 import priv from "priv" /* 1437 */;
 import size from "module_2" /* 2 */;
 
-const ChangeLogStandardTemplate = changelogRules(8106);
+const ChangeLogStandardTemplate = changelogRules(8144);
 function parseMessageContentToAST(arg0, arg1, arg2) {
   if (!arg2) {
     return renderMessageMarkup.renderMessageMarkupToAST(arg0, arg1);

@@ -1,26 +1,26 @@
-// Module ID: 15085
-// Function ID: 15086
+// Module ID: 15134
+// Function ID: 15135
 // Name: BountiesAutoScrollIndicator
-// Dependencies: [19, 17, 21, 4310, 4575, 4574, 576, 4275, 15086, 4570, 1114, 15088, 2]
+// Dependencies: [19, 17, 21, 4341, 4606, 4605, 576, 4306, 15135, 4601, 1114, 15137, 2]
 // Exports: default
 
-// Module 15085 (BountiesAutoScrollIndicator)
+// Module 15134 (BountiesAutoScrollIndicator)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import useToken from "useToken" /* 4275 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import timing from "timing" /* 4575 */;
-import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 15086 */;
+import useToken from "useToken" /* 4306 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import timing from "timing" /* 4606 */;
+import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 15135 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
-const CircularProgress = tmp2(15088);
+const CircularProgress = tmp2(15137);
 require = fn;
 function BouncingArrow(children) {
   let sharedValue;
-  sharedValue = sharedValue(4310).useSharedValue(0);
+  sharedValue = sharedValue(4341).useSharedValue(0);
   let items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
@@ -35,7 +35,7 @@ function BouncingArrow(children) {
     const result = sharedValue.set(obj.withRepeat(obj2.withSequence(withTimingResult, timing.withTiming(0, obj6)), -1));
     return () => sharedValue(dependencyMap[3]).cancelAnimation(closure_1_0);
   }, items);
-  let obj = sharedValue(4310);
+  let obj = sharedValue(4341);
   const fn = function l() {
     const obj = { transform: null };
     const items = [{ translateY: sharedValue.get() }];
@@ -45,14 +45,14 @@ function BouncingArrow(children) {
   fn.__closure = { translateY: sharedValue };
   fn.__workletHash = 10126349088819;
   fn.__initData = __initData;
-  const style = sharedValue(4310).useAnimatedStyle(fn);
+  const style = sharedValue(4341).useAnimatedStyle(fn);
   return closure_5(ReanimatedRexportDefault.View, { style, children: children.children });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const __initData = { code: "function BountiesAutoScrollIndicatorTsx1(){const{translateY}=this.__closure;return{transform:[{translateY:translateY.get()}]};}" };
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { root: { alignItems: "center", gap: nativeDefault.space.PX_8 }, ringContainer: { alignItems: "center", justifyContent: "center", width: 40, height: 40 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

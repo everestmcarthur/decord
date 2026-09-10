@@ -1,17 +1,17 @@
-// Module ID: 9225
-// Function ID: 9226
+// Module ID: 9262
+// Function ID: 9263
 // Name: GuildProfileHeader
-// Dependencies: [19, 17, 2025, 502, 2021, 9226, 21, 4574, 576, 504, 7751, 11, 1971, 8776, 8775, 4272, 4541, 7356, 5598, 4570, 5137, 8773, 1114, 2]
+// Dependencies: [19, 17, 2025, 502, 2021, 9263, 21, 4605, 576, 504, 7788, 11, 1971, 8813, 8812, 4303, 4572, 7394, 5634, 4601, 5173, 8810, 1114, 2]
 // Exports: default
 
-// Module 9225 (GuildProfileHeader)
+// Module 9262 (GuildProfileHeader)
 import nativeDefault from "native" /* 576 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import transitionToGuild from "transitionToGuild" /* 7356 */;
-import BadgeCategory from "BadgeCategory" /* 8775 */;
-import GuildTraits from "GuildTraits" /* 8776 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4303 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import transitionToGuild from "transitionToGuild" /* 7394 */;
+import BadgeCategory from "BadgeCategory" /* 8812 */;
+import GuildTraits from "GuildTraits" /* 8813 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -19,10 +19,10 @@ import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
 require = fn;
 const View = fn(17).View;
-const getBadgeTooltip = fn(9226).getBadgeTooltip;
+const getBadgeTooltip = fn(9263).getBadgeTooltip;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 }, avatarBackground: null, members: null, memberCount: null, dot: null, dotOnline: null, established: null, nameRow: null, guildName: null, guildIcon: null };
 let size = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj2.avatarBackground = size;

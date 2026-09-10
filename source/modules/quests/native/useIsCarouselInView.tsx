@@ -1,10 +1,10 @@
-// Module ID: 15108
-// Function ID: 15109
+// Module ID: 15157
+// Function ID: 15158
 // Name: useIsCarouselInView
 // Dependencies: [32, 19, 1477, 2]
 // Exports: default
 
-// Module 15108 (useIsCarouselInView)
+// Module 15157 (useIsCarouselInView)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

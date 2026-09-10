@@ -1,21 +1,21 @@
-// Module ID: 11252
-// Function ID: 11253
+// Module ID: 11292
+// Function ID: 11293
 // Name: NameplatePreview
-// Dependencies: [19, 17, 4566, 2021, 21, 4574, 576, 1886, 8243, 8185, 504, 4418, 4808, 1178, 8852, 10931, 10932, 4570, 2]
+// Dependencies: [19, 17, 4597, 2021, 21, 4605, 576, 1886, 8280, 8222, 504, 4449, 4839, 1178, 8889, 10969, 10970, 4601, 2]
 // Exports: NameplatePreview
 
-// Module 11252 (NameplatePreview)
+// Module 11292 (NameplatePreview)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
@@ -56,9 +56,9 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     nameplateData = user(1886).getNameplateData(nameplate);
     const obj = user(1886);
   }
-  const avatarDecoration = user(8243).useAvatarDecoration(user, guildId);
-  pendingAvatarDecoration = guildId(8185)({ guildId }).pendingAvatarDecoration;
-  const obj2 = user(8243);
+  const avatarDecoration = user(8280).useAvatarDecoration(user, guildId);
+  pendingAvatarDecoration = guildId(8222)({ guildId }).pendingAvatarDecoration;
+  const obj2 = user(8280);
   const items = [AccessibilityStore];
   stateFromStores = user(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj3 = user(504);
@@ -74,7 +74,7 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     return member;
   });
   const obj4 = user(504);
-  const name = guildId(4418).useName(user);
+  const name = guildId(4449).useName(user);
   if (pendingGlobalName == null) {
     let tmp11 = name;
     if (null != guildId) {
@@ -98,23 +98,23 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     tmp14 = pendingAvatarDecoration;
   }
   pendingAvatarDecoration = tmp14;
-  const tmp15 = guildId(4808)({ userId: user.id, guildId, pendingDisplayNameStyles });
+  const tmp15 = guildId(4839)({ userId: user.id, guildId, pendingDisplayNameStyles });
   const items2 = [tmp.avatar, user, guildId, tmp14, stateFromStores];
   const obj7 = { style: tmp.container, "aria-hidden": aria_hidden["aria-hidden"], children: null };
   const memo = stateFromStores.useMemo(() => React5(native.Avatar, { style: user.avatar, user, guildId, size: native.AvatarSizes.NORMAL, avatarDecoration: pendingAvatarDecoration, animate: !stateFromStores, autoStatusCutout: true, "aria-hidden": true }), items2);
-  const items3 = [closure_7(guildId(8852), { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 }), closure_7(pendingAvatarDecoration, { style: tmp.avatar, children: memo }), ];
+  const items3 = [closure_7(guildId(8889), { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 }), closure_7(pendingAvatarDecoration, { style: tmp.avatar, children: memo }), ];
   const obj10 = { style: tmp.content, children: null };
   let tmp19Result = null != tmp15;
   if (tmp19Result) {
-    const obj11 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: tmp4(10932).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
-    tmp19Result = tmp19(tmp7(10931), obj11);
-    const tmp7Result = tmp7(10931);
+    const obj11 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: tmp4(10970).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
+    tmp19Result = tmp19(tmp7(10969), obj11);
+    const tmp7Result = tmp7(10969);
   }
   const items4 = [tmp19Result, ];
   let tmp19Result2 = null == tmp15;
   if (tmp19Result2) {
     const obj12 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: pendingGlobalName };
-    tmp19Result2 = tmp19(tmp4(4570).Text, obj12);
+    tmp19Result2 = tmp19(tmp4(4601).Text, obj12);
   }
   items4[1] = tmp19Result2;
   obj10.children = items4;

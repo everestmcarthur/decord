@@ -1,24 +1,24 @@
-// Module ID: 12297
-// Function ID: 12298
+// Module ID: 12337
+// Function ID: 12338
 // Name: JumpToPresentButton
-// Dependencies: [19, 17, 9517, 5291, 4795, 21, 4574, 576, 1115, 4275, 504, 9713, 1114, 12298, 12299, 12300, 2]
+// Dependencies: [19, 17, 9555, 5327, 4826, 21, 4605, 576, 1115, 4306, 504, 9751, 1114, 12338, 12339, 12340, 2]
 // Exports: default
 
-// Module 12297 (JumpToPresentButton)
+// Module 12337 (JumpToPresentButton)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4275 */;
+import useToken from "useToken" /* 4306 */;
 import noop from "module_19" /* 19 */;
-import useChatBottomManagerUIStore_mod from "useChatBottomManagerUIStore" /* 9517 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5291 */;
-import MessageStore from "MessageStore" /* 4795 */;
+import useChatBottomManagerUIStore_mod from "useChatBottomManagerUIStore" /* 9555 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5327 */;
+import MessageStore from "MessageStore" /* 4826 */;
 
 require = fn;
 const View = fn(17).View;
-let useChatBottomManagerUIStore = fn(9517);
+let useChatBottomManagerUIStore = fn(9555);
 ({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
 let useChatBottomManagerUIStore = useChatBottomManagerUIStore_mod;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { borderRadius: nativeDefault.radii.round, position: "absolute", right: nativeDefault.modules.mobile.JUMP_TO_PRESENT_RIGHT_SPACING }, containerIOS: { bottom: "100%", pointerEvents: "box-none" } };
 let closure_10 = createStyles.createStyles(obj2);
 const PlatformUtils = fn(1115);
@@ -60,10 +60,10 @@ export default function JumpToPresentButton(channelId) {
     return tmp;
   });
   const obj = channelId(504);
-  const isVoicePanelMounted = channelId(9713).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(9713);
-  const isVoicePanelOpen = channelId(9713).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(9713);
+  const isVoicePanelMounted = channelId(9751).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(9751);
+  const isVoicePanelOpen = channelId(9751).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(9751);
   const items1 = [MessageStore];
   const stateFromStores = channelId(504).useStateFromStores(items1, () => null != MessageStore.getMessages(channelId).jumpReturnTargetId);
   if (!tmp5) {
@@ -87,11 +87,11 @@ export default function JumpToPresentButton(channelId) {
   const items3 = [tmp.container, tmp10];
   obj5.style = items3;
   if (tmp5) {
-    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(12299), onPress: channelId.onJumpToPresent };
-    let tmp12Result = tmp12(screenIndex(12298), obj6);
-    const tmp16 = screenIndex(12298);
+    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(12339), onPress: channelId.onJumpToPresent };
+    let tmp12Result = tmp12(screenIndex(12338), obj6);
+    const tmp16 = screenIndex(12338);
   } else {
-    tmp12Result = tmp12(tmp3(12300).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = tmp12(tmp3(12340).MemoedVoicePanelDismissChatButton, {});
   }
   obj5.children = tmp12Result;
   return <View style={null}>{null}</View>;

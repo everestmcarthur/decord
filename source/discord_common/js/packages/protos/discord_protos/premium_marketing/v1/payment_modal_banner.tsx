@@ -1,11 +1,11 @@
-// Module ID: 10707
-// Function ID: 10708
+// Module ID: 10745
+// Function ID: 10746
 // Name: payment_modal_banner
-// Dependencies: [32, 1188, 10702, 2]
+// Dependencies: [32, 1188, 10740, 2]
 
-// Module 10707 (payment_modal_banner)
+// Module 10745 (payment_modal_banner)
 import _mod1188 from "module_1188" /* 1188 */;
-import localized_string from "localized_string" /* 10702 */;
+import localized_string from "localized_string" /* 10740 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

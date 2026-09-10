@@ -1,10 +1,10 @@
-// Module ID: 11693
-// Function ID: 11694
+// Module ID: 11733
+// Function ID: 11734
 // Name: useShouldHideMediaOptions
 // Dependencies: [1957, 1964, 563, 2]
 // Exports: default
 
-// Module 11693 (useShouldHideMediaOptions)
+// Module 11733 (useShouldHideMediaOptions)
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = globalThis.__r;

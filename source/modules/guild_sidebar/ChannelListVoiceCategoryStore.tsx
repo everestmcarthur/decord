@@ -1,9 +1,9 @@
-// Module ID: 7547
-// Function ID: 7548
+// Module ID: 7585
+// Function ID: 7586
 // Name: ChannelListVoiceCategoryStore
 // Dependencies: [504, 573, 2]
 
-// Module 7547 (ChannelListVoiceCategoryStore)
+// Module 7585 (ChannelListVoiceCategoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

@@ -1,16 +1,16 @@
-// Module ID: 15862
-// Function ID: 15863
+// Module ID: 15911
+// Function ID: 15912
 // Name: FeedBlock
-// Dependencies: [19, 17, 4566, 1183, 6609, 1076, 1074, 21, 4574, 576, 504, 4425, 15102, 15863, 15104, 7555, 7196, 7176, 1114, 4570, 5137, 4541, 15864, 1896, 4529, 4989, 15857, 15865, 1115, 8843, 15866, 5601, 15867, 15868, 2]
+// Dependencies: [19, 17, 4597, 1183, 6645, 1076, 1074, 21, 4605, 576, 504, 4456, 15151, 15912, 15153, 7593, 7234, 7214, 1114, 4601, 5173, 4572, 15913, 1896, 4560, 5025, 15906, 15914, 1115, 8880, 15915, 5637, 15916, 15917, 2]
 // Exports: default
 
-// Module 15862 (FeedBlock)
+// Module 15911 (FeedBlock)
 import nativeDefault from "native" /* 576 */;
-import ShopHomeSortType from "ShopHomeSortType" /* 15863 */;
+import ShopHomeSortType from "ShopHomeSortType" /* 15912 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
-import ConsentStore from "ConsentStore" /* 6609 */;
+import ConsentStore from "ConsentStore" /* 6645 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -19,7 +19,7 @@ const constants = fn(1076).CollectiblesMobileShopScreen;
 const Consents = fn(1074).Consents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { feedContainer: { display: "flex", flexDirection: "column", height: "100%", gap: nativeDefault.space.PX_16 }, feedHeader: null, feedTitle: null, feedFooter: null, feedFooterImage: null, feedFooterOrbImage: null };
 let obj3 = { display: "flex", flexDirection: "column", height: "100%", gap: nativeDefault.space.PX_16 };
 obj2.feedHeader = { display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -45,7 +45,7 @@ export default function _default(feedBlock) {
   const obj = feedBlock(504);
   let items1 = [ConsentStore];
   const stateFromStores1 = feedBlock(504).useStateFromStores(items1, () => ConsentStore.hasConsented(constants2.PERSONALIZATION));
-  let tmp6 = stateFromStores1(15102)();
+  let tmp6 = stateFromStores1(15151)();
   dependencyMap = tmp6;
   const items2 = [feedBlock.sortedSkuIds, tmp6, stateFromStores1];
   const memo = noop.useMemo(() => {
@@ -76,8 +76,8 @@ export default function _default(feedBlock) {
   }, items2);
   ({ isPersonalized, feedProducts } = memo);
   let obj2 = feedBlock(504);
-  const filteredAndSortedProducts = feedBlock(15104).useFilteredAndSortedProducts({ products: feedProducts, maxProducts: 36, screen });
-  const obj3 = feedBlock(15104);
+  const filteredAndSortedProducts = feedBlock(15153).useFilteredAndSortedProducts({ products: feedProducts, maxProducts: 36, screen });
+  const obj3 = feedBlock(15153);
   const items3 = [AccessibilityStore];
   const stateFromStores2 = feedBlock(504).useStateFromStores(items3, () => useReducedMotion.useReducedMotion);
   const obj4 = feedBlock(504);
@@ -89,11 +89,11 @@ export default function _default(feedBlock) {
   } else {
     stringResult = string(t.ivaAA7);
   }
-  const obj5 = { value: stateFromStores1(7176)(stateFromStores1(7196).COLLECTIBLES_SHOP_POPULAR_PICKS).analyticsLocations, children: null };
+  const obj5 = { value: stateFromStores1(7214)(stateFromStores1(7234).COLLECTIBLES_SHOP_POPULAR_PICKS).analyticsLocations, children: null };
   const obj6 = { style: feedFooterOrbImage.feedContainer, children: null };
   const obj7 = { style: feedFooterOrbImage.feedHeader, children: null };
   const obj8 = { style: feedFooterOrbImage.feedTitle, children: null };
-  const items4 = [closure_11(feedBlock(4570).Heading, { variant: "heading-lg/semibold", children: stringResult }), ];
+  const items4 = [closure_11(feedBlock(4601).Heading, { variant: "heading-lg/semibold", children: stringResult }), ];
   if (isPersonalized) {
     const obj9 = {
       onPress() {
@@ -105,8 +105,8 @@ export default function _default(feedBlock) {
     };
     const intl2 = tmp(1114).intl;
     obj9["aria-label"] = intl2.string(tmp(1114).t.hvVgAZ);
-    obj9.children = tmp12(tmp(4529).CircleInformationIcon, { size: "xs" });
-    isPersonalized = tmp12(tmp(5137).PressableOpacity, obj9);
+    obj9.children = tmp12(tmp(4560).CircleInformationIcon, { size: "xs" });
+    isPersonalized = tmp12(tmp(5173).PressableOpacity, obj9);
   }
   function goToShopAll() {
     const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
@@ -124,25 +124,25 @@ export default function _default(feedBlock) {
     const obj10 = { onPress: goToShopAll, text: null, variant: "primary", size: "sm" };
     const intl3 = tmp(1114).intl;
     obj10.text = intl3.string(tmp(1114).t.xFcotU);
-    tmp12Result = tmp12(tmp(4989).Button, obj10);
+    tmp12Result = tmp12(tmp(5025).Button, obj10);
   }
   items5[1] = tmp12Result;
   obj7.children = items5;
-  const items6 = [closure_12(closure_5, obj7), closure_11(stateFromStores1(15857), { products: filteredAndSortedProducts, loadingCardsNum: 36, preferVCPrice, accessibilityLabel: stringResult, disableBundleStaticBackground }), ];
+  const items6 = [closure_12(closure_5, obj7), closure_11(stateFromStores1(15906), { products: filteredAndSortedProducts, loadingCardsNum: 36, preferVCPrice, accessibilityLabel: stringResult, disableBundleStaticBackground }), ];
   const obj11 = { style: feedFooterOrbImage.feedFooter, children: null };
   const obj12 = { variant: "heading-lg/bold", accessibilityRole: "header", children: null };
   const intl4 = tmp(1114).intl;
   obj12.children = intl4.string(feedBlock(1114).t.Yr70c4);
-  const items7 = [closure_11(feedBlock(4570).Text, obj12), , ];
+  const items7 = [closure_11(feedBlock(4601).Text, obj12), , ];
   const obj13 = { onPress: goToShopAll, text: null, variant: "primary", size: "md" };
   const intl5 = tmp(1114).intl;
   obj13.text = intl5.string(feedBlock(1114).t.AfrvRD);
-  items7[1] = closure_11(feedBlock(4989).Button, obj13);
+  items7[1] = closure_11(feedBlock(5025).Button, obj13);
   if (screen === constants.ORBS) {
     if (stateFromStores2) {
       const obj14 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
       const obj15 = { uri: null };
-      tmp5Result = tmp5(15865);
+      tmp5Result = tmp5(15914);
       obj15.uri = tmp5Result;
       obj14.source = obj15;
       feedFooterOrbImage = feedFooterOrbImage.feedFooterOrbImage;
@@ -150,27 +150,27 @@ export default function _default(feedBlock) {
       let tmp12Result2 = tmp12(closure_4, obj14);
     } else {
       if (tmpResult.isAndroid()) {
-        const obj16 = { url: tmp5(15866), autoplay: true, style: feedFooterOrbImage.feedFooterOrbImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-        tmp12Result2 = tmp12(tmp5(8843), obj16);
-        const tmp5Result3 = tmp5(8843);
+        const obj16 = { url: tmp5(15915), autoplay: true, style: feedFooterOrbImage.feedFooterOrbImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+        tmp12Result2 = tmp12(tmp5(8880), obj16);
+        const tmp5Result3 = tmp5(8880);
       } else {
         const obj17 = { source: null, enableAnimation: true, resizeMode: "contain", style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-        const obj18 = { uri: tmp5(15866) };
+        const obj18 = { uri: tmp5(15915) };
         obj17.source = obj18;
         obj17.style = feedFooterOrbImage.feedFooterOrbImage;
-        tmp12Result2 = tmp12(tmp5(5601), obj17);
-        const tmp5Result4 = tmp5(5601);
+        tmp12Result2 = tmp12(tmp5(5637), obj17);
+        const tmp5Result4 = tmp5(5637);
       }
       tmpResult = tmp(1115);
     }
   } else {
     const obj19 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
     if (stateFromStores) {
-      obj19.source = tmp(15867);
+      obj19.source = tmp(15916);
       obj19.style = feedFooterOrbImage.feedFooterImage;
       let tmp18 = obj19;
     } else {
-      obj19.source = tmp(15868);
+      obj19.source = tmp(15917);
       obj19.style = feedFooterOrbImage.feedFooterImage;
       tmp18 = obj19;
     }
@@ -179,6 +179,6 @@ export default function _default(feedBlock) {
     items6[2] = tmp13(tmp14, obj11);
     obj6.children = items6;
     obj5.children = tmp13(tmp14, obj6);
-    return tmp12(tmp(7176).AnalyticsLocationProvider, obj5);
+    return tmp12(tmp(7214).AnalyticsLocationProvider, obj5);
   }
 };

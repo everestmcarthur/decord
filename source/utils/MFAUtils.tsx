@@ -1,14 +1,14 @@
-// Module ID: 6965
-// Function ID: 6966
+// Module ID: 7001
+// Function ID: 7002
 // Name: MFAUtils
-// Dependencies: [17, 1608, 6966, 1232, 2]
+// Dependencies: [17, 1608, 7002, 1232, 2]
 // Exports: captureWebAuthnException, encodeTotpSecret, encodeTotpSecretAsUrl, generateTotpSecret
 
-// Module 6965 (MFAUtils)
+// Module 7001 (MFAUtils)
 import _mod17 from "module_17" /* 17 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import encodeDefault from "encode" /* 6966 */;
+import encodeDefault from "encode" /* 7002 */;
 import size from "module_2" /* 2 */;
 
 let _crypto;

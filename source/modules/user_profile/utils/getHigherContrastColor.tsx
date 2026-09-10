@@ -1,10 +1,10 @@
-// Module ID: 7218
-// Function ID: 7219
+// Module ID: 7256
+// Function ID: 7257
 // Name: getHigherContrastColor
 // Dependencies: [32, 1091, 2]
 // Exports: getHigherContrastColor
 
-// Module 7218 (getHigherContrastColor)
+// Module 7256 (getHigherContrastColor)
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import _slicedToArray from "module_32" /* 32 */;
 

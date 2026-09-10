@@ -1,18 +1,18 @@
-// Module ID: 15849
-// Function ID: 15850
+// Module ID: 15898
+// Function ID: 15899
 // Name: HeroBlock
-// Dependencies: [19, 17, 7556, 1076, 1074, 21, 8797, 4574, 576, 15115, 15850, 1483, 8800, 504, 11516, 4509, 15851, 4275, 4423, 15102, 15104, 7176, 7196, 15852, 1242, 4425, 15854, 15855, 15856, 5001, 4570, 4989, 1114, 11798, 5463, 5137, 7223, 7170, 15857, 8906, 2]
+// Dependencies: [19, 17, 7594, 1076, 1074, 21, 8834, 4605, 576, 15164, 15899, 1483, 8837, 504, 11556, 4540, 15900, 4306, 4454, 15151, 15153, 7214, 7234, 15901, 1242, 4456, 15903, 15904, 15905, 5037, 4601, 5025, 1114, 11838, 5499, 5173, 7261, 7208, 15906, 8943, 2]
 // Exports: default
 
-// Module 15849 (HeroBlock)
+// Module 15898 (HeroBlock)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 8797 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8800 */;
-import SkeletonCardDefault from "SkeletonCard" /* 15115 */;
-import FeaturedFirstCardCoachmarkAnchorDefault from "FeaturedFirstCardCoachmarkAnchor" /* 15852 */;
+import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 8834 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8837 */;
+import SkeletonCardDefault from "SkeletonCard" /* 15164 */;
+import FeaturedFirstCardCoachmarkAnchorDefault from "FeaturedFirstCardCoachmarkAnchor" /* 15901 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7594 */;
 
 require = fn;
 function SkeletonLoading(accessibilityLabel) {
@@ -36,8 +36,8 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-const result = 0.75 * fn(8797).COLLECTIBLES_SHOP_CARD_WIDTH;
-const createStyles = fn(4574);
+const result = 0.75 * fn(8834).COLLECTIBLES_SHOP_CARD_WIDTH;
+const createStyles = fn(4605);
 let obj2 = { heroContainer: { width: "100%" }, heroBannerContainer: null, heroBannerImage: { width: "100%", height: "100%", resizeMode: "cover" }, orbsBackgroundGradient: { position: "absolute", top: 0, left: 0, bottom: 0, right: 0 }, fadeOutGradient: { position: "absolute", bottom: 0, height: "50%", width: "100%", zIndex: 1 }, heroInfoContainer: { display: "flex", justifyContent: "center", flex: 1, minWidth: "100%", maxHeight: 240, aspectRatio: 2.2 }, innerContainer: null, heroLogoContainer: null, heroLogo: null, heroViewAllIcon: null, orbsInnerContainer: null, orbsTitle: null, productCardsContainer: null, skeletonContainer: null };
 const rect = { position: "absolute", top: 0, left: 0, width: "100%", maxHeight: 240 + result, aspectRatio: 1.4883720930232558 };
 obj2.heroBannerContainer = rect;
@@ -62,38 +62,38 @@ export default function _default(heroBlock) {
   let stateFromStores;
   closure_5 = undefined;
   closure_6 = undefined;
-  let obj = heroBlock(15850);
+  let obj = heroBlock(15899);
   dependencyMap = heroBlock(1483).useNavigation();
   let obj2 = heroBlock(1483);
-  noop = heroBlock(8800).useCollectiblesAnalyticsContext();
+  noop = heroBlock(8837).useCollectiblesAnalyticsContext();
   let heroBannerUrl = heroBlock.mobileHeroUrl;
   if (heroBannerUrl == null) {
     heroBannerUrl = heroBlock.heroBannerUrl;
   }
   const heroLogoUrl = heroBlock.heroLogoUrl;
-  let obj3 = heroBlock(8800);
+  let obj3 = heroBlock(8837);
   const items = [closure_6];
   stateFromStores = heroBlock(504).useStateFromStores(items, () => CollectiblesCategoryStore.getCategory(heroBlock.categorySkuId));
   let tmpResult = heroBlock(504);
-  let isEligibleForQuests = heroBlock(11516).getIsEligibleForQuests();
-  const tmpResult9 = heroBlock(11516);
-  const tmp7 = preferVCPrice(4509)();
+  let isEligibleForQuests = heroBlock(11556).getIsEligibleForQuests();
+  const tmpResult9 = heroBlock(11556);
+  const tmp7 = preferVCPrice(4540)();
   const tmp8 = closure_14();
-  const tmpResult10 = heroBlock(15851);
-  const token = heroBlock(4275).useToken(preferVCPrice(576).colors.BACKGROUND_BASE_LOW);
-  const tmpResult11 = heroBlock(4275);
-  const tmpResult12 = heroBlock(4423);
-  const tmpResult13 = heroBlock(4423);
-  const hexToRgbaStringResult = tmpResult12.hexToRgbaString(heroBlock(4423).hexWithOpacity(token, 0));
-  const token1 = heroBlock(4275).useToken(preferVCPrice(576).colors.BACKGROUND_BASE_LOWEST);
-  const tmp12 = preferVCPrice(15102)();
+  const tmpResult10 = heroBlock(15900);
+  const token = heroBlock(4306).useToken(preferVCPrice(576).colors.BACKGROUND_BASE_LOW);
+  const tmpResult11 = heroBlock(4306);
+  const tmpResult12 = heroBlock(4454);
+  const tmpResult13 = heroBlock(4454);
+  const hexToRgbaStringResult = tmpResult12.hexToRgbaString(heroBlock(4454).hexWithOpacity(token, 0));
+  const token1 = heroBlock(4306).useToken(preferVCPrice(576).colors.BACKGROUND_BASE_LOWEST);
+  const tmp12 = preferVCPrice(15151)();
   closure_5 = tmp12;
   const items1 = [heroBlock.rankedSkuIds, tmp12];
   const memo = noop.useMemo(() => closure_5(heroBlock.rankedSkuIds), items1);
-  const tmpResult14 = heroBlock(4275);
-  const filteredAndSortedProducts = heroBlock(15104).useFilteredAndSortedProducts({ products: memo, bypassAndroidUnsyncedFilter: tmp4 });
+  const tmpResult14 = heroBlock(4306);
+  const filteredAndSortedProducts = heroBlock(15153).useFilteredAndSortedProducts({ products: memo, bypassAndroidUnsyncedFilter: tmp4 });
   closure_6 = tmp14;
-  const tmpResult15 = heroBlock(15104);
+  const tmpResult15 = heroBlock(15153);
   let unpublishedAt;
   if (stateFromStores != null) {
     unpublishedAt = stateFromStores.unpublishedAt;
@@ -105,7 +105,7 @@ export default function _default(heroBlock) {
     const tmp18 = null != heroBlock.mobileTitle ? heroBlock.mobileTitle : heroBlock.title;
     const tmp19 = null != heroBlock.mobileSummary ? heroBlock.mobileSummary : heroBlock.summary;
     if (!tmp4) {
-      const obj4 = { value: tmp15(preferVCPrice(7196).COLLECTIBLES_SHOP_HERO).analyticsLocations, children: null };
+      const obj4 = { value: tmp15(preferVCPrice(7234).COLLECTIBLES_SHOP_HERO).analyticsLocations, children: null };
       const obj5 = { onChange: tmpResult10.useTrackProductCardImpression(heroBlock.categoryStoreListingId, "mobile_home", "hero_block").handleCardVisibilityChange, resetKey: heroBlock.categoryStoreListingId, children: null };
       const obj6 = { style: tmp8.heroContainer, children: null };
       const obj7 = { style: tmp8.heroBannerContainer, children: null };
@@ -116,7 +116,7 @@ export default function _default(heroBlock) {
           const obj8 = { colors: ["rgba(39, 30, 173, 0.3)", "transparent"], start: null, end: null, style: null };
           ({ START: obj17.start, END: obj17.end } = closure_10);
           obj8.style = tmp8.orbsBackgroundGradient;
-          tmp22Result = tmp22(tmp6(5001), obj8);
+          tmp22Result = tmp22(tmp6(5037), obj8);
         }
         const obj9 = { children: null };
         const items3 = [tmp22Result, , ];
@@ -131,7 +131,7 @@ export default function _default(heroBlock) {
         obj12.colors = items5;
         ({ START: obj21.start, END: obj21.end } = closure_10);
         obj12.style = tmp8.fadeOutGradient;
-        items3[2] = tmp22(tmp6(5001), obj12);
+        items3[2] = tmp22(tmp6(5037), obj12);
         obj9.children = items3;
         tmp24Result = tmp24(closure_12, obj9);
       }
@@ -143,7 +143,7 @@ export default function _default(heroBlock) {
         let tmp22Result6 = null != tmp18;
         if (tmp22Result6) {
           const obj15 = { variant: "display-md", color: "mobile-text-heading-primary", style: tmp8.orbsTitle, children: tmp18 };
-          tmp22Result6 = tmp22(tmp(4570).Text, obj15);
+          tmp22Result6 = tmp22(tmp(4601).Text, obj15);
         }
         const items7 = [tmp22Result6, ];
         let tmp22Result7 = null != tmp19;
@@ -152,7 +152,7 @@ export default function _default(heroBlock) {
         }
         if (tmp22Result7) {
           const obj16 = { variant: "text-md/medium", children: tmp19 };
-          tmp22Result7 = tmp22(tmp(4570).Text, obj16);
+          tmp22Result7 = tmp22(tmp(4601).Text, obj16);
         }
         const obj18 = { children: null };
         items7[1] = tmp22Result7;
@@ -166,7 +166,7 @@ export default function _default(heroBlock) {
             const obj = heroBlock(navigation[33]);
             obj.openQuestHome({ mergeExistingRoutes: true, fromContent: heroBlock(navigation[34]).QuestContent.ORBS_SHOP_HERO_CTA });
           };
-          isEligibleForQuests = tmp22(tmp(4989).Button, obj19);
+          isEligibleForQuests = tmp22(tmp(5025).Button, obj19);
         }
         items8[1] = isEligibleForQuests;
         obj14.children = items8;
@@ -215,11 +215,11 @@ export default function _default(heroBlock) {
           tmp22Result8 = tmp22(tmp25, obj25);
         }
         const items9 = [tmp22Result8, ];
-        const obj28 = { style: tmp8.heroViewAllIcon, children: tmp22(tmp(7223).ChevronSmallRightIcon, { size: "sm", color: "white" }) };
+        const obj28 = { style: tmp8.heroViewAllIcon, children: tmp22(tmp(7261).ChevronSmallRightIcon, { size: "sm", color: "white" }) };
         items9[1] = tmp22(tmp25, obj28);
         obj24.children = items9;
         obj20.children = tmp24(tmp25, obj24);
-        tmp24Result2 = tmp22(tmp(5137).PressableOpacity, obj20, stateFromStores.storeListingId);
+        tmp24Result2 = tmp22(tmp(5173).PressableOpacity, obj20, stateFromStores.storeListingId);
       }
       obj13.children = tmp24Result2;
       items6[1] = closure_11(closure_5, obj13);
@@ -235,8 +235,8 @@ export default function _default(heroBlock) {
         const intl5 = tmp(1114).intl;
         const obj31 = { category: stateFromStores.name };
         obj30.accessibilityLabel = intl5.formatToPlainString(tmp(1114).t.FNtLb3, obj31);
-        let tmp22Result9 = tmp22(tmp6(15857), obj30);
-        const tmp6Result3 = tmp6(15857);
+        let tmp22Result9 = tmp22(tmp6(15906), obj30);
+        const tmp6Result3 = tmp6(15906);
       } else {
         if (0 === filteredAndSortedProducts.length) {
           const obj32 = { accessibilityLabel: null };
@@ -252,7 +252,7 @@ export default function _default(heroBlock) {
           obj34.data = filteredAndSortedProducts;
           obj34.onScroll = obj.useCollectiblesCoachmarkScrollDismissContext().handleDismissCoachmarkOnScroll;
           obj34.renderItem = tmp17;
-          obj34.snapToInterval = tmp(8797).COLLECTIBLES_SHOP_CARD_WIDTH + tmp6(576).space.PX_12;
+          obj34.snapToInterval = tmp(8834).COLLECTIBLES_SHOP_CARD_WIDTH + tmp6(576).space.PX_12;
           obj34.ListHeaderComponent = function ListHeaderComponent() {
             const obj = { style: { width: preferVCPrice(navigation[8]).space.PX_16 } };
             return closure_1_11(closure_5, obj);
@@ -265,25 +265,25 @@ export default function _default(heroBlock) {
             const obj = { style: { width: preferVCPrice(navigation[8]).space.PX_12 } };
             return closure_1_11(closure_5, obj);
           };
-          tmp22Result10 = tmp22(tmp(8906).FlashList, obj34);
+          tmp22Result10 = tmp22(tmp(8943).FlashList, obj34);
         }
         const obj36 = { children: tmp22Result10 };
         tmp22Result9 = tmp22(closure_12, obj36);
       }
       const obj37 = { children: tmp22Result9 };
-      obj29.children = closure_11(tmp(7170).LayerScope, obj37);
+      obj29.children = closure_11(tmp(7208).LayerScope, obj37);
       items6[2] = closure_11(closure_5, obj29);
       obj6.children = items6;
       obj5.children = closure_13(closure_5, obj6);
-      obj4.children = closure_11(tmp6(15856), obj5);
-      return closure_11(tmp(7176).AnalyticsLocationProvider, obj4);
+      obj4.children = closure_11(tmp6(15905), obj5);
+      return closure_11(tmp(7214).AnalyticsLocationProvider, obj4);
     } else {
       if (tmpResult16.isThemeDark(tmp7)) {
-        let tmp6Result4 = tmp6(15854);
+        let tmp6Result4 = tmp6(15903);
       } else {
-        tmp6Result4 = tmp6(15855);
+        tmp6Result4 = tmp6(15904);
       }
-      tmpResult16 = tmp(4425);
+      tmpResult16 = tmp(4456);
     }
   }
 };

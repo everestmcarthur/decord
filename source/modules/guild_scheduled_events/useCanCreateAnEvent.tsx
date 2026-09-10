@@ -1,15 +1,15 @@
-// Module ID: 9705
-// Function ID: 9706
+// Module ID: 9743
+// Function ID: 9744
 // Name: useCanCreateAnEvent
-// Dependencies: [32, 2012, 1979, 4212, 1074, 504, 9703, 2]
+// Dependencies: [32, 2012, 1979, 4243, 1074, 504, 9741, 2]
 // Exports: default
 
-// Module 9705 (useCanCreateAnEvent)
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9703 */;
+// Module 9743 (useCanCreateAnEvent)
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9741 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = globalThis.__r;
 

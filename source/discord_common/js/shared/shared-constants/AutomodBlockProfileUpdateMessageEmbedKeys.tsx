@@ -1,9 +1,9 @@
-// Module ID: 7525
-// Function ID: 7526
+// Module ID: 7563
+// Function ID: 7564
 // Name: AutomodBlockProfileUpdateMessageEmbedKeys
 // Dependencies: [2]
 
-// Module 7525 (AutomodBlockProfileUpdateMessageEmbedKeys)
+// Module 7563 (AutomodBlockProfileUpdateMessageEmbedKeys)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodBlockProfileUpdateMessageEmbedKeys.tsx");

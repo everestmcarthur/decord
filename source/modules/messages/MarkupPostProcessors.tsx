@@ -1,12 +1,12 @@
-// Module ID: 7903
-// Function ID: 7904
+// Module ID: 7941
+// Function ID: 7942
 // Name: MarkupPostProcessors
-// Dependencies: [1074, 4911, 1362, 7904, 4557, 1232, 2]
+// Dependencies: [1074, 4942, 1362, 7942, 4588, 1232, 2]
 // Exports: checkForSimpleEmbedMessage, convertNewlinesInContent, removeBuildOverrideLinks, removeExperimentLinks, removeGameServerShareLinks, removeQuestsEmbedLinks, runMessageMarkupPostProcessors
 
-// Module 7903 (MarkupPostProcessors)
-import findCodedLinks from "findCodedLinks" /* 4557 */;
-import EmbedUtils from "EmbedUtils" /* 4911 */;
+// Module 7941 (MarkupPostProcessors)
+import findCodedLinks from "findCodedLinks" /* 4588 */;
+import EmbedUtils from "EmbedUtils" /* 4942 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -41011,8 +41011,8 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !closure_0(7904).isExperimentEmbedURL(type.target);
-      const obj = closure_0(7904);
+      tmp = !closure_0(7942).isExperimentEmbedURL(type.target);
+      const obj = closure_0(7942);
     }
     return tmp;
   });
@@ -41271,8 +41271,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !closure_0(7904).isExperimentEmbedURL(type.target);
-        const obj = closure_0(7904);
+        tmp = !closure_0(7942).isExperimentEmbedURL(type.target);
+        const obj = closure_0(7942);
       }
       return tmp;
     });

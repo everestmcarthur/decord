@@ -1,14 +1,14 @@
-// Module ID: 4919
-// Function ID: 4920
+// Module ID: 4950
+// Function ID: 4951
 // Name: actions/AlertActionCreators
-// Dependencies: [19, 21, 4541, 573, 4920, 1114, 4924, 5008, 5008, 1896, 2]
+// Dependencies: [19, 21, 4572, 573, 4951, 1114, 4955, 5044, 5044, 1896, 2]
 
-// Module 4919 (actions/AlertActionCreators)
+// Module 4950 (actions/AlertActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import useAlertStore from "useAlertStore" /* 4920 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import useAlertStore from "useAlertStore" /* 4951 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -123,12 +123,12 @@ export default {
     }
     if (!tmp7) {
       if (flag) {
-        merged(4541).hideActionSheet();
-        const obj4 = merged(4541);
+        merged(4572).hideActionSheet();
+        const obj4 = merged(4572);
       }
       if (null != c6) {
-        confirmText(4920).dismissAlert(c6);
-        const obj5 = confirmText(4920);
+        confirmText(4951).dismissAlert(c6);
+        const obj5 = confirmText(4951);
       }
       merged(573).dispatch({ type: "ALERT_CLOSE" });
       closure_7 = tmp27 + 1;
@@ -138,14 +138,14 @@ export default {
       ({ cancelText, onConfirm: c3, onCancel: c4 } = merged);
       c5 = false;
       ({ title, body: body2, children, confirmColor } = merged);
-      const obj7 = confirmText(4920);
+      const obj7 = confirmText(4951);
       const obj3 = { title, content: body2, extraContent: children, actions: null };
       const obj8 = { variant: null, text: null, onPress: null };
       const obj6 = merged(573);
       const tmp29 = confirmText;
       const tmp31 = c5;
       const tmp32 = c4;
-      obj8.variant = confirmText(5008).getAlertButtonVariant(confirmColor);
+      obj8.variant = confirmText(5044).getAlertButtonVariant(confirmColor);
       obj8.text = confirmText;
       obj8.onPress = function onPress() {
         c5 = true;
@@ -153,7 +153,7 @@ export default {
           tmp();
         }
       };
-      const items = [c3(confirmText(4924).AlertActionButton, obj8), ];
+      const items = [c3(confirmText(4955).AlertActionButton, obj8), ];
       let tmp30Result = null;
       if (null != cancelText) {
         const obj9 = {
@@ -166,14 +166,14 @@ export default {
                 }
               }
         };
-        tmp30Result = tmp30(tmp29(4924).AlertActionButton, obj9);
+        tmp30Result = tmp30(tmp29(4955).AlertActionButton, obj9);
       }
       const obj11 = { children: null };
       items[1] = tmp30Result;
       obj11.children = items;
       obj3.actions = tmp31(tmp32, obj11);
       const obj12 = { dismissable: true === isDismissable };
-      obj7.openAlert(text, c3(confirmText(4924).AlertModal, obj3), () => {
+      obj7.openAlert(text, c3(confirmText(4955).AlertModal, obj3), () => {
         if (!c5) {
           if (c4 != null) {
             tmp();
@@ -183,17 +183,17 @@ export default {
           c6 = null;
         }
       }, obj12);
-      const obj10 = confirmText(5008);
+      const obj10 = confirmText(5044);
     } else {
       if (null != c6) {
-        confirmText(4920).dismissAlert(c6);
+        confirmText(4951).dismissAlert(c6);
         c6 = null;
-        const obj2 = confirmText(4920);
+        const obj2 = confirmText(4951);
       }
       const self = this;
       const obj13 = {
         importer() {
-            return asyncRequireImpl(5008, dependencyMap.paths).then((result) => {
+            return asyncRequireImpl(5044, dependencyMap.paths).then((result) => {
               closure_0 = result.default;
               return (arg0) => {
                 const obj = {};

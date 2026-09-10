@@ -1,9 +1,9 @@
-// Module ID: 5603
-// Function ID: 5604
+// Module ID: 5639
+// Function ID: 5640
 // Name: NativeView
 // Dependencies: [2, 112]
 
-// Module 5603 (NativeView)
+// Module 5639 (NativeView)
 import CommandsDefault from "Commands" /* 112 */;
 import size from "module_2" /* 2 */;
 

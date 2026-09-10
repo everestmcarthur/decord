@@ -1,27 +1,27 @@
-// Module ID: 12791
-// Function ID: 12792
+// Module ID: 12831
+// Function ID: 12832
 // Name: ThreadBrowserHooks
-// Dependencies: [32, 19, 12792, 1957, 4212, 4589, 5521, 7780, 4214, 1085, 7795, 504, 12, 1369, 11, 7779, 7912, 2]
+// Dependencies: [32, 19, 12832, 1957, 4243, 4620, 5557, 7817, 4245, 1085, 7832, 504, 12, 1369, 11, 7816, 7950, 2]
 // Exports: useActiveGuildThreads, useActiveThreadIds, useActiveThreads, useArchivedThreads, useTrackThreadBrowserTab
 
-// Module 12791 (ThreadBrowserHooks)
+// Module 12831 (ThreadBrowserHooks)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7779 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 7912 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7816 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 7950 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
-import ReadStateStore from "ReadStateStore" /* 4589 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5521 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 7780 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4214 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
+import ReadStateStore from "ReadStateStore" /* 4620 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5557 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 7817 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4245 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(12792).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(12832).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");

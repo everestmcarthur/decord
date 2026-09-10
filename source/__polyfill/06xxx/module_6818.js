@@ -1,121 +1,321 @@
 // Module ID: 6818
 // Function ID: 6819
-// Dependencies: [1636, 6645, 6658]
-// Exports: useAnimatedSnapPoints
+// Dependencies: [109, 41, 42, 93, 95, 98, 19, 17, 21, 6819, 6801, 6711]
+// Exports: LegacyBorderlessButton, LegacyPureNativeButton, LegacyRectButton
 
 // Module 6818
-import DEFAULT_HANDLE_HEIGHT from "DEFAULT_HANDLE_HEIGHT" /* 6645 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import ButtonComponentDefault from "ButtonComponent" /* 6801 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
+import module_6819 from "module_6819" /* 6819 */;
 
-const require = globalThis.__r;
-
-require = arg1;
-let dependencyMap = arg6;
-let __initData = { code: "function pnpm_useAnimatedSnapPointsTs1(){const{containerHeight,INITIAL_CONTAINER_HEIGHT,INITIAL_SNAP_POINT,snapPoints,normalizeSnapPoint,enableDynamicSizing,handleHeight,INITIAL_HANDLE_HEIGHT,contentHeight,maxDynamicContentSize,dynamicSnapPointIndex}=this.__closure;const isContainerLayoutReady=containerHeight.value!==INITIAL_CONTAINER_HEIGHT;if(!isContainerLayoutReady){return[INITIAL_SNAP_POINT];}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];let _normalizedSnapPoints=_snapPoints.map(function(snapPoint){return normalizeSnapPoint(snapPoint,containerHeight.value);});if(!enableDynamicSizing){return _normalizedSnapPoints;}if(handleHeight.value===INITIAL_HANDLE_HEIGHT){return[INITIAL_SNAP_POINT];}if(contentHeight.value===INITIAL_CONTAINER_HEIGHT){return[INITIAL_SNAP_POINT];}const dynamicSnapPoint=containerHeight.value-Math.min(contentHeight.value+handleHeight.value,maxDynamicContentSize!==undefined?maxDynamicContentSize:containerHeight.value);if(!_normalizedSnapPoints.includes(dynamicSnapPoint)){_normalizedSnapPoints.push(dynamicSnapPoint);}_normalizedSnapPoints=_normalizedSnapPoints.sort(function(a,b){return b-a;});dynamicSnapPointIndex.value=_normalizedSnapPoints.indexOf(dynamicSnapPoint);return _normalizedSnapPoints;}" };
-let __initData2 = { code: "function pnpm_useAnimatedSnapPointsTs2(){const{enableDynamicSizing,snapPoints}=this.__closure;if(enableDynamicSizing){return true;}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];if(_snapPoints.length&&_snapPoints.find(function(snapPoint){return typeof snapPoint==='string';})){return true;}return false;}" };
-
-export const useAnimatedSnapPoints = (snapPoints, containerHeight, contentHeight, handleHeight, arg4, enableDynamicSizing, maxDynamicContentSize) => {
-  _require = snapPoints;
-  dependencyMap = containerHeight;
-  __initData = contentHeight;
-  __initData2 = handleHeight;
-  closure_4 = enableDynamicSizing;
-  closure_5 = maxDynamicContentSize;
-  const sharedValue = require("cancelAnimation").useSharedValue(-1);
-  const obj = require("cancelAnimation");
-  class P {
-    constructor() {
-      iter = closure_1;
-      tmp = closure_0;
-      tmp2 = closure_1;
-      if (closure_1.value === closure_0(closure_1[1]).INITIAL_CONTAINER_HEIGHT) {
-        items = [];
-        items[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-        return items;
-      } else {
-        iter3 = closure_0;
-        if (closure_0) {
-          str = "value";
-          value = iter3;
-          if ("value" in iter3) {
-            value = iter3.value;
-          }
-          items1 = value;
-        } else {
-          items1 = [];
+let InnerBorderlessButton = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let closure_3 = ["rippleColor", "style"];
+let closure_4 = ["children", "style", "activeOpacity"];
+let closure_5 = ["children", "style", "innerRef", "activeOpacity"];
+_possibleConstructorReturnDefault;
+get_ActivityIndicator = fn(17);
+const Animated = get_ActivityIndicator.Animated;
+({ Platform, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const ButtonComponent = module_6819(ButtonComponentDefault, { shouldCancelWhenOutside: false, shouldActivateOnStart: false });
+class LegacyRawButton {
+  constructor(arg0) {
+    obj = {};
+    merged = Object.assign(global);
+    obj.needsOffscreenAlphaCompositing = true;
+    return jsx(closure_15, obj);
+  }
+}
+class InnerBaseButton {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_7(this, InnerBorderlessButton);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_9;
+    obj = closure_9(InnerBorderlessButton);
+    tmp3 = closure_8;
+    if (closure_2_14()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handleEvent = (nativeEvent) => {
+      nativeEvent = nativeEvent.nativeEvent;
+      ({ state, pointerInside } = nativeEvent);
+      let tmp = pointerInside;
+      if (pointerInside) {
+        let tmp4 = state === InnerBorderlessButton(6711).State.BEGAN;
+        if (!tmp4) {
+          tmp4 = state === InnerBorderlessButton(6711).State.ACTIVE;
         }
-        mapped = items1.map(() => { ... });
-        tmp3 = closure_4;
-        if (closure_4) {
-          iter2 = closure_3;
-          if (closure_3.value === tmp(tmp2[1]).INITIAL_HANDLE_HEIGHT) {
-            items2 = [];
-            items2[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-            return items2;
-          } else {
-            iter4 = closure_2;
-            if (closure_2.value === tmp(tmp2[1]).INITIAL_CONTAINER_HEIGHT) {
-              items3 = [];
-              items3[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-              return items3;
-            } else {
-              tmp4 = globalThis;
-              value1 = closure_5;
-              sum = iter4.value + iter2.value;
-              if (undefined === closure_5) {
-                value1 = iter.value;
-              }
-              diff = iter.value - Math.min(sum, value1);
-              if (!mapped.includes(diff)) {
-                arr1 = mapped.push(diff);
-              }
-              sorted = mapped.sort(() => { ... });
-              tmp8 = closure_6;
-              closure_6.value = sorted.indexOf(diff);
-              return sorted;
+        tmp = tmp4;
+      }
+      if (tmp8) {
+        const props = tmp7.props;
+        props.onActiveStateChange(tmp);
+      }
+      const longPressDetected = tmp7.longPressDetected;
+      let onPress = !longPressDetected;
+      if (!longPressDetected) {
+        onPress = nativeEvent.oldState === InnerBorderlessButton(6711).State.ACTIVE;
+      }
+      if (onPress) {
+        onPress = state !== InnerBorderlessButton(6711).State.CANCELLED;
+      }
+      if (onPress) {
+        onPress = tmp7.lastIsPressed;
+      }
+      if (onPress) {
+        onPress = tmp7.props.onPress;
+      }
+      if (onPress) {
+        const props2 = tmp7.props;
+        props2.onPress(pointerInside);
+      }
+      if (!closure_0.lastIsPressed) {
+        if (state === InnerBorderlessButton(6711).State.BEGAN) {
+          if (pointerInside) {
+            tmp7.longPressDetected = false;
+            if (tmp7.props.onLongPress) {
+              const _setTimeout = setTimeout;
+              tmp7.longPressTimeout = setTimeout(tmp7.onLongPress, tmp7.props.delayLongPress);
             }
           }
-        } else {
-          return mapped;
+          tmp7.lastIsPressed = tmp;
         }
       }
-    }
-  }
-  const obj2 = require("cancelAnimation");
-  P.__closure = { containerHeight, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing, handleHeight, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
-  P.__workletHash = 15015207820492;
-  P.__initData = __initData;
-  let items = [snapPoints, containerHeight, handleHeight, contentHeight, arg4, enableDynamicSizing, maxDynamicContentSize, sharedValue];
-  const derivedValue = obj2.useDerivedValue(P, items);
-  const obj3 = { containerHeight, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing, handleHeight, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
-  class N {
-    constructor() {
-      if (closure_4) {
-        flag = true;
-        return true;
-      } else {
-        iter = closure_0;
-        if (closure_0) {
-          str = "value";
-          value = iter;
-          if ("value" in iter) {
-            value = iter.value;
+      let tmp18 = state !== InnerBorderlessButton(6711).State.ACTIVE || pointerInside || undefined === tmp7.longPressTimeout;
+      if (tmp18) {
+        let tmp19 = undefined === tmp7.longPressTimeout;
+        if (!tmp19) {
+          let tmp22 = state !== InnerBorderlessButton(6711).State.END;
+          if (tmp22) {
+            tmp22 = state !== InnerBorderlessButton(6711).State.CANCELLED;
           }
-          items = value;
-        } else {
-          items = [];
+          if (tmp22) {
+            tmp22 = state !== InnerBorderlessButton(6711).State.FAILED;
+          }
+          tmp19 = tmp22;
         }
-        length = items.length;
-        tmp = !length;
-        if (length) {
-          tmp = !items.find(/* F110988 */ function() { ... });
-        }
-        return !tmp;
+        tmp18 = tmp19;
       }
-    }
+      if (!tmp18) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(tmp7.longPressTimeout);
+        tmp7.longPressTimeout = undefined;
+      }
+    };
+    tmp3Result.onLongPress = () => {
+      closure_0.longPressDetected = true;
+      const props = closure_0.props;
+      const onLongPress = props.onLongPress;
+      if (onLongPress != null) {
+        onLongPress();
+      }
+    };
+    tmp3Result.onHandlerStateChange = (arg0) => {
+      const props = closure_0.props;
+      if (props.onHandlerStateChange != null) {
+        onHandlerStateChange(arg0);
+      }
+      closure_0.handleEvent(arg0);
+    };
+    tmp3Result.onGestureEvent = (arg0) => {
+      const props = closure_0.props;
+      const onGestureEvent = props.onGestureEvent;
+      if (onGestureEvent != null) {
+        onGestureEvent(arg0);
+      }
+      closure_0.handleEvent(arg0);
+    };
+    tmp3Result.lastIsPressed = false;
+    tmp3Result.longPressDetected = false;
+    return tmp3Result;
   }
-  N.__closure = { enableDynamicSizing, snapPoints };
-  N.__workletHash = 4816362093278;
-  N.__initData = __initData2;
-  let items1 = [derivedValue, sharedValue, require("cancelAnimation").useDerivedValue(N)];
-  return items1;
+}
+InnerBorderlessButton = InnerBaseButton;
+_inherits(InnerBaseButton, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const props = this.props;
+    ({ rippleColor, style } = props);
+    const obj = { ref: this.props.innerRef, rippleColor, style: null };
+    const items = [style, false];
+    obj.style = items;
+    const merged = Object.assign(_objectWithoutProperties(props, closure_3));
+    ({ onGestureEvent: obj.onGestureEvent, onHandlerStateChange: obj.onHandlerStateChange } = this);
+    return closure_1_12(LegacyRawButton, obj);
+  }
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(InnerBaseButton, items);
+importDefaultResultResult.defaultProps = { delayLongPress: 600 };
+let closure_18 = Animated.createAnimatedComponent(importDefaultResultResult);
+class LegacyBaseButton {
+  constructor(arg0) {
+    obj = { innerRef: global.ref };
+    merged = Object.assign(Object.assign(global, Object.assign({ ref: 0 })));
+    return jsx(closure_17, obj);
+  }
+}
+function AnimatedBaseButton(innerRef) {
+  const merged = Object.assign(Object.assign(innerRef, Object.assign({ ref: 0 })));
+  return closure_1_12(closure_18, { innerRef: innerRef.ref });
+}
+const underlay = StyleSheet.create({ underlay: { position: "absolute", left: 0, right: 0, bottom: 0, top: 0 } });
+class InnerRectButton {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_7(this, InnerBorderlessButton);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_9;
+    obj = closure_9(InnerBorderlessButton);
+    tmp3 = closure_8;
+    if (closure_2_14()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.onActiveStateChange = (arg0) => {
+      props = props.props;
+      const onActiveStateChange = props.onActiveStateChange;
+      if (onActiveStateChange != null) {
+        onActiveStateChange(arg0);
+      }
+    };
+    value = new c10.Value(0);
+    tmp3Result.opacity = value;
+    return tmp3Result;
+  }
+}
+InnerBorderlessButton = InnerRectButton;
+_inherits(InnerRectButton, noop.Component);
+const entry1 = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ children, style } = props);
+    let flattenResult = StyleSheet.flatten(style);
+    if (flattenResult == null) {
+      flattenResult = {};
+    }
+    const obj = {};
+    const merged = Object.assign(_objectWithoutProperties(props, closure_4));
+    obj.ref = self.props.innerRef;
+    obj.style = flattenResult;
+    obj.onActiveStateChange = self.onActiveStateChange;
+    const obj2 = { style: null };
+    const items = [underlay.underlay, { opacity: self.opacity, backgroundColor: self.props.underlayColor, borderRadius: flattenResult.borderRadius, borderTopLeftRadius: flattenResult.borderTopLeftRadius, borderTopRightRadius: flattenResult.borderTopRightRadius, borderBottomLeftRadius: flattenResult.borderBottomLeftRadius, borderBottomRightRadius: flattenResult.borderBottomRightRadius }];
+    obj2.style = items;
+    const items1 = [closure_1_12(Animated.View, obj2), children];
+    obj.children = items1;
+    return map1(LegacyBaseButton, obj);
+  }
+};
+let items1 = [entry1];
+const importDefaultResultResult1 = _createClass(InnerRectButton, items1);
+importDefaultResultResult1.defaultProps = { activeOpacity: 0.105, underlayColor: "black" };
+class InnerBorderlessButton {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_7(this, InnerBorderlessButton);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_9;
+    obj = closure_9(InnerBorderlessButton);
+    tmp3 = closure_8;
+    if (closure_2_14()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.onActiveStateChange = (arg0) => {
+      props = props.props;
+      const onActiveStateChange = props.onActiveStateChange;
+      if (onActiveStateChange != null) {
+        onActiveStateChange(arg0);
+      }
+    };
+    value = new c10.Value(1);
+    tmp3Result.opacity = value;
+    return tmp3Result;
+  }
+}
+_inherits(InnerBorderlessButton, noop.Component);
+const entry2 = {
+  key: "render",
+  value: function render() {
+    const props = this.props;
+    ({ children, style, innerRef } = props);
+    const obj = {};
+    const merged = Object.assign(_objectWithoutProperties(props, closure_5));
+    obj.innerRef = innerRef;
+    obj.onActiveStateChange = this.onActiveStateChange;
+    const items = [style, false];
+    obj.style = items;
+    obj.children = children;
+    return closure_1_12(AnimatedBaseButton, obj);
+  }
+};
+const items2 = [entry2];
+const importDefaultResultResult2 = _createClass(InnerBorderlessButton, items2);
+importDefaultResultResult2.defaultProps = { activeOpacity: 0.3, borderless: true };
+
+export { LegacyRawButton };
+export { LegacyBaseButton };
+export const LegacyRectButton = (innerRef) => {
+  const merged = Object.assign(Object.assign(innerRef, Object.assign({ ref: 0 })));
+  return closure_1_12(importDefaultResultResult1, { innerRef: innerRef.ref });
+};
+export const LegacyBorderlessButton = (innerRef) => {
+  const merged = Object.assign(Object.assign(innerRef, Object.assign({ ref: 0 })));
+  return closure_1_12(importDefaultResultResult2, { innerRef: innerRef.ref });
+};
+export const LegacyPureNativeButton = (arg0) => {
+  const obj = {};
+  const merged = Object.assign(arg0);
+  obj.needsOffscreenAlphaCompositing = true;
+  return closure_1_12(ButtonComponentDefault, obj);
 };

@@ -1,34 +1,34 @@
-// Module ID: 11652
-// Function ID: 11653
+// Module ID: 11692
+// Function ID: 11693
 // Name: ExecutedApplicationCommandPopout
-// Dependencies: [19, 17, 4566, 1957, 2015, 1979, 4795, 4222, 1371, 9322, 5013, 1074, 1482, 5014, 21, 4574, 576, 1894, 1178, 4541, 8205, 4418, 4570, 4727, 1114, 7176, 504, 4808, 9208, 7975, 5601, 1399, 5621, 1115, 11653, 4271, 5619, 1609, 7537, 4987, 5701, 7196, 8143, 7164, 2]
+// Dependencies: [19, 17, 4597, 1957, 2015, 1979, 4826, 4253, 1371, 9359, 5049, 1074, 1482, 5050, 21, 4605, 576, 1894, 1178, 4572, 8242, 4449, 4601, 4758, 1114, 7214, 504, 4839, 9245, 8013, 5637, 1399, 5657, 1115, 11693, 4302, 5655, 1609, 7575, 5023, 5737, 7234, 8180, 7202, 2]
 // Exports: default
 
-// Module 11652 (ExecutedApplicationCommandPopout)
+// Module 11692 (ExecutedApplicationCommandPopout)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import native from "native" /* 1178 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import Server from "Server" /* 1894 */;
-import ToastUtils from "ToastUtils" /* 4271 */;
-import UserUtilsDefault from "UserUtils" /* 4418 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7537 */;
-import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8143 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
-import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 11653 */;
+import ToastUtils from "ToastUtils" /* 4302 */;
+import UserUtilsDefault from "UserUtils" /* 4449 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7575 */;
+import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8180 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8242 */;
+import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 11693 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AccessibilityStore from "AccessibilityStore" /* 4597 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import MessageStore from "MessageStore" /* 4795 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import MessageStore from "MessageStore" /* 4826 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9322 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9359 */;
 
 require = fn;
 function getCommandOptionComponents(option) {
@@ -70,7 +70,7 @@ function getCommandOptionComponents(option) {
             },
             children: null
           };
-          const items = [closure_1_22, channel(4418).getUserTag(user, { decoration: "never" })];
+          const items = [closure_1_22, channel(4449).getUserTag(user, { decoration: "never" })];
           obj.children = items;
           return closure_1_24(user(1178).LegacyText, obj, "optionValue-" + user.name);
         }
@@ -89,11 +89,11 @@ function getCommandOptionComponents(option) {
           userComponent = null;
           if (null != channel1) {
             let obj = { style: styles.commandOptionMentionText, children: null };
-            const items1 = [closure_20, tmp6(4727).computeChannelName(channel1, UserStore, RelationshipStore)];
+            const items1 = [closure_20, tmp6(4758).computeChannelName(channel1, UserStore, RelationshipStore)];
             obj.children = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = closure_24(tmp6(1178).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(4727);
+            const tmp6Result = tmp6(4758);
           }
         } else {
           function getRoleComponent(role) {
@@ -227,8 +227,8 @@ function getCommandCopyText(item10021, channel, guild, name_localized) {
           channel = ChannelStore.getChannel(item10021.value.toString());
           sum = null;
           if (null != channel) {
-            sum = closure_1_20 + tmp5(4727).computeChannelName(channel, UserStore, RelationshipStore);
-            const tmp5Result = tmp5(4727);
+            sum = closure_1_20 + tmp5(4758).computeChannelName(channel, UserStore, RelationshipStore);
+            const tmp5Result = tmp5(4758);
           }
         } else if (tmp5(1894).ApplicationCommandOptionType.ROLE === type) {
           value = item10021.value;
@@ -600,7 +600,7 @@ function CommandActionsContainer(channelId) {
               const current2 = chatInputRef.current;
               if (current2 != null) {
                 const obj2 = { type: tmp4(1609).KeyboardTypes.APP_LAUNCHER, context: null };
-                const obj3 = { initialRouteName: AppLauncherRouteName.COMMAND_VIEW, analyticsLocation: tmp4(7537).ApplicationCommandTriggerLocations.RECALL, preSelectedCommand: null };
+                const obj3 = { initialRouteName: AppLauncherRouteName.COMMAND_VIEW, analyticsLocation: tmp4(7575).ApplicationCommandTriggerLocations.RECALL, preSelectedCommand: null };
                 const obj5 = { commandId: null, prefilledOptions: null };
                 const sum = tmp3.id + SUB_COMMAND_KEY_SEPARATOR;
                 obj5.commandId = sum + items1.join(SUB_COMMAND_KEY_SEPARATOR);
@@ -644,15 +644,15 @@ function CommandActionsContainer(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, NativeModules: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5013).SUB_COMMAND_KEY_SEPARATOR;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5049).SUB_COMMAND_KEY_SEPARATOR;
 const Constants = fn(1074);
 ({ MessageTypes: closure_17, WHITESPACE_RE: closure_18 } = Constants);
 const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
-const ChannelAutocompleteConstants = fn(5014);
+const ChannelAutocompleteConstants = fn(5050);
 ({ CHANNEL_SENTINEL: closure_20, COMMAND_SENTINEL: closure_21, MENTION_SENTINEL: closure_22 } = ChannelAutocompleteConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { paddingVertical: 8, paddingHorizontal: 16, gap: 16 }, activityIndicator: { padding: 16 }, application: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, applicationIcon: null, commandName: null, commandOptionText: null, commandOptionMentionText: null, commandText: null };
 let size = { width: 18, height: 18, borderRadius: nativeDefault.radii.round };
 obj2.applicationIcon = size;
@@ -705,7 +705,7 @@ export default function ExecutedCommandPopout(channelId) {
       const messageInteractionData = InteractionActionCreatorsAll.fetchMessageInteractionData(channelId, messageId);
     }
   }, items1);
-  const obj2 = { value: messageId(7176)(messageId(7196).EXECUTED_COMMAND).analyticsLocations, children: null };
+  const obj2 = { value: messageId(7214)(messageId(7234).EXECUTED_COMMAND).analyticsLocations, children: null };
   const obj3 = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -735,6 +735,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = tmp9(closure_5, obj7);
   }
   obj3.children = tmp9Result;
-  obj2.children = closure_23(channelId(7164).BottomSheet, obj3);
-  return closure_23(channelId(7176).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_23(channelId(7202).BottomSheet, obj3);
+  return closure_23(channelId(7214).AnalyticsLocationProvider, obj2);
 };

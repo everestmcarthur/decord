@@ -1,16 +1,16 @@
-// Module ID: 13001
-// Function ID: 13002
+// Module ID: 13041
+// Function ID: 13042
 // Name: MediaModalOverlayFooter
-// Dependencies: [32, 19, 17, 21, 4574, 576, 4310, 11568, 4575, 1178, 13002, 6669, 4311, 7137, 7168, 13003, 12993, 2]
+// Dependencies: [32, 19, 17, 21, 4605, 576, 4341, 11608, 4606, 1178, 13042, 6705, 4342, 7175, 7206, 13043, 13033, 2]
 // Exports: MediaModalOverlayFooter
 
-// Module 13001 (MediaModalOverlayFooter)
+// Module 13041 (MediaModalOverlayFooter)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11568 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6705 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11608 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,8 +18,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
-let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "WireType" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "disabled" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
+const createStyles = fn(4605);
+let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "WireType" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "Array" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 let c9 = -1;
 function clamp(arg0, arg1, arg2) {

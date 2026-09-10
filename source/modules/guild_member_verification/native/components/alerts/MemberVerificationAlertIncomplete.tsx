@@ -1,15 +1,15 @@
-// Module ID: 7106
-// Function ID: 7107
+// Module ID: 7144
+// Function ID: 7145
 // Name: MemberVerificationAlertIncomplete
-// Dependencies: [19, 4396, 21, 563, 5583, 5541, 1114, 5551, 7107, 4989, 2]
+// Dependencies: [19, 4427, 21, 563, 5619, 5577, 1114, 5587, 7145, 5025, 2]
 // Exports: default
 
-// Module 7106 (MemberVerificationAlertIncomplete)
+// Module 7144 (MemberVerificationAlertIncomplete)
 import util from "util" /* 1114 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5541 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5583 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5577 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5619 */;
 import noop from "module_19" /* 19 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4396 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4427 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -58,20 +58,20 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   const obj3 = {};
   const obj = guildId(563);
   const merged1 = Object.assign(merged);
-  obj3.icon = guildId(7107).ListViewIcon;
+  obj3.icon = guildId(7145).ListViewIcon;
   obj3.header = formatToPlainStringResult;
   const obj4 = { children: null };
   const obj5 = { variant: "secondary", text: null, onPress: null };
   const intl3 = tmp2(1114).intl;
   obj5.text = intl3.string(guildId(1114).t.h3aGmv);
   obj5.onPress = callback;
-  const items4 = [closure_5(guildId(4989).Button, obj5), ];
+  const items4 = [closure_5(guildId(5025).Button, obj5), ];
   const obj6 = { text: null, variant: "destructive", onPress: null };
   const intl4 = tmp2(1114).intl;
   obj6.text = intl4.string(guildId(1114).t.OQFlFD);
   obj6.onPress = callback1;
-  items4[1] = closure_5(guildId(4989).Button, obj6);
+  items4[1] = closure_5(guildId(5025).Button, obj6);
   obj4.children = items4;
   obj3.buttons = closure_7(closure_6, obj4);
-  return closure_5(onClose(5551), obj3);
+  return closure_5(onClose(5587), obj3);
 };

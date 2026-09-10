@@ -1,26 +1,25 @@
-// Module ID: 15126
-// Function ID: 15127
+// Module ID: 15175
+// Function ID: 15176
 // Name: QuestDockGestureContext
-// Dependencies: [19, 15123, 5458, 15125, 21, 7088, 1477, 4310, 15127, 15124, 12064, 2]
+// Dependencies: [19, 15172, 5494, 15174, 21, 7126, 1477, 4341, 15176, 15173, 12104, 2]
 
-// Module 15126 (QuestDockGestureContext)
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12064 */;
+// Module 15175 (QuestDockGestureContext)
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12104 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 15123 */;
+import QuestDockStore from "QuestDockStore" /* 15172 */;
 
 const require = fn;
-const QuestDockMode = fn(5458).QuestDockMode;
-const QuestDockConstants = fn(15125);
-({ QUEST_DOCK_COLLAPSED_HEIGHT: metroRequire, QUEST_DOCK_EXPANDED_HEIGHT: closure_7 } = QuestDockConstants);
+const QuestDockMode = fn(5494).QuestDockMode;
+const height = fn(15174).QUEST_DOCK_COLLAPSED_HEIGHT;
 const jsx = fn(21).jsx;
 const obj = { questDockWrapperSpecs: null, windowDimensions: null, activeQuestDockMode: null, minExpandedContentHeight: null };
-let ReanimatedHelperTypes = fn(7088);
+let ReanimatedHelperTypes = fn(7126);
 obj.questDockWrapperSpecs = ReanimatedHelperTypes.createFakeSharedValue({ width: 0, height: 0, x: 0, y: 0, prevDeltaY: 0 });
-ReanimatedHelperTypes = fn(7088);
+ReanimatedHelperTypes = fn(7126);
 obj.windowDimensions = ReanimatedHelperTypes.createFakeSharedValue({ width: 0, height: 0, maxContentHeight: 0, landscape: false });
-ReanimatedHelperTypes = fn(7088);
+ReanimatedHelperTypes = fn(7126);
 obj.activeQuestDockMode = ReanimatedHelperTypes.createFakeSharedValue(QuestDockMode.COLLAPSED);
-ReanimatedHelperTypes = fn(7088);
+ReanimatedHelperTypes = fn(7126);
 obj.minExpandedContentHeight = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext(obj);
 let size = fn(2);
@@ -45,7 +44,7 @@ export const QuestDockGestureContextProvider = noop.memo(function QuestDockGestu
   const obj8 = sharedValue(sharedValue2[7]);
   sharedValue2 = obj8.useSharedValue(sharedValue(sharedValue2[9]).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt) ? tmp6.SOFT_DISMISSED : tmp6.COLLAPSED);
   const obj9 = sharedValue(sharedValue2[9]);
-  sharedValue3 = tmp(tmp2[7]).useSharedValue(closure_7);
+  sharedValue3 = tmp(tmp2[7]).useSharedValue(children.expandedHeight);
   const items = [sharedValue];
   const effect = obj.useEffect(() => subscribeToWindowDimensionsDefault((arg0) => {
     ({ width, height } = arg0);

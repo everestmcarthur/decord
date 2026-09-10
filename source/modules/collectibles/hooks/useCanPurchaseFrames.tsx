@@ -1,11 +1,11 @@
-// Module ID: 14659
-// Function ID: 14660
+// Module ID: 14708
+// Function ID: 14709
 // Name: useCanPurchaseFrames
-// Dependencies: [8238, 2]
+// Dependencies: [8275, 2]
 // Exports: default, useCanViewProfileFramesInCollectiblesShop
 
-// Module 14659 (useCanPurchaseFrames)
-import CollectiblesProfileFramesExperiment from "CollectiblesProfileFramesExperiment" /* 8238 */;
+// Module 14708 (useCanPurchaseFrames)
+import CollectiblesProfileFramesExperiment from "CollectiblesProfileFramesExperiment" /* 8275 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useCanPurchaseFrames.tsx");

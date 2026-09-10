@@ -1,20 +1,20 @@
-// Module ID: 11911
-// Function ID: 11912
+// Module ID: 11951
+// Function ID: 11952
 // Name: useSafetyHubClassifications
-// Dependencies: [19, 8458, 8447, 504, 11, 8446, 8448, 11912, 2]
+// Dependencies: [19, 8495, 8484, 504, 11, 8483, 8485, 11952, 2]
 // Exports: useActiveSafetyHubClassifications, useExpiredSafetyHubClassifications, useSafetyHubAppealSignal, useSafetyHubClassification, useSafetyHubClassifications
 
-// Module 11911 (useSafetyHubClassifications)
+// Module 11951 (useSafetyHubClassifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11912 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11952 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8458 */;
+import SafetyHubStore from "SafetyHubStore" /* 8495 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ViolationType = fn(8447).ViolationType;
+const ViolationType = fn(8484).ViolationType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
 
@@ -47,7 +47,7 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
     if (guild_metadata != null) {
       member_type = guild_metadata.member_type;
     }
-    if (member_type === tmp(8448).MemberType.OWNER) {
+    if (member_type === tmp(8485).MemberType.OWNER) {
       let GUILD_MEMBER = ViolationType.GUILD_OWNER;
     } else {
       GUILD_MEMBER = ViolationType.GUILD_MEMBER;

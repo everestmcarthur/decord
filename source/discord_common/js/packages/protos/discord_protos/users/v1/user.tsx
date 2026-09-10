@@ -1183,7 +1183,7 @@ class TypingIndicatorEmoji$Type extends MessageType8 {
 }
 const prototype8 = TypingIndicatorEmoji$Type.prototype;
 prototype8["create"] = function create(arr) {
-  obj = { emoji: { oneofKind: "disabled" }, animated: false };
+  obj = { emoji: { oneofKind: "Array" }, animated: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -2159,7 +2159,7 @@ class Badge$Type extends MessageType16 {
 }
 const prototype16 = Badge$Type.prototype;
 prototype16["create"] = function create(arr) {
-  obj = { badge: { oneofKind: "disabled" } };
+  obj = { badge: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -4192,7 +4192,7 @@ class PerkConfig$Type extends MessageType29 {
 }
 const prototype29 = PerkConfig$Type.prototype;
 prototype29["create"] = function create(arr) {
-  obj = { source: [], kind: { oneofKind: "disabled" } };
+  obj = { source: [], kind: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {

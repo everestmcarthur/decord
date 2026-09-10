@@ -1,10 +1,10 @@
-// Module ID: 15998
-// Function ID: 15999
+// Module ID: 16047
+// Function ID: 16048
 // Name: getDeviceCountry
 // Dependencies: [17, 1115, 1117, 2]
 // Exports: getDeviceCountry
 
-// Module 15998 (getDeviceCountry)
+// Module 16047 (getDeviceCountry)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import size from "module_2" /* 2 */;

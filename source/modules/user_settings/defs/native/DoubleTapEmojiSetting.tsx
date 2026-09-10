@@ -1,15 +1,15 @@
-// Module ID: 15921
-// Function ID: 15922
+// Module ID: 15970
+// Function ID: 15971
 // Name: DoubleTapEmojiSetting
-// Dependencies: [5, 19, 7989, 1074, 1374, 21, 4574, 576, 1935, 7982, 1396, 7144, 11153, 1242, 7196, 11156, 11500, 1114, 2]
+// Dependencies: [5, 19, 8027, 1074, 1374, 21, 4605, 576, 1935, 8020, 1396, 7182, 11193, 1242, 7234, 11196, 11540, 1114, 2]
 
-// Module 15921 (DoubleTapEmojiSetting)
+// Module 15970 (DoubleTapEmojiSetting)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import EmojiDefault from "Emoji" /* 7144 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7982 */;
+import EmojiDefault from "Emoji" /* 7182 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 8020 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,17 +36,17 @@ function SettingsEmoji(emoji) {
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { textEmoji: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_7 = createStyles.createStyles(obj2);
-const SettingBuilders = fn(11500);
+const SettingBuilders = fn(11540);
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["96WKNB"]);
   },
-  parent: fn(7989).MobileUserSettings.CHAT,
+  parent: fn(8027).MobileUserSettings.CHAT,
   useTrailing: function useDoubleTapEmojiSettingTrailing() {
     const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.useSetting();

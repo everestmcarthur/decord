@@ -1,30 +1,30 @@
-// Module ID: 11045
-// Function ID: 11046
+// Module ID: 11085
+// Function ID: 11086
 // Name: CollectiblesShopGiftPurchaseSection
-// Dependencies: [5, 32, 19, 17, 8218, 7438, 1074, 1373, 21, 4574, 576, 6995, 10775, 504, 8210, 7176, 11036, 1242, 11046, 573, 4777, 4919, 11047, 1896, 1115, 10788, 4570, 1114, 4989, 2]
+// Dependencies: [5, 32, 19, 17, 8255, 7476, 1074, 1373, 21, 4605, 576, 7033, 10813, 504, 8247, 7214, 11076, 1242, 11086, 573, 4808, 4950, 11087, 1896, 1115, 10826, 4601, 1114, 5025, 2]
 // Exports: default
 
-// Module 11045 (CollectiblesShopGiftPurchaseSection)
+// Module 11085 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4919 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4950 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8218 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8255 */;
 
 let require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7438).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7476).useNativeCheckoutStore;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, MarketingURLs: c10 } = Constants);
 const PremiumConstants = fn(1373);
 ({ GiftingOrigin: closure_11, PremiumGiftStyles: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: null, disclaimer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);

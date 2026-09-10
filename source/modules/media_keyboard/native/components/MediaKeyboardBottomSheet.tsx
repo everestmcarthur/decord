@@ -1,16 +1,16 @@
-// Module ID: 16803
-// Function ID: 16804
+// Module ID: 16860
+// Function ID: 16861
 // Name: MediaKeyboardBottomSheet
-// Dependencies: [32, 19, 17, 1607, 1074, 21, 1608, 1115, 4574, 576, 1114, 12110, 4284, 4427, 6641, 4311, 4542, 4543, 1242, 4976, 4985, 4310, 5006, 1611, 4973, 4439, 2]
+// Dependencies: [32, 19, 17, 1607, 1074, 21, 1608, 1115, 4605, 576, 1114, 12150, 4315, 4458, 6677, 4342, 4573, 4574, 1242, 5012, 5021, 4341, 5042, 1611, 5009, 4470, 2]
 
-// Module 16803 (MediaKeyboardBottomSheet)
+// Module 16860 (MediaKeyboardBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import ChatInputUtils from "ChatInputUtils" /* 4439 */;
-import HapticUtils from "HapticUtils" /* 4542 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import ChatInputUtils from "ChatInputUtils" /* 4470 */;
+import HapticUtils from "HapticUtils" /* 4573 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +34,7 @@ const MetaQuestUtils = fn(1608);
 let closure_11 = MetaQuestUtils.isMetaQuest();
 const PlatformUtils = fn(1115);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS } };
 let closure_13 = createStyles.createStyles(obj);
 const __initData = { code: "function MediaKeyboardBottomSheetTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()>=0;}" };

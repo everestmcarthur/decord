@@ -1,21 +1,21 @@
-// Module ID: 17793
-// Function ID: 17794
+// Module ID: 17852
+// Function ID: 17853
 // Name: FormEmojiPicker
-// Dependencies: [19, 1074, 1374, 21, 4574, 5538, 576, 13924, 4226, 15273, 15272, 5601, 17794, 9082, 11153, 1178, 4230, 1114, 9971, 2]
+// Dependencies: [19, 1074, 1374, 21, 4605, 5574, 576, 13973, 4257, 15322, 15321, 5637, 17853, 9119, 11193, 1178, 4261, 1114, 10009, 2]
 // Exports: default
 
-// Module 17793 (FormEmojiPicker)
+// Module 17852 (FormEmojiPicker)
 import nativeDefault from "native" /* 576 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11153 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11193 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5538 */;
+import TextStyles_mod from "TextStyles" /* 5574 */;
 
 require = fn;
 const Fonts = fn(1074).Fonts;
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 }, placeholder: null, text: null };
 let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_MUTED, 16));
@@ -36,20 +36,20 @@ export default function FormEmojiPicker(emoji) {
     if (emojiName == null) {
       emojiName = "";
     }
-    emojiId = tmp2(4226).convertSurrogateToName(emojiName, false);
-    const tmp2Result = tmp2(4226);
+    emojiId = tmp2(4257).convertSurrogateToName(emojiName, false);
+    const tmp2Result = tmp2(4257);
   }
-  const tmp4 = onChange(13924)();
-  const emojiByIdOrName = guildId(15273).useEmojiByIdOrName(guildId, emojiId);
+  const tmp4 = onChange(13973)();
+  const emojiByIdOrName = guildId(15322).useEmojiByIdOrName(guildId, emojiId);
   if (null != emojiId) {
     let obj = { guildId, id: emojiId };
-    let tmp9 = closure_4(tmp2(15272), obj);
+    let tmp9 = closure_4(tmp2(15321), obj);
     let tmp10 = closure_4;
   } else {
-    const obj3 = { resizeMode: "contain", source: tmp2(17794) };
-    tmp9 = closure_4(tmp2(5601), obj3);
+    const obj3 = { resizeMode: "contain", source: tmp2(17853) };
+    tmp9 = closure_4(tmp2(5637), obj3);
     tmp10 = closure_4;
-    const tmp2Result3 = tmp2(5601);
+    const tmp2Result3 = tmp2(5637);
   }
   const obj4 = {
     style: null,
@@ -78,22 +78,22 @@ export default function FormEmojiPicker(emoji) {
   const items = [tmp.container, tmp4.textInput];
   obj4.style = items;
   const items1 = [tmp9, , ];
-  let obj2 = guildId(15273);
+  let obj2 = guildId(15322);
   const tmp12 = closure_5;
   const items2 = [tmp.content, ];
   const obj5 = { style: items2, children: null };
   items2[1] = null != emojiByIdOrName ? tmp.text : tmp.placeholder;
   if (null != emojiByIdOrName) {
-    let allEmojiNamesString = tmp5(4230).getAllEmojiNamesString(emojiByIdOrName);
-    const tmp5Result = tmp5(4230);
+    let allEmojiNamesString = tmp5(4261).getAllEmojiNamesString(emojiByIdOrName);
+    const tmp5Result = tmp5(4261);
   } else {
     const intl = tmp5(1114).intl;
     allEmojiNamesString = intl.string(tmp5(1114).t.gXAN3P);
   }
   obj5.children = allEmojiNamesString;
   items1[1] = tmp10(guildId(1178).LegacyText, obj5);
-  const tmp2Result4 = onChange(9082);
-  items1[2] = tmp10(guildId(1178).Icon, { size: guildId(1178).Icon.Sizes.MEDIUM, source: onChange(9971) });
+  const tmp2Result4 = onChange(9119);
+  items1[2] = tmp10(guildId(1178).Icon, { size: guildId(1178).Icon.Sizes.MEDIUM, source: onChange(10009) });
   obj4.children = items1;
   return tmp12(tmp2Result4, obj4);
 };

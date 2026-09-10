@@ -1,13 +1,13 @@
-// Module ID: 17874
-// Function ID: 17875
+// Module ID: 17932
+// Function ID: 17933
 // Name: AVErrorStreamViewHighPacketLoss
-// Dependencies: [4596, 502, 4613, 17873, 4626, 9142, 17870, 2]
+// Dependencies: [4627, 502, 4644, 17931, 4657, 9179, 17928, 2]
 
-// Module 17874 (AVErrorStreamViewHighPacketLoss)
-import StreamKeyUtils from "StreamKeyUtils" /* 4626 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
+// Module 17932 (AVErrorStreamViewHighPacketLoss)
+import StreamKeyUtils from "StreamKeyUtils" /* 4657 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4627 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4613 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4644 */;
 
 require = fn;
 const size = fn(2);

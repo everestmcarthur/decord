@@ -1,10 +1,10 @@
-// Module ID: 12686
-// Function ID: 12687
+// Module ID: 12726
+// Function ID: 12727
 // Name: WelcomeScreenActionCreators
 // Dependencies: [5, 1074, 573, 1272, 2]
 // Exports: clearWelcomeScreenSettings, fetchWelcomeScreen, resetWelcomeScreen, saveWelcomeScreen, updateSettings, welcomeScreenViewed
 
-// Module 12686 (WelcomeScreenActionCreators)
+// Module 12726 (WelcomeScreenActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

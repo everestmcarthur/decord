@@ -1,14 +1,14 @@
-// Module ID: 8020
-// Function ID: 8021
+// Module ID: 8058
+// Function ID: 8059
 // Name: ChannelFollowAddSystemMessage
-// Dependencies: [7974, 1114, 7976, 7978, 2]
+// Dependencies: [8012, 1114, 8014, 8016, 2]
 // Exports: createChannelFollowAddSystemMessage
 
-// Module 8020 (ChannelFollowAddSystemMessage)
+// Module 8058 (ChannelFollowAddSystemMessage)
 import util from "util" /* 1114 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7974 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7976 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7978 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8012 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8014 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8016 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelFollowAddSystemMessage.tsx");

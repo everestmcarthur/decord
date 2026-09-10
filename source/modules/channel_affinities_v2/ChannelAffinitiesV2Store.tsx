@@ -1,12 +1,12 @@
-// Module ID: 16308
-// Function ID: 16309
+// Module ID: 16357
+// Function ID: 16358
 // Name: ChannelAffinitiesV2Store
-// Dependencies: [16309, 504, 573, 2]
+// Dependencies: [16358, 504, 573, 2]
 
-// Module 16308 (ChannelAffinitiesV2Store)
+// Module 16357 (ChannelAffinitiesV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ChannelAffinitiesV2Constants from "ChannelAffinitiesV2Constants" /* 16309 */;
+import ChannelAffinitiesV2Constants from "ChannelAffinitiesV2Constants" /* 16358 */;
 import size from "module_2" /* 2 */;
 
 const CHANNEL_AFFINITY_V2_TTL = ChannelAffinitiesV2Constants.CHANNEL_AFFINITY_V2_TTL;

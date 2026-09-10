@@ -1,10 +1,10 @@
-// Module ID: 10292
-// Function ID: 10293
+// Module ID: 10330
+// Function ID: 10331
 // Name: ExpressionPickerHandlers
 // Dependencies: [19, 2]
 // Exports: usePressEmojiHandler, usePressGIFHandler
 
-// Module 10292 (ExpressionPickerHandlers)
+// Module 10330 (ExpressionPickerHandlers)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

@@ -1,9 +1,9 @@
-// Module ID: 4359
-// Function ID: 4360
+// Module ID: 4390
+// Function ID: 4391
 // Name: RiveErrorBoundary
-// Dependencies: [19, 4355, 2]
+// Dependencies: [19, 4386, 2]
 
-// Module 4359 (RiveErrorBoundary)
+// Module 4390 (RiveErrorBoundary)
 import _modAll19 from "module_19" /* 19 */;
 
 const Component = _modAll19.Component;
@@ -38,7 +38,7 @@ prototype["render"] = function render() {
   }
   return children;
 };
-RiveErrorBoundary.contextType = fn(4355).ManaContext;
+RiveErrorBoundary.contextType = fn(4386).ManaContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/RiveErrorBoundary.tsx");
 

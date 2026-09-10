@@ -1,28 +1,28 @@
-// Module ID: 15900
-// Function ID: 15901
+// Module ID: 15949
+// Function ID: 15950
 // Name: ContentAndSocialScreen
-// Dependencies: [32, 19, 17, 7989, 1074, 21, 4574, 576, 1114, 2024, 15901, 12710, 15904, 7315, 11500, 14844, 14718, 15905, 4570, 2]
+// Dependencies: [32, 19, 17, 8027, 1074, 21, 4605, 576, 1114, 2024, 15950, 12750, 15953, 7353, 11540, 14893, 14767, 15954, 4601, 2]
 // Exports: ConnectedGamesPage, DiscordPermissionsPage, default
 
-// Module 15900 (ContentAndSocialScreen)
+// Module 15949 (ContentAndSocialScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import SettingBuilders from "SettingBuilders" /* 11500 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12710 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15905 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import SettingBuilders from "SettingBuilders" /* 11540 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12750 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15954 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MobileUserSettings = fn(7989).MobileUserSettings;
+const MobileUserSettings = fn(8027).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { loadingIndicator: { marginTop: nativeDefault.space.PX_32 }, emptyContainer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_32 };
 obj2.emptyContainer = { flex: 1, gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -118,7 +118,7 @@ export const DiscordPermissionsPage = function DiscordPermissionsPage() {
     let tmp7 = items6;
     if (!allServersOptionSelected) {
       const items11 = [];
-      HermesBuiltin.arraySpread(tmp2(15901).GUILD_SPECIFIC_SETTINGS, HermesBuiltin.arraySpread(items6, 0));
+      HermesBuiltin.arraySpread(tmp2(15950).GUILD_SPECIFIC_SETTINGS, HermesBuiltin.arraySpread(items6, 0));
       tmp7 = items11;
       const arraySpreadResult = HermesBuiltin.arraySpread(items6, 0);
     }
@@ -204,7 +204,7 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
     const tmp2Result = tmp2(2024);
   } else {
     let obj = { node: tmp5 };
-    tmp7 = React7(tmp2(14718), obj);
+    tmp7 = React7(tmp2(14767), obj);
   }
   return tmp7;
 };

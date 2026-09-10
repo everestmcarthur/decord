@@ -1,13 +1,13 @@
-// Module ID: 6463
-// Function ID: 6464
+// Module ID: 6499
+// Function ID: 6500
 // Name: ShareNitroSpotIllustration
-// Dependencies: [21, 5601, 6464, 2]
+// Dependencies: [21, 5637, 6500, 2]
 // Exports: ShareNitroSpotIllustration
 
-// Module 6463 (ShareNitroSpotIllustration)
+// Module 6499 (ShareNitroSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6464 from "module_6464" /* 6464 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6500 from "module_6500" /* 6500 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const ShareNitroSpotIllustration = function ShareNitroSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6464 };
+  const obj2 = { uri: _modDef6500 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

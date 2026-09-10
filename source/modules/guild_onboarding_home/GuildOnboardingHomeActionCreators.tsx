@@ -1,19 +1,19 @@
-// Module ID: 12314
-// Function ID: 12315
+// Module ID: 12354
+// Function ID: 12355
 // Name: GuildOnboardingHomeActionCreators
-// Dependencies: [5, 2014, 1957, 4761, 4762, 1074, 573, 1272, 12315, 1242, 4585, 11, 2]
+// Dependencies: [5, 2014, 1957, 4792, 4793, 1074, 573, 1272, 12355, 1242, 4616, 11, 2]
 // Exports: clearNewMemberActions, completeNewMemberAction, fetchGuildHomeSettings, fetchNewMemberActions, selectHomeResourceChannel, selectNewMemberActionChannel
 
-// Module 12314 (GuildOnboardingHomeActionCreators)
+// Module 12354 (GuildOnboardingHomeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import transitionToChannel from "transitionToChannel" /* 4585 */;
+import transitionToChannel from "transitionToChannel" /* 4616 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4761 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4762 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4792 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4793 */;
 
 require = fn;
 let closure_10 = async function _fetchGuildHomeSettings(guildId) {

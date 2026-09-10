@@ -1,21 +1,21 @@
-// Module ID: 17027
-// Function ID: 17028
+// Module ID: 17086
+// Function ID: 17087
 // Name: VoiceOrStageSummaryRow
-// Dependencies: [19, 17, 21, 4574, 576, 16698, 4570, 1178, 16693, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 16755, 4601, 1178, 16750, 2]
 
-// Module 17027 (VoiceOrStageSummaryRow)
+// Module 17086 (VoiceOrStageSummaryRow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import _modDef16693 from "module_16693" /* 16693 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16698 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import _modDef16750 from "module_16750" /* 16750 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16755 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = { container: { flexDirection: "row", alignItems: "center", marginLeft: -2 }, overflowCircle: null, wrapper: null, badge: null, audienceBadge: null };
   const size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, width: height };
@@ -93,10 +93,10 @@ export default noop.memo(function VoiceOrStageSummaryRow(arg0) {
     const items3 = [, ];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj4.style = items3;
-    let obj5 = { size: max(1178).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef16693 };
+    let obj5 = { size: max(1178).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef16750 };
     const items4 = [closure_4(max(1178).Icon, obj5), ];
     let obj6 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
-    items4[1] = closure_4(max(4570).Text, obj6);
+    items4[1] = closure_4(max(4601).Text, obj6);
     obj4.children = items4;
     obj3.children = tmp5(tmp6, obj4);
     tmp8Result = tmp8(tmp6, obj3);

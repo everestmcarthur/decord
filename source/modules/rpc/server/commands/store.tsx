@@ -1,12 +1,12 @@
-// Module ID: 14522
-// Function ID: 14523
+// Module ID: 14571
+// Function ID: 14572
 // Name: merged14
-// Dependencies: [5, 4479, 1074, 14523, 14524, 9586, 8886, 10848, 14525, 7414, 2]
+// Dependencies: [5, 4510, 1074, 14572, 14573, 9624, 8923, 10886, 14574, 7452, 2]
 
-// Module 14522 (merged14)
-import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7414 */;
-import RPCErrorDefault from "RPCError" /* 9586 */;
-import validateTransportType from "validateTransportType" /* 14524 */;
+// Module 14571 (merged14)
+import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7452 */;
+import RPCErrorDefault from "RPCError" /* 9624 */;
+import validateTransportType from "validateTransportType" /* 14573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -257,7 +257,7 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(4479);
+let Constants = fn(4510);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1074);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: metroRequire, SKUTypes: closure_7 } = Constants);

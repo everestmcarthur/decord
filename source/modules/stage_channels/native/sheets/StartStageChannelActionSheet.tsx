@@ -1,10 +1,10 @@
-// Module ID: 8425
-// Function ID: 8426
+// Module ID: 8462
+// Function ID: 8463
 // Name: StartStageChannelActionSheet
-// Dependencies: [5, 32, 19, 17, 1962, 5428, 1074, 1963, 21, 4574, 576, 504, 5436, 5006, 1242, 1874, 8426, 4541, 4475, 8435, 4570, 1114, 7164, 7137, 6620, 8438, 4989, 2]
+// Dependencies: [5, 32, 19, 17, 1962, 5464, 1074, 1963, 21, 4605, 576, 504, 5472, 5042, 1242, 1874, 8463, 4572, 4506, 8472, 4601, 1114, 7202, 7175, 6656, 8475, 5025, 2]
 // Exports: default
 
-// Module 8425 (StartStageChannelActionSheet)
+// Module 8462 (StartStageChannelActionSheet)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -14,14 +14,14 @@ import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelsConstants = fn(5428);
+const StageChannelsConstants = fn(5464);
 ({ MAX_STAGE_TOPIC_LENGTH: closure_9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c10 } = StageChannelsConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Fonts } = Constants);
 let closure_12 = fn(1963).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { padding: 16 }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, startButton: { marginTop: 16 }, buttonSubtitle: { paddingTop: 8, textAlign: "center" }, ageVerificationNotice: { marginBottom: nativeDefault.space.PX_16 }, error: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.error = { paddingTop: 8, fontSize: 12, fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.unsafe_rawColors.RED_400 };
@@ -69,10 +69,10 @@ export default function StartStageChannelEventActionSheet(channel) {
               if (null != stateFromStores) {
                 c4 = 3;
                 c5 = 1;
-                const obj6 = { value: tmp33(8426).editStage(channel, tmp53, constants.GUILD_ONLY), done: false };
+                const obj6 = { value: tmp33(8463).editStage(channel, tmp53, constants.GUILD_ONLY), done: false };
                 return obj6;
               } else {
-                const tmp33Result2 = tmp33(8426);
+                const tmp33Result2 = tmp33(8463);
                 c4 = 2;
                 c5 = 1;
                 const obj7 = { value: tmp33Result2.startStage(channel, tmp53, constants.GUILD_ONLY, false), done: false };
@@ -85,7 +85,7 @@ export default function StartStageChannelEventActionSheet(channel) {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp45;
-            const aPIError = new channel(4475).APIError(closure_128_1);
+            const aPIError = new channel(4506).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_4(closure_128_0);
             closure_129_3(false);
@@ -104,9 +104,9 @@ export default function StartStageChannelEventActionSheet(channel) {
               const obj = { value, done: true };
               return obj;
             }
-            tmp3(4541).hideActionSheet(closure_1_10);
+            tmp3(4572).hideActionSheet(closure_1_10);
             dependencyMap = 0;
-            const obj2 = tmp3(4541);
+            const obj2 = tmp3(4572);
           }
           dependencyMap = 0;
           c5 = 3;
@@ -140,8 +140,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   [obj3, c4] = _slicedToArray(noop.useState(null), 2);
   const tmp9 = _slicedToArray(noop.useState(null), 2);
-  const shouldAgeVerifyToSpeakForCurrentUser = channel(5436).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
-  stateFromStores(5006)(() => {
+  const shouldAgeVerifyToSpeakForCurrentUser = channel(5472).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
+  stateFromStores(5042)(() => {
     let id;
     if (stateFromStores != null) {
       id = stateFromStores.id;
@@ -149,7 +149,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     AnalyticsUtilsDefault.track(constants.START_STAGE_OPENED, { stage_instance_id: id, can_start_public_stage: false, guild_id: channel.guild_id });
   });
   let obj4 = { style: tmp.header, children: null };
-  const items1 = [closure_13(stateFromStores(8435), {}), , ];
+  const items1 = [closure_13(stateFromStores(8472), {}), , ];
   let obj5 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   if (null == stateFromStores) {
     const intl2 = tmp2(1114).intl;
@@ -159,7 +159,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     stringResult = intl.string(tmp2(1114).t["5BKP4y"]);
   }
   obj5.children = stringResult;
-  items1[1] = closure_13(channel(4570).Text, obj5);
+  items1[1] = closure_13(channel(4601).Text, obj5);
   let obj6 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   if (null == stateFromStores) {
     const intl4 = tmp2(1114).intl;
@@ -169,11 +169,11 @@ export default function StartStageChannelEventActionSheet(channel) {
     stringResult1 = intl3.string(tmp2(1114).t["I+9bLx"]);
   }
   obj6.children = stringResult1;
-  items1[2] = closure_13(channel(4570).Text, obj6);
+  items1[2] = closure_13(channel(4601).Text, obj6);
   obj4.children = items1;
   let stringResult2;
   const tmp11 = stateFromStores;
-  const tmp2Result = channel(5436);
+  const tmp2Result = channel(5472);
   if (null == stateFromStores) {
     const intl5 = tmp2(1114).intl;
     stringResult2 = intl5.string(tmp2(1114).t.gR66jX);
@@ -198,8 +198,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const intl7 = tmp2(1114).intl;
   obj8.placeholder = intl7.string(channel(1114).t.ZwWruY);
   obj8.onSubmitEditing = handleSave;
-  items2[1] = closure_13(channel(6620).TextInput, obj8);
-  items2[2] = closure_13(tmp11(8438), {
+  items2[1] = closure_13(channel(6656).TextInput, obj8);
+  items2[2] = closure_13(tmp11(8475), {
     onConfirmPress() {
       return stateFromStores(_undefined[17]).hideActionSheet(closure_1_10);
     },
@@ -209,7 +209,7 @@ export default function StartStageChannelEventActionSheet(channel) {
   let tmp15Result = null;
   if (null != obj3) {
     const obj10 = { style: tmp.error, variant: "text-xs/medium", color: "text-feedback-critical", children: obj3.getAnyErrorMessage() };
-    tmp15Result = tmp15(tmp2(4570).Text, obj10);
+    tmp15Result = tmp15(tmp2(4601).Text, obj10);
   }
   items2[3] = tmp15Result;
   const obj11 = { style: tmp.startButton, children: null };
@@ -220,14 +220,14 @@ export default function StartStageChannelEventActionSheet(channel) {
     const intl8 = tmp2(1114).intl;
     stringResult3 = intl8.string(tmp2(1114).t.K344S7);
   }
-  obj11.children = closure_13(channel(4989).Button, { text: stringResult3, onPress: handleSave, disabled: "" === value, loading: tmp8, accessibilityHint: stringResult2 });
+  obj11.children = closure_13(channel(5025).Button, { text: stringResult3, onPress: handleSave, disabled: "" === value, loading: tmp8, accessibilityHint: stringResult2 });
   items2[4] = closure_13(View, obj11);
   let tmp15Result2 = null != stringResult2 && !shouldAgeVerifyToSpeakForCurrentUser;
   if (tmp15Result2) {
     const obj13 = { accessible: false, style: tmp.buttonSubtitle, variant: "text-xs/medium", color: "text-default", children: null };
     const intl10 = tmp2(1114).intl;
     obj13.children = intl10.string(tmp2(1114).t.gR66jX);
-    tmp15Result2 = tmp15(tmp2(4570).Text, obj13);
+    tmp15Result2 = tmp15(tmp2(4601).Text, obj13);
   }
   const obj12 = { text: stringResult3, onPress: handleSave, disabled: "" === value, loading: tmp8, accessibilityHint: stringResult2 };
   const obj9 = {
@@ -240,5 +240,5 @@ export default function StartStageChannelEventActionSheet(channel) {
   const tmp13Result = closure_14(View, obj4);
   items2[5] = tmp15Result2;
   obj7.children = items2;
-  return closure_13(channel(7164).BottomSheet, { keyboardShouldPersistTaps: "always", children: closure_14(channel(7137).SafeAreaPaddingView, obj7) });
+  return closure_13(channel(7202).BottomSheet, { keyboardShouldPersistTaps: "always", children: closure_14(channel(7175).SafeAreaPaddingView, obj7) });
 };

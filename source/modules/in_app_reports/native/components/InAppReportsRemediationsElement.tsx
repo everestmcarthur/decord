@@ -1,19 +1,19 @@
-// Module ID: 9072
-// Function ID: 9073
+// Module ID: 9109
+// Function ID: 9110
 // Name: InAppReportsRemediationsElement
-// Dependencies: [19, 17, 21, 4574, 576, 5701, 1114, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 5737, 1114, 2]
 // Exports: default
 
-// Module 9072 (InAppReportsRemediationsElement)
+// Module 9109 (InAppReportsRemediationsElement)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import TableRowGroup from "TableRowGroup" /* 5701 */;
+import TableRowGroup from "TableRowGroup" /* 5737 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_32 } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

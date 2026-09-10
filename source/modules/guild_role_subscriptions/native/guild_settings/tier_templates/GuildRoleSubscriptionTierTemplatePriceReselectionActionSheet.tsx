@@ -1,18 +1,18 @@
-// Module ID: 17824
-// Function ID: 17825
+// Module ID: 17883
+// Function ID: 17884
 // Name: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet
-// Dependencies: [32, 19, 17, 1373, 1085, 21, 4574, 576, 4292, 9082, 5601, 17728, 16597, 4570, 1114, 7248, 15263, 1611, 7164, 6641, 1178, 4990, 4541, 2]
+// Dependencies: [32, 19, 17, 1373, 1085, 21, 4605, 576, 4323, 9119, 5637, 17787, 16652, 4601, 1114, 7286, 15312, 1611, 7202, 6677, 1178, 5026, 4572, 2]
 // Exports: default
 
-// Module 17824 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
+// Module 17883 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4292 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import PriceUtils from "PriceUtils" /* 7248 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9082 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15263 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4323 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import PriceUtils from "PriceUtils" /* 7286 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9119 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15312 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,7 +35,7 @@ function PriceOptionRow(selected) {
   items[1] = containerSelected;
   const obj3 = { style: tmp.rowStatusIcon, source: null };
   const tmp7 = TouchableHitBoxDefault;
-  obj3.source = importDefault(selected ? 17728 : 16597);
+  obj3.source = importDefault(selected ? 17787 : 16652);
   const items1 = [React7(FastImageDefault, obj3), ];
   const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = tmp2(1114).intl;
@@ -55,7 +55,7 @@ const SubscriptionIntervalTypes = fn(1373).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1085).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md }, rowContainer: null, containerSelected: null, rowStatusIcon: null, confirmButton: null, backToTemplates: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md };
 obj2.rowContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignSelf: "stretch", justifyContent: "flex-start", padding: 12, marginBottom: 12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };

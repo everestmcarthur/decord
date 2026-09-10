@@ -1,19 +1,19 @@
-// Module ID: 15760
-// Function ID: 15761
+// Module ID: 15809
+// Function ID: 15810
 // Name: DevToolsDisplayNameEffectsBenchmarkScreen
-// Dependencies: [32, 19, 17, 1371, 1389, 21, 1390, 10938, 1114, 10934, 2786, 4574, 576, 4987, 4570, 4989, 10931, 10932, 504, 15761, 5701, 5619, 9461, 4810, 2]
+// Dependencies: [32, 19, 17, 1371, 1389, 21, 1390, 10976, 1114, 10972, 2786, 4605, 576, 5023, 4601, 5025, 10969, 10970, 504, 15810, 5737, 5655, 9499, 4841, 2]
 // Exports: default
 
-// Module 15760 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 15809 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2786 from "module_2786" /* 2786 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Stack_Stack from "Stack/Stack" /* 4987 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10931 */;
-import types from "types" /* 10932 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10934 */;
-import _mod10938 from "module_10938" /* 10938 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Stack_Stack from "Stack/Stack" /* 5023 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10969 */;
+import types from "types" /* 10970 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10972 */;
+import _mod10976 from "module_10976" /* 10976 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -71,7 +71,7 @@ const jsxProd = fn(21);
 let items = [...fn(1389).EFFECT_ORDER, fn(1390).DisplayNameEffect.GUMMY];
 let closure_12 = [10, 50, 100, 200];
 let items1 = [{ key: "short", label: "Short", name: "Pixel7" }, { key: "medium", label: "Medium", name: "NebulaWanderer" }, { key: "long", label: "Long", name: "GalacticOverlord2049" }];
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 }, container: null, batchRow: null, optionButtons: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.container = { paddingVertical: nativeDefault.space.PX_16 };
@@ -118,7 +118,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   }, items1);
   const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod10938.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => _mod10976.splitGraphemes(memo).length, items3);
   const items4 = [first];
   const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
@@ -245,7 +245,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         const StringResult = String(arg1);
         const tmp = React6;
         const tmp2 = BenchmarkRow;
-        const splitGraphemesResult = _mod10938.splitGraphemes(run.params.name);
+        const splitGraphemesResult = _mod10976.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
           const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);

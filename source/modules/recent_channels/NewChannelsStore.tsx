@@ -1,23 +1,23 @@
-// Module ID: 7546
-// Function ID: 7547
+// Module ID: 7584
+// Function ID: 7585
 // Name: NewChannelsStore
-// Dependencies: [1221, 502, 1957, 2012, 2021, 1979, 4589, 4755, 1074, 1090, 7296, 573, 7124, 11, 504, 2]
+// Dependencies: [1221, 502, 1957, 2012, 2021, 1979, 4620, 4786, 1074, 1090, 7334, 573, 7162, 11, 504, 2]
 
-// Module 7546 (NewChannelsStore)
+// Module 7584 (NewChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7124 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 7296 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7162 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 7334 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import ReadStateStore from "ReadStateStore" /* 4589 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
+import ReadStateStore from "ReadStateStore" /* 4620 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4786 */;
 
 require = fn;
 function guildHasCommunity(nextResult) {

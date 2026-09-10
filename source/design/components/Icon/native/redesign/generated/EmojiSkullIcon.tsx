@@ -1,13 +1,13 @@
-// Module ID: 15419
-// Function ID: 15420
+// Module ID: 15468
+// Function ID: 15469
 // Name: EmojiSkullIcon
-// Dependencies: [19, 21, 576, 4274, 15420, 2]
+// Dependencies: [19, 21, 576, 4305, 15469, 2]
 // Exports: EmojiSkullIcon
 
-// Module 15419 (EmojiSkullIcon)
+// Module 15468 (EmojiSkullIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod15420 from "module_15420" /* 15420 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod15469 from "module_15469" /* 15469 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const EmojiSkullIcon = function EmojiSkullIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15420, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15469, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

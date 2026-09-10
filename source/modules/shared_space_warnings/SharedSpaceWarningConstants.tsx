@@ -1,9 +1,9 @@
-// Module ID: 13764
-// Function ID: 13765
+// Module ID: 13813
+// Function ID: 13814
 // Name: SharedSpaceWarningConstants
 // Dependencies: [2]
 
-// Module 13764 (SharedSpaceWarningConstants)
+// Module 13813 (SharedSpaceWarningConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpaceWarningConstants.tsx");

@@ -1,8 +1,8 @@
-// Module ID: 6370
-// Function ID: 6371
+// Module ID: 6406
+// Function ID: 6407
 // Dependencies: [2]
 
-// Module 6370
+// Module 6406
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PottedPlantIllocon-2x.png.js");

@@ -1,25 +1,25 @@
-// Module ID: 15775
-// Function ID: 15776
+// Module ID: 15824
+// Function ID: 15825
 // Name: ExperimentOverrideActiveSetting
-// Dependencies: [4490, 1236, 21, 14609, 504, 15776, 14871, 11500, 15616, 2]
+// Dependencies: [4521, 1236, 21, 14658, 504, 15825, 14920, 11540, 15665, 2]
 
-// Module 15775 (ExperimentOverrideActiveSetting)
+// Module 15824 (ExperimentOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14609 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14871 */;
-import DevToolsContent from "DevToolsContent" /* 15776 */;
-import ExperimentStore from "ExperimentStore" /* 4490 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14658 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14920 */;
+import DevToolsContent from "DevToolsContent" /* 15825 */;
+import ExperimentStore from "ExperimentStore" /* 4521 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11500);
+const SettingBuilders = fn(11540);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(15616).BeakerIcon,
+  IconComponent: fn(15665).BeakerIcon,
   useDescription: function useExperimentOverrideActiveDescription() {
     const items = [ExperimentStore];
     const stateFromStores = initialize.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);

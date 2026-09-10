@@ -1,18 +1,18 @@
-// Module ID: 16658
-// Function ID: 16659
+// Module ID: 16713
+// Function ID: 16714
 // Name: SwipeForMemberListWrapper
-// Dependencies: [32, 19, 17, 7890, 7878, 1074, 21, 3, 4574, 576, 4754, 16043, 4434, 4310, 5006, 4509, 7052, 4439, 11558, 1109, 16039, 8295, 12819, 4432, 4431, 4986, 1484, 16565, 6669, 16561, 5139, 7170, 16659, 2]
+// Dependencies: [32, 19, 17, 7928, 7915, 1074, 21, 3, 4605, 576, 4785, 16092, 4465, 4341, 5042, 4540, 7090, 4470, 11598, 1109, 16088, 8332, 12859, 4463, 4462, 5022, 1484, 16614, 6705, 16714, 16715, 16610, 5175, 7208, 16716, 2]
 // Exports: default
 
-// Module 16658 (SwipeForMemberListWrapper)
+// Module 16713 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
-import RootNavigationRef from "RootNavigationRef" /* 4432 */;
-import useChatLayout from "useChatLayout" /* 4434 */;
-import ChatInputUtils from "ChatInputUtils" /* 4439 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4754 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4462 */;
+import RootNavigationRef from "RootNavigationRef" /* 4463 */;
+import useChatLayout from "useChatLayout" /* 4465 */;
+import ChatInputUtils from "ChatInputUtils" /* 4470 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4785 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,16 +20,16 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(7890);
+const ChannelDetailsStore = fn(7928);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const MIDNIGHT_BORDER_WIDTH = fn(7878).MIDNIGHT_BORDER_WIDTH;
+const MIDNIGHT_BORDER_WIDTH = fn(7915).MIDNIGHT_BORDER_WIDTH;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
 let context = noop.createContext(undefined);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { memberListPreview: null, content: null, memberListContainer: null, midnightBorder: null, midnightRightOverflow: null };
 const tmp6 = new LoggerDefault("SwipeForMemberListWrapper");
 obj.memberListPreview = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -200,8 +200,8 @@ export default function _default(channelId) {
       const tmp23Result = useChatLayout;
       let coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);
       if (tmp3) {
-        coerceChannelRouteResult = tmp23(4431).coerceGuildsRoute(currentRoute);
-        const tmp23Result4 = tmp23(4431);
+        coerceChannelRouteResult = tmp23(4462).coerceGuildsRoute(currentRoute);
+        const tmp23Result4 = tmp23(4462);
       }
       const obj3 = { route: coerceChannelRouteResult, channelId: gesture, currentRoute, isChatLockedOpen, routeParams: null };
       let params1;
@@ -393,23 +393,24 @@ export default function _default(channelId) {
   const animatedStyle = gesture(gesture2[13]).useAnimatedStyle(le);
   const obj8 = { gesture: memo1, children: null };
   let obj9 = {
-    style,
     onAccessibilityEscape() {
       if (gesture2) {
         navigation.goBack();
       }
     },
+    style,
     children: null
   };
-  const obj10 = { style: tmp.content, accessibilityElementsHidden: derivedStateFromSharedValue, importantForAccessibility: null, children: null };
+  const obj10 = { navigationKey: channelId, definition: gesture(gesture2[30]).CHANNEL_NAVIGATION_TTI, accessibilityElementsHidden: derivedStateFromSharedValue || undefined, importantForAccessibility: null, style: null, children: null };
   let str;
   if (derivedStateFromSharedValue) {
     str = "no-hide-descendants";
   }
   obj10.importantForAccessibility = str;
-  const items14 = [children, callback2(gesture(gesture2[29]).MainTabsContentScrim, { translateX: derivedValue1, maxWidth })];
+  obj10.style = tmp.content;
+  const items14 = [children, callback2(gesture(gesture2[31]).MainTabsContentScrim, { translateX: derivedValue1, maxWidth })];
   obj10.children = items14;
-  const items15 = [callback3(disallowGesture2, obj10), ];
+  const items15 = [callback3(gesture(gesture2[29]).NavTTISurfaceProvider, obj10), ];
   const items16 = [mainTabsChannelScreenStyles, tmp.memberListContainer, , ];
   let midnightBorder;
   if (tmp4 === derivedStateFromSharedValue.MIDNIGHT) {
@@ -424,10 +425,10 @@ export default function _default(channelId) {
   }
   const obj11 = { style: items16, accessibilityElementsHidden: !derivedStateFromSharedValue, importantForAccessibility: "no-hide-descendants", children: null };
   items16[3] = prop;
-  const items17 = [callback2(derivedValue(gesture2[30]), { absolute: true, withOverlay: true, overlayOpacity: 0.5 }), , ];
+  const items17 = [callback2(derivedValue(gesture2[32]), { absolute: true, withOverlay: true, overlayOpacity: 0.5 }), , ];
   const tmp12Result8 = gesture(gesture2[13]);
-  const tmp41 = !derivedStateFromSharedValue;
-  items17[1] = callback2(gesture(gesture2[31]).LayerScope, { children: callback2(derivedValue(gesture2[32]), { isShowing: derivedStateFromSharedValue, channelId: tmp5[0], isSearchLocked: false, onBackPress: callback4, componentWidth: tmp8, onChannelDeleted: callback3 }) });
+  const tmp40 = !derivedStateFromSharedValue;
+  items17[1] = callback2(gesture(gesture2[33]).LayerScope, { children: callback2(derivedValue(gesture2[34]), { isShowing: derivedStateFromSharedValue, channelId: tmp5[0], isSearchLocked: false, onBackPress: callback4, componentWidth: tmp8, onChannelDeleted: callback3 }) });
   const obj13 = { style: null, children: callback2(disallowGesture2, { style: tmp.memberListPreview }) };
   const items18 = [gesture3.absoluteFill, animatedStyle];
   obj13.style = items18;

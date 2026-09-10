@@ -1,10 +1,10 @@
-// Module ID: 8800
-// Function ID: 8801
+// Module ID: 8837
+// Function ID: 8838
 // Name: CollectiblesAnalyticsContext
 // Dependencies: [19, 21, 2]
 // Exports: CollectiblesAnalyticsProvider, useCollectiblesAnalyticsContext
 
-// Module 8800 (CollectiblesAnalyticsContext)
+// Module 8837 (CollectiblesAnalyticsContext)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

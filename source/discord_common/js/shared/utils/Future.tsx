@@ -1,9 +1,9 @@
-// Module ID: 9325
-// Function ID: 9326
+// Module ID: 9362
+// Function ID: 9363
 // Name: Future
 // Dependencies: [2]
 
-// Module 9325 (Future)
+// Module 9362 (Future)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");

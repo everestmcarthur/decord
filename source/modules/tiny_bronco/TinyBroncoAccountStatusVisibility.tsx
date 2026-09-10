@@ -1,17 +1,17 @@
-// Module ID: 14746
-// Function ID: 14747
+// Module ID: 14795
+// Function ID: 14796
 // Name: TinyBroncoAccountStatusVisibility
-// Dependencies: [19, 4789, 14712, 14713, 5437, 4787, 504, 10991, 2]
+// Dependencies: [19, 4820, 14761, 14762, 5473, 4818, 504, 11031, 2]
 // Exports: isTinyBroncoAnnouncementCountry, shouldShowTinyBroncoAccountStatus, useShouldShowTinyBroncoAccountStatus
 
-// Module 14746 (TinyBroncoAccountStatusVisibility)
-import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10991 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 14713 */;
+// Module 14795 (TinyBroncoAccountStatusVisibility)
+import MessageRequestActionCreators from "MessageRequestActionCreators" /* 11031 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 14762 */;
 import noop from "module_19" /* 19 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4789 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4820 */;
 
 require = fn;
-const TinyBroncoConstants = fn(14712);
+const TinyBroncoConstants = fn(14761);
 ({ TINY_BRONCO_ANNOUNCEMENT_EXCLUDED_COUNTRIES: closure_4, TINY_BRONCO_SETTINGS_LOCATION: hasOwnProperty } = TinyBroncoConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tiny_bronco/TinyBroncoAccountStatusVisibility.tsx");
@@ -32,17 +32,17 @@ export const shouldShowTinyBroncoAccountStatus = function shouldShowTinyBroncoAc
       hasAgeGatedFeaturesResult = !set.has(userCountryCode.alpha2);
     }
     if (hasAgeGatedFeaturesResult) {
-      hasAgeGatedFeaturesResult = tmp(5437).hasAgeGatedFeatures();
-      const tmpResult = tmp(5437);
+      hasAgeGatedFeaturesResult = tmp(5473).hasAgeGatedFeatures();
+      const tmpResult = tmp(5473);
     }
     if (hasAgeGatedFeaturesResult) {
-      let isAssignedByDiscordResult = tmp(4787).isAssignedByDiscord();
+      let isAssignedByDiscordResult = tmp(4818).isAssignedByDiscord();
       if (!isAssignedByDiscordResult) {
-        isAssignedByDiscordResult = !tmp(4787).isAgeVerified();
-        const tmpResult4 = tmp(4787);
+        isAssignedByDiscordResult = !tmp(4818).isAgeVerified();
+        const tmpResult4 = tmp(4818);
       }
       hasAgeGatedFeaturesResult = isAssignedByDiscordResult;
-      const tmpResult3 = tmp(4787);
+      const tmpResult3 = tmp(4818);
     }
     isTinyBroncoEnabledResult = hasAgeGatedFeaturesResult;
   }

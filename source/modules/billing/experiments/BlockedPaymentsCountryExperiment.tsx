@@ -1,12 +1,12 @@
-// Module ID: 7431
-// Function ID: 7432
+// Module ID: 7469
+// Function ID: 7470
 // Name: BlockedPaymentsCountryExperiment
-// Dependencies: [4488, 1433, 7432, 2]
+// Dependencies: [4519, 1433, 7470, 2]
 // Exports: getIsPaymentsBlocked, useBlockedPaymentsConfig, useIsPaymentsBlocked
 
-// Module 7431 (BlockedPaymentsCountryExperiment)
-import useGeoForUserDefault from "useGeoForUser" /* 7432 */;
-import createExperiment from "module_4488" /* 4488 */;
+// Module 7469 (BlockedPaymentsCountryExperiment)
+import useGeoForUserDefault from "useGeoForUser" /* 7470 */;
+import createExperiment from "module_4519" /* 4519 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

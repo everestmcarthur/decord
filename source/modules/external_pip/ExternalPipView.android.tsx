@@ -1,15 +1,15 @@
-// Module ID: 17034
-// Function ID: 17035
+// Module ID: 17093
+// Function ID: 17094
 // Name: ExternalPipView
-// Dependencies: [32, 19, 8318, 21, 17035, 9642, 17037, 2]
+// Dependencies: [32, 19, 8355, 21, 17094, 9680, 17096, 2]
 // Exports: default
 
-// Module 17034 (ExternalPipView)
-import ExternalPipDefault from "ExternalPip" /* 9642 */;
-import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 17037 */;
+// Module 17093 (ExternalPipView)
+import ExternalPipDefault from "ExternalPip" /* 9680 */;
+import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 17096 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppFreezeStore from "AppFreezeStore" /* 8318 */;
+import AppFreezeStore from "AppFreezeStore" /* 8355 */;
 
 function FreezeAfterLayoutPipView() {
   importDefault = noop.useRef(false);

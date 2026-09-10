@@ -1,9 +1,9 @@
-// Module ID: 10356
-// Function ID: 10357
+// Module ID: 10394
+// Function ID: 10395
 // Name: EmojiPickerNativeComponent
 // Dependencies: [106, 65, 114, 2]
 
-// Module 10356 (EmojiPickerNativeComponent)
+// Module 10394 (EmojiPickerNativeComponent)
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;

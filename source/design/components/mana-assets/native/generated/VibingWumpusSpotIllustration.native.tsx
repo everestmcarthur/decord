@@ -1,13 +1,13 @@
-// Module ID: 6569
-// Function ID: 6570
+// Module ID: 6605
+// Function ID: 6606
 // Name: VibingWumpusSpotIllustration
-// Dependencies: [21, 5601, 6570, 2]
+// Dependencies: [21, 5637, 6606, 2]
 // Exports: VibingWumpusSpotIllustration
 
-// Module 6569 (VibingWumpusSpotIllustration)
+// Module 6605 (VibingWumpusSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6570 from "module_6570" /* 6570 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6606 from "module_6606" /* 6606 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const VibingWumpusSpotIllustration = function VibingWumpusSpotIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6570 };
+  const obj2 = { uri: _modDef6606 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

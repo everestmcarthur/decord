@@ -1,14 +1,14 @@
-// Module ID: 16317
-// Function ID: 16318
+// Module ID: 16367
+// Function ID: 16368
 // Name: GuildsBarDnDStore
-// Dependencies: [5452, 1244, 4310, 1249, 1232, 4197, 2]
+// Dependencies: [5488, 1244, 4341, 1249, 1232, 4227, 2]
 // Exports: useFolderBGHeightOffset, useItemDragState
 
-// Module 16317 (GuildsBarDnDStore)
+// Module 16367 (GuildsBarDnDStore)
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
-import _mod4197 from "module_4197" /* 4197 */;
-import SortedGuildStore from "SortedGuildStore" /* 5452 */;
+import _mod4227 from "module_4227" /* 4227 */;
+import SortedGuildStore from "SortedGuildStore" /* 5488 */;
 import identity from "module_1244" /* 1244 */;
 import size from "module_2" /* 2 */;
 
@@ -59,7 +59,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1249).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "r", overSpecs: "isArray" }));
+      dropSpecs(1249).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "toLowerCase" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -83,7 +83,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "disabled" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "Array" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -201,7 +201,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4197.shallow);
+  }, _mod4227.shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

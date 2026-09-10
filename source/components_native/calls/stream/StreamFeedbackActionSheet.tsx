@@ -1,22 +1,22 @@
-// Module ID: 17387
-// Function ID: 17388
+// Module ID: 17446
+// Function ID: 17447
 // Name: StreamFeedbackActionSheet
-// Dependencies: [19, 502, 1074, 11657, 21, 7752, 504, 1114, 2658, 11660, 17388, 1242, 17252, 17389, 4541, 17390, 1896, 4271, 2]
+// Dependencies: [19, 502, 1074, 11697, 21, 7789, 504, 1114, 2658, 11700, 17447, 1242, 17311, 17448, 4572, 17449, 1896, 4302, 2]
 // Exports: default
 
-// Module 17387 (StreamFeedbackActionSheet)
+// Module 17446 (StreamFeedbackActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ToastUtils from "ToastUtils" /* 4271 */;
-import FeedbackUtils from "FeedbackUtils" /* 11660 */;
-import trackStreamProblemDefault from "trackStreamProblem" /* 17252 */;
-import shouldShowLogUploadForCategory from "shouldShowLogUploadForCategory" /* 17389 */;
+import ToastUtils from "ToastUtils" /* 4302 */;
+import FeedbackUtils from "FeedbackUtils" /* 11700 */;
+import trackStreamProblemDefault from "trackStreamProblem" /* 17311 */;
+import shouldShowLogUploadForCategory from "shouldShowLogUploadForCategory" /* 17448 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(11657);
+const Constants = fn(11697);
 ({ FeedbackCategory: hasOwnProperty, FeedbackType: metroRequire, StreamFeedbackOption: closure_7 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -25,8 +25,8 @@ const result = size.fileFinishedImporting("components_native/calls/stream/Stream
 export default function StreamFeedbackActionSheet(stream) {
   stream = stream.stream;
   const analyticsData = stream.analyticsData;
-  dependencyMap = stream(7752).useGetStreamApplication(stream);
-  let obj = stream(7752);
+  dependencyMap = stream(7789).useGetStreamApplication(stream);
+  let obj = stream(7789);
   const items = [AuthenticationStore];
   const stateFromStores = stream(504).useStateFromStores(items, () => AuthenticationStore.getId() === stream.ownerId);
   const intl = stream(1114).intl;
@@ -49,14 +49,14 @@ export default function StreamFeedbackActionSheet(stream) {
   const intl5 = tmp(1114).intl;
   obj3.problemsHeader = intl5.string(stream(1114).t["6Y1t5P"]);
   const stringResult1 = intl2.string(stream(1114).t["0uxA2V"]);
-  obj3.problemOptions = stream(11660).getStreamFeedbackOptions({ isStreamer: stateFromStores });
+  obj3.problemOptions = stream(11700).getStreamFeedbackOptions({ isStreamer: stateFromStores });
   let obj4 = { value: constants2.FREEFORM, label: null };
   const intl6 = tmp(1114).intl;
   obj4.label = intl6.string(stream(1114).t.emlT91);
   obj3.freeformConfig = obj4;
   let obj5 = { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null };
   const tmp11 = jsx;
-  const tmpResult = stream(11660);
+  const tmpResult = stream(11700);
   if (stateFromStores) {
     stringResult2 = stringResult1;
   }
@@ -120,9 +120,9 @@ export default function StreamFeedbackActionSheet(stream) {
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = tmp9);
-          tmp22(4541).openLazy(asyncRequireImpl(17390, dependencyMap.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
+          tmp22(4572).openLazy(asyncRequireImpl(17449, dependencyMap.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
           const obj7 = { mediaSessionId: null, rtcConnectionId: null };
-          const tmp22Result = tmp22(4541);
+          const tmp22Result = tmp22(4572);
         }
         obj3 = shouldShowLogUploadForCategory;
       }
@@ -131,5 +131,5 @@ export default function StreamFeedbackActionSheet(stream) {
       ToastUtils.presentFeedbackSent();
     }
   };
-  return tmp11(tmp10(17388), obj5);
+  return tmp11(tmp10(17447), obj5);
 };

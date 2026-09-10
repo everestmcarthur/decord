@@ -1,21 +1,21 @@
-// Module ID: 15590
-// Function ID: 15591
+// Module ID: 15639
+// Function ID: 15640
 // Name: CopyClientInfoSetting
-// Dependencies: [11457, 21, 1364, 4541, 11820, 7203, 4271, 7211, 7163, 1114, 7213, 4521, 4553, 11500, 5552, 1935, 2]
+// Dependencies: [11497, 21, 1364, 4572, 11860, 7241, 4302, 7249, 7201, 1114, 7251, 4552, 4584, 11540, 5588, 1935, 2]
 // Exports: getClientInfoString
 
-// Module 15590 (CopyClientInfoSetting)
+// Module 15639 (CopyClientInfoSetting)
 import util from "util" /* 1114 */;
-import ToastUtils from "ToastUtils" /* 4271 */;
-import CopyIcon from "CopyIcon" /* 4521 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import DeviceUtils from "DeviceUtils" /* 4553 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
-import ClipboardUtils from "ClipboardUtils" /* 7203 */;
-import ActionSheet from "ActionSheet" /* 7211 */;
-import ActionSheetRow from "ActionSheetRow" /* 7213 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11820 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11457 */;
+import ToastUtils from "ToastUtils" /* 4302 */;
+import CopyIcon from "CopyIcon" /* 4552 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import DeviceUtils from "DeviceUtils" /* 4584 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7201 */;
+import ClipboardUtils from "ClipboardUtils" /* 7241 */;
+import ActionSheet from "ActionSheet" /* 7249 */;
+import ActionSheetRow from "ActionSheetRow" /* 7251 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11860 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11497 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1364 */;
 
 require = fn;
@@ -143,14 +143,14 @@ function ClientClientInfoActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const Manifest = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11500);
+const SettingBuilders = fn(11540);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(5552).ClipboardListIcon,
+  IconComponent: fn(5588).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: ClientClientInfoActionSheet }), "ClientClientInfoActionSheet");
   },

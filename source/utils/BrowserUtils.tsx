@@ -1,20 +1,20 @@
-// Module ID: 4896
-// Function ID: 4897
+// Module ID: 4927
+// Function ID: 4928
 // Name: BrowserUtils
-// Dependencies: [4897, 2]
+// Dependencies: [4928, 2]
 // Exports: canUseWebp, getChromeVersion, getEdgeVersion, getElectronVersion, getFirefoxVersion, getSafariVersion, isFirefox, isSafari, supportsHEVCAlpha
 
-// Module 4896 (BrowserUtils)
-import _modDef4897 from "module_4897" /* 4897 */;
+// Module 4927 (BrowserUtils)
+import _modDef4928 from "module_4928" /* 4928 */;
 
-let str = _modDef4897.name;
+let str = _modDef4928.name;
 if (str == null) {
   str = "unknown";
 }
 const str2 = str.toLowerCase();
 let num = -1;
 if ("chrome" === str2.toLowerCase()) {
-  let str3 = _modDef4897.version;
+  let str3 = _modDef4928.version;
   if (str3 == null) {
     str3 = "";
   }
@@ -22,7 +22,7 @@ if ("chrome" === str2.toLowerCase()) {
 }
 let parsed = num;
 if ("electron" === str2.toLowerCase()) {
-  let str4 = _modDef4897.version;
+  let str4 = _modDef4928.version;
   if (str4 == null) {
     str4 = "";
   }
@@ -30,7 +30,7 @@ if ("electron" === str2.toLowerCase()) {
 }
 let parsed1 = num;
 if ("firefox" === str2.toLowerCase()) {
-  let str5 = _modDef4897.version;
+  let str5 = _modDef4928.version;
   if (str5 == null) {
     str5 = "";
   }
@@ -38,14 +38,14 @@ if ("firefox" === str2.toLowerCase()) {
 }
 let parsed2 = num;
 if ("edge" === str2.toLowerCase()) {
-  let str6 = _modDef4897.version;
+  let str6 = _modDef4928.version;
   if (str6 == null) {
     str6 = "";
   }
   parsed2 = parseInt(str6, 10);
 }
 if ("safari" === str2.toLowerCase()) {
-  let str7 = _modDef4897.version;
+  let str7 = _modDef4928.version;
   if (str7 == null) {
     str7 = "";
   }

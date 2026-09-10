@@ -1,10 +1,10 @@
-// Module ID: 16860
-// Function ID: 16861
+// Module ID: 16917
+// Function ID: 16918
 // Name: InstantInviteSelfMeasurer
-// Dependencies: [19, 17, 21, 4574, 10964, 2]
+// Dependencies: [19, 17, 21, 4605, 11004, 2]
 
-// Module 16860 (InstantInviteSelfMeasurer)
-import InstantInvite from "InstantInvite" /* 10964 */;
+// Module 16917 (InstantInviteSelfMeasurer)
+import InstantInvite from "InstantInvite" /* 11004 */;
 import noop from "module_19" /* 19 */;
 
 const InstantInviteDefault = InstantInvite;
@@ -12,7 +12,7 @@ const InstantInviteDefault = InstantInvite;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles({ container: { position: "absolute", opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx");

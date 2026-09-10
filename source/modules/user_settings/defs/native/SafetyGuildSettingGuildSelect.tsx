@@ -1,22 +1,22 @@
-// Module ID: 15901
-// Function ID: 15902
+// Module ID: 15950
+// Function ID: 15951
 // Name: SafetyGuildSettingGuildSelect
-// Dependencies: [19, 5452, 14720, 15902, 7989, 4541, 15903, 1896, 11500, 2]
+// Dependencies: [19, 5488, 14769, 15951, 8027, 4572, 15952, 1896, 11540, 2]
 
-// Module 15901 (SafetyGuildSettingGuildSelect)
+// Module 15950 (SafetyGuildSettingGuildSelect)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
 import noop from "module_19" /* 19 */;
-import SortedGuildStore from "SortedGuildStore" /* 5452 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14720 */;
+import SortedGuildStore from "SortedGuildStore" /* 5488 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14769 */;
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15902);
+const UserSettingsSafetySelectedGuildStore = fn(15951);
 ({ getSelectedGuildId: metroRequire, GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7, setSelectedGuildId: closure_8, useUserSafetySettingsSelectedGuildStore: closure_9 } = UserSettingsSafetySelectedGuildStore);
-const MobileUserSettings = fn(7989).MobileUserSettings;
+const MobileUserSettings = fn(8027).MobileUserSettings;
 let items = [, ];
 ({ GUILD_SETTING_ACTIVITY_STATUS: arr[0], GUILD_SETTING_ACTIVITY_JOINING: arr[1] } = MobileUserSettings);
-const SettingBuilders = fn(11500);
+const SettingBuilders = fn(11540);
 const guildSelector = SettingBuilders.createGuildSelector({
   unsearchable: true,
   useSelectedGuildId() {
@@ -39,7 +39,7 @@ const guildSelector = SettingBuilders.createGuildSelector({
   },
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15903, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15952, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
   }
 });
 const size = fn(2);

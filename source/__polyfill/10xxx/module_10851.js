@@ -1,9 +1,20 @@
 // Module ID: 10851
 // Function ID: 10852
-// Dependencies: [1122]
+// Dependencies: [19]
+// Exports: useUpdateGestureConfig
 
 // Module 10851
-import registerAsset from "module_1122" /* 1122 */;
+import _mod19 from "module_19" /* 19 */;
 
+const useEffect = _mod19.useEffect;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9dd37f954b23d7c3c7ed4428be93436f", name: "ClydeIcon", type: "png" });
+export const useUpdateGestureConfig = (arg0, enabled) => {
+  closure_0 = arg0;
+  enabled = enabled.enabled;
+  const items = [enabled, arg0];
+  useEffect(() => {
+    if (undefined !== enabled) {
+      closure_0.enabled(tmp);
+    }
+  }, items);
+};

@@ -1,10 +1,10 @@
-// Module ID: 8442
-// Function ID: 8443
+// Module ID: 8479
+// Function ID: 8480
 // Name: AgeVerificationIncodeWebViewConstants
 // Dependencies: [2]
 // Exports: buildIncodeFallbackSessionInjection, buildIncodeParamsInjection, parseIncodeWebViewMessage, postIncodeCaptureComplete, postIncodeFallbackRequest, postIncodeResult, readInjectedIncodeParams
 
-// Module 8442 (AgeVerificationIncodeWebViewConstants)
+// Module 8479 (AgeVerificationIncodeWebViewConstants)
 import size from "module_2" /* 2 */;
 
 let c0 = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";

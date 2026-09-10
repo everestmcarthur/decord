@@ -1,12 +1,12 @@
-// Module ID: 10026
-// Function ID: 10027
+// Module ID: 10064
+// Function ID: 10065
 // Name: NoiseCancellationUtils
-// Dependencies: [1908, 10027, 504, 2]
+// Dependencies: [1908, 10065, 504, 2]
 // Exports: getNoiseCancellationDeferredToSystem, useNoiseCancellationDeferredToSystem
 
-// Module 10026 (NoiseCancellationUtils)
+// Module 10064 (NoiseCancellationUtils)
 import initialize from "initialize" /* 504 */;
-import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 10027 */;
+import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 10065 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;

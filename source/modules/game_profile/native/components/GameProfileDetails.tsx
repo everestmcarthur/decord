@@ -1,17 +1,17 @@
-// Module ID: 8909
-// Function ID: 8910
+// Module ID: 8946
+// Function ID: 8947
 // Name: GameProfileDetails
-// Dependencies: [19, 17, 8386, 21, 4574, 576, 4268, 8748, 1114, 1894, 4255, 8910, 8917, 4570, 2]
+// Dependencies: [19, 17, 8423, 21, 4605, 576, 4299, 8785, 1114, 1894, 4286, 8947, 8954, 4601, 2]
 // Exports: default
 
-// Module 8909 (GameProfileDetails)
+// Module 8946 (GameProfileDetails)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Server from "Server" /* 1894 */;
-import DateUtilsAll from "DateUtils" /* 4255 */;
-import LinkingDefault from "Linking" /* 4268 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import SKUUtils from "SKUUtils" /* 8748 */;
+import DateUtilsAll from "DateUtils" /* 4286 */;
+import LinkingDefault from "Linking" /* 4299 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import SKUUtils from "SKUUtils" /* 8785 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,10 +34,10 @@ function GameProfileWebsiteButton(action) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8386).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8423).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };
@@ -134,7 +134,7 @@ export default function GameProfileDetails(game) {
               if (obj != null) {
                 const websites = obj.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((item) => trackAction(8917)(item, trackAction(576).colors.ICON_SUBTLE));
+                  const mapped3 = websites.map((item) => trackAction(8954)(item, trackAction(576).colors.ICON_SUBTLE));
                   found = mapped3.filter((item) => null != item);
                 }
               }
@@ -178,7 +178,7 @@ export default function GameProfileDetails(game) {
                 stringResult = intl8.string(util.t["UxAag+"]);
               }
               const obj7 = { label: stringResult, value: null };
-              const obj8 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(8910).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(576).colors.ICON_SUBTLE }, platform)) };
+              const obj8 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(8947).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(576).colors.ICON_SUBTLE }, platform)) };
               obj7.value = React6(hasOwnProperty, obj8);
               items.push(obj7);
             }

@@ -1,23 +1,23 @@
-// Module ID: 12748
-// Function ID: 12749
+// Module ID: 12788
+// Function ID: 12789
 // Name: InviteDetails
-// Dependencies: [32, 19, 17, 12443, 1385, 1371, 1074, 12749, 21, 4574, 576, 5455, 7749, 1178, 12689, 4418, 1114, 5604, 4570, 1396, 5601, 1242, 504, 12750, 9804, 4989, 5447, 2]
+// Dependencies: [32, 19, 17, 12483, 1385, 1371, 1074, 12789, 21, 4605, 576, 5491, 7786, 1178, 12729, 4449, 1114, 5640, 4601, 1396, 5637, 1242, 504, 12790, 9842, 5025, 5483, 2]
 // Exports: default
 
-// Module 12748 (InviteDetails)
+// Module 12788 (InviteDetails)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import UserUtilsDefault from "UserUtils" /* 4418 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import GuildBadgeDefault from "GuildBadge" /* 5604 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7749 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 12689 */;
-import InviteRolesListDefault from "InviteRolesList" /* 12750 */;
+import UserUtilsDefault from "UserUtils" /* 4449 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import GuildBadgeDefault from "GuildBadge" /* 5640 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7786 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 12729 */;
+import InviteRolesListDefault from "InviteRolesList" /* 12790 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 12443 */;
+import MultiAccountStore from "MultiAccountStore" /* 12483 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -115,7 +115,7 @@ function InviteHeader(invite) {
     const obj6 = { guild: invite.guild, style: tmp.featureIcon, disableColor: true };
     const items = [closure_1_12(GuildBadgeDefault, obj6), ];
     const obj7 = { style: tmp.guildNameText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: name };
-    items[1] = closure_1_12(tmp2(4570).Heading, obj7);
+    items[1] = closure_1_12(tmp2(4601).Heading, obj7);
     obj4.children = items;
     tmp9 = map1(View, obj4);
   }
@@ -145,17 +145,17 @@ function InviteJoinContext(invite) {
   const stringResult = intl.string(invite(1114).t["3rE1P8"]);
   if (obj.isFriendInvite(invite)) {
     const intl7 = tmp3(1114).intl;
-    let obj2 = { username: isGuildMember(4418).getFormattedName(invite.inviter) };
+    let obj2 = { username: isGuildMember(4449).getFormattedName(invite.inviter) };
     let formatResult = intl7.format(tmp3(1114).t.Quj7HX, obj2);
-    const obj11 = isGuildMember(4418);
+    const obj11 = isGuildMember(4449);
   } else {
     if (tmp3Result.isGroupDMInvite(invite)) {
       if (null != invite.channel) {
         if (null != invite.inviter) {
           const intl6 = tmp3(1114).intl;
-          let obj3 = { username: isGuildMember(4418).getFormattedName(invite.inviter) };
+          let obj3 = { username: isGuildMember(4449).getFormattedName(invite.inviter) };
           let formatResult1 = intl6.format(tmp3(1114).t.Lu4h18, obj3);
-          const obj9 = isGuildMember(4418);
+          const obj9 = isGuildMember(4449);
         }
         formatResult = formatResult1;
       }
@@ -165,9 +165,9 @@ function InviteJoinContext(invite) {
       if (tmp3Result3.isStreamInvite(invite)) {
         if (null != invite.target_user) {
           const intl4 = tmp3(1114).intl;
-          const obj4 = { username: isGuildMember(4418).getFormattedName(invite.target_user) };
+          const obj4 = { username: isGuildMember(4449).getFormattedName(invite.target_user) };
           formatResult = intl4.formatToPlainString(tmp3(1114).t.x2L32Q, obj4);
-          const obj7 = isGuildMember(4418);
+          const obj7 = isGuildMember(4449);
         }
       }
       let tmp7 = isGuildMember;
@@ -192,14 +192,14 @@ function InviteJoinContext(invite) {
         formatResult = stringResult;
         if (tmp10) {
           const intl2 = tmp3(1114).intl;
-          const obj6 = { username: isGuildMember(4418).getFormattedName(invite.inviter) };
+          const obj6 = { username: isGuildMember(4449).getFormattedName(invite.inviter) };
           formatResult = intl2.format(tmp3(1114).t.spU2mI, obj6);
-          const obj5 = isGuildMember(4418);
+          const obj5 = isGuildMember(4449);
         }
       }
-      tmp3Result3 = tmp3(7749);
+      tmp3Result3 = tmp3(7786);
     }
-    tmp3Result = tmp3(7749);
+    tmp3Result = tmp3(7786);
   }
   const obj8 = { style: tmp.inviteJoinContainer, children: null };
   let tmp22 = null;
@@ -208,12 +208,12 @@ function InviteJoinContext(invite) {
     if (!tmp3Result4.isFriendInvite(invite)) {
       const obj10 = { style: tmp.inviterIconWrapper, children: null };
       const obj12 = { source: memo, style: tmp.inviterIcon };
-      obj10.children = closure_12(isGuildMember(5601), obj12);
+      obj10.children = closure_12(isGuildMember(5637), obj12);
       tmp22 = closure_12(tmp21, obj10);
     }
-    tmp3Result4 = tmp3(7749);
+    tmp3Result4 = tmp3(7786);
   }
-  const items1 = [tmp22, closure_12(invite(4570).Text, { style: tmp.inviteJoinText, variant: "text-sm/normal", color: "text-default", children: formatResult })];
+  const items1 = [tmp22, closure_12(invite(4601).Text, { style: tmp.inviteJoinText, variant: "text-sm/normal", color: "text-default", children: formatResult })];
   obj8.children = items1;
   return closure_13(View, obj8);
 }
@@ -286,10 +286,10 @@ function InviteMemberCounts(invite) {
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, InviteStates: c10 } = Constants);
-let closure_11 = fn(12749).INVITE_ROUTING_HUB_GUILD_ID;
+let closure_11 = fn(12789).INVITE_ROUTING_HUB_GUILD_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { avatar: null, avatarContainer: null, inviteJoinContainer: null, inviteJoinText: null, inviterIconWrapper: null, inviterIcon: null, guildNameContainer: null, guildNameText: null, featureIcon: null, memberInfo: null, rolesList: null, dotOnline: null, dotOffline: null, embedDetailsCard: null };
 let size = { height: 64, width: 64, margin: 0, borderRadius: nativeDefault.radii.lg };
 obj2.avatar = size;
@@ -303,14 +303,14 @@ obj2.inviterIcon = size2;
 obj2.guildNameContainer = { flexDirection: "row", alignItems: "center", marginBottom: 8 };
 obj2.guildNameText = { textAlign: "center" };
 let obj3 = { borderRadius: nativeDefault.radii.none, marginRight: 8 };
-obj2.featureIcon = { flexGrow: 0, marginRight: 8, opacity: fn(5455).DARK_1_LIGHT_04 };
+obj2.featureIcon = { flexGrow: 0, marginRight: 8, opacity: fn(5491).DARK_1_LIGHT_04 };
 obj2.memberInfo = { flexDirection: "row", alignItems: "center", marginBottom: 8 };
 obj2.rolesList = { marginTop: 8, marginBottom: 8, alignItems: "center" };
 const size3 = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm, marginRight: 4, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 obj2.dotOnline = size3;
 const size4 = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm, marginRight: 4, marginLeft: 16, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.dotOffline = size4;
-let obj4 = { flexGrow: 0, marginRight: 8, opacity: fn(5455).DARK_1_LIGHT_04 };
+let obj4 = { flexGrow: 0, marginRight: 8, opacity: fn(5491).DARK_1_LIGHT_04 };
 obj2.embedDetailsCard = { width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, borderRadius: nativeDefault.radii.sm, marginTop: 16, marginBottom: 8 };
 let closure_15 = createStyles.createStyles(obj2);
 const constants3 = { ACCEPT: 0, [0]: "ACCEPT", DECLINE: 1, [1]: "DECLINE" };
@@ -345,11 +345,11 @@ export default function InviteDetails(invite) {
   if (tmp8Result) {
     const obj9 = { style: tmp.embedDetailsCard, children: null };
     const obj10 = { event: guild_scheduled_event };
-    const items3 = [tmp10(tmp4(9804).GuildEventCardHeader, obj10), , ];
+    const items3 = [tmp10(tmp4(9842).GuildEventCardHeader, obj10), , ];
     const obj11 = { event: guild_scheduled_event };
-    items3[1] = tmp10(tmp4(9804).GuildEventCardMetaInfo, obj11);
+    items3[1] = tmp10(tmp4(9842).GuildEventCardMetaInfo, obj11);
     const obj12 = { event: guild_scheduled_event };
-    items3[2] = tmp10(tmp4(9804).GuildEventCardGuildInfo, obj12);
+    items3[2] = tmp10(tmp4(9842).GuildEventCardGuildInfo, obj12);
     obj9.children = items3;
     tmp8Result = tmp8(View, obj9);
   }
@@ -365,7 +365,7 @@ export default function InviteDetails(invite) {
   let tmp10Result;
   if (null != userAvatarSource) {
     const obj13 = { source: userAvatarSource, variant: "entity" };
-    tmp10Result = tmp10(tmp4(4989).Button.Icon, obj13);
+    tmp10Result = tmp10(tmp4(5025).Button.Icon, obj13);
   }
   if (null != stateFromStores) {
     const intl = tmp4(1114).intl;
@@ -401,7 +401,7 @@ export default function InviteDetails(invite) {
     _undefined(constants.ACCEPT);
     importDefault();
   }
-  const items4 = [closure_12(invite(4989).Button, { icon: tmp10Result, variant: "primary", size: "lg", text: tmp24, accessibilityLabel: stringResult, onPress: handleAcceptInvitePress, loading: tmp3 === constants3.ACCEPT, disabled: tmp3 === constants3.ACCEPT }), ];
+  const items4 = [closure_12(invite(5025).Button, { icon: tmp10Result, variant: "primary", size: "lg", text: tmp24, accessibilityLabel: stringResult, onPress: handleAcceptInvitePress, loading: tmp3 === constants3.ACCEPT, disabled: tmp3 === constants3.ACCEPT }), ];
   const intl4 = tmp4(1114).intl;
   const string = intl4.string;
   const t = tmp4(1114).t;
@@ -412,7 +412,7 @@ export default function InviteDetails(invite) {
   }
   const obj16 = { children: null };
   const obj17 = { children: null };
-  items4[1] = closure_12(invite(4989).Button, {
+  items4[1] = closure_12(invite(5025).Button, {
     variant: "secondary",
     size: "lg",
     text: stringResult1,
@@ -432,7 +432,7 @@ export default function InviteDetails(invite) {
     disabled: tmp3 === constants3.DECLINE
   });
   obj17.children = items4;
-  items2[6] = closure_13(invite(5447).ButtonGroup, obj17);
+  items2[6] = closure_13(invite(5483).ButtonGroup, obj17);
   obj16.children = items2;
   return closure_13(closure_14, obj16);
 };

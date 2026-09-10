@@ -1,17 +1,17 @@
-// Module ID: 13326
-// Function ID: 13327
+// Module ID: 13375
+// Function ID: 13376
 // Name: useCheckoutPlanPriceString
-// Dependencies: [19, 7438, 1115, 7423, 2]
+// Dependencies: [19, 7476, 1115, 7461, 2]
 // Exports: useCheckoutPlan, useCheckoutPlanDiscountPrices, useCheckoutPlanPriceString
 
-// Module 13326 (useCheckoutPlanPriceString)
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7423 */;
+// Module 13375 (useCheckoutPlanPriceString)
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7461 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const useNativeCheckoutStore = fn(7438).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7476).useNativeCheckoutStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");
 

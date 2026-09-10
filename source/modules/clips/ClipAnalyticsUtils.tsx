@@ -1,18 +1,18 @@
-// Module ID: 7754
-// Function ID: 7755
+// Module ID: 7791
+// Function ID: 7792
 // Name: ClipAnalyticsUtils
-// Dependencies: [4620, 4596, 4597, 4613, 1914, 5146, 1074, 4626, 7755, 4693, 1242, 2]
+// Dependencies: [4651, 4627, 4628, 4644, 1914, 5182, 1074, 4657, 7792, 4724, 1242, 2]
 // Exports: getClipBaseProperties, getClipContextProperties, getClipSaveFailureAnalytics, getClipSavedAnalytics, getClipType, getPreSaveClipAnalytics, trackClipEdited
 
-// Module 7754 (ClipAnalyticsUtils)
+// Module 7791 (ClipAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4626 */;
-import _modDef4693 from "module_4693" /* 4693 */;
-import VideoQualityStats from "VideoQualityStats" /* 7755 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4620 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4613 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4657 */;
+import _modDef4724 from "module_4724" /* 4724 */;
+import VideoQualityStats from "VideoQualityStats" /* 7792 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4651 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4627 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4628 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4644 */;
 import ClipsStore from "ClipsStore" /* 1914 */;
 
 require = fn;
@@ -58,81 +58,81 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
     num2 = 0;
   }
   obj.frames_encoded_nvidia_cuda = num2;
-  let num3 = map.get(tmp3(7755).Encoders.NVIDIA_DIRECT_3D);
+  let num3 = map.get(tmp3(7792).Encoders.NVIDIA_DIRECT_3D);
   if (num3 == null) {
     num3 = 0;
   }
   obj.frames_encoded_nvidia_direct3d = num3;
-  let num4 = map.get(tmp3(7755).Encoders.OPENH264);
+  let num4 = map.get(tmp3(7792).Encoders.OPENH264);
   if (num4 == null) {
     num4 = 0;
   }
   obj.frames_encoded_openh264 = num4;
-  let num5 = map.get(tmp3(7755).Encoders.VIDEOTOOLBOX);
+  let num5 = map.get(tmp3(7792).Encoders.VIDEOTOOLBOX);
   if (num5 == null) {
     num5 = 0;
   }
   obj.frames_encoded_videotoolbox = num5;
-  let num6 = map.get(tmp3(7755).Encoders.AMD_DIRECT_3D);
+  let num6 = map.get(tmp3(7792).Encoders.AMD_DIRECT_3D);
   if (num6 == null) {
     num6 = 0;
   }
   obj.frames_encoded_amd_direct3d = num6;
-  let num7 = map.get(tmp3(7755).Encoders.AMD_VAAPI);
+  let num7 = map.get(tmp3(7792).Encoders.AMD_VAAPI);
   if (num7 == null) {
     num7 = 0;
   }
   obj.frames_encoded_amd_vaapi = num7;
-  let num8 = map.get(tmp3(7755).Encoders.INTEL);
+  let num8 = map.get(tmp3(7792).Encoders.INTEL);
   if (num8 == null) {
     num8 = 0;
   }
   obj.frames_encoded_intel = num8;
-  let num9 = map.get(tmp3(7755).Encoders.INTEL_DIRECT_3D);
+  let num9 = map.get(tmp3(7792).Encoders.INTEL_DIRECT_3D);
   if (num9 == null) {
     num9 = 0;
   }
   obj.frames_encoded_intel_direct3d = num9;
-  let num10 = map.get(tmp3(7755).Encoders.WMF_DIRECT_3D_INTEL);
+  let num10 = map.get(tmp3(7792).Encoders.WMF_DIRECT_3D_INTEL);
   if (num10 == null) {
     num10 = 0;
   }
   obj.frames_encoded_wmf_direct3d_intel = num10;
-  let num11 = map.get(tmp3(7755).Encoders.WMF_DIRECT_3D_NVIDIA);
+  let num11 = map.get(tmp3(7792).Encoders.WMF_DIRECT_3D_NVIDIA);
   if (num11 == null) {
     num11 = 0;
   }
   obj.frames_encoded_wmf_direct3d_nvidia = num11;
-  let num12 = map.get(tmp3(7755).Encoders.WMF_DIRECT_3D_AMD);
+  let num12 = map.get(tmp3(7792).Encoders.WMF_DIRECT_3D_AMD);
   if (num12 == null) {
     num12 = 0;
   }
   obj.frames_encoded_wmf_direct3d_amd = num12;
-  let num13 = map.get(tmp3(7755).Encoders.WMF_DIRECT_3D);
+  let num13 = map.get(tmp3(7792).Encoders.WMF_DIRECT_3D);
   if (num13 == null) {
     num13 = 0;
   }
-  let num14 = map.get(tmp3(7755).Encoders.WMF_DIRECT_3D_INTEL);
+  let num14 = map.get(tmp3(7792).Encoders.WMF_DIRECT_3D_INTEL);
   if (num14 == null) {
     num14 = 0;
   }
   const sum = num13 + num14;
-  let num15 = map.get(tmp3(7755).Encoders.WMF_DIRECT_3D_NVIDIA);
+  let num15 = map.get(tmp3(7792).Encoders.WMF_DIRECT_3D_NVIDIA);
   if (num15 == null) {
     num15 = 0;
   }
   const sum1 = sum + num15;
-  let num16 = map.get(tmp3(7755).Encoders.WMF_DIRECT_3D_AMD);
+  let num16 = map.get(tmp3(7792).Encoders.WMF_DIRECT_3D_AMD);
   if (num16 == null) {
     num16 = 0;
   }
   obj.frames_encoded_wmf_direct3d = sum1 + num16;
-  let num17 = map.get(tmp3(7755).Encoders.UNCATEGORIZED);
+  let num17 = map.get(tmp3(7792).Encoders.UNCATEGORIZED);
   if (num17 == null) {
     num17 = 0;
   }
   obj.frames_encoded_uncategorized = num17;
-  let num18 = map.get(tmp3(7755).Encoders.UNKNOWN);
+  let num18 = map.get(tmp3(7792).Encoders.UNKNOWN);
   if (num18 == null) {
     num18 = 0;
   }
@@ -144,7 +144,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-const ClipsConstants = fn(5146);
+const ClipsConstants = fn(5182);
 ({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
@@ -279,7 +279,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!_modDef4693(isFavorite, tmp)) {
+    if (!_modDef4724(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
@@ -287,7 +287,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!_modDef4693(name, tmp5)) {
+    if (!_modDef4724(name, tmp5)) {
       tmp6 = name;
     }
   }
@@ -307,7 +307,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp11;
   if (null != start1) {
-    if (!_modDef4693(start1, start)) {
+    if (!_modDef4724(start1, start)) {
       tmp11 = start1;
     }
   }
@@ -323,7 +323,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp15;
   if (null != end1) {
-    if (!_modDef4693(end1, end)) {
+    if (!_modDef4724(end1, end)) {
       tmp15 = end1;
     }
   }
@@ -339,7 +339,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp19;
   if (null != applicationAudio1) {
-    if (!_modDef4693(applicationAudio1, applicationAudio)) {
+    if (!_modDef4724(applicationAudio1, applicationAudio)) {
       tmp19 = applicationAudio1;
     }
   }
@@ -355,7 +355,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp23;
   if (null != voiceAudio1) {
-    if (!_modDef4693(voiceAudio1, voiceAudio)) {
+    if (!_modDef4724(voiceAudio1, voiceAudio)) {
       tmp23 = voiceAudio1;
     }
   }
@@ -371,7 +371,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp27;
   if (null != soundboardAudio1) {
-    if (!_modDef4693(soundboardAudio1, soundboardAudio)) {
+    if (!_modDef4724(soundboardAudio1, soundboardAudio)) {
       tmp27 = soundboardAudio1;
     }
   }
@@ -393,7 +393,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp31;
   if (null != preset1) {
-    if (!_modDef4693(preset1, preset)) {
+    if (!_modDef4724(preset1, preset)) {
       tmp31 = preset1;
     }
   }

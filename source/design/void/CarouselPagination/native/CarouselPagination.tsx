@@ -1,20 +1,20 @@
-// Module ID: 14208
-// Function ID: 14209
+// Module ID: 14257
+// Function ID: 14258
 // Name: CarouselPagination
-// Dependencies: [19, 17, 21, 4574, 576, 4310, 4575, 14146, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 4341, 4606, 14195, 2]
 // Exports: default
 
-// Module 14208 (CarouselPagination)
+// Module 14257 (CarouselPagination)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
-import timing from "timing" /* 4575 */;
-import Easing from "Easing" /* 14146 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
+import timing from "timing" /* 4606 */;
+import Easing from "Easing" /* 14195 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: { position: "relative", top: -16, marginBottom: -16, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_20, paddingVertical: nativeDefault.space.PX_32 }, dot: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.xs, marginHorizontal: 4, backgroundColor: nativeDefault.colors.ICON_STRONG };
 obj.dot = size;

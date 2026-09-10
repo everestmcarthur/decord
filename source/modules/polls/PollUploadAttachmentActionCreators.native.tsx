@@ -1,13 +1,13 @@
-// Module ID: 12234
-// Function ID: 12235
+// Module ID: 12274
+// Function ID: 12275
 // Name: PollUploadAttachmentActionCreators
-// Dependencies: [5, 4915, 7843, 12235, 8231, 5152, 5142, 9339, 2]
+// Dependencies: [5, 4946, 7880, 12275, 8268, 5188, 5178, 9376, 2]
 // Exports: handlePollGifAttachmentAdd, handlePollMediaAttachmentAdd, removeAllPollUploadAttachments, removePollUploadAttachment
 
-// Module 12234 (PollUploadAttachmentActionCreators)
-import FileManagerUtils from "FileManagerUtils" /* 8231 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9339 */;
-import PollAttachmentUtils from "PollAttachmentUtils" /* 12235 */;
+// Module 12274 (PollUploadAttachmentActionCreators)
+import FileManagerUtils from "FileManagerUtils" /* 8268 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9376 */;
+import PollAttachmentUtils from "PollAttachmentUtils" /* 12275 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -172,8 +172,8 @@ let closure_8 = async function _removeAllPollUploadAttachments(arg0, arg1) {
   }
   return arg1;
 };
-const DraftType = fn(4915).DraftType;
-const POLL_ATTACHMENT_FOLDER = fn(7843).POLL_ATTACHMENT_FOLDER;
+const DraftType = fn(4946).DraftType;
+const POLL_ATTACHMENT_FOLDER = fn(7880).POLL_ATTACHMENT_FOLDER;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
 

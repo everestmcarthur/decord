@@ -1,15 +1,15 @@
-// Module ID: 13412
-// Function ID: 13413
+// Module ID: 13461
+// Function ID: 13462
 // Name: BuyNitroPerkDetails
-// Dependencies: [19, 17, 21, 4574, 13385, 10262, 1114, 4987, 576, 13413, 13414, 7196, 4541, 2]
+// Dependencies: [19, 17, 21, 4605, 13434, 10300, 1114, 5023, 576, 13462, 13463, 7234, 4572, 2]
 // Exports: openBuyNitroPerkDetails
 
-// Module 13412 (BuyNitroPerkDetails)
+// Module 13461 (BuyNitroPerkDetails)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
-import useBuyNitroPlanSelection from "useBuyNitroPlanSelection" /* 13385 */;
-import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13414 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4572 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7234 */;
+import useBuyNitroPlanSelection from "useBuyNitroPlanSelection" /* 13434 */;
+import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13463 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -19,7 +19,7 @@ const Image = fn(17).Image;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const BuyNitroPerkDetailsActionSheet = "BuyNitroPerkDetailsActionSheet";
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ illustration: { width: "100%", height: 180 } });
 let closure_8 = noop.memo((perk) => {
   perk = perk.perk;
@@ -43,7 +43,7 @@ let closure_8 = noop.memo((perk) => {
     let tmp6Result = null != buyNitroPlanSelection.selection.item;
     if (tmp6Result) {
       const obj5 = { planSelection: buyNitroPlanSelection, item: buyNitroPlanSelection.selection.item, centered: true };
-      tmp6Result = tmp6(tmp9(13413), obj5);
+      tmp6Result = tmp6(tmp9(13462), obj5);
     }
     const items = [tmp6Result, ];
     const obj6 = {
@@ -59,8 +59,8 @@ let closure_8 = noop.memo((perk) => {
     };
     items[1] = React4(BuyNitroPurchaseButtonDefault, obj6);
     obj4.children = items;
-    obj2.actions = hasOwnProperty(tmp2(4987).Stack, obj4);
-    tmp6Result2 = tmp6(tmp2(10262).PromoSheet, obj2);
+    obj2.actions = hasOwnProperty(tmp2(5023).Stack, obj4);
+    tmp6Result2 = tmp6(tmp2(10300).PromoSheet, obj2);
     const tmp9Result = BuyNitroPurchaseButtonDefault;
   }
   return tmp6Result2;

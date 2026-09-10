@@ -1,18 +1,18 @@
-// Module ID: 9260
-// Function ID: 9261
+// Module ID: 9297
+// Function ID: 9298
 // Name: XboxLinkPreConnect
-// Dependencies: [19, 9251, 1074, 21, 4574, 1483, 9261, 9262, 1114, 2]
+// Dependencies: [19, 9288, 1074, 21, 4605, 1483, 9298, 9299, 1114, 2]
 // Exports: default
 
-// Module 9260 (XboxLinkPreConnect)
-import _modDef9261 from "module_9261" /* 9261 */;
+// Module 9297 (XboxLinkPreConnect)
+import _modDef9298 from "module_9298" /* 9298 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const XboxLinkModalScenes = fn(9251).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9288).XboxLinkModalScenes;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkPreConnect.tsx");
@@ -28,11 +28,11 @@ export default function XboxLinkPreConnect() {
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.ERROR);
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef9261 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef9298 }), []);
   const obj2 = { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null };
   const intl = navigation(1114).intl;
   obj2.title = intl.string(navigation(1114).t["e/z3na"]);
   const intl2 = navigation(1114).intl;
   obj2.body = intl2.string(navigation(1114).t["7tXu0i"]);
-  return jsx(navigation(9262).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
+  return jsx(navigation(9299).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
 };

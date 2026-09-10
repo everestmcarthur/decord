@@ -1,25 +1,25 @@
-// Module ID: 5421
-// Function ID: 5422
+// Module ID: 5457
+// Function ID: 5458
 // Name: ConnectionsUtils
-// Dependencies: [2015, 1979, 4212, 5422, 1074, 1365, 38, 1114, 12, 5423, 504, 4394, 1943, 2]
+// Dependencies: [2015, 1979, 4243, 5458, 1074, 1365, 38, 1114, 12, 5459, 504, 4425, 1943, 2]
 // Exports: getCallbackParamsFromURL, getConnectionsCheckText, getCreatedAtDate, getVisibleConnectionsRole, isVerifiedRolesChannelVisible, useShowLinkedRolesAdminNux
 
-// Module 5421 (ConnectionsUtils)
+// Module 5457 (ConnectionsUtils)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1114 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4394 */;
-import getConnectionsRolesDefault from "getConnectionsRoles" /* 5423 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4425 */;
+import getConnectionsRolesDefault from "getConnectionsRoles" /* 5459 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let Constants = fn(5422);
+let Constants = fn(5458);
 ({ MetadataFields: metroRequire, OperatorTypes: closure_7 } = Constants);
 Constants = fn(1074);
 ({ Permissions: closure_8, PlatformTypes: closure_9 } = Constants);

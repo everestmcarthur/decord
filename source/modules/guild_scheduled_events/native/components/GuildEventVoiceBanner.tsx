@@ -1,22 +1,22 @@
-// Module ID: 13806
-// Function ID: 13807
+// Module ID: 13855
+// Function ID: 13856
 // Name: GuildEventVoiceBanner
-// Dependencies: [19, 17, 2011, 7540, 21, 4574, 576, 9694, 504, 9703, 9697, 4541, 9730, 4781, 9821, 5137, 9804, 4989, 1114, 2]
+// Dependencies: [19, 17, 2011, 7578, 21, 4605, 576, 9732, 504, 9741, 9735, 4572, 9768, 4812, 9859, 5173, 9842, 5025, 1114, 2]
 
-// Module 13806 (GuildEventVoiceBanner)
+// Module 13855 (GuildEventVoiceBanner)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9730 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9821 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9768 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9859 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7540).isGuildScheduledEventActive;
+let closure_6 = fn(7578).isGuildScheduledEventActive;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { header: { margin: 12, padding: 12, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, descriptionContainerStyle: { paddingTop: 4 }, buttonContainer: { marginTop: 12 } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { margin: 12, padding: 12, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

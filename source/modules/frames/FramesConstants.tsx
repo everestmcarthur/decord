@@ -1,10 +1,10 @@
-// Module ID: 9543
-// Function ID: 9544
+// Module ID: 9581
+// Function ID: 9582
 // Name: FramesConstants
 // Dependencies: [2]
 // Exports: asLaunched, getChannelIdForSurface, getFrameIntentForSurface, getPipOrientationLockStateForFrame, isLaunched, makeFrameId
 
-// Module 9543 (FramesConstants)
+// Module 9581 (FramesConstants)
 import size from "module_2" /* 2 */;
 
 const EmbeddedSurfaceType = { MAIN: 0, [0]: "MAIN", APP_CHANNEL: 1, [1]: "APP_CHANNEL" };

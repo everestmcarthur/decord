@@ -1,15 +1,15 @@
-// Module ID: 9855
-// Function ID: 9856
+// Module ID: 9893
+// Function ID: 9894
 // Name: utils/InstantInviteUtils
-// Dependencies: [1957, 2012, 4212, 1074, 1114, 9806, 504, 2]
+// Dependencies: [1957, 2012, 4243, 1074, 1114, 9844, 504, 2]
 // Exports: getInviteChannelId, shouldRenderInvite, useShouldShowInviteInActionBar
 
-// Module 9855 (utils/InstantInviteUtils)
+// Module 9893 (utils/InstantInviteUtils)
 import util from "util" /* 1114 */;
-import canViewInviteModal from "canViewInviteModal" /* 9806 */;
+import canViewInviteModal from "canViewInviteModal" /* 9844 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = globalThis.__r;
 

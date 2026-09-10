@@ -1,10 +1,10 @@
-// Module ID: 9807
-// Function ID: 9808
+// Module ID: 9845
+// Function ID: 9846
 // Name: ShareEventUtils
 // Dependencies: [2]
 // Exports: SHARE_EVENT_DETAILS_LINK, canUseInviteModal
 
-// Module 9807 (ShareEventUtils)
+// Module 9845 (ShareEventUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/ShareEventUtils.tsx");

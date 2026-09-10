@@ -1,20 +1,20 @@
-// Module ID: 12249
-// Function ID: 12250
+// Module ID: 12289
+// Function ID: 12290
 // Name: ScheduledMessagesIntro
-// Dependencies: [17, 21, 4574, 576, 12250, 4570, 1114, 10144, 12239, 10983, 2]
+// Dependencies: [17, 21, 4605, 576, 12290, 4601, 1114, 10182, 12279, 11023, 2]
 // Exports: default
 
-// Module 12249 (ScheduledMessagesIntro)
+// Module 12289 (ScheduledMessagesIntro)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import AttachmentIcon from "AttachmentIcon" /* 10144 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10983 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12239 */;
-import _modDef12250 from "module_12250" /* 12250 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import AttachmentIcon from "AttachmentIcon" /* 10182 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 11023 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12279 */;
+import _modDef12290 from "module_12290" /* 12290 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4574 */;
+import createStyles from "createStyles" /* 4605 */;
 import size_mod from "module_2" /* 2 */;
 
 function MenuRow(arg0) {
@@ -61,7 +61,7 @@ export default function ScheduledMessagesIntro() {
   const tmp = closure_8();
   const obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   const obj2 = { style: tmp.container, children: null };
-  const items = [timestampProducer(React3, { source: _modDef12250, style: tmp.upsellImage }), , ];
+  const items = [timestampProducer(React3, { source: _modDef12290, style: tmp.upsellImage }), , ];
   const obj4 = { style: tmp.textContainer, children: null };
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
@@ -88,7 +88,7 @@ export default function ScheduledMessagesIntro() {
   const obj12 = { style: tmp.chatInput, children: null };
   const obj13 = { style: tmp.plusButton, children: null };
   const obj10 = { style: tmp.menuDivider };
-  const obj3 = { source: _modDef12250, style: tmp.upsellImage };
+  const obj3 = { source: _modDef12290, style: tmp.upsellImage };
   obj13.children = timestampProducer(PlusLargeIcon.PlusLargeIcon, { size: "xs", color: nativeDefault.colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT });
   const items4 = [timestampProducer(hasOwnProperty, obj13), ];
   const obj15 = { variant: "text-sm/normal", color: "text-muted", children: null };

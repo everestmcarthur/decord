@@ -1,10 +1,10 @@
-// Module ID: 5540
-// Function ID: 5541
+// Module ID: 5576
+// Function ID: 5577
 // Name: MemberVerificationRouteExperiment
 // Dependencies: [1434, 2]
 // Exports: getIsMemberVerificationRouteDeprecated, useIsMemberVerificationRouteDeprecated
 
-// Module 5540 (MemberVerificationRouteExperiment)
+// Module 5576 (MemberVerificationRouteExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
 const obj = { name: "2026-07-rm-member-verification-route", kind: "user", defaultConfig: { isDeprecated: false }, variations: null };

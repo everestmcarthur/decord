@@ -1,10 +1,10 @@
-// Module ID: 13837
-// Function ID: 13838
+// Module ID: 13886
+// Function ID: 13887
 // Name: noise_cancellation/KrispUtils
 // Dependencies: [1910, 2]
 // Exports: getKrispModel, setKrispModelOverride, setKrispSuppressionLevel
 
-// Module 13837 (noise_cancellation/KrispUtils)
+// Module 13886 (noise_cancellation/KrispUtils)
 import inject from "inject" /* 1910 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
 // Module ID: 2022
 // Function ID: 2023
 // Name: useCommunicationDisabledNoticeStore
-// Dependencies: [32, 2023, 510, 561, 1249, 1244, 4197, 2]
+// Dependencies: [32, 2023, 510, 561, 1249, 1244, 4227, 2]
 // Exports: clearCommunicationDisabledNotice, useCommunicationDisabledNoticeStore
 
 // Module 2022 (useCommunicationDisabledNoticeStore)
 import _mod1244 from "module_1244" /* 1244 */;
-import _mod4197 from "module_4197" /* 4197 */;
+import _mod4227 from "module_4227" /* 4227 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -58,7 +58,7 @@ export const useCommunicationDisabledNoticeStore = function useCommunicationDisa
     const items = [, ];
     ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
     return items;
-  }, _mod4197.shallow), 2);
+  }, _mod4227.shallow), 2);
   const first = tmp[0];
   let items = [!first.has(arg0), tmp[1]];
   return items;

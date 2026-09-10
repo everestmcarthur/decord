@@ -1,12 +1,12 @@
-// Module ID: 16986
-// Function ID: 16987
+// Module ID: 17043
+// Function ID: 17044
 // Name: useProfileFramesMarketing
-// Dependencies: [14659, 8238, 2]
+// Dependencies: [14708, 8275, 2]
 // Exports: deriveProfileFramesMarketing, getProfileFramesMarketing, useProfileFramesMarketing
 
-// Module 16986 (useProfileFramesMarketing)
-import CollectiblesProfileFramesExperimentDefault from "CollectiblesProfileFramesExperiment" /* 8238 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 14659 */;
+// Module 17043 (useProfileFramesMarketing)
+import CollectiblesProfileFramesExperimentDefault from "CollectiblesProfileFramesExperiment" /* 8275 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 14708 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProfileFramesMarketing.tsx");

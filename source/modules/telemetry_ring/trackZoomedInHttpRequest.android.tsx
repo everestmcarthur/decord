@@ -1,10 +1,10 @@
-// Module ID: 17319
-// Function ID: 17320
+// Module ID: 17378
+// Function ID: 17379
 // Name: trackZoomedInHttpRequest
 // Dependencies: [1074, 1899, 2]
 // Exports: default
 
-// Module 17319 (trackZoomedInHttpRequest)
+// Module 17378 (trackZoomedInHttpRequest)
 import Constants from "Constants" /* 1074 */;
 import ZoomedInTelemetryDefault from "ZoomedInTelemetry" /* 1899 */;
 import size from "module_2" /* 2 */;

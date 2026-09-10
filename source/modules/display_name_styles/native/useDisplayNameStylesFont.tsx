@@ -1,14 +1,14 @@
-// Module ID: 9208
-// Function ID: 9209
+// Module ID: 9245
+// Function ID: 9246
 // Name: useDisplayNameStylesFont
-// Dependencies: [1389, 1391, 4809, 9209, 2]
+// Dependencies: [1389, 1391, 4840, 9246, 2]
 // Exports: useDisplayNameStylesFont
 
-// Module 9208 (useDisplayNameStylesFont)
+// Module 9245 (useDisplayNameStylesFont)
 import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1389 */;
 import DisplayNameFont from "DisplayNameFont" /* 1391 */;
-import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 4809 */;
-import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 9209 */;
+import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 4840 */;
+import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 9246 */;
 import size from "module_2" /* 2 */;
 
 const FLYWHEEL_FONTS = DisplayNameStylesConstants.FLYWHEEL_FONTS;

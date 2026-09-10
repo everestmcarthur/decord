@@ -1,12 +1,12 @@
-// Module ID: 9744
-// Function ID: 9745
+// Module ID: 9782
+// Function ID: 9783
 // Name: useGuildsUserCanStartStageIn
-// Dependencies: [2012, 4212, 1965, 504, 2]
+// Dependencies: [2012, 4243, 1965, 504, 2]
 // Exports: useChannelsUserCanStartStageIn
 
-// Module 9744 (useGuildsUserCanStartStageIn)
+// Module 9782 (useGuildsUserCanStartStageIn)
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 
 const require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;

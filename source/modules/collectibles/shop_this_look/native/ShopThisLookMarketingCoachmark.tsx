@@ -1,13 +1,13 @@
-// Module ID: 13146
-// Function ID: 13147
+// Module ID: 13193
+// Function ID: 13194
 // Name: ShopThisLookMarketingCoachmark
-// Dependencies: [19, 17, 1954, 7222, 21, 4574, 5831, 13144, 1114, 11159, 2]
+// Dependencies: [19, 17, 1954, 7260, 21, 4605, 5867, 13191, 1114, 11199, 2]
 // Exports: default
 
-// Module 13146 (ShopThisLookMarketingCoachmark)
+// Module 13193 (ShopThisLookMarketingCoachmark)
 import util from "util" /* 1114 */;
-import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 5831 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 13144 */;
+import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 5867 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 13191 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,9 +16,9 @@ function ShopThisLookMarketingCoachmarkImage() {
 }
 const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const UserProfileThemeTypes = fn(7222).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7260).UserProfileThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/shop_this_look/native/ShopThisLookMarketingCoachmark.tsx");

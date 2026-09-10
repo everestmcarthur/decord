@@ -1,13 +1,13 @@
-// Module ID: 6481
-// Function ID: 6482
+// Module ID: 6517
+// Function ID: 6518
 // Name: SnailIllocon
-// Dependencies: [21, 5601, 6482, 2]
+// Dependencies: [21, 5637, 6518, 2]
 // Exports: SnailIllocon
 
-// Module 6481 (SnailIllocon)
+// Module 6517 (SnailIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6482 from "module_6482" /* 6482 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6518 from "module_6518" /* 6518 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -20,7 +20,7 @@ export const SnailIllocon = function SnailIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6482 };
+  const obj2 = { uri: _modDef6518 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

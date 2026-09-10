@@ -1,13 +1,13 @@
-// Module ID: 13829
-// Function ID: 13830
+// Module ID: 13878
+// Function ID: 13879
 // Name: RTCConnectionStats
-// Dependencies: [1074, 4603, 12, 13830, 2]
+// Dependencies: [1074, 4634, 12, 13879, 2]
 
-// Module 13829 (RTCConnectionStats)
+// Module 13878 (RTCConnectionStats)
 import _modDef12 from "module_12" /* 12 */;
 import Constants from "Constants" /* 1074 */;
-import TimeUtils from "TimeUtils" /* 4603 */;
-import zipWithNextDefault from "zipWithNext" /* 13830 */;
+import TimeUtils from "TimeUtils" /* 4634 */;
+import zipWithNextDefault from "zipWithNext" /* 13879 */;
 import size from "module_2" /* 2 */;
 
 const RTCConnectionStates = Constants.RTCConnectionStates;

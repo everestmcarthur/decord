@@ -1,10 +1,10 @@
-// Module ID: 13498
-// Function ID: 13499
+// Module ID: 13547
+// Function ID: 13548
 // Name: BOGOPromotionMarketingMaterialsExperiments
 // Dependencies: [1433, 2]
 // Exports: getBogoMarketingMaterialsEnabled, useBogoMarketingMaterialsEnabled
 
-// Module 13498 (BOGOPromotionMarketingMaterialsExperiments)
+// Module 13547 (BOGOPromotionMarketingMaterialsExperiments)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

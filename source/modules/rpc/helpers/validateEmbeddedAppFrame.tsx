@@ -1,15 +1,15 @@
-// Module ID: 14490
-// Function ID: 14491
+// Module ID: 14539
+// Function ID: 14540
 // Name: validateEmbeddedAppFrame
-// Dependencies: [9542, 14491, 4479, 1074, 9543, 9591, 8888, 9586, 2]
+// Dependencies: [9580, 14540, 4510, 1074, 9581, 9629, 8925, 9624, 2]
 // Exports: tryValidateEmbeddedAppFrame
 
-// Module 14490 (validateEmbeddedAppFrame)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8888 */;
-import RPCErrorDefault from "RPCError" /* 9586 */;
-import RPCHelpers from "RPCHelpers" /* 9591 */;
-import FramesStore from "FramesStore" /* 9542 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14491 */;
+// Module 14539 (validateEmbeddedAppFrame)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8925 */;
+import RPCErrorDefault from "RPCError" /* 9624 */;
+import RPCHelpers from "RPCHelpers" /* 9629 */;
+import FramesStore from "FramesStore" /* 9580 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14540 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -32,7 +32,7 @@ function validateEmbeddedAppFrame(transport) {
           tmp13 = null;
           if (tmp12.MAIN === type) {
             if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-              let obj6 = { channelId: "Array", guildId: "PX_16" };
+              let obj6 = { channelId: "call", guildId: "accessibilityLabel" };
             } else {
               obj6 = null;
             }
@@ -57,10 +57,10 @@ function validateEmbeddedAppFrame(transport) {
   }
   obj3 = ApplicationFlagUtils;
 }
-const TransportTypes = fn(4479).TransportTypes;
+const TransportTypes = fn(4510).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const FramesConstants = fn(9543);
+const FramesConstants = fn(9581);
 ({ asLaunched: closure_8, EmbeddedSurfaceType: closure_9 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");

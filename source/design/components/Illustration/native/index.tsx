@@ -1,10 +1,10 @@
-// Module ID: 8259
-// Function ID: 8260
-// Dependencies: [4284, 2]
+// Module ID: 8296
+// Function ID: 8297
+// Dependencies: [4315, 2]
 // Exports: getIllustrationSource, useIllustrationSource
 
-// Module 8259
-import native from "native" /* 4284 */;
+// Module 8296
+import native from "native" /* 4315 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Illustration/native/index.tsx");

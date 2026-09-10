@@ -1,19 +1,19 @@
-// Module ID: 15047
-// Function ID: 15048
+// Module ID: 15096
+// Function ID: 15097
 // Name: useBountyVideoEndAppStoreOverlay
-// Dependencies: [19, 5458, 21, 15048, 11521, 11518, 15046, 5463, 7742, 4575, 4578, 7732, 5465, 11529, 2]
+// Dependencies: [19, 5494, 21, 15097, 11561, 11558, 15095, 5499, 7779, 4606, 4609, 7769, 5501, 11569, 2]
 // Exports: BountyVideoEndAppStoreProvider, canUseBountyVideoEndAppStoreOverlay, useBountyVideoEndAppStoreContext, useBountyVideoEndAppStoreOverlay
 
-// Module 15047 (useBountyVideoEndAppStoreOverlay)
-import timing from "timing" /* 4575 */;
-import timingPresets from "timingPresets" /* 4578 */;
-import QuestContent from "QuestContent" /* 5463 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7742 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15048 */;
+// Module 15096 (useBountyVideoEndAppStoreOverlay)
+import timing from "timing" /* 4606 */;
+import timingPresets from "timingPresets" /* 4609 */;
+import QuestContent from "QuestContent" /* 5499 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7779 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15097 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5458).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5494).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const redux = noop.createContext(null);
 const size = fn(2);
@@ -28,10 +28,10 @@ export const useBountyVideoEndAppStoreContext = function useBountyVideoEndAppSto
 export const canUseBountyVideoEndAppStoreOverlay = function canUseBountyVideoEndAppStoreOverlay(bounty, scrollAffordanceVariant) {
   if ("auto" !== scrollAffordanceVariant) {
     if (obj2.canOpenCustomAppStoreOverlayFromCta(bounty.cta)) {
-      const CustomAppStoreSqueezeBackExperiment = tmp6(11521).CustomAppStoreSqueezeBackExperiment;
+      const CustomAppStoreSqueezeBackExperiment = tmp6(11561).CustomAppStoreSqueezeBackExperiment;
       const obj = { location: QuestsExperimentLocations.VIDEO_MODAL_MOBILE };
       const config = CustomAppStoreSqueezeBackExperiment.getConfig(obj);
-      return config.enabled && tmp4 === tmp6(11521).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
+      return config.enabled && tmp4 === tmp6(11561).BountiesCtrExperiment1Variant.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY;
     }
     obj2 = QuestCustomAppStoreOverlayUtils;
   }

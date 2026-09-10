@@ -1,9 +1,9 @@
-// Module ID: 10159
-// Function ID: 10160
+// Module ID: 10197
+// Function ID: 10198
 // Name: Spoiler
-// Dependencies: [19, 17, 1074, 10150, 21, 4574, 1115, 576, 4284, 1178, 2]
+// Dependencies: [19, 17, 1074, 10188, 21, 4605, 1115, 576, 4315, 1178, 2]
 
-// Module 10159 (Spoiler)
+// Module 10197 (Spoiler)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const EMOJI_CHAT_SIZE = fn(1074).EMOJI_CHAT_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 const PlatformUtils = fn(1115);
 let str = "transparent";
 if (PlatformUtils.isAndroid()) {
@@ -23,7 +23,7 @@ let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: n
 obj3.placeholder = size;
 const obj4 = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj3.spoilerRevealed = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
-obj3.muted = { opacity: fn(10150).MUTED_OPACITY_CONTENT };
+obj3.muted = { opacity: fn(10188).MUTED_OPACITY_CONTENT };
 let closure_6 = createStyles.createLegacyClassComponentStyles(obj3);
 const PureComponent = noop.PureComponent;
 class Spoiler extends PureComponent {
@@ -157,7 +157,7 @@ Spoiler.prototype["render"] = function render() {
   }
   tmp4 = noop;
 };
-Spoiler.contextType = fn(4284).ThemeContext;
+Spoiler.contextType = fn(4315).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/native/Spoiler.tsx");
 

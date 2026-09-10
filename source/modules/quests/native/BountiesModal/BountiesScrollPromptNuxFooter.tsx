@@ -1,15 +1,16 @@
-// Module ID: 15076
-// Function ID: 15077
+// Module ID: 15125
+// Function ID: 15126
 // Name: BountiesScrollPromptNuxFooter
-// Dependencies: [17, 21, 4574, 4570, 1114, 2]
+// Dependencies: [17, 21, 4605, 7031, 4601, 1114, 2]
 // Exports: default
 
-// Module 15076 (BountiesScrollPromptNuxFooter)
+// Module 15125 (BountiesScrollPromptNuxFooter)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7031 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4574 */;
+import createStyles from "createStyles" /* 4605 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -19,15 +20,18 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/B
 
 export default function BountiesScrollPromptFooter() {
   const tmp = closure_5();
-  const obj = { style: tmp.root, children: null };
-  const obj2 = { variant: "text-md/semibold", color: "text-default", style: tmp.titleText, children: null };
+  const obj2 = { style: tmp.root, children: null };
+  const typeConsolidationTextTransform = useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("BountiesScrollPromptNuxFooter");
+  const obj3 = { variant: "text-md/semibold", color: "text-default", style: tmp.titleText, children: null };
   const intl = util.intl;
-  obj2.children = intl.string(util.t.H57f41);
-  const items = [React3(Text_Text.Text, obj2), ];
-  const obj3 = { variant: "text-xxs/semibold", color: "text-muted", style: tmp.swipeText, children: null };
+  obj3.children = intl.string(util.t.H57f41);
+  const items = [React3(Text_Text.Text, obj3), ];
+  const obj4 = { variant: "text-xxs/semibold", color: "text-muted", style: null, children: null };
+  const items1 = [tmp.swipeText, typeConsolidationTextTransform];
+  obj4.style = items1;
   const intl2 = util.intl;
-  obj3.children = intl2.string(util.t.tG0zsk);
-  items[1] = React3(Text_Text.Text, obj3);
-  obj.children = items;
-  return React4(View, obj);
+  obj4.children = intl2.string(util.t.tG0zsk);
+  items[1] = React3(Text_Text.Text, obj4);
+  obj2.children = items;
+  return React4(View, obj2);
 };

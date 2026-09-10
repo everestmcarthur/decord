@@ -1,44 +1,11 @@
 // Module ID: 14447
 // Function ID: 14448
-// Dependencies: []
-// Exports: default
+// Dependencies: [14448, 14455]
 
 // Module 14447
+import _mod14448 from "module_14448" /* 14448 */;
+import _mod14455 from "module_14455" /* 14455 */;
 
-export default () => (startTimer) => {
-  closure_0 = startTimer;
-  startTimer = startTimer.startTimer;
-  return {
-    features: {
-      benchmark(title) {
-        const items = [];
-        closure_2 = items();
-        function step(title) {
-          let num = 0;
-          if (0 !== items.length) {
-            num = arr[arr.length - 1].time;
-          }
-          const tmp = closure_2();
-          items.push({ title, time: tmp, delta: tmp - num });
-        }
-        items.push({ title, time: 0, delta: 0 });
-        function stop(title) {
-          if (typeof step === "function") {
-            let num = 0;
-            if (0 !== items.length) {
-              num = arr[arr.length - 1].time;
-            }
-            const tmp3 = closure_2();
-            const obj = { title, time: tmp3, delta: tmp3 - num };
-            items.push(obj);
-            const obj2 = { title, steps: items };
-            title.send("benchmark.report", obj2);
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }
-        return { step, stop, last: stop };
-      }
-    }
-  };
-};
+
+export const URL = _mod14448;
+export const URLSearchParams = _mod14455;

@@ -1,10 +1,17 @@
 // Module ID: 6699
 // Function ID: 6700
-// Dependencies: [17]
+// Dependencies: []
+// Exports: noop, workletNoop
 
 // Module 6699
-import _mod17 from "module_17" /* 17 */;
+const fn = function o() {
 
-const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+};
+fn.__closure = {};
+fn.__workletHash = 16791771801238;
+fn.__initData = { code: "function pnpm_noopTs1(){}" };
 
-export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");
+export () => {
+
+}
+export const workletNoop = fn;

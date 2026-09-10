@@ -1,19 +1,19 @@
-// Module ID: 17519
-// Function ID: 17520
+// Module ID: 17578
+// Function ID: 17579
 // Name: StageBoostUpsellManager
-// Dependencies: [4264, 1957, 4212, 2011, 5428, 7132, 4541, 5431, 9120, 1965, 5444, 1896, 2]
+// Dependencies: [4295, 1957, 4243, 2011, 5464, 7170, 4572, 5467, 9157, 1965, 5480, 1896, 2]
 
-// Module 17519 (StageBoostUpsellManager)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
-import StageMediaHooks from "StageMediaHooks" /* 5431 */;
-import ActionSheetStore from "ActionSheetStore" /* 4264 */;
+// Module 17578 (StageBoostUpsellManager)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4572 */;
+import StageMediaHooks from "StageMediaHooks" /* 5467 */;
+import ActionSheetStore from "ActionSheetStore" /* 4295 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4212 */;
+import PermissionStore from "PermissionStore" /* 4243 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7170 */;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5428).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5464).STAGE_BOOSTING_SHEET_KEY;
 let c8 = false;
 class StageBoostUpsellManager extends tmp2 {
   constructor() {
@@ -47,11 +47,11 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
               if (PermissionStore.can(tmp5(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 const obj2 = { channel };
-                ActionSheetActionCreatorsDefault.openLazy(tmp5(1896)(5444, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
+                ActionSheetActionCreatorsDefault.openLazy(tmp5(1896)(5480, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
                 c8 = true;
               }
             }
-            tmp5Result = tmp5(9120);
+            tmp5Result = tmp5(9157);
           }
           obj = StageMediaHooks;
           tmp6 = dependencyMap;

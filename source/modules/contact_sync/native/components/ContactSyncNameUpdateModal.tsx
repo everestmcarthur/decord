@@ -1,13 +1,13 @@
-// Module ID: 14874
-// Function ID: 14875
+// Module ID: 14923
+// Function ID: 14924
 // Name: ContactSyncNameUpdateModal
-// Dependencies: [5, 32, 19, 17, 12708, 21, 4777, 4574, 576, 5696, 12710, 12714, 4272, 1114, 5611, 12727, 5638, 7014, 2]
+// Dependencies: [5, 32, 19, 17, 12748, 21, 4808, 4605, 576, 5732, 12750, 12754, 4303, 1114, 5647, 12767, 5674, 7052, 2]
 // Exports: default
 
-// Module 14874 (ContactSyncNameUpdateModal)
+// Module 14923 (ContactSyncNameUpdateModal)
 import nativeDefault from "native" /* 576 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
-import Navigator from "Navigator" /* 7014 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4808 */;
+import Navigator from "Navigator" /* 7052 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -29,17 +29,17 @@ function ContactSyncNameInputScreen() {
   }
   dependencyMap = async function _onNext(arg0, arg1) {
     _require(true);
-    await tmp3(12714).updateName(closure_0);
+    await tmp3(12754).updateName(closure_0);
     if (1 === tmp7) {
       c3 = 0;
       const obj7 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
       const intl = closure_0(1114).intl;
       obj7.content = intl.string(closure_0(1114).t.R0RpRX);
-      obj7.icon = tmp3(5611);
-      tmp3(4272).open(obj7);
+      obj7.icon = tmp3(5647);
+      tmp3(4303).open(obj7);
       closure_129_0(false);
       c4 = 3;
-      tmp3(4272);
+      tmp3(4303);
     } else if (arg0 === 1) {
       c4 = 3;
       throw arg1;
@@ -72,7 +72,7 @@ function ContactSyncNameInputScreen() {
     str = "";
   }
   obj3.initialName = str;
-  obj2.children = jsx(onNext(12727), {
+  obj2.children = jsx(onNext(12767), {
     onNext,
     onRemoveName() {
       return onNext(null);
@@ -83,10 +83,10 @@ function ContactSyncNameInputScreen() {
   return <tmp5 style={tmp.container}>{null}</tmp5>;
 }
 const View = fn(17).View;
-const ContactSyncScenes = fn(12708).ContactSyncScenes;
+const ContactSyncScenes = fn(12748).ContactSyncScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5696).NAV_BAR_HEIGHT + 32 } };
+const createStyles = fn(4605);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: fn(5732).NAV_BAR_HEIGHT + 32 } };
 let closure_10 = createStyles.createStyles(obj2);
 const obj4 = {};
 const obj5 = {
@@ -98,7 +98,7 @@ const obj5 = {
   headerLeft: null,
   title: ""
 };
-const NavigatorHeader = fn(5638);
+const NavigatorHeader = fn(5674);
 obj5.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
 obj4[ContactSyncScenes.NAME_INPUT] = obj5;
 const size = fn(2);

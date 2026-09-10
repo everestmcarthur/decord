@@ -1,31 +1,16 @@
 // Module ID: 3939
 // Function ID: 3940
-// Dependencies: [3663, 3664]
-// Exports: default
+// Dependencies: [2027]
 
 // Module 3939
-import _typeof_mod from "module_3663" /* 3663 */;
-import requiredArgs_mod from "requiredArgs" /* 3664 */;
+import code from "module_2027" /* 2027 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+if (!code) {
+  const obj = { default: code };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = code;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function getMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getMonth();
-};
+export default tmp3.default;
 export default exports.default;

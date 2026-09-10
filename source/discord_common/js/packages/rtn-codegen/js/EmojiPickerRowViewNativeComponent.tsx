@@ -1,9 +1,9 @@
-// Module ID: 10344
-// Function ID: 10345
+// Module ID: 10382
+// Function ID: 10383
 // Name: EmojiPickerRowViewNativeComponent
 // Dependencies: [106, 65, 2]
 
-// Module 10344 (EmojiPickerRowViewNativeComponent)
+// Module 10382 (EmojiPickerRowViewNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

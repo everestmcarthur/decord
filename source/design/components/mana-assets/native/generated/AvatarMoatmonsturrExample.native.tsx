@@ -1,13 +1,13 @@
-// Module ID: 5785
-// Function ID: 5786
+// Module ID: 5821
+// Function ID: 5822
 // Name: AvatarMoatmonsturrExample
-// Dependencies: [21, 5601, 5786, 2]
+// Dependencies: [21, 5637, 5822, 2]
 // Exports: AvatarMoatmonsturrExample
 
-// Module 5785 (AvatarMoatmonsturrExample)
+// Module 5821 (AvatarMoatmonsturrExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef5786 from "module_5786" /* 5786 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef5822 from "module_5822" /* 5822 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const AvatarMoatmonsturrExample = function AvatarMoatmonsturrExample(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5786 };
+  const obj2 = { uri: _modDef5822 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

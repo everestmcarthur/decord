@@ -1,22 +1,22 @@
-// Module ID: 15503
-// Function ID: 15504
+// Module ID: 15552
+// Function ID: 15553
 // Name: ShowSpoilersSetting
-// Dependencies: [19, 7989, 1074, 1935, 1114, 11500, 2]
+// Dependencies: [19, 8027, 1074, 1935, 1114, 11540, 2]
 
-// Module 15503 (ShowSpoilersSetting)
+// Module 15552 (ShowSpoilersSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const SpoilerRenderSetting = fn(1074).SpoilerRenderSetting;
-const SettingBuilders = fn(11500);
+const SettingBuilders = fn(11540);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.QgwmVz);
   },
-  parent: fn(7989).MobileUserSettings.CHAT,
+  parent: fn(8027).MobileUserSettings.CHAT,
   useValue: fn(1935).RenderSpoilers.useSetting,
   onValueChange: function onShowSpoilersChange(arg0) {
     const RenderSpoilers = UserSettings.RenderSpoilers;

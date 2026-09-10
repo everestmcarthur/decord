@@ -1,12 +1,12 @@
-// Module ID: 10729
-// Function ID: 10730
+// Module ID: 10767
+// Function ID: 10768
 // Name: constants
 // Dependencies: [2]
 
-// Module 10729 (constants)
+// Module 10767 (constants)
 import size from "module_2" /* 2 */;
 
-const items = ["logitech", "call_of_duty"];
+const items = ["logitech", "call_of_duty", "youtube"];
 const result = size.fileFinishedImporting("modules/premium/promotions/constants.tsx");
 
 export const CountryListMode = { BLOCKLIST: "blocklist", ALLOWLIST: "allowlist" };

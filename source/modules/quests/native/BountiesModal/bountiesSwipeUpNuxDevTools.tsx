@@ -1,11 +1,11 @@
-// Module ID: 15041
-// Function ID: 15042
+// Module ID: 15090
+// Function ID: 15091
 // Name: bountiesSwipeUpNuxDevTools
-// Dependencies: [9963, 2]
+// Dependencies: [10001, 2]
 // Exports: useForceBountiesSwipeUpNux
 
-// Module 15041 (bountiesSwipeUpNuxDevTools)
-import useLocalStorageState from "useLocalStorageState" /* 9963 */;
+// Module 15090 (bountiesSwipeUpNuxDevTools)
+import useLocalStorageState from "useLocalStorageState" /* 10001 */;
 import size from "module_2" /* 2 */;
 
 let c2 = "devtools-force-bounties-swipe-up-nux";

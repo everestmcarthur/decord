@@ -1,18 +1,18 @@
-// Module ID: 15303
-// Function ID: 15304
+// Module ID: 15352
+// Function ID: 15353
 // Name: SettingsAppearanceThemeCarousel
-// Dependencies: [19, 17, 15304, 21, 4310, 1178, 4574, 576, 4976, 12, 15305, 4575, 4578, 1231, 9392, 4570, 1608, 10789, 4542, 1114, 15308, 2]
+// Dependencies: [19, 17, 15353, 21, 4341, 1178, 4605, 576, 5012, 12, 15354, 4606, 4609, 1231, 9430, 4601, 1608, 10827, 4573, 1114, 15357, 2]
 // Exports: default
 
-// Module 15303 (SettingsAppearanceThemeCarousel)
+// Module 15352 (SettingsAppearanceThemeCarousel)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import HapticUtils from "HapticUtils" /* 4542 */;
-import timing from "timing" /* 4575 */;
-import timingPresets from "timingPresets" /* 4578 */;
+import HapticUtils from "HapticUtils" /* 4573 */;
+import timing from "timing" /* 4606 */;
+import timingPresets from "timingPresets" /* 4609 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15304 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15353 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4341 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: { gap: nativeDefault.space.PX_24, alignItems: "center" }, textCentered: { textAlign: "center" }, labelGroup: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
 let obj3 = { gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj.labelGroup = { gap: nativeDefault.space.PX_4, alignItems: "center" };

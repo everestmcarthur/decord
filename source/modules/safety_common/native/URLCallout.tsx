@@ -1,20 +1,20 @@
-// Module ID: 12980
-// Function ID: 12981
+// Module ID: 13020
+// Function ID: 13021
 // Name: URLCallout
-// Dependencies: [19, 17, 21, 4574, 576, 12981, 4570, 2]
+// Dependencies: [19, 17, 21, 4605, 576, 13021, 4601, 2]
 // Exports: URLCallout
 
-// Module 12980 (URLCallout)
+// Module 13020 (URLCallout)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import SharedStateUtils from "SharedStateUtils" /* 12981 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import SharedStateUtils from "SharedStateUtils" /* 13021 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsxs: c3, jsx: closure_4 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { linkCalloutContainer: { maxHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: nativeDefault.radii.md }, linkCalloutContainerText: null };
 let obj3 = { maxHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: nativeDefault.radii.md };
 obj2.linkCalloutContainerText = { padding: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, textAlign: "center" };

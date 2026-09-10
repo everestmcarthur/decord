@@ -1,9 +1,9 @@
-// Module ID: 8704
-// Function ID: 8705
+// Module ID: 8741
+// Function ID: 8742
 // Name: NativeFWOMeasureModule
 // Dependencies: [17, 2]
 
-// Module 8704 (NativeFWOMeasureModule)
+// Module 8741 (NativeFWOMeasureModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

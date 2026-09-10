@@ -1,22 +1,22 @@
-// Module ID: 15834
-// Function ID: 15835
+// Module ID: 15883
+// Function ID: 15884
 // Name: UserSettingsDesignSystemHaptics
-// Dependencies: [19, 17, 21, 4574, 4989, 4542, 4543, 4987, 5621, 4570, 4544, 2]
+// Dependencies: [19, 17, 21, 4605, 5025, 4573, 4574, 5023, 5657, 4601, 4575, 2]
 // Exports: default
 
-// Module 15834 (UserSettingsDesignSystemHaptics)
-import HapticUtils from "HapticUtils" /* 4542 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
-import Patterns from "Patterns" /* 4544 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Stack_Stack from "Stack/Stack" /* 4987 */;
-import Card from "Card" /* 5621 */;
+// Module 15883 (UserSettingsDesignSystemHaptics)
+import HapticUtils from "HapticUtils" /* 4573 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4574 */;
+import Patterns from "Patterns" /* 4575 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Stack_Stack from "Stack/Stack" /* 5023 */;
+import Card from "Card" /* 5657 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function HapticButton(text) {
   const type = text.type;
-  return closure_3(type(4989).Button, {
+  return closure_3(type(5025).Button, {
     variant: "secondary",
     onPress() {
       return HapticUtils.triggerHapticFeedback(type);
@@ -27,7 +27,7 @@ function HapticButton(text) {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_5 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
 let items = [{ type: haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT, label: "IMPACT_LIGHT" }, , , , , , , , ];
 let obj2 = { type: haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT, label: "IMPACT_LIGHT" };
@@ -157,7 +157,7 @@ export default function UserSettingsDesignSystemHaptics() {
     React3(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Built-in haptic sequences using triggerPattern(). Each preset uses a compact notation (o=soft, O=strong, .=short gap, -=medium gap, ==long gap)." }),
     items4.map((description) => {
       ({ label, pattern: closure_0 } = description);
-      return closure_3(closure_0(4989).Button, {
+      return closure_3(closure_0(5025).Button, {
         variant: "secondary",
         onPress() {
           return Patterns.triggerPattern(Patterns.Patterns[closure_1_0]);

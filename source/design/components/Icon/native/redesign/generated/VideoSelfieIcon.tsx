@@ -1,13 +1,13 @@
-// Module ID: 8471
-// Function ID: 8472
+// Module ID: 8508
+// Function ID: 8509
 // Name: VideoSelfieIcon
-// Dependencies: [19, 21, 576, 4274, 8472, 2]
+// Dependencies: [19, 21, 576, 4305, 8509, 2]
 // Exports: VideoSelfieIcon
 
-// Module 8471 (VideoSelfieIcon)
+// Module 8508 (VideoSelfieIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4274 */;
-import _mod8472 from "module_8472" /* 8472 */;
+import BaseIconImage from "BaseIconImage" /* 4305 */;
+import _mod8509 from "module_8509" /* 8509 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,5 +22,5 @@ export const VideoSelfieIcon = function VideoSelfieIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8472, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8509, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

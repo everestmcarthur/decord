@@ -1,9 +1,9 @@
-// Module ID: 8291
-// Function ID: 8292
+// Module ID: 8328
+// Function ID: 8329
 // Name: MediaPlayerMuteManager
 // Dependencies: [17, 560, 1249, 2]
 
-// Module 8291 (MediaPlayerMuteManager)
+// Module 8328 (MediaPlayerMuteManager)
 import get_ActivityIndicator from "module_17" /* 17 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
@@ -13,7 +13,7 @@ const useMediaPlayerMutedStore = module_560.create(() => ({ isMuted: false }));
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.MediaPlayerManager);
 class MediaPlayerMuteManager {
   constructor() {
-    return Object.assign({ muteSubscription: "disabled" });
+    return Object.assign({ muteSubscription: "Array" });
   }
 }
 const prototype = MediaPlayerMuteManager.prototype;
@@ -33,5 +33,5 @@ prototype["terminate"] = function terminate() {
 };
 const result = size.fileFinishedImporting("modules/media_viewer/native/MediaPlayerMuteManager.tsx");
 
-export default Object.assign({ muteSubscription: "disabled" });
+export default Object.assign({ muteSubscription: "Array" });
 export { useMediaPlayerMutedStore };

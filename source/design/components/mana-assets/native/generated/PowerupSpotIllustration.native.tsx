@@ -1,13 +1,13 @@
-// Module ID: 6371
-// Function ID: 6372
+// Module ID: 6407
+// Function ID: 6408
 // Name: PowerupSpotIllustration
-// Dependencies: [21, 5601, 6372, 2]
+// Dependencies: [21, 5637, 6408, 2]
 // Exports: PowerupSpotIllustration
 
-// Module 6371 (PowerupSpotIllustration)
+// Module 6407 (PowerupSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5601 */;
-import _modDef6372 from "module_6372" /* 6372 */;
+import FastImageDefault from "FastImage" /* 5637 */;
+import _modDef6408 from "module_6408" /* 6408 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -28,7 +28,7 @@ export const PowerupSpotIllustration = function PowerupSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6372 };
+  const obj2 = { uri: _modDef6408 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,22 +1,22 @@
-// Module ID: 16662
-// Function ID: 16663
+// Module ID: 16719
+// Function ID: 16720
 // Name: SearchScreenSearchBar
-// Dependencies: [19, 17, 21, 4574, 4280, 6639, 1874, 16663, 16665, 16670, 2]
+// Dependencies: [19, 17, 21, 4605, 4311, 6675, 1874, 16720, 16722, 16727, 2]
 
-// Module 16662 (SearchScreenSearchBar)
+// Module 16719 (SearchScreenSearchBar)
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
-import mergeProps from "mergeProps" /* 4280 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6639 */;
-import SearchBarDefault from "SearchBar" /* 16663 */;
-import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 16665 */;
-import SearchFilterButtonDefault from "SearchFilterButton" /* 16670 */;
+import mergeProps from "mergeProps" /* 4311 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6675 */;
+import layout_SearchBarDefault from "layout/SearchBar" /* 16720 */;
+import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 16722 */;
+import SearchFilterButtonDefault from "SearchFilterButton" /* 16727 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", paddingLeft: 16, zIndex: 10 }, headerWithBackButton: { paddingLeft: 0 }, headerSearch: { flex: 1, flexGrow: 1 }, headerControlsRight: { paddingRight: 16, paddingLeft: 12 }, suggestionsAnchor: { height: 0 }, suggestions: { position: "absolute", left: 0, right: -50, top: 8 }, suggestionsWithBackButton: { left: -28 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/layout/SearchScreenSearchBar.tsx");
@@ -58,7 +58,7 @@ export default noop.memo(noop.forwardRef((arg0, arg1) => {
   items1[1] = headerWithBackButton;
   const items2 = [backButton, , ];
   const obj2 = { style: tmp.headerSearch, children: null };
-  const items3 = [closure_5(SearchBarDefault, { ref: memo, searchContext, setSuggestionsDismissed }), ];
+  const items3 = [closure_5(layout_SearchBarDefault, { ref: memo, searchContext, setSuggestionsDismissed }), ];
   const obj3 = { style: tmp.suggestionsAnchor, children: null };
   const obj4 = { searchContext, onLayoutMeasure: onSuggestionsLayoutMesure, dismissed: suggestionsDismissed, containerStyle: null };
   const items4 = [tmp.suggestions, ];

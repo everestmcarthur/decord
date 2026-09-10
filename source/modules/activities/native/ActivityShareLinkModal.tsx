@@ -1,20 +1,20 @@
-// Module ID: 14514
-// Function ID: 14515
+// Module ID: 14563
+// Function ID: 14564
 // Name: ActivityShareLinkModal
-// Dependencies: [5, 32, 19, 17, 1957, 1371, 1956, 10892, 4567, 21, 4574, 576, 504, 11013, 12162, 14513, 7182, 1369, 14515, 7470, 7696, 4272, 1114, 7203, 4271, 1477, 1611, 1115, 5645, 7877, 5638, 7391, 4517, 5139, 11016, 11027, 2]
+// Dependencies: [5, 32, 19, 17, 1957, 1371, 1956, 10930, 4598, 21, 4605, 576, 504, 11053, 12202, 14562, 7220, 1369, 14564, 7508, 7733, 4303, 1114, 7241, 4302, 1477, 1611, 1115, 5681, 7914, 5674, 7429, 4548, 5175, 11056, 11067, 2]
 // Exports: default
 
-// Module 14514 (ActivityShareLinkModal)
+// Module 14563 (ActivityShareLinkModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastUtils from "ToastUtils" /* 4271 */;
-import LinkIcon from "LinkIcon" /* 4517 */;
-import ClipboardUtils from "ClipboardUtils" /* 7203 */;
-import HeaderActionButton from "HeaderActionButton" /* 7391 */;
-import HeaderShared from "HeaderShared" /* 7877 */;
-import formatResults from "formatResults" /* 11013 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12162 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14513 */;
+import ToastUtils from "ToastUtils" /* 4302 */;
+import LinkIcon from "LinkIcon" /* 4548 */;
+import ClipboardUtils from "ClipboardUtils" /* 7241 */;
+import HeaderActionButton from "HeaderActionButton" /* 7429 */;
+import HeaderShared from "HeaderShared" /* 7914 */;
+import formatResults from "formatResults" /* 11053 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12202 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14562 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,11 +24,11 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
 require = fn;
 const View = fn(17).View;
-let UserRowModes = fn(10892).UserRowModes;
-const MessageSendLocation = fn(4567).MessageSendLocation;
+let UserRowModes = fn(10930).UserRowModes;
+const MessageSendLocation = fn(4598).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null, container: null };
 let obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
@@ -128,7 +128,7 @@ export default function ActivityShareLinkModal(applicationId) {
             if (null != first3) {
               dependencyMap = 1;
               c3 = 1;
-              let obj4 = { value: Promise.all(first1.map(tmp2(11013).getOrResolveChannelIdFromDestinationId)), done: false };
+              let obj4 = { value: Promise.all(first1.map(tmp2(11053).getOrResolveChannelIdFromDestinationId)), done: false };
               return obj4;
             } else {
               c3 = 3;
@@ -139,7 +139,7 @@ export default function ActivityShareLinkModal(applicationId) {
           throw value;
         } else if (arg0 !== 2) {
           closure_128_0 = value.filter(tmp2(1369).isNotNullish);
-          closure_128_1 = tmp2(14515).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
+          closure_128_1 = tmp2(14564).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
           closure_129_6(true);
           const item = closure_128_0.forEach((() => {
             closure_0 = closure_1_3(function*(arg0, value) {
@@ -169,11 +169,11 @@ export default function ActivityShareLinkModal(applicationId) {
                     } else {
                       channel = channel.getChannel(closure_0);
                       if (null != channel) {
-                        const obj2 = closure_2_1(7470);
+                        const obj2 = closure_2_1(7508);
                         const obj6 = { location: constants.ACTIVITY_SHARE };
                         c2 = 1;
                         c1 = 1;
-                        const obj7 = { value: obj2.sendMessage(tmp17, closure_2_1(7696).parse(channel, c1), false, obj6), done: false };
+                        const obj7 = { value: obj2.sendMessage(tmp17, closure_2_1(7733).parse(channel, c1), false, obj6), done: false };
                         return obj7;
                       }
                     }
@@ -204,16 +204,16 @@ export default function ActivityShareLinkModal(applicationId) {
               return applyArgumentsResult;
             };
           })());
-          let obj5 = tmp2(14515);
+          let obj5 = tmp2(14564);
           let obj7 = { key: "ACTIVITY_SHARE_LINK_SUCCESS", content: null };
           const intl = tmp2(1114).intl;
           const obj8 = { applicationName: closure_129_14.name };
           obj7.content = intl.formatToPlainString(tmp2(1114).t.jQULqL, obj8);
-          tmp3(4272).open(obj7);
+          tmp3(4303).open(obj7);
           closure_129_4(true, closure_129_7);
-          let obj6 = tmp3(4272);
-          const result = tmp2(14513).closeActivityShareLinkModal();
-          const obj9 = tmp2(14513);
+          let obj6 = tmp3(4303);
+          const result = tmp2(14562).closeActivityShareLinkModal();
+          const obj9 = tmp2(14562);
         }
         c3 = 3;
         let obj = { value, done: true };

@@ -1,18 +1,18 @@
-// Module ID: 16311
-// Function ID: 16312
+// Module ID: 16360
+// Function ID: 16361
 // Name: FavoritesGuildSidebarHeader
-// Dependencies: [19, 17, 16235, 21, 4574, 576, 10256, 11008, 4541, 10260, 1896, 10259, 4570, 1114, 3236, 5094, 5115, 5085, 4987, 2]
+// Dependencies: [19, 17, 16284, 21, 4605, 576, 10294, 11048, 4572, 10298, 1896, 10297, 4601, 1114, 3236, 5130, 5151, 5121, 5023, 2]
 // Exports: default
 
-// Module 16311 (FavoritesGuildSidebarHeader)
+// Module 16360 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3236 from "module_3236" /* 3236 */;
-import Text_Text from "Text/Text" /* 4570 */;
-import Stack_Stack from "Stack/Stack" /* 4987 */;
-import ChatIcon from "ChatIcon" /* 5085 */;
-import TextIcon from "TextIcon" /* 5094 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5115 */;
+import Text_Text from "Text/Text" /* 4601 */;
+import Stack_Stack from "Stack/Stack" /* 5023 */;
+import ChatIcon from "ChatIcon" /* 5121 */;
+import TextIcon from "TextIcon" /* 5130 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5151 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -67,10 +67,10 @@ function PlaceholderRows() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16235).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16284).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

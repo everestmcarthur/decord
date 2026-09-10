@@ -1,23 +1,23 @@
-// Module ID: 13422
-// Function ID: 13423
+// Module ID: 13471
+// Function ID: 13472
 // Name: BuyNitroMarketingHeader
-// Dependencies: [19, 17, 7446, 21, 576, 4574, 4310, 4577, 4575, 4509, 13423, 1115, 9513, 13421, 1093, 5601, 7448, 9422, 5001, 1114, 13424, 4570, 8113, 12316, 2]
+// Dependencies: [19, 17, 7484, 21, 576, 4605, 4341, 4608, 4606, 4540, 13472, 1115, 9551, 13470, 1093, 5637, 7486, 9460, 5037, 1114, 13473, 4601, 8150, 12356, 2]
 // Exports: default
 
-// Module 13422 (BuyNitroMarketingHeader)
+// Module 13471 (BuyNitroMarketingHeader)
 import nativeDefault from "native" /* 576 */;
-import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4577 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4608 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const Gradients = fn(7446).Gradients;
+const Gradients = fn(7484).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let PX_8 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_11 = createStyles.createStyles((arg0, arg1, arg2) => {
   let num = 0;
   if (arg1) {
@@ -60,7 +60,7 @@ let closure_11 = createStyles.createStyles((arg0, arg1, arg2) => {
   }
   obj3.borderRadius = sm;
   obj2.background = obj3;
-  const rect = { position: "absolute", top: -tmp(576).space.PX_16, right: "call", left: "options", alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007445693852992177 };
+  const rect = { position: "absolute", top: -tmp(576).space.PX_16, right: "call", left: "call", alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018307551778537635 };
   obj2.clouds = rect;
   const rect1 = { position: "absolute", top: arg0 + tmp(576).space.PX_20, right: tmp(576).space.PX_4 };
   obj2.wumpus = rect1;
@@ -123,15 +123,15 @@ export default function BuyNitroMarketingHeader(arg0) {
   const effect = noop.useEffect(() => {
     const accessibilityPreferencesSharedValue = reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue;
     if (!accessibilityPreferencesSharedValue.get().reduceMotion) {
-      const tmpResult = tmp(4310);
-      const result = sharedValue.set(tmpResult.withRepeat(tmp(4575).withTiming(PX_8, { duration: 3400 }), -1, true));
-      const tmpResult6 = tmp(4575);
-      const tmpResult7 = tmp(4310);
-      const result1 = sharedValue1.set(tmpResult7.withRepeat(tmp(4575).withTiming(-PX_12, { duration: 2600 }), -1, true));
-      const tmpResult8 = tmp(4575);
-      const tmpResult9 = tmp(4310);
-      const result2 = sharedValue2.set(tmpResult9.withRepeat(tmp(4575).withTiming(0.6, { duration: 2800 }), -1, true));
-      const tmpResult10 = tmp(4575);
+      const tmpResult = tmp(4341);
+      const result = sharedValue.set(tmpResult.withRepeat(tmp(4606).withTiming(PX_8, { duration: 3400 }), -1, true));
+      const tmpResult6 = tmp(4606);
+      const tmpResult7 = tmp(4341);
+      const result1 = sharedValue1.set(tmpResult7.withRepeat(tmp(4606).withTiming(-PX_12, { duration: 2600 }), -1, true));
+      const tmpResult8 = tmp(4606);
+      const tmpResult9 = tmp(4341);
+      const result2 = sharedValue2.set(tmpResult9.withRepeat(tmp(4606).withTiming(0.6, { duration: 2800 }), -1, true));
+      const tmpResult10 = tmp(4606);
     }
   }, items);
   const tmp4Result9 = sharedValue(sharedValue2[6]);

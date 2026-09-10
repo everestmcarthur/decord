@@ -1,24 +1,24 @@
-// Module ID: 16632
-// Function ID: 16633
+// Module ID: 16687
+// Function ID: 16688
 // Name: VibegrationsPublishNotesSheet
-// Dependencies: [5, 32, 19, 17, 2012, 1979, 4222, 1371, 1074, 4567, 21, 4574, 576, 6995, 504, 7258, 9336, 510, 4541, 11362, 1114, 3560, 1100, 7696, 7470, 7211, 7163, 4570, 7099, 4727, 4989, 2]
+// Dependencies: [5, 32, 19, 17, 2012, 1979, 4253, 1371, 1074, 4598, 21, 4605, 576, 7033, 504, 7296, 9373, 510, 4572, 11402, 1114, 3590, 1100, 7733, 7508, 7249, 7201, 4601, 7137, 4758, 5025, 2]
 // Exports: default
 
-// Module 16632 (VibegrationsPublishNotesSheet)
+// Module 16687 (VibegrationsPublishNotesSheet)
 import Storage3 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
-import _modDef3560 from "module_3560" /* 3560 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 7258 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11362 */;
+import _modDef3590 from "module_3590" /* 3590 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4572 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 7296 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11402 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4222 */;
+import RelationshipStore from "RelationshipStore" /* 4253 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -26,13 +26,13 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
 let closure_9 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
 const Routes = fn(1074).Routes;
-const MessageSendLocation = fn(4567).MessageSendLocation;
+const MessageSendLocation = fn(4598).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const VibegrationsPublishNotesSheet = "VibegrationsPublishNotesSheet";
 let closure_18 = "<#" + "9".repeat(20) + ">";
 const VibegrationsPatchNotesLastChannels = "VibegrationsPatchNotesLastChannels";
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_20 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, section: null, notesSection: null, statusRow: null, actions: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -209,7 +209,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     const obj4 = { title: null };
     const obj = ActionSheetActionCreators;
     const intl = util.intl;
-    obj4.title = intl.string(_modDef3560.IcSdnu);
+    obj4.title = intl.string(_modDef3590.IcSdnu);
     obj3.header = obj4;
     obj3.guild = GuildStore.getGuild(guildId);
     obj3.channels = stateFromStores;
@@ -272,8 +272,8 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                   const _HermesInternal = HermesInternal;
                   combined = "" + tmp30 + tmp38;
                 }
-                const parsed = tmp3(7696).parse(found, combined);
-                const tmp35Result = tmp3(7470);
+                const parsed = tmp3(7733).parse(found, combined);
+                const tmp35Result = tmp3(7508);
                 const obj5 = { location: _undefined2.VIBEGRATIONS_PATCH_NOTES };
                 c3 = 2;
                 c4 = 1;

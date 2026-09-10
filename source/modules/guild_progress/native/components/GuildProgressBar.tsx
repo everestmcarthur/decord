@@ -1,21 +1,21 @@
-// Module ID: 14002
-// Function ID: 14003
+// Module ID: 14051
+// Function ID: 14052
 // Name: GuildProgressBar
-// Dependencies: [19, 17, 21, 4574, 12504, 576, 4310, 4575, 4578, 2]
+// Dependencies: [19, 17, 21, 4605, 12544, 576, 4341, 4606, 4609, 2]
 // Exports: default
 
-// Module 14002 (GuildProgressBar)
+// Module 14051 (GuildProgressBar)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4575 */;
-import timingPresets from "timingPresets" /* 4578 */;
+import timing from "timing" /* 4606 */;
+import timingPresets from "timingPresets" /* 4609 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
-const obj2 = { wrapper: { position: "relative", backgroundColor: fn(12504).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 }, progress: null };
-let obj3 = { position: "relative", backgroundColor: fn(12504).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 };
+const createStyles = fn(4605);
+const obj2 = { wrapper: { position: "relative", backgroundColor: fn(12544).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 }, progress: null };
+let obj3 = { position: "relative", backgroundColor: fn(12544).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 };
 obj2.progress = { position: "absolute", height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.xs };
 let closure_6 = createStyles.createStyles(obj2);
 const __initData = { code: "function GuildProgressBarTsx1(){const{percentWidth}=this.__closure;return{width:percentWidth.get()+\"%\"};}" };
@@ -25,12 +25,12 @@ let result = size.fileFinishedImporting("modules/guild_progress/native/component
 export default function GuildProgressBar(percent) {
   percent = percent.percent;
   const tmp = closure_6();
-  const sharedValue = percent(4310).useSharedValue(0);
+  const sharedValue = percent(4341).useSharedValue(0);
   const items = [percent, sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(timing.withTiming(percent, timingPresets.timingSlow));
   }, items);
-  const obj = percent(4310);
+  const obj = percent(4341);
   const fn = function h() {
     return { width: "" + sharedValue.get() + "%" };
   };
@@ -40,10 +40,10 @@ export default function GuildProgressBar(percent) {
   const obj3 = { style: null, children: null };
   const items1 = [tmp.wrapper, percent.style];
   obj3.style = items1;
-  const animatedStyle = percent(4310).useAnimatedStyle(fn);
+  const animatedStyle = percent(4341).useAnimatedStyle(fn);
   const obj4 = { style: null };
   const items2 = [tmp.progress, animatedStyle];
   obj4.style = items2;
-  obj3.children = jsx(sharedValue(4310).View, { style: null });
+  obj3.children = jsx(sharedValue(4341).View, { style: null });
   return <View style={null}>{null}</View>;
 };

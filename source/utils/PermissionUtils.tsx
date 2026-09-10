@@ -1,18 +1,18 @@
-// Module ID: 4217
-// Function ID: 4218
+// Module ID: 4248
+// Function ID: 4249
 // Name: PermissionUtils
-// Dependencies: [2014, 4213, 4214, 1961, 1975, 2016, 502, 1957, 2021, 2015, 1979, 1371, 1074, 1086, 12, 4218, 4201, 11, 1894, 4219, 2019, 2]
+// Dependencies: [2014, 4244, 4245, 1961, 1975, 2016, 502, 1957, 2021, 2015, 1979, 1371, 1074, 1086, 12, 4249, 4231, 11, 1894, 4250, 2019, 2]
 // Exports: areChannelsLocked, can, canEveryone, canEveryoneRole, canManageACategory, getGuildVisualOwnerId, getHighestHoistedRole, getHighestRole, isRoleHigher, makeEveryoneOverwrite
 
-// Module 4217 (PermissionUtils)
+// Module 4248 (PermissionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Server from "Server" /* 1894 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2019 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4218 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4219 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4249 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4250 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
-import LurkingStore from "LurkingStore" /* 4213 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4214 */;
+import LurkingStore from "LurkingStore" /* 4244 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4245 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -76,13 +76,13 @@ function applyOverwrites(id, member, deserializeResult, overwrites) {
       found = tmp19(1086).filter(addResult4, closure_29);
       const tmp19Result7 = tmp19(1086);
     }
-    const tmp28Result = tmp28(4201);
+    const tmp28Result = tmp28(4231);
     found1 = found;
     if (tmp34) {
       found1 = tmp19(1086).filter(found, closure_28);
       const tmp19Result8 = tmp19(1086);
     }
-    tmp34 = tmp28(4201).isMemberCommunicationDisabled(member) && !hasItem;
+    tmp34 = tmp28(4231).isMemberCommunicationDisabled(member) && !hasItem;
   }
   return found1;
 }

@@ -1,15 +1,15 @@
-// Module ID: 13431
-// Function ID: 13432
+// Module ID: 13480
+// Function ID: 13481
 // Name: useBuyNitroPlanLabelRenderer
-// Dependencies: [19, 17, 2025, 1373, 21, 4574, 576, 4275, 1114, 1880, 4570, 4231, 2]
+// Dependencies: [19, 17, 2025, 1373, 21, 4605, 576, 4306, 1114, 1880, 4601, 4262, 2]
 // Exports: useBuyNitroPlanLabelRenderer
 
-// Module 13431 (useBuyNitroPlanLabelRenderer)
+// Module 13480 (useBuyNitroPlanLabelRenderer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import NumberUtils from "NumberUtils" /* 1880 */;
-import PremiumUtils from "PremiumUtils" /* 4231 */;
-import Text_Text from "Text/Text" /* 4570 */;
+import PremiumUtils from "PremiumUtils" /* 4262 */;
+import Text_Text from "Text/Text" /* 4601 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
@@ -21,7 +21,7 @@ const PremiumConstants = fn(1373);
 ({ DISCOUNTS: metroRequire, SubscriptionPlans: closure_7 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { labelRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, discountBadge: null, discountBadgeText: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.discountBadge = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360, paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_8 };

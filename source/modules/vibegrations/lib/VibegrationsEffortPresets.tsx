@@ -1,13 +1,13 @@
-// Module ID: 16634
-// Function ID: 16635
+// Module ID: 16689
+// Function ID: 16690
 // Name: VibegrationsEffortPresets
-// Dependencies: [1114, 3560, 16635, 2]
+// Dependencies: [1114, 3590, 16690, 2]
 // Exports: describeVibegrationsModelSettings, matchVibegrationsEffortPreset, vibegrationsPresetTier, vibegrationsSettingsForTier
 
-// Module 16634 (VibegrationsEffortPresets)
+// Module 16689 (VibegrationsEffortPresets)
 import util from "util" /* 1114 */;
-import _modDef3560 from "module_3560" /* 3560 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16635 */;
+import _modDef3590 from "module_3590" /* 3590 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16690 */;
 import size from "module_2" /* 2 */;
 
 const items = [
@@ -17,7 +17,7 @@ const items = [
     fast: true,
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3560.Mo0a1m);
+      return intl.string(_modDef3590.Mo0a1m);
     }
   },
   {
@@ -25,7 +25,7 @@ const items = [
     thinking: "high",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3560.dkt78K);
+      return intl.string(_modDef3590.dkt78K);
     }
   },
   {
@@ -33,7 +33,7 @@ const items = [
     thinking: "medium",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3560.Ly6zYL);
+      return intl.string(_modDef3590.Ly6zYL);
     }
   }
 ];
@@ -147,7 +147,7 @@ export const describeVibegrationsModelSettings = function describeVibegrationsMo
   if (true === fast) {
     const intl = util.intl;
     const _HermesInternal = HermesInternal;
-    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3560.qOoAsd);
+    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3590.qOoAsd);
   }
   return combined1;
 };

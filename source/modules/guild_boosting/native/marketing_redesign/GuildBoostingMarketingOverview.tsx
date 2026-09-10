@@ -1,12 +1,12 @@
-// Module ID: 7398
-// Function ID: 7399
+// Module ID: 7436
+// Function ID: 7437
 // Name: GuildBoostingMarketingOverview
-// Dependencies: [32, 19, 17, 1979, 1371, 1074, 21, 4574, 7399, 504, 1483, 7176, 5612, 7407, 1379, 1242, 573, 7271, 4898, 7415, 13602, 13609, 13614, 13622, 13627, 13631, 2]
+// Dependencies: [32, 19, 17, 1979, 1371, 1074, 21, 4605, 7437, 504, 1483, 7214, 5648, 7445, 1379, 1242, 573, 7309, 4929, 7453, 13651, 13658, 13663, 13671, 13676, 13680, 2]
 // Exports: default
 
-// Module 7398 (GuildBoostingMarketingOverview)
+// Module 7436 (GuildBoostingMarketingOverview)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7415 */;
+import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7453 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -18,7 +18,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_13 = createStyles.createStyles({ wrapper: { paddingBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx");
@@ -84,9 +84,9 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, items3);
   const effect1 = obj4.useEffect(() => {
     guildBoostSlots(stateFromStores[16]).wait(() => {
-      const premiumSubscriptionPlans = guildId(7271).fetchPremiumSubscriptionPlans();
-      const obj = guildId(7271);
-      const paymentSources = guildId(4898).fetchPaymentSources();
+      const premiumSubscriptionPlans = guildId(7309).fetchPremiumSubscriptionPlans();
+      const obj = guildId(7309);
+      const paymentSources = guildId(4929).fetchPaymentSources();
     });
   }, []);
   let tmp18 = null;

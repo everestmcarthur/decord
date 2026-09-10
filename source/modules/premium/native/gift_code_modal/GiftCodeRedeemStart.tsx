@@ -1,30 +1,30 @@
-// Module ID: 11471
-// Function ID: 11472
+// Module ID: 11511
+// Function ID: 11512
 // Name: GiftCodeRedeemStart
-// Dependencies: [32, 19, 17, 11461, 1371, 5524, 1074, 21, 4813, 7240, 1114, 4759, 1889, 4574, 576, 1483, 504, 4418, 11472, 11473, 7182, 11074, 7568, 8197, 7179, 11038, 7176, 7196, 1242, 10830, 7352, 7137, 4570, 11477, 11478, 11479, 7186, 8831, 1178, 11140, 11251, 11252, 11480, 4989, 11470, 4777, 8767, 11464, 2]
+// Dependencies: [32, 19, 17, 11501, 1371, 5560, 1074, 21, 4844, 7278, 1114, 4790, 1889, 4605, 576, 1483, 504, 4449, 11512, 11513, 7220, 11114, 7606, 8234, 7217, 11078, 7214, 7234, 1242, 10868, 7390, 7175, 4601, 11517, 11518, 11519, 7224, 8868, 1178, 11180, 11291, 11292, 11520, 5025, 11510, 4808, 8804, 11504, 2]
 // Exports: default
 
-// Module 11471 (GiftCodeRedeemStart)
+// Module 11511 (GiftCodeRedeemStart)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import UserUtilsDefault from "UserUtils" /* 4418 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 4813 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7240 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7352 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10830 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11140 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11251 */;
-import NameplatePreview from "NameplatePreview" /* 11252 */;
-import actions_GiftCodeActionCreatorsDefault from "actions/GiftCodeActionCreators" /* 11464 */;
-import GiftCodeRedeemModal from "GiftCodeRedeemModal" /* 11470 */;
-import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 11480 */;
+import UserUtilsDefault from "UserUtils" /* 4449 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4844 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7278 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7390 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10868 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11180 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11291 */;
+import NameplatePreview from "NameplatePreview" /* 11292 */;
+import actions_GiftCodeActionCreatorsDefault from "actions/GiftCodeActionCreators" /* 11504 */;
+import GiftCodeRedeemModal from "GiftCodeRedeemModal" /* 11510 */;
+import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 11520 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GiftCodeStore from "GiftCodeStore" /* 11461 */;
+import GiftCodeStore from "GiftCodeStore" /* 11501 */;
 import UserStore from "UserStore" /* 1371 */;
-import SKUStore from "SKUStore" /* 5524 */;
+import SKUStore from "SKUStore" /* 5560 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -33,7 +33,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, GiftCodeModalStates: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj2 = { container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28 }, bodyWithMessage: { flex: 0 }, nameplateContainer: { width: "100%" }, nameplateContainerOffCenter: { paddingBottom: 56 }, message: { gap: 8 }, text: { textAlign: "center", paddingHorizontal: 32 }, footer: { paddingHorizontal: 24, paddingBottom: 12 }, confettiBackground: { justifyContent: "center", width: "100%", position: "absolute", top: 0, left: 0, opacity: 0.4, height: 275 }, emojiContainer: { justifyContent: "center", alignItems: "center" }, imageWrapper: { position: "relative", width: "100%", alignItems: "center", justifyContent: "center" }, collectiblesAsset: { margin: 40 }, collectiblesAssetBundle: { margin: 20, alignSelf: "stretch", minHeight: 250, alignItems: "center", justifyContent: "center" }, giftCardAsset: { marginTop: 20, marginBottom: 40 }, linkAccountIcon: { marginRight: 4 } };
 let closure_15 = createStyles.createStyles(obj2);
 let size = fn(2);

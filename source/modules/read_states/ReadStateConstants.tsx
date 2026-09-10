@@ -1,9 +1,9 @@
-// Module ID: 4756
-// Function ID: 4757
+// Module ID: 4787
+// Function ID: 4788
 // Name: ReadStateConstants
 // Dependencies: [2]
 
-// Module 4756 (ReadStateConstants)
+// Module 4787 (ReadStateConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/read_states/ReadStateConstants.tsx");

@@ -1,38 +1,52 @@
 // Module ID: 4118
 // Function ID: 4119
-// Dependencies: [3665]
+// Dependencies: [3974, 3693, 3694, 3697]
 // Exports: default
 
 // Module 4118
-import module_3665_mod from "module_3665" /* 3665 */;
+import module_3974_mod from "module_3974" /* 3974 */;
+import _typeof_mod from "module_3693" /* 3693 */;
+import requiredArgs_mod from "requiredArgs" /* 3694 */;
+import module_3697_mod from "module_3697" /* 3697 */;
 
-let module_3665 = module_3665_mod;
-if (!module_3665) {
-  const obj = { default: module_3665 };
+let module_3974 = module_3974_mod;
+if (!module_3974) {
+  const obj = { default: module_3974 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3665;
+  tmp3 = module_3974;
 }
-function checkWeek(getTime, getTime2, arg2) {
-  let str = "eeee p";
-  if (!module_3665.default(getTime, getTime2, arg2)) {
-    const time = getTime.getTime();
-    let str2 = "'\u4E0A\u4E2A'eeee p";
-    if (time > getTime2.getTime()) {
-      str2 = "'\u4E0B\u4E2A'eeee p";
-    }
-    str = str2;
-  }
-  return str;
+module_3974 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
 }
-module_3665 = tmp3;
-let closure_1 = { lastWeek: checkWeek, yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: checkWeek, other: "PP p" };
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+let module_3697 = module_3697_mod;
+if (!module_3697) {
+  const obj4 = { default: module_3697 };
+  let tmp9 = obj4;
+} else {
+  tmp9 = module_3697;
+}
+module_3697 = tmp9;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_1[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
-  }
-  return tmpResult;
+export default function setWeek(arg0, arg1, arg2) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_3974.default(defaultResult1, arg2) - module_3697.default(arg1);
+  defaultResult1.setDate(defaultResult1.getDate() - 7 * diff);
+  return defaultResult1;
 };
 export default exports.default;

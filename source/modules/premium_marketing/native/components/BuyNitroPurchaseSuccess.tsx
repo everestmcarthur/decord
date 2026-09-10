@@ -1,17 +1,17 @@
-// Module ID: 13418
-// Function ID: 13419
+// Module ID: 13467
+// Function ID: 13468
 // Name: BuyNitroPurchaseSuccess
-// Dependencies: [19, 7435, 1373, 21, 1114, 4920, 4924, 2]
+// Dependencies: [19, 7473, 1373, 21, 1114, 4951, 4955, 2]
 // Exports: presentBuyNitroPurchaseSuccess
 
-// Module 13418 (BuyNitroPurchaseSuccess)
+// Module 13467 (BuyNitroPurchaseSuccess)
 import util from "util" /* 1114 */;
-import useAlertStore from "useAlertStore" /* 4920 */;
-import AlertModal from "AlertModal" /* 4924 */;
+import useAlertStore from "useAlertStore" /* 4951 */;
+import AlertModal from "AlertModal" /* 4955 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const reset = fn(7435).reset;
+const reset = fn(7473).reset;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
